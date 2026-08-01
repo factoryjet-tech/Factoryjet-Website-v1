@@ -67,7 +67,7 @@ function SchemaScript() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('boise') }}
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('boise', FAQ_ITEMS) }}
     />
   )
 }
@@ -79,6 +79,126 @@ const FAQ_CATEGORIES = [
   { key: 'technical', label: 'Platform & SEO' },
   { key: 'local',     label: 'Local Expertise' },
   { key: 'support',   label: 'Support & Ownership' },
+];
+
+const FAQ_ITEMS = [
+            {
+              category: 'local',
+              question: 'Do you have experience with Shopify development for Boise and Idaho businesses?',
+              answer: "Yes — we've built stores for businesses across the Treasure Valley from outdoor brands to Boise food producers to specialty retailers. We understand the Idaho buyer, the outdoor lifestyle orientation of the market, and the specific tax and compliance rules Idaho businesses need to navigate.",
+            },
+            {
+              category: 'technical',
+              question: 'Boise is growing fast. Is now a good time to launch an e-commerce store?',
+              answer: "There's never been a better time. Boise was the #1 fastest-growing city in the US for several consecutive years, and the Treasure Valley market now exceeds 750,000 people. New residents from California, Seattle, and Portland bring strong online shopping habits and higher-than-average digital purchasing intent. Brands that establish a strong online presence now will own search rankings and customer relationships as the market matures.",
+            },
+            {
+              category: 'pricing',
+              question: "What's Idaho's sales tax, and how does it work for an online store?",
+              answer: "Idaho has a 6% flat state sales tax with no local add-ons in most jurisdictions — one of the simplest structures in the Mountain West. For your Shopify store, we configure automatic tax collection for Idaho buyers at checkout. If you sell into other states and exceed those states' economic nexus thresholds (typically $100K in sales or 200 transactions), you'll need to collect those states' taxes too. We configure your store for Idaho from day one and can add multi-state tax handling if needed.",
+            },
+            {
+              category: 'local',
+              question: 'How does the 7-day delivery guarantee work?',
+              answer: "Once you approve your project proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your full Shopify store in that window. If we miss the deadline for any reason on our end, you get a full refund. No exceptions, no excuses. We've never had to give one.",
+            },
+            {
+              category: 'local',
+              question: "I've heard Mode Effect is the best Shopify agency in Boise. Why should I consider FactoryJet?",
+              answer: "Mode Effect does excellent work — for enterprise brands with large budgets and 3-month timelines. If that's you, they're a solid choice. If you're a growing Boise SMB that needs a great Shopify store launched fast at a price that makes business sense, that's our lane. We specialize exclusively in Shopify, launch in 7 days, fixed-price, and we put the deadline in writing.",
+            },
+            {
+              category: 'local',
+              question: 'Boise has a lot of outdoor brands. Do you have experience with that category?',
+              answer: "Outdoor and active lifestyle is one of our strongest verticals. We understand what outdoor buyers care about: fast load times on mobile in the field, clean gear photography, detailed technical specs, size guides, and a checkout that works with Apple Pay and Google Pay. We also know how to structure collections, handle gear variants (size × color × material), and integrate with outdoor-specific fulfillment partners.",
+            },
+            {
+              category: 'local',
+              question: "I'm a farm or food producer in the Treasure Valley. Can I sell direct-to-consumer online?",
+              answer: "Absolutely. Farm-direct and Idaho-made food products are one of the fastest-growing e-commerce categories — consumers actively seek out local, traceable products. We build Shopify stores with subscription box options, local pickup scheduling, CSA-style delivery management, and compliant food labeling. Idaho has specific rules for cottage food businesses that we factor into the store setup.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a health and wellness brand in Boise?',
+              answer: "Yes — health, supplement, and wellness brands are a major segment for us. We build stores with subscription/recurring order support (via Recharge or Shopify Subscriptions), compliance-friendly product descriptions that avoid FTC issues, bundle builders, loyalty programs, and strong email automation through Klaviyo. Boise's health-conscious demographic is one of the best markets in the Mountain West for this category.",
+            },
+            {
+              category: 'local',
+              question: 'How do I handle shipping to rural Idaho buyers?',
+              answer: "Shopify handles carrier-calculated shipping automatically — you set up your preferred carriers (USPS, UPS, FedEx), and the correct rate is calculated at checkout based on the buyer's location. For rural Idaho addresses, USPS Priority Mail is often the most economical. We configure your shipping zones, rates, and any free-shipping thresholds during the build.",
+            },
+            {
+              category: 'pricing',
+              question: 'What platform should I use — Shopify, WooCommerce, or BigCommerce?',
+              answer: "For almost every Boise SMB, Shopify is the right answer. It handles Idaho sales tax automatically, runs fast without a dedicated server, has the best app ecosystem for the integrations Boise businesses need (Klaviyo, Google Shopping, Meta Ads), and requires no ongoing technical maintenance. WooCommerce makes sense only if you're committed to WordPress and have a developer on retainer.",
+            },
+            {
+              category: 'support',
+              question: 'Do you offer ongoing Shopify maintenance and support after launch?',
+              answer: "Yes. Every project includes 30 days of post-launch support — bug fixes, adjustments, and questions answered same-day. After that, we offer monthly maintenance plans covering theme updates, app updates, speed monitoring, and priority support.",
+            },
+            {
+              category: 'pricing',
+              question: 'How much does a Shopify store typically cost in Boise, Idaho?',
+              answer: "Local Boise agencies charge enterprise-level rates for a Shopify build, with timelines of 6–14 weeks. Freelancers on Upwork run far cheaper but with highly variable quality. FactoryJet delivers the same quality at a fraction of the cost, fixed-price and scoped to your build, in 7 days, backed by a money-back guarantee. The main cost drivers are page count, integrations, and design complexity, and every project is quoted up front after a free discovery call so you know the full cost before work starts.",
+            },
+            {
+              category: 'technical',
+              question: 'Can you set up Google Shopping for my Boise product business?',
+              answer: "Yes — Google Shopping setup is included in our Growth and Headless packages and available as a paid add-on for Standard. We create your Google Merchant Center account, configure the product feed, write optimized product titles and descriptions, and link it to Google Ads. For Treasure Valley product businesses, Google Shopping is often the highest-ROI first channel to activate.",
+            },
+            {
+              category: 'local',
+              question: 'I already have a Shopify store but it\'s slow and not converting. Can you fix it?',
+              answer: "Yes — we start with a free audit that takes 24 hours and costs nothing. We analyze your speed scores (Core Web Vitals), checkout abandonment rate, mobile UX, conversion funnel, and theme code. Then we give you a specific list of what's broken and a fixed price to fix it.",
+            },
+            {
+              category: 'included',
+              question: 'Do you build Shopify stores with subscription or recurring order capability?',
+              answer: "Yes. Subscription commerce is growing fast — especially for consumable products like supplements, food, pet supplies, and outdoor consumables. We integrate Shopify Subscriptions or Recharge depending on your complexity needs. We set up the subscriber UX, discount logic, pause/skip/cancel flows, and the Klaviyo email sequences that reduce churn.",
+            },
+            {
+              category: 'included',
+              question: 'What if I need my store to work with my existing inventory or POS system?',
+              answer: "We handle integrations with most major POS and inventory systems — Shopify POS, Square, Lightspeed, Clover, and custom ERPs. If you're a downtown Boise retailer running a physical store and want to sync online and offline inventory automatically, this is a standard part of our Growth and Headless builds.",
+            },
+            {
+              category: 'local',
+              question: "I'm in Nampa or Meridian, not Boise proper. Do you still serve my area?",
+              answer: "Absolutely — we serve the entire Treasure Valley metro: Boise, Meridian, Nampa, Caldwell, Eagle, Star, Kuna, and Garden City. Idaho's 6% flat tax applies everywhere in the state, so there's no difference in tax configuration for different Treasure Valley cities.",
+            },
+            {
+              category: 'local',
+              question: 'How do I get started with FactoryJet?',
+              answer: "Book a 45-minute strategy call. We'll learn about your business, your products, and your goals — then tell you exactly what we'd build and what it costs. You'll leave the call with clarity on the right path forward, no strings attached.",
+            },
+            {
+              category: 'included',
+              question: 'What if I need a custom web application, not just a Shopify store?',
+              answer: "We build custom web apps, CRMs, booking systems, and complex integrations beyond standard Shopify. If you need a dealer portal, a product configurator, a subscription management dashboard, or custom API connections, our full-stack team handles it. Start with a strategy call and describe your vision.",
+            },
+            {
+              category: 'local',
+              question: "Can you help a Boise startup that's pre-revenue launch their first e-commerce store?",
+              answer: "Yes — startups and pre-revenue businesses are welcome. Many of our best client relationships started from day zero. We'll be honest about what you need vs. what you don't — a pre-revenue business usually needs our Standard package to validate the product before investing in advanced features.",
+            },
+            {
+              category: 'local',
+              question: 'Do I need a business license in Idaho before launching an online store?',
+              answer: "Idaho doesn't require a general state business license, but you'll need to register with the Idaho State Tax Commission to collect and remit Idaho sales tax — a simple online process. Depending on your city, you may need a local business license. Nampa, Meridian, and Boise each have their own requirements. We handle the technical store configuration; the business registration side is something we leave to licensed professionals.",
+            },
+            {
+              category: 'local',
+              question: 'Who is the best ecommerce development company in Boise?',
+              answer:
+                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Boise you compare — or any ecommerce solution company in Boise — should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Boise and the best ecommerce solution company in Boise for your catalog.',
+            },
+            {
+              category: 'pricing',
+              question: 'Should I hire ecommerce developer in Boise or work with an agency?',
+              answer:
+                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Boise directly, ask for store speed scores from past builds before committing.',
+            },
 ];
 export default function Page() {
   return (
@@ -394,125 +514,7 @@ export default function Page() {
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Boise E-Commerce Businesses"
           categories={FAQ_CATEGORIES}
-          items={[
-            {
-              category: 'local',
-              question: 'Do you have experience with Shopify development for Boise and Idaho businesses?',
-              answer: "Yes — we've built stores for businesses across the Treasure Valley from outdoor brands to Boise food producers to specialty retailers. We understand the Idaho buyer, the outdoor lifestyle orientation of the market, and the specific tax and compliance rules Idaho businesses need to navigate.",
-            },
-            {
-              category: 'technical',
-              question: 'Boise is growing fast. Is now a good time to launch an e-commerce store?',
-              answer: "There's never been a better time. Boise was the #1 fastest-growing city in the US for several consecutive years, and the Treasure Valley market now exceeds 750,000 people. New residents from California, Seattle, and Portland bring strong online shopping habits and higher-than-average digital purchasing intent. Brands that establish a strong online presence now will own search rankings and customer relationships as the market matures.",
-            },
-            {
-              category: 'pricing',
-              question: "What's Idaho's sales tax, and how does it work for an online store?",
-              answer: "Idaho has a 6% flat state sales tax with no local add-ons in most jurisdictions — one of the simplest structures in the Mountain West. For your Shopify store, we configure automatic tax collection for Idaho buyers at checkout. If you sell into other states and exceed those states' economic nexus thresholds (typically $100K in sales or 200 transactions), you'll need to collect those states' taxes too. We configure your store for Idaho from day one and can add multi-state tax handling if needed.",
-            },
-            {
-              category: 'local',
-              question: 'How does the 7-day delivery guarantee work?',
-              answer: "Once you approve your project proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your full Shopify store in that window. If we miss the deadline for any reason on our end, you get a full refund. No exceptions, no excuses. We've never had to give one.",
-            },
-            {
-              category: 'local',
-              question: "I've heard Mode Effect is the best Shopify agency in Boise. Why should I consider FactoryJet?",
-              answer: "Mode Effect does excellent work — for enterprise brands with large budgets and 3-month timelines. If that's you, they're a solid choice. If you're a growing Boise SMB that needs a great Shopify store launched fast at a price that makes business sense, that's our lane. We specialize exclusively in Shopify, launch in 7 days, fixed-price, and we put the deadline in writing.",
-            },
-            {
-              category: 'local',
-              question: 'Boise has a lot of outdoor brands. Do you have experience with that category?',
-              answer: "Outdoor and active lifestyle is one of our strongest verticals. We understand what outdoor buyers care about: fast load times on mobile in the field, clean gear photography, detailed technical specs, size guides, and a checkout that works with Apple Pay and Google Pay. We also know how to structure collections, handle gear variants (size × color × material), and integrate with outdoor-specific fulfillment partners.",
-            },
-            {
-              category: 'local',
-              question: "I'm a farm or food producer in the Treasure Valley. Can I sell direct-to-consumer online?",
-              answer: "Absolutely. Farm-direct and Idaho-made food products are one of the fastest-growing e-commerce categories — consumers actively seek out local, traceable products. We build Shopify stores with subscription box options, local pickup scheduling, CSA-style delivery management, and compliant food labeling. Idaho has specific rules for cottage food businesses that we factor into the store setup.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a health and wellness brand in Boise?',
-              answer: "Yes — health, supplement, and wellness brands are a major segment for us. We build stores with subscription/recurring order support (via Recharge or Shopify Subscriptions), compliance-friendly product descriptions that avoid FTC issues, bundle builders, loyalty programs, and strong email automation through Klaviyo. Boise's health-conscious demographic is one of the best markets in the Mountain West for this category.",
-            },
-            {
-              category: 'local',
-              question: 'How do I handle shipping to rural Idaho buyers?',
-              answer: "Shopify handles carrier-calculated shipping automatically — you set up your preferred carriers (USPS, UPS, FedEx), and the correct rate is calculated at checkout based on the buyer's location. For rural Idaho addresses, USPS Priority Mail is often the most economical. We configure your shipping zones, rates, and any free-shipping thresholds during the build.",
-            },
-            {
-              category: 'pricing',
-              question: 'What platform should I use — Shopify, WooCommerce, or BigCommerce?',
-              answer: "For almost every Boise SMB, Shopify is the right answer. It handles Idaho sales tax automatically, runs fast without a dedicated server, has the best app ecosystem for the integrations Boise businesses need (Klaviyo, Google Shopping, Meta Ads), and requires no ongoing technical maintenance. WooCommerce makes sense only if you're committed to WordPress and have a developer on retainer.",
-            },
-            {
-              category: 'support',
-              question: 'Do you offer ongoing Shopify maintenance and support after launch?',
-              answer: "Yes. Every project includes 30 days of post-launch support — bug fixes, adjustments, and questions answered same-day. After that, we offer monthly maintenance plans covering theme updates, app updates, speed monitoring, and priority support.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does a Shopify store typically cost in Boise, Idaho?',
-              answer: "Local Boise agencies charge enterprise-level rates for a Shopify build, with timelines of 6–14 weeks. Freelancers on Upwork run far cheaper but with highly variable quality. FactoryJet delivers the same quality at a fraction of the cost, fixed-price and scoped to your build, in 7 days, backed by a money-back guarantee. The main cost drivers are page count, integrations, and design complexity, and every project is quoted up front after a free discovery call so you know the full cost before work starts.",
-            },
-            {
-              category: 'technical',
-              question: 'Can you set up Google Shopping for my Boise product business?',
-              answer: "Yes — Google Shopping setup is included in our Growth and Headless packages and available as a paid add-on for Standard. We create your Google Merchant Center account, configure the product feed, write optimized product titles and descriptions, and link it to Google Ads. For Treasure Valley product businesses, Google Shopping is often the highest-ROI first channel to activate.",
-            },
-            {
-              category: 'local',
-              question: 'I already have a Shopify store but it\'s slow and not converting. Can you fix it?',
-              answer: "Yes — we start with a free audit that takes 24 hours and costs nothing. We analyze your speed scores (Core Web Vitals), checkout abandonment rate, mobile UX, conversion funnel, and theme code. Then we give you a specific list of what's broken and a fixed price to fix it.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build Shopify stores with subscription or recurring order capability?',
-              answer: "Yes. Subscription commerce is growing fast — especially for consumable products like supplements, food, pet supplies, and outdoor consumables. We integrate Shopify Subscriptions or Recharge depending on your complexity needs. We set up the subscriber UX, discount logic, pause/skip/cancel flows, and the Klaviyo email sequences that reduce churn.",
-            },
-            {
-              category: 'included',
-              question: 'What if I need my store to work with my existing inventory or POS system?',
-              answer: "We handle integrations with most major POS and inventory systems — Shopify POS, Square, Lightspeed, Clover, and custom ERPs. If you're a downtown Boise retailer running a physical store and want to sync online and offline inventory automatically, this is a standard part of our Growth and Headless builds.",
-            },
-            {
-              category: 'local',
-              question: "I'm in Nampa or Meridian, not Boise proper. Do you still serve my area?",
-              answer: "Absolutely — we serve the entire Treasure Valley metro: Boise, Meridian, Nampa, Caldwell, Eagle, Star, Kuna, and Garden City. Idaho's 6% flat tax applies everywhere in the state, so there's no difference in tax configuration for different Treasure Valley cities.",
-            },
-            {
-              category: 'local',
-              question: 'How do I get started with FactoryJet?',
-              answer: "Book a 45-minute strategy call. We'll learn about your business, your products, and your goals — then tell you exactly what we'd build and what it costs. You'll leave the call with clarity on the right path forward, no strings attached.",
-            },
-            {
-              category: 'included',
-              question: 'What if I need a custom web application, not just a Shopify store?',
-              answer: "We build custom web apps, CRMs, booking systems, and complex integrations beyond standard Shopify. If you need a dealer portal, a product configurator, a subscription management dashboard, or custom API connections, our full-stack team handles it. Start with a strategy call and describe your vision.",
-            },
-            {
-              category: 'local',
-              question: "Can you help a Boise startup that's pre-revenue launch their first e-commerce store?",
-              answer: "Yes — startups and pre-revenue businesses are welcome. Many of our best client relationships started from day zero. We'll be honest about what you need vs. what you don't — a pre-revenue business usually needs our Standard package to validate the product before investing in advanced features.",
-            },
-            {
-              category: 'local',
-              question: 'Do I need a business license in Idaho before launching an online store?',
-              answer: "Idaho doesn't require a general state business license, but you'll need to register with the Idaho State Tax Commission to collect and remit Idaho sales tax — a simple online process. Depending on your city, you may need a local business license. Nampa, Meridian, and Boise each have their own requirements. We handle the technical store configuration; the business registration side is something we leave to licensed professionals.",
-            },
-            {
-              category: 'local',
-              question: 'Who is the best ecommerce development company in Boise?',
-              answer:
-                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Boise you compare — or any ecommerce solution company in Boise — should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Boise and the best ecommerce solution company in Boise for your catalog.',
-            },
-            {
-              category: 'pricing',
-              question: 'Should I hire ecommerce developer in Boise or work with an agency?',
-              answer:
-                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Boise directly, ask for store speed scores from past builds before committing.',
-            },
-          ]}
+          items={FAQ_ITEMS}
         />
 
         {/* FINAL CTA */}

@@ -85,6 +85,151 @@ const FAQ_CATEGORIES = [
   { key: 'quality',   label: 'Quality & Results' },
 ]
 
+const FAQ_ITEMS = [
+
+            /* ─ Pricing & Budget ─ */
+            {
+              category: 'pricing',
+              question: 'How much does ecommerce development cost in Austin, TX?',
+              answer:
+                "Austin ecommerce agencies typically charge enterprise-level rates for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, pricing is fixed-price and scoped to your build — the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. The difference comes from our lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
+            },
+            {
+              category: 'pricing',
+              question: 'How does FactoryJet keep Austin store pricing fixed and predictable?',
+              answer:
+                "We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. 12 years of experience with 500+ stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get US-hour project management, US-timezone communication, and senior developers with 10+ years of experience — delivering code quality indistinguishable from what a high-end Austin agency would produce, with full code ownership at handoff.",
+            },
+            {
+              category: 'pricing',
+              question: 'Are there any hidden fees I should know about?',
+              answer:
+                "None. Your quote covers everything: design, development, testing, launch, and 30 days of post-launch support. We don't charge extra for revisions during the build phase, platform setup, or standard integrations like Klaviyo and Google Analytics. The only time the price changes is if your project scope expands significantly during the build — and we always discuss that before acting.",
+            },
+            {
+              category: 'pricing',
+              question: 'Do you offer payment plans?',
+              answer:
+                "Yes. Most projects can be split into 50% at kickoff and 50% at launch. For larger builds, we offer a three-payment structure: 40% kickoff, 30% mid-build, 30% at launch. We accept all major US credit cards, ACH bank transfer, and wire.",
+            },
+
+            /* ─ Platforms & Tech ─ */
+            {
+              category: 'platform',
+              question: 'Which ecommerce platform is right for my Austin business?',
+              answer:
+                "For most Austin small businesses just getting into ecommerce, Shopify is the right call — it's reliable, has an enormous app ecosystem, and requires zero server maintenance. WooCommerce makes sense if you're already on WordPress and want full ownership of your data and code. Custom headless builds (Next.js + Shopify/Medusa) are for businesses with complex requirements: custom pricing engines, ERP integrations, or very high traffic. We'll recommend the right platform on your discovery call based on your actual situation.",
+            },
+            {
+              category: 'platform',
+              question: 'Can you migrate my existing store to a new platform?',
+              answer:
+                "Yes, this is one of our most common requests. We migrate Austin businesses from legacy platforms — Magento, Volusion, 3dcart, outdated custom builds — to modern Shopify or WooCommerce installs. Migrations include: product catalog with all images and metafields, customer records, historical order data, blog content, and 301 redirect maps so your SEO rankings survive the switch. We've done 80+ migrations without a single client losing their organic rankings.",
+            },
+            {
+              category: 'platform',
+              question: 'Do you work with Shopify Plus?',
+              answer:
+                "Yes. We have Shopify Plus experience including checkout extensibility, B2B features, automation flows (Shopify Flow), metaobject-based content architecture, and multi-storefront setups. We also handle Shopify Plus migrations — moving clients from standard Shopify, BigCommerce, or Magento to Plus without disrupting their business.",
+            },
+            {
+              category: 'platform',
+              question: 'Will my store work on mobile?',
+              answer:
+                "Every store we build is mobile-first by design — not mobile-adapted after the fact. Austin shoppers are increasingly purchasing on their phones. We test on real devices across iOS and Android, not just browser emulators. Mobile conversion rate optimization is baked into our process, not an add-on.",
+            },
+
+            /* ─ Timeline & Process ─ */
+            {
+              category: 'process',
+              question: 'How can you really build a store in 7 days?',
+              answer:
+                "Because we've done it 500+ times. We have a production system — discovery templates, design component libraries, tested integration setups, and a QA checklist — that lets us build fast without being sloppy. The 7-day clock starts at your kickoff call, and it accounts for your review time and revision rounds. The only thing that extends the timeline is if you need time to gather content (product photos, copy) or if the scope grows significantly. We tell you that upfront.",
+            },
+            {
+              category: 'process',
+              question: 'What do I need to provide before we start?',
+              answer:
+                "Product photos (or we'll advise on stock photography), product descriptions, your logo in vector format (SVG or AI), and your brand colors. If you have existing brand guidelines, great — if not, we'll work with what you have. You don't need to have everything perfect on day one; we'll guide you through it.",
+            },
+            {
+              category: 'process',
+              question: 'Can I still run my business during the build?',
+              answer:
+                "Yes. We build on a staging environment completely separate from any existing website you have. Your current site stays live and untouched until you're ready to launch the new one. On launch day, we handle the DNS switch — usually overnight so your customers don't see any downtime.",
+            },
+            {
+              category: 'process',
+              question: 'What happens after my store launches?',
+              answer:
+                "You get 30 days of post-launch support included — bug fixes, small adjustments, questions answered. After 30 days, you can manage the store independently (we'll provide training), hire us for ongoing work on a project basis, or enroll in a monthly maintenance plan. We're not going anywhere.",
+            },
+
+            /* ─ Austin-Specific ─ */
+            {
+              category: 'local',
+              question: 'Do you know Austin\'s local market and customer behavior?',
+              answer:
+                "We've worked with dozens of Austin businesses across sectors — food & beverage, apparel, health, home goods, tech startups in the Domain and along 6th Street. We understand that Austin shoppers are brand-loyal, environmentally conscious, and willing to pay premium for quality. We build stores that reflect that — not generic templates that look like they could be from anywhere.",
+            },
+            {
+              category: 'local',
+              question: 'Can you integrate local Austin delivery or pickup options?',
+              answer:
+                "Yes. We configure local delivery radius rules, store pickup options with time-slot selection, and curbside pickup flows for Austin businesses with physical locations. We've set this up for South Congress boutiques, East Austin restaurants, and Domain-area retailers. Local pickup and delivery can be a real competitive advantage for Austin brands competing with national players.",
+            },
+            {
+              category: 'local',
+              question: 'I already have a website from a local Austin agency. Can FactoryJet add an online store to it?',
+              answer:
+                "Absolutely. We can either add an ecommerce section to your existing site, build a separate Shopify store that lives on a subdomain (like shop.yourbrand.com), or rebuild your entire site with ecommerce built in from the start. We'll assess your current setup on the discovery call and recommend the cleanest path forward.",
+            },
+            {
+              category: 'local',
+              question: 'How do you compare to Austin agencies like Geek Powered Studios, GLIDE®, or Bryt Designs?',
+              answer:
+                "They're established agencies that do good work — primarily for clients with enterprise-level budgets and months to spare. FactoryJet serves the Austin small business owner who needs a professional ecommerce store but doesn't have enterprise-level resources. Our quality is comparable; our price and timeline are not. If you're working with a lean budget and you need to be selling online within two weeks, FactoryJet is the honest choice.",
+            },
+
+            /* ─ Quality & Results ─ */
+            {
+              category: 'quality',
+              question: 'What does "Lighthouse 100/100" actually mean for my business?',
+              answer:
+                "Google's Lighthouse score measures Performance, Accessibility, Best Practices, and SEO on a 0–100 scale. A score of 100 on Performance means your store loads fast on real mobile connections — under 1.5 seconds. That directly improves your Google ranking, reduces your bounce rate, and increases the likelihood that a shopper who clicks your ad actually completes a purchase. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.",
+            },
+            {
+              category: 'quality',
+              question: 'Will my store rank on Google for Austin ecommerce searches?',
+              answer:
+                "We build every store with technical SEO in place from launch: proper schema markup, clean URL structures, meta tags, sitemap, robots.txt, image optimization, and Core Web Vitals compliance. We also set up Google Search Console and Analytics so you can track your rankings. What we don't do is ongoing SEO content — that's a separate service. But your store's technical foundation will be solid from the first day it's live.",
+            },
+            {
+              category: 'quality',
+              question: 'Can you guarantee conversions or revenue?',
+              answer:
+                "No. Anyone who guarantees revenue is selling you something. What we guarantee: a beautiful, fast-loading, mobile-optimized store built to conversion best practices — clean product pages, frictionless checkout, trust signals in the right places, and a user experience that doesn't drive potential customers away. What happens after launch depends on your products, pricing, marketing, and offer. We give you the best possible foundation.",
+            },
+            {
+              category: 'quality',
+              question: 'What\'s your refund policy if I\'m not happy?',
+              answer:
+                "If your store isn't what we agreed on in the scope document, we fix it — no argument, no extra charge. We don't offer refunds after work has begun, because we invest real hours from day one. That's why our discovery call is thorough: we want you to know exactly what you're getting before you commit. In 500+ projects, we've never had a client who didn't get a store they were genuinely happy with.",
+            },
+            {
+              category: 'quality',
+              question: 'Do you provide training so I can manage my own store?',
+              answer:
+                "Yes. At launch, we do a 60-minute recorded walkthrough via Zoom covering: adding and editing products, managing orders, setting up discount codes, updating content, and reading your analytics dashboard. The recording is yours to keep. Most of our clients are fully self-sufficient within a week. And if you ever get stuck, our support team is a Slack message away.",
+            },
+            {
+              category: 'quality',
+              question: 'Can you help with Shopify apps and integrations after launch?',
+              answer:
+                "Yes. Common post-launch requests we handle: adding new payment methods, integrating with a new 3PL or shipping carrier, connecting a POS system for a new Austin retail location, setting up affiliate or referral programs, and migrating to a new email marketing tool. We bill these as fixed-price add-ons, not hourly — so you always know what you're getting into before you say yes.",
+            },
+];
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function AustinEcommerceDevelopmentPage() {
@@ -463,150 +608,7 @@ export default function AustinEcommerceDevelopmentPage() {
           eyebrow="COMMON QUESTIONS"
           headline="Everything Austin Business Owners Ask Before Getting Started"
           categories={FAQ_CATEGORIES}
-          items={[
-
-            /* ─ Pricing & Budget ─ */
-            {
-              category: 'pricing',
-              question: 'How much does ecommerce development cost in Austin, TX?',
-              answer:
-                "Austin ecommerce agencies typically charge enterprise-level rates for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, pricing is fixed-price and scoped to your build — the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. The difference comes from our lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet keep Austin store pricing fixed and predictable?',
-              answer:
-                "We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. 12 years of experience with 500+ stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get US-hour project management, US-timezone communication, and senior developers with 10+ years of experience — delivering code quality indistinguishable from what a high-end Austin agency would produce, with full code ownership at handoff.",
-            },
-            {
-              category: 'pricing',
-              question: 'Are there any hidden fees I should know about?',
-              answer:
-                "None. Your quote covers everything: design, development, testing, launch, and 30 days of post-launch support. We don't charge extra for revisions during the build phase, platform setup, or standard integrations like Klaviyo and Google Analytics. The only time the price changes is if your project scope expands significantly during the build — and we always discuss that before acting.",
-            },
-            {
-              category: 'pricing',
-              question: 'Do you offer payment plans?',
-              answer:
-                "Yes. Most projects can be split into 50% at kickoff and 50% at launch. For larger builds, we offer a three-payment structure: 40% kickoff, 30% mid-build, 30% at launch. We accept all major US credit cards, ACH bank transfer, and wire.",
-            },
-
-            /* ─ Platforms & Tech ─ */
-            {
-              category: 'platform',
-              question: 'Which ecommerce platform is right for my Austin business?',
-              answer:
-                "For most Austin small businesses just getting into ecommerce, Shopify is the right call — it's reliable, has an enormous app ecosystem, and requires zero server maintenance. WooCommerce makes sense if you're already on WordPress and want full ownership of your data and code. Custom headless builds (Next.js + Shopify/Medusa) are for businesses with complex requirements: custom pricing engines, ERP integrations, or very high traffic. We'll recommend the right platform on your discovery call based on your actual situation.",
-            },
-            {
-              category: 'platform',
-              question: 'Can you migrate my existing store to a new platform?',
-              answer:
-                "Yes, this is one of our most common requests. We migrate Austin businesses from legacy platforms — Magento, Volusion, 3dcart, outdated custom builds — to modern Shopify or WooCommerce installs. Migrations include: product catalog with all images and metafields, customer records, historical order data, blog content, and 301 redirect maps so your SEO rankings survive the switch. We've done 80+ migrations without a single client losing their organic rankings.",
-            },
-            {
-              category: 'platform',
-              question: 'Do you work with Shopify Plus?',
-              answer:
-                "Yes. We have Shopify Plus experience including checkout extensibility, B2B features, automation flows (Shopify Flow), metaobject-based content architecture, and multi-storefront setups. We also handle Shopify Plus migrations — moving clients from standard Shopify, BigCommerce, or Magento to Plus without disrupting their business.",
-            },
-            {
-              category: 'platform',
-              question: 'Will my store work on mobile?',
-              answer:
-                "Every store we build is mobile-first by design — not mobile-adapted after the fact. Austin shoppers are increasingly purchasing on their phones. We test on real devices across iOS and Android, not just browser emulators. Mobile conversion rate optimization is baked into our process, not an add-on.",
-            },
-
-            /* ─ Timeline & Process ─ */
-            {
-              category: 'process',
-              question: 'How can you really build a store in 7 days?',
-              answer:
-                "Because we've done it 500+ times. We have a production system — discovery templates, design component libraries, tested integration setups, and a QA checklist — that lets us build fast without being sloppy. The 7-day clock starts at your kickoff call, and it accounts for your review time and revision rounds. The only thing that extends the timeline is if you need time to gather content (product photos, copy) or if the scope grows significantly. We tell you that upfront.",
-            },
-            {
-              category: 'process',
-              question: 'What do I need to provide before we start?',
-              answer:
-                "Product photos (or we'll advise on stock photography), product descriptions, your logo in vector format (SVG or AI), and your brand colors. If you have existing brand guidelines, great — if not, we'll work with what you have. You don't need to have everything perfect on day one; we'll guide you through it.",
-            },
-            {
-              category: 'process',
-              question: 'Can I still run my business during the build?',
-              answer:
-                "Yes. We build on a staging environment completely separate from any existing website you have. Your current site stays live and untouched until you're ready to launch the new one. On launch day, we handle the DNS switch — usually overnight so your customers don't see any downtime.",
-            },
-            {
-              category: 'process',
-              question: 'What happens after my store launches?',
-              answer:
-                "You get 30 days of post-launch support included — bug fixes, small adjustments, questions answered. After 30 days, you can manage the store independently (we'll provide training), hire us for ongoing work on a project basis, or enroll in a monthly maintenance plan. We're not going anywhere.",
-            },
-
-            /* ─ Austin-Specific ─ */
-            {
-              category: 'local',
-              question: 'Do you know Austin\'s local market and customer behavior?',
-              answer:
-                "We've worked with dozens of Austin businesses across sectors — food & beverage, apparel, health, home goods, tech startups in the Domain and along 6th Street. We understand that Austin shoppers are brand-loyal, environmentally conscious, and willing to pay premium for quality. We build stores that reflect that — not generic templates that look like they could be from anywhere.",
-            },
-            {
-              category: 'local',
-              question: 'Can you integrate local Austin delivery or pickup options?',
-              answer:
-                "Yes. We configure local delivery radius rules, store pickup options with time-slot selection, and curbside pickup flows for Austin businesses with physical locations. We've set this up for South Congress boutiques, East Austin restaurants, and Domain-area retailers. Local pickup and delivery can be a real competitive advantage for Austin brands competing with national players.",
-            },
-            {
-              category: 'local',
-              question: 'I already have a website from a local Austin agency. Can FactoryJet add an online store to it?',
-              answer:
-                "Absolutely. We can either add an ecommerce section to your existing site, build a separate Shopify store that lives on a subdomain (like shop.yourbrand.com), or rebuild your entire site with ecommerce built in from the start. We'll assess your current setup on the discovery call and recommend the cleanest path forward.",
-            },
-            {
-              category: 'local',
-              question: 'How do you compare to Austin agencies like Geek Powered Studios, GLIDE®, or Bryt Designs?',
-              answer:
-                "They're established agencies that do good work — primarily for clients with enterprise-level budgets and months to spare. FactoryJet serves the Austin small business owner who needs a professional ecommerce store but doesn't have enterprise-level resources. Our quality is comparable; our price and timeline are not. If you're working with a lean budget and you need to be selling online within two weeks, FactoryJet is the honest choice.",
-            },
-
-            /* ─ Quality & Results ─ */
-            {
-              category: 'quality',
-              question: 'What does "Lighthouse 100/100" actually mean for my business?',
-              answer:
-                "Google's Lighthouse score measures Performance, Accessibility, Best Practices, and SEO on a 0–100 scale. A score of 100 on Performance means your store loads fast on real mobile connections — under 1.5 seconds. That directly improves your Google ranking, reduces your bounce rate, and increases the likelihood that a shopper who clicks your ad actually completes a purchase. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.",
-            },
-            {
-              category: 'quality',
-              question: 'Will my store rank on Google for Austin ecommerce searches?',
-              answer:
-                "We build every store with technical SEO in place from launch: proper schema markup, clean URL structures, meta tags, sitemap, robots.txt, image optimization, and Core Web Vitals compliance. We also set up Google Search Console and Analytics so you can track your rankings. What we don't do is ongoing SEO content — that's a separate service. But your store's technical foundation will be solid from the first day it's live.",
-            },
-            {
-              category: 'quality',
-              question: 'Can you guarantee conversions or revenue?',
-              answer:
-                "No. Anyone who guarantees revenue is selling you something. What we guarantee: a beautiful, fast-loading, mobile-optimized store built to conversion best practices — clean product pages, frictionless checkout, trust signals in the right places, and a user experience that doesn't drive potential customers away. What happens after launch depends on your products, pricing, marketing, and offer. We give you the best possible foundation.",
-            },
-            {
-              category: 'quality',
-              question: 'What\'s your refund policy if I\'m not happy?',
-              answer:
-                "If your store isn't what we agreed on in the scope document, we fix it — no argument, no extra charge. We don't offer refunds after work has begun, because we invest real hours from day one. That's why our discovery call is thorough: we want you to know exactly what you're getting before you commit. In 500+ projects, we've never had a client who didn't get a store they were genuinely happy with.",
-            },
-            {
-              category: 'quality',
-              question: 'Do you provide training so I can manage my own store?',
-              answer:
-                "Yes. At launch, we do a 60-minute recorded walkthrough via Zoom covering: adding and editing products, managing orders, setting up discount codes, updating content, and reading your analytics dashboard. The recording is yours to keep. Most of our clients are fully self-sufficient within a week. And if you ever get stuck, our support team is a Slack message away.",
-            },
-            {
-              category: 'quality',
-              question: 'Can you help with Shopify apps and integrations after launch?',
-              answer:
-                "Yes. Common post-launch requests we handle: adding new payment methods, integrating with a new 3PL or shipping carrier, connecting a POS system for a new Austin retail location, setting up affiliate or referral programs, and migrating to a new email marketing tool. We bill these as fixed-price add-ons, not hourly — so you always know what you're getting into before you say yes.",
-            },
-          ]}
+          items={FAQ_ITEMS}
         />
 
 
@@ -649,7 +651,7 @@ function SchemaScript() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('austin') }}
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('austin', FAQ_ITEMS) }}
     />
   )
 }

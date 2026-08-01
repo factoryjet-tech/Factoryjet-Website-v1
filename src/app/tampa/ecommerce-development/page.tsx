@@ -29,12 +29,12 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
+  title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
   description: 'Top-rated Shopify developer in Tampa FL: stores live in 7 days, fixed-price. Gulf Coast e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
+    title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
     url: 'https://factoryjet.com/tampa/ecommerce-development',
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
+    title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -78,6 +78,121 @@ const FAQ_CATEGORIES = [
   { key: 'local',     label: 'Local Expertise' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
+
+const FAQ_ITEMS = [
+            {
+              category: 'local',
+              question: 'Who is the best Shopify developer in Tampa, FL?',
+              answer:
+                "FactoryJet is Tampa's top-rated Shopify development agency — 500+ projects delivered, 4.9★ rating, and the only shop in the Gulf Coast region combining Shopify e-commerce with AI agent development. Unlike local Tampa agencies (Wicked Creative, Digital Momentum) that specialize in branding and marketing, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote enterprise-level prices and multi-month timelines, we launch in 7 days, fixed-price.",
+            },
+            {
+              category: 'pricing',
+              question: 'How much does Shopify development cost in Tampa?',
+              answer:
+                "Pricing is fixed-price and scoped to your build — the main drivers are product count, integrations, and design complexity, and every project is quoted up front after a free discovery call, so you know the full cost before work starts. Established Tampa agencies charge enterprise-level rates for comparable scope; FactoryJet delivers the same quality at a fraction of the cost. Every project includes custom design, full development, Florida sales tax configuration (7.5% for Tampa/Hillsborough County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support. No hidden fees, no Phase 2 upsells.",
+            },
+            {
+              category: 'pricing',
+              question: 'What Florida sales tax rate should my Tampa Shopify store charge?',
+              answer:
+                "Tampa businesses in Hillsborough County should configure Shopify to collect 7.5% combined sales tax: Florida's state rate of 6% plus the Hillsborough County discretionary surtax of 1.5%. Florida uses destination-based sales tax — you charge the rate at the buyer's shipping address, not your business location. FactoryJet configures your complete Florida tax settings during every Shopify build, including correct rates for Miami (7%), Orlando (6.5%), and Jacksonville (7%). Florida also offers sales tax exemptions on certain food, medicine, and agricultural items, which we configure for relevant stores.",
+            },
+            {
+              category: 'pricing',
+              question: 'How long does it take to build a Shopify store in Tampa?',
+              answer:
+                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Wicked Creative (4–8 weeks), regional agencies like Mad Creative Beanstalk (6–10 weeks), or national agencies like WebFX (8–16 weeks). Our 7-day timeline is possible because we design in code — no Figma-to-handoff delay — and use a component architecture optimized for rapid deployment. Complex builds with custom features (subscriptions, B2B portals, equipment configurators) may take 2–3 weeks.',
+            },
+            {
+              category: 'pricing',
+              question: 'Does Tampa have any e-commerce advantages over other US cities?',
+              answer:
+                "Yes — several. Florida has no state income tax, giving Tampa-based DTC entrepreneurs higher take-home margins than founders in California, New York, or Illinois. Tampa's 7.5% Hillsborough County sales tax is competitive compared to California (up to 10.75%) and many Northeast states. Tampa's 24M annual tourism visitors create a constantly refreshed customer acquisition pool for local brands. Port Tampa Bay — Florida's largest port — makes Tampa one of the best-positioned cities in the Southeast for physical goods fulfillment and import/export businesses with e-commerce components.",
+            },
+            {
+              category: 'local',
+              question: 'Do you build Shopify stores for Tampa marine and outdoor brands?',
+              answer:
+                "Yes — Gulf Coast marine culture is one of our core Tampa specialties. We build Shopify stores for saltwater fishing brands, boat accessory companies, marine gear retailers, water sports equipment businesses, and outdoor apparel brands. Tampa marine brands have unique needs: equipment configurators, dealer pricing tiers, rental calendar integrations, and nationwide shipping for oversized marine gear. FactoryJet builds all of these natively into Shopify, including the B2B wholesale portals that let Tampa marine brands scale from DTC to dealer distribution simultaneously.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for an Ybor City or Cuban food brand?',
+              answer:
+                "Absolutely. Ybor City's Cuban food heritage — hand-rolled cigars, the original Cuban sandwich, Latin coffee culture — has some of the strongest brand equity of any American food geography. We build Shopify stores for Cuban food brands, craft cigar companies, Tampa Bay specialty food producers, and Latin beverage businesses. Tampa food brands have unique needs: age verification for tobacco and alcohol, refrigerated shipping for perishables, Florida Cottage Food compliant setups, and nationwide gifting flows for tourists who discovered the brand in Ybor City. FactoryJet builds all of these natively.",
+            },
+            {
+              category: 'pricing',
+              question: 'How does FactoryJet compare to Wicked Creative for Tampa Shopify development?',
+              answer:
+                "Wicked Creative is a Tampa brand strategy and digital marketing agency with a strong local reputation. However, they don't specialize in Shopify development — no published Shopify pricing, no AI e-commerce capabilities, and no 7-day delivery guarantee. Their focus is brand identity and marketing campaigns. FactoryJet specializes exclusively in Shopify development and AI-powered e-commerce, delivers in 7 days, prices transparently and fixed-price, and has built stores across Tampa's core verticals: healthcare-wellness, marine, food and beverage, and tourism.",
+            },
+            {
+              category: 'local',
+              question: 'Does my Tampa business need Shopify or WooCommerce?',
+              answer:
+                "For most Tampa businesses, Shopify is the better choice: faster to launch (7 days), lower ongoing maintenance costs, better App Store for subscriptions and B2B, and superior mobile checkout conversion. WooCommerce makes sense if you already have a WordPress site with significant SEO equity and need tight CMS control. At FactoryJet, both Shopify and WooCommerce builds are fixed-price and quoted up front. We'll recommend the right platform based on your catalog size, subscription needs, B2B requirements, and existing tech stack.",
+            },
+            {
+              category: 'pricing',
+              question: 'Can you migrate my Tampa business from WooCommerce or Squarespace to Shopify?',
+              answer:
+                'Yes — we migrate Tampa businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL redirect mapping (preserving Google rankings), metafield migration, Florida tax reconfiguration, and SEO continuity setup. We implement 301 redirects for every old URL so your Tampa local search rankings survive the migration. Timeline: 7–14 days depending on catalog size.',
+            },
+            {
+              category: 'included',
+              question: 'What AI services are available for Tampa small businesses?',
+              answer:
+                "FactoryJet is the only Tampa e-commerce agency that builds production AI agents alongside Shopify development. We build: AI chatbots trained on your catalog and FAQs, AI-powered lead qualification agents, customer service automation (order status, returns, product recommendations), and AI content pipelines that keep your store's blog and product descriptions optimized for ChatGPT, Perplexity, and Google AI Overviews. Tampa's Embarc Collective tech ecosystem is driving AI adoption across Gulf Coast businesses — FactoryJet gets you there in weeks, not months.",
+            },
+            {
+              category: 'included',
+              question: 'What is included in a FactoryJet Shopify build for a Tampa business?',
+              answer:
+                'Every Tampa Shopify store includes: custom design (not a theme), full Shopify development and configuration, Florida sales tax setup (7.5% Hillsborough County), payment gateway integration (Shopify Payments, PayPal, Afterpay), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, FAQPage + Service + BreadcrumbList JSON-LD schema, AI search visibility (AEO for ChatGPT, Perplexity, Google AI Overviews), 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front — no hidden fees.',
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Tampa Bay sports, marine, or outdoor lifestyle brand?',
+              answer: "Yes — Tampa Bay's sports culture and Gulf Coast lifestyle create major DTC opportunities. Tampa is home to the Buccaneers (Super Bowl LV champions), Lightning (3 Stanley Cups in 5 years), Rays, and Rowdies — plus the world's largest concentration of amateur fishing tournaments. We build Shopify stores for: sports lifestyle apparel brands, official-style fan merchandise (non-licensed), marine and fishing gear retailers, Gulf Coast beach lifestyle brands, and outdoor sporting goods companies. Tampa Bay marine retail is especially underdeveloped online — FactoryJet builds fishing gear and boating accessory stores with product configurators, guide service booking, and rental deposit logic that brick-and-mortar marine shops can't match.",
+            },
+            {
+              category: 'technical',
+              question: 'How do I rank my Tampa Shopify store on Google and in AI search?',
+              answer: "FactoryJet builds every Tampa Shopify store with SEO and AEO foundations targeting Tampa Bay-specific search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized meta titles targeting 'Tampa [product]', 'Tampa Bay [industry] store', 'buy [product] Tampa FL'; Core Web Vitals optimization (Lighthouse 90+); and AEO content that answers how Tampa consumers research purchases via AI. Florida's 22M population and Tampa Bay's 3.2M metro mean huge search volume for local product queries — FactoryJet's AEO content strategy positions your store to capture both Google results and AI-generated answer citations for Tampa-area searches.",
+            },
+            {
+              category: 'included',
+              question: 'Do you build subscription Shopify stores for Tampa brands?',
+              answer: "Yes — subscription commerce is a growing model across Tampa's food, lifestyle, and marine categories. We build: Tampa hot sauce and BBQ rub clubs, Gulf seafood and specialty food subscription boxes, craft beer subscriptions for Tampa Bay's craft brewery scene (Cigar City, Coppertail, Angry Chair), premium cigar subscriptions for Ybor City brands with PACT Act compliance, boat supply and maintenance subscription programs, and wellness product clubs for Tampa's health-conscious consumer base. Florida's no-income-tax advantage means Tampa entrepreneurs keep more recurring revenue margin than founders in most states. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Hillsborough County tax compliance for recurring billing, and age verification for tobacco and alcohol subscriptions.",
+            },
+            {
+              category: 'included',
+              question: 'What payment methods should a Tampa Shopify store accept?',
+              answer: "Every Tampa Shopify store should accept: Shopify Payments, PayPal (30%+ first-time buyer preference), Apple Pay and Google Pay (Tampa's young professional and tech population is mobile-payment-forward — reduces cart abandonment by 40%), and Afterpay or Shop Pay Installments for orders above $100. For Tampa's Ybor City cigar brands, configure age verification before any payment collection and use PACT Act-compliant shipping verification. For Tampa's healthcare B2B stores (medical supplies, scrubs, wellness equipment), add institutional PO payment terms and net-30 invoicing. For Tampa's marine and boating stores, add deposit-plus-balance payment flows for equipment rentals and custom orders. All configuration is in the standard 7-day build.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Tampa defense, aerospace, or technology company?',
+              answer: "Yes — Tampa is one of the US military's most important economic hubs: MacDill Air Force Base (CENTCOM and SOCOM headquarters), the 6th Air Refueling Wing, the National Guard, and hundreds of defense contractors make Tampa the #3 US defense market by contract spending. This creates B2B e-commerce demand for: government-contract supply portals, mil-spec equipment and accessory stores, defense training materials and media, and security technology product companies. FactoryJet builds Shopify stores with GSA Schedule pricing configurations, CAC card-compatible authentication (for government buyer verification), ITAR-compliant product listing restrictions, and net-30/net-60 government billing terms. Tampa's defense ecosystem is underserved by e-commerce — FactoryJet builds the stores that close that gap.",
+            },
+            {
+              category: 'local',
+              question: 'Do you serve St. Petersburg, Clearwater, and Sarasota in addition to Tampa?',
+              answer: "Yes — FactoryJet serves the entire Tampa Bay metro and Gulf Coast: Tampa, St. Petersburg, Clearwater, Bradenton, Sarasota, Brandon, Wesley Chapel, Land O'Lakes, Dunedin, Tarpon Springs, and all Hillsborough, Pinellas, Pasco, and Manatee county businesses. Each area has a distinct consumer profile: St. Pete has a younger, arts-forward creative economy (Dali Museum, Vinoy, Fairgrounds St. Pete); Clearwater is family tourism and Scientology headquarters; Sarasota is the Gulf Coast's luxury arts and culture destination with high-AOV consumer demand. FactoryJet configures destination-based Florida sales tax for all county rates: Hillsborough 7.5%, Pinellas 7.0%, Pasco 7.0%, and Sarasota 7.0%.",
+            },
+            {
+              category: 'local',
+              question: 'How does FactoryJet optimize Tampa Shopify stores for mobile shoppers?',
+              answer: "Tampa's consumer is mobile-first: Florida's outdoor lifestyle, beach culture, and young-skewing professional population means your buyers are browsing and purchasing on phones. FactoryJet optimizes every Tampa Shopify store for mobile with: mobile-first design (built for 375px before scaling to desktop), Google Core Web Vitals compliance (Lighthouse 90+, LCP under 2.5s on mobile), Apple Pay and Google Pay one-tap checkout, lazy-loaded images for fast initial mobile renders, and AEO structured content that surfaces in AI-generated mobile search results. Tampa's tourist population (24M annual visitors) is especially mobile-dependent — international visitors searching 'buy Tampa Bay gifts' or 'Tampa souvenir shop' do so entirely on mobile while traveling.",
+            },
+            {
+              category: 'local',
+              question: 'Does FactoryJet offer ongoing Shopify support plans for Tampa businesses?',
+              answer: "Yes — FactoryJet offers post-launch support built around Tampa Bay's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a fixed monthly retainer (development hours plus same-day bug priority), seasonal campaign builds (Gasparilla Pirate Festival merchandise in January, Super Bowl fan merchandise when Tampa hosts, Stanley Cup playoff gear), and quarterly performance reviews. Tampa Bay sports brands in particular need on-call support — a Lightning playoff run or a Buccaneers Super Bowl creates instant merchandise demand spikes that require same-day inventory and promotional updates. FactoryJet retainer clients get priority response for championship moments and high-traffic events.",
+            },
+];
 export default function Page() {
   return (
     <>
@@ -89,7 +204,7 @@ export default function Page() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_tampa_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
-          headline="Shopify Developer Tampa for Gulf Coast Businesses"
+          headline="Tampa's Top-Rated Shopify Developer for Gulf Coast Businesses"
           lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days, fixed-price. 500+ projects, 4.9★."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
@@ -432,120 +547,7 @@ export default function Page() {
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Tampa E-Commerce Businesses"
           categories={FAQ_CATEGORIES}
-          items={[
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Tampa, FL?',
-              answer:
-                "FactoryJet is Tampa's top-rated Shopify development agency — 500+ projects delivered, 4.9★ rating, and the only shop in the Gulf Coast region combining Shopify e-commerce with AI agent development. Unlike local Tampa agencies (Wicked Creative, Digital Momentum) that specialize in branding and marketing, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote enterprise-level prices and multi-month timelines, we launch in 7 days, fixed-price.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Tampa?',
-              answer:
-                "Pricing is fixed-price and scoped to your build — the main drivers are product count, integrations, and design complexity, and every project is quoted up front after a free discovery call, so you know the full cost before work starts. Established Tampa agencies charge enterprise-level rates for comparable scope; FactoryJet delivers the same quality at a fraction of the cost. Every project includes custom design, full development, Florida sales tax configuration (7.5% for Tampa/Hillsborough County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support. No hidden fees, no Phase 2 upsells.",
-            },
-            {
-              category: 'pricing',
-              question: 'What Florida sales tax rate should my Tampa Shopify store charge?',
-              answer:
-                "Tampa businesses in Hillsborough County should configure Shopify to collect 7.5% combined sales tax: Florida's state rate of 6% plus the Hillsborough County discretionary surtax of 1.5%. Florida uses destination-based sales tax — you charge the rate at the buyer's shipping address, not your business location. FactoryJet configures your complete Florida tax settings during every Shopify build, including correct rates for Miami (7%), Orlando (6.5%), and Jacksonville (7%). Florida also offers sales tax exemptions on certain food, medicine, and agricultural items, which we configure for relevant stores.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Tampa?',
-              answer:
-                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Wicked Creative (4–8 weeks), regional agencies like Mad Creative Beanstalk (6–10 weeks), or national agencies like WebFX (8–16 weeks). Our 7-day timeline is possible because we design in code — no Figma-to-handoff delay — and use a component architecture optimized for rapid deployment. Complex builds with custom features (subscriptions, B2B portals, equipment configurators) may take 2–3 weeks.',
-            },
-            {
-              category: 'pricing',
-              question: 'Does Tampa have any e-commerce advantages over other US cities?',
-              answer:
-                "Yes — several. Florida has no state income tax, giving Tampa-based DTC entrepreneurs higher take-home margins than founders in California, New York, or Illinois. Tampa's 7.5% Hillsborough County sales tax is competitive compared to California (up to 10.75%) and many Northeast states. Tampa's 24M annual tourism visitors create a constantly refreshed customer acquisition pool for local brands. Port Tampa Bay — Florida's largest port — makes Tampa one of the best-positioned cities in the Southeast for physical goods fulfillment and import/export businesses with e-commerce components.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Tampa marine and outdoor brands?',
-              answer:
-                "Yes — Gulf Coast marine culture is one of our core Tampa specialties. We build Shopify stores for saltwater fishing brands, boat accessory companies, marine gear retailers, water sports equipment businesses, and outdoor apparel brands. Tampa marine brands have unique needs: equipment configurators, dealer pricing tiers, rental calendar integrations, and nationwide shipping for oversized marine gear. FactoryJet builds all of these natively into Shopify, including the B2B wholesale portals that let Tampa marine brands scale from DTC to dealer distribution simultaneously.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for an Ybor City or Cuban food brand?',
-              answer:
-                "Absolutely. Ybor City's Cuban food heritage — hand-rolled cigars, the original Cuban sandwich, Latin coffee culture — has some of the strongest brand equity of any American food geography. We build Shopify stores for Cuban food brands, craft cigar companies, Tampa Bay specialty food producers, and Latin beverage businesses. Tampa food brands have unique needs: age verification for tobacco and alcohol, refrigerated shipping for perishables, Florida Cottage Food compliant setups, and nationwide gifting flows for tourists who discovered the brand in Ybor City. FactoryJet builds all of these natively.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Wicked Creative for Tampa Shopify development?',
-              answer:
-                "Wicked Creative is a Tampa brand strategy and digital marketing agency with a strong local reputation. However, they don't specialize in Shopify development — no published Shopify pricing, no AI e-commerce capabilities, and no 7-day delivery guarantee. Their focus is brand identity and marketing campaigns. FactoryJet specializes exclusively in Shopify development and AI-powered e-commerce, delivers in 7 days, prices transparently and fixed-price, and has built stores across Tampa's core verticals: healthcare-wellness, marine, food and beverage, and tourism.",
-            },
-            {
-              category: 'local',
-              question: 'Does my Tampa business need Shopify or WooCommerce?',
-              answer:
-                "For most Tampa businesses, Shopify is the better choice: faster to launch (7 days), lower ongoing maintenance costs, better App Store for subscriptions and B2B, and superior mobile checkout conversion. WooCommerce makes sense if you already have a WordPress site with significant SEO equity and need tight CMS control. At FactoryJet, both Shopify and WooCommerce builds are fixed-price and quoted up front. We'll recommend the right platform based on your catalog size, subscription needs, B2B requirements, and existing tech stack.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Tampa business from WooCommerce or Squarespace to Shopify?',
-              answer:
-                'Yes — we migrate Tampa businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL redirect mapping (preserving Google rankings), metafield migration, Florida tax reconfiguration, and SEO continuity setup. We implement 301 redirects for every old URL so your Tampa local search rankings survive the migration. Timeline: 7–14 days depending on catalog size.',
-            },
-            {
-              category: 'included',
-              question: 'What AI services are available for Tampa small businesses?',
-              answer:
-                "FactoryJet is the only Tampa e-commerce agency that builds production AI agents alongside Shopify development. We build: AI chatbots trained on your catalog and FAQs, AI-powered lead qualification agents, customer service automation (order status, returns, product recommendations), and AI content pipelines that keep your store's blog and product descriptions optimized for ChatGPT, Perplexity, and Google AI Overviews. Tampa's Embarc Collective tech ecosystem is driving AI adoption across Gulf Coast businesses — FactoryJet gets you there in weeks, not months.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Tampa business?',
-              answer:
-                'Every Tampa Shopify store includes: custom design (not a theme), full Shopify development and configuration, Florida sales tax setup (7.5% Hillsborough County), payment gateway integration (Shopify Payments, PayPal, Afterpay), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, FAQPage + Service + BreadcrumbList JSON-LD schema, AI search visibility (AEO for ChatGPT, Perplexity, Google AI Overviews), 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front — no hidden fees.',
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Tampa Bay sports, marine, or outdoor lifestyle brand?',
-              answer: "Yes — Tampa Bay's sports culture and Gulf Coast lifestyle create major DTC opportunities. Tampa is home to the Buccaneers (Super Bowl LV champions), Lightning (3 Stanley Cups in 5 years), Rays, and Rowdies — plus the world's largest concentration of amateur fishing tournaments. We build Shopify stores for: sports lifestyle apparel brands, official-style fan merchandise (non-licensed), marine and fishing gear retailers, Gulf Coast beach lifestyle brands, and outdoor sporting goods companies. Tampa Bay marine retail is especially underdeveloped online — FactoryJet builds fishing gear and boating accessory stores with product configurators, guide service booking, and rental deposit logic that brick-and-mortar marine shops can't match.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Tampa Shopify store on Google and in AI search?',
-              answer: "FactoryJet builds every Tampa Shopify store with SEO and AEO foundations targeting Tampa Bay-specific search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized meta titles targeting 'Tampa [product]', 'Tampa Bay [industry] store', 'buy [product] Tampa FL'; Core Web Vitals optimization (Lighthouse 90+); and AEO content that answers how Tampa consumers research purchases via AI. Florida's 22M population and Tampa Bay's 3.2M metro mean huge search volume for local product queries — FactoryJet's AEO content strategy positions your store to capture both Google results and AI-generated answer citations for Tampa-area searches.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Tampa brands?',
-              answer: "Yes — subscription commerce is a growing model across Tampa's food, lifestyle, and marine categories. We build: Tampa hot sauce and BBQ rub clubs, Gulf seafood and specialty food subscription boxes, craft beer subscriptions for Tampa Bay's craft brewery scene (Cigar City, Coppertail, Angry Chair), premium cigar subscriptions for Ybor City brands with PACT Act compliance, boat supply and maintenance subscription programs, and wellness product clubs for Tampa's health-conscious consumer base. Florida's no-income-tax advantage means Tampa entrepreneurs keep more recurring revenue margin than founders in most states. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Hillsborough County tax compliance for recurring billing, and age verification for tobacco and alcohol subscriptions.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Tampa Shopify store accept?',
-              answer: "Every Tampa Shopify store should accept: Shopify Payments, PayPal (30%+ first-time buyer preference), Apple Pay and Google Pay (Tampa's young professional and tech population is mobile-payment-forward — reduces cart abandonment by 40%), and Afterpay or Shop Pay Installments for orders above $100. For Tampa's Ybor City cigar brands, configure age verification before any payment collection and use PACT Act-compliant shipping verification. For Tampa's healthcare B2B stores (medical supplies, scrubs, wellness equipment), add institutional PO payment terms and net-30 invoicing. For Tampa's marine and boating stores, add deposit-plus-balance payment flows for equipment rentals and custom orders. All configuration is in the standard 7-day build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Tampa defense, aerospace, or technology company?',
-              answer: "Yes — Tampa is one of the US military's most important economic hubs: MacDill Air Force Base (CENTCOM and SOCOM headquarters), the 6th Air Refueling Wing, the National Guard, and hundreds of defense contractors make Tampa the #3 US defense market by contract spending. This creates B2B e-commerce demand for: government-contract supply portals, mil-spec equipment and accessory stores, defense training materials and media, and security technology product companies. FactoryJet builds Shopify stores with GSA Schedule pricing configurations, CAC card-compatible authentication (for government buyer verification), ITAR-compliant product listing restrictions, and net-30/net-60 government billing terms. Tampa's defense ecosystem is underserved by e-commerce — FactoryJet builds the stores that close that gap.",
-            },
-            {
-              category: 'local',
-              question: 'Do you serve St. Petersburg, Clearwater, and Sarasota in addition to Tampa?',
-              answer: "Yes — FactoryJet serves the entire Tampa Bay metro and Gulf Coast: Tampa, St. Petersburg, Clearwater, Bradenton, Sarasota, Brandon, Wesley Chapel, Land O'Lakes, Dunedin, Tarpon Springs, and all Hillsborough, Pinellas, Pasco, and Manatee county businesses. Each area has a distinct consumer profile: St. Pete has a younger, arts-forward creative economy (Dali Museum, Vinoy, Fairgrounds St. Pete); Clearwater is family tourism and Scientology headquarters; Sarasota is the Gulf Coast's luxury arts and culture destination with high-AOV consumer demand. FactoryJet configures destination-based Florida sales tax for all county rates: Hillsborough 7.5%, Pinellas 7.0%, Pasco 7.0%, and Sarasota 7.0%.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet optimize Tampa Shopify stores for mobile shoppers?',
-              answer: "Tampa's consumer is mobile-first: Florida's outdoor lifestyle, beach culture, and young-skewing professional population means your buyers are browsing and purchasing on phones. FactoryJet optimizes every Tampa Shopify store for mobile with: mobile-first design (built for 375px before scaling to desktop), Google Core Web Vitals compliance (Lighthouse 90+, LCP under 2.5s on mobile), Apple Pay and Google Pay one-tap checkout, lazy-loaded images for fast initial mobile renders, and AEO structured content that surfaces in AI-generated mobile search results. Tampa's tourist population (24M annual visitors) is especially mobile-dependent — international visitors searching 'buy Tampa Bay gifts' or 'Tampa souvenir shop' do so entirely on mobile while traveling.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Tampa businesses?',
-              answer: "Yes — FactoryJet offers post-launch support built around Tampa Bay's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a fixed monthly retainer (development hours plus same-day bug priority), seasonal campaign builds (Gasparilla Pirate Festival merchandise in January, Super Bowl fan merchandise when Tampa hosts, Stanley Cup playoff gear), and quarterly performance reviews. Tampa Bay sports brands in particular need on-call support — a Lightning playoff run or a Buccaneers Super Bowl creates instant merchandise demand spikes that require same-day inventory and promotional updates. FactoryJet retainer clients get priority response for championship moments and high-traffic events.",
-            },
-          ]}
+          items={FAQ_ITEMS}
         />
 
 
@@ -585,7 +587,7 @@ function SchemaScript() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('tampa') }}
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('tampa', FAQ_ITEMS) }}
     />
   );
 }

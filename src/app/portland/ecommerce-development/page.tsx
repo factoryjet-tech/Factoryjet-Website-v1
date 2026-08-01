@@ -28,12 +28,12 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
-  title: "Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
+  title: "Top-Rated Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
   description: "Top-rated Shopify developer in Portland OR: stores live in 7 days, fixed-price. Oregon has no sales tax. Shopify, WooCommerce & AI. 500+ projects. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: "Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
+    title: "Top-Rated Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
     description: "Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, fixed-price. Oregon has NO sales tax — maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
     url: 'https://factoryjet.com/portland/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Portland' }],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
+    title: "Top-Rated Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
     description: "Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, fixed-price. Oregon has NO sales tax — maximize your margins.",
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -60,6 +60,121 @@ const FAQ_CATEGORIES = [
   { key: 'local',     label: 'Local Expertise' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
+
+const FAQ_ITEMS = [
+            {
+              category: 'local',
+              question: 'Who is the best Shopify developer in Portland, OR?',
+              answer:
+                "FactoryJet is Portland's top-rated Shopify development agency — 500+ projects, 4.9★ rating, and the only shop in the Rose City combining Shopify e-commerce with AI agent development. Local agencies (Instrument, North Studio, Zeal Creative) focus on brand identity and enterprise clients at premium prices. PHNX Digital does Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with Oregon-specific market knowledge.",
+            },
+            {
+              category: 'pricing',
+              question: 'Does Oregon have sales tax? How does that affect my Shopify store?',
+              answer:
+                "Oregon has zero sales tax — one of only five US states with no state or local sales tax. For your Shopify store, this means Oregon customers are never charged sales tax. You still collect sales tax for out-of-state customers based on their destination state (Shopify handles this automatically through Shopify Tax). FactoryJet configures your Oregon store with zero-tax collection for OR customers and automated nexus-based collection for all other states — zero compliance risk, maximum simplicity.",
+            },
+            {
+              category: 'pricing',
+              question: 'How much does Shopify development cost in Portland?',
+              answer:
+                "FactoryJet pricing is fixed-price and scoped to your build — the main drivers are page count, integrations, and design complexity. Compared to Portland agencies like PHNX Digital or Instrument, FactoryJet delivers the same quality at a fraction of the cost. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, Oregon tax configuration (zero-tax for OR customers), and 30 days of post-launch support.",
+            },
+            {
+              category: 'local',
+              question: 'Do you build Shopify stores for Portland outdoor and sportswear brands?',
+              answer:
+                "Yes — outdoor and sportswear is Portland's most important e-commerce category and our core specialty. Portland is home to Nike, Adidas North America, Columbia Sportswear, Danner Boots, and Pendleton. We build stores for brands in this ecosystem: athletic gear retailers, outdoor apparel companies, gear rental platforms, and independent sportswear brands. Every outdoor store includes adventure-specific product configurations, size guide integrations, gear comparison tools, and subscription programs for consumables.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Portland food or artisan brand?',
+              answer:
+                "Yes — Portland's artisan food scene (Salt & Straw, Stumptown, Bob's Red Mill, Jacobsen Salt Co.) sets the national standard for DTC food brands. We build Shopify stores for specialty food companies, craft coffee roasters, premium ice cream and confection brands, artisan meat and charcuterie, mushroom and supplement companies, and craft spirits. Portland food stores need: national cold-chain shipping configurations, subscription box builds, bulk/wholesale ordering tiers, and local pickup.",
+            },
+            {
+              category: 'pricing',
+              question: "How does Oregon's zero sales tax benefit my e-commerce business?",
+              answer:
+                "Three ways: First, no Oregon sales tax simplifies your store configuration — no county overrides, no municipality rates, no food vs. non-food categories for Oregon buyers. Second, your Oregon customers enjoy zero tax, which lowers their effective purchase cost vs. buying from California or Washington competitors. Third, Oregon's business-friendly tax environment means Portland founders keep more of their DTC profits. FactoryJet configures the tax advantage correctly in every Oregon build.",
+            },
+            {
+              category: 'pricing',
+              question: 'How long does it take to build a Shopify store in Portland?',
+              answer:
+                "FactoryJet launches standard Shopify stores in 7 days. Compare that to PHNX Digital (8–16 weeks), Instrument (12–24 weeks), and national agencies (8–16 weeks). Our 7-day timeline is possible because we design in code — no Figma-to-handoff cycle — and use a component architecture optimized for rapid deployment.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for cannabis or hemp products in Oregon?',
+              answer:
+                "Yes — Oregon was the first US state to legalize recreational cannabis (Measure 91, 2014) and has a mature cannabis e-commerce ecosystem. Pure THC products require the state's METRC compliance system and cannot be sold through standard Shopify. However, CBD (hemp-derived cannabidiol), hemp flower, accessories, pipes, and wellness products are fully Shopify-compatible. FactoryJet builds Oregon-compliant stores with age verification, high-risk payment processors (Authorize.net, NMI), and OLCC-compliant product descriptions.",
+            },
+            {
+              category: 'pricing',
+              question: 'How does FactoryJet compare to Instrument for Portland Shopify development?',
+              answer:
+                "Instrument is Portland's most prestigious digital agency — they've done iconic campaigns for Google, Facebook, and Nike. They're excellent, but they serve enterprise Fortune 500 clients at enterprise-level minimums. FactoryJet serves Portland's SMB and growth-stage brands: Shopify stores live in 7 days, fixed-price, with transparent scoping, direct engineer access, and AI-powered features Instrument doesn't offer at any price point in the SMB range.",
+            },
+            {
+              category: 'local',
+              question: 'Does my Portland business need Shopify or WooCommerce?',
+              answer:
+                "For most Portland businesses, Shopify wins — faster launch, lower maintenance cost, better subscription apps for Portland's recurring-revenue brands (coffee, food, apparel), and superior mobile checkout. WooCommerce makes sense if you have a large WordPress site with existing SEO equity or need specific open-source integrations. Both are fixed-price and scoped to your build.",
+            },
+            {
+              category: 'pricing',
+              question: 'Can you migrate my Portland business to Shopify?',
+              answer:
+                "Yes — we migrate Portland businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Portland local search rankings), Oregon zero-tax reconfiguration, metafield migration, and SEO continuity. Timeline: 7–14 days depending on catalog size.",
+            },
+            {
+              category: 'included',
+              question: 'What is included in a FactoryJet Shopify build for a Portland business?',
+              answer:
+                "Every Portland Shopify store includes: custom design (not a theme), full development, Oregon zero-sales-tax configuration, payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search, GSAP micro-animations, 30 days of post-launch support, and a launch walkthrough. Fixed-price, scoped to your build — no hidden fees.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Portland sustainable or eco-friendly brand?',
+              answer: "Absolutely — sustainable and eco-conscious commerce is Portland's most distinctive e-commerce segment. Portland consistently ranks as the US city with the highest consumer willingness to pay a premium for sustainable products. We build Shopify stores for: zero-waste product brands, sustainable packaging companies, B-Corp certified consumer goods, upcycled apparel and accessories, plant-based food brands, and compostable product lines. Portland-specific sustainable commerce features: carbon-neutral shipping integrations (EasyShip + carbon offset), B-Corp and Fair Trade badge display, transparent supply chain storytelling pages, and climate pledge landing pages. FactoryJet understands what Portland's sustainability-conscious consumers want to see before they buy.",
+            },
+            {
+              category: 'technical',
+              question: 'How do I rank my Portland Shopify store on Google and in AI search?',
+              answer: "FactoryJet builds every Portland Shopify store with SEO and AEO foundations targeting Oregon-specific and Portland-local search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; Oregon's zero-sales-tax advantage as an explicit SEO keyword (Portland shoppers and buyers from neighboring WA and CA search for it); Core Web Vitals optimization (Lighthouse 90+); and AEO content targeting how Portland's highly educated consumer base researches products via AI. Portland's artisan and maker brands benefit enormously from AI search visibility — when a consumer asks ChatGPT 'best Portland [product] brands', FactoryJet's AEO setup gets your store cited in the answer.",
+            },
+            {
+              category: 'included',
+              question: 'Do you build subscription Shopify stores for Portland coffee, food, or lifestyle brands?',
+              answer: "Yes — Portland is America's subscription commerce capital in many categories. Stumptown Coffee pioneered the coffee subscription model. Salt & Straw has a successful ice cream club. Bob's Red Mill runs grain subscriptions. Portland's artisan economy is built for recurring revenue. FactoryJet builds: coffee roaster subscription stores (weekly, bi-weekly, monthly bags with variety selection), specialty food clubs (hot sauce of the month, artisan cheese, charcuterie), outdoor gear maintenance subscriptions (wax, oils, climbing chalk), and lifestyle product memberships. We build with Recharge or native Shopify Subscriptions, Oregon zero-tax configuration, and subscription UX optimized for Portland's brand-loyal consumer.",
+            },
+            {
+              category: 'included',
+              question: 'What payment methods should a Portland Shopify store accept?',
+              answer: "Every Portland Shopify store should accept: Shopify Payments, PayPal, Apple Pay and Google Pay (Portland's tech-literate consumer base heavily uses digital wallets), Afterpay for premium outdoor gear and fashion purchases, and cryptocurrency payments for Portland's crypto-forward early adopter segment (via Coinbase Commerce or BitPay, if desired). For Portland's cannabis-adjacent and hemp brands, FactoryJet integrates high-risk payment processors (Authorize.net, NMI) that accept CBD and hemp accessories. Portland consumers are more likely than average US buyers to abandon checkout over limited payment options — FactoryJet configures the full payment stack during the standard build.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Portland maker, craftsperson, or artisan brand?',
+              answer: "Yes — Portland's maker culture (Saturday Market, monthly craft fairs, the Pearl District's gallery and boutique ecosystem) is one of the deepest in the US. We build Shopify stores for: ceramic and pottery studios, leather goods makers, hand-poured candle brands, small-batch jewelry designers, furniture makers, printmakers, and fine art print shops. Portland maker stores need: per-item made-to-order configurations (custom lead times per product), limited edition collection drops, local pickup as a fulfillment option, and artisan story pages that communicate craft to online buyers. FactoryJet builds Portland maker stores that translate the Saturday Market experience into a digital storefront that sells nationally.",
+            },
+            {
+              category: 'local',
+              question: 'Do you serve Eugene, Bend, and Salem in addition to Portland?',
+              answer: "Yes — FactoryJet serves all of Oregon and the Pacific Northwest: Portland, Eugene, Salem, Bend, Medford, Corvallis, Hillsboro, Beaverton, Gresham, Lake Oswego, and all Oregon ZIP codes. Each Oregon city has distinct commerce characteristics: Eugene is home to the University of Oregon and a strong outdoor/athletic brand ecosystem (Track Town USA); Bend is a premium outdoor and craft beer destination with DTC market demand; Salem is the state capital with a significant food processing and agricultural industry. All Oregon stores benefit from the zero-sales-tax configuration, and FactoryJet builds city-level SEO targeting for both Portland metropolitan and statewide Oregon searches.",
+            },
+            {
+              category: 'local',
+              question: 'How does FactoryJet handle international shipping for Portland brands?',
+              answer: "Portland brands have significant international audiences — especially in Canada (1-hour to Vancouver, BC), Japan (Portland's sister city relationship and strong Nike/Adidas cultural connection), the UK, Germany, and Australia. FactoryJet configures Shopify Markets for international selling: multi-currency (USD + CAD, GBP, EUR, JPY, AUD), international carrier rates (DHL Express, USPS First Class International), HS tariff codes for product categories, duty and import tax display at checkout (Landed Cost), international payment methods (iDEAL for Netherlands, Sofort for Germany), and IOSS for EU buyers above €150. Oregon's zero sales tax means international buyers comparing prices across US stores will often choose Portland brands for the clean total price.",
+            },
+            {
+              category: 'local',
+              question: 'Does FactoryJet offer ongoing Shopify support plans for Portland businesses?',
+              answer: "Yes — FactoryJet offers post-launch support designed for Portland's independent brand culture and seasonal commerce. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours, priority bug SLA), seasonal build packages (holiday gift guides, summer outdoor campaigns, Portland-themed cultural events), subscription program optimization, and performance reviews. Portland's independent brands value long-term agency relationships over transactional handoffs — FactoryJet retainer clients get a consistent engineer who knows their store, not a ticket queue. We document every Portland build comprehensively so your team can self-manage daily operations.",
+            },
+];
 export default function Page() {
   return (
     <>
@@ -71,7 +186,7 @@ export default function Page() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_portland_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · PORTLAND"
-          headline="Shopify Developer Portland for Oregon's Independent Brands"
+          headline="Portland's Top-Rated Shopify Developer for Oregon's Independent Brands"
           lead="The only Portland e-commerce agency that launches in 7 days at a fixed price. Oregon has zero sales tax — the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for outdoor brands, independent makers, food businesses, and 'Keep Portland Weird' entrepreneurs. 500+ projects, 4.9★ rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Portland, OR" badgeLabel="Live in 7 days" />}
@@ -399,120 +514,7 @@ export default function Page() {
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Portland E-Commerce Businesses"
           categories={FAQ_CATEGORIES}
-          items={[
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Portland, OR?',
-              answer:
-                "FactoryJet is Portland's top-rated Shopify development agency — 500+ projects, 4.9★ rating, and the only shop in the Rose City combining Shopify e-commerce with AI agent development. Local agencies (Instrument, North Studio, Zeal Creative) focus on brand identity and enterprise clients at premium prices. PHNX Digital does Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with Oregon-specific market knowledge.",
-            },
-            {
-              category: 'pricing',
-              question: 'Does Oregon have sales tax? How does that affect my Shopify store?',
-              answer:
-                "Oregon has zero sales tax — one of only five US states with no state or local sales tax. For your Shopify store, this means Oregon customers are never charged sales tax. You still collect sales tax for out-of-state customers based on their destination state (Shopify handles this automatically through Shopify Tax). FactoryJet configures your Oregon store with zero-tax collection for OR customers and automated nexus-based collection for all other states — zero compliance risk, maximum simplicity.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Portland?',
-              answer:
-                "FactoryJet pricing is fixed-price and scoped to your build — the main drivers are page count, integrations, and design complexity. Compared to Portland agencies like PHNX Digital or Instrument, FactoryJet delivers the same quality at a fraction of the cost. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, Oregon tax configuration (zero-tax for OR customers), and 30 days of post-launch support.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Portland outdoor and sportswear brands?',
-              answer:
-                "Yes — outdoor and sportswear is Portland's most important e-commerce category and our core specialty. Portland is home to Nike, Adidas North America, Columbia Sportswear, Danner Boots, and Pendleton. We build stores for brands in this ecosystem: athletic gear retailers, outdoor apparel companies, gear rental platforms, and independent sportswear brands. Every outdoor store includes adventure-specific product configurations, size guide integrations, gear comparison tools, and subscription programs for consumables.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Portland food or artisan brand?',
-              answer:
-                "Yes — Portland's artisan food scene (Salt & Straw, Stumptown, Bob's Red Mill, Jacobsen Salt Co.) sets the national standard for DTC food brands. We build Shopify stores for specialty food companies, craft coffee roasters, premium ice cream and confection brands, artisan meat and charcuterie, mushroom and supplement companies, and craft spirits. Portland food stores need: national cold-chain shipping configurations, subscription box builds, bulk/wholesale ordering tiers, and local pickup.",
-            },
-            {
-              category: 'pricing',
-              question: "How does Oregon's zero sales tax benefit my e-commerce business?",
-              answer:
-                "Three ways: First, no Oregon sales tax simplifies your store configuration — no county overrides, no municipality rates, no food vs. non-food categories for Oregon buyers. Second, your Oregon customers enjoy zero tax, which lowers their effective purchase cost vs. buying from California or Washington competitors. Third, Oregon's business-friendly tax environment means Portland founders keep more of their DTC profits. FactoryJet configures the tax advantage correctly in every Oregon build.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Portland?',
-              answer:
-                "FactoryJet launches standard Shopify stores in 7 days. Compare that to PHNX Digital (8–16 weeks), Instrument (12–24 weeks), and national agencies (8–16 weeks). Our 7-day timeline is possible because we design in code — no Figma-to-handoff cycle — and use a component architecture optimized for rapid deployment.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for cannabis or hemp products in Oregon?',
-              answer:
-                "Yes — Oregon was the first US state to legalize recreational cannabis (Measure 91, 2014) and has a mature cannabis e-commerce ecosystem. Pure THC products require the state's METRC compliance system and cannot be sold through standard Shopify. However, CBD (hemp-derived cannabidiol), hemp flower, accessories, pipes, and wellness products are fully Shopify-compatible. FactoryJet builds Oregon-compliant stores with age verification, high-risk payment processors (Authorize.net, NMI), and OLCC-compliant product descriptions.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Instrument for Portland Shopify development?',
-              answer:
-                "Instrument is Portland's most prestigious digital agency — they've done iconic campaigns for Google, Facebook, and Nike. They're excellent, but they serve enterprise Fortune 500 clients at enterprise-level minimums. FactoryJet serves Portland's SMB and growth-stage brands: Shopify stores live in 7 days, fixed-price, with transparent scoping, direct engineer access, and AI-powered features Instrument doesn't offer at any price point in the SMB range.",
-            },
-            {
-              category: 'local',
-              question: 'Does my Portland business need Shopify or WooCommerce?',
-              answer:
-                "For most Portland businesses, Shopify wins — faster launch, lower maintenance cost, better subscription apps for Portland's recurring-revenue brands (coffee, food, apparel), and superior mobile checkout. WooCommerce makes sense if you have a large WordPress site with existing SEO equity or need specific open-source integrations. Both are fixed-price and scoped to your build.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Portland business to Shopify?',
-              answer:
-                "Yes — we migrate Portland businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Portland local search rankings), Oregon zero-tax reconfiguration, metafield migration, and SEO continuity. Timeline: 7–14 days depending on catalog size.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Portland business?',
-              answer:
-                "Every Portland Shopify store includes: custom design (not a theme), full development, Oregon zero-sales-tax configuration, payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search, GSAP micro-animations, 30 days of post-launch support, and a launch walkthrough. Fixed-price, scoped to your build — no hidden fees.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Portland sustainable or eco-friendly brand?',
-              answer: "Absolutely — sustainable and eco-conscious commerce is Portland's most distinctive e-commerce segment. Portland consistently ranks as the US city with the highest consumer willingness to pay a premium for sustainable products. We build Shopify stores for: zero-waste product brands, sustainable packaging companies, B-Corp certified consumer goods, upcycled apparel and accessories, plant-based food brands, and compostable product lines. Portland-specific sustainable commerce features: carbon-neutral shipping integrations (EasyShip + carbon offset), B-Corp and Fair Trade badge display, transparent supply chain storytelling pages, and climate pledge landing pages. FactoryJet understands what Portland's sustainability-conscious consumers want to see before they buy.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Portland Shopify store on Google and in AI search?',
-              answer: "FactoryJet builds every Portland Shopify store with SEO and AEO foundations targeting Oregon-specific and Portland-local search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; Oregon's zero-sales-tax advantage as an explicit SEO keyword (Portland shoppers and buyers from neighboring WA and CA search for it); Core Web Vitals optimization (Lighthouse 90+); and AEO content targeting how Portland's highly educated consumer base researches products via AI. Portland's artisan and maker brands benefit enormously from AI search visibility — when a consumer asks ChatGPT 'best Portland [product] brands', FactoryJet's AEO setup gets your store cited in the answer.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Portland coffee, food, or lifestyle brands?',
-              answer: "Yes — Portland is America's subscription commerce capital in many categories. Stumptown Coffee pioneered the coffee subscription model. Salt & Straw has a successful ice cream club. Bob's Red Mill runs grain subscriptions. Portland's artisan economy is built for recurring revenue. FactoryJet builds: coffee roaster subscription stores (weekly, bi-weekly, monthly bags with variety selection), specialty food clubs (hot sauce of the month, artisan cheese, charcuterie), outdoor gear maintenance subscriptions (wax, oils, climbing chalk), and lifestyle product memberships. We build with Recharge or native Shopify Subscriptions, Oregon zero-tax configuration, and subscription UX optimized for Portland's brand-loyal consumer.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Portland Shopify store accept?',
-              answer: "Every Portland Shopify store should accept: Shopify Payments, PayPal, Apple Pay and Google Pay (Portland's tech-literate consumer base heavily uses digital wallets), Afterpay for premium outdoor gear and fashion purchases, and cryptocurrency payments for Portland's crypto-forward early adopter segment (via Coinbase Commerce or BitPay, if desired). For Portland's cannabis-adjacent and hemp brands, FactoryJet integrates high-risk payment processors (Authorize.net, NMI) that accept CBD and hemp accessories. Portland consumers are more likely than average US buyers to abandon checkout over limited payment options — FactoryJet configures the full payment stack during the standard build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Portland maker, craftsperson, or artisan brand?',
-              answer: "Yes — Portland's maker culture (Saturday Market, monthly craft fairs, the Pearl District's gallery and boutique ecosystem) is one of the deepest in the US. We build Shopify stores for: ceramic and pottery studios, leather goods makers, hand-poured candle brands, small-batch jewelry designers, furniture makers, printmakers, and fine art print shops. Portland maker stores need: per-item made-to-order configurations (custom lead times per product), limited edition collection drops, local pickup as a fulfillment option, and artisan story pages that communicate craft to online buyers. FactoryJet builds Portland maker stores that translate the Saturday Market experience into a digital storefront that sells nationally.",
-            },
-            {
-              category: 'local',
-              question: 'Do you serve Eugene, Bend, and Salem in addition to Portland?',
-              answer: "Yes — FactoryJet serves all of Oregon and the Pacific Northwest: Portland, Eugene, Salem, Bend, Medford, Corvallis, Hillsboro, Beaverton, Gresham, Lake Oswego, and all Oregon ZIP codes. Each Oregon city has distinct commerce characteristics: Eugene is home to the University of Oregon and a strong outdoor/athletic brand ecosystem (Track Town USA); Bend is a premium outdoor and craft beer destination with DTC market demand; Salem is the state capital with a significant food processing and agricultural industry. All Oregon stores benefit from the zero-sales-tax configuration, and FactoryJet builds city-level SEO targeting for both Portland metropolitan and statewide Oregon searches.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet handle international shipping for Portland brands?',
-              answer: "Portland brands have significant international audiences — especially in Canada (1-hour to Vancouver, BC), Japan (Portland's sister city relationship and strong Nike/Adidas cultural connection), the UK, Germany, and Australia. FactoryJet configures Shopify Markets for international selling: multi-currency (USD + CAD, GBP, EUR, JPY, AUD), international carrier rates (DHL Express, USPS First Class International), HS tariff codes for product categories, duty and import tax display at checkout (Landed Cost), international payment methods (iDEAL for Netherlands, Sofort for Germany), and IOSS for EU buyers above €150. Oregon's zero sales tax means international buyers comparing prices across US stores will often choose Portland brands for the clean total price.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Portland businesses?',
-              answer: "Yes — FactoryJet offers post-launch support designed for Portland's independent brand culture and seasonal commerce. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours, priority bug SLA), seasonal build packages (holiday gift guides, summer outdoor campaigns, Portland-themed cultural events), subscription program optimization, and performance reviews. Portland's independent brands value long-term agency relationships over transactional handoffs — FactoryJet retainer clients get a consistent engineer who knows their store, not a ticket queue. We document every Portland build comprehensively so your team can self-manage daily operations.",
-            },
-          ]}
+          items={FAQ_ITEMS}
         />
 
 
@@ -552,7 +554,7 @@ function SchemaScript() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('portland') }}
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('portland', FAQ_ITEMS) }}
     />
   );
 }

@@ -28,12 +28,12 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
+  title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
   description: 'Top-rated Shopify developer in Nashville TN: stores live in 7 days, fixed-price. Music City e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
+    title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
     url: 'https://factoryjet.com/nashville/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Nashville' }],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
+    title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -60,6 +60,121 @@ const FAQ_CATEGORIES = [
   { key: 'local',     label: 'Local Expertise' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
+
+const FAQ_ITEMS = [
+            {
+              category: 'local',
+              question: 'Who is the best Shopify developer in Nashville, TN?',
+              answer:
+                "FactoryJet is Nashville's top-rated Shopify development agency — 500+ projects, 4.9★ rating, and the only shop in Music City combining Shopify e-commerce with AI development. Local Nashville agencies (Infomedia, Thompson-Miller) focus on healthcare and financial services web design, not Shopify. National agencies targeting Nashville charge enterprise-level rates. FactoryJet launches Shopify stores in 7 days, fixed-price, with real Nashville market knowledge.",
+            },
+            {
+              category: 'pricing',
+              question: 'How much does Shopify development cost in Nashville?',
+              answer:
+                'Pricing is fixed-price and scoped to your build — the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, Tennessee sales tax configuration (9.25% for Davidson County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support.',
+            },
+            {
+              category: 'pricing',
+              question: 'What Tennessee sales tax rate should my Nashville Shopify store charge?',
+              answer:
+                "Nashville businesses in Davidson County should configure Shopify to collect 9.25% combined sales tax: Tennessee state rate of 7.0% plus Davidson County's 2.25% local rate. Tennessee uses destination-based sales tax. Important Nashville-specific note: Tennessee's reduced 4% state rate on food and groceries applies to grocery items — FactoryJet configures the correct product-level tax categories for food, apparel, and general merchandise in every Tennessee build.",
+            },
+            {
+              category: 'local',
+              question: 'Do you build Shopify stores for Nashville music artists and bands?',
+              answer:
+                "Yes — music and entertainment is one of our core Nashville specialties. We build Shopify stores for artist merchandise (T-shirts, vinyl, signed items), digital downloads, fan club subscriptions, album pre-orders, tour merchandise, and backstage experience packages. We integrate with Bandcamp, DistroKid, and Spotify for Artists to create a unified commerce experience. Nashville labels and management companies use FactoryJet to launch merch stores in 7 days ahead of album releases and tour announcements.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Nashville restaurant or food brand?',
+              answer:
+                "Yes — Nashville's culinary scene (hot chicken, BBQ, Tennessee whiskey, craft coffee) drives major DTC opportunity. We build Shopify stores for restaurant merchandise shops, hot sauce and condiment brands, food subscription boxes, catering booking systems, and whiskey club subscriptions. For Nashville hot chicken brands specifically, we handle heat-level variant configuration, regional shipping restrictions for perishables, and gift set bundling.",
+            },
+            {
+              category: 'local',
+              question: "How does FactoryJet serve Nashville's healthcare industry?",
+              answer:
+                "Nashville's $76B healthcare economy creates B2B e-commerce demand unlike any other US city. We build Shopify stores for: medical supply retailers (gloves, PPE, disposables), healthcare apparel brands (scrubs, compression socks), patient wellness product companies, healthcare staffing agency portals, and medical equipment rental platforms. We configure B2B pricing tiers, institutional PO payment terms, hospital system billing integrations, and HIPAA-compatible data handling where required.",
+            },
+            {
+              category: 'pricing',
+              question: 'How long does it take to build a Shopify store in Nashville?',
+              answer:
+                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Infomedia (8–12 weeks), Thrive Internet Marketing (4–8 weeks), or national agencies like Lounge Lizard (10–16 weeks). Our 7-day timeline is possible because we design in code and use a component architecture optimized for rapid deployment.',
+            },
+            {
+              category: 'pricing',
+              question: "What advantage does Tennessee's zero income tax give Nashville e-commerce businesses?",
+              answer:
+                "Tennessee repealed the Hall Tax on investment income in 2021, making it a true zero-income-tax state. For Nashville DTC founders, this means higher personal margins on business profits and more capital available to reinvest in inventory and marketing. Combined with FactoryJet's fixed-price builds, Nashville entrepreneurs launch profitable stores faster than in almost any other major US metro.",
+            },
+            {
+              category: 'local',
+              question: 'Do you build Shopify stores for Nashville tourism and hospitality businesses?',
+              answer:
+                "Yes — Nashville's 16M annual visitors create significant digital retail opportunity. We build online gift shops for attractions, hotels, and experiences; event merchandise stores for Nashville venues; souvenir brand DTC stores; and tour booking + merchandise combination stores. We configure tourist-specific features: airport pickup locations, international shipping for visitors taking Nashville goods home, gift wrapping, and 'Keep in Nashville' digital gift cards.",
+            },
+            {
+              category: 'pricing',
+              question: 'How does FactoryJet compare to national agencies for Nashville Shopify development?',
+              answer:
+                "National agencies targeting Nashville (Thrive, Lounge Lizard, WebFX) charge enterprise-level rates, quote 8–16 week timelines, have no Nashville market knowledge, and treat your store as one of thousands of cookie-cutter projects. FactoryJet knows Nashville: the Tennessee tax structure, Music City's tourism economy, the Vanderbilt healthcare corridor, the hot chicken DTC opportunity. We deliver in 7 days, fixed-price, and build AI-powered features those agencies can't offer at any price.",
+            },
+            {
+              category: 'pricing',
+              question: 'Can you migrate my Nashville website to Shopify?',
+              answer:
+                "Yes — migrations are a significant part of our Nashville work. We migrate from WooCommerce, BigCommerce, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Nashville local search rankings), Tennessee tax reconfiguration, and SEO continuity. Timeline: 7–14 days.",
+            },
+            {
+              category: 'included',
+              question: 'What is included in a FactoryJet Shopify build for a Nashville business?',
+              answer:
+                "Every Nashville Shopify store includes: custom design (not a theme), full Shopify development, Tennessee sales tax setup (9.25% Davidson County, food product reduced rates), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front — no hidden fees.",
+            },
+            {
+              category: 'included',
+              question: 'Can you build a Shopify store for a Nashville apparel or Southern lifestyle brand?',
+              answer: "Absolutely — Nashville apparel is one of the best DTC opportunities in the Southeast. Nashville's cultural exports — country music aesthetics, Southern lifestyle, Western wear, and Music City identity — translate into strong national brand demand. We build Shopify stores for: Western wear and boot brands, country music–adjacent apparel, Nashville-themed lifestyle goods, Southern food and lifestyle subscription boxes, and artisan craft brands. Nashville apparel brands sell nationally on the strength of place identity — a well-built Shopify store with editorial photography and fast mobile checkout converts country music fans coast to coast. FactoryJet launches Nashville apparel stores in 7 days, fixed-price.",
+            },
+            {
+              category: 'technical',
+              question: 'How do I rank my Nashville Shopify store on Google and AI search?',
+              answer: "FactoryJet builds every Nashville Shopify store with full SEO and AEO foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized titles targeting 'Nashville [product]', 'buy Nashville merchandise', 'Music City gifts'; Core Web Vitals optimization (Lighthouse 90+); Tennessee sales tax compliance (search engines factor compliance in trustworthiness signals); and structured FAQ content that answers how Nashville consumers search for your category. Nashville's 16M annual tourists are heavy local searchers — 'Nashville souvenir shop', 'Nashville hot chicken gift', 'Nashville music merchandise' are high-volume queries FactoryJet targets in every relevant build.",
+            },
+            {
+              category: 'included',
+              question: 'Do you build subscription Shopify stores for Nashville brands?',
+              answer: "Yes — Nashville is strong subscription territory. We build subscription stores for: Nashville hot sauce and condiment clubs (monthly spice boxes), Tennessee whiskey and spirits clubs (monthly selections with TABC age verification), music merchandise fan subscriptions (exclusive monthly merch for artist fan clubs), Nashville restaurant recipe and ingredient subscriptions, and wellness product clubs for Nashville's growing health sector. Nashville's loyal fan base — across sports (Predators, Titans), music, food, and Southern culture — creates high-retention subscription customers. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Tennessee compliance built in, and conversion flows optimized for Music City's brand-loyal consumer.",
+            },
+            {
+              category: 'included',
+              question: 'What payment methods should a Nashville Shopify store accept?',
+              answer: "Every Nashville Shopify store should accept: Shopify Payments, PayPal (30%+ of US first-time buyers prefer PayPal), Apple Pay and Google Pay (Nashville's growing tech population is mobile-payment-forward), and Afterpay for higher-value orders. For Nashville's alcohol and spirits brands, FactoryJet integrates age verification flows before payment collection. For Nashville's healthcare B2B stores, add net-30/net-60 invoicing and institutional billing via Shopify's B2B tools. For Nashville's tourism gift stores, add gift card purchasing with email delivery — Nashville tourists prefer digital gift cards for sending Nashville gifts to friends back home. All payment configuration is included in the standard 7-day build.",
+            },
+            {
+              category: 'local',
+              question: 'Can you build a Shopify store for a Nashville wedding or events brand?',
+              answer: "Yes — Nashville is America's #1 bachelorette party and wedding destination, attracting 800,000+ bachelorette groups annually. This creates significant DTC demand for: bachelorette merchandise (custom sashes, accessories, apparel), wedding party gift boxes, event photography and videography packages, Nashville-themed custom product lines, and wedding favor brands. FactoryJet builds Shopify stores for Nashville wedding brands with: custom product personalization (engraving, monogramming, custom text via Shopify's product options), rush shipping configurations, gift registry integration, and bulk/group order pricing for wedding parties. Nashville's wedding economy represents $900M in annual spending — a well-built Shopify store captures a meaningful slice of that at full margin.",
+            },
+            {
+              category: 'technical',
+              question: 'Do you serve Brentwood, Franklin, and Murfreesboro in addition to Nashville?',
+              answer: "Yes — FactoryJet serves the entire Greater Nashville metro: Nashville/Davidson County, Brentwood, Franklin/Williamson County, Murfreesboro/Rutherford County, Hendersonville, Clarksville, Smyrna, and Lebanon. Each area has a distinct consumer profile: Franklin and Brentwood are high-income suburban markets with premium brand expectations, Murfreesboro is Middle Tennessee State University's home with a younger demographic, and Clarksville serves the Fort Campbell military community. FactoryJet configures Tennessee's destination-based sales tax for all counties — Davidson (9.25%), Williamson (9.25%), and Rutherford (9.75%) — and builds stores with SEO targeting Greater Nashville search queries.",
+            },
+            {
+              category: 'local',
+              question: 'How does FactoryJet optimize Nashville Shopify stores for mobile shoppers?',
+              answer: "Nashville's consumer is mobile-first: the city's younger population, high tourism traffic, and live music culture mean your customers are browsing and buying on phones. FactoryJet optimizes every Nashville Shopify store for mobile with: mobile-first design (layouts built for 375px screens before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, FID/INP under 200ms), Apple Pay and Google Pay one-tap checkout (eliminates the biggest mobile cart abandonment point), thumb-friendly button sizing, and lazy-loaded images that don't block mobile rendering. Every Nashville build passes Lighthouse 90+ on mobile before delivery — not after.",
+            },
+            {
+              category: 'local',
+              question: 'Does FactoryJet offer ongoing Shopify support plans for Nashville businesses?',
+              answer: "Yes — FactoryJet offers post-launch support built around Nashville's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours plus same-day bug priority), pre-season campaign builds (CMA Awards merchandise drops, New Year's Eve Nashville tourism season, bachelorette season spring–fall), and performance monitoring. Nashville artists and labels in particular benefit from on-call retainer support — an album drop, a Grammy nomination, or a viral TikTok moment requires same-day store updates to capture demand spikes. FactoryJet retainer clients get priority response windows for exactly these moments.",
+            },
+];
 export default function Page() {
   return (
     <>
@@ -71,7 +186,7 @@ export default function Page() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_nashville_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · NASHVILLE"
-          headline="Shopify Developer Nashville for Music City Businesses"
+          headline="Nashville's Top-Rated Shopify Developer for Music City Businesses"
           lead="The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
@@ -398,120 +513,7 @@ export default function Page() {
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Nashville E-Commerce Businesses"
           categories={FAQ_CATEGORIES}
-          items={[
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Nashville, TN?',
-              answer:
-                "FactoryJet is Nashville's top-rated Shopify development agency — 500+ projects, 4.9★ rating, and the only shop in Music City combining Shopify e-commerce with AI development. Local Nashville agencies (Infomedia, Thompson-Miller) focus on healthcare and financial services web design, not Shopify. National agencies targeting Nashville charge enterprise-level rates. FactoryJet launches Shopify stores in 7 days, fixed-price, with real Nashville market knowledge.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Nashville?',
-              answer:
-                'Pricing is fixed-price and scoped to your build — the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, Tennessee sales tax configuration (9.25% for Davidson County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support.',
-            },
-            {
-              category: 'pricing',
-              question: 'What Tennessee sales tax rate should my Nashville Shopify store charge?',
-              answer:
-                "Nashville businesses in Davidson County should configure Shopify to collect 9.25% combined sales tax: Tennessee state rate of 7.0% plus Davidson County's 2.25% local rate. Tennessee uses destination-based sales tax. Important Nashville-specific note: Tennessee's reduced 4% state rate on food and groceries applies to grocery items — FactoryJet configures the correct product-level tax categories for food, apparel, and general merchandise in every Tennessee build.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Nashville music artists and bands?',
-              answer:
-                "Yes — music and entertainment is one of our core Nashville specialties. We build Shopify stores for artist merchandise (T-shirts, vinyl, signed items), digital downloads, fan club subscriptions, album pre-orders, tour merchandise, and backstage experience packages. We integrate with Bandcamp, DistroKid, and Spotify for Artists to create a unified commerce experience. Nashville labels and management companies use FactoryJet to launch merch stores in 7 days ahead of album releases and tour announcements.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Nashville restaurant or food brand?',
-              answer:
-                "Yes — Nashville's culinary scene (hot chicken, BBQ, Tennessee whiskey, craft coffee) drives major DTC opportunity. We build Shopify stores for restaurant merchandise shops, hot sauce and condiment brands, food subscription boxes, catering booking systems, and whiskey club subscriptions. For Nashville hot chicken brands specifically, we handle heat-level variant configuration, regional shipping restrictions for perishables, and gift set bundling.",
-            },
-            {
-              category: 'local',
-              question: "How does FactoryJet serve Nashville's healthcare industry?",
-              answer:
-                "Nashville's $76B healthcare economy creates B2B e-commerce demand unlike any other US city. We build Shopify stores for: medical supply retailers (gloves, PPE, disposables), healthcare apparel brands (scrubs, compression socks), patient wellness product companies, healthcare staffing agency portals, and medical equipment rental platforms. We configure B2B pricing tiers, institutional PO payment terms, hospital system billing integrations, and HIPAA-compatible data handling where required.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Nashville?',
-              answer:
-                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Infomedia (8–12 weeks), Thrive Internet Marketing (4–8 weeks), or national agencies like Lounge Lizard (10–16 weeks). Our 7-day timeline is possible because we design in code and use a component architecture optimized for rapid deployment.',
-            },
-            {
-              category: 'pricing',
-              question: "What advantage does Tennessee's zero income tax give Nashville e-commerce businesses?",
-              answer:
-                "Tennessee repealed the Hall Tax on investment income in 2021, making it a true zero-income-tax state. For Nashville DTC founders, this means higher personal margins on business profits and more capital available to reinvest in inventory and marketing. Combined with FactoryJet's fixed-price builds, Nashville entrepreneurs launch profitable stores faster than in almost any other major US metro.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Nashville tourism and hospitality businesses?',
-              answer:
-                "Yes — Nashville's 16M annual visitors create significant digital retail opportunity. We build online gift shops for attractions, hotels, and experiences; event merchandise stores for Nashville venues; souvenir brand DTC stores; and tour booking + merchandise combination stores. We configure tourist-specific features: airport pickup locations, international shipping for visitors taking Nashville goods home, gift wrapping, and 'Keep in Nashville' digital gift cards.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to national agencies for Nashville Shopify development?',
-              answer:
-                "National agencies targeting Nashville (Thrive, Lounge Lizard, WebFX) charge enterprise-level rates, quote 8–16 week timelines, have no Nashville market knowledge, and treat your store as one of thousands of cookie-cutter projects. FactoryJet knows Nashville: the Tennessee tax structure, Music City's tourism economy, the Vanderbilt healthcare corridor, the hot chicken DTC opportunity. We deliver in 7 days, fixed-price, and build AI-powered features those agencies can't offer at any price.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Nashville website to Shopify?',
-              answer:
-                "Yes — migrations are a significant part of our Nashville work. We migrate from WooCommerce, BigCommerce, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Nashville local search rankings), Tennessee tax reconfiguration, and SEO continuity. Timeline: 7–14 days.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Nashville business?',
-              answer:
-                "Every Nashville Shopify store includes: custom design (not a theme), full Shopify development, Tennessee sales tax setup (9.25% Davidson County, food product reduced rates), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front — no hidden fees.",
-            },
-            {
-              category: 'included',
-              question: 'Can you build a Shopify store for a Nashville apparel or Southern lifestyle brand?',
-              answer: "Absolutely — Nashville apparel is one of the best DTC opportunities in the Southeast. Nashville's cultural exports — country music aesthetics, Southern lifestyle, Western wear, and Music City identity — translate into strong national brand demand. We build Shopify stores for: Western wear and boot brands, country music–adjacent apparel, Nashville-themed lifestyle goods, Southern food and lifestyle subscription boxes, and artisan craft brands. Nashville apparel brands sell nationally on the strength of place identity — a well-built Shopify store with editorial photography and fast mobile checkout converts country music fans coast to coast. FactoryJet launches Nashville apparel stores in 7 days, fixed-price.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Nashville Shopify store on Google and AI search?',
-              answer: "FactoryJet builds every Nashville Shopify store with full SEO and AEO foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized titles targeting 'Nashville [product]', 'buy Nashville merchandise', 'Music City gifts'; Core Web Vitals optimization (Lighthouse 90+); Tennessee sales tax compliance (search engines factor compliance in trustworthiness signals); and structured FAQ content that answers how Nashville consumers search for your category. Nashville's 16M annual tourists are heavy local searchers — 'Nashville souvenir shop', 'Nashville hot chicken gift', 'Nashville music merchandise' are high-volume queries FactoryJet targets in every relevant build.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Nashville brands?',
-              answer: "Yes — Nashville is strong subscription territory. We build subscription stores for: Nashville hot sauce and condiment clubs (monthly spice boxes), Tennessee whiskey and spirits clubs (monthly selections with TABC age verification), music merchandise fan subscriptions (exclusive monthly merch for artist fan clubs), Nashville restaurant recipe and ingredient subscriptions, and wellness product clubs for Nashville's growing health sector. Nashville's loyal fan base — across sports (Predators, Titans), music, food, and Southern culture — creates high-retention subscription customers. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Tennessee compliance built in, and conversion flows optimized for Music City's brand-loyal consumer.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Nashville Shopify store accept?',
-              answer: "Every Nashville Shopify store should accept: Shopify Payments, PayPal (30%+ of US first-time buyers prefer PayPal), Apple Pay and Google Pay (Nashville's growing tech population is mobile-payment-forward), and Afterpay for higher-value orders. For Nashville's alcohol and spirits brands, FactoryJet integrates age verification flows before payment collection. For Nashville's healthcare B2B stores, add net-30/net-60 invoicing and institutional billing via Shopify's B2B tools. For Nashville's tourism gift stores, add gift card purchasing with email delivery — Nashville tourists prefer digital gift cards for sending Nashville gifts to friends back home. All payment configuration is included in the standard 7-day build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Nashville wedding or events brand?',
-              answer: "Yes — Nashville is America's #1 bachelorette party and wedding destination, attracting 800,000+ bachelorette groups annually. This creates significant DTC demand for: bachelorette merchandise (custom sashes, accessories, apparel), wedding party gift boxes, event photography and videography packages, Nashville-themed custom product lines, and wedding favor brands. FactoryJet builds Shopify stores for Nashville wedding brands with: custom product personalization (engraving, monogramming, custom text via Shopify's product options), rush shipping configurations, gift registry integration, and bulk/group order pricing for wedding parties. Nashville's wedding economy represents $900M in annual spending — a well-built Shopify store captures a meaningful slice of that at full margin.",
-            },
-            {
-              category: 'technical',
-              question: 'Do you serve Brentwood, Franklin, and Murfreesboro in addition to Nashville?',
-              answer: "Yes — FactoryJet serves the entire Greater Nashville metro: Nashville/Davidson County, Brentwood, Franklin/Williamson County, Murfreesboro/Rutherford County, Hendersonville, Clarksville, Smyrna, and Lebanon. Each area has a distinct consumer profile: Franklin and Brentwood are high-income suburban markets with premium brand expectations, Murfreesboro is Middle Tennessee State University's home with a younger demographic, and Clarksville serves the Fort Campbell military community. FactoryJet configures Tennessee's destination-based sales tax for all counties — Davidson (9.25%), Williamson (9.25%), and Rutherford (9.75%) — and builds stores with SEO targeting Greater Nashville search queries.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet optimize Nashville Shopify stores for mobile shoppers?',
-              answer: "Nashville's consumer is mobile-first: the city's younger population, high tourism traffic, and live music culture mean your customers are browsing and buying on phones. FactoryJet optimizes every Nashville Shopify store for mobile with: mobile-first design (layouts built for 375px screens before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, FID/INP under 200ms), Apple Pay and Google Pay one-tap checkout (eliminates the biggest mobile cart abandonment point), thumb-friendly button sizing, and lazy-loaded images that don't block mobile rendering. Every Nashville build passes Lighthouse 90+ on mobile before delivery — not after.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Nashville businesses?',
-              answer: "Yes — FactoryJet offers post-launch support built around Nashville's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours plus same-day bug priority), pre-season campaign builds (CMA Awards merchandise drops, New Year's Eve Nashville tourism season, bachelorette season spring–fall), and performance monitoring. Nashville artists and labels in particular benefit from on-call retainer support — an album drop, a Grammy nomination, or a viral TikTok moment requires same-day store updates to capture demand spikes. FactoryJet retainer clients get priority response windows for exactly these moments.",
-            },
-          ]}
+          items={FAQ_ITEMS}
         />
 
 
@@ -551,7 +553,7 @@ function SchemaScript() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('nashville') }}
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('nashville', FAQ_ITEMS) }}
     />
   );
 }
