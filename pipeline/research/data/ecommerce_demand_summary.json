@@ -1,0 +1,778 @@
+{
+ "us": {
+  "geo": "us",
+  "n_total": 1291,
+  "n_superlative": 112,
+  "n_question": 9,
+  "cost": 0.5017199999999999,
+  "superlative_tally": {
+   "best": {
+    "vol": 3400,
+    "n": 80
+   },
+   "top": {
+    "vol": 960,
+    "n": 27
+   },
+   "affordable": {
+    "vol": 40,
+    "n": 3
+   },
+   "top 10": {
+    "vol": 10,
+    "n": 1
+   },
+   "leading": {
+    "vol": 10,
+    "n": 1
+   }
+  },
+  "top_superlative": [
+   {
+    "keyword": "best web ecommerce design",
+    "seed": "ecommerce web design",
+    "search_volume": 320,
+    "cpc": 6.3,
+    "competition": "LOW",
+    "difficulty": 25,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 320,
+    "cpc": 6.3,
+    "competition": "LOW",
+    "difficulty": 30,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design for ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 320,
+    "cpc": 6.3,
+    "competition": "LOW",
+    "difficulty": 20,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 320,
+    "cpc": 6.3,
+    "competition": "LOW",
+    "difficulty": 23,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 320,
+    "cpc": 6.3,
+    "competition": "LOW",
+    "difficulty": 9,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo company",
+    "seed": "ecommerce seo company",
+    "search_volume": 320,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 10,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best seo company for ecommerce",
+    "seed": "ecommerce seo company",
+    "search_volume": 320,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 39,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo agency",
+    "seed": "ecommerce agency",
+    "search_volume": 170,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 25,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce development company",
+    "seed": "ecommerce development company",
+    "search_volume": 110,
+    "cpc": 34.32,
+    "competition": "LOW",
+    "difficulty": 0,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce agency",
+    "seed": "ecommerce agency",
+    "search_volume": 70,
+    "cpc": 178.14,
+    "competition": "LOW",
+    "difficulty": 0,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce agency",
+    "seed": "ecommerce agency",
+    "search_volume": 70,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 2,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best shopify agency",
+    "seed": "shopify agency",
+    "search_volume": 70,
+    "cpc": 22.18,
+    "competition": "LOW",
+    "difficulty": 5,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top magento development company",
+    "seed": "magento development company",
+    "search_volume": 70,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 10,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best seo agency for ecommerce",
+    "seed": "ecommerce agency",
+    "search_volume": 50,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 29,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best digital marketing agency for ecommerce",
+    "seed": "ecommerce agency",
+    "search_volume": 50,
+    "cpc": 570.08,
+    "competition": "LOW",
+    "difficulty": 12,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   }
+  ]
+ },
+ "uk": {
+  "geo": "uk",
+  "n_total": 1044,
+  "n_superlative": 74,
+  "n_question": 5,
+  "cost": 0.46704,
+  "superlative_tally": {
+   "best": {
+    "vol": 1240,
+    "n": 52
+   },
+   "top": {
+    "vol": 220,
+    "n": 18
+   },
+   "affordable": {
+    "vol": 90,
+    "n": 3
+   },
+   "award winning": {
+    "vol": 20,
+    "n": 1
+   }
+  },
+  "top_superlative": [
+   {
+    "keyword": "best web design ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 140,
+    "cpc": 6.82,
+    "competition": "MEDIUM",
+    "difficulty": 13,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design for ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 140,
+    "cpc": 6.82,
+    "competition": "MEDIUM",
+    "difficulty": 12,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 140,
+    "cpc": 6.82,
+    "competition": "MEDIUM",
+    "difficulty": 19,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo company",
+    "seed": "ecommerce seo company",
+    "search_volume": 90,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 6,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best seo company for ecommerce",
+    "seed": "ecommerce seo company",
+    "search_volume": 90,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 0,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "affordable ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 70,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 7,
+    "intent": "commercial",
+    "superlative": "affordable",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce agency",
+    "seed": "ecommerce agency",
+    "search_volume": 50,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 16,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo agency",
+    "seed": "ecommerce agency",
+    "search_volume": 30,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 0,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce marketing agency",
+    "seed": "ecommerce agency",
+    "search_volume": 30,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best shopify agency",
+    "seed": "shopify agency",
+    "search_volume": 30,
+    "cpc": 0,
+    "competition": "MEDIUM",
+    "difficulty": 48,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce agency",
+    "seed": "ecommerce agency",
+    "search_volume": 20,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 48,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best seo agency for ecommerce",
+    "seed": "ecommerce agency",
+    "search_volume": 20,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 0,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce website development company",
+    "seed": "ecommerce development company",
+    "search_volume": 20,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce web design companies",
+    "seed": "ecommerce web design",
+    "search_volume": 20,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web design companies",
+    "seed": "ecommerce web design",
+    "search_volume": 20,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   }
+  ]
+ },
+ "india": {
+  "geo": "india",
+  "n_total": 1239,
+  "n_superlative": 114,
+  "n_question": 9,
+  "cost": 0.49679999999999996,
+  "superlative_tally": {
+   "best": {
+    "vol": 2790,
+    "n": 82
+   },
+   "top": {
+    "vol": 660,
+    "n": 26
+   },
+   "no 1": {
+    "vol": 10,
+    "n": 1
+   },
+   "affordable": {
+    "vol": 30,
+    "n": 3
+   },
+   "top 10": {
+    "vol": 10,
+    "n": 1
+   },
+   "leading": {
+    "vol": 30,
+    "n": 1
+   }
+  },
+  "top_superlative": [
+   {
+    "keyword": "best web design ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 260,
+    "cpc": 1.18,
+    "competition": "LOW",
+    "difficulty": 24,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design for ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 260,
+    "cpc": 1.18,
+    "competition": "LOW",
+    "difficulty": 41,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 260,
+    "cpc": 1.18,
+    "competition": "LOW",
+    "difficulty": 31,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "hrl infotechs pvt ltd best ecommerce marketing agency",
+    "seed": "ecommerce agency",
+    "search_volume": 140,
+    "cpc": 0.07,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best shopify development company",
+    "seed": "shopify development company",
+    "search_volume": 140,
+    "cpc": 0.59,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo agency",
+    "seed": "ecommerce agency",
+    "search_volume": 110,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce website development company india",
+    "seed": "ecommerce development company",
+    "search_volume": 110,
+    "cpc": 1.96,
+    "competition": "LOW",
+    "difficulty": 55,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce website development company in india",
+    "seed": "ecommerce development company",
+    "search_volume": 110,
+    "cpc": 1.96,
+    "competition": "LOW",
+    "difficulty": 55,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top shopify development company in india",
+    "seed": "shopify development company",
+    "search_volume": 110,
+    "cpc": 3.87,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "evrig top magento development company",
+    "seed": "magento development company",
+    "search_volume": 110,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "top shopify development company",
+    "seed": "shopify development company",
+    "search_volume": 90,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce development company",
+    "seed": "ecommerce development company",
+    "search_volume": 70,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 85,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce website development company",
+    "seed": "ecommerce development company",
+    "search_volume": 70,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": 79,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best shopify agency",
+    "seed": "shopify agency",
+    "search_volume": 70,
+    "cpc": 0.16,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best shopify development company in india",
+    "seed": "shopify development company",
+    "search_volume": 70,
+    "cpc": 1.6,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   }
+  ]
+ },
+ "uae": {
+  "geo": "uae",
+  "n_total": 471,
+  "n_superlative": 42,
+  "n_question": 4,
+  "cost": 0.38928,
+  "superlative_tally": {
+   "best": {
+    "vol": 370,
+    "n": 32
+   },
+   "top": {
+    "vol": 80,
+    "n": 8
+   },
+   "affordable": {
+    "vol": 20,
+    "n": 2
+   }
+  },
+  "top_superlative": [
+   {
+    "keyword": "best ecommerce website development company",
+    "seed": "ecommerce development company",
+    "search_volume": 30,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design for ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 20,
+    "cpc": 1.68,
+    "competition": "MEDIUM",
+    "difficulty": 53,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web design",
+    "seed": "ecommerce web design",
+    "search_volume": 20,
+    "cpc": 1.68,
+    "competition": "MEDIUM",
+    "difficulty": 53,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best web design ecommerce",
+    "seed": "ecommerce web design",
+    "search_volume": 20,
+    "cpc": 1.68,
+    "competition": "MEDIUM",
+    "difficulty": 53,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce marketing agency rankstar",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce seo agency",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best digital marketing agency for ecommerce",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce marketing agency",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce agency",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best seo agency for ecommerce",
+    "seed": "ecommerce agency",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce development company",
+    "seed": "ecommerce development company",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "MEDIUM",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce website development company in india",
+    "seed": "ecommerce development company",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce web development company dubai",
+    "seed": "ecommerce development company",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "LOW",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   },
+   {
+    "keyword": "top ecommerce development company",
+    "seed": "ecommerce development company",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "top",
+    "is_question": false
+   },
+   {
+    "keyword": "best ecommerce development company in dubai",
+    "seed": "ecommerce development company",
+    "search_volume": 10,
+    "cpc": 0,
+    "competition": "MEDIUM",
+    "difficulty": null,
+    "intent": "commercial",
+    "superlative": "best",
+    "is_question": false
+   }
+  ]
+ }
+}

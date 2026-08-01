@@ -1,0 +1,3927 @@
+{
+ "serp": [
+  {
+   "keyword": "best ecommerce agency",
+   "volume": 70,
+   "vertical": "ecommerce",
+   "geo": "us",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.reddit.com",
+    "www.forbes.com",
+    "clutch.co",
+    "www.outsourceaccelerator.com",
+    "www.stryde.com",
+    "thriveagency.com",
+    "flowium.com"
+   ],
+   "top10": [
+    "www.reddit.com",
+    "clutch.co",
+    "digitalagencynetwork.com",
+    "www.growthmarketingpro.com",
+    "sweatpantsagency.com",
+    "www.forbes.com",
+    "topgrowthmarketing.com",
+    "www.dash.app",
+    "www.shopify.com",
+    "www.youtube.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "volume": 110,
+   "vertical": "ecommerce",
+   "geo": "us",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "clutch.co",
+    "www.elsner.com",
+    "www.hireinsouth.com",
+    "dribbble.com",
+    "www.netguru.com",
+    "www.youtube.com"
+   ],
+   "top10": [
+    "selectedfirms.co",
+    "clutch.co",
+    "www.designrush.com",
+    "www.50pros.com",
+    "soloway.tech",
+    "www.agentosupport.com",
+    "www.rightfirms.co",
+    "www.clickpost.ai",
+    "www.linkedin.com",
+    "www.clickpost.ai"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "top shopify development company",
+   "volume": 50,
+   "vertical": "shopify",
+   "geo": "us",
+   "cost": 0.014,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "netalico.com",
+    "www.linkedin.com",
+    "vservesolution.com",
+    "www.brainvire.com",
+    "qikify.com",
+    "sherocommerce.com"
+   ],
+   "top10": [
+    "www.shopify.com",
+    "clutch.co",
+    "www.reddit.com",
+    "netalico.com",
+    "www.setubridge.com",
+    "www.aitrillion.com",
+    "aureatelabs.com",
+    "www.manektech.com",
+    "www.linkedin.com",
+    "seventhtriangle.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best shopify agency",
+   "volume": 70,
+   "vertical": "shopify",
+   "geo": "us",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.reddit.com",
+    "sherocommerce.com",
+    "alwaysopencommerce.com",
+    "www.toolshero.com",
+    "www.icreativetechnologies.com"
+   ],
+   "top10": [
+    "www.reddit.com",
+    "www.aitrillion.com",
+    "netalico.com",
+    "www.20northmarketing.com",
+    "firstpagesage.com",
+    "www.yotpo.com",
+    "www.youtube.com",
+    "alwaysopencommerce.com",
+    "www.quora.com",
+    "www.youtube.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "volume": 320,
+   "vertical": "ecommerce",
+   "geo": "us",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.reddit.com",
+    "www.cssdesignawards.com",
+    "www.hostinger.com",
+    "vervaunt.com",
+    "elementor.com",
+    "fluentcart.com",
+    "ecomm.design",
+    "www.limely.co.uk",
+    "seahawkmedia.com",
+    "enozom.com"
+   ],
+   "top10": [
+    "www.awwwards.com",
+    "www.reddit.com",
+    "www.ecomdesignawards.com",
+    "www.cssdesignawards.com",
+    "www.limely.co.uk",
+    "dribbble.com",
+    "ecomm.design",
+    "www.siteinspire.com",
+    "land-book.com",
+    "webflow.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "volume": 320,
+   "vertical": "ecommerce_seo",
+   "geo": "us",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.reddit.com",
+    "www.outerboxdesign.com",
+    "www.indiehackers.com",
+    "www.searchbloom.com",
+    "www.resultfirst.com",
+    "dribbble.com",
+    "www.1digitalagency.com",
+    "www.get-ryze.ai"
+   ],
+   "top10": [
+    "www.outerboxdesign.com",
+    "www.reddit.com",
+    "agencies.semrush.com",
+    "firstpagesage.com",
+    "coalitiontechnologies.com",
+    "clutch.co",
+    "www.orbitmedia.com",
+    "www.reddit.com",
+    "www.resultfirst.com",
+    "www.indiehackers.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best magento development company",
+   "volume": 50,
+   "vertical": "magento",
+   "geo": "us",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "magnetoitsolutions.com",
+    "www.brainvire.com",
+    "thetransformagency.com",
+    "www.ravedigital.agency",
+    "firstpagesage.com",
+    "www.orangemantra.com",
+    "www.agentosupport.com"
+   ],
+   "top10": [
+    "magnetoitsolutions.com",
+    "www.brainvire.com",
+    "clutch.co",
+    "www.ravedigital.agency",
+    "www.reddit.com",
+    "sermondo.com",
+    "www.upwork.com",
+    "www.manektech.com",
+    "www.matechco.com",
+    "magebit.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best digital marketing agency for ecommerce",
+   "volume": 50,
+   "vertical": "ecommerce_mkt",
+   "geo": "us",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.forbes.com",
+    "www.reddit.com",
+    "clutch.co",
+    "maestra.io",
+    "www.dash.app",
+    "www.iovista.com",
+    "www.outsourceaccelerator.com",
+    "www.lyfemarketing.com",
+    "marketingltb.com",
+    "um.marketing",
+    "www.magier.com",
+    "zozimus.com"
+   ],
+   "top10": [
+    "www.reddit.com",
+    "www.designrush.com",
+    "www.stryde.com",
+    "www.forbes.com",
+    "www.munro.agency",
+    "thriveagency.com",
+    "www.dash.app",
+    "www.directom.com",
+    "www.primeview.com",
+    "www.iovista.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "volume": 90,
+   "vertical": "ecommerce_seo",
+   "geo": "uk",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.seobusiness.co.uk",
+    "www.outerboxdesign.com",
+    "www.clickslice.co.uk",
+    "www.get-ryze.ai",
+    "www.seoworks.co.uk",
+    "firstplaceseo.co.uk",
+    "studiohawk.co.uk",
+    "thriveagency.com",
+    "respona.com",
+    "mansirana.com"
+   ],
+   "top10": [
+    "www.polarisagency.com",
+    "www.seobusiness.co.uk",
+    "www.clickslice.co.uk",
+    "www.nobraineragency.com",
+    "www.rebootonline.com",
+    "www.reddit.com",
+    "www.charle.co.uk",
+    "firstpagesage.com",
+    "www.sortlist.co.uk",
+    "www.seoworks.co.uk"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best seo company for ecommerce",
+   "volume": 90,
+   "vertical": "ecommerce_seo",
+   "geo": "uk",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.reddit.com",
+    "www.outerboxdesign.com",
+    "www.seobusiness.co.uk",
+    "www.seoworks.co.uk",
+    "www.nobraineragency.com",
+    "thriveagency.com",
+    "www.simply-search.co.uk",
+    "finsburymedia.com",
+    "prerender.io",
+    "www.impressiondigital.com",
+    "www.wiganseo.co.uk"
+   ],
+   "top10": [
+    "www.polarisagency.com",
+    "www.clickslice.co.uk",
+    "agencies.semrush.com",
+    "www.seobusiness.co.uk",
+    "www.outerboxdesign.com",
+    "uk.trustpilot.com",
+    "www.reddit.com",
+    "clutch.co",
+    "www.charle.co.uk",
+    "firstpagesage.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "volume": 50,
+   "vertical": "ecommerce",
+   "geo": "uk",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "digitalagencynetwork.com",
+    "www.polarisagency.com",
+    "www.cake.agency",
+    "www.charle.co.uk"
+   ],
+   "top10": [
+    "digitalagencynetwork.com",
+    "digitalb.co.uk",
+    "www.ontapgroup.com",
+    "www.charle.co.uk",
+    "www.polarisagency.com",
+    "www.cake.agency",
+    "ecommercerevolt.co.uk",
+    "www.munro.agency",
+    "neilpatel.com",
+    "ecommercerevolt.co.uk"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "affordable ecommerce web design",
+   "volume": 70,
+   "vertical": "ecommerce",
+   "geo": "uk",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "davidandgeorge.co.uk",
+    "www.reddit.com",
+    "www.dotgo.uk",
+    "www.cheapwebdesign.co.uk",
+    "www.youtube.com",
+    "website-builders.cybernews.com",
+    "chichesterwebsites.co.uk",
+    "www.elegantthemes.com",
+    "www.rapidformations.co.uk",
+    "www.123-reg.co.uk"
+   ],
+   "top10": [
+    "www.cheapwebdesign.co.uk",
+    "davidandgeorge.co.uk",
+    "www.dotgo.uk",
+    "www.leafletfrog.co.uk",
+    "startups.co.uk",
+    "cheapwebsitedesigner.co.uk",
+    "uk.linkedin.com",
+    "www.execreative.co.uk",
+    "www.reddit.com",
+    "5ms.co.uk"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best shopify development company",
+   "volume": 140,
+   "vertical": "shopify",
+   "geo": "india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "codifyinfotech.com",
+    "seventhtriangle.com",
+    "www.icreativetechnologies.com",
+    "growthhackers.digital",
+    "www.google.com"
+   ],
+   "top10": [
+    "penninetechnolabs.com",
+    "codifyinfotech.com",
+    "www.myvirtualteams.com",
+    "clutch.co",
+    "www.icreativetechnologies.com",
+    "www.orangemantra.com",
+    "www.roihunt.in",
+    "ditindia.com",
+    "www.lusciousleopard.com",
+    "www.linkedin.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "volume": 110,
+   "vertical": "ecommerce_seo",
+   "geo": "india",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "agencies.semrush.com",
+    "www.techmagnate.com",
+    "www.zestard.com",
+    "infogentech.com",
+    "www.infidigit.com",
+    "codexxa.net",
+    "www.pagetraffic.com",
+    "www.rankingbyseo.com",
+    "www.adlift.com",
+    "webdigitalmediagroup.com",
+    "www.resultfirst.com"
+   ],
+   "top10": [
+    "www.infidigit.com",
+    "agencies.semrush.com",
+    "www.zestard.com",
+    "www.techmagnate.com",
+    "firstpagesage.com",
+    "swcybernetics.in",
+    "www.lusciousleopard.com",
+    "infogentech.com",
+    "www.elsner.com",
+    "codexxa.net"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best shopify development company in india",
+   "volume": 70,
+   "vertical": "shopify",
+   "geo": "india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "codifyinfotech.com",
+    "clutch.co",
+    "www.brainiuminfotech.com",
+    "appcosoftware.com",
+    "uncannycs.com",
+    "www.google.com",
+    "www.webshark.in",
+    "iroidsolutions.com",
+    "engineerbabu.com"
+   ],
+   "top10": [
+    "penninetechnolabs.com",
+    "codifyinfotech.com",
+    "www.icreativetechnologies.com",
+    "www.compusysesolutions.com",
+    "clutch.co",
+    "www.roihunt.in",
+    "www.linkedin.com",
+    "www.orangemantra.com",
+    "www.lusciousleopard.com",
+    "www.brainiuminfotech.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce website development company in india",
+   "volume": 110,
+   "vertical": "ecommerce",
+   "geo": "india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "clutch.co",
+    "skyloomstudios.com",
+    "www.ncodetechnologies.com",
+    "www.dakshadesign.com",
+    "www.hiddenbrains.com",
+    "habr.com",
+    "www.mumbaiwebdesign.in",
+    "erasoft.app",
+    "www.aalpha.net",
+    "selectedfirms.co"
+   ],
+   "top10": [
+    "webandcrafts.com",
+    "clutch.co",
+    "www.orangemantra.com",
+    "websenor.com",
+    "www.sagipl.com",
+    "vofoxsolutions.com",
+    "www.clickpost.ai",
+    "www.webhopers.com",
+    "growthhackers.digital",
+    "futuresoftindia.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "volume": 30,
+   "vertical": "ecommerce",
+   "geo": "uae",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.linkedin.com",
+    "webcastle.ae",
+    "colaninfotech.com",
+    "www.redspider.ae",
+    "www.navigator.ca",
+    "digitalnomadshq.com.au",
+    "www.mds.co",
+    "www.wildnetedge.com"
+   ],
+   "top10": [
+    "www.mightywarner.ae",
+    "www.linkedin.com",
+    "webcastle.ae",
+    "www.valoriz.com",
+    "www.tomsher.com",
+    "www.gcc-marketing.com",
+    "clutch.co",
+    "tequila.ae",
+    "aiwadigital.com",
+    "www.superside.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "volume": 20,
+   "vertical": "ecommerce",
+   "geo": "uae",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": false,
+   "aio_cited": false,
+   "aio_sources": [],
+   "top10": [
+    "dribbble.com",
+    "www.awwwards.com",
+    "www.cssdesignawards.com",
+    "www.pinterest.com",
+    "www.siteinspire.com",
+    "fluentcart.com",
+    "www.limely.co.uk",
+    "ecomm.design",
+    "www.parallelhq.com",
+    "www.reddit.com"
+   ],
+   "error": null
+  }
+ ],
+ "llm": [
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.11097,
+   "mentioned": false,
+   "domains": [
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "shopify.com",
+    "shopify.com",
+    "ambaum.com",
+    "ambaum.com",
+    "ambaum.com",
+    "fjsolutions.com",
+    "robeka.com",
+    "robeka.com",
+    "robeka.com",
+    "wemakewebsites.com",
+    "eastsideco.com"
+   ],
+   "error": null,
+   "chars": 6245
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.11348,
+   "mentioned": false,
+   "domains": [
+    "fjsolutions.com",
+    "splitdev.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "conversion-design.com",
+    "conversion-design.com",
+    "conversion-design.com",
+    "newthink.com",
+    "newthink.com",
+    "newthink.com",
+    "prpwebs.com",
+    "prpwebs.com",
+    "prpwebs.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "splitdev.com",
+    "conversion-design.com",
+    "newthink.com",
+    "ecommercepartners.com"
+   ],
+   "error": null,
+   "chars": 5811
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.116315,
+   "mentioned": false,
+   "domains": [
+    "barrel.com",
+    "wemakewebsites.com",
+    "swankyagency.com",
+    "redstage.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "codal.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "mojoactive.com",
+    "mojoactive.com",
+    "mojoactive.com",
+    "corra.com",
+    "blueacornici.com",
+    "scandiweb.com",
+    "scandiweb.com",
+    "epam.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "scandiweb.com",
+    "scandiweb.com",
+    "scandiweb.com",
+    "borngroup.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "adobe.com",
+    "adobe.com",
+    "barrel.com",
+    "redstage.com",
+    "codal.com",
+    "corra.com",
+    "blueacornici.com"
+   ],
+   "error": null,
+   "chars": 5351
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.051565,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "brighterclick.com",
+    "majdra.com",
+    "silverbackstrategies.com",
+    "thriveagency.com",
+    "sweatpantsagency.com"
+   ],
+   "error": null,
+   "chars": 1837
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.05182,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "thriveagency.com",
+    "silverbackstrategies.com",
+    "majdra.com",
+    "yourgrowthpartner.io"
+   ],
+   "error": null,
+   "chars": 1868
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.051739,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "smartsites.com",
+    "silverbackstrategies.com",
+    "brighterclick.com",
+    "takticaldigital.com",
+    "interodigital.com"
+   ],
+   "error": null,
+   "chars": 1976
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.044949,
+   "mentioned": false,
+   "domains": [
+    "silverbackstrategies.com",
+    "gofishdigital.com",
+    "disruptiveadvertising.com",
+    "tinuiti.com",
+    "ignitevisibility.com",
+    "npdigital.com",
+    "thriveagency.com",
+    "webfx.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 3766
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.054829,
+   "mentioned": false,
+   "domains": [
+    "thriveagency.com",
+    "thriveagency.com",
+    "webfx.com",
+    "webfx.com",
+    "outerboxdesign.com",
+    "outerboxdesign.com",
+    "disruptiveadvertising.com",
+    "disruptiveadvertising.com",
+    "digitalsilk.com",
+    "digitalsilk.com"
+   ],
+   "error": null,
+   "chars": 5919
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.056535,
+   "mentioned": false,
+   "domains": [
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "cmarix.com",
+    "cmarix.com",
+    "exinent.com",
+    "exinent.com",
+    "evestar.com",
+    "evestar.com",
+    "gr0.com",
+    "gr0.com",
+    "socialseo.com",
+    "socialseo.com",
+    "theworkingparty.com",
+    "theworkingparty.com",
+    "bvacommerce.com",
+    "bvacommerce.com",
+    "swankyagency.com",
+    "swankyagency.com"
+   ],
+   "error": null,
+   "chars": 6879
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.023637,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "glamcreatives.com",
+    "thriveagency.com",
+    "mayple.com",
+    "agencyspotter.com"
+   ],
+   "error": null,
+   "chars": 4644
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.027207,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "glamcreatives.com",
+    "thesocialshepherd.com",
+    "canopymanagement.com",
+    "thriveagency.com",
+    "mayple.com",
+    "agencyspotter.com"
+   ],
+   "error": null,
+   "chars": 5695
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.026862,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "glamcreatives.com",
+    "thesocialshepherd.com",
+    "thriveagency.com",
+    "canopymanagement.com",
+    "sweatpantsagency.com"
+   ],
+   "error": null,
+   "chars": 5608
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.10455,
+   "mentioned": false,
+   "domains": [
+    "astoundcommerce.com",
+    "valtech.com",
+    "bounteous.com",
+    "iwdagency.com",
+    "corra.com",
+    "mobikasa.com",
+    "wpwebinfotech.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "forrester.com",
+    "forrester.com",
+    "iwdagency.com",
+    "iwdagency.com"
+   ],
+   "error": null,
+   "chars": 3876
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.10677,
+   "mentioned": false,
+   "domains": [
+    "valtech.com",
+    "astoundcommerce.com",
+    "iwdagency.com",
+    "scandiweb.com",
+    "mobikasa.com",
+    "polcode.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "raftlabs.com",
+    "raftlabs.com"
+   ],
+   "error": null,
+   "chars": 4000
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.10773,
+   "mentioned": false,
+   "domains": [
+    "valtech.com",
+    "astoundcommerce.com",
+    "scandiweb.com",
+    "iwdagency.com",
+    "mobikasa.com",
+    "polcode.com",
+    "wpwebinfotech.com",
+    "fjsolutions.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "raftlabs.com",
+    "scandiweb.com",
+    "scandiweb.com"
+   ],
+   "error": null,
+   "chars": 4164
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.046081,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "magnetoitsolutions.com",
+    "techanicinfotech.com",
+    "apptunix.com",
+    "americaneagle.com",
+    "orangemantra.com"
+   ],
+   "error": null,
+   "chars": 1559
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.045976,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "magnetoitsolutions.com",
+    "techanicinfotech.com",
+    "apptunix.com",
+    "americaneagle.com",
+    "orangemantra.com"
+   ],
+   "error": null,
+   "chars": 1586
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.046111,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "magnetoitsolutions.com",
+    "techanicinfotech.com",
+    "apptunix.com",
+    "americaneagle.com",
+    "orangemantra.com"
+   ],
+   "error": null,
+   "chars": 1550
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.046215,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "smartsites.com",
+    "gomage.com",
+    "tavanoteam.com",
+    "pixelunion.net",
+    "kaartech.com",
+    "atwix.com"
+   ],
+   "error": null,
+   "chars": 4102
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.046183,
+   "mentioned": false,
+   "domains": [
+    "techanicinfotech.com",
+    "agentosupport.com"
+   ],
+   "error": null,
+   "chars": 4737
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.05204625,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "capitalnumbers.com",
+    "mobikasa.com",
+    "mobikasa.com",
+    "cleveroad.com",
+    "cleveroad.com",
+    "smartsites.com",
+    "smartsites.com",
+    "pixelcrayons.com",
+    "pixelcrayons.com",
+    "kaartech.com",
+    "kaartech.com",
+    "gomage.com",
+    "gomage.com",
+    "tavanoteam.com",
+    "tavanoteam.com",
+    "pixelunion.net",
+    "pixelunion.net",
+    "techanicinfotech.com",
+    "techanicinfotech.com",
+    "vihadigitalcommerce.com",
+    "vihadigitalcommerce.com"
+   ],
+   "error": null,
+   "chars": 5814
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.029865,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "agentosupport.com",
+    "americaneagle.com",
+    "americaneagle.com",
+    "webfx.com",
+    "digitalsilk.com",
+    "elsner.com",
+    "grinteq.com",
+    "coalitiontechnologies.com",
+    "1digitalagency.com",
+    "arcticleaf.io",
+    "swiftotter.com"
+   ],
+   "error": null,
+   "chars": 6079
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.014235,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "digitalsilk.com",
+    "americaneagle.com",
+    "americaneagle.com",
+    "webfx.com",
+    "1digitalagency.com",
+    "orangemantra.com",
+    "arcticleaf.io",
+    "elsner.com",
+    "folio3.com",
+    "americaneagle.com",
+    "americaneagle.com"
+   ],
+   "error": null,
+   "chars": 1911
+  },
+  {
+   "keyword": "top ecommerce development company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.02925,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "absoluteweb.com",
+    "americaneagle.com",
+    "americaneagle.com",
+    "americaneagle.com",
+    "webfx.com",
+    "agentosupport.com",
+    "swiftotter.com",
+    "arcticleaf.io",
+    "smartsites.com",
+    "elsner.com",
+    "cmarix.com",
+    "coalitiontechnologies.com",
+    "folio3.com",
+    "digitalsilk.com",
+    "codal.com"
+   ],
+   "error": null,
+   "chars": 5542
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.090225,
+   "mentioned": false,
+   "domains": [
+    "shopify.com",
+    "shopify.com",
+    "meetdomaine.com",
+    "wemakewebsites.com",
+    "arcticgrey.com",
+    "eastsideco.com",
+    "netalico.com",
+    "bvacommerce.com",
+    "absoluteweb.com",
+    "ecommercepartners.com"
+   ],
+   "error": null,
+   "chars": 3022
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.107005,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "eastsideco.com",
+    "fuelmade.com",
+    "netalico.com",
+    "swankyagency.com",
+    "absoluteweb.com",
+    "coalitiontechnologies.com",
+    "fjsolutions.com",
+    "fyresite.com"
+   ],
+   "error": null,
+   "chars": 4321
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.09835,
+   "mentioned": false,
+   "domains": [
+    "meetdomaine.com",
+    "avexdesigns.com",
+    "eastsideco.com",
+    "blueswitch.com",
+    "netalico.com",
+    "arcticgrey.com",
+    "sherocommerce.com",
+    "superco.io",
+    "wemakewebsites.com",
+    "shopify.com",
+    "shopify.com"
+   ],
+   "error": null,
+   "chars": 2764
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.050335,
+   "mentioned": false,
+   "domains": [
+    "loungelizard.com",
+    "codal.com",
+    "controlf5.com",
+    "mlveda.com",
+    "digitlhaus.com"
+   ],
+   "error": null,
+   "chars": 1634
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.05107,
+   "mentioned": false,
+   "domains": [
+    "loungelizard.com",
+    "codal.com",
+    "controlf5.com",
+    "digitlhaus.com",
+    "mlveda.com",
+    "fuelmade.com",
+    "mobikasa.com"
+   ],
+   "error": null,
+   "chars": 1825
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.051205,
+   "mentioned": false,
+   "domains": [
+    "loungelizard.com",
+    "codal.com",
+    "controlf5.com",
+    "digitlhaus.com",
+    "mlveda.com",
+    "fuelmade.com",
+    "mobikasa.com"
+   ],
+   "error": null,
+   "chars": 1769
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.055284,
+   "mentioned": false,
+   "domains": [
+    "vaangroup.com",
+    "vaangroup.com",
+    "kingandpartners.com",
+    "kingandpartners.com",
+    "arcticgrey.com",
+    "arcticgrey.com",
+    "swankyagency.com",
+    "swankyagency.com",
+    "electriceye.io",
+    "electriceye.io"
+   ],
+   "error": null,
+   "chars": 6715
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.061891,
+   "mentioned": false,
+   "domains": [
+    "blueswitch.com",
+    "blueswitch.com",
+    "avexdesigns.com",
+    "avexdesigns.com",
+    "verbalplusvisual.com",
+    "verbalplusvisual.com",
+    "goshdigital.com",
+    "goshdigital.com",
+    "eseospace.com",
+    "eseospace.com",
+    "smartsites.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 6676
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.04621875,
+   "mentioned": false,
+   "domains": [],
+   "error": null,
+   "chars": 4785
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.02637,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "bvacommerce.com",
+    "diffagency.com",
+    "avexdesigns.com",
+    "magebit.com",
+    "halfhelix.com",
+    "eastsideco.com",
+    "helloroketto.com",
+    "sensters.com",
+    "taledigital.com",
+    "statementagency.com",
+    "absoluteweb.com",
+    "iwdagency.com",
+    "loungelizard.com"
+   ],
+   "error": null,
+   "chars": 5346
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.02874,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "avexdesigns.com",
+    "bvacommerce.com",
+    "magebit.com",
+    "diffagency.com",
+    "halfhelix.com",
+    "eastsideco.com",
+    "swankyagency.com",
+    "statementagency.com",
+    "helloroketto.com",
+    "glamcreatives.com",
+    "thepeachycompany.com"
+   ],
+   "error": null,
+   "chars": 5495
+  },
+  {
+   "keyword": "best shopify agency",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.02997,
+   "mentioned": false,
+   "domains": [
+    "glamcreatives.com",
+    "wemakewebsites.com",
+    "magebit.com",
+    "diffagency.com",
+    "bvacommerce.com",
+    "halfhelix.com",
+    "thepeachycompany.com",
+    "sensters.com",
+    "avexdesigns.com",
+    "statementagency.com",
+    "eastsideco.com",
+    "swankyagency.com",
+    "absoluteweb.com",
+    "loungelizard.com"
+   ],
+   "error": null,
+   "chars": 5930
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.10167,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "goinflow.com",
+    "tinuiti.com",
+    "roirevolution.com",
+    "logicalposition.com",
+    "smartsites.com",
+    "coalitiontechnologies.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "searchbloom.com",
+    "goinflow.com",
+    "tinuiti.com"
+   ],
+   "error": null,
+   "chars": 4073
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.091485,
+   "mentioned": false,
+   "domains": [
+    "goinflow.com",
+    "searchbloom.com",
+    "webfx.com",
+    "1digitalagency.com",
+    "smartsites.com",
+    "roirevolution.com",
+    "groovecommerce.com",
+    "outerboxdesign.com",
+    "coalitiontechnologies.com",
+    "digitalcommerce.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "bigcommerce.com",
+    "bigcommerce.com"
+   ],
+   "error": null,
+   "chars": 4320
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"The read operation timed out\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.050701,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "cpap.com",
+    "smartsites.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "aumcore.com",
+    "seoprofy.com"
+   ],
+   "error": null,
+   "chars": 2154
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.050356,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "cpap.com",
+    "smartsites.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "aumcore.com",
+    "seoprofy.com"
+   ],
+   "error": null,
+   "chars": 1981
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.048781,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "cpap.com",
+    "smartsites.com",
+    "outerbox.com",
+    "aumcore.com",
+    "webfx.com",
+    "seoprofy.com"
+   ],
+   "error": null,
+   "chars": 1745
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"The read operation timed out\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.053963,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "firstpagesage.com",
+    "outerbox.com",
+    "outerbox.com",
+    "victoriousseo.com",
+    "victoriousseo.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "smartsites.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 7062
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"The read operation timed out\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"Remote end closed connection without response\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.030225,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "goinflow.com",
+    "coalitiontechnologies.com",
+    "seoprofy.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "firstpagesage.com",
+    "thriveagency.com",
+    "1digitalagency.com"
+   ],
+   "error": null,
+   "chars": 6297
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "us",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.02811,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "goinflow.com",
+    "roirevolution.com",
+    "logicalposition.com",
+    "coalitiontechnologies.com",
+    "getpassionfruit.com",
+    "seoprofy.com",
+    "uncommonlogic.com",
+    "gofishdigital.com",
+    "thriveagency.com",
+    "1digitalagency.com",
+    "hawksem.com",
+    "smartsites.com",
+    "monsterclaw.com"
+   ],
+   "error": null,
+   "chars": 5019
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.11146,
+   "mentioned": false,
+   "domains": [
+    "outerboxdesign.com",
+    "goinflow.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "roirevolution.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "smartsites.com",
+    "coalitiontechnologies.com",
+    "groovecommerce.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "goinflow.com",
+    "searchbloom.com"
+   ],
+   "error": null,
+   "chars": 4689
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"Remote end closed connection without response\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0,
+   "mentioned": false,
+   "domains": [],
+   "error": "{\"error\": \"Remote end closed connection without response\"}"
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.049396,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "cpap.com",
+    "smartsites.com",
+    "outerbox.com",
+    "webfx.com",
+    "aumcore.com",
+    "seoprofy.com",
+    "fuelonline.com"
+   ],
+   "error": null,
+   "chars": 1840
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.049466,
+   "mentioned": false,
+   "domains": [
+    "thriveagency.com",
+    "thriveagency.com",
+    "outerbox.com",
+    "outerbox.com",
+    "victoriousseo.com",
+    "victoriousseo.com",
+    "firstpagesage.com",
+    "firstpagesage.com",
+    "scalerankings.com",
+    "scalerankings.com"
+   ],
+   "error": null,
+   "chars": 5180
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.064034,
+   "mentioned": false,
+   "domains": [
+    "scalerankings.com",
+    "thriveagency.com",
+    "victoriousseo.com",
+    "outerbox.com",
+    "smartsites.com",
+    "scalerankings.com",
+    "thriveagency.com",
+    "victoriousseo.com",
+    "outerbox.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 10247
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.050071,
+   "mentioned": false,
+   "domains": [
+    "outerbox.com",
+    "outerbox.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "ignitevisibility.com",
+    "ignitevisibility.com"
+   ],
+   "error": null,
+   "chars": 6452
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.029985,
+   "mentioned": false,
+   "domains": [
+    "firstpagesage.com",
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "outerbox.com",
+    "webfx.com",
+    "goinflow.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "seoprofy.com",
+    "victoriousseo.com",
+    "coalitiontechnologies.com",
+    "thriveagency.com",
+    "1digitalagency.com",
+    "monsterclaw.com",
+    "hawksem.com",
+    "getpassionfruit.com"
+   ],
+   "error": null,
+   "chars": 6125
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.02805,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "goinflow.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "coalitiontechnologies.com",
+    "seoprofy.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "thriveagency.com",
+    "monsterclaw.com",
+    "firstpagesage.com",
+    "1digitalagency.com",
+    "hawksem.com",
+    "resultfirst.com"
+   ],
+   "error": null,
+   "chars": 5466
+  },
+  {
+   "keyword": "best ecommerce seo company",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.02961,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "outerbox.com",
+    "goinflow.com",
+    "webfx.com",
+    "coalitiontechnologies.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "getpassionfruit.com",
+    "seoprofy.com",
+    "hawksem.com",
+    "thriveagency.com",
+    "1digitalagency.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 6532
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.10921,
+   "mentioned": false,
+   "domains": [
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "wemakewebsites.com",
+    "blueacornici.com",
+    "corra.com",
+    "vaimo.com",
+    "halfhelix.com",
+    "eastsideco.com",
+    "absoluteweb.com",
+    "americaneagle.com",
+    "americaneagle.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "ecommercepartners.com",
+    "halfhelix.com",
+    "corra.com",
+    "blueacornici.com",
+    "americaneagle.com",
+    "shopify.com",
+    "shopify.com"
+   ],
+   "error": null,
+   "chars": 5210
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.092045,
+   "mentioned": false,
+   "domains": [
+    "iwdagency.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "sherocommerce.com",
+    "sherocommerce.com",
+    "sherocommerce.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "omnycode.com",
+    "omnycode.com",
+    "omnycode.com",
+    "absoluteweb.com",
+    "blueacornici.com",
+    "corra.com",
+    "vaimo.com",
+    "scandiweb.com",
+    "wikipedia.org",
+    "wikipedia.org"
+   ],
+   "error": null,
+   "chars": 3988
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.10985,
+   "mentioned": false,
+   "domains": [
+    "iwdagency.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "fjsolutions.com",
+    "cronixweb.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "barrelny.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "lucentinnovation.com",
+    "sherocommerce.com",
+    "thinkmobiles.com",
+    "thinkmobiles.com"
+   ],
+   "error": null,
+   "chars": 5251
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.050275,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "brighterclick.com",
+    "majdra.com",
+    "silverbackstrategies.com",
+    "thriveagency.com",
+    "sweatpantsagency.com"
+   ],
+   "error": null,
+   "chars": 1502
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.051034,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "smartsites.com",
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "majdra.com",
+    "takticaldigital.com",
+    "interodigital.com"
+   ],
+   "error": null,
+   "chars": 1714
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.050899,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "smartsites.com",
+    "silverbackstrategies.com",
+    "brighterclick.com",
+    "takticaldigital.com"
+   ],
+   "error": null,
+   "chars": 1859
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.047814,
+   "mentioned": false,
+   "domains": [
+    "smartsites.com",
+    "bighuman.com",
+    "passionfruit.ai",
+    "outerboxdesign.com",
+    "webfx.com",
+    "vaimo.com",
+    "gofishdigital.com",
+    "npdigital.com",
+    "disruptiveadvertising.com"
+   ],
+   "error": null,
+   "chars": 4653
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.048089,
+   "mentioned": false,
+   "domains": [
+    "1digitalagency.com",
+    "absoluteweb.com",
+    "outerbox.com",
+    "npdigital.com",
+    "socialseo.com",
+    "thriveagency.com",
+    "digitalsilk.com",
+    "exinent.com",
+    "cmarix.com",
+    "inflow.com",
+    "gr0.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 5524
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.051695,
+   "mentioned": false,
+   "domains": [
+    "thriveagency.com",
+    "thriveagency.com",
+    "digitalsilk.com",
+    "digitalsilk.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "outerboxdesign.com",
+    "outerboxdesign.com",
+    "smartsites.com",
+    "smartsites.com",
+    "loungelizard.com",
+    "loungelizard.com",
+    "disruptiveadvertising.com",
+    "disruptiveadvertising.com"
+   ],
+   "error": null,
+   "chars": 4908
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.023472,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "glamcreatives.com",
+    "thriveagency.com",
+    "hawkemedia.com",
+    "mutesix.com",
+    "commonthreadco.com",
+    "topgrowthmarketing.com",
+    "sweatpantsagency.com",
+    "canopymanagement.com",
+    "structuredagency.com",
+    "silverbackstrategies.com",
+    "thesocialshepherd.com",
+    "growthmarketingpro.com"
+   ],
+   "error": null,
+   "chars": 4621
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.025182,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "glamcreatives.com",
+    "topgrowthmarketing.com",
+    "mutesix.com",
+    "hawkemedia.com",
+    "commonthreadco.com",
+    "disruptiveadvertising.com",
+    "tinuiti.com",
+    "smartsites.com",
+    "1digitalagency.com",
+    "coalitiontechnologies.com"
+   ],
+   "error": null,
+   "chars": 4727
+  },
+  {
+   "keyword": "best ecommerce agency",
+   "geo": "uk",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.022332,
+   "mentioned": false,
+   "domains": [
+    "brighterclick.com",
+    "silverbackstrategies.com",
+    "tinuiti.com",
+    "glamcreatives.com",
+    "growthhit.com",
+    "disruptiveadvertising.com",
+    "hawkemedia.com",
+    "smartsites.com",
+    "thesocialshepherd.com",
+    "mutesix.com",
+    "avexdesigns.com",
+    "coalitiontechnologies.com",
+    "absoluteweb.com"
+   ],
+   "error": null,
+   "chars": 4069
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.105285,
+   "mentioned": false,
+   "domains": [
+    "ehousestudio.com",
+    "absoluteweb.com",
+    "netalico.com",
+    "arcticgrey.com",
+    "wemakewebsites.com",
+    "eastsideco.com",
+    "lim-media.com",
+    "shopify.com",
+    "shopify.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "digitlhaus.com",
+    "fyresite.com"
+   ],
+   "error": null,
+   "chars": 4641
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.11755,
+   "mentioned": false,
+   "domains": [
+    "absoluteweb.com",
+    "ambaum.com",
+    "ecommercepartners.com",
+    "digitlhaus.com",
+    "fyresite.com",
+    "newthink.com",
+    "robeka.com",
+    "raymondmatthew.com",
+    "netalico.com",
+    "arcticgrey.com",
+    "ambaum.com",
+    "ambaum.com",
+    "ambaum.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "digitlhaus.com",
+    "raymondmatthew.com",
+    "raymondmatthew.com",
+    "raymondmatthew.com",
+    "robeka.com",
+    "robeka.com",
+    "robeka.com",
+    "newthink.com",
+    "newthink.com",
+    "newthink.com",
+    "fyresite.com",
+    "ambaum.com",
+    "ecommercepartners.com",
+    "digitlhaus.com"
+   ],
+   "error": null,
+   "chars": 6031
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.102935,
+   "mentioned": false,
+   "domains": [
+    "meetdomaine.com",
+    "wemakewebsites.com",
+    "halfhelix.com",
+    "eastsideco.com",
+    "avexdesigns.com",
+    "arcticgrey.com",
+    "absoluteweb.com",
+    "firstpier.com",
+    "fyresite.com",
+    "agencycluster.com",
+    "agencycluster.com",
+    "shopify.com",
+    "shopify.com"
+   ],
+   "error": null,
+   "chars": 3786
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.05188,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "wemakewebsites.com",
+    "digitalsilk.com",
+    "mobikasa.com",
+    "wildnetedge.com",
+    "uncap.com",
+    "dyode.com"
+   ],
+   "error": null,
+   "chars": 1327
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.05188,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "wemakewebsites.com",
+    "digitalsilk.com",
+    "wildnetedge.com",
+    "mobikasa.com",
+    "uncap.com",
+    "swankyagency.com"
+   ],
+   "error": null,
+   "chars": 1334
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.052765,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "digitalsilk.com",
+    "wildnetedge.com",
+    "mobikasa.com",
+    "uncap.com",
+    "swanky.com",
+    "instinctools.com"
+   ],
+   "error": null,
+   "chars": 1514
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.054188,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "netalico.com",
+    "codal.com",
+    "praella.com",
+    "absoluteweb.com"
+   ],
+   "error": null,
+   "chars": 6294
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.047919,
+   "mentioned": false,
+   "domains": [
+    "fyresite.com",
+    "fyresite.com",
+    "brainvire.com",
+    "brainvire.com",
+    "codal.com",
+    "codal.com",
+    "expertvillagemedia.com",
+    "expertvillagemedia.com",
+    "uncap.com",
+    "uncap.com",
+    "avexdesigns.com",
+    "avexdesigns.com",
+    "elkfox.com",
+    "elkfox.com",
+    "craftberry.com",
+    "craftberry.com"
+   ],
+   "error": null,
+   "chars": 4525
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.06721875,
+   "mentioned": false,
+   "domains": [
+    "swankyagency.com",
+    "swankyagency.com",
+    "eastsideco.com",
+    "eastsideco.com",
+    "fyresite.com",
+    "fyresite.com",
+    "bigfoliollc.com",
+    "bigfoliollc.com",
+    "netalico.com",
+    "netalico.com",
+    "controlf5.com",
+    "controlf5.com",
+    "brainvire.com",
+    "brainvire.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "optimum7.com",
+    "optimum7.com",
+    "swankyagency.com",
+    "swankyagency.com",
+    "eastsideco.com",
+    "eastsideco.com",
+    "fyresite.com",
+    "fyresite.com",
+    "bigfoliollc.com",
+    "bigfoliollc.com",
+    "netalico.com",
+    "netalico.com",
+    "controlf5.com",
+    "controlf5.com",
+    "brainvire.com",
+    "brainvire.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "optimum7.com",
+    "optimum7.com"
+   ],
+   "error": null,
+   "chars": 11185
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.022443,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "avexdesigns.com",
+    "vtlabs.com",
+    "netalico.com",
+    "wolfpointagency.com",
+    "netguru.com",
+    "controlf5.in",
+    "coalitiontechnologies.com",
+    "f22labs.com",
+    "itgeeks.com",
+    "pointeragency.com",
+    "capitalnumbers.com",
+    "elsner.com",
+    "dynamicdreamz.com"
+   ],
+   "error": null,
+   "chars": 3695
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.029328,
+   "mentioned": false,
+   "domains": [
+    "netguru.com",
+    "wemakewebsites.com",
+    "avexdesigns.com",
+    "netalico.com",
+    "vtlabs.org",
+    "itgeeks.com",
+    "coalitiontechnologies.com",
+    "f22labs.com",
+    "capitalnumbers.com",
+    "wolfpointagency.com"
+   ],
+   "error": null,
+   "chars": 5598
+  },
+  {
+   "keyword": "best shopify development company",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.023928,
+   "mentioned": false,
+   "domains": [
+    "wemakewebsites.com",
+    "avexdesigns.com",
+    "netalico.com",
+    "vtlabs.org",
+    "netguru.com",
+    "f22labs.com",
+    "controlf5.in",
+    "coalitiontechnologies.com",
+    "pointeragency.com",
+    "itgeeks.com",
+    "sherocommerce.com",
+    "capitalnumbers.com",
+    "dynamicdreamz.com",
+    "elsner.com",
+    "brainvire.com"
+   ],
+   "error": null,
+   "chars": 4267
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.09895,
+   "mentioned": false,
+   "domains": [
+    "goinflow.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "outerboxdesign.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "1digitalagency.com",
+    "coalitiontechnologies.com"
+   ],
+   "error": null,
+   "chars": 3241
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.09997,
+   "mentioned": false,
+   "domains": [
+    "inflow.com",
+    "goinflow.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "1digitalagency.com",
+    "thebusinessrover.com",
+    "thebusinessrover.com",
+    "smartsites.com",
+    "coalitiontechnologies.com",
+    "roirevolution.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "groovecommerce.com",
+    "searchbloom.com",
+    "searchbloom.com"
+   ],
+   "error": null,
+   "chars": 3832
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.0949,
+   "mentioned": false,
+   "domains": [
+    "goinflow.com",
+    "searchbloom.com",
+    "roirevolution.com",
+    "outerboxdesign.com",
+    "smartsites.com",
+    "hawksem.com",
+    "groovecommerce.com",
+    "coalitiontechnologies.com",
+    "victorious.com",
+    "blueswitch.com"
+   ],
+   "error": null,
+   "chars": 3616
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.049288,
+   "mentioned": false,
+   "domains": [
+    "victorious.com",
+    "searchbloom.com",
+    "webfx.com",
+    "onelittleweb.com",
+    "seoprofy.com"
+   ],
+   "error": null,
+   "chars": 1827
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.049588,
+   "mentioned": false,
+   "domains": [
+    "victorious.com",
+    "searchbloom.com",
+    "webfx.com",
+    "seoprofy.com",
+    "wytlabs.com",
+    "onelittleweb.com"
+   ],
+   "error": null,
+   "chars": 1780
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.049213,
+   "mentioned": false,
+   "domains": [
+    "victorious.com",
+    "searchbloom.com",
+    "webfx.com",
+    "seoprofy.com",
+    "onelittleweb.com",
+    "wytlabs.com"
+   ],
+   "error": null,
+   "chars": 1545
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.05263125,
+   "mentioned": false,
+   "domains": [
+    "scalerankings.com",
+    "scalerankings.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "thriveagency.com",
+    "thriveagency.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "outerboxdesign.com",
+    "outerboxdesign.com",
+    "victoriousseo.com",
+    "victoriousseo.com",
+    "smartsites.com",
+    "smartsites.com",
+    "goinflow.com",
+    "goinflow.com",
+    "thisisnovos.com",
+    "thisisnovos.com",
+    "firstpagesage.com",
+    "firstpagesage.com",
+    "aumcore.com",
+    "aumcore.com",
+    "avexdesigns.com",
+    "avexdesigns.com",
+    "sellerinteractive.com",
+    "sellerinteractive.com"
+   ],
+   "error": null,
+   "chars": 5852
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.05257,
+   "mentioned": false,
+   "domains": [
+    "scalerankings.com",
+    "scalerankings.com",
+    "thriveagency.com",
+    "thriveagency.com",
+    "victoriousseo.com",
+    "victoriousseo.com",
+    "outerbox.com",
+    "outerbox.com",
+    "searchbloom.com",
+    "searchbloom.com",
+    "thisisnovos.com",
+    "thisisnovos.com",
+    "goinflow.com",
+    "goinflow.com"
+   ],
+   "error": null,
+   "chars": 6352
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.053188,
+   "mentioned": false,
+   "domains": [
+    "scalerankings.com",
+    "thriveagency.com",
+    "victoriousseo.com",
+    "prostockhockey.com",
+    "outerbox.com"
+   ],
+   "error": null,
+   "chars": 6049
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.02781,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "goinflow.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "webfx.com",
+    "outerboxdesign.com",
+    "coalitiontechnologies.com",
+    "1digitalagency.com",
+    "seoprofy.com",
+    "onelittleweb.com",
+    "webtonic.io",
+    "thriveagency.com",
+    "avidonmarketinggroup.com",
+    "firstpagesage.com"
+   ],
+   "error": null,
+   "chars": 5572
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.02523,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "goinflow.com",
+    "roirevolution.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "seoprofy.com",
+    "victoriousseo.com",
+    "hawksem.com",
+    "coalitiontechnologies.com",
+    "1digitalagency.com",
+    "webfx.com",
+    "outerboxdesign.com",
+    "thriveagency.com",
+    "epsilon.com",
+    "firstpagesage.com",
+    "siegemedia.com",
+    "onelittleweb.com",
+    "webtonic.io",
+    "avidonmarketinggroup.com",
+    "outpaceseo.com",
+    "highvoltageseo.com",
+    "minddigital.com",
+    "eclipsemarketing.io"
+   ],
+   "error": null,
+   "chars": 5002
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "geo": "india",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.01359,
+   "mentioned": false,
+   "domains": [
+    "searchbloom.com",
+    "outerboxdesign.com",
+    "webfx.com",
+    "inflow.com",
+    "victorious.com",
+    "seoprofy.com",
+    "tinuiti.com",
+    "logicalposition.com",
+    "firstpagesage.com",
+    "onelittleweb.com"
+   ],
+   "error": null,
+   "chars": 1784
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.105765,
+   "mentioned": false,
+   "domains": [
+    "iwdagency.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "sherocommerce.com",
+    "sherocommerce.com",
+    "sherocommerce.com",
+    "scandiweb.com",
+    "wikipedia.org",
+    "wikipedia.org",
+    "corra.com",
+    "bounteous.com",
+    "human-element.com",
+    "websolutionsnyc.com",
+    "absoluteweb.com"
+   ],
+   "error": null,
+   "chars": 4615
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.105105,
+   "mentioned": false,
+   "domains": [
+    "coalitiontechnologies.com",
+    "eastsideco.com",
+    "wemakewebsites.com",
+    "blueacornici.com",
+    "netguru.com",
+    "scandiweb.com",
+    "omnycode.com",
+    "fyresite.com",
+    "uncap.com",
+    "shopify.com",
+    "shopify.com"
+   ],
+   "error": null,
+   "chars": 4778
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.10177,
+   "mentioned": false,
+   "domains": [
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "scandiweb.com",
+    "corra.com",
+    "blueacornici.com",
+    "wemakewebsites.com",
+    "irishtitan.com",
+    "absoluteweb.com",
+    "coalitiontechnologies.com",
+    "fjsolutions.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "scandiweb.com",
+    "scandiweb.com"
+   ],
+   "error": null,
+   "chars": 4101
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.046534,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "sparxitsolutions.com",
+    "wildnetedge.com"
+   ],
+   "error": null,
+   "chars": 1523
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.047779,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "sparxitsolutions.com",
+    "wildnetedge.com",
+    "techanicinfotech.com",
+    "appschopper.com"
+   ],
+   "error": null,
+   "chars": 1797
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.046654,
+   "mentioned": false,
+   "domains": [
+    "instinctools.com",
+    "sparxitsolutions.com",
+    "wildnetedge.com"
+   ],
+   "error": null,
+   "chars": 1492
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.044643,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "capitalnumbers.com",
+    "smartsites.com",
+    "smartsites.com",
+    "tavanoteam.com",
+    "tavanoteam.com",
+    "gomage.com",
+    "gomage.com",
+    "kaartech.com",
+    "kaartech.com"
+   ],
+   "error": null,
+   "chars": 4115
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.0532525,
+   "mentioned": false,
+   "domains": [
+    "thriveagency.com",
+    "thriveagency.com",
+    "parallelhq.com",
+    "parallelhq.com",
+    "silverbackstrategies.com",
+    "silverbackstrategies.com",
+    "outerbox.com",
+    "outerbox.com",
+    "unifiedinfotech.com",
+    "unifiedinfotech.com",
+    "newwave-solutions.com",
+    "newwave-solutions.com",
+    "disruptiveadvertising.com",
+    "disruptiveadvertising.com",
+    "smartsites.com",
+    "smartsites.com"
+   ],
+   "error": null,
+   "chars": 7196
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.049871,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "smartsites.com",
+    "tavanoteam.com",
+    "gomage.com",
+    "outerbox.com",
+    "thriveagency.com"
+   ],
+   "error": null,
+   "chars": 6047
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.028443,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "magnetoitsolutions.com",
+    "orangemantra.com",
+    "webfx.com",
+    "superside.com",
+    "orbitmedia.com",
+    "digitalsilk.com",
+    "absoluteweb.com",
+    "loungelizard.com",
+    "rno1.com",
+    "emizentech.com",
+    "intexsoft.com",
+    "thesiteslinger.com",
+    "bluefountainmedia.com",
+    "smartsites.com",
+    "coalitiontechnologies.com"
+   ],
+   "error": null,
+   "chars": 5158
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.030483,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "webfx.com",
+    "loungelizard.com",
+    "absoluteweb.com",
+    "ripemedia.com",
+    "intexsoft.com",
+    "magnetoitsolutions.com",
+    "brainvire.com",
+    "konstantinfo.com",
+    "elsner.com",
+    "magenest.com",
+    "superside.com"
+   ],
+   "error": null,
+   "chars": 5792
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.024633,
+   "mentioned": false,
+   "domains": [
+    "capitalnumbers.com",
+    "intexsoft.com",
+    "konstantinfo.com",
+    "iflexion.com",
+    "superside.com",
+    "digitalsilk.com",
+    "webfx.com",
+    "bigdropinc.com",
+    "absoluteweb.com",
+    "elsner.com",
+    "rno1.com",
+    "mobikasa.com",
+    "magnetoitsolutions.com",
+    "brainvire.com",
+    "mageplaza.com"
+   ],
+   "error": null,
+   "chars": 4746
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 0,
+   "cost": 0.099935,
+   "mentioned": false,
+   "domains": [
+    "vaangroup.com",
+    "verbalplusvisual.com",
+    "wemakewebsites.com",
+    "absoluteweb.com",
+    "scandiweb.com",
+    "barrelny.com",
+    "avexdesigns.com",
+    "eastsideco.com",
+    "shopify.com",
+    "shopify.com"
+   ],
+   "error": null,
+   "chars": 3753
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 1,
+   "cost": 0.10653,
+   "mentioned": false,
+   "domains": [
+    "swankyagency.com",
+    "swankyagency.com",
+    "swankyagency.com",
+    "absoluteweb.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "iwdagency.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "ecommercepartners.com",
+    "sunriseintegration.com",
+    "sunriseintegration.com",
+    "sunriseintegration.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "digitawise.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "moburst.com"
+   ],
+   "error": null,
+   "chars": 4661
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "chat_gpt",
+   "run": 2,
+   "cost": 0.10257,
+   "mentioned": false,
+   "domains": [
+    "vaangroup.com",
+    "shopify.com",
+    "shopify.com",
+    "verbalplusvisual.com",
+    "shopify.com",
+    "shopify.com",
+    "meetdomaine.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "avexdesigns.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "netalico.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "arcticgrey.com",
+    "blackbeltcommerce.com",
+    "blackbeltcommerce.com",
+    "wemakewebsites.com",
+    "bigcommerce.com",
+    "bigcommerce.com",
+    "absoluteweb.com",
+    "scandiweb.com",
+    "bigcommerce.com",
+    "bigcommerce.com"
+   ],
+   "error": null,
+   "chars": 5660
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 0,
+   "cost": 0.055264,
+   "mentioned": false,
+   "domains": [
+    "digitalsilk.com",
+    "webfx.com",
+    "dotlogics.com"
+   ],
+   "error": null,
+   "chars": 1990
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 1,
+   "cost": 0.057019,
+   "mentioned": false,
+   "domains": [
+    "digitalsilk.com",
+    "webfx.com",
+    "dotlogics.com"
+   ],
+   "error": null,
+   "chars": 2842
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "claude",
+   "run": 2,
+   "cost": 0.056899,
+   "mentioned": false,
+   "domains": [
+    "digitalsilk.com",
+    "coalitiontechnologies.com",
+    "webfx.com",
+    "redstage.com",
+    "corra.com",
+    "dotlogics.com"
+   ],
+   "error": null,
+   "chars": 2580
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 0,
+   "cost": 0.054029,
+   "mentioned": false,
+   "domains": [],
+   "error": null,
+   "chars": 957
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 1,
+   "cost": 0.04494,
+   "mentioned": false,
+   "domains": [
+    "webfx.com",
+    "webfx.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "outerboxdesign.com",
+    "outerboxdesign.com",
+    "avexdesigns.com",
+    "avexdesigns.com",
+    "thriveds.com",
+    "thriveds.com"
+   ],
+   "error": null,
+   "chars": 3769
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "gemini",
+   "run": 2,
+   "cost": 0.055881,
+   "mentioned": false,
+   "domains": [
+    "thriveagency.com",
+    "thriveagency.com",
+    "smartsites.com",
+    "smartsites.com",
+    "webfx.com",
+    "webfx.com",
+    "outerbox.com",
+    "outerbox.com",
+    "groovecommerce.com",
+    "groovecommerce.com",
+    "wagento.com",
+    "wagento.com",
+    "coalitiontechnologies.com",
+    "coalitiontechnologies.com",
+    "ramotion.com",
+    "ramotion.com",
+    "designstudiouiux.com",
+    "designstudiouiux.com",
+    "orbitmedia.com",
+    "orbitmedia.com"
+   ],
+   "error": null,
+   "chars": 6788
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 0,
+   "cost": 0.02715,
+   "mentioned": false,
+   "domains": [
+    "onelittleweb.com",
+    "superside.com",
+    "webfx.com",
+    "outerboxdesign.com",
+    "outerbox.com",
+    "outerboxdesign.com",
+    "smartsites.com",
+    "thefreewebsiteguys.com",
+    "wholesale2b.com",
+    "bigredjelly.com",
+    "unifiedinfotech.net",
+    "magnetoitsolutions.com",
+    "ateamsoftsolutions.com",
+    "newwave-solutions.com",
+    "disruptiveadvertising.com",
+    "thriveagency.com",
+    "parallelhq.com",
+    "cmsmart.net",
+    "webkul.com",
+    "absoluteweb.com",
+    "coalitiontechnologies.com",
+    "orbitmedia.com",
+    "1digitalagency.com",
+    "blankandco.com",
+    "webdesignrankings.com",
+    "onelittleweb.com",
+    "awesomic.com"
+   ],
+   "error": null,
+   "chars": 5217
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 1,
+   "cost": 0.01374,
+   "mentioned": false,
+   "domains": [
+    "superside.com",
+    "webfx.com",
+    "onelittleweb.com",
+    "smartsites.com",
+    "outerboxdesign.com",
+    "digitalsilk.com",
+    "coalitiontechnologies.com"
+   ],
+   "error": null,
+   "chars": 1915
+  },
+  {
+   "keyword": "best ecommerce web design",
+   "geo": "uae",
+   "llm": "perplexity",
+   "run": 2,
+   "cost": 0.030135,
+   "mentioned": false,
+   "domains": [
+    "superside.com",
+    "onelittleweb.com",
+    "parallelhq.com",
+    "webfx.com",
+    "outerboxdesign.com",
+    "outerbox.com",
+    "outerboxdesign.com",
+    "unifiedinfotech.net",
+    "magnetoitsolutions.com",
+    "groovecommerce.com",
+    "thefreewebsiteguys.com",
+    "smartsites.com",
+    "bigredjelly.com",
+    "wholesale2b.com",
+    "cmsmart.net",
+    "webkul.com",
+    "absoluteweb.com",
+    "1digitalagency.com",
+    "blankandco.com",
+    "coalitiontechnologies.com",
+    "thriveagency.com"
+   ],
+   "error": null,
+   "chars": 5843
+  }
+ ],
+ "runs": 3,
+ "owners": {
+  "organic": [
+   [
+    "firstpagesage.com",
+    5
+   ],
+   [
+    "www.clickpost.ai",
+    3
+   ],
+   [
+    "agencies.semrush.com",
+    3
+   ],
+   [
+    "www.polarisagency.com",
+    3
+   ],
+   [
+    "www.charle.co.uk",
+    3
+   ],
+   [
+    "www.orangemantra.com",
+    3
+   ],
+   [
+    "www.lusciousleopard.com",
+    3
+   ],
+   [
+    "digitalagencynetwork.com",
+    2
+   ],
+   [
+    "www.forbes.com",
+    2
+   ],
+   [
+    "www.dash.app",
+    2
+   ],
+   [
+    "www.shopify.com",
+    2
+   ],
+   [
+    "netalico.com",
+    2
+   ],
+   [
+    "www.aitrillion.com",
+    2
+   ],
+   [
+    "www.manektech.com",
+    2
+   ],
+   [
+    "www.awwwards.com",
+    2
+   ],
+   [
+    "www.cssdesignawards.com",
+    2
+   ],
+   [
+    "www.limely.co.uk",
+    2
+   ],
+   [
+    "dribbble.com",
+    2
+   ],
+   [
+    "ecomm.design",
+    2
+   ],
+   [
+    "www.siteinspire.com",
+    2
+   ],
+   [
+    "www.outerboxdesign.com",
+    2
+   ],
+   [
+    "www.munro.agency",
+    2
+   ],
+   [
+    "www.seobusiness.co.uk",
+    2
+   ],
+   [
+    "www.clickslice.co.uk",
+    2
+   ],
+   [
+    "ecommercerevolt.co.uk",
+    2
+   ],
+   [
+    "penninetechnolabs.com",
+    2
+   ],
+   [
+    "codifyinfotech.com",
+    2
+   ],
+   [
+    "www.icreativetechnologies.com",
+    2
+   ],
+   [
+    "www.roihunt.in",
+    2
+   ],
+   [
+    "www.growthmarketingpro.com",
+    1
+   ],
+   [
+    "sweatpantsagency.com",
+    1
+   ],
+   [
+    "topgrowthmarketing.com",
+    1
+   ],
+   [
+    "selectedfirms.co",
+    1
+   ],
+   [
+    "www.50pros.com",
+    1
+   ],
+   [
+    "soloway.tech",
+    1
+   ],
+   [
+    "www.agentosupport.com",
+    1
+   ],
+   [
+    "www.rightfirms.co",
+    1
+   ],
+   [
+    "www.setubridge.com",
+    1
+   ],
+   [
+    "aureatelabs.com",
+    1
+   ],
+   [
+    "seventhtriangle.com",
+    1
+   ]
+  ],
+  "aio": [
+   [
+    "thriveagency.com",
+    3
+   ],
+   [
+    "www.outerboxdesign.com",
+    3
+   ],
+   [
+    "www.forbes.com",
+    2
+   ],
+   [
+    "www.outsourceaccelerator.com",
+    2
+   ],
+   [
+    "dribbble.com",
+    2
+   ],
+   [
+    "www.brainvire.com",
+    2
+   ],
+   [
+    "sherocommerce.com",
+    2
+   ],
+   [
+    "www.icreativetechnologies.com",
+    2
+   ],
+   [
+    "www.resultfirst.com",
+    2
+   ],
+   [
+    "www.get-ryze.ai",
+    2
+   ],
+   [
+    "www.seobusiness.co.uk",
+    2
+   ],
+   [
+    "www.seoworks.co.uk",
+    2
+   ],
+   [
+    "codifyinfotech.com",
+    2
+   ],
+   [
+    "www.google.com",
+    2
+   ],
+   [
+    "www.stryde.com",
+    1
+   ],
+   [
+    "flowium.com",
+    1
+   ],
+   [
+    "www.elsner.com",
+    1
+   ],
+   [
+    "www.hireinsouth.com",
+    1
+   ],
+   [
+    "www.netguru.com",
+    1
+   ],
+   [
+    "netalico.com",
+    1
+   ],
+   [
+    "vservesolution.com",
+    1
+   ],
+   [
+    "qikify.com",
+    1
+   ],
+   [
+    "alwaysopencommerce.com",
+    1
+   ],
+   [
+    "www.toolshero.com",
+    1
+   ],
+   [
+    "www.cssdesignawards.com",
+    1
+   ],
+   [
+    "www.hostinger.com",
+    1
+   ],
+   [
+    "vervaunt.com",
+    1
+   ],
+   [
+    "elementor.com",
+    1
+   ],
+   [
+    "fluentcart.com",
+    1
+   ],
+   [
+    "ecomm.design",
+    1
+   ],
+   [
+    "www.limely.co.uk",
+    1
+   ],
+   [
+    "seahawkmedia.com",
+    1
+   ],
+   [
+    "enozom.com",
+    1
+   ],
+   [
+    "www.indiehackers.com",
+    1
+   ],
+   [
+    "www.searchbloom.com",
+    1
+   ],
+   [
+    "www.1digitalagency.com",
+    1
+   ],
+   [
+    "magnetoitsolutions.com",
+    1
+   ],
+   [
+    "thetransformagency.com",
+    1
+   ],
+   [
+    "www.ravedigital.agency",
+    1
+   ],
+   [
+    "firstpagesage.com",
+    1
+   ]
+  ],
+  "llm": [
+   [
+    "coalitiontechnologies.com",
+    40
+   ],
+   [
+    "smartsites.com",
+    35
+   ],
+   [
+    "webfx.com",
+    33
+   ],
+   [
+    "thriveagency.com",
+    28
+   ],
+   [
+    "outerboxdesign.com",
+    23
+   ],
+   [
+    "absoluteweb.com",
+    23
+   ],
+   [
+    "wemakewebsites.com",
+    22
+   ],
+   [
+    "1digitalagency.com",
+    20
+   ],
+   [
+    "searchbloom.com",
+    19
+   ],
+   [
+    "outerbox.com",
+    16
+   ],
+   [
+    "digitalsilk.com",
+    15
+   ],
+   [
+    "avexdesigns.com",
+    15
+   ],
+   [
+    "goinflow.com",
+    15
+   ],
+   [
+    "seoprofy.com",
+    15
+   ],
+   [
+    "silverbackstrategies.com",
+    14
+   ],
+   [
+    "eastsideco.com",
+    13
+   ],
+   [
+    "capitalnumbers.com",
+    13
+   ],
+   [
+    "roirevolution.com",
+    13
+   ],
+   [
+    "firstpagesage.com",
+    13
+   ],
+   [
+    "tinuiti.com",
+    12
+   ],
+   [
+    "brighterclick.com",
+    11
+   ],
+   [
+    "netalico.com",
+    11
+   ],
+   [
+    "mobikasa.com",
+    10
+   ],
+   [
+    "shopify.com",
+    9
+   ],
+   [
+    "ecommercepartners.com",
+    9
+   ],
+   [
+    "scandiweb.com",
+    9
+   ],
+   [
+    "swankyagency.com",
+    9
+   ],
+   [
+    "instinctools.com",
+    9
+   ],
+   [
+    "logicalposition.com",
+    9
+   ],
+   [
+    "onelittleweb.com",
+    9
+   ],
+   [
+    "disruptiveadvertising.com",
+    8
+   ],
+   [
+    "glamcreatives.com",
+    8
+   ],
+   [
+    "iwdagency.com",
+    8
+   ],
+   [
+    "magnetoitsolutions.com",
+    8
+   ],
+   [
+    "loungelizard.com",
+    8
+   ],
+   [
+    "victoriousseo.com",
+    8
+   ],
+   [
+    "corra.com",
+    7
+   ],
+   [
+    "codal.com",
+    7
+   ],
+   [
+    "americaneagle.com",
+    7
+   ],
+   [
+    "elsner.com",
+    7
+   ],
+   [
+    "arcticgrey.com",
+    7
+   ],
+   [
+    "fyresite.com",
+    7
+   ],
+   [
+    "fjsolutions.com",
+    6
+   ],
+   [
+    "bigcommerce.com",
+    6
+   ],
+   [
+    "techanicinfotech.com",
+    6
+   ],
+   [
+    "groovecommerce.com",
+    6
+   ],
+   [
+    "hawksem.com",
+    6
+   ],
+   [
+    "wildnetedge.com",
+    6
+   ],
+   [
+    "superside.com",
+    6
+   ],
+   [
+    "blueacornici.com",
+    5
+   ],
+   [
+    "bvacommerce.com",
+    5
+   ],
+   [
+    "orangemantra.com",
+    5
+   ],
+   [
+    "sherocommerce.com",
+    5
+   ],
+   [
+    "digitlhaus.com",
+    5
+   ],
+   [
+    "halfhelix.com",
+    5
+   ],
+   [
+    "aumcore.com",
+    5
+   ],
+   [
+    "scalerankings.com",
+    5
+   ],
+   [
+    "uncap.com",
+    5
+   ],
+   [
+    "brainvire.com",
+    5
+   ],
+   [
+    "victorious.com",
+    5
+   ]
+  ]
+ }
+}
