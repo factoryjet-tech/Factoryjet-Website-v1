@@ -149,11 +149,6 @@ const SHOPIFY_howToSchema = {
   '@id': 'https://factoryjet.com/shopify-development#howto',
   name: 'How FactoryJet builds your Shopify store in 7 days',
   description: 'Our 5-stage process for delivering a high-converting Shopify store for Indian D2C brands.',
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '34999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -637,13 +632,13 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'trust',
     question: 'Which is the best Shopify development company in India?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed written price — and yes, we are the best agency to build a Shopify store fast, with standard stores launching in one week. The best Shopify development agency in India for you still depends on scope: a brand moving to Shopify Plus needs the best Shopify Plus agency in India capabilities, while a first store needs conversion basics from the best Shopify website design company in India it can afford. Whoever you compare among the best Shopify experts in India, ask for store speed scores — that is what the best Shopify development services in India are measured on.',
+      'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed, written price, with standard builds launching in one week. The best agency for you still depends on scope though — a brand moving to Shopify Plus needs real Plus migration experience, while a first store mostly needs solid conversion fundamentals at a price that fits. Whoever you compare us against, ask to see real store speed scores before deciding — that is usually what separates a strong Shopify build from an average one.',
   },
   {
     category: 'trust',
     question: 'What are the top 10 Shopify development companies in India?',
     answer:
-      'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a fixed quote confirmed up front, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.',
+      'Lists like this usually rank by portfolio size, which is the wrong filter for a small business picking a Shopify partner. What actually matters: who writes the code (not who resells the work), a fixed quote confirmed up front, and real launch speed. Judge any top 10 roundup — including ours — by those three things, not by how many logos sit in the portfolio.',
   },
   {
     category: 'cost',

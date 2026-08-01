@@ -367,7 +367,7 @@ export default function BestEcommercePlatformsPage() {
               <div>
                 <p className="pp-eyebrow">Best ecommerce platforms</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '17ch' }}>
-                  The best ecommerce platform is <span className="pp-grad">the one that fits you.</span>
+                  The best ecommerce platform is the one that fits you.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   An honest, side-by-side look at the top ecommerce platforms: Shopify, BigCommerce, Adobe Commerce,
@@ -534,6 +534,20 @@ export default function BestEcommercePlatformsPage() {
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{b.d}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Mid-page CTA ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// before you decide</p>
+            <h2 style={{ marginTop: '10px' }}>Still weighing Shopify vs BigCommerce vs the rest?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Tell us your catalog size and budget. We will give you a straight platform recommendation, not a sales pitch.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Get a free platform audit" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

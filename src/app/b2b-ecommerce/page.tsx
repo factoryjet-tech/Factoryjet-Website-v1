@@ -170,15 +170,12 @@ export default function B2BEcommercePage() {
 
         {/* ── Hero ── */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          {/* aurora orbs */}
-          <div aria-hidden="true" style={{ position: 'absolute', top: '-80px', right: '6%', width: '440px', height: '440px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(240,90,40,0.16) 0%, rgba(240,90,40,0) 70%)', pointerEvents: 'none' }} />
-          <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '0%', width: '320px', height: '320px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,138,76,0.10) 0%, rgba(255,138,76,0) 70%)', pointerEvents: 'none' }} />
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">B2B e-commerce development</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '17ch' }}>
-                  B2B e-commerce your buyers <span className="pp-grad">actually want to use</span>.
+                  B2B e-commerce your buyers actually want to use.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '47ch' }}>
                   We are a B2B ecommerce development agency. We build B2B ecommerce platforms with the rules trade buyers
@@ -405,6 +402,20 @@ export default function B2BEcommercePage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Mid-page CTA ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// before you scope it</p>
+            <h2 style={{ marginTop: '10px' }}>Selling to trade buyers on a B2C storefront?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Tell us how your buyers order today. We will map what a real B2B storefront would replace.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

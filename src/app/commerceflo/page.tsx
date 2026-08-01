@@ -131,7 +131,7 @@ export default function CommercefloPage() {
               <div>
                 <p className="pp-eyebrow">Commerceflo · commerce AI operator</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Your storefront&apos;s <span className="pp-grad">AI operator</span>.
+                  Your storefront&apos;s AI operator.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   Commerceflo audits your storefront in under 90 seconds, ranks what is costing you conversions and
@@ -179,6 +179,20 @@ export default function CommercefloPage() {
                 you a ranked list of what is stalling growth. You approve the fixes you want and Commerceflo applies them
                 across every connected channel. You own and run the system; FactoryJet sets it up and supports it.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mid-page CTA */}
+        <section className="pp-sec">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// see it on your store</p>
+            <h2 style={{ marginTop: '10px' }}>Curious what Commerceflo would flag on your store?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Run the 90-second audit and see the ranked list of fixes before you commit to anything.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
