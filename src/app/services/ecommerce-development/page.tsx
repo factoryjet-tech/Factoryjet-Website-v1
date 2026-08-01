@@ -417,6 +417,7 @@ const FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'migration', label: 'Migrations' },
   { key: 'technical', label: 'Technical & SEO' },
+  { key: 'seo',       label: 'AI Search & GEO' },
   { key: 'trust',     label: 'Working With Us' },
 ];
 

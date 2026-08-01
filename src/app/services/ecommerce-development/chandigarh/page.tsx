@@ -117,7 +117,7 @@ const serviceSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'FactoryJet — Ecommerce Development Chandigarh',
+  name: 'FactoryJet Ecommerce Development Chandigarh',
   url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
   image: 'https://factoryjet.com/logo.png',
   description:
@@ -149,13 +149,13 @@ const CHANDIGARH_ECOM_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Platform Recommendation',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here — before we scope or price anything.',
+      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
   },
   {
     number: '02',
     title: 'Figma Design & Mockup Approval',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX — UPI placement, COD badge position, trust signals above the fold.',
+      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
   },
   {
     number: '03',
@@ -167,7 +167,7 @@ const CHANDIGARH_ECOM_STAGES: ServiceJourneyStage[] = [
     number: '04',
     title: 'QA & Lighthouse Audit',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green — LCP under 2.5s, CLS below 0.1.',
+      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
   },
   {
     number: '05',
@@ -202,19 +202,19 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does ecommerce development cost in Chandigarh?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing — no hourly billing and no scope creep.",
+      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
   },
   {
     category: 'pricing',
     question: 'Do you offer payment plans for the development cost?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans — it is simply a split of the quoted fixed price.',
+      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
   },
   {
     category: 'pricing',
     question: 'What happens if my store is not ready in 7 days?',
     answer:
-      'If we miss the 7-day deadline for reasons within our control, we refund 20% of the project value automatically — no questions asked. We have delivered on time for 97% of all builds. The remaining 3% delays are almost always due to client-side delays in providing product images, content, or payment gateway credentials — which we flag upfront in the onboarding checklist.',
+      'If we miss the 7-day deadline for reasons within our control, we refund 20% of the project value automatically, no questions asked. We have delivered on time for 97% of all builds. The remaining 3% delays are almost always due to client-side delays in providing product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
   },
 
   /* ── Platform & Tech ── */
@@ -222,25 +222,25 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'platform',
     question: 'Which ecommerce platform is right for my Chandigarh business?',
     answer:
-      'Shopify is the best default for most Chandigarh D2C and B2C brands — fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Shopify is the best default for most Chandigarh D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
   },
   {
     category: 'platform',
     question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
     answer:
-      'Yes — all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
   },
   {
     category: 'platform',
     question: 'Can you connect my Chandigarh store to Amazon India and Flipkart?',
     answer:
-      'Yes — this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically — no overselling.',
+      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
   },
   {
     category: 'platform',
     question: 'Can you set up WhatsApp Commerce and automated order flows?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp — open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
+      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
   },
 
   /* ── India-Specific ── */
@@ -248,25 +248,25 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'india',
     question: 'Do your stores support GST invoicing and compliance?',
     answer:
-      'Yes — GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
   },
   {
     category: 'india',
     question: 'Which logistics partner should I use for a Chandigarh store?',
     answer:
-      'Shiprocket is our default recommendation for most Chandigarh ecommerce stores — it gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chandigarh, Dunzo and Shadowfax are the right fit.',
+      'Shiprocket is our default recommendation for most Chandigarh ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chandigarh, Dunzo and Shadowfax are the right fit.',
   },
   {
     category: 'india',
     question: 'Can you add Hindi or Punjabi language support to my store?',
     answer:
-      'Yes — multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
   },
   {
     category: 'india',
     question: 'How do you handle cart abandonment for Indian shoppers?',
     answer:
-      'India has a 78% cart abandonment rate — higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
+      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
   },
 
   /* ── Speed & SEO ── */
@@ -280,19 +280,19 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'seo',
     question: 'Do you guarantee a Lighthouse score?',
     answer:
-      'Yes — Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
   },
   {
     category: 'seo',
     question: 'What are Core Web Vitals and why do they matter for my store?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint — how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint — how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift — whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a store doing ₹50 lakh per month, that is ₹10 lakh in lost revenue every second of slowness.',
+      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
   },
   {
     category: 'seo',
     question: 'Can you optimise an existing Chandigarh store that is already slow?',
     answer:
-      'Yes — we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
+      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
   },
 
   /* ── Process & Ownership ── */
@@ -300,7 +300,7 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'trust',
     question: 'Do I own my store and all the code after launch?',
     answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover — we encourage it. What we hope is that you come back to us for the next phase.',
+      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
   },
   {
     category: 'trust',
@@ -318,7 +318,7 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'trust',
     question: 'Can I manage and update the store myself after launch?',
     answer:
-      'Absolutely — self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -326,7 +326,7 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Chandigarh?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Chandigarh — or any ecommerce solution company in Chandigarh — should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Chandigarh and the best ecommerce solution company in Chandigarh for your catalog.',
+      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Chandigarh, or any ecommerce solution company in Chandigarh, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Chandigarh and the best ecommerce solution company in Chandigarh for your catalog.',
   },
   {
     category: 'pricing',
@@ -400,8 +400,8 @@ export default function ChandigarhEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_chandigarh_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · CHANDIGARH"
-          headline="Chandigarh's Most Trusted Ecommerce Agency — Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Chandigarh brands — Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
+          headline="Chandigarh's Most Trusted Ecommerce Agency: Store Live in 7 Days"
+          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Chandigarh brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -423,7 +423,7 @@ export default function ChandigarhEcommercePage() {
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · CHANDIGARH"
           headline="The Right Platform for Every Chandigarh Business Model"
-          lead="Chandigarh's ecommerce market spans premium D2C fashion brands in Sector 17, Baddi pharma manufacturers, Punjab agri D2C brands, and Mohali IT companies. Each needs a different platform strategy. FactoryJet recommends the right one — before we quote."
+          lead="Chandigarh's ecommerce market spans premium D2C fashion brands in Sector 17, Baddi pharma manufacturers, Punjab agri D2C brands, and Mohali IT companies. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -449,7 +449,7 @@ export default function ChandigarhEcommercePage() {
 
               <p>
                 The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product — it is the store. Slow load times on 4G
+                3–5%. The difference is not the product; it is the store. Slow load times on 4G
                 networks, a UPI checkout that requires too many steps, product pages that bury the buy
                 button below three paragraphs of description, and a mobile layout that was clearly
                 designed on a desktop. These are engineering and design problems, not marketing
@@ -487,7 +487,7 @@ export default function ChandigarhEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue — not a
+                  A great ecommerce store is an engineering project measured in revenue, not a
                   design project measured in compliments.
                 </p>
               </div>
@@ -508,7 +508,7 @@ export default function ChandigarhEcommercePage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Platform guide — Chandigarh
+                  Chandigarh platform guide
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
@@ -563,12 +563,12 @@ export default function ChandigarhEcommercePage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Chandigarh buyers have high expectations — a slow store on a low-trust template is immediately disqualifying in this market. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: "Chandigarh buyers have high expectations: a slow store on a low-trust template is immediately disqualifying in this market. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
               title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Chandigarh ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px — tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              body: 'Most Chandigarh ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
             },
             {
               icon: '📋',
@@ -592,26 +592,26 @@ export default function ChandigarhEcommercePage() {
           eyebrow="CHANDIGARH ECOMMERCE MARKET"
           headline="Why Chandigarh Is North India's Most Affluent Ecommerce Market"
           leadParagraphs={[
-            "Chandigarh — and the Tricity of Chandigarh, Mohali, and Panchkula — punches well above its population weight in ecommerce. As one of India's highest per-capita income regions, Chandigarh consumers are among India's most premium buyers — willing to pay more for quality, authenticity, and a seamless purchase experience. Combined with Punjab's dominant agricultural economy and Baddi's massive pharmaceutical manufacturing cluster, the Chandigarh market represents both a premium B2C opportunity and a significant B2B ecommerce play.",
+            "Chandigarh, and the Tricity of Chandigarh, Mohali, and Panchkula, punches well above its population weight in ecommerce. As one of India's highest per-capita income regions, Chandigarh consumers are among India's most premium buyers, willing to pay more for quality, authenticity, and a seamless purchase experience. Combined with Punjab's dominant agricultural economy and Baddi's massive pharmaceutical manufacturing cluster, the Chandigarh market represents both a premium B2C opportunity and a significant B2B ecommerce play.",
             "Chandigarh's ecommerce market is driven by its affluence and its agricultural hinterland. Sector 17 fashion retailers are transitioning to D2C Shopify operations with premium product photography and Instagram Shop integration. Baddi pharma manufacturers are building B2B procurement portals with CDSCO compliance. Punjab agri brands are launching D2C Basmati rice and premium honey stores targeting urban India and the global Punjabi diaspora. And Mohali IT companies are building B2B SaaS and hardware bundle portals.",
-            "Chandigarh buyers — educated, mobile-first, high disposable income — have high expectations for store quality, load speed, and checkout experience. A slow store on a low-trust template is immediately disqualifying in this market. FactoryJet's Lighthouse 90+ commitment, custom Figma design, and seamless Razorpay checkout are the baseline that Chandigarh buyers expect. We build to that standard on every project.",
+            "Chandigarh buyers (educated, mobile-first, high disposable income) have high expectations for store quality, load speed, and checkout experience. A slow store on a low-trust template is immediately disqualifying in this market. FactoryJet's Lighthouse 90+ commitment, custom Figma design, and seamless Razorpay checkout are the baseline that Chandigarh buyers expect. We build to that standard on every project.",
           ]}
           stats={[
             {
-              value: '₹1.5L+',
-              label: "Average per-capita income in Chandigarh — one of India's most affluent markets",
+              value: 'Top-tier',
+              label: "Per-capita income in Chandigarh: among the most affluent markets in India",
               sourceUrl: 'https://www.ibef.org/states/chandigarh',
               sourceLabel: 'IBEF Chandigarh',
             },
             {
-              value: '₹12.5L Cr',
-              label: "India's projected ecommerce market by 2030, growing at 23% annually",
+              value: '23%',
+              label: "India's projected ecommerce market growth rate, year over year through 2030",
               sourceUrl: 'https://www.ibef.org/industry/ecommerce',
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
               value: '500M+',
-              label: 'UPI transactions per month in India — the payment rail your store must support',
+              label: 'UPI transactions per month in India: the payment rail your store must support',
               sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
               sourceLabel: 'NPCI UPI Statistics',
             },
@@ -622,7 +622,7 @@ export default function ChandigarhEcommercePage() {
         <IndustriesGrid variant="cards"
           eyebrow="CHANDIGARH × ECOMMERCE"
           headline="Ecommerce Development for Chandigarh's Key Commerce Verticals"
-          lead="From Sector 17 premium fashion retailers to Baddi pharma manufacturers to Punjab agri brands — Chandigarh's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          lead="From Sector 17 premium fashion retailers to Baddi pharma manufacturers to Punjab agri brands , and Chandigarh's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Agriculture & Punjab Produce',
@@ -648,14 +648,14 @@ export default function ChandigarhEcommercePage() {
             {
               name: 'Fashion & Lifestyle',
               description:
-                "Chandigarh's affluent consumer base — one of India's highest per-capita income cities — drives demand for premium fashion and lifestyle D2C. Instagram Shop integration, premium product photography, and high-AOV checkout optimisation.",
+                "Chandigarh's affluent consumer base, one of India's highest per-capita income cities, drives demand for premium fashion and lifestyle D2C. Instagram Shop integration, premium product photography, and high-AOV checkout optimisation.",
               example:
                 'Premium lifestyle brands, sustainable fashion D2C, ethnic wear labels.',
             },
             {
               name: 'Food & Punjabi Products',
               description:
-                "Punjab's food culture drives a growing D2C market for premium Punjabi products — ghee, pickles, artisanal honey, Phulkari crafts, and premium spices. FSSAI compliance, gifting SKUs, and subscription boxes.",
+                "Punjab's food culture drives a growing D2C market for premium Punjabi products: ghee, pickles, artisanal honey, Phulkari crafts, and premium spices. FSSAI compliance, gifting SKUs, and subscription boxes.",
               example:
                 'Punjabi food brands, artisanal dairy companies, premium spice D2C labels.',
             },
@@ -676,7 +676,7 @@ export default function ChandigarhEcommercePage() {
           cards={[
             {
               industry: 'Home Décor · Shopify',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison · Chandigarh',
               description:
                 'Belle Maison is a premium interior décor brand. FactoryJet built their Shopify store with a Figma-designed product showcase, Razorpay integration, WhatsApp inquiry flow, and Shiprocket connected on day one. Launched in 7 days.',
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -685,7 +685,7 @@ export default function ChandigarhEcommercePage() {
             },
             {
               industry: 'Fashion · Shopify Plus',
-              title: 'Impulse Branding — Mumbai',
+              title: 'Impulse Branding · Chandigarh',
               description:
                 'Impulse Branding is an ethnic fashion label. FactoryJet built a Shopify Plus store with Myntra and Instagram Shop sync, AI size recommendations, COD configured with Razorpay fraud rules, and a WhatsApp abandoned cart recovery sequence.',
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -708,7 +708,7 @@ export default function ChandigarhEcommercePage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything Chandigarh Founders Ask Before They Sign"
-          lead="The questions we answer on every Chandigarh ecommerce discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Chandigarh ecommerce discovery call, answered here, without the runaround."
           categories={CHANDIGARH_ECOM_FAQ_CATEGORIES}
           items={CHANDIGARH_ECOM_FAQ_ITEMS}
         />
@@ -718,7 +718,7 @@ export default function ChandigarhEcommercePage() {
           variant="dark"
           eyebrow="READY TO LAUNCH"
           headline="Your Chandigarh Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ Indian brands who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store — in 7 business days. Free strategy call, no commitment required."
+          sub="Join 500+ Indian brands who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
