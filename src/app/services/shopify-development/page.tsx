@@ -914,6 +914,7 @@ export default function ShopifyPage() {
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <IndustriesGrid
+          variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six Shopify Services for US E-Commerce Brands"
           lead="From a custom theme on an existing store to a full Shopify Plus B2B platform — we scope the right engagement for where your business is and where it's going."

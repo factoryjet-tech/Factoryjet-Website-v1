@@ -909,6 +909,7 @@ export default function EcommerceDevelopmentPage() {
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <IndustriesGrid
+          variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six E-Commerce Services for US Businesses"
           lead="From a Shopify launch to a fully custom marketplace — we scope the right engagement for your platform, catalog complexity, and revenue stage."
