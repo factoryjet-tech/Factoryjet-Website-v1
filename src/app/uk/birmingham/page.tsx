@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import BirminghamPage from "./BirminghamPage";
-import { FAQS } from "./sections/FAQ";
+import { FAQS } from "./faqData";
 
 export const metadata: Metadata = {
   title: "AI Web Design Agency Birmingham | FactoryJet",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LiverpoolPage from "./LiverpoolPage";
-import { FAQS } from "./sections/FAQ";
+import { FAQS } from "./faqData";
 
 export const metadata: Metadata = {
   title: "Web Design Agency Liverpool | AI-Native | FactoryJet",

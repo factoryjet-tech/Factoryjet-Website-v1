@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FAQ_ITEMS } from "./page";
+import { FAQ_ITEMS } from "./faqData";
 
 export const metadata: Metadata = {
   title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
