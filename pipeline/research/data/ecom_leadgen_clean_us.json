@@ -1,0 +1,6608 @@
+{
+ "cost": [
+  {
+   "keyword": "squarespace pricing",
+   "volume": 18100,
+   "cpc": 10.0,
+   "kd": 11.0
+  },
+  {
+   "keyword": "shopify pricing",
+   "volume": 9900,
+   "cpc": 3.63,
+   "kd": 18.0
+  },
+  {
+   "keyword": "shopify plans pricing",
+   "volume": 1900,
+   "cpc": 2.73,
+   "kd": 23.0
+  },
+  {
+   "keyword": "woocommerce pricing",
+   "volume": 1000,
+   "cpc": 13.83,
+   "kd": 41.0
+  },
+  {
+   "keyword": "shopify plus pricing",
+   "volume": 1000,
+   "cpc": 3.34,
+   "kd": 16.0
+  },
+  {
+   "keyword": "shopify plus cost",
+   "volume": 1000,
+   "cpc": 3.34,
+   "kd": 15.0
+  },
+  {
+   "keyword": "cost of shopify plus",
+   "volume": 1000,
+   "cpc": 3.34,
+   "kd": 14.0
+  },
+  {
+   "keyword": "wix studio pricing",
+   "volume": 590,
+   "cpc": 17.09,
+   "kd": 32.0
+  },
+  {
+   "keyword": "bigcommerce pricing",
+   "volume": 480,
+   "cpc": 17.45,
+   "kd": 14.0
+  },
+  {
+   "keyword": "wix premium plans pricing",
+   "volume": 390,
+   "cpc": 9.41,
+   "kd": 24.0
+  },
+  {
+   "keyword": "wix ecommerce pricing",
+   "volume": 210,
+   "cpc": 12.2,
+   "kd": 26.0
+  },
+  {
+   "keyword": "magento pricing",
+   "volume": 170,
+   "cpc": 20.02,
+   "kd": 4.0
+  },
+  {
+   "keyword": "cheapest ecommerce platform",
+   "volume": 170,
+   "cpc": 16.16,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify website price",
+   "volume": 140,
+   "cpc": 6.91,
+   "kd": 17.0
+  },
+  {
+   "keyword": "wix website cost per month",
+   "volume": 140,
+   "cpc": 3.94,
+   "kd": 24.0
+  },
+  {
+   "keyword": "cost for ecommerce website development",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "cost of ecommerce website development",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "ecommerce website development cost",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "e commerce website development cost",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify subscription price",
+   "volume": 110,
+   "cpc": 7.01,
+   "kd": 33.0
+  },
+  {
+   "keyword": "magento ecommerce pricing",
+   "volume": 90,
+   "cpc": 26.39,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify basic plan cost",
+   "volume": 90,
+   "cpc": 4.28,
+   "kd": 20.0
+  },
+  {
+   "keyword": "how much does an ecommerce website cost",
+   "volume": 90,
+   "cpc": 22.68,
+   "kd": 16.0
+  },
+  {
+   "keyword": "how much does it cost for an ecommerce website",
+   "volume": 90,
+   "cpc": 22.68,
+   "kd": 19.0
+  },
+  {
+   "keyword": "adobe commerce pricing",
+   "volume": 70,
+   "cpc": 23.0,
+   "kd": 9.0
+  },
+  {
+   "keyword": "godaddy ecommerce pricing",
+   "volume": 70,
+   "cpc": 5.54,
+   "kd": 31.0
+  },
+  {
+   "keyword": "how much does it cost to start an online store",
+   "volume": 70,
+   "cpc": 9.94,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify pricing us",
+   "volume": 50,
+   "cpc": 7.32,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify pricing calculator",
+   "volume": 50,
+   "cpc": 3.05,
+   "kd": 9.0
+  },
+  {
+   "keyword": "how much does shopify plus cost",
+   "volume": 50,
+   "cpc": 3.7,
+   "kd": 7.0
+  },
+  {
+   "keyword": "magento enterprise pricing",
+   "volume": 40,
+   "cpc": 10.57,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus pricing calculator",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 9.0
+  },
+  {
+   "keyword": "ecommerce cost",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify website cost per month",
+   "volume": 40,
+   "cpc": 8.64,
+   "kd": 12.0
+  },
+  {
+   "keyword": "shopify basic plan price",
+   "volume": 40,
+   "cpc": 4.16,
+   "kd": 22.0
+  },
+  {
+   "keyword": "shopify app development cost",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how much does it cost to build an ecommerce website",
+   "volume": 40,
+   "cpc": 12.64,
+   "kd": 13.0
+  },
+  {
+   "keyword": "how much does it cost to make an ecommerce website",
+   "volume": 40,
+   "cpc": 12.64,
+   "kd": 10.0
+  },
+  {
+   "keyword": "how much does it cost to create an ecommerce website",
+   "volume": 40,
+   "cpc": 12.64,
+   "kd": 19.0
+  },
+  {
+   "keyword": "woocommerce plugin price",
+   "volume": 40,
+   "cpc": 6.38,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify plus monthly cost",
+   "volume": 40,
+   "cpc": 9.77,
+   "kd": 18.0
+  },
+  {
+   "keyword": "bigcommerce enterprise pricing",
+   "volume": 30,
+   "cpc": 32.98,
+   "kd": 8.0
+  },
+  {
+   "keyword": "how much is shopify transaction fee",
+   "volume": 30,
+   "cpc": 12.84,
+   "kd": null
+  },
+  {
+   "keyword": "shopify advanced pricing",
+   "volume": 30,
+   "cpc": 1.17,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify website development cost",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "how much is shopify per year",
+   "volume": 30,
+   "cpc": 6.0,
+   "kd": 11.0
+  },
+  {
+   "keyword": "wix light plan cost",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 21.0
+  },
+  {
+   "keyword": "how much does magento cost",
+   "volume": 30,
+   "cpc": 7.15,
+   "kd": 9.0
+  },
+  {
+   "keyword": "woocommerce pricing per month",
+   "volume": 20,
+   "cpc": 13.56,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce website price list",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "shopify store development cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix domain cost per month",
+   "volume": 20,
+   "cpc": 9.29,
+   "kd": 28.0
+  },
+  {
+   "keyword": "magento development cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce hosting pricing",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "how much does it cost to hire a shopify developer",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento pricing calculator",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce enterprise pricing reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "is shopify cheaper than wix",
+   "volume": 10,
+   "cpc": 0.18,
+   "kd": null
+  },
+  {
+   "keyword": "shopify pricing yearly",
+   "volume": 10,
+   "cpc": 20.19,
+   "kd": 59.0
+  },
+  {
+   "keyword": "shopify pricing monthly",
+   "volume": 10,
+   "cpc": 7.07,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify pricing europe",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify pricing reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce pricing reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development cost in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 32.0
+  },
+  {
+   "keyword": "custom ecommerce website development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress ecommerce website development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development cost india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 32.0
+  },
+  {
+   "keyword": "ecommerce website development cost breakdown",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 58.0
+  },
+  {
+   "keyword": "ecommerce website development cost in pakistan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development cost in dubai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website cost calculator",
+   "volume": 10,
+   "cpc": 3.25,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify implementation cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify theme development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development store cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify website development cost in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to run an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does an ecommerce website cost to build",
+   "volume": 10,
+   "cpc": 5.59,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to develop an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to maintain an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does an ecommerce website cost uk",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does an ecommerce website cost in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to start an ecommerce website",
+   "volume": 10,
+   "cpc": 23.68,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to have an ecommerce website",
+   "volume": 10,
+   "cpc": 15.7,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to design an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much does it cost to host an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix website cost yearly",
+   "volume": 10,
+   "cpc": 7.61,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 website development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento website development cost india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento website development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "magento site development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento cost per month",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "magento pricing india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 enterprise edition price",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "adobe commerce pricing reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce website development cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce website cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "cost of woocommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce website development cost in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "how much does shopify plus cost per month",
+   "volume": 10,
+   "cpc": 17.48,
+   "kd": null
+  },
+  {
+   "keyword": "what does shopify plus cost",
+   "volume": 10,
+   "cpc": 8.25,
+   "kd": null
+  },
+  {
+   "keyword": "how much shopify plus cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "what is the cost of shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus cost uk",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus plan cost",
+   "volume": 10,
+   "cpc": 22.19,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus cost per month",
+   "volume": 10,
+   "cpc": 7.24,
+   "kd": null
+  },
+  {
+   "keyword": "cost for shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 15.0
+  },
+  {
+   "keyword": "how much does it cost to build a online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 59.0
+  },
+  {
+   "keyword": "how much does it cost to build an online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 59.0
+  },
+  {
+   "keyword": "cost to build online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "affordable shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much do shopify experts make",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much do shopify experts charge",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "cheap shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts price",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much do shopify experts cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how much does a shopify expert cost",
+   "volume": 10,
+   "cpc": 25.01,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify partner account cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much to build an ecommerce website",
+   "volume": 10,
+   "cpc": 12.59,
+   "kd": 16.0
+  },
+  {
+   "keyword": "how much is an ecommerce website to build",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much should i charge to build an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how much to start an online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  }
+ ],
+ "hire": [
+  {
+   "keyword": "shopify partner",
+   "volume": 14800,
+   "cpc": 27.47,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify partners",
+   "volume": 14800,
+   "cpc": 27.47,
+   "kd": 36.0
+  },
+  {
+   "keyword": "shopify developers",
+   "volume": 2400,
+   "cpc": 30.76,
+   "kd": 63.0
+  },
+  {
+   "keyword": "shopify agency",
+   "volume": 1600,
+   "cpc": 31.66,
+   "kd": 58.0
+  },
+  {
+   "keyword": "ecommerce seo services",
+   "volume": 1600,
+   "cpc": 36.33,
+   "kd": 9.0
+  },
+  {
+   "keyword": "shopify expert developer",
+   "volume": 1300,
+   "cpc": 48.16,
+   "kd": 25.0
+  },
+  {
+   "keyword": "shopify experts",
+   "volume": 1300,
+   "cpc": 48.16,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify partner directory",
+   "volume": 1300,
+   "cpc": 17.53,
+   "kd": 30.0
+  },
+  {
+   "keyword": "shopify expert",
+   "volume": 1300,
+   "cpc": 48.16,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify experts developers",
+   "volume": 1300,
+   "cpc": 48.16,
+   "kd": 32.0
+  },
+  {
+   "keyword": "experts shopify",
+   "volume": 1300,
+   "cpc": 48.16,
+   "kd": 13.0
+  },
+  {
+   "keyword": "ecommerce seo agency",
+   "volume": 1000,
+   "cpc": 43.26,
+   "kd": 3.0
+  },
+  {
+   "keyword": "ecommerce development company",
+   "volume": 880,
+   "cpc": 54.45,
+   "kd": 28.0
+  },
+  {
+   "keyword": "shopify development services",
+   "volume": 880,
+   "cpc": 20.46,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify partner account",
+   "volume": 880,
+   "cpc": 11.4,
+   "kd": 11.0
+  },
+  {
+   "keyword": "shopify partner program",
+   "volume": 880,
+   "cpc": 14.87,
+   "kd": 19.0
+  },
+  {
+   "keyword": "e-commerce development services",
+   "volume": 720,
+   "cpc": 44.21,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify development company",
+   "volume": 720,
+   "cpc": 26.6,
+   "kd": 26.0
+  },
+  {
+   "keyword": "ecommerce development services",
+   "volume": 720,
+   "cpc": 44.21,
+   "kd": 18.0
+  },
+  {
+   "keyword": "e commerce development services",
+   "volume": 720,
+   "cpc": 44.21,
+   "kd": 28.0
+  },
+  {
+   "keyword": "e commerce website development services",
+   "volume": 480,
+   "cpc": 25.02,
+   "kd": 20.0
+  },
+  {
+   "keyword": "ecommerce website design company",
+   "volume": 480,
+   "cpc": 41.74,
+   "kd": 32.0
+  },
+  {
+   "keyword": "shopify website developer",
+   "volume": 480,
+   "cpc": 53.31,
+   "kd": 32.0
+  },
+  {
+   "keyword": "hire a shopify developer",
+   "volume": 480,
+   "cpc": 56.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "hire shopify developer",
+   "volume": 480,
+   "cpc": 56.0,
+   "kd": 41.0
+  },
+  {
+   "keyword": "shopify experts marketplace",
+   "volume": 480,
+   "cpc": 59.74,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify development agency",
+   "volume": 480,
+   "cpc": 31.59,
+   "kd": 32.0
+  },
+  {
+   "keyword": "shopify web development services",
+   "volume": 480,
+   "cpc": 29.84,
+   "kd": 26.0
+  },
+  {
+   "keyword": "shopify website development services",
+   "volume": 480,
+   "cpc": 29.84,
+   "kd": 44.0
+  },
+  {
+   "keyword": "seo shopify experts",
+   "volume": 480,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify experts seo",
+   "volume": 480,
+   "cpc": 0.0,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify seo experts",
+   "volume": 480,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "seo experts shopify",
+   "volume": 480,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "ecommerce web design services",
+   "volume": 390,
+   "cpc": 16.24,
+   "kd": 12.0
+  },
+  {
+   "keyword": "ecommerce website design services",
+   "volume": 390,
+   "cpc": 29.29,
+   "kd": 26.0
+  },
+  {
+   "keyword": "ecommerce seo consultant",
+   "volume": 390,
+   "cpc": 112.24,
+   "kd": 9.0
+  },
+  {
+   "keyword": "bigcommerce developer",
+   "volume": 320,
+   "cpc": 62.88,
+   "kd": 11.0
+  },
+  {
+   "keyword": "shopify plus partners",
+   "volume": 320,
+   "cpc": 24.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "ecommerce website design agency",
+   "volume": 320,
+   "cpc": 6.77,
+   "kd": 26.0
+  },
+  {
+   "keyword": "hire shopify expert",
+   "volume": 320,
+   "cpc": 48.87,
+   "kd": 21.0
+  },
+  {
+   "keyword": "hire an ecommerce developer",
+   "volume": 320,
+   "cpc": 59.94,
+   "kd": 13.0
+  },
+  {
+   "keyword": "hire ecommerce developer",
+   "volume": 320,
+   "cpc": 59.94,
+   "kd": 7.0
+  },
+  {
+   "keyword": "e commerce developers",
+   "volume": 320,
+   "cpc": 68.63,
+   "kd": 15.0
+  },
+  {
+   "keyword": "hire shopify experts",
+   "volume": 320,
+   "cpc": 48.87,
+   "kd": 17.0
+  },
+  {
+   "keyword": "e commerce consulting services",
+   "volume": 320,
+   "cpc": 18.63,
+   "kd": 14.0
+  },
+  {
+   "keyword": "ecommerce website developers",
+   "volume": 260,
+   "cpc": 63.58,
+   "kd": 18.0
+  },
+  {
+   "keyword": "shopify app development services",
+   "volume": 260,
+   "cpc": 0.0,
+   "kd": 25.0
+  },
+  {
+   "keyword": "ecommerce website development services",
+   "volume": 260,
+   "cpc": 3.52,
+   "kd": 27.0
+  },
+  {
+   "keyword": "ecommerce development agency",
+   "volume": 260,
+   "cpc": 8.47,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify developer account",
+   "volume": 260,
+   "cpc": 1.77,
+   "kd": 49.0
+  },
+  {
+   "keyword": "e commerce software development services",
+   "volume": 260,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify marketing agency",
+   "volume": 210,
+   "cpc": 81.52,
+   "kd": 0.0
+  },
+  {
+   "keyword": "freelance shopify developer",
+   "volume": 210,
+   "cpc": 51.62,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify expert near me",
+   "volume": 210,
+   "cpc": 52.12,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify experts near me",
+   "volume": 210,
+   "cpc": 52.12,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify ecommerce development services",
+   "volume": 210,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "shopify freelancer",
+   "volume": 210,
+   "cpc": 51.62,
+   "kd": 21.0
+  },
+  {
+   "keyword": "shopify store development services",
+   "volume": 170,
+   "cpc": 85.2,
+   "kd": 40.0
+  },
+  {
+   "keyword": "ecommerce development company usa",
+   "volume": 170,
+   "cpc": 12.41,
+   "kd": 16.0
+  },
+  {
+   "keyword": "shopify experts directory",
+   "volume": 170,
+   "cpc": 51.96,
+   "kd": 18.0
+  },
+  {
+   "keyword": "ecommerce development company in usa",
+   "volume": 170,
+   "cpc": 12.41,
+   "kd": 42.0
+  },
+  {
+   "keyword": "best ecommerce seo agency",
+   "volume": 170,
+   "cpc": 0.0,
+   "kd": 25.0
+  },
+  {
+   "keyword": "hire dedicated shopify developer",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify agency partners",
+   "volume": 140,
+   "cpc": 30.23,
+   "kd": 25.0
+  },
+  {
+   "keyword": "shopify developer near me",
+   "volume": 140,
+   "cpc": 42.21,
+   "kd": 11.0
+  },
+  {
+   "keyword": "ecommerce website development services india",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 28.0
+  },
+  {
+   "keyword": "ecommerce website development services in india",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "custom ecommerce development services",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "custom ecommerce development company",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 5.0
+  },
+  {
+   "keyword": "shopify website agency",
+   "volume": 110,
+   "cpc": 30.11,
+   "kd": 85.0
+  },
+  {
+   "keyword": "ecommerce website developer",
+   "volume": 110,
+   "cpc": 53.88,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify partners logo",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "e commerce solutions company",
+   "volume": 110,
+   "cpc": 23.27,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify expert agency",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 6.0
+  },
+  {
+   "keyword": "shopify plus development services",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify developer freelancer",
+   "volume": 90,
+   "cpc": 117.79,
+   "kd": 22.0
+  },
+  {
+   "keyword": "shopify developer for hire",
+   "volume": 70,
+   "cpc": 63.03,
+   "kd": 8.0
+  },
+  {
+   "keyword": "hire shopify app developer",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 15.0
+  },
+  {
+   "keyword": "shopify theme-development-services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "custom shopify development services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify theme development services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "custom ecommerce website development services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 27.0
+  },
+  {
+   "keyword": "shopify plus experts",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify partner agency",
+   "volume": 70,
+   "cpc": 129.76,
+   "kd": 42.0
+  },
+  {
+   "keyword": "best ecommerce seo services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 16.0
+  },
+  {
+   "keyword": "hire shopify theme developer",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 27.0
+  },
+  {
+   "keyword": "hire shopify web developer",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 12.0
+  },
+  {
+   "keyword": "upwork shopify developer",
+   "volume": 50,
+   "cpc": 5.81,
+   "kd": 0.0
+  },
+  {
+   "keyword": "top shopify development company",
+   "volume": 50,
+   "cpc": 15.6,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify experts for hire",
+   "volume": 50,
+   "cpc": 34.59,
+   "kd": 12.0
+  },
+  {
+   "keyword": "shopify design experts",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 46.0
+  },
+  {
+   "keyword": "shopify partner badge",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 15.0
+  },
+  {
+   "keyword": "hire shopify developer india",
+   "volume": 40,
+   "cpc": 13.87,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify developer hire",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "hire shopify developers india",
+   "volume": 40,
+   "cpc": 13.87,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify development company in usa",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "ecommerce website design and development services",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "best ecommerce website development company",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify experts marketing",
+   "volume": 40,
+   "cpc": 17.74,
+   "kd": 28.0
+  },
+  {
+   "keyword": "shopify experts in india",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify marketing experts",
+   "volume": 40,
+   "cpc": 17.74,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify website experts",
+   "volume": 40,
+   "cpc": 52.96,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify store experts",
+   "volume": 40,
+   "cpc": 49.12,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify experts india",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify experts uk",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 30.0
+  },
+  {
+   "keyword": "shopify partners list",
+   "volume": 40,
+   "cpc": 17.19,
+   "kd": 39.0
+  },
+  {
+   "keyword": "shopify plus agency partner",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 15.0
+  },
+  {
+   "keyword": "hire shopify ecommerce developer",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "hire dedicated ecommerce developer",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "hire ecommerce web developer",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify plus development experts",
+   "volume": 30,
+   "cpc": 4.89,
+   "kd": 5.0
+  },
+  {
+   "keyword": "shopify setup experts",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "shopify set up experts",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify experts london",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 26.0
+  },
+  {
+   "keyword": "shopify plus partner agency",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify partner access",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 28.0
+  },
+  {
+   "keyword": "shopify app developer for hire",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 31.0
+  },
+  {
+   "keyword": "hire shopify website developer",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "top shopify experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "hire ecommerce app developer",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "custom shopify website development services",
+   "volume": 20,
+   "cpc": 78.5,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify development services usa",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website design & development services",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 16.0
+  },
+  {
+   "keyword": "become shopify experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "certified shopify experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify web design experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 75.0
+  },
+  {
+   "keyword": "shopify store setup experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify experts usa",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 62.0
+  },
+  {
+   "keyword": "shopify theme experts",
+   "volume": 20,
+   "cpc": 34.11,
+   "kd": 38.0
+  },
+  {
+   "keyword": "shopify ecommerce experts",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 58.0
+  },
+  {
+   "keyword": "find shopify experts",
+   "volume": 20,
+   "cpc": 47.74,
+   "kd": 20.0
+  },
+  {
+   "keyword": "ecommerce seo services usa",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus agency uk",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website developer jobs",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "hire a developer shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "hire dedicated shopify developer in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "hire a shopify app developer",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify website developer india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "freelance shopify developer india",
+   "volume": 10,
+   "cpc": 27.94,
+   "kd": null
+  },
+  {
+   "keyword": "shopify website developer delhi",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify website developer mumbai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts reviews",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "shopify developer linkedin",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify developer program",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 74.0
+  },
+  {
+   "keyword": "shopify developer agency",
+   "volume": 10,
+   "cpc": 48.41,
+   "kd": 51.0
+  },
+  {
+   "keyword": "hire ecommerce developer in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "hire ecommerce developer india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "hire ecommerce website developer",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "hire ecommerce manager",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website freelancer",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 16.0
+  },
+  {
+   "keyword": "e-commerce developer salary",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce developer job description",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "e commerce web developer near me",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "e-commerce web developer salary",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce web developer job description",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify website development services in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development services india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify website development services india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "best shopify development services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development services in pakistan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify mobile app development services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development services in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify design and development services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development services in dubai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify theme development services india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify website development services usa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development services coalition technologies",
+   "volume": 10,
+   "cpc": 7.88,
+   "kd": null
+  },
+  {
+   "keyword": "top shopify development services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify freelancer jobs",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 6.0
+  },
+  {
+   "keyword": "ecommerce website development services usa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development company services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development services in chennai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website development services in usa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify tax experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify experts deutschland",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "binary web solutions shopify & ecommerce experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts ireland",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 18.0
+  },
+  {
+   "keyword": "shopify experts toronto",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "what do shopify experts do",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts philippines",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts montreal",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts manchester",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "freelancer shopify experts",
+   "volume": 10,
+   "cpc": 36.44,
+   "kd": 12.0
+  },
+  {
+   "keyword": "shopify experts melbourne",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts bangalore",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts nz",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts miami",
+   "volume": 10,
+   "cpc": 116.47,
+   "kd": 23.0
+  },
+  {
+   "keyword": "shopify experts coalition",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "experts marketplace shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify experts in usa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts in new york",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 37.0
+  },
+  {
+   "keyword": "shopify experts espa\u00f1a",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 16.0
+  },
+  {
+   "keyword": "shopify experts reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts list",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to become shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 33.0
+  },
+  {
+   "keyword": "shopify experts vancouver",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts in mumbai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts germany",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts program",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts hire",
+   "volume": 10,
+   "cpc": 13.25,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify experts cape town",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts application",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify seo services & experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts guadalajara",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts singapore",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify web experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts new york",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 25.0
+  },
+  {
+   "keyword": "shopify experts shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify experts south africa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "hire shopify experts india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts in bangalore",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify experts auckland",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts france",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "freelance shopify experts",
+   "volume": 10,
+   "cpc": 36.44,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify experts partners",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts australia",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts mexico",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts logo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify experts post a job",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "experts shopify unique paris",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "shopify experts agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 6.0
+  },
+  {
+   "keyword": "shopify experts in netherlands",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts brasil",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "what is shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify experts uae",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "experts shopify zee agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "shopify experts blog",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify marketing experts in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecom experts shopify plus agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts pakistan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts review",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "experts shopify plus unique paris",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "shopify experts jobs",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 21.0
+  },
+  {
+   "keyword": "shopify experts california",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts atlanta",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts dubai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts austin",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "are shopify experts worth it",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 20.0
+  },
+  {
+   "keyword": "shopify growth experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts hyderabad",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to find shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts chicago",
+   "volume": 10,
+   "cpc": 18.26,
+   "kd": null
+  },
+  {
+   "keyword": "best shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 40.0
+  },
+  {
+   "keyword": "shopify experts denmark",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts canada",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "stalwart digital shopify plus experts agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts perth",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts mumbai",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts nyc",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 6.0
+  },
+  {
+   "keyword": "shopify experts sydney",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts ottawa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify development experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify experts birmingham",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify experts los angeles",
+   "volume": 10,
+   "cpc": 126.22,
+   "kd": 28.0
+  },
+  {
+   "keyword": "shopify experts houston",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "join shopify experts",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "experts shopify com",
+   "volume": 10,
+   "cpc": 45.7,
+   "kd": null
+  },
+  {
+   "keyword": "hire experts shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify experts brisbane",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "top shopify experts in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify expert salary",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify expert jobs",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 21.0
+  },
+  {
+   "keyword": "shopify partner directory requirements",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify partner search",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "kikstart ecom shopify partner agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify agency partner program",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify platinum partner list",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify partner account free",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "delete shopify partner account",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "best ecommerce development agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "e commerce services meaning",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  }
+ ],
+ "compare": [
+  {
+   "keyword": "squarespace vs wix",
+   "volume": 5400,
+   "cpc": 9.11,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify vs etsy",
+   "volume": 2400,
+   "cpc": 6.39,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace",
+   "volume": 1300,
+   "cpc": 10.22,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs shopify",
+   "volume": 1300,
+   "cpc": 11.96,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce vs shopify",
+   "volume": 1000,
+   "cpc": 9.22,
+   "kd": 3.0
+  },
+  {
+   "keyword": "wix vs shopify",
+   "volume": 1000,
+   "cpc": 12.61,
+   "kd": 9.0
+  },
+  {
+   "keyword": "wix vs godaddy",
+   "volume": 720,
+   "cpc": 7.46,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs woocommerce",
+   "volume": 590,
+   "cpc": 4.65,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify vs wix",
+   "volume": 590,
+   "cpc": 9.73,
+   "kd": 24.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify",
+   "volume": 480,
+   "cpc": 19.17,
+   "kd": 2.0
+  },
+  {
+   "keyword": "squarespace vs wix pricing",
+   "volume": 480,
+   "cpc": 7.08,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce",
+   "volume": 390,
+   "cpc": 25.9,
+   "kd": 11.0
+  },
+  {
+   "keyword": "best ecommerce platform for small business",
+   "volume": 390,
+   "cpc": 21.39,
+   "kd": 16.0
+  },
+  {
+   "keyword": "shopify vs squarespace vs wix",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix vs squarespace vs shopify",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix vs shopify vs squarespace",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs shopify vs wix",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs wix vs shopify",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs wix vs squarespace",
+   "volume": 320,
+   "cpc": 7.85,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs",
+   "volume": 260,
+   "cpc": 6.04,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs shopify",
+   "volume": 260,
+   "cpc": 6.04,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs shopify plus",
+   "volume": 260,
+   "cpc": 6.04,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs plus",
+   "volume": 260,
+   "cpc": 6.04,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs shopify",
+   "volume": 170,
+   "cpc": 10.31,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs etsy fees",
+   "volume": 170,
+   "cpc": 3.36,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plans comparison",
+   "volume": 170,
+   "cpc": 3.3,
+   "kd": 33.0
+  },
+  {
+   "keyword": "bigcommerce vs woocommerce",
+   "volume": 140,
+   "cpc": 20.73,
+   "kd": 2.0
+  },
+  {
+   "keyword": "wix vs shopify ecommerce",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 8.0
+  },
+  {
+   "keyword": "wix ecommerce vs shopify",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify vs wix for ecommerce",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 11.0
+  },
+  {
+   "keyword": "shopify vs wix ecommerce",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 8.0
+  },
+  {
+   "keyword": "wix vs shopify for ecommerce",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 9.0
+  },
+  {
+   "keyword": "ecommerce wix vs shopify",
+   "volume": 140,
+   "cpc": 10.58,
+   "kd": 8.0
+  },
+  {
+   "keyword": "best ecommerce platform for beginners",
+   "volume": 140,
+   "cpc": 27.35,
+   "kd": 1.0
+  },
+  {
+   "keyword": "best online store platforms for small business",
+   "volume": 140,
+   "cpc": 24.07,
+   "kd": 19.0
+  },
+  {
+   "keyword": "woocommerce vs bigcommerce",
+   "volume": 140,
+   "cpc": 20.73,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify vs magento",
+   "volume": 110,
+   "cpc": 8.08,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix vs squarespace vs godaddy",
+   "volume": 110,
+   "cpc": 8.39,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs shopify ecommerce",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify vs squarespace commerce",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify vs squarespace for ecommerce",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 10.0
+  },
+  {
+   "keyword": "squarespace vs shopify for ecommerce",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace ecommerce vs shopify",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify vs squarespace ecommerce",
+   "volume": 90,
+   "cpc": 9.88,
+   "kd": 4.0
+  },
+  {
+   "keyword": "advanced shopify vs shopify plus",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify advanced vs plus",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs advanced",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs shopify advanced",
+   "volume": 90,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs woocommerce reddit",
+   "volume": 70,
+   "cpc": 3.05,
+   "kd": 10.0
+  },
+  {
+   "keyword": "woocommerce vs shopify reddit",
+   "volume": 70,
+   "cpc": 3.05,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs bigcommerce",
+   "volume": 70,
+   "cpc": 73.31,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify plus",
+   "volume": 70,
+   "cpc": 73.31,
+   "kd": 1.0
+  },
+  {
+   "keyword": "woocommerce vs wix",
+   "volume": 70,
+   "cpc": 11.95,
+   "kd": 0.0
+  },
+  {
+   "keyword": "which ecommerce platform is best",
+   "volume": 70,
+   "cpc": 20.91,
+   "kd": 15.0
+  },
+  {
+   "keyword": "which is the best platform for ecommerce",
+   "volume": 70,
+   "cpc": 20.91,
+   "kd": 25.0
+  },
+  {
+   "keyword": "which is best ecommerce platform",
+   "volume": 70,
+   "cpc": 20.91,
+   "kd": 57.0
+  },
+  {
+   "keyword": "which is the best ecommerce platform",
+   "volume": 70,
+   "cpc": 20.91,
+   "kd": 55.0
+  },
+  {
+   "keyword": "which platform is best for ecommerce",
+   "volume": 70,
+   "cpc": 20.91,
+   "kd": 14.0
+  },
+  {
+   "keyword": "magento vs shopify plus",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs magento",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs woocommerce",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs wordpress",
+   "volume": 50,
+   "cpc": 6.55,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix vs godaddy pricing",
+   "volume": 50,
+   "cpc": 3.88,
+   "kd": 0.0
+  },
+  {
+   "keyword": "headless commerce vs traditional commerce",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "shopify vs woocommerce vs bigcommerce",
+   "volume": 40,
+   "cpc": 14.77,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce vs shopify vs bigcommerce",
+   "volume": 40,
+   "cpc": 14.77,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs woocommerce",
+   "volume": 40,
+   "cpc": 14.77,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce vs woocommerce",
+   "volume": 40,
+   "cpc": 14.77,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs woocommerce comparison",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce enterprise vs shopify plus",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 3.0
+  },
+  {
+   "keyword": "shopify plus vs bigcommerce enterprise",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace reddit",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace pricing",
+   "volume": 40,
+   "cpc": 8.23,
+   "kd": 9.0
+  },
+  {
+   "keyword": "shopify vs wix store",
+   "volume": 40,
+   "cpc": 5.38,
+   "kd": 15.0
+  },
+  {
+   "keyword": "wix store vs shopify",
+   "volume": 40,
+   "cpc": 5.38,
+   "kd": 15.0
+  },
+  {
+   "keyword": "wix stores vs shopify",
+   "volume": 40,
+   "cpc": 5.38,
+   "kd": 9.0
+  },
+  {
+   "keyword": "squarespace vs shopify reddit",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "squarespace vs shopify for small business",
+   "volume": 40,
+   "cpc": 37.88,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify vs etsy reddit",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "which ecommerce platform is best for seo",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "adobe commerce vs shopify",
+   "volume": 40,
+   "cpc": 3.75,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify starter plan vs basic",
+   "volume": 40,
+   "cpc": 21.8,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs woocommerce vs shopify",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce vs shopify vs magento",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento vs woocommerce",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs wordpress/woocommerce",
+   "volume": 30,
+   "cpc": 2.73,
+   "kd": 8.0
+  },
+  {
+   "keyword": "wordpress woocommerce vs shopify",
+   "volume": 30,
+   "cpc": 2.73,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify vs woocommerce vs magento",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce vs magento vs shopify",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs woocommerce wordpress",
+   "volume": 30,
+   "cpc": 2.73,
+   "kd": 1.0
+  },
+  {
+   "keyword": "magento vs shopify vs woocommerce",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs wordpress woocommerce",
+   "volume": 30,
+   "cpc": 2.73,
+   "kd": 6.0
+  },
+  {
+   "keyword": "magento 2 vs shopify plus",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs magento enterprise",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs magento 2",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento enterprise vs shopify plus",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce vs magento",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify pricing",
+   "volume": 30,
+   "cpc": 35.86,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce pricing",
+   "volume": 30,
+   "cpc": 35.86,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify vs wix vs wordpress",
+   "volume": 30,
+   "cpc": 8.76,
+   "kd": 2.0
+  },
+  {
+   "keyword": "wix vs shopify vs wordpress",
+   "volume": 30,
+   "cpc": 8.76,
+   "kd": 2.0
+  },
+  {
+   "keyword": "wix vs wordpress vs shopify",
+   "volume": 30,
+   "cpc": 8.76,
+   "kd": 3.0
+  },
+  {
+   "keyword": "squarespace vs shopify pricing",
+   "volume": 30,
+   "cpc": 8.46,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs etsy vs squarespace",
+   "volume": 30,
+   "cpc": 6.88,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs shopify for artists",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "which ecommerce platform is best for small business",
+   "volume": 30,
+   "cpc": 24.86,
+   "kd": 0.0
+  },
+  {
+   "keyword": "what is the best ecommerce platform for small business",
+   "volume": 30,
+   "cpc": 16.4,
+   "kd": 29.0
+  },
+  {
+   "keyword": "best ecommerce platform for clothing",
+   "volume": 30,
+   "cpc": 14.67,
+   "kd": 17.0
+  },
+  {
+   "keyword": "best ecommerce platform for dropshipping",
+   "volume": 30,
+   "cpc": 30.26,
+   "kd": 15.0
+  },
+  {
+   "keyword": "magento open source vs adobe commerce",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs woocommerce vs shopify",
+   "volume": 20,
+   "cpc": 5.43,
+   "kd": 1.0
+  },
+  {
+   "keyword": "woocommerce vs shopify pricing",
+   "volume": 20,
+   "cpc": 1.47,
+   "kd": 24.0
+  },
+  {
+   "keyword": "woocommerce vs shopify price",
+   "volume": 20,
+   "cpc": 1.47,
+   "kd": 25.0
+  },
+  {
+   "keyword": "shopify plus vs magento 2 commerce",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs shopify comparison",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs magento comparison",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify reddit",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs squarespace",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace vs bigcommerce",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace for artists",
+   "volume": 20,
+   "cpc": 3.75,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs squarespace for small business",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify vs wix pricing",
+   "volume": 20,
+   "cpc": 7.3,
+   "kd": 9.0
+  },
+  {
+   "keyword": "wix vs shopify reddit",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "godaddy vs shopify vs wix",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 5.0
+  },
+  {
+   "keyword": "wix vs shopify for small business",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "wix studio vs shopify",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify pricing",
+   "volume": 20,
+   "cpc": 15.72,
+   "kd": 12.0
+  },
+  {
+   "keyword": "big cartel vs shopify vs squarespace",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "shopify vs squarespace cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify vs etsy vs amazon",
+   "volume": 20,
+   "cpc": 11.79,
+   "kd": 3.0
+  },
+  {
+   "keyword": "wix basic ecommerce vs standard ecommerce",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce 2024",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "dropshipping shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "woocommerce vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "shopify vs woocommerce market share",
+   "volume": 10,
+   "cpc": 6.2,
+   "kd": 63.0
+  },
+  {
+   "keyword": "woocommerce vs shopify 2026",
+   "volume": 10,
+   "cpc": 2.26,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify 2018",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 57.0
+  },
+  {
+   "keyword": "woocommerce vs shopify for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "woocommerce vs shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 31.0
+  },
+  {
+   "keyword": "shopify vs woocommerce performance",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce vs wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce vs magento vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 39.0
+  },
+  {
+   "keyword": "shopify vs woocommerce cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "reddit woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "woocommerce vs shopify 2025",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce 2022",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 65.0
+  },
+  {
+   "keyword": "woocommerce vs shopify which one is better",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 53.0
+  },
+  {
+   "keyword": "shopify vs woocommerce vs magento vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 39.0
+  },
+  {
+   "keyword": "shopify vs woocommerce vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 53.0
+  },
+  {
+   "keyword": "shopify vs woocommerce speed",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 57.0
+  },
+  {
+   "keyword": "woocommerce vs shopify which is better",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "magento vs woocommerce vs shopify vs opencart vs prestashop",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce vs prestashop",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "dropshipping woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "ecwid vs shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress and woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 11.3,
+   "kd": null
+  },
+  {
+   "keyword": "etsy vs shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "shopify vs woocommerce pricing",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "woocommerce vs shopify fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify vs prestashop",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "wix vs shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "prestashop vs shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix vs woocommerce",
+   "volume": 10,
+   "cpc": 9.09,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify 2024",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs squarespace vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 53.0
+  },
+  {
+   "keyword": "woocommerce vs shopify wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "woocommerce vs shopify: which is better",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce transaction fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "wix vs woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "shopify vs etsy vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "reddit shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify vs woocommerce pros and cons",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs bigcommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 31.0
+  },
+  {
+   "keyword": "shopify vs woocommerce which is better",
+   "volume": 10,
+   "cpc": 7.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce for wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "prestashop vs woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "shopify vs woocommerce 2025",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce 2021",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 65.0
+  },
+  {
+   "keyword": "shopify vs woocommerce dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "shopify vs woocommerce seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs woocommerce vs shopify vs opencart",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "shopify vs woocommerce conversion rate",
+   "volume": 10,
+   "cpc": 0.92,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs prestashop vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "woocommerce pricing vs shopify",
+   "volume": 10,
+   "cpc": 14.09,
+   "kd": 19.0
+  },
+  {
+   "keyword": "woocommerce vs shopify vs bigcommerce vs magento",
+   "volume": 10,
+   "cpc": 53.08,
+   "kd": 39.0
+  },
+  {
+   "keyword": "opencart vs woocommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs woocommerce vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "seo shopify vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs shopify market share",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 63.0
+  },
+  {
+   "keyword": "woocommerce vs shopify cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 62.0
+  },
+  {
+   "keyword": "magento vs shopify vs bigcommerce vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 39.0
+  },
+  {
+   "keyword": "woocommerce vs shopify speed",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 57.0
+  },
+  {
+   "keyword": "shopify vs woocommerce fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress vs shopify reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs adobe commerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 11.0
+  },
+  {
+   "keyword": "magento 2 vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce vs magento",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento 2018",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs opencart vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs prestashop vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "adobe magento vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "pros and cons magento vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs bigcommerce vs shopify",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs wordpress vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs shopify vs opencart",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "prestashop vs shopify vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs magento seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs volusion vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs magento vs bigcommerce",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento coalition",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs magento enterprise",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento enterprise vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs shopify pricing",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs prestashop vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs shopify vs bigcommerce",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento commerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus vs magento commerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 1.0
+  },
+  {
+   "keyword": "wordpress vs magento vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "bigcommerce vs magento vs shopify",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento vs shopify reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "opencart vs magento vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs shopify vs wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs magento market share",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs shopify 2020",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs magento",
+   "volume": 10,
+   "cpc": 20.33,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento ecommerce vs shopify",
+   "volume": 10,
+   "cpc": 6.79,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs volusion vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce comparison",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 18.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify review",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify coalition",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify market share",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 57.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 18.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 18.0
+  },
+  {
+   "keyword": "shopify vs big cartel vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify stock",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce vs volusion",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce 2017",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify 2019",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs bigcommerce cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "volusion vs bigcommerce vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "squarespace vs shopify vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 16.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify vs volusion",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "bigcommerce vs shopify 2017",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs shopify reviews",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "shopify vs bigcommerce stock",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "volusion vs shopify vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify vs godaddy vs bigcommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce vs volusion vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "bigcommerce vs woocommerce reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs squarespace vs wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "magento vs opencart vs prestashop vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs woocommerce seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs opencart vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "magento vs woocommerce speed",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "prestashop vs magento vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "wordpress woocommerce vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "woocommerce vs prestashop vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "magento vs woocommerce performance",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs magento reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "magento ecommerce vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "magento vs wordpress woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "woocommerce vs magento vs prestashop",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "woocommerce vs magento 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "opencart vs magento vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs opencart vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "opencart vs woocommerce vs magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento vs woocommerce vs opencart",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs magento speed",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "magento vs woocommerce reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "woocommerce vs magento vs opencart",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "magento vs prestashop vs woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "square vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "wix vs shopify vs big cartel",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "shopify vs wix vs etsy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify vs wix for online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "wordpress vs wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify vs wix vs weebly",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "weebly vs wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "wix vs squarespace vs wordpress vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "wix vs shopify for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "wix dropshipping vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify vs wix which is better",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "selling on wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix for small business",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix website vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 55.0
+  },
+  {
+   "keyword": "shopify vs wix for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify vs wix comparison",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify 2025",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs squarespace vs weebly vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify vs wix ecommerce reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify fees",
+   "volume": 10,
+   "cpc": 9.41,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs etsy vs wix",
+   "volume": 10,
+   "cpc": 6.55,
+   "kd": 10.0
+  },
+  {
+   "keyword": "wix shop vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "godaddy vs wix vs squarespace vs shopify",
+   "volume": 10,
+   "cpc": 5.93,
+   "kd": 44.0
+  },
+  {
+   "keyword": "wix vs shopify for online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "dropshipping wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "big cartel vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "godaddy vs wix vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "shopify vs wix vs godaddy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "wix vs godaddy vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "ecwid vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "wix vs shopify comparison",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix 2025",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs weebly vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "wix com vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs wix online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "wix vs shopify stock",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "shopify vs wix cost",
+   "volume": 10,
+   "cpc": 0.14,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify vs wix dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "wix vs shopify transaction fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "shopify vs wix reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs wordpress vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify vs godaddy vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "wix vs shopify pros and cons",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 53.0
+  },
+  {
+   "keyword": "wix ecommerce pricing vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "wix vs shopify cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix online store vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 52.0
+  },
+  {
+   "keyword": "wordpress vs shopify vs wix",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "shopify vs wix vs squarespace reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix vs shopify for artists",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix pricing vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 9.0
+  },
+  {
+   "keyword": "wix vs shopify vs godaddy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 22.0
+  },
+  {
+   "keyword": "wix vs weebly vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "squarespace vs shopify vs godaddy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce vs godaddy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace store vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 54.0
+  },
+  {
+   "keyword": "wordpress vs squarespace vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "squarespace commerce vs shopify",
+   "volume": 10,
+   "cpc": 11.58,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify website vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce squarespace vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "squarespace shop vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "squarespace vs shopify seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "etsy vs shopify vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs shopify reddit 2022",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs squarespace vs etsy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "squarespace vs wordpress vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify pricing vs squarespace",
+   "volume": 10,
+   "cpc": 22.48,
+   "kd": null
+  },
+  {
+   "keyword": "squarespace pricing vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "squarespace vs shopify fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "square vs squarespace vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "squarespace vs shopify cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 14.0
+  },
+  {
+   "keyword": "shopify vs squarespace fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "squarespace vs shopify vs wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify vs squarespace transaction fees",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "weebly vs shopify vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify vs wordpress vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 19.0
+  },
+  {
+   "keyword": "shopify vs squarespace online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "selling on squarespace vs shopify",
+   "volume": 10,
+   "cpc": 6.06,
+   "kd": 13.0
+  },
+  {
+   "keyword": "reddit squarespace vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce shopify vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 8.0
+  },
+  {
+   "keyword": "shopify vs squarespace seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs squarespace website builder",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress vs shopify vs squarespace",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "godaddy vs shopify pricing",
+   "volume": 10,
+   "cpc": 2.98,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs godaddy reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "custom website vs shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify vs custom website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify vs custom website reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs etsy for beginners",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs etsy for digital products",
+   "volume": 10,
+   "cpc": 0.19,
+   "kd": null
+  },
+  {
+   "keyword": "best ecommerce platform for small business australia",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is the best for small business",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "best ecommerce platform for small business 2020",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 63.0
+  },
+  {
+   "keyword": "best ecommerce platform for small business uk",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "best ecommerce platform for small business 2022",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 40.0
+  },
+  {
+   "keyword": "best ecommerce platform for small business reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "best ecommerce platform for small business in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "what is the best ecommerce platform for a small business",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "which ecommerce platform is best for clothing",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which is the best ecommerce platform in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 44.0
+  },
+  {
+   "keyword": "which is the best platform to build a ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is best in pakistan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which is the best ecommerce platform to dropship",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "which platform is best for creating ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 73.0
+  },
+  {
+   "keyword": "which ecommerce platform is best for dropshipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which is best platform for ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which platform is best for ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is the best",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 80.0
+  },
+  {
+   "keyword": "which ecommerce platform is best in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is best for beginners",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is best in uae",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "which ecommerce platform is best for me",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 73.0
+  },
+  {
+   "keyword": "shopify plus vs netsuite",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus vs basic",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus vs adobe commerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify advanced vs shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus vs shopify basic",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify basic vs shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "shopify basic vs plus",
+   "volume": 10,
+   "cpc": 6.08,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus vs salesforce commerce cloud",
+   "volume": 10,
+   "cpc": 6.39,
+   "kd": 16.0
+  },
+  {
+   "keyword": "shopify plus vs salesforce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs shopify plus comparison",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs shopify plus features",
+   "volume": 10,
+   "cpc": 6.53,
+   "kd": 52.0
+  },
+  {
+   "keyword": "adobe commerce vs shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify enterprise vs plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify plus vs shopify pricing",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify plus vs enterprise",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify vs shopify plus pricing",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "shopify pro vs plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify grow vs basic",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce vs bigcommerce reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "best ecommerce platform for manufacturers",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 69.0
+  }
+ ],
+ "vertical": [
+  {
+   "keyword": "b2b ecommerce platform",
+   "volume": 1900,
+   "cpc": 31.06,
+   "kd": 18.0
+  },
+  {
+   "keyword": "b2b sites",
+   "volume": 720,
+   "cpc": 20.78,
+   "kd": 31.0
+  },
+  {
+   "keyword": "b2b website design",
+   "volume": 480,
+   "cpc": 37.27,
+   "kd": 9.0
+  },
+  {
+   "keyword": "b2b ecommerce examples",
+   "volume": 320,
+   "cpc": 25.86,
+   "kd": 2.0
+  },
+  {
+   "keyword": "b2b e commerce example",
+   "volume": 320,
+   "cpc": 25.86,
+   "kd": 11.0
+  },
+  {
+   "keyword": "b2b examples companies",
+   "volume": 320,
+   "cpc": 1.21,
+   "kd": 8.0
+  },
+  {
+   "keyword": "alibaba b2b",
+   "volume": 320,
+   "cpc": 1.45,
+   "kd": 26.0
+  },
+  {
+   "keyword": "b2b e commerce website",
+   "volume": 260,
+   "cpc": 7.04,
+   "kd": 29.0
+  },
+  {
+   "keyword": "best b2b websites",
+   "volume": 260,
+   "cpc": 25.72,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b ecommerce website",
+   "volume": 260,
+   "cpc": 7.04,
+   "kd": 50.0
+  },
+  {
+   "keyword": "b2b ecommerce platforms",
+   "volume": 210,
+   "cpc": 36.6,
+   "kd": 41.0
+  },
+  {
+   "keyword": "b2b ecommerce website development",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce for manufacturers",
+   "volume": 140,
+   "cpc": 21.51,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify plus b2b",
+   "volume": 140,
+   "cpc": 11.06,
+   "kd": 27.0
+  },
+  {
+   "keyword": "b2b ecommerce companies",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "shopify themes fashion",
+   "volume": 110,
+   "cpc": 4.17,
+   "kd": 11.0
+  },
+  {
+   "keyword": "b2b website examples",
+   "volume": 90,
+   "cpc": 14.65,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b websites examples",
+   "volume": 90,
+   "cpc": 14.65,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b ecommerce website design",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "best b2b ecommerce platform",
+   "volume": 70,
+   "cpc": 36.33,
+   "kd": 14.0
+  },
+  {
+   "keyword": "fashion e commerce websites",
+   "volume": 50,
+   "cpc": 3.94,
+   "kd": 7.0
+  },
+  {
+   "keyword": "b2b ecommerce for manufacturers",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b ecommerce for distributors",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "e commerce clothing brands",
+   "volume": 30,
+   "cpc": 1.21,
+   "kd": 82.0
+  },
+  {
+   "keyword": "best b2b ecommerce websites",
+   "volume": 30,
+   "cpc": 23.3,
+   "kd": 2.0
+  },
+  {
+   "keyword": "b2b e commerce website examples",
+   "volume": 30,
+   "cpc": 6.73,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b ecommerce website examples",
+   "volume": 30,
+   "cpc": 6.73,
+   "kd": 0.0
+  },
+  {
+   "keyword": "top 100 b2b companies",
+   "volume": 30,
+   "cpc": 10.88,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce b2b pricing",
+   "volume": 20,
+   "cpc": 18.86,
+   "kd": 6.0
+  },
+  {
+   "keyword": "b2b ecommerce website development services",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "top 10 b2b platforms in the world",
+   "volume": 20,
+   "cpc": 19.78,
+   "kd": 4.0
+  },
+  {
+   "keyword": "difference between b2b and b2c e-commerce",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 5.0
+  },
+  {
+   "keyword": "b2b case study examples",
+   "volume": 20,
+   "cpc": 11.74,
+   "kd": 0.0
+  },
+  {
+   "keyword": "list of b2b websites",
+   "volume": 20,
+   "cpc": 16.11,
+   "kd": 2.0
+  },
+  {
+   "keyword": "ecommerce clothing website design",
+   "volume": 10,
+   "cpc": 5.29,
+   "kd": null
+  },
+  {
+   "keyword": "b2b ecommerce website templates",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 45.0
+  },
+  {
+   "keyword": "b2b and b2c website examples",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 48.0
+  },
+  {
+   "keyword": "how to create a b2b e commerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "b2b ecommerce ideas",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "b2b ecommerce platform examples",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "what is b2b e commerce with example",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 26.0
+  },
+  {
+   "keyword": "b2b e-commerce websites quizlet",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "top b2b ecommerce companies",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "b2b ecommerce companies in usa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "best b2b ecommerce companies",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 38.0
+  },
+  {
+   "keyword": "types of b2b e commerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "best b2b case study examples",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "top 50 b2b websites",
+   "volume": 10,
+   "cpc": 55.19,
+   "kd": 31.0
+  },
+  {
+   "keyword": "top 100 b2b websites in the world",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "top 10 b2b websites in usa",
+   "volume": 10,
+   "cpc": 8.71,
+   "kd": null
+  },
+  {
+   "keyword": "how to set up shopify store for clothing brand",
+   "volume": 10,
+   "cpc": 9.94,
+   "kd": null
+  },
+  {
+   "keyword": "electronics image for ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "ecommerce website for electronics",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 78.0
+  },
+  {
+   "keyword": "electronics images for ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "open source b2b ecommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "d2c ecommerce website development",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to start an online store on facebook",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  }
+ ],
+ "howto": [
+  {
+   "keyword": "how to start an online shopping store",
+   "volume": 1600,
+   "cpc": 11.27,
+   "kd": 49.0
+  },
+  {
+   "keyword": "how to start an online store",
+   "volume": 1600,
+   "cpc": 11.27,
+   "kd": 24.0
+  },
+  {
+   "keyword": "how to start an online store website",
+   "volume": 1600,
+   "cpc": 11.27,
+   "kd": 52.0
+  },
+  {
+   "keyword": "how to create an amazon storefront as an influencer",
+   "volume": 720,
+   "cpc": 4.54,
+   "kd": 16.0
+  },
+  {
+   "keyword": "how to create an online store for free",
+   "volume": 590,
+   "cpc": 16.79,
+   "kd": 68.0
+  },
+  {
+   "keyword": "what is an ecommerce platform",
+   "volume": 480,
+   "cpc": 7.51,
+   "kd": 28.0
+  },
+  {
+   "keyword": "what are e commerce platforms",
+   "volume": 480,
+   "cpc": 7.51,
+   "kd": 48.0
+  },
+  {
+   "keyword": "how to build an ecommerce website",
+   "volume": 320,
+   "cpc": 11.32,
+   "kd": 45.0
+  },
+  {
+   "keyword": "how to start an online store with no money",
+   "volume": 170,
+   "cpc": 18.06,
+   "kd": 10.0
+  },
+  {
+   "keyword": "how to start an online store without inventory",
+   "volume": 170,
+   "cpc": 6.32,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to increase sales on ecommerce",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to increase sales ecommerce",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to increase ecommerce sales",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to increase sales in ecommerce",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to build an ecommerce website for free",
+   "volume": 90,
+   "cpc": 15.92,
+   "kd": 67.0
+  },
+  {
+   "keyword": "how to create an ecommerce website for free",
+   "volume": 90,
+   "cpc": 15.92,
+   "kd": 100.0
+  },
+  {
+   "keyword": "how to start an online store free",
+   "volume": 90,
+   "cpc": 11.24,
+   "kd": 92.0
+  },
+  {
+   "keyword": "how to start an online store for free",
+   "volume": 90,
+   "cpc": 11.24,
+   "kd": 67.0
+  },
+  {
+   "keyword": "how to build an ecommerce website from scratch",
+   "volume": 50,
+   "cpc": 16.88,
+   "kd": 17.0
+  },
+  {
+   "keyword": "how to build an ecommerce website with wordpress",
+   "volume": 50,
+   "cpc": 4.33,
+   "kd": 19.0
+  },
+  {
+   "keyword": "how to build an ecommerce website on wordpress",
+   "volume": 50,
+   "cpc": 4.33,
+   "kd": 11.0
+  },
+  {
+   "keyword": "how to start an online store with amazon",
+   "volume": 40,
+   "cpc": 10.9,
+   "kd": 24.0
+  },
+  {
+   "keyword": "how to start an online store business",
+   "volume": 40,
+   "cpc": 13.46,
+   "kd": 41.0
+  },
+  {
+   "keyword": "how to start an online store on amazon",
+   "volume": 40,
+   "cpc": 10.9,
+   "kd": 19.0
+  },
+  {
+   "keyword": "how to start an amazon online store",
+   "volume": 40,
+   "cpc": 10.9,
+   "kd": 26.0
+  },
+  {
+   "keyword": "how to open online store on amazon",
+   "volume": 30,
+   "cpc": 18.97,
+   "kd": 19.0
+  },
+  {
+   "keyword": "how to start an online ecommerce store",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 79.0
+  },
+  {
+   "keyword": "how to optimize ecommerce website",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 3.0
+  },
+  {
+   "keyword": "how to upgrade to shopify plus",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "how to build an ecommerce website step-by-step",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 12.0
+  },
+  {
+   "keyword": "how to build an ecommerce website step by step",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "how to create make build an online ecommerce store website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website step by step pdf",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website using react",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website with python",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how long to build an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website with dreamweaver",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website pdf",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website from scratch using wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website with react",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website with shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website using javascript",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website using wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how long does it take to build an ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "how to build an ecommerce website step-by-step pdf",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website using shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website youtube",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website on shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website step-by step pdf",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to build an ecommerce website like amazon",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to make e commerce website using html and css",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an ebay online store",
+   "volume": 10,
+   "cpc": 4.26,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store step by step",
+   "volume": 10,
+   "cpc": 17.02,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store from scratch",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store reddit",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in australia",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store south africa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store with drop shipping",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 74.0
+  },
+  {
+   "keyword": "how to start an online store legally",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store like amazon",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store with inventory",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 42.0
+  },
+  {
+   "keyword": "how to start an online store in california",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store on instagram",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store without inventory for free",
+   "volume": 10,
+   "cpc": 7.72,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in india",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in the philippines",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store australia",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store on etsy",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 37.0
+  },
+  {
+   "keyword": "how to start an online store for dummies",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store on shopify",
+   "volume": 10,
+   "cpc": 5.03,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store from home",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start up an online store",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 73.0
+  },
+  {
+   "keyword": "how to start an online store in canada",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store with shopify",
+   "volume": 10,
+   "cpc": 10.05,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in pakistan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store uk",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store on ebay",
+   "volume": 10,
+   "cpc": 4.26,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in nigeria",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in japan",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to start an online store in south africa",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to open online store on amazon for free",
+   "volume": 10,
+   "cpc": 5.88,
+   "kd": null
+  },
+  {
+   "keyword": "how to increase ecommerce sales 2022",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to increase your ecommerce sales",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 20.0
+  },
+  {
+   "keyword": "how to increase sales in ecommerce business",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to increase sales ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 23.0
+  },
+  {
+   "keyword": "how to increase sales on ecommerce site",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "how to increase sales for ecommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to increase sales on ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 25.0
+  },
+  {
+   "keyword": "how to increase my ecommerce sales",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to improve e commerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to run ads for ecommerce",
+   "volume": 10,
+   "cpc": 31.77,
+   "kd": null
+  },
+  {
+   "keyword": "how to optimize images for ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to optimize your ecommerce website",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to optimize ecommerce website seo",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  }
+ ],
+ "migrate": [
+  {
+   "keyword": "shopify migration services",
+   "volume": 390,
+   "cpc": 12.32,
+   "kd": 6.0
+  },
+  {
+   "keyword": "migration from magento to shopify",
+   "volume": 210,
+   "cpc": 22.14,
+   "kd": 10.0
+  },
+  {
+   "keyword": "migration magento to shopify",
+   "volume": 210,
+   "cpc": 22.14,
+   "kd": 2.0
+  },
+  {
+   "keyword": "migration from woocommerce to shopify",
+   "volume": 210,
+   "cpc": 33.26,
+   "kd": 33.0
+  },
+  {
+   "keyword": "woocommerce migration to shopify",
+   "volume": 210,
+   "cpc": 33.26,
+   "kd": 33.0
+  },
+  {
+   "keyword": "shopify to shopify migration",
+   "volume": 170,
+   "cpc": 41.99,
+   "kd": 12.0
+  },
+  {
+   "keyword": "migrate to shopify",
+   "volume": 170,
+   "cpc": 18.55,
+   "kd": 20.0
+  },
+  {
+   "keyword": "magento to shopify migration",
+   "volume": 140,
+   "cpc": 22.55,
+   "kd": 29.0
+  },
+  {
+   "keyword": "ecommerce replatform",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "replatform ecommerce",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce migration services",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "migration from magento 1 to magento 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "migration magento 1 to magento 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 3.0
+  },
+  {
+   "keyword": "magento migration 1 to 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 5.0
+  },
+  {
+   "keyword": "migration magento 1 to 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "magento 1 migration to magento 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 5.0
+  },
+  {
+   "keyword": "magento migration from 1 to 2",
+   "volume": 140,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "shopify migration experts",
+   "volume": 110,
+   "cpc": 3.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 data migration",
+   "volume": 110,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "woocommerce to shopify migration",
+   "volume": 90,
+   "cpc": 31.3,
+   "kd": 32.0
+  },
+  {
+   "keyword": "magento migration",
+   "volume": 90,
+   "cpc": 28.49,
+   "kd": 6.0
+  },
+  {
+   "keyword": "magento to shopify migration services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 6.0
+  },
+  {
+   "keyword": "magento to shopify migration service",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 9.0
+  },
+  {
+   "keyword": "migration from shopify to woocommerce",
+   "volume": 70,
+   "cpc": 83.85,
+   "kd": 33.0
+  },
+  {
+   "keyword": "wordpress to shopify migration",
+   "volume": 70,
+   "cpc": 29.17,
+   "kd": 2.0
+  },
+  {
+   "keyword": "ecommerce migration",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "ecommerce platform migration",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration service",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration services",
+   "volume": 70,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "bigcommerce to shopify migration",
+   "volume": 50,
+   "cpc": 42.76,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify data migration",
+   "volume": 50,
+   "cpc": 0.0,
+   "kd": 24.0
+  },
+  {
+   "keyword": "shopify to magento migration",
+   "volume": 40,
+   "cpc": 28.81,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento to shopify product migration",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 4.0
+  },
+  {
+   "keyword": "magento to shopify data migration",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 13.0
+  },
+  {
+   "keyword": "woocommerce migration",
+   "volume": 40,
+   "cpc": 35.53,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to 2 migration",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "wix to shopify migration",
+   "volume": 40,
+   "cpc": 20.72,
+   "kd": 4.0
+  },
+  {
+   "keyword": "shopify plus migration",
+   "volume": 40,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento to shopify plus migration",
+   "volume": 30,
+   "cpc": 9.7,
+   "kd": 0.0
+  },
+  {
+   "keyword": "woocommerce to shopify migration services",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify to woocommerce migration",
+   "volume": 30,
+   "cpc": 27.35,
+   "kd": 30.0
+  },
+  {
+   "keyword": "woocommerce to shopify migration service",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 17.0
+  },
+  {
+   "keyword": "shopify store migration",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "ecommerce migration checklist",
+   "volume": 30,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 2 data migration tool",
+   "volume": 30,
+   "cpc": 24.71,
+   "kd": 38.0
+  },
+  {
+   "keyword": "magento data migration tool",
+   "volume": 30,
+   "cpc": 11.15,
+   "kd": 5.0
+  },
+  {
+   "keyword": "magento migration to shopify",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "magento to shopify migration checklist",
+   "volume": 20,
+   "cpc": 4.76,
+   "kd": 14.0
+  },
+  {
+   "keyword": "magento 1 to shopify migration",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "magento 2 to shopify migration",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 12.0
+  },
+  {
+   "keyword": "volusion to shopify migration",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify to woocommerce migration service",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify to woocommerce migration plugin",
+   "volume": 20,
+   "cpc": 11.04,
+   "kd": 45.0
+  },
+  {
+   "keyword": "shopify to woocommerce migration services",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 10.0
+  },
+  {
+   "keyword": "shopify migration checklist",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 7.0
+  },
+  {
+   "keyword": "ecommerce data migration",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento to woocommerce migration",
+   "volume": 20,
+   "cpc": 29.62,
+   "kd": 23.0
+  },
+  {
+   "keyword": "data migration magento 1 to 2",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 data migration tool",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration tool",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to 2 migration tool",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration cost",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "shopify to bigcommerce migration",
+   "volume": 20,
+   "cpc": 12.89,
+   "kd": 0.0
+  },
+  {
+   "keyword": "how to migrate from wordpress to shopify",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate wordpress site to shopify",
+   "volume": 20,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify to magento 2 data migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento to shopify migration agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify to magento 2 migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento to shopify migration cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopware to shopify migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "prestashop to shopify migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "wordpress to shopify product migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce to shopify migration agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce to shopify migration free",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "shopify to woocommerce migration free",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "cart2cart shopify to woocommerce migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce to shopify migration company",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce to shopify product migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "cart2cart: shopify to woocommerce migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "woocommerce to shopify migration plugin",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 67.0
+  },
+  {
+   "keyword": "how to migrate from woocommerce to shopify",
+   "volume": 10,
+   "cpc": 8.76,
+   "kd": null
+  },
+  {
+   "keyword": "should i move from woocommerce to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "lightspeed to shopify migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 43.0
+  },
+  {
+   "keyword": "migrate & import shopify to woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify data migration services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wordpress to shopify migration services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "store migration app shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 49.0
+  },
+  {
+   "keyword": "magento data migration from 1 to 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to magento 2 data migration steps",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to 2 migration service",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "magento 1 to 2 migration cost",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 0.0
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration process",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to magento 2 migration steps",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to 2 data migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to magento 2 data migration extension",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "data migration from magento 1 to magento 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "data migration magento 1 to magento 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 1 to magento 2 product migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 50.0
+  },
+  {
+   "keyword": "magento 1 to 2 migration services",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 2.0
+  },
+  {
+   "keyword": "magento/data migration from 1 to 2",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 data migration tool github",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 migration steps",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "wix to shopify migration free",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 39.0
+  },
+  {
+   "keyword": "wix to shopify product migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "shopify to wix migration",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 15.0
+  },
+  {
+   "keyword": "shopify plus migration agency",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from bigcommerce to shopify",
+   "volume": 10,
+   "cpc": 37.13,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from squarespace to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate magento to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 28.0
+  },
+  {
+   "keyword": "how to migrate shopify to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from shopify to magento",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 28.0
+  },
+  {
+   "keyword": "how to migrate from magento to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 29.0
+  },
+  {
+   "keyword": "how to migrate shopify to woocommerce",
+   "volume": 10,
+   "cpc": 26.84,
+   "kd": 57.0
+  },
+  {
+   "keyword": "how to migrate squarespace to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate shopify to wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from shopify to woocommerce",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from shopify to wordpress",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate woocommerce to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate website to shopify",
+   "volume": 10,
+   "cpc": 20.12,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate from shopify to bigcommerce",
+   "volume": 10,
+   "cpc": 25.67,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate wordpress to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": null
+  },
+  {
+   "keyword": "how to migrate wix to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  },
+  {
+   "keyword": "how to migrate from wix to shopify",
+   "volume": 10,
+   "cpc": 0.0,
+   "kd": 47.0
+  }
+ ]
+}

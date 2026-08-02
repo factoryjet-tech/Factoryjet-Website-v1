@@ -1,0 +1,297 @@
+{
+ "?->?": {
+  "kws": 36,
+  "vol": 4480,
+  "val": 96110.09999999999,
+  "top": [
+   "data migration tools (1600/mo KD2 $30)",
+   "data migration services (880/mo KD59 $34)",
+   "aws data migration services (320/mo KD10 $20)",
+   "cart2cart migration (170/mo KD38 $12)",
+   "ecommerce migration services (140/mo KD0 $0)",
+   "google data migration service (140/mo KD17 $57)"
+  ]
+ },
+ "shopify->?": {
+  "kws": 10,
+  "vol": 1120,
+  "val": 17376.1,
+  "top": [
+   "shopify migration services (390/mo KD6 $12)",
+   "shopify store migration app (260/mo KD49 $13)",
+   "shopify to shopify migration (170/mo KD12 $42)",
+   "shopify migration experts (110/mo KD0 $3)",
+   "shopify migration agency (70/mo KD0 $0)",
+   "shopify migration agency (50/mo KD7 $32)"
+  ]
+ },
+ "woocommerce->shopify": {
+  "kws": 24,
+  "vol": 1120,
+  "val": 28288.3,
+  "top": [
+   "migrating from woocommerce to shopify (210/mo KD33 $33)",
+   "migration from woocommerce to shopify (210/mo KD33 $33)",
+   "woocommerce migration to shopify (210/mo KD33 $33)",
+   "woocommerce to shopify migration (90/mo KD32 $31)",
+   "migration from woocommerce to shopify (70/mo KD34 $23)",
+   "woocommerce migration to shopify (70/mo KD34 $23)"
+  ]
+ },
+ "magento->shopify": {
+  "kws": 27,
+  "vol": 1320,
+  "val": 19177.7,
+  "top": [
+   "migration from magento to shopify (210/mo KD10 $22)",
+   "migration magento to shopify (210/mo KD2 $22)",
+   "magento to shopify migration (140/mo KD29 $23)",
+   "magento to shopify migration (140/mo KD4 $26)",
+   "migration magento to shopify (90/mo KD10 $12)",
+   "migration from magento to shopify (90/mo KD10 $12)"
+  ]
+ },
+ "?->shopify": {
+  "kws": 7,
+  "vol": 230,
+  "val": 3354.7,
+  "top": [
+   "migrate to shopify (170/mo KD20 $19)",
+   "shopware to shopify migration (10/mo KDNone $0)",
+   "migrate ecwid to shopify (10/mo KDNone $0)",
+   "lightspeed to shopify migration (10/mo KD43 $0)",
+   "weebly to shopify migration (10/mo KD45 $0)",
+   "ecwid to shopify migration (10/mo KDNone $0)"
+  ]
+ },
+ "magento->?": {
+  "kws": 51,
+  "vol": 1930,
+  "val": 3974.4,
+  "top": [
+   "migration from magento 1 to magento 2 (140/mo KD10 $0)",
+   "migration magento 1 to magento 2 (140/mo KD3 $0)",
+   "magento migration 1 to 2 (140/mo KD5 $0)",
+   "migration magento 1 to 2 (140/mo KD7 $0)",
+   "magento 1 migration to magento 2 (140/mo KD5 $0)",
+   "magento 1 to magento 2 migration (110/mo KD10 $0)"
+  ]
+ },
+ "squarespace->shopify": {
+  "kws": 3,
+  "vol": 130,
+  "val": 11675.699999999999,
+  "top": [
+   "migrate from squarespace to shopify (90/mo KD1 $130)",
+   "squarespace to shopify migration (30/mo KD0 $0)",
+   "squarespace to shopify migration (10/mo KD42 $0)"
+  ]
+ },
+ "wordpress->shopify": {
+  "kws": 8,
+  "vol": 160,
+  "val": 2260.7000000000003,
+  "top": [
+   "wordpress to shopify migration (70/mo KD2 $29)",
+   "wordpress to shopify blog migration (20/mo KD19 $0)",
+   "wordpress to shopify migration (20/mo KD25 $11)",
+   "wordpress to shopify product migration (10/mo KDNone $0)",
+   "wordpress to shopify migration services (10/mo KDNone $0)",
+   "wordpress to shopify blog migration (10/mo KDNone $0)"
+  ]
+ },
+ "shopify->woocommerce": {
+  "kws": 16,
+  "vol": 330,
+  "val": 12956.5,
+  "top": [
+   "migration from shopify to woocommerce (70/mo KD33 $84)",
+   "migrate from shopify to woocommerce (70/mo KD33 $84)",
+   "shopify to woocommerce migration (30/mo KD30 $27)",
+   "shopify to woocommerce migration service (20/mo KD10 $0)",
+   "shopify to woocommerce migration plugin (20/mo KD45 $11)",
+   "shopify to woocommerce migration services (20/mo KD10 $0)"
+  ]
+ },
+ "bigcommerce->shopify": {
+  "kws": 2,
+  "vol": 60,
+  "val": 2391.7,
+  "top": [
+   "bigcommerce to shopify migration (50/mo KD0 $43)",
+   "bigcommerce to shopify migration (10/mo KDNone $25)"
+  ]
+ },
+ "shopify->magento": {
+  "kws": 5,
+  "vol": 120,
+  "val": 1152.3999999999999,
+  "top": [
+   "shopify to magento migration (50/mo KD9 $0)",
+   "shopify to magento migration (40/mo KD0 $29)",
+   "shopify to magento 2 data migration (10/mo KDNone $0)",
+   "shopify to magento 2 migration (10/mo KDNone $0)",
+   "shopify to magento 2 migration (10/mo KDNone $0)"
+  ]
+ },
+ "woocommerce->?": {
+  "kws": 6,
+  "vol": 100,
+  "val": 1562.5,
+  "top": [
+   "woocommerce migration (40/mo KD0 $36)",
+   "woocommerce migration plugin (20/mo KD57 $0)",
+   "product import export for woocommerce import export product csv suite (10/mo KDNone $14)",
+   "woocommerce to woocommerce migration (10/mo KD0 $0)",
+   "all-in-one wp migration woocommerce (10/mo KDNone $0)",
+   "migrate woocommerce products with images (10/mo KDNone $0)"
+  ]
+ },
+ "wix->shopify": {
+  "kws": 5,
+  "vol": 100,
+  "val": 828.8,
+  "top": [
+   "wix to shopify migration (40/mo KD4 $21)",
+   "wix to shopify migration (30/mo KDNone $0)",
+   "wix to shopify migration free (10/mo KD39 $0)",
+   "wix to shopify product migration (10/mo KDNone $0)",
+   "wix to shopify product migration (10/mo KDNone $0)"
+  ]
+ },
+ "?->shopify_plus": {
+  "kws": 6,
+  "vol": 90,
+  "val": 363.5,
+  "top": [
+   "upgrade to shopify plus (40/mo KD0 $7)",
+   "when to upgrade to shopify plus (10/mo KD44 $0)",
+   "how to upgrade to shopify plus (10/mo KD23 $0)",
+   "how to upgrade to shopify plus (10/mo KDNone $8)",
+   "when to upgrade to shopify plus (10/mo KDNone $0)",
+   "upgrade to shopify plus (10/mo KDNone $0)"
+  ]
+ },
+ "magento->shopify_plus": {
+  "kws": 2,
+  "vol": 40,
+  "val": 291.0,
+  "top": [
+   "magento to shopify plus migration (30/mo KD0 $10)",
+   "magento to shopify plus migration (10/mo KDNone $0)"
+  ]
+ },
+ "shopify->wordpress": {
+  "kws": 2,
+  "vol": 40,
+  "val": 235.5,
+  "top": [
+   "shopify to wordpress migration (30/mo KD19 $0)",
+   "shopify to wordpress migration (10/mo KD25 $24)"
+  ]
+ },
+ "magento->woocommerce": {
+  "kws": 1,
+  "vol": 20,
+  "val": 592.4,
+  "top": [
+   "magento to woocommerce migration (20/mo KD23 $30)"
+  ]
+ },
+ "volusion->shopify": {
+  "kws": 2,
+  "vol": 30,
+  "val": 0.0,
+  "top": [
+   "volusion to shopify migration (20/mo KD0 $0)",
+   "volusion to shopify migration (10/mo KDNone $0)"
+  ]
+ },
+ "shopify->bigcommerce": {
+  "kws": 2,
+  "vol": 30,
+  "val": 257.8,
+  "top": [
+   "shopify to bigcommerce migration (20/mo KD0 $13)",
+   "shopify to bigcommerce migration (10/mo KDNone $0)"
+  ]
+ },
+ "prestashop->shopify": {
+  "kws": 2,
+  "vol": 20,
+  "val": 42.199999999999996,
+  "top": [
+   "prestashop to shopify migration (10/mo KD47 $0)",
+   "prestashop to shopify migration (10/mo KDNone $4)"
+  ]
+ },
+ "woocommerce->magento": {
+  "kws": 2,
+  "vol": 20,
+  "val": 0.0,
+  "top": [
+   "woocommerce to magento 2 migration (10/mo KD47 $0)",
+   "woocommerce to magento migration (10/mo KD0 $0)"
+  ]
+ },
+ "magento->wordpress": {
+  "kws": 1,
+  "vol": 10,
+  "val": 0.0,
+  "top": [
+   "magento to wordpress migration (10/mo KDNone $0)"
+  ]
+ },
+ "prestashop->?": {
+  "kws": 1,
+  "vol": 10,
+  "val": 0.0,
+  "top": [
+   "prestashop migrationpro (10/mo KDNone $0)"
+  ]
+ },
+ "shopify_plus->?": {
+  "kws": 2,
+  "vol": 20,
+  "val": 0.0,
+  "top": [
+   "shopify plus migration agency (10/mo KDNone $0)",
+   "shopify plus migration agency (10/mo KDNone $0)"
+  ]
+ },
+ "opencart->shopify": {
+  "kws": 3,
+  "vol": 30,
+  "val": 185.60000000000002,
+  "top": [
+   "migrate opencart to shopify (10/mo KD7 $13)",
+   "opencart to shopify migration (10/mo KD22 $0)",
+   "opencart to shopify migration (10/mo KDNone $6)"
+  ]
+ },
+ "shopify->wix": {
+  "kws": 2,
+  "vol": 20,
+  "val": 0.0,
+  "top": [
+   "shopify to wix migration (10/mo KD15 $0)",
+   "shopify to wix migration (10/mo KDNone $0)"
+  ]
+ },
+ "opencart->wordpress": {
+  "kws": 1,
+  "vol": 10,
+  "val": 0.0,
+  "top": [
+   "opencart to wordpress migration (10/mo KDNone $0)"
+  ]
+ },
+ "?->woocommerce": {
+  "kws": 1,
+  "vol": 10,
+  "val": 268.4,
+  "top": [
+   "how to migrate shopify to woocommerce (10/mo KD57 $27)"
+  ]
+ }
+}

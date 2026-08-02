@@ -12,13 +12,13 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
-  title: 'B2B E-Commerce Development Agency | B2B Ecommerce Platform Build | FactoryJet',
+  title: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms | FactoryJet',
   description:
-    'B2B ecommerce development agency for DTC and B2B brands. We build B2B ecommerce platforms with tiered pricing, net terms, account hierarchies, quote workflows, and ERP integration, on Shopify Plus, Adobe Commerce, BigCommerce, Salesforce Commerce Cloud, or Commerceflo. Compare B2B ecommerce platforms and scope your build.',
+    'B2B ecommerce agency building wholesale commerce and multi-channel commerce platforms. Tiered pricing, net terms, account hierarchies, quote and approval workflows, EDI and punchout, and ERP integration with NetSuite, SAP, Dynamics 365, Sage, Acumatica and Epicor, on Shopify Plus, Adobe Commerce, BigCommerce, Salesforce Commerce Cloud, or Commerceflo.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
-    title: 'B2B E-Commerce Development Agency | B2B Ecommerce Platform Build | FactoryJet',
-    description: 'We build B2B ecommerce platforms with tiered pricing, net terms, account hierarchies, quotes, and ERP integration. Self-service ordering your buyers actually use.',
+    title: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms | FactoryJet',
+    description: 'B2B ecommerce agency building wholesale and multi-channel commerce platforms with tiered pricing, net terms, EDI, punchout, and ERP integration.',
     url: 'https://factoryjet.com/b2b-ecommerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, B2B e-commerce development agency' }],
     locale: 'en_US',
@@ -32,6 +32,8 @@ const FAQ_CATEGORIES = [
   { key: 'basics', label: 'B2B basics' },
   { key: 'platforms', label: 'Platforms' },
   { key: 'features', label: 'Features' },
+  { key: 'wholesale', label: 'Wholesale & multi-channel' },
+  { key: 'integrations', label: 'ERP & integrations' },
   { key: 'working', label: 'Working together' },
 ];
 const FAQ_ITEMS = [
@@ -50,6 +52,16 @@ const FAQ_ITEMS = [
   { category: 'features', question: 'Can you integrate our ERP, PIM, POS, and marketplaces?', answer: 'Yes. We connect your ERP, PIM, POS, 3PL, and marketplaces into one order and inventory layer so pricing, stock, and orders stay in sync instead of living in separate systems.' },
   { category: 'features', question: 'Can you build a dealer or distributor portal?', answer: 'Yes. We build dealer, distributor, and wholesale portals with per-account pricing, order history, reordering, quote requests, and net terms, integrated with your ERP.' },
   { category: 'features', question: 'Can my sales reps place orders for accounts?', answer: 'Yes. We build order-on-behalf tools, account dashboards, and quoting so your reps work in the same system your buyers do, with full visibility of pricing and history.' },
+  { category: 'wholesale', question: 'What is a wholesale ecommerce platform?', answer: 'A wholesale ecommerce platform is a B2B store built for trade buyers rather than consumers. It holds wholesale pricing behind a login, enforces minimum order quantities and case or pallet units, gives each account its own catalogue and price list, offers net terms and on-account checkout, and makes reordering forty SKUs a one-click job. We build it on Shopify Plus, Adobe Commerce, BigCommerce, or Commerceflo.' },
+  { category: 'wholesale', question: 'What is the best B2B wholesale platform?', answer: 'It depends on catalogue size and how complex your trade rules are. Shopify Plus handles most wholesale operations cleanly and runs DTC on the same store. Adobe Commerce fits very large catalogues and deep native B2B. BigCommerce sits well in the mid-market. We compare them against your SKU count, pricing rules, and ERP on a scoping call rather than pushing one platform.' },
+  { category: 'wholesale', question: 'Can you build a B2B ecommerce site for manufacturers?', answer: 'Yes. Manufacturer builds usually mean dealer and distributor portals: per-account pricing, spec sheets and technical attributes, configurable or made-to-order products, warranty registration, and reordering, all synced to the ERP that holds your part master. We also handle territory rules where dealers are restricted by region.' },
+  { category: 'wholesale', question: 'Can you build B2B ecommerce for distributors?', answer: 'Yes. Distributor builds centre on large attribute-heavy catalogues, parametric and compatibility search, customer-specific assortments, contract pricing, bulk order pads, and tight inventory accuracy across multiple warehouses. We connect it to your ERP and WMS so availability shown to a buyer is availability you actually hold.' },
+  { category: 'wholesale', question: 'What is multi-channel commerce for B2B?', answer: 'Multi-channel commerce means every route an order can arrive by writes to one system. A self-service portal, EDI from national accounts, punchout from procurement platforms, rep-written orders, marketplaces, and retail or POS all share the same catalogue, pricing rules, and inventory pool. Without it you reconcile several order books by hand and quote from stale stock figures.' },
+  { category: 'wholesale', question: 'Do you support EDI and punchout?', answer: 'Yes. We implement EDI 850 purchase orders, 855 acknowledgements, 856 advance ship notices, and 810 invoices, and cXML or OCI punchout so buyers inside Coupa, Ariba, Jaggaer, or Oracle procurement can shop your catalogue and return an approved requisition. Both routes feed the same order pipeline as portal orders.' },
+  { category: 'integrations', question: 'Which ERPs do you integrate with?', answer: 'NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo. Where a direct connector does not exist, we build middleware against the ERP\'s API or file interface rather than forcing you onto a different system.' },
+  { category: 'integrations', question: 'What data actually syncs between the store and the ERP?', answer: 'Customers and account hierarchies, contract and tiered price lists, credit limits and payment terms, inventory by location, orders, invoices, and shipment status. The direction matters: pricing and stock are read from the ERP so the storefront never quotes a number the finance system disagrees with, while orders and new accounts flow the other way.' },
+  { category: 'integrations', question: 'Can you connect NetSuite or SAP to Shopify Plus?', answer: 'Yes, both are common builds. NetSuite to Shopify Plus typically syncs items, customers, price levels, inventory, and sales orders. SAP Business One and S/4HANA work the same way through their APIs or an integration layer. We scope which objects sync, in which direction, and how often, before writing any code, because that decision drives most of the cost.' },
+  { category: 'integrations', question: 'How do you handle credit limits and net terms against the ERP?', answer: 'The store reads the account\'s credit limit and open balance from the ERP at checkout. If the account is within limit and current, on-account checkout with net terms is offered. If it is over limit or past due, we either hold the order for approval or restrict payment to card, depending on the rule you want. Nothing depends on a manually maintained copy of the balance.' },
   { category: 'working', question: 'Can you migrate our existing B2B store without losing SEO?', answer: 'Yes. We handle replatforming and data migration, including products, customers, orders, and B2B pricing, with 301 redirects and a cutover plan that protects your rankings and uptime.' },
   { category: 'working', question: 'How long does a B2B ecommerce build take?', answer: 'Most B2B builds and migrations run from a few weeks to a few months, depending on catalog complexity, custom pricing rules, and ERP integration. You get a phased timeline with milestones after scoping.' },
   { category: 'working', question: 'How much does B2B ecommerce development cost?', answer: 'It depends on scope, platform, catalog size, pricing rules, and integrations, so we scope it on a short call and send a fixed proposal before any work starts.' },
@@ -79,6 +91,17 @@ const ORG_SCHEMA = {
   description: 'FactoryJet is an e-commerce development agency that builds B2B and omnichannel commerce for DTC and B2B brands.',
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
+};
+const PAGE_MODIFIED = '2026-08-02';
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/b2b-ecommerce#webpage',
+  url: 'https://factoryjet.com/b2b-ecommerce',
+  name: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms',
+  description: 'B2B ecommerce agency building wholesale commerce and multi-channel commerce platforms with tiered pricing, net terms, EDI, punchout, and ERP integration.',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  about: { '@id': 'https://factoryjet.com/#organization' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
@@ -127,6 +150,22 @@ const INDUSTRIES = [
   { t: 'Apparel, textiles & home', d: 'Size and color matrices, pre-book and seasonal ordering, line sheets, and B2B linesheet-to-cart flows for buyers placing large, variant-heavy orders.' },
   { t: 'Health, beauty & supplements', d: 'Wholesale and practitioner portals with gated pricing, compliance-aware product content, subscription reordering, and tiered programs for retailers and clinics.' },
 ];
+const WHOLESALE = [
+  { t: 'Gated wholesale catalogs', d: 'Trade-only products and price lists behind a login, with per-account assortments so a distributor never sees another distributor\'s range or cost.' },
+  { t: 'Volume tiers & MOQs', d: 'Quantity breaks, case and pallet units of measure, minimum order quantities, and order multiples enforced at the cart rather than corrected afterwards.' },
+  { t: 'Trade account onboarding', d: 'Application forms, resale certificate and VAT capture, credit checks, and manual approval before an account sees wholesale pricing.' },
+  { t: 'Net terms & credit control', d: 'Net 30/60/90, credit limits read live from the ERP, on-account checkout, and automatic holds when an account is over limit or past due.' },
+  { t: 'Line sheets & pre-book', d: 'Season-based pre-book ordering, line-sheet-to-cart flows, and size and colour matrices for buyers placing large variant-heavy orders.' },
+  { t: 'Rep-assisted ordering', d: 'Order-on-behalf, shared carts, and quote building so field reps and inside sales work inside the same wholesale platform your buyers use.' },
+];
+const MULTICHANNEL = [
+  { t: 'Self-service portal', d: 'The trade portal where most reorders land, with each account\'s own pricing, order history, and one-click reordering.' },
+  { t: 'EDI', d: 'For the large accounts that will never use a portal: EDI 850 purchase orders, 855 acknowledgements, 856 ASNs, and 810 invoices mapped to the same order pipeline.' },
+  { t: 'Punchout', d: 'cXML and OCI punchout so buyers inside Coupa, Ariba, Jaggaer, or Oracle procurement shop your catalogue and return an approved requisition.' },
+  { t: 'Sales reps', d: 'Order-on-behalf and quoting tools so rep-written orders carry the same pricing rules and land in the same system.' },
+  { t: 'Marketplaces', d: 'Amazon Business, Faire, and vertical marketplaces fed from the same catalogue and inventory pool.' },
+  { t: 'Retail & POS', d: 'Where you also sell direct, POS and DTC orders draw on one shared inventory instead of a separate stock bucket.' },
+];
 const COMPARE = [
   { name: 'Shopify Plus', best: 'DTC + B2B on one clean store', b2b: 'Native B2B: company accounts, price lists, net terms', catalog: 'Small to large', me: false },
   { name: 'Adobe Commerce (Magento)', best: 'Deep, complex B2B', b2b: 'Requisition lists, shared catalogs, quotes, company accounts', catalog: 'Large to very large', me: false },
@@ -163,6 +202,7 @@ export default function B2BEcommercePage() {
       <script id="b2b-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
       <script id="b2b-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script id="b2b-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="b2b-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -335,15 +375,18 @@ export default function B2BEcommercePage() {
               {/* Text */}
               <div>
                 <p className="pp-mlabel">// ERP & integrations</p>
-                <h2 style={{ marginTop: '10px' }}>One order layer across every system</h2>
+                <h2 style={{ marginTop: '10px' }}>ERP-integrated B2B commerce</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
                   A B2B ecommerce platform only works when pricing, inventory, and orders are the same number in every
                   system. We connect your storefront to your ERP, PIM, POS, 3PL, and marketplaces so the data stays in one
-                  place, not spread across imports and spreadsheets.
+                  place, not spread across imports and spreadsheets. Customer records, contract pricing, credit limits,
+                  open invoices, and stock read from the ERP rather than from a copy that drifts.
                 </p>
                 <ul style={{ marginTop: '20px', display: 'grid', gap: '10px' }}>
                   {[
-                    'ERP sync: SAP, NetSuite, Dynamics 365, Odoo, and others',
+                    'ERP sync: NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo',
+                    'What we sync: customers and account hierarchies, contract and tiered price lists, credit limits and terms, inventory by location, orders, invoices, and shipment status',
+                    'EDI and punchout: EDI 850/855/856/810 order and invoice flows, plus cXML and OCI punchout into Coupa, Ariba, Jaggaer, and Oracle procurement',
                     'PIM and product data: Akeneo, Salsify, Plytix',
                     'Marketplaces: Amazon Business, Faire, Angi',
                     '3PL and WMS: ShipBob, Extensiv, and custom warehouses',
@@ -365,11 +408,63 @@ export default function B2BEcommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// who we build for</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce by industry</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
-              The B2B rules differ by industry. Here is how we build for the sectors we know best.
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              The B2B rules differ by industry. Here is how we build for the sectors we know best. If you are a
+              manufacturer or distributor specifically, our{' '}
+              <Link href="/ecommerce-for-manufacturers" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                e-commerce for manufacturers and distributors
+              </Link>{' '}
+              page goes deeper on dealer portals, territory rules, configurable products, and parametric part search.
             </p>
             <div className="pp-bento" style={{ marginTop: '36px' }}>
               {INDUSTRIES.map((u) => (
+                <article className="pp-card" key={u.t}>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Wholesale commerce ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// wholesale commerce</p>
+            <h2 style={{ marginTop: '10px' }}>Wholesale commerce platforms</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              Wholesale is B2B with its own rules. A wholesale ecommerce platform has to hold trade-only pricing behind a
+              login, enforce minimums and case quantities, onboard accounts with credit checks, and let a buyer reorder
+              forty SKUs without rebuilding the basket. We build that on Shopify Plus, Adobe Commerce, BigCommerce, or
+              Commerceflo, wired to the ERP that already holds your price lists.
+            </p>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
+              {WHOLESALE.map((u) => (
+                <article className="pp-card" key={u.t}>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Multi-channel B2B ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// multi-channel commerce</p>
+            <h2 style={{ marginTop: '10px' }}>Multi-channel commerce for B2B</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              Trade buyers do not all order the same way. A national account sends EDI, a procurement team punches out
+              from Coupa, a small independent logs into the portal, and a rep keys an order at a trade show. Multi-channel
+              commerce means every one of those routes writes to the same catalogue, the same pricing rules, and the same
+              inventory pool, so you are not reconciling four order books. If you also sell retail and DTC alongside
+              trade, our{' '}
+              <Link href="/omnichannel-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                omnichannel commerce
+              </Link>{' '}
+              build covers the store, POS, and marketplace side of that in more depth.
+            </p>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
+              {MULTICHANNEL.map((u) => (
                 <article className="pp-card" key={u.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
                 </article>
@@ -637,9 +732,9 @@ export default function B2BEcommercePage() {
               <p style={{ marginTop: '6px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Average across 150+ client projects, DTC and B2B</p>
               <div style={{ margin: '20px 0', borderTop: '1px solid var(--pp-line)' }} />
               {[
-                'Fixed proposal — no hourly billing surprises',
+                'Fixed proposal, no hourly billing surprises',
                 'You own the code and the system, not a subscription',
-                'Platform-agnostic — we recommend fit, not the most expensive option',
+                'Platform-agnostic: we recommend fit, not the most expensive option',
                 'Decade-plus building commerce: DTC, B2B, and unified',
               ].map((item) => (
                 <div key={item} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', marginBottom: '12px' }}>

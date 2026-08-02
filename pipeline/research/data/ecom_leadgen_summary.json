@@ -1,0 +1,2801 @@
+{
+ "us": {
+  "compare": {
+   "kw": 540,
+   "vol": 1497880,
+   "comm_kw": 2,
+   "comm_vol": 640,
+   "cpc_sum": 2793.340000000001,
+   "cpc_n": 208,
+   "top": [
+    {
+     "bucket": "compare",
+     "seed": "woocommerce vs magento",
+     "geo": "us",
+     "keyword": "bigcommerce developer",
+     "volume": 320,
+     "cpc": 62.88,
+     "competition": 0.22,
+     "kd": 11
+    },
+    {
+     "bucket": "compare",
+     "seed": "shopify plus vs shopify",
+     "geo": "us",
+     "keyword": "shopify plus partners",
+     "volume": 320,
+     "cpc": 24,
+     "competition": 0.07,
+     "kd": 1
+    }
+   ],
+   "avg_cpc": 13.43
+  },
+  "vertical": {
+   "kw": 104,
+   "vol": 1485470,
+   "comm_kw": 8,
+   "comm_vol": 15100,
+   "cpc_sum": 836.2900000000001,
+   "cpc_n": 56,
+   "top": [
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "us",
+     "keyword": "shopify partner",
+     "volume": 14800,
+     "cpc": 27.47,
+     "competition": 0.08,
+     "kd": 10
+    },
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "us",
+     "keyword": "b2b ecommerce website development",
+     "volume": 140,
+     "cpc": 0,
+     "competition": 0.09,
+     "kd": 0
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "us",
+     "keyword": "multi vendor marketplace development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 3
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "us",
+     "keyword": "multi-vendor marketplace development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 3
+    },
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "us",
+     "keyword": "b2b ecommerce website development services",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "us",
+     "keyword": "multi vendor ecommerce marketplace development",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "vertical",
+     "seed": "d2c ecommerce website development",
+     "geo": "us",
+     "keyword": "d2c ecommerce website development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "us",
+     "keyword": "multi vendor marketplace app development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 14.93
+  },
+  "hire": {
+   "kw": 323,
+   "vol": 303920,
+   "comm_kw": 307,
+   "comm_vol": 270660,
+   "cpc_sum": 4165.979999999998,
+   "cpc_n": 109,
+   "top": [
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "us",
+     "keyword": "mobile app developers",
+     "volume": 201000,
+     "cpc": 53.31,
+     "competition": 0.01,
+     "kd": 55
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "us",
+     "keyword": "shopify partners",
+     "volume": 14800,
+     "cpc": 27.47,
+     "competition": 0.08,
+     "kd": 36
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "shopify partner login",
+     "volume": 5400,
+     "cpc": 15.78,
+     "competition": 0,
+     "kd": 42
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "shopify partners login",
+     "volume": 5400,
+     "cpc": 15.78,
+     "competition": 0,
+     "kd": 40
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "us",
+     "keyword": "shopify developers",
+     "volume": 2400,
+     "cpc": 30.76,
+     "competition": 0.35,
+     "kd": 63
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "us",
+     "keyword": "hire developer for app",
+     "volume": 1900,
+     "cpc": 79.66,
+     "competition": 0.27,
+     "kd": 26
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "us",
+     "keyword": "shopify agency",
+     "volume": 1600,
+     "cpc": 31.66,
+     "competition": 0.28,
+     "kd": 58
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "us",
+     "keyword": "shopify expert developer",
+     "volume": 1300,
+     "cpc": 48.16,
+     "competition": 0.41,
+     "kd": 25
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "us",
+     "keyword": "shopify experts",
+     "volume": 1300,
+     "cpc": 48.16,
+     "competition": 0.41,
+     "kd": 13
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "us",
+     "keyword": "shopify partner directory",
+     "volume": 1300,
+     "cpc": 17.53,
+     "competition": 0.05,
+     "kd": 30
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "us",
+     "keyword": "shopify expert",
+     "volume": 1300,
+     "cpc": 48.16,
+     "competition": 0.41,
+     "kd": 7
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "us",
+     "keyword": "ecommerce website development",
+     "volume": 1300,
+     "cpc": 54.58,
+     "competition": 0.11,
+     "kd": 31
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "shopify experts developers",
+     "volume": 1300,
+     "cpc": 48.16,
+     "competition": 0.41,
+     "kd": 32
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "experts shopify",
+     "volume": 1300,
+     "cpc": 48.16,
+     "competition": 0.41,
+     "kd": 13
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "shopify partner dashboard",
+     "volume": 1000,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 59
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "us",
+     "keyword": "ecommerce development company",
+     "volume": 880,
+     "cpc": 54.45,
+     "competition": 0.13,
+     "kd": 28
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "us",
+     "keyword": "shopify development services",
+     "volume": 880,
+     "cpc": 20.46,
+     "competition": 0.12,
+     "kd": 24
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "us",
+     "keyword": "ecommerce development companies",
+     "volume": 880,
+     "cpc": 54.45,
+     "competition": 0.13,
+     "kd": 28
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "us",
+     "keyword": "shopify partner account",
+     "volume": 880,
+     "cpc": 11.4,
+     "competition": 0.03,
+     "kd": 11
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify partner agency",
+     "geo": "us",
+     "keyword": "shopify partner program",
+     "volume": 880,
+     "cpc": 14.87,
+     "competition": 0.01,
+     "kd": 19
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "us",
+     "keyword": "hire web developers",
+     "volume": 720,
+     "cpc": 113.38,
+     "competition": 0.32,
+     "kd": 18
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "us",
+     "keyword": "e-commerce development services",
+     "volume": 720,
+     "cpc": 44.21,
+     "competition": 0.13,
+     "kd": 24
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "us",
+     "keyword": "shopify development company",
+     "volume": 720,
+     "cpc": 26.6,
+     "competition": 0.06,
+     "kd": 26
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "us",
+     "keyword": "ecommerce development",
+     "volume": 720,
+     "cpc": 0,
+     "competition": 0.1,
+     "kd": 1
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "us",
+     "keyword": "ecommerce development services",
+     "volume": 720,
+     "cpc": 44.21,
+     "competition": 0.13,
+     "kd": 18
+    }
+   ],
+   "avg_cpc": 38.22
+  },
+  "cost": {
+   "kw": 173,
+   "vol": 145400,
+   "comm_kw": 34,
+   "comm_vol": 2680,
+   "cpc_sum": 1196.4999999999995,
+   "cpc_n": 87,
+   "top": [
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "e commerce website development services",
+     "volume": 480,
+     "cpc": 25.02,
+     "competition": 0.03,
+     "kd": 20
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website design company",
+     "volume": 480,
+     "cpc": 41.74,
+     "competition": 0.08,
+     "kd": 32
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "shopify website developer",
+     "volume": 480,
+     "cpc": 53.31,
+     "competition": 0.27,
+     "kd": 32
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website design agency",
+     "volume": 320,
+     "cpc": 6.77,
+     "competition": 0.05,
+     "kd": 26
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "cost for ecommerce website development",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0.04,
+     "kd": 17
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "cost of ecommerce website development",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0.04,
+     "kd": 17
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0.04,
+     "kd": 24
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website developer",
+     "volume": 110,
+     "cpc": 53.88,
+     "competition": 0.27,
+     "kd": 13
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "e commerce website development cost",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0.04,
+     "kd": 17
+    },
+    {
+     "bucket": "cost",
+     "seed": "woocommerce website cost",
+     "geo": "us",
+     "keyword": "woocommerce plugin development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.07,
+     "kd": 8
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "us",
+     "keyword": "shopify app development cost",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0.05,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "us",
+     "keyword": "shopify website development cost",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0.29,
+     "kd": 14
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "shopify development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.21,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "us",
+     "keyword": "shopify store development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "us",
+     "keyword": "magento development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 32
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "custom ecommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "wordpress ecommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 32
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost breakdown",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 58
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost in pakistan",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website development cost in dubai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "website cost calculator freelancer",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 49
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "us",
+     "keyword": "ecommerce website developer jobs",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "us",
+     "keyword": "shopify theme development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 13.75
+  },
+  "howto": {
+   "kw": 320,
+   "vol": 87430,
+   "comm_kw": 8,
+   "comm_vol": 3400,
+   "cpc_sum": 1584.6600000000005,
+   "cpc_n": 113,
+   "top": [
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "ecommerce seo services",
+     "volume": 1600,
+     "cpc": 36.33,
+     "competition": 0.05,
+     "kd": 9
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "ecommerce seo agency",
+     "volume": 1000,
+     "cpc": 43.26,
+     "competition": 0.04,
+     "kd": 3
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "ecommerce seo consultant",
+     "volume": 390,
+     "cpc": 112.24,
+     "competition": 0.02,
+     "kd": 9
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "best ecommerce seo agency",
+     "volume": 170,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 25
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "seo agency websites",
+     "volume": 140,
+     "cpc": 56.49,
+     "competition": 0.18,
+     "kd": 78
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "best ecommerce seo services",
+     "volume": 70,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 16
+    },
+    {
+     "bucket": "howto",
+     "seed": "how to optimize ecommerce website",
+     "geo": "us",
+     "keyword": "ecommerce seo services usa",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "howto",
+     "seed": "ecommerce website checklist",
+     "geo": "us",
+     "keyword": "ecommerce website development checklist",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 14.02
+  },
+  "migrate": {
+   "kw": 157,
+   "vol": 25500,
+   "comm_kw": 19,
+   "comm_vol": 2160,
+   "cpc_sum": 1167.8899999999999,
+   "cpc_n": 48,
+   "top": [
+    {
+     "bucket": "migrate",
+     "seed": "replatform ecommerce",
+     "geo": "us",
+     "keyword": "data migration services",
+     "volume": 880,
+     "cpc": 33.88,
+     "competition": 0.17,
+     "kd": 59
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "us",
+     "keyword": "shopify migration services",
+     "volume": 390,
+     "cpc": 12.32,
+     "competition": 0.08,
+     "kd": 6
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "shopify marketing agency",
+     "volume": 210,
+     "cpc": 81.52,
+     "competition": 0.32,
+     "kd": 0
+    },
+    {
+     "bucket": "migrate",
+     "seed": "replatform ecommerce",
+     "geo": "us",
+     "keyword": "ecommerce migration services",
+     "volume": 140,
+     "cpc": 0,
+     "competition": 0.04,
+     "kd": 0
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "us",
+     "keyword": "shopify migration experts",
+     "volume": 110,
+     "cpc": 3,
+     "competition": 0.1,
+     "kd": 0
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "shopify website agency",
+     "volume": 110,
+     "cpc": 30.11,
+     "competition": 0.27,
+     "kd": 85
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "us",
+     "keyword": "magento to shopify migration services",
+     "volume": 70,
+     "cpc": 0,
+     "competition": 0.1,
+     "kd": 6
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento 1 to magento 2 migration",
+     "geo": "us",
+     "keyword": "magento 1 to magento 2 migration services",
+     "volume": 70,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 0
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "swanky agency",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.32,
+     "kd": 5
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "us",
+     "keyword": "woocommerce to shopify migration services",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0.15,
+     "kd": 10
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "us",
+     "keyword": "shopify to woocommerce migration services",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 10
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "us",
+     "keyword": "magento to shopify migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "us",
+     "keyword": "woocommerce to shopify migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "us",
+     "keyword": "woocommerce to shopify migration company",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "shopify data migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "wordpress to shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.54,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "us",
+     "keyword": "shopify plus agency uk",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento 1 to magento 2 migration",
+     "geo": "us",
+     "keyword": "magento 1 to 2 migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 2
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify plus migration",
+     "geo": "us",
+     "keyword": "shopify plus migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.1,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 24.33
+  }
+ },
+ "india": {
+  "hire": {
+   "kw": 168,
+   "vol": 12650,
+   "comm_kw": 168,
+   "comm_vol": 12650,
+   "cpc_sum": 74.3,
+   "cpc_n": 36,
+   "top": [
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify development services",
+     "volume": 1300,
+     "cpc": 1.55,
+     "competition": 0.04,
+     "kd": 26
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "india",
+     "keyword": "ecommerce website development services in india",
+     "volume": 880,
+     "cpc": 1.3,
+     "competition": 0.03,
+     "kd": 38
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "india",
+     "keyword": "ecommerce website development services india",
+     "volume": 880,
+     "cpc": 1.3,
+     "competition": 0.03,
+     "kd": 33
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "india",
+     "keyword": "hire shopify developer",
+     "volume": 720,
+     "cpc": 3.36,
+     "competition": 0.07,
+     "kd": 28
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "india",
+     "keyword": "hire a shopify developer",
+     "volume": 720,
+     "cpc": 3.36,
+     "competition": 0.07,
+     "kd": 46
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "experts shopify",
+     "volume": 720,
+     "cpc": 2.83,
+     "competition": 0.1,
+     "kd": 46
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts",
+     "volume": 720,
+     "cpc": 2.83,
+     "competition": 0.1,
+     "kd": 46
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts developers",
+     "volume": 720,
+     "cpc": 2.83,
+     "competition": 0.1,
+     "kd": 63
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify web development services",
+     "volume": 480,
+     "cpc": 1.7,
+     "competition": 0.02,
+     "kd": 50
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify website development services",
+     "volume": 480,
+     "cpc": 1.7,
+     "competition": 0.02,
+     "kd": 44
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "india",
+     "keyword": "ecommerce website development services",
+     "volume": 390,
+     "cpc": 0.92,
+     "competition": 0.05,
+     "kd": 41
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "hire shopify experts",
+     "volume": 320,
+     "cpc": 2.06,
+     "competition": 0.04,
+     "kd": 26
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts in india",
+     "volume": 320,
+     "cpc": 1.89,
+     "competition": 0.02,
+     "kd": 28
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts india",
+     "volume": 320,
+     "cpc": 1.89,
+     "competition": 0.02,
+     "kd": 28
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "seo shopify experts",
+     "volume": 210,
+     "cpc": 0.89,
+     "competition": 0.02,
+     "kd": 1
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify seo experts",
+     "volume": 210,
+     "cpc": 0.89,
+     "competition": 0.02,
+     "kd": 0
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts seo",
+     "volume": 210,
+     "cpc": 0.89,
+     "competition": 0.02,
+     "kd": 4
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "india",
+     "keyword": "hire shopify developer india",
+     "volume": 170,
+     "cpc": 1.96,
+     "competition": 0.03,
+     "kd": 48
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify store development services",
+     "volume": 170,
+     "cpc": 1.97,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "india",
+     "keyword": "hire ecommerce developer",
+     "volume": 140,
+     "cpc": 0.72,
+     "competition": 0.04,
+     "kd": 50
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify app development services",
+     "volume": 110,
+     "cpc": 0.97,
+     "competition": 0.01,
+     "kd": 14
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify plus development services",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "india",
+     "keyword": "shopify experts marketplace",
+     "volume": 110,
+     "cpc": 2.83,
+     "competition": 0.06,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "india",
+     "keyword": "hire dedicated shopify developer",
+     "volume": 90,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 55
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "india",
+     "keyword": "shopify ecommerce development services",
+     "volume": 70,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 2.06
+  },
+  "compare": {
+   "kw": 299,
+   "vol": 7000,
+   "comm_kw": 0,
+   "comm_vol": 0,
+   "cpc_sum": 18.770000000000003,
+   "cpc_n": 22,
+   "top": [],
+   "avg_cpc": 0.85
+  },
+  "cost": {
+   "kw": 57,
+   "vol": 3200,
+   "comm_kw": 27,
+   "comm_vol": 1860,
+   "cpc_sum": 12.479999999999997,
+   "cpc_n": 15,
+   "top": [
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost",
+     "volume": 320,
+     "cpc": 1.03,
+     "competition": 0.18,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "cost of ecommerce website development",
+     "volume": 320,
+     "cpc": 1.03,
+     "competition": 0.18,
+     "kd": 26
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "cost for ecommerce website development",
+     "volume": 320,
+     "cpc": 1.03,
+     "competition": 0.18,
+     "kd": 21
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in india",
+     "volume": 260,
+     "cpc": 0.92,
+     "competition": 0.24,
+     "kd": 2
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify website development cost in india",
+     "volume": 260,
+     "cpc": 1.89,
+     "competition": 0.22,
+     "kd": 0
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify website development cost",
+     "volume": 90,
+     "cpc": 0.3,
+     "competition": 0.15,
+     "kd": 54
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost india",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0.06,
+     "kd": 2
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify development cost",
+     "volume": 30,
+     "cpc": 0.41,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify app development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify store development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "woocommerce website cost",
+     "geo": "india",
+     "keyword": "woocommerce website development cost in india",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in mumbai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in pakistan",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "shopify ecommerce website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.08,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "wordpress ecommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.14,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in bangalore",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in chennai",
+     "volume": 10,
+     "cpc": 0.76,
+     "competition": 0.46,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in dubai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost in delhi",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "india",
+     "keyword": "ecommerce website development cost breakdown",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "india",
+     "keyword": "shopify theme development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "india",
+     "keyword": "magento website development cost",
+     "volume": 10,
+     "cpc": 0.28,
+     "competition": 0.14,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "india",
+     "keyword": "magento site development cost",
+     "volume": 10,
+     "cpc": 0.28,
+     "competition": 0.14,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "india",
+     "keyword": "magento development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "india",
+     "keyword": "magento 2 development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 0.83
+  },
+  "howto": {
+   "kw": 151,
+   "vol": 3400,
+   "comm_kw": 1,
+   "comm_vol": 10,
+   "cpc_sum": 52.519999999999996,
+   "cpc_n": 43,
+   "top": [
+    {
+     "bucket": "howto",
+     "seed": "ecommerce website checklist",
+     "geo": "india",
+     "keyword": "ecommerce website development checklist",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 1.22
+  },
+  "migrate": {
+   "kw": 64,
+   "vol": 1380,
+   "comm_kw": 8,
+   "comm_vol": 360,
+   "cpc_sum": 31.479999999999997,
+   "cpc_n": 8,
+   "top": [
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "india",
+     "keyword": "shopify migration services",
+     "volume": 210,
+     "cpc": 3.8,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "india",
+     "keyword": "magento to shopify migration services",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "india",
+     "keyword": "woocommerce to shopify migration services",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento 1 to magento 2 migration",
+     "geo": "india",
+     "keyword": "magento 1 to magento 2 migration services",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0.01,
+     "kd": 54
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "india",
+     "keyword": "magento to shopify migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.03,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "india",
+     "keyword": "woocommerce to shopify migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.02,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "india",
+     "keyword": "wordpress to shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify plus migration",
+     "geo": "india",
+     "keyword": "shopify plus migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.03,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 3.93
+  },
+  "vertical": {
+   "kw": 12,
+   "vol": 210,
+   "comm_kw": 3,
+   "comm_vol": 80,
+   "cpc_sum": 4.140000000000001,
+   "cpc_n": 2,
+   "top": [
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "india",
+     "keyword": "b2b ecommerce website development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.07,
+     "kd": null
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "india",
+     "keyword": "multi vendor marketplace development",
+     "volume": 20,
+     "cpc": 3.43,
+     "competition": 0.07,
+     "kd": null
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "india",
+     "keyword": "multi vendor ecommerce marketplace development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 2.07
+  }
+ },
+ "uk": {
+  "compare": {
+   "kw": 332,
+   "vol": 6310,
+   "comm_kw": 0,
+   "comm_vol": 0,
+   "cpc_sum": 579.3000000000001,
+   "cpc_n": 51,
+   "top": [],
+   "avg_cpc": 11.36
+  },
+  "cost": {
+   "kw": 53,
+   "vol": 1560,
+   "comm_kw": 25,
+   "comm_vol": 390,
+   "cpc_sum": 67.06,
+   "cpc_n": 11,
+   "top": [
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "cost of ecommerce website development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.05,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.05,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "cost for ecommerce website development",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.05,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 43
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify website development cost",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.86,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost in mumbai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost in chennai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost in dubai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost breakdown",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "ecommerce website development cost india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uk",
+     "keyword": "wordpress ecommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify theme development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify development store cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify app development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uk",
+     "keyword": "shopify store development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento 2 website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento ecommerce development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento site development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento 2 development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uk",
+     "keyword": "magento website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "woocommerce website cost",
+     "geo": "uk",
+     "keyword": "woocommerce website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "woocommerce website cost",
+     "geo": "uk",
+     "keyword": "woocommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 6.1
+  },
+  "hire": {
+   "kw": 133,
+   "vol": 4940,
+   "comm_kw": 133,
+   "comm_vol": 4940,
+   "cpc_sum": 883.7,
+   "cpc_n": 25,
+   "top": [
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "experts shopify",
+     "volume": 390,
+     "cpc": 36.62,
+     "competition": 0.61,
+     "kd": 14
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts",
+     "volume": 390,
+     "cpc": 36.62,
+     "competition": 0.61,
+     "kd": 14
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts uk",
+     "volume": 390,
+     "cpc": 0,
+     "competition": 0.2,
+     "kd": 5
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts developers",
+     "volume": 390,
+     "cpc": 36.62,
+     "competition": 0.61,
+     "kd": 23
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify seo experts",
+     "volume": 260,
+     "cpc": 31.58,
+     "competition": 0.13,
+     "kd": 1
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts seo",
+     "volume": 260,
+     "cpc": 31.58,
+     "competition": 0.13,
+     "kd": 4
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "seo shopify experts",
+     "volume": 260,
+     "cpc": 31.58,
+     "competition": 0.13,
+     "kd": 0
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uk",
+     "keyword": "shopify web development services",
+     "volume": 170,
+     "cpc": 0,
+     "competition": 0.21,
+     "kd": 15
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uk",
+     "keyword": "shopify website development services",
+     "volume": 170,
+     "cpc": 0,
+     "competition": 0.21,
+     "kd": 27
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uk",
+     "keyword": "shopify development services",
+     "volume": 170,
+     "cpc": 28.82,
+     "competition": 0.11,
+     "kd": 18
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "uk",
+     "keyword": "ecommerce website development services",
+     "volume": 140,
+     "cpc": 0,
+     "competition": 0.16,
+     "kd": 0
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uk",
+     "keyword": "hire shopify developer",
+     "volume": 110,
+     "cpc": 21.53,
+     "competition": 0.25,
+     "kd": 13
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uk",
+     "keyword": "hire a shopify developer",
+     "volume": 110,
+     "cpc": 21.53,
+     "competition": 0.25,
+     "kd": 32
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "hire shopify experts",
+     "volume": 110,
+     "cpc": 34.26,
+     "competition": 0.49,
+     "kd": 16
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify migration experts",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.11,
+     "kd": 0
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts london",
+     "volume": 50,
+     "cpc": 0,
+     "competition": 0.02,
+     "kd": 11
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts near me",
+     "volume": 40,
+     "cpc": 32.4,
+     "competition": 0.72,
+     "kd": 10
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts marketplace",
+     "volume": 40,
+     "cpc": 60.66,
+     "competition": 0.22,
+     "kd": 10
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify partner agency",
+     "geo": "uk",
+     "keyword": "shopify plus agency partner",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 27
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uk",
+     "keyword": "shopify ecommerce development services",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "uk",
+     "keyword": "custom ecommerce website development services",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify plus experts",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0.02,
+     "kd": 71
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uk",
+     "keyword": "shopify experts manchester",
+     "volume": 30,
+     "cpc": 0,
+     "competition": 0.08,
+     "kd": 1
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uk",
+     "keyword": "hire dedicated shopify developer",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uk",
+     "keyword": "hire shopify app developer",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.14,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 35.35
+  },
+  "howto": {
+   "kw": 141,
+   "vol": 3080,
+   "comm_kw": 1,
+   "comm_vol": 10,
+   "cpc_sum": 282.21000000000004,
+   "cpc_n": 34,
+   "top": [
+    {
+     "bucket": "howto",
+     "seed": "ecommerce website checklist",
+     "geo": "uk",
+     "keyword": "ecommerce website development checklist",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 8.3
+  },
+  "migrate": {
+   "kw": 60,
+   "vol": 1480,
+   "comm_kw": 8,
+   "comm_vol": 160,
+   "cpc_sum": 242.7,
+   "cpc_n": 12,
+   "top": [
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "uk",
+     "keyword": "shopify migration services",
+     "volume": 90,
+     "cpc": 4.53,
+     "competition": 0.38,
+     "kd": 2
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento to shopify migration",
+     "geo": "uk",
+     "keyword": "magento to shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.29,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "uk",
+     "keyword": "woocommerce to shopify migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.71,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "woocommerce to shopify migration",
+     "geo": "uk",
+     "keyword": "woocommerce to shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "uk",
+     "keyword": "wordpress to shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "uk",
+     "keyword": "shopify data migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "magento 1 to magento 2 migration",
+     "geo": "uk",
+     "keyword": "magento 1 to magento 2 migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "migrate",
+     "seed": "shopify plus migration",
+     "geo": "uk",
+     "keyword": "shopify plus migration agency",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.43,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 20.22
+  },
+  "vertical": {
+   "kw": 8,
+   "vol": 220,
+   "comm_kw": 3,
+   "comm_vol": 140,
+   "cpc_sum": 0.0,
+   "cpc_n": 0,
+   "top": [
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "uk",
+     "keyword": "b2b ecommerce website development",
+     "volume": 110,
+     "cpc": 0,
+     "competition": 0.19,
+     "kd": 0
+    },
+    {
+     "bucket": "vertical",
+     "seed": "multi vendor marketplace development",
+     "geo": "uk",
+     "keyword": "multi vendor marketplace development",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0,
+     "kd": 5
+    },
+    {
+     "bucket": "vertical",
+     "seed": "d2c ecommerce website development",
+     "geo": "uk",
+     "keyword": "d2c ecommerce website development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 0
+  }
+ },
+ "uae": {
+  "hire": {
+   "kw": 75,
+   "vol": 1020,
+   "comm_kw": 75,
+   "comm_vol": 1020,
+   "cpc_sum": 214.65999999999997,
+   "cpc_n": 10,
+   "top": [
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uae",
+     "keyword": "experts shopify",
+     "volume": 50,
+     "cpc": 12.88,
+     "competition": 0.48,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uae",
+     "keyword": "shopify experts developers",
+     "volume": 50,
+     "cpc": 12.88,
+     "competition": 0.48,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uae",
+     "keyword": "shopify experts",
+     "volume": 50,
+     "cpc": 12.88,
+     "competition": 0.48,
+     "kd": 47
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify web development services",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify development services",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0.13,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify website development services",
+     "volume": 40,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify experts",
+     "geo": "uae",
+     "keyword": "shopify experts dubai",
+     "volume": 40,
+     "cpc": 31.65,
+     "competition": 0.37,
+     "kd": 35
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "uae",
+     "keyword": "ecommerce website development services",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.43,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "uae",
+     "keyword": "ecommerce website development services india",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.21,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "ecommerce website development services",
+     "geo": "uae",
+     "keyword": "ecommerce website development services in india",
+     "volume": 20,
+     "cpc": 0,
+     "competition": 0.21,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "hire shopify developer",
+     "volume": 10,
+     "cpc": 21.92,
+     "competition": 0.86,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "hire shopify website developer",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "hire a shopify developer",
+     "volume": 10,
+     "cpc": 21.92,
+     "competition": 0.86,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "hire shopify developer india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "shopify developer hire",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "shopify developer for hire",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire shopify developer",
+     "geo": "uae",
+     "keyword": "hire shopify app developer",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "hire ecommerce developer",
+     "geo": "uae",
+     "keyword": "hire ecommerce developer",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify store development services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify development services in dubai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify ecommerce development services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify website development services in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify development services india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify theme development services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "hire",
+     "seed": "shopify development services",
+     "geo": "uae",
+     "keyword": "shopify app development services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 21.47
+  },
+  "compare": {
+   "kw": 106,
+   "vol": 1110,
+   "comm_kw": 0,
+   "comm_vol": 0,
+   "cpc_sum": 19.87,
+   "cpc_n": 6,
+   "top": [],
+   "avg_cpc": 3.31
+  },
+  "cost": {
+   "kw": 23,
+   "vol": 250,
+   "comm_kw": 14,
+   "comm_vol": 140,
+   "cpc_sum": 4.67,
+   "cpc_n": 1,
+   "top": [
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "ecommerce website development cost in india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.86,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "cost of ecommerce website development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.46,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "ecommerce website development cost in dubai",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.43,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "cost for ecommerce website development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.46,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "ecommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.46,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "ecommerce website development cost in pakistan",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "ecommerce website development cost",
+     "geo": "uae",
+     "keyword": "ecommerce website development cost india",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uae",
+     "keyword": "shopify store development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uae",
+     "keyword": "shopify development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.24,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uae",
+     "keyword": "shopify website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0.57,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uae",
+     "keyword": "shopify app development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "shopify development cost",
+     "geo": "uae",
+     "keyword": "shopify website development cost in india",
+     "volume": 10,
+     "cpc": 4.67,
+     "competition": 0.71,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "magento development cost",
+     "geo": "uae",
+     "keyword": "magento 2 development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    },
+    {
+     "bucket": "cost",
+     "seed": "woocommerce website cost",
+     "geo": "uae",
+     "keyword": "woocommerce website development cost",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 4.67
+  },
+  "howto": {
+   "kw": 53,
+   "vol": 550,
+   "comm_kw": 1,
+   "comm_vol": 10,
+   "cpc_sum": 37.87,
+   "cpc_n": 9,
+   "top": [
+    {
+     "bucket": "howto",
+     "seed": "ecommerce website checklist",
+     "geo": "uae",
+     "keyword": "ecommerce website development checklist",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 4.21
+  },
+  "migrate": {
+   "kw": 17,
+   "vol": 170,
+   "comm_kw": 1,
+   "comm_vol": 10,
+   "cpc_sum": 0.0,
+   "cpc_n": 0,
+   "top": [
+    {
+     "bucket": "migrate",
+     "seed": "shopify migration services",
+     "geo": "uae",
+     "keyword": "shopify migration services",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 0
+  },
+  "vertical": {
+   "kw": 2,
+   "vol": 20,
+   "comm_kw": 1,
+   "comm_vol": 10,
+   "cpc_sum": 0.0,
+   "cpc_n": 0,
+   "top": [
+    {
+     "bucket": "vertical",
+     "seed": "b2b ecommerce website development",
+     "geo": "uae",
+     "keyword": "b2b ecommerce website development",
+     "volume": 10,
+     "cpc": 0,
+     "competition": 0,
+     "kd": null
+    }
+   ],
+   "avg_cpc": 0
+  }
+ }
+}
