@@ -236,7 +236,10 @@ export default function EcommerceForManufacturersPage() {
                     <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B e-commerce
                     </Link>{' '}
-                    build.
+                    build. If you already run a dealer portal and the platform underneath it is the problem, see{' '}
+                    <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      e-commerce replatforming
+                    </Link>.
                   </p>
                 </div>
               </div>

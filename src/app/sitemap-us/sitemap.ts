@@ -24,6 +24,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/',                                              source: 'src/app/page.tsx' },
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
   { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
+  { path: '/replatforming',                                source: 'src/app/replatforming/page.tsx' },
+  { path: '/replatforming/magento-to-shopify',             source: 'src/app/replatforming/magento-to-shopify/page.tsx' },
   { path: '/omnichannel-commerce',                         source: 'src/app/omnichannel-commerce/page.tsx' },
   { path: '/ecommerce-consulting',                         source: 'src/app/ecommerce-consulting/page.tsx' },
   { path: '/bigcommerce-development',                       source: 'src/app/bigcommerce-development/page.tsx' },

@@ -419,6 +419,14 @@ export default function B2BEcommercePage() {
                 e-commerce for manufacturers and distributors
               </Link>{' '}
               page goes deeper on dealer portals, territory rules, configurable products, and parametric part search.
+              Already trading on a platform you have outgrown? See{' '}
+              <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                e-commerce replatforming
+              </Link>{' '}
+              and{' '}
+              <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                Magento to Shopify migration
+              </Link>.
             </p>
             <div className="pp-bento" style={{ marginTop: '36px' }}>
               {INDUSTRIES.map((u) => (
