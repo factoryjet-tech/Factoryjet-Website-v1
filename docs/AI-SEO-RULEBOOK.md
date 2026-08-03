@@ -291,6 +291,87 @@ Stated plainly so v2 can close them:
 
 ---
 
+## 6b. Authority vs citation: they are NOT the same game (measured 2026-08-03)
+
+Two pulls on the same day settled a question that had been assumed rather than tested.
+
+### Backlink reality (`dfs_backlinks.py`, $0.385)
+
+| Domain | Type | Referring domains |
+|---|---|---:|
+| outerboxdesign.com | LLM-named agency | 4,718 |
+| litextension.com | migration tool | 3,028 |
+| oroinc.com | B2B platform | 2,916 |
+| meetanshi.com | migration agency | 2,812 |
+| coalitiontechnologies.com | B2B agency | 2,772 |
+| netalico.com | LLM-named agency | 557 |
+| **factoryjet.com** | **us** | **53** |
+| cart2cart.com | migration tool | 45 |
+
+**We sit at 53 referring domains against a competitor median of 1,799, a 34x gap.**
+This is not closable with content. Treat it as a fixed constraint, not a target.
+
+### The finding that matters
+
+**LLM citation does not track domain authority.** In the same day's citation sweep,
+**netalico.com (557 referring domains) was cited 17 times** across nine buyer prompts, while
+**outerboxdesign.com (4,718 referring domains, 8.5x more links) barely appeared** on those same
+prompts. Authority buys organic position. It does not buy citation.
+
+### Rule 19 — high-KD keywords: target them, but change the goal and the metric
+
+The instinct to chase high-volume high-KD terms is right, and the usual reason given for it is wrong.
+
+- ❌ **Wrong reason: "we will pick up some traffic anyway."** Our own GSC disproves this. The
+  existing service and city pages already sit at **position 29-67 and produce ~0 clicks**. That
+  experiment is running right now and returning nothing. CTR below position 20 is a rounding error,
+  and at 53 referring domains we will not reach the top 10 on a KD 34+ term in any near timeframe.
+- ✅ **Right reason: KD is an ORGANIC-ranking metric and has no bearing on LLM citation.** An LLM
+  answering "which ecommerce agency should I use" does not consult Keyword Difficulty. The netalico
+  vs outerboxdesign result above is direct evidence.
+
+**So: build for the high-KD head terms, but as capability/specificity content judged on mention
+rate, never on ranking position.** Judging them on rankings will produce a false failure signal,
+exactly as it would for the SFCC page (§9).
+
+High-volume high-KD US targets worth covering on those terms:
+
+| Keyword | Vol/mo | KD | CPC |
+|---|---:|---:|---:|
+| shopify partners / shopify development partner | 14,800 | 36 | $27.47 |
+| **ecommerce agency** | 2,400 | 34 | **$106.43** |
+| shopify developers | 2,400 | 63 | $30.76 |
+| ecommerce web design (variants) | 1,900 | 31-62 | $18.15 |
+| shopify agency | 1,600 | 58 | $31.66 |
+| ecommerce website development | 1,300 | 31 | $54.58 |
+
+Roughly 58,800/mo combined. Do not forecast organic clicks from these. Forecast citations.
+
+---
+
+## 6c. AI citation baseline (2026-08-03, `dfs_citation_baseline.py`, $3.367)
+
+Taken the day the replatforming pages deployed, so the zeros are expected and are a start line,
+not a verdict. 3 runs x 2 models x 9 pages.
+
+| Page | ChatGPT | Perplexity |
+|---|---:|---:|
+| `/b2b-ecommerce` **(control, was 6/9 on 2026-08-02)** | **2/3** | 0/3 |
+| all 7 replatforming pages | 0/3 | 0/3 |
+| `/ecommerce-for-manufacturers` | 0/3 | 0/3 |
+
+The control at 2/3 (67%) is consistent with the earlier 6/9 (67%), but **three runs is far too few
+to call it stable**. Raise the run count on the re-test before reading anything into movement.
+
+Most-cited domains on these prompts: 1digitalagency (33), elogic (19), swankyagency (18),
+scandiweb (17), netalico (17), vaimo (11), iwdagency (10), absoluteweb (10), dcxcommerce (10),
+optimum7 (10).
+
+**Re-test ~2026-08-17**: re-run the script unchanged and diff. If replatforming pages move off zero
+while referring domains stay near 53, the specificity route is confirmed as independent of authority.
+
+---
+
 ## 7. Fact-check: Gemini deep-research report (supplied 2026-08-02)
 
 Verified against primary sources. Verdict: **directionally useful, but contains one known-fabricated

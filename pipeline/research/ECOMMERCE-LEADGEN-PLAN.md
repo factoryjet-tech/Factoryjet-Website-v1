@@ -315,5 +315,58 @@ and the traffic is 96% brand-spam. Editing it would have been busywork.
 `scripts/check-tracked-imports.mjs` passed. Not rendered locally, per the documented OOM hazard with
 `next dev/build` on this repo.
 
-### Tier 2 — replatforming (next)
+### Tier 2 — replatforming — complete 2026-08-03
+
+Hub + 6 spokes shipped and verified live: `/replatforming` plus `magento-to-shopify`,
+`woocommerce-to-shopify`, `squarespace-to-shopify`, `wix-to-shopify`, `wordpress-to-shopify`,
+`salesforce-commerce-cloud-to-shopify-plus`. 23-27 FAQs each, one h1, `Person` schema,
+`dateModified`, sitemap-registered, cross-linked.
+
+Hub spoke links were gated behind a `live` flag until each page existed, so we never shipped a URL
+Google could cache a 404 verdict against.
+
+### Visual + citation pass — 2026-08-03
+
+- **Layout**: `.pp-bento` was hard-coded 3-up, leaving orphan rows on every 4- and 5-card section.
+  Count-matched variants applied to 15 grids. Stat-band sublabels now baseline-align. Related
+  sections restructured to a 2-column split.
+- **Motion**: CSS-only scroll reveals (`animation-timeline: view()` behind `@supports`, content
+  visible by default). framer-motion deliberately NOT reintroduced, preserving the earlier mobile
+  Performance 90+ decision.
+- **Imagery**: 45 images generated via Runware FLUX.2. 27 environments + 18 people, 5 per page.
+  **The CLAUDE.md ban on AI-generated photoreal people was explicitly lifted by Bhavesh on
+  2026-08-03** after being raised twice; the override is recorded in CLAUDE.md so it is not reverted.
+  One image was rejected and regenerated for garbled pseudo-text. **Learned rule: never make legible
+  text the sharp-focus subject.**
+- **Comparison tables**: 1 of 9 pages → 9 of 9. Note our only ever AI-cited page was also the only
+  one that had a table.
+- **Semantic lists**: 18 `<ol>` + 15 `<ul>` conversions turn card grids into real list items.
+  Rendered `<li>` rises from 75-83 to roughly 98-121 (benchmark median 110).
+- **Competitors woven in** from live SERP data, targeting `woocommerce alternatives` (170/mo, KD 0,
+  $25.28), `magento alternatives` (KD 0), `salesforce commerce cloud vs shopify` (KD 0).
+
+### The authority question, settled 2026-08-03
+
+**53 referring domains vs a competitor median of 1,799 (34x gap).** Not closable with content.
+
+But **LLM citation does not track authority**: netalico.com (557 referring domains) was cited 17
+times across nine buyer prompts while outerboxdesign.com (4,718) barely appeared. See
+`docs/AI-SEO-RULEBOOK.md` §6b.
+
+**Consequence for strategy:** high-volume high-KD head terms (`ecommerce agency` 2,400/mo KD 34
+**$106 CPC**, `shopify partners` 14,800/mo KD 36, ~58,800/mo combined) ARE worth targeting, but as
+citation plays judged on mention rate, never on ranking position. The "we'll pick up some traffic
+anyway" argument is disproved by our own GSC: existing pages sit at position 29-67 with ~0 clicks.
+
 ### Tier 3 — density rewrites of `/headless-commerce`, `/omnichannel-commerce`, `/commerceflo`
+
+Still open. `/headless-commerce` is 1,230 rendered words at 22.0 terms/1k and cited 0/4;
+`/omnichannel-commerce` is 2,145 at 21.9 and cited 0/4. Both sit below the 2,813-word benchmark
+median AND below the density of the page that does get cited.
+
+### Open measurement
+
+- **Citation baseline taken 2026-08-03** (all new pages 0/3, control 2/3). Re-test ~2026-08-17 with
+  a higher run count.
+- ChatGPT/Perplexity citation-URL capture still returns no URLs, so the structural analysis behind
+  the rulebook remains Google-AI-Overview-only.
