@@ -80,6 +80,8 @@ const WEBPAGE_SCHEMA = {
   name: 'E-Commerce for Manufacturers & Distributors',
   description: 'Manufacturer and distributor ecommerce: dealer portals, contract pricing, configurable products, EDI, punchout, and ERP integration.',
   dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   about: { '@id': 'https://factoryjet.com/#organization' },
 };
@@ -100,10 +102,12 @@ const STATS = [
   { b: 'Any ERP', s: 'P21, NetSuite, SAP, Infor' },
   { b: '10+ yrs', s: 'building commerce' },
 ];
+// Citations fetch-verified 2026-08-02 against the linked primary sources.
+// Do not edit a figure here without re-verifying the source page first.
 const SOURCED = [
-  { v: '$2.3T', d: 'US B2B ecommerce site sales in 2024, up about 10.5% year over year, making it one of the fastest-growing sales channels.', src: 'Digital Commerce 360', href: 'https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/' },
-  { v: '56%', d: 'of US B2B revenue now comes through digital channels, up from 45% in 2023 and 32% in 2020.', src: 'Digital Commerce 360 / eMarketer', href: 'https://www.statista.com/statistics/273104/us-b2b-e-commerce-share/' },
-  { v: '3 to 10', d: 'channels the average B2B buyer now uses to research, negotiate, and place orders, with most preferring digital self-service.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
+  { v: '17%', d: 'year-over-year growth in US B2B ecommerce sales across sites, password-protected portals, and apps in 2023, reaching roughly $2.3 trillion.', src: 'Digital Commerce 360', href: 'https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/' },
+  { v: 'Ten', d: 'channels the average B2B buyer now uses across the buying journey, from researching suppliers to reordering, up from five in 2016.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
+  { v: 'One third', d: 'of B2B buyers prefer digital self-service at any given stage, alongside a third wanting remote contact and a third wanting in-person. A dealer portal serves one of the three, not all of them.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
 ];
 const PAINS = [
   { i: '✉', t: 'Dealers order by email and phone', d: 'Inside sales re-keys orders from inboxes and voicemails, and a typo in a part number becomes a return, a credit note, and a lost afternoon.' },

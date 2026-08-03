@@ -23,6 +23,7 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 const US_ROUTES: { path: string; source: string }[] = [
   { path: '/',                                              source: 'src/app/page.tsx' },
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
+  { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
   { path: '/omnichannel-commerce',                         source: 'src/app/omnichannel-commerce/page.tsx' },
   { path: '/ecommerce-consulting',                         source: 'src/app/ecommerce-consulting/page.tsx' },
   { path: '/bigcommerce-development',                       source: 'src/app/bigcommerce-development/page.tsx' },

@@ -41,7 +41,7 @@ const FAQ_ITEMS = [
   { category: 'basics', question: 'What is the difference between B2B and DTC ecommerce?', answer: 'A DTC site sells to consumers at one price. A B2B site adds logins for trade accounts, tiered or contract pricing, net terms, quotes and approvals, account hierarchies, and gated catalogs. We can run both on one unified system.' },
   { category: 'basics', question: 'What are some examples of B2B ecommerce?', answer: 'A manufacturer letting distributors place and reorder online; a wholesaler giving each trade account its own price list and net terms; a brand running a DTC store and a gated B2B portal on the same catalog; a distributor with quote-and-approve workflows for large orders. We build all of these.' },
   { category: 'basics', question: 'What are the benefits of B2B ecommerce?', answer: 'Self-service ordering your buyers prefer, fewer manual errors, faster reorders, larger average orders, and hours back for your sales team. One system replaces the email-and-phone process that slows everyone down.' },
-  { category: 'basics', question: 'How big is the B2B ecommerce market?', answer: 'US B2B ecommerce site sales reached about $2.3 trillion in 2024, growing roughly 10.5% year over year, and digital channels now drive a majority of US B2B revenue. B2B ecommerce is the fastest-growing sales channel for most distributors and manufacturers.' },
+  { category: 'basics', question: 'How big is the B2B ecommerce market?', answer: 'US B2B ecommerce sales across sites, password-protected portals, and apps reached roughly $2.3 trillion in 2023, growing 17% year over year, according to Digital Commerce 360. That growth rate is why most distributors and manufacturers now treat the trade portal as a primary sales channel rather than a side project.' },
   { category: 'basics', question: 'Can DTC and B2B run on one site with different pricing?', answer: 'Yes. We build one storefront that serves retail shoppers and gives trade buyers their own login with tiered or contract pricing, net terms, and reordering, on one catalog and one inventory.' },
   { category: 'platforms', question: 'What is the best B2B ecommerce platform?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. Shopify Plus suits a clean DTC-plus-B2B model on one store, Adobe Commerce (Magento) suits deep native B2B and very large catalogs, BigCommerce offers strong mid-market B2B value, Salesforce Commerce Cloud suits enterprise, and Commerceflo fits when a unified engine is the goal. We compare them against your needs on a scoping call.' },
   { category: 'platforms', question: 'How do I choose a B2B ecommerce platform?', answer: 'Match the platform to five things: your catalog size and complexity, your pricing rules (tiers, contracts, customer-specific catalogs), the integrations you need (ERP, PIM, POS, marketplaces), whether you also sell DTC, and your budget for build and ongoing license. We run that comparison with you and recommend the fit rather than the most expensive option.' },
@@ -100,6 +100,8 @@ const WEBPAGE_SCHEMA = {
   name: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms',
   description: 'B2B ecommerce agency building wholesale commerce and multi-channel commerce platforms with tiered pricing, net terms, EDI, punchout, and ERP integration.',
   dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   about: { '@id': 'https://factoryjet.com/#organization' },
 };
@@ -114,10 +116,12 @@ const STATS = [
   { b: 'Any ERP', s: 'integrated to the storefront' },
   { b: '10+ yrs', s: 'building commerce' },
 ];
+// Citations fetch-verified 2026-08-02 against the linked primary sources.
+// Do not edit a figure here without re-verifying the source page first.
 const SOURCED = [
-  { v: '$2.3T', d: 'US B2B ecommerce site sales in 2024, up about 10.5% year over year, making it one of the fastest-growing sales channels.', src: 'Digital Commerce 360', href: 'https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/' },
-  { v: '56%', d: 'of US B2B revenue now comes through digital channels, up from 45% in 2023 and 32% in 2020.', src: 'Digital Commerce 360 / eMarketer', href: 'https://www.statista.com/statistics/273104/us-b2b-e-commerce-share/' },
-  { v: '3 to 10', d: 'channels the average B2B buyer now uses to research, negotiate, and place orders, with most preferring digital self-service.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
+  { v: '17%', d: 'year-over-year growth in US B2B ecommerce sales across sites, password-protected portals, and apps in 2023, reaching roughly $2.3 trillion.', src: 'Digital Commerce 360', href: 'https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/' },
+  { v: 'Ten', d: 'channels the average B2B buyer now uses across the buying journey, from researching suppliers to reordering, up from five in 2016.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
+  { v: 'One third', d: 'of B2B buyers prefer digital self-service at any given stage, alongside a third wanting remote contact and a third wanting in-person. Serving only one of the three loses the other two.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
 ];
 const PAINS = [
   { i: '✉', t: 'Orders by email and phone', d: 'Your team re-keys orders from inboxes and voicemails, and buyers wait on a quote instead of placing the order themselves.' },
