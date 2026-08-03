@@ -372,6 +372,72 @@ while referring domains stay near 53, the specificity route is confirmed as inde
 
 ---
 
+## 6d. Backlinks: what we will and will not do (2026-08-03)
+
+### Out of scope, permanently
+
+**No automated link placement.** Posting into forums, blog comments, profile pages, or directory
+submissions via browser automation is a **link scheme** under Google's spam policies, breaches most
+sites' terms, and risks the whole domain. At 53 referring domains we would be trading a recoverable
+position for an unrecoverable one. Also out of scope: buying links, PBNs, and reciprocal schemes.
+Account creation and sending outreach are not things an agent should do on the business's behalf.
+
+### The link gap, measured (`dfs_link_gap.py`, $0.410)
+
+Pulled up to 400 referring domains for each of 10 mid-size rivals, subtracted anything already
+linking to us, and ranked what remained by how many rivals it links to.
+
+**3,072 domains link to competitors but not to us.** Then the filter that matters:
+
+| Filter | Count |
+|---|---:|
+| Total gap domains | 3,072 |
+| Match link-farm patterns (directory / seo / backlink / rank / `.site`) | 354 (11%) |
+| Remainder | 2,718 |
+| **Remainder at domain rank ≥40 (the workable list)** | **584** |
+
+### The finding: competitor link counts are partly junk
+
+The raw top of the gap list was almost entirely link farms: `eliterankdirectory.com`,
+`seobacklinkdirectory.com`, `powerlinkdirectory.com`, `linkboostdirectory.com`, `yelpdirectory.com`
+(not the real Yelp), `skylinkseo.site`. All at rank 0.
+
+Share of each rival's sampled profile that is link-farm junk:
+
+| Competitor | Junk share |
+|---|---:|
+| iwdagency.com | **38%** |
+| magefan.com | 23% |
+| heycarson.com | 19% |
+| sherocommerce.com | 14% |
+| netalico.com | 12% |
+| absoluteweb.com / elogic.co / swankyagency.com | 9% |
+| optimum7.com | 7% |
+| digitalsuits.co | 1% |
+
+**Consequence: the 1,799 median referring-domain figure overstates the real gap.** Some rivals have
+inflated their counts with directories that carry no authority. The genuine gap is smaller and more
+attackable than the headline number suggests. It also means link *count* is a poor target; **584
+quality prospects** is the real number to work against.
+
+Notable: `netalico.com` is cited 17x by LLMs with 557 referring domains, 12% of which are junk. Link
+quantity is clearly not what earns citation.
+
+### Rule 20 — how we actually earn links
+
+1. **Original research is the asset.** We hold data nobody else has published: the citation anatomy
+   study (58 cited pages, 232 AI Overview citations), this backlink-junk analysis, and the
+   authority-does-not-predict-citation finding. Original data studies are the most reliably linked
+   asset type in this industry and the trade press actively covers this exact question. **This is the
+   highest-leverage backlink action available and it is currently sitting unused in
+   `pipeline/research/`.**
+2. **Work the 584-domain qualified list** by hand, highest rank first. `data/link_gap.csv` has the
+   full set with which rivals each one links to.
+3. **Unlinked brand mentions** and **broken-link recovery** — both findable with tools we have.
+4. **Drafting outreach is fine; a human sends it.**
+
+---
+
 ## 7. Fact-check: Gemini deep-research report (supplied 2026-08-02)
 
 Verified against primary sources. Verdict: **directionally useful, but contains one known-fabricated
