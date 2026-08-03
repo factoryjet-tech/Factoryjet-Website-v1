@@ -14,8 +14,15 @@ import { getFileLastMod } from '@/lib/sitemap-helpers'
    route families are intentionally distinct (per Report 19).
 
    Once CASE_STUDIES is populated in src/data/case-studies/index.ts the
-   per-slug entries appear automatically. While the array is empty only
-   the `/case-studies/` index URL ships.
+   per-slug entries appear automatically.
+
+   ⚠️ URLs here MUST NOT carry a trailing slash. Next serves these routes at the
+   no-slash form and 308s the slashed form, so every slashed entry put a redirect
+   in the sitemap instead of a canonical 200. Audited 2026-08-03: all 7 entries
+   were 308s. Sitemaps must list only canonical, directly-200 URLs.
+
+   The `/case-studies` index itself is emitted by sitemap-us/sitemap.ts, so it is
+   deliberately NOT repeated here — listing it in both produced a duplicate.
    ──────────────────────────────────────────────────────────────────────────── */
 
 export const dynamic = 'force-static'
@@ -23,35 +30,25 @@ export const dynamic = 'force-static'
 const SITE_URL = 'https://factoryjet.com'
 
 const PRIORITY = {
-  index:      0.8,
   caseStudy:  0.8,
 } as const
 
 const CHANGEFREQ = {
-  index:      'monthly',
   caseStudy:  'monthly',
 } as const
 
 type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const indexEntry: MetadataRoute.Sitemap[number] = {
-    url: `${SITE_URL}/case-studies/`,
-    lastModified: getFileLastMod('src/app/case-studies/page.tsx'),
-    changeFrequency: CHANGEFREQ.index as ChangeFreq,
-    priority: PRIORITY.index,
-  }
-
   // All case studies share the same data file — share lastmod from it so
   // any content update bumps every entry. Per-slug overrides can be added
   // later if individual case studies live in separate files.
   const dataLastMod = getFileLastMod('src/data/case-studies/index.ts')
-  const studies: MetadataRoute.Sitemap = CASE_STUDIES.map((cs) => ({
-    url: `${SITE_URL}/case-studies/${cs.slug}/`,
+
+  return CASE_STUDIES.map((cs) => ({
+    url: `${SITE_URL}/case-studies/${cs.slug}`,
     lastModified: dataLastMod,
     changeFrequency: CHANGEFREQ.caseStudy as ChangeFreq,
     priority: PRIORITY.caseStudy,
   }))
-
-  return [indexEntry, ...studies]
 }

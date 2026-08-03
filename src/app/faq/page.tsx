@@ -70,8 +70,11 @@ export default function UsFaqPage() {
         cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
       <main className="bg-white">
+        {/* This page has no hero, so the FAQ headline IS the page h1.
+            Audited 2026-08-03: /faq was the only live URL rendering zero h1. */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
+          headlineAs="h1"
           headline="E-commerce development, omnichannel commerce, and working with FactoryJet."
           lead="If your question is not below, send a short brief and answers usually come back inside 24 hours."
           categories={FAQ_CATEGORIES}

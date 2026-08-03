@@ -251,8 +251,8 @@ cannot separate them.** Do not present density as an isolated proven cause.
 | Both new pages | Fetch-verify external stats | ✅ Done, and **all three were wrong** (see below) |
 | Both new pages | Named author + `Person` schema | ✅ Done, mirroring the existing `src/app/austin/seo/page.tsx` pattern |
 | Both new pages | Raise `<li>` count toward benchmark 110 (currently 83 / 81) | ⏳ Open |
-| Sitewide | Audit `dateModified` coverage (~29/214 per 2026-07-31 audit) | ⏳ Open |
-| Sitewide | Audit `Person` schema coverage | ⏳ Open. **Note: it already exists** in `layout.tsx`, city SEO pages, and author pages, so v1.0's "likely near zero" guess was wrong. |
+| Sitewide | Audit `dateModified` coverage (~29/214 per 2026-07-31 audit) | ✅ Done 2026-08-03, see §8. Real figure is **154/447 (34%)** against a 56% benchmark. |
+| Sitewide | Audit `Person` schema coverage | ✅ Done 2026-08-03, see §8. **447/447 (100%)**, against a 41% benchmark. This was never a gap; both earlier guesses were wrong. |
 
 ### Citation verification results (2026-08-02) — all three failed
 
@@ -495,6 +495,147 @@ changes our rules. Its FAQ-count and llms.txt guidance are actively wrong for us
 **Standing instruction:** no statistic from an AI-generated research report goes into client-facing
 copy until traced to a primary source. Two Gemini reports have now each contained the same
 fabricated Unbounce statistic.
+
+---
+
+## 8. Sitewide audit (2026-08-03, rendered HTML, n=447 live URLs)
+
+Run with `node scripts/audit-rendered.mjs`, which fetches every URL in the live sitemap index and
+measures it the same way `dfs_citation_anatomy.py` measured the 58 cited competitor pages, so our
+numbers and the benchmark are directly comparable. Raw output: `pipeline/research/data/rendered_audit_2026-08-03.json`.
+A companion source-side check, `node scripts/audit-rulebook.mjs`, reports the same signals from the
+`.tsx` tree with imports followed one level, for finding *which file* to edit.
+
+### Where we stand against the benchmark
+
+| Metric | Ours (median) | Benchmark | Verdict |
+|---|---:|---:|---|
+| Rendered words | **3,445** | 2,813 | ✅ above |
+| `<h2>` count | **11** | 11 | ✅ at |
+| `<li>`, whole page | **73** | 110 | ❌ **below** |
+| `dateModified` | **34%** (154/447) | 56% | ❌ below |
+| `Person` schema | **100%** (447/447) | 41% | ✅ well above |
+| `FAQPage` schema | **93%** (417/447) | 41% | ✅ above |
+| `BreadcrumbList` | **74%** (329/447) | (36/58 ≈ 62%) | ✅ above |
+| Exactly one `<h1>` | **446/447** | 55/58 | ✅ one violation, fixed |
+
+Depth and sectioning are fine. **List density is the one structural rule we genuinely fail**, and
+`dateModified` is the one cheap schema field we under-ship. Everything the two earlier audits flagged
+as a likely `Person`-schema gap was wrong: it is universal, because it ships from `layout.tsx`.
+
+### ⚠️ Correction: the `<li>` figures from the previous phase included nav chrome
+
+The 110 benchmark counts `<li>` across the **whole document**, header and footer included, because
+that is what `dfs_citation_anatomy.py` does to competitor pages. Our own before/after numbers from
+the visual pass ("75-83 → 98-121") were measured the same way, so they are comparable to the
+benchmark, but they are **not** a measure of content.
+
+Measured inside `<main>` only, `/b2b-ecommerce` has **56** list items, not 121. Our site chrome
+contributes 25 `<li>` on UK pages and 65 on US pages, so whole-page `<li>` is not even comparable
+between our own regions. Both numbers are worth keeping, for different questions:
+
+| Question | Use |
+|---|---|
+| How do we compare to cited competitor pages? | whole-page `<li>` (chrome included, as the benchmark does) |
+| How much list structure does the *content* actually have? | `<li>` inside `<main>` |
+
+This does not invalidate the previous phase's work; the pages did gain real list markup. It does mean
+the gain was smaller than "98-121 vs a 110 benchmark" implied.
+
+### Per-segment breakdown
+
+| Segment | n | words | h2 | `<li>` all | `<li>` in main | dateMod | FAQ Qs |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| blog | 117 | 3,976 | 13 | 83 | 18 | 99% | 19 |
+| **uk** | **124** | **590** | **6** | **3** | **3** | **10%** | **8** |
+| us-commercial | 48 | 3,916 | 12 | 78 | 26 | 23% | 23 |
+| india-city | 43 | 3,858 | 12 | 57 | 5 | 0% | 22 |
+| us-service | 41 | 4,115 | 11 | 92 | 28 | 7% | 22 |
+| us-city | 41 | 4,338 | 12 | 85 | 26 | 10% | 22 |
+| utility/hub | 13 | 779 | 5 | 68 | 3 | 0% | 0 |
+| uae/au | 12 | 3,984 | 9 | 74 | 69 | 8% | 22 |
+| case-study | 8 | 1,150 | 7 | 69 | 4 | 75% | 5 |
+
+Every segment except UK sits at or above the 2,813-word benchmark. India city pages are the weakest
+on content list structure (5 `<li>` in `<main>` against 3,858 words of prose).
+
+### 🚨 The finding that outranks the one we went looking for: 90 UK doorway pages
+
+The UK segment's 590-word median is not a thin tail. It is a **15 cities × 6 services grid of 90
+near-identical pages**, served from the dynamic route `src/app/uk/[city]/[service]/page.tsx`.
+
+Measured directly: `/uk/oxford/ecommerce`, `/uk/derby/ecommerce` and `/uk/plymouth/ecommerce` are
+**620 rendered words each**, and a word-level diff between any two differs in **26 words out of 620**,
+every one of them the city name. Each carries 3 `<li>` and 8 FAQ questions.
+
+Cities: brighton, bristol, cambridge, cardiff, coventry, derby, edinburgh, glasgow, hull, leicester,
+newcastle, nottingham, oxford, plymouth, southampton.
+Services: `web-design`, `ai-websites`, `ecommerce`, `seo`, `ai-seo`, `ai-agents`.
+
+This is the shape Google's spam policy calls **scaled content abuse / doorway pages**: many pages
+that differ only by location, created to catch a query rather than to serve a reader.
+
+**What they earn (GSC, 2026-05-05 to 2026-08-02, 90 days):** the entire `/uk/` tree produced
+**15 clicks**. The 90 thin pages produced **5** of those (cambridge/web-design, derby/seo,
+hull/ai-websites, newcastle/ai-websites, newcastle/web-design, one click each), at positions 25-75.
+Only 14 UK URLs earned a click at all; every other indexed UK URL returns zero against thousands of
+impressions. `/uk/leicester/ai-seo` alone has 1,579 impressions and 0 clicks at position 24.7.
+
+So they are not load-bearing. They are 90 near-duplicate pages carrying a documented spam-policy risk
+for 5 clicks a quarter, on a domain whose binding constraint is already authority (53 referring
+domains, §6b).
+
+**Note the interaction with the earlier UK consolidation.** The third-level
+`/uk/{city}/{service}/{platform}` URLs are already 301'd, single-hop, verified, but they redirect
+**into** these 90 thin pages. Consolidating further means re-pointing those redirects too, not just
+retiring the thin tier, or the existing 301s become 2-hop chains.
+
+**Recommendation (decision is Bhavesh's, not mine):** 301 the 90 city×service pages into the
+corresponding national hub (`/uk/seo`, `/uk/web-design`, `/uk/ecommerce-development`,
+`/uk/ai-agents`, `/uk/ai-seo`), keep the ~15 city root pages, and re-point the existing platform-level
+redirects at the same hubs so nothing becomes a 2-hop chain. This matches the 2026-07-25 UK analysis,
+which independently concluded UK is over-built and authority-constrained, and that the lever is
+consolidation plus links rather than more city pages.
+
+### Defects found and fixed in this audit
+
+| Defect | Detail | Status |
+|---|---|---|
+| `/faq` rendered **zero `<h1>`** | Only live URL to fail Tier A rule 1. The page renders `<FAQ>`, whose headline is an `<h2>`; the `<h1>` lives in `src/app/faq/FaqContent.tsx`, which is **orphaned** (referenced only by `.fuse_hidden*` remnants). Fixed by adding an optional `headlineAs` prop to `FAQ`, defaulting to `h2` so the 190+ pages that already own an `h1` are untouched, and passing `h1` on `/faq` only. | ✅ Fixed |
+| `sitemap-case-studies` listed **7/7 redirecting URLs** | Every entry carried a trailing slash; Next serves these routes at the no-slash form and 308s the slashed one. The sitemap advertised 7 redirects and zero canonical URLs. | ✅ Fixed |
+| `/case-studies` listed in **two** sitemaps | `sitemap-us` emitted `/case-studies` (which matches the page's own canonical), `sitemap-case-studies` emitted `/case-studies/`. Removed the duplicate from `sitemap-case-studies`. | ✅ Fixed |
+| **`WEBPAGE_SCHEMA` declared but never rendered** on `/headless-commerce`, `/omnichannel-commerce`, `/commerceflo` | See below. The three Tier 3 pages shipped with `dateModified` and a `Person` author that existed **only in source**. | ✅ Fixed |
+
+#### The silent-schema bug, and why it survived review
+
+All three Tier 3 pages from 2026-08-03 declared `const WEBPAGE_SCHEMA = {...}` carrying
+`dateModified` and a `Person` author, then emitted only their FAQ, Service and Breadcrumb schemas.
+The constant was never `JSON.stringify`'d into a `<script>` tag, so none of it reached the page.
+
+This is a **silent** failure, and the previous session's build log records these pages as carrying
+`dateModified` and `Person` schema. They carried the constant, not the output.
+
+- `tsc` passes: an unused module-scope const is legal TypeScript.
+- `validate-build` and `check-tracked-imports` pass: nothing is missing or untracked.
+- Code review reads fine: the object is right there, correct, above the component.
+- Only rendered HTML shows it, which is why §4b's "measure on rendered HTML" rule keeps paying out.
+
+Found because the rendered audit reported `dateModified=false` on pages a source grep said had it.
+**Two independent measurements disagreeing is the signal. Chase it, do not reconcile it away.**
+
+`scripts/audit-rulebook.mjs` now detects this class directly: it flags any module-scope const whose
+body contains `@context` and whose name is never referenced again, and exits non-zero. Run it
+alongside `check-tracked-imports.mjs` before a push.
+
+
+### Still open after this audit
+
+1. **The 90 UK doorway pages.** Needs Bhavesh's decision, above.
+2. **`dateModified` on 293 URLs.** Cheap, but only worth doing where the date is honest; stamping a
+   build date onto pages that have not changed is a freshness lie, not a fix.
+3. **List density.** 73 whole-page against 110. India city pages and the utility/hub pages are the
+   worst offenders on content-only list structure.
+4. `src/app/faq/FaqContent.tsx` is dead code and can be deleted.
 
 ---
 

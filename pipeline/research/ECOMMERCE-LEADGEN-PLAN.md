@@ -360,9 +360,27 @@ anyway" argument is disproved by our own GSC: existing pages sit at position 29-
 
 ### Tier 3 — density rewrites of `/headless-commerce`, `/omnichannel-commerce`, `/commerceflo`
 
-Still open. `/headless-commerce` is 1,230 rendered words at 22.0 terms/1k and cited 0/4;
-`/omnichannel-commerce` is 2,145 at 21.9 and cited 0/4. Both sit below the 2,813-word benchmark
-median AND below the density of the page that does get cited.
+Shipped 2026-08-03. Re-measured live on 2026-08-03 (`scripts/audit-rendered.mjs`):
+
+| Page | Rendered words | `<li>` all | `<li>` in main | h2 | FAQ Qs |
+|---|---:|---:|---:|---:|---:|
+| `/headless-commerce` | 1,949 (was 1,230) | 78 | 13 | 7 | 22 |
+| `/omnichannel-commerce` | 2,784 (was 2,145) | 88 | 23 | 12 | 28 |
+| `/commerceflo` | 2,146 | 78 | 13 | 7 | 24 |
+
+`/omnichannel-commerce` now sits at the 2,813-word benchmark. The other two are still short of it,
+and all three are short on `<li>`.
+
+**All three shipped with a broken `WEBPAGE_SCHEMA`** — declared with `dateModified` and a `Person`
+author, never rendered into a `<script>` tag. Fixed 2026-08-03. See rulebook §8; the detector is now
+in `scripts/audit-rulebook.mjs`.
+
+### Sitewide audit — done 2026-08-03
+
+Full rendered-HTML audit of all 447 live sitemap URLs. See `docs/AI-SEO-RULEBOOK.md` §8 and
+`pipeline/research/data/rendered_audit_2026-08-03.json`. Headline: depth and sectioning are at benchmark, list density and
+`dateModified` are not, and the audit surfaced **90 near-duplicate UK city×service pages** (620 words
+each, differing only by city name, 5 clicks in 90 days) that need a consolidation decision.
 
 ### Open measurement
 

@@ -46,6 +46,12 @@ export interface FAQCategory {
 export interface FAQProps {
   eyebrow?: string;
   headline: ReactNode;
+  /** Heading level for `headline`. Defaults to "h2" because FAQ is normally a
+   *  section on a page that already owns its own h1. Pass "h1" ONLY when the FAQ
+   *  IS the page and nothing else supplies an h1 (currently just /faq, which
+   *  rendered zero h1 until the 2026-08-03 audit caught it). Rulebook Tier A
+   *  rule 1: exactly one h1 per page. */
+  headlineAs?: 'h1' | 'h2';
   lead?: string;
   categories?: ReadonlyArray<FAQCategory>;
   items: ReadonlyArray<FAQItem>;
@@ -120,6 +126,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
 export default function FAQ({
   eyebrow,
   headline,
+  headlineAs = 'h2',
   lead,
   categories,
   items,
@@ -146,7 +153,7 @@ export default function FAQ({
         <div className="mx-auto max-w-[1120px] px-6 md:px-8">
           <MotionFadeUp className="mx-auto max-w-[760px] text-center">
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
-            <Heading as="h2" size="h3" className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}>
+            <Heading as={headlineAs} size="h3" className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}>
               {headline}
             </Heading>
             {lead && (
@@ -186,7 +193,7 @@ export default function FAQ({
         <MotionFadeUp>
           {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
           <Heading
-            as="h2"
+            as={headlineAs}
             size="h3"
             className={`text-fj-ink ${eyebrow ? 'mt-6' : ''} max-w-[640px]`}
           >
