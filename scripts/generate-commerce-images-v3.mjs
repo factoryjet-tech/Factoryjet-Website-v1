@@ -100,7 +100,10 @@ const IMAGES = [
   // /replatforming/wordpress-to-shopify
   ['wordpress-to-shopify-editorial-desk', 'A smiling editor at a bright white desk with a large monitor showing a clean magazine-style article layout with a big photograph and only a short headline, sunlit white office, an orange notebook'],
   ['wordpress-to-shopify-content-archive', 'A smiling librarian-like content manager arranging neatly labelled white archive boxes on clean white shelving, bright airy room, large windows, one orange box among white ones'],
-  ['wordpress-to-shopify-hybrid-architecture', 'Two colleagues smiling as they draw a simple clean two-box diagram on a large glass whiteboard in a bright white office, big windows, an orange marker in hand'],
+  // The first generation drew "INPUT -> OUTPUT", which is legible but says nothing
+  // about the caption (WordPress kept for content, Shopify running commerce). The
+  // box labels are now pinned to the actual concept.
+  ['wordpress-to-shopify-hybrid-architecture', 'Two colleagues smiling as they draw a simple clean diagram on a large glass whiteboard in a bright white office. The diagram is exactly two hand-drawn rectangles side by side joined by one arrow: the left box is labelled "CONTENT" and the right box is labelled "COMMERCE", with no other writing anywhere on the glass. Big windows, an orange marker in hand'],
 
   // /replatforming/salesforce-commerce-cloud-to-shopify-plus
   ['salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room', 'Five smiling professionals collaborating around a large bright white conference table, a wall screen showing a simple clean timeline of large plain blocks with no small writing, glass walls, abundant daylight, one orange folder on the table'],

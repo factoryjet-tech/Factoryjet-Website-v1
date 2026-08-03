@@ -708,7 +708,9 @@ export default function AustinSeoPage() {
                 <p className="lead">From Silicon Hills startups to South Congress boutiques, FactoryJet builds local SEO that compounds month over month. One agency, the entire metro.</p>
                 <div className="csstats">
                   <div className="csstat"><div className="csv">500+</div><div className="csk">businesses served across the US</div></div>
-                  <div className="csstat"><div className="csv">25 yrs</div><div className="csk">of building sites and SEO for SMBs</div></div>
+                  {/* "10+ yrs", not 25. PRODUCT.md fixes the experience framing at
+                      decade-plus and rules out 25 years explicitly. */}
+                  <div className="csstat"><div className="csv">10+ yrs</div><div className="csk">of building sites and SEO for SMBs</div></div>
                   <div className="csstat"><div className="csv">7 days</div><div className="csk">from audit to active campaign</div></div>
                 </div>
                 <div className="cta-row" style={{ marginTop: '28px' }}>

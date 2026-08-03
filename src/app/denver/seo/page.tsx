@@ -400,7 +400,9 @@ export default function DenverSeoPage() {
                 <p className="real">No stock screenshots and no invented case studies. These are live client builds you can open and test yourself.</p>
                 <div className="trust-chips">
                   <div className="trust-chip"><b>500+</b> businesses served</div>
-                  <div className="trust-chip"><b>25 yrs</b> building for SMBs</div>
+                  {/* "10+ yrs", not 25. PRODUCT.md fixes the experience framing at
+                      decade-plus and rules out 25 years explicitly. */}
+                  <div className="trust-chip"><b>10+ yrs</b> building for SMBs</div>
                   <div className="trust-chip">Month to month</div>
                 </div>
               </div>
