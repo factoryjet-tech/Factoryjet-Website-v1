@@ -1,0 +1,812 @@
+{
+ "per_page": {
+  "replatforming": {
+   "competitors": [
+    [
+     "swankyagency.com",
+     2
+    ],
+    [
+     "icreativetechnologies.com",
+     2
+    ],
+    [
+     "virtocommerce.com",
+     1
+    ],
+    [
+     "cloudflight.io",
+     1
+    ],
+    [
+     "fptsoftware.com",
+     1
+    ],
+    [
+     "contentful.com",
+     1
+    ],
+    [
+     "it-consultis.com",
+     1
+    ],
+    [
+     "scayle.com",
+     1
+    ],
+    [
+     "zoolatech.com",
+     1
+    ],
+    [
+     "akeneo.com",
+     1
+    ],
+    [
+     "uncap.com",
+     1
+    ],
+    [
+     "elogic.co",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "shopify.com",
+     2
+    ],
+    [
+     "salesforce.com",
+     1
+    ],
+    [
+     "help.shopify.com",
+     1
+    ]
+   ],
+   "paa": [
+    "How much does it cost to migrate to Shopify?",
+    "Is Shopify still worth it in 2026?",
+    "Who is a Shopify migration expert?",
+    "How do I migrate a Shopify store?",
+    "How much does Shopify take from a $100 sale?",
+    "Why migrate to Shopify?",
+    "Who is Shopify's biggest competitor?",
+    "Why is Shopify plummeting?"
+   ]
+  },
+  "magento-to-shopify": {
+   "competitors": [
+    [
+     "referralcandy.com",
+     2
+    ],
+    [
+     "amasty.com",
+     2
+    ],
+    [
+     "litextension.com",
+     1
+    ],
+    [
+     "matrixify.app",
+     1
+    ],
+    [
+     "optimum7.com",
+     1
+    ],
+    [
+     "rebuyengine.com",
+     1
+    ],
+    [
+     "fourmeta.com",
+     1
+    ],
+    [
+     "meetanshi.com",
+     1
+    ],
+    [
+     "sleeplessmedia.com",
+     1
+    ],
+    [
+     "ontapgroup.com",
+     1
+    ],
+    [
+     "blog.mastroke.com",
+     1
+    ],
+    [
+     "gempages.net",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "shopify.com",
+     1
+    ],
+    [
+     "apps.shopify.com",
+     1
+    ],
+    [
+     "experienceleague.adobe.com",
+     1
+    ]
+   ],
+   "paa": [
+    "How much does Magento migration cost?",
+    "Does anyone still use Magento?",
+    "Is Magento end of life?",
+    "What are the best Magento agencies?",
+    "Which is better, Magento or WooCommerce?",
+    "What are the disadvantages of Magento?"
+   ]
+  },
+  "woocommerce-to-shopify": {
+   "competitors": [
+    [
+     "litextension.com",
+     1
+    ],
+    [
+     "matrixify.app",
+     1
+    ],
+    [
+     "wearepresta.com",
+     1
+    ],
+    [
+     "gladly.ai",
+     1
+    ],
+    [
+     "madebyextreme.com",
+     1
+    ],
+    [
+     "exposureninja.com",
+     1
+    ],
+    [
+     "shopping-cart-migration.com",
+     1
+    ],
+    [
+     "fyresite.com",
+     1
+    ],
+    [
+     "brihaspatitech.com",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "apps.shopify.com",
+     2
+    ],
+    [
+     "community.shopify.com",
+     2
+    ],
+    [
+     "help.shopify.com",
+     1
+    ],
+    [
+     "woocommerce.com",
+     1
+    ],
+    [
+     "wordpress.org",
+     1
+    ]
+   ],
+   "paa": []
+  },
+  "squarespace-to-shopify": {
+   "competitors": [
+    [
+     "forum.squarespace.com",
+     2
+    ],
+    [
+     "litextension.com",
+     1
+    ],
+    [
+     "adoric.com",
+     1
+    ],
+    [
+     "heycarson.com",
+     1
+    ],
+    [
+     "highviewapps.com",
+     1
+    ],
+    [
+     "20northmarketing.com",
+     1
+    ],
+    [
+     "simple-affiliate.com",
+     1
+    ],
+    [
+     "netalico.com",
+     1
+    ],
+    [
+     "tiktok.com",
+     1
+    ],
+    [
+     "tinyseo.com",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "community.shopify.com",
+     2
+    ],
+    [
+     "help.shopify.com",
+     1
+    ],
+    [
+     "shopify.com",
+     1
+    ]
+   ],
+   "paa": [
+    "Is Shopify still worth it in 2026?",
+    "Is it hard to switch from Square to Shopify?",
+    "How much would it cost to migrate my website to Shopify?",
+    "How long does it take to transfer a domain from Squarespace to Shopify?",
+    "Who is Shopify's biggest competitor?",
+    "Why do so many Shopify stores fail?",
+    "Why is Shopify better than Square?",
+    "How much does it cost to migrate to Shopify?"
+   ]
+  },
+  "wix-to-shopify": {
+   "competitors": [
+    [
+     "litextension.com",
+     2
+    ],
+    [
+     "shopping-cart-migration.com",
+     1
+    ],
+    [
+     "support.wix.com",
+     1
+    ],
+    [
+     "seventhtriangle.com",
+     1
+    ],
+    [
+     "meetanshi.com",
+     1
+    ],
+    [
+     "fourmeta.co.uk",
+     1
+    ],
+    [
+     "digitalsuits.co",
+     1
+    ],
+    [
+     "psdtohtmlninja.com",
+     1
+    ],
+    [
+     "elsner.com",
+     1
+    ],
+    [
+     "heycarson.com",
+     1
+    ],
+    [
+     "hulkapps.com",
+     1
+    ],
+    [
+     "webdesksolution.com",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "community.shopify.com",
+     2
+    ],
+    [
+     "help.shopify.com",
+     1
+    ]
+   ],
+   "paa": [
+    "Does Wix work well with Shopify?",
+    "How much would it cost to migrate my website to Shopify?",
+    "How long does it take to transfer a domain from Wix to Shopify?",
+    "Which is easier, Shopify or Wix?",
+    "How hard is it to switch from Wix to Shopify?",
+    "Is Shopify still worth it in 2026?",
+    "How much does Shopify take from a $100 sale?",
+    "Who is Shopify's biggest competitor?"
+   ]
+  },
+  "wordpress-to-shopify": {
+   "competitors": [
+    [
+     "litextension.com",
+     1
+    ],
+    [
+     "shopping-cart-migration.com",
+     1
+    ],
+    [
+     "wecanflyagency.com",
+     1
+    ],
+    [
+     "heycarson.com",
+     1
+    ],
+    [
+     "matrixify.app",
+     1
+    ],
+    [
+     "goldenweb.net",
+     1
+    ],
+    [
+     "naturaily.com",
+     1
+    ],
+    [
+     "magefan.com",
+     1
+    ],
+    [
+     "gempages.net",
+     1
+    ],
+    [
+     "ecorn.agency",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "community.shopify.com",
+     3
+    ],
+    [
+     "help.shopify.com",
+     2
+    ],
+    [
+     "wordpress.org",
+     1
+    ]
+   ],
+   "paa": []
+  },
+  "salesforce-commerce-cloud-to-shopify-plus": {
+   "competitors": [
+    [
+     "getapp.co.uk",
+     2
+    ],
+    [
+     "ardncloudsolutions.com",
+     1
+    ],
+    [
+     "gartner.com",
+     1
+    ],
+    [
+     "shopware.com",
+     1
+    ],
+    [
+     "6sense.com",
+     1
+    ],
+    [
+     "oroinc.com",
+     1
+    ],
+    [
+     "aximcommerce.com",
+     1
+    ],
+    [
+     "creatio.com",
+     1
+    ],
+    [
+     "vervaunt.com",
+     1
+    ],
+    [
+     "swell.is",
+     1
+    ],
+    [
+     "tailoredd.com",
+     1
+    ],
+    [
+     "litextension.com",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "shopify.com",
+     1
+    ],
+    [
+     "salesforce.com",
+     1
+    ]
+   ],
+   "paa": []
+  },
+  "b2b-ecommerce": {
+   "competitors": [
+    [
+     "b2becommerceagency.com",
+     2
+    ],
+    [
+     "b2bea.org",
+     2
+    ],
+    [
+     "oroinc.com",
+     2
+    ],
+    [
+     "onemagnify.com",
+     1
+    ],
+    [
+     "coalitiontechnologies.com",
+     1
+    ],
+    [
+     "loomisguild.com",
+     1
+    ],
+    [
+     "thesiliconreview.com",
+     1
+    ],
+    [
+     "magnetoitsolutions.com",
+     1
+    ],
+    [
+     "netguru.com",
+     1
+    ],
+    [
+     "groovecommerce.com",
+     1
+    ],
+    [
+     "websolutionsnyc.com",
+     1
+    ],
+    [
+     "anyleads.com",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "bigcommerce.com",
+     1
+    ],
+    [
+     "shopify.com",
+     1
+    ]
+   ],
+   "paa": [
+    "What is the average cost of a B2B agency?",
+    "What is B2B in e-commerce?",
+    "What are the 4 types of B2B organizations?",
+    "What is the best B2B e-commerce platform?",
+    "Do you need an LLC for a marketing agency?",
+    "How to start a B2B agency?",
+    "What are examples of B2B companies?",
+    "What is B2B salary?",
+    "What is a B2B eCommerce platform?",
+    "What is the best B2B eCommerce platform?",
+    "Which platform is best for B2B?",
+    "What are the 4 types of B2B?",
+    "Can you give me an example of a B2B platform?",
+    "Is Walmart a B2B company?",
+    "What are the top 10 B2B websites in the USA?",
+    "Is Shopify good for B2B?"
+   ]
+  },
+  "ecommerce-for-manufacturers": {
+   "competitors": [
+    [
+     "ontapgroup.com",
+     2
+    ],
+    [
+     "netsuite.com",
+     1
+    ],
+    [
+     "headq.io",
+     1
+    ],
+    [
+     "tacton.com",
+     1
+    ],
+    [
+     "coredna.com",
+     1
+    ],
+    [
+     "lansa.com",
+     1
+    ],
+    [
+     "mrpeasy.com",
+     1
+    ],
+    [
+     "virtocommerce.com",
+     1
+    ],
+    [
+     "getbalance.com",
+     1
+    ],
+    [
+     "orderease.com",
+     1
+    ],
+    [
+     "codilar.com",
+     1
+    ],
+    [
+     "elogic.co",
+     1
+    ]
+   ],
+   "vendors": [
+    [
+     "bigcommerce.com",
+     1
+    ],
+    [
+     "wix.com",
+     1
+    ]
+   ],
+   "paa": [
+    "How much does it cost to create a B2B website?",
+    "What is a B2B website?",
+    "What are the 4 types of B2B?",
+    "Which is the best B2B website?",
+    "How much should I pay someone to design a website?",
+    "How to make a good B2B website?",
+    "What is the cost of a B2B website?"
+   ]
+  }
+ },
+ "alternatives": [
+  {
+   "keyword": "woocommerce alternatives",
+   "volume": 170,
+   "cpc": 25.28,
+   "kd": 0
+  },
+  {
+   "keyword": "bigcommerce alternatives",
+   "volume": 90,
+   "cpc": 24.27,
+   "kd": 13
+  },
+  {
+   "keyword": "magento alternatives",
+   "volume": 50,
+   "cpc": 20.82,
+   "kd": 0
+  },
+  {
+   "keyword": "alternatives to woocommerce",
+   "volume": 50,
+   "cpc": 9.73,
+   "kd": 0
+  },
+  {
+   "keyword": "salesforce commerce cloud vs shopify",
+   "volume": 40,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "shopify plus alternatives",
+   "volume": 20,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "woocommerce alternatives for wordpress",
+   "volume": 20,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "shopify vs salesforce commerce cloud",
+   "volume": 20,
+   "cpc": 17.24,
+   "kd": 0
+  },
+  {
+   "keyword": "alternatives to magento 2",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 21
+  },
+  {
+   "keyword": "magento alternatives reddit",
+   "volume": 10,
+   "cpc": 0,
+   "kd": null
+  },
+  {
+   "keyword": "magento alternatives 2020",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 19
+  },
+  {
+   "keyword": "alternatives to magento",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "magento alternatives open source",
+   "volume": 10,
+   "cpc": 8.28,
+   "kd": 21
+  },
+  {
+   "keyword": "magento alternatives: open source",
+   "volume": 10,
+   "cpc": 8.28,
+   "kd": null
+  },
+  {
+   "keyword": "alternatives to magento enterprise",
+   "volume": 10,
+   "cpc": 0,
+   "kd": null
+  },
+  {
+   "keyword": "magento 2 alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 21
+  },
+  {
+   "keyword": "magento ecommerce alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": null
+  },
+  {
+   "keyword": "bigcommerce shopify alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": null
+  },
+  {
+   "keyword": "alternatives to bigcommerce",
+   "volume": 10,
+   "cpc": 27.57,
+   "kd": 13
+  },
+  {
+   "keyword": "woocommerce alternatives wordpress",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "alternatives to woocommerce for wordpress",
+   "volume": 10,
+   "cpc": 4.1,
+   "kd": 0
+  },
+  {
+   "keyword": "wordpress woocommerce alternatives",
+   "volume": 10,
+   "cpc": 6.54,
+   "kd": 0
+  },
+  {
+   "keyword": "woocommerce subscriptions alternatives",
+   "volume": 10,
+   "cpc": 3.24,
+   "kd": 0
+  },
+  {
+   "keyword": "alternatives to woocommerce wordpress",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 0
+  },
+  {
+   "keyword": "woocommerce alternatives reddit",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 52
+  },
+  {
+   "keyword": "woocommerce bookings alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 48
+  },
+  {
+   "keyword": "woocommerce plugin alternatives for wordpress",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 53
+  },
+  {
+   "keyword": "free woocommerce alternatives for wordpress",
+   "volume": 10,
+   "cpc": 15.65,
+   "kd": null
+  },
+  {
+   "keyword": "best woocommerce alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": null
+  },
+  {
+   "keyword": "free woocommerce alternatives",
+   "volume": 10,
+   "cpc": 0,
+   "kd": 48
+  }
+ ]
+}

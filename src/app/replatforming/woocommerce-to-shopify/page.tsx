@@ -39,6 +39,8 @@ const FAQ_ITEMS = [
   { category: 'basics', question: 'Why do WooCommerce stores migrate to Shopify?', answer: 'Usually one of three reasons: the plugin stack has become fragile and updates break things, the security and hosting maintenance burden falls on a team that does not want it, or the checkout underperforms and improving it means yet another plugin. Shopify trades plugin-level control for a hosted platform with a checkout you do not maintain.' },
   { category: 'basics', question: 'Is WooCommerce worse than Shopify?', answer: 'No, they are different trade-offs. WooCommerce gives you complete control and no platform fees in exchange for owning hosting, security, updates, and plugin compatibility. Shopify handles all of that and charges for it. The right answer depends on whether your team wants to operate infrastructure, not on which platform is better.' },
   { category: 'basics', question: 'Should we stay on WooCommerce instead?', answer: 'Often yes. If your team is comfortable maintaining WordPress, your plugin stack is stable, and your hosting is solid, migrating is expensive disruption for limited gain. We recommend staying when the real problem is a slow theme, a bad host, or an unoptimised checkout, all of which are far cheaper to fix in place.' },
+  { category: 'basics', question: 'What are the best WooCommerce alternatives?', answer: 'Shopify and Shopify Plus are the most common destination, because they remove hosting and plugin maintenance entirely. BigCommerce suits mid-market catalogues with strong native B2B. Adobe Commerce fits very large or highly customised catalogues. Squarespace and Wix only make sense if you are simplifying rather than scaling. We compare them against your actual plugin stack rather than a feature grid.' },
+  { category: 'basics', question: 'Who else does WooCommerce to Shopify migrations?', answer: 'The space splits into tools and agencies. LitExtension, Cart2Cart, and Matrixify are self-serve data-migration tools that move records but leave URL mapping, plugin replacement, subscriptions, and integrations to you. Agencies including Meetanshi, DigitalSuits, HeyCarson, and Magefan take on the full project, as we do. If your store is small and has no subscriptions or integrations, a tool may genuinely be enough, and we will say so.' },
   { category: 'basics', question: 'Can we keep WordPress for content and move only the store?', answer: 'Yes, and for content-heavy sites this is sometimes the better answer. WordPress stays for the blog and marketing pages while commerce moves to Shopify, connected under one domain via subdomain or reverse proxy. It adds architectural complexity, so it is worth it when the content operation is genuinely substantial.' },
   { category: 'data', question: 'What data migrates from WooCommerce to Shopify?', answer: 'Products including simple, variable, and grouped types, categories and tags, images, customers and address books, order and refund history, coupons, product reviews, blog posts and pages, and existing redirects. Custom fields, often built with ACF or a plugin, map to Shopify metafields, which is usually the largest single piece of data work.' },
   { category: 'data', question: 'How do WooCommerce product types map to Shopify?', answer: 'Simple products map directly. Variable products become Shopify products with variant options, subject to Shopify variant limits. Grouped and external or affiliate products have no direct equivalent and need a decision: rebuild as collections, as metafield-driven bundles, or drop them. We identify these during the audit rather than at build time.' },
@@ -200,11 +202,27 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/woocommerce-to-shopify-plugin-sprawl.webp"
+                     alt="A cluttered desk with a laptop, sticky notes, tangled cables and external drives"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                The plugin audit is where the real scope of a WooCommerce migration appears.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons WooCommerce stores leave</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
                 <article className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
@@ -252,11 +270,27 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/woocommerce-to-shopify-subscription-box.webp"
+                     alt="A row of identical subscription boxes ready for dispatch on a wooden table"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Subscription payment tokens are resolved before cutover, never after.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -267,11 +301,30 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/woocommerce-to-shopify-packing-bench.webp"
+                     alt="A small business packing bench with kraft boxes, tape and a laptop showing an order list"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Orders keep flowing through the migration window.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               See{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
               for the other migration routes we run, including{' '}
@@ -280,6 +333,7 @@ export default function WooCommerceToShopifyPage() {
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
               build covers account pricing, net terms, and ERP-synced ordering on the new platform.
             </p>
+            </div>
           </div>
         </section>
 

@@ -193,6 +193,22 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wordpress-to-shopify-editorial-desk.webp"
+                     alt="An editorial writing desk with printed article proofs marked in red pencil and a laptop"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                On content-led sites the blog archive is the biggest part of the redirect map.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
@@ -223,11 +239,27 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wordpress-to-shopify-content-archive.webp"
+                     alt="A wall of neatly labelled archive boxes and binders in a bright office"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Category archives are mapped to a destination, not silently dropped.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -238,11 +270,30 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
+                     alt="Two laptops side by side, one showing a long-form article layout and one a product page"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Keeping WordPress for content while Shopify runs commerce is often the better architecture.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               If your store runs on WooCommerce, see{' '}
               <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
               instead, which covers products, subscriptions, and the plugin stack. See{' '}
@@ -251,6 +302,7 @@ export default function WordPressToShopifyPage() {
               <Link href="/services/wordpress-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WordPress development</Link>{' '}
               if the answer turns out to be improving what you have.
             </p>
+            </div>
           </div>
         </section>
 

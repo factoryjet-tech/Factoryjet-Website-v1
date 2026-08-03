@@ -55,6 +55,8 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   { category: 'basics', question: 'Why do Salesforce Commerce Cloud brands move to Shopify Plus?', answer: 'Three drivers dominate: total cost of ownership including licence and the specialist development capacity SFCC requires, release velocity when every change needs a cartridge deployment, and licence renewal forcing a genuine build-versus-buy review. The trade is deep enterprise configurability for a platform your team can operate.' },
   { category: 'basics', question: 'Is Shopify Plus really an enterprise alternative to SFCC?', answer: 'For a large share of SFCC brands, yes, and for some, no. Shopify Plus handles high-volume DTC, multi-market selling, and B2B well. Where SFCC still wins is extremely deep custom merchandising logic, very complex multi-brand catalog hierarchies, and organisations already committed to the wider Salesforce ecosystem.' },
+  { category: 'basics', question: 'Salesforce Commerce Cloud vs Shopify Plus: how do they compare?', answer: 'SFCC gives deeper merchandising configurability, a more expressive promotions engine, and multi-brand catalogue hierarchies, at the cost of licence fees, specialist developers, and slower release cycles. Shopify Plus gives faster iteration, a far larger app ecosystem, and a platform your own team can operate, at the cost of some low-level control. The honest split: SFCC wins on configurability, Shopify Plus wins on velocity and cost of ownership.' },
+  { category: 'basics', question: 'What are the main Salesforce Commerce Cloud alternatives?', answer: 'Shopify Plus and Adobe Commerce are the two most common enterprise destinations. BigCommerce Enterprise and commercetools appear where composable or API-first architecture is the priority. OroCommerce and Virto Commerce come up for heavily B2B estates. Which fits depends far more on your promotions complexity and integration surface than on any feature comparison table.' },
   { category: 'basics', question: 'What is the difference between SFCC and Demandware?', answer: 'They are the same platform. Demandware was the original product name before Salesforce acquired it, and the term still appears in older documentation, job specs, and internal naming. If your team says Demandware and your invoices say Salesforce B2C Commerce, you are on one platform, not two.' },
   { category: 'basics', question: 'Should we stay on Salesforce Commerce Cloud?', answer: 'Sometimes, and we will say so. If your merchandising logic genuinely requires SFCC\'s depth, you run many brands and locales with divergent catalogs, or the wider Salesforce estate is central to operations, replatforming trades one set of constraints for another. The migration is worth it when the platform is the bottleneck.' },
   { category: 'arch', question: 'What happens to our cartridges?', answer: 'They do not transfer. Cartridges are SFCC-specific extension packages, so every piece of custom functionality is re-implemented as Shopify theme code, a Shopify app, Shopify Functions, or dropped. Cataloguing what each cartridge actually does, including ones nobody maintains, is where the real project scope emerges.' },
@@ -210,6 +212,22 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room.webp"
+                     alt="A large empty corporate meeting room with wall-mounted dashboards and a city view"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Licence renewal is the usual trigger, and it sets a hard deadline.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
@@ -245,11 +263,27 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-integration-map.webp"
+                     alt="A neatly organised network rack with colour-coded patch cables in ordered bundles"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Every OCAPI and SCAPI integration is rebuilt against Shopify APIs and tested on real orders.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage enterprise process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -260,11 +294,30 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-multi-market.webp"
+                     alt="A desk with printed regional catalogue pages and several currency price lists"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Multi-locale URL maps are built per locale, never sampled.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               See{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
               for the other routes we run, including{' '}
@@ -275,6 +328,7 @@ export default function SFCCToShopifyPlusPage() {
               <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>{' '}
               covers the decoupled front-end option.
             </p>
+            </div>
           </div>
         </section>
 

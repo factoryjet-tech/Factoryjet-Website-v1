@@ -38,6 +38,9 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS = [
   { category: 'basics', question: 'What is ecommerce for manufacturers?', answer: 'Manufacturer ecommerce is a trade ordering system rather than a shop. Dealers, distributors, and specifiers log in, see the pricing their contract entitles them to, check real stock, configure or specify a product, and place or repeat an order without emailing a rep. The storefront reads pricing and availability from the ERP that already runs the plant, so what a dealer sees is what your finance and inventory systems agree on.' },
+  { category: 'basics', question: 'What is a B2B website?', answer: 'A B2B website sells to other businesses rather than consumers, which changes the mechanics rather than just the audience. Buyers log in to see pricing their account is entitled to, order against agreed terms rather than a card, reorder from history, and often route the order through an approval step. Public pricing and single-click checkout, the defaults of a consumer store, are usually the wrong answer.' },
+  { category: 'basics', question: 'How much does it cost to create a B2B website?', answer: 'Four things drive nearly all of the variance: catalogue size, whether products are configurable, the state of your product data, and how deep the ERP integration goes. A dealer portal on a clean catalogue with a simple ERP sync is a very different project from a configurable-product build with EDI and punchout. We scope it on a short call and send a fixed proposal before any work starts.' },
+  { category: 'basics', question: 'Who else builds ecommerce for manufacturers and distributors?', answer: 'The field splits three ways. Platform vendors such as NetSuite SuiteCommerce and BigCommerce sell the software. Specialist B2B platforms including OroCommerce, Virto Commerce, and Coredna target distribution specifically. Agencies such as OnTap Group and HeadQ, and ourselves, build on top of Shopify Plus, Adobe Commerce, or BigCommerce. The right answer depends on whether your constraint is the platform or the implementation.' },
   { category: 'basics', question: 'Why do manufacturers need ecommerce if they sell through distributors?', answer: 'Selling through distributors does not remove the ordering problem, it moves it. Distributors still place orders, check stock, chase lead times, and request quotes, and most of that still arrives by email and phone. A dealer portal absorbs that traffic, cuts re-keying errors, and gives you first-party visibility of who orders what. It does not disintermediate your channel unless you choose to sell direct, and most of our manufacturer builds deliberately do not.' },
   { category: 'basics', question: 'What is the difference between manufacturer ecommerce and distributor ecommerce?', answer: 'A manufacturer typically sells a deep but narrow catalog of its own products to a controlled dealer network, so the hard parts are configuration, spec data, territory rules, and warranty. A distributor resells a broad catalog from many suppliers, so the hard parts are catalog volume, parametric search, supplier data quality, and multi-warehouse inventory accuracy. We build both, but they are different jobs and the platform choice can differ.' },
   { category: 'basics', question: 'Will an online channel undercut our dealers?', answer: 'Only if you design it to. The common pattern is a dealer-only portal with no public pricing, where a consumer enquiry is routed to the nearest authorised dealer by postcode or territory. Some manufacturers add a direct channel later at list price so dealers are never undercut. We build the rules you want rather than assuming a direct-to-consumer model.' },
@@ -310,7 +313,7 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// what we build'}</p>
             <h2 style={{ marginTop: '10px' }}>Manufacturer and distributor commerce features</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n8" style={{ marginTop: '32px' }}>
               {FEATURES.map((f) => (
                 <article className="pp-card" key={f.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{f.t}</h3><p>{f.d}</p>
@@ -402,7 +405,7 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>How we build it</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n4" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>

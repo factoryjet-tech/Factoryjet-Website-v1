@@ -39,6 +39,8 @@ const FAQ_ITEMS = [
   { category: 'basics', question: 'Why do Magento stores migrate to Shopify?', answer: 'Three reasons come up repeatedly: the maintenance burden of version upgrades and security patches, total cost once hosting, extensions, and developer retainers are added together, and the fact that merchandising changes need a developer. Shopify Plus trades low-level control for a hosted platform your own team can operate.' },
   { category: 'basics', question: 'Is Magento 1 still safe to run?', answer: 'Magento 1 reached end of support, which means no official security patches. Running it now is a risk decision rather than a cost saving, and PCI compliance becomes harder to evidence. Most Magento 1 stores we speak to are choosing between a Magento 2 upgrade and a move to Shopify Plus, and the cost gap is smaller than expected.' },
   { category: 'basics', question: 'Should we upgrade to Magento 2 instead of migrating?', answer: 'Sometimes yes. If you rely on deep native B2B features, a very large catalog with complex attribute logic, or custom modules central to your operation, Magento 2 may fit better. We will say so. The migration is worth it when the platform maintenance itself is the constraint rather than any specific feature.' },
+  { category: 'basics', question: 'What are the best Magento alternatives?', answer: 'Shopify Plus is the most common destination for Magento merchants, trading extension-level control for a hosted platform with no upgrade cycle. BigCommerce suits mid-market catalogues wanting native B2B without the licence cost. Adobe Commerce itself remains the answer where merchandising depth is genuinely required. Open-source alternatives such as WooCommerce or PrestaShop reduce licence cost but keep the maintenance burden that most Magento teams are trying to escape.' },
+  { category: 'basics', question: 'Who else does Magento to Shopify migrations?', answer: 'Self-serve tools such as LitExtension, Cart2Cart, and Matrixify move records but leave attribute mapping, extension replacement, URL redirects, and ERP integration to your team. Agencies including Meetanshi, Magefan, DigitalSuits, and Fourmeta run full projects, as we do. For a small catalogue with no extensions or ERP, a tool is often genuinely sufficient and cheaper, and we will tell you when that is the case.' },
   { category: 'basics', question: 'What is the difference between Magento and Adobe Commerce?', answer: 'Adobe Commerce is the paid, Adobe-supported edition; Magento Open Source is the free self-hosted one. They share a codebase, so the migration path to Shopify is broadly the same. Adobe Commerce stores usually carry more native B2B configuration, which adds scoping work around contract pricing and company accounts.' },
   { category: 'data', question: 'What data migrates from Magento to Shopify?', answer: 'Products with configurable and simple variants, categories, images, customers and address books, order and invoice history, CMS pages and blog content, discount rules, reviews, and existing URL redirects. Magento attribute sets and custom attributes need mapping to Shopify metafields, which is usually the largest single piece of data work.' },
   { category: 'data', question: 'How do Magento attribute sets map to Shopify?', answer: 'Shopify has no direct equivalent, so attributes become metafields, variant options, or tags depending on how each is used. Magento stores typically accumulate attributes over years, many unused. We audit which are actually populated and referenced before mapping, rather than porting the whole set and inheriting the mess.' },
@@ -216,11 +218,27 @@ export default function MagentoToShopifyPage() {
         </section>
 
         {/* Why */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/magento-to-shopify-legacy-stack.webp"
+                     alt="A developer workstation showing dense code beside a product catalogue grid"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Magento upgrades are projects, not updates. Every one risks breaking extensions.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons Magento stores leave</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
                 <article className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
@@ -271,11 +289,27 @@ export default function MagentoToShopifyPage() {
         </section>
 
         {/* Process */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/magento-to-shopify-catalog-attributes.webp"
+                     alt="Printed product specification sheets and attribute tables spread across a desk"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Attribute sets are audited for what is actually populated, then mapped to Shopify metafields.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -287,11 +321,30 @@ export default function MagentoToShopifyPage() {
         </section>
 
         {/* Related */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/magento-to-shopify-enterprise-retail.webp"
+                     alt="A glass-walled meeting room with migration flow diagrams on a whiteboard"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Scope is agreed and written down before any build work begins.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               This page covers one migration path. See{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
               for the other routes we run. If your Magento store carries native B2B configuration, our{' '}
@@ -300,6 +353,7 @@ export default function MagentoToShopifyPage() {
               distributors and manufacturers specifically, see{' '}
               <Link href="/ecommerce-for-manufacturers" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>dealer and distributor portals</Link>.
             </p>
+            </div>
           </div>
         </section>
 

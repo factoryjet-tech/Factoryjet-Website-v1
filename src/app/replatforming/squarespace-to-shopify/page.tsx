@@ -200,11 +200,27 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/squarespace-to-shopify-boutique-counter.webp"
+                     alt="An empty boutique retail counter with a tablet point of sale and folded textiles"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Squarespace suits a brochure site with a store attached. Once the store is the business, priorities invert.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons Squarespace stores leave</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
                 <article className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
@@ -252,11 +268,27 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/squarespace-to-shopify-product-styling.webp"
+                     alt="A minimal product photography setup on a light table with ceramic homeware"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Every CDN-hosted image is re-hosted with its filename and alt text preserved.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -267,11 +299,30 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/squarespace-to-shopify-brand-archive.webp"
+                     alt="Printed lookbook pages and colour swatches fanned across a pale desk"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Content and blog archives are mapped, not abandoned.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               See{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
               for the other routes we run, including{' '}
@@ -279,6 +330,7 @@ export default function SquarespaceToShopifyPage() {
               and{' '}
               <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Magento to Shopify</Link>.
             </p>
+            </div>
           </div>
         </section>
 

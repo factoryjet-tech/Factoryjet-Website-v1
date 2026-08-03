@@ -225,6 +225,22 @@ export default function ReplatformingPage() {
         </section>
 
         {/* Routes */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/replatforming-migration-planning.webp"
+                     alt="A desk with a legacy admin interface on one screen and a rebuilt storefront on the other, alongside printed URL mapping sheets"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Every indexed URL is mapped to a destination before the build starts, not after a traffic drop.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// migration paths'}</p>
@@ -260,7 +276,7 @@ export default function ReplatformingPage() {
               Replatforming is expensive and disruptive. It is worth it when the platform itself is the constraint, and
               not otherwise. If your real problem is a slow theme or a bad checkout, we will tell you to fix that instead.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
               {TRIGGERS.map((t) => (
                 <article className="pp-card" key={t.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{t.i}</span> {t.t}</h3><p>{t.d}</p>
@@ -275,7 +291,7 @@ export default function ReplatformingPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// context'}</p>
             <h2 style={{ marginTop: '10px' }}>Why platform limits get expensive</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <div className="pp-bento n2" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <article className="pp-card" key={s.v}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.v}</h3>
@@ -290,6 +306,22 @@ export default function ReplatformingPage() {
         </section>
 
         {/* Risks */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/replatforming-warehouse-continuity.webp"
+                     alt="A tidy fulfilment warehouse aisle with labelled shelving and a packing bench"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Orders keep flowing throughout. The old store stays reachable until the new one is verified.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// what goes wrong'}</p>
@@ -325,11 +357,27 @@ export default function ReplatformingPage() {
         </section>
 
         {/* Process */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/replatforming-cutover-night.webp"
+                     alt="A quiet operations room at night with muted dashboards and a cutover checklist"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Cutover happens at a low-traffic window, with rollback kept to a DNS change.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -343,9 +391,12 @@ export default function ReplatformingPage() {
         {/* Related */}
         <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>After the migration</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>After the migration</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               Most replatforms are the start of something rather than the end. If you sell to trade buyers, our{' '}
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
               build covers account pricing, net terms, and ERP-synced ordering. If you are a manufacturer or distributor,{' '}
@@ -353,6 +404,7 @@ export default function ReplatformingPage() {
               go deeper on territory rules and parametric part search. For a decoupled front end, see{' '}
               <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>.
             </p>
+            </div>
           </div>
         </section>
 

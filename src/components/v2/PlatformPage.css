@@ -53,8 +53,13 @@
 .platpage .pp-mlabel { font-family: var(--pp-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--pp-muted); }
 
 /* stat band — maxi typography */
-.platpage .pp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-@media (max-width: 720px) { .platpage .pp-stats { grid-template-columns: repeat(2, 1fr); } }
+/* Stat band. Each stat is a full-height flex column with the sublabel pushed to
+   the bottom, so a 2-line headline ("Zero downtime") still baseline-aligns its
+   sublabel with a 1-line one ("10+ yrs"). Without this the sublabels stagger. */
+.platpage .pp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
+.platpage .pp-stat { display: flex; flex-direction: column; height: 100%; }
+.platpage .pp-stat span { margin-top: auto; padding-top: 8px; }
+@media (max-width: 720px) { .platpage .pp-stats { grid-template-columns: repeat(2, 1fr); row-gap: 26px; } }
 .platpage .pp-stat b {
   display: block; font-family: var(--pp-display); font-weight: 800;
   font-size: clamp(28px, 4.4vw, 44px); line-height: 1; letter-spacing: -0.03em; color: var(--pp-ink);
@@ -63,9 +68,56 @@
 .platpage .pp-stat span { display: block; margin-top: 8px; font-family: var(--pp-mono); font-size: 11.5px; color: var(--pp-muted); line-height: 1.4; }
 
 /* bento cards */
+/* Split row: a narrow heading rail beside prose. Used where a lone capped
+   paragraph under a heading was leaving a large empty gutter on the right. */
+.platpage .pp-splitrow {
+  display: grid; grid-template-columns: minmax(220px, 0.8fr) 1.6fr;
+  gap: clamp(24px, 4vw, 56px); align-items: start;
+}
+@media (max-width: 860px) {
+  .platpage .pp-splitrow { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* Bento grid.
+   Default is 3-up, which only tiles cleanly for card counts divisible by 3.
+   A 4-card or 5-card section left an orphan row with dead space beside it, so
+   counts that do NOT divide by 3 get an explicit variant class. Set the variant
+   to match the array length in the page (n2/n4/n5); 3, 6 and 9 need nothing. */
 .platpage .pp-bento { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 900px) { .platpage .pp-bento { grid-template-columns: repeat(2, 1fr) !important; } }
-@media (max-width: 560px) { .platpage .pp-bento { grid-template-columns: 1fr !important; } }
+
+/* 2 cards: half-width each rather than two-thirds and a hole. */
+.platpage .pp-bento.n2 { grid-template-columns: repeat(2, 1fr); }
+
+/* 4 cards: one clean row of 4. */
+.platpage .pp-bento.n4 { grid-template-columns: repeat(4, 1fr); }
+
+/* 5 cards: 3 then 2, both rows full-bleed. A 6-col base lets row 1 use
+   3 spans of 2 and row 2 use 2 spans of 3, so neither row leaves a gap. */
+.platpage .pp-bento.n5 { grid-template-columns: repeat(6, 1fr); }
+.platpage .pp-bento.n5 > * { grid-column: span 2; }
+.platpage .pp-bento.n5 > *:nth-child(n+4) { grid-column: span 3; }
+
+/* 8 cards: 4 x 2. */
+.platpage .pp-bento.n8 { grid-template-columns: repeat(4, 1fr); }
+
+/* Tablet: everything collapses to 2-up and the span rules must be cleared,
+   otherwise n5 children keep spanning 2-3 tracks of a 2-track grid and overflow. */
+@media (max-width: 900px) {
+  .platpage .pp-bento,
+  .platpage .pp-bento.n2,
+  .platpage .pp-bento.n4,
+  .platpage .pp-bento.n5,
+  .platpage .pp-bento.n8 { grid-template-columns: repeat(2, 1fr) !important; }
+  .platpage .pp-bento.n5 > *,
+  .platpage .pp-bento.n5 > *:nth-child(n+4) { grid-column: auto !important; }
+}
+@media (max-width: 560px) {
+  .platpage .pp-bento,
+  .platpage .pp-bento.n2,
+  .platpage .pp-bento.n4,
+  .platpage .pp-bento.n5,
+  .platpage .pp-bento.n8 { grid-template-columns: 1fr !important; }
+}
 .platpage .pp-card {
   border: 1px solid var(--pp-line); border-radius: 18px; padding: 22px; background: #fff;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
@@ -148,6 +200,63 @@
   .platpage .pp-stage { margin-top: 26px; max-width: 380px; }
   /* founder band + final CTA (pp-wrap used as a grid) → single column */
   .platpage .pp-wrap[style*="grid"] { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+
+/* ── Motion layer (CSS only, no JS) ──────────────────────────────────────────
+   framer-motion is deliberately NOT used here: a prior pass removed it to reach
+   mobile Performance 90+, and re-adding it would regress that. Everything below
+   is scroll-driven CSS with a hard rule: content is VISIBLE by default and the
+   animation only applies where `animation-timeline` is supported. Never hide
+   content behind a feature query, or non-supporting browsers and crawlers get a
+   blank page. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .platpage .pp-sec > .pp-wrap > .pp-mlabel,
+    .platpage .pp-sec > .pp-wrap > h2,
+    .platpage .pp-sec > .pp-wrap > .pp-lead,
+    .platpage .pp-splitrow,
+    .platpage .pp-bento > *,
+    .platpage .pp-stat {
+      animation: pp-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 26%;
+    }
+    /* Gentle stagger so a row resolves left to right rather than as one block. */
+    .platpage .pp-bento > *:nth-child(2) { animation-range: entry 10% cover 28%; }
+    .platpage .pp-bento > *:nth-child(3) { animation-range: entry 12% cover 30%; }
+    .platpage .pp-bento > *:nth-child(4) { animation-range: entry 13% cover 31%; }
+    .platpage .pp-stat:nth-child(2) { animation-range: entry 10% cover 28%; }
+    .platpage .pp-stat:nth-child(3) { animation-range: entry 12% cover 30%; }
+    .platpage .pp-stat:nth-child(4) { animation-range: entry 14% cover 32%; }
+  }
+}
+@keyframes pp-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Layered depth on cards: a tight contact shadow plus a soft ambient one reads
+   as real elevation, where a single large blur reads as a generic drop shadow. */
+.platpage .pp-card {
+  box-shadow: 0 1px 2px -1px rgba(20,17,15,.06), 0 8px 24px -20px rgba(20,17,15,.28);
+}
+.platpage .pp-card:hover {
+  box-shadow: 0 2px 4px -2px rgba(20,17,15,.10), 0 22px 48px -28px rgba(20,17,15,.42);
+}
+
+/* Section imagery: same elevation language as cards, and a slow scale on hover
+   so photography feels alive without parallax or video. */
+.platpage .pp-shot {
+  border-radius: 20px; overflow: hidden; border: 1px solid var(--pp-line);
+  box-shadow: 0 1px 2px -1px rgba(20,17,15,.06), 0 18px 44px -30px rgba(20,17,15,.35);
+}
+.platpage .pp-shot img { display: block; width: 100%; height: auto; transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+.platpage .pp-shot:hover img { transform: scale(1.03); }
+
+/* Keyboard focus must always be visible. */
+.platpage a:focus-visible,
+.platpage button:focus-visible {
+  outline: 2px solid var(--pp-orange-dark); outline-offset: 3px; border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {

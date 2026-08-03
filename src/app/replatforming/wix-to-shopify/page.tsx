@@ -38,6 +38,9 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   { category: 'basics', question: 'Why migrate from Wix to Shopify?', answer: 'Nearly always because commerce outgrew the site builder. Wix handles a small catalog well, but variant limits, thin shipping and tax logic, a narrow app ecosystem, and no meaningful B2B or subscription model start to constrain what you can sell. Teams move when the store becomes the business.' },
   { category: 'basics', question: 'Is Wix or Shopify better for ecommerce?', answer: 'Shopify is the stronger commerce platform; Wix is the easier general website builder. If you sell a handful of products alongside a brochure site, Wix is doing its job and migrating is unnecessary cost. If commerce drives your revenue, Shopify\'s catalog model, checkout, and app ecosystem are built for it in a way Wix is not.' },
+  { category: 'basics', question: 'Does Wix work well with Shopify?', answer: 'They are competing platforms rather than complementary ones, so there is no meaningful integration between them. You can embed a Shopify buy button into a Wix site as a stopgap, but running both properly means running two systems, two inventories, and two checkouts. In practice teams pick one, which is why this is usually a migration question rather than an integration question.' },
+  { category: 'basics', question: 'Which is easier, Shopify or Wix?', answer: 'Wix is easier to build a general website with, because its editor is more forgiving and more visual. Shopify is easier to run a store with, because catalogue, inventory, shipping, tax, and checkout are built for commerce rather than bolted on. The honest answer depends on which job dominates your week: designing pages, or processing orders.' },
+  { category: 'basics', question: 'How hard is it to switch from Wix to Shopify?', answer: 'The data move is straightforward because Wix catalogues are usually small and clean. The hard parts are that Wix has no full site export, so pages and blog content are rebuilt, and that URL structures differ completely, so every indexed URL needs a redirect. Velo code, Bookings, and Members are rebuilds rather than migrations and drive most of the effort.' },
   { category: 'basics', question: 'Should we just stay on Wix?', answer: 'Sometimes, yes. If your catalog is small, your shipping rules are simple, and nothing about the platform is blocking you, migration is disruption without payoff. We say this more often than people expect. The trigger to move is a constraint you keep working around, not a general sense that Shopify is more professional.' },
   { category: 'data', question: 'What can you export from Wix?', answer: 'Less than most platforms, and this is the central constraint. Wix provides CSV exports for products, orders, and contacts from the dashboard, but there is no complete site export. Pages, blog posts, and design are not exportable in any portable format, so content is rebuilt rather than imported.' },
   { category: 'data', question: 'Can we get our order history out of Wix?', answer: 'Yes, via the orders CSV export in the Wix dashboard, and through the Wix API where the volume or detail justifies it. What you cannot do is a single site-wide export that carries everything, so orders, contacts, and products come out as separate extracts that we reconcile before import.' },
@@ -192,6 +195,22 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wix-to-shopify-small-shop.webp"
+                     alt="A small independent shop interior at opening time with a laptop on the counter"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                The trigger to move is a constraint you keep working around, not a feeling that Shopify sounds more serious.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
@@ -226,11 +245,27 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wix-to-shopify-rebuild-desk.webp"
+                     alt="A designer desk with a tablet showing a wireframe grid and printed page layouts pinned behind"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                With no full site export, pages and blog content are rebuilt rather than imported.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <article className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
@@ -241,11 +276,30 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/wix-to-shopify-stock-shelf.webp"
+                     alt="Neatly organised retail stock on shelving with small handwritten price cards"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Products, orders and contacts are extracted properly rather than guessed.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// related'}</p>
-            <h2 style={{ marginTop: '10px' }}>Related work</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+            <div className="pp-splitrow">
+              <div>
+                <p className="pp-mlabel">{'// related'}</p>
+                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              </div>
+              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
               See{' '}
               <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
               for the other routes we run. If you are weighing builders,{' '}
@@ -254,6 +308,7 @@ export default function WixToShopifyPage() {
               <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
               covers the self-hosted route.
             </p>
+            </div>
           </div>
         </section>
 
