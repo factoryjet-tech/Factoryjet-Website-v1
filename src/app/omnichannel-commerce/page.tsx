@@ -36,6 +36,18 @@ const FAQ_CATEGORIES = [
   { key: 'working', label: 'Working together' },
 ];
 const FAQ_ITEMS = [
+  { category: 'basics', question: 'What is omnichannel commerce?', answer: 'Omnichannel commerce means every place you sell reads from one catalogue, one inventory pool, and one order record. A customer buying online, in store, or through a marketplace hits the same stock number and lands in the same order book. Multi-channel means selling in several places; omnichannel means those places agree with each other.' },
+  { category: 'basics', question: 'What is the difference between multichannel and omnichannel?', answer: 'Multichannel is presence: you sell on your store, on Amazon, and in a shop. Omnichannel is consistency: those channels share inventory, pricing, and customer history, so a return bought online can be processed in store and stock never oversells. Most brands are multichannel by accident and omnichannel only on purpose.' },
+  { category: 'basics', question: 'Why does inventory oversell across channels?', answer: 'Because each channel keeps its own copy of the stock number and they reconcile on a schedule rather than in real time. The gap between syncs is where overselling happens, and it gets worse the more channels you add. Fixing it means one system owning stock and every channel reading from it.' },
+  { category: 'basics', question: 'What is BOPIS and do we need it?', answer: 'Buy online, pick up in store. It needs accurate store-level inventory, a staff-facing pick flow, and a customer notification path. It is worth building when you have real footfall and stock sitting in stores; it is a distraction if your stores carry little inventory or your volume is mostly shipped.' },
+  { category: 'connecting', question: 'Which ecommerce agency handles omnichannel integrations?', answer: 'Look for one that treats integration as the project rather than the follow-up phase. The storefront is the easy part. Ask how they handle inventory reconciliation, partial fulfilment, and returns across channels, because those three are where omnichannel builds actually fail.' },
+  { category: 'connecting', question: 'Can you connect our POS to the online store?', answer: 'Yes. Shopify POS is the cleanest case; Lightspeed, Square, and older on-premise systems usually need middleware. What matters is deciding which system owns stock and which merely reports it. Two systems both believing they own inventory is the root of most omnichannel problems.' },
+  { category: 'connecting', question: 'How do marketplaces fit into omnichannel?', answer: 'Amazon, Walmart, eBay, and Faire each become another channel drawing on the same inventory pool, with their own listing rules and fulfilment expectations. The work is less about listing and more about keeping stock buffers, pricing rules, and order routing sane once several channels compete for the same units.' },
+  { category: 'connecting', question: 'Do we need an OMS?', answer: 'Not always. Below a certain complexity, the commerce platform can act as the order manager. A dedicated OMS earns its place when you have multiple fulfilment locations, complex routing rules, or partial shipments across warehouses. We will tell you which side of that line you sit on rather than selling you one by default.' },
+  { category: 'platforms', question: 'What is the best platform for omnichannel commerce?', answer: 'Shopify Plus with POS covers most retail-plus-online brands cleanly. Adobe Commerce suits very large catalogues with complex rules. BigCommerce sits well in the mid-market. Where the requirement is genuinely one engine across many channels, Commerceflo is built for that. The right answer follows your store count and fulfilment complexity.' },
+  { category: 'platforms', question: 'Do we need to replatform to go omnichannel?', answer: 'Frequently not. Omnichannel is mostly an integration and data-ownership problem, and many platforms can support it once inventory has a single owner. If your current platform genuinely cannot express multi-location stock, that is a real replatforming trigger, and our replatforming work covers that path.' },
+  { category: 'working', question: 'How long does an omnichannel build take?', answer: 'Usually a few months, driven by how many systems have to agree rather than by storefront design. Each additional channel, warehouse, or legacy system adds reconciliation work. We scope the integration surface first because that is what sets the timeline.' },
+  { category: 'working', question: 'What does ecommerce website development cost for omnichannel?', answer: 'It depends on channel count, fulfilment complexity, and how much legacy integration is involved. We scope it on a short call and send a fixed proposal before any work starts, so the number does not move mid-project.' },
   { category: 'basics', question: 'What is omnichannel commerce?', answer: 'Omnichannel commerce means selling across every channel your customers use, web, mobile, retail, marketplaces, and social, with one connected system behind it. An omnichannel ecommerce platform reads from one catalog and one inventory, so a customer can buy anywhere and you still see one order history and one source of truth.' },
   { category: 'basics', question: 'What is the difference between multichannel and omnichannel ecommerce?', answer: 'Multichannel means you sell in many places that each run on their own stock and pricing. Omnichannel connects those channels to one catalog, one inventory, and one customer record, so they act as a single system. We build the connected, omnichannel version, not a pile of disconnected tools.' },
   { category: 'basics', question: 'What is an omnichannel commerce platform?', answer: 'It is the system that keeps your storefront, POS, marketplaces, and B2B portal reading from one catalog and one inventory, with one view of every customer and order. We build it on the platform that fits and connect it to the rest of your stack.' },
@@ -77,6 +89,17 @@ const ORG_SCHEMA = {
   description: 'FactoryJet is an e-commerce development agency that builds omnichannel and B2B commerce for DTC and B2B brands.',
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
+};
+const PAGE_MODIFIED = '2026-08-03';
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/omnichannel-commerce#webpage',
+  url: 'https://factoryjet.com/omnichannel-commerce',
+  name: 'Omnichannel Commerce Agency',
+  dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
@@ -214,15 +237,15 @@ export default function OmnichannelCommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it matters</p>
             <h2 style={{ marginTop: '10px' }}>Shoppers already buy across channels</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {SOURCED.map((s) => (
-                <article className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '32px', lineHeight: 1, color: 'var(--pp-orange-dark)', letterSpacing: '-0.03em' }}>{s.v}</div>
                   <p style={{ marginTop: '10px' }}>{s.d}</p>
                   <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -231,14 +254,14 @@ export default function OmnichannelCommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it pays off</p>
             <h2 style={{ marginTop: '10px' }}>The benefits of going omnichannel</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {BENEFITS.map((b) => (
-                <article className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{b.i}</span>
                   <h3>{b.t}</h3><p>{b.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -248,13 +271,13 @@ export default function OmnichannelCommercePage() {
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>An omnichannel commerce system, end to end</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>The pieces that turn separate tools into one connected commerce system your team and customers can trust.</p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {CAPABILITIES.map((c) => (
-                <article className="pp-card" key={c.t}>
+                <li className="pp-card" key={c.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{c.t}</h3><p>{c.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -312,14 +335,14 @@ export default function OmnichannelCommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
             <h2 style={{ marginTop: '10px' }}>From many tools to one system you own</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ul className="pp-bento n4" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
                   <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

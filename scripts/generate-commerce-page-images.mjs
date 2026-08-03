@@ -86,6 +86,16 @@ const PAGES = {
     ['integration-map', 'A neatly organised network rack with colour-coded patch cables running in ordered bundles, soft equipment indicator lights, clean quiet data room, shallow depth of field'],
     ['multi-market', 'An overhead shot of a desk with printed regional catalogue pages and a world map notebook, several currency price lists, pen resting on top'],
   ],
+  'headless-commerce': [
+    ['storefront-build', 'A front-end developer workstation with a large monitor showing a component-based storefront layout in a browser and a second screen with a terminal running a build, notebook with a wireframe sketch, evening office light'],
+    ['api-layer', 'A close overhead shot of a desk with a tablet showing a clean API response view, a printed architecture sketch beside it, pen resting on top, soft daylight'],
+    ['speed-lab', 'A minimal desk with a laptop showing a performance waterfall chart and a stopwatch beside the trackpad, clean bright workspace'],
+  ],
+  'commerceflo': [
+    ['unified-engine', 'A wide clean desk with three screens side by side showing a storefront, a marketplace listing grid, and a retail point of sale, one shared inventory figure visible across them, calm modern office'],
+    ['channel-floor', 'A brand operations room with a wall of neatly organised product samples on shelving and a single desk with a monitor, warm daylight, unoccupied'],
+    ['stock-truth', 'A close shot of a warehouse tablet mounted on a shelving upright showing a simple stock count, labelled bins either side, bright industrial light'],
+  ],
   'b2b-ecommerce': [
     ['trade-counter', 'A wholesale trade counter with an order terminal, stacked catalogues and a clipboard, industrial shelving behind, daylight from high windows, no people'],
     ['pallet-aisle', 'A distribution warehouse aisle with wrapped pallets and clear location labels, forklift parked at the end, bright overhead light, no workers'],

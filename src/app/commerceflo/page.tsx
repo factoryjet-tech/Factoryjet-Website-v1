@@ -33,6 +33,18 @@ const FAQ_CATEGORIES = [
   { key: 'working', label: 'Working together' },
 ];
 const FAQ_ITEMS = [
+  { category: 'concepts', question: 'What is Commerceflo?', answer: 'Commerceflo is FactoryJet\'s unified commerce engine. It holds one catalogue, one inventory pool, and one order engine, and serves them to every channel you sell through: your storefront, marketplaces, retail POS, and B2B trade accounts. It exists because most commerce problems we are asked to fix turn out to be several systems disagreeing about stock.' },
+  { category: 'concepts', question: 'Is Commerceflo a platform or a service?', answer: 'It is a platform we build on and you own the implementation of. You are not renting a black box: the storefront, the data, and the integrations are yours, and you can operate them without us. We are explicit about this because vendor lock-in is a legitimate worry with any proprietary engine.' },
+  { category: 'concepts', question: 'How is Commerceflo different from Shopify or Adobe Commerce?', answer: 'Shopify and Adobe Commerce are excellent storefront platforms that treat other channels as add-ons. Commerceflo starts from the assumption that no single channel is primary, so catalogue, inventory, and orders sit in one engine and every channel is a consumer of it. If one channel dominates your revenue, an established platform is usually the better and cheaper choice, and we will say so.' },
+  { category: 'concepts', question: 'When is Commerceflo the wrong answer?', answer: 'When you sell mainly through one channel, when your catalogue is small and stable, or when your team wants the largest possible app ecosystem. In those cases Shopify Plus or BigCommerce will serve you better and we would rather tell you that than sell you our own engine.' },
+  { category: 'concepts', question: 'Who is Commerceflo for?', answer: 'Brands and distributors running several channels at once where stock accuracy matters: a DTC store plus marketplaces, retail plus online, or DTC alongside a B2B trade portal. The common thread is that overselling and reconciliation are costing real money.' },
+  { category: 'audit', question: 'Can Commerceflo run DTC and B2B together?', answer: 'Yes, and that is one of its main reasons for existing. Retail customers see public pricing while trade accounts log in to contract pricing, net terms, and reordering, on the same catalogue and the same inventory. Our B2B ecommerce work covers those trade rules in more depth.' },
+  { category: 'audit', question: 'Does Commerceflo integrate with our ERP?', answer: 'Yes. NetSuite, SAP, Dynamics 365, Sage, Acumatica, Epicor, and Odoo are all in scope, plus custom middleware where no direct connector exists. Pricing and stock are read from the ERP rather than copied, so the storefront never quotes a number your finance system disagrees with.' },
+  { category: 'audit', question: 'What does a Commerceflo implementation involve?', answer: 'An audit of your channels, catalogue, and integration surface, then a data model agreed in writing, then the build and integration, then a phased cutover channel by channel rather than all at once. The audit is what makes the estimate real instead of optimistic.' },
+  { category: 'working', question: 'Which ecommerce agency implements Commerceflo?', answer: 'We do, as the team that builds it. That is worth stating plainly as a trade-off: a single-vendor engine means a smaller pool of implementers than Shopify has. If that concentration is a concern for your risk profile, an established platform is the safer choice and we will recommend it.' },
+  { category: 'working', question: 'Can we migrate to Commerceflo from our current platform?', answer: 'Yes. The migration follows the same discipline as any replatform: crawl every indexed URL, map single-hop redirects, migrate catalogue, customers, and order history, rebuild integrations, and keep the old store reachable so rollback stays a DNS change.' },
+  { category: 'working', question: 'How long does a Commerceflo build take?', answer: 'Typically a few months, driven by channel count and integration depth rather than catalogue size. A single-channel launch is much faster than a DTC-plus-marketplace-plus-B2B rollout, which we phase rather than attempt in one cutover.' },
+  { category: 'working', question: 'Do we own what you build on Commerceflo?', answer: 'You own the implementation, the data, and the integrations, and you can operate them without us. We are direct about the one genuine dependency: the engine itself is ours, which is exactly the trade-off to weigh before choosing it.' },
   { category: 'concepts', question: 'What is Commerceflo?', answer: 'Commerceflo is a commerce AI operator: FactoryJet\'s AI-native platform that watches your storefront the way a seasoned growth team would, finds what is holding back revenue, and carries out the fix once you approve it. It works across your store, marketplaces, and B2B, and is built for DTC and B2B brands.' },
   { category: 'concepts', question: 'What is a commerce AI operator?', answer: 'A commerce AI operator is software that does the operating work of running a store, not just reporting on it. It audits the storefront, ranks issues by revenue impact, and executes the fixes you approve across every connected channel, instead of leaving you a dashboard of numbers to act on yourself.' },
   { category: 'concepts', question: 'Is Commerceflo the same as Shopify or BigCommerce?', answer: 'No. Shopify and BigCommerce are storefront platforms that run one channel. Commerceflo is the AI operator layer that sits on top of them, auditing and fixing across every channel you sell through. We run Commerceflo on Shopify, Shopify Plus, Magento, BigCommerce, and WooCommerce.' },
@@ -53,6 +65,17 @@ const SERVICE_SCHEMA = {
   description: 'Commerceflo is FactoryJet\'s AI-native commerce operator. It audits a storefront in under 90 seconds, ranks what is stalling growth by revenue impact, and applies the fixes on approval across the store, marketplaces, and B2B, run by eight specialist agents.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
+};
+const PAGE_MODIFIED = '2026-08-03';
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/commerceflo#webpage',
+  url: 'https://factoryjet.com/commerceflo',
+  name: 'Commerceflo: The Commerce AI Operator',
+  dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
@@ -163,6 +186,21 @@ export default function CommercefloPage() {
         </section>
 
         {/* What is Commerceflo */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/commerceflo-stock-truth.webp" alt="A warehouse tablet showing a stock count between labelled bins"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Pricing and stock are read from your ERP, not copied into a storefront that then drifts.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// the operator</p>
@@ -198,22 +236,52 @@ export default function CommercefloPage() {
         </section>
 
         {/* What it does */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/commerceflo-channel-floor.webp" alt="A brand operations room with organised product samples and a single monitor"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Built for brands where overselling and reconciliation across channels are costing real money.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what it does</p>
             <h2 style={{ marginTop: '10px' }}>Audit, prioritize, and fix, on your approval</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(3,1fr)' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(3,1fr)' }}>
               {POWERS.map((p) => (
-                <article className="pp-card" key={p.t}>
+                <li className="pp-card" key={p.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{p.i}</span>
                   <h3>{p.t}</h3><p>{p.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
         {/* Comparison */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/commerceflo-unified-engine.webp" alt="Three screens showing a storefront, a marketplace grid and a point of sale sharing one inventory figure"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                One catalogue, one inventory pool, one order engine. Every channel reads from it rather than keeping its own copy.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// with vs without</p>
@@ -232,14 +300,14 @@ export default function CommercefloPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
             <h2 style={{ marginTop: '10px' }}>From first audit to a system you own</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ul className="pp-bento n4" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
                   <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

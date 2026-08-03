@@ -33,6 +33,18 @@ const FAQ_CATEGORIES = [
   { key: 'working', label: 'Working together' },
 ];
 const FAQ_ITEMS = [
+  { category: 'concepts', question: 'What is headless commerce?', answer: 'Headless commerce splits the storefront your customers see from the commerce engine that holds products, carts, and orders, and connects them over an API. The front end is built with a framework such as Next.js, Remix, or Hydrogen. It buys you speed and design freedom, and it costs you the convenience of an all-in-one theme.' },
+  { category: 'concepts', question: 'Is headless commerce worth it?', answer: 'Only when the storefront is genuinely the constraint. If your theme is slow, your content model is fighting you, or you are serving several brands or locales from one catalogue, headless earns its keep. If the real problem is an unoptimised theme or a bad host, headless is an expensive way to avoid fixing that, and we will say so.' },
+  { category: 'concepts', question: 'What is the difference between headless and composable commerce?', answer: 'Headless describes decoupling the front end from the commerce engine. Composable describes assembling the whole stack from best-of-breed services: separate search, CMS, cart, and payments. Every composable build is headless, but plenty of headless builds keep one monolithic commerce engine behind them, which is usually the cheaper and saner starting point.' },
+  { category: 'concepts', question: 'Does headless commerce hurt SEO?', answer: 'It can, and this is where headless projects most often go wrong. Server-side rendering is not optional: if content only appears after client-side JavaScript, crawlers and AI retrieval bots may never see it. Metadata, structured data, canonical tags, and redirects all have to be rebuilt deliberately rather than inherited from a theme.' },
+  { category: 'build', question: 'Which ecommerce agency should build a headless storefront?', answer: 'One that will tell you when you do not need one. Ask any candidate how they handle server-side rendering, structured data, and preview for the content team, and how they keep Core Web Vitals green once the JavaScript bundle grows. Those three answers separate teams who have shipped headless from teams who have read about it.' },
+  { category: 'build', question: 'Do you work as a Shopify development partner on headless builds?', answer: 'Yes. We build headless Shopify storefronts on Hydrogen and Oxygen, and on Next.js against the Storefront API where you want framework independence. Checkout stays on Shopify, which is the right call for almost everyone: rebuilding checkout costs a great deal and rarely converts better.' },
+  { category: 'build', question: 'What does a headless build cost compared to a theme?', answer: 'More, in both build and ongoing ownership, because you take on a front end that needs engineers. The honest framing is that headless converts engineering capacity into design and performance freedom. If you do not have or want that capacity, a well-built theme is the better commercial decision.' },
+  { category: 'build', question: 'Can you go headless without replatforming?', answer: 'Often yes, and it is usually the lower-risk order. The commerce engine stays where it is while the storefront is rebuilt against its API. Doing both at once means debugging two migrations simultaneously, which is how these projects slip.' },
+  { category: 'working', question: 'How long does a headless commerce build take?', answer: 'Typically a few months. The variables are how many templates the site needs, how much content modelling is involved, and whether search, personalisation, or multi-locale are in scope. A single-brand catalogue with a modest template set is much faster than a multi-market build.' },
+  { category: 'working', question: 'What happens to our content team\'s workflow?', answer: 'This is the question most often skipped, and it decides whether the build succeeds. A decoupled front end breaks the visual editing your team relies on unless preview is designed in. We wire the CMS, preview, and publishing flow as part of the build rather than as an afterthought.' },
+  { category: 'working', question: 'Do you support the storefront after launch?', answer: 'Yes, and headless genuinely needs it. A decoupled front end has dependencies, framework upgrades, and a build pipeline that a hosted theme does not. Whoever owns it needs to keep it patched. You own the code either way.' },
+  { category: 'working', question: 'Can headless work for B2B?', answer: 'Yes, and it suits B2B well where the buying experience is unusual: complex configurators, account-specific catalogues, or a portal that looks nothing like a consumer store. The B2B rules still live in the commerce engine; headless changes what sits in front of them.' },
   { category: 'concepts', question: 'What is headless commerce?', answer: 'Headless commerce separates the storefront (what customers see) from the commerce backend (catalog, cart, checkout, orders). The front end is rebuilt in a fast framework and talks to the backend through APIs, so you get speed and full design freedom without changing how commerce runs underneath.' },
   { category: 'concepts', question: 'What is composable commerce?', answer: 'Composable commerce takes the headless idea further: instead of one platform, you assemble best-of-breed services (catalog, search, checkout, payments, CMS) connected by APIs. We build composable architectures when a brand needs flexibility no single platform gives.' },
   { category: 'concepts', question: 'Headless vs composable commerce, what is the difference?', answer: 'Headless decouples the front end from one commerce backend. Composable decouples the whole stack into interchangeable services. Headless is a front-end decision; composable is an architecture decision. We help you pick the right level for your needs and budget.' },
@@ -51,6 +63,17 @@ const SERVICE_SCHEMA = {
   description: 'Headless commerce development agency. We build fast headless and composable commerce storefronts on Shopify (Hydrogen), BigCommerce (Catalyst), and Commerceflo, connecting a custom front end to your commerce backend through APIs.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
+};
+const PAGE_MODIFIED = '2026-08-03';
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/headless-commerce#webpage',
+  url: 'https://factoryjet.com/headless-commerce',
+  name: 'Headless & Composable Commerce Development Agency',
+  dateModified: PAGE_MODIFIED,
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
@@ -129,6 +152,21 @@ export default function HeadlessCommercePage() {
         </section>
 
         {/* What is headless */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/headless-commerce-speed-lab.webp" alt="A laptop showing a performance waterfall chart beside a stopwatch"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Headless converts engineering capacity into design and performance freedom. Without that capacity, a good theme wins.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// the concept</p>
@@ -164,22 +202,52 @@ export default function HeadlessCommercePage() {
         </section>
 
         {/* What we build (bento) */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/headless-commerce-api-layer.webp" alt="A tablet showing a clean API response beside a printed architecture sketch"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Checkout stays on Shopify. Rebuilding it costs a great deal and rarely converts better.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>Headless &amp; composable, done right</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {BUILD.map((b) => (
-                <article className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{b.i}</span>
                   <h3>{b.t}</h3><p>{b.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
         {/* Comparison */}
+        {/* Section image */}
+        <section className="pp-sec" style={{ paddingTop: 0 }}>
+          <div className="pp-wrap">
+            <figure style={{ margin: 0 }}>
+              <div className="pp-shot">
+                <img src="/images/us/commerce/headless-commerce-storefront-build.webp" alt="A developer workstation showing a component-based storefront alongside a running build"
+                     width={1280} height={800} loading="lazy" decoding="async" />
+              </div>
+              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+                Server-side rendering is not optional. Content that only appears after client-side JavaScript may never be seen by crawlers or AI retrieval bots.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// how it compares</p>
@@ -199,14 +267,14 @@ export default function HeadlessCommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
             <h2 style={{ marginTop: '10px' }}>From scope to launch</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ul className="pp-bento n4" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
                   <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
