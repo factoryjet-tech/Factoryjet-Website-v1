@@ -3,6 +3,7 @@ import { CityData, services } from '@/data/uk'
 import HeroInlineForm from '@/components/HeroInlineForm'
 import UkFooter from '@/app/uk/sections/Footer'
 import { getCityDepth } from '@/data/countries/gb/cityDepth'
+import { getCityMarket } from '@/data/countries/gb/cityMarket'
 
 /**
  * UK city hub, rebuilt 2026-08-03.
@@ -169,6 +170,8 @@ const LEAD = 'mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-n
 export default function CityHubPage({ city }: CityHubPageProps) {
   const faqs = buildFaqs(city)
   const depth = getCityDepth(city.slug)
+  const market = getCityMarket(city.slug)
+  const topTerm = market?.terms?.[0]
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -247,6 +250,114 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Answer-first block. Sits directly under the hero so the page states its
+            position before any marketing. Figures are real: search volumes come
+            from DataForSEO (UK, en), business counts from the city dataset. */}
+        {topTerm && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-12 md:px-8 md:py-14">
+            <div className="mx-auto max-w-[1160px]">
+              <p className="max-w-[76ch] font-fj-display text-[1.25rem] font-medium leading-[1.55] tracking-[-0.01em] text-fj-ink md:text-[1.4rem]">
+                About {fmt(city.businesses)} businesses trade in {city.name}, and roughly{' '}
+                {fmt(topTerm.volume)} searches a month go to &ldquo;{topTerm.keyword.toLowerCase()}&rdquo; alone.
+                FactoryJet builds the websites, stores, search visibility and AI agents those businesses
+                run on, remotely, with a fixed written scope agreed before any work starts.
+              </p>
+              <p className="mt-5 max-w-[74ch] font-fj-body text-[1rem] leading-[1.75] text-fj-neutral-600">
+                You own the code, the domain and the data on day one. There is no retainer you cannot
+                leave and no platform you are locked into. If what you need is smaller than what you
+                asked for, we say so before quoting rather than after.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Real search demand, as a comparison table */}
+        {market && market.terms.length > 0 && (
+          <section className="px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>What {city.name} businesses actually search for</h2>
+              <p className={LEAD}>
+                Measured monthly search volume in the UK for city-level terms, pulled from Google Ads
+                keyword data. Competition is the advertiser competition band for the term, not how hard
+                it is to rank.
+              </p>
+              <div className="mt-8 overflow-x-auto">
+                <table className="w-full min-w-[520px] border-collapse text-left">
+                  <thead>
+                    <tr className="border-b border-fj-neutral-200">
+                      <th className="pb-3 font-fj-body text-[13px] font-semibold uppercase tracking-[0.08em] text-fj-neutral-400">Search term</th>
+                      <th className="pb-3 text-right font-fj-body text-[13px] font-semibold uppercase tracking-[0.08em] text-fj-neutral-400">Searches / month</th>
+                      <th className="pb-3 text-right font-fj-body text-[13px] font-semibold uppercase tracking-[0.08em] text-fj-neutral-400">Advertiser competition</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {market.terms.map((t) => (
+                      <tr key={t.keyword} className="border-b border-fj-neutral-200">
+                        <td className="py-3 font-fj-body text-[15px] text-fj-ink">{t.keyword.toLowerCase()}</td>
+                        <td className="py-3 text-right font-fj-body text-[15px] font-semibold text-fj-ink">{fmt(t.volume)}</td>
+                        <td className="py-3 text-right font-fj-body text-[15px] capitalize text-fj-neutral-600">{t.competition}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 font-fj-body text-[13px] text-fj-neutral-400">
+                Source: Google Ads keyword data via DataForSEO, UK, English. Pulled {UPDATED}.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Real SERP competitors */}
+        {market && market.competitors.length > 0 && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>Who else ranks for web design in {city.name}</h2>
+              <p className={LEAD}>
+                The agencies currently holding page-one positions for &ldquo;web design {city.name.toLowerCase()}&rdquo;,
+                with their live position. We would rather name them than pretend the market is empty.
+                Get more than one quote, and if another team fits your project better, that is a good outcome.
+              </p>
+              <ol className="mt-8 flex flex-col gap-3">
+                {market.competitors.map((c) => (
+                  <li key={c.domain} className="flex items-baseline gap-4 border-b border-fj-neutral-200 pb-3">
+                    <span className="w-10 shrink-0 font-fj-mono text-[13px] text-fj-neutral-400">#{c.rank}</span>
+                    <span className="font-fj-body text-[15.5px] text-fj-ink">{c.domain}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-4 font-fj-body text-[13px] text-fj-neutral-400">
+                Live Google results, UK, pulled {UPDATED}. Positions move.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* People Also Ask. Rendered ONLY where Google actually returns a PAA block:
+            5 of the 15 cities. The rest get no section rather than another city's
+            questions dressed up as their own. */}
+        {market && market.paa.length > 0 && (
+          <section className="px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[860px]">
+              <h2 className={H2}>People also ask</h2>
+              <p className={LEAD}>
+                Questions Google surfaces alongside &ldquo;web design {city.name.toLowerCase()}&rdquo;, verbatim
+                from the live results.
+              </p>
+              <ul className="mt-8 flex flex-col gap-3">
+                {market.paa.map((p) => (
+                  <li key={p.q} className="border-b border-fj-neutral-200 pb-3 font-fj-body text-[15.5px] text-fj-ink">
+                    {p.q}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 font-fj-body text-[13px] text-fj-neutral-400">
+                Answers to all of these are in the FAQ below.
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* 1. Local market numbers */}
         <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
