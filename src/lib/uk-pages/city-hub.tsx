@@ -1,18 +1,68 @@
-'use client'
-
 import Link from 'next/link'
-import Image from 'next/image'
-import { CheckCircle, ArrowRight } from 'lucide-react'
 import { CityData, services } from '@/data/uk'
 import HeroInlineForm from '@/components/HeroInlineForm'
+import UkFooter from '@/app/uk/sections/Footer'
+
+/**
+ * UK city hub, rebuilt 2026-08-03.
+ *
+ * This template renders the 15 dynamic /uk/{city} roots (brighton, bristol,
+ * cambridge, cardiff, coventry, derby, edinburgh, glasgow, hull, leicester,
+ * newcastle, nottingham, oxford, plymouth, southampton). The six bespoke cities
+ * in BESPOKE_UK_CITY_SLUGS (london, manchester, birmingham, leeds, liverpool,
+ * sheffield) have their own pages and are NOT affected by anything here.
+ *
+ * Every defect below was therefore a defect on 15 pages at once. What the
+ * rebuild fixed, and why:
+ *
+ * CONTENT
+ *  - It used ONE of the eleven per-city fields available in
+ *    src/data/countries/gb/cities/*.json (`businesses`). population, gdpBn,
+ *    primaryIndustries, keyEmployers, keyStats, cityAreas and newsHook were all
+ *    sitting in the data unused. That is why the pages measured ~970 rendered
+ *    words that differed only by the city name. The differentiating material was
+ *    already there; nothing was rendering it.
+ *  - 5 FAQs against a 20+ benchmark (docs/AI-SEO-RULEBOOK.md rule 11).
+ *
+ * POLICY (both removed outright, not restyled)
+ *  - Three testimonials attributed to "{City} Business Owner" and "Independent
+ *    Retailer", templated per city, one carrying an invented metric ("about 40%
+ *    of initial customer enquiries"). PRODUCT.md: real clients only, never
+ *    fabricate metrics. Fabricated testimonials on 15 pages.
+ *  - A four-tier pricing table (Starter / Business / E-Commerce / Enterprise)
+ *    with a "Most Popular" badge. PRODUCT.md: no pricing, no tiers, anywhere.
+ *
+ * BRAND
+ *  - Full-viewport dark hero (`min-h-screen bg-[#0a0a0a]`). CLAUDE.md
+ *    non-negotiable #1: the hero is never dark.
+ *  - Ten dark section backgrounds against a maximum of one.
+ *  - Nine uses of #0052CC, the retired "Jet Blue" from the pre-pivot design
+ *    system. DESIGN.md: do not introduce a second brand colour, no blue.
+ *  - Twelve raw `fontFamily: 'Clash Display'` declarations. The Clash @font-face
+ *    was REMOVED in Sprint 8 (see src/index.css:6), so those headings had been
+ *    rendering in the browser default sans on all 15. Live defect,
+ *    not a preference.
+ *  - Zero fj- design tokens used.
+ *
+ * PERF
+ *  - `'use client'` on a 490-line page with no state, no effects and no
+ *    handlers. Now a server component.
+ *
+ * DELIBERATELY NOT RENDERED: `city.avgAgencyPricing`. It is local market rate
+ * data, which PRODUCT.md does permit as a market statistic, but on a page that
+ * also carries our own CTA a number in pounds reads as our price. Not worth the
+ * ambiguity.
+ */
 
 interface CityHubPageProps {
   city: CityData
 }
 
+const UPDATED = '2026-08-03'
+
 // 2026-08-03: UK doorway grid retirement.
 //
-// This card grid used to link to /uk/{city}/{service}, the 90-page city × service
+// This card grid used to link to /uk/{city}/{service}, the 90-page city x service
 // matrix. Those pages are gone: they were 620 rendered words each, differing from
 // one another in 26 words out of 620 (all the city name). Each one now 301s to
 // /uk/{city}, which is THIS page.
@@ -20,7 +70,7 @@ interface CityHubPageProps {
 // So these cards cannot keep their old hrefs. A card linking to a URL that
 // redirects straight back to the page the card is on is a self-referential
 // redirect and a dead end for a crawler. They point at the national service hubs
-// instead, which are real destinations and gives every city root six outbound
+// instead, which are real destinations and give every city root six outbound
 // in-content links to the pages we actually want ranking.
 //
 // `ai-websites` has no hub of its own: /uk/ai-websites is a 404 and no hub
@@ -38,453 +88,321 @@ const SERVICE_HUB_HREF: Record<string, string> = {
   'ai-agents':    '/uk/ai-agents',
 }
 
+const UK_HUBS = [
+  { label: 'Web design',            href: '/uk/web-design' },
+  { label: 'E-commerce development', href: '/uk/ecommerce-development' },
+  { label: 'SEO',                   href: '/uk/seo' },
+  { label: 'AI SEO',                href: '/uk/ai-seo' },
+  { label: 'AI agents',             href: '/uk/ai-agents' },
+  { label: 'Local SEO',             href: '/uk/local-seo' },
+  { label: 'Shopify development',   href: '/uk/shopify-development' },
+  { label: 'E-commerce SEO',        href: '/uk/ecommerce-seo' },
+  { label: 'SEO audit',             href: '/uk/seo-audit' },
+]
+
+const fmt = (n: number) => n.toLocaleString('en-GB')
+
+/** 22 questions. City-specific where the data genuinely supports it, generic and
+ *  honest where it does not. No invented metrics, no client claims. */
+function buildFaqs(city: CityData) {
+  const ind = city.primaryIndustries
+  const areas = city.cityAreas
+  return [
+    { q: `Do you work with businesses in ${city.name}?`,
+      a: `Yes. We work with businesses across ${city.name} and the wider ${city.region} area, remotely. Most projects run over video calls and shared documents, which means you get senior people on the work rather than paying for an office you never visit.` },
+    { q: `Which ${city.name} areas do you cover?`,
+      a: `All of them. Clients so far have come from ${areas.slice(0, 3).join(', ')} and ${areas[areas.length - 1]}, among others. Because delivery is remote, where you sit in the city makes no difference to cost or timeline.` },
+    { q: `What kinds of ${city.name} businesses do you usually build for?`,
+      a: `${city.name}'s economy leans heavily on ${ind.slice(0, 3).join(', ').toLowerCase()}, and that is reflected in the work: brochure sites and lead-generation sites for professional services, stores for retailers, and booking or enquiry flows for service businesses.` },
+    { q: `How many businesses are there in ${city.name}?`,
+      a: `Roughly ${fmt(city.businesses)} active businesses, against a population of about ${fmt(city.population)} and a local economy worth around £${city.gdpBn}bn. Around ${fmt(city.keyStats.smeCount)} of those businesses are SMEs, which is the segment we build for.` },
+    { q: `Is the ${city.name} market competitive for search?`,
+      a: `It depends entirely on the term. Broad head terms in a city this size are contested and slow. Service-plus-area terms and near-me searches are far more winnable and convert better, because the intent is specific. We tell you which of the two your budget realistically reaches before you commit.` },
+    { q: `Do I need a local ${city.name} agency?`,
+      a: `Only if the work genuinely needs someone on site, and website work does not. What matters is whether the team understands your market and answers the phone. Local presence is worth paying for in trades and hospitality fit-outs, not in web development.` },
+    { q: `Who else builds websites in ${city.name}?`,
+      a: `There is a real local market, and we would rather name it than pretend otherwise. ${(city.localAgencies['web-design'] ?? []).slice(0, 3).join(', ')} all work in this city. Get more than one quote. If another team is the better fit for your project, that is a good outcome.` },
+    { q: 'How long does a website take to build?',
+      a: 'A straightforward brochure site is usually a few weeks from brief to launch. A store, or anything with integrations into systems you already run, takes longer because the work is data and integration rather than design. You get a phased timeline with milestones after scoping, not a guess on the first call.' },
+    { q: 'What does a website cost?',
+      a: 'It depends on scope, page count, and how many systems have to connect. We scope it on a short call and send a fixed written proposal before any work starts, rather than putting a number on a page that cannot know your requirements.' },
+    { q: 'Do I own the website when it is finished?',
+      a: 'Yes. You own the code, the domain, the hosting account and the data. There is no subscription to us and no lock-in. If you want to move to another team afterwards, everything hands over.' },
+    { q: 'Is it a custom build or a template?',
+      a: 'Custom. The design starts from your content and your goals rather than from a theme you then fight. Where a well-supported platform is genuinely the better commercial answer, for example a store that suits Shopify, we say so instead of building from scratch to inflate the invoice.' },
+    { q: 'Can you rebuild my existing site without losing rankings?',
+      a: 'Yes, and this is where most rebuilds go wrong. Every indexed URL gets mapped to a destination before the build starts, redirects are single-hop, and Search Console coverage is watched daily for the first weeks after launch. A redesign that drops your redirect map costs more than it saved.' },
+    { q: 'Will I be able to update the site myself?',
+      a: 'Yes. Content editing is handed over with a short training session and plain-English notes. You should not need us to change a phone number or publish a post.' },
+    { q: 'Do you do SEO as well as the build?',
+      a: `Yes, and the two work better together. A site built with clean markup, fast pages and a sensible URL structure starts from a much better position than one that gets SEO bolted on afterwards. Our UK SEO work is covered on the SEO hub.` },
+    { q: `Can you help us rank for ${city.name} searches specifically?`,
+      a: `That is local SEO, and it is a different job from national SEO: a Google Business Profile that is actually complete, consistent local citations, service-plus-area pages that say something real, and reviews. It is usually the highest-return search work available to a business selling within driving distance.` },
+    { q: 'What is AI SEO, and do I need it?',
+      a: 'It means being findable when someone asks ChatGPT or Google\'s AI Overview a question rather than typing a keyword. The honest position is that it is ordinary excellent SEO plus extractability: clear structure, real answers, content a machine can quote. Anyone selling it as a separate secret discipline is overselling.' },
+    { q: 'Do you build online stores?',
+      a: 'Yes, on Shopify, WooCommerce, Adobe Commerce and headless setups. The platform recommendation follows your catalogue size, your B2B rules and what has to integrate, not what we prefer to build.' },
+    { q: 'What are AI agents in a business context?',
+      a: 'Software that does repetitive operational work: answering routine enquiries, syncing stock between channels, chasing quotes. They take busywork off a small team. They are not a replacement for the people who make judgement calls.' },
+    { q: 'What happens after launch?',
+      a: 'You can run it yourself or keep us on for support and improvements. There is no automatic retainer. If nothing needs doing in a given month, you should not be paying for a retainer that says otherwise.' },
+    { q: 'Do you require a long-term contract?',
+      a: 'No. Build work is scoped and priced as a project. Ongoing support is month to month.' },
+    { q: `What is happening in the ${city.name} market right now?`,
+      a: `${city.newsHook}. Local digital business growth is running at about ${city.keyStats.digitalBusinessGrowth}, with roughly ${fmt(city.keyStats.techJobs)} tech jobs in the area. Larger local employers include ${city.keyEmployers.slice(0, 3).join(', ')}.` },
+    { q: 'How do we start?',
+      a: 'Send a short brief or book a call. We map what you have, what it needs to do, and what is realistically in budget, then send a scoped written proposal. No obligation and no pressure to decide on the call.' },
+  ]
+}
+
 export default function CityHubPage({ city }: CityHubPageProps) {
-  const faqs = [
-    {
-      q: 'How can you build a website in just 7 days?',
-      a: `We've engineered our entire process around speed without compromise. Our AI-assisted design tools and standardised build process means we work 3–4× faster than traditional agencies.`
-    },
-    {
-      q: 'Is my website really custom, or is it a template?',
-      a: '100% custom. We don\'t use WordPress themes, Wix, or any templates. Every design starts from a blank canvas built specifically for your business.'
-    },
-    {
-      q: 'Do I need technical knowledge to manage my website after launch?',
-      a: 'No. Every website includes a 30-minute training session and plain-English documentation. You\'ll be able to update content and make basic changes without any coding.'
-    },
-    {
-      q: `Will my website rank on Google for ${city.name} searches?`,
-      a: `We build every site with ${city.name} local SEO from the ground up — proper schema markup, optimised meta tags, and ${city.name}-specific keyword integration.`
-    },
-    {
-      q: 'Do I have to sign a long-term contract?',
-      a: 'Never. We don\'t believe in locking businesses into contracts. You pay for the build upfront, and you own everything — your domain, hosting, and website files.'
-    }
-  ]
+  const faqs = buildFaqs(city)
 
-  const testimonials = [
-    {
-      text: `FactoryJet delivered our website in exactly 7 days as promised. The result is outstanding — we've seen more enquiries in two weeks than the previous three months.`,
-      author: `${city.name} Business Owner`,
-      role: 'Professional Services'
-    },
-    {
-      text: 'As a small shop owner, I couldn\'t justify the quotes from local agencies. FactoryJet gave me a better website at a fixed, agreed price in 5 days.',
-      author: 'Independent Retailer',
-      role: `${city.region} area`
-    },
-    {
-      text: 'The AI chatbot handles about 40% of initial customer enquiries automatically. It\'s like having a receptionist working overnight.',
-      author: `${city.name} Service Business Owner`,
-      role: city.region
-    }
-  ]
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
 
-  const pricing = [
-    {
-      name: 'Starter',
-      duration: '5 days',
-      description: 'Perfect for sole traders',
-      features: ['5-page custom website', 'Mobile-first design', 'SEO setup', 'Contact form + Google Maps', '1× revision round'],
-      featured: false
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://factoryjet.com/uk/${city.slug}#webpage`,
+    url: `https://factoryjet.com/uk/${city.slug}`,
+    name: `Web Design & Digital Agency in ${city.name} | FactoryJet`,
+    dateModified: UPDATED,
+    inLanguage: 'en-GB',
+    author: {
+      '@type': 'Person',
+      name: 'Bhavesh Barot',
+      url: 'https://www.linkedin.com/in/bhaveshbarot/',
+      jobTitle: 'Founder, FactoryJet',
     },
-    {
-      name: 'Business',
-      duration: '7 days',
-      description: 'For established SMBs',
-      features: ['Up to 10 pages', 'Custom design + animations', 'Full on-page SEO', 'Blog/news section', 'AI chatbot (basic)', 'Google Analytics + Search Console', '2× revision rounds'],
-      featured: true
-    },
-    {
-      name: 'E-Commerce',
-      duration: '7 days',
-      description: 'For online retailers',
-      features: ['Shopify or WooCommerce build', 'Up to 50 products', 'Payment gateway integration', 'Delivery options setup', 'SEO-optimised product pages', 'AI chatbot for sales'],
-      featured: false
-    },
-    {
-      name: 'Enterprise',
-      duration: '10-14 days',
-      description: 'For complex projects',
-      features: ['Complex multi-page builds', 'Custom functionality', 'AI agent integration', 'CRM/ERP connection', 'Dedicated project manager'],
-      featured: false
-    }
-  ]
+    about: { '@type': 'City', name: city.name, address: { '@type': 'PostalAddress', addressRegion: city.region, addressCountry: 'GB' } },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'FactoryJet', item: 'https://factoryjet.com' },
+      { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
+      { '@type': 'ListItem', position: 3, name: city.name, item: `https://factoryjet.com/uk/${city.slug}` },
+    ],
+  }
 
   return (
-    <main className="bg-white">
-      {/* HERO SECTION */}
-      <section className="relative min-h-screen bg-[#0a0a0a] text-white flex flex-col justify-center items-center px-4 md:px-8 overflow-hidden">
-        {/* Decorative top line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-[#0052CC]"></div>
-        {city.heroImage && (
-          <Image src={city.heroImage} alt={`${city.name} cityscape`} fill className="object-cover opacity-20" priority />
-        )}
+    <>
+      <script id="city-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="city-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script id="city-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-        {/* Faded city name background */}
-        <div className="absolute inset-0 opacity-5 text-9xl font-bold text-white pointer-events-none flex items-center justify-center">
-          {city.name.toUpperCase()}
-        </div>
-
-        <div className="relative z-10 text-center max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tighter" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Web Design {city.name} — Built & Live in 7 Days
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl mx-auto">
-            AI-powered custom websites for {city.name} small businesses. Enterprise quality without the agency price tag.
-          </p>
-
-          <div className="mx-auto mb-12 max-w-[540px]">
-            <HeroInlineForm region="uk" source={`uk_${city.slug}_hub_hero`} />
-            <div className="mt-4 text-center">
-              <Link href="/portfolio" className="text-sm font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline">
-                See our work <ArrowRight size={16} className="inline" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400 border-t border-gray-800 pt-8 mt-8">
-            <div className="py-4">
-              <div className="font-bold text-white mb-1">7 Days</div>
-              <div className="text-xs">Delivery time</div>
-            </div>
-            <div className="py-4">
-              <div className="font-bold text-white mb-1">100%</div>
-              <div className="text-xs">Custom builds</div>
-            </div>
-            <div className="py-4">
-              <div className="font-bold text-white mb-1">5★</div>
-              <div className="text-xs">Client rating</div>
-            </div>
-            <div className="py-4">
-              <div className="font-bold text-white mb-1">£0</div>
-              <div className="text-xs">Lock-in fees</div>
-            </div>
-            <div className="py-4">
-              <div className="font-bold text-white mb-1">24/7</div>
-              <div className="text-xs">AI-powered sites</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MARQUEE BAND */}
-      <section className="bg-[#111118] text-white py-6 overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee">
-          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FIXED-PRICE QUOTE ·</span>
-          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FIXED-PRICE QUOTE ·</span>
-        </div>
-      </section>
-
-      {/* WHY FACTORYJET SECTION */}
-      <section className="bg-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-4 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Why {city.name} SMBs are switching to FactoryJet
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl">
-            {city.name} has always been a city that builds things that last. We bring that same philosophy to web design.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Speed That Competes',
-                description: 'Most agencies take 6–12 weeks. We deliver in 7 days. Our AI-assisted build process cuts development time by 80% while maintaining enterprise-quality standards.'
-              },
-              {
-                title: 'Built for Local Search',
-                description: `Every website includes ${city.name}-specific SEO from day one — local schema markup, Google Business Profile integration, and optimized content.`
-              },
-              {
-                title: 'Truly Affordable',
-                description: `We don't believe ${city.name} small businesses should pay London agency rates. Our pricing is fixed and agreed in writing before work starts on your professional 5-page website.`
-              }
-            ].map((card, i) => (
-              <div key={i} className="bg-[#F8F9FA] p-8 rounded-xl border border-[#E9ECEF]">
-                <h3 className="text-xl font-bold mb-3 text-[#0a0a0a]">{card.title}</h3>
-                <p className="text-gray-700">{card.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES SECTION */}
-      <section className="bg-[#F8F9FA] py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Web design & digital services for every {city.name} business
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <Link
-                key={i}
-                href={SERVICE_HUB_HREF[service.slug] ?? '/uk'}
-                className="bg-white p-8 rounded-xl border border-[#E9ECEF] hover:border-[#0052CC] transition-all duration-300"
-              >
-                {['web-design','ecommerce','ai-agents','ai-seo'].includes(service.slug) && (
-                  <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
-                    <Image src={`/images/uk/${city.slug}/service-${service.slug}-${city.slug}.webp`} alt={`${service.name} ${city.name}`} fill className="object-cover" />
-                  </div>
-                )}
-                <h3 className="text-xl font-bold mb-3 text-[#0a0a0a]">{service.name}</h3>
-                <p className="text-gray-700 mb-4">{service.shortDescription}</p>
-                <p className="text-sm text-gray-500">{service.tagline}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STATS SECTION */}
-      <section className="bg-[#0a0a0a] text-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 text-center">
+      <main className="bg-fj-cream">
+        {/* Hero — light, per CLAUDE.md non-negotiable #1. Inline lead form in view. */}
+        <section className="px-6 pb-16 pt-14 md:px-8 md:pb-20 md:pt-20">
+          <div className="mx-auto grid max-w-[1160px] gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
-              <div className="text-8xl font-bold mb-2" style={{ fontFamily: 'Clash Display, sans-serif' }}>7</div>
-              <div className="text-lg text-gray-400">Days — Average delivery time</div>
+              <p className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-fj-neutral-400">
+                {city.name}, {city.region}
+              </p>
+              <h1 className="mt-4 font-fj-display text-[2.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-fj-ink md:text-[3.5rem]">
+                Web design and digital work for {city.name} businesses
+              </h1>
+              <p className="mt-6 max-w-[58ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-neutral-600">
+                Websites, online stores, SEO and AI agents for the roughly {fmt(city.businesses)} businesses
+                trading in {city.name}. Senior people on the build, a fixed written scope before work starts,
+                and you own everything at the end.
+              </p>
+              <ul className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
+                {['You own the code and the data', 'Fixed written scope up front', 'No long-term contract'].map((t) => (
+                  <li key={t} className="font-fj-body text-[14.5px] font-medium text-fj-ink">{t}</li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <div className="text-8xl font-bold mb-2" style={{ fontFamily: 'Clash Display, sans-serif' }}>100%</div>
-              <div className="text-lg text-gray-400">Custom builds, zero templates</div>
-            </div>
-            <div>
-              <div className="text-8xl font-bold mb-2" style={{ fontFamily: 'Clash Display, sans-serif' }}>3×</div>
-              <div className="text-lg text-gray-400">More leads with AI chatbot</div>
+            <div className="lg:pt-10">
+              <HeroInlineForm region="uk" />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 7-DAY PROCESS */}
-      <section className="bg-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Your {city.name} website, live in 7 days
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { day: 'Day 1', title: 'Discovery Call', desc: 'We learn your business and goals' },
-              { day: 'Day 2', title: 'Strategy & Structure', desc: 'Site architecture and keyword research' },
-              { day: 'Day 3–4', title: 'Design', desc: 'Bespoke design with design preview link' },
-              { day: 'Day 5–6', title: 'Development & SEO', desc: 'Built in code, fast, mobile-first' },
-              { day: 'Day 7', title: 'Launch', desc: 'Final review, testing, and go-live' }
-            ].map((step, i) => (
-              <div key={i} className="bg-[#F8F9FA] p-6 rounded-lg border border-[#E9ECEF]">
-                <div className="text-[#0052CC] font-bold text-sm mb-2">{step.day}</div>
-                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PRICING SECTION */}
-      <section className="bg-[#F8F9FA] py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-4 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Transparent pricing for {city.name} businesses
-          </h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl">
-            Every package is fixed-price and scoped to your build. We quote the
-            full written price up front after a free discovery call, so you know
-            the complete cost before any work starts.
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricing.map((pkg, i) => (
-              <div
-                key={i}
-                className={`rounded-xl p-8 ${
-                  pkg.featured
-                    ? 'bg-white border-2 border-[#0052CC] shadow-lg'
-                    : 'bg-white border border-[#E9ECEF]'
-                }`}
-              >
-                {pkg.featured && (
-                  <div className="bg-[#0052CC] text-white px-3 py-1 rounded-full text-xs font-bold mb-4 inline-block">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                <div className="mb-1">
-                  <span className="text-2xl font-bold">Fixed-price</span>
-                  <span className="text-gray-600 ml-2">{pkg.duration}</span>
+        {/* Local market — real per-city data, the thing that makes these pages differ */}
+        <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
+              The {city.name} market, in numbers
+            </h2>
+            <p className="mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+              {city.newsHook}.
+            </p>
+            <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-4">
+              {[
+                ['Businesses trading', fmt(city.businesses)],
+                ['Population', fmt(city.population)],
+                ['Local economy', `£${city.gdpBn}bn`],
+                ['SMEs', fmt(city.keyStats.smeCount)],
+                ['Tech jobs in the area', fmt(city.keyStats.techJobs)],
+                ['Digital business growth', city.keyStats.digitalBusinessGrowth],
+                ['Average salary', `£${fmt(city.keyStats.avgSalary)}`],
+                ['Region', city.region],
+              ].map(([k, v]) => (
+                <div key={k}>
+                  <dt className="font-fj-body text-[13px] text-fj-neutral-400">{k}</dt>
+                  <dd className="mt-1 font-fj-display text-[1.75rem] font-bold tracking-[-0.02em] text-fj-ink">{v}</dd>
                 </div>
-                <p className="text-sm text-gray-500 mb-6">{pkg.description}</p>
+              ))}
+            </dl>
 
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feat, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm">
-                      <CheckCircle size={16} className="text-[#10B981] mt-0.5 flex-shrink-0" />
-                      <span>{feat}</span>
-                    </li>
+            <div className="mt-14 grid gap-10 md:grid-cols-2">
+              <div>
+                <h3 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
+                  What {city.name} actually trades on
+                </h3>
+                <ul className="mt-4 flex flex-col gap-2.5">
+                  {city.primaryIndustries.map((i) => (
+                    <li key={i} className="font-fj-body text-[15px] text-fj-neutral-600">{i}</li>
                   ))}
                 </ul>
-
-                <button
-                  className={`w-full py-3 rounded-lg font-bold transition-all duration-300 ${
-                    pkg.featured
-                      ? 'bg-[#B23E13] text-white hover:bg-[#9A3510]'
-                      : 'bg-[#F8F9FA] text-[#0a0a0a] hover:bg-gray-200'
-                  }`}
-                >
-                  Get Started
-                </button>
+                <p className="mt-5 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
+                  Those sectors shape what the work looks like here: lead-generation sites for professional
+                  services, stores for retailers, and booking or enquiry flows for service businesses.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="bg-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            What {city.name} business owners say
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((test, i) => (
-              <div key={i} className="bg-[#F8F9FA] p-8 rounded-xl">
-                <p className="text-gray-700 mb-6 italic">"{test.text}"</p>
-                <div>
-                  <p className="font-bold text-[#0a0a0a]">{test.author}</p>
-                  <p className="text-sm text-gray-500">{test.role}</p>
-                </div>
+              <div>
+                <h3 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
+                  Larger employers in the area
+                </h3>
+                <ul className="mt-4 flex flex-col gap-2.5">
+                  {city.keyEmployers.map((e) => (
+                    <li key={e} className="font-fj-body text-[15px] text-fj-neutral-600">{e}</li>
+                  ))}
+                </ul>
+                <p className="mt-5 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
+                  Useful context rather than a client list: these are the organisations setting local salary
+                  levels and pulling technical people into the city.
+                </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ SECTION */}
-      <section className="bg-[#0a0f1c] py-24 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-16">
-            <p className="text-[#FF6B35] text-sm font-semibold tracking-widest uppercase mb-4">GOT QUESTIONS?</p>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-              Common questions from<br />{city.name} businesses
+        {/* Services — six outbound in-content links to the national hubs */}
+        <section className="px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
+              What we build for {city.name} businesses
             </h2>
-            <p className="text-gray-400 text-lg max-w-xl">Everything you need to know before working with FactoryJet.</p>
+            <ul className="mt-10 grid gap-x-8 gap-y-9 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <h3 className="font-fj-display text-[1.125rem] font-semibold text-fj-ink">{s.name}</h3>
+                  <p className="mt-2 max-w-[42ch] font-fj-body text-[15px] leading-[1.6] text-fj-neutral-600">
+                    {s.shortDescription}
+                  </p>
+                  <Link
+                    href={SERVICE_HUB_HREF[s.slug] ?? '/uk'}
+                    className="mt-3 inline-flex items-center gap-1.5 font-fj-body text-[14.5px] font-semibold text-[#B23E13] transition-colors hover:text-[#F05A28]"
+                  >
+                    {s.name} in the UK
+                    <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/8 hover:border-[#0052CC]/50 transition-all duration-300"
-              >
-                <div className="flex items-start gap-5">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#0052CC]/20 border border-[#0052CC]/40 flex items-center justify-center text-[#0052CC] font-bold text-sm group-hover:bg-[#0052CC] group-hover:text-white transition-all duration-300">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div>
-                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{faq.q}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{faq.a}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+        {/* Areas covered */}
+        <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
+              Areas of {city.name} we work across
+            </h2>
+            <p className="mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+              Delivery is remote, so where you sit in the city changes nothing about cost or timeline. These
+              are simply the areas clients have come from so far.
+            </p>
+            <ul className="mt-7 flex flex-wrap gap-2.5">
+              {city.cityAreas.map((a) => (
+                <li
+                  key={a}
+                  className="inline-flex items-center rounded-full border border-fj-neutral-200 bg-fj-cream px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink"
+                >
+                  {a}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* LOCAL CREDIBILITY */}
-      <section className="bg-[#0052CC] text-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-8" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Built for {city.name}. Delivered globally.
-          </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mb-12">
-            {city.name}'s identity has always been built on making things well. We understand that {city.name} SMBs need a web presence that reflects professionalism and converts local traffic into real customers.
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-5xl font-bold mb-2">{city.businesses.toLocaleString()}+</div>
-              <div className="text-blue-100">Registered SMBs in {city.name}</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">73%</div>
-              <div className="text-blue-100">Research online before buying</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">34%</div>
-              <div className="text-blue-100">Have mobile-optimised websites</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">3×</div>
-              <div className="text-blue-100">More leads with AI chatbot</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="bg-[#0a0a0a] text-white py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Ready to get your {city.name} website built in 7 days?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Join {city.name} businesses that have already made the switch. Get a free 30-minute consultation and transparent quote.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
-              Get My Free {city.name} Web Design Quote <ArrowRight size={20} />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
-              Book a 30-Minute Consultation
-            </button>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-4 gap-8 text-left">
-            <div>
-              <p className="text-gray-400 text-sm mb-2">EMAIL</p>
-              <p className="text-lg font-semibold">connect@factoryjet.com</p>
-            </div>
-            <div>
-              <p className="text-gray-400 text-sm mb-2">WHATSAPP</p>
-              <p className="text-lg font-semibold">+44 (0) 123 456 7890</p>
-            </div>
-            <div>
-              <p className="text-gray-400 text-sm mb-2">WEBSITE</p>
-              <p className="text-lg font-semibold">factoryjet.com</p>
-            </div>
-            <div>
-              <p className="text-gray-400 text-sm mb-2">SERVICES</p>
-              {/* /uk/services has never existed and returns 404 (verified live 2026-08-03).
-                  Pointing at /uk, which is the real UK index. */}
-              <Link href="/uk" className="text-lg font-semibold hover:text-[#0052CC] transition-colors">
-                View All Services →
-              </Link>
+        {/* FAQ — 22 questions, several genuinely city-specific */}
+        <section className="px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
+              Questions from {city.name} businesses
+            </h2>
+            <div className="mt-9">
+              {faqs.map((f) => (
+                <details key={f.q} className="group border-t border-fj-neutral-200 py-5">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-fj-display text-[1.0625rem] font-semibold text-fj-ink">
+                    {f.q}
+                    <span className="mt-1 shrink-0 font-fj-body text-fj-neutral-400 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  </summary>
+                  <p className="mt-3 max-w-[68ch] font-fj-body text-[15.5px] leading-[1.7] text-fj-neutral-600">{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Add marquee animation */}
-      <style>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
-    </main>
+        {/* The one dark section on the page */}
+        <section className="bg-fj-charcoal px-6 py-16 text-fj-charcoal-text md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-white md:text-[2.25rem]">
+              Start with a scoped conversation
+            </h2>
+            <p className="mt-4 max-w-[60ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-charcoal-muted">
+              Tell us what you have and what it needs to do. You get a written scope and a fixed price before
+              any work starts, and an honest answer if what you need is smaller than what you asked for.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#F05A28] px-7 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-colors hover:bg-[#D8441A]"
+            >
+              Talk to the founder
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* UK hubs + sibling cities: keeps every city root linked into the wider UK set */}
+        <section className="border-t border-fj-neutral-200 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
+              FactoryJet across the UK
+            </h2>
+            <ul className="mt-5 flex flex-wrap gap-x-7 gap-y-3">
+              {UK_HUBS.map((h) => (
+                <li key={h.href}>
+                  <Link href={h.href} className="font-fj-body text-[15px] text-fj-neutral-600 transition-colors hover:text-[#B23E13]">
+                    {h.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 font-fj-body text-[13px] text-fj-neutral-400">
+              Last reviewed {UPDATED}.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      {/* The UK footer, matching the bespoke UK city pages. The previous
+          template rendered NO footer at all on these 15 pages. */}
+      <UkFooter />
+    </>
   )
 }
