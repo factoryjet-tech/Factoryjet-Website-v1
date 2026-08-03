@@ -61,7 +61,8 @@ const services = [
       "Shopify, Shopify Plus, WooCommerce and headless commerce stores with UK payment gateway and shipping integration. Launch-ready in 3–6 weeks.",
     provider,
     areaServed,
-    url: "https://factoryjet.com/uk/ecommerce",
+    // 2026-08-03: was /uk/ecommerce, which 404s. Same defect as the footer link.
+    url: "https://factoryjet.com/uk/ecommerce-development",
   },
   {
     "@context": "https://schema.org",

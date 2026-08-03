@@ -5,7 +5,17 @@ import { useContactModal } from "@/context/ContactModalContext";
 import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 import RecognitionStrip from "@/components/RecognitionStrip";
 
+// 2026-08-03: extended from 10 to all 21 UK city roots.
+//
+// The 11 added below (london plus the 10 that had nothing) were previously
+// reachable in content ONLY from the 6 /uk/{city}/{service} doorway pages each.
+// Those 90 pages were retired the same day (see /public/_redirects), which would
+// have left brighton, cambridge, cardiff, coventry, derby, hull, leicester,
+// oxford, plymouth and southampton as full in-content orphans: measured on
+// rendered HTML, none of them appears anywhere on any of the 10 UK hubs, and
+// none was in this footer. This list is now their inbound link.
 const CITIES = [
+  "london",
   "leeds",
   "manchester",
   "birmingham",
@@ -16,12 +26,26 @@ const CITIES = [
   "glasgow",
   "newcastle",
   "nottingham",
+  "cardiff",
+  "leicester",
+  "coventry",
+  "hull",
+  "derby",
+  "southampton",
+  "brighton",
+  "oxford",
+  "cambridge",
+  "plymouth",
 ];
 
 const SERVICES = [
   { name: "Web Design",          slug: "web-design" },
   { name: "Shopify Development", slug: "shopify-development" },
-  { name: "E-Commerce",          slug: "ecommerce" },
+  // 2026-08-03: was `ecommerce`, which produced /uk/ecommerce. That URL has
+  // never existed and returns 404 (verified live). The real hub slug is
+  // ecommerce-development. This was a sitewide UK footer link, so it 404'd
+  // from every UK page.
+  { name: "E-Commerce",          slug: "ecommerce-development" },
   { name: "Shopify SEO",         slug: "shopify-seo" },
   { name: "Ecommerce SEO",       slug: "ecommerce-seo" },
   { name: "AI Agents",           slug: "ai-agents" },

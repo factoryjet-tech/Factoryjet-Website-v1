@@ -13,6 +13,10 @@ import Footer from "./sections/Footer";
 import { ukMetadata } from "./metadata";
 import { ukSchemas } from "./schema";
 
+// Last date the content of /uk actually changed. Matches the `UPDATED` const
+// convention used by the UK hub pages (see src/app/uk/ai-agents/page.tsx).
+const UPDATED = "2026-08-03";
+
 export function generateMetadata(): Metadata {
   return ukMetadata;
 }
@@ -49,6 +53,13 @@ export default function UKPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             "@id": "https://factoryjet.com/uk#webpage",
+            inLanguage: "en-GB",
+            // 2026-08-03: /uk shipped without dateModified, one of the 293 URLs
+            // the rendered audit flagged. Honest date: the footer city list and
+            // the /uk/ecommerce service-schema URL both changed on this date.
+            // Bump this only when the page actually changes; a build-date stamp
+            // on unchanged content is a freshness lie, not a fix.
+            dateModified: UPDATED,
             speakable: {
               "@type": "SpeakableSpecification",
               cssSelector: ["h1", "h2:first-of-type"],

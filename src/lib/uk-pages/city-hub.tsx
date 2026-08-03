@@ -10,6 +10,34 @@ interface CityHubPageProps {
   city: CityData
 }
 
+// 2026-08-03: UK doorway grid retirement.
+//
+// This card grid used to link to /uk/{city}/{service}, the 90-page city × service
+// matrix. Those pages are gone: they were 620 rendered words each, differing from
+// one another in 26 words out of 620 (all the city name). Each one now 301s to
+// /uk/{city}, which is THIS page.
+//
+// So these cards cannot keep their old hrefs. A card linking to a URL that
+// redirects straight back to the page the card is on is a self-referential
+// redirect and a dead end for a crawler. They point at the national service hubs
+// instead, which are real destinations and gives every city root six outbound
+// in-content links to the pages we actually want ranking.
+//
+// `ai-websites` has no hub of its own: /uk/ai-websites is a 404 and no hub
+// mentions AI websites at all (measured on rendered HTML 2026-08-03). It shares
+// /uk/web-design with `web-design` here because the card has to go somewhere and
+// a website build page is the closest live match. That is a UI fallback, NOT a
+// redirect target; the redirect for /uk/{city}/ai-websites is /uk/{city}.
+// Full reasoning in pipeline/research/UK-DOORWAY-RETIREMENT.md.
+const SERVICE_HUB_HREF: Record<string, string> = {
+  'web-design':   '/uk/web-design',
+  'ai-websites':  '/uk/web-design',
+  'ecommerce':    '/uk/ecommerce-development',
+  'seo':          '/uk/seo',
+  'ai-seo':       '/uk/ai-seo',
+  'ai-agents':    '/uk/ai-agents',
+}
+
 export default function CityHubPage({ city }: CityHubPageProps) {
   const faqs = [
     {
@@ -195,7 +223,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             {services.map((service, i) => (
               <Link
                 key={i}
-                href={`/uk/${city.slug}/${service.slug}`}
+                href={SERVICE_HUB_HREF[service.slug] ?? '/uk'}
                 className="bg-white p-8 rounded-xl border border-[#E9ECEF] hover:border-[#0052CC] transition-all duration-300"
               >
                 {['web-design','ecommerce','ai-agents','ai-seo'].includes(service.slug) && (
@@ -433,7 +461,9 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             </div>
             <div>
               <p className="text-gray-400 text-sm mb-2">SERVICES</p>
-              <Link href="/uk/services" className="text-lg font-semibold hover:text-[#0052CC] transition-colors">
+              {/* /uk/services has never existed and returns 404 (verified live 2026-08-03).
+                  Pointing at /uk, which is the real UK index. */}
+              <Link href="/uk" className="text-lg font-semibold hover:text-[#0052CC] transition-colors">
                 View All Services →
               </Link>
             </div>

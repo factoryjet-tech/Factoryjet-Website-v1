@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { cities, services, BESPOKE_CITY_SERVICE_PAGES } from '@/data/uk'
+import { cities, BESPOKE_CITY_SERVICE_PAGES } from '@/data/uk'
 import { getFileLastMod, getMaxLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
@@ -39,8 +39,13 @@ const BESPOKE_UK_CITY_SLUGS: ReadonlySet<string> = new Set([
 // without converting clicks (1 click across all UK in 90 days). Production
 // redirect /uk/:city/:service/:platform → /uk/:city/:service lives in
 // /public/_redirects. See audit-current-state/16_uk_framework_b_plus_plan_2026-05-27.md.
+//
+// 2026-08-03: the /uk/[city]/[service] route was deleted too, and the 90 URLs
+// it generated (15 dynamic cities × 6 services) now 301 to the national hubs
+// via /public/_redirects. They are removed from this sitemap in the same
+// change, because a sitemap that advertises 90 redirecting URLs is worse than
+// one that omits them. See docs/AI-SEO-RULEBOOK.md §8.
 const DYNAMIC_CITY_PAGE = 'src/app/uk/[city]/page.tsx'
-const DYNAMIC_CITY_SERVICE_PAGE = 'src/app/uk/[city]/[service]/page.tsx'
 
 // National UK service hub pages — standalone static segments at
 // src/app/uk/{slug}/page.tsx (not part of the city × service matrix).
@@ -87,37 +92,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  // Cities served by the dynamic [city]/[service] route. Bespoke cities
-  // have only /uk/{slug}/page.tsx — no service or platform descendants
-  // exist on disk — so listing /uk/{bespoke}/{service} would advertise
-  // 404s. Mirrors Patch #2's `dynamicCities` filter; folded back to a
-  // shared import once Patch #2 is merged.
-  const dynamicCities = cities.filter(
-    (c) => !BESPOKE_UK_CITY_SLUGS.has(c.slug)
-  )
-
-  // City × service — only cities served by the dynamic [city]/[service]
-  // route. Bespoke city service URLs would 404.
-  const cityService: MetadataRoute.Sitemap = dynamicCities.flatMap((city) =>
-    services.map((service) => ({
-      url: `${SITE_URL}/uk/${city.slug}/${service.slug}`,
-      lastModified: getMaxLastMod(
-        `src/data/uk/cities/${city.slug}.json`,
-        `src/data/uk/services/${service.slug}.json`,
-        DYNAMIC_CITY_SERVICE_PAGE,
-      ),
-      changeFrequency: CHANGEFREQ.dynamic as ChangeFreq,
-      priority: PRIORITY.dynamic,
-    }))
-  )
-
+  // City × service branch removed 2026-08-03 (UK doorway grid retirement).
+  // The 90 URLs it emitted are now 301s to the national hubs, so listing them
+  // would advertise 90 redirects. The two surviving bespoke combos are emitted
+  // by `bespokeCityService` below.
+  //
   // City × service × platform branch removed in PR #3 (2026-05-27).
-  // Production redirect handles inbound traffic to the deleted URLs.
+  // Production redirects handle inbound traffic to both deleted tiers.
 
   // Bespoke city × service pages — pipeline-generated landing pages that
   // live as static segments under src/app/uk/{city}/{service}/page.tsx.
-  // These are excluded from cityService above (dynamicCities filter), so
-  // we emit them explicitly.
+  // The generated city × service grid is gone, so these two are the only
+  // /uk/{city}/{service} URLs that still resolve; we emit them explicitly.
   const bespokeCityService: MetadataRoute.Sitemap = BESPOKE_CITY_SERVICE_PAGES.map(
     ({ city, service }) => ({
       url: `${SITE_URL}/uk/${city}/${service}`,
@@ -146,7 +132,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ukIndex,
     ...nationalServicePages,
     ...cityHubs,
-    ...cityService,
     ...bespokeCityService,
   ]
 }

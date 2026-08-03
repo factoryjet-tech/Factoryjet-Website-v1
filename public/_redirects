@@ -119,21 +119,152 @@
 # ── NEW INDIA SERVICE PAGES (2026-05-24) ─────────────────────────────────────
 # WordPress Development and n8n Automation pages at clean root-level URLs
 
-# ── UK PLATFORM ROUTE DEPRECATION (2026-05-27, PR #3) ───────────────────────
-# Kill the /uk/{city}/{service}/{platform} doorway-page pattern.
-# This route generated ~450 templated URLs (15 dynamic cities × 6 services
-# × ~5 platforms) that delivered 1 click in 90 days while consuming crawl
-# budget that should go to US pages.
+# ── UK DOORWAY GRID RETIREMENT (2026-08-03) ─────────────────────────────────
+# Supersedes the 2026-05-27 platform-route deprecation that used to live here.
 #
-# Redirect strategy: preserve city + service intent, drop only the platform
-# specificity. Mirrors the US ecommerce migration pattern below (one level
-# of URL collapse to the parent intent).
+# WHAT IS BEING RETIRED
+# The 15 dynamic cities x 6 services grid at /uk/{city}/{service}, served from
+# src/app/uk/[city]/[service]/page.tsx (route now deleted). Measured in the
+# 2026-08-03 rendered audit: 620 rendered words each, and a word-level diff
+# between any two of them differs in 26 words out of 620, every one the city
+# name. That is the shape Google's spam policy calls scaled content abuse.
+# GSC 2026-05-05..2026-08-02: the whole /uk/ tree earned 15 clicks and these
+# 90 pages earned 5 of them. See docs/AI-SEO-RULEBOOK.md section 8.
 #
-# NOTE: This is the FIRST placeholder rule in this file. Cloudflare Pages
-# _redirects supports :placeholder syntax per their docs. If this rule
-# fails to activate on first deploy, fall back to the 90 explicit rules
-# documented in audit-current-state/16_uk_framework_b_plus_plan_2026-05-27.md.
-/uk/:city/:service/:platform   /uk/:city/:service   301
+# WHY THE CITY ROOT AND NOT THE NATIONAL HUB
+# The obvious target was the matching national hub (/uk/seo, /uk/web-design and
+# so on). Measured on live rendered HTML 2026-08-03, that is the wrong call:
+#   - 10 of the 15 retiring cities (brighton, cambridge, cardiff, coventry,
+#     derby, hull, leicester, oxford, plymouth, southampton) appear ZERO times
+#     on any of the 10 UK hubs. A visitor 301'd from /uk/leicester/seo would
+#     land on a page that never says "Leicester".
+#   - The 15 city ROOT pages are being kept, and their ONLY in-content inbound
+#     links are from the 6 doorway pages each. Sending the doorways to a hub
+#     would orphan 10 kept pages the day it ships.
+#   - `ai-websites` has no hub at all. /uk/ai-websites is a 404, and the terms
+#     "ai website", "ai websites", "ai-powered website" and "ai web design"
+#     each occur 0 times across all 10 hubs. There is nothing to point it at.
+# Redirecting to /uk/{city} preserves the location intent exactly, makes the
+# kept city roots the equity destination instead of stripping their only
+# inbound links, and dissolves the ai-websites problem entirely.
+# Caveat, recorded honestly: the city roots are ~970 words with no FAQ, so this
+# consolidates thin pages into a less-thin page, not into a strong one.
+#
+# WHAT SURVIVES
+#   - The 21 city ROOT pages /uk/{city}. They are the destination here.
+#   - The two bespoke city x service pages /uk/london/web-design and
+#     /uk/london/seo, which are hand-built static segments, not grid output.
+#     They are NOT in the list below and must never be added to it.
+#
+# WHY EXPLICIT RULES INSTEAD OF /uk/:city/:service
+# A placeholder rule would also swallow /uk/london/web-design and /uk/london/seo.
+# Cloudflare's own docs say "redirects are always followed, regardless of whether
+# or not an asset matches the incoming request", so a placeholder here would kill
+# two live pages. 90 explicit static rules cost nothing against the 2,100 static
+# rule limit and cannot misfire.
+/uk/brighton/web-design      /uk/brighton     301
+/uk/brighton/ai-websites     /uk/brighton     301
+/uk/brighton/ecommerce       /uk/brighton     301
+/uk/brighton/seo             /uk/brighton     301
+/uk/brighton/ai-seo          /uk/brighton     301
+/uk/brighton/ai-agents       /uk/brighton     301
+/uk/bristol/web-design       /uk/bristol      301
+/uk/bristol/ai-websites      /uk/bristol      301
+/uk/bristol/ecommerce        /uk/bristol      301
+/uk/bristol/seo              /uk/bristol      301
+/uk/bristol/ai-seo           /uk/bristol      301
+/uk/bristol/ai-agents        /uk/bristol      301
+/uk/cambridge/web-design     /uk/cambridge    301
+/uk/cambridge/ai-websites    /uk/cambridge    301
+/uk/cambridge/ecommerce      /uk/cambridge    301
+/uk/cambridge/seo            /uk/cambridge    301
+/uk/cambridge/ai-seo         /uk/cambridge    301
+/uk/cambridge/ai-agents      /uk/cambridge    301
+/uk/cardiff/web-design       /uk/cardiff      301
+/uk/cardiff/ai-websites      /uk/cardiff      301
+/uk/cardiff/ecommerce        /uk/cardiff      301
+/uk/cardiff/seo              /uk/cardiff      301
+/uk/cardiff/ai-seo           /uk/cardiff      301
+/uk/cardiff/ai-agents        /uk/cardiff      301
+/uk/coventry/web-design      /uk/coventry     301
+/uk/coventry/ai-websites     /uk/coventry     301
+/uk/coventry/ecommerce       /uk/coventry     301
+/uk/coventry/seo             /uk/coventry     301
+/uk/coventry/ai-seo          /uk/coventry     301
+/uk/coventry/ai-agents       /uk/coventry     301
+/uk/derby/web-design         /uk/derby        301
+/uk/derby/ai-websites        /uk/derby        301
+/uk/derby/ecommerce          /uk/derby        301
+/uk/derby/seo                /uk/derby        301
+/uk/derby/ai-seo             /uk/derby        301
+/uk/derby/ai-agents          /uk/derby        301
+/uk/edinburgh/web-design     /uk/edinburgh    301
+/uk/edinburgh/ai-websites    /uk/edinburgh    301
+/uk/edinburgh/ecommerce      /uk/edinburgh    301
+/uk/edinburgh/seo            /uk/edinburgh    301
+/uk/edinburgh/ai-seo         /uk/edinburgh    301
+/uk/edinburgh/ai-agents      /uk/edinburgh    301
+/uk/glasgow/web-design       /uk/glasgow      301
+/uk/glasgow/ai-websites      /uk/glasgow      301
+/uk/glasgow/ecommerce        /uk/glasgow      301
+/uk/glasgow/seo              /uk/glasgow      301
+/uk/glasgow/ai-seo           /uk/glasgow      301
+/uk/glasgow/ai-agents        /uk/glasgow      301
+/uk/hull/web-design          /uk/hull         301
+/uk/hull/ai-websites         /uk/hull         301
+/uk/hull/ecommerce           /uk/hull         301
+/uk/hull/seo                 /uk/hull         301
+/uk/hull/ai-seo              /uk/hull         301
+/uk/hull/ai-agents           /uk/hull         301
+/uk/leicester/web-design     /uk/leicester    301
+/uk/leicester/ai-websites    /uk/leicester    301
+/uk/leicester/ecommerce      /uk/leicester    301
+/uk/leicester/seo            /uk/leicester    301
+/uk/leicester/ai-seo         /uk/leicester    301
+/uk/leicester/ai-agents      /uk/leicester    301
+/uk/newcastle/web-design     /uk/newcastle    301
+/uk/newcastle/ai-websites    /uk/newcastle    301
+/uk/newcastle/ecommerce      /uk/newcastle    301
+/uk/newcastle/seo            /uk/newcastle    301
+/uk/newcastle/ai-seo         /uk/newcastle    301
+/uk/newcastle/ai-agents      /uk/newcastle    301
+/uk/nottingham/web-design    /uk/nottingham   301
+/uk/nottingham/ai-websites   /uk/nottingham   301
+/uk/nottingham/ecommerce     /uk/nottingham   301
+/uk/nottingham/seo           /uk/nottingham   301
+/uk/nottingham/ai-seo        /uk/nottingham   301
+/uk/nottingham/ai-agents     /uk/nottingham   301
+/uk/oxford/web-design        /uk/oxford       301
+/uk/oxford/ai-websites       /uk/oxford       301
+/uk/oxford/ecommerce         /uk/oxford       301
+/uk/oxford/seo               /uk/oxford       301
+/uk/oxford/ai-seo            /uk/oxford       301
+/uk/oxford/ai-agents         /uk/oxford       301
+/uk/plymouth/web-design      /uk/plymouth     301
+/uk/plymouth/ai-websites     /uk/plymouth     301
+/uk/plymouth/ecommerce       /uk/plymouth     301
+/uk/plymouth/seo             /uk/plymouth     301
+/uk/plymouth/ai-seo          /uk/plymouth     301
+/uk/plymouth/ai-agents       /uk/plymouth     301
+/uk/southampton/web-design   /uk/southampton  301
+/uk/southampton/ai-websites  /uk/southampton  301
+/uk/southampton/ecommerce    /uk/southampton  301
+/uk/southampton/seo          /uk/southampton  301
+/uk/southampton/ai-seo       /uk/southampton  301
+/uk/southampton/ai-agents    /uk/southampton  301
+
+# ── UK PLATFORM TIER, RE-POINTED (originally 2026-05-27, re-pointed 2026-08-03)
+# The /uk/{city}/{service}/{platform} tier (~450 URLs) has 301'd to
+# /uk/{city}/{service} since 2026-05-27. Now that the middle tier itself
+# redirects, that rule would become a 2-hop chain, so each platform URL is
+# re-pointed at the SAME final destination its middle tier goes to. Every UK
+# redirect stays single-hop.
+#
+# ORDER MATTERS: the two london rules must stay above the :city rule, because
+# the topmost matching rule wins and london's middle tier is a real page.
+/uk/london/web-design/:platform    /uk/london/web-design   301
+/uk/london/seo/:platform           /uk/london/seo          301
+/uk/:city/:service/:platform       /uk/:city               301
 
 # ── CASE STUDIES URL MIGRATION (2026-05-28 evening) ──────────────────────────
 # Migrated 6 real client case studies from legacy /case/ family to v2 /case-studies/.
