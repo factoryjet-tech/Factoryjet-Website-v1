@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { CityData, services } from '@/data/uk'
 import HeroInlineForm from '@/components/HeroInlineForm'
 import UkFooter from '@/app/uk/sections/Footer'
+import { getCityDepth } from '@/data/countries/gb/cityDepth'
 
 /**
  * UK city hub, rebuilt 2026-08-03.
@@ -155,12 +156,25 @@ function buildFaqs(city: CityData) {
   ]
 }
 
+
+/* Shared list styling. Everything that is a list is marked up as one: the
+   rulebook's highest-signal finding is <li> density (rule 10, median 110 on
+   cited pages), and card grids built from <div> throw that away for nothing. */
+const PILL =
+  'inline-flex items-center rounded-full border border-fj-neutral-200 bg-fj-cream px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink'
+const H2 =
+  'font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]'
+const LEAD = 'mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600'
+
 export default function CityHubPage({ city }: CityHubPageProps) {
   const faqs = buildFaqs(city)
+  const depth = getCityDepth(city.slug)
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    // Generated from the SAME array the page renders. Never hand-duplicate this:
+    // schema that disagrees with visible content is cloaking-adjacent.
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
@@ -182,7 +196,12 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       url: 'https://www.linkedin.com/in/bhaveshbarot/',
       jobTitle: 'Founder, FactoryJet',
     },
-    about: { '@type': 'City', name: city.name, address: { '@type': 'PostalAddress', addressRegion: city.region, addressCountry: 'GB' } },
+    publisher: { '@id': 'https://factoryjet.com/#organization' },
+    about: {
+      '@type': 'City',
+      name: city.name,
+      address: { '@type': 'PostalAddress', addressRegion: city.region, addressCountry: 'GB' },
+    },
   }
 
   const breadcrumbSchema = {
@@ -202,7 +221,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       <script id="city-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="bg-fj-cream">
-        {/* Hero — light, per CLAUDE.md non-negotiable #1. Inline lead form in view. */}
+        {/* Hero, light, per CLAUDE.md non-negotiable #1. Lead form in first viewport. */}
         <section className="px-6 pb-16 pt-14 md:px-8 md:pb-20 md:pt-20">
           <div className="mx-auto grid max-w-[1160px] gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
@@ -218,7 +237,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 and you own everything at the end.
               </p>
               <ul className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
-                {['You own the code and the data', 'Fixed written scope up front', 'No long-term contract'].map((t) => (
+                {['You own the code and the data', 'Fixed written scope up front', 'No long-term contract', 'Senior people on the build'].map((t) => (
                   <li key={t} className="font-fj-body text-[14.5px] font-medium text-fj-ink">{t}</li>
                 ))}
               </ul>
@@ -229,16 +248,12 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* Local market — real per-city data, the thing that makes these pages differ */}
+        {/* 1. Local market numbers */}
         <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-[1160px]">
-            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
-              The {city.name} market, in numbers
-            </h2>
-            <p className="mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
-              {city.newsHook}.
-            </p>
-            <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-4">
+            <h2 className={H2}>The {city.name} market, in numbers</h2>
+            <p className={LEAD}>{city.newsHook}.</p>
+            <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-4">
               {[
                 ['Businesses trading', fmt(city.businesses)],
                 ['Population', fmt(city.population)],
@@ -249,52 +264,59 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 ['Average salary', `£${fmt(city.keyStats.avgSalary)}`],
                 ['Region', city.region],
               ].map(([k, v]) => (
-                <div key={k}>
-                  <dt className="font-fj-body text-[13px] text-fj-neutral-400">{k}</dt>
-                  <dd className="mt-1 font-fj-display text-[1.75rem] font-bold tracking-[-0.02em] text-fj-ink">{v}</dd>
-                </div>
+                <li key={k}>
+                  <p className="font-fj-body text-[13px] text-fj-neutral-400">{k}</p>
+                  <p className="mt-1 font-fj-display text-[1.75rem] font-bold tracking-[-0.02em] text-fj-ink">{v}</p>
+                </li>
               ))}
-            </dl>
-
-            <div className="mt-14 grid gap-10 md:grid-cols-2">
-              <div>
-                <h3 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
-                  What {city.name} actually trades on
-                </h3>
-                <ul className="mt-4 flex flex-col gap-2.5">
-                  {city.primaryIndustries.map((i) => (
-                    <li key={i} className="font-fj-body text-[15px] text-fj-neutral-600">{i}</li>
-                  ))}
-                </ul>
-                <p className="mt-5 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
-                  Those sectors shape what the work looks like here: lead-generation sites for professional
-                  services, stores for retailers, and booking or enquiry flows for service businesses.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
-                  Larger employers in the area
-                </h3>
-                <ul className="mt-4 flex flex-col gap-2.5">
-                  {city.keyEmployers.map((e) => (
-                    <li key={e} className="font-fj-body text-[15px] text-fj-neutral-600">{e}</li>
-                  ))}
-                </ul>
-                <p className="mt-5 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
-                  Useful context rather than a client list: these are the organisations setting local salary
-                  levels and pulling technical people into the city.
-                </p>
-              </div>
-            </div>
+            </ul>
+            {depth && <p className="mt-10 max-w-[74ch] font-fj-body text-[1rem] leading-[1.75] text-fj-neutral-600">{depth.marketNote}</p>}
           </div>
         </section>
 
-        {/* Services — six outbound in-content links to the national hubs */}
+        {/* 2. Sectors, with a real note each */}
         <section className="px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-[1160px]">
-            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
-              What we build for {city.name} businesses
-            </h2>
+            <h2 className={H2}>What {city.name} actually trades on</h2>
+            <p className={LEAD}>
+              These sectors shape what the work looks like here, and what a site has to do to be taken
+              seriously by a buyer in each one.
+            </p>
+            <ul className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
+              {(depth?.sectorNotes ?? city.primaryIndustries.map((s) => ({ sector: s, note: '' }))).map((s) => (
+                <li key={s.sector}>
+                  <h3 className="font-fj-display text-[1.125rem] font-semibold text-fj-ink">{s.sector}</h3>
+                  {s.note && <p className="mt-2 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">{s.note}</p>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* 3. Project shapes that recur here */}
+        {depth && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>Projects that come up most in {city.name}</h2>
+              <p className={LEAD}>
+                Given that local economy, a few project shapes recur far more often than others.
+              </p>
+              <ul className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-3">
+                {depth.commonProjects.map((p) => (
+                  <li key={p.title}>
+                    <h3 className="font-fj-display text-[1.0625rem] font-semibold text-fj-ink">{p.title}</h3>
+                    <p className="mt-2 font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">{p.note}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* 4. Services, six outbound in-content links to the national hubs */}
+        <section className="px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className={H2}>What we build for {city.name} businesses</h2>
             <ul className="mt-10 grid gap-x-8 gap-y-9 md:grid-cols-2 lg:grid-cols-3">
               {services.map((s) => (
                 <li key={s.slug}>
@@ -315,50 +337,111 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* Areas covered */}
-        <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+        {/* 5. Local search character */}
+        {depth && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>What local search looks like in {city.name}</h2>
+              <p className="mt-4 max-w-[74ch] font-fj-body text-[1rem] leading-[1.75] text-fj-neutral-600">{depth.searchNote}</p>
+            </div>
+          </section>
+        )}
+
+        {/* 6. Employers */}
+        <section className="px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-[1160px]">
-            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
-              Areas of {city.name} we work across
-            </h2>
-            <p className="mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+            <h2 className={H2}>Larger employers in the area</h2>
+            <p className={LEAD}>
+              Context rather than a client list. These are the organisations setting local salary levels and
+              pulling technical people into the city.
+            </p>
+            <ul className="mt-7 flex flex-wrap gap-2.5">
+              {city.keyEmployers.map((e) => <li key={e} className={PILL}>{e}</li>)}
+            </ul>
+          </div>
+        </section>
+
+        {/* 7. Business districts */}
+        {depth && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>Business districts and parks in {city.name}</h2>
+              <p className={LEAD}>
+                Where the commercial activity actually sits, which is not always the same as the city centre.
+              </p>
+              <ul className="mt-7 flex flex-wrap gap-2.5">
+                {depth.businessDistricts.map((d) => <li key={d} className={PILL}>{d}</li>)}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* 8. Areas of the city */}
+        <section className="px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <h2 className={H2}>Areas of {city.name} we work across</h2>
+            <p className={LEAD}>
               Delivery is remote, so where you sit in the city changes nothing about cost or timeline. These
               are simply the areas clients have come from so far.
             </p>
             <ul className="mt-7 flex flex-wrap gap-2.5">
-              {city.cityAreas.map((a) => (
-                <li
-                  key={a}
-                  className="inline-flex items-center rounded-full border border-fj-neutral-200 bg-fj-cream px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink"
-                >
-                  {a}
+              {city.cityAreas.map((a) => <li key={a} className={PILL}>{a}</li>)}
+            </ul>
+          </div>
+        </section>
+
+        {/* 9. Wider catchment */}
+        {depth && (
+          <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>Towns and areas near {city.name} we also serve</h2>
+              <p className={LEAD}>
+                Most businesses here trade across a wider catchment than the city boundary, and search
+                behaves the same way.
+              </p>
+              <ul className="mt-7 flex flex-wrap gap-2.5">
+                {depth.servingAreas.map((a) => <li key={a} className={PILL}>{a}</li>)}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* 10. Institutions */}
+        {depth && (
+          <section className="px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 className={H2}>Universities and research institutions</h2>
+              <p className={LEAD}>
+                A steady source of spin-outs, research groups and short-cycle project work in this city.
+              </p>
+              <ul className="mt-7 flex flex-wrap gap-2.5">
+                {depth.institutions.map((i) => <li key={i} className={PILL}>{i}</li>)}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* 11. FAQ, 22 questions, marked up as a list for extraction */}
+        <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[860px]">
+            <h2 className={H2}>Questions from {city.name} businesses</h2>
+            <ul className="mt-9">
+              {faqs.map((f) => (
+                <li key={f.q}>
+                  <details className="group border-t border-fj-neutral-200 py-5">
+                    <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-fj-display text-[1.0625rem] font-semibold text-fj-ink">
+                      {f.q}
+                      <span className="mt-1 shrink-0 font-fj-body text-fj-neutral-400 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-[68ch] font-fj-body text-[15.5px] leading-[1.7] text-fj-neutral-600">{f.a}</p>
+                  </details>
                 </li>
               ))}
             </ul>
           </div>
         </section>
 
-        {/* FAQ — 22 questions, several genuinely city-specific */}
-        <section className="px-6 py-16 md:px-8 md:py-20">
-          <div className="mx-auto max-w-[860px]">
-            <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
-              Questions from {city.name} businesses
-            </h2>
-            <div className="mt-9">
-              {faqs.map((f) => (
-                <details key={f.q} className="group border-t border-fj-neutral-200 py-5">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-fj-display text-[1.0625rem] font-semibold text-fj-ink">
-                    {f.q}
-                    <span className="mt-1 shrink-0 font-fj-body text-fj-neutral-400 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                  </summary>
-                  <p className="mt-3 max-w-[68ch] font-fj-body text-[15.5px] leading-[1.7] text-fj-neutral-600">{f.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* The one dark section on the page */}
+        {/* 12. The one dark section on the page */}
         <section className="bg-fj-charcoal px-6 py-16 text-fj-charcoal-text md:px-8 md:py-20">
           <div className="mx-auto max-w-[1160px]">
             <h2 className="font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-white md:text-[2.25rem]">
@@ -378,12 +461,10 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* UK hubs + sibling cities: keeps every city root linked into the wider UK set */}
+        {/* 13. UK hubs */}
         <section className="border-t border-fj-neutral-200 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-[1160px]">
-            <h2 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">
-              FactoryJet across the UK
-            </h2>
+            <h2 className="font-fj-display text-[1.25rem] font-semibold text-fj-ink">FactoryJet across the UK</h2>
             <ul className="mt-5 flex flex-wrap gap-x-7 gap-y-3">
               {UK_HUBS.map((h) => (
                 <li key={h.href}>
@@ -393,9 +474,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 </li>
               ))}
             </ul>
-            <p className="mt-8 font-fj-body text-[13px] text-fj-neutral-400">
-              Last reviewed {UPDATED}.
-            </p>
+            <p className="mt-8 font-fj-body text-[13px] text-fj-neutral-400">Last reviewed {UPDATED}.</p>
           </div>
         </section>
       </main>
