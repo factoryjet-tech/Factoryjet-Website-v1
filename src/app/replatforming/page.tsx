@@ -103,9 +103,9 @@ const ROUTES = [
   { slug: 'magento-to-shopify', live: true, from: 'Magento / Adobe Commerce', to: 'Shopify Plus', d: 'The most common enterprise move we run. Escaping version upgrades, extension conflicts, and hosting overhead, while keeping complex catalogs and B2B pricing intact.' },
   { slug: 'woocommerce-to-shopify', live: true, from: 'WooCommerce', to: 'Shopify', d: 'Usually driven by plugin fragility, hosting and security maintenance, or a checkout that will not convert. The catalog moves cleanly; the plugin stack is where the real scoping work sits.' },
   { slug: 'squarespace-to-shopify', live: true, from: 'Squarespace', to: 'Shopify', d: 'A store that outgrew a website builder. Straightforward data, but URL structures differ sharply, so redirect mapping decides whether traffic survives.' },
-  { slug: 'wix-to-shopify', live: false, from: 'Wix', to: 'Shopify', d: 'Same shape as Squarespace: modest catalog, simple data, and a URL structure that needs careful remapping to avoid losing existing rankings.' },
-  { slug: 'wordpress-to-shopify', live: false, from: 'WordPress', to: 'Shopify', d: 'Often a content-heavy site with commerce bolted on. The blog archive and its internal links matter as much as the products here.' },
-  { slug: 'salesforce-commerce-cloud-to-shopify-plus', live: false, from: 'Salesforce Commerce Cloud', to: 'Shopify Plus', d: 'Enterprise replatforming: cartridge-based customisation, complex integration surface, and a licence renewal usually driving the timeline.' },
+  { slug: 'wix-to-shopify', live: true, from: 'Wix', to: 'Shopify', d: 'Same shape as Squarespace: modest catalog, simple data, and a URL structure that needs careful remapping to avoid losing existing rankings.' },
+  { slug: 'wordpress-to-shopify', live: true, from: 'WordPress', to: 'Shopify', d: 'Often a content-heavy site with commerce bolted on. The blog archive and its internal links matter as much as the products here.' },
+  { slug: 'salesforce-commerce-cloud-to-shopify-plus', live: true, from: 'Salesforce Commerce Cloud', to: 'Shopify Plus', d: 'Enterprise replatforming: cartridge-based customisation, complex integration surface, and a licence renewal usually driving the timeline.' },
 ];
 const STATS = [
   { b: 'Single-hop', s: '301 redirect mapping' },
