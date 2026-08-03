@@ -205,13 +205,13 @@ export default function WooCommerceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/woocommerce-to-shopify-plugin-sprawl.webp"
                      alt="A cluttered desk with a laptop, sticky notes, tangled cables and external drives"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 The plugin audit is where the real scope of a WooCommerce migration appears.
               </figcaption>
             </figure>
@@ -273,13 +273,13 @@ export default function WooCommerceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/woocommerce-to-shopify-subscription-box.webp"
                      alt="A row of identical subscription boxes ready for dispatch on a wooden table"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Subscription payment tokens are resolved before cutover, never after.
               </figcaption>
             </figure>
@@ -356,13 +356,13 @@ export default function WooCommerceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/woocommerce-to-shopify-packing-bench.webp"
                      alt="A small business packing bench with kraft boxes, tape and a laptop showing an order list"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Orders keep flowing through the migration window.
               </figcaption>
             </figure>

@@ -215,13 +215,13 @@ export default function SFCCToShopifyPlusPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room.webp"
                      alt="A large empty corporate meeting room with wall-mounted dashboards and a city view"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Licence renewal is the usual trigger, and it sets a hard deadline.
               </figcaption>
             </figure>
@@ -266,13 +266,13 @@ export default function SFCCToShopifyPlusPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-integration-map.webp"
                      alt="A neatly organised network rack with colour-coded patch cables in ordered bundles"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Every OCAPI and SCAPI integration is rebuilt against Shopify APIs and tested on real orders.
               </figcaption>
             </figure>
@@ -349,13 +349,13 @@ export default function SFCCToShopifyPlusPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-multi-market.webp"
                      alt="A desk with printed regional catalogue pages and several currency price lists"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Multi-locale URL maps are built per locale, never sampled.
               </figcaption>
             </figure>

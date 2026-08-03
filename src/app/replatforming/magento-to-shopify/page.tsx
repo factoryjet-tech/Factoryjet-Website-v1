@@ -221,13 +221,13 @@ export default function MagentoToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/magento-to-shopify-legacy-stack.webp"
                      alt="A developer workstation showing dense code beside a product catalogue grid"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Magento upgrades are projects, not updates. Every one risks breaking extensions.
               </figcaption>
             </figure>
@@ -292,13 +292,13 @@ export default function MagentoToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/magento-to-shopify-catalog-attributes.webp"
                      alt="Printed product specification sheets and attribute tables spread across a desk"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Attribute sets are audited for what is actually populated, then mapped to Shopify metafields.
               </figcaption>
             </figure>
@@ -376,13 +376,13 @@ export default function MagentoToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/magento-to-shopify-enterprise-retail.webp"
                      alt="A glass-walled meeting room with migration flow diagrams on a whiteboard"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Scope is agreed and written down before any build work begins.
               </figcaption>
             </figure>

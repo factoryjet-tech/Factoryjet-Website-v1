@@ -203,13 +203,13 @@ export default function SquarespaceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/squarespace-to-shopify-boutique-counter.webp"
                      alt="An empty boutique retail counter with a tablet point of sale and folded textiles"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Squarespace suits a brochure site with a store attached. Once the store is the business, priorities invert.
               </figcaption>
             </figure>
@@ -271,13 +271,13 @@ export default function SquarespaceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/squarespace-to-shopify-product-styling.webp"
                      alt="A minimal product photography setup on a light table with ceramic homeware"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Every CDN-hosted image is re-hosted with its filename and alt text preserved.
               </figcaption>
             </figure>
@@ -354,13 +354,13 @@ export default function SquarespaceToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/squarespace-to-shopify-brand-archive.webp"
                      alt="Printed lookbook pages and colour swatches fanned across a pale desk"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Content and blog archives are mapped, not abandoned.
               </figcaption>
             </figure>

@@ -267,6 +267,45 @@
 .platpage .pp-shot img { display: block; width: 100%; height: auto; transition: transform .6s cubic-bezier(.22,.61,.36,1); }
 .platpage .pp-shot:hover img { transform: scale(1.03); }
 
+/* Section image band.
+   Replaces the full-bleed "1280px photo with one stray caption line underneath"
+   that the 2026-08-03 imagery pass left on 9 pages (27 instances). Full width gave
+   a decorative photo the visual weight of a hero and left the caption reading as an
+   orphan, which is exactly how it was flagged in review.
+
+   Here the photo is capped and set beside its caption, so the caption reads as an
+   annotation on the image rather than a leftover line. Reads as one object, not two. */
+.platpage .pp-figband {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(20px, 3.5vw, 44px);
+  align-items: center;
+}
+/* Caption earns presence through type, not decoration: a short rule above it,
+   then copy a step up from the old 13.5px muted line. No side stripe. */
+.platpage .pp-figband figcaption {
+  font-size: clamp(15px, 1.15vw, 16.5px);
+  line-height: 1.55;
+  color: var(--pp-body);
+  max-width: 34ch;
+}
+.platpage .pp-figband figcaption::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-bottom: 16px;
+  background: var(--pp-orange);
+}
+@media (max-width: 860px) {
+  .platpage .pp-figband { grid-template-columns: 1fr; gap: 18px; }
+  .platpage .pp-figband figcaption {
+    max-width: 60ch; font-size: 14.5px;
+  }
+  .platpage .pp-figband figcaption::before { margin-bottom: 12px; }
+}
+
 /* Keyboard focus must always be visible. */
 .platpage a:focus-visible,
 .platpage button:focus-visible {

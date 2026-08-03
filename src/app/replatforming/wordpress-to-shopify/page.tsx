@@ -196,13 +196,13 @@ export default function WordPressToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wordpress-to-shopify-editorial-desk.webp"
                      alt="An editorial writing desk with printed article proofs marked in red pencil and a laptop"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 On content-led sites the blog archive is the biggest part of the redirect map.
               </figcaption>
             </figure>
@@ -242,13 +242,13 @@ export default function WordPressToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wordpress-to-shopify-content-archive.webp"
                      alt="A wall of neatly labelled archive boxes and binders in a bright office"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Category archives are mapped to a destination, not silently dropped.
               </figcaption>
             </figure>
@@ -325,13 +325,13 @@ export default function WordPressToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
                      alt="Two laptops side by side, one showing a long-form article layout and one a product page"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Keeping WordPress for content while Shopify runs commerce is often the better architecture.
               </figcaption>
             </figure>

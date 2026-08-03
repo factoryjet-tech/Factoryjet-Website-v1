@@ -228,13 +228,13 @@ export default function ReplatformingPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/replatforming-migration-planning.webp"
                      alt="A desk with a legacy admin interface on one screen and a rebuilt storefront on the other, alongside printed URL mapping sheets"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Every indexed URL is mapped to a destination before the build starts, not after a traffic drop.
               </figcaption>
             </figure>
@@ -309,13 +309,13 @@ export default function ReplatformingPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/replatforming-warehouse-continuity.webp"
                      alt="A tidy fulfilment warehouse aisle with labelled shelving and a packing bench"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Orders keep flowing throughout. The old store stays reachable until the new one is verified.
               </figcaption>
             </figure>
@@ -360,13 +360,13 @@ export default function ReplatformingPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/replatforming-cutover-night.webp"
                      alt="A quiet operations room at night with muted dashboards and a cutover checklist"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Cutover happens at a low-traffic window, with rollback kept to a DNS change.
               </figcaption>
             </figure>

@@ -190,12 +190,12 @@ export default function CommercefloPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/commerceflo-stock-truth.webp" alt="A warehouse tablet showing a stock count between labelled bins"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Pricing and stock are read from your ERP, not copied into a storefront that then drifts.
               </figcaption>
             </figure>
@@ -240,12 +240,12 @@ export default function CommercefloPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/commerceflo-channel-floor.webp" alt="A brand operations room with organised product samples and a single monitor"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Built for brands where overselling and reconciliation across channels are costing real money.
               </figcaption>
             </figure>
@@ -271,12 +271,12 @@ export default function CommercefloPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/commerceflo-unified-engine.webp" alt="Three screens showing a storefront, a marketplace grid and a point of sale sharing one inventory figure"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 One catalogue, one inventory pool, one order engine. Every channel reads from it rather than keeping its own copy.
               </figcaption>
             </figure>

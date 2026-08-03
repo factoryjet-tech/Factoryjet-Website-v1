@@ -198,13 +198,13 @@ export default function WixToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wix-to-shopify-small-shop.webp"
                      alt="A small independent shop interior at opening time with a laptop on the counter"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 The trigger to move is a constraint you keep working around, not a feeling that Shopify sounds more serious.
               </figcaption>
             </figure>
@@ -248,13 +248,13 @@ export default function WixToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wix-to-shopify-rebuild-desk.webp"
                      alt="A designer desk with a tablet showing a wireframe grid and printed page layouts pinned behind"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 With no full site export, pages and blog content are rebuilt rather than imported.
               </figcaption>
             </figure>
@@ -331,13 +331,13 @@ export default function WixToShopifyPage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/wix-to-shopify-stock-shelf.webp"
                      alt="Neatly organised retail stock on shelving with small handwritten price cards"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Products, orders and contacts are extracted properly rather than guessed.
               </figcaption>
             </figure>

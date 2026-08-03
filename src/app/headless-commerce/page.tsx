@@ -156,12 +156,12 @@ export default function HeadlessCommercePage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/headless-commerce-speed-lab.webp" alt="A laptop showing a performance waterfall chart beside a stopwatch"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Headless converts engineering capacity into design and performance freedom. Without that capacity, a good theme wins.
               </figcaption>
             </figure>
@@ -206,12 +206,12 @@ export default function HeadlessCommercePage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/headless-commerce-api-layer.webp" alt="A tablet showing a clean API response beside a printed architecture sketch"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Checkout stays on Shopify. Rebuilding it costs a great deal and rarely converts better.
               </figcaption>
             </figure>
@@ -237,12 +237,12 @@ export default function HeadlessCommercePage() {
         {/* Section image */}
         <section className="pp-sec" style={{ paddingTop: 0 }}>
           <div className="pp-wrap">
-            <figure style={{ margin: 0 }}>
+            <figure className="pp-figband">
               <div className="pp-shot">
                 <img src="/images/us/commerce/headless-commerce-storefront-build.webp" alt="A developer workstation showing a component-based storefront alongside a running build"
                      width={1280} height={800} loading="lazy" decoding="async" />
               </div>
-              <figcaption style={{ marginTop: '12px', fontSize: '13.5px', lineHeight: 1.5, color: 'var(--pp-muted)', maxWidth: '64ch' }}>
+              <figcaption>
                 Server-side rendering is not optional. Content that only appears after client-side JavaScript may never be seen by crawlers or AI retrieval bots.
               </figcaption>
             </figure>

@@ -86,6 +86,20 @@ const US_PLATFORMS = [
   { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
 ] as const;
 
+// Replatforming (US) — migration hub + its six spokes, added to the Platforms mega
+// 2026-08-03. Every href below was curl-verified 200 on the live site before being
+// linked. Do NOT add a route here before its page ships: Google caches the 404
+// verdict against a linked-but-missing URL and only a manual GSC recrawl clears it.
+const US_REPLATFORMING_HUB = '/replatforming';
+const US_REPLATFORMING = [
+  { label: 'Magento to Shopify',       href: '/replatforming/magento-to-shopify' },
+  { label: 'WooCommerce to Shopify',   href: '/replatforming/woocommerce-to-shopify' },
+  { label: 'WordPress to Shopify',     href: '/replatforming/wordpress-to-shopify' },
+  { label: 'Squarespace to Shopify',   href: '/replatforming/squarespace-to-shopify' },
+  { label: 'Wix to Shopify',           href: '/replatforming/wix-to-shopify' },
+  { label: 'Salesforce Commerce Cloud', href: '/replatforming/salesforce-commerce-cloud-to-shopify-plus', note: 'to Shopify Plus' },
+] as const;
+
 // Services (US) — supporting / demoted services that link up to the commerce pillar
 const US_SUPPORT_SERVICES = [
   { icon: Globe,      label: 'Web Design',          href: '/services/web-design',                  desc: 'Conversion-focused sites' },
@@ -136,14 +150,16 @@ const US_WHO_WE_SERVE_TYPES = [
   { label: 'DTC & E-Commerce Brands',        href: '/',                       desc: 'Sell across every channel' },
   { label: 'B2B, Wholesale & Distributors',  href: '/b2b-ecommerce',         desc: 'Trade portals & account pricing' },
   { label: 'Marketplace Sellers',            href: '/services/amazon-agency', desc: 'Amazon, Walmart, TikTok Shop' },
-  { label: 'Brands Replatforming',           href: '/ecommerce-consulting',  desc: 'Migrate without losing SEO' },
+  { label: 'Manufacturers & Distributors',   href: '/ecommerce-for-manufacturers', desc: 'Dealer portals & ERP-synced catalogs' },
+  // Points at the replatforming hub, not /ecommerce-consulting, since the hub shipped 2026-08-03.
+  { label: 'Brands Replatforming',           href: '/replatforming',         desc: 'Migrate without losing SEO' },
 ] as const;
 
 // Who We Serve — by what you need (US desktop mega panel)
 const US_WHO_WE_SERVE_NEEDS = [
   { label: 'I sell on multiple channels', href: '/omnichannel-commerce',          sub: 'Omnichannel commerce' },
   { label: 'I need a B2B store',          href: '/b2b-ecommerce',                 sub: 'B2B e-commerce' },
-  { label: 'I want to migrate platforms', href: '/ecommerce-consulting',          sub: 'Replatforming' },
+  { label: 'I want to migrate platforms', href: '/replatforming',                 sub: 'Replatforming' },
   { label: 'I want AI in my commerce',    href: '/services/ai-agents',            sub: 'Commerce AI agents' },
 ] as const;
 
@@ -154,6 +170,7 @@ const US_KNOWLEDGE_HUB = [
   { icon: LayoutTemplate,label: 'Portfolio',           href: '/portfolio',     desc: 'Browse our work' },
   { icon: Search,        label: 'FAQ',                 href: '/faq',           desc: 'Common questions answered' },
   { icon: Layers,        label: 'Glossary',            href: '/glossary',      desc: 'Commerce & AI terms defined' },
+  { icon: TrendingUp,    label: 'AI Citation Study',   href: '/ai-citation-study', desc: 'What AI answers actually cite' },
 ] as const;
 
 // ─── UK (GB) nav data ─────────────────────────────────────────────────────────
@@ -888,14 +905,46 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'platforms' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className="w-[600px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                          <div className="p-4">
-                            <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Platforms we build on</p>
-                            <div className="grid grid-cols-2 gap-x-2">
-                              {PLATFORMS.map((s) => (
-                                <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                              ))}
+                        <div className="w-[760px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="grid grid-cols-[1fr_260px]">
+                            <div className="p-4">
+                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Platforms we build on</p>
+                              <div className="grid grid-cols-2 gap-x-2">
+                                {PLATFORMS.map((s) => (
+                                  <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
                             </div>
+                            {/* Replatforming column — US only; the UK has no migration spokes yet. */}
+                            {locale === 'us' && (
+                              <div className="border-l border-fj-neutral-100 bg-fj-cream/40 p-4">
+                                <Link
+                                  href={US_REPLATFORMING_HUB}
+                                  className="group mb-1 flex items-center gap-1.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400 transition-colors hover:text-[#B23E13]"
+                                >
+                                  Replatforming
+                                  <ArrowRight size={11} strokeWidth={2.2} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                                </Link>
+                                <p className="mb-3 font-fj-body text-[11.5px] leading-snug text-fj-neutral-400">
+                                  Migrate without losing rankings.
+                                </p>
+                                <ul className="space-y-0.5">
+                                  {US_REPLATFORMING.map((r) => (
+                                    <li key={r.href}>
+                                      <Link
+                                        href={r.href}
+                                        className="block rounded-md px-2 py-1.5 font-fj-body text-[12.5px] font-medium leading-tight text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#B23E13]"
+                                      >
+                                        {r.label}
+                                        {'note' in r && r.note && (
+                                          <span className="block font-normal text-[11px] text-fj-neutral-400">{r.note}</span>
+                                        )}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -1489,6 +1538,24 @@ export default function SiteHeader({
                             {s.label}
                           </Link>
                         ))}
+                        {locale === 'us' && (
+                          <>
+                            <Link
+                              href={US_REPLATFORMING_HUB}
+                              onClick={() => setMobileOpen(false)}
+                              className="mb-1 mt-3 flex items-center gap-1.5 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400 transition-colors hover:text-[#B23E13]"
+                            >
+                              Replatforming
+                              <ArrowRight size={11} strokeWidth={2.2} />
+                            </Link>
+                            {US_REPLATFORMING.map((r) => (
+                              <Link key={r.href} href={r.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                                <RefreshCw size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                                {r.label}
+                              </Link>
+                            ))}
+                          </>
+                        )}
                         <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Services</p>
                         {SUPPORT.map((s) => (
                           <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
