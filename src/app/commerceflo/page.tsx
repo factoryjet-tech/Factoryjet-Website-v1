@@ -187,75 +187,88 @@ export default function CommercefloPage() {
         </section>
 
         {/* What is Commerceflo */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/commerceflo-stock-truth.webp" alt="A warehouse tablet showing a stock count between labelled bins"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Pricing and stock are read from your ERP, not copied into a storefront that then drifts.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
         <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
             <p className="pp-mlabel">// the operator</p>
             <h2 style={{ marginTop: '10px' }}>What is Commerceflo?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
-              <p>
-                Commerceflo is an AI-native commerce operator: software that watches your storefront the way a seasoned
-                growth team would, finds what is holding back revenue, and carries out the fix once you approve it. It is
-                FactoryJet&apos;s own commerce platform, built for DTC and B2B brands that sell across a store,
-                marketplaces, and B2B.
-              </p>
-              <p>
-                It starts with a 90-second audit of your catalog, pricing, inventory, content, and checkout, then hands
-                you a ranked list of what is stalling growth. You approve the fixes you want and Commerceflo applies them
-                across every connected channel. You own and run the system; FactoryJet sets it up and supports it.
-              </p>
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  Commerceflo is an AI-native commerce operator: software that watches your storefront the way a seasoned
+                  growth team would, finds what is holding back revenue, and carries out the fix once you approve it. It is
+                  FactoryJet&apos;s own commerce platform, built for DTC and B2B brands that sell across a store,
+                  marketplaces, and B2B.
+                </p>
+                <p>
+                  It starts with a 90-second audit of your catalog, pricing, inventory, content, and checkout, then hands
+                  you a ranked list of what is stalling growth. You approve the fixes you want and Commerceflo applies them
+                  across every connected channel. You own and run the system; FactoryJet sets it up and supports it.
+                </p>
+                <p className="pp-splitband-note">
+                  Pricing and stock are read from your ERP, not copied into a storefront that then drifts.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/commerceflo-stock-truth.webp" alt="An operations lead holding a tablet in a bright warehouse office, with stock visible behind"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
             </div>
           </div>
         </section>
 
         {/* Mid-page CTA */}
         <section className="pp-sec">
-          <div className="pp-wrap" style={{ textAlign: 'center' }}>
-            <p className="pp-mlabel">// see it on your store</p>
-            <h2 style={{ marginTop: '10px' }}>Curious what Commerceflo would flag on your store?</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
-              Run the 90-second audit and see the ranked list of fixes before you commit to anything.
-            </p>
-            <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+          <div className="pp-wrap">
+            <div className="pp-splitband reverse" style={{ marginTop: 0 }}>
+              <div className="pp-splitband-text">
+                <p className="pp-mlabel">// see it on your store</p>
+                <h2 style={{ marginTop: '10px' }}>Curious what Commerceflo would flag on your store?</h2>
+                <p className="pp-lead" style={{ marginTop: '12px' }}>
+                  Run the 90-second audit and see the ranked list of fixes before you commit to anything.
+                </p>
+                <p className="pp-splitband-note">
+                  Built for brands where overselling and reconciliation across channels are costing real money.
+                </p>
+                <div style={{ marginTop: '22px' }}>
+                  <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+                </div>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/commerceflo-channel-floor.webp" alt="A multi-channel retail team at a bright workspace with three monitors showing storefronts"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
             </div>
           </div>
         </section>
 
         {/* What it does */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/commerceflo-channel-floor.webp" alt="A brand operations room with organised product samples and a single monitor"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Built for brands where overselling and reconciliation across channels are costing real money.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what it does</p>
             <h2 style={{ marginTop: '10px' }}>Audit, prioritize, and fix, on your approval</h2>
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  Nothing runs without a human saying yes. The audit ranks what it finds by what the issue is costing you,
+                  you pick what to action, and only then does anything change on a live channel. That approval step is the
+                  difference between an operator and an automation that quietly rewrites your storefront.
+                </p>
+                <p className="pp-splitband-note">
+                  One catalogue, one inventory pool, one order engine. Every channel reads from it rather than keeping its own copy.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/commerceflo-unified-engine.webp" alt="An operations manager presenting a diagram of one central engine feeding four connected channels"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ul className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(3,1fr)' }}>
               {POWERS.map((p) => (
                 <li className="pp-card" key={p.t}>
@@ -268,20 +281,6 @@ export default function CommercefloPage() {
         </section>
 
         {/* Comparison */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/commerceflo-unified-engine.webp" alt="Three screens showing a storefront, a marketplace grid and a point of sale sharing one inventory figure"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                One catalogue, one inventory pool, one order engine. Every channel reads from it rather than keeping its own copy.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec">
           <div className="pp-wrap">

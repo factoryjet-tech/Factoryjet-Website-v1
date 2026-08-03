@@ -306,6 +306,53 @@
   .platpage .pp-figband figcaption::before { margin-bottom: 12px; }
 }
 
+/* Split band: image beside the section's REAL body copy.
+
+   Supersedes .pp-figband. The figband still put a large photo next to a 2-3 line
+   caption, which is unbalanced no matter how the caption is styled; that was the
+   substance of the second round of review feedback. Here the photo shares a row
+   with the paragraphs that already exist in the section, and the old caption
+   becomes a closing emphasis line under them, so both columns carry real weight.
+
+   Alternate .reverse down a page. Three identical text-left/image-right bands in
+   a row is the cloned-block pattern every design review flags. */
+.platpage .pp-splitband {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  margin-top: 26px;
+}
+.platpage .pp-splitband.reverse > .pp-splitband-fig { order: -1; }
+
+.platpage .pp-splitband-text > p { margin: 0 0 14px; max-width: 60ch; }
+.platpage .pp-splitband-text > p:last-child { margin-bottom: 0; }
+
+/* The former figcaption. Now a deliberate closing statement, not a stray line. */
+.platpage .pp-splitband-note {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--pp-line);
+  font-size: clamp(15px, 1.1vw, 16.5px);
+  line-height: 1.5;
+  color: var(--pp-ink);
+  font-weight: 600;
+  max-width: 52ch;
+}
+
+.platpage .pp-splitband-fig { margin: 0; }
+
+@media (max-width: 860px) {
+  .platpage .pp-splitband {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  /* On one column the image always follows the text it belongs to, so the
+     reverse modifier must not flip reading order. */
+  .platpage .pp-splitband.reverse > .pp-splitband-fig { order: 0; }
+  .platpage .pp-splitband-note { max-width: none; }
+}
+
 /* Keyboard focus must always be visible. */
 .platpage a:focus-visible,
 .platpage button:focus-visible {

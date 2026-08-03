@@ -195,7 +195,8 @@ export default function SFCCToShopifyPlusPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does an SFCC to Shopify Plus migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A Salesforce Commerce Cloud replatform moves your catalog, customers, orders, content, integrations, and
                 URLs onto Shopify Plus. Because SFCC is an enterprise platform with its own extension model, almost
@@ -208,25 +209,21 @@ export default function SFCCToShopifyPlusPage() {
                 scheduled jobs, and integrations over years, and a meaningful share are unmaintained or undocumented.
                 Anyone quoting an enterprise SFCC replatform without that inventory is quoting a guess.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room.webp"
-                     alt="A large empty corporate meeting room with wall-mounted dashboards and a city view"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+                <p className="pp-splitband-note">
+                  Licence renewal is the usual trigger, and it sets a hard deadline.
+                </p>
               </div>
-              <figcaption>
-                Licence renewal is the usual trigger, and it sets a hard deadline.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room.webp"
+                       alt="An enterprise team around a bright conference table reviewing a migration timeline on a wall screen"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            </div>
+          </section>
+
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -250,34 +247,33 @@ export default function SFCCToShopifyPlusPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Licence renewal driving the timeline?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Licence renewal driving the timeline?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 That is the usual trigger, and it sets a hard deadline. Migrations compressed to hit a contract date are
                 where the expensive mistakes happen. Starting the customisation inventory early costs very little and
                 preserves your options, including the option to stay.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    Every OCAPI and SCAPI integration is rebuilt against Shopify APIs and tested on real orders.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-integration-map.webp"
+                         alt="A solutions architect arranging integration cards into a flow on a white wall"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-integration-map.webp"
-                     alt="A neatly organised network rack with colour-coded patch cables in ordered bundles"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Every OCAPI and SCAPI integration is rebuilt against Shopify APIs and tested on real orders.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -335,6 +331,21 @@ export default function SFCCToShopifyPlusPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage enterprise process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Multi-locale URL maps are built per locale, never sampled.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-multi-market.webp"
+                       alt="A team reviewing a world map of store locales on a large monitor"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -346,21 +357,6 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-multi-market.webp"
-                     alt="A desk with printed regional catalogue pages and several currency price lists"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Multi-locale URL maps are built per locale, never sampled.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec">
           <div className="pp-wrap">

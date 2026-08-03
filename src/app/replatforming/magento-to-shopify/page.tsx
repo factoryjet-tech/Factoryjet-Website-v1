@@ -200,7 +200,8 @@ export default function MagentoToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does a Magento to Shopify migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A Magento to Shopify migration moves your catalog, customers, order history, content, and URLs from
                 Magento or Adobe Commerce onto Shopify or Shopify Plus. Because the two platforms model data and URLs
@@ -213,26 +214,22 @@ export default function MagentoToShopifyPage() {
                 mapping, URL redirect mapping, and rebuilding integrations, particularly the ERP connection. Teams that
                 treat it as a design project get surprised. Teams that treat it as a data and redirect project land it.
               </p>
+                <p className="pp-splitband-note">
+                  Magento upgrades are projects, not updates. Every one risks breaking extensions.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/magento-to-shopify-legacy-stack.webp"
+                       alt="A developer at a bright desk reviewing a Magento catalogue alongside its rebuilt Shopify storefront"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
             </div>
-          </div>
+            </div>
         </section>
 
         {/* Why */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/magento-to-shopify-legacy-stack.webp"
-                     alt="A developer workstation showing dense code beside a product catalogue grid"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Magento upgrades are projects, not updates. Every one risks breaking extensions.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -275,35 +272,34 @@ export default function MagentoToShopifyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Want to know what your Magento data actually looks like?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Want to know what your Magento data actually looks like?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 Attribute sprawl and extension count decide most of the cost, and neither is obvious from the front end.
                 We will audit your catalog, your indexed URLs, and your integrations, and tell you what a realistic
                 migration looks like before anyone writes a proposal.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    Attribute sets are audited for what is actually populated, then mapped to Shopify metafields.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/magento-to-shopify-catalog-attributes.webp"
+                         alt="An overhead view of product samples and a tablet showing a catalogue grid, laid out for attribute mapping"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
         {/* Process */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/magento-to-shopify-catalog-attributes.webp"
-                     alt="Printed product specification sheets and attribute tables spread across a desk"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Attribute sets are audited for what is actually populated, then mapped to Shopify metafields.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -361,6 +357,21 @@ export default function MagentoToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Scope is agreed and written down before any build work begins.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/magento-to-shopify-enterprise-retail.webp"
+                       alt="A retail team meeting in a bright glass-walled room, agreeing migration scope before the build starts"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -373,21 +384,6 @@ export default function MagentoToShopifyPage() {
         </section>
 
         {/* Related */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/magento-to-shopify-enterprise-retail.webp"
-                     alt="A glass-walled meeting room with migration flow diagrams on a whiteboard"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Scope is agreed and written down before any build work begins.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">

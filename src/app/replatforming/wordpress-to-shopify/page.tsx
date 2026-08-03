@@ -176,7 +176,8 @@ export default function WordPressToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does a WordPress to Shopify migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A WordPress to Shopify migration moves your pages, blog archive, media, and URLs onto Shopify, and where
                 a store exists, the products and customers with it. Because WordPress permalink structures are
@@ -189,25 +190,21 @@ export default function WordPressToShopifyPage() {
                 publishing occasionally that is fine. For a real content operation it is a downgrade, and keeping
                 WordPress for content while Shopify runs commerce is often the better architecture.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wordpress-to-shopify-editorial-desk.webp"
-                     alt="An editorial writing desk with printed article proofs marked in red pencil and a laptop"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+                <p className="pp-splitband-note">
+                  On content-led sites the blog archive is the biggest part of the redirect map.
+                </p>
               </div>
-              <figcaption>
-                On content-led sites the blog archive is the biggest part of the redirect map.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wordpress-to-shopify-editorial-desk.webp"
+                       alt="An editor at a bright desk reviewing an article layout on a large monitor"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            </div>
+          </section>
+
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -226,34 +223,33 @@ export default function WordPressToShopifyPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Publishing seriously? Consider the hybrid.</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Publishing seriously? Consider the hybrid.</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 Running WordPress for content and Shopify for commerce under one domain keeps your editorial tooling and
                 taxonomy while moving the store. It adds architectural complexity, so it is worth it when the content
                 operation is genuinely substantial. We will tell you honestly which side of that line you are on.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    Category archives are mapped to a destination, not silently dropped.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/wordpress-to-shopify-content-archive.webp"
+                         alt="A content manager arranging labelled archive boxes, representing a mapped blog archive"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wordpress-to-shopify-content-archive.webp"
-                     alt="A wall of neatly labelled archive boxes and binders in a bright office"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Category archives are mapped to a destination, not silently dropped.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -311,6 +307,21 @@ export default function WordPressToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Keeping WordPress for content while Shopify runs commerce is often the better architecture.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
+                       alt="Two colleagues sketching a two-box diagram on glass, showing WordPress for content beside Shopify for commerce"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -322,21 +333,6 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
-                     alt="Two laptops side by side, one showing a long-form article layout and one a product page"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Keeping WordPress for content while Shopify runs commerce is often the better architecture.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec">
           <div className="pp-wrap">

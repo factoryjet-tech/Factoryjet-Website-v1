@@ -153,75 +153,88 @@ export default function HeadlessCommercePage() {
         </section>
 
         {/* What is headless */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/headless-commerce-speed-lab.webp" alt="A laptop showing a performance waterfall chart beside a stopwatch"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Headless converts engineering capacity into design and performance freedom. Without that capacity, a good theme wins.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
         <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
+          <div className="pp-wrap">
             <p className="pp-mlabel">// the concept</p>
             <h2 style={{ marginTop: '10px' }}>What is headless commerce?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
-              <p>
-                Headless commerce separates the storefront, the part customers see and interact with, from the commerce
-                backend that handles catalog, cart, checkout, and orders. The two talk through APIs. That means you can
-                rebuild the front end in a fast modern framework and ship a custom experience without re-platforming the
-                commerce engine underneath.
-              </p>
-              <p>
-                Composable commerce takes it further, decoupling the whole stack into best-of-breed services you assemble
-                and swap as you grow. We build both, and we are honest about when a brand actually needs them versus when
-                a well-built standard storefront is the smarter call.
-              </p>
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  Headless commerce separates the storefront, the part customers see and interact with, from the commerce
+                  backend that handles catalog, cart, checkout, and orders. The two talk through APIs. That means you can
+                  rebuild the front end in a fast modern framework and ship a custom experience without re-platforming the
+                  commerce engine underneath.
+                </p>
+                <p>
+                  Composable commerce takes it further, decoupling the whole stack into best-of-breed services you assemble
+                  and swap as you grow. We build both, and we are honest about when a brand actually needs them versus when
+                  a well-built standard storefront is the smarter call.
+                </p>
+                <p className="pp-splitband-note">
+                  Headless converts engineering capacity into design and performance freedom. Without that capacity, a good theme wins.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/headless-commerce-speed-lab.webp" alt="A front-end engineer at a bright desk viewing a fast-loading storefront, a stopwatch on the desk"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
             </div>
           </div>
         </section>
 
         {/* Mid-page CTA */}
         <section className="pp-sec tint">
-          <div className="pp-wrap" style={{ textAlign: 'center' }}>
-            <p className="pp-mlabel">// still deciding</p>
-            <h2 style={{ marginTop: '10px' }}>Headless, composable, or a standard storefront?</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
-              Tell us your stack and performance goals. We will tell you honestly which approach actually earns its keep.
-            </p>
-            <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+          <div className="pp-wrap">
+            <div className="pp-splitband reverse" style={{ marginTop: 0 }}>
+              <div className="pp-splitband-text">
+                <p className="pp-mlabel">// still deciding</p>
+                <h2 style={{ marginTop: '10px' }}>Headless, composable, or a standard storefront?</h2>
+                <p className="pp-lead" style={{ marginTop: '12px' }}>
+                  Tell us your stack and performance goals. We will tell you honestly which approach actually earns its keep.
+                </p>
+                <p className="pp-splitband-note">
+                  Checkout stays on Shopify. Rebuilding it costs a great deal and rarely converts better.
+                </p>
+                <div style={{ marginTop: '22px' }}>
+                  <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+                </div>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/headless-commerce-api-layer.webp" alt="Two developers reviewing a storefront on a large monitor at a bright desk"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
             </div>
           </div>
         </section>
 
         {/* What we build (bento) */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/headless-commerce-api-layer.webp" alt="A tablet showing a clean API response beside a printed architecture sketch"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Checkout stays on Shopify. Rebuilding it costs a great deal and rarely converts better.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>Headless &amp; composable, done right</h2>
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  A headless build is not one deliverable, it is a front end, a content model, a preview workflow and a
+                  deployment pipeline that all have to be owned after launch. These are the pieces we put in place so the
+                  storefront stays maintainable by your team rather than only by whoever built it.
+                </p>
+                <p className="pp-splitband-note">
+                  Server-side rendering is not optional. Content that only appears after client-side JavaScript may never be seen by crawlers or AI retrieval bots.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/headless-commerce-storefront-build.webp" alt="A designer and developer reviewing a rebuilt storefront together at a bright desk"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {BUILD.map((b) => (
                 <li className="pp-card" key={b.t}>
@@ -234,20 +247,6 @@ export default function HeadlessCommercePage() {
         </section>
 
         {/* Comparison */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/headless-commerce-storefront-build.webp" alt="A developer workstation showing a component-based storefront alongside a running build"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Server-side rendering is not optional. Content that only appears after client-side JavaScript may never be seen by crawlers or AI retrieval bots.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec">
           <div className="pp-wrap">

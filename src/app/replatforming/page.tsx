@@ -207,37 +207,32 @@ export default function ReplatformingPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the basics'}</p>
             <h2 style={{ marginTop: '10px' }}>What is e-commerce replatforming?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
-              <p>
-                Replatforming means moving your store from one e-commerce platform to another, taking the catalog,
-                customers, orders, content, and URLs with you. It is not a redesign, though the two are often done at
-                the same time. The point is to change the system underneath without losing the traffic, revenue, and
-                history you already have.
-              </p>
-              <p>
-                It differs from rehosting, which moves the same software to different servers. In a replatform the data
-                model, URL structure, templates, and every integration have to be rebuilt or remapped. That is why the
-                risky parts are rarely visual: they are data quality, URL mapping, and the integrations nobody
-                documented.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Routes */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/replatforming-migration-planning.webp"
-                     alt="A desk with a legacy admin interface on one screen and a rebuilt storefront on the other, alongside printed URL mapping sheets"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  Replatforming means moving your store from one e-commerce platform to another, taking the catalog,
+                  customers, orders, content, and URLs with you. It is not a redesign, though the two are often done at
+                  the same time. The point is to change the system underneath without losing the traffic, revenue, and
+                  history you already have.
+                </p>
+                <p>
+                  It differs from rehosting, which moves the same software to different servers. In a replatform the data
+                  model, URL structure, templates, and every integration have to be rebuilt or remapped. That is why the
+                  risky parts are rarely visual: they are data quality, URL mapping, and the integrations nobody
+                  documented.
+                </p>
+                <p className="pp-splitband-note">
+                  Every indexed URL is mapped to a destination before the build starts, not after a traffic drop.
+                </p>
               </div>
-              <figcaption>
-                Every indexed URL is mapped to a destination before the build starts, not after a traffic drop.
-              </figcaption>
-            </figure>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/replatforming-migration-planning.webp"
+                       alt="Two colleagues at a bright desk comparing a legacy storefront and its rebuilt replacement across two monitors"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
           </div>
         </section>
 
@@ -306,29 +301,32 @@ export default function ReplatformingPage() {
         </section>
 
         {/* Risks */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/replatforming-warehouse-continuity.webp"
-                     alt="A tidy fulfilment warehouse aisle with labelled shelving and a packing bench"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Orders keep flowing throughout. The old store stays reachable until the new one is verified.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// what goes wrong'}</p>
             <h2 style={{ marginTop: '10px' }}>Six ways migrations lose traffic</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              Every one of these is preventable with a pre-launch checklist. Every one of them is also common.
-            </p>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>
+                  Every one of these is preventable with a pre-launch checklist. Every one of them is also common.
+                </p>
+                <p>
+                  The reason they keep happening is that most of the damage is invisible on launch day. A dropped
+                  redirect, a lost canonical, or an unmapped category reads as a normal page to anyone clicking through
+                  the new site. It only surfaces weeks later, in a traffic chart, once the rankings have already gone.
+                </p>
+                <p className="pp-splitband-note">
+                  Orders keep flowing throughout. The old store stays reachable until the new one is verified.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/replatforming-warehouse-continuity.webp"
+                       alt="A warehouse team member scanning a parcel in a bright fulfilment centre, with orders still shipping during a migration"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {RISKS.map((r) => (
                 <li className="pp-card" key={r.t}>
@@ -343,33 +341,30 @@ export default function ReplatformingPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Not sure whether you should replatform at all?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
-                That is the right question to ask first, and the honest answer is often no. We will audit your current
-                platform, your indexed URLs, and your integrations, and tell you whether the platform is genuinely the
-                constraint or whether something cheaper fixes it.
-              </p>
-              <div style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Not sure whether you should replatform at all?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
+                    That is the right question to ask first, and the honest answer is often no. We will audit your current
+                    platform, your indexed URLs, and your integrations, and tell you whether the platform is genuinely the
+                    constraint or whether something cheaper fixes it.
+                  </p>
+                  <p className="pp-splitband-note">
+                    Cutover happens at a low-traffic window, with rollback kept to a DNS change.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
+                    <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+                  </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/replatforming-cutover-night.webp"
+                         alt="An operations lead at a bright desk checking a green all-clear status board after a migration cutover"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Process */}
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/replatforming-cutover-night.webp"
-                     alt="A quiet operations room at night with muted dashboards and a cutover checklist"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Cutover happens at a low-traffic window, with rollback kept to a DNS change.
-              </figcaption>
-            </figure>
           </div>
         </section>
 

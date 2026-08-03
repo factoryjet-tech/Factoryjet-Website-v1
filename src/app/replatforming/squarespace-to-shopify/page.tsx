@@ -183,7 +183,8 @@ export default function SquarespaceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does a Squarespace to Shopify migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A Squarespace to Shopify migration moves your products, customers, order history, content, images, and
                 URLs onto Shopify. The build itself is usually quick because Squarespace catalogs tend to be small and
@@ -196,25 +197,21 @@ export default function SquarespaceToShopifyPage() {
                 Shopify structure product URLs completely differently, so almost every URL changes and the redirect map
                 determines whether your traffic survives.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/squarespace-to-shopify-boutique-counter.webp"
-                     alt="An empty boutique retail counter with a tablet point of sale and folded textiles"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+                <p className="pp-splitband-note">
+                  Squarespace suits a brochure site with a store attached. Once the store is the business, priorities invert.
+                </p>
               </div>
-              <figcaption>
-                Squarespace suits a brochure site with a store attached. Once the store is the business, priorities invert.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/squarespace-to-shopify-boutique-counter.webp"
+                       alt="A boutique owner at a bright retail counter with a tablet point of sale beside folded stock"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            </div>
+          </section>
+
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -255,34 +252,33 @@ export default function SquarespaceToShopifyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Worried about losing your order history?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Worried about losing your order history?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 You should be, because the standard Squarespace export leaves it behind entirely. We will check what is
                 actually recoverable from your admin exports and the Commerce API before anyone quotes you, so nothing
                 important is discovered missing after launch.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    Every CDN-hosted image is re-hosted with its filename and alt text preserved.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/squarespace-to-shopify-product-styling.webp"
+                         alt="A product photographer styling a garment on a white sweep in a bright studio"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/squarespace-to-shopify-product-styling.webp"
-                     alt="A minimal product photography setup on a light table with ceramic homeware"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Every CDN-hosted image is re-hosted with its filename and alt text preserved.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -340,6 +336,21 @@ export default function SquarespaceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Content and blog archives are mapped, not abandoned.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/squarespace-to-shopify-brand-archive.webp"
+                       alt="A content editor at a bright desk reviewing printed lookbook pages beside a laptop"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -351,21 +362,6 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/squarespace-to-shopify-brand-archive.webp"
-                     alt="Printed lookbook pages and colour swatches fanned across a pale desk"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Content and blog archives are mapped, not abandoned.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">

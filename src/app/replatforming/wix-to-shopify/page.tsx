@@ -179,7 +179,8 @@ export default function WixToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does a Wix to Shopify migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A Wix to Shopify migration is part data move and part rebuild, and the split matters for planning. Wix
                 provides CSV exports for products, orders, and contacts from the dashboard, but there is no complete
@@ -191,25 +192,21 @@ export default function WixToShopifyPage() {
                 functionality built with Velo, Wix Bookings, or Wix Members has no Shopify equivalent and gets rebuilt.
                 None of this is visible from the front end, which is why Wix migrations are routinely underestimated.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wix-to-shopify-small-shop.webp"
-                     alt="A small independent shop interior at opening time with a laptop on the counter"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+                <p className="pp-splitband-note">
+                  The trigger to move is a constraint you keep working around, not a feeling that Shopify sounds more serious.
+                </p>
               </div>
-              <figcaption>
-                The trigger to move is a constraint you keep working around, not a feeling that Shopify sounds more serious.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wix-to-shopify-small-shop.webp"
+                       alt="An independent shop owner standing in her bright retail space beside neatly arranged stock"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            </div>
+          </section>
+
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -233,33 +230,32 @@ export default function WixToShopifyPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Running Velo code, Bookings, or Members?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Running Velo code, Bookings, or Members?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 Then those are rebuilds, not migrations, and they drive most of the cost. We will audit what your Velo
                 code actually does and what your Bookings or Members setup depends on before anyone writes a proposal.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    With no full site export, pages and blog content are rebuilt rather than imported.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/wix-to-shopify-rebuild-desk.webp"
+                         alt="A designer sketching a page wireframe beside a monitor showing the rebuilt storefront"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wix-to-shopify-rebuild-desk.webp"
-                     alt="A designer desk with a tablet showing a wireframe grid and printed page layouts pinned behind"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                With no full site export, pages and blog content are rebuilt rather than imported.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -317,6 +313,21 @@ export default function WixToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Products, orders and contacts are extracted properly rather than guessed.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wix-to-shopify-stock-shelf.webp"
+                       alt="A stockroom assistant checking labelled inventory on clean shelving"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -328,21 +339,6 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/wix-to-shopify-stock-shelf.webp"
-                     alt="Neatly organised retail stock on shelving with small handwritten price cards"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Products, orders and contacts are extracted properly rather than guessed.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec">
           <div className="pp-wrap">

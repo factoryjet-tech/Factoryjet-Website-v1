@@ -186,7 +186,8 @@ export default function WooCommerceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
             <h2 style={{ marginTop: '10px' }}>What does a WooCommerce to Shopify migration involve?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '14px', maxWidth: '72ch' }} className="pp-lead">
+            <div className="pp-splitband">
+              <div className="pp-splitband-text pp-lead">
               <p>
                 A WooCommerce to Shopify migration moves your products, customers, order history, reviews, content, and
                 URLs from WordPress onto Shopify or Shopify Plus. Because WooCommerce permalinks are a configurable
@@ -198,25 +199,21 @@ export default function WooCommerceToShopifyPage() {
                 blog archive. None of those are visible from the storefront, and all three are routinely discovered
                 halfway through a badly scoped project.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/woocommerce-to-shopify-plugin-sprawl.webp"
-                     alt="A cluttered desk with a laptop, sticky notes, tangled cables and external drives"
-                     width={1280} height={800} loading="lazy" decoding="async" />
+                <p className="pp-splitband-note">
+                  The plugin audit is where the real scope of a WooCommerce migration appears.
+                </p>
               </div>
-              <figcaption>
-                The plugin audit is where the real scope of a WooCommerce migration appears.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/woocommerce-to-shopify-plugin-sprawl.webp"
+                       alt="A person grouping coloured notes into columns on a white wall while auditing WooCommerce plugins"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            </div>
+          </section>
+
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -257,34 +254,33 @@ export default function WooCommerceToShopifyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <h2 style={{ marginTop: 0 }}>Running active subscriptions?</h2>
-              <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
+              <div className="pp-splitband" style={{ marginTop: 0 }}>
+                <div className="pp-splitband-text">
+                  <h2 style={{ marginTop: 0 }}>Running active subscriptions?</h2>
+                  <p className="pp-lead" style={{ marginTop: '12px' }}>
                 Then that is the first thing to scope, not the last. Whether payment tokens port depends on your
                 gateway, and getting it wrong means asking every subscriber to re-authorise. We will check your specific
                 setup before anyone talks about themes.
               </p>
-              <div style={{ marginTop: '20px' }}>
+                  <p className="pp-splitband-note">
+                    Subscription payment tokens are resolved before cutover, never after.
+                  </p>
+                  <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
+              </div>
+                </div>
+                <figure className="pp-splitband-fig">
+                  <div className="pp-shot">
+                    <img src="/images/us/commerce/woocommerce-to-shopify-subscription-box.webp"
+                         alt="A shop owner packing a subscription box, representing subscriptions carried through a migration"
+                         width={1280} height={800} loading="lazy" decoding="async" />
+                  </div>
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/woocommerce-to-shopify-subscription-box.webp"
-                     alt="A row of identical subscription boxes ready for dispatch on a wooden table"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Subscription payment tokens are resolved before cutover, never after.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         {/* Comparison table */}
         <section className="pp-sec">
@@ -342,6 +338,21 @@ export default function WooCommerceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
+            <div className="pp-splitband reverse">
+              <div className="pp-splitband-text pp-lead">
+                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
+                <p className="pp-splitband-note">
+                  Orders keep flowing through the migration window.
+                </p>
+              </div>
+              <figure className="pp-splitband-fig">
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/woocommerce-to-shopify-packing-bench.webp"
+                       alt="A packer sealing a shipping box at a bright bench, with orders still flowing during cutover"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
             <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -353,21 +364,6 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
-        {/* Section image */}
-        <section className="pp-sec" style={{ paddingTop: 0 }}>
-          <div className="pp-wrap">
-            <figure className="pp-figband">
-              <div className="pp-shot">
-                <img src="/images/us/commerce/woocommerce-to-shopify-packing-bench.webp"
-                     alt="A small business packing bench with kraft boxes, tape and a laptop showing an order list"
-                     width={1280} height={800} loading="lazy" decoding="async" />
-              </div>
-              <figcaption>
-                Orders keep flowing through the migration window.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
 
         <section className="pp-sec tint">
           <div className="pp-wrap">
