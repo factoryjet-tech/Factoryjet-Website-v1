@@ -248,9 +248,9 @@ export default function ReplatformingPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               Each path has its own failure modes. These are the ones we see most often.
             </p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {ROUTES.map((r) => (
-                <article className="pp-card" key={r.slug}>
+                <li className="pp-card" key={r.slug}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>
                     {r.live ? (
                       <Link href={`/replatforming/${r.slug}`} style={{ color: 'inherit' }}>
@@ -261,9 +261,9 @@ export default function ReplatformingPage() {
                     )}
                   </h3>
                   <p>{r.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -276,13 +276,13 @@ export default function ReplatformingPage() {
               Replatforming is expensive and disruptive. It is worth it when the platform itself is the constraint, and
               not otherwise. If your real problem is a slow theme or a bad checkout, we will tell you to fix that instead.
             </p>
-            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
               {TRIGGERS.map((t) => (
-                <article className="pp-card" key={t.t}>
+                <li className="pp-card" key={t.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{t.i}</span> {t.t}</h3><p>{t.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -291,17 +291,17 @@ export default function ReplatformingPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// context'}</p>
             <h2 style={{ marginTop: '10px' }}>Why platform limits get expensive</h2>
-            <div className="pp-bento n2" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento n2" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
-                <article className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.v}</h3>
                   <p>{s.d}</p>
                   <p style={{ marginTop: '10px', fontSize: '13px' }}>
                     <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>{s.src}</a>
                   </p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -329,13 +329,13 @@ export default function ReplatformingPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               Every one of these is preventable with a pre-launch checklist. Every one of them is also common.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {RISKS.map((r) => (
-                <article className="pp-card" key={r.t}>
+                <li className="pp-card" key={r.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{r.t}</h3><p>{r.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -373,18 +373,70 @@ export default function ReplatformingPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>Which destination platform fits</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>We are platform-agnostic and recommend fit rather than the most expensive option. This is how the realistic destinations differ.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Platform</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Shopify Plus</td>
+                    <td>Hosted, no upgrade cycle, large app ecosystem</td>
+                    <td>DTC plus B2B on one store, fast iteration</td>
+                    <td>Most common destination we migrate to</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Adobe Commerce</td>
+                    <td>Deep native B2B, very large catalogues</td>
+                    <td>You own hosting, patching and upgrades</td>
+                    <td>Right answer when merchandising depth is genuinely required</td>
+                  </tr>
+                  <tr>
+                    <td className="name">BigCommerce</td>
+                    <td>Strong native B2B at mid-market cost</td>
+                    <td>No platform transaction fee</td>
+                    <td>Good value where Shopify Plus licensing is the blocker</td>
+                  </tr>
+                  <tr>
+                    <td className="name">WooCommerce</td>
+                    <td>Full control, no licence fee</td>
+                    <td>You own hosting, security and plugin compatibility</td>
+                    <td>Fits teams comfortable running WordPress</td>
+                  </tr>
+                  <tr>
+                    <td className="name">commercetools</td>
+                    <td>API-first, composable</td>
+                    <td>Requires real engineering ownership</td>
+                    <td>Enterprise composable builds only</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Commerceflo</td>
+                    <td>Unified catalogue, inventory and order engine</td>
+                    <td>One system across channels</td>
+                    <td>Where a unified engine is the goal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -409,6 +461,31 @@ export default function ReplatformingPage() {
         </section>
 
         {/* FAQ */}
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Who you actually work with</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Migrations are decided by judgement calls, not by a tool. These are the conversations that shape the plan.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/replatforming-people-team-planning.webp" alt="Two colleagues at a whiteboard working through a migration plan together"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Scoping starts with your URLs, your integrations, and your data quality.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/replatforming-people-ops-review.webp" alt="A woman reviewing two monitors at her desk, concentrating"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>We monitor Search Console coverage daily for the first weeks after cutover.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         <FAQ
           eyebrow="REPLATFORMING FAQ"
           headline="Questions teams ask before migrating"

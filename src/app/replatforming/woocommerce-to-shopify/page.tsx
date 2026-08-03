@@ -222,13 +222,13 @@ export default function WooCommerceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons WooCommerce stores leave</h2>
-            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
-                <article className="pp-card" key={w.t}>
+                <li className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
               Said plainly: often you should stay. If your team is comfortable running WordPress, the plugin stack is
               stable, and hosting is solid, migration is expensive disruption. When the real problem is a slow theme or
@@ -244,13 +244,13 @@ export default function WooCommerceToShopifyPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               These separate a clean WooCommerce migration from one that loses traffic and churns subscribers.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -286,18 +286,70 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>What actually changes moving off WooCommerce</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Catalogue size matters less here than the plugin stack and whether you run subscriptions.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>WooCommerce</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Hosting & security</td>
+                    <td>Yours to run, patch, and prove compliant</td>
+                    <td>Hosted and patched</td>
+                    <td>Removes the job most teams did not want</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Permalinks</td>
+                    <td>Configurable, so no two stores match</td>
+                    <td>Fixed /products/, /collections/, /blogs/</td>
+                    <td>Redirect map must come from a real crawl, never assumed</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Plugins</td>
+                    <td>Dozens accumulated, a few load-bearing</td>
+                    <td>Apps, Functions, or dropped</td>
+                    <td>The plugin audit sets the true project scope</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Custom fields</td>
+                    <td>ACF and plugin postmeta, much of it orphaned</td>
+                    <td>Metafields</td>
+                    <td>Audit what is populated before porting the sediment</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Subscriptions</td>
+                    <td>WooCommerce Subscriptions with gateway tokens</td>
+                    <td>Shopify subscription apps</td>
+                    <td>Most underestimated item; tokens may not port</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Reviews</td>
+                    <td>Stored as WordPress comments</td>
+                    <td>Reviews app</td>
+                    <td>Export cleanly but need mapping; ratings are real trust equity</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -333,6 +385,31 @@ export default function WooCommerceToShopifyPage() {
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
               build covers account pricing, net terms, and ERP-synced ordering on the new platform.
             </p>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Built around how you actually trade</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Most WooCommerce stores we move are run by small teams who cannot afford a bad launch week.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/woocommerce-to-shopify-people-owner-packing.webp" alt="A shop owner packing a customer order at a wooden bench"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Orders keep flowing throughout. The old store stays live until the new one is verified.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/woocommerce-to-shopify-people-laptop-orders.webp" alt="A business owner checking an order list on a laptop beside stacked boxes"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Subscriptions and their payment tokens are resolved before cutover, never after.</figcaption>
+              </figure>
             </div>
           </div>
         </section>

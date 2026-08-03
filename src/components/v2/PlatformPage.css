@@ -83,7 +83,12 @@
    A 4-card or 5-card section left an orphan row with dead space beside it, so
    counts that do NOT divide by 3 get an explicit variant class. Set the variant
    to match the array length in the page (n2/n4/n5); 3, 6 and 9 need nothing. */
-.platpage .pp-bento { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+/* pp-bento renders as <ul>/<ol> so the cards are real list items. Citation
+   research (docs/AI-SEO-RULEBOOK.md §2) found the median AI-cited page carries
+   ~110 <li> elements: a list item is a self-contained retrievable chunk, a
+   <div> is not. Reset the list chrome so the grid looks identical. */
+.platpage .pp-bento { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr);
+  list-style: none; margin: 0; padding: 0; }
 
 /* 2 cards: half-width each rather than two-thirds and a hole. */
 .platpage .pp-bento.n2 { grid-template-columns: repeat(2, 1fr); }
@@ -242,6 +247,15 @@
 }
 .platpage .pp-card:hover {
   box-shadow: 0 2px 4px -2px rgba(20,17,15,.10), 0 22px 48px -28px rgba(20,17,15,.42);
+}
+
+/* Two-up image pair. Breaks the rhythm of consecutive full-width bands so a
+   long page does not read as band, text, band, text all the way down. */
+.platpage .pp-duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.5vw, 26px); }
+@media (max-width: 760px) { .platpage .pp-duo { grid-template-columns: 1fr; } }
+.platpage .pp-duo figure { margin: 0; }
+.platpage .pp-duo figcaption {
+  margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--pp-muted);
 }
 
 /* Section imagery: same elevation language as cards, and a slow scale on hover

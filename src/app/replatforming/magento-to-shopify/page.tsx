@@ -238,13 +238,13 @@ export default function MagentoToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons Magento stores leave</h2>
-            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
-                <article className="pp-card" key={w.t}>
+                <li className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
               Worth saying plainly: sometimes the answer is to stay. If you depend on deep native B2B behaviour, a very
               large attribute-heavy catalog, or custom modules central to how you operate, Magento 2 may be the better
@@ -261,13 +261,13 @@ export default function MagentoToShopifyPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               These are the specifics that separate a clean Magento migration from one that loses traffic for two quarters.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -305,18 +305,70 @@ export default function MagentoToShopifyPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>What actually changes moving off Magento</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The storefront is the visible part. These six differences are what the project is really about.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>Magento / Adobe Commerce</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Hosting & patching</td>
+                    <td>You own servers, security patches, and PCI evidence</td>
+                    <td>Hosted, patched by Shopify</td>
+                    <td>Removes a standing maintenance cost and a risk you carry</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Upgrade cycle</td>
+                    <td>Major upgrades are projects that can break extensions</td>
+                    <td>Continuous, no upgrade project</td>
+                    <td>Frees the budget that upgrades consume</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Product attributes</td>
+                    <td>Attribute sets, often hundreds accumulated over years</td>
+                    <td>Metafields, variant options, tags</td>
+                    <td>Largest single piece of data work in the migration</td>
+                  </tr>
+                  <tr>
+                    <td className="name">URL structure</td>
+                    <td>Category-nested paths with a configurable suffix</td>
+                    <td>Fixed /products/ and /collections/, no nesting</td>
+                    <td>Almost every URL changes, so redirect mapping decides traffic</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Extensions</td>
+                    <td>Marketplace extensions, some unmaintained</td>
+                    <td>Apps, Shopify Functions, or custom build</td>
+                    <td>None transfer; the audit is where real scope appears</td>
+                  </tr>
+                  <tr>
+                    <td className="name">B2B pricing</td>
+                    <td>Native company accounts and shared catalogs</td>
+                    <td>Shopify Plus B2B price lists and company accounts</td>
+                    <td>Maps across, but must be reconciled against your ERP</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -358,6 +410,31 @@ export default function MagentoToShopifyPage() {
         </section>
 
         {/* FAQ */}
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>The people doing the work</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Magento migrations succeed or fail on the customisation inventory, and that is a human judgement rather than a script.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/magento-to-shopify-people-pair-review.webp" alt="Two developers reviewing code together on a shared ultrawide monitor"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Every extension is reviewed one by one, not assumed replaceable.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/magento-to-shopify-people-lead-dev.webp" alt="A developer at a standing desk working across two screens"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Attribute sets are audited for what is actually populated before mapping.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         <FAQ
           eyebrow="MAGENTO TO SHOPIFY FAQ"
           headline="Questions Magento teams ask before migrating"

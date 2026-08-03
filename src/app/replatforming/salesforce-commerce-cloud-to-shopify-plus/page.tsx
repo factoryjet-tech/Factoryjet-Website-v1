@@ -232,13 +232,13 @@ export default function SFCCToShopifyPlusPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
             <h2 style={{ marginTop: '10px' }}>Six things that decide the timeline</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
               And the counterpoint we will give you honestly: if your merchandising logic genuinely needs SFCC’s depth,
               you run many brands and locales with divergent catalogs, or the wider Salesforce estate is central to how
@@ -279,18 +279,70 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>Salesforce Commerce Cloud vs Shopify Plus</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>SFCC wins on configurability. Shopify Plus wins on velocity and cost of ownership. Where you land depends on which of those is currently the bottleneck.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>Salesforce Commerce Cloud</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Customisation model</td>
+                    <td>Cartridges, SFCC-specific</td>
+                    <td>Apps, Functions, theme code</td>
+                    <td>No cartridge transfers; the inventory sets the timeline</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Templating</td>
+                    <td>ISML, SiteGenesis or SFRA</td>
+                    <td>Liquid, or headless via Hydrogen</td>
+                    <td>Chance to move business rules out of templates</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Pricing model</td>
+                    <td>Price books with fallback hierarchies</td>
+                    <td>Markets, price lists, B2B catalogs</td>
+                    <td>A modelling exercise, not a data copy</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Promotions</td>
+                    <td>Campaigns, qualifiers, deep stacking</td>
+                    <td>Native discounts plus Functions</td>
+                    <td>Usually the hardest single component to rebuild</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Scheduled work</td>
+                    <td>Job framework</td>
+                    <td>Middleware, iPaaS, or Flow</td>
+                    <td>Invisible from the storefront and routinely forgotten</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Release velocity</td>
+                    <td>Cartridge deployment cycle</td>
+                    <td>Same-day theme and app changes</td>
+                    <td>The reason most teams start the conversation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage enterprise process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -328,6 +380,31 @@ export default function SFCCToShopifyPlusPage() {
               <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>{' '}
               covers the decoupled front-end option.
             </p>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Enterprise replatforming is a governance problem</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>SFCC projects fail on scope discovered mid-build, so the discovery is front-loaded and written down.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-people-exec-meeting.webp" alt="Executives reviewing dashboards in a glass-walled meeting room"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Phased milestones with sign-off gates, agreed before any build work starts.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-people-architect-review.webp" alt="A senior engineer studying a system diagram at a whiteboard"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Cartridge-by-cartridge inventory before anyone produces an estimate.</figcaption>
+              </figure>
             </div>
           </div>
         </section>

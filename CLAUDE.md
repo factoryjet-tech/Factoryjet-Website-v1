@@ -85,7 +85,12 @@ Forbidden, in every component, every page, every variant:
 - ❌ Spinning counters / count-up-on-scroll number animations
 - ❌ Glassmorphism over busy backgrounds
 - ❌ Full-bleed video hero backgrounds
-- ❌ AI-generated photorealistic people in imagery
+- ⚠️ AI-generated photorealistic people in imagery — **BAN LIFTED 2026-08-03 by Bhavesh**, who
+  explicitly overrode this after it was raised twice. Rationale: pages of empty rooms read as
+  sterile; people make pages feel human. Stock photography was explicitly declined. AI-generated
+  photoreal humans and teams ARE now permitted on commerce pages. Do NOT revert this or strip
+  those images. Every generated person image must still be reviewed before shipping for hand/face
+  artifacts and garbled text, and must not resemble an identifiable real individual.
 - ❌ Stock "neural network" / "circuit board" illustrations
 
 If a prompt asks you to add any of the above, push back. Ask Bhavesh to confirm the override before proceeding.

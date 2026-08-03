@@ -264,17 +264,17 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the market'}</p>
             <h2 style={{ marginTop: '10px' }}>Why your buyers already expect this</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
-                <article className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.v}</h3>
                   <p>{s.d}</p>
                   <p style={{ marginTop: '10px', fontSize: '13px' }}>
                     <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>{s.src}</a>
                   </p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -283,13 +283,13 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the problem'}</p>
             <h2 style={{ marginTop: '10px' }}>What channel ordering looks like without it</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {PAINS.map((p) => (
-                <article className="pp-card" key={p.t}>
+                <li className="pp-card" key={p.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{p.i}</span> {p.t}</h3><p>{p.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -298,13 +298,13 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the outcome'}</p>
             <h2 style={{ marginTop: '10px' }}>What changes after launch</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {BENEFITS.map((b) => (
-                <article className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{b.i}</span> {b.t}</h3><p>{b.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -313,13 +313,13 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// what we build'}</p>
             <h2 style={{ marginTop: '10px' }}>Manufacturer and distributor commerce features</h2>
-            <div className="pp-bento n8" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento n8" style={{ marginTop: '32px' }}>
               {FEATURES.map((f) => (
-                <article className="pp-card" key={f.t}>
+                <li className="pp-card" key={f.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{f.t}</h3><p>{f.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -373,13 +373,13 @@ export default function EcommerceForManufacturersPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '64ch' }}>
               The catalog rules differ sharply by sector. Here is how the build changes across the ones we know best.
             </p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {SEGMENTS.map((u) => (
-                <article className="pp-card" key={u.t}>
+                <li className="pp-card" key={u.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -401,22 +401,99 @@ export default function EcommerceForManufacturersPage() {
         </section>
 
         {/* Process */}
-        <section className="pp-sec tint">
+        {/* Comparison table */}
+        <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>How we build it</h2>
-            <div className="pp-bento n4" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
-              ))}
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>Which platform fits a manufacturer or distributor</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Part count, configuration complexity, and ERP depth decide this far more than a feature checklist.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Platform</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Shopify Plus</td>
+                    <td>Clean admin, fast to launch, B2B built in</td>
+                    <td>Variant ceilings on highly configurable products</td>
+                    <td>Fits most dealer portals and distributor catalogues</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Adobe Commerce</td>
+                    <td>Very large attribute-heavy catalogues</td>
+                    <td>Hosting, patching and upgrades are yours</td>
+                    <td>Fits deep technical catalogues and complex B2B rules</td>
+                  </tr>
+                  <tr>
+                    <td className="name">BigCommerce</td>
+                    <td>Strong B2B Edition at mid-market cost</td>
+                    <td>Smaller app ecosystem</td>
+                    <td>Good middle ground for distributors</td>
+                  </tr>
+                  <tr>
+                    <td className="name">OroCommerce</td>
+                    <td>Purpose-built for B2B and distribution</td>
+                    <td>Smaller talent pool, heavier implementation</td>
+                    <td>Worth considering for pure-play distribution</td>
+                  </tr>
+                  <tr>
+                    <td className="name">NetSuite SuiteCommerce</td>
+                    <td>Native to NetSuite ERP</td>
+                    <td>Weaker storefront flexibility</td>
+                    <td>Compelling only if NetSuite already runs the business</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Commerceflo</td>
+                    <td>Unified catalogue, inventory and order engine</td>
+                    <td>Newer platform</td>
+                    <td>Where one engine across channels is the goal</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// how it runs'}</p>
+            <h2 style={{ marginTop: '10px' }}>How we build it</h2>
+            <ul className="pp-bento n4" style={{ marginTop: '36px' }}>
+              {STEPS.map((s) => (
+                <li className="pp-card" key={s.n}>
+                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* FAQ */}
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Dealers, distributors, and the people serving them</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Manufacturer portals are judged by the branch manager placing a reorder on a Tuesday morning.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/ecommerce-for-manufacturers-people-engineer-floor.webp" alt="A manufacturing engineer in safety glasses inspecting a machined component"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Configurable products enforce real engineering rules, not a guess at valid options.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/ecommerce-for-manufacturers-people-dealer-desk.webp" alt="A parts counter specialist working with a technical binder and a parts catalogue"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Contract pricing is read live from the ERP, so quotes stop going out wrong.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         <FAQ
           eyebrow="MANUFACTURER E-COMMERCE FAQ"
           headline="Questions manufacturers and distributors ask"

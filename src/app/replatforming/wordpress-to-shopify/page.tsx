@@ -213,13 +213,13 @@ export default function WordPressToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
             <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -255,18 +255,70 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>WordPress vs Shopify for content and commerce</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The commerce case is clear. The content case is genuinely not, and this table is why.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>WordPress</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Blog taxonomy</td>
+                    <td>Categories and tags, hierarchical</td>
+                    <td>Tags only</td>
+                    <td>A real downgrade for a large structured archive</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Permalinks</td>
+                    <td>Configurable, often date or category based</td>
+                    <td>{'Fixed /blogs/{blog}/{article}'}</td>
+                    <td>Almost every content URL changes</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Custom post types</td>
+                    <td>Arbitrary content models</td>
+                    <td>Products, articles, pages, metaobjects</td>
+                    <td>Needs a content modelling decision before import</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Page builders</td>
+                    <td>Elementor, Divi, WPBakery markup</td>
+                    <td>Theme sections</td>
+                    <td>Builder pages are rebuilt, not migrated</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Editorial tooling</td>
+                    <td>Mature, flexible, plugin-rich</td>
+                    <td>Simpler, commerce-first</td>
+                    <td>The main argument for a hybrid setup</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Commerce</td>
+                    <td>Requires WooCommerce plus a plugin stack</td>
+                    <td>Native, hosted, maintained</td>
+                    <td>The main argument for moving</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -302,6 +354,31 @@ export default function WordPressToShopifyPage() {
               <Link href="/services/wordpress-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WordPress development</Link>{' '}
               if the answer turns out to be improving what you have.
             </p>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Content teams have the most to lose</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The commerce case is usually clear. The content case is the one that deserves a proper conversation.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wordpress-to-shopify-people-editor-desk.webp" alt="A writer marking up printed article proofs with a red pencil"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Shopify blogging is genuinely weaker than WordPress. That should be a knowing decision.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wordpress-to-shopify-people-content-team.webp" alt="Three colleagues reviewing printed page layouts around a table"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Category archives are mapped to a destination, not silently dropped.</figcaption>
+              </figure>
             </div>
           </div>
         </section>

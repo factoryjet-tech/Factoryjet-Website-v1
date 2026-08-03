@@ -220,13 +220,13 @@ export default function SquarespaceToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// why teams move'}</p>
             <h2 style={{ marginTop: '10px' }}>Four reasons Squarespace stores leave</h2>
-            <div className="pp-bento n4" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
               {WHY.map((w) => (
-                <article className="pp-card" key={w.t}>
+                <li className="pp-card" key={w.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
               And the honest counterpoint: if you sell a handful of products, need no complex shipping or subscription
               logic, and the site is a brochure with a store attached, Squarespace is doing its job. We talk people out
@@ -242,13 +242,13 @@ export default function SquarespaceToShopifyPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
               None of these are visible from the storefront, which is why this migration gets underestimated.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -284,18 +284,70 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>What actually changes moving off Squarespace</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The build is quick. These are the parts that catch teams out.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>Squarespace</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Data export</td>
+                    <td>Site XML covers pages, posts, basic products only</td>
+                    <td>Full catalogue, customers and orders</td>
+                    <td>Orders and customers are NOT in the site export</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Order history</td>
+                    <td>Separate admin CSV, or the Commerce API</td>
+                    <td>Imported and visible to customers</td>
+                    <td>Missing this means launching with no purchase history</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Images</td>
+                    <td>Served from the Squarespace CDN</td>
+                    <td>Hosted on Shopify</td>
+                    <td>Every reference breaks on exit; all images need re-hosting</td>
+                  </tr>
+                  <tr>
+                    <td className="name">URL structure</td>
+                    <td>Products nested under the store page slug</td>
+                    <td>Fixed /products/ and /collections/</td>
+                    <td>Almost every product URL changes</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Member Areas</td>
+                    <td>Native gated content</td>
+                    <td>Customer tags or a membership app</td>
+                    <td>A rebuild, not a data move</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Apps & extensibility</td>
+                    <td>Limited</td>
+                    <td>Large app ecosystem</td>
+                    <td>Usually the reason for moving in the first place</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -330,6 +382,31 @@ export default function SquarespaceToShopifyPage() {
               and{' '}
               <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Magento to Shopify</Link>.
             </p>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>For brands that outgrew the builder</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Squarespace migrations are usually design-led businesses whose store became the business.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/squarespace-to-shopify-people-studio-owner.webp" alt="A ceramicist arranging handmade homeware for a product photograph"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Every image is re-hosted with its filename and alt text preserved.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/squarespace-to-shopify-people-boutique-floor.webp" alt="A shop owner folding textiles on a boutique display table"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>We talk people out of this migration more often than you would expect.</figcaption>
+              </figure>
             </div>
           </div>
         </section>

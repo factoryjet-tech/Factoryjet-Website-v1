@@ -304,15 +304,15 @@ export default function B2BEcommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why B2B is moving online</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce is now the channel buyers prefer</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {SOURCED.map((s) => (
-                <article className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '32px', lineHeight: 1, color: 'var(--pp-orange-dark)', letterSpacing: '-0.03em' }}>{s.v}</div>
                   <p style={{ marginTop: '10px' }}>{s.d}</p>
                   <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -321,14 +321,14 @@ export default function B2BEcommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// the problem</p>
             <h2 style={{ marginTop: '10px' }}>Why most B2B sites stall</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {PAINS.map((p) => (
-                <article className="pp-card" key={p.t}>
+                <li className="pp-card" key={p.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{p.i}</span>
                   <h3>{p.t}</h3><p>{p.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -337,14 +337,14 @@ export default function B2BEcommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it pays off</p>
             <h2 style={{ marginTop: '10px' }}>The benefits of B2B ecommerce</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {BENEFITS.map((b) => (
-                <article className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{b.i}</span>
                   <h3>{b.t}</h3><p>{b.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -354,13 +354,13 @@ export default function B2BEcommercePage() {
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce features, built in</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '60ch' }}>The features that turn a catalog into a self-service ordering system your buyers trust.</p>
-            <div className="pp-bento n8" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ul className="pp-bento n8" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
               {FEATURES.map((f) => (
-                <article className="pp-card" key={f.t}>
+                <li className="pp-card" key={f.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)', fontSize: '15px' }}>{f.t}</h3><p>{f.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -430,13 +430,13 @@ export default function B2BEcommercePage() {
                 Magento to Shopify migration
               </Link>.
             </p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {INDUSTRIES.map((u) => (
-                <article className="pp-card" key={u.t}>
+                <li className="pp-card" key={u.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -451,13 +451,13 @@ export default function B2BEcommercePage() {
               forty SKUs without rebuilding the basket. We build that on Shopify Plus, Adobe Commerce, BigCommerce, or
               Commerceflo, wired to the ERP that already holds your price lists.
             </p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {WHOLESALE.map((u) => (
-                <article className="pp-card" key={u.t}>
+                <li className="pp-card" key={u.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -477,13 +477,13 @@ export default function B2BEcommercePage() {
               </Link>{' '}
               build covers the store, POS, and marketplace side of that in more depth.
             </p>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {MULTICHANNEL.map((u) => (
-                <article className="pp-card" key={u.t}>
+                <li className="pp-card" key={u.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{u.t}</h3><p>{u.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -694,6 +694,31 @@ export default function B2BEcommercePage() {
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>Built for the people placing the orders</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>A trade portal only works if the buyers and the team behind the counter actually prefer it to the phone.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/b2b-ecommerce-people-trade-counter-staff.webp" alt="A counter assistant handing a boxed order across a wholesale trade counter"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Self-service ordering frees your team from re-keying orders out of inboxes.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/b2b-ecommerce-people-warehouse-team.webp" alt="Two warehouse workers checking a pallet against a clipboard"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Pricing, stock and orders read from one record across every channel and your ERP.</figcaption>
+              </figure>
             </div>
           </div>
         </section>

@@ -215,13 +215,13 @@ export default function WixToShopifyPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the hard parts'}</p>
             <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ol className="pp-bento" style={{ marginTop: '32px' }}>
               {HARD.map((h) => (
-                <article className="pp-card" key={h.t}>
+                <li className="pp-card" key={h.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
               Worth saying: if your catalog is small, your shipping rules are simple, and nothing about Wix is actually
               blocking you, migrating is disruption without payoff. The trigger to move is a constraint you keep working
@@ -261,18 +261,70 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
+        {/* Comparison table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// side by side'}</p>
+            <h2 style={{ marginTop: '10px' }}>What actually changes moving off Wix</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Part data move, part rebuild. The split matters for planning and cost.</p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Dimension</th><th>Wix</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td className="name">Site export</td>
+                    <td>Products, orders and contacts as CSV only</td>
+                    <td>Full import</td>
+                    <td>No site export at all, so pages and blog are rebuilt</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Pages & blog</td>
+                    <td>Not exportable in any portable format</td>
+                    <td>Rebuilt in the new theme</td>
+                    <td>Budget rebuild time, not import time</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Images</td>
+                    <td>Served from the Wix static CDN</td>
+                    <td>Hosted on Shopify</td>
+                    <td>References stop resolving once you leave</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Custom code</td>
+                    <td>Velo, Wix's own framework</td>
+                    <td>Theme code, apps, or Functions</td>
+                    <td>No migration path; audit what it actually does</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Bookings & Members</td>
+                    <td>Native Wix products</td>
+                    <td>Apps or a separate system</td>
+                    <td>Rebuilds that drive most of the cost</td>
+                  </tr>
+                  <tr>
+                    <td className="name">URL structure</td>
+                    <td>Product-page and post paths</td>
+                    <td>Fixed /products/, /collections/, /blogs/</td>
+                    <td>Every indexed URL needs a redirect</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
             <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-bento n5" style={{ marginTop: '36px' }}>
+            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -308,6 +360,31 @@ export default function WixToShopifyPage() {
               <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
               covers the self-hosted route.
             </p>
+            </div>
+          </div>
+        </section>
+
+        {/* People */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// who does this'}</p>
+            <h2 style={{ marginTop: '10px' }}>For independent shops going further</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Wix migrations are part data move and part rebuild, and the split is worth understanding before you commit.</p>
+            <div className="pp-duo" style={{ marginTop: '32px' }}>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wix-to-shopify-people-counter-owner.webp" alt="An independent shop owner working at a small retail counter"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Products, orders and contacts are extracted properly rather than guessed.</figcaption>
+              </figure>
+              <figure>
+                <div className="pp-shot">
+                  <img src="/images/us/commerce/wix-to-shopify-people-stock-check.webp" alt="A retail assistant checking stock on a shelf with a tablet"
+                       width={1280} height={800} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>Pages and blog content are rebuilt, because Wix offers no portable export.</figcaption>
+              </figure>
             </div>
           </div>
         </section>
