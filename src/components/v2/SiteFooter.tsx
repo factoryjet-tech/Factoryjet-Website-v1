@@ -28,6 +28,35 @@ export interface SiteFooterColumn {
 
 export type SiteFooterLocale = 'us' | 'in' | 'uae';
 
+/**
+ * Region switcher.
+ *
+ * The footer is chosen by PAGE, not by visitor: /replatforming is a US page and
+ * renders US columns for everyone. The edge Function in functions/_middleware.js
+ * routes NA humans off India URLs and India humans off the six US pages that have
+ * a real India twin, but most of the commerce cluster (/replatforming,
+ * /b2b-ecommerce, /omnichannel-commerce, ...) has no India version at all. This
+ * selector is how a visitor gets to their region on those pages.
+ *
+ * Native <details>, deliberately. No client JS, so SiteFooter stays a pure server
+ * component and this still works on the static export.
+ *
+ * India has no /in root; its entry point is the India web-design hub.
+ */
+const REGIONS: ReadonlyArray<{ label: string; href: string }> = [
+  { label: 'United States',  href: '/' },
+  { label: 'India',          href: '/web-design' },
+  { label: 'United Kingdom', href: '/uk' },
+  { label: 'United Arab Emirates', href: '/uae' },
+  { label: 'Australia',      href: '/au' },
+];
+
+const REGION_LABEL: Record<SiteFooterLocale, string> = {
+  us: 'United States',
+  in: 'India',
+  uae: 'United Arab Emirates',
+};
+
 export interface SiteFooterProps {
   /** Controls which locale's default link columns are used when no explicit
    *  `linkColumns` prop is passed. Default: 'us' (primary domain). */
@@ -83,43 +112,22 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Contact',      href: '/contact' },
     ],
   },
+  // City pages are NOT listed here any more.
+  //
+  // Until 2026-08-03 this footer carried two 12-13 item city columns, because those
+  // pages had zero other inbound internal links. Measured with
+  // scripts/footer-orphan-risk.mjs: 21 India pages were footer-only. Deleting the
+  // columns without a replacement would have orphaned every one of them.
+  //
+  // They now live in city blocks on their own hubs (/web-design, /seo,
+  // /services/ecommerce-development), which is a stronger internal link than a
+  // sitewide footer link anyway. Re-run that script before touching this array.
   {
-    heading: 'Web Design Cities',
+    heading: 'Locations',
     links: [
-      { label: 'Mumbai',       href: '/web-design/mumbai' },
-      { label: 'Delhi',        href: '/web-design/delhi' },
-      { label: 'Bangalore',    href: '/web-design/bangalore' },
-      { label: 'Chennai',      href: '/web-design/chennai' },
-      { label: 'Hyderabad',    href: '/web-design/hyderabad' },
-      { label: 'Pune',         href: '/web-design/pune' },
-      { label: 'Ahmedabad',    href: '/web-design/ahmedabad' },
-      { label: 'Kolkata',      href: '/web-design/kolkata' },
-      { label: 'Jaipur',       href: '/web-design/jaipur' },
-      { label: 'Surat',        href: '/web-design/surat' },
-      { label: 'Indore',       href: '/web-design/indore' },
-      { label: 'Kochi',        href: '/web-design/kochi' },
-    ],
-  },
-  // E-Commerce city pages (en-IN). These live at /services/ecommerce-development/[city]
-  // and were previously ORPHANED — in the India sitemap but with zero inbound internal
-  // links. Surfaced here (India/global footer only — never rendered for US visitors, see
-  // LOCALE_COLUMNS below) to give all 13 pages internal link equity + crawl paths.
-  {
-    heading: 'E-Commerce Cities',
-    links: [
-      { label: 'Mumbai',       href: '/services/ecommerce-development/mumbai' },
-      { label: 'Delhi',        href: '/services/ecommerce-development/delhi' },
-      { label: 'Bangalore',    href: '/services/ecommerce-development/bangalore' },
-      { label: 'Hyderabad',    href: '/services/ecommerce-development/hyderabad' },
-      { label: 'Chennai',      href: '/services/ecommerce-development/chennai' },
-      { label: 'Pune',         href: '/services/ecommerce-development/pune' },
-      { label: 'Ahmedabad',    href: '/services/ecommerce-development/ahmedabad' },
-      { label: 'Kolkata',      href: '/services/ecommerce-development/kolkata' },
-      { label: 'Surat',        href: '/services/ecommerce-development/surat' },
-      { label: 'Jaipur',       href: '/services/ecommerce-development/jaipur' },
-      { label: 'Kochi',        href: '/services/ecommerce-development/kochi' },
-      { label: 'Lucknow',      href: '/services/ecommerce-development/lucknow' },
-      { label: 'Chandigarh',   href: '/services/ecommerce-development/chandigarh' },
+      { label: 'Web design by city',  href: '/web-design' },
+      { label: 'SEO by city',         href: '/seo' },
+      { label: 'E-commerce by city',  href: '/services/ecommerce-development' },
     ],
   },
 ];
@@ -215,38 +223,45 @@ export default function SiteFooter({
     bottomRow.copyright ?? DEFAULT_BOTTOM_ROW.copyright ?? '';
   const bottomLinks = bottomRow.links ?? DEFAULT_BOTTOM_ROW.links;
 
+  const currentRegion = REGION_LABEL[locale] ?? 'United States';
+  const surfaceClass = isDark ? 'border-white/10 bg-white/[0.03]' : 'border-fj-neutral-200 bg-white/60';
+
   return (
     <footer className={`${sectionClass} ${className}`.trim()}>
-      <div className="mx-auto max-w-[1200px] px-6 py-16 md:px-8 md:py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
-          {/* Brand column (4 of 12) */}
-          <div className="lg:col-span-4">
-            <p className="font-fj-display fj-display text-[24px] font-medium">
+      <div className="mx-auto max-w-[1200px] px-6 pt-16 md:px-8 md:pt-20">
+        {/* Brand block carries real weight now: statement + a live CTA, not a logo
+            and one nine-word line over dead space. */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(260px,1.1fr)_3fr] lg:gap-16">
+          <div>
+            <p className="font-fj-display fj-display text-[24px] font-semibold tracking-[-0.02em]">
               {logoText}
             </p>
-            <p
-              className={`mt-3 max-w-[280px] font-fj-body text-[14px] leading-[1.55] ${taglineClass}`}
-            >
+            <p className={`mt-3.5 max-w-[30ch] font-fj-body text-[15px] leading-[1.6] ${taglineClass}`}>
               {tagline}
             </p>
+            <Link
+              href="/contact"
+              className="group mt-5 inline-flex items-center gap-2 font-fj-body text-[15px] font-semibold text-[#B23E13] transition-colors hover:text-[#F05A28]"
+            >
+              Talk to the founder
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5">
+                <path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" />
+              </svg>
+            </Link>
           </div>
 
-          {/* Link columns (8 of 12, 3 cols inside) */}
-          <div className={`grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-8 ${lgColsClass} lg:gap-8`}>
+          <div className={`grid grid-cols-2 gap-x-8 gap-y-10 ${lgColsClass} lg:gap-8`}>
             {resolvedColumns.map((col) => (
               <div key={col.heading}>
-                <p
-                  className={`font-fj-body text-[12px] font-semibold uppercase tracking-[0.14em] ${headingClass}`}
-                >
+                <p className={`font-fj-body text-[12px] font-semibold uppercase tracking-[0.13em] ${headingClass}`}>
                   {col.heading}
                 </p>
-                <ul className="mt-4 space-y-3">
+                {/* mt-[18px] not mt-4.5: this is Tailwind 3.4 and 4.5 is not in the
+                    default spacing scale, so mt-4.5 compiles to nothing. */}
+                <ul className="mt-[18px] flex flex-col gap-2.5">
                   {col.links.map((link) => (
                     <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className={`font-fj-body text-[15px] ${linkClass}`}
-                      >
+                      <Link href={link.href} className={`font-fj-body text-[14.5px] leading-snug ${linkClass}`}>
                         {link.label}
                       </Link>
                     </li>
@@ -257,58 +272,81 @@ export default function SiteFooter({
           </div>
         </div>
 
-        {/* Bottom zone: third-party recognition strip + legal row, one divider */}
-        <div className={`mt-16 pt-8 ${dividerClass}`}>
-          {/* Recognition — verified directory profiles + award. Trust signals, not review claims. */}
-          {showRecognition && (
-            <div className="mb-10">
-              <p
-                className={`font-fj-mono text-[11px] font-medium uppercase tracking-[0.16em] ${headingClass}`}
-              >
-                Recognized on
-              </p>
-              <ul className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
-                {RECOGNITION_PROFILES.map((p) => (
-                  <li key={p.href}>
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`font-fj-body text-[15px] ${linkClass}`}
-                    >
-                      {p.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <p className={`mt-4 font-fj-body text-[13px] ${taglineClass}`}>
-                Awarded{' '}
-                <span className="font-semibold">&ldquo;Highly Recommended&rdquo;</span>{' '}
-                by SoftwareSuggest, Winter 2025.
-              </p>
-            </div>
-          )}
-
-          {/* Legal row */}
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className={`font-fj-body text-[13px] ${copyClass}`}>
-              {copyright}
-            </p>
-            {bottomLinks && bottomLinks.length > 0 && (
-              <ul className="flex flex-wrap gap-x-6 gap-y-2">
-                {bottomLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={`font-fj-body text-[13px] ${bottomLinkClass}`}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+        {/* Recognition — verified directory profiles + award. Kept sitewide per
+            Bhavesh 2026-08-03 (he was asked and chose to keep it). Restyled to sit
+            as one quiet line rather than a stacked block with its own heading. */}
+        {showRecognition && (
+          <div className={`mt-14 flex flex-wrap items-center gap-x-5 gap-y-2 border-t pt-7 ${dividerClass}`}>
+            <span className={`font-fj-mono text-[11px] font-medium uppercase tracking-[0.16em] ${headingClass}`}>
+              Recognized on
+            </span>
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              {RECOGNITION_PROFILES.map((p) => (
+                <li key={p.href}>
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`font-fj-body text-[14px] ${linkClass}`}
+                  >
+                    {p.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <span className={`font-fj-body text-[13px] ${taglineClass}`}>
+              &ldquo;Highly Recommended&rdquo;, SoftwareSuggest Winter 2025.
+            </span>
           </div>
+        )}
+      </div>
+
+      {/* Bottom bar: copyright, region switcher, legal. */}
+      <div className={`mt-10 border-t ${dividerClass}`}>
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-x-7 gap-y-4 px-6 py-6 md:px-8">
+          <p className={`font-fj-body text-[13px] ${copyClass}`}>{copyright}</p>
+
+          <details className="group relative">
+            <summary
+              className={`flex cursor-pointer list-none items-center gap-2 rounded-lg border px-3 py-1.5 font-fj-body text-[13px] transition-colors ${surfaceClass} ${taglineClass} hover:border-fj-neutral-400`}
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
+                <circle cx="8" cy="8" r="6.3" /><ellipse cx="8" cy="8" rx="2.7" ry="6.3" /><path d="M1.9 6h12.2M1.9 10h12.2" />
+              </svg>
+              {currentRegion}
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="transition-transform duration-200 group-open:rotate-180">
+                <path d="M3 4.5 6 7.5l3-3" />
+              </svg>
+            </summary>
+            <ul
+              className={`absolute bottom-full left-0 z-30 mb-2 min-w-[220px] overflow-hidden rounded-xl border py-1.5 shadow-xl ${isDark ? 'border-white/10 bg-fj-charcoal' : 'border-fj-neutral-200 bg-white'}`}
+            >
+              {REGIONS.map((r) => (
+                <li key={r.href}>
+                  <Link
+                    href={r.href}
+                    className={`block px-4 py-2 font-fj-body text-[14px] ${linkClass} ${r.label === currentRegion ? 'font-semibold' : ''}`}
+                  >
+                    {r.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </details>
+
+          <div className="flex-1" />
+
+          {bottomLinks && bottomLinks.length > 0 && (
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              {bottomLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={`font-fj-body text-[13px] ${bottomLinkClass}`}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </footer>

@@ -1,6 +1,35 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+/**
+ * India e-commerce city pages, indexed near the foot of this page.
+ *
+ * The web-design cities are NOT listed here: this hub has rendered
+ * IN_WEB_DESIGN_CITIES (from @/data/inWebDesignCities) since 2026-07-26, so those
+ * pages already have a hub link. Only the /services/ecommerce-development/{city}
+ * pages were footer-only, and they live under a US-owned parent hub with no India
+ * index of their own, which is why they land here.
+ *
+ * Every slug below was checked against src/app on 2026-08-03. Do not add a city
+ * here before its page exists: a linked-but-missing URL gets a 404 verdict cached
+ * by Google that only a manual GSC recrawl clears.
+ */
+const IN_ECOM_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
+  { slug: 'mumbai', name: 'Mumbai' },
+  { slug: 'delhi', name: 'Delhi' },
+  { slug: 'bangalore', name: 'Bangalore' },
+  { slug: 'hyderabad', name: 'Hyderabad' },
+  { slug: 'chennai', name: 'Chennai' },
+  { slug: 'pune', name: 'Pune' },
+  { slug: 'ahmedabad', name: 'Ahmedabad' },
+  { slug: 'kolkata', name: 'Kolkata' },
+  { slug: 'surat', name: 'Surat' },
+  { slug: 'jaipur', name: 'Jaipur' },
+  { slug: 'kochi', name: 'Kochi' },
+  { slug: 'lucknow', name: 'Lucknow' },
+  { slug: 'chandigarh', name: 'Chandigarh' },
+];
 import { webDesignAlternates } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -1330,6 +1359,42 @@ export default function WebDesignServicePage() {
           objectionHandler="Lighthouse 100 guaranteed. Full code ownership on launch day. 7-day delivery on Starter tier. Fixed price confirmed upfront."
         />
 
+        {/* E-commerce city index.
+            Replaces the 13-item "E-Commerce Cities" column that used to sit in the
+            India footer. Measured with scripts/footer-orphan-risk.mjs: those pages
+            had NO other inbound internal link, so the column could not simply be
+            deleted. Their parent hub (/services/ecommerce-development) is US-owned
+            and indexes US cities, so this India entry point is the right host.
+
+            The web-design cities are deliberately absent: this page already renders
+            IN_WEB_DESIGN_CITIES higher up. If you remove this section, re-run that
+            script first. */}
+        <section className="border-t border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-[1120px]">
+            <h2
+              className="font-fj-display font-semibold text-fj-ink"
+              style={{ fontSize: 'clamp(1.35rem, 2.2vw, 1.75rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+            >
+              E-commerce development in your city
+            </h2>
+            <p className="mt-3 max-w-[62ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+              Store builds, migrations and marketplace setup, with the payment gateways and
+              logistics partners each market actually uses.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2.5">
+              {IN_ECOM_CITIES.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/services/ecommerce-development/${c.slug}`}
+                    className="inline-flex items-center rounded-full border border-fj-ink/15 bg-fj-cream px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink transition-colors hover:border-[#F05A28]/50 hover:text-[#B23E13]"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
       </main>
 

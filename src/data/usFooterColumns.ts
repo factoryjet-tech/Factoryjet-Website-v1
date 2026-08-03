@@ -3,100 +3,77 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
 /**
  * US-locale footer link columns.
  *
- * Pass these as `linkColumns` to <SiteFooter> on every /us/* page so that
- * footer links resolve to /us/* routes instead of the bare-path defaults
- * (which resolve to the India/global locale).
+ * Rebuilt 2026-08-03, 58 links in 6 columns down to 30 in 4.
  *
- * Usage:
- *   import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
- *   <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+ * What changed and why. Reference footers were pulled rather than guessed:
+ * Anthropic ships 75 links, Stripe ~67, Linear 37. Link COUNT was never the
+ * problem. Three things were, and only the first two live in this file:
+ *
+ *   1. A 16-item "US Cities" column reading "Austin, TX" next to "Austin SEO"
+ *      next to "Charlotte SEO". That is a keyword list, not navigation, and no
+ *      reference footer contains anything like it. Removed. City pages are reached
+ *      from the service hubs, which is a stronger internal link.
+ *   2. Duplication. "AI SEO" appeared in both the SEO and AI Services columns;
+ *      E-Commerce carried 11 links including three marketplace agencies that
+ *      already cross-link each other.
+ *   3. (In the component) no typographic hierarchy across six identical columns.
+ *
+ * Before removing anything from this array, run:
+ *     node scripts/footer-orphan-risk.mjs
+ * It reports which footer links are the ONLY inbound internal link to their page.
+ * It excludes sitemaps deliberately: a sitemap entry declares a URL, it does not
+ * link to it, and counting sitemaps once made every US link look safe to cut.
+ * At the last run, /colorado-springs/seo was the single US page at risk; it is
+ * kept reachable from /services/seo.
  */
 export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
-    heading: 'Web & Design',
+    heading: 'Commerce',
     links: [
-      { label: 'Website Design',         href: '/services/web-design' },
-      { label: 'Website Redesign',        href: '/services/website-redesign' },
-      { label: 'WordPress Development',   href: '/services/wordpress-development' },
-      { label: 'Web App Development',     href: '/services/web-application-development' },
-      { label: 'Small Business Websites', href: '/services/small-business-website-design' },
-      { label: 'Law Firm Websites',       href: '/services/law-firm-website-design' },
-      { label: 'Real Estate Websites',    href: '/services/real-estate-website-design' },
+      { label: 'E-Commerce Development', href: '/services/ecommerce-development' },
+      { label: 'B2B E-Commerce',         href: '/b2b-ecommerce' },
+      { label: 'Omnichannel Commerce',   href: '/omnichannel-commerce' },
+      { label: 'Replatforming',          href: '/replatforming' },
+      { label: 'Headless Commerce',      href: '/headless-commerce' },
+      { label: 'Agentic Commerce',       href: '/agentic-commerce' },
+      { label: 'For Manufacturers',      href: '/ecommerce-for-manufacturers' },
+      { label: 'Amazon Agency',          href: '/services/amazon-agency' },
     ],
   },
   {
-    heading: 'E-Commerce',
+    heading: 'Platforms',
     links: [
       { label: 'Shopify Development',     href: '/services/shopify-development' },
-      { label: 'Custom E-Commerce',       href: '/services/ecommerce-development' },
-      { label: 'Agentic Commerce',        href: '/agentic-commerce' },
-      { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },
-      { label: 'Amazon Agency',           href: '/services/amazon-agency' },
-      { label: 'TikTok Shop Agency',      href: '/services/tiktok-shop-agency' },
-      { label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency' },
-      { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
       { label: 'Magento Development',     href: '/services/magento-development' },
-      { label: 'E-Commerce SEO',          href: '/services/ecommerce-seo' },
-      { label: 'Shopify SEO',             href: '/services/shopify-seo' },
+      { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
+      { label: 'BigCommerce',             href: '/bigcommerce-development' },
+      { label: 'Commerceflo',             href: '/commerceflo' },
+      { label: 'WordPress Development',   href: '/services/wordpress-development' },
     ],
   },
   {
-    heading: 'SEO',
+    heading: 'Services',
     links: [
-      { label: 'SEO Services',       href: '/services/seo' },
-      { label: 'Local SEO',          href: '/services/local-seo' },
-      { label: 'Small Business SEO', href: '/services/small-business-seo' },
-      { label: 'SEO Audit',          href: '/services/seo-audit' },
-      { label: 'AI SEO',             href: '/services/ai-seo' },
-      { label: 'Healthcare SEO',     href: '/services/healthcare-seo' },
-      { label: 'Dental SEO',         href: '/services/dental-seo' },
-      { label: 'Law Firm SEO',       href: '/services/law-firm-seo' },
-    ],
-  },
-  {
-    heading: 'AI Services',
-    links: [
-      { label: 'AI Visibility Checker',  href: '/ai-visibility-checker' },
+      { label: 'Web Design',             href: '/services/web-design' },
+      { label: 'SEO Services',           href: '/services/seo' },
+      { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
       { label: 'AI SEO',                 href: '/services/ai-seo' },
       { label: 'AI Agents',              href: '/services/ai-agents' },
-      { label: 'AI Chatbot Development', href: '/services/ai-chatbot-development' },
-      { label: 'AI Automation',          href: '/services/ai-automation' },
-      { label: 'AI Integration',         href: '/services/ai-integration-services' },
-      { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+      { label: 'AI Visibility Checker',  href: '/ai-visibility-checker' },
+      { label: 'All services',           href: '/services' },
     ],
   },
   {
-    heading: 'US Cities',
+    heading: 'Company',
     links: [
-      { label: 'Austin, TX',          href: '/austin/web-design' },
-      { label: 'Miami, FL',           href: '/miami/web-design' },
-      { label: 'Denver, CO',          href: '/denver/web-design' },
-      { label: 'Nashville, TN',       href: '/nashville/web-design' },
-      { label: 'New York, NY',        href: '/new-york/web-design' },
-      { label: 'Charlotte, NC',       href: '/charlotte/web-design' },
-      { label: 'Raleigh, NC',         href: '/raleigh/web-design' },
-      { label: 'Tampa, FL',           href: '/tampa/web-design' },
-      { label: 'Portland, OR',        href: '/portland/web-design' },
-      { label: 'Colorado Springs, CO', href: '/colorado-springs/seo' },
-      { label: 'Cleveland, OH',       href: '/cleveland/web-design' },
-      { label: 'Austin SEO',          href: '/austin/seo' },
-      { label: 'Charlotte SEO',       href: '/charlotte/seo' },
-      { label: 'Cleveland SEO',       href: '/cleveland/seo' },
-      { label: 'Nashville SEO',       href: '/nashville/seo' },
-      { label: 'Boise SEO',           href: '/boise/seo' },
-    ],
-  },
-  {
-    heading: 'Knowledge Hub',
-    links: [
-      { label: 'Blog',               href: '/blog' },
+      { label: 'About FactoryJet',   href: '/about' },
       { label: 'Case Studies',       href: '/case-studies' },
       { label: 'Portfolio',          href: '/portfolio' },
-      { label: 'FAQ',                href: '/faq' },
+      { label: 'Blog',               href: '/blog' },
+      { label: 'AI Citation Study',  href: '/ai-citation-study' },
       { label: 'Glossary',           href: '/glossary' },
+      { label: 'FAQ',                href: '/faq' },
       { label: 'Website Cost Guide', href: '/website-cost' },
-      { label: 'About FactoryJet',  href: '/about' },
-      { label: 'Pricing',            href: '/pricing' },
       { label: 'Contact',            href: '/contact' },
     ],
   },

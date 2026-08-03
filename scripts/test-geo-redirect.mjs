@@ -6,7 +6,10 @@
  * decision function across the geo × crawler × path matrix without needing the
  * Cloudflare runtime (which cannot be run locally — see the OOM hazard note in repo memory).
  */
-import { decideNaRedirect, isExemptCrawler, indiaTarget, isIndiaPath } from '../functions/_middleware.js'
+import {
+  decideNaRedirect, isExemptCrawler, indiaTarget, isIndiaPath,
+  decideInRedirect, decideGeoRedirect, usTarget, isGeoSensitivePath,
+} from '../functions/_middleware.js'
 
 const CHROME = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
 const GOOGLEBOT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
@@ -110,6 +113,63 @@ expect('isIndiaPath(/ai-seo) = true', isIndiaPath('/ai-seo'), true)
 expect('isIndiaPath(/services/web-design) = false (US twin, keeps caching)', isIndiaPath('/services/web-design'), false)
 expect('isIndiaPath(/) = false (root passes through)', isIndiaPath('/'), false)
 expect('isIndiaPath(/api/notify-lead) = false (function passthrough)', isIndiaPath('/api/notify-lead'), false)
+
+// ─── India visitors on US pages → India twin (added 2026-08-03) ───────────────
+console.log('\nIndia-visitor mirror — cases:')
+
+expect('IN human /services/web-design → /web-design',
+  decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
+expect('IN human /services/seo → /seo',
+  decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), '/seo')
+expect('IN human /services/ai-agents → /services/ai-agent-development',
+  decideInRedirect({ path: '/services/ai-agents', country: 'IN', userAgent: CHROME }), '/services/ai-agent-development')
+expect('IN human trailing slash normalised',
+  decideInRedirect({ path: '/services/ai-seo/', country: 'IN', userAgent: CHROME }), '/ai-seo')
+expect('country case-insensitive',
+  decideInRedirect({ path: '/services/seo', country: 'in', userAgent: CHROME }), '/seo')
+
+// Crawlers are never redirected, in either direction. Same reasoning as the NA rules:
+// a redirected crawler deindexes the page it was trying to read.
+expect('Googlebot on /services/seo from IN → NOT redirected',
+  decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: GOOGLEBOT }), null)
+expect('GPTBot on /services/web-design from IN → NOT redirected',
+  decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: GPTBOT }), null)
+
+// US-only commerce pages have no India twin: an India visitor keeps the US page.
+// This is the case Bhavesh actually hit; the footer region selector covers it.
+expect('IN human /replatforming → NOT redirected (no India twin)',
+  decideInRedirect({ path: '/replatforming', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /b2b-ecommerce → NOT redirected (no India twin)',
+  decideInRedirect({ path: '/b2b-ecommerce', country: 'IN', userAgent: CHROME }), null)
+// Deliberately NOT mirrored: the reverse would narrow the page. See US_TO_INDIA_RULES.
+expect('IN human /services/ai-workflow-automation → NOT redirected (reverse would narrow)',
+  decideInRedirect({ path: '/services/ai-workflow-automation', country: 'IN', userAgent: CHROME }), null)
+expect('US human on a US page → NOT redirected',
+  decideInRedirect({ path: '/services/seo', country: 'US', userAgent: CHROME }), null)
+expect('unknown country → NOT redirected (fail open)',
+  decideInRedirect({ path: '/services/seo', country: 'XX', userAgent: CHROME }), null)
+
+// --- no redirect loop: the two directions must never bounce a visitor back ---
+// An IN visitor sent /services/seo → /seo must then be served /seo, not sent back.
+expect('LOOP CHECK: IN visitor landing on the India target is served, not redirected',
+  decideGeoRedirect({ path: '/seo', country: 'IN', userAgent: CHROME }), null)
+expect('LOOP CHECK: US visitor landing on the US target is served, not redirected',
+  decideGeoRedirect({ path: '/services/web-design', country: 'US', userAgent: CHROME }), null)
+
+// --- combined entry point routes both directions ---
+expect('decideGeoRedirect US on India path → US target',
+  decideGeoRedirect({ path: '/seo/mumbai', country: 'US', userAgent: CHROME }), '/services/seo')
+expect('decideGeoRedirect IN on US path → India target',
+  decideGeoRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), '/seo')
+expect('decideGeoRedirect GB visitor → null (neither direction)',
+  decideGeoRedirect({ path: '/services/seo', country: 'GB', userAgent: CHROME }), null)
+
+// --- isGeoSensitivePath drives cache-stripping; must cover BOTH rule sets ---
+expect('isGeoSensitivePath(/seo) = true (India cluster)', isGeoSensitivePath('/seo'), true)
+expect('isGeoSensitivePath(/services/seo) = true (now has an India twin)', isGeoSensitivePath('/services/seo'), true)
+expect('isGeoSensitivePath(/replatforming) = false (keeps edge caching)', isGeoSensitivePath('/replatforming'), false)
+expect('isGeoSensitivePath(/) = false', isGeoSensitivePath('/'), false)
+expect('usTarget(/replatforming) = null', usTarget('/replatforming'), null)
 
 console.log('')
 if (failures) { console.error(`❌ ${failures} test(s) failed`); process.exit(1) }

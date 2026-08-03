@@ -74,6 +74,32 @@ export const INDIA_TO_US_RULES = [
   { match: (p) => p === '/digital-marketing' || p.startsWith('/digital-marketing/'), target: '/services' },
 ]
 
+// Countries routed to the India twin of a US page. Added 2026-08-03 at Bhavesh's
+// request, to make the routing symmetric: NA humans already get US pages, so India
+// humans should get India pages.
+export const IN_COUNTRIES = new Set(['IN'])
+
+// US → India, the mirror of INDIA_TO_US_RULES. Deliberately EXACT-MATCH and short.
+//
+// Only genuine 1:1 twins are listed. Two categories are intentionally absent:
+//   1. US pages with no India equivalent at all (/replatforming, /b2b-ecommerce,
+//      /omnichannel-commerce, /ecommerce-for-manufacturers, /headless-commerce,
+//      /commerceflo, /agentic-commerce). There is nowhere better to send an India
+//      visitor, so they keep the US page. The footer region selector covers these.
+//   2. Reverses that NARROW the page. /services/ai-workflow-automation → /n8n-automation
+//      and /services/ai-chatbot-development → /whatsapp-chatbot exist as forward rules
+//      because a broad US page is a fine landing spot for a narrow India one. The
+//      reverse is not true: sending someone from "AI workflow automation" to a page
+//      only about n8n is a downgrade. Not mirrored.
+export const US_TO_INDIA_RULES = [
+  { match: (p) => p === '/services/web-design',           target: '/web-design' },
+  { match: (p) => p === '/services/seo',                  target: '/seo' },
+  { match: (p) => p === '/services/ai-seo',               target: '/ai-seo' },
+  { match: (p) => p === '/services/shopify-development',  target: '/shopify-development' },
+  { match: (p) => p === '/services/wordpress-development', target: '/wordpress-development' },
+  { match: (p) => p === '/services/ai-agents',            target: '/services/ai-agent-development' },
+]
+
 /** Drop a trailing slash (except root) so `/web-design/` and a target with no slash
  *  can never self-match into a redirect loop. */
 export function normalizePath(pathname) {
@@ -99,10 +125,32 @@ export function indiaTarget(pathname) {
   return null
 }
 
+/** The India target for a US path, or null if the US page has no India twin. */
+export function usTarget(pathname) {
+  const p = normalizePath(pathname)
+  for (const rule of US_TO_INDIA_RULES) {
+    if (rule.match(p)) return rule.target
+  }
+  return null
+}
+
 /** True when the path belongs to an India-only cluster (so its response is
  *  country/UA-dependent and must not be stored in the shared edge cache). */
 export function isIndiaPath(pathname) {
   return indiaTarget(pathname) !== null
+}
+
+/**
+ * True when the response for this path depends on country or User-Agent, in either
+ * direction, and therefore must not be stored in the shared edge cache.
+ *
+ * Cost of the 2026-08-03 addition, stated plainly: the six US pages in
+ * US_TO_INDIA_RULES now bypass shared edge caching too. Pages still serves them from
+ * the edge, but they lose the cached-HTML fast path. Six pages is an acceptable
+ * price for symmetric routing; adding the whole /services tree here would not be.
+ */
+export function isGeoSensitivePath(pathname) {
+  return indiaTarget(pathname) !== null || usTarget(pathname) !== null
 }
 
 /**
@@ -118,6 +166,31 @@ export function decideNaRedirect({ path, country, userAgent }) {
   return indiaTarget(path)
 }
 
+/**
+ * The India-visitor mirror. Returns an India target path, or null to serve unchanged.
+ *   - Non-India country (or unknown) → null (fail open)
+ *   - Known crawler → null (same reasoning as above: never redirect a crawler)
+ *   - US path with a real India twin → that twin
+ *
+ * No redirect loop is possible: this only fires for IN, decideNaRedirect only fires
+ * for US/CA, and the two rule sets are disjoint in both directions. An India visitor
+ * sent to /web-design hits indiaTarget on the next request, but IN is not in
+ * NA_COUNTRIES, so that returns null and the page is served.
+ */
+export function decideInRedirect({ path, country, userAgent }) {
+  if (!country || !IN_COUNTRIES.has(country.toUpperCase())) return null
+  if (isExemptCrawler(userAgent)) return null
+  return usTarget(path)
+}
+
+/** Single entry point: whichever direction applies, or null. */
+export function decideGeoRedirect({ path, country, userAgent }) {
+  return (
+    decideNaRedirect({ path, country, userAgent }) ??
+    decideInRedirect({ path, country, userAgent })
+  )
+}
+
 // --- Cloudflare Pages Functions entrypoint ---
 export async function onRequest(context) {
   const { request, next } = context
@@ -125,21 +198,22 @@ export async function onRequest(context) {
     const url = new URL(request.url)
     const path = url.pathname
 
-    // Only India-cluster paths are country/UA-dependent. Everything else passes
+    // Only geo-sensitive paths are country/UA-dependent. Everything else passes
     // straight through untouched (keeps its normal edge caching + the /api function).
-    if (!isIndiaPath(path)) return next()
+    if (!isGeoSensitivePath(path)) return next()
 
     const country = request.headers.get('cf-ipcountry') || ''
     const userAgent = request.headers.get('user-agent') || ''
-    const target = decideNaRedirect({ path, country, userAgent })
+    const target = decideGeoRedirect({ path, country, userAgent })
 
     if (target) {
+      const direction = decideNaRedirect({ path, country, userAgent }) ? 'na-to-us' : 'in-to-india'
       return new Response(null, {
-        status: 302, // temporary — transfers no ranking signal; India URL stays canonical
+        status: 302, // temporary — transfers no ranking signal; the URL stays canonical
         headers: {
           Location: SITE_ORIGIN + target + url.search,
           'Cache-Control': 'no-store', // never cache a per-visitor geo decision
-          'X-FJ-Geo-Redirect': 'na-to-us', // deploy/verification marker
+          'X-FJ-Geo-Redirect': direction, // deploy/verification marker
         },
       })
     }
@@ -151,7 +225,7 @@ export async function onRequest(context) {
     const res = await next()
     const headers = new Headers(res.headers)
     headers.set('Cache-Control', 'private, no-store')
-    headers.set('X-FJ-Geo-Redirect', 'india-served') // deploy marker — visible from any country
+    headers.set('X-FJ-Geo-Redirect', isIndiaPath(path) ? 'india-served' : 'us-served')
     return new Response(res.body, { status: res.status, statusText: res.statusText, headers })
   } catch {
     // Fail open: any error → serve the page normally. Geo logic must never 500 a page.

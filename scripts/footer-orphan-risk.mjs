@@ -61,6 +61,43 @@ function extractLinks(src) {
 const usLinks = [...new Set(extractLinks(footerSrc))];
 const inLinks = [...new Set(extractLinks(inFooterSrc))];
 
+/**
+ * Hubs build city links as template literals: href={`/${c.slug}/seo`}. A literal
+ * string search for '/colorado-springs/seo' finds nothing and reports a false
+ * orphan, which it did on the first run of this script. So for a multi-segment
+ * path, also look for its slug quoted in a data array alongside the matching
+ * template pattern.
+ */
+function templateLiteralCovered(href) {
+  const segs = href.split('/').filter(Boolean);
+  if (segs.length < 2) return null;
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  // Both shapes occur in this codebase and BOTH have caused a false orphan report:
+  //   slug-first: href={`/${c.slug}/seo`}        (/services/seo hub)
+  //   slug-last:  href={`/web-design/${c.slug}`} (/web-design hub)
+  const candidates = [
+    // slug first, rest is the fixed tail
+    { slug: segs[0], pattern: new RegExp('`/\\$\\{[^}]+\\}/' + esc(segs.slice(1).join('/')) + '`') },
+    // slug last, everything before it is the fixed head
+    { slug: segs[segs.length - 1], pattern: new RegExp('`/' + esc(segs.slice(0, -1).join('/')) + '/\\$\\{[^}]+\\}`') },
+  ];
+
+  for (const f of files) {
+    if (isChrome(f.path) || NOT_A_LINK.test(f.path)) continue;
+    for (const c of candidates) {
+      if (!c.pattern.test(f.text)) continue;
+      // The array supplying the slug may be imported, so accept a match in this file
+      // OR in any non-chrome file (the data modules under src/data).
+      const slugQuoted = new RegExp(`slug:\\s*['"]${esc(c.slug)}['"]`);
+      if (slugQuoted.test(f.text)) return f.path;
+      const inData = files.find((d) => !isChrome(d.path) && slugQuoted.test(d.text));
+      if (inData) return `${f.path} (slugs from ${inData.path})`;
+    }
+  }
+  return null;
+}
+
 function inboundCount(href) {
   // Match the path as a quoted string value, so /seo does not match /seo/mumbai.
   const needle = new RegExp(`['"\`]${href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"\`]`);
@@ -81,7 +118,10 @@ function report(title, links) {
   const risky = [];
   for (const href of links) {
     const { body } = inboundCount(href);
-    if (body === 0) risky.push(href);
+    if (body > 0) continue;
+    const viaTemplate = templateLiteralCovered(href);
+    if (viaTemplate) continue;
+    risky.push(href);
   }
   console.log(`Linked ONLY from site chrome (would orphan if cut): ${risky.length}`);
   risky.forEach((h) => console.log('  ⚠️  ' + h));
@@ -92,3 +132,43 @@ function report(title, links) {
 
 report('US footer', usLinks);
 report('India/global footer (defined in SiteFooter.tsx)', inLinks);
+
+// ── Regression guard: links REMOVED from the footer in the 2026-08-03 slim-down.
+// The report above only covers links still IN the footer. These are the ones taken
+// out; each must have a real inbound link elsewhere or it is orphaned.
+const REMOVED_2026_08_03 = [
+  '/colorado-springs/seo', '/austin/web-design', '/miami/web-design', '/denver/web-design',
+  '/nashville/web-design', '/new-york/web-design', '/charlotte/web-design', '/raleigh/web-design',
+  '/tampa/web-design', '/portland/web-design', '/cleveland/web-design', '/austin/seo',
+  '/charlotte/seo', '/cleveland/seo', '/nashville/seo', '/boise/seo', '/pricing',
+  '/services/website-redesign', '/services/web-application-development',
+  '/services/small-business-website-design', '/services/law-firm-website-design',
+  '/services/real-estate-website-design', '/services/ecommerce-growth-agency',
+  '/services/tiktok-shop-agency', '/services/walmart-marketplace-agency',
+  '/services/shopify-seo', '/services/local-seo', '/services/small-business-seo',
+  '/services/seo-audit', '/services/healthcare-seo', '/services/dental-seo',
+  '/services/law-firm-seo', '/services/ai-chatbot-development', '/services/ai-automation',
+  '/services/ai-integration-services', '/services/ai-workflow-automation',
+  '/web-design/mumbai', '/web-design/delhi', '/web-design/bangalore', '/web-design/chennai',
+  '/web-design/hyderabad', '/web-design/pune', '/web-design/ahmedabad', '/web-design/kolkata',
+  '/web-design/jaipur', '/web-design/surat', '/web-design/indore', '/web-design/kochi',
+  '/services/ecommerce-development/mumbai', '/services/ecommerce-development/delhi',
+  '/services/ecommerce-development/bangalore', '/services/ecommerce-development/hyderabad',
+  '/services/ecommerce-development/chennai', '/services/ecommerce-development/pune',
+  '/services/ecommerce-development/ahmedabad', '/services/ecommerce-development/kolkata',
+  '/services/ecommerce-development/surat', '/services/ecommerce-development/jaipur',
+  '/services/ecommerce-development/kochi', '/services/ecommerce-development/lucknow',
+  '/services/ecommerce-development/chandigarh',
+];
+
+console.log(`\n=== Removed-link regression guard (${REMOVED_2026_08_03.length} paths) ===`);
+const stillOrphaned = REMOVED_2026_08_03.filter((h) => {
+  const { body } = inboundCount(h);
+  return body === 0 && !templateLiteralCovered(h);
+});
+if (stillOrphaned.length) {
+  stillOrphaned.forEach((h) => console.log('  ⚠️  ORPHANED: ' + h));
+  process.exitCode = 1;
+} else {
+  console.log('  ✅ all removed links still reachable from real page content');
+}
