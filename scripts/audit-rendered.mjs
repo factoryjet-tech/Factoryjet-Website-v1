@@ -27,6 +27,10 @@ const limitArg = args.indexOf('--limit');
 const LIMIT = limitArg > -1 ? Number(args[limitArg + 1]) : Infinity;
 const outArg = args.indexOf('--out');
 const OUT = outArg > -1 ? args[outArg + 1] : 'pipeline/research/data/rendered_audit_2026-08-03.json';
+// --filter <substring>: scope the sweep to matching URLs, e.g. --filter /uk/
+// Useful after changing one template rather than re-fetching all 447 URLs.
+const filterArg = args.indexOf('--filter');
+const FILTER = filterArg > -1 ? args[filterArg + 1] : null;
 
 const BENCH = { words: 2813, h2: 11, li: 110 };
 
@@ -103,7 +107,9 @@ for (const m of childMaps) {
   console.error(`${m.replace(ORIGIN, '')}: ${found.length}`);
   urls.push(...found);
 }
-urls = [...new Set(urls)].slice(0, LIMIT);
+urls = [...new Set(urls)];
+if (FILTER) urls = urls.filter((u) => u.includes(FILTER));
+urls = urls.slice(0, LIMIT);
 console.error(`\nAuditing ${urls.length} live URLs...\n`);
 
 const results = await pool(urls, async (u) => {
