@@ -58,10 +58,17 @@ const STYLE =
   'Exactly one warm orange object in frame as the only strong colour accent. ' +
   'Ultra detailed, professional colour grading, photorealistic, no illustration.'
 
-/* Short UI labels only. Never paragraphs. */
+/* Short UI labels only. Never paragraphs.
+ *
+ * The store name is forced to an invented word. GPT Image 2 renders brand marks
+ * legibly, and left to itself it reaches for real retailers: one generation came
+ * back with "EVERLANE" across the storefront header. On a page about storefronts
+ * we build, a real brand reads as a client claim and puts someone else's
+ * trademark in our marketing. Always pin an invented name. */
 const SHOP = 'the screen shows a clean modern e-commerce store: a large grid of colourful ' +
   'clothing product photographs, big blocks of solid colour, generous white space, and only very short ' +
-  'menu labels such as "Shop", "New", "Sale"'
+  'menu labels such as "Shop", "New", "Sale". The store is named with the invented word ' +
+  '"NORVELL" and no real-world brand name appears anywhere in the image'
 
 /** [filename (must match page markup), scene] */
 const IMAGES = [
