@@ -453,7 +453,8 @@ export default function ReplatformingPage() {
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
               build covers account pricing, net terms, and ERP-synced ordering. If you are a manufacturer or distributor,{' '}
               <Link href="/ecommerce-for-manufacturers" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>dealer and distributor portals</Link>{' '}
-              go deeper on territory rules and parametric part search. For a decoupled front end, see{' '}
+              go deeper on territory rules and parametric part search.{' '}We also publish{' '}
+              <Link href="/ai-citation-study" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>original research on what AI search actually cites</Link>. For a decoupled front end, see{' '}
               <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>.
             </p>
             </div>

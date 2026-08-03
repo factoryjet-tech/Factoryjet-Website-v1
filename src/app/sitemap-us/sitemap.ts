@@ -24,6 +24,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/',                                              source: 'src/app/page.tsx' },
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
   { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
+  { path: '/ai-citation-study',                            source: 'src/app/ai-citation-study/page.tsx' },
   { path: '/replatforming',                                source: 'src/app/replatforming/page.tsx' },
   { path: '/replatforming/magento-to-shopify',             source: 'src/app/replatforming/magento-to-shopify/page.tsx' },
   { path: '/replatforming/woocommerce-to-shopify',         source: 'src/app/replatforming/woocommerce-to-shopify/page.tsx' },
