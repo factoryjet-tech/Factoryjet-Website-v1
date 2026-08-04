@@ -94,6 +94,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://factoryjet.com',
   },
+  // Bing Webmaster Tools site ownership. Bing only reads this on the home page,
+  // but it lives in the root metadata so it can never fall off. Bing re-checks
+  // it periodically, so do NOT remove it after verification succeeds.
+  verification: {
+    other: {
+      'msvalidate.01': '3A0547224E80A68951411C92CF87D94E',
+    },
+  },
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
