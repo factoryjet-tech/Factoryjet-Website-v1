@@ -184,15 +184,8 @@ export const post: BlogPost = {
                 cssSelector: ['#answer-first', 'h1', 'h2'],
               },
             },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://factoryjet.com/blog' },
-                { '@type': 'ListItem', position: 3, name: 'What Does an AI Automation Agency Actually Do?', item: PAGE_URL },
-              ],
-            },
+            // BreadcrumbList is emitted once by the blog route
+            // (src/app/blog/[slug]/page.tsx) via <BreadcrumbSchema>.
             {
               '@context': 'https://schema.org',
               '@type': 'Service',

@@ -291,7 +291,14 @@ export default function Page() {
     },
   ] as const
 
-const CHN_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
+// 2026-08-04: 'pricing' was missing from this list while 6 FAQ items carry
+// category: 'pricing'. The shared FAQ component groups by category and silently
+// drops any item whose category has no key here, so those 6 questions shipped in
+// the FAQPage JSON-LD but never rendered on screen. That is the schema-contradicts-
+// visible-content hard fail (S9). Same defect was fixed on surat and madurai.
+const CHN_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing' },
+  { key: 'process', label: 'Process' },
   { key: 'technical', label: 'Technical' },
   { key: 'ecommerce', label: 'E-Commerce' },
   { key: 'local', label: 'Chennai' },

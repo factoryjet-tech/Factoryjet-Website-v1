@@ -221,7 +221,7 @@ const nextConfig = {
 ### Lighthouse Targets
 - **LCP**: < 2.5s (hero image preloaded)
 - **CLS**: < 0.1 (font fallback metrics prevent layout shift)
-- **FID**: < 100ms (compositor-driven animations)
+- **INP**: <= 200ms (compositor-driven animations)
 - **Overall**: 92+ score
 
 ### Optimizations

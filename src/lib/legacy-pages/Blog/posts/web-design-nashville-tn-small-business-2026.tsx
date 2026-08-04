@@ -82,7 +82,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Nashville's SMB Web Design Market in 2026</h2>
       <p className="mb-4">
-        Nashville has seen explosive SMB growth across three sectors: hospitality and entertainment (driven by continued tourism growth), healthcare and wellness (Nashville is home to more healthcare companies per capita than almost any US city), and the growing tech startup ecosystem anchored by companies like Eventbrite, Asurion, and SmileDirectClub.
+        Nashville has seen explosive SMB growth across three sectors: hospitality and entertainment (driven by continued tourism growth), healthcare and wellness (Nashville is home to more healthcare companies per capita than almost any US city), and the growing tech sector anchored by companies like Asurion, which runs its global headquarters on Church Street, Eventbrite, whose Nashville sales team works out of Cummins Station, and Oracle, which is building a new headquarters campus on the East Bank.
       </p>
       <p className="mb-4">
         Each sector has distinct web design requirements. Hospitality needs mobile-first, reservation-integrated, fast-loading media. Healthcare needs compliance-aware, accessibility-first design. Music and entertainment needs media-rich but performance-optimized builds. Local Nashville agencies serve all three, at prices that reflect their downtown Nashville overhead.

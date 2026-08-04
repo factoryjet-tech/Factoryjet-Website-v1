@@ -873,7 +873,7 @@ export default function ShopifyPage() {
                   { metric: 'Mobile Add-to-Cart Rate', score: '2.3×', note: 'vs. generic theme avg.' },
                   { metric: 'Time to First Byte', score: '<310ms', note: "Shopify's global CDN" },
                   { metric: 'Checkout Conversion', score: '+15%', note: 'Shopify checkout vs. custom' },
-                  { metric: 'Core Web Vitals', score: 'Green', note: 'all three: LCP, CLS, FID' },
+                  { metric: 'Core Web Vitals', score: 'Green', note: 'all three: LCP, CLS, INP' },
                 ].map((item) => (
                   <div key={item.metric} className="flex items-center justify-between gap-4 py-3.5">
                     <div>

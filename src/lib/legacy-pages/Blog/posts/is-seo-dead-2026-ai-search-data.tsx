@@ -120,65 +120,7 @@ export const post: BlogPost = {
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
-              description:
-                "Is SEO dead in 2026? The short answer: no, but it has changed. Here's what the real data shows about organic search, AI Overviews, and what actually works.",
-              author: {
-                '@type': 'Person',
-                name: 'Bhavesh Barot',
-                url: 'https://factoryjet.com/about',
-              },
-              publisher: {
-                '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-                name: 'FactoryJet',
-                url: 'https://factoryjet.com',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://factoryjet.com/logo.png',
-                },
-              },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
-              image: 'https://factoryjet.com/blog-images/is-seo-dead-2026-ai-search-data.webp',
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id': 'https://factoryjet.com/blog/is-seo-dead-2026-ai-search-data',
-              },
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Blog',
-                  item: 'https://factoryjet.com/blog',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'Is SEO Dead in 2026?',
-                  item: 'https://factoryjet.com/blog/is-seo-dead-2026-ai-search-data',
-                },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
 
       {/* ── QUICK ANSWER ───────────────────────────────────────────────── */}
       <div

@@ -996,7 +996,7 @@ export default function WebDesignServicePage() {
                   { metric: 'Lighthouse SEO', score: '100', note: 'technical SEO included' },
                   { metric: 'Largest Contentful Paint', score: '<1.8s', note: 'mobile. India' },
                   { metric: 'Cumulative Layout Shift', score: '0.02', note: 'well below 0.1 threshold' },
-                  { metric: 'First Input Delay', score: '<50ms', note: 'instant response to taps' },
+                  { metric: 'Interaction to Next Paint', score: '<200ms', note: "Google's good threshold" },
                 ].map((item) => (
                   <div key={item.metric} className="flex items-center justify-between gap-4 py-3.5">
                     <div>

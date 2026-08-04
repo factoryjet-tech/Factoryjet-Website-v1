@@ -134,13 +134,25 @@ export default function FAQ({
 }: FAQProps) {
   const hasCats = !!categories?.length;
 
-  /* Group items by category */
+  /* Group items by category.
+   *
+   * 2026-08-04: this used to silently DROP any item whose `category` had no matching
+   * key in `categories`, while `totalCount` below still counted it. That produced a
+   * page rendering 16 questions under a badge reading "22 questions", and shipped the
+   * other 6 in the FAQPage JSON-LD where only a machine could see them. That is the
+   * schema-contradicts-visible-content hard fail (S9 in the perfect-page rubric), and
+   * it had silently occurred on four city pages before anyone noticed.
+   *
+   * An unknown category now falls back to the first category, exactly as a missing one
+   * already did. Content can no longer disappear without someone deleting it on purpose.
+   */
   const grouped: Record<string, FAQItem[]> = {};
   if (hasCats) {
     for (const cat of categories!) grouped[cat.key] = [];
     for (const item of items) {
       const key = item.category ?? categories![0].key;
-      if (grouped[key]) grouped[key].push(item);
+      const bucket = grouped[key] ?? grouped[categories![0].key];
+      bucket.push(item);
     }
   }
 

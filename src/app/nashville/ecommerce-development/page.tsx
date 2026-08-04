@@ -167,7 +167,7 @@ const FAQ_ITEMS = [
             {
               category: 'local',
               question: 'How does FactoryJet optimize Nashville Shopify stores for mobile shoppers?',
-              answer: "Nashville's consumer is mobile-first: the city's younger population, high tourism traffic, and live music culture mean your customers are browsing and buying on phones. FactoryJet optimizes every Nashville Shopify store for mobile with: mobile-first design (layouts built for 375px screens before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, FID/INP under 200ms), Apple Pay and Google Pay one-tap checkout (eliminates the biggest mobile cart abandonment point), thumb-friendly button sizing, and lazy-loaded images that don't block mobile rendering. Every Nashville build passes Lighthouse 90+ on mobile before delivery, not after.",
+              answer: "Nashville's consumer is mobile-first: the city's younger population, high tourism traffic, and live music culture mean your customers are browsing and buying on phones. FactoryJet optimizes every Nashville Shopify store for mobile with: mobile-first design (layouts built for 375px screens before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms), Apple Pay and Google Pay one-tap checkout (eliminates the biggest mobile cart abandonment point), thumb-friendly button sizing, and lazy-loaded images that don't block mobile rendering. Every Nashville build passes Lighthouse 90+ on mobile before delivery, not after.",
             },
             {
               category: 'local',

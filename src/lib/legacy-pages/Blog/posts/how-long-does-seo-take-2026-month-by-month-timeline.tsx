@@ -128,67 +128,7 @@ export const post: BlogPost = {
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: 'How Long Does SEO Take in 2026? A Month-by-Month Timeline',
-              description:
-                'SEO takes 3–6 months for initial results, 6–12 for competitive terms. This month-by-month timeline shows exactly what happens when, backed by Ahrefs and Semrush data.',
-              author: {
-                '@type': 'Person',
-                name: 'Bhavesh Barot',
-                url: 'https://factoryjet.com/about',
-              },
-              publisher: {
-                '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-                name: 'FactoryJet',
-                url: 'https://factoryjet.com',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://factoryjet.com/logo.png',
-                },
-              },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-13',
-              image:
-                'https://factoryjet.com/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id':
-                  'https://factoryjet.com/blog/how-long-does-seo-take-2026-month-by-month-timeline',
-              },
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Blog',
-                  item: 'https://factoryjet.com/blog',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'How Long Does SEO Take in 2026?',
-                  item: 'https://factoryjet.com/blog/how-long-does-seo-take-2026-month-by-month-timeline',
-                },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
 
       {/* ── QUICK ANSWER ───────────────────────────────────────────────── */}
       <div

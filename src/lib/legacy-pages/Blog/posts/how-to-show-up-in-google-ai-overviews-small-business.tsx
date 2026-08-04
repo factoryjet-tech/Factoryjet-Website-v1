@@ -120,68 +120,7 @@ export const post: BlogPost = {
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline:
-                'How to Show Up in Google AI Overviews: A Small Business Checklist (2026)',
-              description:
-                'Google AI Overviews now answer queries before users ever scroll. This 12-step checklist shows small businesses exactly how to get cited in AIO results.',
-              author: {
-                '@type': 'Person',
-                name: 'Bhavesh Barot',
-                url: 'https://factoryjet.com/about',
-              },
-              publisher: {
-                '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-                name: 'FactoryJet',
-                url: 'https://factoryjet.com',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://factoryjet.com/logo.png',
-                },
-              },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
-              image:
-                'https://factoryjet.com/blog-images/how-to-show-up-in-google-ai-overviews-small-business.webp',
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id':
-                  'https://factoryjet.com/blog/how-to-show-up-in-google-ai-overviews-small-business',
-              },
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Blog',
-                  item: 'https://factoryjet.com/blog',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'How to Show Up in Google AI Overviews',
-                  item: 'https://factoryjet.com/blog/how-to-show-up-in-google-ai-overviews-small-business',
-                },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
 
       {/* ── QUICK ANSWER ───────────────────────────────────────────────── */}
       <div

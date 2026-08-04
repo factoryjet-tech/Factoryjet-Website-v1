@@ -99,8 +99,23 @@ export const webDesignAlternates = {
  * bilingual cluster: add 'en-IN' → the new India URL and repoint x-default to it.
  * The India ecommerce *city* pages (ecommerceCityAlternatesIN) are unaffected.
  */
+/**
+ * 2026-08-04: was `en-US` + `x-default`. Changed to `en` + `x-default`.
+ *
+ * Why: this URL is not a US page. It sits in BOTH sitemap-us and sitemap-india, it is the canonical
+ * parent of the 13 India ecommerce city pages, and it links the 13 US city pages. One URL genuinely
+ * serves India, the US, the UK and the UAE. Declaring `en-US` told Google the page was for United
+ * States users only, which is the structural reason its copy had drifted US-exclusive.
+ *
+ * `en` is language-targeted with no country restriction, which is what a single English page serving
+ * several English-speaking markets should declare. No new URL is invented and no duplicate content is
+ * created, so this is the lowest-risk correction available.
+ *
+ * If a dedicated India ecommerce hub is ever built at its own URL, convert this back to a bilingual
+ * cluster: `en-IN` -> the new India URL, `en-US` -> this one, and repoint x-default.
+ */
 export const ecommerceAlternates = {
-  'en-US': 'https://factoryjet.com/services/ecommerce-development',
+  'en': 'https://factoryjet.com/services/ecommerce-development',
   'x-default': 'https://factoryjet.com/services/ecommerce-development',
 } as const
 

@@ -119,39 +119,7 @@ export const post: BlogPost = {
   faqs,
   content: (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: 'How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)',
-              author: { '@type': 'Person', name: 'Bhavesh Barot' },
-              publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
-              description: 'SEO pricing ranges from $300 to $30,000 per month depending on who you hire. Here is the honest, itemized breakdown of what US small businesses actually pay, and what each budget tier buys you.',
-              url: 'https://factoryjet.com/blog/seo-cost-small-business-2026',
-              image: 'https://factoryjet.com/blog-images/seo-cost-small-business-2026.webp',
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://factoryjet.com/blog' },
-                { '@type': 'ListItem', position: 3, name: 'SEO Cost for Small Business 2026', item: 'https://factoryjet.com/blog/seo-cost-small-business-2026' },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
       {/* Quick Answer Box */}
       <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
         <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">Quick Answer</p>

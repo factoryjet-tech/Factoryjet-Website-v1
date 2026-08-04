@@ -64,8 +64,6 @@ import { post as howToShowUpInGoogleAiOverviewsPost } from './posts/how-to-show-
 import { post as howLongDoesSeoTake2026Post } from './posts/how-long-does-seo-take-2026-month-by-month-timeline';
 import { post as isSeoDeadPost } from './posts/is-seo-dead-2026-ai-search-data';
 import { post as seoAuditCost2026Post } from './posts/seo-audit-cost-2026';
-import { post as worldCup2026EcommerceFlashSaleStoreUsPost } from './posts/world-cup-2026-ecommerce-flash-sale-store-us';
-import { post as worldCup2026SeoSmallBusinessPost } from './posts/world-cup-2026-seo-small-business';
 import { post as bigcommerceVsShopify2026FeeChangePost } from './posts/bigcommerce-vs-shopify-2026-fee-change';
 import { post as shopifyDevelopmentCost2026Post } from './posts/shopify-development-cost-2026';
 import { post as aiAdoptionUsSmallBusinesses2026Post } from './posts/ai-adoption-us-small-businesses-2026';
@@ -325,8 +323,12 @@ export const POSTS: BlogPost[] = [
   readTime: '10 min read',
   imageUrl: '/blog-images/react-vs-wordpress.webp',
   meta: {
-    title: "React vs WordPress: Which Is Better in 2026?",
-    description: "Compare React vs WordPress for performance, SEO, cost, and scalability. Find out which platform is right for your business in our 2026 expert guide."
+    // Title deliberately carries no year. This guide was published Oct 2024 and
+    // its sources (State of JavaScript 2024, the 2024 migration case study) are
+    // from that year. Claiming "in 2026" was a freshness signal the content
+    // does not earn. Re-add a year only alongside a genuine content refresh.
+    title: "React vs WordPress: Which Architecture Suits Your Business?",
+    description: "Compare React vs WordPress for performance, SEO, cost, and scalability. Find out which platform is right for your business."
   },
   keyTakeaways: [
     "React is a JavaScript library for building interactive UIs. WordPress is a full content management system (CMS).",
@@ -341,7 +343,7 @@ export const POSTS: BlogPost[] = [
     { q: "Can React and WordPress work together?", a: "Yes. React and WordPress can work together through a headless architecture. WordPress manages content through its REST API, and React (via Next.js) handles frontend rendering. This approach gives teams the editorial ease of WordPress and the performance benefits of React in a single solution." },
     { q: "Which is faster: React or WordPress?", a: "React with Next.js is generally faster than a standard WordPress installation. React-powered sites consistently score higher on Core Web Vitals, particularly Largest Contentful Paint (LCP). WordPress can achieve competitive speeds with caching, a CDN, and managed hosting, but requires ongoing optimisation to maintain those scores." },
     { q: "How much does a React website cost compared to WordPress?", a: "A custom React website typically costs $8,000–$50,000+ to build, compared to $2,000–$15,000 for a WordPress site. React also carries higher maintenance costs due to ongoing developer dependency. WordPress is more cost-effective for content sites, especially when managed by a non-technical team." },
-    { q: "Is WordPress still good for modern websites in 2026?", a: "Yes. WordPress remains highly effective for modern websites in 2026. Its plugin ecosystem, Gutenberg block editor, and WooCommerce integration continue to evolve. For content-heavy businesses, marketing teams, and ecommerce stores that do not require fully custom functionality, WordPress is still one of the best platforms available." },
+    { q: "Is WordPress still good for modern websites?", a: "Yes. WordPress remains highly effective for modern websites. Its plugin ecosystem, Gutenberg block editor, and WooCommerce integration continue to evolve. For content-heavy businesses, marketing teams, and ecommerce stores that do not require fully custom functionality, WordPress is still one of the best platforms available." },
     { q: "Should I migrate from WordPress to React?", a: "Migrating from WordPress to React makes sense if your site is experiencing performance problems, requires custom features that are difficult to build with plugins, or if your development team has React expertise. A headless WordPress approach, keeping WordPress as the CMS and using React for the frontend, lets you migrate gradually without disrupting your content team." },
     { q: "Is Next.js a replacement for WordPress?", a: "No. Next.js is not a direct replacement for WordPress. Next.js is a React framework for building performant, SEO-friendly websites and applications. It does not include a content management system. Many teams use Next.js together with headless WordPress, getting the performance of Next.js and the editorial simplicity of WordPress in one architecture." }
   ],
@@ -362,14 +364,14 @@ export const POSTS: BlogPost[] = [
       </div>
 
       <div className="my-8">
-        <img src="/react vs wordpress comparison for modern website development.webp" alt="React vs WordPress comparison for modern website development in 2026" className="rounded-xl w-full" />
+        <img src="/react vs wordpress comparison for modern website development.webp" alt="React vs WordPress comparison for modern website development" className="rounded-xl w-full" />
       </div>
 
       <p className="text-lg mb-6">
         Choosing the right platform for your website is one of the biggest decisions a business makes. Get it wrong, and you pay for it in slow load times, lost rankings, and expensive developer fixes.
       </p>
       <p className="mb-6">
-        Two platforms dominate the conversation in 2026: React and WordPress. One powers nearly half the internet. The other is reshaping how high-performance websites are built.
+        Two platforms dominate the conversation: React and WordPress. One powers nearly half the internet. The other is reshaping how high-performance websites are built.
       </p>
       <p className="mb-8">
         In this guide, the team at <a href="https://www.factoryjet.com/" className="text-blue-600 underline">FactoryJet</a> breaks down React vs WordPress across performance, SEO, cost, and scalability. By the end, you will know exactly which platform fits your business.
@@ -4743,8 +4745,6 @@ export const POSTS: BlogPost[] = [
   howLongDoesSeoTake2026Post,
   isSeoDeadPost,
   seoAuditCost2026Post,
-  worldCup2026EcommerceFlashSaleStoreUsPost,
-  worldCup2026SeoSmallBusinessPost,
   bigcommerceVsShopify2026FeeChangePost,
   shopifyDevelopmentCost2026Post,
   aiAdoptionUsSmallBusinesses2026Post,

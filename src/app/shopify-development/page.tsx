@@ -1021,7 +1021,7 @@ export default function ShopifyDevelopmentPage() {
                   { category: 'Storefront', tools: 'Shopify Liquid, Hydrogen (headless)' },
                   { category: 'Design', tools: 'Figma, custom Liquid section builder' },
                   { category: 'Payments', tools: 'Razorpay, PayU, UPI, EMI, BNPL' },
-                  { category: 'Logistics', tools: 'Shiprocket, Delhivery, Dunzo' },
+                  { category: 'Logistics', tools: 'Shiprocket, Delhivery, Shadowfax, Porter' },
                   { category: 'WhatsApp', tools: 'Interakt, Wati, AiSensy' },
                   { category: 'Email & SMS', tools: 'Klaviyo, WebEngage, MSG91' },
                   { category: 'Analytics', tools: 'GA4, Meta Pixel, CleverTap' },

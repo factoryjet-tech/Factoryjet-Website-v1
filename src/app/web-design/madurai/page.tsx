@@ -294,7 +294,12 @@ export default function Page() {
     },
   ] as const
 
-const MDU_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
+// Every `category` used in MDU_FAQ_ITEMS must have a key here. The FAQ
+// component silently drops items whose category is not listed, which is how
+// six pricing questions ended up in the FAQPage schema but never on screen.
+const MDU_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing' },
+  { key: 'process', label: 'Process' },
   { key: 'technical', label: 'Technical' },
   { key: 'ecommerce', label: 'E-Commerce' },
   { key: 'local', label: 'Madurai' },
@@ -324,16 +329,16 @@ const MDU_FAQ_ITEMS = [
 
   // Money-query coverage, added 2026-06-11
   {
-    category: 'pricing',
+    category: 'local',
     question: 'Who is the best web design agency in Madurai?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Madurai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Madurai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Madurai.',
+      'For small businesses, FactoryJet makes a strong case: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any agency you compare should pass three checks. Live websites you can open and test. Speed scores you can verify yourself. A price that does not grow mid-project. That is the honest way to pick.',
   },
   {
-    category: 'pricing',
-    question: 'Should I hire web designer in Madurai or use an agency?',
+    category: 'local',
+    question: 'Should I use a freelance web designer in Madurai or an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Madurai directly, agree the scope and price in writing first.',
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire a freelancer directly, agree the scope and price in writing first.',
   },
 ];
 

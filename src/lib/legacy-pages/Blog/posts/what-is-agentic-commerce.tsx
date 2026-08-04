@@ -167,15 +167,8 @@ const JSON_LD = [
       cssSelector: ['#answer-first', '#agentic-commerce-definition'],
     },
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://factoryjet.com/blog' },
-      { '@type': 'ListItem', position: 3, name: 'What Is Agentic Commerce?', item: URL },
-    ],
-  },
+  // BreadcrumbList is emitted once by the blog route (src/app/blog/[slug]/page.tsx)
+  // via <BreadcrumbSchema>. A second copy used to live here.
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -211,16 +204,9 @@ const JSON_LD = [
       { '@type': 'ListItem', position: 10, name: 'Perplexity', description: 'Answer-engine shopping flows with buy actions attached to product recommendations.' },
     ],
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    '@id': `${URL}#faq`,
-    mainEntity: FAQS.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
+  // FAQPage is emitted once by the blog route (src/app/blog/[slug]/page.tsx)
+  // from post.faqs, which is this same FAQS array. A second copy used to live here
+  // and made the page read as 68 questions instead of 34.
 ];
 
 export const post: BlogPost = {

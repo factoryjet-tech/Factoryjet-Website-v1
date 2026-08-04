@@ -115,39 +115,7 @@ export const post: BlogPost = {
   faqs,
   content: (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: 'How to Get ChatGPT to Recommend Your Small Business (2026 Playbook)',
-              author: { '@type': 'Person', name: 'Bhavesh Barot' },
-              publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
-              description: 'ChatGPT is now a referral source that sends real buyers to businesses it trusts. Here is exactly how to make your business one of them, covering the specific signals, content moves, and technical fixes that determine whether AI recommends you or your competitor.',
-              url: 'https://factoryjet.com/blog/how-to-get-chatgpt-to-recommend-your-business-2026',
-              image: 'https://factoryjet.com/blog-images/how-to-get-chatgpt-to-recommend-your-business-2026.webp',
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://factoryjet.com/blog' },
-                { '@type': 'ListItem', position: 3, name: 'How to Get ChatGPT to Recommend Your Business', item: 'https://factoryjet.com/blog/how-to-get-chatgpt-to-recommend-your-business-2026' },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
       {/* Quick Answer Box */}
       <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
         <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">Quick Answer</p>

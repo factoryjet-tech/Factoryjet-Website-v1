@@ -116,70 +116,7 @@ export const post: BlogPost = {
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: 'How Much Does an SEO Audit Cost in 2026? (Real Pricing Breakdown)',
-              description:
-                'SEO audit costs range from $0 to $30,000+ in 2026. This breakdown covers what each price tier delivers, what to ask before paying, and what a small business actually needs.',
-              author: {
-                '@type': 'Person',
-                name: 'Bhavesh Barot',
-                url: 'https://factoryjet.com/about',
-              },
-              publisher: {
-                '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-                name: 'FactoryJet',
-                url: 'https://factoryjet.com',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://factoryjet.com/logo.png',
-                },
-              },
-              datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
-              image: 'https://factoryjet.com/blog-images/seo-audit-cost-2026.webp',
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id': 'https://factoryjet.com/blog/seo-audit-cost-2026',
-              },
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                {
-                  '@type': 'ListItem',
-                  position: 1,
-                  name: 'Home',
-                  item: 'https://factoryjet.com',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: 'Blog',
-                  item: 'https://factoryjet.com/blog',
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: 'SEO Audit Cost 2026',
-                  item: 'https://factoryjet.com/blog/seo-audit-cost-2026',
-                },
-              ],
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-            },
-          ]),
-        }}
-      />
+      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
 
       {/* ── QUICK ANSWER ───────────────────────────────────────────────── */}
       <div

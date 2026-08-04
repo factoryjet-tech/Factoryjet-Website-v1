@@ -1,6 +1,5 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
-import { BreadcrumbSchema } from '../../../../components/BreadcrumbSchema';
 
 // FAQs are grounded in live US "People Also Ask" data on "small business web design"
 // and "will AI replace web designers" (pulled Jul 2026). The FAQPage schema below is
@@ -227,28 +226,12 @@ export const post: BlogPost = {
                 { '@type': 'ListItem', position: 10, name: 'Knowing what to remove (needs a human)' },
               ],
             },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
-                '@type': 'Question',
-                name: f.q,
-                acceptedAnswer: { '@type': 'Answer', text: f.a },
-              })),
-            },
           ]),
         }}
       />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Blog', url: 'https://factoryjet.com/blog' },
-          {
-            name: 'Will AI Replace Web Designers?',
-            url: 'https://factoryjet.com/blog/will-ai-replace-web-designers',
-          },
-        ]}
-      />
+      {/* FAQPage and BreadcrumbList are emitted once by the blog route
+          (src/app/blog/[slug]/page.tsx). The literal FAQPage array and the
+          BreadcrumbSchema element that lived here were duplicates. */}
 
       {/* Answer-first block for AI Overviews / ChatGPT citation */}
       <div className="answer-first bg-amber-50 border border-amber-200 p-5 rounded-2xl mb-8">

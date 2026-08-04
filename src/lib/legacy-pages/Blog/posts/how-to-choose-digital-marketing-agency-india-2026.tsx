@@ -1,6 +1,5 @@
 import React from 'react';
 import type { BlogPost, FAQItem } from '../data.types';
-import { BreadcrumbSchema } from '../../../../components/BreadcrumbSchema';
 
 // FAQs are grounded in live Google "People Also Ask" + related-search data for
 // "how to choose a digital marketing agency" and "best digital marketing agency in india"
@@ -185,28 +184,12 @@ export const post: BlogPost = {
               ],
               url: 'https://factoryjet.com/digital-marketing',
             },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: faqs.map((f) => ({
-                '@type': 'Question',
-                name: f.q,
-                acceptedAnswer: { '@type': 'Answer', text: f.a },
-              })),
-            },
           ]),
         }}
       />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Blog', url: 'https://factoryjet.com/blog' },
-          {
-            name: 'How to Choose a Digital Marketing Agency in India (2026)',
-            url: 'https://factoryjet.com/blog/how-to-choose-digital-marketing-agency-india-2026',
-          },
-        ]}
-      />
+      {/* FAQPage and BreadcrumbList are emitted once by the blog route
+          (src/app/blog/[slug]/page.tsx). The literal FAQPage array and the
+          BreadcrumbSchema element that lived here were duplicates. */}
 
       {/* Answer-first block for AI Overviews / ChatGPT citation */}
       <div className="answer-first bg-amber-50 border border-amber-200 p-5 rounded-2xl mb-8">

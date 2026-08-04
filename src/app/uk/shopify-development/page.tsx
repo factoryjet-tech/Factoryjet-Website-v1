@@ -209,7 +209,7 @@ export default function ShopifyDevelopmentPage() {
           <div className="scorecard-row">
             <div>
               <div className="scorecard-metric">Core Web Vitals</div>
-              <div className="scorecard-note">LCP, CLS, FID; all green on delivery</div>
+              <div className="scorecard-note">LCP, CLS, INP; all green on delivery</div>
             </div>
             <div className="scorecard-val" style={{ color: 'var(--green)' }}>Green</div>
           </div>
@@ -393,7 +393,7 @@ export default function ShopifyDevelopmentPage() {
           <div className="scorecard-row">
             <div>
               <div className="scorecard-metric">Core Web Vitals</div>
-              <div className="scorecard-note">LCP, CLS, FID; all three</div>
+              <div className="scorecard-note">LCP, CLS, INP; all three</div>
             </div>
             <div className="scorecard-val" style={{ color: 'var(--green)' }}>Green</div>
           </div>

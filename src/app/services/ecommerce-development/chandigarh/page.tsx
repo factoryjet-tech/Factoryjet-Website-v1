@@ -252,7 +252,7 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'india',
     question: 'Which logistics partner should I use for a Chandigarh store?',
     answer:
-      'Shiprocket is our default recommendation for most Chandigarh ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chandigarh, Dunzo and Shadowfax are the right fit.',
+      'Shiprocket is our default recommendation for most Chandigarh ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chandigarh, Shadowfax and Porter are the right fit.',
   },
   {
     category: 'india',

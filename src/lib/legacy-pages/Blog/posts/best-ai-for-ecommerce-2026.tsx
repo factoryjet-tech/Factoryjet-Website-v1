@@ -181,20 +181,8 @@ export const post: BlogPost = {
                   cssSelector: ['#answer-first', 'h1'],
                 },
               },
-              {
-                '@type': 'BreadcrumbList',
-                '@id': `${URL}#breadcrumb`,
-                itemListElement: [
-                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-                  { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://factoryjet.com/blog' },
-                  {
-                    '@type': 'ListItem',
-                    position: 3,
-                    name: 'The Best AI for Ecommerce in 2026',
-                    item: URL,
-                  },
-                ],
-              },
+              // BreadcrumbList is emitted once by the blog route
+              // (src/app/blog/[slug]/page.tsx) via <BreadcrumbSchema>.
               {
                 '@type': 'Service',
                 '@id': `${URL}#service`,
