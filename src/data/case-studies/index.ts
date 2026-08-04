@@ -694,6 +694,265 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
     ],
   },
+
+  // ─── 7. Sow Easy — distributor + white-label portal on Commerceflo ───────
+  // Added 2026-08-04 from Bhavesh's brief. No metrics are asserted: the build
+  // is described, not scored. Do not add numbers without a measured source.
+  // The public site is still in development, so no live URL is published here.
+  {
+    slug: 'sow-easy-distributor-portal',
+    client: 'Sow Easy',
+    tagline: 'A distributor network that needed its partners to sell onward, not just order.',
+    industry: 'B2B Distribution',
+    services: [
+      'Commerceflo B2B Storefront',
+      'Distributor Portal',
+      'White-Label Partner Mini-Sites',
+      'Trade Pricing Tiers',
+      'Sample Ordering',
+      'UI/UX Design',
+      'AI SEO',
+    ],
+    headline: 'A Distributor Portal Where Partners Can Launch Their Own Storefronts',
+    summary:
+      'Sow Easy sells through distributors and trade partners rather than direct to consumers. FactoryJet built their B2B commerce on Commerceflo with a full distributor portal, trade pricing that resolves per account at login, and sample ordering. The part that makes it unusual is white-labelling: a distributor can launch their own mini-site for their end customers off the same catalogue. We built the same pattern for two sibling brands in the group, Buddyburst and Seedsticks.',
+    category: 'E-Comm',
+    heroStats: [
+      { value: 'White-label', label: 'Partner mini-sites' },
+      { value: 'Commerceflo', label: 'Platform built on' },
+      { value: '3 brands', label: 'Sow Easy, Buddyburst, Seedsticks' },
+    ],
+    glanceTiles: [
+      { label: 'INDUSTRY', value: 'B2B Distribution' },
+      { label: 'SERVICES', value: 'Distributor Portal + White-Label' },
+      { label: 'PLATFORM', value: 'Commerceflo' },
+      { label: 'PRICING', value: 'Trade Tiers on Login' },
+      { label: 'ORDERING', value: 'Samples + Trade Orders' },
+      { label: 'GROUP', value: 'Buddyburst, Seedsticks' },
+    ],
+    keyMetrics: [
+      { label: 'Partner Model', value: 'White-label mini-sites', note: 'Distributors sell onward under their own brand' },
+      { label: 'Pricing', value: 'Per-account tiers', note: 'Resolved at login, not a public list price' },
+      { label: 'Sampling', value: 'Sample ordering built in' },
+      { label: 'Group Builds', value: 'Buddyburst, Seedsticks' },
+    ],
+    headlineMetric: {
+      label: 'What Makes This Different',
+      value: 'Partners get their own storefront',
+      note: 'A distributor can launch a branded mini-site for their end customers off the same catalogue',
+    },
+    resultsMetrics: [
+      { label: 'Distributor Portal', value: 'Live' },
+      { label: 'White-Label Mini-Sites', value: 'Supported' },
+      { label: 'Trade Pricing', value: 'Per account, on login' },
+      { label: 'Sample Ordering', value: 'Built in' },
+      { label: 'Search', value: 'AI SEO in progress' },
+      { label: 'Sibling Builds', value: 'Buddyburst, Seedsticks' },
+    ],
+    challenge:
+      'Selling through distributors creates a problem a normal storefront does not solve. The distributor is a buyer, so they need trade pricing and bulk ordering. But they are also a seller, so they need something to sell with, and most of them do not have their own ecommerce. Left alone, that gap gets filled by PDFs, spreadsheets and phone calls, and the brand loses any view of what happens past the distributor.',
+    challengePullQuote:
+      'A distributor is a buyer and a seller at the same time. Build for only one of those and the other half breaks.',
+    approach:
+      'We treated the distributor as two users in one account. As a buyer they get contracted pricing, sample ordering and repeat ordering. As a seller they get a white-label mini-site they can point their own customers at, running off the same catalogue so nothing has to be re-keyed or kept in sync by hand. Commerceflo carries the account-based pricing and quote logic natively, which keeps trade rules in the platform instead of in custom code. We then applied the same pattern to Buddyburst and Seedsticks in the same group.',
+    techStack: ['Commerceflo'],
+    solution:
+      'Trade partners log in and see their own pricing tier rather than a public price. They can order samples before committing to volume, which matters in a category where buyers want to handle the product first. Distributors who want to sell onward get a white-label storefront for their end customers, drawing on the same catalogue. Alongside the build we designed the UI/UX and started AI SEO so the brand is findable in AI answers as well as in search.',
+    results:
+      'Sow Easy now has a distributor channel that can transact and resell without the brand hand-holding every order, and the same pattern is running for Buddyburst and Seedsticks. The public site is still in development, so we are not publishing traffic or revenue figures for it. We would rather describe the build accurately than attach a number to it before there is one worth quoting.',
+    imageUrl: '/images/case-studies/sow-easy-distributor-portal-hero.jpg',
+    ogImageUrl: '/images/case-studies/sow-easy-distributor-portal-og.png',
+    publishedDate: '2026-08-04',
+    ctaTeaser: 'If you sell through distributors and want them selling onward under their own brand, this is the pattern.',
+    relatedSlugs: ['belle-maison-ecommerce-success', 'gpsuk-promotional-products'],
+    faqs: [
+      {
+        q: 'What is a white-label distributor mini-site?',
+        a: 'It is a small storefront your distributor runs under their own branding, selling your catalogue to their customers. They do not have to build or maintain ecommerce themselves, and you are not stuck rebuilding a separate site for every partner.',
+      },
+      {
+        q: 'Why does sample ordering need to be built in?',
+        a: 'In trade categories buyers usually want to handle the product before ordering volume. If sampling happens over email it sits outside the system, so nobody can see which samples led to which orders. Building it into the portal keeps that history attached to the account.',
+      },
+      {
+        q: 'What does "trade pricing tiers on login" actually mean?',
+        a: 'Different partners have agreed different rates with you. Rather than showing one public price and correcting it later in a quote, the storefront resolves the right price for that account the moment they log in. What they see is what they pay.',
+      },
+      {
+        q: 'Can this work for a group with several brands?',
+        a: 'Yes, and Sow Easy is the example. The same distributor and white-label pattern runs across Buddyburst and Seedsticks in the same group, so partners get a consistent way to buy and resell across all three.',
+      },
+      {
+        q: 'Do distributors need technical skill to run a mini-site?',
+        a: 'No. That is the point of white-labelling it. The catalogue, pricing and ordering all come from the parent system, so the distributor is running a storefront rather than building one.',
+      },
+    ],
+  },
+
+  // ─── 8. GPSUK — promotional products, B2B storefront on Commerceflo ──────
+  {
+    slug: 'gpsuk-promotional-products',
+    client: 'GPSUK',
+    tagline: 'A UK promotional products supplier selling to trade buyers who order the same things repeatedly.',
+    industry: 'Promotional Products',
+    services: [
+      'Commerceflo B2B Storefront',
+      'Trade Account Ordering',
+      'Catalogue Structuring',
+      'Quote-to-Order Workflow',
+    ],
+    headline: 'Putting a UK Promotional Products Catalogue in Front of Trade Buyers',
+    summary:
+      'GPSUK supplies promotional products to business customers in the UK, a category where buyers reorder branded stock and often need a quote before an order. FactoryJet built their B2B storefront on Commerceflo so trade accounts can browse the catalogue, get their own pricing, and move from quote to order without it being rebuilt by hand each time.',
+    category: 'E-Comm',
+    heroStats: [
+      { value: 'B2B', label: 'Trade account storefront' },
+      { value: 'Commerceflo', label: 'Platform built on' },
+      { value: 'UK', label: 'Market served' },
+    ],
+    glanceTiles: [
+      { label: 'INDUSTRY', value: 'Promotional Products' },
+      { label: 'SERVICES', value: 'B2B Storefront + Quoting' },
+      { label: 'PLATFORM', value: 'Commerceflo' },
+      { label: 'BUYERS', value: 'Trade Accounts' },
+      { label: 'MARKET', value: 'United Kingdom' },
+      { label: 'ORDERING', value: 'Quote-to-Order' },
+    ],
+    keyMetrics: [
+      { label: 'Buyer Type', value: 'Trade accounts' },
+      { label: 'Pricing', value: 'Account-based' },
+      { label: 'Quoting', value: 'Quote-to-order' },
+      { label: 'Platform', value: 'Commerceflo' },
+    ],
+    headlineMetric: {
+      label: 'What Changed',
+      value: 'Self-serve trade ordering',
+      note: 'Buyers work from a live catalogue with their own pricing instead of a emailed quote',
+    },
+    resultsMetrics: [
+      { label: 'Storefront', value: 'B2B, account-based' },
+      { label: 'Catalogue', value: 'Structured for reorder' },
+      { label: 'Quoting', value: 'Quote-to-order' },
+      { label: 'Market', value: 'UK trade buyers' },
+      { label: 'Platform', value: 'Commerceflo' },
+      { label: 'Manual Re-entry', value: 'Removed' },
+    ],
+    challenge:
+      'Promotional products is a reorder business. A customer brands stock once and then comes back for more of the same, often against pricing agreed earlier. Handling that over email means the catalogue lives in one place, the agreed price lives in someone\'s inbox, and every repeat order is reconstructed from scratch. It is slow for the buyer and it hides demand from the supplier.',
+    approach:
+      'We built the storefront around the reorder, not the first order. That means a trade account can find what they bought before, see the price that applies to them, and raise a quote or an order without a conversation. Commerceflo handles account-based pricing and quote-to-order natively, so the trade rules stay in the platform rather than being reimplemented.',
+    techStack: ['Commerceflo'],
+    solution:
+      'GPSUK trade customers log in to a catalogue priced for their account. Where an order needs quoting first, the quote carries through to the order rather than being retyped. The catalogue is structured so buyers can find products the way they describe them, which matters in a category with a very wide range and a lot of near-identical items.',
+    results:
+      'GPSUK now has a trade storefront their customers can serve themselves from, with pricing and quoting handled in the system rather than in email. We have not published revenue or traffic figures for this build, because we do not have measured ones to publish.',
+    imageUrl: '/images/case-studies/gpsuk-promotional-products-hero.jpg',
+    ogImageUrl: '/images/case-studies/gpsuk-promotional-products-og.png',
+    publishedDate: '2026-08-04',
+    ctaTeaser: 'If your buyers reorder against agreed pricing, a trade storefront removes the email round trip.',
+    relatedSlugs: ['sow-easy-distributor-portal', 'belle-maison-ecommerce-success'],
+    faqs: [
+      {
+        q: 'Why do promotional products suppliers need B2B commerce specifically?',
+        a: 'Because the buyer is a business reordering branded stock against agreed pricing, not a shopper making a one-off purchase. A retail checkout shows one price to everyone and assumes the order is new, which is the opposite of how this category actually buys.',
+      },
+      {
+        q: 'What does quote-to-order remove?',
+        a: 'The retyping. In most suppliers a quote is written in email or a spreadsheet, then re-entered as an order once approved. That step is where errors and delays come from. Quote-to-order keeps it as one record from start to finish.',
+      },
+      {
+        q: 'Does a trade storefront replace the sales team?',
+        a: 'No, it takes the repetitive work off them. Straightforward reorders go through the portal, which leaves the team on the quotes and relationships that actually need a person.',
+      },
+      {
+        q: 'How do you handle a very large catalogue of similar items?',
+        a: 'Structure. If products are only findable by exact code, buyers give up and email instead. We organise the catalogue around how buyers describe what they want, so search and browsing both land on the right item.',
+      },
+    ],
+  },
+
+  // ─── 9. Yadav Entrance Automation — site build plus SEO and AI SEO ───────
+  {
+    slug: 'yadav-entrance-automation-website-seo',
+    client: 'Yadav Entrance Automation',
+    tagline: 'An entrance automation specialist that needed a real website before it could be found at all.',
+    industry: 'Entrance Automation',
+    services: [
+      'Website Build From Scratch',
+      'Technical SEO',
+      'AI SEO',
+      'Content Structure',
+    ],
+    headline: 'Building an Entrance Automation Specialist a Site Search Engines and AI Can Read',
+    summary:
+      'Yadav Entrance Automation installs and services automatic entrance systems. FactoryJet built their website from scratch and runs their SEO and AI SEO, so the business is findable both in traditional search results and in AI answers when someone asks who does this work.',
+    category: 'Corporate',
+    heroStats: [
+      { value: 'Built', label: 'Website from scratch' },
+      { value: 'SEO', label: 'Ongoing search work' },
+      { value: 'AI SEO', label: 'Findable in AI answers' },
+    ],
+    glanceTiles: [
+      { label: 'INDUSTRY', value: 'Entrance Automation' },
+      { label: 'SERVICES', value: 'Website + SEO + AI SEO' },
+      { label: 'SCOPE', value: 'Built From Scratch' },
+      { label: 'SEARCH', value: 'Organic + AI Answers' },
+      { label: 'STATUS', value: 'Live, SEO Ongoing' },
+      { label: 'SITE', value: 'yadaventranceautomation.com' },
+    ],
+    keyMetrics: [
+      { label: 'Website', value: 'Built from scratch' },
+      { label: 'Search Work', value: 'SEO and AI SEO, ongoing' },
+      { label: 'Site', value: 'yadaventranceautomation.com' },
+      { label: 'Engagement', value: 'Continuing' },
+    ],
+    headlineMetric: {
+      label: 'Scope',
+      value: 'Site build plus ongoing search',
+      note: 'Built the website, then kept working on how the business is found',
+    },
+    resultsMetrics: [
+      { label: 'Website', value: 'Live' },
+      { label: 'Technical SEO', value: 'In place' },
+      { label: 'AI SEO', value: 'Ongoing' },
+      { label: 'Content Structure', value: 'Built for extraction' },
+      { label: 'Engagement', value: 'Ongoing' },
+      { label: 'Site', value: 'yadaventranceautomation.com' },
+    ],
+    challenge:
+      'A specialist trade business with no real web presence is invisible to anyone who does not already know its name. Buyers looking for entrance automation search for the problem, not the company, and increasingly they ask an AI assistant rather than scrolling results. Without a site that either can read properly, the business only gets found by referral.',
+    approach:
+      'We built the site from scratch rather than dressing up a template, so the structure matches how the work is actually bought: what the systems are, what gets installed and serviced, and who it is for. Then we treated search as ongoing work rather than a launch task, covering both traditional SEO and AI SEO, because being quoted in an AI answer and ranking in results draw on the same foundations.',
+    techStack: ['Custom Website'],
+    solution:
+      'The site is structured so each section answers one question a buyer would actually ask, with content in real text that both search engines and AI assistants can extract. On top of that we run continuing SEO and AI SEO work rather than treating the launch as the finish line.',
+    results:
+      'Yadav Entrance Automation has a website built for how the business is bought, and search work continuing on it. We are not publishing ranking or traffic figures here. The engagement is ongoing and we would rather report measured numbers later than estimated ones now.',
+    imageUrl: '/images/case-studies/yadav-entrance-automation-website-seo-hero.jpg',
+    ogImageUrl: '/images/case-studies/yadav-entrance-automation-website-seo-og.png',
+    publishedDate: '2026-08-04',
+    ctaTeaser: 'If your buyers search for the problem rather than your name, the site has to answer the problem.',
+    relatedSlugs: ['formative-concepts-bim', 'rukman-transport-logistics'],
+    faqs: [
+      {
+        q: 'What is AI SEO, in plain terms?',
+        a: 'It is making sure that when someone asks ChatGPT, Gemini or Google\'s AI answers about your kind of work, your business is one of the ones named. It relies on the same fundamentals as normal SEO: real text, clear structure, and content that answers the question directly.',
+      },
+      {
+        q: 'Is AI SEO separate work from normal SEO?',
+        a: 'Mostly not, and anyone selling it as a separate trick is overselling. Google states there is no special markup or file that gets you into AI answers. What helps is being crawlable, being clearly structured, and genuinely answering the question.',
+      },
+      {
+        q: 'Why build from scratch instead of using a template?',
+        a: 'A template decides your structure before anyone has thought about how your work is bought. For a specialist trade that usually means the pages a buyer needs are missing and the pages nobody wants are prominent.',
+      },
+      {
+        q: 'How long before search work shows results?',
+        a: 'Branded searches for the company name tend to come first, usually within weeks of launch. Competitive service terms take longer, typically months, and depend on how contested the category is. Anyone promising a fixed timeline is guessing.',
+      },
+    ],
+  },
+
 ]
 
 /**

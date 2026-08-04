@@ -35,11 +35,32 @@ const CREAM = '#FAFAF7'
 //-shipped screenshot of the actual delivered client site.
 const CARDS = [
   {
+    slug: 'sow-easy-distributor-portal',
+    client: 'Sow Easy',
+    category: 'E-Comm',
+    stat: 'White-label',
+    label: 'Partner Mini-Sites',
+  },
+  {
+    slug: 'gpsuk-promotional-products',
+    client: 'GPSUK',
+    category: 'E-Comm',
+    stat: 'B2B',
+    label: 'Trade Account Storefront',
+  },
+  {
+    slug: 'yadav-entrance-automation-website-seo',
+    client: 'Yadav Entrance Automation',
+    category: 'Corporate',
+    stat: 'SEO',
+    label: 'Website Build + AI SEO',
+  },
+  {
     slug: 'belle-maison-ecommerce-success',
     client: 'Belle Maison',
     category: 'E-Comm',
-    stat: '$180K',
-    label: 'Revenue in 120 Days',
+    stat: 'B2B',
+    label: 'Quote-to-Cash Storefront',
     realHero: 'belle-maison.webp',
   },
   {
