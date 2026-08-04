@@ -93,10 +93,19 @@ export default function ProductionAnalytics() {
     // AFTER first paint / LCP, so the GTM container never executes inside the LCP
     // window on throttled mobile. requestIdleCallback's timeout is a hard cap so
     // bounced real users are still measured; Safari (no rIC) uses a timer.
+    //
+    // CAP LOWERED 2026-08-04 (8000 -> 2500 / 6000 -> 3000). The old 8s cap meant any
+    // visitor who landed and left inside 8 seconds without scrolling, tapping or
+    // moving a mouse was never measured at all. On mobile there is no mousemove, so
+    // that silently erased most short mobile sessions. rIC still fires at natural
+    // first idle (normally well under 2s here, i.e. after LCP), so this only changes
+    // behaviour on pages whose main thread stays busy past 2.5s; measuring those is
+    // worth more than the marginal LCP risk. Do not raise this again without
+    // checking GA4 session counts against GSC clicks first.
     if (ric) {
-      idleHandle = ric(load, { timeout: 8000 });
+      idleHandle = ric(load, { timeout: 2500 });
     } else {
-      timer = setTimeout(load, 6000);
+      timer = setTimeout(load, 3000);
     }
 
     return cleanup;

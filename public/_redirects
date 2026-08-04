@@ -1,3 +1,22 @@
+# ══ READ FIRST: THIS FILE HAS AN 8 KiB RULE BUDGET ═════════════════════════
+# Cloudflare Pages strips comments and blank lines, then caps the remaining RULE
+# content at 8192 bytes. Anything past that byte is SILENTLY DROPPED: no build
+# error, no warning, nothing in the deploy log. The rules just never fire and
+# their URLs serve 404s.
+#
+# This bit us for a month. On 2026-08-04 we measured production and found only
+# the first 148 of 202 rules were live. The dead tail included the `/us/*`
+# migration catch-all (so every former /us/ URL 404'd) and 12 UK blog 301s.
+#
+# RULES FOR EDITING THIS FILE
+#   1. Comments are FREE. Document as much as you like.
+#   2. Rule lines are NOT free, and alignment padding counts. Use single spaces.
+#   3. Prefer one :placeholder or /* rule over N repeated explicit rules.
+#   4. `npm run validate` fails the build if you cross the cap. Do not bypass it.
+#   5. Cloudflare's documented "2,100 static rules" limit is real but is NOT the
+#      binding constraint here. The byte budget is. Ignore the rule count.
+# ═══════════════════════════════════════════════════════════════════════════
+#
 # ── CANONICAL URL STRATEGY ──────────────────────────────────────────────────
 # Preferred canonical: https://factoryjet.com (no www, HTTPS)
 # All per-page Next.js metadata includes an explicit `alternates.canonical`.
@@ -17,26 +36,26 @@
 # is handled by Cloudflare Dashboard rule "shopify_legacy_ecommerce_redirect" (301)
 
 # Foundation Patch #3: old /uk/sitemap-*.xml URLs → native sitemap-index
-/uk/sitemap-index.xml      /sitemap.xml                  301
-/uk/sitemap-cities.xml     /sitemap-uk/sitemap.xml       301
-/uk/sitemap-services.xml   /sitemap-uk/sitemap.xml       301
+/uk/sitemap-index.xml /sitemap.xml 301
+/uk/sitemap-cities.xml /sitemap-uk/sitemap.xml 301
+/uk/sitemap-services.xml /sitemap-uk/sitemap.xml 301
 
 # Conventional sitemap path redirects (emission lives at /sitemap-{section}/sitemap.xml)
-/sitemap-pages.xml   /sitemap-pages/sitemap.xml   301
-/sitemap-uk.xml      /sitemap-uk/sitemap.xml      301
-/sitemap-us.xml      /sitemap-us/sitemap.xml      301
-/sitemap-uae.xml     /sitemap-uae/sitemap.xml     301
-/sitemap-blog.xml    /sitemap-blog/sitemap.xml    301
+/sitemap-pages.xml /sitemap-pages/sitemap.xml 301
+/sitemap-uk.xml /sitemap-uk/sitemap.xml 301
+/sitemap-us.xml /sitemap-us/sitemap.xml 301
+/sitemap-uae.xml /sitemap-uae/sitemap.xml 301
+/sitemap-blog.xml /sitemap-blog/sitemap.xml 301
 
 # ── CANNIBALIZATION CONSOLIDATION (2026-07-25) ──────────────────────────────
 # Overlapping US service pages retired into their canonical twin (301, keep
 # permanently). Preserves link equity + avoids 404s on already-indexed URLs.
 #   generative-engine-optimization → ai-seo    (thin/orphaned; ai-seo owns GEO+AEO)
 #   ai-agency                      → ai-agents  (ai-agents is the canonical AI hub)
-/services/generative-engine-optimization   /services/ai-seo      301
-/services/ai-agency                         /services/ai-agents   301
+/services/generative-engine-optimization /services/ai-seo 301
+/services/ai-agency /services/ai-agents 301
 # whatsapp-chatbot US namespace was a noindex double-hop stub → point straight at the US twin
-/services/whatsapp-chatbot                  /services/ai-chatbot-development   301
+/services/whatsapp-chatbot /services/ai-chatbot-development 301
 
 # ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
 # NOTE: NYC /services rule moved to canonical block below (line ~58) to avoid
@@ -46,23 +65,23 @@
 # /us/{city} has no page.tsx — redirect to the city web-design landing page.
 # These fire when users type the hub URL directly or follow an old external link.
 # Root city hubs (no page.tsx at /{city}) — send to the city web-design landing.
-/austin        /austin/web-design        301
-/miami         /miami/web-design         301
-/denver        /denver/web-design        301
-/nashville     /nashville/web-design     301
-/portland      /portland/web-design      301
-/charlotte     /charlotte/web-design     301
-/raleigh       /raleigh/web-design       301
-/tampa         /tampa/web-design         301
+/austin /austin/web-design 301
+/miami /miami/web-design 301
+/denver /denver/web-design 301
+/nashville /nashville/web-design 301
+/portland /portland/web-design 301
+/charlotte /charlotte/web-design 301
+/raleigh /raleigh/web-design 301
+/tampa /tampa/web-design 301
 # Legacy /us city hubs → new root city web-design (single hop)
-/us/austin     /austin/web-design        301
-/us/miami      /miami/web-design         301
-/us/denver     /denver/web-design        301
-/us/nashville  /nashville/web-design     301
-/us/portland   /portland/web-design      301
-/us/charlotte  /charlotte/web-design     301
-/us/raleigh    /raleigh/web-design       301
-/us/tampa      /tampa/web-design         301
+/us/austin /austin/web-design 301
+/us/miami /miami/web-design 301
+/us/denver /denver/web-design 301
+/us/nashville /nashville/web-design 301
+/us/portland /portland/web-design 301
+/us/charlotte /charlotte/web-design 301
+/us/raleigh /raleigh/web-design 301
+/us/tampa /tampa/web-design 301
 
 # NOTE: Tier-3 e-commerce city pages (boise, chattanooga, fargo, lincoln, sioux-falls)
 # were previously redirected here while on the legacy theme.
@@ -70,46 +89,46 @@
 
 # ── NEW YORK & CLEVELAND URL MIGRATION (2026-05-14) ───────────────────────────
 # Old /services/web-design/{city} → new /us/{city}/web-design (SEO canonical migration)
-/us/services/web-design/new-york   /new-york/web-design   301
-/us/services/web-design/cleveland  /cleveland/web-design  301
-/services/web-design/new-york      /new-york/web-design   301
-/services/web-design/cleveland     /cleveland/web-design  301
+/us/services/web-design/new-york /new-york/web-design 301
+/us/services/web-design/cleveland /cleveland/web-design 301
+/services/web-design/new-york /new-york/web-design 301
+/services/web-design/cleveland /cleveland/web-design 301
 
 # Sub-pages of old NYC URL → new canonical
-/us/services/web-design/new-york/faq       /new-york/web-design  301
-/us/services/web-design/new-york/services  /new-york/web-design  301
+/us/services/web-design/new-york/faq /new-york/web-design 301
+/us/services/web-design/new-york/services /new-york/web-design 301
 
 # City hub redirects (no page.tsx at hub level)
-/new-york      /new-york/web-design   301
-/cleveland     /cleveland/web-design  301
-/us/new-york   /new-york/web-design   301
-/us/cleveland  /cleveland/web-design  301
+/new-york /new-york/web-design 301
+/cleveland /cleveland/web-design 301
+/us/new-york /new-york/web-design 301
+/us/cleveland /cleveland/web-design 301
 
 # ── INDIA SERVICE URL MIGRATION (2026-05-16) ────────────────────────────────
 # Dropping /services/ prefix from India web-design city pages
 # Old: /services/web-design/[city]  →  New: /web-design/[city]
 # NOTE (2026-07-01): bare /services/web-design redirect removed — US web-design
 # service page now lives at /services/web-design (US-as-root migration).
-/services/web-design/ahmedabad           /web-design/ahmedabad           301
-/services/web-design/bangalore           /web-design/bangalore           301
-/services/web-design/chennai             /web-design/chennai             301
-/services/web-design/delhi               /web-design/delhi               301
-/services/web-design/hyderabad           /web-design/hyderabad           301
-/services/web-design/madurai             /web-design/madurai             301
-/services/web-design/mumbai              /web-design/mumbai              301
-/services/web-design/pune                /web-design/pune                301
-/services/web-design/surat               /web-design/surat               301
+/services/web-design/ahmedabad /web-design/ahmedabad 301
+/services/web-design/bangalore /web-design/bangalore 301
+/services/web-design/chennai /web-design/chennai 301
+/services/web-design/delhi /web-design/delhi 301
+/services/web-design/hyderabad /web-design/hyderabad 301
+/services/web-design/madurai /web-design/madurai 301
+/services/web-design/mumbai /web-design/mumbai 301
+/services/web-design/pune /web-design/pune 301
+/services/web-design/surat /web-design/surat 301
 
 # NOTE: /ecommerce-development URL migration was reverted 2026-05-18.
 # /services/ecommerce-development is the canonical India ecommerce hub (page.tsx exists).
 # No redirect needed — page serves directly.
 
 # Bare /ecommerce-development → canonical India ecommerce hub
-/ecommerce-development    /services/ecommerce-development    301
+/ecommerce-development /services/ecommerce-development 301
 # City paths under the retired /ecommerce-development prefix → canonical /services/ URL
 # (legacy static public/ecommerce-development/* deleted 2026-06-05; see FJ-001)
-/ecommerce-development/mumbai    /services/ecommerce-development/mumbai    301
-/ecommerce-development/*    /services/ecommerce-development/:splat    301
+/ecommerce-development/mumbai /services/ecommerce-development/mumbai 301
+/ecommerce-development/* /services/ecommerce-development/:splat 301
 
 # ── SHOPIFY INDIA URL MIGRATION (2026-05-24) ─────────────────────────────────
 # /services/shopify-development → /shopify-development (drop /services/ prefix)
@@ -160,98 +179,33 @@
 # A placeholder rule would also swallow /uk/london/web-design and /uk/london/seo.
 # Cloudflare's own docs say "redirects are always followed, regardless of whether
 # or not an asset matches the incoming request", so a placeholder here would kill
-# two live pages. 90 explicit static rules cost nothing against the 2,100 static
-# rule limit and cannot misfire.
-/uk/brighton/web-design      /uk/brighton     301
-/uk/brighton/ai-websites     /uk/brighton     301
-/uk/brighton/ecommerce       /uk/brighton     301
-/uk/brighton/seo             /uk/brighton     301
-/uk/brighton/ai-seo          /uk/brighton     301
-/uk/brighton/ai-agents       /uk/brighton     301
-/uk/bristol/web-design       /uk/bristol      301
-/uk/bristol/ai-websites      /uk/bristol      301
-/uk/bristol/ecommerce        /uk/bristol      301
-/uk/bristol/seo              /uk/bristol      301
-/uk/bristol/ai-seo           /uk/bristol      301
-/uk/bristol/ai-agents        /uk/bristol      301
-/uk/cambridge/web-design     /uk/cambridge    301
-/uk/cambridge/ai-websites    /uk/cambridge    301
-/uk/cambridge/ecommerce      /uk/cambridge    301
-/uk/cambridge/seo            /uk/cambridge    301
-/uk/cambridge/ai-seo         /uk/cambridge    301
-/uk/cambridge/ai-agents      /uk/cambridge    301
-/uk/cardiff/web-design       /uk/cardiff      301
-/uk/cardiff/ai-websites      /uk/cardiff      301
-/uk/cardiff/ecommerce        /uk/cardiff      301
-/uk/cardiff/seo              /uk/cardiff      301
-/uk/cardiff/ai-seo           /uk/cardiff      301
-/uk/cardiff/ai-agents        /uk/cardiff      301
-/uk/coventry/web-design      /uk/coventry     301
-/uk/coventry/ai-websites     /uk/coventry     301
-/uk/coventry/ecommerce       /uk/coventry     301
-/uk/coventry/seo             /uk/coventry     301
-/uk/coventry/ai-seo          /uk/coventry     301
-/uk/coventry/ai-agents       /uk/coventry     301
-/uk/derby/web-design         /uk/derby        301
-/uk/derby/ai-websites        /uk/derby        301
-/uk/derby/ecommerce          /uk/derby        301
-/uk/derby/seo                /uk/derby        301
-/uk/derby/ai-seo             /uk/derby        301
-/uk/derby/ai-agents          /uk/derby        301
-/uk/edinburgh/web-design     /uk/edinburgh    301
-/uk/edinburgh/ai-websites    /uk/edinburgh    301
-/uk/edinburgh/ecommerce      /uk/edinburgh    301
-/uk/edinburgh/seo            /uk/edinburgh    301
-/uk/edinburgh/ai-seo         /uk/edinburgh    301
-/uk/edinburgh/ai-agents      /uk/edinburgh    301
-/uk/glasgow/web-design       /uk/glasgow      301
-/uk/glasgow/ai-websites      /uk/glasgow      301
-/uk/glasgow/ecommerce        /uk/glasgow      301
-/uk/glasgow/seo              /uk/glasgow      301
-/uk/glasgow/ai-seo           /uk/glasgow      301
-/uk/glasgow/ai-agents        /uk/glasgow      301
-/uk/hull/web-design          /uk/hull         301
-/uk/hull/ai-websites         /uk/hull         301
-/uk/hull/ecommerce           /uk/hull         301
-/uk/hull/seo                 /uk/hull         301
-/uk/hull/ai-seo              /uk/hull         301
-/uk/hull/ai-agents           /uk/hull         301
-/uk/leicester/web-design     /uk/leicester    301
-/uk/leicester/ai-websites    /uk/leicester    301
-/uk/leicester/ecommerce      /uk/leicester    301
-/uk/leicester/seo            /uk/leicester    301
-/uk/leicester/ai-seo         /uk/leicester    301
-/uk/leicester/ai-agents      /uk/leicester    301
-/uk/newcastle/web-design     /uk/newcastle    301
-/uk/newcastle/ai-websites    /uk/newcastle    301
-/uk/newcastle/ecommerce      /uk/newcastle    301
-/uk/newcastle/seo            /uk/newcastle    301
-/uk/newcastle/ai-seo         /uk/newcastle    301
-/uk/newcastle/ai-agents      /uk/newcastle    301
-/uk/nottingham/web-design    /uk/nottingham   301
-/uk/nottingham/ai-websites   /uk/nottingham   301
-/uk/nottingham/ecommerce     /uk/nottingham   301
-/uk/nottingham/seo           /uk/nottingham   301
-/uk/nottingham/ai-seo        /uk/nottingham   301
-/uk/nottingham/ai-agents     /uk/nottingham   301
-/uk/oxford/web-design        /uk/oxford       301
-/uk/oxford/ai-websites       /uk/oxford       301
-/uk/oxford/ecommerce         /uk/oxford       301
-/uk/oxford/seo               /uk/oxford       301
-/uk/oxford/ai-seo            /uk/oxford       301
-/uk/oxford/ai-agents         /uk/oxford       301
-/uk/plymouth/web-design      /uk/plymouth     301
-/uk/plymouth/ai-websites     /uk/plymouth     301
-/uk/plymouth/ecommerce       /uk/plymouth     301
-/uk/plymouth/seo             /uk/plymouth     301
-/uk/plymouth/ai-seo          /uk/plymouth     301
-/uk/plymouth/ai-agents       /uk/plymouth     301
-/uk/southampton/web-design   /uk/southampton  301
-/uk/southampton/ai-websites  /uk/southampton  301
-/uk/southampton/ecommerce    /uk/southampton  301
-/uk/southampton/seo          /uk/southampton  301
-/uk/southampton/ai-seo       /uk/southampton  301
-/uk/southampton/ai-agents    /uk/southampton  301
+# two live pages. The explicit rules cannot misfire, so they stay.
+# CORRECTION (2026-08-04): this block used to claim they "cost nothing against
+# the 2,100 static rule limit". That was wrong and it is what broke the file.
+# The binding constraint is the 8 KiB rule-byte budget (see header) and this
+# block is the single largest consumer of it. If budget runs out, reclaim it
+# elsewhere first; do NOT collapse these into a placeholder.
+# COLLAPSED 2026-08-04: these were 90 explicit {city}/{service} rules (~3.4 KB).
+# All 90 mapped {city}/{service} -> /uk/{city} 301, verified uniform before the
+# collapse, and none of the 15 cities has any live sub-page. One splat per city
+# is exactly equivalent and also absorbs the /{service}/{platform} tier.
+# London is deliberately NOT here: /uk/london/web-design and /uk/london/seo are
+# real pages and a splat would kill them. Never add a london splat.
+/uk/brighton/* /uk/brighton 301
+/uk/bristol/* /uk/bristol 301
+/uk/cambridge/* /uk/cambridge 301
+/uk/cardiff/* /uk/cardiff 301
+/uk/coventry/* /uk/coventry 301
+/uk/derby/* /uk/derby 301
+/uk/edinburgh/* /uk/edinburgh 301
+/uk/glasgow/* /uk/glasgow 301
+/uk/hull/* /uk/hull 301
+/uk/leicester/* /uk/leicester 301
+/uk/newcastle/* /uk/newcastle 301
+/uk/nottingham/* /uk/nottingham 301
+/uk/oxford/* /uk/oxford 301
+/uk/plymouth/* /uk/plymouth 301
+/uk/southampton/* /uk/southampton 301
 
 # ── UK PLATFORM TIER, RE-POINTED (originally 2026-05-27, re-pointed 2026-08-03)
 # The /uk/{city}/{service}/{platform} tier (~450 URLs) has 301'd to
@@ -262,21 +216,21 @@
 #
 # ORDER MATTERS: the two london rules must stay above the :city rule, because
 # the topmost matching rule wins and london's middle tier is a real page.
-/uk/london/web-design/:platform    /uk/london/web-design   301
-/uk/london/seo/:platform           /uk/london/seo          301
-/uk/:city/:service/:platform       /uk/:city               301
+/uk/london/web-design/:platform /uk/london/web-design 301
+/uk/london/seo/:platform /uk/london/seo 301
+/uk/:city/:service/:platform /uk/:city 301
 
 # ── CASE STUDIES URL MIGRATION (2026-05-28 evening) ──────────────────────────
 # Migrated 6 real client case studies from legacy /case/ family to v2 /case-studies/.
 # Old /case/{slug} URLs 301 to new /case-studies/{slug} URLs to preserve Google equity.
 # See audit-current-state/26_case_study_mockup_and_repositioning_2026-05-28.md
-/case/belle-maison-ecommerce-success    /case-studies/belle-maison-ecommerce-success    301
-/case/impulse-branding-migration        /case-studies/impulse-branding-migration        301
-/case/formative-concepts-bim            /case-studies/formative-concepts-bim            301
-/case/grofresh-manufacturing-erp        /case-studies/grofresh-manufacturing-erp        301
-/case/fliying-pixel-agency              /case-studies/fliying-pixel-agency              301
-/case/rukman-transport-logistics        /case-studies/rukman-transport-logistics        301
-/case                                   /case-studies                                   301
+/case/belle-maison-ecommerce-success /case-studies/belle-maison-ecommerce-success 301
+/case/impulse-branding-migration /case-studies/impulse-branding-migration 301
+/case/formative-concepts-bim /case-studies/formative-concepts-bim 301
+/case/grofresh-manufacturing-erp /case-studies/grofresh-manufacturing-erp 301
+/case/fliying-pixel-agency /case-studies/fliying-pixel-agency 301
+/case/rukman-transport-logistics /case-studies/rukman-transport-logistics 301
+/case /case-studies 301
 
 # ── MOCK CASE STUDIES DELETION (2026-05-27 evening) ──────────────────────────
 # 13 fabricated case studies were deleted from src/lib/legacy-pages/Case/data.constants.ts
@@ -284,56 +238,27 @@
 # Resources mega-menu — creating credibility / AEO / GEO liability for the brand.
 # All 13 slugs redirect to the /case/ index where the 6 REAL Indian client cases live.
 # See audit-current-state/22_legacy_case_route_audit_2026-05-27.md for full context.
-/case/apex-fintech-london             /case-studies   301
-/case/solaris-energy-sydney           /case-studies   301
-/case/velvet-oak-dubai                /case-studies   301
-/case/medicore-health-nyc             /case-studies   301
-/case/nordic-auto-berlin              /case-studies   301
-/case/eduverse-singapore              /case-studies   301
-/case/pacific-logistics-california    /case-studies   301
-/case/pure-organics-toronto           /case-studies   301
-/case/zenith-law-london               /case-studies   301
-/case/buildsmart-texas                /case-studies   301
-/case/aura-cosmetics-paris            /case-studies   301
-/case/gulf-oil-riyadh                 /case-studies   301
-/case/techstream-ai-sf                /case-studies   301
+# Collapsed to one splat on 2026-08-04 to reclaim rule budget. This MUST stay
+# below the 6 real /case/{slug} rules above: first match wins, so the real case
+# studies keep their specific destinations and only the 13 deleted mock slugs
+# (plus any other stray /case/* URL) fall through to the index.
+/case/* /case-studies 301
 
-# ── US ECOMMERCE CITY URL MIGRATION (2026-05-19) ─────────────────────────────
-# Old service-first /us/services/ecommerce-development/{city}/
-# → New city-first /us/{city}/ecommerce-development/
-# Matches exact path and any sub-paths (/* catches trailing slash variants)
-/us/services/ecommerce-development/austin/*        /us/austin/ecommerce-development        301
-/us/services/ecommerce-development/boise/*         /us/boise/ecommerce-development         301
-/us/services/ecommerce-development/charlotte/*     /us/charlotte/ecommerce-development     301
-/us/services/ecommerce-development/chattanooga/*   /us/chattanooga/ecommerce-development   301
-/us/services/ecommerce-development/denver/*        /us/denver/ecommerce-development        301
-/us/services/ecommerce-development/fargo/*         /us/fargo/ecommerce-development         301
-/us/services/ecommerce-development/lincoln/*       /us/lincoln/ecommerce-development       301
-/us/services/ecommerce-development/miami/*         /us/miami/ecommerce-development         301
-/us/services/ecommerce-development/nashville/*     /us/nashville/ecommerce-development     301
-/us/services/ecommerce-development/portland/*      /us/portland/ecommerce-development      301
-/us/services/ecommerce-development/raleigh/*       /us/raleigh/ecommerce-development       301
-/us/services/ecommerce-development/sioux-falls/*   /us/sioux-falls/ecommerce-development   301
-/us/services/ecommerce-development/tampa/*         /us/tampa/ecommerce-development         301
-# Exact-path variants (no trailing slash)
-/us/services/ecommerce-development/austin          /us/austin/ecommerce-development        301
-/us/services/ecommerce-development/boise           /us/boise/ecommerce-development         301
-/us/services/ecommerce-development/charlotte       /us/charlotte/ecommerce-development     301
-/us/services/ecommerce-development/chattanooga     /us/chattanooga/ecommerce-development   301
-/us/services/ecommerce-development/denver          /us/denver/ecommerce-development        301
-/us/services/ecommerce-development/fargo           /us/fargo/ecommerce-development         301
-/us/services/ecommerce-development/lincoln         /us/lincoln/ecommerce-development       301
-/us/services/ecommerce-development/miami           /us/miami/ecommerce-development         301
-/us/services/ecommerce-development/nashville       /us/nashville/ecommerce-development     301
-/us/services/ecommerce-development/portland        /us/portland/ecommerce-development      301
-/us/services/ecommerce-development/raleigh         /us/raleigh/ecommerce-development       301
-/us/services/ecommerce-development/sioux-falls     /us/sioux-falls/ecommerce-development   301
-/us/services/ecommerce-development/tampa           /us/tampa/ecommerce-development         301
+# ── US ECOMMERCE CITY URL MIGRATION (2026-05-19, re-pointed 2026-08-04) ──────
+# Old service-first /us/services/ecommerce-development/{city}/ → city-first.
+# TWO bugs fixed on 2026-08-04:
+#   1. The 26 explicit rules that were here sat past the 8 KiB rule budget
+#      (see header) and were silently dropped by Cloudflare. They never fired.
+#   2. They pointed at /us/{city}/ecommerce-development, which is ITSELF a 404
+#      since the /us prefix was dropped on 2026-07-01. Now pointed at root.
+# One placeholder pair replaces 26 rules and costs ~120 bytes instead of ~1.9 KB.
+/us/services/ecommerce-development/:city /:city/ecommerce-development 301
+/us/services/ecommerce-development/:city/* /:city/ecommerce-development 301
 
 # ── /us → root migration: US is now the primary domain (2026-07-01) ──────────
 # Every former /us/* path now lives at root. Keep permanently.
-/us/*   /:splat   301
-/us     /         301
+/us/* /:splat 301
+/us / 301
 
 # ── UK BLOG CONSOLIDATION (2026-07-31) ───────────────────────────────────────
 # 26 UK-targeted blog posts had accumulated across 3 regeneration waves
@@ -342,15 +267,15 @@
 # 14 pillar posts per pipeline/research/UK-LEAD-GEN-PLAN.md. Retired source
 # files deleted from src/lib/legacy-pages/Blog/posts/ and deregistered from
 # posts.tsx; all 12 rules below are single-hop.
-/blog/best-web-design-agency-uk-2026-ai-native-sme                   /blog/best-web-design-agencies-uk-smbs-2026               301
-/blog/web-development-agency-uk-2026-custom-ai-solutions             /blog/best-web-design-agencies-uk-smbs-2026               301
-/blog/best-web-design-agencies-small-business-2026                   /blog/best-web-design-agencies-uk-smbs-2026               301
-/blog/top-web-design-agencies-london-2026-ai-native-vs-traditional   /blog/top-web-design-agencies-london-smbs-2026            301
-/blog/choose-web-design-agency-uk-smb-questions-2026                 /blog/how-to-choose-web-design-agency-uk-2026             301
-/blog/choose-web-design-agency-uk-2026-questions                     /blog/how-to-choose-web-design-agency-uk-2026             301
-/blog/choose-best-web-design-agency-uk-2026-checklist                /blog/how-to-choose-web-design-agency-uk-2026             301
-/blog/web-design-agency-pricing-uk-2026                              /blog/uk-web-design-agency-pricing-2026-smb-guide         301
-/blog/how-to-build-online-store-uk-smb-2026                          /blog/how-to-build-online-store-uk-smb-guide-2026         301
-/blog/best-online-store-development-small-business-uk-2026           /blog/custom-online-store-development-uk-smbs-2026        301
-/blog/shopify-vs-woocommerce-uk-smbs                                 /blog/ecommerce-development-uk-shopify-woocommerce-2026   301
-/blog/website-redesign-ideas-uk-smbs-2026                            /blog/website-redesign-small-business-uk-2026-ai-powered  301
+/blog/best-web-design-agency-uk-2026-ai-native-sme /blog/best-web-design-agencies-uk-smbs-2026 301
+/blog/web-development-agency-uk-2026-custom-ai-solutions /blog/best-web-design-agencies-uk-smbs-2026 301
+/blog/best-web-design-agencies-small-business-2026 /blog/best-web-design-agencies-uk-smbs-2026 301
+/blog/top-web-design-agencies-london-2026-ai-native-vs-traditional /blog/top-web-design-agencies-london-smbs-2026 301
+/blog/choose-web-design-agency-uk-smb-questions-2026 /blog/how-to-choose-web-design-agency-uk-2026 301
+/blog/choose-web-design-agency-uk-2026-questions /blog/how-to-choose-web-design-agency-uk-2026 301
+/blog/choose-best-web-design-agency-uk-2026-checklist /blog/how-to-choose-web-design-agency-uk-2026 301
+/blog/web-design-agency-pricing-uk-2026 /blog/uk-web-design-agency-pricing-2026-smb-guide 301
+/blog/how-to-build-online-store-uk-smb-2026 /blog/how-to-build-online-store-uk-smb-guide-2026 301
+/blog/best-online-store-development-small-business-uk-2026 /blog/custom-online-store-development-uk-smbs-2026 301
+/blog/shopify-vs-woocommerce-uk-smbs /blog/ecommerce-development-uk-shopify-woocommerce-2026 301
+/blog/website-redesign-ideas-uk-smbs-2026 /blog/website-redesign-small-business-uk-2026-ai-powered 301

@@ -1,0 +1,63 @@
+
+============================================================================================================
+CLUSTER                   QUERY                                  GSC impr    pos   VOLUME     CPC  VERDICT
+============================================================================================================
+------------------------------------------------------------------------------------------------------------
+India AI-SEO              ai seo expert in india                      259    7.9        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo services india                       241    6.2        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo company india                        176   4.05        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              best geo agency in india                    175    9.5        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo agency in india                      157    5.3        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo company in india                     144    5.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo services in india                    100    4.6        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              ai seo and aeo agency in india               81    4.6        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              best ai seo agency in mumbai                 54    5.2        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+India AI-SEO              best ai seo agency                          261   16.6        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+------------------------------------------------------------------------------------------------------------
+India AI-SEO (rankstr-suffixed)ai seo agency for ecommerce                 764    8.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+------------------------------------------------------------------------------------------------------------
+Fargo                     seo company fargo                           204    7.6       20       -  SUSPECT: 204 impr vs 20/mo volume
+Fargo                     fargo seo                                   158    6.3       50   16.69  SUSPECT: 158 impr vs 50/mo volume
+Fargo                     seo fargo                                   170    9.7       50   16.69  SUSPECT: 170 impr vs 50/mo volume
+Fargo                     fargo seo company                           135    9.2       10       -  SUSPECT: 135 impr vs 10/mo volume
+Fargo                     seo company fargo nd                        122    8.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+Fargo                     seo fargo nd                                103    7.7       50   16.69  REAL DEMAND
+Fargo                     fargo moorhead seo strategy company          39    4.6       10       -  SUSPECT: 39 impr vs 10/mo volume
+------------------------------------------------------------------------------------------------------------
+UK AI-SEO                 ai search agency newcastle                  579   14.7        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai search agency leicester                  573   25.1        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai seo agency london                        214   19.9       70    8.75  SUSPECT: 214 impr vs 70/mo volume
+UK AI-SEO                 aeo agencies leicester                      131    5.9        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 aeo agency leicester                         93   18.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai seo glasgow                               75   17.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai seo services london                       71   14.1        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai seo agencies in uk                        54   11.9        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai search agency derby                       49   20.0        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+UK AI-SEO                 ai seo cardiff                               47    4.7        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+------------------------------------------------------------------------------------------------------------
+Austin                    austin seo                                 1242   17.5     3600    8.32  REAL DEMAND
+Austin                    austin seo expert                           478   16.8      320       -  REAL DEMAND
+Austin                    austin seo consultant                       416   13.8      390       -  REAL DEMAND
+Austin                    austin seo company                          261   11.5     4400   28.12  REAL DEMAND
+Austin                    capital of techs pflugerville seo           239    8.3       30       -  SUSPECT: 239 impr vs 30/mo volume
+------------------------------------------------------------------------------------------------------------
+Blog: GEO cost            do i need extra budget for geo              413   11.7        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+------------------------------------------------------------------------------------------------------------
+Blog: SEO timeline (head, control)how long does seo take                        0    0.0      140    17.4  REAL DEMAND
+------------------------------------------------------------------------------------------------------------
+Blog: AI adoption         ai adoption rates dutch smbs by size        133    9.9        -       -  NO DATA (keyword unknown to Google Ads = effectively zero demand)
+------------------------------------------------------------------------------------------------------------
+CONTROL (should be high)  seo agency                                    0    0.0    27100   44.12  REAL DEMAND
+CONTROL (should be high)  seo services india                            0    0.0     2900    1.28  REAL DEMAND
+
+============================================================================================================
+SUMMARY BY CLUSTER (impressions vs real monthly demand)
+============================================================================================================
+Austin                                 impr=  2636  real monthly volume=  8740  0/5 queries have zero demand (0%)
+UK AI-SEO                              impr=  1886  real monthly volume=    70  9/10 queries have zero demand (90%)  <-- MOSTLY SYNTHETIC
+India AI-SEO                           impr=  1648  real monthly volume=     0  10/10 queries have zero demand (100%)  <-- MOSTLY SYNTHETIC
+Fargo                                  impr=   931  real monthly volume=   190  1/7 queries have zero demand (14%)
+India AI-SEO (rankstr-suffixed)        impr=   764  real monthly volume=     0  1/1 queries have zero demand (100%)  <-- MOSTLY SYNTHETIC
+Blog: GEO cost                         impr=   413  real monthly volume=     0  1/1 queries have zero demand (100%)  <-- MOSTLY SYNTHETIC
+Blog: AI adoption                      impr=   133  real monthly volume=     0  1/1 queries have zero demand (100%)  <-- MOSTLY SYNTHETIC
+Blog: SEO timeline (head, control)     impr=     0  real monthly volume=   140  0/1 queries have zero demand (0%)

@@ -202,6 +202,42 @@ try {
       fatals.push(`_redirects — "${s}" 301s but a live page exists at src/app${s}/page.tsx; the redirect can't fire (zombie duplicate). Delete the page (or remove the redirect).`);
     }
   }
+
+  /* ── 5d. _redirects RULE-BYTE BUDGET (8 KiB) ────────────────────────────── */
+  // Found the hard way on 2026-08-04. Cloudflare Pages strips comments and blank
+  // lines, then caps the remaining RULE content at 8192 bytes. Rules past that
+  // byte are silently dropped: no build error, no warning, no log line. They
+  // simply never fire, and every URL they were meant to catch serves a 404.
+  //
+  // We shipped 202 rules and only the first 148 were live. The dead tail included
+  // the whole `/us/* -> /:splat` migration catch-all, so every former /us/ URL
+  // 404'd for a month, and 12 UK blog consolidation 301s never took effect.
+  //
+  // The file header used to claim rules "cost nothing against the 2,100 static
+  // rule limit". That documented limit is real but it is NOT the binding one.
+  // The byte budget is. Counting matches the observed cut exactly: raw rule-line
+  // bytes (INCLUDING alignment padding) plus one newline each.
+  const BUDGET = 8192;
+  let ruleBytes = 0;
+  for (const ln of red.split('\n')) {
+    if (!ln.trim() || ln.trim().startsWith('#')) continue;
+    ruleBytes += Buffer.byteLength(ln, 'utf8') + 1;
+  }
+  if (ruleBytes > BUDGET) {
+    fatals.push(
+      `_redirects — rule content is ${ruleBytes} bytes, over Cloudflare's ${BUDGET}-byte cap. ` +
+      `Rules past byte ${BUDGET} are SILENTLY DROPPED in production. ` +
+      `Reclaim space: collapse alignment padding to single spaces, and replace repeated ` +
+      `explicit rules with one :placeholder or /* rule. Comments are free (stripped before the cap).`
+    );
+  } else {
+    // Informational only — deliberately NOT pushed to warns, because this repo
+    // treats warns as fatal and "you have room left" must never block a build.
+    const pct = Math.round((ruleBytes / BUDGET) * 100);
+    if (pct >= 75) {
+      console.log(`ℹ️  _redirects — ${ruleBytes}/${BUDGET} rule bytes (${pct}% of cap, ${BUDGET - ruleBytes} left). Reclaim space before adding many more rules.`);
+    }
+  }
 } catch { /* no _redirects */ }
 
 /* ── 6. lead-capture forms must use the durable submitLead path ──────────── */
