@@ -139,9 +139,15 @@ export default function ServiceJourneyRow({
           />
 
           {/* ── Stage grid ─────────────────────────────────────────────── */}
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-5 lg:gap-5">
+          {/* <ol>, not <div>: a delivery process is an ordered list, and rulebook
+              rule 10 (median 110 <li> on AI-Overview-cited pages) is the highest
+              signal we have. Tailwind preflight zeroes list-style/margin/padding,
+              so the <li> simply becomes the grid cell and the layout is unchanged.
+              This component ships on 131 pages. */}
+          <ol className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-5 lg:gap-5">
             {stages.map((stage, i) => (
-              <MotionFadeUp key={i} delay={i * 0.08}>
+              <li key={i}>
+              <MotionFadeUp delay={i * 0.08}>
                 <div className="flex flex-col">
 
                   {/* ── Circle node ──────────────────────────────────── */}
@@ -206,8 +212,9 @@ export default function ServiceJourneyRow({
 
                 </div>
               </MotionFadeUp>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
 
         {/* ── Closing note, flanked by gradient rules ────────────────────── */}

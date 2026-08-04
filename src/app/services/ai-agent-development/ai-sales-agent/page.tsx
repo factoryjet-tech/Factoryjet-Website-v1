@@ -118,7 +118,10 @@ const SALES_STATS = [
 
 const SALES_MARKET_STATS = [
   { value: '72%', label: 'of Indian B2C businesses say WhatsApp is their primary sales channel', sourceUrl: 'https://meta.com/business/whatsapp-india-report-2024', sourceLabel: 'Meta Business India 2024' },
-  { value: '67%', label: 'of inbound B2B leads in India never receive a follow-up after first contact', sourceUrl: 'https://www.deloitte.com/in/en/research-studies/india-ai-readiness.html', sourceLabel: 'Deloitte India AI Readiness 2024' },
+  // Was credited to Deloitte's India AI Readiness study, which is about AI
+  // adoption and does not contain a lead-follow-up figure. Replaced 2026-08-04
+  // with the finding that is actually documented, and labelled as US data.
+  { value: '21x', label: 'higher odds of qualifying a lead when you respond within 5 minutes rather than 30 (US data)', sourceUrl: 'https://www.leadresponsemanagement.org/lrm_study/', sourceLabel: 'Lead Response Management study, Oldroyd' },
   { value: '₹65,000 Cr+', label: "India's AI and sales automation market projected by 2027", sourceUrl: 'https://nasscom.in/ai-report-2024', sourceLabel: 'NASSCOM AI Report 2024' },
 ];
 

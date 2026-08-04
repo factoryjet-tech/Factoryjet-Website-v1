@@ -210,8 +210,11 @@ function ServiceChips({ items }: { items: string[] }) {
 
 /** Full industry content card */
 function IndustryCard({ industry, titleSize = 24 }: { industry: Industry; titleSize?: number }) {
+  // <li>, not <div>: rulebook rule 10, median 110 <li> on AI-Overview-cited
+  // pages. Rendered inside the <ul> rows below. Preflight zeroes list styling,
+  // so the <li> simply becomes the grid cell. Ships on 131 pages.
   return (
-    <div style={CRYSTAL}>
+    <li style={CRYSTAL}>
       <CrystalTopShimmer />
       <WatermarkNum n={industry.id} />
 
@@ -298,7 +301,7 @@ function IndustryCard({ industry, titleSize = 24 }: { industry: Industry; titleS
           />
         </svg>
       </Link>
-    </div>
+    </li>
   );
 }
 
@@ -313,7 +316,7 @@ function OrangeStatCard({
   tagline?: string;
 }) {
   return (
-    <div
+    <li
       style={{
         background: '#B23E13',
         padding: '36px 28px',
@@ -391,7 +394,7 @@ function OrangeStatCard({
           {tagline}
         </p>
       )}
-    </div>
+    </li>
   );
 }
 
@@ -623,36 +626,36 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
           }}
         >
           {/* Row 1, [2fr content] [1fr orange stat] */}
-          <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[2fr_1fr]">
+          <ul className="grid grid-cols-1 gap-[3px] lg:grid-cols-[2fr_1fr]">
             <IndustryCard industry={INDUSTRIES[0]} titleSize={24} />
             <OrangeStatCard
               stat="523+"
               statLabel="businesses served across 30+ industries"
               tagline="7-day delivery · fixed pricing"
             />
-          </div>
+          </ul>
 
           {/* Row 2, [1fr orange stat] [2fr content] */}
-          <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[1fr_2fr]">
+          <ul className="grid grid-cols-1 gap-[3px] lg:grid-cols-[1fr_2fr]">
             <OrangeStatCard
               stat="Day 1"
               statLabel="code & data ownership on every project, with full GitHub repo handover at launch"
               tagline="no retainers · no lock-in"
             />
             <IndustryCard industry={INDUSTRIES[1]} titleSize={24} />
-          </div>
+          </ul>
 
           {/* Row 3, [1fr] [1fr] 2×2 grid */}
-          <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
             <IndustryCard industry={INDUSTRIES[2]} titleSize={22} />
             <IndustryCard industry={INDUSTRIES[3]} titleSize={22} />
-          </div>
+          </ul>
 
           {/* Row 4, [1fr] [1fr] 2×2 grid */}
-          <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
             <IndustryCard industry={INDUSTRIES[4]} titleSize={22} />
             <IndustryCard industry={INDUSTRIES[5]} titleSize={22} />
-          </div>
+          </ul>
         </div>
 
         {/* ── CTA strip ─────────────────────────────────────────────── */}

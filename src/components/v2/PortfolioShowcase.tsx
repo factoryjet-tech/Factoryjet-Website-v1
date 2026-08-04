@@ -102,10 +102,13 @@ export default function PortfolioShowcase({
         </div>
 
         {/* Card grid */}
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* <ul>/<li>: a portfolio is a list. Rulebook rule 10, median 110 <li>
+            on AI-Overview-cited pages. Preflight zeroes list styling, so each
+            <li> just becomes the grid cell. Ships on 59 pages. */}
+        <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card, i) => (
+            <li key={i}>
             <article
-              key={i}
               className="group flex flex-col overflow-hidden rounded-2xl bg-fj-neutral-50 border border-fj-neutral-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
             >
               {/* Image */}
@@ -191,8 +194,9 @@ export default function PortfolioShowcase({
                 )}
               </div>
             </article>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Mobile CTA, only shown on small screens */}
         {ctaHref && (

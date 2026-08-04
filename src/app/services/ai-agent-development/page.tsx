@@ -1133,7 +1133,7 @@ export default function AIAgentDevelopmentINPage() {
             {
               icon: '⏱️',
               title: 'Leads going cold while you sleep',
-              body: 'Research on Indian B2B sales shows that responding to a lead within 5 minutes increases qualification rates by 21×. Your competitors with AI agents respond in under 60 seconds, 24/7. Manual follow-up simply cannot compete with that speed.',
+              body: 'The Lead Response Management study (InsideSales platform data analysed by Dr James Oldroyd, MIT Sloan) found the odds of qualifying a lead are 21x higher when you respond within 5 minutes rather than 30. That is US data, not Indian, but the mechanism is the same wherever the lead comes from. Your competitors with AI agents respond in under 60 seconds, 24/7. Manual follow-up simply cannot compete with that speed.',
             },
           ]}
         />
