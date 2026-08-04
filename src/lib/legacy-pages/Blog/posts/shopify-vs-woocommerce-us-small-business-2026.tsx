@@ -24,7 +24,7 @@ export const post: BlogPost = {
     'Sales tax automation is built into Shopify (Shopify Tax) but is a paid plugin on WooCommerce (TaxJar or Avalara, $19-$50/month), factor this in if you have nexus in multiple states.',
     'For US payment stacks: both platforms support Stripe, PayPal, and Square. Shopify Payments waives the 0.5-2% platform fee; WooCommerce never charges a platform fee regardless of processor.',
     'Black Friday / Cyber Monday traffic handling favors Shopify out of the box, managed infrastructure scales automatically. WooCommerce needs a properly sized host (Cloudways, Kinsta, WP Engine) configured in advance.',
-    'FactoryJet builds both platforms for US small businesses with 7-day delivery and Lighthouse 100/100 performance: Shopify from $2,499, WooCommerce from $2,999.',
+    'FactoryJet builds both platforms for US small businesses with 7-day delivery and Lighthouse 95+ performance: Shopify from $2,499, WooCommerce from $2,999.',
   ],
   faqs: [
     {
@@ -253,13 +253,13 @@ export const post: BlogPost = {
         FactoryJet builds both platforms for US small businesses, and we genuinely don't have a horse in the race, we recommend the one that matches your numbers and your operational style. Here's the framework we use with US clients.
       </p>
       <p className="mb-4">
-        If you're doing under $500,000/year in revenue, have no in-house technical resource, and want to launch in under 2 weeks: <strong>Shopify</strong>. We build a Shopify store in 7 days starting at $2,499, including custom theme configuration, up to 50 products loaded, Shopify Payments setup, US sales tax across all 50 states, Lighthouse 100/100 performance, and 30 days of post-launch support. The vast majority of US DTC brands and retail businesses we work with fit this profile.
+        If you're doing under $500,000/year in revenue, have no in-house technical resource, and want to launch in under 2 weeks: <strong>Shopify</strong>. We build a Shopify store in 7 days starting at $2,499, including custom theme configuration, up to 50 products loaded, Shopify Payments setup, US sales tax across all 50 states, Lighthouse 95+ performance, and 30 days of post-launch support. The vast majority of US DTC brands and retail businesses we work with fit this profile.
       </p>
       <p className="mb-4">
-        If you're doing over $500,000/year in revenue, already running WordPress for content, or you need B2B-specific features like wholesale tiers or net-30 terms: <strong>WooCommerce</strong>. We build WooCommerce stores in 10-14 days starting at $2,999, custom theme, payment gateway integration (Stripe, PayPal, or Square), managed hosting setup, TaxJar or Avalara configured for your nexus states, and Lighthouse 100/100 across product and category pages.
+        If you're doing over $500,000/year in revenue, already running WordPress for content, or you need B2B-specific features like wholesale tiers or net-30 terms: <strong>WooCommerce</strong>. We build WooCommerce stores in 10-14 days starting at $2,999, custom theme, payment gateway integration (Stripe, PayPal, or Square), managed hosting setup, TaxJar or Avalara configured for your nexus states, and Lighthouse 95+ across product and category pages.
       </p>
       <p className="mb-4">
-        For both platforms, every build ships with the same technical foundation: Lighthouse 100/100, WCAG 2.2 Level AA accessibility, Product JSON-LD schema for Google Shopping rich results, Core Web Vitals optimization, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment. No vendor lock-in on our side either, you can move to any agency or in-house team afterward.
+        For both platforms, every build ships with the same technical foundation: Lighthouse 95+, WCAG 2.2 Level AA accessibility, Product JSON-LD schema for Google Shopping rich results, Core Web Vitals optimization, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment. No vendor lock-in on our side either, you can move to any agency or in-house team afterward.
       </p>
       <p className="mb-4">
         ➡ See pricing for both platforms: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">All ecommerce options</a> · <a href="/blog/shopify-vs-custom-website-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs custom website: which platform for your business</a>
@@ -277,7 +277,7 @@ export const post: BlogPost = {
           Talk to the Founder &rarr;
         </a>
         <p className="text-blue-200 text-sm mt-6">
-          Shopify from $2,499 &middot; WooCommerce from $2,999 &middot; 7-day delivery &middot; Lighthouse 100/100
+          Shopify from $2,499 &middot; WooCommerce from $2,999 &middot; 7-day delivery &middot; Lighthouse 95+
         </p>
       </div>
 

@@ -626,38 +626,41 @@ const faqSchema = {
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How FactoryJet builds your e-commerce store in 7 days',
-  description: 'Our proven 7-day process for delivering professional, conversion-optimized e-commerce stores for US businesses.',
-  totalTime: 'P7D',
+  name: 'How FactoryJet builds your e-commerce store',
+  description: 'Our process for delivering this work, typically 3 to 14 weeks depending on scope.',
+  // Aligned 2026-08-04 to the timeline this page actually states (3 to 14 weeks).
+  // 7-day delivery is real for standard website builds, but this page's own
+  // process section says 3 to 14 weeks, so P7D contradicted the visible content.
+  totalTime: 'P98D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
+      name: 'Stage 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
+      name: 'Stage 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Stage 3 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Stage 4 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
+      name: 'Stage 5 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -1162,7 +1165,7 @@ export default function EcommerceDevelopmentPage() {
         <TestimonialsSection
           region="us"
           eyebrow="CLIENT RESULTS"
-          headline="What US founders say after we build their e-commerce store"
+          headline="What founders say after we build their e-commerce store"
         />
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}

@@ -15,16 +15,16 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Nashville TN: Small Business Guide & Pricing 2026',
     description:
-      'Everything Nashville TN small businesses need to know about web design in 2026, local agency costs, what to look for, and how to get a Lighthouse 100/100 site for $1,999.',
+      'Everything Nashville TN small businesses need to know about web design in 2026, local agency costs, what to look for, and how to get a Lighthouse 95+ site for $1,999.',
   },
   keyTakeaways: [
     "Nashville's hospitality, music, and healthcare industries are fiercely competitive online: a slow or generic website loses customers to competitors before you ever get a call.",
     'Local Nashville web design agencies charge $8,000–$20,000 for a 5-page professional website; offshore agencies with US-hour support deliver the same technical quality for $1,999–$4,000.',
-    'Lighthouse 100/100 scores are achievable for any Nashville small business, they require engineering discipline, not budget. Ask any agency you consider to show live PageSpeed URLs.',
+    'Lighthouse 95+ scores are achievable for any Nashville small business, they require engineering discipline, not budget. Ask any agency you consider to show live PageSpeed URLs.',
     'Nashville hospitality and restaurant businesses need mobile-first design above all: over 72% of local searches for food, venues, and entertainment happen on smartphones.',
     'Music-industry SMBs (studios, venues, talent agencies) benefit from media-rich sites with optimized video and audio, but only when performance is maintained alongside the media.',
     'Healthcare and wellness businesses in Nashville must include HIPAA-aware contact forms and ADA-compliant design, non-negotiable legal requirements in 2026.',
-    'FactoryJet delivers custom Nashville small business websites in 7 days starting at $1,999 with Lighthouse 100/100, full SEO, and US business-hour support.',
+    'FactoryJet delivers custom Nashville small business websites in 7 days starting at $1,999 with Lighthouse 95+, full SEO, and US business-hour support.',
   ],
   faqs: [
     {
@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What are Nashville web design agencies charging for e-commerce sites in 2026?',
-      a: "Nashville agencies charge $12,000–$35,000 for custom e-commerce builds (Shopify or WooCommerce). Template-based Shopify setups with basic customization run $3,000–$8,000 locally. FactoryJet builds production-ready Shopify stores for Nashville businesses starting at $2,499, with custom theme development, Lighthouse 100/100, full product setup, and payment gateway integration. For Nashville retail and DTC brands, this is the fastest path to a competitive online store.",
+      a: "Nashville agencies charge $12,000–$35,000 for custom e-commerce builds (Shopify or WooCommerce). Template-based Shopify setups with basic customization run $3,000–$8,000 locally. FactoryJet builds production-ready Shopify stores for Nashville businesses starting at $2,499, with custom theme development, Lighthouse 95+, full product setup, and payment gateway integration. For Nashville retail and DTC brands, this is the fastest path to a competitive online store.",
     },
     {
       q: 'Do Nashville healthcare and wellness businesses need special web design compliance?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Nashville small business choose FactoryJet over a local Nashville agency?',
-      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 100/100 performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price starting at $1,999, FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ US small businesses and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
+      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 95+ performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price starting at $1,999, FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ US small businesses and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -165,7 +165,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Nashville SMBs</h2>
       <p className="mb-4">
-        FactoryJet has served 500+ businesses including US small businesses across hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 100/100 on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
+        FactoryJet has served 500+ businesses including US small businesses across hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 95+ on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
       </p>
       <p className="mb-4">
         Starting price: $1,999 for a 5-page professional website. Shopify stores from $2,499. Monthly maintenance from $149/month.

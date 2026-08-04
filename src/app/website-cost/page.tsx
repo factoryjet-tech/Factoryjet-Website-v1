@@ -32,6 +32,19 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/website-cost#webpage',
+  url: 'https://factoryjet.com/website-cost',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -72,6 +85,10 @@ const APPROACHES = [
 export default function WebsiteCostPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="cost-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       <SiteHeader
@@ -149,6 +166,24 @@ export default function WebsiteCostPage() {
               <Link href="/pricing" className="font-semibold text-[#C94A1A] underline">how we scope and price commerce work</Link> and our{' '}
               <Link href="/services/ecommerce-development" className="font-semibold text-[#C94A1A] underline">e-commerce development services</Link>.
             </p>
+          </div>
+        </section>
+
+        {/* Rendered from FAQ_SCHEMA.mainEntity so the visible FAQ and the
+            FAQPage JSON-LD can never drift apart. Before 2026-08-04 these
+            questions existed ONLY in schema and rendered nowhere, which is the
+            cloaking-adjacent case Google's structured-data policy prohibits. */}
+        <section id="faq-visible" className="border-t border-[#E7DED6] bg-[#FFF8F5]">
+          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
+            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">Cost questions</h2>
+            <dl className="mt-10 grid gap-6">
+              {FAQ_SCHEMA.mainEntity.map((q) => (
+                <div key={q.name} className="rounded-2xl border border-[#E7DED6] bg-white p-6">
+                  <dt className="font-fj-display text-lg font-bold">{q.name}</dt>
+                  <dd className="mt-2 text-[15px] leading-relaxed text-[#46403B]">{q.acceptedAnswer.text}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
       </main>

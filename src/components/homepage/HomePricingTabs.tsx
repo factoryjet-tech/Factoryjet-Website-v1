@@ -48,7 +48,7 @@ const WEB_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
       'Third-party API integrations',
       'CRM & automation setup',
       'Priority support + quarterly reviews',
-      'Lighthouse 100/100 guaranteed',
+      'Lighthouse 95+ guaranteed',
     ],
     cta: { label: 'Get a quote', modal: true, region: 'in' },
   },

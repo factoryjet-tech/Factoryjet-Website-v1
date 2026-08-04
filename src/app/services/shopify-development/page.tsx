@@ -81,6 +81,19 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/shopify-development#webpage',
+  url: 'https://factoryjet.com/services/shopify-development',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -659,6 +672,10 @@ export default function ShopifyPage() {
     <>
       {/* JSON-LD structured data */}
       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
         id="shopify-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -1133,7 +1150,7 @@ export default function ShopifyPage() {
         <TestimonialsSection
           region="us"
           eyebrow="CLIENT RESULTS"
-          headline="What US founders say after we build their Shopify store"
+          headline="What founders say after we build their Shopify store"
         />
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}

@@ -75,7 +75,7 @@ const CHN_COMPARISON_ROWS = [
     values: ['7 days', '6–12 weeks', '3–8 weeks'],
   },
   {
-    feature: 'Lighthouse 100 score',
+    feature: 'Lighthouse 95+ score',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ca" kind="no" />,
@@ -185,7 +185,7 @@ export default function Page() {
         body: "We understand the RFQ-driven world of Chennai's manufacturing sector. Our sites communicate technical authority that enterprise buyers trust.",
       },
       {
-        title: 'Lighthouse 100 Performance',
+        title: 'Lighthouse 95+ Performance',
         body: 'Every site we build hits green Core Web Vitals. Fast on Chennai\'s 4G networks, faster on fibre.',
       },
     ],

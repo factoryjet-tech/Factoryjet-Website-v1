@@ -494,7 +494,7 @@ export const post: BlogPost = {
         {[
           { day: 'Day 1–2', action: 'Discovery + Figma wireframes. Client approves layout before a single line of code is written.' },
           { day: 'Day 2–4', action: 'Full build in Next.js. Component-based architecture means we\'re not reinventing the wheel for every client: a proven design system honed across 500+ websites.' },
-          { day: 'Day 4–5', action: 'Content integration, SEO setup (meta titles, descriptions, schema markup, sitemap, GSC submission), performance optimisation to hit Lighthouse 100/100.' },
+          { day: 'Day 4–5', action: 'Content integration, SEO setup (meta titles, descriptions, schema markup, sitemap, GSC submission), performance optimisation to hit Lighthouse 95+.' },
           { day: 'Day 6', action: 'Cross-browser testing, mobile testing, form testing, payment gateway sandbox testing (for ecommerce).' },
           { day: 'Day 7', action: 'Client review + feedback round. Launch. Sites deployed on Cloudflare Pages for sub-1.5s load speeds from anywhere in India.' },
         ].map((step, i) => (
@@ -574,7 +574,7 @@ export const post: BlogPost = {
         </p>
         <ul className="text-gray-300 text-sm space-y-1 mb-6">
           <li>✓ Custom design (no generic templates)</li>
-          <li>✓ Mobile-first, Lighthouse 100/100 performance</li>
+          <li>✓ Mobile-first, Lighthouse 95+ performance</li>
           <li>✓ On-page SEO setup included</li>
           <li>✓ Deployed on Cloudflare for blazing speed</li>
           <li>✓ GST invoice provided</li>

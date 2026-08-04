@@ -28,7 +28,7 @@ import './local-seo.css';
    blocking webfont or inlineCss. See reference_nextjs_performance_playbook.
 
    Honesty: no pricing section, CTAs → free-audit modal + Calendly, verified
-   claims only (4.9/5, 500+, 7-day / Lighthouse 100), no fabricated metrics
+   claims only (4.9/5, 500+, 7-day / Lighthouse 95+), no fabricated metrics
    (the map + reputation cards are illustrative and labeled), no em-dashes.
    Schema: Service + Organization + FAQPage(25) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -215,6 +215,19 @@ export const metadata: Metadata = {
 };
 
 /* ── JSON-LD ──────────────────────────────────────────────────────────────── */
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/local-seo#webpage',
+  url: 'https://factoryjet.com/services/local-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -329,6 +342,10 @@ const SCORE_DIY = [['No strategist', 'x'], ['Manual setup', 'x'], ['Plugin remin
 export default function LocalSeoServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="local-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="local-seo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script id="local-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -366,7 +383,7 @@ export default function LocalSeoServicePage() {
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">businesses served</span></div>
                 <span className="sep" />
-                <div className="s"><span className="n">7-day</span><span className="l">builds, Lighthouse 100</span></div>
+                <div className="s"><span className="n">7-day</span><span className="l">builds, Lighthouse 95+</span></div>
               </div>
             </div>
 
@@ -410,9 +427,9 @@ export default function LocalSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by US founders &amp; teams</div>
+            <div className="lbl">Trusted by founders across India and the UK</div>
             <div className="logos">
-              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

@@ -25,7 +25,7 @@ import './small-business-seo.css';
    (zero CLS), team image lazy + reserved, zero page JS. display:'optional' fonts.
 
    Honesty: no pricing section; CTAs → free SEO audit modal + Calendly; verified
-   claims only (4.9/5, 500+, month-to-month, 7-day/Lighthouse 100); growth card
+   claims only (4.9/5, 500+, month-to-month, 7-day/Lighthouse 95+); growth card
    labeled illustrative; no em-dashes. Anti-cannibalization: owns "small business
    SEO services / company / agency / affordable SEO"; local/near-me intent stays
    on /us/services/local-seo (linked, not duplicated).
@@ -184,6 +184,19 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/small-business-seo#webpage',
+  url: 'https://factoryjet.com/services/small-business-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -266,6 +279,10 @@ const SCORE_DIY = [['Solo, stretched thin', 'p'], ['Low', 'c'], ['Hit or miss', 
 export default function SmallBusinessSeoServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="sbseo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="sbseo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script id="sbseo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -344,9 +361,9 @@ export default function SmallBusinessSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by US small business owners</div>
+            <div className="lbl">Trusted by founders across India and the UK</div>
             <div className="logos">
-              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

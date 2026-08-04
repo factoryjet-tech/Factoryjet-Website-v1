@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'how-much-does-a-website-cost-small-business-usa-2026',
   title: 'How Much Does a Website Cost for a Small Business in the USA? (2026)',
   excerpt:
-    'A US small business website costs $500–$25,000 in 2026 depending on complexity, technology, and whether you hire locally or offshore. This guide gives you the full price breakdown, explains every factor that affects cost, and shows you how to get a Lighthouse 100/100 site for $1,999.',
+    'A US small business website costs $500–$25,000 in 2026 depending on complexity, technology, and whether you hire locally or offshore. This guide gives you the full price breakdown, explains every factor that affects cost, and shows you how to get a Lighthouse 95+ site for $1,999.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'How Much Does a Website Cost for a Small Business USA? (2026 Pricing Guide)',
     description:
-      "Complete 2026 pricing guide: US small business website costs from $500 to $25,000. What affects price, what you actually need, and how to get Lighthouse 100/100 for $1,999.",
+      "Complete 2026 pricing guide: US small business website costs from $500 to $25,000. What affects price, what you actually need, and how to get Lighthouse 95+ for $1,999.",
   },
   keyTakeaways: [
     'US small business website costs in 2026 range from $500 (DIY builder) to $25,000+ (premium domestic agency), with the sweet spot for a custom professional site at $1,999–$8,000.',
@@ -23,8 +23,8 @@ export const post: BlogPost = {
     'A $500 Wix or Squarespace site costs very little upfront but creates long-term SEO and performance limitations: the cost of rebuilding it in 18–24 months is often $3,000–$8,000.',
     'E-commerce adds $1,500–$8,000 to a basic site cost depending on product volume, payment complexity, and inventory system integrations.',
     'US domestic agencies charge $8,000–$25,000 not because they build better websites, but because they carry higher overhead, office space, US salaries, and local marketing costs.',
-    'Lighthouse 100/100 scores (the performance standard that predicts Google rankings) are achievable at any price point above $1,999 when the agency prioritizes engineering quality.',
-    'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 100/100, full technical SEO, WCAG 2.2 compliance, and 7-day delivery.',
+    'Lighthouse 95+ scores (the performance standard that predicts Google rankings) are achievable at any price point above $1,999 when the agency prioritizes engineering quality.',
+    'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, and 7-day delivery.',
   ],
   faqs: [
     {
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: "What's included in a $1,999 website from FactoryJet?",
-      a: "FactoryJet's $1,999 starting package includes: custom design (not purchased templates), up to 5 pages, Next.js or WordPress build, Lighthouse 100/100 across all four metrics (Performance, Accessibility, Best Practices, SEO), WCAG 2.2 Level AA accessibility compliance, technical SEO (schema markup, XML sitemap, meta tags, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, full code and hosting ownership transferred to you, and US business-hour project management. Delivery in 7 days when content is provided at kickoff.",
+      a: "FactoryJet's $1,999 starting package includes: custom design (not purchased templates), up to 5 pages, Next.js or WordPress build, Lighthouse 95+ across all four metrics (Performance, Accessibility, Best Practices, SEO), WCAG 2.2 Level AA accessibility compliance, technical SEO (schema markup, XML sitemap, meta tags, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, full code and hosting ownership transferred to you, and US business-hour project management. Delivery in 7 days when content is provided at kickoff.",
     },
     {
       q: "Is a $500 Wix or Squarespace website good enough for a US small business?",
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How do I get the best value website for my small business in the USA?',
-      a: "The highest-value path for most US small businesses: hire an offshore agency with US-hour project management, verified Lighthouse 100/100 client sites, a fixed-price contract, and named US references you can call. This delivers $8,000–$20,000 worth of technical output for $1,999–$4,000. The verification checklist: run PageSpeed Insights yourself on three of their live client sites (pagespeed.web.dev), ask for a named US reference you can call this week, confirm WCAG 2.2 compliance is included in the base price, and get a written scope with every deliverable listed. FactoryJet meets all four criteria, get a free quote at factoryjet.com/contact.",
+      a: "The highest-value path for most US small businesses: hire an offshore agency with US-hour project management, verified Lighthouse 95+ client sites, a fixed-price contract, and named US references you can call. This delivers $8,000–$20,000 worth of technical output for $1,999–$4,000. The verification checklist: run PageSpeed Insights yourself on three of their live client sites (pagespeed.web.dev), ask for a named US reference you can call this week, confirm WCAG 2.2 compliance is included in the base price, and get a written scope with every deliverable listed. FactoryJet meets all four criteria, get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -141,7 +141,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Drives Website Costs Up (and Down)</h2>
       <p className="mb-4">
-        <strong>Technology stack.</strong> Next.js custom builds require more developer skill than WordPress template installations, and appropriately cost more. But they deliver Lighthouse 100/100 reliably, which translates directly into better Google rankings. The cost premium for Next.js over template WordPress is typically $500–$1,500 for a basic site.
+        <strong>Technology stack.</strong> Next.js custom builds require more developer skill than WordPress template installations, and appropriately cost more. But they deliver Lighthouse 95+ reliably, which translates directly into better Google rankings. The cost premium for Next.js over template WordPress is typically $500–$1,500 for a basic site.
       </p>
       <p className="mb-4">
         <strong>Number of pages.</strong> Every additional page requires design, content architecture, and development work. Budget approximately $200–$400 per additional page beyond the base package when working with an agency.
@@ -184,7 +184,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What $1,999 Gets You from FactoryJet</h2>
       <p className="mb-4">
-        FactoryJet's $1,999 starting price includes everything a US small business needs to launch a competitive professional website: custom Next.js design (no templates purchased), up to 5 pages, Lighthouse 100/100 scores on all four metrics (verified with PageSpeed proof on delivery), WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, US business-hour project management, US-governed contract, and full code + hosting ownership transferred at final payment.
+        FactoryJet's $1,999 starting price includes everything a US small business needs to launch a competitive professional website: custom Next.js design (no templates purchased), up to 5 pages, Lighthouse 95+ scores on all four metrics (verified with PageSpeed proof on delivery), WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, US business-hour project management, US-governed contract, and full code + hosting ownership transferred at final payment.
       </p>
       <p className="mb-4">
         Delivery: 7 days from kickoff when content is provided at project start. 97% of projects delivered on time. 500+ businesses served.

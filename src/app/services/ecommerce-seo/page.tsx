@@ -27,7 +27,7 @@ import './ecommerce-seo.css';
    the external cached route bundle. See reference_animation_stack + perf playbook.
 
    Honesty: no pricing; CTAs → free ecommerce SEO audit modal + Calendly; verified
-   claims only (4.9/5, 500+, 7-day/Lighthouse 100); SERP + funnel labeled
+   claims only (4.9/5, 500+, 7-day/Lighthouse 95+); SERP + funnel labeled
    illustrative; no em-dashes. Anti-cannibalization: owns ecommerce/Shopify/Woo/
    Magento + product/collection/technical SEO (distinct from /ecommerce-development
    and /shopify-development which BUILD stores).
@@ -188,6 +188,19 @@ export const metadata: Metadata = {
     languages: ecommerceSeoServicesAlternatesUS,
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ecommerce-seo#webpage',
+  url: 'https://factoryjet.com/services/ecommerce-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -352,6 +365,10 @@ const ECOM_SEO_COMPETITORS: ReadonlyArray<{ name: string; known: string; us?: bo
 export default function EcommerceSeoServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="ecom-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="ecom-seo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script id="ecom-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -433,9 +450,9 @@ export default function EcommerceSeoServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by US founders &amp; teams</div>
+            <div className="lbl">Trusted by founders across India and the UK</div>
             <div className="logos" data-reveal>
-              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

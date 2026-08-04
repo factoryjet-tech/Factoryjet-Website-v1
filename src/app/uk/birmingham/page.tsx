@@ -18,6 +18,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/uk/birmingham#webpage',
+  url: 'https://factoryjet.com/uk/birmingham',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -137,6 +150,10 @@ export default function Page() {
     <>
       {/* JetBrains Mono, used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="birmingham-schema"
         type="application/ld+json"

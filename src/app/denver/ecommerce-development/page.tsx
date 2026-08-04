@@ -78,7 +78,7 @@ const FAQ_ITEMS = [
               category: 'pricing',
               question: 'What sales tax rate should my Denver Shopify store charge?',
               answer:
-                "Denver businesses should configure Shopify to collect 8.81% combined sales tax: Colorado state 2.9%, Denver City 4.31%, Regional Transportation District (RTD) 1.0%, Cultural Facilities District 0.1%, Football Stadium District 0.1%, Scientific & Cultural Facilities 0.25%, and Denver Broadcasting 0.1%. Colorado uses destination-based sales tax, you charge the buyer's address rate. FactoryJet configures all Front Range municipality rates: Aurora (8.0%), Lakewood (7.5%), Arvada (8.46%), Westminster (8.16%), and Thornton (8.0%).",
+                "Denver businesses should configure Shopify to collect 8.81% combined sales tax: the combined state, city, RTD and Scientific & Cultural Facilities District rate, which the Colorado Department of Revenue publishes and updates by address. Colorado uses destination-based sales tax, you charge the buyer's address rate. FactoryJet configures all Front Range municipality rates: Aurora (8.0%), Lakewood (7.5%), Arvada (8.46%), Westminster (8.16%), and Thornton (8.0%).",
             },
             {
               category: 'local',
@@ -137,7 +137,7 @@ const FAQ_ITEMS = [
             {
               category: 'local',
               question: 'Can you build a Shopify store for a Denver ski, snowboard, or winter sports brand?',
-              answer: "Yes, ski and winter sports is Denver's most important e-commerce category and a core FactoryJet specialty. Denver is the gateway to Vail, Breckenridge, Keystone, Arapahoe Basin, and 26+ Colorado ski resorts within a 2-hour drive. We build Shopify stores for: ski and snowboard equipment retailers, après-ski apparel and lifestyle brands, ski resort merchandise shops, winter sports accessory companies, and ski rental platforms with deposit-plus-rental-period logic. Colorado's 60M+ annual ski visits generate enormous DTC demand: a well-built Shopify store lets Denver outdoor brands capture resort-town spend at full retail margins instead of losing it to REI or Amazon.",
+              answer: "Yes, ski and winter sports is Denver's most important e-commerce category and a core FactoryJet specialty. Denver is the gateway to Vail, Breckenridge, Keystone, Arapahoe Basin, and 26+ Colorado ski resorts within a 2-hour drive. We build Shopify stores for: ski and snowboard equipment retailers, après-ski apparel and lifestyle brands, ski resort merchandise shops, winter sports accessory companies, and ski rental platforms with deposit-plus-rental-period logic. Colorado's 13.8 million annual skier visits (Colorado Ski Country USA, 2024-25 season) generate enormous DTC demand: a well-built Shopify store lets Denver outdoor brands capture resort-town spend at full retail margins instead of losing it to REI or Amazon.",
             },
             {
               category: 'technical',
@@ -157,7 +157,7 @@ const FAQ_ITEMS = [
             {
               category: 'local',
               question: 'Can you build a Shopify store for a Denver tech startup or SaaS company?',
-              answer: "Yes: Denver's fast-growing tech scene (Palantir HQ, DoorDash major office, Gusto, Ibotta, Ping Identity, and hundreds of growth-stage startups) creates e-commerce demand for hardware accessories, branded merchandise, and B2B self-serve portals. We build Shopify stores for: developer tool companies with swag and license stores, hardware/IoT startups with accessory and replacement part stores, B2B SaaS companies with self-serve annual subscription purchasing, and tech-forward DTC brands that need headless Next.js performance. Denver's I-25 tech corridor expects fast, well-designed stores, FactoryJet builds Lighthouse 100/100 stores that match the product quality of Denver's best tech companies.",
+              answer: "Yes: Denver's fast-growing tech scene (Palantir HQ, DoorDash major office, Gusto, Ibotta, Ping Identity, and hundreds of growth-stage startups) creates e-commerce demand for hardware accessories, branded merchandise, and B2B self-serve portals. We build Shopify stores for: developer tool companies with swag and license stores, hardware/IoT startups with accessory and replacement part stores, B2B SaaS companies with self-serve annual subscription purchasing, and tech-forward DTC brands that need headless Next.js performance. Denver's I-25 tech corridor expects fast, well-designed stores, FactoryJet builds Lighthouse 95+ stores that match the product quality of Denver's best tech companies.",
             },
             {
               category: 'local',
@@ -341,7 +341,7 @@ export default function Page() {
               industry: 'Craft Brewery & Beverage',
               title: 'Colorado Craft Brewery DTC Client',
               description:
-                "Colorado's 400+ craft breweries represent a huge DTC opportunity most brands underexploit. We build Shopify stores for merchandise (apparel, glassware, growlers), beer club subscriptions, online gift card sales, private event booking, and branded gear, with OLCC-compliant age verification and Toast POS sync for taproom inventory.",
+                "Colorado's 400+ craft breweries represent a huge DTC opportunity most brands underexploit. We build Shopify stores for merchandise (apparel, glassware, growlers), beer club subscriptions, online gift card sales, private event booking, and branded gear, with Colorado Liquor Enforcement Division compliant age verification and Toast POS sync for taproom inventory.",
               imageSrc: '/images/us/denver/ecommerce/portfolio-2.webp',
               stat1: '+48% subscription revenue',
               stat2: '7-day launch',
@@ -468,7 +468,7 @@ export default function Page() {
             {
               name: 'Craft Breweries & Distilleries',
               description:
-                "DTC stores, merchandise shops, and subscription beer clubs for Colorado's 400+ craft beverage brands. Toast POS sync, OLCC-compliant age verification, and brewery-specific bundling, gift sets, growler clubs, and taproom event booking.",
+                "DTC stores, merchandise shops, and subscription beer clubs for Colorado's 400+ craft beverage brands. Toast POS sync, Colorado Liquor Enforcement Division compliant age verification, and brewery-specific bundling, gift sets, growler clubs, and taproom event booking.",
               example:
                 'Denver craft breweries, Colorado distilleries, and craft spirits brands with DTC merchandise and subscription revenue.',
             },
@@ -507,7 +507,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 by clients from Denver and beyond."
+          headline="Rated 4.9/5 across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

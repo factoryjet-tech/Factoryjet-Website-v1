@@ -709,7 +709,7 @@ export default function ChandigarhEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Chandigarh founders say after we build their store"
+          headline="What founders say after we build their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}

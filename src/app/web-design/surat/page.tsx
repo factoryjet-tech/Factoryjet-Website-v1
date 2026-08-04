@@ -75,7 +75,7 @@ const SRT_COMPARISON_ROWS = [
     values: ['7 days', '6–10 weeks', '3–8 weeks'],
   },
   {
-    feature: 'Lighthouse 100 score',
+    feature: 'Lighthouse 95+ score',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="sa" kind="no" />,
@@ -185,7 +185,7 @@ export default function Page() {
         body: 'Projects are scoped to you. Fixed scope, fixed price: every rupee accounted for before you sign.',
       },
       {
-        title: 'Lighthouse 100 Performance',
+        title: 'Lighthouse 95+ Performance',
         body: 'Every site scores green on Core Web Vitals. Fast on Surat mobile networks, instant on broadband.',
       },
     ],

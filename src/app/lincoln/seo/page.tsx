@@ -18,7 +18,7 @@ import './lincoln-seo.css';
    WhatsAppCTA. Styles scoped under .lseo (./lincoln-seo.css, next/font vars,
    no webfont request). CSS lanes hero (text LCP, zero CLS), market photos lazy
    below the fold with intrinsic dimensions, zero page-level JS
-   -> Lighthouse 100 target. Source: research/mockup-us-lincoln-seo-v4.html.
+   -> Lighthouse 95+ target. Source: research/mockup-us-lincoln-seo-v4.html.
    Honesty: NO pricing anywhere (2026-06-11 rule), free audit, no guarantee,
    month-to-month; founder byline. No fake LocalBusiness address, no
    self-serving Review schema.
@@ -239,6 +239,7 @@ const REPORT_ROWS: { lab: string; cls: 'l' | 'n'; width: string; val: string }[]
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Lincoln SEO Company | Local SEO Services in Lincoln, NE',
   url: CANONICAL,
   description:

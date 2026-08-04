@@ -22,7 +22,7 @@ export const post: BlogPost = {
     'Custom web development wins when the website is the product: SaaS dashboards, customer portals, real-time apps, unique workflow logic, or anything where WordPress would require fighting the platform.',
     'Typical US SMB budgets: $5,000–$30,000 for a professionally built WordPress site; $30,000–$200,000 for a custom web application. The 4–10x price gap reflects real engineering scope, not markup.',
     "WordPress security and update burden is the most underestimated cost, plan for $99–$249/month in managed maintenance or a 2–4 hour monthly DIY commitment that most owners don't sustain.",
-    'Headless WordPress (WordPress back end, Next.js front end) is the practical hybrid for SMBs that want editor-friendly content and Lighthouse 100/100 performance. Budget $15,000–$45,000.',
+    'Headless WordPress (WordPress back end, Next.js front end) is the practical hybrid for SMBs that want editor-friendly content and Lighthouse 95+ performance. Budget $15,000–$45,000.',
     "Plugin sprawl is the single biggest cause of WordPress sites breaking. Keep the active plugin count under 20 and audit annually: every plugin is a third party with access to your database.",
     'FactoryJet builds both WordPress sites and custom web applications, with 7-day delivery on standard WordPress builds. We recommend the platform that fits your business, not the platform we want to sell.',
   ],
@@ -221,7 +221,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Hybrid Path: Headless WordPress + Next.js</h2>
       <p className="mb-4">
-        Headless WordPress keeps the editorial experience your team already knows: the WordPress admin, the Gutenberg editor, custom post types, taxonomies, but replaces the front end with a custom Next.js or Astro application that fetches content via the WordPress REST API or WPGraphQL. Visitors see a Lighthouse 100/100 site. Editors see WordPress.
+        Headless WordPress keeps the editorial experience your team already knows: the WordPress admin, the Gutenberg editor, custom post types, taxonomies, but replaces the front end with a custom Next.js or Astro application that fetches content via the WordPress REST API or WPGraphQL. Visitors see a Lighthouse 95+ site. Editors see WordPress.
       </p>
       <p className="mb-4">
         This is the sophisticated middle path. It costs more than vanilla WordPress and less than a fully custom system: typically $15,000–$45,000 for an SMB build. The technical maturity has caught up: WP Engine&apos;s Atlas, Vercel&apos;s Next.js integrations, and WPGraphQL make this stack production-ready in 2026.

@@ -61,13 +61,13 @@ import { IN_WEB_DESIGN_CITIES } from '@/data/inWebDesignCities';
 export const metadata: Metadata = {
   title: 'Best Web Design Company in India (2026) | FactoryJet',
   description:
-    'Looking for the best web design company in India? Compare the top 10, built from live search data. Mobile-first, Lighthouse 100, full code ownership.',
+    'Looking for the best web design company in India? Compare the top 10, built from live search data. Mobile-first, Lighthouse 95+, full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Best Web Design Company in India (2026) | FactoryJet',
     description:
-      'Compare the top 10 web design companies in India, built from live search data. Next.js, WordPress and Shopify. Mobile-first, Lighthouse 100.',
+      'Compare the top 10 web design companies in India, built from live search data. Next.js, WordPress and Shopify. Mobile-first, Lighthouse 95+.',
     url: 'https://factoryjet.com/web-design',
     images: [
       {
@@ -212,7 +212,7 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for Indian businesses. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
+    'Custom website design and development for Indian businesses. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 95+ performance. Mobile-first, full code ownership.',
   
 };
 
@@ -418,7 +418,7 @@ const IN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 100 performance',
+    feature: 'Lighthouse 95+ performance',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="in" kind="partial" />,
@@ -662,7 +662,7 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Indian web agency?',
     answer:
-      'Three differences that matter: speed (7-day delivery on Starter projects, most Indian agencies quote 6–12 weeks), quality (Next.js + Figma + Lighthouse 100, the same stack used by India\'s top product companies), and ownership (full codebase transferred to your GitHub on launch day, no retainer required to keep the site online). We\'ve delivered 500+ websites across India, the US, and the UK.',
+      'Three differences that matter: speed (7-day delivery on Starter projects, most Indian agencies quote 6–12 weeks), quality (Next.js + Figma + Lighthouse 95+, the same stack used by India\'s top product companies), and ownership (full codebase transferred to your GitHub on launch day, no retainer required to keep the site online). We\'ve delivered 500+ websites across India, the US, and the UK.',
   },
   {
     category: 'trust',
@@ -834,7 +834,7 @@ export default function WebDesignServicePage() {
         formSlot={<HeroInlineForm region="in" source="web_design_hero" />}
           eyebrow="WEB DESIGN COMPANY · INDIA"
           headline="Web Design Company in India That Builds Websites Which Actually Convert"
-          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify, designed in Figma, built to Lighthouse 100, with a fixed quote agreed before work starts."
+          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify, designed in Figma, built to Lighthouse 95+, with a fixed quote agreed before work starts."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites delivered',
@@ -916,7 +916,7 @@ export default function WebDesignServicePage() {
               {/* Performance chip strip */}
               <div className="flex flex-wrap gap-2" aria-hidden>
                 {[
-                  'Lighthouse 100',
+                  'Lighthouse 95+',
                   'Core Web Vitals green',
                   'Mobile-first',
                   'Schema markup',
@@ -971,7 +971,7 @@ export default function WebDesignServicePage() {
                 </p>
               </div>
               <p>
-                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast on mobile, ranks well on Google India, and looks intentional, because it was designed for your specific business, not adapted from someone else&apos;s template.
+                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 95+ as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast on mobile, ranks well on Google India, and looks intentional, because it was designed for your specific business, not adapted from someone else&apos;s template.
               </p>
               <p>
                 We&apos;ve built for SMBs, D2C brands, healthcare providers, real estate developers, CA firms, law practices, coaching institutes, and SaaS companies across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. The design language changes with each business; the standard of craft doesn&apos;t. Every project gets the same full Figma design process, the same engineering rigour, and the same Lighthouse audit before launch.
@@ -1041,7 +1041,7 @@ export default function WebDesignServicePage() {
             {
               icon: '💸',
               title: 'Most agencies hide their rates and timelines',
-              body: 'A typical web agency quotes a business website without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet gives you a fixed-price quote before you commit, delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 quality, and backs it with a 7-day delivery guarantee in writing.',
+              body: 'A typical web agency quotes a business website without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet gives you a fixed-price quote before you commit, delivers the same Figma-first design, Next.js engineering, and Lighthouse 95+ quality, and backs it with a 7-day delivery guarantee in writing.',
             },
           ]}
         />
@@ -1308,7 +1308,7 @@ export default function WebDesignServicePage() {
           lead="Not all web design options are the same. Here's what the decision looks like when you compare the real trade-offs side by side, price, delivery, quality, and ownership."
           pullQuote={{
             stat: '7 days',
-            caption: 'from kickoff to launch. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a big-agency project, with a fixed quote agreed before work starts.',
+            caption: 'from kickoff to launch. Same Figma design, Next.js engineering, and Lighthouse 95+ quality as a big-agency project, with a fixed quote agreed before work starts.',
           }}
           columns={IN_COMPARISON_COLUMNS}
           rows={IN_COMPARISON_ROWS}
@@ -1327,7 +1327,7 @@ export default function WebDesignServicePage() {
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say after we build their site."
+          headline="What founders say after we build their site."
         />
 
         {/* ── 14. FAQ (light, buffer) ──────────────────────────────────────────── */}
@@ -1380,7 +1380,7 @@ export default function WebDesignServicePage() {
           sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting your performance and Google rankings, and give you a fixed INR price to fix it. No pitch. No pressure. Just an honest assessment from engineers and designers who build for a living."
           primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Lighthouse 100 guaranteed. Full code ownership on launch day. 7-day delivery on Starter tier. Fixed price confirmed upfront."
+          objectionHandler="Lighthouse 95+ guaranteed. Full code ownership on launch day. 7-day delivery on Starter tier. Fixed price confirmed upfront."
         />
 
         {/* E-commerce city index.

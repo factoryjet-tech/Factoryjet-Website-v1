@@ -34,10 +34,16 @@ export interface LogoBarProps {
  * project_factoryjet_clients memory. List doubles via CSS marquee so 6
  * entries give 12 visible items per loop — enough to read as a continuous strip.
  */
+// 2026-08-04: added the UK clients (GPSUK, Sow Easy, Buddyburst) confirmed by
+// Bhavesh. Every name here must be a real client. Several pages previously
+// captioned this India-only list as "US founders", which was not true.
 const LOGOS = [
   'Belle Maison',
   'Formative Concepts',
   'Impulse Branding',
+  'GPSUK',
+  'Sow Easy',
+  'Buddyburst',
   'Shevvaa',
   'RDB Travels',
 ];

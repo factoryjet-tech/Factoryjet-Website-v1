@@ -75,7 +75,7 @@ const MDU_COMPARISON_ROWS = [
     values: ['7 days', '6–10 weeks', '3–8 weeks'],
   },
   {
-    feature: 'Lighthouse 100 score',
+    feature: 'Lighthouse 95+ score',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ma" kind="no" />,
@@ -185,7 +185,7 @@ export default function Page() {
         body: "We understand how Tamil Nadu buyers research, evaluate, and decide. Our sites are designed with that buyer psychology in mind.",
       },
       {
-        title: 'Lighthouse 100 Performance',
+        title: 'Lighthouse 95+ Performance',
         body: 'Every site scores green on Core Web Vitals, fast on Madurai 4G networks, instant on broadband.',
       },
     ],

@@ -462,7 +462,7 @@ export default function Hero() {
           }}
         >
           {[
-            "Lighthouse 100",
+            "Lighthouse 95+",
             "Shopify Plus Partner",
             "AI-First Agency",
             "£11bn Pipeline City",

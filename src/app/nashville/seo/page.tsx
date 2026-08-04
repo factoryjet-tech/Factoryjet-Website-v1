@@ -19,7 +19,7 @@ import './nashville-seo.css';
    inline VS comparison, canonical FAQ sidebar w/ Experts & consultants category.
    Real SiteHeader/SiteFooter/ModalCTAButton, all CTAs modalVariant="seo"
    (pre-selected one-step form). Styles scoped under .nseo (next/font vars).
-   No images, no page JS (text LCP, zero CLS) → Lighthouse 100 target.
+   No images, no page JS (text LCP, zero CLS) → Lighthouse 95+ target.
    Source: research/mockup-us-nashville-seo-v1.html + city-nashville-industry-brief.md.
    Honesty: no pricing shown (no-pricing rule), month-to-month, free audit, no guarantee; real clients
    only; founder byline; Census/Visit-Music-City-cited stats. No fake
@@ -74,7 +74,7 @@ const SETLIST: { no: string; h: string; p: string }[] = [
   { no: '01', h: 'Google Business Profile optimization', p: 'The Map Pack is built from your profile: categories, services, photos, posts, Q&A, and consistent name, address, phone.' },
   { no: '02', h: 'Citations & NAP cleanup', p: 'Consistent listings across the directories Google trusts; duplicates removed.' },
   { no: '03', h: 'Review growth & response', p: 'A system to earn and answer reviews, the strongest local signal you control.' },
-  { no: '04', h: 'On-page & technical SEO', p: 'Speed, Core Web Vitals, schema, crawlability. Built by engineers, tuned for Lighthouse 100.' },
+  { no: '04', h: 'On-page & technical SEO', p: 'Speed, Core Web Vitals, schema, crawlability. Built by engineers, tuned for Lighthouse 95+.' },
   { no: '05', h: 'Local content', p: 'Service and neighborhood pages that earn rankings without reading like doorway pages.' },
   { no: '06', h: 'AI SEO / GEO', p: 'Entity data and answer-first content so ChatGPT, Perplexity, and Google AI Overviews can cite you.' },
 ];

@@ -74,6 +74,19 @@ export const metadata: Metadata = {
    derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/law-firm-website-design#webpage',
+  url: 'https://factoryjet.com/services/law-firm-website-design',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -194,9 +207,13 @@ const LEGAL_JOURNEY_STAGES: ServiceJourneyStage[] = [
 
 const LEGAL_STATS = [
   {
-    value: '$7,559',
-    label: 'average CPC for legal web design keywords: the highest of any professional services vertical in search advertising',
-    sourceUrl: 'https://www.wordstream.com/blog/ws/2017/09/13/most-expensive-keywords',
+    // Corrected 2026-08-04. The page previously showed $7,559, which is not a
+    // cost-per-click for any keyword. WordStream benchmarks the Attorneys and
+    // Legal Services category at roughly $8.58 average CPC, the highest of any
+    // industry, which is the real and still-striking number.
+    value: '$8.58',
+    label: 'average CPC for the Attorneys & Legal Services category: the highest of any industry in Google Ads',
+    sourceUrl: 'https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks',
     sourceLabel: 'WordStream',
   },
   {
@@ -558,38 +575,40 @@ const faqSchema = {
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How FactoryJet builds your law firm website in 7 days',
+  name: 'How FactoryJet builds your law firm website',
   description: 'Our proven 7-day process for delivering professional, conversion-optimized law firm websites for US attorneys.',
-  totalTime: 'P7D',
+  // Aligned 2026-08-04 to the page's own band: 4 weeks (small firm) to
+  // 14 weeks (large firm). P7D contradicted the visible process and FAQ.
+  totalTime: 'P98D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
+      name: 'Stage 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
+      name: 'Stage 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Stage 3 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Stage 4 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
+      name: 'Stage 5 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -603,6 +622,10 @@ export default function LawFirmWebsiteDesignPage() {
   return (
     <>
       {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="law-firm-website-faq-schema"
         type="application/ld+json"
@@ -727,7 +750,7 @@ export default function LawFirmWebsiteDesignPage() {
                 ))}
               </div>
               <p>
-                Legal is the highest-CPC vertical in professional services search, at $7,559 average cost-per-click, the organic ranking that replaces a paid click is worth more in legal than in almost any other industry. That competitive intensity means the bar for what a law firm website needs to do is higher than a general business site, and the gap between a well-built site and a poorly built one shows up directly in consultation volume.
+                Legal is the highest-CPC vertical in professional services search, at roughly $8.58 average cost-per-click (WordStream, 2025 Google Ads benchmarks), the organic ranking that replaces a paid click is worth more in legal than in almost any other industry. That competitive intensity means the bar for what a law firm website needs to do is higher than a general business site, and the gap between a well-built site and a poorly built one shows up directly in consultation volume.
               </p>
               <div
                 className="border-l-2 border-[#F05A28] pl-5 py-1"
@@ -840,7 +863,7 @@ export default function LawFirmWebsiteDesignPage() {
           eyebrow="THE US LEGAL WEB DESIGN MARKET"
           headline="Legal Is the Highest-Competition, Highest-Value Vertical in Local Search"
           leadParagraphs={[
-            "At an average CPC of $7,559, legal keywords are the most expensive in Google Ads, which means the organic ranking that replaces a paid click is worth more in legal than in any other professional services category. Law firms that invest in proper website architecture for local SEO are systematically replacing heavy monthly ad spend with organic rankings that compound in value over time.",
+            "At roughly $8.58 average CPC, legal keywords are the most expensive in Google Ads, which means the organic ranking that replaces a paid click is worth more in legal than in any other professional services category. Law firms that invest in proper website architecture for local SEO are systematically replacing heavy monthly ad spend with organic rankings that compound in value over time.",
             "The search data tells the same story: 'law firm website design' searches have grown +190% in the last 3 months, driven by attorneys who recognize that their current site, whether a FindLaw template, an outdated custom site, or a page builder build, is not competitive in their local market. The firms making this transition now are capturing organic positions before their competitors do the same.",
             "FactoryJet has delivered professional service websites for US firms across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and nationwide. We understand the local SEO dynamics specific to legal, the bar advertising rules that vary by state, and the trust-building requirements that make legal website design fundamentally different from other verticals. A law firm consultation is free. Come in and see what your current site is leaving on the table.",
           ]}
@@ -876,7 +899,7 @@ export default function LawFirmWebsiteDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 by clients from US businesses and professional practices."
+          headline="Rated 4.9/5 across 500+ projects."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}

@@ -391,6 +391,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'WebPage',
+      '@id': 'https://factoryjet.com/huntington-beach/seo#webpage',
+      url: 'https://factoryjet.com/huntington-beach/seo',
+      // Freshness signal. Keep honest: bump when content actually changes.
+      dateModified: '2026-08-04',
+      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+      publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
+    {
       '@type': 'Organization',
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',

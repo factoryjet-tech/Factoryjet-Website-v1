@@ -71,6 +71,19 @@ export const metadata: Metadata = {
    FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-workflow-automation#webpage',
+  url: 'https://factoryjet.com/services/ai-workflow-automation',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -110,38 +123,41 @@ const serviceSchema = {
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How FactoryJet builds your AI workflow automation solution in 7 days',
-  description: 'Our 7-day process for delivering production-ready AI agents and automation for businesses.',
-  totalTime: 'P7D',
+  name: 'How FactoryJet builds your AI workflow automation solution',
+  description: 'Our process for delivering this work, typically 2 to 4 weeks depending on scope.',
+  // Aligned 2026-08-04 to the timeline this page actually states (2 to 4 weeks).
+  // 7-day delivery is real for standard website builds, but this page's own
+  // process section says 2 to 4 weeks, so P7D contradicted the visible content.
+  totalTime: 'P28D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery & Use-Case Mapping',
+      name: 'Stage 1 | Discovery & Use-Case Mapping',
       text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Architecture & Data Planning',
+      name: 'Stage 2 | Architecture & Data Planning',
       text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Build & Integrate',
+      name: 'Stage 3 | Build & Integrate',
       text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Testing & Optimization',
+      name: 'Stage 4 | Testing & Optimization',
       text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch & Training',
+      name: 'Stage 5 | Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
   ],
@@ -283,7 +299,7 @@ const MARKET_STATS = [
   {
     value: '3–6×',
     label: 'higher ROI from AI-enhanced automation vs. basic rule-based tools like Zapier',
-    microcopy: 'McKinsey Automation in SMBs Study',
+    microcopy: 'McKinsey, Winning the SMB tech market in a challenging economy',
     categoryLabel: 'AI ADVANTAGE',
   },
 ];
@@ -595,6 +611,10 @@ export default function AIWorkflowAutomationPage() {
   return (
     <>
       {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="ai-automation-faq-schema"
         type="application/ld+json"

@@ -93,6 +93,19 @@ export const metadata: Metadata = {
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/shopify-development#webpage',
+  url: 'https://factoryjet.com/shopify-development',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const SHOPIFY_serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -666,6 +679,10 @@ const SHOPIFY_faqSchema = {
 export default function ShopifyDevelopmentPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="shopify-service-schema"
         type="application/ld+json"

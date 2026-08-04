@@ -15,21 +15,21 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Denver CO: 2026 Pricing & Agency Guide for Small Businesses',
     description:
-      'Denver CO small business web design costs, what outdoor and tech startups need, local vs offshore agency comparison, and how to get Lighthouse 100/100 for $1,999 in 7 days.',
+      'Denver CO small business web design costs, what outdoor and tech startups need, local vs offshore agency comparison, and how to get Lighthouse 95+ for $1,999 in 7 days.',
   },
   keyTakeaways: [
     "Denver's outdoor, tech startup, and wellness cultures create SMBs with strong brand identities that need web design to match, performance-first, visually bold, mobile-optimized.",
-    'Denver local web design agencies charge $9,000–$22,000 for a 5-page professional site; the same Lighthouse 100/100 quality is available for $1,999 from agencies with US-hour support.',
+    'Denver local web design agencies charge $9,000–$22,000 for a 5-page professional site; the same Lighthouse 95+ quality is available for $1,999 from agencies with US-hour support.',
     "Denver's tech startup community has raised the bar for web design standards, businesses competing for talent or customers in that ecosystem need modern Next.js builds, not WordPress templates from 2019.",
     'Outdoor and adventure businesses in Denver need fast-loading photo-heavy sites with structured data for events, tours, and activities, and mobile performance that works at altitude (on cell networks).',
     'Colorado has state-level privacy laws (CPA, Colorado Privacy Act) that affect how Denver businesses collect and display data privacy disclosures on their websites.',
     'The 7-day delivery model works for Denver businesses when they arrive at kickoff with copy, logos, and brand guidelines ready: the bottleneck is always client content, not development.',
-    'FactoryJet delivers custom Denver CO websites in 7 days starting at $1,999 with Lighthouse 100/100, full technical SEO, and US business-hour project management.',
+    'FactoryJet delivers custom Denver CO websites in 7 days starting at $1,999 with Lighthouse 95+, full technical SEO, and US business-hour project management.',
   ],
   faqs: [
     {
       q: 'How much does web design cost for a small business in Denver CO?',
-      a: "Denver local agencies charge $9,000–$22,000 for a professional 5-page website in 2026. Mid-market Denver agencies run $5,000–$9,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same technical quality: Lighthouse 100/100, full technical SEO, WCAG 2.2 compliance, for $1,999–$3,999. Denver agencies carry high overhead from Cherry Creek and LoDo office space plus Colorado-rate salaries. That overhead shows up in your quote, not in your website's performance.",
+      a: "Denver local agencies charge $9,000–$22,000 for a professional 5-page website in 2026. Mid-market Denver agencies run $5,000–$9,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same technical quality: Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, for $1,999–$3,999. Denver agencies carry high overhead from Cherry Creek and LoDo office space plus Colorado-rate salaries. That overhead shows up in your quote, not in your website's performance.",
     },
     {
       q: 'What do Denver outdoor and adventure businesses need from their website?',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What should Denver tech startups look for in a web design agency?',
-      a: "Denver tech startups need: Next.js or React builds (not WordPress, tech audiences can tell), component-based design systems that scale as the product grows, performance-first architecture with Lighthouse 100/100 from day one, headless CMS integration for content teams, modern design language (clean, spacious, Stripe-style UI), and fast iteration capability for A/B testing and conversion optimization. The agency should be fluent in Vercel, Netlify, and CI/CD pipelines, not just Figma mockups.",
+      a: "Denver tech startups need: Next.js or React builds (not WordPress, tech audiences can tell), component-based design systems that scale as the product grows, performance-first architecture with Lighthouse 95+ from day one, headless CMS integration for content teams, modern design language (clean, spacious, Stripe-style UI), and fast iteration capability for A/B testing and conversion optimization. The agency should be fluent in Vercel, Netlify, and CI/CD pipelines, not just Figma mockups.",
     },
     {
       q: 'Does Colorado privacy law affect how Denver businesses build their websites?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Denver small business choose FactoryJet over a local Denver agency?',
-      a: "Choose FactoryJet if you want: Lighthouse 100/100 scores (guaranteed, with PageSpeed proof on delivery), 7-day delivery, WCAG 2.2 compliance, full technical SEO, and a starting price of $1,999, roughly at a fixed, transparent price. We've served 500+ businesses and provide named US client references. Local Denver agencies make sense if you need in-person discovery sessions or weekly face-to-face meetings. For everything else, the technical quality is equivalent and the savings are real. Start with a free quote at factoryjet.com/contact.",
+      a: "Choose FactoryJet if you want: Lighthouse 95+ scores (guaranteed, with PageSpeed proof on delivery), 7-day delivery, WCAG 2.2 compliance, full technical SEO, and a starting price of $1,999, roughly at a fixed, transparent price. We've served 500+ businesses and provide named US client references. Local Denver agencies make sense if you need in-person discovery sessions or weekly face-to-face meetings. For everything else, the technical quality is equivalent and the savings are real. Start with a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -152,7 +152,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Denver SMBs</h2>
       <p className="mb-4">
-        FactoryJet delivers custom-built Denver small business websites in 7 days starting at $1,999. Every project: custom Next.js or WordPress build (no templates purchased), Lighthouse 100/100 on all four metrics, WCAG 2.2 Level AA compliance, full technical SEO, US business-hour project management, US-governed contracts, full code ownership at final payment, and 30 days post-launch support.
+        FactoryJet delivers custom-built Denver small business websites in 7 days starting at $1,999. Every project: custom Next.js or WordPress build (no templates purchased), Lighthouse 95+ on all four metrics, WCAG 2.2 Level AA compliance, full technical SEO, US business-hour project management, US-governed contracts, full code ownership at final payment, and 30 days post-launch support.
       </p>
       <p className="mb-4">
         ➡ <a href="/denver/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Denver web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>

@@ -538,6 +538,7 @@ const agencyListSchema = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   '@id': `${URL}#webpage`,
   url: URL,
   name: 'Ecommerce Marketing Agency for US Brands',

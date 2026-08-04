@@ -146,7 +146,7 @@ const SEO_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build',
     description:
-      'We fix the technical side first: speed, the hidden code that helps Google understand your site, and the links between your pages. Then we improve the pages that win you customers. We do it on your site or hand your developer a clear list. Week 2 to 4',
+      'We fix the technical side first: speed, schema markup, the JSON-LD code that helps Google understand your site, and the links between your pages. Then we improve the pages that win you customers. We do it on your site or hand your developer a clear list. Week 2 to 4',
   },
   {
     number: '04',
@@ -201,7 +201,7 @@ const SEO_FAQ_ITEMS = [
     category: 'included',
     question: 'What does an SEO plan actually include?',
     answer:
-      'Every plan covers the technical side (a fast site that Google can read easily), improving the pages that win you customers, and local SEO including your free Google listing. Bigger plans add helpful content, real links from trusted sites, and getting picked up by Google AI answers. You also get a monthly call and a report you can read in five minutes.',
+      'Every plan covers the technical side (a fast site that Google can read easily), improving the pages that win you customers, and local SEO including your Google Business Profile. Bigger plans add helpful content, real links from trusted sites, and getting picked up by Google AI answers. You also get a monthly call and a report you can read in five minutes.',
   },
   {
     category: 'included',
@@ -226,13 +226,13 @@ const SEO_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you help me show up in Google AI answers and AI search?',
     answer:
-      'Yes. Google, ChatGPT, and Perplexity now answer many searches with AI before anyone clicks. We lay out your content as clear questions and answers, add the hidden code that helps these tools trust you, and write facts they can quote, so they point to your business. It is part of every plan, not an extra.',
+      'Yes. Google, ChatGPT, and Perplexity now answer many searches with AI before anyone clicks. We lay out your content as clear questions and answers, add schema markup, the JSON-LD code that helps ChatGPT, Perplexity, Gemini and Google AI Overviews trust you, and write facts they can quote, so they point to your business. It is part of every plan, not an extra.',
   },
   {
     category: 'technical',
     question: 'What technical work do you handle?',
     answer:
-      'We make sure Google can find and read every page, your site loads fast, the hidden code is correct, your sitemap and internal links are tidy, and the right pages show up instead of duplicates. We can do it on your site directly, or hand your developer a clear, ordered to-do list.',
+      'We make sure Google can find and read every page, your site loads fast, your schema markup is correct, your XML sitemap and internal links are tidy, and the right pages show up instead of duplicates. We can do it on your site directly, or hand your developer a clear, ordered to-do list.',
   },
   {
     category: 'technical',
@@ -482,7 +482,7 @@ export default function SeoHubPage() {
             {
               name: 'Technical SEO',
               description:
-                'Making your site fast and easy for Google to read: quick loading, the hidden code that explains your pages, a tidy sitemap, and no duplicate or missing pages. This is the base everything else sits on.',
+                'Making your site fast and easy for Google to read: quick loading, your schema markup (the JSON-LD code that explains your pages to Google), a tidy XML sitemap, and no duplicate or missing pages. This is the base everything else sits on.',
               example: 'Speed, clean code, easy for Google to read.',
               linkLabel: 'Explore Technical SEO',
               linkHref: '/seo/technical-seo',
@@ -504,7 +504,7 @@ export default function SeoHubPage() {
             {
               name: 'Local SEO + Google Business Profile',
               description:
-                'Getting you into the top three on the map for "near me" searches: your free Google listing set up and looked after, your details matching everywhere, and a plan for reviews. Vital for shops and local services.',
+                'Getting you into the top three on the map for "near me" searches: your Google Business Profile (the free listing) set up and looked after, your details matching everywhere, and a plan for reviews. Vital for shops and local services.',
               example: 'Top of the map + Google listing.',
               linkLabel: 'Explore Local SEO',
               linkHref: '/seo/local-seo',

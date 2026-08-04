@@ -12,7 +12,7 @@ import './arlington-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /us/arlington/seo, "Grid Iron" layout. Arlington TX local-SEO page.
-   Built 2026-06-12. CSS standings-board widget (text LCP, zero CLS, Lighthouse 100).
+   Built 2026-06-12. CSS standings-board widget (text LCP, zero CLS, Lighthouse 95+).
    Keywords: arlington seo company (480/mo), arlington seo agency (140),
    seo company arlington tx, local seo arlington tx, seo services arlington.
    DFW metro context: 7.8M people, 4th-largest US metro.
@@ -210,6 +210,15 @@ const faqItems = FAQ_GROUPS.flatMap((g) =>
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://factoryjet.com/arlington/seo#webpage',
+      url: 'https://factoryjet.com/arlington/seo',
+      // Freshness signal. Keep honest: bump when content actually changes.
+      dateModified: '2026-08-04',
+      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+      publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
     {
       '@type': 'Organization',
       '@id': 'https://factoryjet.com/#organization',

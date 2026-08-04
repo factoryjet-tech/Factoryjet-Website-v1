@@ -23,7 +23,7 @@ import Link from 'next/link';
  *
  * Tech notes:
  *   - Calendly opens in new tab (target="_blank") — zero JS, preserves
- *     Lighthouse 100/100 (no Calendly widget script).
+ *     Lighthouse 95+ (no Calendly widget script).
  *   - Mailto secondary uses bhavesh@factoryjet.com with surface-specific
  *     subject for sender expectation setting.
  *   - Placeholder headshot is pure inline SVG (gradient + "BB" monogram).

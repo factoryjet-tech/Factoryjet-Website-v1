@@ -1374,7 +1374,7 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say after we build their AI agents"
+          headline="What founders say after we build their AI agents"
         />
 
         {/* ── 14. FAQ (LIGHT, buffer before next dark) ─────────────────────── */}

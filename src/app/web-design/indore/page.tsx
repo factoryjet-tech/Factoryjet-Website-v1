@@ -337,7 +337,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Which is the best web design company in Indore?',
     answer:
-      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served, far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
+      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served, far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 95+ scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
   },
   {
     category: 'local',
@@ -871,7 +871,7 @@ export default function IndoreWebDesignPage() {
             {
               name: 'IT Companies & Startups',
               description:
-                "Scheme 78 IT Park and the Super Corridor are attracting a growing cluster of software companies, SaaS startups, and digital agencies, supported by IIM Indore, IIT Indore, and IIST alumni. For IT companies and startups, the website is a sales tool, a talent magnet, and a credibility signal for enterprise clients. We build SaaS marketing sites, enterprise IT services sites, and product landing pages with Lighthouse 100/100 performance, because Indore's IT founders know the difference between a fast site and a slow one.",
+                "Scheme 78 IT Park and the Super Corridor are attracting a growing cluster of software companies, SaaS startups, and digital agencies, supported by IIM Indore, IIT Indore, and IIST alumni. For IT companies and startups, the website is a sales tool, a talent magnet, and a credibility signal for enterprise clients. We build SaaS marketing sites, enterprise IT services sites, and product landing pages with Lighthouse 95+ performance, because Indore's IT founders know the difference between a fast site and a slow one.",
               example:
                 'SaaS startups in Scheme 78, IT services companies targeting US and European clients, software product companies, and digital marketing agencies in the Bengali Square cluster.',
             },

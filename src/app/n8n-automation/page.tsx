@@ -86,6 +86,19 @@ export const metadata: Metadata = {
    JSON-LD Schema, N8N_FAQ_SCHEMA is declared after N8N_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/n8n-automation#webpage',
+  url: 'https://factoryjet.com/n8n-automation',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const N8N_SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -591,6 +604,10 @@ const N8N_FAQ_SCHEMA = {
 export default function N8nAutomationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="n8n-faq-schema"
         type="application/ld+json"

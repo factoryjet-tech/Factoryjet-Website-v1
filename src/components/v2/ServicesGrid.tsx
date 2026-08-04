@@ -60,7 +60,7 @@ const SERVICES: Service[] = [
     timeline: '7-day delivery',
     timelineLabel: 'Delivery',
     deliverables: [
-      'Lighthouse 100/100 performance score',
+      'Lighthouse 95+ performance score',
       'Mobile-first responsive design',
       'GA4 + Google Search Console setup',
       'Full GitHub ownership on delivery',

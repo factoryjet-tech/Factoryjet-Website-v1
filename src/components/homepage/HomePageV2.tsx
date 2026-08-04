@@ -70,7 +70,7 @@ const FAQ_ITEMS = [
   {
     question: 'What tech stack do you use?',
     answer:
-      'Next.js (App Router) for the frontend, deployed to Cloudflare Pages for global edge performance. CMS options include Sanity, Contentful, and headless WordPress depending on your team\'s preference. All builds target Lighthouse 100/100 on Performance, Accessibility, Best Practices, and SEO.',
+      'Next.js (App Router) for the frontend, deployed to Cloudflare Pages for global edge performance. CMS options include Sanity, Contentful, and headless WordPress depending on your team\'s preference. All builds target Lighthouse 95+ on Performance, Accessibility, Best Practices, and SEO.',
     category: 'web',
   },
   {
@@ -253,9 +253,9 @@ export default function HomePageV2() {
             {' '}for India&apos;s Growing Brands.
           </>
         }
-        lead="7-day delivery on Starter sites. Lighthouse 100/100. AI SEO built in from day one. 500+ businesses launched across India, the US, and the UK."
+        lead="7-day delivery on Starter sites. Lighthouse 95+. AI SEO built in from day one. 500+ businesses launched across India, the US, and the UK."
         secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
-        trustItems={['500+ businesses', '7-day delivery', 'Lighthouse 100/100', '60–70% vs agencies']}
+        trustItems={['500+ businesses', '7-day delivery', 'Lighthouse 95+', '60–70% vs agencies']}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
       />
 

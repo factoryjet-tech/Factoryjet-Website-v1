@@ -613,6 +613,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   '@id': `${PAGE_URL}#webpage`,
   url: PAGE_URL,
   name: 'Roofing SEO Services: SEO for Roofers and Roofing Companies',
@@ -745,6 +746,10 @@ function CrossCircle({ size = 20 }: { size?: number }) {
 export default function RoofingSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="roof-webpage-schema"
         type="application/ld+json"

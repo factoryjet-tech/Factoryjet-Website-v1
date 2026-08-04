@@ -108,7 +108,7 @@ export default function RaleighWebDesignPage() {
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
         headline={"Why Raleigh Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Local Raleigh agencies include Forge3 (digital marketing and web, Raleigh-based), iFactory (web design and development, Raleigh), and national players like Lounge Lizard that actively serve the Triangle market. Forge3 and iFactory are credible firms, but neither publishes delivery timelines or builds in Next.js as standard. Triangle-area agencies charge enterprise-level rates for a 10–15 page project.\n\nFactoryJet's Growth tier delivers the same scope, blog CMS, lead capture, GA4, Next.js, at a fixed, transparent quote, with a 7-day delivery guarantee in writing and a codebase you own outright. No retainer, no plugin maintenance, no proprietary platform. We win because every project ships with JSON-LD schema for AI search crawlers (GPTBot, ClaudeBot, PerplexityBot), Lighthouse 100 performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
+        lead={"Local Raleigh agencies include Forge3 (digital marketing and web, Raleigh-based), iFactory (web design and development, Raleigh), and national players like Lounge Lizard that actively serve the Triangle market. Forge3 and iFactory are credible firms, but neither publishes delivery timelines or builds in Next.js as standard. Triangle-area agencies charge enterprise-level rates for a 10–15 page project.\n\nFactoryJet's Growth tier delivers the same scope, blog CMS, lead capture, GA4, Next.js, at a fixed, transparent quote, with a 7-day delivery guarantee in writing and a codebase you own outright. No retainer, no plugin maintenance, no proprietary platform. We win because every project ships with JSON-LD schema for AI search crawlers (GPTBot, ClaudeBot, PerplexityBot), Lighthouse 95+ performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
         pillars={[
           { title: 'AI-native',    body: 'Every site ships with JSON-LD schema for AI search crawlers and is built with an AI-assisted workflow that compresses build time without compressing quality. We have run 500+ projects through this system.' },
           { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price, agreed up front, in writing.' },
@@ -172,7 +172,7 @@ export default function RaleighWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"Rated 4.9/5 by clients from Raleigh and beyond."}
+        headline={"Rated 4.9/5 across 500+ projects."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"
@@ -282,6 +282,7 @@ function SchemaScript() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "dateModified": "2026-08-04",
           "name": "Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet",
           "url": "https://factoryjet.com/raleigh/web-design/",
           "speakable": {

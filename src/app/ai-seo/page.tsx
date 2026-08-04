@@ -124,7 +124,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'What is the difference between GEO and AEO?',
     answer:
-      'Two names for nearly the same work. GEO (generative engine optimization) targets AI tools that write answers, like ChatGPT and Perplexity. AEO (answer engine optimization) targets anything that gives a direct answer, including Google AI Overviews. The actual work, clear answers, the hidden code AI reads, real mentions, is nearly identical. Never pay twice for two acronyms.',
+      'Two names for nearly the same work. GEO (generative engine optimization) targets AI tools that write answers, like ChatGPT and Perplexity. AEO (answer engine optimization) targets anything that gives a direct answer, including Google AI Overviews. The actual work, clear answers, the schema markup AI reads, real mentions, is nearly identical. Never pay twice for two acronyms.',
   },
   {
     category: 'what',
@@ -194,7 +194,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'engines',
     question: 'What about Google AI Overviews: the answers at the top of Google?',
     answer:
-      'They matter a lot: when an AI Overview appears, pages ranked #1 lose up to 58% of their clicks (Ahrefs, Dec 2025). The best AI Overviews optimization services in India work the same way featured snippets were won: clear question-and-answer formatting, the hidden code Google reads, and trust signals. It is part of every plan we run.',
+      'They matter a lot: when an AI Overview appears, pages ranked #1 lose up to 58% of their clicks (Ahrefs, Dec 2025). The best AI Overviews optimization services in India work the same way featured snippets were won: clear question-and-answer formatting, the schema markup Google reads, and trust signals. It is part of every plan we run.',
   },
   {
     category: 'engines',
@@ -232,7 +232,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'What do you actually do every month?',
     answer:
-      'Four things, on repeat: fix and improve how your pages answer real buyer questions, maintain the hidden code AI engines read, earn real mentions of your business in places AI checks, and send you a one-page report with citations per engine. No filler tasks, no 20-page PDFs.',
+      'Four things, on repeat: fix and improve how your pages answer real buyer questions, maintain the schema markup and JSON-LD that AI engines read, earn real mentions of your business in places AI checks, and send you a one-page report with citations per engine. No filler tasks, no 20-page PDFs.',
   },
 
   // ── Getting started ──────────────────────────────────────────────────────
@@ -271,7 +271,7 @@ const JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '02',
     title: 'Fix the structure',
     description:
-      'Clear questions and answers on every page, plus the hidden code (schema) that AI engines read and quote.',
+      'Clear questions and answers on every page, plus your schema markup, the JSON-LD code that ChatGPT, Perplexity, Gemini and Google AI Overviews read and quote.',
   },
   {
     number: '03',
@@ -325,6 +325,7 @@ const CITY_PINS = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Best AI SEO Agency in India | GEO + AEO',
   url: 'https://factoryjet.com/ai-seo',
   description:
@@ -415,6 +416,10 @@ function AnswerCardStack() {
 export default function AiSeoIndiaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="ai-seo-webpage-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script id="ai-seo-service-schema" type="application/ld+json"

@@ -18,13 +18,13 @@ export const post: BlogPost = {
       'Denver CO small businesses: Shopify and custom ecommerce development in 7 days starting at $2,499. Pricing is fixed and published upfront. Complete guide with costs, timelines, and FAQs.',
   },
   keyTakeaways: [
-    'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores, offshore agencies with US support deliver identical Lighthouse 100/100 results for $2,499–$7,999.',
+    'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores, offshore agencies with US support deliver identical Lighthouse 95+ results for $2,499–$7,999.',
     'Denver\'s outdoor, active lifestyle, and health & wellness market is one of the strongest DTC ecommerce segments in the US, average order values are high and repeat purchase rates are strong.',
     'Shopify is the right platform for most Denver SMBs selling physical products: lower upfront cost, faster launch, and a proven app ecosystem. Custom development is only justified for unique checkout logic, subscription complexity, or marketplace functionality.',
     'Colorado\'s economic nexus law requires sales tax collection on orders over $100,000/year or 200 transactions: your ecommerce platform must handle multi-state tax collection correctly from day one.',
     'Denver\'s seasonal retail patterns (ski season, outdoor recreation season) mean your ecommerce site must handle traffic spikes without performance degradation: Shopify and Next.js both handle this well.',
     'Local SEO for Denver ecommerce requires product schema, Google Shopping integration, and service area signals: Denver Metro, Boulder, Fort Collins, and Colorado Springs are distinct commercial audiences.',
-    'FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 with 7-day delivery, Lighthouse 100/100, and full product setup for up to 50 SKUs.',
+    'FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 with 7-day delivery, Lighthouse 95+, and full product setup for up to 50 SKUs.',
   ],
   faqs: [
     {
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build an ecommerce store for my Denver CO business?',
-      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 for a standard 50-product Shopify setup with 7-day delivery. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 100/100 optimization, and 30 days post-launch support. We\'ve served 500+ US businesses across Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 for a standard 50-product Shopify setup with 7-day delivery. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ US businesses across Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -142,7 +142,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Denver Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499, 7-day delivery, Lighthouse 100/100, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and published upfront with identical technical quality. US business-hour project management throughout.
+        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499, 7-day delivery, Lighthouse 95+, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and published upfront with identical technical quality. US business-hour project management throughout.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free ecommerce quote with PageSpeed proof in 24 hours</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our ecommerce packages</a>

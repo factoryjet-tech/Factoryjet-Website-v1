@@ -44,7 +44,7 @@ const LAW_SEO_FIRMS = [
 export const metadata: Metadata = {
   title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
   description:
-    'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
+    'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
   alternates: {
     canonical: 'https://factoryjet.com/services/law-firm-seo',
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
     description:
-      'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
+      'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
     images: [
       {
         url: 'https://factoryjet.com/images/us/services/law-firm-seo/hero.webp',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
     description:
-      'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
+      'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
     images: ['https://factoryjet.com/images/us/services/law-firm-seo/hero.webp'],
   },
   robots: {
@@ -95,7 +95,7 @@ const schemaWebPage = {
   name: 'Law Firm SEO Agency. Legal SEO Services for Attorneys | FactoryJet',
   url: 'https://factoryjet.com/services/law-firm-seo',
   description:
-    'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more.',
+    'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more.',
   inLanguage: 'en-US',
   dateModified: '2026-06-14',
   isPartOf: {
@@ -127,7 +127,7 @@ const schemaService = {
   areaServed: { '@type': 'Country', name: 'United States' },
   serviceType: 'Law Firm SEO / Legal SEO',
   description:
-    'Law firm SEO services for US attorneys and legal practices. YMYL-certified content, Google Business Profile optimization, Map Pack dominance, Google Local Services Ads setup, and bar-compliance review on every deliverable.',
+    'Law firm SEO services for US attorneys and legal practices. Content built to Google YMYL standards, Google Business Profile optimization, Map Pack dominance, Google Local Services Ads setup, and bar-compliance review on every deliverable.',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -805,7 +805,7 @@ export default function LawFirmSEOPage() {
               <div className="trust-chips reveal reveal-delay-3">
                 <span className="trust-chip">500+ businesses served</span>
                 <span className="trust-chip">US legal SEO specialists</span>
-                <span className="trust-chip">YMYL-certified content</span>
+                <span className="trust-chip">Built to Google YMYL standards</span>
                 <span className="trust-chip">GSC-verified results</span>
                 <span className="trust-chip">No black-hat tactics</span>
               </div>

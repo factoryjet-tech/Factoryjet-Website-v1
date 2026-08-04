@@ -425,7 +425,7 @@ export default function Page() {
                 'Large catalog, products & collections scoped per project',
                 'ERP / inventory system integration',
                 'Multi-location fulfillment logic',
-                'Sub-1s load time, Lighthouse 100',
+                'Sub-1s load time, Lighthouse 95+',
                 'Dedicated project manager',
                 '60-day post-launch support',
               ],

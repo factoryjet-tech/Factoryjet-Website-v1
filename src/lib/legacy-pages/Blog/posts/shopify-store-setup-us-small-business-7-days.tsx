@@ -19,11 +19,11 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'A professionally built Shopify store can launch in 7 days when the client supplies product data, images, and brand assets at project kickoff, content delays are the #1 timeline killer.',
-    'A complete 7-day Shopify setup includes: custom theme configuration, up to 50 products loaded, payment gateway integration (Stripe/PayPal/Shopify Payments), shipping zones, tax settings, Google Analytics 4, and Lighthouse 100/100 performance.',
+    'A complete 7-day Shopify setup includes: custom theme configuration, up to 50 products loaded, payment gateway integration (Stripe/PayPal/Shopify Payments), shipping zones, tax settings, Google Analytics 4, and Lighthouse 95+ performance.',
     'Shopify\'s app ecosystem solves most US SMB needs without custom development: Klaviyo for email, Judge.me for reviews, ReConvert for post-purchase upsells, and Gorgias for customer support.',
     'The most expensive Shopify mistake is buying a $200 premium theme and spending $5,000 on customization: a properly configured free or $180 Shopify theme with custom CSS delivers equivalent results.',
     'Shopify Payments is the right default for US businesses under $1M/year revenue: no transaction fees (vs 0.5–2% with third-party gateways), instant setup, and integrated fraud protection.',
-    'FactoryJet launches professional Shopify stores for US small businesses in 7 days starting at $2,499, including custom theme, product upload, payment setup, and Lighthouse 100/100 optimization.',
+    'FactoryJet launches professional Shopify stores for US small businesses in 7 days starting at $2,499, including custom theme, product upload, payment setup, and Lighthouse 95+ optimization.',
     'Post-launch SEO on Shopify requires technical fixes Shopify doesn\'t do automatically: canonical tags for collection/product URL duplicates, JSON-LD product schema, and Core Web Vitals optimization.',
   ],
   faqs: [
@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to set up a Shopify store for a US small business?',
-      a: 'Professional Shopify store setup by an agency costs $2,499–$8,000 for a standard US SMB store (up to 50 products, custom theme, payment setup, core apps). DIY Shopify costs $29–$299/month in platform fees plus $200–$400 for a theme, but "DIY" typically results in suboptimal performance and missing technical SEO. US domestic agencies charge $8,000–$20,000 for the same scope. FactoryJet\'s Shopify setup starts at $2,499 with 7-day delivery, Lighthouse 100/100, and full product loading included.',
+      a: 'Professional Shopify store setup by an agency costs $2,499–$8,000 for a standard US SMB store (up to 50 products, custom theme, payment setup, core apps). DIY Shopify costs $29–$299/month in platform fees plus $200–$400 for a theme, but "DIY" typically results in suboptimal performance and missing technical SEO. US domestic agencies charge $8,000–$20,000 for the same scope. FactoryJet\'s Shopify setup starts at $2,499 with 7-day delivery, Lighthouse 95+, and full product loading included.',
     },
     {
       q: 'What is included in a professional 7-day Shopify store setup?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet set up my Shopify store in 7 days?',
-      a: 'Yes. FactoryJet launches Shopify stores for US small businesses in 7 days starting at $2,499. Our scope includes custom theme configuration, up to 50 products loaded, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 + Search Console, Product JSON-LD schema, Lighthouse 100/100 performance optimization, and 30 days post-launch support. We\'ve launched Shopify stores for US DTC brands, retail shops, and service businesses across all 50 states. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet launches Shopify stores for US small businesses in 7 days starting at $2,499. Our scope includes custom theme configuration, up to 50 products loaded, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 + Search Console, Product JSON-LD schema, Lighthouse 95+ performance optimization, and 30 days post-launch support. We\'ve launched Shopify stores for US DTC brands, retail shops, and service businesses across all 50 states. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -159,7 +159,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers in 7 Days</h2>
       <p className="mb-4">
-        FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 100/100 optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
+        FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 95+ optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
       </p>
       <p className="mb-4">
         We serve US small businesses coast to coast, from outdoor brands and manufacturers in{' '}

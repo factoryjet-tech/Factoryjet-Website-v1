@@ -79,6 +79,19 @@ export const metadata: Metadata = {
    JSON-LD Schemas, FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/magento-development#webpage',
+  url: 'https://factoryjet.com/services/magento-development',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -534,6 +547,10 @@ export default function MagentoDevelopmentPage() {
   return (
     <>
       {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -601,7 +618,7 @@ export default function MagentoDevelopmentPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ US e-commerce businesses trust FactoryJet, from custom modules to full Magento migrations" />
+        <LogoBar tagline="500+ e-commerce businesses trust FactoryJet, from custom modules to full Magento migrations" />
 
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock

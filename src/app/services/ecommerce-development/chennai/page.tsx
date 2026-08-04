@@ -709,7 +709,7 @@ export default function ChennaiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Chennai founders say after we build their store"
+          headline="What founders say after we build their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}

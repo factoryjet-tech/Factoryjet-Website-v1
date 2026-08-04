@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'web-design-austin-tx-small-business-guide-2026',
   title: 'Web Design in Austin TX: Small Business Guide for 2026',
   excerpt:
-    'Austin TX small businesses are paying $8,000–$25,000 for web design from local agencies when offshore-with-US-support options deliver the same Lighthouse 100/100 quality for $1,999–$4,999. This guide breaks down what Austin SMBs actually need, what local agencies charge, and how to get a faster, better website without overpaying.',
+    'Austin TX small businesses are paying $8,000–$25,000 for web design from local agencies when offshore-with-US-support options deliver the same Lighthouse 95+ quality for $1,999–$4,999. This guide breaks down what Austin SMBs actually need, what local agencies charge, and how to get a faster, better website without overpaying.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Austin TX: Small Business Guide for 2026 | FactoryJet',
     description:
-      'Austin TX small businesses: get Lighthouse 100/100 web design in 7 days starting at $1,999, at a fixed, transparent price. Complete 2026 guide with costs, timelines, and FAQs.',
+      'Austin TX small businesses: get Lighthouse 95+ web design in 7 days starting at $1,999, at a fixed, transparent price. Complete 2026 guide with costs, timelines, and FAQs.',
   },
   keyTakeaways: [
     'Austin web design agencies charge $8,000–$25,000 for a 5-page small business website, 4–12x more than offshore-with-US-support agencies delivering identical technical quality.',
@@ -23,13 +23,13 @@ export const post: BlogPost = {
     'A Lighthouse 100/100 score on mobile is achievable in 7 days from a modern agency, not 8–16 weeks from a traditional Austin studio.',
     'Austin SMBs in tech, food & beverage, real estate, and professional services all need the same core website features: fast load times, clear CTAs, and structured local SEO.',
     'Local SEO for Austin requires schema markup with Austin NAP data, Google Business Profile optimization, and Austin-specific service area pages, not just a local phone number.',
-    'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 100/100 scores, full technical SEO, and US business-hour project management.',
+    'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 95+ scores, full technical SEO, and US business-hour project management.',
     '60–70% cost savings over Austin local agencies means the budget difference ($5,000–$18,000) can fund 6–18 months of Google Ads or content SEO for your Austin market.',
   ],
   faqs: [
     {
       q: 'How much does web design cost for Austin TX small businesses in 2026?',
-      a: 'Austin local web design agencies typically charge $8,000–$25,000 for a professional 5–8 page small business website. Boutique Austin studios charge $12,000–$40,000 for custom builds. Offshore agencies with US business-hour support (like FactoryJet) deliver the same Lighthouse 100/100 quality for $1,999–$4,999. The price difference is driven by Austin cost-of-living and overhead, not technical skill. For most Austin SMBs, the $6,000–$20,000 savings is better deployed on Google Ads, local SEO, or the next phase of site development.',
+      a: 'Austin local web design agencies typically charge $8,000–$25,000 for a professional 5–8 page small business website. Boutique Austin studios charge $12,000–$40,000 for custom builds. Offshore agencies with US business-hour support (like FactoryJet) deliver the same Lighthouse 95+ quality for $1,999–$4,999. The price difference is driven by Austin cost-of-living and overhead, not technical skill. For most Austin SMBs, the $6,000–$20,000 savings is better deployed on Google Ads, local SEO, or the next phase of site development.',
     },
     {
       q: 'How long does it take to build a website for an Austin small business?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build a website for my Austin TX small business?',
-      a: 'Yes. FactoryJet has built websites for US small businesses across Texas including Austin-area service businesses, retail stores, and professional services firms. We deliver 5-page custom websites in 7 days starting at $1,999, with Lighthouse 100/100 scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We\'re at a fixed, transparent price with identical or better technical outcomes. Get a free quote with PageSpeed proof at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet has built websites for US small businesses across Texas including Austin-area service businesses, retail stores, and professional services firms. We deliver 5-page custom websites in 7 days starting at $1,999, with Lighthouse 95+ scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We\'re at a fixed, transparent price with identical or better technical outcomes. Get a free quote with PageSpeed proof at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -77,7 +77,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        Austin is one of the fastest-growing small business markets in the US, and local web design agencies have priced themselves accordingly. If you've gotten quotes from Austin studios recently, $10,000–$20,000 for a 5-page business website is now standard. This guide explains what's driving those prices, what you actually need, and how Austin SMBs are getting Lighthouse 100/100 websites in 7 days for $1,999.
+        Austin is one of the fastest-growing small business markets in the US, and local web design agencies have priced themselves accordingly. If you've gotten quotes from Austin studios recently, $10,000–$20,000 for a 5-page business website is now standard. This guide explains what's driving those prices, what you actually need, and how Austin SMBs are getting Lighthouse 95+ websites in 7 days for $1,999.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Web Design Costs in Austin TX in 2026</h2>
@@ -151,7 +151,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Austin TX Small Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds custom websites for Austin small businesses starting at $1,999, with 7-day delivery, Lighthouse 100/100 scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We've served 500+ US businesses across Texas and beyond.
+        FactoryJet builds custom websites for Austin small businesses starting at $1,999, with 7-day delivery, Lighthouse 95+ scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We've served 500+ US businesses across Texas and beyond.
       </p>
       <p className="mb-4">
         Our Austin clients get: custom Next.js builds (no templates), WCAG 2.2 accessibility compliance, Core Web Vitals green scores, full code ownership, 30-day post-launch support, and a fixed-price contract with itemized scope. Pricing is fixed and published upfront.

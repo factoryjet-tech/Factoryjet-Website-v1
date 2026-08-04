@@ -16,7 +16,7 @@ import './boise-seo.css';
    "The Welcome Mat" layout. Real SiteHeader/SiteFooter/ModalCTAButton/WhatsAppCTA.
    Styles scoped under .bseo (./boise-seo.css, next/font vars, no webfont request).
    CSS sign-card hero (text LCP, zero CLS), market photos lazy below the fold
-   → Lighthouse 100 target. Source: research/mockup-us-boise-seo-v4.html.
+   → Lighthouse 95+ target. Source: research/mockup-us-boise-seo-v4.html.
    Honesty: NO pricing anywhere (2026-06-11 rule), free audit, no guarantee,
    month-to-month; real clients only; founder byline. No fake LocalBusiness
    address, no self-serving Review schema.
@@ -235,6 +235,7 @@ const REPORT_ROWS: { lab: string; width: string; val: string }[] = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Boise SEO Company | Local SEO Services in Boise, ID',
   url: CANONICAL,
   description:

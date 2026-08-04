@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'web-design-miami-fl-small-business-2026',
   title: 'Web Design for Miami FL Small Businesses: 2026 Complete Guide',
   excerpt:
-    'Miami small businesses face a unique web design challenge: a bilingual market, heavy hospitality and retail competition, and local agency prices running $10,000–$30,000. This guide covers what Miami SMBs actually need, bilingual SEO strategy, and how to get a Lighthouse 100/100 website for $1,999 in 7 days.',
+    'Miami small businesses face a unique web design challenge: a bilingual market, heavy hospitality and retail competition, and local agency prices running $10,000–$30,000. This guide covers what Miami SMBs actually need, bilingual SEO strategy, and how to get a Lighthouse 95+ website for $1,999 in 7 days.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
@@ -15,21 +15,21 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Miami FL: Small Business Guide 2026 | FactoryJet',
     description:
-      'Miami FL small businesses: bilingual web design, Lighthouse 100/100, 7-day delivery starting at $1,999. Pricing is fixed and published upfront. Complete 2026 guide.',
+      'Miami FL small businesses: bilingual web design, Lighthouse 95+, 7-day delivery starting at $1,999. Pricing is fixed and published upfront. Complete 2026 guide.',
   },
   keyTakeaways: [
     'Miami web design agencies charge $10,000–$30,000 for a professional small business website, driven by South Florida\'s premium real estate and talent costs.',
     'Miami\'s bilingual market (Spanish and English) makes language-switching or dual-language websites a competitive necessity, not a nice-to-have, for businesses serving the Latin American community.',
     'Hospitality, real estate, retail, and professional services dominate Miami\'s SMB landscape: all requiring image-heavy, mobile-first, fast-loading websites with strong visual identity.',
-    'Lighthouse 100/100 scores on mobile are non-negotiable in Miami\'s competitive market, slow sites lose to competitors on Google and lose walk-in business from mobile searchers.',
+    'Lighthouse 95+ scores on mobile are non-negotiable in Miami\'s competitive market, slow sites lose to competitors on Google and lose walk-in business from mobile searchers.',
     'Miami\'s seasonal tourist influx means websites must handle traffic spikes without performance degradation, static site generators like Next.js excel here.',
     'Local SEO for Miami requires neighborhood-level targeting: Miami Beach, Brickell, Wynwood, Coral Gables, Doral, and Hialeah each have distinct commercial audiences.',
-    'FactoryJet delivers bilingual-capable Miami business websites in 7 days starting at $1,999, with Lighthouse 100/100, Spanish/English content support, and full local SEO.',
+    'FactoryJet delivers bilingual-capable Miami business websites in 7 days starting at $1,999, with Lighthouse 95+, Spanish/English content support, and full local SEO.',
   ],
   faqs: [
     {
       q: 'How much does web design cost for Miami FL small businesses in 2026?',
-      a: 'Miami local web design agencies typically charge $10,000–$30,000 for a 5–8 page professional small business website. Miami\'s high cost of living, premium office space in Brickell and Miami Beach, and competition for bilingual talent drive these prices. Offshore agencies with US business-hour support (like FactoryJet) deliver the same Lighthouse 100/100 quality for $1,999–$4,999: a 60–70% cost reduction. For Miami SMBs in competitive sectors like hospitality or real estate, that savings funds significant Google Ads or social media budget.',
+      a: 'Miami local web design agencies typically charge $10,000–$30,000 for a 5–8 page professional small business website. Miami\'s high cost of living, premium office space in Brickell and Miami Beach, and competition for bilingual talent drive these prices. Offshore agencies with US business-hour support (like FactoryJet) deliver the same Lighthouse 95+ quality for $1,999–$4,999: a 60–70% cost reduction. For Miami SMBs in competitive sectors like hospitality or real estate, that savings funds significant Google Ads or social media budget.',
     },
     {
       q: 'Do Miami small businesses need a bilingual (Spanish/English) website?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build a bilingual website for my Miami business?',
-      a: 'Yes. FactoryJet builds bilingual (English/Spanish) websites for Miami small businesses with proper hreflang implementation, separate language URL structures, and Spanish-language keyword optimization. Our Miami packages start at $1,999 for a 5-page English site; bilingual builds start at $2,999. Every site delivers Lighthouse 100/100 scores, full technical SEO, and US business-hour project management. Get a free quote at factoryjet.com/contact and receive a PageSpeed proof link for a comparable project within 24 hours.',
+      a: 'Yes. FactoryJet builds bilingual (English/Spanish) websites for Miami small businesses with proper hreflang implementation, separate language URL structures, and Spanish-language keyword optimization. Our Miami packages start at $1,999 for a 5-page English site; bilingual builds start at $2,999. Every site delivers Lighthouse 95+ scores, full technical SEO, and US business-hour project management. Get a free quote at factoryjet.com/contact and receive a PageSpeed proof link for a comparable project within 24 hours.',
     },
   ],
   content: (
@@ -142,7 +142,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Miami FL Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds English and bilingual websites for Miami small businesses starting at $1,999 (English) and $2,999 (English + Spanish). Every project delivers Lighthouse 100/100 scores, full technical SEO, neighborhood-level local schema, hreflang implementation for bilingual builds, and US business-hour project management. 7-day delivery on 5-page builds.
+        FactoryJet builds English and bilingual websites for Miami small businesses starting at $1,999 (English) and $2,999 (English + Spanish). Every project delivers Lighthouse 95+ scores, full technical SEO, neighborhood-level local schema, hreflang implementation for bilingual builds, and US business-hour project management. 7-day delivery on 5-page builds.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>

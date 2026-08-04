@@ -709,7 +709,7 @@ export default function KochiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Kochi founders say after we build their store"
+          headline="What founders say after we build their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}

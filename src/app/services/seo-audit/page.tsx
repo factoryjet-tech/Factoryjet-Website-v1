@@ -28,7 +28,7 @@ import './seo-audit.css';
    Team image lazy + reserved. Scoped CSS (.aseo) in the external cached bundle.
 
    Honesty: no pricing; CTAs → free SEO audit modal + Calendly; verified claims
-   only (4.9/5, 500+, 7-day/Lighthouse 100); report card + fix list labeled
+   only (4.9/5, 500+, 7-day/Lighthouse 95+); report card + fix list labeled
    illustrative; no em-dashes. Anti-cannibalization: owns "seo audit services /
    site audit / technical seo agency / audit report"; general SEO stays on the hub.
    Schema: Service + Organization + FAQPage(21) + BreadcrumbList.
@@ -186,6 +186,19 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/seo-audit#webpage',
+  url: 'https://factoryjet.com/services/seo-audit',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -259,6 +272,10 @@ const SCORE_DIY = [['A bot', 'x'], ['Flat error list', 'x'], ['Score only', 'p']
 export default function SeoAuditServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="aseo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="aseo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script id="aseo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -335,9 +352,9 @@ export default function SeoAuditServicePage() {
         {/* 3. LOGOS */}
         <div className="logobar">
           <div className="wrap">
-            <div className="lbl">Trusted by US founders &amp; teams</div>
+            <div className="lbl">Trusted by founders across India and the UK</div>
             <div className="logos" data-reveal>
-              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

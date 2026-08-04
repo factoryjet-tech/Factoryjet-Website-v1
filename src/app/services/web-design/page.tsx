@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
     description:
-      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
+      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 95+, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     url: 'https://factoryjet.com/services/web-design',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
     description:
-      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
+      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 95+, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -91,7 +91,7 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 100 performance. Fixed-price, milestone-paid. Get a quote on a free discovery call.',
+    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 95+ performance. Fixed-price, milestone-paid. Get a quote on a free discovery call.',
 };
 
 const howToSchema = {
@@ -336,7 +336,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 100 performance',
+    feature: 'Lighthouse 95+ performance',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -508,7 +508,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep web design pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid: every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly, no account-management or project-coordinator layers, delivering Next.js expertise, Figma design quality, and Lighthouse 100 performance, with full code ownership at handoff.',
+      'We work fixed-price and milestone-paid: every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly, no account-management or project-coordinator layers, delivering Next.js expertise, Figma design quality, and Lighthouse 95+ performance, with full code ownership at handoff.',
   },
 
   /* ── Technical & Performance ── */
@@ -662,6 +662,7 @@ export default function WebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "dateModified": "2026-08-04",
           "name": "Web Design Services USA | 7-Day Website Launch | FactoryJet",
           "url": "https://factoryjet.com/services/web-design/",
           "speakable": {
@@ -689,7 +690,7 @@ export default function WebDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_web_design_hero" />}
           eyebrow="WEB DESIGN · USA"
           headline="A Website That Converts, Launched in 7 Days"
-          lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify, designed in Figma, built to Lighthouse 100, and delivered fixed-price with full code ownership at handoff."
+          lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify, designed in Figma, built to Lighthouse 95+, and delivered fixed-price with full code ownership at handoff."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ websites delivered',
@@ -760,7 +761,7 @@ export default function WebDesignPage() {
               {/* Performance chip strip, aria-hidden decorative */}
               <div className="flex flex-wrap gap-2" aria-hidden>
                 {[
-                  'Lighthouse 100',
+                  'Lighthouse 95+',
                   'Core Web Vitals green',
                   'Mobile-first',
                   'Schema markup',
@@ -817,7 +818,7 @@ export default function WebDesignPage() {
                 </p>
               </div>
               <p>
-                FactoryJet approaches web design the way modern SaaS companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast, ranks well, and looks intentional, because it was designed for your specific business, not adapted from someone else&apos;s template.
+                FactoryJet approaches web design the way modern SaaS companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 95+ as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast, ranks well, and looks intentional, because it was designed for your specific business, not adapted from someone else&apos;s template.
               </p>
 
               <p>
@@ -891,7 +892,7 @@ export default function WebDesignPage() {
             {
               icon: '💸',
               title: 'Traditional agencies charge several times more for the same work',
-              body: 'A mid-tier US web agency bills a multiple of what we charge per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance: fixed-price, milestone-paid, with full code ownership at handoff. 12 years serving US clients means we scope accurately on the first call.',
+              body: 'A mid-tier US web agency bills a multiple of what we charge per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 95+ performance: fixed-price, milestone-paid, with full code ownership at handoff. 12 years serving US clients means we scope accurately on the first call.',
             },
           ]}
         />
@@ -1114,7 +1115,7 @@ export default function WebDesignPage() {
           lead="Not all web design options are the same. Here's what the decision looks like when you compare the real tradeoffs side by side."
           pullQuote={{
             stat: 'Fixed price',
-            caption: 'quoted upfront. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a traditional agency project that costs several times more.',
+            caption: 'quoted upfront. Same Figma design, Next.js engineering, and Lighthouse 95+ quality as a traditional agency project that costs several times more.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -1125,7 +1126,7 @@ export default function WebDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="CLIENT RESULTS"
-          headline="What US founders say after we build their site"
+          headline="What founders say after we build their site"
         />
 
         {/* ── 13. PRICING ──────────────────────────────────────────────────── */}
@@ -1223,7 +1224,7 @@ export default function WebDesignPage() {
             sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting performance and conversions, and give you a fixed price to fix it. No pitch. No pressure. Just an honest assessment from engineers who build for a living."
             primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-            objectionHandler="Lighthouse 100 guaranteed. Full code ownership. 7-day delivery. Fixed price."
+            objectionHandler="Lighthouse 95+ guaranteed. Full code ownership. 7-day delivery. Fixed price."
           />
         </div>
 

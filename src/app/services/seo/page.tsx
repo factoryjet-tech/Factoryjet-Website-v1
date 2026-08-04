@@ -665,10 +665,10 @@ export default function SeoServicePage() {
         <section className="py-12">
           <div className="mx-auto max-w-[1180px] px-6 text-center md:px-8">
             <p className="font-fj-mono text-[12px] uppercase tracking-[0.13em] text-fj-neutral-400">
-              Trusted by US founders &amp; teams
+              Trusted by founders across India and the UK
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-11 gap-y-4 opacity-70">
-              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((name) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'GPSUK', 'Sow Easy', 'Shevvaa'].map((name) => (
                 <span key={name} className="fj-display whitespace-nowrap text-[1.4rem] font-bold text-fj-neutral-600">
                   {name}
                 </span>

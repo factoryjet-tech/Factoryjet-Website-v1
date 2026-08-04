@@ -34,7 +34,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Small Business Website Design | 7-Day Delivery | FactoryJet',
   description:
-    'Professional website design for US small businesses. Custom design, mobile-first, Lighthouse 100, full SEO setup. Fixed-price, delivered in 7 days.',
+    'Professional website design for US small businesses. Custom design, mobile-first, Lighthouse 95+, full SEO setup. Fixed-price, delivered in 7 days.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -79,6 +79,19 @@ export const metadata: Metadata = {
 /* ----------------------------------------------------------------------------─
    JSON-LD Schemas, FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
+
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/small-business-website-design#webpage',
+  url: 'https://factoryjet.com/services/small-business-website-design',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -196,7 +209,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Mobile-first & Lighthouse 100',
+    feature: 'Mobile-first & Lighthouse 95+',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="diy" kind="partial" />,
@@ -259,7 +272,7 @@ const PRICING_TIERS = [
       'A professionally designed 5-page website for small businesses ready to stop looking like a startup and start winning customers. Delivered in 7 days, mobile-first, and built to convert.',
     features: [
       'Up to 5 custom-designed pages',
-      'Mobile-first, Lighthouse 100 performance',
+      'Mobile-first, Lighthouse 95+ performance',
       'On-page SEO, meta tags, schema, sitemap',
       'Contact form + Google Maps integration',
       'SSL, domain connection, Google Analytics setup',
@@ -348,7 +361,7 @@ const FAQ_ITEMS = [
     category: 'design',
   },
   {
-    question: 'What is Lighthouse 100 and why does it matter?',
+    question: 'What is Lighthouse 95+ and why does it matter?',
     answer: `Lighthouse is Google's tool for measuring website quality across four categories: Performance, Accessibility, Best Practices, and SEO. A score of 100 in each means your site loads fast, works for users with disabilities, follows web standards, and is technically optimized for search. A slow site (Lighthouse Performance score below 70) ranks lower in Google and converts fewer visitors, Google's data shows that every 1-second delay in load time reduces conversions by 7%. FactoryJet hits 100 in all four categories on every site we build.`,
     category: 'design',
   },
@@ -413,7 +426,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Will my website rank better with a faster load time?',
-    answer: `Yes: Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower, it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 100 performance scores, which means optimal Core Web Vitals: fast loading, no layout shifts, and responsive interactivity.`,
+    answer: `Yes: Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower, it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 95+ performance scores, which means optimal Core Web Vitals: fast loading, no layout shifts, and responsive interactivity.`,
     category: 'seo',
   },
   {
@@ -508,6 +521,10 @@ export default function SmallBusinessWebDesignPage() {
   return (
     <>
       {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -529,7 +546,7 @@ export default function SmallBusinessWebDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Fixed price, scoped to your build."
-          lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup, and delivered to your domain in 7 days. 500+ US small businesses served."
+          lead="Custom-designed (not a template), mobile-first, Lighthouse 95+ performance, full SEO setup, and delivered to your domain in 7 days. 500+ US small businesses served."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -545,7 +562,7 @@ export default function SmallBusinessWebDesignPage() {
                 {[
                   { item: 'Custom design', detail: 'Built around your brand, not a template' },
                   { item: 'Mobile-first', detail: 'Designed for phones before desktops' },
-                  { item: 'Lighthouse 100', detail: 'Performance, SEO, accessibility: all green' },
+                  { item: 'Lighthouse 95+', detail: 'Performance, SEO, accessibility: all green' },
                   { item: 'On-page SEO', detail: 'Meta, schema, sitemap, alt text: all done' },
                   { item: 'Contact forms', detail: 'Configured and tested before launch' },
                   { item: 'Analytics + Search Console', detail: 'Connected on day one' },
@@ -597,7 +614,7 @@ export default function SmallBusinessWebDesignPage() {
               </p>
 
               <p>
-                The second problem is speed. Google uses Core Web Vitals as a ranking signal. A slow site ranks lower, and a slow site also loses visitors, 53% of mobile users abandon a page that takes more than 3 seconds to load. Most DIY website builder sites and cheaply built WordPress sites fail these metrics. Every FactoryJet site hits Lighthouse 100 in Performance, Accessibility, Best Practices, and SEO, those aren't nice-to-haves, they're the baseline.
+                The second problem is speed. Google uses Core Web Vitals as a ranking signal. A slow site ranks lower, and a slow site also loses visitors, 53% of mobile users abandon a page that takes more than 3 seconds to load. Most DIY website builder sites and cheaply built WordPress sites fail these metrics. Every FactoryJet site hits Lighthouse 95+ in Performance, Accessibility, Best Practices, and SEO, those aren't nice-to-haves, they're the baseline.
               </p>
 
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -612,7 +629,7 @@ export default function SmallBusinessWebDesignPage() {
                 <div className="divide-y divide-fj-neutral-100">
                   {[
                     { problem: 'Template design', impact: 'Low trust, high bounce rate', fix: 'Custom-designed for your brand' },
-                    { problem: 'Slow load speed', impact: 'Lower ranking, lost visitors', fix: 'Lighthouse 100 on every page' },
+                    { problem: 'Slow load speed', impact: 'Lower ranking, lost visitors', fix: 'Lighthouse 95+ on every page' },
                     { problem: 'No SEO setup', impact: 'Zero organic traffic', fix: 'Schema, meta, sitemap: all configured' },
                     { problem: 'Not mobile-first', impact: 'Poor UX for 60%+ of visitors', fix: 'Designed phone-first, every time' },
                     { problem: 'No clear CTA', impact: 'Visitors leave without acting', fix: 'Conversion-optimized page structure' },

@@ -331,6 +331,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations',
   url: 'https://factoryjet.com/services/shopify-seo',
   description:
@@ -726,6 +727,10 @@ export default function ShopifySeoServicePage() {
   return (
     <>
       {/* JSON-LD schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="shopify-seo-webpage-schema"
         type="application/ld+json"

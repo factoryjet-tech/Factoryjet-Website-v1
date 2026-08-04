@@ -231,7 +231,7 @@ export const post: BlogPost = {
         The skepticism around offshore agencies is largely outdated. In 2026, the same Next.js, React, and Shopify frameworks used by US developers are used globally. Lighthouse scores, WCAG compliance, Core Web Vitals, and schema markup don't have a geography. What matters is technical competence and communication reliability. You verify the first by auditing live client sites, and the second by checking US business-hour response times and client references.
       </p>
       <p className="mb-4">
-        FactoryJet operates on this model: India-based development team, US business-hour communication, US-governed project agreements, and US client references. Five-page websites ship in 7 days with Lighthouse 100/100 scores. The cost savings versus comparable US agencies typically run $6,000–$18,000 per project.
+        FactoryJet operates on this model: India-based development team, US business-hour communication, US-governed project agreements, and US client references. Five-page websites ship in 7 days with Lighthouse 95+ scores. The cost savings versus comparable US agencies typically run $6,000–$18,000 per project.
       </p>
       <p className="mb-4">➡ See our work: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Web Design Services</a></p>
 
@@ -381,7 +381,7 @@ export const post: BlogPost = {
         FactoryJet was founded to solve a specific problem: US small businesses paying $8,000–$20,000 for websites that an equally competent offshore team could build for $2,000. Our India-based development team, US-hour project management, and productized 5-page build process deliver:
       </p>
       <p className="mb-4">
-        Custom design (not a template) · Next.js or WordPress build · Lighthouse 100/100 performance score · WCAG AA accessibility compliance · On-page SEO (full technical SEO included) · 5 pages with client-supplied copy · Mobile-first responsive layout · 7-day delivery guarantee · 30 days post-launch support · Full code and hosting ownership transferred at completion
+        Custom design (not a template) · Next.js or WordPress build · Lighthouse 95+ performance score · WCAG AA accessibility compliance · On-page SEO (full technical SEO included) · 5 pages with client-supplied copy · Mobile-first responsive layout · 7-day delivery guarantee · 30 days post-launch support · Full code and hosting ownership transferred at completion
       </p>
       <p className="mb-4">
         Both the 5-page website and the Shopify store are quoted as fixed-scope projects, not hourly, so the number you agree to is the number you pay. Projects are delivered in 7 days or we extend until it's right at no additional cost.

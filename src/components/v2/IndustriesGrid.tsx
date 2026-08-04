@@ -627,7 +627,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             <IndustryCard industry={INDUSTRIES[0]} titleSize={24} />
             <OrangeStatCard
               stat="523+"
-              statLabel="US businesses served across 30+ industries"
+              statLabel="businesses served across 30+ industries"
               tagline="7-day delivery · fixed pricing"
             />
           </div>

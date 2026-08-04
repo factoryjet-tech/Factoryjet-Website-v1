@@ -92,7 +92,7 @@ const CHIPS: { kw: string; vol: string }[] = [
 
 const CONSULT_PTS: { h: string; p: string }[] = [
   { h: 'You talk to the person doing the work', p: 'No account managers. The Austin SEO expert on your account writes the fixes, then explains them in plain English.' },
-  { h: 'Technical SEO is the floor, not an upsell', p: 'Core Web Vitals, schema, crawlability, and SEO optimization built into every month. Lighthouse 100 is our own standard.' },
+  { h: 'Technical SEO is the floor, not an upsell', p: 'Core Web Vitals, schema, crawlability, and SEO optimization built into every month. Lighthouse 95+ is our own standard.' },
   { h: 'Free SEO audit, yours to keep', p: 'Every engagement starts with a full SEO audit. Austin businesses get the findings and the roadmap whether they hire us or not.' },
   { h: 'AI SEO and GEO included', p: 'Entity data and answer-first content so ChatGPT, Perplexity, and Google AI Overviews can find and cite you.' },
 ];
@@ -313,6 +313,15 @@ const OTHER_CITIES: { name: string; path: string }[] = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://factoryjet.com/austin/seo#webpage',
+      url: 'https://factoryjet.com/austin/seo',
+      // Freshness signal. Keep honest: bump when content actually changes.
+      dateModified: '2026-08-04',
+      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+      publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
     {
       '@type': 'Organization',
       '@id': 'https://factoryjet.com/#organization',

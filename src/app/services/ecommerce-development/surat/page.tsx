@@ -709,7 +709,7 @@ export default function SuratEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Surat founders say after we build their store"
+          headline="What founders say after we build their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}

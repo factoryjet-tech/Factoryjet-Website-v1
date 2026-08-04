@@ -54,6 +54,19 @@ const FAQ_ITEMS = [
   { category: 'working', question: 'Do we own the BigCommerce store you build?', answer: 'Yes. You own and operate everything we build. We design, build, implement, and hand it over, and we stay on call to support and scale it. We never run your store for you.' },
   { category: 'working', question: 'Do you work with US BigCommerce brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds behind us.' },
 ];
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/bigcommerce-development#webpage',
+  url: 'https://factoryjet.com/bigcommerce-development',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Service', serviceType: 'BigCommerce development',
@@ -137,6 +150,10 @@ const tile = { height: '38px', borderRadius: '8px', background: 'linear-gradient
 export default function BigCommerceDevelopmentPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="bc-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script id="bc-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="bc-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />

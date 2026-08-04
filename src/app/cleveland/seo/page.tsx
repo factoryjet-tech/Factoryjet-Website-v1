@@ -17,7 +17,7 @@ import './cleveland-seo.css';
    checklist (targets "evaluating seo company cleveland" 390/KD0), schedule
    comparison, canonical FAQ sidebar. Real SiteHeader/SiteFooter/ModalCTAButton.
    Styles scoped under .clseo (next/font vars, no webfont request). No images,
-   no page JS (text LCP, zero CLS) → Lighthouse 100 target.
+   no page JS (text LCP, zero CLS) → Lighthouse 95+ target.
    Source: research/mockup-us-cleveland-seo-v1.html + city-cleveland-industry-brief.md.
    Honesty: no price shown, month-to-month, free audit, no guarantee; real clients
    only; founder byline; Census-cited stats. No fake LocalBusiness address, no
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 const TECH_ITEMS: { h: string; p: string }[] = [
-  { h: 'Core Web Vitals & speed', p: 'We build and tune for Lighthouse 100. Slow sites lose rankings and customers.' },
+  { h: 'Core Web Vitals & speed', p: 'We build and tune for Lighthouse 95+. Slow sites lose rankings and customers.' },
   { h: 'Crawlability, schema & indexing', p: 'Clean architecture, structured data, and sitemaps so Google sees every page.' },
   { h: 'Technical SEO audits', p: 'Every engagement starts with a full technical SEO audit of your site. Free, in plain English.' },
   { h: 'AI SEO / GEO', p: 'Entity data and answer-first content so ChatGPT, Perplexity, and Google AI Overviews can cite you.' },
@@ -155,7 +155,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'What makes FactoryJet one of the top SEO companies in Cleveland?',
-        a: 'Three things set the top SEO companies in Cleveland apart from the rest: senior engineers doing the actual work (not account managers), reporting tied to calls and leads (not ranking screenshots), and a technical foundation that includes Core Web Vitals, schema markup, and AI/GEO optimization, not just content and links. FactoryJet passes all three: every engagement is run by the same senior engineers who build Lighthouse 100/100 sites, with a written deliverables list and month-to-month terms. You can verify our technical work by running PageSpeed on factoryjet.com yourself before you talk to us.',
+        a: 'Three things set the top SEO companies in Cleveland apart from the rest: senior engineers doing the actual work (not account managers), reporting tied to calls and leads (not ranking screenshots), and a technical foundation that includes Core Web Vitals, schema markup, and AI/GEO optimization, not just content and links. FactoryJet passes all three: every engagement is run by the same senior engineers who build Lighthouse 95+ sites, with a written deliverables list and month-to-month terms. You can verify our technical work by running PageSpeed on factoryjet.com yourself before you talk to us.',
       },
       {
         q: 'What local SEO services do you provide for Cleveland businesses?',

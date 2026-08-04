@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Charlotte NC: Small Business Pricing & Agency Guide 2026',
     description:
-      'Charlotte NC small business web design in 2026, what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 100/100 site for $1,999.',
+      'Charlotte NC small business web design in 2026, what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 95+ site for $1,999.',
   },
   keyTakeaways: [
     "Charlotte is a top-10 fastest-growing US metro, web design competition among SMBs is intense, especially in finance, healthcare, professional services, and real estate.",
@@ -23,13 +23,13 @@ export const post: BlogPost = {
     'Finance and professional services firms in Charlotte need trust-first design: clean typography, structured credentials, case studies, and schema markup, not flashy visuals.',
     'Healthcare SMBs in Charlotte face the same ADA compliance requirements as any US business, WCAG 2.2 Level AA and HIPAA-aware contact forms are non-negotiable.',
     'Charlotte real estate and construction businesses need performance-optimized image galleries, neighborhood-based local SEO, and mobile-first design for on-the-go buyers.',
-    "A website built on Next.js with Lighthouse 100/100 scores gives Charlotte small businesses a measurable technical advantage over competitors still running slow WordPress template sites.",
+    "A website built on Next.js with Lighthouse 95+ scores gives Charlotte small businesses a measurable technical advantage over competitors still running slow WordPress template sites.",
     'FactoryJet delivers custom Charlotte NC websites in 7 days starting at $1,999 with full technical SEO, WCAG 2.2 compliance, and US business-hour support.',
   ],
   faqs: [
     {
       q: 'How much does web design cost for a small business in Charlotte NC?',
-      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same Lighthouse 100/100 output for $1,999–$3,999. The gap is entirely explained by local overhead: Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
+      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same Lighthouse 95+ output for $1,999–$3,999. The gap is entirely explained by local overhead: Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
     },
     {
       q: 'What do finance and professional services businesses in Charlotte need from their website?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Charlotte small business consider FactoryJet over a local agency?',
-      a: "Consider FactoryJet if your priorities are: Lighthouse 100/100 performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999, about at a fixed, transparent price. We've served 500+ US businesses with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else, FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
+      a: "Consider FactoryJet if your priorities are: Lighthouse 95+ performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999, about at a fixed, transparent price. We've served 500+ US businesses with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else, FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -157,7 +157,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Charlotte SMBs</h2>
       <p className="mb-4">
-        FactoryJet delivers custom-built Charlotte NC small business websites in 7 days starting at $1,999. Every project includes: Next.js or WordPress custom build (no purchased templates), Lighthouse 100/100 across all four metrics, WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, meta tags, Core Web Vitals optimization), US business-hour project management, US-governed contracts, and full code ownership transferred at final payment.
+        FactoryJet delivers custom-built Charlotte NC small business websites in 7 days starting at $1,999. Every project includes: Next.js or WordPress custom build (no purchased templates), Lighthouse 95+ across all four metrics, WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, meta tags, Core Web Vitals optimization), US business-hour project management, US-governed contracts, and full code ownership transferred at final payment.
       </p>
       <p className="mb-4">
         ➡ <a href="/charlotte/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Charlotte web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>

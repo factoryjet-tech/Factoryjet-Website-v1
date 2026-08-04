@@ -778,7 +778,7 @@ export default function AISchedulingAgentINPage() {
         <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say after automating their appointment scheduling"
+          headline="What Indian founders say about working with FactoryJet"
         />
 
         <FAQ

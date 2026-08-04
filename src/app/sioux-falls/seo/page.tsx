@@ -16,7 +16,7 @@ import './sioux-falls-seo.css';
    "The Trust Vault" layout. Real SiteHeader/SiteFooter/ModalCTAButton/WhatsAppCTA.
    Styles scoped under .sfseo (./sioux-falls-seo.css, next/font vars, no webfont
    request). CSS passbook-vault hero (text LCP, zero CLS), market photos lazy
-   below the fold → Lighthouse 100 target. Source: research/mockup-us-sioux-falls-seo-v4.html.
+   below the fold → Lighthouse 95+ target. Source: research/mockup-us-sioux-falls-seo-v4.html.
    Honesty: NO pricing anywhere (2026-06-11 rule), free audit, no guarantee,
    month-to-month; "0 agencies leading with AI search" claim softened to "almost
    no agency structures sites for AI citation today" (Tiger29 now markets GEO).
@@ -367,6 +367,7 @@ const LINK_STYLE = { color: '#B23E13', fontWeight: 600, textDecoration: 'underli
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Sioux Falls SEO Company | Local SEO Services in Sioux Falls, SD',
   url: CANONICAL,
   description:

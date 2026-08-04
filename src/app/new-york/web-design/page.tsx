@@ -205,6 +205,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'WebPage',
+      '@id': 'https://factoryjet.com/new-york/web-design#webpage',
+      url: 'https://factoryjet.com/new-york/web-design',
+      // Freshness signal. Keep honest: bump when content actually changes.
+      dateModified: '2026-08-04',
+      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+      publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
+    {
       '@type': 'LocalBusiness',
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
@@ -504,7 +513,7 @@ export default function NewYorkWebDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 by clients from US businesses."
+          headline="Rated 4.9/5 across 500+ projects."
         />
 
         <FAQ

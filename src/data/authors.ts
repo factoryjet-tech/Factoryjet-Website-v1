@@ -20,7 +20,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   name: 'Bhavesh Barot',
   slug: 'bhavesh-barot',
   jobTitle: 'Founder & CEO',
-  bio: 'Bhavesh Barot is the Founder and CEO of FactoryJet, a web design and e-commerce development agency that has served 500+ businesses across the US, UK, and UAE. Under his leadership, FactoryJet has delivered professional websites, Shopify stores, and custom web applications for small businesses, DTC brands, law firms, real estate agencies, and professional service providers, consistently achieving Lighthouse 100/100 performance scores and Core Web Vitals compliance. Bhavesh brings a decade-plus of digital strategy and business development experience to his writing, with direct exposure to how website quality affects lead generation, conversion rates, and organic search visibility for small businesses. He has evaluated hundreds of web design agency proposals, developed FactoryJet\'s 7-day delivery methodology, and built the pricing frameworks that allow US small businesses to access enterprise-grade web development at a fixed, transparent price. His work has been informed by direct client relationships across Austin TX, Miami FL, Denver CO, Nashville TN, and other US markets.',
+  bio: 'Bhavesh Barot is the Founder and CEO of FactoryJet, a web design and e-commerce development agency that has served 500+ businesses across the US, UK, and UAE. Under his leadership, FactoryJet has delivered professional websites, Shopify stores, and custom web applications for small businesses, DTC brands, law firms, real estate agencies, and professional service providers, consistently achieving Lighthouse 95+ performance scores and Core Web Vitals compliance. Bhavesh brings a decade-plus of digital strategy and business development experience to his writing, with direct exposure to how website quality affects lead generation, conversion rates, and organic search visibility for small businesses. He has evaluated hundreds of web design agency proposals, developed FactoryJet\'s 7-day delivery methodology, and built the pricing frameworks that allow US small businesses to access enterprise-grade web development at a fixed, transparent price. His work has been informed by direct client relationships across Austin TX, Miami FL, Denver CO, Nashville TN, and other US markets.',
   shortBio: 'Founder & CEO of FactoryJet, a web design and e-commerce agency serving 500+ US, UK, and UAE businesses. Expert in small business website strategy, Shopify development, and Core Web Vitals optimization.',
   // "10+", not "25+". PRODUCT.md fixes the experience framing at decade-plus and
   // rules out 25 years explicitly. This value renders on the author page AND on
@@ -30,7 +30,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   linkedin: 'https://www.linkedin.com/in/barotbhavesh/',
   credentials: [
     '500+ websites delivered to US, UK, and UAE clients',
-    'Lighthouse 100/100 performance standard on all FactoryJet projects',
+    'Lighthouse 95+ performance standard on all FactoryJet projects',
     '7-day delivery guarantee methodology, 97% on-time delivery rate',
     'Direct experience with web design agency pricing across US, UK, and offshore markets',
     'A decade-plus in digital strategy and web development business leadership',

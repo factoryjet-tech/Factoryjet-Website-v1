@@ -721,7 +721,7 @@ export default function BangaloreEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Bangalore founders say after we build their store"
+          headline="What founders say after we build their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}

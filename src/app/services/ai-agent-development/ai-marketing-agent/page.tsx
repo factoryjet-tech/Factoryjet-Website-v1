@@ -1003,7 +1003,7 @@ export default function AIMarketingAgentINPage() {
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say after deploying our AI marketing agents"
+          headline="What Indian founders say about working with FactoryJet"
         />
 
         {/* ── 14. FAQ (LIGHT) ───────────────────────────────────────────────── */}

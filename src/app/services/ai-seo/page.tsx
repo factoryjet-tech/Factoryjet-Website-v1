@@ -646,6 +646,7 @@ const COMPETITORS = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'AI SEO Agency in the USA: AI SEO Services, GEO + AEO',
   url: 'https://factoryjet.com/services/ai-seo',
   description:
@@ -1575,6 +1576,10 @@ export default function AiSeoServicePage() {
   return (
     <>
       {/* JSON-LD schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="ai-seo-webpage-schema"
         type="application/ld+json"

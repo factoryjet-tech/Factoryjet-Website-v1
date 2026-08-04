@@ -13,7 +13,7 @@ import './tampa-seo.css';
    /us/tampa/seo, Tampa local-SEO city page. Built 2026-06-06.
    Real SiteHeader/SiteFooter/ModalCTAButton. Styles scoped under .tseo
    (./tampa-seo.css, next/font vars, no webfont request). CSS-drawn map hero
-   (text LCP, zero CLS) → Lighthouse 100 target. Source: research/mockup-us-tampa-seo-v2.html.
+   (text LCP, zero CLS) → Lighthouse 95+ target. Source: research/mockup-us-tampa-seo-v2.html.
    Honesty: fixed-price month-to-month, free audit, no guarantee; real clients
    only; founder byline. No fake LocalBusiness address, no self-serving Review schema.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -139,6 +139,15 @@ const faqSchemaItems = FAQ_GROUPS.flatMap((g) =>
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://factoryjet.com/tampa/seo#webpage',
+      url: 'https://factoryjet.com/tampa/seo',
+      // Freshness signal. Keep honest: bump when content actually changes.
+      dateModified: '2026-08-04',
+      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+      publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
     {
       '@type': 'Organization',
       '@id': 'https://factoryjet.com/#organization',

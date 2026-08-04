@@ -486,7 +486,7 @@ export default function AISalesAgentINPage() {
 
 
         <GetFreeQuoteCTA />
-        <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What Indian founders say after deploying our AI sales agents" />
+        <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What Indian founders say about working with FactoryJet" />
 
         <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="Everything to Know Before You Start" lead="The questions we answer on every Indian AI sales agent discovery call, answered honestly." categories={SALES_FAQ_CATEGORIES} items={SALES_FAQ_ITEMS} />
 

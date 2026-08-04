@@ -16,7 +16,7 @@ import './fargo-seo.css';
    "The Radius" layout. Real SiteHeader/SiteFooter/ModalCTAButton/WhatsAppCTA.
    Styles scoped under .fseo (./fargo-seo.css, next/font vars, no webfont request).
    CSS radar-rings hero with ND|MN state line (text LCP, zero CLS), market photos
-   lazy below the fold → Lighthouse 100 target. Source: research/mockup-us-fargo-seo-v4.html.
+   lazy below the fold → Lighthouse 95+ target. Source: research/mockup-us-fargo-seo-v4.html.
    Honesty: NO pricing anywhere (2026-06-11 rule), free audit, no guarantee,
    month-to-month; real clients only; founder byline. No fake LocalBusiness
    address, no self-serving Review schema.
@@ -476,6 +476,7 @@ const CITY_LINKS: { href: string; label: string; note: string }[] = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Fargo SEO Company | Local SEO Services in Fargo, ND',
   url: CANONICAL,
   description:

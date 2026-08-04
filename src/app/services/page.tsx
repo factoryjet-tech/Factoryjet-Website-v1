@@ -38,6 +38,19 @@ export const metadata: Metadata = {
    JSON-LD
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
+// Keep honest: bump when the page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services#webpage',
+  url: 'https://factoryjet.com/services',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -89,7 +102,7 @@ const SERVICES = [
     eyebrow: 'MOST POPULAR',
     title: 'Custom Web Design',
     description:
-      'Figma-first design built in Next.js or WordPress. Lighthouse 100 guaranteed. Live in 7 days.',
+      'Figma-first design built in Next.js or WordPress. Lighthouse 95+ guaranteed. Live in 7 days.',
     href: '/services/web-design',
     cta: 'See Web Design',
     featured: true,
@@ -255,7 +268,7 @@ const FAQS = [
   },
   {
     q: 'Which platform do you build on?',
-    a: 'Most business sites go on Next.js (our default, fastest performance, Lighthouse 100). We also build on WordPress, Shopify, and Webflow depending on your content management needs. We\'ll recommend the right fit on the discovery call.',
+    a: 'Most business sites go on Next.js (our default, fastest performance, Lighthouse 95+). We also build on WordPress, Shopify, and Webflow depending on your content management needs. We\'ll recommend the right fit on the discovery call.',
   },
   {
     q: 'Do you work with US small businesses specifically?',
@@ -398,6 +411,10 @@ function ArrowIcon() {
 export default function USServicesHubPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -686,7 +703,7 @@ export default function USServicesHubPage() {
         <TestimonialsSection
           region="us"
           eyebrow="CLIENT RESULTS"
-          headline="What US founders say after we build their site"
+          headline="What founders say after we build their site"
         />
 
         {/* ── FAQ ──────────────────────────────────────────────────────────── */}

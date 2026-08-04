@@ -203,7 +203,7 @@ export default function TampaWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"Rated 4.9/5 by clients from Tampa and beyond."}
+        headline={"Rated 4.9/5 across 500+ projects."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"
@@ -313,6 +313,7 @@ function SchemaScript() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "dateModified": "2026-08-04",
           "name": "Web Design Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet",
           "url": "https://factoryjet.com/tampa/web-design/",
           "speakable": {

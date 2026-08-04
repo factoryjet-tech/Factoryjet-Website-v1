@@ -92,7 +92,7 @@ const FAQ_ITEMS = [
               category: 'pricing',
               question: 'How much does ecommerce development cost in Austin, TX?',
               answer:
-                "Austin ecommerce agencies typically charge enterprise-level rates for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. The difference comes from our lean operations, not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
+                "Austin ecommerce agencies typically charge enterprise-level rates for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. The difference comes from our lean operations, not from cutting corners on quality. We guarantee Lighthouse 95+ on every project regardless of tier.",
             },
             {
               category: 'pricing',
@@ -194,7 +194,7 @@ const FAQ_ITEMS = [
             /* ─ Quality & Results ─ */
             {
               category: 'quality',
-              question: 'What does "Lighthouse 100/100" actually mean for my business?',
+              question: 'What does "Lighthouse 95+" actually mean for my business?',
               answer:
                 "Google's Lighthouse score measures Performance, Accessibility, Best Practices, and SEO on a 0–100 scale. A score of 100 on Performance means your store loads fast on real mobile connections, under 1.5 seconds. That directly improves your Google ranking, reduces your bounce rate, and increases the likelihood that a shopper who clicks your ad actually completes a purchase. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.",
             },
@@ -297,7 +297,7 @@ export default function AustinEcommerceDevelopmentPage() {
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · AUSTIN"
           headline="What 'Ecommerce Development' Actually Means for an Austin Business"
-          lead="Most Austin agencies sell you a theme and hand you a bill. FactoryJet builds a revenue-generating store: custom design, Texas sales tax configured correctly (8.25% Travis County), Lighthouse 100/100 performance, JSON-LD schema for AI search visibility, and full email automation: all in 7 days."
+          lead="Most Austin agencies sell you a theme and hand you a bill. FactoryJet builds a revenue-generating store: custom design, Texas sales tax configured correctly (8.25% Travis County), Lighthouse 95+ performance, JSON-LD schema for AI search visibility, and full email automation: all in 7 days."
           body={
             <>
               <p>
@@ -353,7 +353,7 @@ export default function AustinEcommerceDevelopmentPage() {
               body: 'Austin ecommerce agencies typically charge enterprise-level rates for a Shopify store. FactoryJet delivers the same quality at a fraction of the cost. Fixed-price builds, US project management, full quality guarantee.',
             },
             {
-              title: 'Lighthouse 100/100',
+              title: 'Lighthouse 95+',
               body: 'Every store we build scores 100/100 on Google Lighthouse: Performance, Accessibility, Best Practices, and SEO. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.',
             },
           ]}
@@ -454,7 +454,7 @@ export default function AustinEcommerceDevelopmentPage() {
               values: [
                 'Project-based, undisclosed. Primarily WordPress/WooCommerce. 4–8 weeks typical.',
                 'Fixed-price · 7-day delivery',
-                'FactoryJet specializes in Shopify and custom headless ecommerce. Fixed pricing, guaranteed 7-day timeline, Lighthouse 100/100 on every project.',
+                'FactoryJet specializes in Shopify and custom headless ecommerce. Fixed pricing, guaranteed 7-day timeline, Lighthouse 95+ on every project.',
               ],
             },
             {
@@ -473,7 +473,7 @@ export default function AustinEcommerceDevelopmentPage() {
           eyebrow="TRANSPARENT PRICING"
           headline="Simple Pricing. No Surprises. No Hidden Fees."
           lead={
-            "Pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every plan includes: project management, revisions within agreed build scope, 30 days post-launch support, Lighthouse 100/100 guarantee, and same-week kickoff. No contracts. No retainers."
+            "Pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every plan includes: project management, revisions within agreed build scope, 30 days post-launch support, Lighthouse 95+ guarantee, and same-week kickoff. No contracts. No retainers."
           }
           tiers={[
             {
@@ -486,7 +486,7 @@ export default function AustinEcommerceDevelopmentPage() {
                 'Up to 50 products configured',
                 'Custom homepage, collection & product pages',
                 'Payment gateway + Texas tax setup (8.25%)',
-                'Mobile-first, Lighthouse 100/100',
+                'Mobile-first, Lighthouse 95+',
                 'Basic email automation (welcome + cart)',
                 'Google Analytics 4 + Search Console',
                 '30 days post-launch support',
@@ -521,7 +521,7 @@ export default function AustinEcommerceDevelopmentPage() {
                 'Large catalog, products scoped per project',
                 'B2B wholesale pricing portal',
                 'ERP, POS, or 3PL integrations',
-                'Headless Next.js frontend (Lighthouse 100)',
+                'Headless Next.js frontend (Lighthouse 95+)',
                 'Multi-warehouse inventory setup',
                 'Custom Shopify apps or plugins',
                 'Dedicated PM throughout',

@@ -25,7 +25,7 @@ import './charlotte-seo.css';
    verticals, bento, timeline, dual-panel comparison, manifesto quote, FAQ bands.
    Real SiteHeader/SiteFooter/ModalCTAButton. Styles scoped under .cseo
    (./charlotte-seo.css, next/font vars, no webfont request). No images
-   (text LCP, zero CLS) → Lighthouse 100 target.
+   (text LCP, zero CLS) → Lighthouse 95+ target.
    Source: research/mockup-us-charlotte-seo-v3.html + research/city-charlotte-industry-brief.md.
    Honesty: no pricing shown (no-pricing rule), month-to-month, free audit, no guarantee; real clients
    only; founder byline. Growth stat = Census-derived 148/day (54,100/yr, vintage

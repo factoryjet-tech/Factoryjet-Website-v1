@@ -16,7 +16,7 @@ import './chattanooga-seo.css';
    "The Itinerary" layout. Real SiteHeader/SiteFooter/ModalCTAButton/WhatsAppCTA.
    Styles scoped under .cseo (./chattanooga-seo.css, next/font vars, no webfont
    request). CSS route-card hero (text LCP, zero CLS), market photos lazy below
-   the fold → Lighthouse 100 target. Source: research/mockup-us-chattanooga-seo-v4.html.
+   the fold → Lighthouse 95+ target. Source: research/mockup-us-chattanooga-seo-v4.html.
    Honesty: NO pricing anywhere (2026-06-11 rule), free audit, no guarantee,
    month-to-month; real clients only; founder byline. No fake LocalBusiness
    address, no self-serving Review schema.
@@ -249,6 +249,7 @@ const TRI: { i: string; b: string; p: string }[] = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  dateModified: '2026-08-04',
   name: 'Chattanooga SEO Company | Local SEO Services in Chattanooga, TN',
   url: CANONICAL,
   description:

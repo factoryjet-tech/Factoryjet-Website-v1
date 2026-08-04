@@ -1018,7 +1018,7 @@ export default function AIChatbotINPage() {
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say after we build their AI chatbots"
+          headline="What founders say after we build their AI chatbots"
         />
 
         {/* ── 14. FAQ (LIGHT) ───────────────────────────────────────────────── */}

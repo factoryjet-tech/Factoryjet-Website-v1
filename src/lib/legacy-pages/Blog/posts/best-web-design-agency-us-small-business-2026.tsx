@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'The "local agency" premium is rarely justified for SMBs: offshore-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
     'WCAG 2.2 accessibility compliance is non-negotiable in 2026: ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
     'Ask for three named client references you can call independently, not testimonials on the agency\'s own website.',
-    'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 100/100 scores and US-hour project management.',
+    'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 95+ scores and US-hour project management.',
   ],
   faqs: [
     {
@@ -139,7 +139,7 @@ export const post: BlogPost = {
         The typical small business owner evaluates agencies on three things: how the portfolio looks, how likable the salesperson was, and whether the price fits the mental budget. None of these correlate reliably with outcomes. Beautiful portfolio sites can load in six seconds and fail Google's mobile-friendly test. Likable salespeople hand off to developers they've never managed. And the mental budget anchors to the wrong reference point entirely.
       </p>
       <p className="mb-4">
-        The agencies that build the best-performing small business websites in 2026 are often not the most polished in their own marketing. They're engineers-first teams with efficient workflows, modern technical stacks, and a process orientation that looks boring on a Behance page but delivers Lighthouse 100 scores on every client site. Identifying them requires different signals than portfolio aesthetics.
+        The agencies that build the best-performing small business websites in 2026 are often not the most polished in their own marketing. They're engineers-first teams with efficient workflows, modern technical stacks, and a process orientation that looks boring on a Behance page but delivers Lighthouse 95+ scores on every client site. Identifying them requires different signals than portfolio aesthetics.
       </p>
       <p className="mb-4">
         A Brightlocal 2024 survey of 600 US small businesses that had worked with web design agencies in the previous 18 months found that 47% reported their site underperformed on Google search, 39% said the project took more than twice as long as quoted, and 31% paid more than the original quote due to scope creep or change orders. These aren't unusual outcomes. They're the predictable result of selecting agencies on the wrong criteria.
@@ -315,7 +315,7 @@ export const post: BlogPost = {
         FactoryJet is an India-based agency built to serve US small businesses with enterprise-level technical standards at offshore-level pricing. We've served 500+ businesses across the US, UK, and UAE.
       </p>
       <p className="mb-4">
-        What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 100/100 scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.
+        What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 95+ scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.
       </p>
       <p className="mb-4">
         Pricing: 5-page professional website starts at $1,999. Shopify stores start at $2,499. Monthly maintenance plans from $149/month. 97% of projects delivered on time. Pricing is fixed and published upfront.
