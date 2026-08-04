@@ -3,6 +3,25 @@
 **Written:** 2026-08-04, end of the US pass.
 **Next session's job:** run the AI-judge layer over every non-US page. The US pass is done.
 
+> ## ✅ DONE — 2026-08-04, later the same day
+>
+> The non-US judge pass described in this document has been **completed**. All 236 non-US pages
+> (India 82, UK 34, blog 117, UAE 2, AU 1) were judged on all ten AI-only checks across 33 parallel
+> batches. **65 hard fails found. Zero verdicts dropped for want of a quote.**
+>
+> **Findings:** `docs/audits/2026-08-04-non-us-judge-pass.md`
+>
+> Headline: the blog was the worst region (35 hard fails) and India the best of the three (12),
+> because the fabricated-locality pattern §3 predicted was genuinely fixed and did not recur.
+> E4 + E3 account for 55% of all points lost — the weakest dimension is honesty, not structure.
+>
+> **Open decision for Bhavesh:** 40 of 94 blog posts publish FactoryJet's own prices, which conflicts
+> with the standing no-pricing rule (W5). Nothing was changed pending his call. See §6 of the report.
+>
+> Sections 4–7 below remain accurate and should still be used for any future judge run. Section 3's
+> scope list is now historical. One addition to §6: **give every judge agent its own scratch
+> directory** — two agents overwrote each other's temp files in this run.
+
 ---
 
 ## 1. What exists already (do not rebuild any of this)
