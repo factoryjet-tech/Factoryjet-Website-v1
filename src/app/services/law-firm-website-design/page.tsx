@@ -695,7 +695,7 @@ export default function LawFirmWebsiteDesignPage() {
             { value: '500+', label: 'Professional Sites Built' },
             { value: '7 Days', label: 'Delivery Guarantee' },
             { value: 'Fixed Price', label: 'Scoped to Your Build, Confirmed Upfront' },
-            { value: '25 Yrs', label: 'Legal Web Expertise' },
+            { value: '10+ Yrs', label: 'Legal Web Expertise' },
           ]}
         />
 

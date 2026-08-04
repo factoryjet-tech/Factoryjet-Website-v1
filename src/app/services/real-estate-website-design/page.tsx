@@ -524,7 +524,7 @@ export default function RealEstateWebsiteDesignPage() {
           { value: '500+', label: 'Agent Sites Built' },
           { value: '7 Days', label: 'Delivery Guarantee' },
           { value: 'Fixed Price', label: 'Scoped to Your Build, IDX Included' },
-          { value: '25 Yrs', label: 'Real Estate Web Expertise' },
+          { value: '10+ Yrs', label: 'Real Estate Web Expertise' },
         ]}
       />
 

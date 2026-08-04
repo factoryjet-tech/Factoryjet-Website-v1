@@ -687,7 +687,7 @@ export default function WordPressDevelopmentPage() {
             { value: '500+', label: 'WordPress Projects Delivered' },
             { value: '7 Days', label: 'Delivery Guarantee' },
             { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
-            { value: '25 Yrs', label: 'WordPress Expertise' },
+            { value: '10+ Yrs', label: 'WordPress Expertise' },
           ]}
         />
 

@@ -701,7 +701,7 @@ export default function WebsiteRedesignPage() {
             { value: '500+', label: 'Redesigns Delivered' },
             { value: '7 Days', label: 'Delivery Guarantee' },
             { value: 'Fixed', label: 'Price, Milestone-Paid' },
-            { value: '25 Yrs', label: 'Web Design Expertise' },
+            { value: '10+ Yrs', label: 'Web Design Expertise' },
           ]}
         />
 

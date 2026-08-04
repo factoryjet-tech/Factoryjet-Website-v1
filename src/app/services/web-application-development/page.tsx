@@ -578,7 +578,7 @@ export default function WebApplicationDevelopmentPage() {
           { value: 'Fixed Price', label: 'Scoped to Your Build' },
           { value: '4–8 Wks', label: 'Typical MVP Build Time' },
           { value: 'Milestone', label: 'Paid in Stages' },
-          { value: '25 Yrs', label: 'Software Expertise' },
+          { value: '10+ Yrs', label: 'Software Expertise' },
         ]}
       />
 

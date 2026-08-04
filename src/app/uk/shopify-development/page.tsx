@@ -249,7 +249,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>Client Rating</div>
       </div>
       <div>
-        <div className="stat-num" style={{ color: '#fff' }}>25 Yrs</div>
+        <div className="stat-num" style={{ color: '#fff' }}>10+ Yrs</div>
         <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>E-Commerce Expertise</div>
       </div>
     </div>

@@ -740,7 +740,7 @@ export default function WebDesignPage() {
             { value: '500+', label: 'Websites Delivered' },
             { value: '7 Days', label: 'Delivery Guarantee' },
             { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
-            { value: '25 Yrs', label: 'Web Design Expertise' },
+            { value: '10+ Yrs', label: 'Web Design Expertise' },
           ]}
         />
 

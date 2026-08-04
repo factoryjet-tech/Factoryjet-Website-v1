@@ -738,7 +738,7 @@ export default function SmallBusinessWebDesignPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  Not a template shop. Not a freelancer. A 25-year-old engineering team that delivers in 7 days.
+                  Not a template shop. Not a freelancer. An engineering team with more than a decade behind it, delivering in 7 days.
                 </p>
               </div>
 

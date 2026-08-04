@@ -935,7 +935,7 @@ export default function AustinAIAgentsPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not an Austin agency with a Congress Ave office. That's exactly the point."
-          lead="We're a 25-year-old software company that has built 500+ production systems for real businesses. The AI agents we build don't live in a demo — they run in production, handling real customer conversations every day."
+          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The AI agents we build don't live in a demo — they run in production, handling real customer conversations every day."
           pillars={[
             {
               icon: '⚡',
