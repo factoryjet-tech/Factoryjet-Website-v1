@@ -62,7 +62,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/seo/ahmedabad',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Ahmedabad' },
     { '@type': 'City', name: 'Gandhinagar' },

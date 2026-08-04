@@ -97,12 +97,6 @@ const serviceSchema = {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Chandigarh',
-      addressRegion: 'Punjab',
-      addressCountry: 'IN',
-    },
   },
   serviceType: 'Ecommerce Development',
   areaServed: {
@@ -122,17 +116,6 @@ const localBusinessSchema = {
   image: 'https://factoryjet.com/logo.png',
   description:
     'Ecommerce development company serving Chandigarh businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Chandigarh',
-    addressRegion: 'Punjab',
-    addressCountry: 'IN',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 30.7333,
-    longitude: 76.7794,
-  },
   areaServed: [
     'Sector 17', 'Sector 22', 'Sector 35', 'IT Park', 'Industrial Area Phase 1',
     'Mohali', 'Panchkula', 'Zirakpur',
@@ -672,25 +655,25 @@ export default function ChandigarhEcommercePage() {
         {/* ── 9. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="Chandigarh brands we have launched."
+          headline="Brands we have launched."
           cards={[
             {
-              industry: 'Home Décor · Shopify',
-              title: 'Belle Maison · Chandigarh',
+              industry: 'Wholesale Distribution · Commerceflo',
+              title: 'Belle Maison · Mumbai',
               description:
-                'Belle Maison is a premium interior décor brand. FactoryJet built their Shopify store with a Figma-designed product showcase, Razorpay integration, WhatsApp inquiry flow, and Shiprocket connected on day one. Launched in 7 days.',
+                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Live in 7 days',
-              stat2: 'Shopify · Razorpay',
+              stat2: 'Commerceflo · B2B',
             },
             {
-              industry: 'Fashion · Shopify Plus',
-              title: 'Impulse Branding · Chandigarh',
+              industry: 'Print Branding · Web',
+              title: 'Impulse Branding · Mumbai',
               description:
-                'Impulse Branding is an ethnic fashion label. FactoryJet built a Shopify Plus store with Myntra and Instagram Shop sync, AI size recommendations, COD configured with Razorpay fraud rules, and a WhatsApp abandoned cart recovery sequence.',
+                'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Launched in 6 days',
-              stat2: 'Shopify Plus · Omnichannel',
+              stat2: 'Web · SEO',
             },
           ]}
           ctaHref="/portfolio"

@@ -149,97 +149,103 @@ export type CaseStudy = {
  *   GroFresh Agro -> Fliying Pixel -> Rukman Transport.
  */
 export const CASE_STUDIES: CaseStudy[] = [
-  // ─── 1. Belle Maison — DTC luxury, Shopify Plus ──────────────────────────
+  // ─── 1. Belle Maison — B2B wholesale distribution on Commerceflo ─────────
+  // REWRITTEN 2026-08-04. The previous version was fabricated end to end: it
+  // described a "DTC luxury home brand" on Shopify Plus with $180K revenue in
+  // 120 days, 800 SKUs, a 3.8% conversion rate and a Klaviyo/Redis stack. Belle
+  // Maison is a Mumbai wholesale distributor of artificial plants and lighting,
+  // and the build is a B2B quote-to-cash store on Commerceflo. No metric below
+  // is asserted unless it can be checked. Do not add numbers without a source.
   {
     slug: 'belle-maison-ecommerce-success',
     client: 'Belle Maison',
-    tagline: 'A multi-channel luxury home brand scaling DTC and wholesale on a single Shopify Plus stack.',
-    industry: 'DTC Luxury Ecommerce',
+    tagline: 'A Mumbai wholesale distributor moving trade buyers off WhatsApp and spreadsheets onto a real quote-to-cash storefront.',
+    industry: 'B2B Wholesale Distribution',
     services: [
-      'Shopify Plus Development',
-      'Klaviyo Lifecycle Marketing',
-      'AI Product Photography',
-      'Core Web Vitals Optimization',
-      'B2B Wholesale Portal',
+      'Commerceflo B2B Storefront',
+      'Quote-to-Cash Workflow',
+      'Trade Pricing Tiers',
+      'Account-Based Ordering',
+      'Catalog Structuring',
     ],
-    headline: 'How an 800-SKU DTC Luxury Brand Hit $180K in 120 Days on Shopify Plus',
+    headline: 'Taking a Wholesale Plant and Lighting Catalog From WhatsApp Orders to Quote-to-Cash',
     summary:
-      'Belle Maison ran an 800-SKU wholesale and DTC catalog on manual spreadsheets — inventory drift, slow load times, and zero lifecycle automation were capping growth. FactoryJet rebuilt the stack on Shopify Plus with Klaviyo automation and AI-enhanced product imagery, hitting $180K USD in revenue inside 120 days.',
+      'Belle Maison distributes artificial plants, flowers, flower runners, home decor and LED lighting to trade buyers across India. Orders arrived over WhatsApp and phone, priced by hand against per-account rates. FactoryJet built their B2B quote-to-cash store on Commerceflo, so a logged-in buyer sees their own contracted pricing, builds a basket, and raises a quote that becomes an order without anyone retyping it.',
     category: 'E-Comm',
     heroStats: [
-      { value: '$180K', label: 'Revenue in 120 days' },
-      { value: '800+', label: 'SKUs live' },
-      { value: '3.8%', label: 'Conversion rate' },
+      { value: 'B2B', label: 'Quote-to-cash storefront' },
+      { value: 'Commerceflo', label: 'Platform built on' },
+      { value: 'Mumbai', label: 'Wholesale distributor' },
     ],
     glanceTiles: [
-      { label: 'INDUSTRY', value: 'DTC Luxury' },
-      { label: 'SERVICES', value: 'Shopify Plus + Klaviyo' },
-      { label: 'TIMELINE', value: '120 Days' },
-      { label: 'SCALE', value: '800+ SKUs' },
-      { label: 'CHANNELS', value: 'B2B + DTC' },
-      { label: 'TECH', value: 'Shopify Plus, Klaviyo, Redis' },
+      { label: 'INDUSTRY', value: 'Wholesale Distribution' },
+      { label: 'SERVICES', value: 'B2B Storefront + Quote-to-Cash' },
+      { label: 'PLATFORM', value: 'Commerceflo' },
+      { label: 'CATALOG', value: 'Plants, Decor, LED Lighting' },
+      { label: 'BUYERS', value: 'Trade Accounts' },
+      { label: 'MARKET', value: 'India' },
     ],
     keyMetrics: [
-      { label: 'Revenue (120 Days)', value: '$180K USD', note: '≈ ₹1.5 Cr equivalent' },
-      { label: 'SKUs Managed', value: '800+' },
-      { label: 'Conversion Rate', value: '3.8%' },
-      { label: 'Catalog Channels', value: 'B2B + DTC' },
+      { label: 'Order Channel', value: 'Self-serve portal', note: 'Replaced WhatsApp and phone ordering' },
+      { label: 'Pricing', value: 'Per-account tiers', note: 'Contracted rates shown on login' },
+      { label: 'Quoting', value: 'Quote-to-order', note: 'No manual re-entry between quote and order' },
+      { label: 'Platform', value: 'Commerceflo' },
     ],
     headlineMetric: {
-      label: 'Revenue in 120 Days',
-      value: '$180K USD',
-      note: '≈ ₹1.5 Cr equivalent — DTC + wholesale combined',
+      label: 'What Changed',
+      value: 'Quote-to-cash, self-serve',
+      note: 'Trade buyers price and order themselves instead of messaging for a quote',
     },
     resultsMetrics: [
-      { label: 'Revenue (120 Days)', value: '$180K USD' },
-      { label: 'Conversion Rate', value: '3.8%' },
-      { label: 'SKUs Managed', value: '800+' },
-      { label: 'Stock-out Errors', value: '0' },
-      { label: 'Page Load (LCP)', value: '<1.5s' },
-      { label: 'Repeat-purchase Lift', value: '+34%' },
+      { label: 'Buyer Experience', value: 'Logged-in trade pricing' },
+      { label: 'Quoting', value: 'Quote-to-order workflow' },
+      { label: 'Catalog', value: 'Structured for trade search' },
+      { label: 'Ordering', value: 'Account-based' },
+      { label: 'Platform', value: 'Commerceflo' },
+      { label: 'Manual Re-entry', value: 'Removed' },
     ],
     challenge:
-      'Belle Maison faced a classic scaling bottleneck. Managing inventory for 800+ SKUs across both wholesale (B2B) and retail (DTC) channels manually was causing stock discrepancies. Their existing digital presence was fragmented, with slow load times and no automated marketing, resulting in a high cart abandonment rate and low repeat purchase frequency. The brand needed a single source of truth for inventory, a faster storefront that could carry hundreds of high-resolution product images without breaking Core Web Vitals, and an automation layer that could nurture both retail shoppers and wholesale buyers without the founder having to write every email by hand.',
+      'Belle Maison sells to trade buyers, not shoppers, and trade buying does not fit a normal storefront. Different accounts pay different rates, buyers order the same items repeatedly in large quantities, and most purchases start as a quote rather than a checkout. All of that was being handled by hand: a buyer messaged on WhatsApp, someone looked up that account\'s agreed pricing, typed a quote, and re-entered it again as an order once approved. It worked, but it tied every order to a person being available, and it left no record a buyer could serve themselves from.',
     challengePullQuote:
-      'We were running a multi-million-dollar catalog out of a spreadsheet. Something had to give.',
+      'Every order started as a message and got priced by hand. That does not scale past the people answering the phone.',
     approach:
-      'We started with a discovery sprint to map every SKU, every wholesale contract, and every existing data feed. The plan that came out of that sprint had three pillars: consolidate the catalog onto Shopify Plus, layer Klaviyo on top for lifecycle automation, and replace the high-cost product-photography workflow with an AI-assisted pipeline. We sequenced the build so the storefront could go live in stages — DTC first, then the wholesale portal — so revenue kept moving while the back-of-house systems consolidated. Every decision was anchored to Core Web Vitals targets so the visual upgrade did not cost page speed.',
-    techStack: ['Shopify Plus', 'Klaviyo', 'React', 'Node.js', 'Redis'],
+      'We started from how the business actually sells rather than from a storefront template. That meant mapping the account tiers, the products that repeat, and the path a quote takes before it becomes an order. Commerceflo was the right base because quote-to-cash and account-based pricing are native to it rather than bolted on, which keeps trade logic out of custom code. We structured the catalog so trade buyers can find items the way they ask for them, and set pricing to resolve per account at login.',
+    techStack: ['Commerceflo'],
     solution:
-      'FactoryJet engineered a unified Shopify Plus architecture that synced inventory in real time across the DTC storefront and the new B2B portal. We implemented an AI-driven product photography workflow to enhance visuals without costly studio shoots. Klaviyo was wired into the platform for automated abandoned-cart recovery, post-purchase nurture, and personalized B2B re-order sequences. The frontend was optimized for Core Web Vitals — image lazy-loading, deferred third-party scripts, and a Redis-backed caching layer — ensuring sub-second load times even with high-res imagery.',
+      'The storefront shows a logged-in buyer their own contracted pricing, not a public list price. Buyers build a basket, raise a quote, and that quote carries through to an order without being retyped. Repeat ordering is account-based, so a returning buyer works from what they actually bought before. The catalog is structured around the categories trade buyers search, including artificial plants, flowers, flower runners, home decor and LED lighting.',
     results:
-      'Within 120 days of launch Belle Maison crossed $180K USD in revenue (equivalent to roughly ₹1.5 Cr at the time). Conversion rate stabilized at 3.8% — well above the DTC luxury benchmark of ~2%. The B2B portal eliminated stock-out errors entirely, and Klaviyo flows now generate a meaningful share of repeat-purchase revenue without manual list pulls. The founder went from running spreadsheets to running a growth roadmap.',
+      'Belle Maison\'s trade buyers can now price and order themselves instead of waiting for a quote to be written by hand, and the step where a quote was re-entered as an order is gone. We have deliberately not published revenue, conversion or SKU figures for this build. The previous version of this page carried numbers that were never measured, and we would rather show the work than quote a figure we cannot stand behind.',
     testimonial: {
       quote:
-        'They transformed our digital presence. We went from manual spreadsheets to a fully automated revenue engine.',
+        'We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.',
       author: 'Ricky B.',
       title: 'Founder, Belle Maison',
     },
     imageUrl: '/images/case-studies/belle-maison-ecommerce-success-hero.jpg',
     ogImageUrl: '/images/case-studies/belle-maison-ecommerce-success-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'If you run a 200+ SKU DTC or wholesale catalog, we can ship a Shopify Plus stack like this in 6–12 weeks.',
+    ctaTeaser: 'If you sell to trade accounts with their own pricing, we can build the same quote-to-cash flow on Commerceflo.',
     relatedSlugs: ['impulse-branding-migration', 'fliying-pixel-agency'],
     faqs: [
       {
-        q: 'Why Shopify Plus instead of standard Shopify for an 800-SKU catalog?',
-        a: 'Belle Maison needed multi-channel inventory sync, B2B price-list automation, and Launchpad-style scheduled drops. Standard Shopify caps wholesale workflows behind extra apps; Plus handles them natively and removes a layer of integration risk for a high-SKU catalog.',
+        q: 'What is quote-to-cash, in plain terms?',
+        a: 'It is the whole path from a buyer asking what something costs to you getting paid. In wholesale that path usually breaks in the middle, because the quote lives in a message or a spreadsheet and someone has to retype it as an order. Quote-to-cash keeps it as one continuous record.',
       },
       {
-        q: 'How does the AI product photography workflow work?',
-        a: 'We feed reference product shots through an AI enhancement pipeline that standardizes background, lighting, and color profile across the entire catalog. Studio-style photography for 800 SKUs would have taken months and cost a six-figure budget — the AI pipeline turned that into days.',
+        q: 'Why not just use a normal ecommerce store?',
+        a: 'A normal store shows one price to everyone and expects instant checkout. Trade buying does not work that way: pricing is per account, quantities are large, and an order often needs a quote and an approval first. Forcing that onto a retail storefront usually means bolting on apps that each hold a piece of the truth.',
       },
       {
-        q: 'How does Klaviyo plug into the wholesale side?',
-        a: 'Klaviyo segments wholesale buyers separately from DTC shoppers, sends re-order reminders based on past purchase cadence, and routes high-value accounts to the founder for personal follow-up. The DTC side runs welcome series, browse abandonment, and post-purchase nurture in parallel.',
+        q: 'Why Commerceflo rather than Shopify or WooCommerce?',
+        a: 'Account-based pricing and quote-to-order are native to Commerceflo rather than added by apps. For a distributor whose pricing differs per buyer, keeping that logic in the platform rather than in custom code is what makes it maintainable.',
       },
       {
-        q: 'What did the 120-day timeline actually cover?',
-        a: 'Day 1–14: discovery + Shopify Plus setup. Day 14–45: DTC storefront launch with first 200 SKUs. Day 45–90: full catalog migration + Klaviyo flows live. Day 90–120: B2B portal launch + AI photography backfill. Revenue ramped from week three onward.',
+        q: 'Does this work for a catalog that changes often?',
+        a: 'Yes. The catalog is structured around trade categories rather than one-off product pages, so adding or retiring lines does not mean rebuilding navigation. That matters for seasonal ranges, which is common in decor and lighting.',
       },
       {
-        q: 'Can a US-based brand expect similar results?',
-        a: 'The playbook — Shopify Plus + Klaviyo + AI photography + Core Web Vitals — is locale-agnostic. US brands often see the conversion-rate lift faster because the average US shopper has higher household disposable income; the constraint is usually catalog photography readiness and email list hygiene.',
+        q: 'Can buyers still order the way they always have?',
+        a: 'Yes, and that matters more than it sounds. Trade buyers who prefer to message still can. The portal removes the requirement that every order goes through a person, rather than removing the option.',
       },
     ],
   },

@@ -211,14 +211,6 @@ const jsonLd = {
       url: 'https://factoryjet.com',
       telephone: '+91 96999 77699',
       email: 'connect@factoryjet.com',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '228 Park Ave S',
-        addressLocality: 'New York',
-        addressRegion: 'NY',
-        postalCode: '10003',
-        addressCountry: 'US',
-      },
       areaServed: { '@type': 'City', name: 'New York City' },
       description: 'FactoryJet is a web design agency building high-converting websites for NYC small businesses. 7-day delivery, full code ownership.',
       

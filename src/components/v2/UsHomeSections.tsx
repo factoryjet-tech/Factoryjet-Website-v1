@@ -315,7 +315,7 @@ export function ProofSection() {
                 </div>
               </article>
               <article className="pf-card">
-                <div className="pf-kicker">Belle Maison · DTC</div>
+                <div className="pf-kicker">Belle Maison · B2B</div>
                 <h3 className="pf-name">A DTC store built to convert and scale</h3>
                 <p className="pf-built">A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels.</p>
                 <div className="pf-tags"><span className="ptag">DTC</span><span className="ptag">Storefront build</span><span className="ptag">Multi-channel ready</span><span className="ptag">Home &amp; decor</span></div>

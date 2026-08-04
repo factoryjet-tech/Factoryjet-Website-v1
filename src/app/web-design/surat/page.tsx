@@ -116,12 +116,6 @@ export default function Page() {
     description: 'Professional web design company serving Surat businesses across diamond, textile, MSME manufacturing, and trading sectors.',
     url: 'https://factoryjet.com/web-design/surat',
     telephone: '+91 96999 77699',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Surat',
-      addressRegion: 'Gujarat',
-      addressCountry: 'IN',
-    },
     areaServed: [
       { '@type': 'City', name: 'Surat' },
       { '@type': 'City', name: 'Navsari' },
@@ -457,12 +451,12 @@ const SRT_FAQ_ITEMS = [
           headline="What India's businesses look like after FactoryJet."
           cards={[
             {
-              industry: 'Interior Décor · Web Design',
+              industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison — Mumbai',
               description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
-              stat2: 'Next.js · WhatsApp',
+              stat2: 'Commerceflo · B2B',
             },
             {
               industry: 'MEP / BIM Consulting · SEO',

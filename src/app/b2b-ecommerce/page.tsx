@@ -625,7 +625,7 @@ export default function B2BEcommercePage() {
                   />
                 </div>
                 <div style={{ padding: '24px' }}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · DTC</div>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · B2B</div>
                   <p className="pp-lead" style={{ marginTop: '10px', fontSize: '15px' }}>A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels, ready to add a B2B portal on the same system.</p>
                   <div style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                     {['DTC', 'Storefront build', 'Multi-channel ready'].map((t) => (
@@ -665,7 +665,7 @@ export default function B2BEcommercePage() {
                   </div>
                   <div>
                     <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink)' }}>Ricky B.</div>
-                    <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Founder, Belle Maison · Artificial Plants &amp; Flowers · US</div>
+                    <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Founder, Belle Maison · Artificial Plants &amp; Flowers · Mumbai</div>
                   </div>
                 </div>
               </article>

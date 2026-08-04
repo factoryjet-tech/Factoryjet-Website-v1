@@ -70,12 +70,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Gachibowli' },
     { '@type': 'City', name: 'HITEC City' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Hyderabad',
-    addressRegion: 'Telangana',
-    addressCountry: 'IN',
-  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

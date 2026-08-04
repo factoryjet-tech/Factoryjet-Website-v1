@@ -116,12 +116,6 @@ export default function Page() {
     description: 'Professional web design company serving Chennai businesses across automotive, IT, healthcare, and manufacturing sectors.',
     url: 'https://factoryjet.com/web-design/chennai',
     telephone: '+91 96999 77699',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Chennai',
-      addressRegion: 'Tamil Nadu',
-      addressCountry: 'IN',
-    },
     areaServed: [
       { '@type': 'City', name: 'Chennai' },
       { '@type': 'City', name: 'Tambaram' },
@@ -457,12 +451,12 @@ const CHN_FAQ_ITEMS = [
           headline="What India's businesses look like after FactoryJet."
           cards={[
             {
-              industry: 'Interior Décor · Web Design',
+              industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison — Mumbai',
               description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
-              stat2: 'Next.js · WhatsApp',
+              stat2: 'Commerceflo · B2B',
             },
             {
               industry: 'MEP / BIM Consulting · SEO',

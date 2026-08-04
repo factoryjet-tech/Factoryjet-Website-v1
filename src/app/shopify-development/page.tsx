@@ -1172,7 +1172,7 @@ export default function ShopifyDevelopmentPage() {
               industry: 'Interior Décor · Shopify',
               title: 'Belle Maison — Mumbai',
               description:
-                'Belle Maison is a premium interior décor brand. FactoryJet built their Shopify store with a custom Figma-designed theme, WhatsApp order notification flow, Razorpay + UPI checkout, and Shiprocket logistics. Lighthouse 95+ on mobile before launch.',
+                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Razorpay + WhatsApp',

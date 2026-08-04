@@ -98,12 +98,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/web-design/ahmedabad',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Ahmedabad',
-    addressRegion: 'Gujarat',
-    addressCountry: 'IN',
-  },
   areaServed: [
     { '@type': 'City', name: 'Ahmedabad' },
     { '@type': 'City', name: 'Gandhinagar' },
@@ -702,13 +696,13 @@ export default function AhmedabadWebDesignPage() {
           headline="What India's businesses look like after FactoryJet."
           cards={[
             {
-              industry: 'Interior Décor · Web Design',
+              industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison — Mumbai',
               description:
-                "Belle Maison is a premium interior décor brand. FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries. Lighthouse 95+ on mobile before launch.",
+                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
-              stat2: 'Next.js · WhatsApp',
+              stat2: 'Commerceflo · B2B',
             },
             {
               industry: 'MEP / BIM Consulting · SEO',

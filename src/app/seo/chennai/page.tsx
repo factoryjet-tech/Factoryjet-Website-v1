@@ -70,12 +70,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'OMR' },
     { '@type': 'City', name: 'Guindy' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Chennai',
-    addressRegion: 'Tamil Nadu',
-    addressCountry: 'IN',
-  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

@@ -62,7 +62,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/seo/vadodara',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Vadodara', addressRegion: 'Gujarat', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Vadodara' },
     { '@type': 'City', name: 'Makarpura' },

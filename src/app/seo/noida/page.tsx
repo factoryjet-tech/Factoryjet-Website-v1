@@ -63,7 +63,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/seo/noida',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Noida', addressRegion: 'Uttar Pradesh', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Noida' },
     { '@type': 'City', name: 'Greater Noida' },

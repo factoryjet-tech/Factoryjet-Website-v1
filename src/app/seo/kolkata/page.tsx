@@ -62,7 +62,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/seo/kolkata',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Kolkata', addressRegion: 'West Bengal', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Kolkata' },
     { '@type': 'City', name: 'Bidhannagar' },

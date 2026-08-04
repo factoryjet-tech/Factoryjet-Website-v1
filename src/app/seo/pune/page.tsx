@@ -70,12 +70,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Hinjewadi' },
     { '@type': 'City', name: 'Kharadi' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Pune',
-    addressRegion: 'Maharashtra',
-    addressCountry: 'IN',
-  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

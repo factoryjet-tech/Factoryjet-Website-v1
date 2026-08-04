@@ -72,12 +72,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Gurugram' },
     { '@type': 'City', name: 'Faridabad' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'New Delhi',
-    addressRegion: 'Delhi',
-    addressCountry: 'IN',
-  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

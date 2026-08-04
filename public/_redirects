@@ -279,3 +279,9 @@
 /blog/best-online-store-development-small-business-uk-2026 /blog/custom-online-store-development-uk-smbs-2026 301
 /blog/shopify-vs-woocommerce-uk-smbs /blog/ecommerce-development-uk-shopify-woocommerce-2026 301
 /blog/website-redesign-ideas-uk-smbs-2026 /blog/website-redesign-small-business-uk-2026-ai-powered 301
+
+# Retired persona author profiles (2026-08-04). Not real people; see src/data/authors.ts.
+/author/rajesh-kumar /author/bhavesh-barot 301
+/author/vikram-malhotra /author/bhavesh-barot 301
+/author/priya-singh /author/bhavesh-barot 301
+/author/anjali-gupta /author/bhavesh-barot 301

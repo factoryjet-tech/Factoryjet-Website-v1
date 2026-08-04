@@ -62,7 +62,6 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/seo/jaipur',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Jaipur', addressRegion: 'Rajasthan', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Jaipur' },
     { '@type': 'City', name: 'Sitapura' },

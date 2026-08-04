@@ -112,57 +112,12 @@ const LIVE_PROJECTS: LiveProject[] = [
 
 /* ─── US content ──────────────────────────────────────────────────────────── */
 
-const US_TESTIMONIALS: Testimonial[] = [
-  {
-    initials: 'SM',
-    name: 'Sarah M.',
-    role: 'Owner, Lakeview Interiors',
-    city: 'Austin, TX',
-    quote:
-      'We went live in 7 days — completely on schedule. The site looks better than anything I had seen from local Austin agencies, and at a fraction of the price. Inquiry form submissions doubled in the first month.',
-    industry: 'Interior Design · Web Design',
-    warmAvatar: true,
-  },
-  {
-    initials: 'JT',
-    name: 'James T.',
-    role: 'Founder, Peak Trail Outfitters',
-    city: 'Denver, CO',
-    quote:
-      'FactoryJet rebuilt our Shopify store from scratch in under two weeks. Mobile checkout conversion went from 1.8% to 4.1% — that is a real number on a real revenue line. Delivered ahead of schedule.',
-    industry: 'Outdoor Retail · Shopify E-Commerce',
-    warmAvatar: false,
-  },
-  {
-    initials: 'MR',
-    name: 'Marcus R.',
-    role: 'Managing Partner, Harborlight Group',
-    city: 'Miami, FL',
-    quote:
-      'We needed a site that wins enterprise clients. FactoryJet delivered structured data, sub-2-second load times, and a design that looks like a Tier-1 firm. Lighthouse 100/100 on launch day — I checked myself.',
-    industry: 'B2B Consulting · SEO',
-    warmAvatar: true,
-  },
-];
-
-const US_LIVE_PROJECTS: LiveProject[] = [
-  {
-    client: 'Lakeview Interiors',
-    url: 'Portfolio highlight',
-    href: '/portfolio',
-    highlight: 'US CLIENT',
-  },
-  {
-    client: 'Peak Trail Outfitters',
-    url: 'Portfolio highlight',
-    href: '/portfolio',
-  },
-  {
-    client: 'Harborlight Group',
-    url: 'Portfolio highlight',
-    href: '/portfolio',
-  },
-];
+// The US variant used to ship three invented clients (Sarah M./Lakeview Interiors,
+// James T./Peak Trail Outfitters, Marcus R./Harborlight Group) with fabricated
+// metrics, plus "Portfolio highlight" placeholders where a real URL should be.
+// Confirmed fabricated by Bhavesh on 2026-08-04 and removed. Every region now
+// renders the same real, named, photographed clients with live checkable URLs.
+// Do NOT add a testimonial without a real client who actually said it.
 
 const US_STATS = [
   { value: '500+', label: 'websites built across the US, UK & India' },
@@ -245,17 +200,17 @@ export default function TestimonialsSection({
 }: TestimonialsSectionProps) {
   const isUS = region === 'us';
 
-  const testimonials = isUS ? US_TESTIMONIALS : TESTIMONIALS;
-  const liveProjects = isUS ? US_LIVE_PROJECTS : LIVE_PROJECTS;
+  const testimonials = TESTIMONIALS;
+  const liveProjects = LIVE_PROJECTS;
   const stats        = isUS ? US_STATS : ([
     { value: '523+',     label: 'websites built across India, US & UK' },
     { value: '97%',      label: 'delivered on time or early' },
     { value: '₹400Cr+', label: 'client revenue from sites we built' },
   ] as const);
-  const liveProjectsLabel = isUS ? 'Portfolio highlights' : 'Live verified projects';
+  const liveProjectsLabel = 'Live verified projects';
   const resolvedHeadline  = headline ?? (
     isUS
-      ? "What US business owners say after we build their site"
+      ? 'What our clients say after we build their site'
       : "What India's founders say after we build their site"
   );
 
