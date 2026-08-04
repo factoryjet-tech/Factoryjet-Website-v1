@@ -18,22 +18,22 @@ export const post: BlogPost = {
       "Complete 2026 pricing guide: US small business website costs from $500 to $25,000. What affects price, what you actually need, and how to get Lighthouse 100/100 for $1,999.",
   },
   keyTakeaways: [
-    'US small business website costs in 2026 range from $500 (DIY builder) to $25,000+ (premium domestic agency) — with the sweet spot for a custom professional site at $1,999–$8,000.',
+    'US small business website costs in 2026 range from $500 (DIY builder) to $25,000+ (premium domestic agency), with the sweet spot for a custom professional site at $1,999–$8,000.',
     'The four cost factors that matter most: technology stack (Next.js vs template), number of pages, e-commerce requirements, and whether you hire a US domestic agency vs offshore with US support.',
-    'A $500 Wix or Squarespace site costs very little upfront but creates long-term SEO and performance limitations — the cost of rebuilding it in 18–24 months is often $3,000–$8,000.',
+    'A $500 Wix or Squarespace site costs very little upfront but creates long-term SEO and performance limitations: the cost of rebuilding it in 18–24 months is often $3,000–$8,000.',
     'E-commerce adds $1,500–$8,000 to a basic site cost depending on product volume, payment complexity, and inventory system integrations.',
-    'US domestic agencies charge $8,000–$25,000 not because they build better websites, but because they carry higher overhead — office space, US salaries, and local marketing costs.',
+    'US domestic agencies charge $8,000–$25,000 not because they build better websites, but because they carry higher overhead, office space, US salaries, and local marketing costs.',
     'Lighthouse 100/100 scores (the performance standard that predicts Google rankings) are achievable at any price point above $1,999 when the agency prioritizes engineering quality.',
     'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 100/100, full technical SEO, WCAG 2.2 compliance, and 7-day delivery.',
   ],
   faqs: [
     {
       q: 'How much should a small business website cost in the USA in 2026?',
-      a: "Budget breakdown for US small businesses in 2026: DIY (Wix, Squarespace, Shopify basic) — $0–$500 setup + $20–$50/month. Template-based WordPress with freelancer customization — $500–$2,500. Custom professional 5-page site from an offshore agency with US support — $1,999–$4,000. Custom professional site from a US domestic agency — $8,000–$18,000. E-commerce (Shopify custom) — $2,499–$12,000. Full custom web application — $15,000–$50,000+. For most US SMBs needing a professional conversion-optimized site, $1,999–$4,000 from a properly vetted agency delivers the best ROI.",
+      a: "Budget breakdown for US small businesses in 2026: DIY (Wix, Squarespace, Shopify basic), $0–$500 setup + $20–$50/month. Template-based WordPress with freelancer customization, $500–$2,500. Custom professional 5-page site from an offshore agency with US support, $1,999–$4,000. Custom professional site from a US domestic agency, $8,000–$18,000. E-commerce (Shopify custom), $2,499–$12,000. Full custom web application, $15,000–$50,000+. For most US SMBs needing a professional conversion-optimized site, $1,999–$4,000 from a properly vetted agency delivers the best ROI.",
     },
     {
       q: 'Why do US web design agencies charge $10,000–$25,000 for a website?',
-      a: "US domestic agencies charge what they do because of overhead, not superior technical quality. A mid-size US agency pays $85–$200/sq ft for office space, $85,000–$130,000 in annual salary per developer, $15,000–$40,000 in annual health benefits per employee, plus marketing, sales, and account management costs. Every dollar of that overhead gets baked into your quote. The same Next.js expertise, Lighthouse optimization techniques, and React patterns exist in India, Eastern Europe, and Latin America at a fraction of the labor cost — with no measurable difference in technical output.",
+      a: "US domestic agencies charge what they do because of overhead, not superior technical quality. A mid-size US agency pays $85–$200/sq ft for office space, $85,000–$130,000 in annual salary per developer, $15,000–$40,000 in annual health benefits per employee, plus marketing, sales, and account management costs. Every dollar of that overhead gets baked into your quote. The same Next.js expertise, Lighthouse optimization techniques, and React patterns exist in India, Eastern Europe, and Latin America at a fraction of the labor cost, with no measurable difference in technical output.",
     },
     {
       q: "What's included in a $1,999 website from FactoryJet?",
@@ -41,15 +41,15 @@ export const post: BlogPost = {
     },
     {
       q: "Is a $500 Wix or Squarespace website good enough for a US small business?",
-      a: "For a hobby project, event page, or proof-of-concept: yes. For a business that depends on Google search traffic, local SEO rankings, or online credibility: no, for three specific reasons. First, website builders create technical SEO ceilings — Wix and Squarespace generate slower, less efficiently structured code that limits how high you can rank in competitive local searches. Second, Lighthouse Performance scores on builder sites average 50–65 on mobile, compared to 95–100 on custom Next.js builds. Third, you don't own the underlying code — if the platform changes pricing or closes, you start over. The rebuild cost at 18–24 months typically runs $3,000–$8,000.",
+      a: "For a hobby project, event page, or proof-of-concept: yes. For a business that depends on Google search traffic, local SEO rankings, or online credibility: no, for three specific reasons. First, website builders create technical SEO ceilings: Wix and Squarespace generate slower, less efficiently structured code that limits how high you can rank in competitive local searches. Second, Lighthouse Performance scores on builder sites average 50–65 on mobile, compared to 95–100 on custom Next.js builds. Third, you don't own the underlying code, if the platform changes pricing or closes, you start over. The rebuild cost at 18–24 months typically runs $3,000–$8,000.",
     },
     {
       q: 'How much does an e-commerce website cost for a US small business in 2026?',
-      a: "E-commerce pricing in 2026: Basic Shopify setup with a free theme and manual product entry — $500–$1,500 (freelancer cost). Custom Shopify theme with up to 50 products, payment integration, and basic apps — $2,499–$4,999 (FactoryJet). Mid-tier custom e-commerce with 100–500 products, custom checkout, and CRM integration — $5,000–$12,000. Full custom WooCommerce or headless e-commerce build — $12,000–$35,000. For most US small business DTC brands and retail stores, the $2,499–$4,999 custom Shopify range delivers the performance and customization needed without the enterprise-scale build cost.",
+      a: "E-commerce pricing in 2026: Basic Shopify setup with a free theme and manual product entry, $500–$1,500 (freelancer cost). Custom Shopify theme with up to 50 products, payment integration, and basic apps, $2,499–$4,999 (FactoryJet). Mid-tier custom e-commerce with 100–500 products, custom checkout, and CRM integration, $5,000–$12,000. Full custom WooCommerce or headless e-commerce build, $12,000–$35,000. For most US small business DTC brands and retail stores, the $2,499–$4,999 custom Shopify range delivers the performance and customization needed without the enterprise-scale build cost.",
     },
     {
       q: 'Does a more expensive website rank better on Google?',
-      a: "No — price doesn't correlate with Google rankings. Technical quality does. Specifically: Lighthouse Performance score on mobile (Google's Core Web Vitals signal), semantic HTML structure, schema markup, mobile-first design, page speed, and HTTPS with proper security headers are what Google measures. A $25,000 agency build on a slow server with a poorly optimized theme can rank below a $1,999 custom Next.js build with Lighthouse 100/100. Always verify Lighthouse scores on live client sites — not the agency's own website, not their pricing page.",
+      a: "No, price doesn't correlate with Google rankings. Technical quality does. Specifically: Lighthouse Performance score on mobile (Google's Core Web Vitals signal), semantic HTML structure, schema markup, mobile-first design, page speed, and HTTPS with proper security headers are what Google measures. A $25,000 agency build on a slow server with a poorly optimized theme can rank below a $1,999 custom Next.js build with Lighthouse 100/100. Always verify Lighthouse scores on live client sites, not the agency's own website, not their pricing page.",
     },
     {
       q: 'What ongoing costs should a US small business budget for their website?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How do I get the best value website for my small business in the USA?',
-      a: "The highest-value path for most US small businesses: hire an offshore agency with US-hour project management, verified Lighthouse 100/100 client sites, a fixed-price contract, and named US references you can call. This delivers $8,000–$20,000 worth of technical output for $1,999–$4,000. The verification checklist: run PageSpeed Insights yourself on three of their live client sites (pagespeed.web.dev), ask for a named US reference you can call this week, confirm WCAG 2.2 compliance is included in the base price, and get a written scope with every deliverable listed. FactoryJet meets all four criteria — get a free quote at factoryjet.com/contact.",
+      a: "The highest-value path for most US small businesses: hire an offshore agency with US-hour project management, verified Lighthouse 100/100 client sites, a fixed-price contract, and named US references you can call. This delivers $8,000–$20,000 worth of technical output for $1,999–$4,000. The verification checklist: run PageSpeed Insights yourself on three of their live client sites (pagespeed.web.dev), ask for a named US reference you can call this week, confirm WCAG 2.2 compliance is included in the base price, and get a written scope with every deliverable listed. FactoryJet meets all four criteria, get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -78,7 +78,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        "How much does a website cost?" is the question every US small business owner asks before starting — and it's genuinely hard to get a straight answer. Google it and you'll find articles ranging from "a few hundred dollars" to "$50,000+" without enough context to apply to your actual situation. This guide gives you the real numbers, the factors that drive those numbers, and enough specifics to make an informed decision for your business.
+        "How much does a website cost?" is the question every US small business owner asks before starting, and it's genuinely hard to get a straight answer. Google it and you'll find articles ranging from "a few hundred dollars" to "$50,000+" without enough context to apply to your actual situation. This guide gives you the real numbers, the factors that drive those numbers, and enough specifics to make an informed decision for your business.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Complete US Small Business Website Price Range in 2026</h2>
@@ -141,7 +141,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Drives Website Costs Up (and Down)</h2>
       <p className="mb-4">
-        <strong>Technology stack.</strong> Next.js custom builds require more developer skill than WordPress template installations — and appropriately cost more. But they deliver Lighthouse 100/100 reliably, which translates directly into better Google rankings. The cost premium for Next.js over template WordPress is typically $500–$1,500 for a basic site.
+        <strong>Technology stack.</strong> Next.js custom builds require more developer skill than WordPress template installations, and appropriately cost more. But they deliver Lighthouse 100/100 reliably, which translates directly into better Google rankings. The cost premium for Next.js over template WordPress is typically $500–$1,500 for a basic site.
       </p>
       <p className="mb-4">
         <strong>Number of pages.</strong> Every additional page requires design, content architecture, and development work. Budget approximately $200–$400 per additional page beyond the base package when working with an agency.
@@ -150,7 +150,7 @@ export const post: BlogPost = {
         <strong>E-commerce complexity.</strong> A 20-product Shopify store with standard checkout is very different from a 500-product WooCommerce build with custom inventory sync, multiple payment gateways, and subscription billing. Define scope precisely before getting quotes.
       </p>
       <p className="mb-4">
-        <strong>Custom functionality.</strong> Booking systems, membership portals, customer dashboards, API integrations with existing tools (CRMs, ERPs, accounting software) — each adds $500–$5,000+ depending on complexity.
+        <strong>Custom functionality.</strong> Booking systems, membership portals, customer dashboards, API integrations with existing tools (CRMs, ERPs, accounting software): each adds $500–$5,000+ depending on complexity.
       </p>
       <p className="mb-4">
         <strong>Agency location.</strong> This is the biggest single variable. A US domestic agency carries $85–$200/sq ft in office overhead plus US-rate salaries. An offshore agency with equivalent skills operates at 20–30% of that cost. The technical output is comparable when the offshore agency is properly vetted.
@@ -178,7 +178,7 @@ export const post: BlogPost = {
         The price difference is explained entirely by cost structure. A senior Next.js developer in San Francisco or Chicago costs $110,000–$160,000/year in base salary. A comparable developer in Bangalore or Pune costs $18,000–$35,000/year. Both developers can write the same React components to the same Lighthouse 100/100 standard. The business you hire passes that cost differential to you in their pricing.
       </p>
       <p className="mb-4">
-        For most US small businesses, this means a $1,999 offshore agency quote and a $12,000 US agency quote are buying the same technical output — with the US agency offering in-person meetings, US-time-zone availability, and local accountability as the premium.
+        For most US small businesses, this means a $1,999 offshore agency quote and a $12,000 US agency quote are buying the same technical output, with the US agency offering in-person meetings, US-time-zone availability, and local accountability as the premium.
       </p>
       <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 

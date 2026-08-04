@@ -73,7 +73,13 @@ export const webDesignAlternates = {
   'en-IN': 'https://factoryjet.com/web-design',
   'en-US': 'https://factoryjet.com/services/web-design',
   'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
+  // en-GB → the dedicated /uk/web-design page, not the /uk country landing.
+  // Corrected 2026-08-04: a dedicated UK web-design page exists, but this map
+  // still pointed en-GB at /uk while /uk/web-design emitted no languages at all,
+  // so the cluster was asymmetric in both directions. Same pattern as the UAE
+  // ecommerce-development exception above: when a dedicated country page ships,
+  // repoint that locale at it AND make the new page emit this same object back.
+  'en-GB': 'https://factoryjet.com/uk/web-design',
   // x-default → US hub (not the India hub) so NA/generic searchers land on the US
   // web-design page, not the India one. Matches the aiSeoAlternates fix. (geo-seg 2026-07-06)
   'x-default': 'https://factoryjet.com/services/web-design',

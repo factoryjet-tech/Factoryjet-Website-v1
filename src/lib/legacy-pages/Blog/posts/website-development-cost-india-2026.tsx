@@ -16,16 +16,16 @@ export const post: BlogPost = {
   meta: {
     title: 'Website Development Cost in India 2026: Complete INR Breakdown | FactoryJet',
     description:
-      'How much does a website cost in India in 2026? Honest INR price ranges from ₹15,000 basic sites to ₹10L+ enterprise builds — with every hidden cost exposed.',
+      'How much does a website cost in India in 2026? Honest INR price ranges from ₹15,000 basic sites to ₹10L+ enterprise builds, with every hidden cost exposed.',
   },
   keyTakeaways: [
-    'A professional 5-page business website in India costs ₹30,000–₹80,000 from a reliable agency — anything under ₹15,000 buys a template with minimal customisation.',
+    'A professional 5-page business website in India costs ₹30,000–₹80,000 from a reliable agency, anything under ₹15,000 buys a template with minimal customisation.',
     'Ecommerce stores start at ₹50,000 for a Shopify setup and scale to ₹3,00,000+ with full Razorpay, UPI, COD, Shiprocket, and GST invoicing integrations.',
-    'GST at 18% is not optional — a ₹50,000 quote becomes ₹59,000 with tax. Always ask whether prices are GST-inclusive before comparing quotes.',
+    'GST at 18% is not optional: a ₹50,000 quote becomes ₹59,000 with tax. Always ask whether prices are GST-inclusive before comparing quotes.',
     'City location affects price by 2–3x (Mumbai vs Tier-2), but the best agencies work remotely. A strong Indore agency outperforms a mediocre Mumbai agency at half the price.',
-    'Hidden costs — domain renewals, SSL, speed optimisation, annual maintenance, GST — add ₹15,000–₹50,000/year to the original build cost for most small businesses.',
+    'Hidden costs, domain renewals, SSL, speed optimisation, annual maintenance, GST, add ₹15,000–₹50,000/year to the original build cost for most small businesses.',
     '70% of Indian SMBs have no professional website (NASSCOM data). Every day without one is a lead flowing to a competitor who showed up on Google.',
-    'FactoryJet delivers production-grade websites in 7 days from ₹25,000 — faster than the industry average of 6–10 weeks, deployed on Cloudflare for sub-1.5s load speeds across India.',
+    'FactoryJet delivers production-grade websites in 7 days from ₹25,000, faster than the industry average of 6–10 weeks, deployed on Cloudflare for sub-1.5s load speeds across India.',
   ],
   faqs: [
     {
@@ -34,7 +34,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Website banane ka kharcha kitna hota hai?',
-      a: 'Ek basic 5-page website ka kharcha India mein ₹15,000 se ₹50,000 tak hota hai. Agar aapko custom design, SEO, aur ecommerce chahiye, toh budget ₹60,000 se ₹1,50,000 ke beech rakhein. Achhi quality ke liye freelancer se kam, agency se thoda zyada milta hai — ₹40,000–₹80,000 ek balanced range hai zyaadatar small businesses ke liye.',
+      a: 'Ek basic 5-page website ka kharcha India mein ₹15,000 se ₹50,000 tak hota hai. Agar aapko custom design, SEO, aur ecommerce chahiye, toh budget ₹60,000 se ₹1,50,000 ke beech rakhein. Achhi quality ke liye freelancer se kam, agency se thoda zyada milta hai, ₹40,000–₹80,000 ek balanced range hai zyaadatar small businesses ke liye.',
     },
     {
       q: 'How much does a 5-page website cost in India?',
@@ -46,7 +46,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Kya 7 din mein website ban sakti hai?',
-      a: 'Haan — FactoryJet ki taraf se. Basic se lekar 5-page tak ki professional website 7 working days mein deliver hoti hai. Yeh possible hai ek proven production system ki wajah se jo Next.js aur Cloudflare par built hai. 500+ websites ke baad, yeh process tight aur tested hai.',
+      a: 'Haan, FactoryJet ki taraf se. Basic se lekar 5-page tak ki professional website 7 working days mein deliver hoti hai. Yeh possible hai ek proven production system ki wajah se jo Next.js aur Cloudflare par built hai. 500+ websites ke baad, yeh process tight aur tested hai.',
     },
     {
       q: 'Shopify store banana ke liye kitna paisa chahiye?',
@@ -62,7 +62,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is WordPress or Shopify better for Indian businesses?',
-      a: 'For product-based businesses selling online, Shopify is better — it\'s purpose-built for ecommerce with strong UPI and Razorpay integration. For service businesses, coaches, agencies, and content sites, WordPress is more flexible and cheaper long-term (no monthly platform fee). For performance-focused businesses, a custom Next.js site is the fastest option.',
+      a: 'For product-based businesses selling online, Shopify is better, it\'s purpose-built for ecommerce with strong UPI and Razorpay integration. For service businesses, coaches, agencies, and content sites, WordPress is more flexible and cheaper long-term (no monthly platform fee). For performance-focused businesses, a custom Next.js site is the fastest option.',
     },
     {
       q: 'How much does website maintenance cost in India per year?',
@@ -86,11 +86,11 @@ export const post: BlogPost = {
     },
     {
       q: 'What is ONDC and how much does ONDC integration cost?',
-      a: 'ONDC (Open Network for Digital Commerce) is India\'s government-backed open commerce protocol — think of it as a UPI equivalent for ecommerce. Integrating your store with ONDC allows you to list products across multiple buyer apps (like Paytm, Meesho, Magicpin). ONDC integration costs ₹15,000–₹50,000+ depending on the platform and complexity of your catalog.',
+      a: 'ONDC (Open Network for Digital Commerce) is India\'s government-backed open commerce protocol, think of it as a UPI equivalent for ecommerce. Integrating your store with ONDC allows you to list products across multiple buyer apps (like Paytm, Meesho, Magicpin). ONDC integration costs ₹15,000–₹50,000+ depending on the platform and complexity of your catalog.',
     },
     {
       q: 'Can I get a professional website for under ₹50,000 in India?',
-      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet builds professional websites starting at ₹25,000. Anything under ₹15,000 from an agency should be examined carefully — at that price point, expect template designs with minimal customisation.',
+      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet builds professional websites starting at ₹25,000. Anything under ₹15,000 from an agency should be examined carefully, at that price point, expect template designs with minimal customisation.',
     },
     {
       q: 'How much does a WordPress website cost in India?',
@@ -98,7 +98,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What questions should I ask a web developer before hiring them in India?',
-      a: 'Ask: (1) Can I see your portfolio of live projects? (2) Is this quote GST-inclusive? (3) What CMS will I use to edit content after launch? (4) What is the exact timeline and milestone schedule? (5) What\'s included in post-launch support and for how long? (6) Who owns the domain and hosting account — me or you? (7) What is your process for SEO setup? Any developer who can\'t answer these clearly is a risk.',
+      a: 'Ask: (1) Can I see your portfolio of live projects? (2) Is this quote GST-inclusive? (3) What CMS will I use to edit content after launch? (4) What is the exact timeline and milestone schedule? (5) What\'s included in post-launch support and for how long? (6) Who owns the domain and hosting account, me or you? (7) What is your process for SEO setup? Any developer who can\'t answer these clearly is a risk.',
     },
     {
       q: 'How much does a website redesign cost in India?',
@@ -106,7 +106,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Does website development cost differ for US clients vs Indian clients?',
-      a: 'Yes, significantly. Indian agencies typically charge US clients 50–70% of what equivalent US agencies charge — this is the core value proposition. FactoryJet, for example, delivers professional US-market websites at Indian rates, providing 60–70% savings vs. US agencies with the same or better quality. Payments are usually in USD or INR equivalent depending on the engagement structure.',
+      a: 'Yes, significantly. Indian agencies typically charge US clients 50–70% of what equivalent US agencies charge, this is the core value proposition. FactoryJet, for example, delivers professional US-market websites at Indian rates, providing 60–70% savings vs. US agencies with the same or better quality. Payments are usually in USD or INR equivalent depending on the engagement structure.',
     },
   ],
   content: (
@@ -115,7 +115,7 @@ export const post: BlogPost = {
       <p className="text-lg leading-relaxed mb-6">
         If you&apos;ve Googled this question, you&apos;ve probably found answers ranging from
         ₹5,000 to ₹50,00,000. That&apos;s not a typo. That insane range exists because
-        &ldquo;website&rdquo; means wildly different things — a single landing page is a website;
+        &ldquo;website&rdquo; means wildly different things: a single landing page is a website;
         so is an enterprise ecommerce platform processing 10,000 orders per day.
       </p>
       <p className="text-lg leading-relaxed mb-6">
@@ -137,7 +137,7 @@ export const post: BlogPost = {
         The Complete INR Cost Table: Every Website Type in India (2026)
       </h2>
       <p className="mb-4 text-gray-700">
-        Here&apos;s the full breakdown in one table — so you can find your range in 30 seconds.
+        Here&apos;s the full breakdown in one table, so you can find your range in 30 seconds.
       </p>
       <div className="overflow-x-auto mb-3">
         <table className="w-full border-collapse text-sm">
@@ -183,7 +183,7 @@ export const post: BlogPost = {
         every cost component, itemised.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">1. Domain Name — ₹800 to ₹1,500 per year</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">1. Domain Name, ₹800 to ₹1,500 per year</h3>
       <p className="mb-3 text-gray-700">
         Your domain (yourbusiness.in or yourbusiness.com) typically costs ₹800–₹1,500 per year
         through registrars like GoDaddy, Namecheap, BigRock, or Hostinger. A <code>.in</code>{' '}
@@ -198,31 +198,31 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">2. Web Hosting — ₹2,000 to ₹15,000 per year</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">2. Web Hosting, ₹2,000 to ₹15,000 per year</h3>
       <p className="mb-3 text-gray-700">Hosting is where your website lives. Pricing tiers:</p>
       <ul className="list-disc pl-6 mb-3 space-y-2 text-gray-700">
-        <li><strong>Shared hosting</strong> (Hostinger, Bluehost India): ₹2,000–₹5,000/year — fine for brochure sites</li>
-        <li><strong>VPS hosting</strong> (DigitalOcean, Linode): ₹6,000–₹24,000/year — needed for medium-traffic sites</li>
-        <li><strong>Managed WordPress</strong> (Kinsta, WP Engine): ₹12,000–₹60,000/year — premium performance</li>
-        <li><strong>Edge/CDN hosting</strong> (Cloudflare Pages, Vercel): Free to ₹2,000/month — best performance for modern Next.js sites</li>
+        <li><strong>Shared hosting</strong> (Hostinger, Bluehost India): ₹2,000–₹5,000/year, fine for brochure sites</li>
+        <li><strong>VPS hosting</strong> (DigitalOcean, Linode): ₹6,000–₹24,000/year, needed for medium-traffic sites</li>
+        <li><strong>Managed WordPress</strong> (Kinsta, WP Engine): ₹12,000–₹60,000/year, premium performance</li>
+        <li><strong>Edge/CDN hosting</strong> (Cloudflare Pages, Vercel): Free to ₹2,000/month, best performance for modern Next.js sites</li>
       </ul>
       <p className="mb-6 text-gray-700">
         For an ecommerce store, never go with cheap shared hosting. A slow checkout kills
         conversions. Budget at least ₹5,000–₹12,000/year minimum for hosting a store.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">3. Design — ₹8,000 to ₹80,000</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">3. Design, ₹8,000 to ₹80,000</h3>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700">
-        <li><strong>Pre-built template</strong>: ₹0–₹8,000 (WordPress themes, Shopify themes) — fast but generic</li>
-        <li><strong>Custom UI design (Figma)</strong>: ₹15,000–₹80,000+ — built specifically for your brand</li>
-        <li><strong>Design system for enterprise</strong>: ₹1,00,000+ — full component libraries, brand guidelines</li>
+        <li><strong>Pre-built template</strong>: ₹0–₹8,000 (WordPress themes, Shopify themes), fast but generic</li>
+        <li><strong>Custom UI design (Figma)</strong>: ₹15,000–₹80,000+, built specifically for your brand</li>
+        <li><strong>Design system for enterprise</strong>: ₹1,00,000+, full component libraries, brand guidelines</li>
       </ul>
       <p className="mb-6 text-gray-700">
         The difference between a ₹5,000 template site and a ₹50,000 custom design is visible in
         2 seconds. If you&apos;re building a brand, don&apos;t cut corners here.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">4. Development — ₹10,000 to ₹8,00,000</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">4. Development, ₹10,000 to ₹8,00,000</h3>
       <ul className="list-disc pl-6 mb-3 space-y-2 text-gray-700">
         <li><strong>Basic WordPress site</strong>: ₹10,000–₹30,000</li>
         <li><strong>Custom WordPress with plugins + SEO</strong>: ₹30,000–₹80,000</li>
@@ -230,11 +230,11 @@ export const post: BlogPost = {
         <li><strong>Full-stack web app</strong>: ₹2,00,000–₹10,00,000+</li>
       </ul>
       <p className="mb-6 text-gray-700">
-        Modern agencies like FactoryJet build in Next.js deployed on Cloudflare — delivering
+        Modern agencies like FactoryJet build in Next.js deployed on Cloudflare, delivering
         significantly faster load speeds than traditional PHP/WordPress setups.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">5. Content — ₹5,000 to ₹50,000</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">5. Content, ₹5,000 to ₹50,000</h3>
       <p className="mb-6 text-gray-700">
         Every page needs words, images, and sometimes videos. Professional copywriting in India
         runs ₹1,500–₹5,000 per page. Stock photography from Shutterstock or free options like
@@ -242,7 +242,7 @@ export const post: BlogPost = {
         5,000–8,000 words of copy. Budget for it.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">6. Testing &amp; QA — ₹5,000 to ₹20,000</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">6. Testing &amp; QA, ₹5,000 to ₹20,000</h3>
       <p className="mb-6 text-gray-700">
         Professional agencies test across browsers (Chrome, Safari, Firefox), devices (iPhone,
         Android, tablets), and screen sizes. For ecommerce, this includes payment flow testing
@@ -250,11 +250,11 @@ export const post: BlogPost = {
         agencies include it.
       </p>
 
-      <h3 className="text-xl font-bold mt-8 mb-3">7. SEO Setup — ₹5,000 to ₹25,000</h3>
+      <h3 className="text-xl font-bold mt-8 mb-3">7. SEO Setup, ₹5,000 to ₹25,000</h3>
       <p className="mb-6 text-gray-700">
         Basic on-page SEO (meta titles, descriptions, schema markup, sitemaps, Google Search
-        Console submission) is often included in agency packages. Technical SEO — Core Web
-        Vitals optimisation, structured data, page speed tuning — costs extra.
+        Console submission) is often included in agency packages. Technical SEO, Core Web
+        Vitals optimisation, structured data, page speed tuning, costs extra.
       </p>
 
       {/* ── 5-Page Website ──────────────────────────────────────────────────── */}
@@ -450,7 +450,7 @@ export const post: BlogPost = {
       {[
         {
           title: '1. GST at 18%',
-          text: 'Web development services in India attract 18% GST. If an agency quotes ₹50,000, you\'ll pay ₹59,000 with GST. Always ask: "Is this GST-inclusive or exclusive?" If you have a GSTIN, you can claim input tax credit — effectively reducing the real cost.',
+          text: 'Web development services in India attract 18% GST. If an agency quotes ₹50,000, you\'ll pay ₹59,000 with GST. Always ask: "Is this GST-inclusive or exclusive?" If you have a GSTIN, you can claim input tax credit, effectively reducing the real cost.',
         },
         {
           title: '2. Annual Domain Renewal Price Jumps',
@@ -462,7 +462,7 @@ export const post: BlogPost = {
         },
         {
           title: '4. Speed Optimisation',
-          text: 'A site built without performance optimisation will fail Core Web Vitals — which directly hurts Google rankings. Speed optimisation costs ₹5,000–₹20,000 if done after launch. FactoryJet builds this in by default.',
+          text: 'A site built without performance optimisation will fail Core Web Vitals, which directly hurts Google rankings. Speed optimisation costs ₹5,000–₹20,000 if done after launch. FactoryJet builds this in by default.',
         },
         {
           title: '5. Ongoing Maintenance',
@@ -493,7 +493,7 @@ export const post: BlogPost = {
       <div className="bg-gray-900 text-white rounded-xl p-6 mb-10">
         {[
           { day: 'Day 1–2', action: 'Discovery + Figma wireframes. Client approves layout before a single line of code is written.' },
-          { day: 'Day 2–4', action: 'Full build in Next.js. Component-based architecture means we\'re not reinventing the wheel for every client — a proven design system honed across 500+ websites.' },
+          { day: 'Day 2–4', action: 'Full build in Next.js. Component-based architecture means we\'re not reinventing the wheel for every client: a proven design system honed across 500+ websites.' },
           { day: 'Day 4–5', action: 'Content integration, SEO setup (meta titles, descriptions, schema markup, sitemap, GSC submission), performance optimisation to hit Lighthouse 100/100.' },
           { day: 'Day 6', action: 'Cross-browser testing, mobile testing, form testing, payment gateway sandbox testing (for ecommerce).' },
           { day: 'Day 7', action: 'Client review + feedback round. Launch. Sites deployed on Cloudflare Pages for sub-1.5s load speeds from anywhere in India.' },
@@ -512,7 +512,7 @@ export const post: BlogPost = {
         City-Wise Website Development Cost Variation in India
       </h2>
       <p className="mb-6 text-gray-700">
-        Where your developer is based significantly affects what you pay — not always what you get.
+        Where your developer is based significantly affects what you pay, not always what you get.
       </p>
       <div className="grid sm:grid-cols-2 gap-4 mb-8">
         {[
@@ -537,10 +537,10 @@ export const post: BlogPost = {
       </h2>
       <div className="space-y-4 mb-8">
         {[
-          { label: 'Just starting out, need digital presence', budget: '₹25,000–₹50,000', detail: 'A 5-page professional site. Don\'t go cheaper — a ₹8,000 site will cost more in rebuilds. Don\'t go higher yet — you don\'t know what you need.' },
+          { label: 'Just starting out, need digital presence', budget: '₹25,000–₹50,000', detail: 'A 5-page professional site. Don\'t go cheaper: a ₹8,000 site will cost more in rebuilds. Don\'t go higher yet, you don\'t know what you need.' },
           { label: 'Generating leads, need performance', budget: '₹60,000–₹1,20,000', detail: 'A business site with proper SEO, speed optimisation, and a CMS so you can update it yourself.' },
           { label: 'Selling products online', budget: '₹80,000–₹2,00,000', detail: 'A proper Shopify or WooCommerce setup with Razorpay, UPI, COD, and GST billing configured correctly.' },
-          { label: 'Building a tech product or SaaS', budget: '₹3,00,000–₹10,00,000', detail: 'An MVP-quality web application. This is not a website — it\'s a product. Treat it like one.' },
+          { label: 'Building a tech product or SaaS', budget: '₹3,00,000–₹10,00,000', detail: 'An MVP-quality web application. This is not a website, it\'s a product. Treat it like one.' },
         ].map((item, i) => (
           <div key={i} className="flex gap-4 border border-gray-200 rounded-lg p-4">
             <div className="flex-shrink-0 text-center">
@@ -556,7 +556,7 @@ export const post: BlogPost = {
       <p className="text-gray-700 mb-4">
         One more thing: <strong>70% of Indian SMBs still don&apos;t have a professional website
         </strong> (NASSCOM data). In every market, that means your competitors are probably not
-        online yet. Building now — even a solid ₹40,000 site — gives you a real first-mover
+        online yet. Building now, even a solid ₹40,000 site, gives you a real first-mover
         advantage in your city and category.
       </p>
       <p className="text-gray-700 mb-10">

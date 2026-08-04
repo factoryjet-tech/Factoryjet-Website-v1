@@ -28,7 +28,7 @@ export default function AuHeader() {
   return (
     <header className="auh-header">
       <div className="wrap nav">
-        <Link href="/au" className="logo" aria-label="FactoryJet Australia — home">
+        <Link href="/au" className="logo" aria-label="FactoryJet Australia, home">
           Factory<span>Jet</span> <span className="au-tag">AU</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">

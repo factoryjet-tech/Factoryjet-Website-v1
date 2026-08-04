@@ -69,7 +69,7 @@ const STATS = [
     value: 100,
     prefix: "£",
     suffix: "B",
-    label: "Greater Manchester GVA — largest UK city-region outside London",
+    label: "Greater Manchester GVA, largest UK city-region outside London",
   },
   {
     value: 94,

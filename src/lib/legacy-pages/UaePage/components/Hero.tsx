@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
                     {/* 3. Description (Condensed) */}
                     <p className={`font-sans text-[15px] leading-[1.5] text-white/90 mb-6 max-w-[550px] transition-all duration-700 delay-200 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
-                        FactoryJet is Dubai's first <strong className="font-semibold text-white">AI-native</strong> web design agency and website development company, combining cutting-edge artificial intelligence with <strong className="font-semibold text-white">12+ years</strong> of human expertise. Our AI-powered workflows enable our expert team to deliver stunning, high-performance websites <strong className="font-semibold text-white">10x faster</strong> than traditional agencies—without compromising quality.
+                        FactoryJet is Dubai's first <strong className="font-semibold text-white">AI-native</strong> web design agency and website development company, combining cutting-edge artificial intelligence with <strong className="font-semibold text-white">12+ years</strong> of human expertise. Our AI-powered workflows enable our expert team to deliver stunning, high-performance websites <strong className="font-semibold text-white">10x faster</strong> than traditional agencies, without compromising quality.
                     </p>
 
                     {/* 4. CTA Buttons (Compact) */}
@@ -120,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                         region="in"
                         source="uae_hero"
                         heading="Get a free consultation"
-                        subheading="Custom proposal in 2 hours — just your name and email."
+                        subheading="Custom proposal in 2 hours, just your name and email."
                       />
                     </div>
                 </div>

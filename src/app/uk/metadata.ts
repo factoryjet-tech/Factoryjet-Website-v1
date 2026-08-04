@@ -34,7 +34,7 @@ export const ukMetadata: Metadata = {
         url: "/images/uk/hero-uk.webp",
         width: 1200,
         height: 630,
-        alt: "UK Web Design Agency — FactoryJet",
+        alt: "UK Web Design Agency: FactoryJet",
       },
     ],
   },

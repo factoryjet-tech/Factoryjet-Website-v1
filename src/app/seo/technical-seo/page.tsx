@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -49,6 +50,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/technical-seo', languages: seoSubServiceAlternatesIN['technical-seo'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/technical-seo#webpage',
+  url: 'https://factoryjet.com/seo/technical-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -140,6 +155,10 @@ const TECH_COMPARISON_ROWS = [
 export default function TechnicalSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="tech-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="tech-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
@@ -154,10 +173,15 @@ export default function TechnicalSeoPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'Technical SEO', url: 'https://factoryjet.com/seo/technical-seo' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_technical_seo_hero" />}
           eyebrow="TECHNICAL SEO SERVICES · INDIA"
-          headline="Technical SEO Services in India — Make Your Site Fast, Crawlable, and Trusted by Google"
+          headline="Technical SEO Services in India: Make Your Site Fast, Crawlable, and Trusted by Google"
           lead="The technical side of SEO is making your site fast and easy for Google to find, read, and trust. It is the base everything else stands on. A slow site that Google cannot read will not rank, no matter how good your content is. We run a full technical SEO audit, speed your site up, fix the things Google cannot read, add the hidden code that explains your pages, and tidy up your site so the right pages get found. No long contracts, and everything we fix stays yours."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Faster on phones', 'Google can read every page', 'No long contracts']}
@@ -166,7 +190,7 @@ export default function TechnicalSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Technical SEO Agency — 500+ Sites, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Technical SEO Agency, 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

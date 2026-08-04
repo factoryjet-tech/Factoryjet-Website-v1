@@ -51,7 +51,7 @@ export default function FinalCTA() {
         maxWidth: "100vw",
       }}
     >
-      {/* Decorative stat watermarks — behind content */}
+      {/* Decorative stat watermarks, behind content */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {WATERMARKS.map((w) => (
           <span
@@ -145,7 +145,7 @@ export default function FinalCTA() {
             Join Birmingham businesses that chose AI-native web design over
             inflated agency rates. Free quote in 24 hours. No discovery fee. No
             commitment. Whether you&rsquo;re in Digbeth, the Jewellery Quarter,
-            Brindleyplace, or Grand Central — we build digital systems that
+            Brindleyplace, or Grand Central, we build digital systems that
             match your ambition without the studio overhead baked into a
             traditional agency&rsquo;s quote.
           </p>

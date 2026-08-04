@@ -5,7 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import JsonLd from '@/components/JsonLd';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /glossary — Commerce & AI glossary (built 2026-07-07)
+   /glossary, Commerce & AI glossary (built 2026-07-07)
 
    GEO/AI-search asset: plain-language, self-contained definitions of the terms
    FactoryJet's buyers ask AI assistants about ("what is GEO / headless commerce /
@@ -14,7 +14,7 @@ import JsonLd from '@/components/JsonLd';
    and Google AI Overviews can cite individual entries.
 
    Static server component. Schema emitted via the native <JsonLd> helper (never
-   next/script — enforced by validate-build.mjs check 7).
+   next/script, enforced by validate-build.mjs check 7).
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/glossary';

@@ -58,7 +58,7 @@ export default function ServiceHeroImageBand({
           priority
         />
 
-        {/* Gradient overlay: subtle top, heavy bottom — keeps stat strip bg solid */}
+        {/* Gradient overlay: subtle top, heavy bottom, keeps stat strip bg solid */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

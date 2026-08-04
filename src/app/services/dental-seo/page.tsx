@@ -10,7 +10,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import './dental-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/dental-seo — production page
+   /us/services/dental-seo, production page
    Converted from mockup-us-services-dental-seo-v1.html 2026-06-14.
    Layout: custom inline JSX, scoped under .dseo CSS wrapper.
    No pricing anywhere (no-pricing rule 2026-06-11).
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/us/services/dental-seo/hero.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Dental SEO agency for US dental practices',
+        alt: 'FactoryJet: Dental SEO agency for US dental practices',
       },
     ],
   },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Dental SEO Agency — Map Pack SEO for Dentists and Dental Practices',
+  name: 'Dental SEO Agency | Map Pack SEO for Dentists and Dental Practices',
   url: 'https://factoryjet.com/services/dental-seo',
   description:
     'Dental SEO agency that gets practices into the Google Map Pack. GBP optimization, review velocity, clinical entity authority, and citation building for dental practices across the US.',

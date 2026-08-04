@@ -63,13 +63,13 @@ const STATS = [
     value: 800,
     prefix: "",
     suffix: "K+",
-    label: "Population — West Yorkshire's economic engine",
+    label: "Population: West Yorkshire's economic engine",
   },
   {
     value: 23,
     prefix: "£",
     suffix: ".4B",
-    label: "Leeds city GDP — fastest growing in Northern England",
+    label: "Leeds city GDP, fastest growing in Northern England",
   },
   {
     value: 42000,

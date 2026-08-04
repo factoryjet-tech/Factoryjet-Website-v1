@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Users, ShoppingCart, Mail, Film, Store, Target, Sparkles, Check } from 'lucide-react';
 
@@ -610,6 +611,11 @@ export default function EcommerceMarketingAgencyPage() {
       <SiteHeader locale="us" />
 
       <main className="bg-white font-fj-body text-[#141414]">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'Ecommerce Marketing Agency', url: URL },
+        ]} />
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section
           className="relative overflow-hidden border-b border-[#EAEAE3] py-12 md:py-16"

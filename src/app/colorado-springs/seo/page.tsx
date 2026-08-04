@@ -11,7 +11,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import './colorado-springs-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/colorado-springs/seo — "Pikes Peak" Colorado Springs local-SEO city page.
+   /us/colorado-springs/seo, "Pikes Peak" Colorado Springs local-SEO city page.
    Built 2026-06-14. Layout: split hero with real photo + glass chips, stats
    bento, industries bento, dark landscape section, neighborhood chips scroll,
    5-step process, team dark section, sidebar FAQ, orange final CTA.

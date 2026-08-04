@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -50,6 +51,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/jaipur', languages: seoCityAlternatesIN['jaipur'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/jaipur#webpage',
+  url: 'https://factoryjet.com/seo/jaipur',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const localBusinessSchema = {
@@ -174,6 +189,10 @@ const JAI_COMPARISON_ROWS = [
 export default function JaipurSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="jai-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="jai-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="jai-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -189,6 +208,11 @@ export default function JaipurSeoPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'Jaipur', url: 'https://factoryjet.com/seo/jaipur' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_jaipur_hero" />}
           eyebrow="SEO · JAIPUR"

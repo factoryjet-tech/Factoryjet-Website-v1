@@ -50,7 +50,7 @@ export default function CityContextProseInline({
                     <strong className="font-semibold text-navy">
                       {stat.value}
                     </strong>
-                    <span className="text-slate"> — {stat.whatItMeans}</span>
+                    <span className="text-slate">, {stat.whatItMeans}</span>
                     <Link
                       href={stat.sourceUrl}
                       target="_blank"

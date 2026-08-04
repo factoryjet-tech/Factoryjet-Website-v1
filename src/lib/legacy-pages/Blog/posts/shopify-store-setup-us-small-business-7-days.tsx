@@ -18,18 +18,18 @@ export const post: BlogPost = {
       'Exact 7-day Shopify launch timeline for US small businesses. Day-by-day breakdown, what\'s included, common blockers, and why professional setup starts at $2,499. FactoryJet delivers in 7 days.',
   },
   keyTakeaways: [
-    'A professionally built Shopify store can launch in 7 days when the client supplies product data, images, and brand assets at project kickoff — content delays are the #1 timeline killer.',
+    'A professionally built Shopify store can launch in 7 days when the client supplies product data, images, and brand assets at project kickoff, content delays are the #1 timeline killer.',
     'A complete 7-day Shopify setup includes: custom theme configuration, up to 50 products loaded, payment gateway integration (Stripe/PayPal/Shopify Payments), shipping zones, tax settings, Google Analytics 4, and Lighthouse 100/100 performance.',
     'Shopify\'s app ecosystem solves most US SMB needs without custom development: Klaviyo for email, Judge.me for reviews, ReConvert for post-purchase upsells, and Gorgias for customer support.',
-    'The most expensive Shopify mistake is buying a $200 premium theme and spending $5,000 on customization — a properly configured free or $180 Shopify theme with custom CSS delivers equivalent results.',
+    'The most expensive Shopify mistake is buying a $200 premium theme and spending $5,000 on customization: a properly configured free or $180 Shopify theme with custom CSS delivers equivalent results.',
     'Shopify Payments is the right default for US businesses under $1M/year revenue: no transaction fees (vs 0.5–2% with third-party gateways), instant setup, and integrated fraud protection.',
-    'FactoryJet launches professional Shopify stores for US small businesses in 7 days starting at $2,499 — including custom theme, product upload, payment setup, and Lighthouse 100/100 optimization.',
+    'FactoryJet launches professional Shopify stores for US small businesses in 7 days starting at $2,499, including custom theme, product upload, payment setup, and Lighthouse 100/100 optimization.',
     'Post-launch SEO on Shopify requires technical fixes Shopify doesn\'t do automatically: canonical tags for collection/product URL duplicates, JSON-LD product schema, and Core Web Vitals optimization.',
   ],
   faqs: [
     {
       q: 'Can a Shopify store really launch in 7 days for a US small business?',
-      a: 'Yes — with two conditions. First, the client supplies all required assets at kickoff: product photos, descriptions, pricing, brand logo and colors, and return/shipping policy copy. Second, the agency uses a productized process with parallel tracks (theme setup, product loading, and app configuration running simultaneously). FactoryJet\'s 7-day Shopify delivery has launched stores with up to 50 products in 7 calendar days for US SMBs. Beyond 50 products or with complex custom functionality, allow 10–14 days.',
+      a: 'Yes, with two conditions. First, the client supplies all required assets at kickoff: product photos, descriptions, pricing, brand logo and colors, and return/shipping policy copy. Second, the agency uses a productized process with parallel tracks (theme setup, product loading, and app configuration running simultaneously). FactoryJet\'s 7-day Shopify delivery has launched stores with up to 50 products in 7 calendar days for US SMBs. Beyond 50 products or with complex custom functionality, allow 10–14 days.',
     },
     {
       q: 'How much does it cost to set up a Shopify store for a US small business?',
@@ -41,7 +41,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What are the most important Shopify apps for US small businesses?',
-      a: 'Start with these five: (1) Klaviyo — email marketing with abandoned cart recovery, the single highest-ROI Shopify app for US DTC brands. (2) Judge.me or Stamped.io — product reviews with schema markup for Google star ratings. (3) ReConvert — post-purchase upsell flows that increase average order value by 15–25%. (4) Gorgias — customer support inbox that integrates with Shopify orders. (5) Lucky Orange or Hotjar — session recording to see where customers drop off. Avoid installing more than 8–10 apps; each adds JavaScript that degrades your Lighthouse Performance score.',
+      a: 'Start with these five: (1) Klaviyo, email marketing with abandoned cart recovery, the single highest-ROI Shopify app for US DTC brands. (2) Judge.me or Stamped.io, product reviews with schema markup for Google star ratings. (3) ReConvert, post-purchase upsell flows that increase average order value by 15–25%. (4) Gorgias, customer support inbox that integrates with Shopify orders. (5) Lucky Orange or Hotjar, session recording to see where customers drop off. Avoid installing more than 8–10 apps; each adds JavaScript that degrades your Lighthouse Performance score.',
     },
     {
       q: 'Should I use Shopify Payments or a third-party payment gateway?',
@@ -49,11 +49,11 @@ export const post: BlogPost = {
     },
     {
       q: 'What kills a 7-day Shopify launch timeline?',
-      a: 'Three things kill Shopify launch timelines: (1) Content delays — agency can\'t load products without photos and copy. If you provide product data on Day 4, your "7-day launch" becomes Day 11. (2) Scope creep — custom functionality requests (custom checkout flows, subscription products, complex discount rules) added mid-project extend timelines by 3–7 days each. (3) Payment gateway approval delays — Shopify Payments usually activates instantly, but Stripe merchant verification for certain business types can take 2–5 business days. Start payment gateway setup on Day 1.',
+      a: 'Three things kill Shopify launch timelines: (1) Content delays, agency can\'t load products without photos and copy. If you provide product data on Day 4, your "7-day launch" becomes Day 11. (2) Scope creep, custom functionality requests (custom checkout flows, subscription products, complex discount rules) added mid-project extend timelines by 3–7 days each. (3) Payment gateway approval delays: Shopify Payments usually activates instantly, but Stripe merchant verification for certain business types can take 2–5 business days. Start payment gateway setup on Day 1.',
     },
     {
       q: 'Does Shopify handle SEO well for US small businesses?',
-      a: 'Shopify handles basic SEO automatically (canonical tags, sitemaps, SSL). But several technical SEO issues require manual fixes: (1) Duplicate product URLs — Shopify creates both /products/[product-slug] and /collections/[collection]/products/[product-slug] URLs; canonical tags must point to the /products/ version. (2) Product schema — Shopify\'s default schema is minimal; proper Product JSON-LD with price, availability, and review aggregate improves Google Shopping visibility. (3) Image alt text — must be manually added to every product image. (4) Core Web Vitals — theme JavaScript must be audited and trimmed. A professional setup addresses all four.',
+      a: 'Shopify handles basic SEO automatically (canonical tags, sitemaps, SSL). But several technical SEO issues require manual fixes: (1) Duplicate product URLs, Shopify creates both /products/[product-slug] and /collections/[collection]/products/[product-slug] URLs; canonical tags must point to the /products/ version. (2) Product schema, Shopify\'s default schema is minimal; proper Product JSON-LD with price, availability, and review aggregate improves Google Shopping visibility. (3) Image alt text, must be manually added to every product image. (4) Core Web Vitals, theme JavaScript must be audited and trimmed. A professional setup addresses all four.',
     },
     {
       q: 'Can FactoryJet set up my Shopify store in 7 days?',
@@ -77,7 +77,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        "Can we launch in 7 days?" is the first question most US small business owners ask when they decide to open a Shopify store. The honest answer is yes — but only with the right process, the right agency, and your content ready at kickoff. This guide gives you the exact day-by-day timeline, the complete scope of a professional setup, and what to watch out for.
+        "Can we launch in 7 days?" is the first question most US small business owners ask when they decide to open a Shopify store. The honest answer is yes, but only with the right process, the right agency, and your content ready at kickoff. This guide gives you the exact day-by-day timeline, the complete scope of a professional setup, and what to watch out for.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Day-by-Day 7-Day Shopify Launch Timeline</h2>
@@ -135,12 +135,12 @@ export const post: BlogPost = {
         The most common reason a "7-day Shopify launch" becomes a 3-week project is simple: missing content. Agencies can only load products that exist. They can only configure shipping for rates you've decided on. They can configure tax settings once you've confirmed your nexus states.
       </p>
       <p className="mb-4">
-        Prepare these assets before kickoff: product photos (minimum 1000×1000px, white background recommended), product titles and descriptions, pricing and SKUs, shipping policy, return policy, and payment gateway credentials. Agencies that offer true 7-day delivery give you a detailed pre-kickoff checklist — use it fully.
+        Prepare these assets before kickoff: product photos (minimum 1000×1000px, white background recommended), product titles and descriptions, pricing and SKUs, shipping policy, return policy, and payment gateway credentials. Agencies that offer true 7-day delivery give you a detailed pre-kickoff checklist, use it fully.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Shopify SEO: What's Automatic vs. Manual</h2>
       <p className="mb-4">
-        Shopify handles these automatically: XML sitemap generation, SSL certificates, basic canonical tags on product pages, and mobile-responsive themes. These are table stakes — every Shopify store gets them.
+        Shopify handles these automatically: XML sitemap generation, SSL certificates, basic canonical tags on product pages, and mobile-responsive themes. These are table stakes: every Shopify store gets them.
       </p>
       <p className="mb-4">
         These require manual work from your agency: Product JSON-LD schema with price and availability (enables Google Shopping rich results), collection page meta descriptions (Shopify leaves these blank by default), image optimization and alt text for all product images, Core Web Vitals optimization (trimming theme JavaScript to achieve Lighthouse 90+ on mobile), and fixing the collection/product URL canonical tag issue where Shopify creates duplicate indexable URLs.
@@ -162,12 +162,12 @@ export const post: BlogPost = {
         FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 100/100 optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
       </p>
       <p className="mb-4">
-        We serve US small businesses coast to coast — from outdoor brands and manufacturers in{' '}
+        We serve US small businesses coast to coast, from outdoor brands and manufacturers in{' '}
         <a href="/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Chattanooga, TN
         </a>{' '}
         to DTC brands launching their first store. Every build includes Tennessee sales tax
-        configuration, state-specific shipping zones, and compliance setup as standard — no
+        configuration, state-specific shipping zones, and compliance setup as standard, no
         extra charge for getting the details right.
       </p>
       <p className="mb-4">

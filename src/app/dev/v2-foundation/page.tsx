@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function V2FoundationPage() {
   return (
     <main className="min-h-screen bg-fj-cream">
-      {/* Page header — Clash Display + Inter body + Geist Mono eyebrow */}
+      {/* Page header, Clash Display + Inter body + Geist Mono eyebrow */}
       <div className="mx-auto max-w-[1120px] px-4 pb-8 pt-12 lg:px-6">
         <p
           className="font-fj-body font-semibold uppercase text-fj-neutral-600"
@@ -102,20 +102,20 @@ export default function V2FoundationPage() {
 
       {/* === StrategicDarkSection === */}
       <SectionLabel slug="StrategicDarkSection" />
-      {/* v2.1: full content section — accepts eyebrow, headline, lead, pillars. */}
+      {/* v2.1: full content section, accepts eyebrow, headline, lead, pillars. */}
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
         headline="We're not a local London agency. That's the point."
-        lead="Strategic dark sections appear no more than twice per page — a deliberate rhythm break, not a default surface. Reserved for mid-page rhythm per the M1.d.1.1 canon."
+        lead="Strategic dark sections appear no more than twice per page: a deliberate rhythm break, not a default surface. Reserved for mid-page rhythm per the M1.d.1.1 canon."
         pillars={[
-          { title: 'AI-native', body: 'Every site is built with AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
+          { title: 'AI-native', body: 'Every site is built with AI-assisted workflow | compressing build time without compressing quality. We have run 500+ projects through this system.' },
           { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },
           { title: 'Guaranteed', body: "7-day delivery guarantee. If we miss the deadline, you don't pay. We have delivered on time on 97% of all projects." },
         ]}
       />
 
       {/* === Hero (with rightSlot) === */}
-      <SectionLabel slug="M1.b — Hero (with rightSlot)" />
+      <SectionLabel slug="M1.b, Hero (with rightSlot)" />
       <Hero
         formSlot={<HeroInlineForm region="in" source="dev_v2_foundation_hero" />}
         eyebrow="AI SERVICES · UK"
@@ -144,7 +144,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === Hero (single-column, no rightSlot) === */}
-      <SectionLabel slug="M1.b — Hero (single-column, no rightSlot)" />
+      <SectionLabel slug="M1.b: Hero (single-column, no rightSlot)" />
       <Hero
         eyebrow="AI SERVICES · UK"
         headline={
@@ -163,7 +163,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === FinalCTA (light variant) === */}
-      <SectionLabel slug="M1.b — FinalCTA (light variant)" />
+      <SectionLabel slug="M1.b, FinalCTA (light variant)" />
       <FinalCTA
         eyebrow="READY WHEN YOU ARE"
         headline={
@@ -178,7 +178,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === FinalCTA (dark variant) === */}
-      <SectionLabel slug="M1.b — FinalCTA (dark variant)" />
+      <SectionLabel slug="M1.b, FinalCTA (dark variant)" />
       <FinalCTA
         variant="dark"
         eyebrow="READY WHEN YOU ARE"
@@ -194,7 +194,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === CityContextSection === */}
-      <SectionLabel slug="M1.c.1 — CityContextSection" />
+      <SectionLabel slug="M1.c.1, CityContextSection" />
       <CityContextSection
         eyebrow="LONDON MARKET"
         headline={
@@ -229,7 +229,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === FAQ === */}
-      <SectionLabel slug="M1.c.1 — FAQ" />
+      <SectionLabel slug="M1.c.1, FAQ" />
       <FAQ
         eyebrow="COMMON QUESTIONS"
         headline={
@@ -241,7 +241,7 @@ export default function V2FoundationPage() {
           {
             question: 'How long does a London project take?',
             answer:
-              "60 days end-to-end on average — discovery to production. We'll tell you on the first call if your stack pushes that out, and exactly why.",
+              "60 days end-to-end on average, discovery to production. We'll tell you on the first call if your stack pushes that out, and exactly why.",
           },
           {
             question: "What's the typical price range?",
@@ -261,7 +261,7 @@ export default function V2FoundationPage() {
           {
             question: 'Do you work with industries outside the five listed?',
             answer:
-              "Yes — those five are where we have the most case-study density. The delivery standard doesn't change by sector. Boring, by design.",
+              "Yes, those five are where we have the most case-study density. The delivery standard doesn't change by sector. Boring, by design.",
           },
           {
             question: 'What happens after launch?',
@@ -272,7 +272,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === PricingTiers === */}
-      <SectionLabel slug="M1.c.1 — PricingTiers" />
+      <SectionLabel slug="M1.c.1, PricingTiers" />
       <PricingTiers
         eyebrow="TRANSPARENT PRICING"
         headline={
@@ -330,7 +330,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === IndustriesGrid === */}
-      <SectionLabel slug="M1.c.1 — IndustriesGrid" />
+      <SectionLabel slug="M1.c.1, IndustriesGrid" />
       <IndustriesGrid
         eyebrow="LONDON × WEB DESIGN"
         headline={
@@ -348,7 +348,7 @@ export default function V2FoundationPage() {
           {
             name: 'Professional, Scientific & Technical Services',
             description:
-              'Law firms, consultancies, and accountants compete on reputation. Lead-capture flows and consultation booking that turn research-stage buyers into booked calls — not bounce.',
+              'Law firms, consultancies, and accountants compete on reputation. Lead-capture flows and consultation booking that turn research-stage buyers into booked calls, not bounce.',
           },
           {
             name: 'Information Technology & Communications',
@@ -358,12 +358,12 @@ export default function V2FoundationPage() {
           {
             name: 'Real Estate & Construction',
             description:
-              "Fast property galleries, enquiry forms that route correctly, local SEO that captures buyers searching by postcode. London's most competitive sector — your site is the qualifier.",
+              "Fast property galleries, enquiry forms that route correctly, local SEO that captures buyers searching by postcode. London's most competitive sector: your site is the qualifier.",
           },
           {
             name: 'Creative Industries, Media & Tourism',
             description:
-              'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert — for hospitality, production, and the £18.8bn tourism sector.',
+              'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert, for hospitality, production, and the £18.8bn tourism sector.',
           },
         ]}
       />
@@ -375,7 +375,7 @@ export default function V2FoundationPage() {
        * pricing/turnaround use placeholder strings — the prompt explicitly
        * forbids fabricating numbers when the anchor isn't in london.json or
        * factoryjet.DESIGN.md. */}
-      <SectionLabel slug="M1.c.2 — ComparisonTable" />
+      <SectionLabel slug="M1.c.2, ComparisonTable" />
       <ComparisonTable
         eyebrow="COMPARE"
         headline={
@@ -383,7 +383,7 @@ export default function V2FoundationPage() {
             FactoryJet vs the alternatives.
           </>
         }
-        lead="We'll tell you when not to hire us — short list, no spin."
+        lead="We'll tell you when not to hire us, short list, no spin."
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },
           { label: 'Local London Agency' },
@@ -435,11 +435,11 @@ export default function V2FoundationPage() {
             ],
           },
         ]}
-        footer="(Numbers grounded in src/data/uk/cities/london.json. Empty cells are honest TODOs — pricing benchmarks pending sign-off.)"
+        footer="(Numbers grounded in src/data/uk/cities/london.json. Empty cells are honest TODOs, pricing benchmarks pending sign-off.)"
       />
 
       {/* === ServiceJourneyRow === */}
-      <SectionLabel slug="M1.c.2 — ServiceJourneyRow" />
+      <SectionLabel slug="M1.c.2, ServiceJourneyRow" />
       <ServiceJourneyRow
         eyebrow="HOW WE WORK"
         headline={
@@ -455,7 +455,7 @@ export default function V2FoundationPage() {
        * Web design contextualised for London's financial services sector.
        * rightSlot: stat callout grounded in london.json
        * (population 9.1m, GDP £569bn). */}
-      <SectionLabel slug="M1.c.2 — ServiceExplanation" />
+      <SectionLabel slug="M1.c.2, ServiceExplanation" />
       <ServiceExplanation
         eyebrow="WEB DESIGN · LONDON"
         headline={
@@ -472,7 +472,7 @@ export default function V2FoundationPage() {
               search to vet vendors.
             </p>
             <p>
-              The site is the qualifier — not your sales call. By the time a
+              The site is the qualifier, not your sales call. By the time a
               prospect picks up the phone, the credibility question is already
               answered.
             </p>
@@ -494,7 +494,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === SiteHeader === */}
-      <SectionLabel slug="M1.c.2.5 — SiteHeader (would normally render once per page)" />
+      <SectionLabel slug="M1.c.2.5, SiteHeader (would normally render once per page)" />
       <div className="mx-auto max-w-[1200px] px-4 lg:px-6">
         <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
           <SiteHeader />
@@ -507,7 +507,7 @@ export default function V2FoundationPage() {
        * cleaner than the legacy left-anchored version. Same stats data;
        * only the new `align="center"` prop differs. The default stays
        * `'start'` for backward-compat with all existing call sites. */}
-      <SectionLabel slug='M1.c.2.5 — BoringStatsRow (alignment fix · align="center")' />
+      <SectionLabel slug='M1.c.2.5, BoringStatsRow (alignment fix · align="center")' />
       <BoringStatsRow
         align="center"
         stats={[
@@ -530,7 +530,7 @@ export default function V2FoundationPage() {
       />
 
       {/* === ImageBlock (3 variants) === */}
-      <SectionLabel slug="M1.c.2.5 — ImageBlock (bordered · elevated · with caption)" />
+      <SectionLabel slug="M1.c.2.5, ImageBlock (bordered · elevated · with caption)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <ImageBlock
@@ -554,18 +554,18 @@ export default function V2FoundationPage() {
             width={640}
             height={480}
             aspectRatio="4/3"
-            caption="(Hartwell & Co. — Mayfair financial advisory mockup.)"
+            caption="(Hartwell & Co., Mayfair financial advisory mockup.)"
           />
         </div>
       </div>
 
       {/* === LogoBar === */}
-      <SectionLabel slug="M1.c.2.5 — LogoBar (self-contained marquee)" />
+      <SectionLabel slug="M1.c.2.5, LogoBar (self-contained marquee)" />
       {/* v2.1: logos are hardcoded inside LogoBar; only tagline is injected. */}
       <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
 
       {/* === CaseStudyCard (3 cards) === */}
-      <SectionLabel slug="M1.c.2.5 — CaseStudyCard (3-card grid)" />
+      <SectionLabel slug="M1.c.2.5, CaseStudyCard (3-card grid)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <CaseStudyCard
@@ -579,7 +579,7 @@ export default function V2FoundationPage() {
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Atlas Legal — case study cover',
+              alt: 'Atlas Legal, case study cover',
               width: 800,
               height: 600,
             }}
@@ -589,14 +589,14 @@ export default function V2FoundationPage() {
             industry="HEALTHCARE · LONDON"
             clientName="Bright Health"
             headline="Compliance-aware redesign cleared regulatory review."
-            body="Rebuilt a patient-facing site with WCAG 2.2 AA compliance, MHRA-aligned content review, and secure intake forms — landed on the first regulatory pass."
+            body="Rebuilt a patient-facing site with WCAG 2.2 AA compliance, MHRA-aligned content review, and secure intake forms, landed on the first regulatory pass."
             metrics={[
               { value: '100%', label: 'first-pass regulatory clearance' },
               { value: '4.9/5', label: 'patient onboarding NPS' },
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Bright Health — case study cover',
+              alt: 'Bright Health, case study cover',
               width: 800,
               height: 600,
             }}
@@ -617,7 +617,7 @@ export default function V2FoundationPage() {
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Forge & Co — case study cover',
+              alt: 'Forge & Co, case study cover',
               width: 800,
               height: 600,
             }}
@@ -632,7 +632,7 @@ export default function V2FoundationPage() {
        * from the component's DEFAULT_COLUMNS in M1.d.3 — callers now own
        * the per-locale city list (this dev page mirrors a /uk route, so
        * UK cities are passed here verbatim). */}
-      <SectionLabel slug="M1.c.2.5 — SiteFooter (would normally render once per page)" />
+      <SectionLabel slug="M1.c.2.5, SiteFooter (would normally render once per page)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-12 lg:px-6">
         <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
           <SiteFooter

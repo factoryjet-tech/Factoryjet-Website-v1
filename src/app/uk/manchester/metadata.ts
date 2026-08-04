@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const manchesterMetadata: Metadata = {
-  title: "Web Design Manchester | AI-Native Agency — FactoryJet",
+  title: "Web Design Manchester | AI-Native Agency | FactoryJet",
   description:
     "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront. Free quote. SEO 100 guaranteed.",
   keywords: [
@@ -22,18 +22,18 @@ export const manchesterMetadata: Metadata = {
   ],
   alternates: { canonical: "https://factoryjet.com/uk/manchester" },
   openGraph: {
-    title: "Web Design Manchester | AI-Native Agency — FactoryJet",
+    title: "Web Design Manchester | AI-Native Agency | FactoryJet",
     description:
       "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront. Free quote.",
     url: "https://factoryjet.com/uk/manchester",
     siteName: "FactoryJet",
     locale: "en_GB",
     type: "website",
-    images: [{ url: '/images/uk/city-manchester.jpg', width: 1200, height: 630, alt: 'Web Design Manchester — FactoryJet' }],
+    images: [{ url: '/images/uk/city-manchester.jpg', width: 1200, height: 630, alt: 'Web Design Manchester: FactoryJet' }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Manchester | AI-Native Agency — FactoryJet",
+    title: "Web Design Manchester | AI-Native Agency | FactoryJet",
     description:
       "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront.",
   },

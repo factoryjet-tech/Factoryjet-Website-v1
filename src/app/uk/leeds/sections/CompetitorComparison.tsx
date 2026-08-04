@@ -191,7 +191,7 @@ export default function CompetitorComparison() {
               lineHeight: 1.7,
             }}
           >
-            Leeds has a dense digital agency market — over 200 agencies compete across web design, SEO, and digital marketing. The top-tier agencies include Ascensor, Bolser, Engage Interactive, and Show + Tell. But none of them offer AI agent development or generative engine optimisation as dedicated services. Here&apos;s how FactoryJet stacks up.
+            Leeds has a dense digital agency market, over 200 agencies compete across web design, SEO, and digital marketing. The top-tier agencies include Ascensor, Bolser, Engage Interactive, and Show + Tell. But none of them offer AI agent development or generative engine optimisation as dedicated services. Here&apos;s how FactoryJet stacks up.
           </p>
         </div>
 
@@ -376,7 +376,7 @@ export default function CompetitorComparison() {
               lineHeight: 1.7,
             }}
           >
-            FactoryJet operates from Bengaluru, India with a senior engineering team that builds at the same technical level as London and Leeds agencies — but at India delivery economics. You get enterprise-grade Next.js development, GSAP animation, and conversion engineering at a fixed, transparent quote. No offshore compromises: direct communication with senior engineers, UK business hours availability, and the same quality benchmarks as any Park Row agency.
+            FactoryJet operates from Bengaluru, India with a senior engineering team that builds at the same technical level as London and Leeds agencies, but at India delivery economics. You get enterprise-grade Next.js development, GSAP animation, and conversion engineering at a fixed, transparent quote. No offshore compromises: direct communication with senior engineers, UK business hours availability, and the same quality benchmarks as any Park Row agency.
           </p>
         </div>
 

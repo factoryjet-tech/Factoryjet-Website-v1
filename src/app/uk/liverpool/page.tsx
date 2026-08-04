@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Award-winning AI-native web design, e-commerce & AI agent development for Liverpool businesses. £11bn investment pipeline. Free quote.",
     url: "https://factoryjet.com/uk/liverpool",
-    images: [{ url: '/images/uk/city-liverpool.jpg', width: 1200, height: 630, alt: 'Web Design Liverpool — FactoryJet' }],
+    images: [{ url: '/images/uk/city-liverpool.jpg', width: 1200, height: 630, alt: 'Web Design Liverpool: FactoryJet' }],
   },
 };
 
@@ -111,7 +111,7 @@ const schema = {
 export default function Page() {
   return (
     <>
-      {/* JetBrains Mono — used by the TechStack section on this page */}
+      {/* JetBrains Mono, used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
       <script
         id="liverpool-schema"

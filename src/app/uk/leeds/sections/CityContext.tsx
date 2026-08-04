@@ -16,9 +16,9 @@ const STATS = [
 ];
 
 const PARAGRAPHS = [
-  "Leeds is the economic engine of West Yorkshire and the largest financial centre in the UK outside London. With HSBC relocating its UK headquarters to the city centre — bringing 2,500 financial services jobs — and Channel 4's national HQ driving a creative and media boom, Leeds is experiencing a digital transformation unlike anywhere else in Northern England. The city's 38,000 small and medium businesses span financial services, legal, fashion, retail, healthcare, manufacturing, and the rapidly expanding digital and tech sector, which now accounts for over 12,000 jobs and is growing at 18% year-over-year.",
+  "Leeds is the economic engine of West Yorkshire and the largest financial centre in the UK outside London. With HSBC relocating its UK headquarters to the city centre, bringing 2,500 financial services jobs, and Channel 4's national HQ driving a creative and media boom, Leeds is experiencing a digital transformation unlike anywhere else in Northern England. The city's 38,000 small and medium businesses span financial services, legal, fashion, retail, healthcare, manufacturing, and the rapidly expanding digital and tech sector, which now accounts for over 12,000 jobs and is growing at 18% year-over-year.",
   "Yet the majority of Leeds businesses still rely on local web design agencies that price by overhead and project complexity, building standard websites and selling monthly SEO retainers that ignore the most significant shift in search behaviour since mobile. In 2026, 54% of UK businesses are actively using AI, Google AI Overviews appear in 42% of UK searches, ChatGPT had 1.8 billion UK visits in the first eight months of 2025, and Perplexity AI processes 780 million queries every month.",
-  "That is exactly what FactoryJet builds for. We are not another web design agency in Leeds — we are an AI-native digital partner that combines world-class web development, e-commerce expertise, custom AI agents, and generative engine optimisation into a single, cohesive growth engine for your business.",
+  "That is exactly what FactoryJet builds for. We are not another web design agency in Leeds, we are an AI-native digital partner that combines world-class web development, e-commerce expertise, custom AI agents, and generative engine optimisation into a single, cohesive growth engine for your business.",
 ];
 
 export default function CityContext() {
@@ -168,7 +168,7 @@ export default function CityContext() {
             ))}
           </div>
 
-          {/* RIGHT: sticky stat sidebar — sticky on desktop only */}
+          {/* RIGHT: sticky stat sidebar, sticky on desktop only */}
           <div
             ref={statsRef}
             className="flex flex-col lg:sticky lg:top-[120px]"

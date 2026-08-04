@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Search, ClipboardList, LayoutTemplate, ShieldCheck, Workflow, Check } from 'lucide-react';
 
@@ -214,6 +215,11 @@ export default function AmazonAgencyPage() {
       <SiteHeader locale="us" />
 
       <main className="amz">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'Amazon Agency', url: URL },
+        ]} />
         {/* HERO */}
         <section className="amz-hero">
           <div className="amz-wrap amz-hero-grid">

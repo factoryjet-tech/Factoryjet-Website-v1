@@ -196,7 +196,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 {post.content}
               </div>
 
-              {/* Inline lead capture — end of article, before FAQ. Reuses the
+              {/* Inline lead capture, end of article, before FAQ. Reuses the
                   proven submitLead pipeline; redirect to /thank-you fires the
                   single Google Ads + GA4 lead conversion. source = blog_<slug>. */}
               <BlogLeadCapture slug={post.slug} />

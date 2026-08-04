@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -21,7 +22,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'AI Workflow Automation India | FactoryJet',
   description:
-    'AI workflow automation for Indian businesses — automate Zoho CRM, Tally, GST invoicing & WhatsApp follow-ups. Fixed price. Live in 2–4 weeks.',
+    'AI workflow automation for Indian businesses, automate Zoho CRM, Tally, GST invoicing & WhatsApp follow-ups. Fixed price. Live in 2–4 weeks.',
   keywords: [
     'AI workflow automation India',
     'business process automation India',
@@ -53,12 +54,26 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Workflow Automation Development India',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  description: 'Custom AI workflow automation for Indian businesses — connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
+  description: 'Custom AI workflow automation for Indian businesses, connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
   areaServed: 'IN',
   serviceType: 'AI Workflow Automation',
 };
@@ -88,12 +103,12 @@ const WORKFLOW_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '03',
     title: 'Build & Integrate',
-    description: 'We build the automation using n8n, Make, or a custom Python/Node backend — connecting your Zoho, Tally, Shopify, WhatsApp, and Razorpay accounts via APIs and webhooks. Every integration is tested in a sandbox first.',
+    description: 'We build the automation using n8n, Make, or a custom Python/Node backend, connecting your Zoho, Tally, Shopify, WhatsApp, and Razorpay accounts via APIs and webhooks. Every integration is tested in a sandbox first.',
   },
   {
     number: '04',
     title: 'Test & Validate',
-    description: 'We run the automation against real data samples — including edge cases, duplicate records, and error states — and verify that every system receives accurate data. Your team validates the outputs before go-live.',
+    description: 'We run the automation against real data samples, including edge cases, duplicate records, and error states, and verify that every system receives accurate data. Your team validates the outputs before go-live.',
   },
   {
     number: '05',
@@ -105,7 +120,7 @@ const WORKFLOW_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const WORKFLOW_STATS = [
   {
     value: '5–10 hrs',
-    label: 'of weekly manual admin time eliminated per automation — typical for Indian SMBs',
+    label: 'of weekly manual admin time eliminated per automation, typical for Indian SMBs',
     microcopy: 'FactoryJet client data',
     categoryLabel: 'TIME SAVED',
   },
@@ -138,7 +153,7 @@ const WORKFLOW_MARKET_STATS = [
   },
   {
     value: '500+',
-    label: 'businesses served by FactoryJet — across India, US, UK, and UAE',
+    label: 'businesses served by FactoryJet, across India, US, UK, and UAE',
     sourceUrl: 'https://factoryjet.com/about',
     sourceLabel: 'FactoryJet Track Record',
   },
@@ -252,12 +267,12 @@ const WORKFLOW_INDUSTRIES = [
   },
   {
     name: 'Real Estate',
-    description: 'Lead intake automation from 99acres, MagicBricks, and Facebook — auto-routed to Zoho CRM by project, site visit booked to Google Calendar, WhatsApp follow-up sent, and telecaller assigned automatically.',
+    description: 'Lead intake automation from 99acres, MagicBricks, and Facebook, auto-routed to Zoho CRM by project, site visit booked to Google Calendar, WhatsApp follow-up sent, and telecaller assigned automatically.',
     example: 'Builders reduce lead response time from 4+ hours to under 3 minutes.',
   },
   {
     name: 'Manufacturing & Distribution',
-    description: 'Purchase order to Tally entry automation, B2B WhatsApp order receiving, GST invoice generation and dispatch, and inventory sync between Zoho Inventory and your ERP — all without manual re-entry.',
+    description: 'Purchase order to Tally entry automation, B2B WhatsApp order receiving, GST invoice generation and dispatch, and inventory sync between Zoho Inventory and your ERP: all without manual re-entry.',
     example: 'Distributors save 8–12 hours per week of billing and inventory data entry.',
   },
   {
@@ -295,7 +310,7 @@ const WORKFLOW_PRICING_TIERS = [
   {
     name: 'Multi-System Workflow Platform',
     priceRange: '',
-    description: '5–10 connected tools in a unified automation platform — your operations on autopilot.',
+    description: '5–10 connected tools in a unified automation platform: your operations on autopilot.',
     features: [
       '5–10 system integrations',
       'Multi-step workflow chains with AI decision logic',
@@ -339,7 +354,7 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'What is AI workflow automation and what makes it different from basic automation?',
-    answer: "Basic automation (n8n, Make, Zapier) connects tools with if-this-then-that rules. It works for predictable, structured data but breaks when inputs are unstructured — a WhatsApp message in Hindi, a PDF invoice with variable formatting, an email that could be a complaint or a sales enquiry. AI workflow automation adds intelligence: the AI reads unstructured inputs, classifies them, extracts data, makes routing decisions, and drafts responses — then the workflow handles the execution. The result is automation that handles real-world messiness, not just clean API calls.",
+    answer: "Basic automation (n8n, Make, Zapier) connects tools with if-this-then-that rules. It works for predictable, structured data but breaks when inputs are unstructured: a WhatsApp message in Hindi, a PDF invoice with variable formatting, an email that could be a complaint or a sales enquiry. AI workflow automation adds intelligence: the AI reads unstructured inputs, classifies them, extracts data, makes routing decisions, and drafts responses, then the workflow handles the execution. The result is automation that handles real-world messiness, not just clean API calls.",
   },
   {
     category: 'basics',
@@ -348,8 +363,8 @@ const WORKFLOW_FAQ_ITEMS = [
   },
   {
     category: 'basics',
-    question: 'Can the AI handle unstructured data — like documents, emails, or WhatsApp messages?',
-    answer: "Yes — this is where AI adds value over basic automation tools. The AI can read a PDF invoice and extract line items, GSTIN, and amounts into structured fields. It can classify an incoming WhatsApp message as a support query, sales lead, or payment confirmation and route accordingly. It can parse an email and determine whether it needs a human response or can be handled automatically. This document and message intelligence is what separates AI workflow automation from simple no-code tools.",
+    question: 'Can the AI handle unstructured data, like documents, emails, or WhatsApp messages?',
+    answer: "Yes, this is where AI adds value over basic automation tools. The AI can read a PDF invoice and extract line items, GSTIN, and amounts into structured fields. It can classify an incoming WhatsApp message as a support query, sales lead, or payment confirmation and route accordingly. It can parse an email and determine whether it needs a human response or can be handled automatically. This document and message intelligence is what separates AI workflow automation from simple no-code tools.",
   },
   {
     category: 'basics',
@@ -364,12 +379,12 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'tools',
     question: 'Can you connect tools that do not have native integrations?',
-    answer: "Yes. For tools without APIs — like older Tally versions — we use the TallyPrime XML bridge, screen-level automation, or scheduled data exports. For tools with APIs that lack native connectors, we write custom API adapters. For tools that only support email or PDF output, we use AI document parsing to extract structured data. We have connected nearly every tool in the Indian SMB ecosystem over 12 years.",
+    answer: "Yes. For tools without APIs, like older Tally versions, we use the TallyPrime XML bridge, screen-level automation, or scheduled data exports. For tools with APIs that lack native connectors, we write custom API adapters. For tools that only support email or PDF output, we use AI document parsing to extract structured data. We have connected nearly every tool in the Indian SMB ecosystem over 12 years.",
   },
   {
     category: 'tools',
     question: 'Can you automate WhatsApp notifications and follow-ups?',
-    answer: "Yes — WhatsApp automation is one of our most-requested workflows. We connect your triggers (Shopify order placed, Razorpay payment cleared, Zoho lead created, Shiprocket shipment dispatched) to WhatsApp Business API via Interakt, Wati, or AiSensy to send personalised template messages automatically. We handle template approval, opt-in compliance, and DND filtering.",
+    answer: "Yes, WhatsApp automation is one of our most-requested workflows. We connect your triggers (Shopify order placed, Razorpay payment cleared, Zoho lead created, Shiprocket shipment dispatched) to WhatsApp Business API via Interakt, Wati, or AiSensy to send personalised template messages automatically. We handle template approval, opt-in compliance, and DND filtering.",
   },
   {
     category: 'tools',
@@ -379,22 +394,22 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'india',
     question: 'Can you automate GST invoice generation and Tally entries?',
-    answer: "Yes — GST and Tally automation is one of our most common India deployments. We automate: GST invoice generation from Shopify or Razorpay order data (with correct HSN codes, tax rates, and GSTIN), pushing entries to Tally ERP in real time, sending invoices to customers via WhatsApp or email, and flagging mismatches for reconciliation. This eliminates 2–5 hours of daily data entry for most Indian SMBs.",
+    answer: "Yes, GST and Tally automation is one of our most common India deployments. We automate: GST invoice generation from Shopify or Razorpay order data (with correct HSN codes, tax rates, and GSTIN), pushing entries to Tally ERP in real time, sending invoices to customers via WhatsApp or email, and flagging mismatches for reconciliation. This eliminates 2–5 hours of daily data entry for most Indian SMBs.",
   },
   {
     category: 'india',
-    question: 'How does the AI handle Indian document formats — like GST invoices and Aadhaar-based KYC?',
-    answer: "We build India-specific document parsers that understand GST invoice formats, PAN card fields, Aadhaar data layouts, bank statement structures, and purchase order templates used by Indian manufacturers. The AI extracts structured data from these documents and pushes it into your CRM, ERP, or accounting system — eliminating manual re-entry and the errors that come with it.",
+    question: 'How does the AI handle Indian document formats, like GST invoices and Aadhaar-based KYC?',
+    answer: "We build India-specific document parsers that understand GST invoice formats, PAN card fields, Aadhaar data layouts, bank statement structures, and purchase order templates used by Indian manufacturers. The AI extracts structured data from these documents and pushes it into your CRM, ERP, or accounting system, eliminating manual re-entry and the errors that come with it.",
   },
   {
     category: 'india',
-    question: 'Can the automation handle multi-language inputs — like WhatsApp messages in Hindi?',
-    answer: "Yes. We configure the AI to detect the language of an incoming message, extract the relevant intent and data, process it normally, and respond in the same language. A WhatsApp message in Hindi asking for an order status is understood, processed, and responded to in Hindi — the same workflow handles English queries without any separate configuration.",
+    question: 'Can the automation handle multi-language inputs, like WhatsApp messages in Hindi?',
+    answer: "Yes. We configure the AI to detect the language of an incoming message, extract the relevant intent and data, process it normally, and respond in the same language. A WhatsApp message in Hindi asking for an order status is understood, processed, and responded to in Hindi: the same workflow handles English queries without any separate configuration.",
   },
   {
     category: 'india',
     question: 'Is our data safe when using API-level integrations?',
-    answer: "All integrations use API-level access with the minimum permissions required for the specific automation task — we never request admin-level access unless operationally necessary. Data flows are encrypted in transit, and we do not store your business data on FactoryJet infrastructure. For BFSI, healthcare, and legal clients, we can deploy the automation entirely within your own cloud environment (AWS, GCP, or Azure) with zero third-party data exposure.",
+    answer: "All integrations use API-level access with the minimum permissions required for the specific automation task, we never request admin-level access unless operationally necessary. Data flows are encrypted in transit, and we do not store your business data on FactoryJet infrastructure. For BFSI, healthcare, and legal clients, we can deploy the automation entirely within your own cloud environment (AWS, GCP, or Azure) with zero third-party data exposure.",
   },
   {
     category: 'process',
@@ -409,17 +424,17 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'process',
     question: 'Can we automate just one process to start and expand later?',
-    answer: "Yes — and this is how most clients start. We identify your highest-impact single automation (usually the one consuming the most manual hours), build and deploy it as a Workflow Starter, and measure the time savings. Most clients expand to a multi-system platform within 3–6 months once they see the ROI from the first automation.",
+    answer: "Yes, and this is how most clients start. We identify your highest-impact single automation (usually the one consuming the most manual hours), build and deploy it as a Workflow Starter, and measure the time savings. Most clients expand to a multi-system platform within 3–6 months once they see the ROI from the first automation.",
   },
   {
     category: 'process',
     question: 'What happens if our tools change or we switch platforms?',
-    answer: "Because you own the code, you are never locked in. If you switch from Razorpay to PayU, or from Shiprocket to Delhivery, we update the integration connectors — typically a 1–3 day engagement on retainer. Workflow logic and AI components are independent of specific tool credentials, so changes are modular and low-risk.",
+    answer: "Because you own the code, you are never locked in. If you switch from Razorpay to PayU, or from Shiprocket to Delhivery, we update the integration connectors, typically a 1–3 day engagement on retainer. Workflow logic and AI components are independent of specific tool credentials, so changes are modular and low-risk.",
   },
   {
     category: 'pricing',
     question: 'How is the ROI calculated for a workflow automation project?',
-    answer: "The simplest calculation: count the hours your team spends weekly on the manual task being automated, multiply by the hourly cost of that employee, and project across 12 months. Most Indian SMB automations eliminate 5–15 hours per week of admin work, saving ₹12,000–₹40,000/month in salary cost. At our fixed build price, payback is typically 4–6 months — and the automation runs indefinitely after that.",
+    answer: "The simplest calculation: count the hours your team spends weekly on the manual task being automated, multiply by the hourly cost of that employee, and project across 12 months. Most Indian SMB automations eliminate 5–15 hours per week of admin work, saving ₹12,000–₹40,000/month in salary cost. At our fixed build price, payback is typically 4–6 months, and the automation runs indefinitely after that.",
   },
   {
     category: 'pricing',
@@ -429,12 +444,12 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Can we get a fixed-price quote before starting?',
-    answer: "Yes — every FactoryJet automation project starts with a free discovery call and a fixed-price proposal. We map the automation in detail, identify all integrations and edge cases, and give you a firm price before writing a single line of code. No hourly billing, no scope creep, no surprises. If the scope changes after we start, we discuss it openly and agree on any additional cost before proceeding.",
+    answer: "Yes: every FactoryJet automation project starts with a free discovery call and a fixed-price proposal. We map the automation in detail, identify all integrations and edge cases, and give you a firm price before writing a single line of code. No hourly billing, no scope creep, no surprises. If the scope changes after we start, we discuss it openly and agree on any additional cost before proceeding.",
   },
   {
     category: 'pricing',
     question: 'Do you offer a maintenance retainer after delivery?',
-    answer: "Yes — an optional monthly maintenance retainer covers workflow monitoring, error resolution, minor logic updates, and new integration connectors as your tools change. Most clients on the Full Business Automation Suite take the retainer for the first few months. Starter and multi-system clients often manage independently after the 30-day post-launch window.",
+    answer: "Yes: an optional monthly maintenance retainer covers workflow monitoring, error resolution, minor logic updates, and new integration connectors as your tools change. Most clients on the Full Business Automation Suite take the retainer for the first few months. Starter and multi-system clients often manage independently after the 30-day post-launch window.",
   },
 ];
 
@@ -451,6 +466,10 @@ const faqSchema = {
 export default function AIWorkflowAutomationINPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="ai-workflow-automation-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="ai-workflow-automation-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script
@@ -478,12 +497,18 @@ export default function AIWorkflowAutomationINPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+          { name: 'AI Workflow Automation', url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation' },
+        ]} />
 
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_workflow_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · INDIA"
-          headline="Stop Re-Entering Data Between Zoho, Tally, and WhatsApp — Automate It Once"
-          lead="Connect your Indian business tools into automated pipelines with AI. When a Razorpay payment clears, the Tally entry writes itself, the GST invoice sends itself, and the WhatsApp notification reaches your customer — all before you finish your chai. Fixed price. Live in 1–4 weeks."
+          headline="Stop Re-Entering Data Between Zoho, Tally, and WhatsApp, Automate It Once"
+          lead="Connect your Indian business tools into automated pipelines with AI. When a Razorpay payment clears, the Tally entry writes itself, the GST invoice sends itself, and the WhatsApp notification reaches your customer: all before you finish your chai. Fixed price. Live in 1–4 weeks."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
@@ -493,10 +518,10 @@ export default function AIWorkflowAutomationINPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                WORKFLOW IN ACTION — EVERY ORDER
+                WORKFLOW IN ACTION: EVERY ORDER
               </p>
               <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                From Shopify order to GST invoice to WhatsApp tracking — in under 60 seconds.
+                From Shopify order to GST invoice to WhatsApp tracking, in under 60 seconds.
               </p>
               <div className="mt-6 space-y-3">
                 {[
@@ -514,7 +539,7 @@ export default function AIWorkflowAutomationINPage() {
                 ))}
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">Runs 24/7 — no manual intervention, no missed entries, no delayed invoices.</p>
+                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">Runs 24/7, no manual intervention, no missed entries, no delayed invoices.</p>
               </div>
             </div>
           }
@@ -530,7 +555,7 @@ export default function AIWorkflowAutomationINPage() {
         <ServiceExplanation
           eyebrow="AI WORKFLOW AUTOMATION EXPLAINED"
           headline="Why AI Workflow Automation Is Different From Zapier or Manual n8n"
-          lead="Basic automation tools connect systems with simple if-this-then-that rules. They break the moment data is unstructured — a Hindi WhatsApp message, a PDF invoice, an email with variable formatting. AI workflow automation adds intelligence to handle the real world."
+          lead="Basic automation tools connect systems with simple if-this-then-that rules. They break the moment data is unstructured: a Hindi WhatsApp message, a PDF invoice, an email with variable formatting. AI workflow automation adds intelligence to handle the real world."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -539,7 +564,7 @@ export default function AIWorkflowAutomationINPage() {
                 ))}
               </div>
               <p>
-                If your team spends any part of their day copying data from one tool to another — leads from Facebook to Zoho, payments from Razorpay to Tally, orders from Shopify to Shiprocket — that is manual work that should not exist. Every hour spent on data entry is an hour not spent on sales, service, or growth. AI workflow automation connects your tools once and eliminates that repetition permanently.
+                If your team spends any part of their day copying data from one tool to another, leads from Facebook to Zoho, payments from Razorpay to Tally, orders from Shopify to Shiprocket, that is manual work that should not exist. Every hour spent on data entry is an hour not spent on sales, service, or growth. AI workflow automation connects your tools once and eliminates that repetition permanently.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -559,7 +584,7 @@ export default function AIWorkflowAutomationINPage() {
                 </p>
               </div>
               <p>
-                FactoryJet AI workflow automations are built on n8n, Make, or custom Node/Python backends — connected to the full Indian SMB tool stack: Zoho, Tally, Razorpay, Shopify, Commerceflo, WhatsApp, Shiprocket, and Freshdesk. The AI layer handles document parsing, language detection, classification, and data extraction — so the automation handles real-world inputs, not just clean API payloads.
+                FactoryJet AI workflow automations are built on n8n, Make, or custom Node/Python backends, connected to the full Indian SMB tool stack: Zoho, Tally, Razorpay, Shopify, Commerceflo, WhatsApp, Shiprocket, and Freshdesk. The AI layer handles document parsing, language detection, classification, and data extraction, so the automation handles real-world inputs, not just clean API payloads.
               </p>
             </>
           }
@@ -570,10 +595,10 @@ export default function AIWorkflowAutomationINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { scenario: 'New Razorpay payment', manual: 'Open Tally, find order, enter manually — 5 min per transaction', ai: 'Tally entry written automatically on webhook — 0 seconds' },
-                  { scenario: 'Facebook lead ad submission', manual: 'Check ads manager, copy to Zoho, assign to rep — 10 min per lead', ai: 'Auto-added to Zoho, assigned, WhatsApp sent — <30 seconds' },
-                  { scenario: 'Shopify order shipped', manual: 'Copy tracking from Shiprocket, paste into WhatsApp — 3 min per order', ai: 'WhatsApp with tracking link sent automatically on dispatch' },
-                  { scenario: 'GST invoice needed', manual: 'Open Zoho Books, find order, generate, email — 8 min per invoice', ai: 'Invoice generated and WhatsApp/emailed on payment confirmation' },
+                  { scenario: 'New Razorpay payment', manual: 'Open Tally, find order, enter manually, 5 min per transaction', ai: 'Tally entry written automatically on webhook, 0 seconds' },
+                  { scenario: 'Facebook lead ad submission', manual: 'Check ads manager, copy to Zoho, assign to rep, 10 min per lead', ai: 'Auto-added to Zoho, assigned, WhatsApp sent, <30 seconds' },
+                  { scenario: 'Shopify order shipped', manual: 'Copy tracking from Shiprocket, paste into WhatsApp, 3 min per order', ai: 'WhatsApp with tracking link sent automatically on dispatch' },
+                  { scenario: 'GST invoice needed', manual: 'Open Zoho Books, find order, generate, email, 8 min per invoice', ai: 'Invoice generated and WhatsApp/emailed on payment confirmation' },
                 ].map((row) => (
                   <div key={row.scenario} className="px-7 py-4">
                     <p className="font-fj-mono font-semibold text-fj-ink" style={{ fontSize: '0.75rem', letterSpacing: '0.04em' }}>{row.scenario}</p>
@@ -597,22 +622,22 @@ export default function AIWorkflowAutomationINPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is doing the work your software should be doing"
-          lead="The biggest hidden cost in most Indian SMBs is not a bad strategy — it is the hours spent every day copying data between tools that do not talk to each other. An AI workflow automation eliminates that entirely."
+          lead="The biggest hidden cost in most Indian SMBs is not a bad strategy, it is the hours spent every day copying data between tools that do not talk to each other. An AI workflow automation eliminates that entirely."
           pillars={[
             {
               icon: '📋',
               title: 'Data entry is eating your best employees',
-              body: "Research shows 60% of Indian SMB working hours are spent on tasks that can be automated — copying leads to CRM, entering payments to Tally, sending order confirmations, updating stock levels. These are not strategic activities. Every hour spent on data entry is an hour your team is not selling, supporting customers, or growing the business. AI workflow automation gives those hours back permanently.",
+              body: "Research shows 60% of Indian SMB working hours are spent on tasks that can be automated, copying leads to CRM, entering payments to Tally, sending order confirmations, updating stock levels. These are not strategic activities. Every hour spent on data entry is an hour your team is not selling, supporting customers, or growing the business. AI workflow automation gives those hours back permanently.",
             },
             {
               icon: '⚠️',
               title: 'Manual processes create errors that cost money',
-              body: "A missed Tally entry means incorrect GST filings. A delayed Shiprocket booking means late deliveries and customer complaints. A lead that takes 4 hours to reach the CRM has already gone cold. Manual processes have a 1–5% error rate per transaction — at 100 transactions per day, that is 1–5 errors every day compounding into costly corrections, unhappy customers, and compliance risk.",
+              body: "A missed Tally entry means incorrect GST filings. A delayed Shiprocket booking means late deliveries and customer complaints. A lead that takes 4 hours to reach the CRM has already gone cold. Manual processes have a 1–5% error rate per transaction, at 100 transactions per day, that is 1–5 errors every day compounding into costly corrections, unhappy customers, and compliance risk.",
             },
             {
               icon: '📈',
               title: 'You cannot scale operations without automation',
-              body: "Doubling your orders should not mean doubling your admin headcount. AI workflow automation scales with your business — 100 orders or 10,000 orders, the workflow runs the same. The businesses that automate operations early compound an operational advantage: they handle more volume with the same team, respond faster, make fewer errors, and have more data to make better decisions.",
+              body: "Doubling your orders should not mean doubling your admin headcount. AI workflow automation scales with your business, 100 orders or 10,000 orders, the workflow runs the same. The businesses that automate operations early compound an operational advantage: they handle more volume with the same team, respond faster, make fewer errors, and have more data to make better decisions.",
             },
           ]}
         />
@@ -621,7 +646,7 @@ export default function AIWorkflowAutomationINPage() {
           eyebrow="HOW WE BUILD"
           headline="From process audit to live automation in 1–4 weeks"
           stages={WORKFLOW_JOURNEY_STAGES}
-          closingNote="Every automation is tested against real data before it runs on your live systems. You validate the outputs — we fix any edge case before go-live."
+          closingNote="Every automation is tested against real data before it runs on your live systems. You validate the outputs, we fix any edge case before go-live."
         />
 
         <ServiceExplanation
@@ -674,7 +699,7 @@ export default function AIWorkflowAutomationINPage() {
                   { name: 'GST Invoice Automation', desc: 'Razorpay payment → Zoho Books invoice with GST → WhatsApp/email dispatch → Tally accounting entry.' },
                   { name: 'Document Processing AI', desc: 'PDF invoices, KYC documents, and purchase orders parsed by AI → data pushed to CRM, ERP, or Google Sheets.' },
                   { name: 'Support Ticket Routing', desc: 'Inbound WhatsApp/email → AI classifies issue type → routed to correct team → SLA timer started in Freshdesk.' },
-                  { name: 'Multi-System Data Sync', desc: 'Bi-directional sync between Shopify, Zoho Inventory, and Tally — stock levels, prices, and order status always in sync.' },
+                  { name: 'Multi-System Data Sync', desc: 'Bi-directional sync between Shopify, Zoho Inventory, and Tally | stock levels, prices, and order status always in sync.' },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
                     <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.name}</p>
@@ -710,8 +735,8 @@ export default function AIWorkflowAutomationINPage() {
           eyebrow="INDIA AUTOMATION MARKET"
           headline="60% of Indian SMB working hours are spent on tasks that should not require a human."
           leadParagraphs={[
-            "The Indian business stack is uniquely fragmented: Zoho for CRM, Tally for accounting, Shopify or WooCommerce for e-commerce, Razorpay for payments, Shiprocket for logistics, WhatsApp for communication — none of these talk to each other by default. The gap between each system is filled by a human copying and pasting data, every hour of every working day.",
-            "FactoryJet has been building integrations for Indian businesses. We know the Tally ERP XML structure, the Zoho webhook payloads, the Razorpay signature verification quirks, and the Shiprocket rate-card API edge cases. We build automations that work with the real Indian tool stack — not the clean US SaaS stack that documentation assumes.",
+            "The Indian business stack is uniquely fragmented: Zoho for CRM, Tally for accounting, Shopify or WooCommerce for e-commerce, Razorpay for payments, Shiprocket for logistics, WhatsApp for communication, none of these talk to each other by default. The gap between each system is filled by a human copying and pasting data, every hour of every working day.",
+            "FactoryJet has been building integrations for Indian businesses. We know the Tally ERP XML structure, the Zoho webhook payloads, the Razorpay signature verification quirks, and the Shiprocket rate-card API edge cases. We build automations that work with the real Indian tool stack, not the clean US SaaS stack that documentation assumes.",
           ]}
           bodySlot={
             <>
@@ -733,7 +758,7 @@ export default function AIWorkflowAutomationINPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. No-Code Tool vs. IT Outsourcing vs. Manual Process"
-          lead="Fixed price, full code ownership, Indian tool stack built-in — the honest comparison."
+          lead="Fixed price, full code ownership, Indian tool stack built-in: the honest comparison."
           pullQuote={{ stat: 'Fixed price', caption: 'AI workflow automation connecting your two highest-impact systems, with error handling, audit log, and full code ownership. No ongoing fee to FactoryJet.' }}
           columns={WORKFLOW_COMPARISON_COLUMNS}
           rows={WORKFLOW_COMPARISON_ROWS}
@@ -757,7 +782,7 @@ export default function AIWorkflowAutomationINPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Automate"
-          lead="The questions we answer on every Indian workflow automation discovery call — answered honestly, with examples."
+          lead="The questions we answer on every Indian workflow automation discovery call, answered honestly, with examples."
           categories={WORKFLOW_FAQ_CATEGORIES}
           items={WORKFLOW_FAQ_ITEMS}
         />
@@ -767,7 +792,7 @@ export default function AIWorkflowAutomationINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free Automation Discovery Call"
-            sub="Tell us your most painful manual process — usually Tally data entry, lead-to-CRM copying, or order fulfilment notifications. We will map out exactly how to automate it and give you a fixed-price estimate before writing a single line of code."
+            sub="Tell us your most painful manual process, usually Tally data entry, lead-to-CRM copying, or order fulfilment notifications. We will map out exactly how to automate it and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Discovery Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. Zoho + Tally + Razorpay + WhatsApp ready. 500+ businesses served."

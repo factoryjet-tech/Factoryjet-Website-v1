@@ -13,7 +13,7 @@ type Platform = {
 };
 
 const PLATFORMS: Platform[] = [
-  { id: "nextjs",    name: "Next.js 15",       tagline: "App Router, SSR, ISR — Lighthouse 95+ guaranteed",                    accent: "#FFFFFF", mark: "N" },
+  { id: "nextjs",    name: "Next.js 15",       tagline: "App Router, SSR, ISR | Lighthouse 95+ guaranteed",                    accent: "#FFFFFF", mark: "N" },
   { id: "react",     name: "React 19",          tagline: "Server Components, concurrent rendering, zero layout shift",           accent: "#61DAFB", mark: "R" },
   { id: "nodejs",    name: "Node.js",           tagline: "API layers, webhooks, and server-side integrations",                   accent: "#8CC84B", mark: "⬡" },
   { id: "wordpress", name: "WordPress",         tagline: "Custom themes, plugins, and content-managed builds",                   accent: "#21759B", mark: "W" },
@@ -220,12 +220,12 @@ export default function TechStack() {
               The difference between a 2026-ready website and a website that
               needs rebuilding in 18 months is the stack it runs on. Every
               FactoryJet build uses the same technology stack that Stripe,
-              Vercel, and Linear use for their marketing sites — adapted to real
+              Vercel, and Linear use for their marketing sites, adapted to real
               Birmingham business budgets.
             </p>
             <p>
               Birmingham agencies build on WordPress with Elementor. That&rsquo;s
-              fine — for 2018. FactoryJet builds on the stack that powers the
+              fine, for 2018. FactoryJet builds on the stack that powers the
               fastest, most scalable websites on the internet: Next.js 15 with
               App Router, React 19, Tailwind CSS 4, and GSAP 3.13 for
               animations that don&rsquo;t compromise your Core Web Vitals. Our AI
@@ -257,7 +257,7 @@ export default function TechStack() {
         </div>
       </div>
 
-      {/* Code ticker — marquee */}
+      {/* Code ticker, marquee */}
       <div
         className="relative w-full"
         style={{

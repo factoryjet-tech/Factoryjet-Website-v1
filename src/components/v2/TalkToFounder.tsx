@@ -37,8 +37,8 @@ import Link from 'next/link';
 
 // ─── Locked content (see memory files) ──────────────────────────────────────
 const BIO_TEXT =
-  "Hi, I'm Bhavesh, founder of FactoryJet. I run every discovery call myself — so by minute 10 we already know whether what you need pays for itself, and how fast.";
-const HEADLINE = 'Bhavesh — Founder, FactoryJet';
+  "Hi, I'm Bhavesh, founder of FactoryJet. I run every discovery call myself, so by minute 10 we already know whether what you need pays for itself, and how fast.";
+const HEADLINE = 'Bhavesh: Founder, FactoryJet';
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CONTACT_EMAIL = 'bhavesh@factoryjet.com';
 
@@ -179,7 +179,7 @@ export default function TalkToFounder({
 
   /* ─── COMPACT VARIANT ───────────────────────────────────────────────────
      Self-contained card. Drops into pricing tier cells / sidebars / inline
-     contexts. No section padding — parent provides surrounding context.
+     contexts. No section padding, parent provides surrounding context.
      ---------------------------------------------------------------------- */
   if (variant === 'compact') {
     const cardBase =
@@ -277,7 +277,7 @@ export default function TalkToFounder({
           backgroundSize: '28px 28px, 100% 100%',
         }}
       >
-        {/* Orange aurora — left */}
+        {/* Orange aurora, left */}
         <div
           className="pointer-events-none absolute"
           style={{
@@ -292,7 +292,7 @@ export default function TalkToFounder({
           }}
           aria-hidden="true"
         />
-        {/* Warm aurora — right */}
+        {/* Warm aurora, right */}
         <div
           className="pointer-events-none absolute"
           style={{

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Mumbai | FactoryJet',
     description:
-      'Professional website design company in Mumbai — Next.js, SEO, and GA4 included. 7-day delivery. Serving BKC, Andheri, Lower Parel, Navi Mumbai.',
+      'Professional website design company in Mumbai: Next.js, SEO, and GA4 included. 7-day delivery. Serving BKC, Andheri, Lower Parel, Navi Mumbai.',
     url: 'https://factoryjet.com/web-design/mumbai',
     images: [
       {
@@ -87,6 +88,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/mumbai#webpage',
+  url: 'https://factoryjet.com/web-design/mumbai',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -145,31 +160,31 @@ const MUMBAI_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Mumbai's market — whether that's an international B2B buyer sourcing from SEEPZ, a D2C shopper in Andheri, or a BFSI decision-maker in BKC. We audit your top three competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Mumbai's market, whether that's an international B2B buyer sourcing from SEEPZ, a D2C shopper in Andheri, or a BFSI decision-maker in BKC. We audit your top three competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Mumbai-specific local SEO targeting built in — not sold as an add-on. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Mumbai-specific local SEO targeting built in, not sold as an add-on.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -194,19 +209,19 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to build a website?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace — not from the first conversation.',
+      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace, not from the first conversation.',
   },
   {
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Mumbai web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and large office overheads in BKC. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with account managers, strategy teams, and large office overheads in BKC. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. We have been building websites. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront and the guarantee applies to the rescheduled date. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront and the guarantee applies to the rescheduled date. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,13 +235,13 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you write the content for my website?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content — detailed service pages, blog posts, and city landing pages — is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
+      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content, detailed service pages, blog posts, and city landing pages, is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
   },
   {
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account — we configure it for you. This means you are never on a shared hosting server that slows down under Mumbai's traffic spikes. There is no monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account, we configure it for you. This means you are never on a shared hosting server that slows down under Mumbai's traffic spikes. There is no monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -246,19 +261,19 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on, and why does it matter?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks — significantly faster than WordPress, which renders server-side and is loaded with plugins. For Mumbai businesses competing on local search and Google's Core Web Vitals ranking signals, that performance gap over a WordPress competitor is real and measurable.",
+      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks, significantly faster than WordPress, which renders server-side and is loaded with plugins. For Mumbai businesses competing on local search and Google's Core Web Vitals ranking signals, that performance gap over a WordPress competitor is real and measurable.",
   },
   {
     category: 'technical',
     question: 'How does the site perform on mobile for Indian users?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout. Given that 70%+ of Indian web traffic is mobile — often on 4G with variable speeds — mobile performance is non-negotiable and tested before delivery.',
+      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout. Given that 70%+ of Indian web traffic is mobile, often on 4G with variable speeds, mobile performance is non-negotiable and tested before delivery.',
   },
   {
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks) are configured from day one so you are tracking revenue-relevant actions, not just page views. Search Console is verified and the sitemap submitted. We walk you through both in the handover.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks) are configured from day one so you are tracking revenue-relevant actions, not just page views. Search Console is verified and the sitemap submitted. We walk you through both in the handover.',
   },
 
   /* ── Mumbai Local ── */
@@ -266,19 +281,19 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for B2B exporters and manufacturers in Mumbai?',
     answer:
-      "Yes — B2B and export-oriented businesses are a core client profile for us in Mumbai. We build websites optimised for international B2B buyer research: export credentials display, product catalogs with datasheet downloads, RFQ inquiry systems, and technical SEO targeting English-language searches from buyers in the US, UK, UAE, and EU. We have worked with businesses in SEEPZ, MIDC Andheri, Bhandup, and Bhiwandi.",
+      "Yes, B2B and export-oriented businesses are a core client profile for us in Mumbai. We build websites optimised for international B2B buyer research: export credentials display, product catalogs with datasheet downloads, RFQ inquiry systems, and technical SEO targeting English-language searches from buyers in the US, UK, UAE, and EU. We have worked with businesses in SEEPZ, MIDC Andheri, Bhandup, and Bhiwandi.",
   },
   {
     category: 'local',
     question: 'Can you build websites for BFSI or fintech companies in BKC?',
     answer:
-      "Yes. BKC is India's densest concentration of financial institutions, and the web design requirements there are distinct — compliance awareness, authority signals, and content architecture that answers regulatory and due-diligence questions before a prospect ever picks up the phone. We build BFSI websites with proper schema for financial services, clear regulatory credential display, and lead-capture flows designed for longer sales cycles.",
+      "Yes. BKC is India's densest concentration of financial institutions, and the web design requirements there are distinct, compliance awareness, authority signals, and content architecture that answers regulatory and due-diligence questions before a prospect ever picks up the phone. We build BFSI websites with proper schema for financial services, clear regulatory credential display, and lead-capture flows designed for longer sales cycles.",
   },
   {
     category: 'local',
     question: "Do you know Mumbai's different business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Mumbai's business geography as part of discovery — from BKC's financial district and Lower Parel's media/startup corridor to Andheri East's MIDC industrial cluster, SEEPZ's export zone, and Navi Mumbai's Belapur CBD. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level and district-level searches, which is where many Mumbai B2B and professional services businesses win.",
+      "Yes. We research Mumbai's business geography as part of discovery, from BKC's financial district and Lower Parel's media/startup corridor to Andheri East's MIDC industrial cluster, SEEPZ's export zone, and Navi Mumbai's Belapur CBD. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level and district-level searches, which is where many Mumbai B2B and professional services businesses win.",
   },
   {
     category: 'local',
@@ -292,7 +307,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -304,7 +319,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'support',
     question: 'What happens if something breaks after launch?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime — server crashes, plugin conflicts, database failures — simply do not apply. The last line of defence is already off the table.',
+      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply. The last line of defence is already off the table.',
   },
   {
     category: 'support',
@@ -435,31 +450,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Mumbai market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Mumbai competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Mumbai local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Mumbai local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -483,6 +498,10 @@ const speakableSchema = {
 export default function MumbaiWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="mumbai-local-business-schema"
         type="application/ld+json"
@@ -512,12 +531,17 @@ export default function MumbaiWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Mumbai', url: 'https://factoryjet.com/web-design/mumbai' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_mumbai_hero" />}
           eyebrow="WEB DESIGN · MUMBAI"
-          headline="Website Design in Mumbai That Converts Buyers — Not Just Looks Good"
+          headline="Website Design in Mumbai That Converts Buyers, Not Just Looks Good"
           lead="Mumbai powers 40% of India's corporate tax revenue, houses the NSE, BSE, and RBI, and is home to over 2.5 lakh registered businesses. B2B exporters in SEEPZ, D2C startups in Andheri, and BFSI firms in BKC all compete for the same Google real estate. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
@@ -539,28 +563,28 @@ export default function MumbaiWebDesignPage() {
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="MUMBAI MARKET"
-          headline="Why Your Mumbai Web Presence Is a Business Asset — Not a Line Item"
+          headline="Why Your Mumbai Web Presence Is a Business Asset, Not a Line Item"
           leadParagraphs={[
-            "Mumbai is India's commercial capital — contributing approximately ₹21 lakh crore to the national economy and housing the headquarters of every major Indian bank, insurer, and stock exchange. The Bandra-Kurla Complex (BKC) is home to the Reserve Bank of India, SEBI, Citibank, HSBC, JP Morgan India, and the regional offices of virtually every Fortune 500 company operating in the country. Lower Parel and Andheri East have become India's second-densest startup corridor, with D2C brands, SaaS companies, and fintech startups launching every week. SEEPZ and MIDC Andheri host thousands of export-oriented manufacturers — electronics, gems, garments, engineering goods — competing for international buyers on Google every day.",
-            "This diversity creates a web design challenge unique to Mumbai: a gemstone exporter in Zaveri Bazaar needs a completely different site architecture from a fintech startup in Powai — different trust signals, different buyer journeys, different conversion flows. A hotel in Colaba needs a different mobile experience from a law firm in Nariman Point. FactoryJet builds for all of them, because we start every project with the buyer in mind, not the template.",
-            "The businesses that win in Mumbai's competitive market are not necessarily the largest — they are the ones with a faster, better-structured web presence than their competitors. A 1-second improvement in page load time increases conversions by 7%. A properly structured FAQ section indexed by Google can double inbound enquiry volume. These are not abstract metrics — they are the difference between a website that earns its cost in a month and one that sits on a business card.",
+            "Mumbai is India's commercial capital, contributing approximately ₹21 lakh crore to the national economy and housing the headquarters of every major Indian bank, insurer, and stock exchange. The Bandra-Kurla Complex (BKC) is home to the Reserve Bank of India, SEBI, Citibank, HSBC, JP Morgan India, and the regional offices of virtually every Fortune 500 company operating in the country. Lower Parel and Andheri East have become India's second-densest startup corridor, with D2C brands, SaaS companies, and fintech startups launching every week. SEEPZ and MIDC Andheri host thousands of export-oriented manufacturers, electronics, gems, garments, engineering goods, competing for international buyers on Google every day.",
+            "This diversity creates a web design challenge unique to Mumbai: a gemstone exporter in Zaveri Bazaar needs a completely different site architecture from a fintech startup in Powai, different trust signals, different buyer journeys, different conversion flows. A hotel in Colaba needs a different mobile experience from a law firm in Nariman Point. FactoryJet builds for all of them, because we start every project with the buyer in mind, not the template.",
+            "The businesses that win in Mumbai's competitive market are not necessarily the largest, they are the ones with a faster, better-structured web presence than their competitors. A 1-second improvement in page load time increases conversions by 7%. A properly structured FAQ section indexed by Google can double inbound enquiry volume. These are not abstract metrics, they are the difference between a website that earns its cost in a month and one that sits on a business card.",
           ]}
           stats={[
             {
               value: '₹21L Cr+',
-              label: "Mumbai's annual GDP — India's single largest city economy",
+              label: "Mumbai's annual GDP: India's single largest city economy",
               sourceUrl: 'https://mospi.gov.in/web/mospi/statistical-year-book-india',
               sourceLabel: 'MoSPI Statistical Year Book',
             },
             {
               value: '2.5L+',
-              label: 'Registered companies in Mumbai — the highest concentration in any Indian city',
+              label: 'Registered companies in Mumbai: the highest concentration in any Indian city',
               sourceUrl: 'https://www.mca.gov.in/',
               sourceLabel: 'Ministry of Corporate Affairs',
             },
             {
               value: '20M+',
-              label: 'Population in the Mumbai Metropolitan Region — India\'s largest metro by GDP',
+              label: 'Population in the Mumbai Metropolitan Region: India\'s largest metro by GDP',
               sourceUrl: 'https://censusindia.gov.in/',
               sourceLabel: 'Census India',
             },
@@ -571,12 +595,12 @@ export default function MumbaiWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · MUMBAI"
           headline="What 'Web Design' Actually Means for a Mumbai Business"
-          lead="Mumbai's economy runs on two very different buyer behaviours — B2B industrial buyers doing months of research before a vendor call, and D2C consumers making purchase decisions in under 10 seconds on mobile. Both need very different web strategies. FactoryJet builds for both."
+          lead="Mumbai's economy runs on two very different buyer behaviours, B2B industrial buyers doing months of research before a vendor call, and D2C consumers making purchase decisions in under 10 seconds on mobile. Both need very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
-                For Mumbai&apos;s B2B exporters, manufacturers, and BFSI firms — businesses in SEEPZ,
-                MIDC Andheri, BKC, and Nariman Point — a website needs to project export credentials,
+                For Mumbai&apos;s B2B exporters, manufacturers, and BFSI firms, businesses in SEEPZ,
+                MIDC Andheri, BKC, and Nariman Point: a website needs to project export credentials,
                 technical depth, and compliance awareness. International buyers from the US, UK, UAE,
                 and EU research vendors for weeks before making contact. The site needs to answer their
                 due-diligence questions clearly: certifications, manufacturing capacity, past clients,
@@ -586,7 +610,7 @@ export default function MumbaiWebDesignPage() {
               </p>
               <p>
                 For Mumbai&apos;s D2C brands, startups, and service businesses in Andheri West, Bandra,
-                Lower Parel, and Powai — the challenge is the opposite. Consumers arriving on mobile
+                Lower Parel, and Powai: the challenge is the opposite. Consumers arriving on mobile
                 from Instagram or Google search make decisions in seconds. The site needs to load
                 under 1.5 seconds on a 4G connection, present the product or service above the fold,
                 and make the next step obvious. We build these sites mobile-first, at 375px before
@@ -595,7 +619,7 @@ export default function MumbaiWebDesignPage() {
               <p>
                 Every FactoryJet Mumbai project covers discovery, Figma prototyping, Next.js
                 development, SEO, GA4, and a 30-day support window. You leave with a codebase you own,
-                a design system you keep, and a site built to rank — not just to look good in a mockup.
+                a design system you keep, and a site built to rank, not just to look good in a mockup.
               </p>
             </>
           }
@@ -670,12 +694,12 @@ export default function MumbaiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Mumbai's market moves fast. Waiting 16 weeks for an agency to deliver a website you briefed in April is not a plan — it's a liability. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Mumbai's market moves fast. Waiting 16 weeks for an agency to deliver a website you briefed in April is not a plan. It's a liability. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -706,7 +730,7 @@ export default function MumbaiWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -715,9 +739,9 @@ export default function MumbaiWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with an authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO targeting high-value engineering queries across India.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with an authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO targeting high-value engineering queries across India.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -731,11 +755,11 @@ export default function MumbaiWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Mumbai Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Mumbai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Mumbai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={MUMBAI_COMPARISON_COLUMNS}
           rows={MUMBAI_COMPARISON_ROWS}
@@ -746,33 +770,33 @@ export default function MumbaiWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="MUMBAI × WEB DESIGN"
           headline="Web Design for Mumbai's Key Industries"
-          lead="From SEEPZ export manufacturers to BKC fintech startups to Bandra D2C brands — Mumbai's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From SEEPZ export manufacturers to BKC fintech startups to Bandra D2C brands, Mumbai's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Manufacturing & Export',
               description:
-                "Mumbai's SEEPZ and MIDC Andheri house thousands of export-oriented manufacturers — electronics, gems, garments, chemicals, and engineering goods. These businesses need websites that project export credentials, quality certifications, and manufacturing capacity to international B2B buyers. RFQ forms, product catalogs with datasheet downloads, and EXIM certificate display — all standard.",
+                "Mumbai's SEEPZ and MIDC Andheri house thousands of export-oriented manufacturers, electronics, gems, garments, chemicals, and engineering goods. These businesses need websites that project export credentials, quality certifications, and manufacturing capacity to international B2B buyers. RFQ forms, product catalogs with datasheet downloads, and EXIM certificate display: all standard.",
               example:
                 'Exporters in SEEPZ, manufacturers in MIDC Andheri, Bhandup, Bhiwandi, and Thane targeting buyers in the US, EU, UAE, and Southeast Asia.',
             },
             {
               name: 'BFSI & Fintech',
               description:
-                "BKC is India's financial nerve centre — home to the RBI, SEBI, every major private and foreign bank, and a growing fintech ecosystem. BFSI websites need to project compliance awareness, regulatory credentials, and technical authority. Lead-capture flows designed for longer B2B sales cycles, clear regulatory licence display, and schema markup for financial services.",
+                "BKC is India's financial nerve centre, home to the RBI, SEBI, every major private and foreign bank, and a growing fintech ecosystem. BFSI websites need to project compliance awareness, regulatory credentials, and technical authority. Lead-capture flows designed for longer B2B sales cycles, clear regulatory licence display, and schema markup for financial services.",
               example:
                 'Fintech startups in Powai and Andheri, financial advisory firms, insurance tech companies, and professional services firms serving the BKC financial ecosystem.',
             },
             {
               name: 'D2C & Retail',
               description:
-                "Mumbai is India's original D2C city — home to fashion brands, lifestyle companies, beauty startups, and specialty food businesses that sell direct to consumers. D2C websites need to convert mobile visitors in under 10 seconds. That means sub-1.5s load times, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. Mobile-first, every time.",
+                "Mumbai is India's original D2C city, home to fashion brands, lifestyle companies, beauty startups, and specialty food businesses that sell direct to consumers. D2C websites need to convert mobile visitors in under 10 seconds. That means sub-1.5s load times, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. Mobile-first, every time.",
               example:
                 'D2C fashion, lifestyle, and beauty brands in Bandra, Juhu, Andheri West, and Khar selling to consumers across India.',
             },
             {
               name: 'Real Estate & Construction',
               description:
-                "Mumbai's real estate market is one of the most competitive in Asia — Thane, Navi Mumbai, and BKC are seeing sustained project activity. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA details, and lead-capture forms that route enquiries to the right sales team. Local SEO targeting high-demand micro-markets is built in.",
+                "Mumbai's real estate market is one of the most competitive in Asia: Thane, Navi Mumbai, and BKC are seeing sustained project activity. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA details, and lead-capture forms that route enquiries to the right sales team. Local SEO targeting high-demand micro-markets is built in.",
               example:
                 'Residential developers in Thane and Navi Mumbai, commercial real estate brokers in BKC, and construction firms operating across the MMR.',
             },
@@ -786,7 +810,7 @@ export default function MumbaiWebDesignPage() {
             {
               name: 'Professional Services',
               description:
-                "Mumbai's professional services market — CA firms, law firms, consulting practices, HR agencies, and marketing companies — is among the most competitive in India. For these businesses, the website is the first qualification filter: Does this firm look credible enough to call? We build authority-first sites with case study structures, credential display, and lead-capture flows that convert research into booked consultations.",
+                "Mumbai's professional services market: CA firms, law firms, consulting practices, HR agencies, and marketing companies, is among the most competitive in India. For these businesses, the website is the first qualification filter: Does this firm look credible enough to call? We build authority-first sites with case study structures, credential display, and lead-capture flows that convert research into booked consultations.",
               example:
                 'CA and CS firms, corporate law practices in Fort and Nariman Point, management consulting firms, and HR companies serving Mumbai\'s corporate ecosystem.',
             },
@@ -804,7 +828,7 @@ export default function MumbaiWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Mumbai Businesses"
-          lead="The questions we answer on every Mumbai discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Mumbai discovery call, answered here, without the runaround."
           categories={MUMBAI_FAQ_CATEGORIES}
           items={MUMBAI_FAQ_ITEMS}
         />
@@ -814,7 +838,7 @@ export default function MumbaiWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Mumbai Website?"
-          sub="Mumbai's ₹21 lakh crore economy is home to India's most competitive businesses — and every one of them is competing for the same Google rankings, the same buyer first impression, and the same digital real estate. Every week without a high-performing website is ground you are giving to a competitor who showed up with a better one. Start today and have a sitemap ready within 72 hours."
+          sub="Mumbai's ₹21 lakh crore economy is home to India's most competitive businesses, and every one of them is competing for the same Google rankings, the same buyer first impression, and the same digital real estate. Every week without a high-performing website is ground you are giving to a competitor who showed up with a better one. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

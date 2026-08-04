@@ -30,7 +30,7 @@ if (process.env.NODE_ENV !== 'production') {
   if (missing.length) {
     console.warn(
       `[firebase] missing env vars: ${missing.join(', ')}. ` +
-      `Set them in .env.local — see .env.example.`
+      `Set them in .env.local, see .env.example.`
     );
   }
 }

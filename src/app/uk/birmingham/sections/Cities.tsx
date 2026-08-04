@@ -196,7 +196,7 @@ function CityCard({ city }: { city: City }) {
         }}
       />
 
-      {/* "You are here" badge — Birmingham only */}
+      {/* "You are here" badge, Birmingham only */}
       {city.active && (
         <span
           className="absolute"
@@ -410,7 +410,7 @@ export default function Cities() {
               Agency, and Republic Marketing in Brindleyplace have built. They
               serve Birmingham well. But if your ambitions sit outside their
               price range, their technology stack, or their willingness to build
-              AI-native systems from day one — FactoryJet builds digital
+              AI-native systems from day one, FactoryJet builds digital
               infrastructure for Birmingham that compounds across 10 UK cities.
             </p>
           </div>

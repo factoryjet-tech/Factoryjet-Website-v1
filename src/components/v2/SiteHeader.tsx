@@ -393,7 +393,7 @@ const LOCALE_CONFIG = {
     pricingHref:     '/pricing',
     aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
-    featuredBody:    'Custom websites delivered in 7 days — built by senior engineers, fixed-price, with full code ownership.',
+    featuredBody:    'Custom websites delivered in 7 days, built by senior engineers, fixed-price, with full code ownership.',
     featuredStats:   ['500+ businesses served', '12+ years of expertise', 'Fixed-price projects'],
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',
@@ -409,7 +409,7 @@ const LOCALE_CONFIG = {
     pricingHref:     '/uae',
     aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
-    featuredBody:    'Custom websites for Dubai & UAE businesses — delivered in 7 days, fixed-price, with full code ownership.',
+    featuredBody:    'Custom websites for Dubai & UAE businesses, delivered in 7 days, fixed-price, with full code ownership.',
     featuredStats:   ['500+ businesses served', '12+ years of expertise', 'No hidden fees'],
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',
@@ -568,7 +568,7 @@ export default function SiteHeader({
             {/* Desktop nav */}
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
 
-              {/* Services trigger + mega-dropdown (India / UAE only — US uses commerce menus below) */}
+              {/* Services trigger + mega-dropdown (India / UAE only, US uses commerce menus below) */}
               {!isCommerce && (
               <div
                 className="relative"
@@ -672,7 +672,7 @@ export default function SiteHeader({
                               AI Agent Development
                             </p>
 
-                            {/* Hub header — links to parent hub page */}
+                            {/* Hub header, links to parent hub page */}
                             <Link
                               href={IN_AI_HUB_HREF}
                               className="group mb-3 flex items-center gap-3 rounded-xl border border-fj-neutral-200 bg-white p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
@@ -724,7 +724,7 @@ export default function SiteHeader({
                             </Link>
                           </div>
 
-                          {/* Featured panel — dark charcoal for India */}
+                          {/* Featured panel, dark charcoal for India */}
                           <div
                             className="flex flex-col justify-between rounded-r-2xl p-4"
                             style={{ background: '#0F0F12' }}
@@ -799,7 +799,7 @@ export default function SiteHeader({
                             </div>
                           </div>
 
-                          {/* Featured panel — orange gradient for US/UAE */}
+                          {/* Featured panel, orange gradient for US/UAE */}
                           <div
                             className="flex flex-col justify-between rounded-r-2xl p-5"
                             style={{ background: 'linear-gradient(145deg, #F05A28 0%, #c44820 100%)' }}
@@ -915,7 +915,7 @@ export default function SiteHeader({
                                 ))}
                               </div>
                             </div>
-                            {/* Replatforming column — US only; the UK has no migration spokes yet. */}
+                            {/* Replatforming column, US only; the UK has no migration spokes yet. */}
                             {locale === 'us' && (
                               <div className="border-l border-fj-neutral-100 bg-fj-cream/40 p-4">
                                 <Link
@@ -975,7 +975,7 @@ export default function SiteHeader({
                 </>
               )}
 
-              {/* Who We Serve trigger — US only */}
+              {/* Who We Serve trigger, US only */}
               {isCommerce && (
                 <div
                   className="relative"
@@ -1074,7 +1074,7 @@ export default function SiteHeader({
                 </div>
               )}
 
-              {/* Locations trigger + dropdown — India / UAE only on desktop */}
+              {/* Locations trigger + dropdown, India / UAE only on desktop */}
               {!isCommerce && (
               <div
                 className="relative"

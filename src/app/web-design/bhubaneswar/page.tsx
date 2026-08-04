@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Bhubaneswar | FactoryJet',
     description:
-      'Professional website design company in Bhubaneswar — Next.js, SEO, and GA4 included. 7-day delivery. Serving Infocity IT Park, STPI Bhubaneswar, KIIT University zone, and Startup Odisha ecosystem.',
+      'Professional website design company in Bhubaneswar: Next.js, SEO, and GA4 included. 7-day delivery. Serving Infocity IT Park, STPI Bhubaneswar, KIIT University zone, and Startup Odisha ecosystem.',
     url: 'https://factoryjet.com/web-design/bhubaneswar',
     images: [
       {
@@ -93,6 +94,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ──────────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/bhubaneswar#webpage',
+  url: 'https://factoryjet.com/web-design/bhubaneswar',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -143,31 +158,31 @@ const BBSR_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Bhubaneswar's market — whether that's an IT company in Infocity IT Park, a government contractor serving Odisha departments, a tourism or hospitality business near the Temple City heritage strip, or a startup in the Startup Odisha ecosystem. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Bhubaneswar's market, whether that's an IT company in Infocity IT Park, a government contractor serving Odisha departments, a tourism or hospitality business near the Temple City heritage strip, or a startup in the Startup Odisha ecosystem. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Bhubaneswar-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Bhubaneswar-specific local SEO targeting built in.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -198,13 +213,13 @@ const BBSR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Bhubaneswar web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -224,7 +239,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -244,7 +259,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Bhubaneswar businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Bhubaneswar businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -256,7 +271,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Bhubaneswar Local ── */
@@ -264,19 +279,19 @@ const BBSR_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for IT companies and startups in Bhubaneswar?',
     answer:
-      "Yes — IT/ITeS companies, software firms, and startups in Infocity IT Park, STPI Bhubaneswar, and the Startup Odisha ecosystem are a core client profile. Bhubaneswar is now Eastern India's fastest-growing IT hub, with Infosys, TCS, Wipro, and Mindtree all operating significant centres in Infocity. The businesses that establish strong digital presence now will own the search rankings as the ecosystem continues to scale.",
+      "Yes: IT/ITeS companies, software firms, and startups in Infocity IT Park, STPI Bhubaneswar, and the Startup Odisha ecosystem are a core client profile. Bhubaneswar is now Eastern India's fastest-growing IT hub, with Infosys, TCS, Wipro, and Mindtree all operating significant centres in Infocity. The businesses that establish strong digital presence now will own the search rankings as the ecosystem continues to scale.",
   },
   {
     category: 'local',
     question: 'Can you build websites for Odisha government contractors and public sector firms?',
     answer:
-      "Yes. Odisha has one of India's most tech-forward state governments — eDistrict, the MO (Moving On) bus app, and Odisha One portals reflect a government that procures and communicates digitally. Government contractors, consultancy firms serving Odisha departments, and public sector adjacent businesses need websites that project compliance credentials, project credentials, and institutional credibility clearly.",
+      "Yes. Odisha has one of India's most tech-forward state governments, eDistrict, the MO (Moving On) bus app, and Odisha One portals reflect a government that procures and communicates digitally. Government contractors, consultancy firms serving Odisha departments, and public sector adjacent businesses need websites that project compliance credentials, project credentials, and institutional credibility clearly.",
   },
   {
     category: 'local',
     question: "Do you know Bhubaneswar's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Bhubaneswar's business geography as part of discovery — from Infocity IT Park's tech corridor and STPI Bhubaneswar's software zone to Nalco Nagar, the Janpath commercial corridor, Patia and Nayapalli business areas, and the Temple City heritage belt. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Bhubaneswar's business geography as part of discovery, from Infocity IT Park's tech corridor and STPI Bhubaneswar's software zone to Nalco Nagar, the Janpath commercial corridor, Patia and Nayapalli business areas, and the Temple City heritage belt. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -288,7 +303,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for tourism and hospitality businesses in Bhubaneswar?',
     answer:
-      "Absolutely. Bhubaneswar is known as the Temple City of India — home to 700+ temples including the famous Lingaraj, Mukteshwar, and Rajarani. Tourism operators, hotels, heritage tour companies, and hospitality businesses need mobile-first websites with booking systems, local SEO for temple circuit tourism, and conversion-optimised architecture for travellers researching itineraries online.",
+      "Absolutely. Bhubaneswar is known as the Temple City of India, home to 700+ temples including the famous Lingaraj, Mukteshwar, and Rajarani. Tourism operators, hotels, heritage tour companies, and hospitality businesses need mobile-first websites with booking systems, local SEO for temple circuit tourism, and conversion-optimised architecture for travellers researching itineraries online.",
   },
 
   /* ── Support & Ownership ── */
@@ -296,7 +311,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -320,7 +335,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'support',
     question: 'Can FactoryJet help Odisha exporters and handicraft businesses build a global web presence?',
     answer:
-      "Yes. Odisha has a rich export base — handicrafts, agri-products, stone crafts, and textiles are key sectors. Odisha exporters need websites that project product quality, export credentials, and artisan story to international B2B buyers and D2C consumers in the US, EU, and Southeast Asia. We build export-ready websites with B2B inquiry flows, product catalog systems, and SEO targeting English-language international buyer searches.",
+      "Yes. Odisha has a rich export base, handicrafts, agri-products, stone crafts, and textiles are key sectors. Odisha exporters need websites that project product quality, export credentials, and artisan story to international B2B buyers and D2C consumers in the US, EU, and Southeast Asia. We build export-ready websites with B2B inquiry flows, product catalog systems, and SEO targeting English-language international buyer searches.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -445,31 +460,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Bhubaneswar market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Bhubaneswar competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Bhubaneswar local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Bhubaneswar local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -493,6 +508,10 @@ const speakableSchema = {
 export default function BhubaneswarWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="bbsr-local-business-schema"
         type="application/ld+json"
@@ -522,13 +541,18 @@ export default function BhubaneswarWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Bhubaneswar', url: 'https://factoryjet.com/web-design/bhubaneswar' },
+        ]} />
 
         {/* ── 1. HERO ───────────────────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_bhubaneswar_hero" />}
           eyebrow="WEB DESIGN · BHUBANESWAR"
           headline="Website Design in Bhubaneswar for IT Companies, Odisha Startups, and Growing Businesses"
-          lead="Bhubaneswar is Eastern India's fastest-growing IT hub — India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Bhubaneswar is Eastern India's fastest-growing IT hub: India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -551,26 +575,26 @@ export default function BhubaneswarWebDesignPage() {
           eyebrow="BHUBANESWAR MARKET"
           headline="Why Your Bhubaneswar Web Presence Is a Strategic Business Asset"
           leadParagraphs={[
-            "Bhubaneswar is Odisha's capital and India's first planned Smart City — and it is now the fastest-growing IT hub in all of Eastern India, overtaking even Kolkata in the pace of tech talent supply and IT investment. Infocity IT Park hosts major operations from Infosys, TCS, Wipro, and Mindtree. STPI Bhubaneswar and the Nalco Nagar Tech Zone add further depth. The Startup Odisha initiative has registered over 1,500 startups, supported by the Odisha Startup Policy 2016 — one of India's earliest and most progressive state-level startup frameworks.",
-            "Bhubaneswar's economy is genuinely diverse. IT/ITeS is the fastest-growing sector, but the city's economy also spans steel and mining (SAIL, Tata Steel operations nearby), education (AIIMS Bhubaneswar, IIT Bhubaneswar, KIIT University, XIMB — Xavier Institute of Management), and a significant tourism economy anchored by the city's 700+ temples. The Odisha government's digital-first approach — eDistrict, MO bus app, Odisha One portals — has created a procurement environment where digital credentials matter for government contractors and public sector adjacent businesses.",
-            "This creates a web design landscape that is both more competitive and more opportunity-rich than most people outside Odisha realise. An IT company in Infocity needs a completely different site from a temple circuit tour operator, an MEP contractor bidding on government infrastructure, or a handicraft exporter selling Odisha art globally. FactoryJet builds for all of them — because every project starts with the buyer journey, not the template.",
+            "Bhubaneswar is Odisha's capital and India's first planned Smart City, and it is now the fastest-growing IT hub in all of Eastern India, overtaking even Kolkata in the pace of tech talent supply and IT investment. Infocity IT Park hosts major operations from Infosys, TCS, Wipro, and Mindtree. STPI Bhubaneswar and the Nalco Nagar Tech Zone add further depth. The Startup Odisha initiative has registered over 1,500 startups, supported by the Odisha Startup Policy 2016: one of India's earliest and most progressive state-level startup frameworks.",
+            "Bhubaneswar's economy is genuinely diverse. IT/ITeS is the fastest-growing sector, but the city's economy also spans steel and mining (SAIL, Tata Steel operations nearby), education (AIIMS Bhubaneswar, IIT Bhubaneswar, KIIT University, XIMB: Xavier Institute of Management), and a significant tourism economy anchored by the city's 700+ temples. The Odisha government's digital-first approach, eDistrict, MO bus app, Odisha One portals, has created a procurement environment where digital credentials matter for government contractors and public sector adjacent businesses.",
+            "This creates a web design landscape that is both more competitive and more opportunity-rich than most people outside Odisha realise. An IT company in Infocity needs a completely different site from a temple circuit tour operator, an MEP contractor bidding on government infrastructure, or a handicraft exporter selling Odisha art globally. FactoryJet builds for all of them, because every project starts with the buyer journey, not the template.",
           ]}
           stats={[
             {
               value: '#1',
-              label: "Eastern India's fastest-growing IT hub — Bhubaneswar now leads Kolkata in tech talent supply and IT investment growth",
+              label: "Eastern India's fastest-growing IT hub, Bhubaneswar now leads Kolkata in tech talent supply and IT investment growth",
               sourceUrl: 'https://www.nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: '1,500+',
-              label: "Registered startups under Startup Odisha — one of India's most active state-level startup ecosystems",
+              label: "Registered startups under Startup Odisha: one of India's most active state-level startup ecosystems",
               sourceUrl: 'https://startupodisha.gov.in/',
               sourceLabel: 'Startup Odisha',
             },
             {
               value: '700+',
-              label: 'Temples in Bhubaneswar — the Temple City tourism economy anchors a major hospitality and tourism business sector',
+              label: 'Temples in Bhubaneswar: the Temple City tourism economy anchors a major hospitality and tourism business sector',
               sourceUrl: 'https://www.odishatourism.gov.in/',
               sourceLabel: 'Odisha Tourism',
             },
@@ -581,12 +605,12 @@ export default function BhubaneswarWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · BHUBANESWAR"
           headline="What 'Web Design' Actually Means for a Bhubaneswar Business"
-          lead="Bhubaneswar's economy runs on four very different buyer types — IT and B2B enterprise clients, government and institutional procurement, domestic and international tourists, and international buyers of Odisha's export products. Each needs a fundamentally different website strategy."
+          lead="Bhubaneswar's economy runs on four very different buyer types: IT and B2B enterprise clients, government and institutional procurement, domestic and international tourists, and international buyers of Odisha's export products. Each needs a fundamentally different website strategy."
           body={
             <>
               <p>
                 For IT companies, software firms, and startups in Infocity IT Park and STPI
-                Bhubaneswar — the website is a credibility and lead-generation tool for enterprise
+                Bhubaneswar: the website is a credibility and lead-generation tool for enterprise
                 sales. Product-led architecture, case study display, service capability pages, and
                 conversion flows designed for enterprise decision-makers are the standard. These
                 sites need to position Bhubaneswar-based firms as credible technology partners for
@@ -594,14 +618,14 @@ export default function BhubaneswarWebDesignPage() {
               </p>
               <p>
                 For government contractors, MEP consultancies, and infrastructure firms bidding on
-                Odisha government projects — the website needs to project institutional credibility,
+                Odisha government projects: the website needs to project institutional credibility,
                 project credentials, compliance documentation, and the kind of authority that makes
                 procurement managers confident. For tourism and hospitality businesses near the
-                Temple City heritage belt — mobile-first speed, booking system integration, and
+                Temple City heritage belt, mobile-first speed, booking system integration, and
                 local SEO for temple circuit searches are non-negotiable.
               </p>
               <p>
-                For Odisha exporters — handicrafts, agri-products, stone crafts, textiles — the
+                For Odisha exporters, handicrafts, agri-products, stone crafts, textiles: the
                 site needs to project product quality and artisan story to international B2B buyers
                 and D2C consumers with product catalog systems and B2B inquiry flows. Every
                 FactoryJet Bhubaneswar project covers discovery, Figma prototyping, Next.js
@@ -692,12 +716,12 @@ export default function BhubaneswarWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bhubaneswar Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Bhubaneswar's IT ecosystem moves fast — Startup Odisha companies are pitching investors, IT firms are responding to RFPs, and government contractors are building credibility for the next tender cycle. Waiting 12 weeks for a website that should have been live last quarter is not a strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Bhubaneswar's IT ecosystem moves fast: Startup Odisha companies are pitching investors, IT firms are responding to RFPs, and government contractors are building credibility for the next tender cycle. Waiting 12 weeks for a website that should have been live last quarter is not a strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -728,7 +752,7 @@ export default function BhubaneswarWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -737,9 +761,9 @@ export default function BhubaneswarWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -753,11 +777,11 @@ export default function BhubaneswarWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Bhubaneswar Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Bhubaneswar deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Bhubaneswar deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={BBSR_COMPARISON_COLUMNS}
           rows={BBSR_COMPARISON_ROWS}
@@ -768,47 +792,47 @@ export default function BhubaneswarWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="BHUBANESWAR × WEB DESIGN"
           headline="Web Design for Bhubaneswar's Key Industries"
-          lead="From IT companies in Infocity and Startup Odisha-backed startups to government contractors, KIIT and IIT Bhubaneswar adjacent businesses, temple tourism operators, steel and mining sector firms, and Odisha exporters — Bhubaneswar's economy is broader and faster-growing than most people outside the state realise. FactoryJet builds for each of them."
+          lead="From IT companies in Infocity and Startup Odisha-backed startups to government contractors, KIIT and IIT Bhubaneswar adjacent businesses, temple tourism operators, steel and mining sector firms, and Odisha exporters, Bhubaneswar's economy is broader and faster-growing than most people outside the state realise. FactoryJet builds for each of them."
           sectors={[
             {
               name: 'IT & Software Companies',
               description:
-                "Infocity IT Park is Bhubaneswar's flagship technology hub — housing major operations from Infosys, TCS, Wipro, and Mindtree, alongside a growing ecosystem of mid-size IT services companies and product startups. STPI Bhubaneswar and Nalco Nagar Tech Zone add further depth. IT companies need product-led websites with service capability pages, case study systems, and lead flows designed for enterprise sales cycles — not generic agency brochure sites.",
+                "Infocity IT Park is Bhubaneswar's flagship technology hub, housing major operations from Infosys, TCS, Wipro, and Mindtree, alongside a growing ecosystem of mid-size IT services companies and product startups. STPI Bhubaneswar and Nalco Nagar Tech Zone add further depth. IT companies need product-led websites with service capability pages, case study systems, and lead flows designed for enterprise sales cycles, not generic agency brochure sites.",
               example:
                 'IT services companies, software product firms, BPO and KPO operations, and tech startups in Infocity IT Park, STPI Bhubaneswar, and the broader Odisha IT corridor.',
             },
             {
               name: 'Startups & Entrepreneurship',
               description:
-                "Startup Odisha has registered over 1,500 startups under the Odisha Startup Policy 2016 — making Bhubaneswar one of India's most active state-level startup ecosystems outside the major metros. KIIT University's TBI (Technology Business Incubator) and IIT Bhubaneswar's incubation centre add further momentum. Startup websites need investor-credibility architecture, product-led design, demo request flows, and performance built for rapid iteration.",
+                "Startup Odisha has registered over 1,500 startups under the Odisha Startup Policy 2016, making Bhubaneswar one of India's most active state-level startup ecosystems outside the major metros. KIIT University's TBI (Technology Business Incubator) and IIT Bhubaneswar's incubation centre add further momentum. Startup websites need investor-credibility architecture, product-led design, demo request flows, and performance built for rapid iteration.",
               example:
                 "Startup Odisha-registered ventures, KIIT TBI-incubated companies, IIT Bhubaneswar spinouts, and early-stage tech and D2C companies across the Bhubaneswar startup ecosystem.",
             },
             {
               name: 'Government Contractors & Consulting',
               description:
-                "Odisha has one of India's most tech-forward state governments — eDistrict, the MO bus app, Odisha One portals, and a digital-first procurement approach. Government contractors, MEP consultancies, infrastructure and construction firms bidding on Odisha government projects, and public sector consulting firms need websites that project institutional credibility, project track record, compliance credentials, and authority signals that matter in procurement decisions.",
+                "Odisha has one of India's most tech-forward state governments, eDistrict, the MO bus app, Odisha One portals, and a digital-first procurement approach. Government contractors, MEP consultancies, infrastructure and construction firms bidding on Odisha government projects, and public sector consulting firms need websites that project institutional credibility, project track record, compliance credentials, and authority signals that matter in procurement decisions.",
               example:
                 'Engineering and infrastructure contractors, MEP consultancies, IT system integrators, and management consulting firms serving Odisha state government departments and PSUs.',
             },
             {
               name: 'Education & EdTech',
               description:
-                "Bhubaneswar has one of India's densest concentrations of premier institutions — AIIMS Bhubaneswar, IIT Bhubaneswar, KIIT University (deemed university, 30,000+ students), and XIMB (Xavier Institute of Management). This ecosystem creates demand for education-adjacent businesses: coaching institutes, EdTech platforms, student accommodation, and professional services targeting the student and faculty community.",
+                "Bhubaneswar has one of India's densest concentrations of premier institutions: AIIMS Bhubaneswar, IIT Bhubaneswar, KIIT University (deemed university, 30,000+ students), and XIMB (Xavier Institute of Management). This ecosystem creates demand for education-adjacent businesses: coaching institutes, EdTech platforms, student accommodation, and professional services targeting the student and faculty community.",
               example:
                 "Coaching centres, EdTech platforms, student housing providers, and professional services businesses serving the KIIT, IIT Bhubaneswar, AIIMS, and XIMB academic communities.",
             },
             {
               name: 'Tourism & Temple Hospitality',
               description:
-                "Bhubaneswar is India's Temple City — home to 700+ temples including Lingaraj, Mukteshwar, Rajarani, and dozens of others of architectural and historic significance. Odisha Tourism actively promotes the Golden Triangle (Bhubaneswar–Puri–Konark). Tourism operators, hotels, heritage tour companies, and restaurants serving this heritage belt need mobile-first websites with booking systems, rich photo galleries, and local SEO targeting temple circuit and Odisha tourism searches.",
+                "Bhubaneswar is India's Temple City, home to 700+ temples including Lingaraj, Mukteshwar, Rajarani, and dozens of others of architectural and historic significance. Odisha Tourism actively promotes the Golden Triangle (Bhubaneswar–Puri–Konark). Tourism operators, hotels, heritage tour companies, and restaurants serving this heritage belt need mobile-first websites with booking systems, rich photo galleries, and local SEO targeting temple circuit and Odisha tourism searches.",
               example:
                 "Heritage hotels, temple circuit tour operators, restaurants near Lingaraj and Mukteshwar, and travel businesses targeting domestic and international tourists visiting the Odisha Golden Triangle.",
             },
             {
               name: 'Steel, Mining & Industrial',
               description:
-                "Odisha is India's leading producer of iron ore and a major steel-producing state — with SAIL and Tata Steel operating large nearby facilities. Bhubaneswar's business community includes hundreds of steel sector suppliers, mining equipment vendors, logistics companies, and industrial services businesses serving this ecosystem. These businesses need websites that project capability, compliance certifications, and supply track record to institutional procurement teams.",
+                "Odisha is India's leading producer of iron ore and a major steel-producing state, with SAIL and Tata Steel operating large nearby facilities. Bhubaneswar's business community includes hundreds of steel sector suppliers, mining equipment vendors, logistics companies, and industrial services businesses serving this ecosystem. These businesses need websites that project capability, compliance certifications, and supply track record to institutional procurement teams.",
               example:
                 'Steel sector suppliers, mining equipment vendors, industrial logistics companies, and raw material traders serving SAIL, Tata Steel, and the broader Odisha minerals and metals ecosystem.',
             },
@@ -826,7 +850,7 @@ export default function BhubaneswarWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Bhubaneswar Businesses"
-          lead="The questions we answer on every Bhubaneswar discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Bhubaneswar discovery call, answered here, without the runaround."
           categories={BBSR_FAQ_CATEGORIES}
           items={BBSR_FAQ_ITEMS}
         />
@@ -836,7 +860,7 @@ export default function BhubaneswarWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Bhubaneswar Website?"
-          sub="Bhubaneswar is Eastern India's fastest-growing IT hub — with Infocity's major tech operations, 1,500+ Startup Odisha companies, a tech-forward state government, and a tourism economy anchored by 700+ temples. The businesses that invest in a high-performing web presence now will own the search rankings as the city's digital economy continues to accelerate. Every week without a strong website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          sub="Bhubaneswar is Eastern India's fastest-growing IT hub, with Infocity's major tech operations, 1,500+ Startup Odisha companies, a tech-forward state government, and a tourism economy anchored by 700+ temples. The businesses that invest in a high-performing web presence now will own the search rankings as the city's digital economy continues to accelerate. Every week without a strong website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

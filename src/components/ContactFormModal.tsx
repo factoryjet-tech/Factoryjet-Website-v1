@@ -442,7 +442,7 @@ const ContactFormModal: React.FC = () => {
         </div>
       </div>
 
-      {/* Honeypot — visually hidden, off-screen; real users never see/fill it. */}
+      {/* Honeypot, visually hidden, off-screen; real users never see/fill it. */}
       <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', top: 'auto', height: 0, width: 0, overflow: 'hidden' }}>
         <label>Company website
           <input
@@ -499,7 +499,7 @@ const ContactFormModal: React.FC = () => {
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">
           Don&rsquo;t want to wait?
         </p>
-        {/* Calendly CTA — primary action on success */}
+        {/* Calendly CTA, primary action on success */}
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"

@@ -49,7 +49,7 @@ export default function FinalCTA() {
       className="relative w-full overflow-hidden"
       style={{ backgroundColor: "#F05A28", color: "#FFFFFF", maxWidth: "100vw" }}
     >
-      {/* Decorative stat watermarks — behind content */}
+      {/* Decorative stat watermarks, behind content */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {WATERMARKS.map((w) => (
           <span
@@ -142,7 +142,7 @@ export default function FinalCTA() {
           >
             Whether you need a high-performance website, a revenue-generating
             online store, custom AI agents that work 24/7, or AI SEO that gets
-            you found in ChatGPT and Google alike — FactoryJet delivers it all
+            you found in ChatGPT and Google alike, FactoryJet delivers it all
             at pricing that makes traditional traditional agencies uncomfortable. Start
             with a free digital audit.
           </p>

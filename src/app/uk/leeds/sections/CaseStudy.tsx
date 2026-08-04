@@ -85,10 +85,10 @@ function BeforeAfterSlider() {
         aria-label="Before and after website comparison. Drag to compare."
         role="img"
       >
-        {/* Layer 0 — BEFORE image (full width, base layer) */}
+        {/* Layer 0: BEFORE image (full width, base layer) */}
         <Image
           src="/images/leeds/case-before.webp"
-          alt="Leeds financial advisory firm website before FactoryJet redesign — slow, outdated WordPress theme"
+          alt="Leeds financial advisory firm website before FactoryJet redesign, slow, outdated WordPress theme"
           fill
           quality={80}
           className="object-cover object-top"
@@ -96,7 +96,7 @@ function BeforeAfterSlider() {
           draggable={false}
         />
 
-        {/* Layer 1 — AFTER image (clipped to reveal from left) */}
+        {/* Layer 1, AFTER image (clipped to reveal from left) */}
         <div
           className="absolute inset-0"
           style={{
@@ -106,7 +106,7 @@ function BeforeAfterSlider() {
         >
           <Image
             src="/images/leeds/case-after.webp"
-            alt="Leeds financial advisory firm website after FactoryJet redesign — fast, modern, conversion-engineered"
+            alt="Leeds financial advisory firm website after FactoryJet redesign, fast, modern, conversion-engineered"
             fill
             quality={80}
             className="object-cover object-top"
@@ -114,7 +114,7 @@ function BeforeAfterSlider() {
           />
         </div>
 
-        {/* Layer 2 — Vertical divider line */}
+        {/* Layer 2, Vertical divider line */}
         <div
           className="absolute top-0 bottom-0 pointer-events-none"
           style={{
@@ -128,7 +128,7 @@ function BeforeAfterSlider() {
           aria-hidden="true"
         />
 
-        {/* Layer 3 — Drag handle */}
+        {/* Layer 3, Drag handle */}
         <div
           className="absolute top-1/2 flex items-center justify-center rounded-full pointer-events-none"
           style={{
@@ -150,7 +150,7 @@ function BeforeAfterSlider() {
           ⟨⟩
         </div>
 
-        {/* BEFORE badge — top-left */}
+        {/* BEFORE badge, top-left */}
         <div
           className="absolute top-4 left-4 rounded-full px-3 py-1 pointer-events-none"
           style={{
@@ -167,7 +167,7 @@ function BeforeAfterSlider() {
           Before
         </div>
 
-        {/* AFTER badge — top-right */}
+        {/* AFTER badge, top-right */}
         <div
           className="absolute top-4 right-4 rounded-full px-3 py-1 pointer-events-none"
           style={{

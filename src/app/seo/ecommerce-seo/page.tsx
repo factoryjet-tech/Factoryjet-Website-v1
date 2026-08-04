@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -49,6 +50,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/ecommerce-seo', languages: seoSubServiceAlternatesIN['ecommerce-seo'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/ecommerce-seo#webpage',
+  url: 'https://factoryjet.com/seo/ecommerce-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -140,6 +155,10 @@ const ECOM_COMPARISON_ROWS = [
 export default function EcommerceSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="ecom-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="ecom-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
@@ -154,10 +173,15 @@ export default function EcommerceSeoPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'Ecommerce SEO', url: 'https://factoryjet.com/seo/ecommerce-seo' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_ecommerce_seo_hero" />}
           eyebrow="ECOMMERCE SEO SERVICES · INDIA"
-          headline="Ecommerce SEO Services in India — Get Your Online Store Found on Google and Sell More"
+          headline="Ecommerce SEO Services in India, Get Your Online Store Found on Google and Sell More"
           lead="An online store can have hundreds of pages, but only a few make you money: your category pages and your product pages. Those are the pages people land on when they are ready to buy. We help online stores across India get those pages found on Google. We work on the pages that sell, tidy big stores so Google does not get lost, show your reviews and star ratings in Google results, and make your store fast on phones. Works with Shopify, WooCommerce, and custom stores. No long contracts, and everything we do stays yours."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Shopify, Woo & custom', 'Pages that sell', 'No long contracts']}
@@ -166,7 +190,7 @@ export default function EcommerceSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Ecommerce SEO Agency — 500+ Stores, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Ecommerce SEO Agency, 500+ Stores, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

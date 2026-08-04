@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Bot, ShoppingBag, RefreshCw, Handshake, MessagesSquare, Workflow, Check } from 'lucide-react';
 
@@ -196,6 +197,10 @@ export default function AgenticCommercePage() {
       <SiteHeader locale="us" />
 
       <main className="agc">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Agentic Commerce', url: URL },
+        ]} />
         {/* HERO */}
         <section className="agc-hero">
           <div className="agc-wrap agc-hero-grid">
@@ -385,7 +390,7 @@ export default function AgenticCommercePage() {
           </div>
         </section>
 
-        {/* Free AI Visibility Checker — lead magnet funnel */}
+        {/* Free AI Visibility Checker, lead magnet funnel */}
         <AiVisibilityCtaBand />
 
         {/* FAQ */}

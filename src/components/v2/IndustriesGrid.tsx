@@ -61,7 +61,7 @@ const INDUSTRIES = [
     id: 1,
     name: 'E-Commerce & DTC Brands',
     description:
-      'Custom Shopify and headless commerce storefronts that outperform templates — faster load times, higher AOV, and better mobile conversion rates for direct-to-consumer brands.',
+      'Custom Shopify and headless commerce storefronts that outperform templates, faster load times, higher AOV, and better mobile conversion rates for direct-to-consumer brands.',
     stat: '+38%',
     statLabel: 'avg. conversion lift on custom Shopify vs. off-the-shelf template builds',
     chips: ['Shopify', 'Headless', 'DTC', 'Klaviyo'],
@@ -72,7 +72,7 @@ const INDUSTRIES = [
     id: 2,
     name: 'Professional Services',
     description:
-      'Accountants, consultants, financial advisors, and agencies — credibility-first websites built to generate qualified inbound leads and shorten long B2B sales cycles.',
+      'Accountants, consultants, financial advisors, and agencies, credibility-first websites built to generate qualified inbound leads and shorten long B2B sales cycles.',
     stat: '3.2×',
     statLabel: 'more qualified inbound leads within 90 days of launch',
     chips: ['Consulting', 'Finance', 'Agencies', 'B2B'],
@@ -83,7 +83,7 @@ const INDUSTRIES = [
     id: 3,
     name: 'Healthcare & MedTech',
     description:
-      'HIPAA-aware, ADA-compliant web experiences for practices, clinics, and health tech companies — built to earn patient trust and drive appointment bookings.',
+      'HIPAA-aware, ADA-compliant web experiences for practices, clinics, and health tech companies, built to earn patient trust and drive appointment bookings.',
     stat: '+52%',
     statLabel: 'increase in appointment bookings after redesign',
     chips: ['HIPAA-aware', 'ADA', 'MedTech'],
@@ -94,7 +94,7 @@ const INDUSTRIES = [
     id: 4,
     name: 'Retail & Local Businesses',
     description:
-      'Mobile-first sites optimized for local search, foot traffic, and repeat customers — delivering measurable ROI for brick-and-mortar and omnichannel brands.',
+      'Mobile-first sites optimized for local search, foot traffic, and repeat customers, delivering measurable ROI for brick-and-mortar and omnichannel brands.',
     stat: '+41%',
     statLabel: 'increase in local organic search traffic within 60 days',
     chips: ['Local SEO', 'Google Maps', 'Mobile-First'],
@@ -509,7 +509,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
     >
       {/* ── Background refraction blobs ──────────────────────────────── */}
       <div aria-hidden="true" className="pointer-events-none select-none">
-        {/* Orange — top-left */}
+        {/* Orange, top-left */}
         <div
           style={{
             position: 'absolute',
@@ -523,7 +523,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             zIndex: 0,
           }}
         />
-        {/* Purple — bottom-right */}
+        {/* Purple, bottom-right */}
         <div
           style={{
             position: 'absolute',
@@ -537,7 +537,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             zIndex: 0,
           }}
         />
-        {/* Blue — centre */}
+        {/* Blue, centre */}
         <div
           style={{
             position: 'absolute',
@@ -551,7 +551,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             zIndex: 0,
           }}
         />
-        {/* Small orange — top-right */}
+        {/* Small orange, top-right */}
         <div
           style={{
             position: 'absolute',
@@ -622,7 +622,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             borderRadius: 12,
           }}
         >
-          {/* Row 1 — [2fr content] [1fr orange stat] */}
+          {/* Row 1, [2fr content] [1fr orange stat] */}
           <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[2fr_1fr]">
             <IndustryCard industry={INDUSTRIES[0]} titleSize={24} />
             <OrangeStatCard
@@ -632,7 +632,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             />
           </div>
 
-          {/* Row 2 — [1fr orange stat] [2fr content] */}
+          {/* Row 2, [1fr orange stat] [2fr content] */}
           <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[1fr_2fr]">
             <OrangeStatCard
               stat="Day 1"
@@ -642,13 +642,13 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             <IndustryCard industry={INDUSTRIES[1]} titleSize={24} />
           </div>
 
-          {/* Row 3 — [1fr] [1fr] 2×2 grid */}
+          {/* Row 3, [1fr] [1fr] 2×2 grid */}
           <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
             <IndustryCard industry={INDUSTRIES[2]} titleSize={22} />
             <IndustryCard industry={INDUSTRIES[3]} titleSize={22} />
           </div>
 
-          {/* Row 4 — [1fr] [1fr] 2×2 grid */}
+          {/* Row 4, [1fr] [1fr] 2×2 grid */}
           <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
             <IndustryCard industry={INDUSTRIES[4]} titleSize={22} />
             <IndustryCard industry={INDUSTRIES[5]} titleSize={22} />

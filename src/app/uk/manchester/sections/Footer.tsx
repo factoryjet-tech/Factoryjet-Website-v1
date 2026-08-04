@@ -51,7 +51,7 @@ export default function Footer() {
               design, e-commerce development (Shopify, WooCommerce, headless
               commerce), AI agent development, and AI-powered SEO (GEO, AEO,
               AIO). Our Manchester web design services are built on Next.js 15,
-              Tailwind CSS 4, and GSAP — delivering enterprise-grade websites
+              Tailwind CSS 4, and GSAP, delivering enterprise-grade websites
               at startup-friendly prices. Whether you&apos;re a tech startup in
               the Northern Quarter, a financial services firm in Spinningfields,
               a media company at MediaCityUK, or a manufacturer in Trafford

@@ -5,7 +5,7 @@ import { FAQS } from "./faqData";
 export const metadata: Metadata = {
   title: "AI Web Design Agency Birmingham | FactoryJet",
   description:
-    "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. Fixed-price, scoped to your build and quoted up front. From Paradise Quarter to Brindleyplace — built for the second city.",
+    "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. Fixed-price, scoped to your build and quoted up front. From Paradise Quarter to Brindleyplace, built for the second city.",
   alternates: {
     canonical: "https://factoryjet.com/uk/birmingham",
   },
@@ -41,7 +41,7 @@ const schema = {
     },
     {
       "@type": "LocalBusiness",
-      "name": "FactoryJet Technologies — Birmingham",
+      "name": "FactoryJet Technologies: Birmingham",
       "url": "https://factoryjet.com/uk/birmingham",
       "description":
         "AI-native web design, e-commerce, AI agents and AI SEO agency serving Birmingham and the West Midlands.",
@@ -135,7 +135,7 @@ const schema = {
 export default function Page() {
   return (
     <>
-      {/* JetBrains Mono — used by the TechStack section on this page */}
+      {/* JetBrains Mono, used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
       <script
         id="birmingham-schema"

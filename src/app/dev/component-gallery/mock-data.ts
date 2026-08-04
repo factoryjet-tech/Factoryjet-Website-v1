@@ -31,7 +31,7 @@ import type { FinalCTAAnchorProps } from '@/components/programmatic/FinalCTAAnch
 export const mockHero: HeroSectionProps = {
   eyebrow: 'WEB DESIGN · LONDON',
   headline: 'Web design that wins London business.',
-  lead: "London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days — with transparent pricing, a codebase you own, and SEO baked in from day one.",
+  lead: "London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days, with transparent pricing, a codebase you own, and SEO baked in from day one.",
   trustItems: ['31-day delivery', 'From £1,200', 'You own the code'],
   primaryCta: {
     label: 'Get a Free Quote',
@@ -53,7 +53,7 @@ export const mockCityContextStatStrip: CityContextStatStripProps = {
   eyebrow: 'LONDON IN NUMBERS',
   headline: 'A market that rewards a serious digital presence.',
   leadParagraph:
-    "London is the UK's commercial centre — a concentrated market of nine million people and roughly a third of national output. Search visibility and conversion design earn back their cost in weeks, not quarters.",
+    "London is the UK's commercial centre: a concentrated market of nine million people and roughly a third of national output. Search visibility and conversion design earn back their cost in weeks, not quarters.",
   stats: [
     {
       value: '9.0M',
@@ -88,9 +88,9 @@ export const mockCityContextProseInline: CityContextProseInlineProps = {
   headline: "A city that's quietly become the UK's manufacturing-tech corridor.",
   paragraphs: [
     "Sheffield is no longer the city that featured in your school history textbooks. The Advanced Manufacturing Research Centre with Boeing brought serious industrial R&D to the south of the city, and the AMRC ecosystem has anchored a generation of engineering startups around it.",
-    "The two universities — Sheffield and Sheffield Hallam — graduate around 13,000 students every year between them. A meaningful slice of that cohort stays. The city now has a real software and product-design talent pool, priced well below London or Manchester rates.",
+    "The two universities: Sheffield and Sheffield Hallam, graduate around 13,000 students every year between them. A meaningful slice of that cohort stays. The city now has a real software and product-design talent pool, priced well below London or Manchester rates.",
     "What's missing is digital presentation. Many capable Sheffield firms still run websites that under-sell what they actually do. A clean, fast, well-architected site is one of the cheapest competitive moves available, and it's where we focus.",
-    "We build for Sheffield clients the same way we build for London clients — same stack, same delivery cadence, same code ownership at handover. The only thing that differs is the local proof we cite in the copy.",
+    "We build for Sheffield clients the same way we build for London clients, same stack, same delivery cadence, same code ownership at handover. The only thing that differs is the local proof we cite in the copy.",
   ],
   inlineStats: [
     {
@@ -125,12 +125,12 @@ export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
     href: '#pricing',
   },
   introParagraph:
-    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both — because the second is where a website earns its keep over years, not weeks.",
+    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both, because the second is where a website earns its keep over years, not weeks.",
   pullquoteText:
     "We don't hand you a black box. We hand you Next.js, Tailwind, and a CMS your team can actually edit.",
   bodyParagraphs: [
     "Every site ships on a modern, statically-generated stack. Static export means no server to keep warm, no surprise hosting bills, and Lighthouse scores in the high nineties without us tuning anything exotic. Cloudflare Pages takes care of edge delivery and rollback. Your team needs neither devops experience nor a renewal contract.",
-    "We instrument analytics, schema markup, and AI-search visibility from day one. The site is built to be discoverable not just by Google, but by Claude, Perplexity, and ChatGPT — increasingly the way decision-makers find vendors. That's not a separate add-on. It's the same build.",
+    "We instrument analytics, schema markup, and AI-search visibility from day one. The site is built to be discoverable not just by Google, but by Claude, Perplexity, and ChatGPT, increasingly the way decision-makers find vendors. That's not a separate add-on. It's the same build.",
   ],
   diagramNodes: [
     { label: 'Discovery', description: 'Brief + audit' },
@@ -185,7 +185,7 @@ export const mockServiceStepsHorizontal: ServiceStepsHorizontalProps = {
 export const mockWhyComparisonMatrix: WhyComparisonMatrixProps = {
   eyebrow: 'WHY FACTORYJET',
   headline: 'How we compare to the typical London digital agency.',
-  lead: "Pricing varies enormously across London digital agencies, and most won't publish numbers. Here's how our delivery model differs structurally — independent of headline price.",
+  lead: "Pricing varies enormously across London digital agencies, and most won't publish numbers. Here's how our delivery model differs structurally, independent of headline price.",
   // competitorColumnHeaders intentionally omitted — component default
   // is the generic "Local London agency". We never name real competitors
   // in published copy.
@@ -263,11 +263,11 @@ export const mockWhyCompactAdvantageList: WhyCompactAdvantageListProps = {
     },
     {
       title: 'AI search baked in',
-      body: 'Schema markup, crawler-friendly HTML, and an answer-engine-ready content structure. Your site shows up when somebody asks Claude for a Sheffield supplier — not just when they Google one.',
+      body: 'Schema markup, crawler-friendly HTML, and an answer-engine-ready content structure. Your site shows up when somebody asks Claude for a Sheffield supplier, not just when they Google one.',
     },
     {
       title: 'A handover that ends the engagement',
-      body: "We don't run on retainers. The build ends, the code is yours, and we step out of the way. If you want help later, you call us — but you're not obligated to.",
+      body: "We don't run on retainers. The build ends, the code is yours, and we step out of the way. If you want help later, you call us, but you're not obligated to.",
     },
   ],
 };
@@ -322,7 +322,7 @@ export const mockProcessVerticalTimeline: ProcessVerticalTimelineProps = {
 export const mockIndustriesGridIllustrated: IndustriesGridIllustratedProps = {
   eyebrow: 'WHO WE BUILD FOR',
   headline: 'Six London sectors where a faster, sharper site moves the needle most.',
-  lead: "We don't pretend to be sector specialists. We are stack specialists. But these six categories of London business consistently see the largest commercial uplift from a serious web rebuild — usually because their existing site is the slowest part of an otherwise excellent operation.",
+  lead: "We don't pretend to be sector specialists. We are stack specialists. But these six categories of London business consistently see the largest commercial uplift from a serious web rebuild, usually because their existing site is the slowest part of an otherwise excellent operation.",
   sectors: [
     {
       slug: 'financial-services',
@@ -447,7 +447,7 @@ export const mockPricingThreeTier: PricingThreeTierProps = {
 export const mockFAQEditorialColumn: FAQEditorialColumnProps = {
   eyebrow: 'COMMON QUESTIONS',
   headline: "What London clients ask before they sign.",
-  lead: "These are the eight questions that come up most often on first calls. If yours isn't here, message us — we'll add it.",
+  lead: "These are the eight questions that come up most often on first calls. If yours isn't here, message us. We'll add it.",
   faqs: [
     {
       question: 'How is your pricing fixed if every project is different?',
@@ -462,22 +462,22 @@ export const mockFAQEditorialColumn: FAQEditorialColumnProps = {
     {
       question: 'What happens if I want changes after launch?',
       answer:
-        "Small edits are easy because the codebase is yours and the CMS is configured for your team. For larger changes, you can hire us back on a fixed-scope basis or take it to any other developer — the stack is industry-standard Next.js, not a proprietary system.",
+        "Small edits are easy because the codebase is yours and the CMS is configured for your team. For larger changes, you can hire us back on a fixed-scope basis or take it to any other developer: the stack is industry-standard Next.js, not a proprietary system.",
     },
     {
       question: 'Do you do SEO, or just the build?',
       answer:
-        "Technical SEO — schema, performance, crawlability, AI-search markup — is included in every build. Content SEO and link-building are not; those are ongoing disciplines that we'd rather not pretend to be a fit for. We can recommend specialist partners.",
+        "Technical SEO, schema, performance, crawlability, AI-search markup, is included in every build. Content SEO and link-building are not; those are ongoing disciplines that we'd rather not pretend to be a fit for. We can recommend specialist partners.",
     },
     {
       question: 'What about hosting and ongoing costs?',
       answer:
-        "We deploy on Cloudflare Pages, which is free for the traffic profiles of most clients we work with. Domains and any premium integrations (a CRM, scheduling tool, etc.) are billed directly to you by those providers — never marked up by us.",
+        "We deploy on Cloudflare Pages, which is free for the traffic profiles of most clients we work with. Domains and any premium integrations (a CRM, scheduling tool, etc.) are billed directly to you by those providers, never marked up by us.",
     },
     {
       question: 'Can you work with our existing brand and assets?',
       answer:
-        "Yes. We're happy to build inside an existing brand system if you have one, and we'll flag where the brand is fighting the conversion goals so you can decide what to do about it. If you don't have a brand system, we don't pretend to be brand strategists — we'll work with what you have or recommend a partner.",
+        "Yes. We're happy to build inside an existing brand system if you have one, and we'll flag where the brand is fighting the conversion goals so you can decide what to do about it. If you don't have a brand system, we don't pretend to be brand strategists. We'll work with what you have or recommend a partner.",
     },
     {
       question: 'What does "you own the code" actually mean?',

@@ -95,7 +95,7 @@ export default function FinalCTA() {
                 maxWidth: "50ch",
               }}
             >
-              Whether you need a website, an online store, an AI agent, or a complete digital strategy — we will give you an honest assessment of what will work, what it costs, and how fast we can deliver. No obligation. No jargon. Just a clear plan.
+              Whether you need a website, an online store, an AI agent, or a complete digital strategy, we will give you an honest assessment of what will work, what it costs, and how fast we can deliver. No obligation. No jargon. Just a clear plan.
             </p>
 
             {/* Trust checkpoints */}
@@ -156,7 +156,7 @@ export default function FinalCTA() {
               region="uk"
               source="uk_leeds_final_cta"
               heading="Get your free Leeds digital audit"
-              subheading="Just your name and email to start — we reply within 4 hours."
+              subheading="Just your name and email to start, we reply within 4 hours."
             />
           </div>
 

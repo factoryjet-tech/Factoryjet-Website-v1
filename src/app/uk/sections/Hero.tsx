@@ -154,15 +154,15 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      aria-label="FactoryJet UK — hero"
+      aria-label="FactoryJet UK, hero"
       className="relative flex min-h-screen w-full items-start justify-center overflow-hidden"
       style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
     >
-      {/* Layer 1 — WebGL mesh gradient (lazy, client only) */}
+      {/* Layer 1: WebGL mesh gradient (lazy, client only) */}
       <MeshGradient />
 
-      {/* Layer 1b — Photographic hero image. Enhances the dark hero with
-          warmth and texture without competing with text — low opacity,
+      {/* Layer 1b, Photographic hero image. Enhances the dark hero with
+          warmth and texture without competing with text, low opacity,
           overlay blend mode, sits above the WebGL mesh but below the
           grain layer and content. */}
       <div
@@ -183,7 +183,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Layer 2 — SVG cityscape silhouette */}
+      {/* Layer 2, SVG cityscape silhouette */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1600 200"
@@ -232,7 +232,7 @@ export default function Hero() {
         </g>
       </svg>
 
-      {/* Layer 3 — Grain */}
+      {/* Layer 3, Grain */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
@@ -246,7 +246,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Watermark "UK" — desktop only */}
+      {/* Watermark "UK", desktop only */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute hidden select-none lg:block font-clash"
@@ -264,8 +264,8 @@ export default function Hero() {
         UK
       </span>
 
-      {/* Layer 4 — Content. Tight vertical rhythm so the whole stack —
-          eyebrow → H1 → sub → value prop → CTAs → trust bar → cityscape —
+      {/* Layer 4, Content. Tight vertical rhythm so the whole stack,
+          eyebrow → H1 → sub → value prop → CTAs → trust bar → cityscape,
           fits within a single 1440×900 viewport without scrolling. */}
       <div
         className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-[18vh] pb-24 text-center sm:px-8"
@@ -306,11 +306,11 @@ export default function Hero() {
             textShadow: "0 0 30px rgba(255,107,53,0.08)",
           }}
         >
-          The UK&rsquo;s AI-Native Digital Agency — Web Design, E-Commerce, AI
+          The UK&rsquo;s AI-Native Digital Agency: Web Design, E-Commerce, AI
           Agents &amp; AI SEO for British Businesses
         </h1>
 
-        {/* Sub-headline — opener sentence only. Rest moved to Section 2. */}
+        {/* Sub-headline, opener sentence only. Rest moved to Section 2. */}
         <div ref={subheadRef} className="mt-4">
           <p
             style={{
@@ -338,7 +338,7 @@ export default function Hero() {
               lineHeight: 1.45,
             }}
           >
-            Enterprise-grade web design, e-commerce, AI agents &amp; AI SEO —
+            Enterprise-grade web design, e-commerce, AI agents &amp; AI SEO,
             at a fixed, transparent quote.
           </p>
         </div>
@@ -411,7 +411,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll cue — sits low, overlapping the decorative cityscape */}
+      {/* Scroll cue, sits low, overlapping the decorative cityscape */}
       <div
         ref={scrollCueRef}
         aria-hidden="true"

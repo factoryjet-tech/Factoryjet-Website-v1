@@ -131,7 +131,7 @@ const TREATMENTS: ReadonlyArray<TreatmentEntry> = [
 export default function ComponentGalleryPage() {
   return (
     <div className="bg-white">
-      {/* Sticky nav strip — anchor links to each treatment */}
+      {/* Sticky nav strip, anchor links to each treatment */}
       <nav
         aria-label="Treatment navigation"
         className="sticky top-0 z-50 border-b border-border-soft bg-white/95 backdrop-blur"

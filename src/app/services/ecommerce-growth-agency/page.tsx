@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Megaphone, Mail, Search, MousePointerClick, ShoppingBag, Bot, Check } from 'lucide-react';
 
@@ -198,6 +199,11 @@ export default function EcommerceGrowthAgencyPage() {
       <SiteHeader locale="us" />
 
       <main className="ega">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'Ecommerce Growth Agency', url: URL },
+        ]} />
         {/* HERO */}
         <section className="ega-hero">
           <div className="ega-wrap ega-hero-grid">

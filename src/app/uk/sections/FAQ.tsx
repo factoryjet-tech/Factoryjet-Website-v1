@@ -30,7 +30,7 @@ const CATEGORIES: Category[] = [
   { id: "web-design", label: "Web Design & Development", count: 7 },
   { id: "ecommerce", label: "E-Commerce", count: 5 },
   { id: "ai-agents", label: "AI Agents", count: 5 },
-  { id: "ai-seo", label: "AI SEO — GEO/AEO/AIO", count: 7 },
+  { id: "ai-seo", label: "AI SEO: GEO/AEO/AIO", count: 7 },
   { id: "general", label: "General", count: 4 },
 ];
 
@@ -45,27 +45,27 @@ const FAQS: Faq[] = [
   {
     cat: "web-design",
     q: "How much does a website cost in the UK in 2026?",
-    a: "UK website costs vary significantly with scope, from basic template sites to enterprise builds. FactoryJet pricing is fixed-price and scoped to your build — the main drivers are page count, custom design depth, and integrations. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
+    a: "UK website costs vary significantly with scope, from basic template sites to enterprise builds. FactoryJet pricing is fixed-price and scoped to your build: the main drivers are page count, custom design depth, and integrations. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
   },
   {
     cat: "web-design",
     q: "What is the best website design company in the UK?",
-    a: "The best website design company depends on your specific needs and budget. Large agencies serve enterprise clients at premium rates, and mid-market agencies sit somewhere below that. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, scoped price quoted up front. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
+    a: "The best website design company depends on your specific needs and budget. Large agencies serve enterprise clients at premium rates, and mid-market agencies sit somewhere below that. FactoryJet occupies a unique position as the UK’s AI-native web design agency, delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, scoped price quoted up front. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
   },
   {
     cat: "web-design",
     q: "How long does it take to build a website in the UK?",
-    a: "Most UK web design agencies take 8–16 weeks for a standard business website. FactoryJet delivers in 3–6 weeks for most projects, and as fast as 2 weeks for smaller sites. Our faster turnaround comes from building on a component-based architecture with AI-augmented development workflows — not from cutting corners. Every build includes responsive design, SEO optimisation, AI search readiness, and full quality assurance.",
+    a: "Most UK web design agencies take 8–16 weeks for a standard business website. FactoryJet delivers in 3–6 weeks for most projects, and as fast as 2 weeks for smaller sites. Our faster turnaround comes from building on a component-based architecture with AI-augmented development workflows, not from cutting corners. Every build includes responsive design, SEO optimisation, AI search readiness, and full quality assurance.",
   },
   {
     cat: "web-design",
     q: "What is the difference between a web designer and a web developer?",
-    a: "A web designer focuses on the visual appearance — layout, typography, colours, and user experience. A web developer writes the code that makes the design functional — handling databases, server logic, and interactive features. At FactoryJet, every project gets both: our AI-augmented process handles design and development together, so you get a site that looks stunning and performs flawlessly without hiring two separate teams.",
+    a: "A web designer focuses on the visual appearance, layout, typography, colours, and user experience. A web developer writes the code that makes the design functional, handling databases, server logic, and interactive features. At FactoryJet, every project gets both: our AI-augmented process handles design and development together, so you get a site that looks stunning and performs flawlessly without hiring two separate teams.",
   },
   {
     cat: "web-design",
     q: "Is WordPress still good for business websites in 2026?",
-    a: "WordPress powers roughly 43% of all websites globally and remains a viable option for many businesses. However, WordPress sites typically score 50–70 on Google Lighthouse performance, require constant security patching, and are not optimised for AI search engines. Modern frameworks like Next.js 15 deliver significantly faster load times (under 2 seconds vs 4–6 seconds for WordPress), better SEO scores (90+ Lighthouse vs 60–80), and built-in AI crawler compatibility. FactoryJet builds exclusively on Next.js for these reasons — the performance difference directly impacts your revenue. Sites loading in one second convert at three times the rate of sites taking five seconds.",
+    a: "WordPress powers roughly 43% of all websites globally and remains a viable option for many businesses. However, WordPress sites typically score 50–70 on Google Lighthouse performance, require constant security patching, and are not optimised for AI search engines. Modern frameworks like Next.js 15 deliver significantly faster load times (under 2 seconds vs 4–6 seconds for WordPress), better SEO scores (90+ Lighthouse vs 60–80), and built-in AI crawler compatibility. FactoryJet builds exclusively on Next.js for these reasons: the performance difference directly impacts your revenue. Sites loading in one second convert at three times the rate of sites taking five seconds.",
   },
   {
     cat: "web-design",
@@ -75,17 +75,17 @@ const FAQS: Faq[] = [
   {
     cat: "web-design",
     q: "What is Next.js and why should my UK business use it?",
-    a: "Next.js is a React-based framework used by Stripe, Vercel, TikTok, and Netflix for their websites. It delivers server-side rendering for instant load times, automatic code splitting for performance, built-in SEO optimisation, and static site generation for maximum speed. FactoryJet builds every UK client website on Next.js 15 — the latest version — paired with Tailwind CSS 4. The result is websites that load in under two seconds, score 90+ on Lighthouse, and are readable by both Google and AI search engines like ChatGPT and Perplexity.",
+    a: "Next.js is a React-based framework used by Stripe, Vercel, TikTok, and Netflix for their websites. It delivers server-side rendering for instant load times, automatic code splitting for performance, built-in SEO optimisation, and static site generation for maximum speed. FactoryJet builds every UK client website on Next.js 15: the latest version, paired with Tailwind CSS 4. The result is websites that load in under two seconds, score 90+ on Lighthouse, and are readable by both Google and AI search engines like ChatGPT and Perplexity.",
   },
   {
     cat: "ecommerce",
-    q: "Shopify vs WooCommerce — which is better for UK businesses in 2026?",
-    a: "Both are excellent platforms serving different needs. Shopify (5.8 million live sites globally) is better for businesses that want simplicity, reliability, and managed infrastructure — hosting, security, and payments work out of the box, on a tiered monthly subscription plus standard card-processing fees. WooCommerce (4.5 million live sites) is better for businesses needing deep customisation who are comfortable managing their own hosting. For most UK SMBs launching their first online store, we typically recommend Shopify for lower maintenance overhead. For businesses with complex product configurations, multiple integrations, or existing WordPress sites, WooCommerce offers more flexibility. We build on both and recommend based on your actual business needs, not our preferred platform.",
+    q: "Shopify vs WooCommerce, which is better for UK businesses in 2026?",
+    a: "Both are excellent platforms serving different needs. Shopify (5.8 million live sites globally) is better for businesses that want simplicity, reliability, and managed infrastructure, hosting, security, and payments work out of the box, on a tiered monthly subscription plus standard card-processing fees. WooCommerce (4.5 million live sites) is better for businesses needing deep customisation who are comfortable managing their own hosting. For most UK SMBs launching their first online store, we typically recommend Shopify for lower maintenance overhead. For businesses with complex product configurations, multiple integrations, or existing WordPress sites, WooCommerce offers more flexibility. We build on both and recommend based on your actual business needs, not our preferred platform.",
   },
   {
     cat: "ecommerce",
     q: "How much does an e-commerce website cost in the UK?",
-    a: "UK e-commerce website costs vary widely, from a basic Shopify store to a large enterprise custom build. FactoryJet delivers Shopify and WooCommerce stores at a fixed price scoped to your build — the main drivers are catalogue size, theme customisation, and the integrations you need. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
+    a: "UK e-commerce website costs vary widely, from a basic Shopify store to a large enterprise custom build. FactoryJet delivers Shopify and WooCommerce stores at a fixed price scoped to your build: the main drivers are catalogue size, theme customisation, and the integrations you need. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
   },
   {
     cat: "ecommerce",
@@ -105,17 +105,17 @@ const FAQS: Faq[] = [
   {
     cat: "ai-agents",
     q: "What is an AI agent and how is it different from a chatbot?",
-    a: "A chatbot follows pre-defined scripts and decision trees — if the user’s query does not match the script, the chatbot fails. An AI agent uses large language models to understand natural language, interpret context, reason about the best action, and take autonomous steps to achieve a goal. The industry term is agentic AI — named a Gartner Top 10 strategic technology trend, with related inquiries surging 1,445% from Q1 2024 to Q2 2025. AI agents can handle complex, multi-step tasks like qualifying sales leads, processing insurance claims, managing customer returns, and coordinating across multiple business systems. They improve over time, integrate with existing tools, and can manage 60–80% of routine business interactions.",
+    a: "A chatbot follows pre-defined scripts and decision trees, if the user’s query does not match the script, the chatbot fails. An AI agent uses large language models to understand natural language, interpret context, reason about the best action, and take autonomous steps to achieve a goal. The industry term is agentic AI, named a Gartner Top 10 strategic technology trend, with related inquiries surging 1,445% from Q1 2024 to Q2 2025. AI agents can handle complex, multi-step tasks like qualifying sales leads, processing insurance claims, managing customer returns, and coordinating across multiple business systems. They improve over time, integrate with existing tools, and can manage 60–80% of routine business interactions.",
   },
   {
     cat: "ai-agents",
     q: "How much does it cost to build an AI agent in the UK?",
-    a: "Costs vary significantly based on complexity, from simple template FAQ chatbots through to enterprise-grade multi-agent systems with complex integrations. FactoryJet’s custom AI agent development is fixed-price and scoped to your build — the main drivers are the number of integrations, the level of autonomy, and workflow complexity. A focused single-function agent is an accessible entry point for UK SMBs, and every project is quoted up front after a free discovery call. Most clients see ROI within three to six months through reduced staffing costs, 24/7 availability, and automated handling of routine interactions.",
+    a: "Costs vary significantly based on complexity, from simple template FAQ chatbots through to enterprise-grade multi-agent systems with complex integrations. FactoryJet’s custom AI agent development is fixed-price and scoped to your build: the main drivers are the number of integrations, the level of autonomy, and workflow complexity. A focused single-function agent is an accessible entry point for UK SMBs, and every project is quoted up front after a free discovery call. Most clients see ROI within three to six months through reduced staffing costs, 24/7 availability, and automated handling of routine interactions.",
   },
   {
     cat: "ai-agents",
     q: "What is agentic AI and why is everyone talking about it?",
-    a: "Agentic AI refers to AI systems that can independently plan, reason, and take actions to achieve goals — going beyond simple question-and-answer interactions. Gartner named it a Top 10 strategic technology trend for 2026, predicting that 40% of enterprise applications will embed AI agents by year’s end. The global AI agents market hit $7.63 billion in 2025 and is projected to reach $10.91 billion in 2026 — a 43% year-over-year jump. In the UK, 54% of businesses are already using AI but only 28% have fully integrated it. FactoryJet builds agentic AI systems that bridge this gap, using Model Context Protocol and A2A protocol for seamless agent-to-agent communication.",
+    a: "Agentic AI refers to AI systems that can independently plan, reason, and take actions to achieve goals, going beyond simple question-and-answer interactions. Gartner named it a Top 10 strategic technology trend for 2026, predicting that 40% of enterprise applications will embed AI agents by year’s end. The global AI agents market hit $7.63 billion in 2025 and is projected to reach $10.91 billion in 2026: a 43% year-over-year jump. In the UK, 54% of businesses are already using AI but only 28% have fully integrated it. FactoryJet builds agentic AI systems that bridge this gap, using Model Context Protocol and A2A protocol for seamless agent-to-agent communication.",
   },
   {
     cat: "ai-agents",
@@ -130,17 +130,17 @@ const FAQS: Faq[] = [
   {
     cat: "ai-seo",
     q: "What is generative engine optimisation (GEO) and how is it different from traditional SEO?",
-    a: "Generative engine optimisation is the practice of structuring your website content so that AI-powered search tools — Google AI Overviews, ChatGPT, Perplexity AI, Claude, and others — reference and cite your business in their responses. Traditional SEO focuses on ranking in Google’s organic results list. GEO focuses on being the source that AI systems draw from when answering user queries directly. The GEO market is valued at $848 million growing at 50.5% CAGR to a projected $19.8 billion by 2034. AI search traffic converts at 4.4 times the rate of traditional organic. FactoryJet is one of the few traditional agencies offering GEO as a dedicated service.",
+    a: "Generative engine optimisation is the practice of structuring your website content so that AI-powered search tools: Google AI Overviews, ChatGPT, Perplexity AI, Claude, and others, reference and cite your business in their responses. Traditional SEO focuses on ranking in Google’s organic results list. GEO focuses on being the source that AI systems draw from when answering user queries directly. The GEO market is valued at $848 million growing at 50.5% CAGR to a projected $19.8 billion by 2034. AI search traffic converts at 4.4 times the rate of traditional organic. FactoryJet is one of the few traditional agencies offering GEO as a dedicated service.",
   },
   {
     cat: "ai-seo",
     q: "What is answer engine optimisation (AEO)?",
-    a: "Answer engine optimisation focuses on winning the direct-answer positions in search results — featured snippets, People Also Ask boxes, knowledge panels, and AI-generated summaries that now appear at the top of 42% of UK Google searches. AEO delivers the fastest results of any SEO discipline, often within 2–8 weeks, because it targets answer positions that already exist in search results rather than competing for traditional organic rankings. It complements traditional SEO and GEO by capturing different types of search intent.",
+    a: "Answer engine optimisation focuses on winning the direct-answer positions in search results, featured snippets, People Also Ask boxes, knowledge panels, and AI-generated summaries that now appear at the top of 42% of UK Google searches. AEO delivers the fastest results of any SEO discipline, often within 2–8 weeks, because it targets answer positions that already exist in search results rather than competing for traditional organic rankings. It complements traditional SEO and GEO by capturing different types of search intent.",
   },
   {
     cat: "ai-seo",
     q: "Is SEO dead because of AI?",
-    a: "No. SEO is evolving, not dying. Google still processes billions of searches daily and organic traffic remains the highest-ROI marketing channel for most businesses. What has changed is that SEO now needs to encompass AI platforms alongside traditional Google rankings. Over 60% of Google searches end without a click, AI search traffic converts 4.4 times higher than traditional organic, and AI Overviews appear in 42% of UK searches. The smartest approach in 2026 is search everywhere optimisation — combining traditional SEO with GEO, AEO, and AIO to ensure your business is visible wherever your customers search.",
+    a: "No. SEO is evolving, not dying. Google still processes billions of searches daily and organic traffic remains the highest-ROI marketing channel for most businesses. What has changed is that SEO now needs to encompass AI platforms alongside traditional Google rankings. Over 60% of Google searches end without a click, AI search traffic converts 4.4 times higher than traditional organic, and AI Overviews appear in 42% of UK searches. The smartest approach in 2026 is search everywhere optimisation, combining traditional SEO with GEO, AEO, and AIO to ensure your business is visible wherever your customers search.",
   },
   {
     cat: "ai-seo",
@@ -150,7 +150,7 @@ const FAQS: Faq[] = [
   {
     cat: "ai-seo",
     q: "How much does SEO cost in the UK?",
-    a: "UK SEO pricing varies widely, from freelance consultants through to enterprise retainers from large agencies. FactoryJet’s monthly SEO retainer is a fixed price scoped to your goals — combining traditional SEO with AI SEO (GEO/AEO/AIO). The main drivers are your competition, target keywords, and content volume, and every retainer is quoted up front and runs month-to-month. We also offer an AI SEO-only service covering generative engine optimisation, answer engine optimisation, and AI visibility — a service that almost no other traditional agency offers at any price.",
+    a: "UK SEO pricing varies widely, from freelance consultants through to enterprise retainers from large agencies. FactoryJet’s monthly SEO retainer is a fixed price scoped to your goals, combining traditional SEO with AI SEO (GEO/AEO/AIO). The main drivers are your competition, target keywords, and content volume, and every retainer is quoted up front and runs month-to-month. We also offer an AI SEO-only service covering generative engine optimisation, answer engine optimisation, and AI visibility: a service that almost no other traditional agency offers at any price.",
   },
   {
     cat: "ai-seo",
@@ -160,17 +160,17 @@ const FAQS: Faq[] = [
   {
     cat: "ai-seo",
     q: "What is share of AI voice and how do I measure it?",
-    a: "Share of AI voice measures how frequently AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews reference and recommend your brand compared to competitors. It is the AI equivalent of share of voice in traditional marketing. FactoryJet tracks share of AI voice by systematically querying AI platforms with your target keywords and measuring how often your brand appears versus competitors. This gives you visibility into a channel that most UK businesses are completely blind to — and one that is growing at 527% year-over-year in referral traffic.",
+    a: "Share of AI voice measures how frequently AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews reference and recommend your brand compared to competitors. It is the AI equivalent of share of voice in traditional marketing. FactoryJet tracks share of AI voice by systematically querying AI platforms with your target keywords and measuring how often your brand appears versus competitors. This gives you visibility into a channel that most UK businesses are completely blind to, and one that is growing at 527% year-over-year in referral traffic.",
   },
   {
     cat: "general",
     q: "How does FactoryJet deliver faster than a traditional agency?",
-    a: "Three reasons — none of which mean cutting corners. First, our AI-augmented workflow removes the busywork that slows traditional agencies down: we use AI across design generation, code review, testing, and QA, so senior engineers spend their time on the work that actually matters. Second, we build on a component-based architecture, assembling high-quality sites in days instead of rebuilding from scratch every time. Third, our fixed-price, milestone-paid model means no account-manager layers or hourly billing inflating your invoice. The result: 7-day delivery, transparent fixed pricing, and every site scoring 90+ on Google Lighthouse — the same quality benchmark as agencies that take months and charge far more.",
+    a: "Three reasons, none of which mean cutting corners. First, our AI-augmented workflow removes the busywork that slows traditional agencies down: we use AI across design generation, code review, testing, and QA, so senior engineers spend their time on the work that actually matters. Second, we build on a component-based architecture, assembling high-quality sites in days instead of rebuilding from scratch every time. Third, our fixed-price, milestone-paid model means no account-manager layers or hourly billing inflating your invoice. The result: 7-day delivery, transparent fixed pricing, and every site scoring 90+ on Google Lighthouse: the same quality benchmark as agencies that take months and charge far more.",
   },
   {
     cat: "general",
     q: "Do you work with businesses outside major UK cities?",
-    a: "Absolutely. While our city-specific pages focus on major cities — Leeds, Manchester, Birmingham, Sheffield, Bristol, Edinburgh, Liverpool, Glasgow, Newcastle, and Nottingham — we work with businesses across the entire United Kingdom. Whether you are in a market town, a suburban business park, or a rural area, our remote-first model means you get the same quality of service, the same AI-native capabilities, and the same competitive pricing. Our clients span every region of England, Scotland, Wales, and Northern Ireland.",
+    a: "Absolutely. While our city-specific pages focus on major cities: Leeds, Manchester, Birmingham, Sheffield, Bristol, Edinburgh, Liverpool, Glasgow, Newcastle, and Nottingham, we work with businesses across the entire United Kingdom. Whether you are in a market town, a suburban business park, or a rural area, our remote-first model means you get the same quality of service, the same AI-native capabilities, and the same competitive pricing. Our clients span every region of England, Scotland, Wales, and Northern Ireland.",
   },
   {
     cat: "general",
@@ -421,7 +421,7 @@ export default function FAQ() {
                 28 answers. Zero jargon.
               </p>
 
-              {/* Desktop — vertical category list */}
+              {/* Desktop, vertical category list */}
               <nav
                 aria-label="Filter FAQs by category"
                 className="mt-8 hidden lg:block"
@@ -475,7 +475,7 @@ export default function FAQ() {
                 </ul>
               </nav>
 
-              {/* Mobile — horizontal pill scroller */}
+              {/* Mobile, horizontal pill scroller */}
               <div
                 className="fj-cat-pills mt-6 flex gap-2 overflow-x-auto lg:hidden"
                 role="group"
@@ -523,7 +523,7 @@ export default function FAQ() {
             </div>
           </aside>
 
-          {/* ── RIGHT — ACCORDION LIST ───────────────────────────────── */}
+          {/* ── RIGHT, ACCORDION LIST ───────────────────────────────── */}
           <div ref={listRef}>
             {visible.map((item) => {
               const id = idFor(item.q);
@@ -572,7 +572,7 @@ export default function FAQ() {
                     <PlusIcon open={isOpen} />
                   </button>
 
-                  {/* Answer — ALWAYS in the DOM. Collapsed via max-height/opacity. */}
+                  {/* Answer, ALWAYS in the DOM. Collapsed via max-height/opacity. */}
                   <div
                     id={`faq-panel-${id}`}
                     data-acc-panel

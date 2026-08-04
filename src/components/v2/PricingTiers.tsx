@@ -133,7 +133,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
        */
       <div className="group relative lg:-mt-3">
 
-        {/* Outer hover ring — orange ambient glow */}
+        {/* Outer hover ring, orange ambient glow */}
         <div
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
@@ -155,7 +155,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
             boxShadow: '0 24px 72px rgba(240,90,40,0.20), 0 8px 24px rgba(0,0,0,0.40), 0 2px 8px rgba(0,0,0,0.28)',
           }}
         >
-          {/* Crystal shimmer — orange on dark */}
+          {/* Crystal shimmer, orange on dark */}
           <div
             className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"
             style={{
@@ -193,7 +193,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
             {tier.name}
           </h3>
 
-          {/* Price — orange accent */}
+          {/* Price, orange accent */}
           <p
             className="fj-display font-bold mt-6"
             style={{
@@ -236,7 +236,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
             ))}
           </ul>
 
-          {/* CTA — solid orange fill */}
+          {/* CTA, solid orange fill */}
           <div className="mt-8">
             {tier.cta.modal ? (
               <ModalCTAButton
@@ -265,7 +265,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
   return (
     <div className="group relative h-full">
 
-      {/* Outer hover ring — orange glow OUTSIDE overflow-hidden */}
+      {/* Outer hover ring, orange glow OUTSIDE overflow-hidden */}
       <div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
@@ -286,7 +286,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
           boxShadow: '0 4px 20px rgba(240,90,40,0.06), 0 1px 4px rgba(0,0,0,0.05)',
         }}
       >
-        {/* Crystal shimmer — orange */}
+        {/* Crystal shimmer, orange */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"
           style={{
@@ -345,7 +345,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
           ))}
         </ul>
 
-        {/* CTA — outlined blue → fills on hover */}
+        {/* CTA, outlined blue → fills on hover */}
         <div className="mt-8">
           {tier.cta.modal ? (
             <ModalCTAButton

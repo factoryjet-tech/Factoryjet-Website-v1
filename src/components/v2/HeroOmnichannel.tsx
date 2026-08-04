@@ -86,7 +86,7 @@ export default function HeroOmnichannel() {
             <div
               className="ho-stage"
               role="img"
-              aria-label="Any sales channel or marketplace worldwide — Amazon, Walmart, TikTok Shop, Shopify, and B2B — connecting into one unified commerce engine: one catalog, one inventory, one order engine."
+              aria-label="Any sales channel or marketplace worldwide: Amazon, Walmart, TikTok Shop, Shopify, and B2B, connecting into one unified commerce engine: one catalog, one inventory, one order engine."
             >
               <svg className="ho-links-svg" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
                 <line className="ho-flow" x1="78" y1="60" x2="200" y2="200" />

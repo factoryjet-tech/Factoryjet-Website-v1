@@ -47,7 +47,7 @@ export default function ServiceEditorialPullquote({
     <section className="bg-white">
       <div className="mx-auto max-w-container-xl px-6 py-section-y lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left — sticky sidebar (4/12) */}
+          {/* Left, sticky sidebar (4/12) */}
           <aside className="lg:col-span-4">
             <div className="lg:sticky lg:top-32 lg:self-start">
               <div className="mb-6 inline-flex items-center font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
@@ -65,7 +65,7 @@ export default function ServiceEditorialPullquote({
             </div>
           </aside>
 
-          {/* Right — editorial body (8/12) */}
+          {/* Right, editorial body (8/12) */}
           <div className="lg:col-span-8">
             <p className="text-body-lg text-slate">{introParagraph}</p>
 

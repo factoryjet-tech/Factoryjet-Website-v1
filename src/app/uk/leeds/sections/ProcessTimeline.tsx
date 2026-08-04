@@ -10,7 +10,7 @@ const STEPS = [
     days: "STEP 01",
     title: "Free Leeds Digital Audit",
     description:
-      "We start with a comprehensive audit of your current digital presence — Lighthouse performance, search visibility across Google and AI platforms, competitor positioning in the Leeds market, and keyword opportunities in your industry. Free, delivered within 48 hours.",
+      "We start with a comprehensive audit of your current digital presence: Lighthouse performance, search visibility across Google and AI platforms, competitor positioning in the Leeds market, and keyword opportunities in your industry. Free, delivered within 48 hours.",
   },
   {
     days: "STEP 02",
@@ -34,7 +34,7 @@ const STEPS = [
     days: "STEP 05",
     title: "Ongoing Growth",
     description:
-      "Ongoing access to our team for support, updates, and strategic advice. Maintenance plans and SEO and AI SEO retainers are available — scoped and quoted to fit your needs — so your Leeds digital presence keeps growing month after month.",
+      "Ongoing access to our team for support, updates, and strategic advice. Maintenance plans and SEO and AI SEO retainers are available, scoped and quoted to fit your needs, so your Leeds digital presence keeps growing month after month.",
   },
 ];
 
@@ -217,13 +217,13 @@ export default function ProcessTimeline() {
             marginBottom: "64px",
           }}
         >
-          From First Conversation to Launch — How We Work with Leeds Businesses
+          From First Conversation to Launch, How We Work with Leeds Businesses
         </h2>
 
         {/* ── Timeline ───────────────────────────────────────────────── */}
         <div className="relative">
 
-          {/* Vertical line — desktop center */}
+          {/* Vertical line, desktop center */}
           <div
             ref={desktopLineRef}
             className="hidden md:block absolute inset-y-0 pointer-events-none"
@@ -235,7 +235,7 @@ export default function ProcessTimeline() {
             }}
           />
 
-          {/* Vertical line — mobile left (centered on 64px node) */}
+          {/* Vertical line, mobile left (centered on 64px node) */}
           <div
             ref={mobileLineRef}
             className="md:hidden absolute inset-y-0 pointer-events-none"

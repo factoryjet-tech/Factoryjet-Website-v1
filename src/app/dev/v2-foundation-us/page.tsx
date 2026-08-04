@@ -37,7 +37,7 @@ import { resolveLocale } from '@/lib/locales';
  * noindex via metadata. Pure server component.
  */
 export const metadata: Metadata = {
-  title: 'V2 Foundation Components — US locale (dev)',
+  title: 'V2 Foundation Components | US locale (dev)',
   robots: { index: false, follow: false },
 };
 
@@ -66,14 +66,14 @@ export default function V2FoundationUSPage() {
             letterSpacing: '-0.025em',
           }}
         >
-          v2 foundation components — US
+          v2 foundation components, US
         </h1>
         <p
           className="mt-4 max-w-[640px] font-fj-body text-fj-neutral-600"
           style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
         >
           Same component set as the GB showcase, rendering with US locale
-          data. Verifies the v2 components are locale-agnostic — different
+          data. Verifies the v2 components are locale-agnostic, different
           country, different currency, no component changes.
         </p>
       </div>
@@ -98,13 +98,13 @@ export default function V2FoundationUSPage() {
             · Agency archetype: {locale.agencyArchetypeLabel}
           </p>
           <p className="mt-3 font-fj-body text-[0.8125rem] text-fj-neutral-400">
-            Demo data only — not authoritative numbers. For dev verification of
+            Demo data only, not authoritative numbers. For dev verification of
             locale-agnostic components.
           </p>
         </div>
       </div>
 
-      {/* === BoringStatsRow (universal stats — same across locales) === */}
+      {/* === BoringStatsRow (universal stats, same across locales) === */}
       <SectionLabel slug="BoringStatsRow" />
       <BoringStatsRow
         stats={[
@@ -138,20 +138,20 @@ export default function V2FoundationUSPage() {
 
       {/* === StrategicDarkSection === */}
       <SectionLabel slug="StrategicDarkSection" />
-      {/* v2.1: full content section — accepts eyebrow, headline, lead, pillars. */}
+      {/* v2.1: full content section, accepts eyebrow, headline, lead, pillars. */}
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
         headline="We're not a local New York agency. That's the point."
-        lead="Strategic dark sections appear no more than twice per page — a deliberate rhythm break, not a default surface."
+        lead="Strategic dark sections appear no more than twice per page: a deliberate rhythm break, not a default surface."
         pillars={[
-          { title: 'AI-native', body: 'Every site is built with AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
+          { title: 'AI-native', body: 'Every site is built with AI-assisted workflow | compressing build time without compressing quality. We have run 500+ projects through this system.' },
           { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },
           { title: 'Guaranteed', body: "7-day delivery guarantee. If we miss the deadline, you don't pay. We have delivered on time on 97% of all projects." },
         ]}
       />
 
       {/* === Hero (with rightSlot) === */}
-      <SectionLabel slug="M1.b — Hero (with rightSlot)" />
+      <SectionLabel slug="M1.b, Hero (with rightSlot)" />
       <Hero
         formSlot={<HeroInlineForm region="in" source="dev_v2_foundation_us_hero" />}
         eyebrow="AI SERVICES · US"
@@ -176,7 +176,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === Hero (single-column, no rightSlot) === */}
-      <SectionLabel slug="M1.b — Hero (single-column, no rightSlot)" />
+      <SectionLabel slug="M1.b: Hero (single-column, no rightSlot)" />
       <Hero
         eyebrow="AI SERVICES · US"
         headline={<>AI agents that actually ship.</>}
@@ -191,7 +191,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === FinalCTA (light variant) === */}
-      <SectionLabel slug="M1.b — FinalCTA (light variant)" />
+      <SectionLabel slug="M1.b, FinalCTA (light variant)" />
       <FinalCTA
         eyebrow="READY WHEN YOU ARE"
         headline={<>Stop running pilots. Start shipping.</>}
@@ -202,7 +202,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === FinalCTA (dark variant) === */}
-      <SectionLabel slug="M1.b — FinalCTA (dark variant)" />
+      <SectionLabel slug="M1.b, FinalCTA (dark variant)" />
       <FinalCTA
         variant="dark"
         eyebrow="READY WHEN YOU ARE"
@@ -214,7 +214,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === CityContextSection === */}
-      <SectionLabel slug="M1.c.1 — CityContextSection" />
+      <SectionLabel slug="M1.c.1, CityContextSection" />
       <CityContextSection
         eyebrow="NEW YORK CITY MARKET"
         headline={<>Built for the world's most demanding business climate.</>}
@@ -242,7 +242,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === FAQ === */}
-      <SectionLabel slug="M1.c.1 — FAQ" />
+      <SectionLabel slug="M1.c.1, FAQ" />
       <FAQ
         eyebrow="COMMON QUESTIONS"
         headline={<>What you'll actually ask first.</>}
@@ -250,7 +250,7 @@ export default function V2FoundationUSPage() {
           {
             question: 'How long does a New York City project take?',
             answer:
-              "60 days end-to-end on average — discovery to production. We'll tell you on the first call if your stack pushes that out, and exactly why.",
+              "60 days end-to-end on average, discovery to production. We'll tell you on the first call if your stack pushes that out, and exactly why.",
           },
           {
             question: "What's the typical price range?",
@@ -270,7 +270,7 @@ export default function V2FoundationUSPage() {
           {
             question: 'Do you work with industries outside the five listed?',
             answer:
-              "Yes — those five are where we have the most case-study density. The delivery standard doesn't change by sector. Boring, by design.",
+              "Yes, those five are where we have the most case-study density. The delivery standard doesn't change by sector. Boring, by design.",
           },
           {
             question: 'What happens after launch?',
@@ -281,7 +281,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === PricingTiers === */}
-      <SectionLabel slug="M1.c.1 — PricingTiers" />
+      <SectionLabel slug="M1.c.1, PricingTiers" />
       <PricingTiers
         eyebrow="TRANSPARENT PRICING"
         headline={<>Pricing on the first call.</>}
@@ -335,7 +335,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === IndustriesGrid === */}
-      <SectionLabel slug="M1.c.1 — IndustriesGrid" />
+      <SectionLabel slug="M1.c.1, IndustriesGrid" />
       <IndustriesGrid
         eyebrow="NEW YORK CITY × WEB DESIGN"
         headline={<>We work with New York City's biggest sectors.</>}
@@ -349,7 +349,7 @@ export default function V2FoundationUSPage() {
           {
             name: 'Professional, Scientific & Technical Services',
             description:
-              'Law firms, consultancies, and accountants compete on reputation. Lead-capture flows and consultation booking that turn research-stage buyers into booked calls — not bounce.',
+              'Law firms, consultancies, and accountants compete on reputation. Lead-capture flows and consultation booking that turn research-stage buyers into booked calls, not bounce.',
           },
           {
             name: 'Information Technology & Communications',
@@ -359,22 +359,22 @@ export default function V2FoundationUSPage() {
           {
             name: 'Real Estate & Construction',
             description:
-              "Fast property galleries, enquiry forms that route correctly, local SEO that captures buyers searching by ZIP code. NYC's most competitive sector — your site is the qualifier.",
+              "Fast property galleries, enquiry forms that route correctly, local SEO that captures buyers searching by ZIP code. NYC's most competitive sector: your site is the qualifier.",
           },
           {
             name: 'Creative Industries, Media & Tourism',
             description:
-              'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert — for hospitality, production, and the multi-billion-dollar Manhattan tourism sector.',
+              'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert, for hospitality, production, and the multi-billion-dollar Manhattan tourism sector.',
           },
         ]}
       />
 
       {/* === ComparisonTable === */}
-      <SectionLabel slug="M1.c.2 — ComparisonTable" />
+      <SectionLabel slug="M1.c.2, ComparisonTable" />
       <ComparisonTable
         eyebrow="COMPARE"
         headline={<>FactoryJet vs the alternatives.</>}
-        lead="We'll tell you when not to hire us — short list, no spin."
+        lead="We'll tell you when not to hire us, short list, no spin."
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },
           { label: 'Local Manhattan Agency' },
@@ -422,11 +422,11 @@ export default function V2FoundationUSPage() {
             ],
           },
         ]}
-        footer="(Numbers grounded in demo data — for verification only, not authoritative.)"
+        footer="(Numbers grounded in demo data, for verification only, not authoritative.)"
       />
 
       {/* === ServiceJourneyRow === */}
-      <SectionLabel slug="M1.c.2 — ServiceJourneyRow" />
+      <SectionLabel slug="M1.c.2, ServiceJourneyRow" />
       <ServiceJourneyRow
         eyebrow="HOW WE WORK"
         headline={<>Ship to production. Not to slides.</>}
@@ -435,7 +435,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === ServiceExplanation === */}
-      <SectionLabel slug="M1.c.2 — ServiceExplanation" />
+      <SectionLabel slug="M1.c.2, ServiceExplanation" />
       <ServiceExplanation
         eyebrow="WEB DESIGN · NEW YORK CITY"
         headline={<>Sites that signal credibility before someone opens them.</>}
@@ -448,7 +448,7 @@ export default function V2FoundationUSPage() {
               search to vet vendors.
             </p>
             <p>
-              The site is the qualifier — not your sales call. By the time a
+              The site is the qualifier, not your sales call. By the time a
               prospect picks up the phone, the credibility question is already
               answered.
             </p>
@@ -470,7 +470,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === SiteHeader === */}
-      <SectionLabel slug="M1.c.2.5 — SiteHeader (would normally render once per page)" />
+      <SectionLabel slug="M1.c.2.5, SiteHeader (would normally render once per page)" />
       <div className="mx-auto max-w-[1200px] px-4 lg:px-6">
         <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
           <SiteHeader />
@@ -478,7 +478,7 @@ export default function V2FoundationUSPage() {
       </div>
 
       {/* === BoringStatsRow (alignment fix · align="center") === */}
-      <SectionLabel slug='M1.c.2.5 — BoringStatsRow (alignment fix · align="center")' />
+      <SectionLabel slug='M1.c.2.5, BoringStatsRow (alignment fix · align="center")' />
       <BoringStatsRow
         align="center"
         stats={[
@@ -501,7 +501,7 @@ export default function V2FoundationUSPage() {
       />
 
       {/* === ImageBlock (3 variants) === */}
-      <SectionLabel slug="M1.c.2.5 — ImageBlock (bordered · elevated · with caption)" />
+      <SectionLabel slug="M1.c.2.5, ImageBlock (bordered · elevated · with caption)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <ImageBlock
@@ -525,18 +525,18 @@ export default function V2FoundationUSPage() {
             width={640}
             height={480}
             aspectRatio="4/3"
-            caption="(Hartwell Capital — Midtown financial advisory mockup.)"
+            caption="(Hartwell Capital, Midtown financial advisory mockup.)"
           />
         </div>
       </div>
 
       {/* === LogoBar === */}
-      <SectionLabel slug="M1.c.2.5 — LogoBar (self-contained marquee)" />
+      <SectionLabel slug="M1.c.2.5, LogoBar (self-contained marquee)" />
       {/* v2.1: logos are hardcoded inside LogoBar; only tagline is injected. */}
       <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
 
       {/* === CaseStudyCard (3 cards) === */}
-      <SectionLabel slug="M1.c.2.5 — CaseStudyCard (3-card grid)" />
+      <SectionLabel slug="M1.c.2.5, CaseStudyCard (3-card grid)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <CaseStudyCard
@@ -550,7 +550,7 @@ export default function V2FoundationUSPage() {
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Atlas Legal — case study cover',
+              alt: 'Atlas Legal, case study cover',
               width: 800,
               height: 600,
             }}
@@ -560,14 +560,14 @@ export default function V2FoundationUSPage() {
             industry="HEALTHCARE · NEW YORK CITY"
             clientName="Bright Health"
             headline="Compliance-aware redesign cleared regulatory review."
-            body="Rebuilt a patient-facing site with WCAG 2.2 AA compliance, HIPAA-aligned content review, and secure intake forms — landed on the first regulatory pass."
+            body="Rebuilt a patient-facing site with WCAG 2.2 AA compliance, HIPAA-aligned content review, and secure intake forms, landed on the first regulatory pass."
             metrics={[
               { value: '100%', label: 'first-pass regulatory clearance' },
               { value: '4.9/5', label: 'patient onboarding NPS' },
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Bright Health — case study cover',
+              alt: 'Bright Health, case study cover',
               width: 800,
               height: 600,
             }}
@@ -584,7 +584,7 @@ export default function V2FoundationUSPage() {
             ]}
             image={{
               src: placeholderImageDataUrl(800, 600),
-              alt: 'Forge & Co — case study cover',
+              alt: 'Forge & Co, case study cover',
               width: 800,
               height: 600,
             }}
@@ -596,7 +596,7 @@ export default function V2FoundationUSPage() {
       {/* === SiteFooter ===
        * Locations column carries the per-locale city list; for /us routes
        * those are major US metros. Demo data only. */}
-      <SectionLabel slug="M1.c.2.5 — SiteFooter (would normally render once per page)" />
+      <SectionLabel slug="M1.c.2.5, SiteFooter (would normally render once per page)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-12 lg:px-6">
         <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
           <SiteFooter

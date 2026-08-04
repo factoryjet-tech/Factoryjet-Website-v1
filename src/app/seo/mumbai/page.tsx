@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -19,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet',
   description:
-    'Looking for the best SEO company in Mumbai? FactoryJet delivers expert SEO services in Mumbai — local SEO, technical SEO, ecommerce SEO, and link building. No long contracts. Book a free call.',
+    'Looking for the best SEO company in Mumbai? FactoryJet delivers expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. No long contracts. Book a free call.',
   keywords: [
     'seo company in mumbai india',
     'seo services in mumbai',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet',
     description:
-      'Expert SEO services in Mumbai — local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star rating. No long contracts. Start with a free check.',
+      'Expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star rating. No long contracts. Start with a free check.',
     url: 'https://factoryjet.com/seo/mumbai',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Mumbai India' }],
     locale: 'en_IN',
@@ -54,11 +55,25 @@ export const metadata: Metadata = {
 
 /* ─── Schemas ─────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/mumbai#webpage',
+  url: 'https://factoryjet.com/seo/mumbai',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://factoryjet.com/seo/mumbai#localbusiness',
-  name: 'FactoryJet — SEO Company in Mumbai',
+  name: 'FactoryJet | SEO Company in Mumbai',
   description:
     'FactoryJet provides SEO services in Mumbai for local businesses, D2C brands, ecommerce stores, and enterprises across BKC, Andheri, Bandra, Worli, Thane, and Navi Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
@@ -116,7 +131,7 @@ const speakableSchema = {
 const MUMBAI_JOURNEY: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Mumbai SEO audit — see where you actually stand',
+    title: 'Mumbai SEO audit | see where you actually stand',
     description:
       'We check your current rankings across Mumbai searches, who is beating you and why, which pages are hurting your site, and how your site loads on mobile. You get a plain-English report, not a PDF packed with numbers you will never read. (Week 1)',
   },
@@ -124,19 +139,19 @@ const MUMBAI_JOURNEY: ServiceJourneyStage[] = [
     number: '02',
     title: 'Fix the technical problems first',
     description:
-      'Slow pages, broken links, missing titles, duplicate content, crawl errors, bad Core Web Vitals — we fix everything that is stopping Google from trusting your site. Mumbai is a competitive market. A clean technical foundation is table stakes. (Weeks 1–2)',
+      'Slow pages, broken links, missing titles, duplicate content, crawl errors, bad Core Web Vitals, we fix everything that is stopping Google from trusting your site. Mumbai is a competitive market. A clean technical foundation is table stakes. (Weeks 1–2)',
   },
   {
     number: '03',
     title: 'Build content that Mumbai buyers are actually searching for',
     description:
-      'We write and update pages around the exact terms your Mumbai customers type into Google — service names, neighbourhood names, real questions. We do not stuff keywords in. We answer questions better than whoever is already ranking. (Weeks 2–6)',
+      'We write and update pages around the exact terms your Mumbai customers type into Google, service names, neighbourhood names, real questions. We do not stuff keywords in. We answer questions better than whoever is already ranking. (Weeks 2–6)',
   },
   {
     number: '04',
     title: 'Earn real links from trusted Indian websites',
     description:
-      'Links from trusted Indian publications, trade directories, and local partners are the signals Google uses to decide who deserves the first page in Mumbai. We earn them the right way — no link farms, no private blog networks. (Month 2 onwards)',
+      'Links from trusted Indian publications, trade directories, and local partners are the signals Google uses to decide who deserves the first page in Mumbai. We earn them the right way, no link farms, no private blog networks. (Month 2 onwards)',
   },
   {
     number: '05',
@@ -162,25 +177,25 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Is SEO worth it for a Mumbai business?',
     answer:
-      'Yes — if your customers search on Google before they buy. Mumbai alone has enormous search volume: "seo company in mumbai india" is searched 8,100 times a month. That is real buyers with money, looking for exactly what you sell. If a rival shows up on page one and you do not, they get the call. And unlike ads, SEO keeps working after you stop paying for it.',
+      'Yes, if your customers search on Google before they buy. Mumbai alone has enormous search volume: "seo company in mumbai india" is searched 8,100 times a month. That is real buyers with money, looking for exactly what you sell. If a rival shows up on page one and you do not, they get the call. And unlike ads, SEO keeps working after you stop paying for it.',
   },
   {
     category: 'getting-started',
     question: 'How do I find a good SEO company in Mumbai?',
     answer:
-      'Ask three things: Can you show me the ranking history of a current Mumbai client — not a screenshot? Do your senior people do the work or is it outsourced? What exactly will happen in the first 90 days? Good agencies answer all three without hesitation. Be cautious of any agency that leads with guaranteed rankings or talks mostly about links without mentioning your site speed and content.',
+      'Ask three things: Can you show me the ranking history of a current Mumbai client, not a screenshot? Do your senior people do the work or is it outsourced? What exactly will happen in the first 90 days? Good agencies answer all three without hesitation. Be cautious of any agency that leads with guaranteed rankings or talks mostly about links without mentioning your site speed and content.',
   },
   {
     category: 'getting-started',
     question: 'What makes Mumbai SEO different from SEO in other Indian cities?',
     answer:
-      'Mumbai is the most competitive SEO market in India. Every major national brand, every funded startup, and hundreds of local businesses are fighting for the same first page. Keyword difficulty on most Mumbai terms runs 10–30 points higher than Pune or Jaipur. You need strong technical SEO and real content and links — not just a title tag tweak.',
+      'Mumbai is the most competitive SEO market in India. Every major national brand, every funded startup, and hundreds of local businesses are fighting for the same first page. Keyword difficulty on most Mumbai terms runs 10–30 points higher than Pune or Jaipur. You need strong technical SEO and real content and links, not just a title tag tweak.',
   },
   {
     category: 'getting-started',
     question: 'Do I need a Mumbai-based agency or can I work with someone remote?',
     answer:
-      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business — not someone physically in Andheri. We are not based in Mumbai, but we have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 12 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
+      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business, not someone physically in Andheri. We are not based in Mumbai, but we have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 12 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -212,25 +227,25 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'results',
     question: 'How long does SEO take to show results in Mumbai?',
     answer:
-      'For technical fixes on a site with existing content, you can see ranking movement in 4–8 weeks. For new content pages targeting Mumbai keywords, expect 3–5 months before they hit page one. For highly competitive terms in BKC or central Mumbai, sometimes 6–9 months. SEO is not fast — but a page that ranks for "seo services in mumbai" keeps bringing leads for years, with no per-click cost.',
+      'For technical fixes on a site with existing content, you can see ranking movement in 4–8 weeks. For new content pages targeting Mumbai keywords, expect 3–5 months before they hit page one. For highly competitive terms in BKC or central Mumbai, sometimes 6–9 months. SEO is not fast, but a page that ranks for "seo services in mumbai" keeps bringing leads for years, with no per-click cost.',
   },
   {
     category: 'results',
     question: 'What kind of results do Mumbai businesses typically see?',
     answer:
-      'Our clients typically see first-page rankings for their core service terms within 3–6 months, steady month-on-month organic traffic growth, and more enquiries from Google — not just clicks. Because Mumbai search volumes are high, moving from position 8 to position 3 on a term searched 3,600 times a month makes a real difference to your pipeline.',
+      'Our clients typically see first-page rankings for their core service terms within 3–6 months, steady month-on-month organic traffic growth, and more enquiries from Google, not just clicks. Because Mumbai search volumes are high, moving from position 8 to position 3 on a term searched 3,600 times a month makes a real difference to your pipeline.',
   },
   {
     category: 'results',
     question: 'Can you guarantee Google rankings?',
     answer:
-      'No honest SEO company in Mumbai or anywhere else can guarantee a specific ranking — Google controls that. What we can guarantee is the work that has moved hundreds of sites up: fix your technical issues, write better content than your rivals, and earn real links. If the work is done right and your site is not penalised, rankings follow. We show you exactly what we are doing every month so you can see the effort and the direction of travel.',
+      'No honest SEO company in Mumbai or anywhere else can guarantee a specific ranking, Google controls that. What we can guarantee is the work that has moved hundreds of sites up: fix your technical issues, write better content than your rivals, and earn real links. If the work is done right and your site is not penalised, rankings follow. We show you exactly what we are doing every month so you can see the effort and the direction of travel.',
   },
   {
     category: 'results',
     question: 'How do you measure SEO success?',
     answer:
-      'We measure what matters to your business: rankings for your Mumbai target keywords, how many people came from Google each month, how many turned into enquiries or calls, and how that compares to the previous month. We connect Google Search Console and Google Analytics to your account and give you a one-page monthly report — no inflated vanity metrics, no rank-tracking screenshots of keywords nobody searches for.',
+      'We measure what matters to your business: rankings for your Mumbai target keywords, how many people came from Google each month, how many turned into enquiries or calls, and how that compares to the previous month. We connect Google Search Console and Google Analytics to your account and give you a one-page monthly report, no inflated vanity metrics, no rank-tracking screenshots of keywords nobody searches for.',
   },
   /* ── Cost & Contracts ─────────────────────────────────────────── */
   {
@@ -243,19 +258,19 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'cost',
     question: 'Do I have to sign a long contract?',
     answer:
-      'No. We work month to month. You can pause or stop with 30 days notice. We keep clients because the rankings go up, not because they are locked in. Everything we build — your content pages, your Google Business Profile, your structured data — belongs to you and stays with you, whatever happens.',
+      'No. We work month to month. You can pause or stop with 30 days notice. We keep clients because the rankings go up, not because they are locked in. Everything we build: your content pages, your Google Business Profile, your structured data, belongs to you and stays with you, whatever happens.',
   },
   {
     category: 'cost',
     question: 'Are your SEO packages different for Mumbai compared to other Indian cities?',
     answer:
-      'The work is more intensive in Mumbai because the competition is higher. A plan that would rank you in Nashik in 3 months might take 5–6 months in Andheri. We account for that when we scope your plan. The price reflects the real effort required — not a generic package applied to every city the same way.',
+      'The work is more intensive in Mumbai because the competition is higher. A plan that would rank you in Nashik in 3 months might take 5–6 months in Andheri. We account for that when we scope your plan. The price reflects the real effort required, not a generic package applied to every city the same way.',
   },
   {
     category: 'cost',
     question: 'What is included in your monthly Mumbai SEO plan?',
     answer:
-      'Every month: keyword tracking for your Mumbai target terms, technical checks and fixes, one or two new or updated content pieces, local SEO maintenance where applicable, link-building outreach, Google Search Console and Analytics monitoring, and a one-page report with a call. We do not outsource any of this — the same small senior team does the work every month.',
+      'Every month: keyword tracking for your Mumbai target terms, technical checks and fixes, one or two new or updated content pieces, local SEO maintenance where applicable, link-building outreach, Google Search Console and Analytics monitoring, and a one-page report with a call. We do not outsource any of this: the same small senior team does the work every month.',
   },
   /* ── Mumbai Market ────────────────────────────────────────────── */
   {
@@ -266,7 +281,7 @@ const MUMBAI_FAQ_ITEMS = [
   },
   {
     category: 'mumbai-market',
-    question: 'My business is in BKC — can you get me on the first page of Google?',
+    question: 'My business is in BKC, can you get me on the first page of Google?',
     answer:
       'BKC is one of the most competitive areas in Mumbai for finance, consulting, and professional services. The path to page one: a technically clean site, content that answers exactly what BKC buyers search for, and links from credible Indian sources that tell Google you belong there. We have done this in competitive Mumbai verticals. Book a free call and we will tell you what it would specifically take for your business.',
   },
@@ -280,7 +295,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'mumbai-market',
     question: "I've been burned by an SEO company in Mumbai before. Why should I trust you?",
     answer:
-      'Fair question. Most bad SEO experiences in Mumbai come from one of three things: fake link farms, a report full of numbers that never meant calls, or a team that disappeared after month three. We are a small founder-led team — Bhavesh, the founder, is still involved in every client. You get a real monthly call, a one-page report you can read in five minutes, and month-to-month billing with no lock-in. If it is not working, you leave with everything we built. We are motivated to show you results every single month.',
+      'Fair question. Most bad SEO experiences in Mumbai come from one of three things: fake link farms, a report full of numbers that never meant calls, or a team that disappeared after month three. We are a small founder-led team: Bhavesh, the founder, is still involved in every client. You get a real monthly call, a one-page report you can read in five minutes, and month-to-month billing with no lock-in. If it is not working, you leave with everything we built. We are motivated to show you results every single month.',
   },
 ];
 
@@ -451,6 +466,10 @@ export default function SeoMumbaiPage() {
   return (
     <>
       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
         id="mumbai-seo-localbusiness"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -480,13 +499,18 @@ export default function SeoMumbaiPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home',   url: 'https://factoryjet.com' },
+          { name: 'SEO',    url: 'https://factoryjet.com/seo' },
+          { name: 'Mumbai', url: 'https://factoryjet.com/seo/mumbai' },
+        ]} />
 
-        {/* ─── 1. Hero — fits single viewport ──────────────────────────────── */}
+        {/* ─── 1. Hero, fits single viewport ──────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_mumbai_hero" />}
           eyebrow="SEO COMPANY IN MUMBAI, INDIA"
           headline="The SEO Company in Mumbai That Gets You to Page One and Keeps You There"
-          lead="Mumbai is India's most competitive search market — 14,900+ monthly searches just for SEO help here. We deliver local SEO, technical SEO, ecommerce SEO, and link building for Mumbai businesses that want leads from Google. No long contracts."
+          lead="Mumbai is India's most competitive search market, 14,900+ monthly searches just for SEO help here. We deliver local SEO, technical SEO, ecommerce SEO, and link building for Mumbai businesses that want leads from Google. No long contracts."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Local + Technical + Ecommerce SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<MumbaiKeywordCard />}
@@ -499,7 +523,7 @@ export default function SeoMumbaiPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY MUMBAI BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company — 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building"
         />
 
         {/* ─── 4. Six SEO services ──────────────────────────────────────────── */}
@@ -507,7 +531,7 @@ export default function SeoMumbaiPage() {
           variant="cards"
           eyebrow="SEO SERVICES IN MUMBAI"
           headline="Six SEO Services We Deliver for Mumbai Businesses"
-          lead="Mumbai is not one market — it is BKC finance, Andheri logistics, Bandra retail, Worli real estate, Thane services, and Navi Mumbai tech. We put together the right combination of SEO services for your business, your area, and your budget."
+          lead="Mumbai is not one market, it is BKC finance, Andheri logistics, Bandra retail, Worli real estate, Thane services, and Navi Mumbai tech. We put together the right combination of SEO services for your business, your area, and your budget."
           sectors={[
             {
               name: 'Local SEO for Mumbai',
@@ -536,13 +560,13 @@ export default function SeoMumbaiPage() {
             {
               name: 'Link Building',
               description:
-                'Links from trusted Indian publications, trade directories, and local partners tell Google your Mumbai website deserves the first page. We earn real links — no link farms, no private blog networks. Every link we get is one you keep forever.',
+                'Links from trusted Indian publications, trade directories, and local partners tell Google your Mumbai website deserves the first page. We earn real links, no link farms, no private blog networks. Every link we get is one you keep forever.',
               example: 'Real links from credible Indian sites.',
             },
             {
               name: 'SEO Audit',
               description:
-                'Not ranking despite having a good website? Something is wrong. Our Mumbai SEO audit finds exactly what — technical problems, content gaps, missing links, on-page issues — and gives you a clear action list in plain English.',
+                'Not ranking despite having a good website? Something is wrong. Our Mumbai SEO audit finds exactly what, technical problems, content gaps, missing links, on-page issues, and gives you a clear action list in plain English.',
               example: 'Clear audit report, clear action list.',
             },
           ]}
@@ -552,11 +576,11 @@ export default function SeoMumbaiPage() {
         <ServiceExplanation
           eyebrow="FACTORYJET VS A MUMBAI SEO AGENCY"
           headline="Most Mumbai SEO Agencies Are Too Big to Actually Care About Your Business"
-          lead="A 50-person Mumbai agency sounds impressive. In practice, your account goes to the most junior person on the team — and the founder you met in the pitch has moved on to the next sale."
+          lead="A 50-person Mumbai agency sounds impressive. In practice, your account goes to the most junior person on the team, and the founder you met in the pitch has moved on to the next sale."
           body={
             <>
               <p>
-                Big Mumbai agencies sell on brand but deliver on headcount. Once you sign, your account moves to a junior executive following a template. We are the opposite — a small, senior team where the same people who scope your work do the work. Every month.
+                Big Mumbai agencies sell on brand but deliver on headcount. Once you sign, your account moves to a junior executive following a template. We are the opposite: a small, senior team where the same people who scope your work do the work. Every month.
               </p>
               <p>
                 We also cost significantly less than a mid-size Mumbai agency, not because we do less, but because we run lean. No marble lobbies in BKC. No account management overhead. Every rupee you pay goes into{' '}
@@ -574,7 +598,7 @@ export default function SeoMumbaiPage() {
                 <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">
                   SEO companies in India
                 </a>
-                , we do not lock you in. Month to month. Cancel with 30 days notice. Everything we build — your content pages, your Google Business Profile, your structured data — stays yours if you ever leave.
+                , we do not lock you in. Month to month. Cancel with 30 days notice. Everything we build: your content pages, your Google Business Profile, your structured data, stays yours if you ever leave.
               </p>
             </>
           }
@@ -637,8 +661,8 @@ export default function SeoMumbaiPage() {
             },
             {
               icon: '02',
-              title: 'Competition is fierce — which means the gap is large.',
-              body: 'Most Mumbai businesses still have basic or broken technical SEO. A company that fixes the fundamentals — site speed, crawlability, schema — can move from page four to page one in months, not years.',
+              title: 'Competition is fierce | which means the gap is large.',
+              body: 'Most Mumbai businesses still have basic or broken technical SEO. A company that fixes the fundamentals, site speed, crawlability, schema, can move from page four to page one in months, not years.',
             },
             {
               icon: '03',
@@ -667,7 +691,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'BKC & Bandra',
               description:
-                'Financial services, consulting, fintech, and professional services. The most competitive SEO terrain in India — strong technical SEO and real link authority are non-negotiable here.',
+                'Financial services, consulting, fintech, and professional services. The most competitive SEO terrain in India, strong technical SEO and real link authority are non-negotiable here.',
             },
             {
               name: 'Andheri',
@@ -677,22 +701,22 @@ export default function SeoMumbaiPage() {
             {
               name: 'Worli & Lower Parel',
               description:
-                'Real estate, luxury retail, hospitality, and D2C brands. Buyers in these corridors search with high purchase intent — the right ranking converts fast.',
+                'Real estate, luxury retail, hospitality, and D2C brands. Buyers in these corridors search with high purchase intent: the right ranking converts fast.',
             },
             {
               name: 'Thane',
               description:
-                'Manufacturing, healthcare, education, and retail. Thane keywords carry lower competition than central Mumbai with strong local volume — a fast-mover opportunity for businesses in the city.',
+                'Manufacturing, healthcare, education, and retail. Thane keywords carry lower competition than central Mumbai with strong local volume: a fast-mover opportunity for businesses in the city.',
             },
             {
               name: 'Navi Mumbai',
               description:
-                'IT, logistics, APMC trade, and growing residential retail. Navi Mumbai is an underserved SEO market — most businesses here still rank on basic optimisation, which means early movers win.',
+                'IT, logistics, APMC trade, and growing residential retail. Navi Mumbai is an underserved SEO market: most businesses here still rank on basic optimisation, which means early movers win.',
             },
             {
               name: 'Powai & Vikhroli',
               description:
-                'Tech companies, startups, and enterprise brands. Buyers are digitally savvy and research-led — content quality and topical authority matter more here than anywhere else in Mumbai.',
+                'Tech companies, startups, and enterprise brands. Buyers are digitally savvy and research-led, content quality and topical authority matter more here than anywhere else in Mumbai.',
             },
             {
               name: 'Malad & Goregaon',
@@ -702,7 +726,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'Dadar & Chembur',
               description:
-                'Healthcare, education, retail, and local services. Strong search volume, lower competition than the western suburbs — good ROI for businesses that act now.',
+                'Healthcare, education, retail, and local services. Strong search volume, lower competition than the western suburbs, good ROI for businesses that act now.',
             },
           ]}
         />
@@ -737,12 +761,12 @@ export default function SeoMumbaiPage() {
             {
               name: 'Healthcare & Clinics',
               description:
-                'Hospitals, clinics, dentists, labs, and health-tech startups. Healthcare SEO follows strict content credibility standards — we know which signals Google trusts in this vertical.',
+                'Hospitals, clinics, dentists, labs, and health-tech startups. Healthcare SEO follows strict content credibility standards, we know which signals Google trusts in this vertical.',
             },
             {
               name: 'IT & Technology',
               description:
-                'Software companies, SaaS, IT services, and AI startups. B2B tech SEO in Mumbai is content-heavy — buyers research for weeks before they contact you, and you need to be there throughout.',
+                'Software companies, SaaS, IT services, and AI startups. B2B tech SEO in Mumbai is content-heavy, buyers research for weeks before they contact you, and you need to be there throughout.',
             },
           ]}
         />
@@ -773,13 +797,13 @@ export default function SeoMumbaiPage() {
                 letterSpacing: '-0.02em',
               }}
             >
-              Real SEO results for Indian businesses — Mumbai case studies on the way
+              Real SEO results for Indian businesses, Mumbai case studies on the way
             </h2>
             <p
               className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
             >
-              We are building Mumbai-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record — 500+ businesses, 4.9-star average — is built on the same SEO fundamentals we bring to every Mumbai engagement.
+              We are building Mumbai-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average, is built on the same SEO fundamentals we bring to every Mumbai engagement.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
@@ -804,23 +828,23 @@ export default function SeoMumbaiPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. a Mumbai Agency vs. a Freelancer vs. Doing It Yourself"
-          lead="There are four ways to do SEO in Mumbai. Here is the honest comparison — what you actually get, what you keep, and what happens when something goes wrong."
+          lead="There are four ways to do SEO in Mumbai. Here is the honest comparison, what you actually get, what you keep, and what happens when something goes wrong."
           pullQuote={{
             stat: 'No lock-in',
             caption:
-              'month-to-month billing, every deliverable stays yours — content pages, structured data, Google listings, and links — even if you leave.',
+              'month-to-month billing, every deliverable stays yours, content pages, structured data, Google listings, and links, even if you leave.',
           }}
           columns={MUMBAI_COMPARISON_COLUMNS}
           rows={MUMBAI_COMPARISON_ROWS}
           footer="FactoryJet plans run month to month. 30 days notice to pause or stop. You keep everything we build."
         />
 
-        {/* ─── 12. Internal link hub — other SEO services ───────────────────── */}
+        {/* ─── 12. Internal link hub, other SEO services ───────────────────── */}
         <IndustriesGrid
           variant="cards"
           eyebrow="MORE SEO FROM FACTORYJET"
           headline="Other SEO Services We Offer Mumbai Businesses"
-          lead="Looking for a specific type of SEO? We cover the full stack — from Google map rankings to technical clean-up to ecommerce product pages."
+          lead="Looking for a specific type of SEO? We cover the full stack, from Google map rankings to technical clean-up to ecommerce product pages."
           sectors={[
             {
               name: 'Local SEO',
@@ -833,7 +857,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'Technical SEO',
               description:
-                'Site speed, Core Web Vitals, crawl errors, schema, mobile optimisation — the foundation everything else is built on.',
+                'Site speed, Core Web Vitals, crawl errors, schema, mobile optimisation: the foundation everything else is built on.',
               example: 'Explore technical SEO',
               linkLabel: 'Explore technical SEO',
               linkHref: '/seo/technical-seo',
@@ -849,7 +873,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'Link Building',
               description:
-                'Earning links from trusted Indian publications, trade directories, and local partners — the signal Google uses to decide who deserves the first page.',
+                'Earning links from trusted Indian publications, trade directories, and local partners: the signal Google uses to decide who deserves the first page.',
               example: 'Explore link building',
               linkLabel: 'Explore link building',
               linkHref: '/seo/link-building',
@@ -857,7 +881,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'SEO Audit',
               description:
-                'A plain-English audit of what is stopping your Mumbai website from ranking — with a clear action list you can hand to any developer.',
+                'A plain-English audit of what is stopping your Mumbai website from ranking, with a clear action list you can hand to any developer.',
               example: 'Explore SEO audit',
               linkLabel: 'Explore SEO audit',
               linkHref: '/seo/seo-audit',
@@ -865,7 +889,7 @@ export default function SeoMumbaiPage() {
             {
               name: 'SEO Hub India',
               description:
-                'Our full guide to SEO services in India — what to look for, how to compare agencies, and how to tell whether it is working.',
+                'Our full guide to SEO services in India, what to look for, how to compare agencies, and how to tell whether it is working.',
               example: 'Back to India SEO hub',
               linkLabel: 'Back to India SEO hub',
               linkHref: '/seo',
@@ -880,7 +904,7 @@ export default function SeoMumbaiPage() {
           region="in"
         />
 
-        {/* ─── 14. FAQ — Linear Minimal, 5 cats × 4 Qs = 20 total ─────────── */}
+        {/* ─── 14. FAQ: Linear Minimal, 5 cats × 4 Qs = 20 total ─────────── */}
         <FAQ
           eyebrow="MUMBAI SEO QUESTIONS"
           headline="Every Question Mumbai Business Owners Ask About SEO, Answered Simply"

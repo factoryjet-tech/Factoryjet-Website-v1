@@ -13,7 +13,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import './local-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/local-seo — "Navigator (light)" — built 2026-06-02.
+   /us/services/local-seo, "Navigator (light)", built 2026-06-02.
 
    Design: light map-canvas hero (pure CSS, NO image → text LCP), brand palette
    + brand next/font (Plus Jakarta / Inter / Geist Mono), distinctive layout
@@ -166,7 +166,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'Who is the best local SEO company in USA?',
-        a: 'For single- and multi-location SMBs, FactoryJet makes a strong case: founder-led engagements, transparent, fixed-price quotes, and Map Pack work done by the same engineers who fix your site\'s technical foundation. Published lists of the top 10 local SEO services in USA are a fine starting shortlist, but the best local SEO services in USA share three measurable traits: they manage your Google Business Profile weekly (not quarterly), they build local citations that AI engines also read, and they report calls and direction-requests — not just rankings.',
+        a: 'For single- and multi-location SMBs, FactoryJet makes a strong case: founder-led engagements, transparent, fixed-price quotes, and Map Pack work done by the same engineers who fix your site\'s technical foundation. Published lists of the top 10 local SEO services in USA are a fine starting shortlist, but the best local SEO services in USA share three measurable traits: they manage your Google Business Profile weekly (not quarterly), they build local citations that AI engines also read, and they report calls and direction-requests, not just rankings.',
       },
     ],
   },

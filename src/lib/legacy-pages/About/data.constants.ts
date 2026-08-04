@@ -67,7 +67,7 @@ export const VALUES: ValueItem[] = [
   },
   {
     title: "Partnership, Not Transactions",
-    items: ["We're not vendors—we're long-term partners", "Your growth is our growth", "Success measured by outcomes, not hours"]
+    items: ["We're not vendors. We're long-term partners", "Your growth is our growth", "Success measured by outcomes, not hours"]
   },
   {
     title: "Innovation That Delivers",
@@ -90,7 +90,7 @@ export const VALUES: ValueItem[] = [
 export const REASONS: ReasonItem[] = [
   {
     title: "SMB-Focused Expertise",
-    subtitle: "We specialize in small and medium businesses—it's all we do.",
+    subtitle: "We specialize in small and medium businesses. It's all we do.",
     description: ["We understand your budget constraints", "We know you need quick ROI", "Solutions that scale with you"],
     comparison: {
       label: "The Difference:",
@@ -99,7 +99,7 @@ export const REASONS: ReasonItem[] = [
   },
   {
     title: "Comprehensive One-Stop Solution",
-    subtitle: "You don't need multiple vendors—we handle everything.",
+    subtitle: "You don't need multiple vendors, we handle everything.",
     description: ["Website, E-commerce, Marketing, CRM, ERP, AI"],
     comparison: {
       label: "The Benefit:",
@@ -161,7 +161,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "I've been burned by agencies before. How do I know you're different?",
-    answer: "We hear this a lot, and it hurts us too. Here's our promise: We don't hide behind jargon, we don't hold your code hostage, and we don't disappear after launch. We have a 98% client satisfaction rate because we treat your business like our own. Plus, if you're not happy, we fix it—guaranteed."
+    answer: "We hear this a lot, and it hurts us too. Here's our promise: We don't hide behind jargon, we don't hold your code hostage, and we don't disappear after launch. We have a 98% client satisfaction rate because we treat your business like our own. Plus, if you're not happy, we fix it, guaranteed."
   },
   {
     question: "How long has FactoryJet actually been around?",
@@ -181,11 +181,11 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "What is your pricing model? Are there hidden fees?",
-    answer: "We hate surprises. We mostly work on fixed-price projects—you know exactly what you're paying before we start. For ongoing stuff like marketing, it's a predictable monthly retainer. No hidden 'server setup fees' or 'admin charges' popped on you at the end."
+    answer: "We hate surprises. We mostly work on fixed-price projects, you know exactly what you're paying before we start. For ongoing stuff like marketing, it's a predictable monthly retainer. No hidden 'server setup fees' or 'admin charges' popped on you at the end."
   },
   {
     question: "Do you offer payment plans for larger projects?",
-    answer: "Yes, we understand cash flow is king for SMBs. For larger implementations, we can often structure payments across milestones—so you pay as we deliver value, not all upfront."
+    answer: "Yes, we understand cash flow is king for SMBs. For larger implementations, we can often structure payments across milestones, so you pay as we deliver value, not all upfront."
   },
   {
     question: "Am I locked into a long-term contract?",

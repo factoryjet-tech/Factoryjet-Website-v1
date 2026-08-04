@@ -104,7 +104,7 @@ export default function Hero() {
           ref={headingRef}
           className="font-clash text-white font-semibold leading-tight mb-4 text-3xl md:text-4xl lg:text-5xl"
         >
-          Web Design, E-Commerce & AI Solutions for Leeds Businesses — Built by FactoryJet
+          Web Design, E-Commerce & AI Solutions for Leeds Businesses, Built by FactoryJet
         </h1>
 
         {/* 3. Subheading */}
@@ -112,7 +112,7 @@ export default function Hero() {
           ref={subheadRef}
           className="text-sm md:text-base text-white/70 max-w-xl mx-auto mb-6 leading-relaxed"
         >
-          AI-native web design, e-commerce, AI agents & AI SEO for Leeds businesses — enterprise-grade quality at a fixed, transparent quote. Delivered in 2–4 weeks, not 2–4 months.
+          AI-native web design, e-commerce, AI agents & AI SEO for Leeds businesses, enterprise-grade quality at a fixed, transparent quote. Delivered in 2–4 weeks, not 2–4 months.
         </p>
 
         {/* 4. CTA buttons */}

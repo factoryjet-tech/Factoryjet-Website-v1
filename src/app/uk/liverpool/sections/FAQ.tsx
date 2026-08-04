@@ -80,7 +80,7 @@ export default function FAQ() {
     <section
       ref={sectionRef}
       id="faq"
-      aria-label="Frequently asked questions — Liverpool web design"
+      aria-label="Frequently asked questions, Liverpool web design"
       className="relative w-full"
       style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
       itemScope
@@ -96,7 +96,7 @@ export default function FAQ() {
         {/* Two-column layout: header left, cards right */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[35%_1fr] lg:gap-16">
 
-          {/* Left — section header, sticky on desktop */}
+          {/* Left, section header, sticky on desktop */}
           <aside>
             <div ref={headerRef} className="lg:sticky lg:top-[120px]">
               <p
@@ -142,7 +142,7 @@ export default function FAQ() {
             </div>
           </aside>
 
-          {/* Right — all 12 cards, permanently expanded */}
+          {/* Right: all 12 cards, permanently expanded */}
           <div ref={listRef} className="flex flex-col gap-4">
             {FAQS.map((item, i) => (
               <div

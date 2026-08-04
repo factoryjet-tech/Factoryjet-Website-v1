@@ -24,7 +24,7 @@ const INDUSTRIES: Industry[] = [
   {
     name: "Legal & Professional Services",
     description:
-      "Leeds has the largest legal sector outside London — Eversheds Sutherland, Addleshaw Goddard, DLA Piper, and hundreds of smaller practices. We build authority-establishing websites that generate new client enquiries and develop AI document analysis agents that save solicitors hours of manual contract review.",
+      "Leeds has the largest legal sector outside London: Eversheds Sutherland, Addleshaw Goddard, DLA Piper, and hundreds of smaller practices. We build authority-establishing websites that generate new client enquiries and develop AI document analysis agents that save solicitors hours of manual contract review.",
     image: "/images/leeds/industry-legal.jpg",
     imageAlt: "Legal and professional services firms in Leeds",
   },

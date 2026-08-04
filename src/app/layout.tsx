@@ -117,7 +117,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* dataLayer stub — defines window.dataLayer + window.gtag BEFORE hydration
+        {/* dataLayer stub, defines window.dataLayer + window.gtag BEFORE hydration
             so any dataLayer push (e.g. /thank-you's `lead_converted` event) queues
             safely before the GTM container finishes loading. It only DEFINES the
             queue; it does NOT load gtm.js/gtag.js or send any pings, so it is
@@ -203,7 +203,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-slate-900 antialiased">
-        {/* Analytics (GTM + Google Ads) — loads on the production hostname only
+        {/* Analytics (GTM + Google Ads), loads on the production hostname only
             so Cloudflare *.pages.dev preview deploys don't pollute GA4/Ads. */}
         <ProductionAnalytics />
 

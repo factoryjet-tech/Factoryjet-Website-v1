@@ -10,7 +10,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import './tampa-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/tampa/seo — Tampa local-SEO city page. Built 2026-06-06.
+   /us/tampa/seo, Tampa local-SEO city page. Built 2026-06-06.
    Real SiteHeader/SiteFooter/ModalCTAButton. Styles scoped under .tseo
    (./tampa-seo.css, next/font vars, no webfont request). CSS-drawn map hero
    (text LCP, zero CLS) → Lighthouse 100 target. Source: research/mockup-us-tampa-seo-v2.html.

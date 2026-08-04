@@ -14,7 +14,7 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us homepage — omnichannel / B2B e-commerce repositioning (2026-06-26)
+   /us homepage, omnichannel / B2B e-commerce repositioning (2026-06-26)
 
    Entity (title/meta/Service schema): "Ecommerce Development Agency".
    Omnichannel commerce is the wrapper concept/story, not the SEO entity
@@ -22,16 +22,16 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
    Section order (ported from research/mockup-us-problem-v1.html):
      1.  SiteHeader (CTA: Talk to the Founder)
-     2.  HeroOmnichannel — locked copy + channel->engine constellation
-     3.  ProblemSection — the fragmented-commerce tax
-     4.  SolutionSection — one catalog / inventory / order engine / AI workforce
-     5.  PillarsSection — five ways we build and scale commerce
-     6.  AgentConsole — animated live AI agent console (client)
-     7.  GrowthSurfaces — get found and chosen
-     8.  ComparisonSection — a pile of tools vs a partner
-     9.  ProofSection — Bombay Petals (B2B) + Belle Maison (DTC)
-     10. FAQ — 20 commerce FAQs (reuses v2 FAQ.tsx + FAQPage schema)
-     11. FinalCtaSection — Talk to the Founder + Get a commerce audit
+     2.  HeroOmnichannel, locked copy + channel->engine constellation
+     3.  ProblemSection: the fragmented-commerce tax
+     4.  SolutionSection: one catalog / inventory / order engine / AI workforce
+     5.  PillarsSection: five ways we build and scale commerce
+     6.  AgentConsole, animated live AI agent console (client)
+     7.  GrowthSurfaces, get found and chosen
+     8.  ComparisonSection: a pile of tools vs a partner
+     9.  ProofSection, Bombay Petals (B2B) + Belle Maison (DTC)
+     10. FAQ, 20 commerce FAQs (reuses v2 FAQ.tsx + FAQPage schema)
+     11. FinalCtaSection, Talk to the Founder + Get a commerce audit
      12. RelatedGuides · ExitIntentLeadForm · SiteFooter
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -261,7 +261,7 @@ export default function USHomePage() {
         <AgentConsole />
         {/* 7. Commerce growth / visibility surfaces */}
         <GrowthSurfaces />
-        {/* 7b. Free AI Visibility Checker — lead magnet funnel */}
+        {/* 7b. Free AI Visibility Checker, lead magnet funnel */}
         <AiVisibilityCtaBand />
         {/* 8. A pile of tools vs a partner */}
         <ComparisonSection />

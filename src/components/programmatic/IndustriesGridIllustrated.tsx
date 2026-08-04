@@ -49,7 +49,7 @@ export default function IndustriesGridIllustrated({
               key={sector.slug}
               className="rounded-lg border border-border-soft bg-white p-6"
             >
-              {/* Illustration slot — 4:3 */}
+              {/* Illustration slot, 4:3 */}
               <div className="mb-4 aspect-[4/3] overflow-hidden rounded-md">
                 {sector.illustrationPath ? (
                   // eslint-disable-next-line @next/next/no-img-element

@@ -88,11 +88,11 @@ const faqs = [
     },
     {
       q: 'What does Ahrefs data say about how long SEO takes?',
-      a: "Ahrefs' research produces two widely cited findings. First, their study of 2 million random pages found that 95% of newly published content never reaches Google's top 10 within the first year — the 5% that do typically have strong backlink profiles or target low-competition queries. Second, their analysis of pages currently ranking in the top 10 found that the average top-10 result is over 2 years old, underscoring that authority compounds over time. For timeline expectations, Ahrefs data consistently supports the 3–6 month window for initial traction and 6–12 months for sustained competitive rankings.",
+      a: "Ahrefs' research produces two widely cited findings. First, their study of 2 million random pages found that 95% of newly published content never reaches Google's top 10 within the first year: the 5% that do typically have strong backlink profiles or target low-competition queries. Second, their analysis of pages currently ranking in the top 10 found that the average top-10 result is over 2 years old, underscoring that authority compounds over time. For timeline expectations, Ahrefs data consistently supports the 3–6 month window for initial traction and 6–12 months for sustained competitive rankings.",
     },
     {
       q: 'What does Semrush research say about the SEO timeline?',
-      a: "Semrush's State of Search reports consistently find that newly created pages take 3–6 months to generate meaningful impressions and 6–12 months to reach page-one positions for competitive keywords. Their data also shows that content length, structured data, and internal linking all statistically correlate with faster ranking movement — pages with FAQ schema and answer-first headings appear in AI Overviews and featured snippets significantly faster than pages without. The 3–6 month baseline is the most-cited figure from both Semrush and Ahrefs research.",
+      a: "Semrush's State of Search reports consistently find that newly created pages take 3–6 months to generate meaningful impressions and 6–12 months to reach page-one positions for competitive keywords. Their data also shows that content length, structured data, and internal linking all statistically correlate with faster ranking movement, pages with FAQ schema and answer-first headings appear in AI Overviews and featured snippets significantly faster than pages without. The 3–6 month baseline is the most-cited figure from both Semrush and Ahrefs research.",
     },
     {
       q: 'Does FactoryJet help with SEO timelines?',
@@ -475,11 +475,11 @@ export const post: BlogPost = {
           <strong>Skipping technical foundations on e-commerce stores.</strong> Shopify and
           WooCommerce stores without JSON-LD schema, with duplicate product descriptions, or
           missing canonical tags consistently take 3–4 extra months to rank. E-commerce
-          businesses in competitive markets — including outdoor brands and manufacturers in{' '}
+          businesses in competitive markets, including outdoor brands and manufacturers in{' '}
           <a href="/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
             Chattanooga
           </a>{' '}
-          — get the fastest SEO traction when structured data, clean URL architecture, and
+, get the fastest SEO traction when structured data, clean URL architecture, and
           AEO content are built in from day one, not bolted on after launch.
         </li>
         <li>

@@ -18,7 +18,7 @@ export default function HeroImageMockup({ className = '' }: { className?: string
     <div className={`relative select-none ${className}`}>
       <Image
         src="/images/hero-us-mockup.webp"
-        alt="FactoryJet builds high-converting Shopify stores and websites for US small businesses — live in 7 days"
+        alt="FactoryJet builds high-converting Shopify stores and websites for US small businesses, live in 7 days"
         width={2600}
         height={1451}
         className="w-full h-auto rounded-2xl"

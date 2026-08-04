@@ -7,7 +7,7 @@ const AgencyInfo: React.FC = () => {
   const tabs = [
     {
       title: "AI Workflows",
-      content: "Our AI-native methodology doesn't replace human expertise—it amplifies it. AI handles repetitive technical tasks, code optimization, and testing automation while our expert designers focus on innovation, user experience, and business strategy."
+      content: "Our AI-native methodology doesn't replace human expertise, it amplifies it. AI handles repetitive technical tasks, code optimization, and testing automation while our expert designers focus on innovation, user experience, and business strategy."
     },
     {
       title: "Comprehensive Optimization",

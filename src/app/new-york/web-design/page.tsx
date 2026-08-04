@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design — New York, NY',
+        alt: 'FactoryJet Web Design: New York, NY',
       },
     ],
     locale: 'en_US',
@@ -80,11 +80,11 @@ const howToJsonLd = {
   description: 'Our proven 7-day process for delivering a professional, SEO-optimized website for New York businesses.',
   totalTime: 'P7D',
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Day 1 — Discovery Call', text: 'We learn your business, goals, and competitive landscape in New York. We define the sitemap, content strategy, and technical requirements.' },
-    { '@type': 'HowToStep', position: 2, name: 'Day 2 — Strategy & Structure', text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.' },
-    { '@type': 'HowToStep', position: 3, name: 'Days 3–4 — Design', text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.' },
-    { '@type': 'HowToStep', position: 4, name: 'Days 5–6 — Development & SEO', text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for New York, structured data, and connect all integrations.' },
-    { '@type': 'HowToStep', position: 5, name: 'Day 7 — Launch', text: 'Your New York website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.' },
+    { '@type': 'HowToStep', position: 1, name: 'Day 1 | Discovery Call', text: 'We learn your business, goals, and competitive landscape in New York. We define the sitemap, content strategy, and technical requirements.' },
+    { '@type': 'HowToStep', position: 2, name: 'Day 2 | Strategy & Structure', text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.' },
+    { '@type': 'HowToStep', position: 3, name: 'Days 3–4 | Design', text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.' },
+    { '@type': 'HowToStep', position: 4, name: 'Days 5–6 | Development & SEO', text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for New York, structured data, and connect all integrations.' },
+    { '@type': 'HowToStep', position: 5, name: 'Day 7 | Launch', text: 'Your New York website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.' },
   ],
 };
 
@@ -97,12 +97,12 @@ const FAQ_ITEMS = [
             {
               category: 'pricing',
               question: 'How long does it take to get a website built?',
-              answer: 'Starter sites (5 pages) are delivered in 7 business days — that\'s our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts the day you approve the Figma design.',
+              answer: 'Starter sites (5 pages) are delivered in 7 business days, that\'s our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts the day you approve the Figma design.',
             },
             {
               category: 'local',
               question: 'Do you work with NYC businesses remotely?',
-              answer: 'Yes, 100% remotely — which is how we keep costs significantly below local agency benchmarks. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
+              answer: 'Yes, 100% remotely, which is how we keep costs significantly below local agency benchmarks. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
             },
             {
               category: 'local',
@@ -116,18 +116,18 @@ const FAQ_ITEMS = [
             },
             {
               category: 'included',
-              question: 'I run an e-commerce brand in NYC — can you build my Shopify store?',
+              question: 'I run an e-commerce brand in NYC, can you build my Shopify store?',
               answer: 'Absolutely. We build custom Shopify themes, headless Shopify storefronts on Next.js, and full custom e-commerce platforms. Our Shopify work includes conversion-optimized product pages, fast checkout flows, and integrations with Klaviyo, Recharge, and your 3PL.',
             },
             {
               category: 'technical',
               question: 'Can you redesign my website without hurting my Google rankings?',
-              answer: 'Yes. Before touching anything, we do a full SEO audit — mapping every URL, checking rankings, and documenting redirect needs. We preserve URL structure where possible, implement 301 redirects where needed, and migrate all meta tags. We\'ve never had a client lose meaningful rankings from a FactoryJet redesign.',
+              answer: 'Yes. Before touching anything, we do a full SEO audit, mapping every URL, checking rankings, and documenting redirect needs. We preserve URL structure where possible, implement 301 redirects where needed, and migrate all meta tags. We\'ve never had a client lose meaningful rankings from a FactoryJet redesign.',
             },
             {
               category: 'technical',
               question: 'What platform do you build NYC websites on?',
-              answer: 'Our default is Next.js on Cloudflare Pages — the fastest, most SEO-friendly architecture available. We also build on WordPress for content-heavy sites, Shopify for e-commerce, and Webflow for teams that want visual editing. We\'ll recommend the right platform based on your needs.',
+              answer: 'Our default is Next.js on Cloudflare Pages: the fastest, most SEO-friendly architecture available. We also build on WordPress for content-heavy sites, Shopify for e-commerce, and Webflow for teams that want visual editing. We\'ll recommend the right platform based on your needs.',
             },
             {
               category: 'pricing',
@@ -146,23 +146,23 @@ const FAQ_ITEMS = [
             },
             {
               category: 'local',
-              question: 'My medical practice is in NYC — can you build a HIPAA-aware website?',
-              answer: 'We design with HIPAA considerations in mind — specifically avoiding collection of PHI through standard contact forms and recommending compliant form solutions. We\'ve built dozens of healthcare websites and know what to avoid. We recommend verifying specific requirements with your compliance team.',
+              question: 'My medical practice is in NYC, can you build a HIPAA-aware website?',
+              answer: 'We design with HIPAA considerations in mind, specifically avoiding collection of PHI through standard contact forms and recommending compliant form solutions. We\'ve built dozens of healthcare websites and know what to avoid. We recommend verifying specific requirements with your compliance team.',
             },
             {
               category: 'local',
               question: 'How do I get started with a New York City web design project?',
-              answer: 'Book a 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
+              answer: 'Book a 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch, just a practical conversation about what you need and what it\'ll cost.',
             },
             {
               category: 'local',
               question: 'Do you have a physical office in New York City?',
-              answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at significantly below local agency benchmarks. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
+              answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at significantly below local agency benchmarks. We work in US Eastern time and communicate via Slack, Loom, and Figma: the same tools your team already uses.',
             },
             {
               category: 'local',
               question: 'What happens after my NYC website launches?',
-              answer: 'The 30 days after launch are covered — minor text changes, bug fixes, and training requests are included. We give you a recorded CMS walkthrough so you can manage content yourself. After 30 days, choose a monthly maintenance plan or use us for one-off change requests at fixed rates.',
+              answer: 'The 30 days after launch are covered, minor text changes, bug fixes, and training requests are included. We give you a recorded CMS walkthrough so you can manage content yourself. After 30 days, choose a monthly maintenance plan or use us for one-off change requests at fixed rates.',
             },
             {
               category: 'local',
@@ -176,23 +176,23 @@ const FAQ_ITEMS = [
             },
             {
               category: 'local',
-              question: 'My startup is in the Flatiron District — do you work with early-stage companies?',
+              question: 'My startup is in the Flatiron District, do you work with early-stage companies?',
               answer: 'Yes. Early-stage startups are one of our most common client types in NYC. We\'ve built SaaS landing pages, investor-facing websites, client portals, and MVPs for companies at pre-seed through Series B. We understand that speed and flexibility matter at this stage.',
             },
             {
               category: 'local',
               question: 'How do I know FactoryJet is legitimate?',
-              answer: 'We maintain a 4.9/5 average client rating, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
+              answer: 'We maintain a 4.9/5 average client rating, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly, because transparency is the only way to build trust with clients who have never met us in person.',
             },
             {
               category: 'local',
               question: 'Can you build a website that works well in NYC and other US markets?',
-              answer: 'Yes. Most of our clients serve customers nationally, not just in NYC. We build with national SEO structure in mind — service pages targeting city + service terms, proper hreflang for any international audiences, and schema markup that helps AI search engines understand your geographic service area.',
+              answer: 'Yes. Most of our clients serve customers nationally, not just in NYC. We build with national SEO structure in mind, service pages targeting city + service terms, proper hreflang for any international audiences, and schema markup that helps AI search engines understand your geographic service area.',
             },
             {
               category: 'technical',
               question: 'Does my NYC business website need to be ADA compliant?',
-              answer: 'Yes, and this is increasingly important for NYC businesses. New York City has seen a significant rise in ADA web accessibility lawsuits under the Americans with Disabilities Act — particularly in retail, hospitality, and healthcare. Every FactoryJet site is built to WCAG 2.1 AA standards: proper alt text, keyboard navigation, color contrast ratios, ARIA labels, and semantic HTML. We also recommend periodic accessibility audits as your site content grows.',
+              answer: 'Yes, and this is increasingly important for NYC businesses. New York City has seen a significant rise in ADA web accessibility lawsuits under the Americans with Disabilities Act, particularly in retail, hospitality, and healthcare. Every FactoryJet site is built to WCAG 2.1 AA standards: proper alt text, keyboard navigation, color contrast ratios, ARIA labels, and semantic HTML. We also recommend periodic accessibility audits as your site content grows.',
             },
             {
               category: 'technical',
@@ -309,8 +309,8 @@ export default function NewYorkWebDesignPage() {
           eyebrow="NEW YORK CITY MARKET"
           headline="Why Your NYC Web Presence Can't Be an Afterthought"
           leadParagraphs={[
-            "New York City is the largest US metro economy at over $2 trillion in GDP, home to 220,000+ businesses across finance, media, fashion, healthcare, legal services, and technology. The buyer pool is enormous — but so is the competition. In a city where your prospect walks past three competitor storefronts on the way to work, your website is often the deciding factor on whether they call you or someone else.",
-            "NYC consumers and B2B buyers are among the most digitally sophisticated in the country. They notice slow load times, dated design, and missing information — and they leave. The average NYC small business competes not just with local firms but with national brands who have invested heavily in their digital presence. A website that loaded in 3 seconds and last looked good in 2019 is actively losing you money every day it's live.",
+            "New York City is the largest US metro economy at over $2 trillion in GDP, home to 220,000+ businesses across finance, media, fashion, healthcare, legal services, and technology. The buyer pool is enormous, but so is the competition. In a city where your prospect walks past three competitor storefronts on the way to work, your website is often the deciding factor on whether they call you or someone else.",
+            "NYC consumers and B2B buyers are among the most digitally sophisticated in the country. They notice slow load times, dated design, and missing information, and they leave. The average NYC small business competes not just with local firms but with national brands who have invested heavily in their digital presence. A website that loaded in 3 seconds and last looked good in 2019 is actively losing you money every day it's live.",
           ]}
           stats={[
             { value: '$2T+', label: 'New York City Metro GDP', sourceUrl: 'https://www.bea.gov/' },
@@ -322,12 +322,12 @@ export default function NewYorkWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · NEW YORK CITY"
           headline="What a Great NYC Business Website Actually Needs"
-          lead="Most NYC web design agencies charge for the Manhattan zip code, not the quality of work. FactoryJet builds the same Next.js infrastructure, Figma design system, and conversion architecture — without the Manhattan overhead."
+          lead="Most NYC web design agencies charge for the Manhattan zip code, not the quality of work. FactoryJet builds the same Next.js infrastructure, Figma design system, and conversion architecture, without the Manhattan overhead."
           body={
             <>
-              <p>For <strong>financial services and professional services firms</strong> — the backbone of the NYC economy — a website needs to establish credibility before the prospect picks up the phone. That means attorney profiles built for E-E-A-T, clear service pages structured for local SEO, and lead-capture forms that route directly into your CRM.</p>
+              <p>For <strong>financial services and professional services firms</strong>: the backbone of the NYC economy: a website needs to establish credibility before the prospect picks up the phone. That means attorney profiles built for E-E-A-T, clear service pages structured for local SEO, and lead-capture forms that route directly into your CRM.</p>
               <p>For <strong>retail, hospitality, and DTC brands</strong> in New York, the website is a revenue channel. We build Shopify storefronts and custom e-commerce that convert on mobile, load in under 1.5 seconds on a Manhattan 4G connection, and integrate with your inventory and fulfillment systems.</p>
-              <p>For <strong>startups and tech companies</strong> in NYC's growing Silicon Alley ecosystem — from Midtown to the Flatiron District to Brooklyn Tech Triangle — we build SaaS landing pages, client portals, and web applications that scale with your growth stage.</p>
+              <p>For <strong>startups and tech companies</strong> in NYC's growing Silicon Alley ecosystem, from Midtown to the Flatiron District to Brooklyn Tech Triangle, we build SaaS landing pages, client portals, and web applications that scale with your growth stage.</p>
               <p>Every FactoryJet project ships with JSON-LD schema for AI search visibility, GA4 analytics wired in from day one, and a recorded handover so your team can manage the site without calling a developer every week.</p>
             </>
           }
@@ -337,9 +337,9 @@ export default function NewYorkWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why NYC Small Businesses Choose FactoryJet Over Local Agencies"
-          lead={"The average NYC web design agency charges enterprise-level rates for a small business website. Blue Fountain Media, Coalition Technologies, and Lounge Lizard are credible options — but none publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session — the same quality at a fraction of the cost, fixed-price, with US project management. Not because we cut corners, but because we don't have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No maintenance retainer you can't cancel."}
+          lead={"The average NYC web design agency charges enterprise-level rates for a small business website. Blue Fountain Media, Coalition Technologies, and Lounge Lizard are credible options, but none publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session: the same quality at a fraction of the cost, fixed-price, with US project management. Not because we cut corners, but because we don't have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No maintenance retainer you can't cancel."}
           pillars={[
-            { title: 'NYC-aware', body: 'We understand the NYC business landscape — finance, media, legal, retail, hospitality. We\'ve built for all of them. The copy and conversion architecture reflect what actually works in this market.' },
+            { title: 'NYC-aware', body: 'We understand the NYC business landscape | finance, media, legal, retail, hospitality. We\'ve built for all of them. The copy and conversion architecture reflect what actually works in this market.' },
             { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no \'scope review\' fee before work starts. Fixed price. Agreed upfront. In writing.' },
             { title: 'Guaranteed', body: '7-day delivery on Starter sites. If we miss the deadline for any reason on our end, you don\'t pay. We\'ve maintained a 97% on-time delivery rate across 500+ projects.' },
           ]}
@@ -393,7 +393,7 @@ export default function NewYorkWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs NYC Web Design Agencies"
-          lead={"NYC agencies charge a premium for the zip code. Blue Fountain Media, Coalition Technologies, and Lounge Lizard are credible shops — but their baseline pricing for a small business website runs enterprise-level.\n\nFactoryJet delivers the same quality at a fraction of the cost, fixed-price, with a 7-day delivery guarantee on Starter sites and a Next.js codebase you own outright."}
+          lead={"NYC agencies charge a premium for the zip code. Blue Fountain Media, Coalition Technologies, and Lounge Lizard are credible shops, but their baseline pricing for a small business website runs enterprise-level.\n\nFactoryJet delivers the same quality at a fraction of the cost, fixed-price, with a 7-day delivery guarantee on Starter sites and a Next.js codebase you own outright."}
           columns={[
             { label: 'Their pricing' },
             { label: 'FactoryJet', isFactoryJet: true },
@@ -406,7 +406,7 @@ export default function NewYorkWebDesignPage() {
             },
             {
               feature: 'Coalition Technologies',
-              values: ['Enterprise-level rates', 'Fixed-price · 7-day delivery', 'Same Next.js quality and SEO focus. FactoryJet confirms fixed pricing upfront — no discovery fee required.'],
+              values: ['Enterprise-level rates', 'Fixed-price · 7-day delivery', 'Same Next.js quality and SEO focus. FactoryJet confirms fixed pricing upfront, no discovery fee required.'],
             },
             {
               feature: 'Lounge Lizard',
@@ -442,7 +442,7 @@ export default function NewYorkWebDesignPage() {
             },
             {
               name: 'Technology & Startups (Silicon Alley)',
-              description: 'NYC\'s tech sector — centered in the Flatiron District, Hudson Yards, and Brooklyn Tech Triangle — has raised over $30B in VC funding since 2020. Startups need websites that convert investors and customers simultaneously.',
+              description: 'NYC\'s tech sector, centered in the Flatiron District, Hudson Yards, and Brooklyn Tech Triangle, has raised over $30B in VC funding since 2020. Startups need websites that convert investors and customers simultaneously.',
               example: 'Series A–C startups in Fintech, Proptech, Adtech, and SaaS companies headquartered in NYC.',
             },
             {
@@ -455,8 +455,8 @@ export default function NewYorkWebDesignPage() {
 
         <PricingTiers
           eyebrow="HOW WE SCOPE"
-          headline="Fixed Pricing for NYC Businesses — No Surprises"
-          lead="NYC web design agencies charge enterprise-level rates for comparable work. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session — the same quality at a fraction of the cost, fixed-price, with US project management. Pricing is scoped to your build; the main drivers are page count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. A 7-day delivery guarantee and a Next.js codebase you own outright come standard."
+          headline="Fixed Pricing for NYC Businesses, No Surprises"
+          lead="NYC web design agencies charge enterprise-level rates for comparable work. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session: the same quality at a fraction of the cost, fixed-price, with US project management. Pricing is scoped to your build; the main drivers are page count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. A 7-day delivery guarantee and a Next.js codebase you own outright come standard."
           tiers={[
             {
               name: 'Starter',

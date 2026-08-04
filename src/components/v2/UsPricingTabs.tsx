@@ -71,7 +71,7 @@ const UsPricingTabs: React.FC = () => {
         <div className="text-center mb-8">
           <p className="text-xs font-fj-mono uppercase tracking-widest text-[#B23E13] mb-3">Pricing plans</p>
           <h2 className="text-3xl md:text-4xl font-fj-display font-bold text-fj-ink">Fixed-price plans for every service</h2>
-          <p className="mt-3 text-fj-ink/60 font-fj-body max-w-2xl mx-auto">Pick a service to see its tiers. Every plan is fixed-price and scoped to your build — no hourly billing, no surprise invoices, code and data you own from day one. You get a clear quote up front after a free discovery call.</p>
+          <p className="mt-3 text-fj-ink/60 font-fj-body max-w-2xl mx-auto">Pick a service to see its tiers. Every plan is fixed-price and scoped to your build, no hourly billing, no surprise invoices, code and data you own from day one. You get a clear quote up front after a free discovery call.</p>
         </div>
 
         {/* Tabs */}
@@ -136,7 +136,7 @@ const UsPricingTabs: React.FC = () => {
         </div>
 
         <p className="mt-8 text-center text-xs text-fj-ink/60 font-fj-body">
-          Fixed-price, milestone-paid, quoted up front after a free discovery call. Copywriting, premium licenses, and custom photography are itemized before you sign. AI SEO retainers are month-to-month — no annual contracts.
+          Fixed-price, milestone-paid, quoted up front after a free discovery call. Copywriting, premium licenses, and custom photography are itemized before you sign. AI SEO retainers are month-to-month, no annual contracts.
         </p>
       </div>
     </section>

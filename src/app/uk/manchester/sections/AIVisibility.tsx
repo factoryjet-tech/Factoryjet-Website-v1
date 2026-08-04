@@ -6,9 +6,9 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 
 const BODY_PARAGRAPHS = [
-  "Google still drives the majority of web traffic. But in 2026, a rapidly growing share of business discovery happens through AI systems: ChatGPT Search, Perplexity, Google AI Overviews, and Claude. When a Manchester business owner asks Perplexity \"who's the best web design agency in Manchester?\", the answer isn't pulled from Google rankings — it's synthesised from structured data, schema markup, E-E-A-T signals, and content quality.",
+  "Google still drives the majority of web traffic. But in 2026, a rapidly growing share of business discovery happens through AI systems: ChatGPT Search, Perplexity, Google AI Overviews, and Claude. When a Manchester business owner asks Perplexity \"who's the best web design agency in Manchester?\", the answer isn't pulled from Google rankings. It's synthesised from structured data, schema markup, E-E-A-T signals, and content quality.",
   "Most Manchester web agencies have no strategy for this. Their websites are invisible to AI crawlers because they use JavaScript-heavy frameworks without server-side rendering, hide content behind accordions and tabs, lack structured data, and have no schema markup beyond basic meta tags.",
-  "FactoryJet builds every Manchester website for dual visibility: Google organic search AND AI-powered discovery. This means full LocalBusiness and Service schema on every page, FAQPage structured data targeting \"People Also Ask\" boxes, expanded visible content (never hidden in accordions — AI crawlers can't execute JavaScript), BreadcrumbList and HowTo schema for rich result eligibility, and server-side rendered Next.js pages that AI crawlers can parse in milliseconds.",
+  "FactoryJet builds every Manchester website for dual visibility: Google organic search AND AI-powered discovery. This means full LocalBusiness and Service schema on every page, FAQPage structured data targeting \"People Also Ask\" boxes, expanded visible content (never hidden in accordions: AI crawlers can't execute JavaScript), BreadcrumbList and HowTo schema for rich result eligibility, and server-side rendered Next.js pages that AI crawlers can parse in milliseconds.",
 ];
 
 const INFO_CARDS = [
@@ -22,13 +22,13 @@ const INFO_CARDS = [
     badge: "AEO",
     title: "Answer Engine Optimisation",
     description:
-      "FAQPage structured data targeting \"People Also Ask\" boxes. All content fully visible and expanded — never hidden in JS toggles.",
+      "FAQPage structured data targeting \"People Also Ask\" boxes. All content fully visible and expanded, never hidden in JS toggles.",
   },
   {
     badge: "SSR",
     title: "Server-Side Rendering",
     description:
-      "Next.js pages rendered on the server. AI crawlers parse your content in milliseconds — zero JavaScript execution required.",
+      "Next.js pages rendered on the server. AI crawlers parse your content in milliseconds, zero JavaScript execution required.",
   },
 ];
 

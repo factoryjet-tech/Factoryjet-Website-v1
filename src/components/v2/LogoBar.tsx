@@ -62,7 +62,7 @@ export default function LogoBar({
         )}
       </div>
 
-      {/* Marquee track — overflow-hidden parent on section */}
+      {/* Marquee track, overflow-hidden parent on section */}
       <div
         className="relative mt-10"
         style={{
@@ -72,7 +72,7 @@ export default function LogoBar({
             'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)',
         }}
       >
-        {/* Keyframes injected inline — no separate CSS file needed for SSR */}
+        {/* Keyframes injected inline, no separate CSS file needed for SSR */}
         <style>{`
           @keyframes logoMarquee {
             0%   { transform: translateX(0); }

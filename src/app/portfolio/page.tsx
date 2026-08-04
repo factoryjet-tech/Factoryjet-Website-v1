@@ -8,7 +8,7 @@ import { portfolioAlternatesUS } from '@/data/hreflangMap';
 export const metadata: Metadata = {
   title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
   description:
-    "Browse FactoryJet's US portfolio — e-commerce stores, SaaS platforms & business websites. 500+ projects delivered. Find inspiration for your next project.",
+    "Browse FactoryJet's US portfolio, e-commerce stores, SaaS platforms & business websites. 500+ projects delivered. Find inspiration for your next project.",
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -80,31 +80,31 @@ const HOW_TO_SCHEMA = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
+      name: 'Days 5–6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],

@@ -28,7 +28,7 @@ export default function ContactMethods() {
         </p>
 
         <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {/* Book a call — featured */}
+          {/* Book a call, featured */}
           <div className="rounded-2xl border-2 border-[#F05A28] bg-white p-6">
             <div className="mb-3.5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF0EA]">
               <CalendarClock className="h-6 w-6 text-[#F05A28]" />

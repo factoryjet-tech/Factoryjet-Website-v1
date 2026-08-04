@@ -149,7 +149,7 @@ export default function Pricing() {
               textTransform: "uppercase",
             }}
           >
-            Transparent Pricing — No Surprises
+            Transparent Pricing, No Surprises
           </p>
 
           <h2
@@ -245,7 +245,7 @@ export default function Pricing() {
                       borderTop: "1px solid #E2E8F0",
                     }}
                   >
-                    {/* Service — highlighted column (Jet Green) */}
+                    {/* Service, highlighted column (Jet Green) */}
                     <div
                       className="px-6 py-6"
                       style={{

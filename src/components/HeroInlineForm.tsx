@@ -107,7 +107,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
           </button>
         </div>
 
-        {/* Honeypot — hidden from real users */}
+        {/* Honeypot, hidden from real users */}
         <input
           type="text" tabIndex={-1} autoComplete="off" aria-hidden="true"
           value={honeypot} onChange={(e) => setHoneypot(e.target.value)}

@@ -16,7 +16,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/shopify-seo — Shopify SEO services page (2026-06-03)
+   /us/services/shopify-seo, Shopify SEO services page (2026-06-03)
 
    Cloned from /us/services/ai-seo template (shared v2 components, same schema
    pattern). Targets the Shopify-SEO commercial cluster: shopify seo services
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Shopify SEO services for US stores',
+        alt: 'FactoryJet: Shopify SEO services for US stores',
       },
     ],
     locale: 'en_US',
@@ -76,14 +76,14 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Section data — pillars, journey stages, pricing tiers
+   Section data, pillars, journey stages, pricing tiers
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PILLARS = [
   {
     title: 'Shopify creates duplicate URLs that quietly split your rankings',
     body:
-      'By default Shopify serves every product on two paths — /products/x and /collections/y/products/x — plus paginated and tag-filtered collection URLs. Without canonical discipline, Google splits authority across duplicates and your real pages underperform. A generalist SEO audit rarely catches this; it is Shopify-specific plumbing.',
+      'By default Shopify serves every product on two paths, /products/x and /collections/y/products/x, plus paginated and tag-filtered collection URLs. Without canonical discipline, Google splits authority across duplicates and your real pages underperform. A generalist SEO audit rarely catches this; it is Shopify-specific plumbing.',
   },
   {
     title: 'Collection and product pages are thin by default',
@@ -93,7 +93,7 @@ const PILLARS = [
   {
     title: 'App and theme bloat tanks Core Web Vitals',
     body:
-      'Every review widget, upsell app, and pop-up injects JavaScript. Stack five apps and your mobile LCP collapses — and Core Web Vitals are a ranking and conversion factor. Fixing Shopify performance is engineering work, not a checklist an app can run for you.',
+      'Every review widget, upsell app, and pop-up injects JavaScript. Stack five apps and your mobile LCP collapses, and Core Web Vitals are a ranking and conversion factor. Fixing Shopify performance is engineering work, not a checklist an app can run for you.',
   },
 ];
 
@@ -102,7 +102,7 @@ const SHOPIFY_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '01',
     title: 'Audit',
     description:
-      'We crawl your store the way Google does — duplicate URLs, canonical errors, thin collections, app-injected JS, broken schema, and the queries you should rank for but do not. Output: a Shopify SEO scorecard and a prioritized 90-day roadmap.',
+      'We crawl your store the way Google does, duplicate URLs, canonical errors, thin collections, app-injected JS, broken schema, and the queries you should rank for but do not. Output: a Shopify SEO scorecard and a prioritized 90-day roadmap.',
   },
   {
     number: '02',
@@ -114,7 +114,7 @@ const SHOPIFY_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '03',
     title: 'Content',
     description:
-      'We write real, query-matched copy for your priority collection and product pages, plus buyer-intent blog content. Authored by people, structured so both Google and AI engines can extract answers — never thin LLM boilerplate.',
+      'We write real, query-matched copy for your priority collection and product pages, plus buyer-intent blog content. Authored by people, structured so both Google and AI engines can extract answers, never thin LLM boilerplate.',
   },
   {
     number: '04',
@@ -126,7 +126,7 @@ const SHOPIFY_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '05',
     title: 'Measure',
     description:
-      'Monthly: keyword rankings, organic and AI-referral sessions, indexed-page health, Core Web Vitals, and revenue where tracking is wired in. You see what is moving. We adjust scope monthly — no annual lock-in.',
+      'Monthly: keyword rankings, organic and AI-referral sessions, indexed-page health, Core Web Vitals, and revenue where tracking is wired in. You see what is moving. We adjust scope monthly, no annual lock-in.',
   },
 ];
 
@@ -186,7 +186,7 @@ const PRICING_TIERS = [
     cadence: '',
     description: 'Custom scope for Shopify Plus, multi-store, or international stores. Dedicated engineer + strategist.',
     features: [
-      'Custom scope — defined per engagement',
+      'Custom scope, defined per engagement',
       'Shopify Plus / multi-store / international',
       'Dedicated senior engineer + strategist',
       'Quarterly executive review',
@@ -234,7 +234,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'What is the difference between Shopify SEO and general ecommerce SEO?',
     answer:
-      'Ecommerce SEO is the broad discipline of ranking online stores on any platform; Shopify SEO applies those principles to the specific way Shopify builds and serves pages. If you run a Shopify store, the Shopify-specific work — duplicate URLs, theme performance, app bloat, collection architecture — is where most of the wins are. If you are on WooCommerce, Magento, or a custom platform, our broader ecommerce SEO service is the better fit.',
+      'Ecommerce SEO is the broad discipline of ranking online stores on any platform; Shopify SEO applies those principles to the specific way Shopify builds and serves pages. If you run a Shopify store, the Shopify-specific work, duplicate URLs, theme performance, app bloat, collection architecture, is where most of the wins are. If you are on WooCommerce, Magento, or a custom platform, our broader ecommerce SEO service is the better fit.',
   },
 
   // ── Technical & apps ───────────────────────────────────────────────────
@@ -248,7 +248,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'technical',
     question: 'Do Shopify SEO apps actually work?',
     answer:
-      'SEO apps (Smart SEO, Plug in SEO, and similar) automate useful basics — bulk meta tags, alt text, simple schema, broken-link checks. They are worth having. But they cannot fix the work that actually moves rankings: collection and product content, duplicate-URL and canonical architecture, Core Web Vitals, internal linking strategy, or AI-citation positioning. Apps are a tool, not a strategy. We often keep a client on one app and do the high-impact work around it.',
+      'SEO apps (Smart SEO, Plug in SEO, and similar) automate useful basics, bulk meta tags, alt text, simple schema, broken-link checks. They are worth having. But they cannot fix the work that actually moves rankings: collection and product content, duplicate-URL and canonical architecture, Core Web Vitals, internal linking strategy, or AI-citation positioning. Apps are a tool, not a strategy. We often keep a client on one app and do the high-impact work around it.',
   },
   {
     category: 'technical',
@@ -260,7 +260,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'technical',
     question: 'Will my Shopify apps and theme hurt Core Web Vitals?',
     answer:
-      'Often, yes. Each app typically injects its own JavaScript and CSS, and a heavy theme compounds it — which slows mobile load and drags down Core Web Vitals, a Google ranking and conversion factor. We audit what each app costs in performance, remove or defer what is not earning its weight, and optimize the theme so your store stays fast as you add functionality.',
+      'Often, yes. Each app typically injects its own JavaScript and CSS, and a heavy theme compounds it, which slows mobile load and drags down Core Web Vitals, a Google ranking and conversion factor. We audit what each app costs in performance, remove or defer what is not earning its weight, and optimize the theme so your store stays fast as you add functionality.',
   },
 
   // ── Methodology ────────────────────────────────────────────────────────
@@ -268,13 +268,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'method',
     question: 'What does a Shopify SEO audit include?',
     answer:
-      'The audit covers four areas: (1) technical — duplicate URLs, canonicals, indexation, sitemap, and crawl issues; (2) content — collection and product page gaps versus the queries you should rank for; (3) performance — Core Web Vitals and app/theme bloat; and (4) authority and AI — backlink profile, citation gaps, and whether AI engines reference your store. You get a written scorecard, a prioritized 90-day roadmap, and a strategy call with the founder.',
+      'The audit covers four areas: (1) technical, duplicate URLs, canonicals, indexation, sitemap, and crawl issues; (2) content, collection and product page gaps versus the queries you should rank for; (3) performance, Core Web Vitals and app/theme bloat; and (4) authority and AI, backlink profile, citation gaps, and whether AI engines reference your store. You get a written scorecard, a prioritized 90-day roadmap, and a strategy call with the founder.',
   },
   {
     category: 'method',
     question: 'Can I hire a dedicated Shopify SEO consultant or expert?',
     answer:
-      'Yes. Every engagement gives you a dedicated Shopify SEO expert — not a rotating pool — who owns your audit, fixes, content, and reporting. If you want strategic input rather than full execution, you can hire a Shopify SEO consultant for the audit and roadmap and run it with your own team. Either way you work directly with a Shopify specialist, with founder access on every account.',
+      'Yes. Every engagement gives you a dedicated Shopify SEO expert, not a rotating pool, who owns your audit, fixes, content, and reporting. If you want strategic input rather than full execution, you can hire a Shopify SEO consultant for the audit and roadmap and run it with your own team. Either way you work directly with a Shopify specialist, with founder access on every account.',
   },
   {
     category: 'method',
@@ -286,7 +286,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'method',
     question: 'Do you write the content, or just tell me what to do?',
     answer:
-      'Both options exist. On a retainer we write and publish collection copy, product descriptions, and blog content for you. If you prefer to keep content in-house, the audit and roadmap give your team exact briefs — target queries, structure, schema, and internal-linking instructions — so you can execute without guesswork.',
+      'Both options exist. On a retainer we write and publish collection copy, product descriptions, and blog content for you. If you prefer to keep content in-house, the audit and roadmap give your team exact briefs, target queries, structure, schema, and internal-linking instructions, so you can execute without guesswork.',
   },
 
   // ── Measurement ────────────────────────────────────────────────────────
@@ -294,13 +294,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'measure',
     question: 'How do you measure Shopify SEO results?',
     answer:
-      'A monthly report you can read in five minutes: keyword rankings for your target terms, organic and AI-referral sessions, indexed-page health, Core Web Vitals, and — where tracking is wired in — revenue and conversions from organic. Every metric ties back to the 90-day roadmap so you see progress against plan, not vanity numbers.',
+      'A monthly report you can read in five minutes: keyword rankings for your target terms, organic and AI-referral sessions, indexed-page health, Core Web Vitals, and, where tracking is wired in, revenue and conversions from organic. Every metric ties back to the 90-day roadmap so you see progress against plan, not vanity numbers.',
   },
   {
     category: 'measure',
     question: 'How long does Shopify SEO take to work?',
     answer:
-      'Technical fixes (canonical and duplicate-URL cleanup, schema, Core Web Vitals) can show impact within weeks because they let Google index and rank pages it was previously discounting. Content and authority work compounds over 3–6 months. Most stores see early movement in the first quarter and meaningful organic growth by months 4–6. SEO is a compounding asset, not a switch — we sequence the fast wins first.',
+      'Technical fixes (canonical and duplicate-URL cleanup, schema, Core Web Vitals) can show impact within weeks because they let Google index and rank pages it was previously discounting. Content and authority work compounds over 3–6 months. Most stores see early movement in the first quarter and meaningful organic growth by months 4–6. SEO is a compounding asset, not a switch, we sequence the fast wins first.',
   },
 
   // ── Pricing & engagement ───────────────────────────────────────────────
@@ -314,13 +314,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pricing',
     question: 'Do you require annual contracts?',
     answer:
-      'No. Shopify SEO retainers are month-to-month. SEO has to keep proving itself, and locking you into a 12-month contract removes our incentive to keep delivering. Cancel with one billing-cycle notice. Most retainers continue voluntarily because the rankings and revenue keep climbing — that is the bar we hold ourselves to.',
+      'No. Shopify SEO retainers are month-to-month. SEO has to keep proving itself, and locking you into a 12-month contract removes our incentive to keep delivering. Cancel with one billing-cycle notice. Most retainers continue voluntarily because the rankings and revenue keep climbing, that is the bar we hold ourselves to.',
   },
   {
     category: 'pricing',
     question: 'Can I start with just the Shopify SEO audit?',
     answer:
-      'Yes. The audit is a complete deliverable — many stores use it as a one-time strategic input, run the roadmap with their own team, and return for retainer support later. If you continue into a retainer within 30 days, the audit fee is credited toward your first month. You own all audit deliverables either way.',
+      'Yes. The audit is a complete deliverable, many stores use it as a one-time strategic input, run the roadmap with their own team, and return for retainer support later. If you continue into a retainer within 30 days, the audit fee is credited toward your first month. You own all audit deliverables either way.',
   },
 ];
 
@@ -452,19 +452,19 @@ function StatsRow() {
               value: '120+',
               suffix: 'Shopify stores',
               label: 'built & optimized',
-              body: 'We know Shopify SEO because we build Shopify stores — duplicate URLs, theme performance, and app bloat are problems we have already solved at the code level.',
+              body: 'We know Shopify SEO because we build Shopify stores, duplicate URLs, theme performance, and app bloat are problems we have already solved at the code level.',
             },
             {
               value: '0',
               suffix: 'annual contracts',
               label: 'month-to-month, always',
-              body: 'Cancel with one billing-cycle notice. Most retainers continue voluntarily because the rankings keep climbing — not because of contract teeth.',
+              body: 'Cancel with one billing-cycle notice. Most retainers continue voluntarily because the rankings keep climbing, not because of contract teeth.',
             },
             {
               value: 'Google + AI',
               suffix: 'both covered',
               label: 'on every report',
-              body: 'We rank your store in Google AND position it to be cited by ChatGPT, Perplexity, and Google AI Overviews — reported side by side every month.',
+              body: 'We rank your store in Google AND position it to be cited by ChatGPT, Perplexity, and Google AI Overviews, reported side by side every month.',
             },
           ].map((stat) => (
             <div key={stat.value}>
@@ -549,7 +549,7 @@ function ShopifySeoPricingGrid() {
             className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            Start with an audit. Move into a retainer when you see where the opportunity is. We quote each store on catalog size, technical health, and goals — you get a clear scope and price before any work starts. No annual contracts. Full code and data ownership from day one.
+            Start with an audit. Move into a retainer when you see where the opportunity is. We quote each store on catalog size, technical health, and goals, you get a clear scope and price before any work starts. No annual contracts. Full code and data ownership from day one.
           </p>
         </div>
 
@@ -711,7 +711,7 @@ function ShopifySeoPricingGrid() {
             fontWeight: 500,
           }}
         >
-          Month-to-month. Full code &amp; data ownership from day one. Start with an audit — no required retainer.
+          Month-to-month. Full code &amp; data ownership from day one. Start with an audit, no required retainer.
         </p>
       </div>
     </section>
@@ -764,7 +764,7 @@ export default function ShopifySeoServicePage() {
             not just rankings.
           </>
         }
-        lead="We fix the Shopify-specific issues that quietly cap your rankings — duplicate URLs, thin collections, app bloat — then rank your products and collections in Google and get your store cited by AI engines. One retainer. Monthly reports you can read in five minutes."
+        lead="We fix the Shopify-specific issues that quietly cap your rankings, duplicate URLs, thin collections, app bloat, then rank your products and collections in Google and get your store cited by AI engines. One retainer. Monthly reports you can read in five minutes."
         secondaryCta={{
           label: 'See pricing',
           href: '#pricing',
@@ -779,11 +779,11 @@ export default function ShopifySeoServicePage() {
       {/* ─── 2. Stats row ────────────────────────────────────────────────── */}
       <StatsRow />
 
-      {/* ─── 3. Service explanation — what Shopify SEO is ────────────────── */}
+      {/* ─── 3. Service explanation, what Shopify SEO is ────────────────── */}
       <ServiceExplanation
         eyebrow="WHAT SHOPIFY SEO COVERS"
         headline="Shopify can rank brilliantly. Out of the box, it usually doesn't."
-        lead="Shopify handles SSL, mobile, and sitemaps for you — then quietly works against you with duplicate product URLs, thin collection pages, and app-injected JavaScript that drags down Core Web Vitals. A generalist SEO audit rarely catches the Shopify-specific issues. That gap is exactly what we close."
+        lead="Shopify handles SSL, mobile, and sitemaps for you, then quietly works against you with duplicate product URLs, thin collection pages, and app-injected JavaScript that drags down Core Web Vitals. A generalist SEO audit rarely catches the Shopify-specific issues. That gap is exactly what we close."
         body={
           <>
             <p
@@ -843,13 +843,13 @@ export default function ShopifySeoServicePage() {
                 lineHeight: 1.55,
               }}
             >
-              We sequence the fast technical wins — canonical and duplicate-URL fixes, schema, Core Web Vitals — before the slower-compounding content and authority work, so you see movement early.
+              We sequence the fast technical wins, canonical and duplicate-URL fixes, schema, Core Web Vitals, before the slower-compounding content and authority work, so you see movement early.
             </p>
           </div>
         }
       />
 
-      {/* ─── 4. Strategic dark — why Shopify needs specialist SEO ────────── */}
+      {/* ─── 4. Strategic dark, why Shopify needs specialist SEO ────────── */}
       <StrategicDarkSection
         eyebrow="WHY SHOPIFY NEEDS SPECIALIST SEO"
         headline="Three Shopify problems a generalist SEO audit will miss."
@@ -857,7 +857,7 @@ export default function ShopifySeoServicePage() {
         pillars={PILLARS}
       />
 
-      {/* ─── 5. Service journey — 5-step process ─────────────────────────── */}
+      {/* ─── 5. Service journey, 5-step process ─────────────────────────── */}
       <ServiceJourneyRow
         eyebrow="OUR 5-STEP SHOPIFY SEO PROCESS"
         headline="From audit to compounding rankings and citations."
@@ -870,7 +870,7 @@ export default function ShopifySeoServicePage() {
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs SEO apps, freelancers, and generalist agencies."
-        lead="The four ways most Shopify stores try to do SEO — and where a Shopify-specialist, engineer-led model differs."
+        lead="The four ways most Shopify stores try to do SEO, and where a Shopify-specialist, engineer-led model differs."
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },
           { label: 'SEO Apps' },
@@ -935,7 +935,7 @@ export default function ShopifySeoServicePage() {
         footer="Comparison reflects typical offerings in each category as of 2026-06-03. Individual providers vary."
       />
 
-      {/* ─── 7. Pricing — custom 4-card grid ─────────────────────────────── */}
+      {/* ─── 7. Pricing, custom 4-card grid ─────────────────────────────── */}
       <ShopifySeoPricingGrid />
 
       {/* ─── 8. Industries served (DARK) ─────────────────────────────────── */}
@@ -945,12 +945,12 @@ export default function ShopifySeoServicePage() {
       <FAQ
         eyebrow="SHOPIFY SEO FAQ"
         headline="Shopify SEO questions, answered the way Bhavesh would on a call."
-        lead="If your question is not below, send a written brief — answers usually come back inside 24 hours."
+        lead="If your question is not below, send a written brief, answers usually come back inside 24 hours."
         categories={FAQ_CATEGORIES}
         items={FAQ_ITEMS}
       />
 
-      {/* ─── 10. Closing CTA — TalkToFounder full dark ───────────────────── */}
+      {/* ─── 10. Closing CTA, TalkToFounder full dark ───────────────────── */}
       <TalkToFounder
         variant="full"
         theme="dark"

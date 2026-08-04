@@ -17,12 +17,12 @@ export const post: BlogPost = {
     description: "We rank 7 top web design agencies for US small businesses on price ($1,500-$8,000), delivery speed, and Lighthouse 90+ scores. Find out which one delivers real results.",
   },
   keyTakeaways: [
-    'The best agencies prove quality with PageSpeed Insights URLs on live client sites — scores above 90 on mobile. Never hire based on portfolio screenshots alone.',
+    'The best agencies prove quality with PageSpeed Insights URLs on live client sites, scores above 90 on mobile. Never hire based on portfolio screenshots alone.',
     'Fixed-price contracts with itemized deliverables protect SMBs from scope creep; hourly billing should only apply to ongoing maintenance and change orders.',
-    'Agencies delivering in 7–21 days use modern tooling (Next.js, CI/CD pipelines, component libraries) — not shortcuts. Slow agencies are often disorganized, not thorough.',
+    'Agencies delivering in 7–21 days use modern tooling (Next.js, CI/CD pipelines, component libraries), not shortcuts. Slow agencies are often disorganized, not thorough.',
     'The "local agency" premium is rarely justified for SMBs: offshore-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
-    'WCAG 2.2 accessibility compliance is non-negotiable in 2026 — ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
-    'Ask for three named client references you can call independently — not testimonials on the agency\'s own website.',
+    'WCAG 2.2 accessibility compliance is non-negotiable in 2026: ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
+    'Ask for three named client references you can call independently, not testimonials on the agency\'s own website.',
     'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 100/100 scores and US-hour project management.',
   ],
   faqs: [
@@ -40,7 +40,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What questions should I ask a web design agency before hiring them?',
-      a: "Ask: (1) Can you share PageSpeed Insights URLs for three recent client sites? (2) What framework do you build on — Next.js, WordPress, or templates? (3) Is your pricing fixed-price with itemized scope? (4) Who owns the code and hosting credentials at project completion? (5) What is your delivery timeline, and what are the milestones? (6) Is technical SEO (schema markup, XML sitemap, meta tags) included in the base price? (7) Can I speak with two US clients who hired you in the past 6 months? Any hesitation on these questions is a red flag.",
+      a: "Ask: (1) Can you share PageSpeed Insights URLs for three recent client sites? (2) What framework do you build on: Next.js, WordPress, or templates? (3) Is your pricing fixed-price with itemized scope? (4) Who owns the code and hosting credentials at project completion? (5) What is your delivery timeline, and what are the milestones? (6) Is technical SEO (schema markup, XML sitemap, meta tags) included in the base price? (7) Can I speak with two US clients who hired you in the past 6 months? Any hesitation on these questions is a red flag.",
     },
     {
       q: 'What are the red flags that an agency will deliver a bad website?',
@@ -56,7 +56,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Do small business web design agencies include SEO in their services?',
-      a: "They should include technical SEO — semantic HTML, schema markup, XML sitemaps, meta titles and descriptions, image alt text, and Core Web Vitals optimization. Ongoing content SEO (keyword research, link building, monthly content) is a separate service typically costing $500–$2,000/month. Be wary of agencies that exclude technical SEO from the base build and then upsell it as an add-on after launch.",
+      a: "They should include technical SEO, semantic HTML, schema markup, XML sitemaps, meta titles and descriptions, image alt text, and Core Web Vitals optimization. Ongoing content SEO (keyword research, link building, monthly content) is a separate service typically costing $500–$2,000/month. Be wary of agencies that exclude technical SEO from the base build and then upsell it as an add-on after launch.",
     },
     {
       q: 'What is a fair delivery timeline for a small business website?',
@@ -131,7 +131,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        Finding the best web design agency for your small business is harder than it looks in 2026 — not because good agencies don't exist, but because the selection process most SMB owners use systematically filters out the technically excellent and rewards the visually impressive. This guide rebuilds that process from the metrics that actually predict whether your website will generate revenue.
+        Finding the best web design agency for your small business is harder than it looks in 2026, not because good agencies don't exist, but because the selection process most SMB owners use systematically filters out the technically excellent and rewards the visually impressive. This guide rebuilds that process from the metrics that actually predict whether your website will generate revenue.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Most Agency Selection Processes Fail US SMBs</h2>
@@ -142,7 +142,7 @@ export const post: BlogPost = {
         The agencies that build the best-performing small business websites in 2026 are often not the most polished in their own marketing. They're engineers-first teams with efficient workflows, modern technical stacks, and a process orientation that looks boring on a Behance page but delivers Lighthouse 100 scores on every client site. Identifying them requires different signals than portfolio aesthetics.
       </p>
       <p className="mb-4">
-        A Brightlocal 2024 survey of 600 US small businesses that had worked with web design agencies in the previous 18 months found that 47% reported their site underperformed on Google search, 39% said the project took more than twice as long as quoted, and 31% paid more than the original quote due to scope creep or change orders. These aren't unusual outcomes — they're the predictable result of selecting agencies on the wrong criteria.
+        A Brightlocal 2024 survey of 600 US small businesses that had worked with web design agencies in the previous 18 months found that 47% reported their site underperformed on Google search, 39% said the project took more than twice as long as quoted, and 31% paid more than the original quote due to scope creep or change orders. These aren't unusual outcomes. They're the predictable result of selecting agencies on the wrong criteria.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Five Non-Negotiable Criteria for 2026</h2>
@@ -219,10 +219,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Accessibility: The Legal and Commercial Case for WCAG 2.2</h2>
       <p className="mb-4">
-        Web accessibility is often framed as a legal compliance issue. It's also a commercial one. The US Census Bureau reports that 26% of American adults — 86 million people — live with at least one disability. Screen readers, keyboard navigation, and high-contrast viewing are not edge cases. They're the access method for a $490 billion consumer spending segment that inaccessible websites actively exclude.
+        Web accessibility is often framed as a legal compliance issue. It's also a commercial one. The US Census Bureau reports that 26% of American adults, 86 million people, live with at least one disability. Screen readers, keyboard navigation, and high-contrast viewing are not edge cases. They're the access method for a $490 billion consumer spending segment that inaccessible websites actively exclude.
       </p>
       <p className="mb-4">
-        WCAG 2.2 Level AA compliance in practice means: all images have descriptive alt text, all interactive elements are keyboard-navigable, color contrast ratios meet 4.5:1 minimum for body text, form fields have proper labels, and no content flashes more than three times per second. These aren't design constraints — they're engineering practices that modern agencies implement automatically on properly structured HTML builds.
+        WCAG 2.2 Level AA compliance in practice means: all images have descriptive alt text, all interactive elements are keyboard-navigable, color contrast ratios meet 4.5:1 minimum for body text, form fields have proper labels, and no content flashes more than three times per second. These aren't design constraints. They're engineering practices that modern agencies implement automatically on properly structured HTML builds.
       </p>
       <p className="mb-4">
         Ask any agency shortlisted: "Can you run an Axe DevTools or WAVE scan on a recent client site and share the results?" Agencies delivering WCAG-compliant sites will have zero or near-zero critical issues. Agencies that haven't thought about accessibility will have 15–40 critical violations visible in a 30-second automated scan.
@@ -236,7 +236,7 @@ export const post: BlogPost = {
         <strong>Hourly billing</strong> is appropriate for ongoing maintenance and defined change orders after launch. $100–$175/hour is the US agency standard; $35–$75/hour is the offshore-with-US-support rate. Never agree to hourly billing for the initial website build unless the scope is genuinely undefined (e.g., a complex custom web application where requirements emerge through development).
       </p>
       <p className="mb-4">
-        <strong>Monthly retainer</strong> is appropriate for ongoing relationships covering maintenance, content updates, SEO, and iterative improvements. $149–$499/month covers most SMB needs from a well-structured agency. Retainers should specify deliverables — "X hours of development time, security monitoring included, Y content updates per month" — not vague "ongoing support."
+        <strong>Monthly retainer</strong> is appropriate for ongoing relationships covering maintenance, content updates, SEO, and iterative improvements. $149–$499/month covers most SMB needs from a well-structured agency. Retainers should specify deliverables, "X hours of development time, security monitoring included, Y content updates per month", not vague "ongoing support."
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Reference Check: How to Verify Without Getting Burned</h2>
@@ -244,10 +244,10 @@ export const post: BlogPost = {
         Reference checks are only useful if you ask the right questions. "Did you like working with them?" tells you nothing about technical quality. Ask references these five questions:
       </p>
       <p className="mb-4">
-        (1) Did the project deliver on time and within the quoted budget? If not, why not? (2) What is your Google PageSpeed Insights score on mobile — do you know? (3) Have you received any organic search leads from the site since launch? (4) How responsive was the team when bugs or issues came up post-launch? (5) Would you hire them again for a larger project?
+        (1) Did the project deliver on time and within the quoted budget? If not, why not? (2) What is your Google PageSpeed Insights score on mobile, do you know? (3) Have you received any organic search leads from the site since launch? (4) How responsive was the team when bugs or issues came up post-launch? (5) Would you hire them again for a larger project?
       </p>
       <p className="mb-4">
-        Reference #5 is often the most revealing. "Probably" or "maybe" usually means the experience was fine but not exceptional. "Absolutely, already have them on retainer" means the agency delivered real business value. References who can't answer question #2 (their own PageSpeed score) indicate the agency never educated them on performance metrics — a telling gap.
+        Reference #5 is often the most revealing. "Probably" or "maybe" usually means the experience was fine but not exceptional. "Absolutely, already have them on retainer" means the agency delivered real business value. References who can't answer question #2 (their own PageSpeed score) indicate the agency never educated them on performance metrics: a telling gap.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Offshore vs. US Domestic: The Real 2026 Trade-Off</h2>
@@ -255,10 +255,10 @@ export const post: BlogPost = {
         The argument for US-only agencies rests on three things: local accountability, time-zone overlap for real-time communication, and US legal recourse if something goes wrong. In 2026, all three advantages have narrowed significantly.
       </p>
       <p className="mb-4">
-        Offshore agencies with dedicated US business-hour project management solve the time-zone issue — you're communicating with a US-hours PM who manages the India-based development team asynchronously. US-governed contracts (offer, acceptance, payment terms under US law) solve the legal recourse issue. US client references with contact details solve the accountability issue.
+        Offshore agencies with dedicated US business-hour project management solve the time-zone issue. You're communicating with a US-hours PM who manages the India-based development team asynchronously. US-governed contracts (offer, acceptance, payment terms under US law) solve the legal recourse issue. US client references with contact details solve the accountability issue.
       </p>
       <p className="mb-4">
-        The cost difference remains real and significant: India-based development teams cost $18,000–$45,000/year per developer versus $95,000–$160,000 for comparable US talent. This isn't a quality arbitrage — it's a cost-of-living differential. The same Next.js expertise, the same React patterns, the same Lighthouse optimization techniques are globally distributed in 2026.
+        The cost difference remains real and significant: India-based development teams cost $18,000–$45,000/year per developer versus $95,000–$160,000 for comparable US talent. This isn't a quality arbitrage. It's a cost-of-living differential. The same Next.js expertise, the same React patterns, the same Lighthouse optimization techniques are globally distributed in 2026.
       </p>
       <p className="mb-4">
         For most US SMBs spending $3,000–$12,000 on a website, the offshore premium delivers $5,000–$15,000 in savings with no measurable quality reduction when the agency is properly vetted. The money saved is better invested in SEO content, paid advertising, or the next phase of site development.
@@ -267,7 +267,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Contract Terms That Protect SMB Interests</h2>
       <p className="mb-4">
-        The contract is where most SMBs lose money — not because they don't read it, but because they don't know which clauses to insist on. These four provisions protect your interests:
+        The contract is where most SMBs lose money, not because they don't read it, but because they don't know which clauses to insist on. These four provisions protect your interests:
       </p>
       <p className="mb-4">
         <strong>Code and IP ownership:</strong> "Upon receipt of final payment, all source code, design files, database schemas, and related intellectual property are transferred in full to the client." If this isn't in the contract, you don't own your website.
@@ -288,7 +288,7 @@ export const post: BlogPost = {
       </p>
       <ol className="list-decimal pl-6 space-y-2 mb-6">
         <li>Can you share PageSpeed Insights URLs for three recent client sites you built from scratch?</li>
-        <li>What framework or CMS do you build on — and why?</li>
+        <li>What framework or CMS do you build on, and why?</li>
         <li>Is your pricing fixed-price with an itemized statement of work, or hourly?</li>
         <li>Who owns the code and hosting credentials when the project is complete?</li>
         <li>Is WCAG 2.2 Level AA accessibility included in your standard build?</li>
@@ -304,10 +304,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Red Flags That Predict Expensive Mistakes</h2>
       <p className="mb-4">
-        Walk away immediately from agencies that: (1) can't show Lighthouse scores on live client sites, (2) claim to "guarantee first-page Google rankings" — no ethical agency can promise this, (3) offer "unlimited revisions" without defining what a revision means, (4) won't provide named client references with contact details, (5) quote without a written scope document, (6) charge for hosting on accounts in their own name without a migration policy, (7) bundle SEO "for free" — it's either not real SEO or it's being taken out of the development margin elsewhere, (8) show portfolios with only homepage screenshots and no live site URLs, (9) can't articulate what framework they build on and why, or (10) push for full payment upfront.
+        Walk away immediately from agencies that: (1) can't show Lighthouse scores on live client sites, (2) claim to "guarantee first-page Google rankings", no ethical agency can promise this, (3) offer "unlimited revisions" without defining what a revision means, (4) won't provide named client references with contact details, (5) quote without a written scope document, (6) charge for hosting on accounts in their own name without a migration policy, (7) bundle SEO "for free". It's either not real SEO or it's being taken out of the development margin elsewhere, (8) show portfolios with only homepage screenshots and no live site URLs, (9) can't articulate what framework they build on and why, or (10) push for full payment upfront.
       </p>
       <p className="mb-4">
-        These aren't hypothetical — they're patterns documented in SMB web development dispute cases. The 30 minutes spent checking these boxes before signing saves $5,000–$20,000 in disputes, delays, and rebuilds.
+        These aren't hypothetical. They're patterns documented in SMB web development dispute cases. The 30 minutes spent checking these boxes before signing saves $5,000–$20,000 in disputes, delays, and rebuilds.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers US Small Businesses</h2>

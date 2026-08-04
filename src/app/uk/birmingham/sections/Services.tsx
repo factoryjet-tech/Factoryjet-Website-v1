@@ -23,14 +23,14 @@ const SERVICES: Service[] = [
     id: "web-design",
     number: "01",
     name: "Web Design",
-    heading: "From Webflow to Next.js 15 — Designed to Convert Birmingham Buyers",
+    heading: "From Webflow to Next.js 15: Designed to Convert Birmingham Buyers",
     image: "/images/uk/birmingham/service-web-design-birmingham.webp",
     imageAlt: "Modern website design for Birmingham businesses",
     imageSide: "right",
     body: [
-      "Birmingham businesses don't need a pretty portfolio piece. They need a website that converts a Google searcher into a qualified lead before your competitor's page loads. We build in Next.js 15, React 19, WordPress, Webflow, and Framer — whichever platform your team can manage, whichever stack your budget supports.",
-      "Unlike agencies at the Mailbox or in the Jewellery Quarter, our development process begins with conversion architecture, not visual mood boards. We map the buyer journey for your specific industry — whether you're a professional services firm in Colmore Business District, a manufacturer in Erdington, or a property developer in the Jewellery Quarter — before we write a single line of code.",
-      "We're one of the only agencies deploying Next.js 15 with AI-assisted content personalisation for Birmingham businesses. WordPress, Webflow, Framer, and Next.js developer expertise in one team — no outsourcing, no handoffs. Every build ships with a Lighthouse SEO score of 100 guaranteed.",
+      "Birmingham businesses don't need a pretty portfolio piece. They need a website that converts a Google searcher into a qualified lead before your competitor's page loads. We build in Next.js 15, React 19, WordPress, Webflow, and Framer, whichever platform your team can manage, whichever stack your budget supports.",
+      "Unlike agencies at the Mailbox or in the Jewellery Quarter, our development process begins with conversion architecture, not visual mood boards. We map the buyer journey for your specific industry, whether you're a professional services firm in Colmore Business District, a manufacturer in Erdington, or a property developer in the Jewellery Quarter, before we write a single line of code.",
+      "We're one of the only agencies deploying Next.js 15 with AI-assisted content personalisation for Birmingham businesses. WordPress, Webflow, Framer, and Next.js developer expertise in one team, no outsourcing, no handoffs. Every build ships with a Lighthouse SEO score of 100 guaranteed.",
     ],
     keywords:
       "web design Birmingham Next.js developer Birmingham Webflow developer Birmingham Framer developer Birmingham AI web design Birmingham",
@@ -44,9 +44,9 @@ const SERVICES: Service[] = [
     imageAlt: "E-commerce development for Birmingham businesses",
     imageSide: "left",
     body: [
-      "Eastside Co in Digbeth has built 500+ Shopify stores from their Birmingham base — they've proved the demand is here. What they haven't cracked is headless commerce and the B2B ecommerce niche that Birmingham's manufacturing sector urgently needs.",
+      "Eastside Co in Digbeth has built 500+ Shopify stores from their Birmingham base. They've proved the demand is here. What they haven't cracked is headless commerce and the B2B ecommerce niche that Birmingham's manufacturing sector urgently needs.",
       "We deliver Shopify Plus agency-level builds at non-Plus prices. Headless commerce on Next.js with a Shopify or WooCommerce backend. B2B ecommerce with customer portals, trade pricing, and ERP integrations. Full custom builds for brands that have outgrown what magic42 or SwiftSync can offer at a fraction of the agency markup.",
-      "Our Birmingham e-commerce clients see average basket values 23% higher within 90 days of replatforming — because conversion rate optimisation is baked into every build, not sold as a monthly upsell. The Jewellery Quarter's 700 businesses need B2B and B2C in a single headless architecture — that's our specialism.",
+      "Our Birmingham e-commerce clients see average basket values 23% higher within 90 days of replatforming, because conversion rate optimisation is baked into every build, not sold as a monthly upsell. The Jewellery Quarter's 700 businesses need B2B and B2C in a single headless architecture, that's our specialism.",
     ],
     keywords:
       "Shopify Plus agency Birmingham B2B ecommerce Birmingham headless commerce Birmingham WooCommerce Birmingham Jewellery Quarter ecommerce",
@@ -62,8 +62,8 @@ const SERVICES: Service[] = [
     imageSide: "right",
     featured: true,
     body: [
-      "Birmingham's legal community — Gowling WLG, Pinsent Masons, the city's 200+ law firm ecosystem — handles thousands of enquiries, contracts, and document reviews every week. AI agents can automate 60–70% of that intake workflow. Most firms haven't moved yet because the agencies pitching to them don't understand the legal context.",
-      "We build agentic AI systems — multi-step autonomous workflows that intake leads, qualify them against your criteria, trigger CRM entries, draft response emails, and escalate edge cases to a human. Not a chatbot. An agent that works a 24-hour shift without a salary.",
+      "Birmingham's legal community: Gowling WLG, Pinsent Masons, the city's 200+ law firm ecosystem, handles thousands of enquiries, contracts, and document reviews every week. AI agents can automate 60–70% of that intake workflow. Most firms haven't moved yet because the agencies pitching to them don't understand the legal context.",
+      "We build agentic AI systems, multi-step autonomous workflows that intake leads, qualify them against your criteria, trigger CRM entries, draft response emails, and escalate edge cases to a human. Not a chatbot. An agent that works a 24-hour shift without a salary.",
       "No dominant AI agent development agency exists in Birmingham yet. The Bot Factory offers lightweight automation. Opace Digital is soft-positioning. FactoryJet builds production-grade multi-agent systems using Claude, GPT-4o, and open-source LLMs. Use cases specific to Birmingham: legal intake automation · financial services client onboarding · manufacturing RFQ processing · property developer lead qualification · Jewellery Quarter wholesale order management.",
     ],
     keywords:
@@ -78,8 +78,8 @@ const SERVICES: Service[] = [
     imageAlt: "AI SEO and GEO services for Birmingham businesses",
     imageSide: "left",
     body: [
-      "Search is fragmenting. A Birmingham CFO looking for an audit firm types into ChatGPT. A procurement manager sourcing a manufacturer asks Perplexity. A law firm partner researching a legal tech supplier queries Google's AI Overview. Traditional SEO optimises for the ten blue links. AI SEO — generative engine optimisation (GEO) and answer engine optimisation (AEO) — optimises for the AI answer.",
-      "Accentuate Agency is the only Birmingham-based agency currently positioning on GEO. M3.agency, Opace, and Chameleon Web Services are all operating on pre-AI SEO playbooks. FactoryJet builds entity-based content architectures with structured schema, llms.txt implementation, and explicit AI crawler whitelisting — the full technical stack that gets your content cited by ChatGPT, Perplexity, and Google AI Overviews.",
+      "Search is fragmenting. A Birmingham CFO looking for an audit firm types into ChatGPT. A procurement manager sourcing a manufacturer asks Perplexity. A law firm partner researching a legal tech supplier queries Google's AI Overview. Traditional SEO optimises for the ten blue links. AI SEO, generative engine optimisation (GEO) and answer engine optimisation (AEO), optimises for the AI answer.",
+      "Accentuate Agency is the only Birmingham-based agency currently positioning on GEO. M3.agency, Opace, and Chameleon Web Services are all operating on pre-AI SEO playbooks. FactoryJet builds entity-based content architectures with structured schema, llms.txt implementation, and explicit AI crawler whitelisting: the full technical stack that gets your content cited by ChatGPT, Perplexity, and Google AI Overviews.",
       "For Birmingham businesses targeting London-based clients, AI SEO is not optional. It's where the attention already is.",
     ],
     keywords:

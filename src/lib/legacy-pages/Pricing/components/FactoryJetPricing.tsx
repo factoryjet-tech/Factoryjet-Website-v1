@@ -615,7 +615,7 @@ const FAQ_DATA = [
       },
       {
         q: "What is the typical timeline for a 'Business' plan?",
-        a: "Starter and Business websites launch in 7 days. Enterprise builds with complex integrations are scoped individually — you'll get a day-by-day delivery plan at kickoff, not a vague estimate.",
+        a: "Starter and Business websites launch in 7 days. Enterprise builds with complex integrations are scoped individually. You'll get a day-by-day delivery plan at kickoff, not a vague estimate.",
       },
       {
         q: "Do I own the Intellectual Property (IP)?",
@@ -861,7 +861,7 @@ const FactoryJetPricing = () => {
         </div>
       </header>
 
-      {/* Tab + Pricing Grid — sticky tab is bounded to this container so it doesn't overlap the CTA below */}
+      {/* Tab + Pricing Grid, sticky tab is bounded to this container so it doesn't overlap the CTA below */}
       <div>
 
       {/* --- TAB SWITCHER --- */}

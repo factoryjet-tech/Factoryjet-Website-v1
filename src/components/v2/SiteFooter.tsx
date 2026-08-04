@@ -167,7 +167,7 @@ const UAE_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
 const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> = {
   in:  IN_COLUMNS,
   uae: UAE_COLUMNS,
-  us:  US_FOOTER_COLUMNS, // US is the primary domain — its footer must never fall back to India routes
+  us:  US_FOOTER_COLUMNS, // US is the primary domain: its footer must never fall back to India routes
 };
 
 /** @deprecated kept for backwards-compat — callers should pass locale prop instead.
@@ -272,7 +272,7 @@ export default function SiteFooter({
           </div>
         </div>
 
-        {/* Recognition — verified directory profiles + award. Kept sitewide per
+        {/* Recognition, verified directory profiles + award. Kept sitewide per
             Bhavesh 2026-08-03 (he was asked and chose to keep it). Restyled to sit
             as one quiet line rather than a stacked block with its own heading. */}
         {showRecognition && (

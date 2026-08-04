@@ -27,14 +27,14 @@ const CREAM = '#FAFAF7'
 export const metadata: Metadata = {
   title: 'Case Studies | FactoryJet',
   description:
-    'Real FactoryJet client wins — measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+    'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
   alternates: { canonical: 'https://factoryjet.com/case-studies' },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Case Studies | FactoryJet',
     description:
-      'Real FactoryJet client wins — measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+      'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
     url: 'https://factoryjet.com/case-studies',
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Case Studies | FactoryJet',
     description:
-      'Real FactoryJet client wins — measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+      'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
     images: ['https://factoryjet.com/og-default.png'],
   },
 }
@@ -101,7 +101,7 @@ export default function CaseStudiesIndexPage() {
               className="mt-5 max-w-[640px] font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.125rem', lineHeight: 1.6 }}
             >
-              Every case below is a real FactoryJet engagement — measurable revenue,
+              Every case below is a real FactoryJet engagement, measurable revenue,
               traffic, or efficiency gains, with the client&apos;s permission to
               publish. No fabricated logos, no mock metrics.
             </p>
@@ -228,7 +228,7 @@ export default function CaseStudiesIndexPage() {
                 <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
                   We&apos;re finalising client-approved numbers and quotes for the
                   launch queue. In the meantime, you can talk to the founder
-                  directly — every project Bhavesh runs starts the same way.
+                  directly: every project Bhavesh runs starts the same way.
                 </p>
               </div>
             </div>

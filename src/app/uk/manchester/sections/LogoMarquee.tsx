@@ -98,10 +98,10 @@ export default function LogoMarquee({
             </div>
           ))}
 
-          {/* ── Set 2 (identical duplicate — creates the seamless loop) ── */}
+          {/* ── Set 2 (identical duplicate, creates the seamless loop) ── */}
           {LOGOS.map((logo) => (
             <div key={`b-${logo.src}`} className="logo-item flex-shrink-0">
-              {/* alt="" on duplicates — they are purely decorative repeats */}
+              {/* alt="" on duplicates, they are purely decorative repeats */}
               <Image
                 src={logo.src}
                 alt=""

@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'There are four cost buckets: Shopify plan fee (ongoing), theme (one-time), development/setup (one-time), and apps (ongoing). Most owners budget only for the platform fee.',
     'US agency rates run $120–$200/hour. A standard SMB store build runs $2,999–$6,000 as a fixed-price project. FactoryJet delivers these in 7 days (disclosure: this is us).',
     'Hidden costs matter: apps average $50–$500/month, transaction fees run 0.5–2% if you skip Shopify Payments, and email marketing is a separate line item.',
-    'A $4,999 custom store converting at 2% vs 1% on $50K/month GMV generates $12,000 in additional annual revenue — paying for itself in 5 months.',
+    'A $4,999 custom store converting at 2% vs 1% on $50K/month GMV generates $12,000 in additional annual revenue, paying for itself in 5 months.',
     'Shopify Plus costs $2,300/month as of June 2026 per Shopify\'s pricing page. Full enterprise/headless builds run $40,000–$200,000+.',
   ],
   faqs: [
@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to build a Shopify store from scratch?',
-      a: 'The cost to build a Shopify store from scratch depends on your approach. A developer doing everything from scratch — custom design, custom Liquid theme, app integration, product upload, payment configuration — typically runs $3,000–$15,000. A template-based store built by an agency (selecting a premium theme, customizing it, and setting it up for launch) runs $1,500–$5,000. FactoryJet\'s template store tier starts at $2,999 and includes Shopify setup, product upload up to 50 items, payment configuration, and a mobile-first build — delivered in 7 days.',
+      a: 'The cost to build a Shopify store from scratch depends on your approach. A developer doing everything from scratch, custom design, custom Liquid theme, app integration, product upload, payment configuration, typically runs $3,000–$15,000. A template-based store built by an agency (selecting a premium theme, customizing it, and setting it up for launch) runs $1,500–$5,000. FactoryJet\'s template store tier starts at $2,999 and includes Shopify setup, product upload up to 50 items, payment configuration, and a mobile-first build, delivered in 7 days.',
     },
     {
       q: 'What is the total shopify website cost for a small business?',
@@ -41,7 +41,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the shopify development cost for a custom store?',
-      a: 'Shopify development cost for a custom store — unique design, custom brand fonts and palette, conversion-optimized layouts — runs $4,999–$15,000 for most US small businesses. FactoryJet\'s custom theme tier is $4,999 (disclosure: that\'s us) and covers unique design built to your brand specifications, mobile-first build, and product setup up to 50 items. Agencies in the US and UK charge $120–$200/hour for custom work, so a 30–50 hour engagement lands in that range.',
+      a: 'Shopify development cost for a custom store, unique design, custom brand fonts and palette, conversion-optimized layouts, runs $4,999–$15,000 for most US small businesses. FactoryJet\'s custom theme tier is $4,999 (disclosure: that\'s us) and covers unique design built to your brand specifications, mobile-first build, and product setup up to 50 items. Agencies in the US and UK charge $120–$200/hour for custom work, so a 30–50 hour engagement lands in that range.',
     },
     {
       q: 'What does a shopify developer cost per hour?',
@@ -49,15 +49,15 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does a Shopify store cost per month to run?',
-      a: 'A Shopify store costs $39–$399/month in platform fees on standard plans. The Basic plan is $39/month (or $29/month billed annually), the Grow plan is $105/month ($79/month annually), and Advanced is $399/month ($299/month annually), per Shopify\'s pricing page as of June 2026. Add apps — a basic stack of reviews, email marketing, and upsell tools runs $50–$250/month — and your monthly operating cost is typically $89–$650/month for most SMBs.',
+      a: 'A Shopify store costs $39–$399/month in platform fees on standard plans. The Basic plan is $39/month (or $29/month billed annually), the Grow plan is $105/month ($79/month annually), and Advanced is $399/month ($299/month annually), per Shopify\'s pricing page as of June 2026. Add apps: a basic stack of reviews, email marketing, and upsell tools runs $50–$250/month, and your monthly operating cost is typically $89–$650/month for most SMBs.',
     },
     {
       q: 'What is the shopify website cost for a small business that just needs a basic store?',
-      a: 'A basic Shopify website cost for a small business needing a clean, functional store — homepage, collection pages, product pages, about, and contact — runs $2,000–$4,000 for professional setup. FactoryJet\'s template store starts at $2,999 with Shopify setup, up to 50 products uploaded, payment configuration, and 7-day delivery. Using Shopify Basic at $29/month billed annually, your first year all-in is roughly $4,350–$5,350.',
+      a: 'A basic Shopify website cost for a small business needing a clean, functional store, homepage, collection pages, product pages, about, and contact, runs $2,000–$4,000 for professional setup. FactoryJet\'s template store starts at $2,999 with Shopify setup, up to 50 products uploaded, payment configuration, and 7-day delivery. Using Shopify Basic at $29/month billed annually, your first year all-in is roughly $4,350–$5,350.',
     },
     {
       q: 'How much does Shopify charge in fees?',
-      a: 'Shopify charges monthly plan fees of $39–$399/month (or $29–$299/month on annual billing) plus transaction fees of 0.5–2% if you use a third-party payment processor instead of Shopify Payments. Shopify Payments eliminates the transaction fee but has its own credit card processing rates: 2.9% + 30¢ on Basic, scaling down on higher plans. Shopify Plus costs $2,300/month. There are no setup fees from Shopify itself — only from any developer or agency you hire.',
+      a: 'Shopify charges monthly plan fees of $39–$399/month (or $29–$299/month on annual billing) plus transaction fees of 0.5–2% if you use a third-party payment processor instead of Shopify Payments. Shopify Payments eliminates the transaction fee but has its own credit card processing rates: 2.9% + 30¢ on Basic, scaling down on higher plans. Shopify Plus costs $2,300/month. There are no setup fees from Shopify itself, only from any developer or agency you hire.',
     },
     {
       q: 'What does it cost to hire a Shopify developer or agency?',
@@ -65,15 +65,15 @@ export const post: BlogPost = {
     },
     {
       q: 'What does a shopify custom theme cost?',
-      a: 'A Shopify custom theme cost — where a developer designs and codes a completely original theme rather than customizing an existing one — runs $3,000–$15,000 one-time. Customization of an existing paid Shopify theme costs $1,500–$8,000 depending on scope. Paid themes from the Shopify Theme Store are $0–$200 one-time. FactoryJet\'s custom theme tier at $4,999 includes unique design with brand fonts and palette, built on a clean codebase, with mobile-first layouts and performance optimization.',
+      a: 'A Shopify custom theme cost, where a developer designs and codes a completely original theme rather than customizing an existing one, runs $3,000–$15,000 one-time. Customization of an existing paid Shopify theme costs $1,500–$8,000 depending on scope. Paid themes from the Shopify Theme Store are $0–$200 one-time. FactoryJet\'s custom theme tier at $4,999 includes unique design with brand fonts and palette, built on a clean codebase, with mobile-first layouts and performance optimization.',
     },
     {
       q: 'What is shopify headless development cost?',
-      a: 'Shopify headless development cost — building a custom Next.js or React frontend that connects to Shopify\'s commerce backend via API — runs $60,000–$200,000+. FactoryJet\'s headless tier starts at $8,999 for smaller-scale implementations, while full enterprise headless architecture with custom checkout, CDN optimization, and complex integrations is priced separately. Headless development makes financial sense when annual revenue is above $500,000 and performance or design flexibility requirements cannot be met by a standard Shopify theme.',
+      a: 'Shopify headless development cost, building a custom Next.js or React frontend that connects to Shopify\'s commerce backend via API, runs $60,000–$200,000+. FactoryJet\'s headless tier starts at $8,999 for smaller-scale implementations, while full enterprise headless architecture with custom checkout, CDN optimization, and complex integrations is priced separately. Headless development makes financial sense when annual revenue is above $500,000 and performance or design flexibility requirements cannot be met by a standard Shopify theme.',
     },
     {
       q: 'Is Shopify cheaper or more expensive than WooCommerce?',
-      a: 'Shopify vs WooCommerce cost comparison: Shopify has higher monthly platform fees ($39–$399/month) but includes hosting, SSL, and CDN. WooCommerce is free to install but requires separate hosting ($5–$200/month), paid plugins ($200–$800/year for a standard stack), and ongoing maintenance. Development costs are comparable — $2,000–$8,000 for a professional build on either platform. Total 3-year cost of ownership is similar for most SMB store sizes. Shopify wins on predictability; WooCommerce wins on flexibility and lower entry cost if you manage hosting yourself.',
+      a: 'Shopify vs WooCommerce cost comparison: Shopify has higher monthly platform fees ($39–$399/month) but includes hosting, SSL, and CDN. WooCommerce is free to install but requires separate hosting ($5–$200/month), paid plugins ($200–$800/year for a standard stack), and ongoing maintenance. Development costs are comparable, $2,000–$8,000 for a professional build on either platform. Total 3-year cost of ownership is similar for most SMB store sizes. Shopify wins on predictability; WooCommerce wins on flexibility and lower entry cost if you manage hosting yourself.',
     },
     {
       q: 'How much does Shopify Plus cost?',
@@ -81,11 +81,11 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the shopify website cost in the UK?',
-      a: 'Shopify website cost in the UK is similar to US pricing since Shopify plans are priced in USD globally ($29–$299/month on annual billing). UK agency development rates run £80–£150/hour (roughly $100–$190/hour), slightly below US rates. A professionally built Shopify store for a UK SMB typically costs £2,500–£8,000 for development. FactoryJet serves UK small businesses at the same pricing tiers as US clients — $2,999 for template stores, $4,999 for custom themes.',
+      a: 'Shopify website cost in the UK is similar to US pricing since Shopify plans are priced in USD globally ($29–$299/month on annual billing). UK agency development rates run £80–£150/hour (roughly $100–$190/hour), slightly below US rates. A professionally built Shopify store for a UK SMB typically costs £2,500–£8,000 for development. FactoryJet serves UK small businesses at the same pricing tiers as US clients, $2,999 for template stores, $4,999 for custom themes.',
     },
     {
       q: 'What is the shopify website cost in India?',
-      a: 'Shopify website cost in India for development is significantly lower than Western markets — Indian Shopify agencies and freelancers typically charge $15–$50/hour, making a full custom store build $2,000–$6,000. Shopify platform fees are the same globally ($29–$299/month USD on annual billing). Quality varies significantly — verify Shopify Partner certification, review live store examples, and confirm mobile performance scores before hiring. FactoryJet is India-based and builds for US and UK clients at $2,999–$8,999+.',
+      a: 'Shopify website cost in India for development is significantly lower than Western markets, Indian Shopify agencies and freelancers typically charge $15–$50/hour, making a full custom store build $2,000–$6,000. Shopify platform fees are the same globally ($29–$299/month USD on annual billing). Quality varies significantly, verify Shopify Partner certification, review live store examples, and confirm mobile performance scores before hiring. FactoryJet is India-based and builds for US and UK clients at $2,999–$8,999+.',
     },
     {
       q: 'How long does it take to build a Shopify store?',
@@ -101,19 +101,19 @@ export const post: BlogPost = {
     },
     {
       q: 'Can I build a Shopify store myself without a developer?',
-      a: 'Yes, you can build a Shopify store yourself using Shopify\'s drag-and-drop editor. Shopify is designed for non-technical users — you can select a free theme, add products, set up payments, and launch without writing a line of code. A self-built store is reasonable for validating a product idea or launching with a limited budget. Hire a developer when you need custom functionality, complex integrations, or your time as a business owner is worth more than the $2,000–$5,000 you\'d save by doing it yourself.',
+      a: 'Yes, you can build a Shopify store yourself using Shopify\'s drag-and-drop editor. Shopify is designed for non-technical users, you can select a free theme, add products, set up payments, and launch without writing a line of code. A self-built store is reasonable for validating a product idea or launching with a limited budget. Hire a developer when you need custom functionality, complex integrations, or your time as a business owner is worth more than the $2,000–$5,000 you\'d save by doing it yourself.',
     },
     {
       q: 'What does a Shopify migration cost?',
-      a: 'Shopify migration cost depends on the source platform. WooCommerce to Shopify migration typically costs $3,000–$12,000 and covers product data transfer, URL redirects for SEO preservation, customer data migration, and theme build. Magento to Shopify migration runs $7,000–$25,000 due to complex database structures. Squarespace or Wix to Shopify migrations are simpler at $1,500–$5,000. The SEO redirect work — mapping old URLs to new ones to avoid losing organic rankings — is often the most time-consuming part.',
+      a: 'Shopify migration cost depends on the source platform. WooCommerce to Shopify migration typically costs $3,000–$12,000 and covers product data transfer, URL redirects for SEO preservation, customer data migration, and theme build. Magento to Shopify migration runs $7,000–$25,000 due to complex database structures. Squarespace or Wix to Shopify migrations are simpler at $1,500–$5,000. The SEO redirect work, mapping old URLs to new ones to avoid losing organic rankings, is often the most time-consuming part.',
     },
     {
       q: 'What does a Shopify website redesign cost?',
-      a: 'A Shopify website redesign cost — where you keep your existing store but replace the theme and update the design — runs $2,000–$10,000 for most SMBs. A light redesign customizing an existing theme costs $1,500–$4,000. A full redesign with a new custom theme, updated product pages, and conversion optimization runs $4,999–$12,000. FactoryJet\'s custom theme tier at $4,999 covers complete redesigns for existing Shopify stores. Redesigns typically take 2–4 weeks for standard scope.',
+      a: 'A Shopify website redesign cost, where you keep your existing store but replace the theme and update the design, runs $2,000–$10,000 for most SMBs. A light redesign customizing an existing theme costs $1,500–$4,000. A full redesign with a new custom theme, updated product pages, and conversion optimization runs $4,999–$12,000. FactoryJet\'s custom theme tier at $4,999 covers complete redesigns for existing Shopify stores. Redesigns typically take 2–4 weeks for standard scope.',
     },
     {
       q: 'How much does Shopify SEO cost?',
-      a: 'Shopify SEO cost depends on what\'s included. A basic technical SEO setup on a new store — structured data, canonical tags, sitemap, image alt text, meta titles — costs $500–$1,500 as part of a development project. FactoryJet includes basic SEO setup in every build. Ongoing Shopify SEO with keyword targeting, content creation, and link building typically runs $1,500–$5,000/month from a specialized agency. A one-time SEO audit for an existing store costs $500–$2,000 and identifies the highest-priority fixes.',
+      a: 'Shopify SEO cost depends on what\'s included. A basic technical SEO setup on a new store, structured data, canonical tags, sitemap, image alt text, meta titles, costs $500–$1,500 as part of a development project. FactoryJet includes basic SEO setup in every build. Ongoing Shopify SEO with keyword targeting, content creation, and link building typically runs $1,500–$5,000/month from a specialized agency. A one-time SEO audit for an existing store costs $500–$2,000 and identifies the highest-priority fixes.',
     },
   ],
   content: (
@@ -126,7 +126,7 @@ export const post: BlogPost = {
         A Shopify website costs <strong>$2,000–$50,000+</strong> depending on complexity. A DIY
         store with a free theme costs $468–$1,068 in Year 1. A professionally built custom store
         for a US small business runs $2,999–$8,000 one-time. Enterprise and headless builds start
-        at $40,000. Here&apos;s what actually drives that number — and how to know what your build
+        at $40,000. Here&apos;s what actually drives that number, and how to know what your build
         will cost before you talk to a single developer.
       </p>
 
@@ -169,7 +169,7 @@ export const post: BlogPost = {
         Shopify Website Cost at a Glance: The Full Breakdown Table
       </h2>
       <p className="mb-4">
-        Here&apos;s the table most cost guides won&apos;t give you — all four cost buckets in one
+        Here&apos;s the table most cost guides won&apos;t give you: all four cost buckets in one
         place, by store type:
       </p>
 
@@ -278,7 +278,7 @@ export const post: BlogPost = {
       <h3 className="text-xl font-bold mt-6 mb-3">Design Complexity</h3>
       <p className="mb-4">
         Customizing a premium Shopify theme adds $1,000–$4,000 to a base build. Building a
-        completely original design from scratch — wireframes, UI design, then development — adds
+        completely original design from scratch, wireframes, UI design, then development, adds
         $2,000–$8,000 for design work alone before a single line of code. If you have strong brand
         guidelines and specific visual requirements, a custom theme build at $4,999–$10,000 is
         usually the right call. If you&apos;re launching to test product-market fit, a template at
@@ -315,10 +315,10 @@ export const post: BlogPost = {
       <h3 className="text-xl font-bold mt-6 mb-3">Product Count and Content Readiness</h3>
       <p className="mb-4">
         Most agencies include product upload for up to 50 SKUs in a standard build. Stores with
-        500+ products need structured data migration plans and often a PIM system — add $2,000–$8,000
+        500+ products need structured data migration plans and often a PIM system, add $2,000–$8,000
         for large catalog work. More importantly: having photography, copy, and brand assets ready at
         kickoff cuts development time by 30–50%. At $120–$200/hour agency rates, that&apos;s real
-        money. The biggest hidden cost for most store owners isn&apos;t development — it&apos;s
+        money. The biggest hidden cost for most store owners isn&apos;t development, it&apos;s
         content they haven&apos;t prepared.
       </p>
 
@@ -403,7 +403,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">Apps: $50–$500+/Month</h3>
       <p className="mb-4">
-        Shopify&apos;s app ecosystem has over 8,000 apps — many free, many not. A typical SMB app
+        Shopify&apos;s app ecosystem has over 8,000 apps, many free, many not. A typical SMB app
         stack:
       </p>
       <div className="overflow-x-auto mb-6">
@@ -472,7 +472,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         If you use a third-party payment processor instead of Shopify Payments, Shopify charges a
         transaction fee of 2% on Basic, 1% on Grow, and 0.5% on Advanced. On $50,000/month GMV,
-        that&apos;s $1,000/month on the Basic plan — $12,000/year — in fees that disappear if you
+        that&apos;s $1,000/month on the Basic plan, $12,000/year, in fees that disappear if you
         switch to Shopify Payments. Shopify Payments has its own processing rates (2.9% + 30¢ on
         Basic), but no separate transaction fee. For most US small businesses, Shopify Payments is
         the right default.
@@ -588,14 +588,14 @@ export const post: BlogPost = {
         generates 500 visits/month and 5 sales per 1,000 visitors.
       </p>
       <p className="mb-3">
-        A custom theme build — better layouts, stronger product photography presentation,
-        mobile-optimized checkout, faster load times — commonly moves conversion from 1% to 2%.
+        A custom theme build, better layouts, stronger product photography presentation,
+        mobile-optimized checkout, faster load times, commonly moves conversion from 1% to 2%.
         That&apos;s documented in Google&apos;s Core Web Vitals research showing 8–20% conversion
         improvements from speed and UX improvements.
       </p>
       <p className="mb-3">
         At 2% conversion on $50K/month GMV: that&apos;s <strong>$100,000/month</strong> in revenue
-        from the same traffic. The difference is <strong>$50,000/month</strong> — or{' '}
+        from the same traffic. The difference is <strong>$50,000/month</strong>, or{' '}
         <strong>$600,000/year</strong> in additional revenue. Even at a more conservative lift of
         0.2%, you&apos;re looking at $12,000/year in additional revenue from a $4,999 investment.
         That&apos;s a 5-month payback period.
@@ -790,7 +790,7 @@ export const post: BlogPost = {
         <Link href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
           across the US
         </Link>{' '}
-        — all with a 7-day delivery guarantee and fixed-price quotes. If you want a scope estimate
+: all with a 7-day delivery guarantee and fixed-price quotes. If you want a scope estimate
         for your specific build, a 30-minute call is the fastest path.
       </p>
       <p className="mb-8">
@@ -800,7 +800,7 @@ export const post: BlogPost = {
           rel="noopener noreferrer"
           className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
-          Get a Free Shopify Store Quote — 30 Minutes, Fixed Price
+          Get a Free Shopify Store Quote, 30 Minutes, Fixed Price
         </a>
       </p>
 
@@ -832,7 +832,7 @@ export const post: BlogPost = {
         >
           Ogresto
         </a>{' '}
-        (June 2026). FactoryJet pricing is our own published tiers — disclosed as such.
+        (June 2026). FactoryJet pricing is our own published tiers, disclosed as such.
       </p>
     </>
   ),

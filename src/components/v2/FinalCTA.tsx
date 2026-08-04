@@ -62,7 +62,7 @@ export default function FinalCTA({
           backgroundSize: '28px 28px, 100% 100%',
         }}
       >
-        {/* Orange aurora — left-center */}
+        {/* Orange aurora, left-center */}
         <div
           className="pointer-events-none absolute"
           style={{
@@ -75,7 +75,7 @@ export default function FinalCTA({
           aria-hidden="true"
         />
 
-        {/* Warm amber aurora — right-center */}
+        {/* Warm amber aurora, right-center */}
         <div
           className="pointer-events-none absolute"
           style={{
@@ -88,7 +88,7 @@ export default function FinalCTA({
           aria-hidden="true"
         />
 
-        {/* Amber accent — bottom-center */}
+        {/* Amber accent, bottom-center */}
         <div
           className="pointer-events-none absolute"
           style={{

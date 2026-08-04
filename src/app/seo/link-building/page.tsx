@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -47,6 +48,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/link-building', languages: seoSubServiceAlternatesIN['link-building'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/link-building#webpage',
+  url: 'https://factoryjet.com/seo/link-building',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -138,6 +153,10 @@ const LINK_COMPARISON_ROWS = [
 export default function LinkBuildingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="link-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="link-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
@@ -152,10 +171,15 @@ export default function LinkBuildingPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'Link Building', url: 'https://factoryjet.com/seo/link-building' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_link_building_hero" />}
           eyebrow="LINK BUILDING SERVICES · INDIA"
-          headline="Link Building Services in India — Real Links From Trusted Sites, So Google Trusts You More"
+          headline="Link Building Services in India: Real Links From Trusted Sites, So Google Trusts You More"
           lead="When a respected website links to yours, it is like getting a vote of confidence in public. Google counts those votes: the more good ones you have from trusted sites, the more it trusts you, and the higher you can rank. We earn real links the safe way, through digital PR, guest articles, and genuinely helpful content. We never use spammy tricks or bought links that can get you punished. No long contracts, and every link we earn stays yours."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Real links only', 'No spammy tricks', 'No long contracts']}
@@ -164,7 +188,7 @@ export default function LinkBuildingPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Link Building Agency — 500+ Sites, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Link Building Agency, 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

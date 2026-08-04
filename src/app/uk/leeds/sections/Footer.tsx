@@ -47,7 +47,7 @@ export default function Footer() {
                 maxWidth: "400px",
               }}
             >
-              FactoryJet Technologies is an AI-native web design agency serving businesses across Leeds, West Yorkshire, and the wider UK. We specialise in enterprise-grade website design and development using Next.js 15, Tailwind CSS 4, WordPress, and TypeScript — delivering Lighthouse 95+ performance scores at a fixed, transparent quote. Our services include custom web design, e-commerce development (Shopify, WooCommerce), AI search optimisation (GEO/AEO), and AI agent development. We work with businesses across all Leeds postcodes — from the financial district around Park Row and the Northern Square Mile, to the tech hubs at Leeds Dock and Nexus, to retail and fashion businesses in the Victoria Quarter and Kirkgate Market.
+              FactoryJet Technologies is an AI-native web design agency serving businesses across Leeds, West Yorkshire, and the wider UK. We specialise in enterprise-grade website design and development using Next.js 15, Tailwind CSS 4, WordPress, and TypeScript, delivering Lighthouse 95+ performance scores at a fixed, transparent quote. Our services include custom web design, e-commerce development (Shopify, WooCommerce), AI search optimisation (GEO/AEO), and AI agent development. We work with businesses across all Leeds postcodes, from the financial district around Park Row and the Northern Square Mile, to the tech hubs at Leeds Dock and Nexus, to retail and fashion businesses in the Victoria Quarter and Kirkgate Market.
             </p>
           </div>
 

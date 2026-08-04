@@ -56,7 +56,7 @@ export const DEFAULT_JOURNEY_STAGES: ReadonlyArray<ServiceJourneyStage> = [
     number: '05',
     title: 'Run',
     description:
-      'Optional retainer for evolutions. Or hand back the keys — your codebase, your call.',
+      'Optional retainer for evolutions. Or hand back the keys: your codebase, your call.',
   },
 ];
 
@@ -123,7 +123,7 @@ export default function ServiceJourneyRow({
          */}
         <div className="relative mt-10">
 
-          {/* ── Connector line — desktop only ──────────────────────────── */}
+          {/* ── Connector line, desktop only ──────────────────────────── */}
           {/*
            * Sits at top-[22px] = half the circle height (h-11 = 44px).
            * Fades in from left and out to right so it doesn't clip the
@@ -210,7 +210,7 @@ export default function ServiceJourneyRow({
           </div>
         </div>
 
-        {/* ── Closing note — flanked by gradient rules ────────────────────── */}
+        {/* ── Closing note, flanked by gradient rules ────────────────────── */}
         {closingNote && (
           <div
             className="mt-10 flex items-center gap-5"

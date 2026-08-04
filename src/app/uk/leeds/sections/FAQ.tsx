@@ -20,7 +20,7 @@ const GENERAL_FAQS = [
   },
   {
     q: "Do you have a physical office in Leeds?",
-    a: "FactoryJet operates as a remote-first, AI-native agency serving Leeds businesses from our global delivery network. This is exactly how we keep pricing at a fixed, transparent quote — we do not pass the cost of Leeds city centre office space onto our clients. We are available via video call, WhatsApp, phone, and email throughout UK business hours, and we meet in person for larger engagements.",
+    a: "FactoryJet operates as a remote-first, AI-native agency serving Leeds businesses from our global delivery network. This is exactly how we keep pricing at a fixed, transparent quote, we do not pass the cost of Leeds city centre office space onto our clients. We are available via video call, WhatsApp, phone, and email throughout UK business hours, and we meet in person for larger engagements.",
   },
   {
     q: "Do I need a website for my small business in Leeds in 2026?",
@@ -31,7 +31,7 @@ const GENERAL_FAQS = [
 const TECHNOLOGY_FAQS = [
   {
     q: "What is generative engine optimisation and why does my Leeds business need it?",
-    a: "Generative engine optimisation (GEO) is the practice of optimising your website and content to appear in AI-generated search results — Google AI Overviews, ChatGPT responses, Perplexity AI answers, and Claude citations. In the UK, 42% of Google searches now show AI-generated summaries, ChatGPT had 1.8 billion UK visits in 2025, and AI search traffic converts at 4.4 times the rate of traditional organic search. No other SEO agency in Leeds currently offers dedicated GEO and AEO services — making this a significant first-mover opportunity for Leeds businesses that act now.",
+    a: "Generative engine optimisation (GEO) is the practice of optimising your website and content to appear in AI-generated search results: Google AI Overviews, ChatGPT responses, Perplexity AI answers, and Claude citations. In the UK, 42% of Google searches now show AI-generated summaries, ChatGPT had 1.8 billion UK visits in 2025, and AI search traffic converts at 4.4 times the rate of traditional organic search. No other SEO agency in Leeds currently offers dedicated GEO and AEO services, making this a significant first-mover opportunity for Leeds businesses that act now.",
   },
   {
     q: "Are AI chatbots and AI agents GDPR compliant in the UK?",
@@ -39,7 +39,7 @@ const TECHNOLOGY_FAQS = [
   },
   {
     q: "Can you help my Leeds business get mentioned in ChatGPT and Perplexity?",
-    a: "Yes — this is a core part of our AI SEO service. We optimise your content for LLM citation patterns, ensure AI crawlers can access your site through proper robots.txt and Cloudflare configuration, build entity-rich structured data, and implement schema markup that improves your AI visibility.",
+    a: "Yes, this is a core part of our AI SEO service. We optimise your content for LLM citation patterns, ensure AI crawlers can access your site through proper robots.txt and Cloudflare configuration, build entity-rich structured data, and implement schema markup that improves your AI visibility.",
   },
 ];
 
@@ -50,7 +50,7 @@ const SERVICES_FAQS = [
   },
   {
     q: "What is an AI agent and how can it help my Leeds business?",
-    a: "An AI agent is an intelligent software system that can autonomously handle tasks your team currently does manually — answering customer enquiries, qualifying sales leads, processing documents, scheduling appointments, and more. For Leeds businesses, AI agents typically deliver ROI within three to six months by reducing staffing costs, improving 24/7 response times, and handling 60–80% of routine interactions.",
+    a: "An AI agent is an intelligent software system that can autonomously handle tasks your team currently does manually, answering customer enquiries, qualifying sales leads, processing documents, scheduling appointments, and more. For Leeds businesses, AI agents typically deliver ROI within three to six months by reducing staffing costs, improving 24/7 response times, and handling 60–80% of routine interactions.",
   },
   {
     q: "What industries does FactoryJet serve in Leeds?",
@@ -69,7 +69,7 @@ const COMPARISONS_FAQS = [
   },
   {
     q: "How does FactoryJet compare to agencies like Ascensor, Parallax, or Bolser in Leeds?",
-    a: "Ascensor, Parallax, and Bolser are established Leeds agencies with solid track records. Where FactoryJet differs: Technology — we build on Next.js 15 instead of WordPress. AI capabilities — we offer AI agent development and GEO/AEO that no Leeds agency provides. Pricing — 50–60% lower costs for comparable or superior quality.",
+    a: "Ascensor, Parallax, and Bolser are established Leeds agencies with solid track records. Where FactoryJet differs: Technology, we build on Next.js 15 instead of WordPress. AI capabilities, we offer AI agent development and GEO/AEO that no Leeds agency provides. Pricing, 50–60% lower costs for comparable or superior quality.",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function FAQ() {
           {/* ── RIGHT: grouped Q&A ─────────────────────────────────────── */}
           {/*
             Content is NEVER hidden behind accordions or JS toggles.
-            All 16 Q&As are static HTML — GPTBot, ClaudeBot, and
+            All 16 Q&As are static HTML: GPTBot, ClaudeBot, and
             PerplexityBot parse every word without executing JavaScript.
           */}
           <div className="lg:col-span-9">

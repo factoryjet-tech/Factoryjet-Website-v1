@@ -109,7 +109,7 @@ export default function ThankYouContent() {
           target="_blank"
           rel="noopener noreferrer"
           /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on
-             any calendly.com click — no inline gtag needed. */
+             any calendly.com click, no inline gtag needed. */
           className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#B23E13] px-7 py-3.5 text-base font-bold text-white shadow-[0_10px_26px_-10px_rgba(240,90,40,0.7)] transition-all hover:-translate-y-0.5 hover:bg-[#d44d1f]"
         >
           <CalendarClock size={18} />

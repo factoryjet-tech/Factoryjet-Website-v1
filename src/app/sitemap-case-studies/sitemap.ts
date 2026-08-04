@@ -3,14 +3,14 @@ import { CASE_STUDIES } from '@/data/case-studies'
 import { getFileLastMod } from '@/lib/sitemap-helpers'
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   sitemap-case-studies — dedicated sub-sitemap for the new `/case-studies/`
+   sitemap-case-studies, dedicated sub-sitemap for the new `/case-studies/`
    route family. Lives alongside sitemap-blog/, sitemap-us/, sitemap-uk/,
-   sitemap-india/, sitemap-uae/, sitemap-pages/ — matches the project's
+   sitemap-india/, sitemap-uae/, sitemap-pages/, matches the project's
    established split-sitemap convention.
 
    Note: a separate legacy `/case/` route (driven by
    src/lib/legacy-pages/Case/data.constants.ts) is already enumerated by
-   sitemap-pages/sitemap.ts. That sitemap is left untouched — the two
+   sitemap-pages/sitemap.ts. That sitemap is left untouched: the two
    route families are intentionally distinct (per Report 19).
 
    Once CASE_STUDIES is populated in src/data/case-studies/index.ts the
@@ -22,7 +22,7 @@ import { getFileLastMod } from '@/lib/sitemap-helpers'
    were 308s. Sitemaps must list only canonical, directly-200 URLs.
 
    The `/case-studies` index itself is emitted by sitemap-us/sitemap.ts, so it is
-   deliberately NOT repeated here — listing it in both produced a duplicate.
+   deliberately NOT repeated here, listing it in both produced a duplicate.
    ──────────────────────────────────────────────────────────────────────────── */
 
 export const dynamic = 'force-static'

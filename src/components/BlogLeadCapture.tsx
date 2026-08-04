@@ -147,7 +147,7 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
             </button>
           </div>
 
-          {/* Honeypot — hidden from real users */}
+          {/* Honeypot, hidden from real users */}
           <input
             type="text" tabIndex={-1} autoComplete="off" aria-hidden="true"
             value={honeypot} onChange={(e) => setHoneypot(e.target.value)}

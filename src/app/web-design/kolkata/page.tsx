@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Kolkata | FactoryJet',
     description:
-      'Professional website design company in Kolkata — Next.js, SEO, and GA4 included. 7-day delivery. Serving Salt Lake Sector V, Rajarhat, Park Street, Dalhousie, and Burrabazar.',
+      'Professional website design company in Kolkata: Next.js, SEO, and GA4 included. 7-day delivery. Serving Salt Lake Sector V, Rajarhat, Park Street, Dalhousie, and Burrabazar.',
     url: 'https://factoryjet.com/web-design/kolkata',
     images: [
       {
@@ -85,6 +86,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/kolkata#webpage',
+  url: 'https://factoryjet.com/web-design/kolkata',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -135,31 +150,31 @@ const KOL_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Kolkata's market — whether that's an international buyer sourcing jute or tea, an IT firm in Salt Lake Sector V, a logistics business near Kolkata Port, or a retail brand on Park Street. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Kolkata's market, whether that's an international buyer sourcing jute or tea, an IT firm in Salt Lake Sector V, a logistics business near Kolkata Port, or a retail brand on Park Street. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Kolkata-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Kolkata-specific local SEO targeting built in.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -190,13 +205,13 @@ const KOL_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Kolkata web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -216,7 +231,7 @@ const KOL_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -236,7 +251,7 @@ const KOL_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Kolkata businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Kolkata businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -248,7 +263,7 @@ const KOL_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Kolkata Local ── */
@@ -256,19 +271,19 @@ const KOL_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for jute and tea trade businesses in Kolkata?',
     answer:
-      "Yes — jute traders, tea exporters, and commodity businesses are a core client profile for us in Kolkata. We build websites optimised for international B2B buyer research: export credentials display, product catalog with inquiry forms, and technical SEO targeting English-language searches from buyers in the US, EU, Middle East, and Southeast Asia.",
+      "Yes, jute traders, tea exporters, and commodity businesses are a core client profile for us in Kolkata. We build websites optimised for international B2B buyer research: export credentials display, product catalog with inquiry forms, and technical SEO targeting English-language searches from buyers in the US, EU, Middle East, and Southeast Asia.",
   },
   {
     category: 'local',
     question: 'Can you build websites for IT and BPO companies in Salt Lake Sector V?',
     answer:
-      "Yes. Salt Lake Sector V is one of India's largest IT hubs, and the businesses there — IT services firms, BPO operations, SaaS startups, and tech consultancies — need websites built for global client acquisition. We build with authority-first architecture, clear service capability pages, and lead flows designed for international sales cycles.",
+      "Yes. Salt Lake Sector V is one of India's largest IT hubs, and the businesses there: IT services firms, BPO operations, SaaS startups, and tech consultancies, need websites built for global client acquisition. We build with authority-first architecture, clear service capability pages, and lead flows designed for international sales cycles.",
   },
   {
     category: 'local',
     question: "Do you know Kolkata's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Kolkata's business geography as part of discovery — from Dalhousie and BBD Bagh's commercial core and Park Street's retail and hospitality strip, to Salt Lake Sector V's IT corridor, Burrabazar's wholesale trading district, and Rajarhat New Town's emerging tech and residential developments. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Kolkata's business geography as part of discovery, from Dalhousie and BBD Bagh's commercial core and Park Street's retail and hospitality strip, to Salt Lake Sector V's IT corridor, Burrabazar's wholesale trading district, and Rajarhat New Town's emerging tech and residential developments. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -282,7 +297,7 @@ const KOL_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -425,31 +440,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Kolkata market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Kolkata competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Kolkata local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Kolkata local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -473,6 +488,10 @@ const speakableSchema = {
 export default function KolkataWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="kol-local-business-schema"
         type="application/ld+json"
@@ -502,13 +521,18 @@ export default function KolkataWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Kolkata', url: 'https://factoryjet.com/web-design/kolkata' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_kolkata_hero" />}
           eyebrow="WEB DESIGN · KOLKATA"
           headline="Website Design in Kolkata for Jute & Tea Traders, IT Firms, and East India's Growing Businesses"
-          lead="Kolkata is East India's commercial capital — home to India's oldest port, the country's largest jute industry, Salt Lake's thriving IT hub, and one of India's most resilient MSME ecosystems. From Dalhousie's heritage commercial core and Burrabazar's wholesale trading to Salt Lake Sector V's IT corridor and Rajarhat New Town's emerging business district, Kolkata businesses compete nationally and internationally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Kolkata is East India's commercial capital, home to India's oldest port, the country's largest jute industry, Salt Lake's thriving IT hub, and one of India's most resilient MSME ecosystems. From Dalhousie's heritage commercial core and Burrabazar's wholesale trading to Salt Lake Sector V's IT corridor and Rajarhat New Town's emerging business district, Kolkata businesses compete nationally and internationally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -531,26 +555,26 @@ export default function KolkataWebDesignPage() {
           eyebrow="KOLKATA MARKET"
           headline="Why Your Kolkata Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Kolkata is East India's commercial capital — a city with a GDP exceeding $150 billion and one of the most diverse business ecosystems in India. The city's heritage trading roots run through Burrabazar's wholesale markets and Dalhousie's BBD Bagh commercial district, while modern Kolkata has built a thriving IT and BPO sector in Salt Lake Sector V and the rising Rajarhat New Town corridor. Kolkata Port — the oldest and one of the busiest ports in India — serves as the gateway for jute, tea, and commodity exports flowing out of East and Northeast India.",
-            "This creates a web design landscape unique to Kolkata: a jute exporter in Burrabazar needs a completely different site architecture from an IT services company in Salt Lake Sector V, a logistics firm near the Port Trust area, or a retail brand on Park Street. International buyers sourcing jute, tea, and commodities research Indian vendors for weeks before making contact. An IT firm pitching US clients needs a site that projects technical capability and credibility at a global standard. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template.",
-            "Kolkata's business community has historically invested cautiously in digital — which means the gap between businesses with a high-performing website and those without is widening rapidly. The businesses that act now capture the search rankings, the buyer first impressions, and the digital credibility their slower competitors are conceding every week.",
+            "Kolkata is East India's commercial capital: a city with a GDP exceeding $150 billion and one of the most diverse business ecosystems in India. The city's heritage trading roots run through Burrabazar's wholesale markets and Dalhousie's BBD Bagh commercial district, while modern Kolkata has built a thriving IT and BPO sector in Salt Lake Sector V and the rising Rajarhat New Town corridor. Kolkata Port: the oldest and one of the busiest ports in India, serves as the gateway for jute, tea, and commodity exports flowing out of East and Northeast India.",
+            "This creates a web design landscape unique to Kolkata: a jute exporter in Burrabazar needs a completely different site architecture from an IT services company in Salt Lake Sector V, a logistics firm near the Port Trust area, or a retail brand on Park Street. International buyers sourcing jute, tea, and commodities research Indian vendors for weeks before making contact. An IT firm pitching US clients needs a site that projects technical capability and credibility at a global standard. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template.",
+            "Kolkata's business community has historically invested cautiously in digital, which means the gap between businesses with a high-performing website and those without is widening rapidly. The businesses that act now capture the search rankings, the buyer first impressions, and the digital credibility their slower competitors are conceding every week.",
           ]}
           stats={[
             {
               value: '$150B+',
-              label: 'Kolkata Metro GDP — East India\'s largest city economy and commercial gateway',
+              label: 'Kolkata Metro GDP, East India\'s largest city economy and commercial gateway',
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
             {
               value: 'Kolkata Port',
-              label: 'India\'s oldest major port — East India\'s gateway for jute, tea, and commodity exports',
+              label: 'India\'s oldest major port: East India\'s gateway for jute, tea, and commodity exports',
               sourceUrl: 'https://www.kolkataporttrust.gov.in/',
               sourceLabel: 'Kolkata Port Trust',
             },
             {
               value: '5L+ MSMEs',
-              label: 'Micro, small, and medium enterprises in West Bengal — one of India\'s largest MSME bases',
+              label: 'Micro, small, and medium enterprises in West Bengal: one of India\'s largest MSME bases',
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'Ministry of MSME',
             },
@@ -561,12 +585,12 @@ export default function KolkataWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · KOLKATA"
           headline="What 'Web Design' Actually Means for a Kolkata Business"
-          lead="Kolkata's economy runs on two very different buyer behaviours — B2B international buyers doing weeks of vendor research for jute, tea, and commodities, and domestic consumers and retail buyers deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
+          lead="Kolkata's economy runs on two very different buyer behaviours, B2B international buyers doing weeks of vendor research for jute, tea, and commodities, and domestic consumers and retail buyers deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
                 For Kolkata&apos;s jute exporters, tea traders, commodity businesses, and
-                manufacturing firms — the website needs to project export credentials, product
+                manufacturing firms: the website needs to project export credentials, product
                 range, and supply capacity to international B2B buyers in the US, EU, Middle East,
                 and Southeast Asia. These buyers research vendors for weeks before making contact.
                 The site needs to answer their due-diligence questions: certifications, production
@@ -576,7 +600,7 @@ export default function KolkataWebDesignPage() {
               </p>
               <p>
                 For IT services firms and BPO operations in Salt Lake Sector V, logistics companies
-                near Kolkata Port, and consumer retail brands on Park Street and New Market — the
+                near Kolkata Port, and consumer retail brands on Park Street and New Market: the
                 challenge is different. IT firms pitching US and EU clients need global-standard
                 credibility signals and service capability pages. Logistics businesses need
                 operations display and trade documentation. Consumer retail needs mobile-first
@@ -660,7 +684,7 @@ export default function KolkataWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kolkata Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -696,7 +720,7 @@ export default function KolkataWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -705,9 +729,9 @@ export default function KolkataWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -721,11 +745,11 @@ export default function KolkataWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Kolkata Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Kolkata deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Kolkata deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={KOL_COMPARISON_COLUMNS}
           rows={KOL_COMPARISON_ROWS}
@@ -736,33 +760,33 @@ export default function KolkataWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="KOLKATA × WEB DESIGN"
           headline="Web Design for Kolkata's Key Industries"
-          lead="From jute and tea exporters and port logistics firms to IT companies in Salt Lake and retail brands on Park Street — Kolkata's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From jute and tea exporters and port logistics firms to IT companies in Salt Lake and retail brands on Park Street, Kolkata's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Jute & Tea Trade',
               description:
-                "Kolkata is the global hub of the jute industry and a primary auction centre for Indian tea. Exporters and traders need websites that project product quality, export credentials, and supply capacity to international buyers in the US, EU, Bangladesh, and Southeast Asia. Product catalog systems, sample inquiry forms, and B2B lead capture are standard — alongside technical SEO targeting English-language buyer searches.",
+                "Kolkata is the global hub of the jute industry and a primary auction centre for Indian tea. Exporters and traders need websites that project product quality, export credentials, and supply capacity to international buyers in the US, EU, Bangladesh, and Southeast Asia. Product catalog systems, sample inquiry forms, and B2B lead capture are standard, alongside technical SEO targeting English-language buyer searches.",
               example:
                 'Jute manufacturers and tea exporters in Burrabazar, Strand Road, and Kolkata Port Trade Area targeting international wholesale buyers.',
             },
             {
               name: 'IT & BPO',
               description:
-                "Salt Lake Sector V is one of India's largest IT hubs — home to IT services firms, BPO operations, KPO companies, SaaS startups, and tech consultancies. These businesses need websites built for global client acquisition: authority-first positioning, service capability pages, case study architecture, and lead flows designed for international sales cycles with US, UK, and EU clients.",
+                "Salt Lake Sector V is one of India's largest IT hubs, home to IT services firms, BPO operations, KPO companies, SaaS startups, and tech consultancies. These businesses need websites built for global client acquisition: authority-first positioning, service capability pages, case study architecture, and lead flows designed for international sales cycles with US, UK, and EU clients.",
               example:
                 'IT services companies, BPO operations, and tech startups in Salt Lake Sector V, Rajarhat New Town, and Eco Park targeting international clients.',
             },
             {
               name: 'Logistics & Port Services',
               description:
-                "Kolkata Port is India's oldest major port and the primary gateway for East and Northeast India's trade. Logistics companies, freight forwarders, customs brokers, and supply chain firms need websites that display operational capabilities, certification credentials, trade lane coverage, and RFQ forms — optimised for both domestic shippers and international trading partners.",
+                "Kolkata Port is India's oldest major port and the primary gateway for East and Northeast India's trade. Logistics companies, freight forwarders, customs brokers, and supply chain firms need websites that display operational capabilities, certification credentials, trade lane coverage, and RFQ forms, optimised for both domestic shippers and international trading partners.",
               example:
                 'Freight forwarders, customs brokers, and logistics companies operating around Kolkata Port and serving East India trade corridors.',
             },
             {
               name: 'Retail & FMCG',
               description:
-                "Kolkata has one of India's most vibrant retail cultures — from Park Street's landmark stores and New Market's heritage retail to the growing e-commerce brands emerging from the city. Consumer retail brands, FMCG distributors, and D2C businesses need mobile-first websites with fast load times, product showcase systems, and conversion-optimised checkout flows for both online and click-to-call buyers.",
+                "Kolkata has one of India's most vibrant retail cultures, from Park Street's landmark stores and New Market's heritage retail to the growing e-commerce brands emerging from the city. Consumer retail brands, FMCG distributors, and D2C businesses need mobile-first websites with fast load times, product showcase systems, and conversion-optimised checkout flows for both online and click-to-call buyers.",
               example:
                 'Consumer retail brands, FMCG distributors, and D2C businesses on Park Street, New Market, and growing in online channels.',
             },
@@ -776,7 +800,7 @@ export default function KolkataWebDesignPage() {
             {
               name: 'Manufacturing & Engineering',
               description:
-                "Howrah and Kolkata's industrial corridors house a deep manufacturing and engineering base — steel fabricators, industrial equipment manufacturers, printing and packaging companies, and engineering services firms. B2B manufacturers need websites with product catalog architecture, technical specification display, certifications, and inquiry flows designed for industrial procurement cycles.",
+                "Howrah and Kolkata's industrial corridors house a deep manufacturing and engineering base, steel fabricators, industrial equipment manufacturers, printing and packaging companies, and engineering services firms. B2B manufacturers need websites with product catalog architecture, technical specification display, certifications, and inquiry flows designed for industrial procurement cycles.",
               example:
                 'Steel fabricators, industrial equipment manufacturers, and engineering services firms in Howrah and Kolkata industrial corridors.',
             },
@@ -794,7 +818,7 @@ export default function KolkataWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Kolkata Businesses"
-          lead="The questions we answer on every Kolkata discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Kolkata discovery call, answered here, without the runaround."
           categories={KOL_FAQ_CATEGORIES}
           items={KOL_FAQ_ITEMS}
         />

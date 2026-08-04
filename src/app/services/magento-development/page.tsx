@@ -33,20 +33,20 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
   description:
-    'Hire certified Magento developers from a US Magento development company. Magento 2 & Adobe Commerce builds, custom modules, migrations & performance — fixed-price. Free consultation.',
+    'Hire certified Magento developers from a US Magento development company. Magento 2 & Adobe Commerce builds, custom modules, migrations & performance: fixed-price. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
     description:
-      'Hire certified Magento developers for US businesses. Magento 2 & Adobe Commerce builds, custom modules, migrations from Magento 1, and performance optimization — delivered by senior engineers.',
+      'Hire certified Magento developers for US businesses. Magento 2 & Adobe Commerce builds, custom modules, migrations from Magento 1, and performance optimization, delivered by senior engineers.',
     url: 'https://factoryjet.com/services/magento-development',
     images: [
       {
         url: 'https://factoryjet.com/images/us/hero-us.webp',
         width: 1200,
         height: 630,
-        alt: 'Magento Development Services — FactoryJet',
+        alt: 'Magento Development Services: FactoryJet',
       },
     ],
     locale: 'en_US',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
     description:
-      'Hire certified Magento developers — Magento 2 & Adobe Commerce builds, custom modules, migrations & performance tuning.',
+      'Hire certified Magento developers: Magento 2 & Adobe Commerce builds, custom modules, migrations & performance tuning.',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 };
 
 /* ----------------------------------------------------------------------------─
-   JSON-LD Schemas — FAQPage · Service · BreadcrumbList
+   JSON-LD Schemas, FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
 const serviceSchema = {
@@ -84,7 +84,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Magento Development Services',
   description:
-    'Custom Magento and Adobe Commerce development for US e-commerce businesses — full store builds, module development, Magento 1 to 2 migrations, and performance optimization.',
+    'Custom Magento and Adobe Commerce development for US e-commerce businesses, full store builds, module development, Magento 1 to 2 migrations, and performance optimization.',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
@@ -144,7 +144,7 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '05',
     title: 'Launch + 30-Day Support',
     description:
-      `We deploy to production with zero-downtime deployment practices, monitor for issues in the first 48 hours, and provide 30 days of post-launch support. No "we'll fix that in the next sprint" — issues get resolved on the same project.`,
+      `We deploy to production with zero-downtime deployment practices, monitor for issues in the first 48 hours, and provide 30 days of post-launch support. No "we'll fix that in the next sprint", issues get resolved on the same project.`,
   },
 ];
 
@@ -158,7 +158,7 @@ const STATS = [
   {
     value: 'Fixed Price',
     label: 'milestone-paid Magento builds with full code ownership',
-    microcopy: 'senior-only team — predictable from quote to launch',
+    microcopy: 'senior-only team, predictable from quote to launch',
     categoryLabel: 'PRICING MODEL',
   },
   {
@@ -265,11 +265,11 @@ const PRICING_TIERS = [
     name: 'Module Development',
     priceRange: 'Get a quote',
     description:
-      `Custom Magento 2 module or extension development — built to Magento coding standards, documented, and tested. Ideal for adding custom functionality, building admin features, or extending Magento's native capabilities.`,
+      `Custom Magento 2 module or extension development, built to Magento coding standards, documented, and tested. Ideal for adding custom functionality, building admin features, or extending Magento's native capabilities.`,
     features: [
       'Custom module architecture and development',
       'Admin UI components (grids, forms, ACL)',
-      'Plugin / preference / observer patterns — done right',
+      'Plugin / preference / observer patterns, done right',
       'REST and GraphQL API integration',
       'Unit and integration test coverage',
       'Magento Marketplace-ready packaging if needed',
@@ -282,14 +282,14 @@ const PRICING_TIERS = [
     name: 'Migration (M1 → M2)',
     priceRange: 'Get a quote',
     description:
-      'Magento 1 to Magento 2 migration — the right way. Full data migration (products, orders, customers), custom extension rebuild or replacement, theme rebuild, and integration re-wiring. No shortcuts.',
+      'Magento 1 to Magento 2 migration: the right way. Full data migration (products, orders, customers), custom extension rebuild or replacement, theme rebuild, and integration re-wiring. No shortcuts.',
     features: [
       'Pre-migration technical audit of your M1 store',
-      'Full data migration — products, orders, customers, CMS',
+      'Full data migration, products, orders, customers, CMS',
       'Custom extension rebuild or M2 equivalent sourcing',
       'Theme rebuild in Luma or Hyvä',
       'Third-party integration re-wiring (ERP, CRM, shipping)',
-      'Performance optimization — FPC, Varnish, Redis',
+      'Performance optimization: FPC, Varnish, Redis',
       'UAT support and cutover planning',
       '30-day post-launch support',
     ],
@@ -300,15 +300,15 @@ const PRICING_TIERS = [
     name: 'Full Store Build',
     priceRange: 'Talk to the founder',
     description:
-      'A new Magento 2 (Adobe Commerce) store built from scratch — custom theme, configured catalog, payment and shipping setup, SEO foundation, and full third-party integrations. Sized for complex, high-volume operations.',
+      'A new Magento 2 (Adobe Commerce) store built from scratch, custom theme, configured catalog, payment and shipping setup, SEO foundation, and full third-party integrations. Sized for complex, high-volume operations.',
     features: [
       'Magento 2 Open Source or Adobe Commerce setup',
       'Custom theme on Hyvä or Luma',
-      'Full catalog configuration — attributes, facets, pricing rules',
+      'Full catalog configuration, attributes, facets, pricing rules',
       'Multi-store or multi-currency setup if needed',
       'Payment gateway + shipping carrier integration',
       'ERP / CRM / 3PL integration',
-      'Full technical SEO — sitemap, schema, canonical, hreflang',
+      'Full technical SEO, sitemap, schema, canonical, hreflang',
       '30-day post-launch support',
     ],
     cta: { label: 'Get a Store Build Quote', modal: true, region: 'us' },
@@ -333,29 +333,29 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Is Magento 2 good for large product catalogs?',
-    answer: `Yes — Magento 2 is purpose-built for large, complex product catalogs. It handles hundreds of thousands of SKUs with configurable products, layered navigation, and complex attribute sets. Properly optimized (Elasticsearch for search, Varnish for full-page cache, Redis for session and cache storage), a Magento 2 store can handle enormous catalogs and high traffic volumes. This is where Magento outperforms Shopify and WooCommerce, which struggle with catalog complexity at scale.`,
+    answer: `Yes: Magento 2 is purpose-built for large, complex product catalogs. It handles hundreds of thousands of SKUs with configurable products, layered navigation, and complex attribute sets. Properly optimized (Elasticsearch for search, Varnish for full-page cache, Redis for session and cache storage), a Magento 2 store can handle enormous catalogs and high traffic volumes. This is where Magento outperforms Shopify and WooCommerce, which struggle with catalog complexity at scale.`,
     category: 'platform',
   },
   {
     question: 'What is Hyvä and should I use it for my Magento 2 store?',
-    answer: `Hyvä is a modern Magento 2 frontend theme framework that replaces the default Luma theme. It uses Alpine.js and Tailwind CSS instead of RequireJS and Knockout.js — resulting in dramatically faster page load times (often 3–5x) and much simpler frontend code. For new Magento 2 builds in 2025, Hyvä is generally the right choice if you don't need Magento's native Page Builder. FactoryJet builds on Hyvä for new stores when performance is the priority.`,
+    answer: `Hyvä is a modern Magento 2 frontend theme framework that replaces the default Luma theme. It uses Alpine.js and Tailwind CSS instead of RequireJS and Knockout.js, resulting in dramatically faster page load times (often 3–5x) and much simpler frontend code. For new Magento 2 builds in 2025, Hyvä is generally the right choice if you don't need Magento's native Page Builder. FactoryJet builds on Hyvä for new stores when performance is the priority.`,
     category: 'platform',
   },
   {
     question: 'Does Magento work with B2B e-commerce?',
-    answer: `Yes — B2B is one of Magento's strongest use cases. Adobe Commerce includes native B2B features: company accounts, shared catalogs with customer-group pricing, custom purchase approval workflows, requisition lists, quick order by SKU, and net payment terms. Magento Open Source can handle basic B2B with extensions. If you need a complex B2B portal with negotiated pricing, buyer hierarchies, and approval workflows, Adobe Commerce is the right platform.`,
+    answer: `Yes, B2B is one of Magento's strongest use cases. Adobe Commerce includes native B2B features: company accounts, shared catalogs with customer-group pricing, custom purchase approval workflows, requisition lists, quick order by SKU, and net payment terms. Magento Open Source can handle basic B2B with extensions. If you need a complex B2B portal with negotiated pricing, buyer hierarchies, and approval workflows, Adobe Commerce is the right platform.`,
     category: 'platform',
   },
   {
     question: 'Can Magento handle multiple stores and currencies?',
-    answer: `Yes — Magento's multi-store architecture is one of its strongest differentiators. A single Magento installation can run multiple websites, each with separate domains, themes, product catalogs, pricing, and tax configurations. Multi-currency and multi-language are supported natively. This makes Magento ideal for brands with separate B2B and B2C storefronts, regional stores with different catalogs, or wholesale and retail operations on the same platform.`,
+    answer: `Yes, Magento's multi-store architecture is one of its strongest differentiators. A single Magento installation can run multiple websites, each with separate domains, themes, product catalogs, pricing, and tax configurations. Multi-currency and multi-language are supported natively. This makes Magento ideal for brands with separate B2B and B2C storefronts, regional stores with different catalogs, or wholesale and retail operations on the same platform.`,
     category: 'platform',
   },
 
   // -- Magento Migration --------------------------------------------------
   {
     question: 'Is Magento 1 still safe to use in 2025?',
-    answer: `No — Magento 1 reached official end-of-life in June 2020. It no longer receives security patches from Adobe. Running a Magento 1 store in 2025 means running unpatched security vulnerabilities that are actively exploited by automated attacks. Payment card industry (PCI DSS) compliance is also increasingly difficult to maintain on an unsupported platform. If you're still on Magento 1, migration to Magento 2 or an alternative platform is urgent.`,
+    answer: `No, Magento 1 reached official end-of-life in June 2020. It no longer receives security patches from Adobe. Running a Magento 1 store in 2025 means running unpatched security vulnerabilities that are actively exploited by automated attacks. Payment card industry (PCI DSS) compliance is also increasingly difficult to maintain on an unsupported platform. If you're still on Magento 1, migration to Magento 2 or an alternative platform is urgent.`,
     category: 'migration',
   },
   {
@@ -370,19 +370,19 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Will my SEO rankings survive a Magento migration?',
-    answer: `SEO can survive a Magento migration intact — but only if it's done carefully. The key factors: proper URL redirect mapping (all old URLs redirect 301 to new equivalents), preserved URL structure where possible, migrated meta titles and descriptions, maintained canonical tags, and proper sitemap resubmission after launch. FactoryJet includes an SEO migration checklist in every M1-to-M2 project. Poorly managed migrations lose 20–50% of organic traffic; well-managed ones are transparent to Google.`,
+    answer: `SEO can survive a Magento migration intact, but only if it's done carefully. The key factors: proper URL redirect mapping (all old URLs redirect 301 to new equivalents), preserved URL structure where possible, migrated meta titles and descriptions, maintained canonical tags, and proper sitemap resubmission after launch. FactoryJet includes an SEO migration checklist in every M1-to-M2 project. Poorly managed migrations lose 20–50% of organic traffic; well-managed ones are transparent to Google.`,
     category: 'migration',
   },
   {
     question: 'How long does a Magento 1 to Magento 2 migration take?',
-    answer: `A straightforward Magento 1 migration with standard extensions takes 8–12 weeks. Stores with heavy custom code, complex catalog structures, or many third-party integrations take 12–20 weeks. The longest phases are typically extension auditing/rebuilding and UAT testing. FactoryJet provides a timeline estimate after a technical audit of your existing M1 store — we don't guess, we measure.`,
+    answer: `A straightforward Magento 1 migration with standard extensions takes 8–12 weeks. Stores with heavy custom code, complex catalog structures, or many third-party integrations take 12–20 weeks. The longest phases are typically extension auditing/rebuilding and UAT testing. FactoryJet provides a timeline estimate after a technical audit of your existing M1 store, we don't guess, we measure.`,
     category: 'migration',
   },
 
   // -- Development Work --------------------------------------------------─
   {
     question: 'What is a Magento custom module?',
-    answer: `A Magento module is a self-contained package of code that extends or modifies Magento's functionality. Custom modules add features that aren't part of Magento's core — for example: a custom shipping rate calculator, a product configurator, a wholesale price management system, a custom loyalty rewards system, or a Magento-to-ERP sync. Modules follow Magento's architecture (plugins, observers, preferences, service contracts) and install via Composer without modifying core files.`,
+    answer: `A Magento module is a self-contained package of code that extends or modifies Magento's functionality. Custom modules add features that aren't part of Magento's core, for example: a custom shipping rate calculator, a product configurator, a wholesale price management system, a custom loyalty rewards system, or a Magento-to-ERP sync. Modules follow Magento's architecture (plugins, observers, preferences, service contracts) and install via Composer without modifying core files.`,
     category: 'development',
   },
   {
@@ -392,7 +392,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Can you fix or optimize an existing Magento 2 store?',
-    answer: `Yes — a significant portion of our Magento work is optimizing, debugging, or extending existing stores. Common projects include: performance optimization (slow load times, database query bottlenecks, cache configuration), security patching and hardening, fixing broken or poorly coded third-party extensions, adding new features without disrupting existing functionality, and resolving checkout or payment issues. We do a technical audit first, then provide a fixed-price proposal for the work.`,
+    answer: `Yes: a significant portion of our Magento work is optimizing, debugging, or extending existing stores. Common projects include: performance optimization (slow load times, database query bottlenecks, cache configuration), security patching and hardening, fixing broken or poorly coded third-party extensions, adding new features without disrupting existing functionality, and resolving checkout or payment issues. We do a technical audit first, then provide a fixed-price proposal for the work.`,
     category: 'development',
   },
   {
@@ -402,7 +402,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Do you follow Magento coding standards?',
-    answer: `Yes — all FactoryJet Magento development follows official Magento coding standards and best practices. This means no core file modifications (everything via plugins, observers, or preferences), proper module structure (composer.json, registration.php, module.xml), PSR-2 coding style, Magento ECG code smell detection, and inline documentation. Code that follows these standards is maintainable, upgradeable, and won't break on Magento patches — which matters a lot for long-term stability.`,
+    answer: `Yes: all FactoryJet Magento development follows official Magento coding standards and best practices. This means no core file modifications (everything via plugins, observers, or preferences), proper module structure (composer.json, registration.php, module.xml), PSR-2 coding style, Magento ECG code smell detection, and inline documentation. Code that follows these standards is maintainable, upgradeable, and won't break on Magento patches, which matters a lot for long-term stability.`,
     category: 'development',
   },
 
@@ -414,17 +414,17 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Do you charge hourly or fixed price for Magento development?',
-    answer: `FactoryJet charges fixed prices for Magento projects whenever possible — we strongly prefer fixed-price over hourly billing because it eliminates scope creep risk for you and forces us to scope accurately. For well-defined projects (module development, migrations, new builds), we provide a fixed price after the discovery call. For ongoing retainer work (maintenance, support, iterative development), we offer monthly retainer packages with defined hours.`,
+    answer: `FactoryJet charges fixed prices for Magento projects whenever possible, we strongly prefer fixed-price over hourly billing because it eliminates scope creep risk for you and forces us to scope accurately. For well-defined projects (module development, migrations, new builds), we provide a fixed price after the discovery call. For ongoing retainer work (maintenance, support, iterative development), we offer monthly retainer packages with defined hours.`,
     category: 'cost',
   },
   {
     question: 'How much does a Magento performance optimization project cost?',
-    answer: `Magento performance optimization is fixed-price and scoped to what's needed. A typical performance engagement includes a technical audit (identifying slow queries, cache misconfig, unoptimized extensions), Varnish and Redis configuration, image optimization, Elasticsearch tuning, and frontend asset optimization. We provide a fixed price after the audit. Some performance issues are simple configuration fixes; others require extension rewrites — we won't know until we look.`,
+    answer: `Magento performance optimization is fixed-price and scoped to what's needed. A typical performance engagement includes a technical audit (identifying slow queries, cache misconfig, unoptimized extensions), Varnish and Redis configuration, image optimization, Elasticsearch tuning, and frontend asset optimization. We provide a fixed price after the audit. Some performance issues are simple configuration fixes; others require extension rewrites, we won't know until we look.`,
     category: 'cost',
   },
   {
     question: 'Is Magento more expensive to run than Shopify?',
-    answer: `Magento 2 Open Source has no platform license fee, but it requires self-managed hosting — a monthly server bill for a properly configured environment (Nginx, PHP-FPM, Redis, Elasticsearch, Varnish). Adobe Commerce adds a substantial annual license fee on top. Shopify charges an ongoing monthly platform fee plus transaction fees. For high-volume stores, Magento's total cost is often lower than Shopify Plus. For simpler operations, Shopify's lower infrastructure complexity often wins.`,
+    answer: `Magento 2 Open Source has no platform license fee, but it requires self-managed hosting: a monthly server bill for a properly configured environment (Nginx, PHP-FPM, Redis, Elasticsearch, Varnish). Adobe Commerce adds a substantial annual license fee on top. Shopify charges an ongoing monthly platform fee plus transaction fees. For high-volume stores, Magento's total cost is often lower than Shopify Plus. For simpler operations, Shopify's lower infrastructure complexity often wins.`,
     category: 'cost',
   },
 
@@ -436,32 +436,32 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Do you offer ongoing Magento maintenance and support?',
-    answer: `Yes — FactoryJet offers monthly Magento maintenance retainers that cover: security patches and updates, performance monitoring, extension updates, bug fixes, and small development tasks. Retainers are scoped and quoted up front with a defined hours allocation. For larger ongoing development needs, we offer dedicated developer arrangements at a fixed monthly cost. Every project engagement includes 30 days of free post-launch support regardless of retainer.`,
+    answer: `Yes, FactoryJet offers monthly Magento maintenance retainers that cover: security patches and updates, performance monitoring, extension updates, bug fixes, and small development tasks. Retainers are scoped and quoted up front with a defined hours allocation. For larger ongoing development needs, we offer dedicated developer arrangements at a fixed monthly cost. Every project engagement includes 30 days of free post-launch support regardless of retainer.`,
     category: 'factoryjet',
   },
   {
     question: 'Have you worked on Magento projects for US businesses before?',
-    answer: `Yes — FactoryJet has been building Magento stores and custom modules for US e-commerce businesses since Magento 1. Our portfolio includes B2B wholesale portals, multi-store retail operations, high-SKU catalog sites, and Magento-to-ERP integrations across a range of industries. We serve US clients exclusively and operate in US time zones for all client communication. Ask to see relevant Magento case studies on your consultation call.`,
+    answer: `Yes, FactoryJet has been building Magento stores and custom modules for US e-commerce businesses since Magento 1. Our portfolio includes B2B wholesale portals, multi-store retail operations, high-SKU catalog sites, and Magento-to-ERP integrations across a range of industries. We serve US clients exclusively and operate in US time zones for all client communication. Ask to see relevant Magento case studies on your consultation call.`,
     category: 'factoryjet',
   },
   {
     question: 'Can I see examples of your Magento work?',
-    answer: `Yes — we share relevant Magento portfolio examples during the consultation call. Due to client confidentiality, we don't publish all projects publicly, but we'll show you work relevant to your specific type of project (B2B, multi-store, migration, custom module, etc.). You can also see general e-commerce work on our portfolio page. The best way to evaluate our technical depth is the consultation conversation — our developers talk through architecture, not just show screenshots.`,
+    answer: `Yes, we share relevant Magento portfolio examples during the consultation call. Due to client confidentiality, we don't publish all projects publicly, but we'll show you work relevant to your specific type of project (B2B, multi-store, migration, custom module, etc.). You can also see general e-commerce work on our portfolio page. The best way to evaluate our technical depth is the consultation conversation: our developers talk through architecture, not just show screenshots.`,
     category: 'factoryjet',
   },
   {
     question: 'What time zone does FactoryJet work in for Magento projects?',
-    answer: `FactoryJet serves US clients exclusively. We schedule all client communication (calls, reviews, demos) during US business hours — typically 9 AM–5 PM Eastern. Daily async updates are provided through your preferred tool (Slack, email, or project management). For urgent production issues, we provide same-day response during business hours and best-effort off-hours response for critical emergencies.`,
+    answer: `FactoryJet serves US clients exclusively. We schedule all client communication (calls, reviews, demos) during US business hours, typically 9 AM–5 PM Eastern. Daily async updates are provided through your preferred tool (Slack, email, or project management). For urgent production issues, we provide same-day response during business hours and best-effort off-hours response for critical emergencies.`,
     category: 'factoryjet',
   },
   {
     question: 'How do I hire certified Magento developers?',
-    answer: `Book a discovery call and we assign a dedicated team of senior, Magento-certified developers matched to your project — Magento 2, Adobe Commerce, B2B, or migration. You can hire Magento developers for a fixed-scope build or on a monthly retainer for ongoing module development, upgrades, and performance work. Every engagement runs on fixed-price proposals you approve before work starts, so there is no open-ended hourly billing. US freelance Magento developers typically bill hourly with no ceiling, which is why most businesses prefer our scoped-team model.`,
+    answer: `Book a discovery call and we assign a dedicated team of senior, Magento-certified developers matched to your project: Magento 2, Adobe Commerce, B2B, or migration. You can hire Magento developers for a fixed-scope build or on a monthly retainer for ongoing module development, upgrades, and performance work. Every engagement runs on fixed-price proposals you approve before work starts, so there is no open-ended hourly billing. US freelance Magento developers typically bill hourly with no ceiling, which is why most businesses prefer our scoped-team model.`,
     category: 'factoryjet',
   },
   {
     question: 'Do you work with Magento 2 and Adobe Commerce?',
-    answer: `Yes — both. We build on Magento 2 Open Source for most small and mid-market stores, and on Adobe Commerce (the paid edition) when you need advanced B2B, customer segmentation, or merchandising features, typically at $5M+ GMV. Our certified developers handle architecture, custom module development, theme work, and third-party integrations on either edition, and we'll recommend the one that fits your business rather than the most expensive option.`,
+    answer: `Yes, both. We build on Magento 2 Open Source for most small and mid-market stores, and on Adobe Commerce (the paid edition) when you need advanced B2B, customer segmentation, or merchandising features, typically at $5M+ GMV. Our certified developers handle architecture, custom module development, theme work, and third-party integrations on either edition, and we'll recommend the one that fits your business rather than the most expensive option.`,
     category: 'platform',
   },
   {
@@ -471,7 +471,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Can you migrate my Magento 1 store to Magento 2?',
-    answer: `Yes — Magento 1 reached end of life and no longer receives security patches, so migrating is about protecting your store as much as gaining features. We migrate your catalog, customers, orders, and SEO URLs to Magento 2 or Adobe Commerce, rebuild custom functionality that doesn't carry over, map every changed URL with 301 redirects to protect rankings, and test the full checkout on staging before switching DNS. Migrations are fixed-price and scoped after a technical audit.`,
+    answer: `Yes, Magento 1 reached end of life and no longer receives security patches, so migrating is about protecting your store as much as gaining features. We migrate your catalog, customers, orders, and SEO URLs to Magento 2 or Adobe Commerce, rebuild custom functionality that doesn't carry over, map every changed URL with 301 redirects to protect rankings, and test the full checkout on staging before switching DNS. Migrations are fixed-price and scoped after a technical audit.`,
     category: 'migration',
   },
 ];
@@ -496,31 +496,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
+      name: 'Days 5–6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -555,7 +555,7 @@ export default function MagentoDevelopmentPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_magento_development_hero" />}
           eyebrow="MAGENTO DEVELOPMENT SERVICES"
           headline="Senior Magento developers. Fixed-price projects. fixed-price, milestone-paid."
-          lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers."
+          lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization, delivered by Magento-certified engineers."
           secondaryCta={{ label: 'View Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -601,7 +601,7 @@ export default function MagentoDevelopmentPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ US e-commerce businesses trust FactoryJet — from custom modules to full Magento migrations" />
+        <LogoBar tagline="500+ US e-commerce businesses trust FactoryJet, from custom modules to full Magento migrations" />
 
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
@@ -612,12 +612,12 @@ export default function MagentoDevelopmentPage() {
         {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="WHAT WE BUILD"
-          headline="Every Type of Magento Development — From Modules to Full Migrations"
+          headline="Every Type of Magento Development, From Modules to Full Migrations"
           lead="Magento is a complex platform. Good Magento development requires deep platform knowledge, careful architecture, and engineers who understand how Magento's internals actually work. Here's what we deliver."
           body={
             <>
               <p>
-                Custom module development is the most common Magento engagement. Whether you need a custom pricing engine, a product configurator, a wholesale ordering workflow, or a Magento-to-ERP data sync — modules let you extend Magento without touching core files, so your customizations survive upgrades and patches.
+                Custom module development is the most common Magento engagement. Whether you need a custom pricing engine, a product configurator, a wholesale ordering workflow, or a Magento-to-ERP data sync, modules let you extend Magento without touching core files, so your customizations survive upgrades and patches.
               </p>
 
               <p>
@@ -651,7 +651,7 @@ export default function MagentoDevelopmentPage() {
               </div>
 
               <p>
-                Performance optimization is the third major engagement type. A misconfigured Magento install — wrong cache backend, Elasticsearch not set up for search, no Varnish in front of the store — will be slow regardless of how well the code is written. We audit the full infrastructure stack, not just the application layer, and fix performance at the root cause.
+                Performance optimization is the third major engagement type. A misconfigured Magento install, wrong cache backend, Elasticsearch not set up for search, no Varnish in front of the store, will be slow regardless of how well the code is written. We audit the full infrastructure stack, not just the application layer, and fix performance at the root cause.
               </p>
             </>
           }
@@ -702,19 +702,19 @@ export default function MagentoDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="WHERE MAGENTO PROJECTS GO WRONG"
           headline="Three Reasons Magento Projects Go Over Budget and Miss Deadlines"
-          lead="Magento is a powerful platform — and a punishing one for teams that don't know it deeply. Here's what causes most Magento project failures, and how FactoryJet avoids them."
+          lead="Magento is a powerful platform, and a punishing one for teams that don't know it deeply. Here's what causes most Magento project failures, and how FactoryJet avoids them."
           pillars={[
             {
               title: 'Underestimating custom extension rebuild scope',
-              body: `Most Magento 1 stores have 10–30 installed extensions. Some have M2 equivalents you can buy. Some need to be rebuilt from scratch. Some were built by your previous agency and exist nowhere else. Agencies that don't audit every extension before quoting consistently underestimate this work by 30–50%. FactoryJet runs a full extension audit before providing a migration quote — we know what we're walking into before the first line of code is written.`,
+              body: `Most Magento 1 stores have 10–30 installed extensions. Some have M2 equivalents you can buy. Some need to be rebuilt from scratch. Some were built by your previous agency and exist nowhere else. Agencies that don't audit every extension before quoting consistently underestimate this work by 30–50%. FactoryJet runs a full extension audit before providing a migration quote, we know what we're walking into before the first line of code is written.`,
             },
             {
               title: 'Core file modifications that break on every patch',
-              body: `The most common Magento technical debt is core file modifications — code changes made directly to Magento's core files instead of through plugins or preferences. These modifications get overwritten every time you apply a security patch, causing broken functionality and forcing you to manually re-apply changes. FactoryJet never modifies core files. All customizations use Magento's official extension points, which means your store can be patched and upgraded without losing custom functionality.`,
+              body: `The most common Magento technical debt is core file modifications, code changes made directly to Magento's core files instead of through plugins or preferences. These modifications get overwritten every time you apply a security patch, causing broken functionality and forcing you to manually re-apply changes. FactoryJet never modifies core files. All customizations use Magento's official extension points, which means your store can be patched and upgraded without losing custom functionality.`,
             },
             {
               title: 'SEO ranking loss from poor migration planning',
-              body: `A Magento migration that doesn't carefully handle URL redirects, canonical tags, and sitemap resubmission can lose 30–50% of organic traffic in the first 60 days after launch. FactoryJet includes a full SEO migration checklist in every M1-to-M2 project: URL mapping and redirect configuration, meta data migration, structured data rebuild, and post-launch Search Console monitoring. SEO preservation isn't an add-on — it's part of the migration scope.`,
+              body: `A Magento migration that doesn't carefully handle URL redirects, canonical tags, and sitemap resubmission can lose 30–50% of organic traffic in the first 60 days after launch. FactoryJet includes a full SEO migration checklist in every M1-to-M2 project: URL mapping and redirect configuration, meta data migration, structured data rebuild, and post-launch Search Console monitoring. SEO preservation isn't an add-on. It's part of the migration scope.`,
             },
           ]}
         />
@@ -723,10 +723,10 @@ export default function MagentoDevelopmentPage() {
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
           headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Budget Dev Shop"
-          lead="Not all Magento developers are equal. Here's what separates senior Magento expertise from the alternatives — and what the decision actually costs."
+          lead="Not all Magento developers are equal. Here's what separates senior Magento expertise from the alternatives, and what the decision actually costs."
           pullQuote={{
             stat: 'Fixed Price',
-            caption: 'milestone-paid Magento builds with full code ownership — senior engineers on every project.',
+            caption: 'milestone-paid Magento builds with full code ownership, senior engineers on every project.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -742,16 +742,16 @@ export default function MagentoDevelopmentPage() {
         <ServiceExplanation
           eyebrow="OUR ENGINEERING APPROACH"
           headline="Fixed Prices. Senior Engineers. Magento Standards. Full Documentation."
-          lead="Magento projects fail when teams don't know the platform deeply. We've been building on Magento since its early versions — and every principle of how we work is designed to prevent the outcomes most Magento clients have experienced before finding us."
+          lead="Magento projects fail when teams don't know the platform deeply. We've been building on Magento since its early versions, and every principle of how we work is designed to prevent the outcomes most Magento clients have experienced before finding us."
           reverseOnDesktop
           body={
             <>
               <p>
-                Every FactoryJet Magento project is handled by senior engineers who specialize in Magento — not generalist developers who work in whatever framework the project demands this week. Magento's architecture is nuanced enough that deep specialization matters: plugins vs. preferences vs. observers, EAV vs. flat tables, indexer management, and the caching layers that make the difference between a fast store and a slow one.
+                Every FactoryJet Magento project is handled by senior engineers who specialize in Magento, not generalist developers who work in whatever framework the project demands this week. Magento's architecture is nuanced enough that deep specialization matters: plugins vs. preferences vs. observers, EAV vs. flat tables, indexer management, and the caching layers that make the difference between a fast store and a slow one.
               </p>
 
               <p>
-                We work to Magento coding standards on every project. No core file modifications. Proper composer.json and module registration. PSR-2 code style. Inline documentation. This isn't just good practice — it means your code can be maintained by any Magento developer, not just us. You're not creating a dependency on FactoryJet to understand your own codebase.
+                We work to Magento coding standards on every project. No core file modifications. Proper composer.json and module registration. PSR-2 code style. Inline documentation. This isn't just good practice, it means your code can be maintained by any Magento developer, not just us. You're not creating a dependency on FactoryJet to understand your own codebase.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>
@@ -764,7 +764,7 @@ export default function MagentoDevelopmentPage() {
               </div>
 
               <p>
-                Fixed-price proposals mean we scope accurately before we start. If we quote a migration and it takes longer than estimated, that's on us — not on you in the form of an overrun invoice. This requires thorough discovery, which is why we audit before we quote. It's more work upfront, but it's the only way to give a number we can stand behind.
+                Fixed-price proposals mean we scope accurately before we start. If we quote a migration and it takes longer than estimated, that's on us, not on you in the form of an overrun invoice. This requires thorough discovery, which is why we audit before we quote. It's more work upfront, but it's the only way to give a number we can stand behind.
               </p>
             </>
           }
@@ -780,7 +780,7 @@ export default function MagentoDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { standard: 'No core file modifications', detail: 'Plugins and preferences only — upgrade-safe' },
+                  { standard: 'No core file modifications', detail: 'Plugins and preferences only, upgrade-safe' },
                   { standard: 'PSR-2 code style', detail: 'Consistent, readable, maintainable code' },
                   { standard: 'Composer-managed deps', detail: 'Proper version control for all packages' },
                   { standard: 'Unit + integration tests', detail: 'Automated test coverage before delivery' },
@@ -804,7 +804,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 10. HOW IT WORKS --------------------------------------------─-- */}
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
-          headline="From Technical Discovery to Production — 5 Stages"
+          headline="From Technical Discovery to Production, 5 Stages"
           lead="Every Magento project follows the same disciplined process. No surprises mid-project. No scope debates at the finish line. Just a clear path from discovery to a working, tested system in production."
           stages={JOURNEY_STAGES}
         />
@@ -813,7 +813,7 @@ export default function MagentoDevelopmentPage() {
         <PricingTiers
           eyebrow="PRICING"
           headline="Fixed-Price Magento Development Packages"
-          lead="Starting prices for common Magento project types. Every project gets a custom quote after the technical discovery call — scope drives price, and we don't quote accurately without auditing first."
+          lead="Starting prices for common Magento project types. Every project gets a custom quote after the technical discovery call, scope drives price, and we don't quote accurately without auditing first."
           tiers={PRICING_TIERS}
         />
 
@@ -832,7 +832,7 @@ export default function MagentoDevelopmentPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
                 <p>
-                  Magento is unforgiving — a wrong architecture decision compounds for years. When you{' '}
+                  Magento is unforgiving: a wrong architecture decision compounds for years. When you{' '}
                   <strong>hire Magento developers</strong> through FactoryJet, you get senior, Magento-certified
                   engineers who have shipped Magento 2 and Adobe Commerce stores at scale, not generalists learning on
                   your budget. As a US Magento development company, we assign a dedicated team that owns architecture,
@@ -871,7 +871,7 @@ export default function MagentoDevelopmentPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* Related Reading — internal linking to blog posts */}
+        {/* Related Reading, internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>

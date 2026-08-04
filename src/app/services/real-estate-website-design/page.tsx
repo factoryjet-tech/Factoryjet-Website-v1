@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
     url: 'https://factoryjet.com/services/real-estate-website-design',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet — Real Estate Website Design USA' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet: Real Estate Website Design USA' }],
     locale: 'en_US',
   },
   twitter: {
@@ -84,17 +84,17 @@ const journeyStages: ServiceJourneyStage[] = [
   {
     number: '01',
     title: 'Discovery & Market Strategy',
-    description: 'We map your market — target neighborhoods, buyer vs. seller focus, competitor sites, and the search terms your clients use. Your site is built around your specific geography, not a generic real estate template.',
+    description: 'We map your market, target neighborhoods, buyer vs. seller focus, competitor sites, and the search terms your clients use. Your site is built around your specific geography, not a generic real estate template.',
   },
   {
     number: '02',
-    title: 'Design — Agent Brand First',
-    description: 'Real estate is a relationship business. Your site leads with your face, your track record, and your market expertise — not just listings. We design a homepage that builds trust before it shows a search bar.',
+    title: 'Design | Agent Brand First',
+    description: 'Real estate is a relationship business. Your site leads with your face, your track record, and your market expertise, not just listings. We design a homepage that builds trust before it shows a search bar.',
   },
   {
     number: '03',
     title: 'IDX Integration',
-    description: 'We connect your IDX provider, configure search filters for your MLS, and style the listing display to match your brand. No off-the-shelf widget look — listings look native to your site.',
+    description: 'We connect your IDX provider, configure search filters for your MLS, and style the listing display to match your brand. No off-the-shelf widget look, listings look native to your site.',
   },
   {
     number: '04',
@@ -142,7 +142,7 @@ const USE_CASES = [
   },
   {
     name: 'Real Estate Developers',
-    description: 'Project marketing sites for new developments — floor plans, reservation/waitlist capture, virtual tours, and broker co-op pages.',
+    description: 'Project marketing sites for new developments, floor plans, reservation/waitlist capture, virtual tours, and broker co-op pages.',
     example: 'Includes waitlist capture and floor plan gallery. Fixed price, scoped to your build.',
     linkLabel: 'Get an estimate',
     linkHref: '/contact',
@@ -152,7 +152,7 @@ const USE_CASES = [
 const RELATED_SERVICES = [
   {
     name: 'Website Redesign',
-    description: 'Already have a site? Modernize it with faster load times, new design, and better SEO — without losing your existing rankings.',
+    description: 'Already have a site? Modernize it with faster load times, new design, and better SEO, without losing your existing rankings.',
     linkLabel: 'Learn more',
     linkHref: '/services/website-redesign',
   },
@@ -164,7 +164,7 @@ const RELATED_SERVICES = [
   },
   {
     name: 'Transparent Pricing',
-    description: 'See all FactoryJet service pricing — fixed packages, no hourly billing, no surprise invoices.',
+    description: 'See all FactoryJet service pricing: fixed packages, no hourly billing, no surprise invoices.',
     linkLabel: 'See pricing',
     linkHref: '/pricing',
   },
@@ -229,7 +229,7 @@ const PRICING_TIERS = [
     priceRange: 'Fixed price, scoped to your build',
     description: 'Custom website for individual agents with IDX, neighborhood pages, and lead capture. Live in 7 days.',
     features: [
-      'Up to 8 pages — custom design, your brand',
+      'Up to 8 pages, custom design, your brand',
       'IDX integration (your provider)',
       'Up to 5 neighborhood pages',
       'Home valuation lead capture',
@@ -299,38 +299,38 @@ const FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'How much does a real estate agent website cost?',
-    answer: "A custom real estate agent website from FactoryJet is fixed-price and scoped to your build — a custom 8-page site with IDX integration, neighborhood pages, lead capture forms, mobile optimization, and on-page SEO setup. The main cost drivers are the site type (agent, brokerage, or property management), page count, and the number of neighborhood pages. We quote the full price up front after a free discovery call, and it comes in well below what US real estate web agencies charge for comparable work.",
+    answer: "A custom real estate agent website from FactoryJet is fixed-price and scoped to your build: a custom 8-page site with IDX integration, neighborhood pages, lead capture forms, mobile optimization, and on-page SEO setup. The main cost drivers are the site type (agent, brokerage, or property management), page count, and the number of neighborhood pages. We quote the full price up front after a free discovery call, and it comes in well below what US real estate web agencies charge for comparable work.",
   },
   {
     category: 'basics',
     question: 'Do I need a website if I have a Zillow Premier Agent profile?',
-    answer: "Zillow and a website serve different purposes. Zillow puts you in front of buyers already on Zillow — you pay per lead, and the moment you stop paying, you disappear. A website builds organic search visibility: when someone searches 'real estate agent in [neighborhood]' or '[city] homes for sale,' your site ranks — not your Zillow profile. Over 3–5 years, a website that ranks generates leads at near-zero cost. Zillow leads keep costing you per contact. The top-producing agents run both — but the website builds an asset. Zillow is a rental.",
+    answer: "Zillow and a website serve different purposes. Zillow puts you in front of buyers already on Zillow, you pay per lead, and the moment you stop paying, you disappear. A website builds organic search visibility: when someone searches 'real estate agent in [neighborhood]' or '[city] homes for sale,' your site ranks, not your Zillow profile. Over 3–5 years, a website that ranks generates leads at near-zero cost. Zillow leads keep costing you per contact. The top-producing agents run both, but the website builds an asset. Zillow is a rental.",
   },
   {
     category: 'basics',
     question: 'What is IDX integration and how does it work on my website?',
-    answer: "IDX (Internet Data Exchange) is the data-sharing agreement that lets your website display live MLS listings. When a buyer searches for homes on your site, they see real-time listing data from the MLS — the same data on Zillow, but on your branded website where you control the experience. We integrate with iHomefinder, Showcase IDX, Homes.com IDX, and direct RETS/RESO connections depending on your MLS. IDX integration is scoped into your fixed-price quote based on your provider.",
+    answer: "IDX (Internet Data Exchange) is the data-sharing agreement that lets your website display live MLS listings. When a buyer searches for homes on your site, they see real-time listing data from the MLS: the same data on Zillow, but on your branded website where you control the experience. We integrate with iHomefinder, Showcase IDX, Homes.com IDX, and direct RETS/RESO connections depending on your MLS. IDX integration is scoped into your fixed-price quote based on your provider.",
   },
   /* ── SEO ── */
   {
     category: 'seo',
     question: 'How do I rank on Google for real estate searches in my city?',
-    answer: "Local real estate SEO is about neighborhood-specific content. Google does not rank generic pages ('Denver homes for sale') highly unless you have enormous domain authority. What ranks are specific pages: 'Washington Park Denver homes for sale,' 'Cherry Creek Denver condos,' '[specific neighborhood] market report.' FactoryJet builds a dedicated page for every neighborhood you target — with your expert commentary, market statistics, school information, and an IDX search filtered to that area.",
+    answer: "Local real estate SEO is about neighborhood-specific content. Google does not rank generic pages ('Denver homes for sale') highly unless you have enormous domain authority. What ranks are specific pages: 'Washington Park Denver homes for sale,' 'Cherry Creek Denver condos,' '[specific neighborhood] market report.' FactoryJet builds a dedicated page for every neighborhood you target, with your expert commentary, market statistics, school information, and an IDX search filtered to that area.",
   },
   {
     category: 'seo',
     question: 'How long does it take to rank on Google for real estate terms?',
-    answer: "New websites typically take 3–6 months to establish domain authority and begin ranking meaningfully. Highly competitive terms like '[major city] real estate agent' may take 12–18 months. Neighborhood-specific terms are less competitive and rank faster — often within 60–90 days of launch. The SEO work we do at launch sets the foundation. Consistent content additions accelerate the timeline.",
+    answer: "New websites typically take 3–6 months to establish domain authority and begin ranking meaningfully. Highly competitive terms like '[major city] real estate agent' may take 12–18 months. Neighborhood-specific terms are less competitive and rank faster, often within 60–90 days of launch. The SEO work we do at launch sets the foundation. Consistent content additions accelerate the timeline.",
   },
   {
     category: 'seo',
     question: 'Do you write the content for neighborhood pages?',
-    answer: "We can write neighborhood page content as an add-on, scoped per neighborhood page. However, the best neighborhood pages have your voice and your local knowledge. We provide a content template for each neighborhood that prompts you with exactly what to fill in. Most agents do a 30-minute voice memo per neighborhood and we write from that — the result is content that's authentically yours.",
+    answer: "We can write neighborhood page content as an add-on, scoped per neighborhood page. However, the best neighborhood pages have your voice and your local knowledge. We provide a content template for each neighborhood that prompts you with exactly what to fill in. Most agents do a 30-minute voice memo per neighborhood and we write from that: the result is content that's authentically yours.",
   },
   {
     category: 'seo',
     question: 'Should my real estate website have a blog?',
-    answer: "Yes — a real estate blog done well is one of the highest-ROI SEO investments available to agents. The right content: monthly market reports for each neighborhood, buyer and seller guides, answers to questions your clients ask repeatedly, and hyperlocal posts. This content ranks for long-tail searches and positions you as the local expert. We build the blog infrastructure into your site.",
+    answer: "Yes: a real estate blog done well is one of the highest-ROI SEO investments available to agents. The right content: monthly market reports for each neighborhood, buyer and seller guides, answers to questions your clients ask repeatedly, and hyperlocal posts. This content ranks for long-tail searches and positions you as the local expert. We build the blog infrastructure into your site.",
   },
   /* ── Process ── */
   {
@@ -346,39 +346,39 @@ const FAQ_ITEMS = [
   {
     category: 'process',
     question: 'Can you redesign my current real estate website?',
-    answer: "Yes — redesigns are common. Many agents have sites on older platforms (Agent Image, Real Geeks, BoomTown) that are slow, look dated, or can't be customized without paying per change. We redesign onto Next.js or WordPress, keeping your domain, migrating your content, setting up 301 redirects to preserve your existing search rankings. Redesign pricing is typically 20–30% lower than a new build of the same scope.",
+    answer: "Yes, redesigns are common. Many agents have sites on older platforms (Agent Image, Real Geeks, BoomTown) that are slow, look dated, or can't be customized without paying per change. We redesign onto Next.js or WordPress, keeping your domain, migrating your content, setting up 301 redirects to preserve your existing search rankings. Redesign pricing is typically 20–30% lower than a new build of the same scope.",
   },
   {
     category: 'process',
     question: 'Do you build sites for property management companies as well?',
-    answer: "Yes — property management is a distinct use case from agent sites. They need: a public marketing site for owner acquisition and tenant search, a tenant portal (online rent payment, maintenance requests, lease documents), and an owner portal (financial reporting, vacancy status, maintenance updates). This is a web application build — fixed-price and scoped to your portals and feature set.",
+    answer: "Yes, property management is a distinct use case from agent sites. They need: a public marketing site for owner acquisition and tenant search, a tenant portal (online rent payment, maintenance requests, lease documents), and an owner portal (financial reporting, vacancy status, maintenance updates). This is a web application build: fixed-price and scoped to your portals and feature set.",
   },
   /* ── Leads ── */
   {
     category: 'leads',
     question: 'How does a real estate website generate leads?',
-    answer: "The highest-converting real estate lead magnets: (1) Instant home valuation — 'Find out what your home is worth' captures seller leads with high intent. (2) Neighborhood guides — buyers trade their email for a PDF about the area they're researching. (3) Listing alerts — 'Get notified when homes matching your criteria hit the market.' (4) Mortgage calculator — keeps buyers on your site longer. FactoryJet builds all four into your site and connects your CRM so leads flow directly.",
+    answer: "The highest-converting real estate lead magnets: (1) Instant home valuation, 'Find out what your home is worth' captures seller leads with high intent. (2) Neighborhood guides, buyers trade their email for a PDF about the area they're researching. (3) Listing alerts, 'Get notified when homes matching your criteria hit the market.' (4) Mortgage calculator, keeps buyers on your site longer. FactoryJet builds all four into your site and connects your CRM so leads flow directly.",
   },
   {
     category: 'leads',
     question: 'Can you integrate my real estate website with my CRM?',
-    answer: "Yes — CRM integration is standard on all real estate site builds. We connect to Follow Up Boss, BoomTown, kvCORE, HubSpot, Salesforce, and Pipedrive. When a buyer fills out a home search form or a seller requests a home valuation, the lead goes directly to your CRM with source tracking so you know which page generated the lead.",
+    answer: "Yes, CRM integration is standard on all real estate site builds. We connect to Follow Up Boss, BoomTown, kvCORE, HubSpot, Salesforce, and Pipedrive. When a buyer fills out a home search form or a seller requests a home valuation, the lead goes directly to your CRM with source tracking so you know which page generated the lead.",
   },
   {
     category: 'leads',
     question: 'How do I capture home seller leads on my website?',
-    answer: "Seller lead capture starts with a home valuation tool — a form where homeowners enter their address and get a preliminary estimate. We integrate with Homebot, HouseCanary, or Cloud CMA, or implement a simple form that captures the address and promises a manual follow-up within 24 hours. In our experience, the manual follow-up promise converts better than the instant AVM alone — it creates a reason to contact the lead.",
+    answer: "Seller lead capture starts with a home valuation tool: a form where homeowners enter their address and get a preliminary estimate. We integrate with Homebot, HouseCanary, or Cloud CMA, or implement a simple form that captures the address and promises a manual follow-up within 24 hours. In our experience, the manual follow-up promise converts better than the instant AVM alone, it creates a reason to contact the lead.",
   },
   {
     category: 'leads',
     question: 'What makes a real estate website convert visitors into leads?',
-    answer: "The three conversion killers on most real estate websites: (1) Generic stock photography — nobody trusts a real estate site that uses the same Getty Images photo as every other agent. (2) A single contact form at the bottom — multiple lead capture points matched to where the visitor is in their journey dramatically outperform a single form. (3) No social proof specific to your market — 'I sold 23 homes in Washington Park last year' converts better than national reviews.",
+    answer: "The three conversion killers on most real estate websites: (1) Generic stock photography, nobody trusts a real estate site that uses the same Getty Images photo as every other agent. (2) A single contact form at the bottom, multiple lead capture points matched to where the visitor is in their journey dramatically outperform a single form. (3) No social proof specific to your market, 'I sold 23 homes in Washington Park last year' converts better than national reviews.",
   },
   /* ── Platforms ── */
   {
     category: 'platforms',
     question: 'What platform do you build real estate websites on?',
-    answer: "We build on Next.js (for performance-first sites with excellent Core Web Vitals) or WordPress (for agents who want to update content themselves). Next.js sites consistently score 90+ on Google Lighthouse — critical for a competitive local SEO landscape. WordPress sites use a lightweight custom theme, never Elementor or Divi page builders.",
+    answer: "We build on Next.js (for performance-first sites with excellent Core Web Vitals) or WordPress (for agents who want to update content themselves). Next.js sites consistently score 90+ on Google Lighthouse, critical for a competitive local SEO landscape. WordPress sites use a lightweight custom theme, never Elementor or Divi page builders.",
   },
   {
     category: 'platforms',
@@ -393,7 +393,7 @@ const FAQ_ITEMS = [
   {
     category: 'platforms',
     question: 'Do you build real estate websites for teams and brokerages?',
-    answer: "Yes — brokerage and team sites need: a team roster with individual agent profiles and bios, a listings page that aggregates listings across all team members, office location pages, a recruitment page targeting agent talent, and often co-branded templates that individual agents can personalize. Brokerage sites are fixed-price and scoped to your team size and feature set.",
+    answer: "Yes, brokerage and team sites need: a team roster with individual agent profiles and bios, a listings page that aggregates listings across all team members, office location pages, a recruitment page targeting agent talent, and often co-branded templates that individual agents can personalize. Brokerage sites are fixed-price and scoped to your team size and feature set.",
   },
 ];
 
@@ -410,19 +410,19 @@ const faqSchema = {
 const MARKET_STATS = [
   {
     value: 'Fixed price',
-    label: 'scoped to your build for a custom agent site with IDX — well below US real estate web agency rates',
+    label: 'scoped to your build for a custom agent site with IDX, well below US real estate web agency rates',
     sourceUrl: 'https://factoryjet.com/services/real-estate-website-design',
     sourceLabel: 'FactoryJet',
   },
   {
     value: '90+',
-    label: 'Lighthouse performance score on FactoryJet real estate sites — vs. 40–65 on most platform-built sites',
+    label: 'Lighthouse performance score on FactoryJet real estate sites, vs. 40–65 on most platform-built sites',
     sourceUrl: 'https://factoryjet.com/services/real-estate-website-design',
     sourceLabel: 'FactoryJet',
   },
   {
     value: '$0/mo',
-    label: 'ongoing FactoryJet platform fee — you own the site outright, pay only for hosting',
+    label: 'ongoing FactoryJet platform fee, you own the site outright, pay only for hosting',
     sourceUrl: 'https://factoryjet.com/pricing',
     sourceLabel: 'FactoryJet',
   },
@@ -438,31 +438,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
+      name: 'Days 5–6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -487,7 +487,7 @@ export default function RealEstateWebsiteDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_real_estate_website_design_hero" />}
         eyebrow="REAL ESTATE WEBSITE DESIGN"
         headline="Real Estate Websites That Rank Locally and Convert Visitors Into Leads"
-        lead="Custom agent, team, and brokerage websites with IDX integration and neighborhood pages — built to outrank generic templates on local search. Fixed price, scoped to your build. 7-day delivery. No ongoing platform fees."
+        lead="Custom agent, team, and brokerage websites with IDX integration and neighborhood pages, built to outrank generic templates on local search. Fixed price, scoped to your build. 7-day delivery. No ongoing platform fees."
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['IDX integration included', '7-day delivery guarantee', 'No ongoing platform fees']}
         rightSlot={
@@ -519,7 +519,7 @@ export default function RealEstateWebsiteDesignPage() {
       {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
       <ServiceHeroImageBand
         imageSrc="/images/services/card-real-estate.webp"
-        imageAlt="Real estate agent website with property listings on a MacBook — FactoryJet real estate website design"
+        imageAlt="Real estate agent website with property listings on a MacBook, FactoryJet real estate website design"
         stats={[
           { value: '500+', label: 'Agent Sites Built' },
           { value: '7 Days', label: 'Delivery Guarantee' },
@@ -541,14 +541,14 @@ export default function RealEstateWebsiteDesignPage() {
       <ServiceExplanation
         eyebrow="WHY MOST REAL ESTATE WEBSITES FAIL"
         headline="Generic template sites don't rank. Neighborhood-specific sites do."
-        lead="The problem with most real estate website platforms — Real Geeks, Agent Image, even custom WordPress builds from non-specialist agencies — is that they're built for every agent in every market. Which means they're optimized for none of them."
+        lead="The problem with most real estate website platforms: Real Geeks, Agent Image, even custom WordPress builds from non-specialist agencies, is that they're built for every agent in every market. Which means they're optimized for none of them."
         body={
           <>
             <p>
               Google&apos;s local search algorithm rewards specificity. A page titled &apos;Washington Park Denver Homes for Sale&apos; with original market commentary, local school data, and a neighborhood-specific listing search will out-rank a generic &apos;Denver Real Estate&apos; homepage every time.
             </p>
             <p>
-              FactoryJet builds real estate sites around your specific markets. Every neighborhood you work in gets its own page. Every page is written with your voice and your local knowledge. IDX is filtered to that specific area. The result is a site that ranks for the exact searches your clients are making — not the generic searches every other agent is also trying to win.
+              FactoryJet builds real estate sites around your specific markets. Every neighborhood you work in gets its own page. Every page is written with your voice and your local knowledge. IDX is filtered to that specific area. The result is a site that ranks for the exact searches your clients are making, not the generic searches every other agent is also trying to win.
             </p>
             <p>
               We&apos;ve built real estate sites for agents in Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, and Tampa. The formula is the same in every market: neighborhood depth beats homepage generality, every time.
@@ -587,16 +587,16 @@ export default function RealEstateWebsiteDesignPage() {
         lead="Real estate technology platforms have convinced agents that the answer to lead generation is a better CRM or a higher Zillow spend. It's not. The agents generating the most organic leads in every market have one thing in common: a website with deep, specific content about the exact neighborhoods their clients are searching. Not a platform. Not a template. A real website that Google has a reason to rank."
         pillars={[
           {
-            title: 'Platform sites look identical — Google knows it',
+            title: 'Platform sites look identical | Google knows it',
             body: "Real Geeks, BoomTown, and kvCORE generate thousands of nearly identical sites. Google's algorithm deprioritizes thin, duplicate content. Your neighborhood pages compete not just with other agents, but with thousands of sites on the same template. A custom site with original content is a different signal entirely.",
           },
           {
             title: 'You pay forever but own nothing',
-            body: "Platform subscriptions carry a steep recurring monthly fee. Over a few years, that adds up to many times the cost of a one-time build — for a site you can't take with you if you switch brokerages, and that disappears the moment you stop paying. A FactoryJet site is built once, owned forever.",
+            body: "Platform subscriptions carry a steep recurring monthly fee. Over a few years, that adds up to many times the cost of a one-time build, for a site you can't take with you if you switch brokerages, and that disappears the moment you stop paying. A FactoryJet site is built once, owned forever.",
           },
           {
             title: 'Platform performance scores hurt your rankings',
-            body: "Real estate platform sites typically score 40–65 on Google Lighthouse — well below the 90+ threshold Google favors. Page speed is a direct Google ranking signal. If your platform-built site loads slower than a competitor's custom site, Google notices and ranks you accordingly.",
+            body: "Real estate platform sites typically score 40–65 on Google Lighthouse, well below the 90+ threshold Google favors. Page speed is a direct Google ranking signal. If your platform-built site loads slower than a competitor's custom site, Google notices and ranks you accordingly.",
           },
         ]}
       />
@@ -616,7 +616,7 @@ export default function RealEstateWebsiteDesignPage() {
       <IndustriesGrid
         eyebrow="WHO WE BUILD FOR"
         headline="Real estate websites for every business model in the industry"
-        lead="Agent sites, team sites, brokerage platforms, and property management portals — each with a different structure, different lead strategy, and different price point."
+        lead="Agent sites, team sites, brokerage platforms, and property management portals: each with a different structure, different lead strategy, and different price point."
         sectors={USE_CASES}
       />
 
@@ -625,8 +625,8 @@ export default function RealEstateWebsiteDesignPage() {
         eyebrow="MARKETS WE SERVE"
         headline="Real estate website design for agents across the US"
         leadParagraphs={[
-          "FactoryJet builds real estate websites for agents, teams, and brokerages in every US market. Our SEO work is US-market-specific — we research neighborhood-level search terms in your city and build pages that target them.",
-          "We've built sites for agents in competitive markets including Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, and Tampa. Each market has different neighborhood vocabulary, different search intent patterns, and different IDX providers — we know the nuances.",
+          "FactoryJet builds real estate websites for agents, teams, and brokerages in every US market. Our SEO work is US-market-specific, we research neighborhood-level search terms in your city and build pages that target them.",
+          "We've built sites for agents in competitive markets including Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, and Tampa. Each market has different neighborhood vocabulary, different search intent patterns, and different IDX providers, we know the nuances.",
           "Our 7-day delivery guarantee applies to agent sites up to 10 pages. Every site includes the same fixed-price package: IDX integration, neighborhood pages, lead capture, CRM connection, and on-page SEO setup.",
         ]}
         stats={MARKET_STATS}
@@ -636,11 +636,11 @@ export default function RealEstateWebsiteDesignPage() {
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. Real Estate Platforms vs. Generic Web Agencies"
-        lead="Not all real estate website options are equal. Here's what the decision looks like when you compare side by side — on price, quality, and what you're left with long-term."
-        pullQuote={{ stat: '$0/mo', caption: 'ongoing FactoryJet platform fee — you pay once and own the site outright.' }}
+        lead="Not all real estate website options are equal. Here's what the decision looks like when you compare side by side, on price, quality, and what you're left with long-term."
+        pullQuote={{ stat: '$0/mo', caption: 'ongoing FactoryJet platform fee, you pay once and own the site outright.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
-        footer="Real Geeks, kvCORE, and BoomTown monthly fees are recurring and typically increase over time. FactoryJet is a one-time build fee — a small monthly hosting cost goes directly to your host."
+        footer="Real Geeks, kvCORE, and BoomTown monthly fees are recurring and typically increase over time. FactoryJet is a one-time build fee: a small monthly hosting cost goes directly to your host."
       />
 
       {/* ── 10. PRICING TIERS ── */}
@@ -648,9 +648,9 @@ export default function RealEstateWebsiteDesignPage() {
         <PricingTiers
           eyebrow="REAL ESTATE WEBSITE PRICING"
           headline="Fixed-Price Real Estate Websites: No Ongoing Platform Fees"
-          lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. You own the site outright — no platform lock-in, no monthly subscription to FactoryJet."
+          lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. You own the site outright, no platform lock-in, no monthly subscription to FactoryJet."
           tiers={PRICING_TIERS}
-          footnote="The IDX provider's own monthly fee is paid directly to your IDX provider — not FactoryJet. No ongoing FactoryJet fees after launch."
+          footnote="The IDX provider's own monthly fee is paid directly to your IDX provider, not FactoryJet. No ongoing FactoryJet fees after launch."
         />
       </div>
 

@@ -82,7 +82,7 @@ export default function ComparisonTable({
   return (
     <section className="bg-fj-cream py-14 md:py-20 overflow-x-clip">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-        {/* Header — 2-col with pull-quote when provided, single-col otherwise */}
+        {/* Header, 2-col with pull-quote when provided, single-col otherwise */}
         {hasPullQuote ? (
           <MotionFadeUp className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Left: eyebrow + headline + lead */}
@@ -147,7 +147,7 @@ export default function ComparisonTable({
           </MotionFadeUp>
         )}
 
-        {/* Table wrapper — horizontal scroll on narrow viewports */}
+        {/* Table wrapper, horizontal scroll on narrow viewports */}
         <div className="mt-12 overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse">
             <thead>

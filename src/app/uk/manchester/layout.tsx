@@ -114,7 +114,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 5,
       name: "Launch, Indexing & 90-Day Support (Day 19+)",
-      text: "Deploy to your domain, submit to Google Search Console, configure analytics, and begin monitoring indexation. 90 days of post-launch support including bug fixes, content updates, and performance monitoring — included, not invoiced separately.",
+      text: "Deploy to your domain, submit to Google Search Console, configure analytics, and begin monitoring indexation. 90 days of post-launch support including bug fixes, content updates, and performance monitoring, included, not invoiced separately.",
     },
   ],
 };

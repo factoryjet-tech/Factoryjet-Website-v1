@@ -59,7 +59,7 @@ export default function CityContextSection({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
 
-          {/* ── Left — content (7/12) ──────────────────────────────────── */}
+          {/* ── Left, content (7/12) ──────────────────────────────────── */}
           <MotionFadeUp className="lg:col-span-7">
             {eyebrow && (
               <p className="fj-eyebrow">{eyebrow}</p>
@@ -94,7 +94,7 @@ export default function CityContextSection({
             )}
           </MotionFadeUp>
 
-          {/* ── Right — stat data panels (5/12) ───────────────────────── */}
+          {/* ── Right, stat data panels (5/12) ───────────────────────── */}
           <div className="flex flex-col gap-4 lg:col-span-5">
             {stats.map((s, i) => (
               <MotionFadeUp key={i} delay={i * 0.1}>

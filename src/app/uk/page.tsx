@@ -24,14 +24,14 @@ export function generateMetadata(): Metadata {
 export default function UKPage() {
   return (
     <div className="uk-page-root">
-      {/* Skip-to-content — keyboard accessibility */}
+      {/* Skip-to-content, keyboard accessibility */}
       <a href="#main-content" className="uk-skip-link">
         Skip to main content
       </a>
 
-      {/* LCP image preload — homepage hero only (moved out of the shared UK layout) */}
+      {/* LCP image preload, homepage hero only (moved out of the shared UK layout) */}
       <link rel="preload" as="image" type="image/webp" href="/images/uk/hero-uk.webp" fetchPriority="high" />
-      {/* JetBrains Mono — used by the TechStack section on this page */}
+      {/* JetBrains Mono, used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
 
       {/* JSON-LD: Organization, Service ×4, FAQPage, BreadcrumbList */}

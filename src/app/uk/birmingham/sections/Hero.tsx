@@ -139,7 +139,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      aria-label="FactoryJet Birmingham — hero"
+      aria-label="FactoryJet Birmingham, hero"
       className="relative flex min-h-screen w-full items-start justify-center overflow-hidden"
       style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
     >
@@ -150,10 +150,10 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Layer 1 — WebGL mesh gradient */}
+      {/* Layer 1, WebGL mesh gradient */}
       <MeshGradient />
 
-      {/* Layer 1b — Hero image */}
+      {/* Layer 1b, Hero image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -161,7 +161,7 @@ export default function Hero() {
       >
         <Image
           src="/images/uk/birmingham/hero-birmingham.webp"
-          alt="Birmingham city skyline — AI web design agency backdrop"
+          alt="Birmingham city skyline, AI web design agency backdrop"
           fill
           sizes="100vw"
           priority
@@ -172,7 +172,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Layer 2 — Birmingham skyline SVG: Rotunda + Selfridges dome */}
+      {/* Layer 2, Birmingham skyline SVG: Rotunda + Selfridges dome */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1600 200"
@@ -186,7 +186,7 @@ export default function Hero() {
           <rect x="48" y="145" width="30" height="55" />
           <rect x="81" y="158" width="40" height="42" />
 
-          {/* Rotunda — Birmingham's iconic cylindrical tower */}
+          {/* Rotunda, Birmingham's iconic cylindrical tower */}
           {/* Circular tower approximated as rectangle with curved top */}
           <rect x="130" y="50" width="55" height="150" rx="6" />
           {/* Rotunda top dome/cylinder cap */}
@@ -198,10 +198,10 @@ export default function Hero() {
           <rect x="195" y="95" width="38" height="105" />
           <rect x="236" y="110" width="30" height="90" />
 
-          {/* Bullring Selfridges dome — iconic disc facade */}
+          {/* Bullring Selfridges dome, iconic disc facade */}
           {/* Base building */}
           <rect x="275" y="75" width="120" height="125" rx="4" />
-          {/* Selfridges dome — bulging organic form */}
+          {/* Selfridges dome, bulging organic form */}
           <ellipse cx="335" cy="75" rx="62" ry="32" />
           {/* Disc details on Selfridges (simplified circles) */}
           <circle cx="300" cy="85" r="6" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
@@ -216,7 +216,7 @@ export default function Hero() {
           <rect x="405" y="105" width="65" height="95" />
           <rect x="410" y="98" width="55" height="12" />
 
-          {/* Mid buildings — Colmore Business District-ish */}
+          {/* Mid buildings, Colmore Business District-ish */}
           <rect x="480" y="90" width="42" height="110" />
           <rect x="525" y="75" width="35" height="125" />
           {/* Tall office tower */}
@@ -232,7 +232,7 @@ export default function Hero() {
           <rect x="730" y="120" width="70" height="80" />
           <rect x="735" y="113" width="60" height="12" />
 
-          {/* Brindleyplace area — canalside low buildings */}
+          {/* Brindleyplace area, canalside low buildings */}
           <rect x="808" y="135" width="50" height="65" />
           <rect x="862" y="125" width="42" height="75" />
           <rect x="908" y="118" width="35" height="82" />
@@ -261,7 +261,7 @@ export default function Hero() {
         </g>
       </svg>
 
-      {/* Layer 3 — Grain */}
+      {/* Layer 3, Grain */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
@@ -314,7 +314,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Watermark "BHM" — desktop only */}
+      {/* Watermark "BHM", desktop only */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute hidden select-none lg:block font-clash"
@@ -332,7 +332,7 @@ export default function Hero() {
         BHM
       </span>
 
-      {/* Layer 4 — Content */}
+      {/* Layer 4, Content */}
       <div
         className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-[18vh] pb-24 text-center sm:px-8"
         style={{ zIndex: 10 }}
@@ -372,7 +372,7 @@ export default function Hero() {
             textShadow: "0 0 30px rgba(255,107,53,0.08)",
           }}
         >
-          Birmingham&rsquo;s AI-Native Web Agency — Built for the Second City&rsquo;s Digital Decade
+          Birmingham&rsquo;s AI-Native Web Agency, Built for the Second City&rsquo;s Digital Decade
         </h1>
 
         {/* Sub-headline */}
@@ -389,7 +389,7 @@ export default function Hero() {
             }}
           >
             Web design, e-commerce, AI agents and AI SEO for Birmingham&rsquo;s
-            60,000 businesses — at a fixed, transparent quote you&rsquo;ve been
+            60,000 businesses, at a fixed, transparent quote you&rsquo;ve been
             quoted from Jewellery Quarter and Brindleyplace agencies.
           </p>
           <p

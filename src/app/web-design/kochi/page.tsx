@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Kochi | FactoryJet',
     description:
-      'Professional website design company in Kochi — Next.js, SEO, and GA4 included. 7-day delivery. Serving Infopark, Kakkanad, MG Road Ernakulam, Fort Kochi & Edapally.',
+      'Professional website design company in Kochi: Next.js, SEO, and GA4 included. 7-day delivery. Serving Infopark, Kakkanad, MG Road Ernakulam, Fort Kochi & Edapally.',
     url: 'https://factoryjet.com/web-design/kochi',
     images: [
       {
@@ -89,6 +90,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/kochi#webpage',
+  url: 'https://factoryjet.com/web-design/kochi',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -139,31 +154,31 @@ const KOCHI_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Kochi's market — whether that's an international buyer researching a Kerala seafood or spice exporter, a tourist planning a backwater trip through Fort Kochi, an enterprise procurement team evaluating an Infopark IT vendor, or an NRI business owner launching a new venture. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Kochi's market, whether that's an international buyer researching a Kerala seafood or spice exporter, a tourist planning a backwater trip through Fort Kochi, an enterprise procurement team evaluating an Infopark IT vendor, or an NRI business owner launching a new venture. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      "Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking systems for tourism businesses, product catalog systems for exporters, and any third-party APIs your business uses. Kerala's high internet-penetration audience expects fast, modern web experiences — performance budgets enforced from the first commit. — Days 5–6",
+      "Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking systems for tourism businesses, product catalog systems for exporters, and any third-party APIs your business uses. Kerala's high internet-penetration audience expects fast, modern web experiences, performance budgets enforced from the first commit.: Days 5–6",
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Kochi-specific local SEO targeting built in — including bilingual search intent awareness for Malayalam + English queries. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Kochi-specific local SEO targeting built in, including bilingual search intent awareness for Malayalam + English queries.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -194,13 +209,13 @@ const KOCHI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Kochi web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,7 +235,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -234,13 +249,13 @@ const KOCHI_FAQ_ITEMS = [
     category: 'technical',
     question: 'Will my website rank on Google India?',
     answer:
-      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Kerala has India's highest internet penetration — your audience is online and actively searching. Branded searches typically rank within 1–2 weeks.",
+      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Kerala has India's highest internet penetration: your audience is online and actively searching. Branded searches typically rank within 1–2 weeks.",
   },
   {
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Kochi businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Kochi businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -252,7 +267,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, booking enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, booking enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Kochi Local ── */
@@ -260,19 +275,19 @@ const KOCHI_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for IT companies at Infopark Kochi?',
     answer:
-      "Yes — IT and software companies at Infopark and the broader Kakkanad tech corridor are a core client profile. We build websites optimised for B2B tech sales: service capability architecture, case study and credentials display, technology stack showcase, and lead flows designed for enterprise procurement cycles. Kerala's IT sector is growing fast — a high-performance website is no longer optional.",
+      "Yes, IT and software companies at Infopark and the broader Kakkanad tech corridor are a core client profile. We build websites optimised for B2B tech sales: service capability architecture, case study and credentials display, technology stack showcase, and lead flows designed for enterprise procurement cycles. Kerala's IT sector is growing fast: a high-performance website is no longer optional.",
   },
   {
     category: 'local',
     question: 'Can you build tourism and hospitality websites for Fort Kochi and backwater operators?',
     answer:
-      "Yes. Tourism is Kochi's headline industry — Fort Kochi's heritage quarter, Kumarakom's backwaters, Alappuzha houseboats, and Munnar hill stations attract hundreds of thousands of visitors each year. Tourism businesses need mobile-first booking flows, gallery-rich design, TripAdvisor review integration, and international buyer UX. We build for English-language international search as well as domestic travel searches.",
+      "Yes. Tourism is Kochi's headline industry: Fort Kochi's heritage quarter, Kumarakom's backwaters, Alappuzha houseboats, and Munnar hill stations attract hundreds of thousands of visitors each year. Tourism businesses need mobile-first booking flows, gallery-rich design, TripAdvisor review integration, and international buyer UX. We build for English-language international search as well as domestic travel searches.",
   },
   {
     category: 'local',
     question: "Do you know Kochi's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Kochi's business geography as part of discovery — from Infopark's IT cluster in Kakkanad and the Kochi Smart City precinct to MG Road Ernakulam's commercial high street, Fort Kochi's heritage tourism zone, and Edapally's emerging commercial corridor. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Kochi's business geography as part of discovery, from Infopark's IT cluster in Kakkanad and the Kochi Smart City precinct to MG Road Ernakulam's commercial high street, Fort Kochi's heritage tourism zone, and Edapally's emerging commercial corridor. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -286,7 +301,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -310,7 +325,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'support',
     question: 'Can NRI business owners work with FactoryJet remotely?',
     answer:
-      "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Kochi businesses are NRI-owned or NRI-funded. Our entire process is remote-first — discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
+      "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Kochi businesses are NRI-owned or NRI-funded. Our entire process is remote-first, discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
   },
   {
     category: 'local',
@@ -441,31 +456,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Kochi market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Kochi competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Kochi local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Kochi local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -489,6 +504,10 @@ const speakableSchema = {
 export default function KochiWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="kochi-local-business-schema"
         type="application/ld+json"
@@ -518,13 +537,18 @@ export default function KochiWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Kochi', url: 'https://factoryjet.com/web-design/kochi' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_kochi_hero" />}
           eyebrow="WEB DESIGN · KOCHI"
           headline="Website Design in Kochi for IT Firms, Tourism Businesses, Exporters, and Kerala's Growing Startups"
-          lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate — your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate: your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -547,26 +571,26 @@ export default function KochiWebDesignPage() {
           eyebrow="KOCHI MARKET"
           headline="Why Your Kochi Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Kochi is Kerala's commercial capital and the state's digital frontline. Kerala consistently ranks as India's highest internet-penetrated state — with over 54% internet penetration against a national average of 43% — and has India's highest literacy rate at 96.2%. This is not a population that stumbles onto your website by accident. They are researching you, comparing you, and deciding whether to contact you — entirely online. A high-performing website in Kochi is not a nice-to-have; it is the first and most-scrutinised touchpoint in your sales process.",
-            "Kochi's economy is multi-layered. Infopark — one of India's largest IT parks — houses 450+ companies employing over 70,000 professionals and generating billions in annual revenue. The Kerala Startup Mission (KSUM) has supported 5,000+ startups, with Kochi and Thiruvananthapuram as the primary hubs. The Kochi Smart City project and Kochi Metro are accelerating commercial development in Kakkanad and Edapally. Fort Kochi's heritage tourism draws international visitors and high-end NRI-funded hospitality businesses. And the Kochi Port and nearby Cochin Fisheries Harbour make the city a critical hub for seafood, spice, and commodity exports.",
-            "Kerala's large NRI diaspora — over 20 lakh Keralites work abroad, mostly in the Gulf — means many Kochi businesses are NRI-owned or NRI-funded, and expect international-quality web presence as a baseline. A website that looks like it was built in 2015 is not competitive in a market where the business owner has been comparing it against Dubai and London competitors. FactoryJet builds websites that match the ambition of Kochi's most forward-thinking businesses.",
+            "Kochi is Kerala's commercial capital and the state's digital frontline. Kerala consistently ranks as India's highest internet-penetrated state, with over 54% internet penetration against a national average of 43%, and has India's highest literacy rate at 96.2%. This is not a population that stumbles onto your website by accident. They are researching you, comparing you, and deciding whether to contact you, entirely online. A high-performing website in Kochi is not a nice-to-have; it is the first and most-scrutinised touchpoint in your sales process.",
+            "Kochi's economy is multi-layered. Infopark: one of India's largest IT parks, houses 450+ companies employing over 70,000 professionals and generating billions in annual revenue. The Kerala Startup Mission (KSUM) has supported 5,000+ startups, with Kochi and Thiruvananthapuram as the primary hubs. The Kochi Smart City project and Kochi Metro are accelerating commercial development in Kakkanad and Edapally. Fort Kochi's heritage tourism draws international visitors and high-end NRI-funded hospitality businesses. And the Kochi Port and nearby Cochin Fisheries Harbour make the city a critical hub for seafood, spice, and commodity exports.",
+            "Kerala's large NRI diaspora, over 20 lakh Keralites work abroad, mostly in the Gulf, means many Kochi businesses are NRI-owned or NRI-funded, and expect international-quality web presence as a baseline. A website that looks like it was built in 2015 is not competitive in a market where the business owner has been comparing it against Dubai and London competitors. FactoryJet builds websites that match the ambition of Kochi's most forward-thinking businesses.",
           ]}
           stats={[
             {
               value: '450+',
-              label: "IT companies at Infopark Kochi — employing 70,000+ professionals",
+              label: "IT companies at Infopark Kochi, employing 70,000+ professionals",
               sourceUrl: 'https://infopark.in/',
               sourceLabel: 'Infopark Kerala',
             },
             {
               value: '5,000+',
-              label: "Startups supported by Kerala Startup Mission (KSUM) — Kochi is the primary hub",
+              label: "Startups supported by Kerala Startup Mission (KSUM): Kochi is the primary hub",
               sourceUrl: 'https://startupmission.kerala.gov.in/',
               sourceLabel: 'Kerala Startup Mission',
             },
             {
               value: '96.2%',
-              label: "Kerala literacy rate — India's highest. Your customers research extensively before buying.",
+              label: "Kerala literacy rate, India's highest. Your customers research extensively before buying.",
               sourceUrl: 'https://censusindia.gov.in/',
               sourceLabel: 'Census of India',
             },
@@ -577,11 +601,11 @@ export default function KochiWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · KOCHI"
           headline="What 'Web Design' Actually Means for a Kochi Business"
-          lead="Kochi's economy spans IT services, tourism, exports, startups, and a large NRI business community — each with completely different buyer journeys and web strategies. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template."
+          lead="Kochi's economy spans IT services, tourism, exports, startups, and a large NRI business community: each with completely different buyer journeys and web strategies. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template."
           body={
             <>
               <p>
-                For Kochi&apos;s IT and software companies at Infopark — the website needs to
+                For Kochi&apos;s IT and software companies at Infopark: the website needs to
                 project technical capability, team credentials, and past project scope to
                 enterprise procurement teams and international clients. IT services websites
                 need case study architecture, technology stack display, certifications, and
@@ -590,18 +614,18 @@ export default function KochiWebDesignPage() {
               </p>
               <p>
                 For tourism and hospitality businesses in Fort Kochi, Kumarakom, and the
-                backwater corridor — the website needs gallery-rich, mobile-first design, fast
+                backwater corridor: the website needs gallery-rich, mobile-first design, fast
                 booking flows, and international buyer UX. Tourism audiences make decisions
                 on emotion and imagery. We build tourism sites that convert research into
                 bookings, with TripAdvisor integration, WhatsApp inquiry flows, and SEO
                 targeting English-language searches from international travellers.
               </p>
               <p>
-                For seafood and spice exporters operating through Kochi Port — the challenge
+                For seafood and spice exporters operating through Kochi Port: the challenge
                 is international B2B credibility. Buyers in the US, EU, Japan, and the Middle
                 East research Indian vendors for weeks. Export sites need certifications,
                 product quality documentation, processing capacity display, and frictionless
-                RFQ forms. For NRI-owned businesses and startups emerging from KSUM — the
+                RFQ forms. For NRI-owned businesses and startups emerging from KSUM: the
                 site needs to match the international quality benchmark their owners have
                 experienced abroad. Every FactoryJet Kochi project covers discovery, Figma
                 prototyping, Next.js development, SEO, GA4, and a 30-day support window.
@@ -691,7 +715,7 @@ export default function KochiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kochi Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -701,7 +725,7 @@ export default function KochiWebDesignPage() {
             {
               icon: '🏗️',
               title: 'Next.js, not WordPress. Kerala\'s audience notices.',
-              body: "Kerala has India's highest internet penetration — your audience is sophisticated and uses fast mobile connections. WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on 4G versus 4–6s for WordPress. For businesses competing on Google's Core Web Vitals, that gap directly affects rankings.",
+              body: "Kerala has India's highest internet penetration: your audience is sophisticated and uses fast mobile connections. WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on 4G versus 4–6s for WordPress. For businesses competing on Google's Core Web Vitals, that gap directly affects rankings.",
             },
             {
               icon: '📋',
@@ -727,7 +751,7 @@ export default function KochiWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -736,9 +760,9 @@ export default function KochiWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -752,11 +776,11 @@ export default function KochiWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Kochi/Trivandrum Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Kerala deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Kerala deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={KOCHI_COMPARISON_COLUMNS}
           rows={KOCHI_COMPARISON_ROWS}
@@ -767,26 +791,26 @@ export default function KochiWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="KOCHI × WEB DESIGN"
           headline="Web Design for Kochi's Key Industries"
-          lead="From IT firms at Infopark and tourism operators in Fort Kochi to seafood exporters at Kochi Port and startups from KSUM — Kochi's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From IT firms at Infopark and tourism operators in Fort Kochi to seafood exporters at Kochi Port and startups from KSUM, Kochi's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'IT & Software Services',
               description:
-                "Infopark Kochi houses 450+ IT and software companies employing over 70,000 professionals. Kerala's IT sector — ITES, software products, and digital services — is one of India's fastest growing. IT services websites need authority-first architecture: service capability pages, technology stack display, team credentials, case studies, and lead flows designed for enterprise procurement cycles. International clients research for weeks before making contact.",
+                "Infopark Kochi houses 450+ IT and software companies employing over 70,000 professionals. Kerala's IT sector: ITES, software products, and digital services, is one of India's fastest growing. IT services websites need authority-first architecture: service capability pages, technology stack display, team credentials, case studies, and lead flows designed for enterprise procurement cycles. International clients research for weeks before making contact.",
               example:
                 'Software development companies, ITES firms, SaaS product startups, and digital agencies operating from Infopark and Kakkanad.',
             },
             {
               name: 'Tourism & Hospitality',
               description:
-                "Kochi is the gateway to Kerala — one of India's top domestic and international tourism destinations. Fort Kochi's heritage quarter, the backwater houseboat network from Alappuzha, Munnar's hill stations, and Kochi's international cruise terminal together attract millions of visitors annually. Tourism businesses need gallery-rich mobile-first design, booking engine integration, TripAdvisor review display, and international buyer UX with multi-currency support.",
+                "Kochi is the gateway to Kerala: one of India's top domestic and international tourism destinations. Fort Kochi's heritage quarter, the backwater houseboat network from Alappuzha, Munnar's hill stations, and Kochi's international cruise terminal together attract millions of visitors annually. Tourism businesses need gallery-rich mobile-first design, booking engine integration, TripAdvisor review display, and international buyer UX with multi-currency support.",
               example:
                 'Heritage homestays and boutique hotels in Fort Kochi, backwater houseboat operators, Ayurvedic resorts, and inbound tourism agencies.',
             },
             {
               name: 'Seafood & Spice Exports',
               description:
-                "Kochi is one of India's most important seafood export hubs — the Cochin Fisheries Harbour handles thousands of tonnes of processed seafood annually for markets in the US, EU, Japan, and Southeast Asia. Kerala's spice trade (pepper, cardamom, ginger) runs through Kochi's commodity markets. Export businesses need certifications display, product quality documentation, cold chain credentials, and B2B inquiry flows targeting international procurement buyers.",
+                "Kochi is one of India's most important seafood export hubs: the Cochin Fisheries Harbour handles thousands of tonnes of processed seafood annually for markets in the US, EU, Japan, and Southeast Asia. Kerala's spice trade (pepper, cardamom, ginger) runs through Kochi's commodity markets. Export businesses need certifications display, product quality documentation, cold chain credentials, and B2B inquiry flows targeting international procurement buyers.",
               example:
                 'Seafood processing and export companies, spice exporters, and commodity traders operating through Kochi Port and Willingdon Island.',
             },
@@ -800,14 +824,14 @@ export default function KochiWebDesignPage() {
             {
               name: 'Healthcare & Wellness',
               description:
-                "Kerala is India's healthcare tourism leader — with internationally accredited hospitals in Kochi and a globally recognised Ayurveda sector. Hospitals, specialty clinics, and Ayurvedic wellness centres serve a demanding mix of domestic patients, Gulf NRI medical tourists, and international wellness travellers. Healthcare websites need NABH credential display, doctor profile pages, appointment booking systems, and international patient UX.",
+                "Kerala is India's healthcare tourism leader, with internationally accredited hospitals in Kochi and a globally recognised Ayurveda sector. Hospitals, specialty clinics, and Ayurvedic wellness centres serve a demanding mix of domestic patients, Gulf NRI medical tourists, and international wellness travellers. Healthcare websites need NABH credential display, doctor profile pages, appointment booking systems, and international patient UX.",
               example:
                 'Multi-specialty hospitals, Ayurvedic resorts and clinics, dental chains, and wellness centres targeting domestic and international patients.',
             },
             {
               name: 'NRI Business & Professional Services',
               description:
-                "Kerala's NRI diaspora — over 20 lakh Keralites working abroad, primarily in the Gulf — creates a distinctive business category: NRI-owned companies that require international-quality web presence as a baseline expectation. CA firms, real estate developers, legal practices, and professional services businesses serving Kochi's NRI community need authority-first sites with professional credential display, service capability pages, and lead-capture flows that convert international enquiries.",
+                "Kerala's NRI diaspora, over 20 lakh Keralites working abroad, primarily in the Gulf, creates a distinctive business category: NRI-owned companies that require international-quality web presence as a baseline expectation. CA firms, real estate developers, legal practices, and professional services businesses serving Kochi's NRI community need authority-first sites with professional credential display, service capability pages, and lead-capture flows that convert international enquiries.",
               example:
                 'CA and CS firms, real estate developers, corporate law practices, and professional services firms serving Kochi and the NRI community.',
             },
@@ -825,7 +849,7 @@ export default function KochiWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Kochi Businesses"
-          lead="The questions we answer on every Kochi discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Kochi discovery call, answered here, without the runaround."
           categories={KOCHI_FAQ_CATEGORIES}
           items={KOCHI_FAQ_ITEMS}
         />
@@ -835,7 +859,7 @@ export default function KochiWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Kochi Website?"
-          sub="Kochi's IT companies, tourism operators, export businesses, and startups are all competing for the same Google rankings and the same first impressions from a digital audience that is more informed than anywhere else in India. Kerala has India's highest internet penetration and literacy rate — your audience is researching you right now. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          sub="Kochi's IT companies, tourism operators, export businesses, and startups are all competing for the same Google rankings and the same first impressions from a digital audience that is more informed than anywhere else in India. Kerala has India's highest internet penetration and literacy rate: your audience is researching you right now. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

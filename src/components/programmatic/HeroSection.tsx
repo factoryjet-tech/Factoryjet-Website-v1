@@ -43,14 +43,14 @@ export function HeroSection({
     <section className="relative bg-white">
       <div className="mx-auto max-w-container-xl px-6 py-section-y lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left column — content (7/12) */}
+          {/* Left column, content (7/12) */}
           <div className="lg:col-span-7">
             {/* Eyebrow chip */}
             <div className="mb-8 inline-flex items-center font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
               {eyebrow}
             </div>
 
-            {/* H1 — display-lg, font-display (Source Serif 4) */}
+            {/* H1, display-lg, font-display (Source Serif 4) */}
             <h1 className="font-display text-display-lg text-black">
               {headline}
             </h1>
@@ -87,7 +87,7 @@ export function HeroSection({
             </div>
           </div>
 
-          {/* Right column — BrowserMockup (5/12) */}
+          {/* Right column, BrowserMockup (5/12) */}
           <div className="lg:col-span-5">
             <BrowserMockup
               url="hartwell-co.com"
@@ -144,7 +144,7 @@ function HartwellMockSite() {
         </p>
       </div>
 
-      {/* Mock CTA — this is where Jet Blue appears (in the demoed product) */}
+      {/* Mock CTA, this is where Jet Blue appears (in the demoed product) */}
       <button
         type="button"
         className="rounded-md bg-jet-blue px-4 py-2 text-xs font-medium text-white"

@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 };
 
 /* ----------------------------------------------------------------------------─
-   JSON-LD Schemas — FAQPage · Service · BreadcrumbList
+   JSON-LD Schemas, FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
 const serviceSchema = {
@@ -85,7 +85,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Small Business Website Design',
   description:
-    'Custom website design and development for US small businesses. Mobile-first, SEO-optimized websites built on WordPress, Webflow, or Next.js — fixed-price, delivered in 7 days.',
+    'Custom website design and development for US small businesses. Mobile-first, SEO-optimized websites built on WordPress, Webflow, or Next.js: fixed-price, delivered in 7 days.',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
@@ -127,13 +127,13 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '02',
     title: 'Design & Content',
     description:
-      'You send us your logo, photos, and copy (or we write it for you). We design every page — desktop and mobile — built around your brand. You review and approve the design before development starts.',
+      'You send us your logo, photos, and copy (or we write it for you). We design every page, desktop and mobile, built around your brand. You review and approve the design before development starts.',
   },
   {
     number: '03',
     title: 'Build & QA',
     description:
-      'We build your approved design on WordPress, Webflow, or Next.js. Cross-browser testing, mobile QA, Lighthouse audits, SEO configuration, contact form setup, and analytics integration — all handled before handover.',
+      'We build your approved design on WordPress, Webflow, or Next.js. Cross-browser testing, mobile QA, Lighthouse audits, SEO configuration, contact form setup, and analytics integration: all handled before handover.',
   },
   {
     number: '04',
@@ -145,7 +145,7 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '05',
     title: '30-Day Support',
     description:
-      'Every project includes 30 days of post-launch support — text changes, image swaps, layout tweaks, and bug fixes at no extra charge. You get a direct line to the team that built your site.',
+      'Every project includes 30 days of post-launch support, text changes, image swaps, layout tweaks, and bug fixes at no extra charge. You get a direct line to the team that built your site.',
   },
 ];
 
@@ -214,7 +214,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Fixed price — no hourly billing',
+    feature: 'Fixed price, no hourly billing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="diy" kind="yes" />,
@@ -232,7 +232,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own the code — no lock-in',
+    feature: 'You own the code, no lock-in',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="diy" kind="no" />,
@@ -260,10 +260,10 @@ const PRICING_TIERS = [
     features: [
       'Up to 5 custom-designed pages',
       'Mobile-first, Lighthouse 100 performance',
-      'On-page SEO — meta tags, schema, sitemap',
+      'On-page SEO, meta tags, schema, sitemap',
       'Contact form + Google Maps integration',
       'SSL, domain connection, Google Analytics setup',
-      'WordPress, Webflow, or Next.js — your choice',
+      'WordPress, Webflow, or Next.js: your choice',
       '30-day post-launch support',
     ],
     cta: { label: 'Get a Free Quote', modal: true, region: 'us' },
@@ -272,11 +272,11 @@ const PRICING_TIERS = [
     name: 'Growth',
     priceRange: 'Fixed price, scoped to your build',
     description:
-      'A larger, more ambitious website for businesses that are serious about organic search and online lead generation. More pages, more functionality, deeper SEO — built for growth.',
+      'A larger, more ambitious website for businesses that are serious about organic search and online lead generation. More pages, more functionality, deeper SEO, built for growth.',
     features: [
       'Up to 15 custom-designed pages',
       'Blog + CMS for ongoing content publishing',
-      'Advanced SEO — local SEO, schema markup, page speed',
+      'Advanced SEO, local SEO, schema markup, page speed',
       'CRM, email marketing, and booking integrations',
       'Custom animations and interactive UI elements',
       'Team training to manage your own site',
@@ -289,15 +289,15 @@ const PRICING_TIERS = [
     name: 'E-Commerce',
     priceRange: 'Fixed price, scoped to your build',
     description:
-      'A Shopify or WooCommerce store built to sell — not just to exist online. Product pages designed for conversion, checkout flows that keep revenue, and an SEO foundation to bring in organic traffic.',
+      'A Shopify or WooCommerce store built to sell, not just to exist online. Product pages designed for conversion, checkout flows that keep revenue, and an SEO foundation to bring in organic traffic.',
     features: [
-      'Shopify or WooCommerce — your platform',
+      'Shopify or WooCommerce: your platform',
       'Up to 50 products configured and uploaded',
-      'Custom theme design — not a pre-built template',
+      'Custom theme design, not a pre-built template',
       'Payment gateway + shipping method setup',
       'Product page conversion optimization',
-      'E-commerce SEO — collections, product schema',
-      'Full store ownership — no agency dependency',
+      'E-commerce SEO, collections, product schema',
+      'Full store ownership, no agency dependency',
       '30-day post-launch support',
     ],
     cta: { label: 'Get an E-Commerce Quote', modal: true, region: 'us' },
@@ -317,7 +317,7 @@ const FAQ_ITEMS = [
   // -- Planning Your Site ------------------------------------------------─
   {
     question: 'What pages does a small business website need?',
-    answer: `Most small business websites need 5–8 core pages: a homepage, a services or products page, an about page, a contact page, and ideally a blog or FAQ for SEO. If you serve multiple locations or industries, each may need its own dedicated landing page. The homepage does the heavy lifting — it needs to answer "what do you do, who is it for, and why should I trust you" within the first 5 seconds. Every other page exists to go deeper on one of those questions.`,
+    answer: `Most small business websites need 5–8 core pages: a homepage, a services or products page, an about page, a contact page, and ideally a blog or FAQ for SEO. If you serve multiple locations or industries, each may need its own dedicated landing page. The homepage does the heavy lifting, it needs to answer "what do you do, who is it for, and why should I trust you" within the first 5 seconds. Every other page exists to go deeper on one of those questions.`,
     category: 'planning',
   },
   {
@@ -327,66 +327,66 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How many pages does a small business website need?',
-    answer: `A functional small business website needs at least 4–5 pages: home, services/products, about, and contact. For better SEO, add individual service pages (one per service you want to rank for), location pages if you serve multiple areas, and a blog for ongoing content. More pages aren't always better — every page needs a clear purpose. A focused 5-page site beats a bloated 20-page site with thin content every time.`,
+    answer: `A functional small business website needs at least 4–5 pages: home, services/products, about, and contact. For better SEO, add individual service pages (one per service you want to rank for), location pages if you serve multiple areas, and a blog for ongoing content. More pages aren't always better: every page needs a clear purpose. A focused 5-page site beats a bloated 20-page site with thin content every time.`,
     category: 'planning',
   },
   {
     question: 'What information do I need to provide to get my website built?',
-    answer: `To build your website, you'll typically need to provide: your logo (or we can create one), photos of your business/team/products, your service descriptions and pricing (if you want it public), your contact information and location, any existing brand guidelines or color preferences, and examples of websites you like. If you don't have professional copywriting, FactoryJet can write your page content — we gather everything through a structured intake form at the start of the project.`,
+    answer: `To build your website, you'll typically need to provide: your logo (or we can create one), photos of your business/team/products, your service descriptions and pricing (if you want it public), your contact information and location, any existing brand guidelines or color preferences, and examples of websites you like. If you don't have professional copywriting, FactoryJet can write your page content, we gather everything through a structured intake form at the start of the project.`,
     category: 'planning',
   },
   {
     question: 'What platform should a small business use for their website?',
-    answer: `WordPress powers 43% of all websites for good reason — it's flexible, well-supported, and SEO-friendly. It's the right choice for most small businesses that want control and growth room. Webflow is excellent for design-forward businesses that want a premium look. Shopify is the standard for e-commerce. Wix and Squarespace are fine for true DIY — but have SEO ceilings and limited flexibility. FactoryJet builds on WordPress, Webflow, or Next.js depending on your goals, and helps you choose the right fit.`,
+    answer: `WordPress powers 43% of all websites for good reason. It's flexible, well-supported, and SEO-friendly. It's the right choice for most small businesses that want control and growth room. Webflow is excellent for design-forward businesses that want a premium look. Shopify is the standard for e-commerce. Wix and Squarespace are fine for true DIY, but have SEO ceilings and limited flexibility. FactoryJet builds on WordPress, Webflow, or Next.js depending on your goals, and helps you choose the right fit.`,
     category: 'planning',
   },
 
   // -- Design & Build ----------------------------------------------------─
   {
     question: 'What does "mobile-first" web design actually mean?',
-    answer: `Mobile-first means the website is designed starting with the phone layout, then adapted up to tablet and desktop — not the other way around. It matters because 60%+ of web traffic is mobile, Google uses mobile-first indexing (meaning your mobile site determines your search ranking), and users are much less patient on mobile. A site designed desktop-first often gets "squished" onto phones as an afterthought and performs poorly on both the user experience and SEO fronts.`,
+    answer: `Mobile-first means the website is designed starting with the phone layout, then adapted up to tablet and desktop, not the other way around. It matters because 60%+ of web traffic is mobile, Google uses mobile-first indexing (meaning your mobile site determines your search ranking), and users are much less patient on mobile. A site designed desktop-first often gets "squished" onto phones as an afterthought and performs poorly on both the user experience and SEO fronts.`,
     category: 'design',
   },
   {
     question: 'What is Lighthouse 100 and why does it matter?',
-    answer: `Lighthouse is Google's tool for measuring website quality across four categories: Performance, Accessibility, Best Practices, and SEO. A score of 100 in each means your site loads fast, works for users with disabilities, follows web standards, and is technically optimized for search. A slow site (Lighthouse Performance score below 70) ranks lower in Google and converts fewer visitors — Google's data shows that every 1-second delay in load time reduces conversions by 7%. FactoryJet hits 100 in all four categories on every site we build.`,
+    answer: `Lighthouse is Google's tool for measuring website quality across four categories: Performance, Accessibility, Best Practices, and SEO. A score of 100 in each means your site loads fast, works for users with disabilities, follows web standards, and is technically optimized for search. A slow site (Lighthouse Performance score below 70) ranks lower in Google and converts fewer visitors, Google's data shows that every 1-second delay in load time reduces conversions by 7%. FactoryJet hits 100 in all four categories on every site we build.`,
     category: 'design',
   },
   {
     question: 'How long does a small business website take to build?',
-    answer: `FactoryJet delivers 5-page websites in 7 days — a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2–3 weeks. E-commerce stores take 2–4 weeks depending on product count. Traditional agencies typically quote 6–16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
+    answer: `FactoryJet delivers 5-page websites in 7 days: a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2–3 weeks. E-commerce stores take 2–4 weeks depending on product count. Traditional agencies typically quote 6–16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
     category: 'design',
   },
   {
     question: 'Will I be able to update my website myself?',
-    answer: `Yes — every FactoryJet site is built so you can make basic updates yourself. WordPress sites include a user-friendly admin dashboard for editing text, swapping images, and adding blog posts. We also provide a training session so you know exactly how to use it. For bigger changes or development work, our 30-day post-launch support covers you, and we offer ongoing maintenance packages. You're never locked into needing us for basic site management.`,
+    answer: `Yes: every FactoryJet site is built so you can make basic updates yourself. WordPress sites include a user-friendly admin dashboard for editing text, swapping images, and adding blog posts. We also provide a training session so you know exactly how to use it. For bigger changes or development work, our 30-day post-launch support covers you, and we offer ongoing maintenance packages. You're never locked into needing us for basic site management.`,
     category: 'design',
   },
   {
     question: 'Do you design the site from scratch or use templates?',
-    answer: `Every FactoryJet site is custom-designed from scratch for your business — no templates, no site builders with preset layouts. We design at the component level: your hero section, your service cards, your about section, your contact form — each designed to fit your brand, industry, and goals. This is why our sites look different from one another and why they perform better than template-based sites, which all share the same structural limitations.`,
+    answer: `Every FactoryJet site is custom-designed from scratch for your business, no templates, no site builders with preset layouts. We design at the component level: your hero section, your service cards, your about section, your contact form: each designed to fit your brand, industry, and goals. This is why our sites look different from one another and why they perform better than template-based sites, which all share the same structural limitations.`,
     category: 'design',
   },
 
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much should a small business spend on a website?',
-    answer: `A small business that relies on its website to generate leads should budget for a professionally built site — enough to cover real design thinking, an SEO setup, and accountability. The cheapest options usually mean a template swap with no SEO and no support, which is often worse than no website at all. Traditional agencies charge several times more than a lean specialist team like FactoryJet for comparable work. The right question isn't "what's cheapest" — it's "what will actually generate leads."`,
+    answer: `A small business that relies on its website to generate leads should budget for a professionally built site, enough to cover real design thinking, an SEO setup, and accountability. The cheapest options usually mean a template swap with no SEO and no support, which is often worse than no website at all. Traditional agencies charge several times more than a lean specialist team like FactoryJet for comparable work. The right question isn't "what's cheapest". It's "what will actually generate leads."`,
     category: 'cost',
   },
   {
     question: 'What is the cheapest way to get a professional small business website?',
-    answer: `The best-value professional option is FactoryJet — a fixed-price custom site with design, development, SEO setup, and 30-day support all included, scoped to your build. Cheaper options typically mean template-based services with no custom design thinking, unvetted freelancers with inconsistent quality, or DIY builders that cost time instead of money. Our pricing is engineered for measurable outcomes on the same deliverable, and we confirm it after a free discovery call.`,
+    answer: `The best-value professional option is FactoryJet: a fixed-price custom site with design, development, SEO setup, and 30-day support all included, scoped to your build. Cheaper options typically mean template-based services with no custom design thinking, unvetted freelancers with inconsistent quality, or DIY builders that cost time instead of money. Our pricing is engineered for measurable outcomes on the same deliverable, and we confirm it after a free discovery call.`,
     category: 'cost',
   },
   {
     question: 'Are there any hidden costs or monthly fees after launch?',
-    answer: `No hidden fees. FactoryJet charges a fixed project price — design, development, SEO setup, and 30-day support are all included. After launch, you'll pay only a small monthly hosting fee to a provider of your choice and an annual domain registration fee. We don't lock you into a monthly retainer, a maintenance plan, or a proprietary hosting arrangement. You own everything and pay nothing to us after the project is complete.`,
+    answer: `No hidden fees. FactoryJet charges a fixed project price, design, development, SEO setup, and 30-day support are all included. After launch, you'll pay only a small monthly hosting fee to a provider of your choice and an annual domain registration fee. We don't lock you into a monthly retainer, a maintenance plan, or a proprietary hosting arrangement. You own everything and pay nothing to us after the project is complete.`,
     category: 'cost',
   },
   {
     question: 'Why are US web design agencies so expensive?',
-    answer: `traditional agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers — all billing at US salaries. A typical agency project involves many people billing hourly. FactoryJet is structured differently: a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, no bloated account management, direct client access. You get predictable cost from quote to launch with full code ownership at handoff.`,
+    answer: `traditional agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers: all billing at US salaries. A typical agency project involves many people billing hourly. FactoryJet is structured differently: a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, no bloated account management, direct client access. You get predictable cost from quote to launch with full code ownership at handoff.`,
     category: 'cost',
   },
   {
@@ -398,54 +398,54 @@ const FAQ_ITEMS = [
   // -- SEO & Traffic ------------------------------------------------------
   {
     question: 'Does my small business website need SEO?',
-    answer: `Yes — if you want people to find you through Google, your website needs SEO. Most small business owners discover that a beautifully designed site with no SEO gets zero organic traffic. Every FactoryJet website includes on-page SEO: optimized title tags and meta descriptions, schema markup for your business type, an XML sitemap, Google Search Console setup, and page speed optimization. This is the technical SEO foundation — ongoing content and link building are separate strategies we can advise on.`,
+    answer: `Yes, if you want people to find you through Google, your website needs SEO. Most small business owners discover that a beautifully designed site with no SEO gets zero organic traffic. Every FactoryJet website includes on-page SEO: optimized title tags and meta descriptions, schema markup for your business type, an XML sitemap, Google Search Console setup, and page speed optimization. This is the technical SEO foundation, ongoing content and link building are separate strategies we can advise on.`,
     category: 'seo',
   },
   {
     question: 'How long does it take for a new website to rank in Google?',
-    answer: `A new website typically takes 3–6 months to see meaningful organic search rankings — and that's with a properly built site (fast, mobile-first, technically sound) and active content publishing. Google needs time to crawl and index your site, assess its relevance, and compare it against existing competition. Sites with strong technical SEO foundations rank faster. FactoryJet submits your sitemap to Google Search Console on launch day and configures all the technical signals that help Google understand your site quickly.`,
+    answer: `A new website typically takes 3–6 months to see meaningful organic search rankings, and that's with a properly built site (fast, mobile-first, technically sound) and active content publishing. Google needs time to crawl and index your site, assess its relevance, and compare it against existing competition. Sites with strong technical SEO foundations rank faster. FactoryJet submits your sitemap to Google Search Console on launch day and configures all the technical signals that help Google understand your site quickly.`,
     category: 'seo',
   },
   {
     question: 'What is local SEO and does my small business need it?',
-    answer: `Local SEO helps your business appear in Google searches with local intent — "web designer near me" or "plumber in Austin" — including the Google Maps pack above the regular results. If your business serves a specific geographic area, local SEO is one of your highest-ROI activities. FactoryJet includes local SEO basics in all projects: schema markup with your business address, optimized Google Business Profile guidance, and location-specific page content. We also build dedicated city landing pages for businesses targeting multiple markets.`,
+    answer: `Local SEO helps your business appear in Google searches with local intent, "web designer near me" or "plumber in Austin", including the Google Maps pack above the regular results. If your business serves a specific geographic area, local SEO is one of your highest-ROI activities. FactoryJet includes local SEO basics in all projects: schema markup with your business address, optimized Google Business Profile guidance, and location-specific page content. We also build dedicated city landing pages for businesses targeting multiple markets.`,
     category: 'seo',
   },
   {
     question: 'Will my website rank better with a faster load time?',
-    answer: `Yes — Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower — it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 100 performance scores, which means optimal Core Web Vitals: fast loading, no layout shifts, and responsive interactivity.`,
+    answer: `Yes: Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower, it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 100 performance scores, which means optimal Core Web Vitals: fast loading, no layout shifts, and responsive interactivity.`,
     category: 'seo',
   },
   {
     question: 'Should I have a blog on my small business website?',
-    answer: `A blog is one of the most effective long-term SEO tools for a small business — but only if you're going to publish consistently. A blog with 2–3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1–2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners.`,
+    answer: `A blog is one of the most effective long-term SEO tools for a small business, but only if you're going to publish consistently. A blog with 2–3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1–2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners.`,
     category: 'seo',
   },
 
   // -- Working with FactoryJet --------------------------------------------─
   {
     question: 'What happens during the strategy call?',
-    answer: `The strategy call is a 30-minute video or phone call with a FactoryJet project lead. We cover: what your business does and who you serve, what you want the website to accomplish, what pages and features you need, your timeline and any constraints, and your design preferences. At the end of the call, we give you a fixed-price proposal. There's no obligation to move forward — the call is genuinely about figuring out if we're a good fit for your project.`,
+    answer: `The strategy call is a 30-minute video or phone call with a FactoryJet project lead. We cover: what your business does and who you serve, what you want the website to accomplish, what pages and features you need, your timeline and any constraints, and your design preferences. At the end of the call, we give you a fixed-price proposal. There's no obligation to move forward: the call is genuinely about figuring out if we're a good fit for your project.`,
     category: 'factoryjet',
   },
   {
     question: 'Do you work with businesses outside Austin, Miami, and Denver?',
-    answer: `Absolutely — FactoryJet works with small businesses across all 50 US states. Our priority cities include Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa, but our clients are spread across the country. The entire engagement is remote: strategy calls, design reviews, feedback, and launch — all handled digitally. Geography has never been a constraint for us.`,
+    answer: `Absolutely, FactoryJet works with small businesses across all 50 US states. Our priority cities include Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa, but our clients are spread across the country. The entire engagement is remote: strategy calls, design reviews, feedback, and launch: all handled digitally. Geography has never been a constraint for us.`,
     category: 'factoryjet',
   },
   {
     question: 'What if I need changes after the website launches?',
-    answer: `Every FactoryJet project includes 30 days of post-launch support at no extra charge. During that window, we handle text changes, image swaps, layout tweaks, and bug fixes for free. After 30 days, we offer maintenance packages for ongoing updates — or we can do one-off changes billed at our standard rate. You also have full admin access to make basic changes yourself. You're never locked into depending on us for routine site management.`,
+    answer: `Every FactoryJet project includes 30 days of post-launch support at no extra charge. During that window, we handle text changes, image swaps, layout tweaks, and bug fixes for free. After 30 days, we offer maintenance packages for ongoing updates, or we can do one-off changes billed at our standard rate. You also have full admin access to make basic changes yourself. You're never locked into depending on us for routine site management.`,
     category: 'factoryjet',
   },
   {
     question: 'How many revisions do I get during the design process?',
-    answer: `We build two rounds of design revisions into every project — enough to get the design right without endless back-and-forth. The first round is a full design review where you can give holistic feedback. The second is a refinement round for specific adjustments. In practice, most projects reach approval in one or two rounds because we do thorough discovery upfront and rarely miss the mark significantly. If something isn't right after two rounds, we'll work through it — we want you to love the design.`,
+    answer: `We build two rounds of design revisions into every project, enough to get the design right without endless back-and-forth. The first round is a full design review where you can give holistic feedback. The second is a refinement round for specific adjustments. In practice, most projects reach approval in one or two rounds because we do thorough discovery upfront and rarely miss the mark significantly. If something isn't right after two rounds, we'll work through it, we want you to love the design.`,
     category: 'factoryjet',
   },
   {
     question: 'What makes FactoryJet different from other small business web designers?',
-    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10–15 clients — which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
+    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10–15 clients, which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
     category: 'factoryjet',
   },
 ];
@@ -470,31 +470,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
+      name: 'Days 5–6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -529,7 +529,7 @@ export default function SmallBusinessWebDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Fixed price, scoped to your build."
-          lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup — and delivered to your domain in 7 days. 500+ US small businesses served."
+          lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup, and delivered to your domain in 7 days. 500+ US small businesses served."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -543,10 +543,10 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { item: 'Custom design', detail: 'Built around your brand — not a template' },
+                  { item: 'Custom design', detail: 'Built around your brand, not a template' },
                   { item: 'Mobile-first', detail: 'Designed for phones before desktops' },
-                  { item: 'Lighthouse 100', detail: 'Performance, SEO, accessibility — all green' },
-                  { item: 'On-page SEO', detail: 'Meta, schema, sitemap, alt text — all done' },
+                  { item: 'Lighthouse 100', detail: 'Performance, SEO, accessibility: all green' },
+                  { item: 'On-page SEO', detail: 'Meta, schema, sitemap, alt text: all done' },
                   { item: 'Contact forms', detail: 'Configured and tested before launch' },
                   { item: 'Analytics + Search Console', detail: 'Connected on day one' },
                   { item: 'Full code ownership', detail: 'Your repo, your hosting, no lock-in' },
@@ -577,7 +577,7 @@ export default function SmallBusinessWebDesignPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ US small businesses trust FactoryJet — from Austin and Miami to Denver, Nashville, and Portland" />
+        <LogoBar tagline="500+ US small businesses trust FactoryJet, from Austin and Miami to Denver, Nashville, and Portland" />
 
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
@@ -589,15 +589,15 @@ export default function SmallBusinessWebDesignPage() {
         <ServiceExplanation
           eyebrow="WHAT ACTUALLY MATTERS"
           headline="Most Small Business Websites Fail at the Same Three Things"
-          lead="A website isn't valuable because it exists. It's valuable because it makes people trust you, makes them take action, and shows up when they're searching. Most small business sites fail at all three — here's why."
+          lead="A website isn't valuable because it exists. It's valuable because it makes people trust you, makes them take action, and shows up when they're searching. Most small business sites fail at all three, here's why."
           body={
             <>
               <p>
-                The first problem is design. 75% of people judge a business's credibility by its website. A template-based site — where the layout looks like ten thousand other businesses — signals that you didn't invest in your presentation. That translates directly to bounce rates, lower trust, and fewer leads. Custom design isn't a luxury. It's the foundation of a site that converts.
+                The first problem is design. 75% of people judge a business's credibility by its website. A template-based site, where the layout looks like ten thousand other businesses, signals that you didn't invest in your presentation. That translates directly to bounce rates, lower trust, and fewer leads. Custom design isn't a luxury. It's the foundation of a site that converts.
               </p>
 
               <p>
-                The second problem is speed. Google uses Core Web Vitals as a ranking signal. A slow site ranks lower, and a slow site also loses visitors — 53% of mobile users abandon a page that takes more than 3 seconds to load. Most DIY website builder sites and cheaply built WordPress sites fail these metrics. Every FactoryJet site hits Lighthouse 100 in Performance, Accessibility, Best Practices, and SEO — those aren't nice-to-haves, they're the baseline.
+                The second problem is speed. Google uses Core Web Vitals as a ranking signal. A slow site ranks lower, and a slow site also loses visitors, 53% of mobile users abandon a page that takes more than 3 seconds to load. Most DIY website builder sites and cheaply built WordPress sites fail these metrics. Every FactoryJet site hits Lighthouse 100 in Performance, Accessibility, Best Practices, and SEO, those aren't nice-to-haves, they're the baseline.
               </p>
 
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -613,7 +613,7 @@ export default function SmallBusinessWebDesignPage() {
                   {[
                     { problem: 'Template design', impact: 'Low trust, high bounce rate', fix: 'Custom-designed for your brand' },
                     { problem: 'Slow load speed', impact: 'Lower ranking, lost visitors', fix: 'Lighthouse 100 on every page' },
-                    { problem: 'No SEO setup', impact: 'Zero organic traffic', fix: 'Schema, meta, sitemap — all configured' },
+                    { problem: 'No SEO setup', impact: 'Zero organic traffic', fix: 'Schema, meta, sitemap: all configured' },
                     { problem: 'Not mobile-first', impact: 'Poor UX for 60%+ of visitors', fix: 'Designed phone-first, every time' },
                     { problem: 'No clear CTA', impact: 'Visitors leave without acting', fix: 'Conversion-optimized page structure' },
                   ].map(({ problem, impact, fix }) => (
@@ -627,7 +627,7 @@ export default function SmallBusinessWebDesignPage() {
               </div>
 
               <p>
-                The third problem is SEO. A beautifully designed, fast-loading site that nobody can find in Google is a missed opportunity. On-page SEO — optimized title tags, meta descriptions, schema markup, XML sitemaps, and Google Search Console setup — needs to be built in from day one. FactoryJet includes all of this in every project, at every price tier.
+                The third problem is SEO. A beautifully designed, fast-loading site that nobody can find in Google is a missed opportunity. On-page SEO, optimized title tags, meta descriptions, schema markup, XML sitemaps, and Google Search Console setup, needs to be built in from day one. FactoryJet includes all of this in every project, at every price tier.
               </p>
             </>
           }
@@ -643,7 +643,7 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { scenario: 'DIY builder — 40 hrs to build', cost: '40 hours of your time', subtext: 'Plus ongoing maintenance hours' },
+                  { scenario: 'DIY builder, 40 hrs to build', cost: '40 hours of your time', subtext: 'Plus ongoing maintenance hours' },
                   { scenario: 'Slow load speed (3s+)', cost: '53% mobile abandonment', subtext: 'Google penalizes slow sites in rankings' },
                   { scenario: 'Template design', cost: 'High bounce rate', subtext: '75% judge credibility by design' },
                   { scenario: 'No on-page SEO', cost: 'Zero organic traffic', subtext: 'Invisible to search engines' },
@@ -674,18 +674,18 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 5. INDUSTRIES WE SERVE --------------------------------------─-- */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
-          headline="We've Built Websites for 500+ US Small Businesses — Across Every Industry"
+          headline="We've Built Websites for 500+ US Small Businesses, Across Every Industry"
         />
 
         {/* -- 6. WHY US AGENCIES AREN'T THE ANSWER ------------------------─-- */}
         <StrategicDarkSection
           eyebrow="THE AGENCY PROBLEM"
           headline={`Three Reasons Traditional Agencies Are Overkill for Most Small Businesses`}
-          lead="US web design agencies do great work for enterprise clients with large budgets. For most small businesses, you're paying for overhead you don't need — and waiting longer than you have to."
+          lead="US web design agencies do great work for enterprise clients with large budgets. For most small businesses, you're paying for overhead you don't need, and waiting longer than you have to."
           pillars={[
             {
               title: 'You pay for their cost structure, not their output',
-              body: `A traditional agency employs account managers, project managers, junior developers billing at senior rates, and UX researchers — many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
+              body: `A traditional agency employs account managers, project managers, junior developers billing at senior rates, and UX researchers, many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
             },
             {
               title: '6–16 weeks to launch when you need 7 days',
@@ -693,7 +693,7 @@ export default function SmallBusinessWebDesignPage() {
             },
             {
               title: `Templates dressed up as custom design`,
-              body: `Many agencies — especially in the mid-price range — use premium WordPress themes or page builder templates with light customization and call it "custom design." You get a site that looks like dozens of others in your industry. FactoryJet designs every site from scratch at the component level: your hero section, your service cards, your testimonials layout — designed to fit your brand specifically, not assembled from a pre-built kit.`,
+              body: `Many agencies, especially in the mid-price range, use premium WordPress themes or page builder templates with light customization and call it "custom design." You get a site that looks like dozens of others in your industry. FactoryJet designs every site from scratch at the component level: your hero section, your service cards, your testimonials layout, designed to fit your brand specifically, not assembled from a pre-built kit.`,
             },
           ]}
         />
@@ -702,7 +702,7 @@ export default function SmallBusinessWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
           headline="FactoryJet vs. DIY Builder vs. Freelancer vs. Traditional Agency"
-          lead="Four ways to get a small business website. Here's what the decision actually looks like when you compare on the things that matter — cost, speed, quality, and ownership."
+          lead="Four ways to get a small business website. Here's what the decision actually looks like when you compare on the things that matter, cost, speed, quality, and ownership."
           pullQuote={{
             stat: '7 days',
             caption: 'delivery guarantee for 5-page small business websites. Traditional agencies average 6–16 weeks for the same scope.',
@@ -721,16 +721,16 @@ export default function SmallBusinessWebDesignPage() {
         <ServiceExplanation
           eyebrow="OUR APPROACH"
           headline="Senior Engineers. Fixed Price. 7-Day Delivery. Full Ownership."
-          lead="Every web design agency promises quality. We're specific about what that means and how we deliver it — because the details are what separate a website that works from one that just exists."
+          lead="Every web design agency promises quality. We're specific about what that means and how we deliver it, because the details are what separate a website that works from one that just exists."
           reverseOnDesktop
           body={
             <>
               <p>
-                FactoryJet has been building websites. That's 12 years of small business web design — enough time to know what works, what doesn't, and how to price projects accurately enough to offer fixed prices with no scope creep games.
+                FactoryJet has been building websites. That's 12 years of small business web design, enough time to know what works, what doesn't, and how to price projects accurately enough to offer fixed prices with no scope creep games.
               </p>
 
               <p>
-                Our lean team serves US clients directly with fixed-price, milestone-paid contracts. You get the same or better engineering — not from junior developers or third-party QA contractors, but from senior engineers on every project, every time. The quote you sign on the first call is what you pay. Full code ownership at handoff.
+                Our lean team serves US clients directly with fixed-price, milestone-paid contracts. You get the same or better engineering, not from junior developers or third-party QA contractors, but from senior engineers on every project, every time. The quote you sign on the first call is what you pay. Full code ownership at handoff.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>
@@ -743,7 +743,7 @@ export default function SmallBusinessWebDesignPage() {
               </div>
 
               <p>
-                Full code ownership on every project. Your files go into your GitHub repo or are delivered as a zip on launch day. Your hosting account. Your domain. If you ever stop working with us, your site keeps running — no dependencies, no hostage situations. That's how it should be.
+                Full code ownership on every project. Your files go into your GitHub repo or are delivered as a zip on launch day. Your hosting account. Your domain. If you ever stop working with us, your site keeps running, no dependencies, no hostage situations. That's how it should be.
               </p>
             </>
           }
@@ -763,7 +763,7 @@ export default function SmallBusinessWebDesignPage() {
                   { reason: '7-day delivery', detail: 'Hard guarantee for 5-page sites' },
                   { reason: 'Fixed pricing', detail: 'No hourly billing, no scope creep' },
                   { reason: 'Senior team only', detail: 'No juniors billing at senior rates' },
-                  { reason: 'Custom design', detail: 'Not templates — built for your brand' },
+                  { reason: 'Custom design', detail: 'Not templates, built for your brand' },
                   { reason: '500+ delivered', detail: '12+ years, hundreds of small businesses' },
                   { reason: 'Full ownership', detail: 'Your code, your hosting, no lock-in' },
                   { reason: '30-day support', detail: 'Post-launch fixes included' },
@@ -785,7 +785,7 @@ export default function SmallBusinessWebDesignPage() {
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
           headline="From Strategy Call to Live Website in 5 Steps"
-          lead={`No surprises, no delays, no "we'll show you when it's done." Every stage is transparent — you know exactly where your project is and what comes next.`}
+          lead={`No surprises, no delays, no "we'll show you when it's done." Every stage is transparent, you know exactly where your project is and what comes next.`}
           stages={JOURNEY_STAGES}
         />
 
@@ -812,7 +812,7 @@ export default function SmallBusinessWebDesignPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* Related Reading — internal linking to blog posts */}
+        {/* Related Reading, internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
@@ -833,7 +833,7 @@ export default function SmallBusinessWebDesignPage() {
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to get a website that actually works?"
-          sub="Book a 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal — no obligation, no sales pressure."
+          sub="Book a 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal, no obligation, no sales pressure."
           primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
           objectionHandler="No commitment required. Most clients get a proposal within 24 hours."

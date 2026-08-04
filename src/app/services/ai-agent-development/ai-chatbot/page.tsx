@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -25,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'AI Chatbot Development India | WhatsApp Chatbot | FactoryJet',
   description:
-    'Custom AI chatbots for Indian businesses — WhatsApp agents, website chatbots & multilingual bots. Integrated with Zoho, Razorpay & Shopify. Fixed price.',
+    'Custom AI chatbots for Indian businesses: WhatsApp agents, website chatbots & multilingual bots. Integrated with Zoho, Razorpay & Shopify. Fixed price.',
   keywords: [
     'AI chatbot development India',
     'WhatsApp chatbot India',
@@ -79,8 +80,22 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas — faqSchema is declared after CHATBOT_FAQ_ITEMS below
+   JSON-LD Schemas, faqSchema is declared after CHATBOT_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-chatbot#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -96,7 +111,7 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Chatbot Development',
   description:
-    'Custom AI chatbots for Indian businesses — WhatsApp chat agents, website chatbots, and multilingual support bots integrated with Zoho, Razorpay, Shopify, and Freshdesk. Fixed price. Deployed in 2–3 weeks.',
+    'Custom AI chatbots for Indian businesses: WhatsApp chat agents, website chatbots, and multilingual support bots integrated with Zoho, Razorpay, Shopify, and Freshdesk. Fixed price. Deployed in 2–3 weeks.',
 };
 
 const speakableSchema = {
@@ -119,7 +134,7 @@ const CHATBOT_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discover',
     description:
-      'A 45-minute call. We map which conversations are costing your team the most time — top WhatsApp queries, FAQ patterns, lead qualification steps — and identify the highest-ROI chatbot use case to build first.',
+      'A 45-minute call. We map which conversations are costing your team the most time, top WhatsApp queries, FAQ patterns, lead qualification steps, and identify the highest-ROI chatbot use case to build first.',
   },
   {
     number: '02',
@@ -131,13 +146,13 @@ const CHATBOT_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build & Integrate',
     description:
-      'Engineering the chatbot with your language, tone, and business rules. We integrate Zoho CRM, Shopify, Freshdesk, Razorpay, or Shiprocket so the bot can take actions — not just answer questions.',
+      'Engineering the chatbot with your language, tone, and business rules. We integrate Zoho CRM, Shopify, Freshdesk, Razorpay, or Shiprocket so the bot can take actions, not just answer questions.',
   },
   {
     number: '04',
     title: 'Train & Test',
     description:
-      'We run the chatbot against real customer conversation samples — including Hindi queries, edge cases, and abusive inputs — tune the prompts, and stress-test until behaviour is reliable and on-brand.',
+      'We run the chatbot against real customer conversation samples, including Hindi queries, edge cases, and abusive inputs, tune the prompts, and stress-test until behaviour is reliable and on-brand.',
   },
   {
     number: '05',
@@ -162,7 +177,7 @@ const CHATBOT_STATS = [
   },
   {
     value: '500M+',
-    label: 'WhatsApp Business users in India — your customers are already there',
+    label: 'WhatsApp Business users in India: your customers are already there',
     microcopy: 'Meta India, 2024',
     categoryLabel: 'WHATSAPP INDIA',
   },
@@ -293,7 +308,7 @@ const CHATBOT_INDUSTRIES = [
   {
     name: 'D2C E-Commerce',
     description:
-      'WhatsApp chatbots that answer order status queries, process returns, send Shiprocket tracking updates, and handle product questions 24/7 — integrated directly with your Shopify or WooCommerce store. Frees your support team to focus on complex issues.',
+      'WhatsApp chatbots that answer order status queries, process returns, send Shiprocket tracking updates, and handle product questions 24/7, integrated directly with your Shopify or WooCommerce store. Frees your support team to focus on complex issues.',
     example: 'D2C brands report 70%+ WhatsApp ticket deflection within 30 days of launch.',
     linkLabel: 'See e-commerce AI',
     linkHref: '/services/ecommerce-development',
@@ -301,31 +316,31 @@ const CHATBOT_INDUSTRIES = [
   {
     name: 'Real Estate',
     description:
-      'Website and WhatsApp chatbots that qualify leads from 99acres, MagicBricks, and Housing.com, answer project FAQs, show available units, and book site visits — all logged automatically to Zoho CRM or LeadSquared.',
+      'Website and WhatsApp chatbots that qualify leads from 99acres, MagicBricks, and Housing.com, answer project FAQs, show available units, and book site visits: all logged automatically to Zoho CRM or LeadSquared.',
     example: 'Builders see 35–50% more site visit bookings without adding telecallers.',
   },
   {
     name: 'EdTech & Coaching',
     description:
-      'Enrolment chatbots that answer course questions, collect student details, process Razorpay payment links, send onboarding material, and track batch registration — reducing counsellor workload by 60%+.',
+      'Enrolment chatbots that answer course questions, collect student details, process Razorpay payment links, send onboarding material, and track batch registration, reducing counsellor workload by 60%+.',
     example: 'EdTech platforms report 3× faster lead-to-enrolment conversion.',
   },
   {
     name: 'Healthcare & Clinics',
     description:
-      'WhatsApp appointment booking bots that check doctor availability, confirm slots, send reminders, and handle cancellations — with DPDP-compliant data handling and full audit trails for every interaction.',
+      'WhatsApp appointment booking bots that check doctor availability, confirm slots, send reminders, and handle cancellations, with DPDP-compliant data handling and full audit trails for every interaction.',
     example: 'Clinics recover 3–4 hours of front-desk time per day.',
   },
   {
     name: 'Financial Services',
     description:
-      'Lead qualification chatbots for loan applications, insurance queries, and investment products — collecting KYC documents, asking eligibility questions, and routing hot leads to relationship managers in real time.',
+      'Lead qualification chatbots for loan applications, insurance queries, and investment products, collecting KYC documents, asking eligibility questions, and routing hot leads to relationship managers in real time.',
     example: 'NBFC platforms cut loan application intake time by 55%.',
   },
   {
     name: 'Retail & Distribution',
     description:
-      'B2B ordering chatbots on WhatsApp that let your dealers place orders, check stock levels, track delivery status, and download GST invoices — without calling your sales team or waiting for business hours.',
+      'B2B ordering chatbots on WhatsApp that let your dealers place orders, check stock levels, track delivery status, and download GST invoices, without calling your sales team or waiting for business hours.',
     example: 'Distributors report 40% fewer inbound sales calls after WhatsApp bot launch.',
   },
 ];
@@ -335,11 +350,11 @@ const CHATBOT_PRICING_TIERS = [
     name: 'Website Chatbot',
     priceRange: '',
     description:
-      'A focused AI chatbot for your website — captures leads, answers FAQs, books appointments, and qualifies visitors 24/7.',
+      'A focused AI chatbot for your website, captures leads, answers FAQs, books appointments, and qualifies visitors 24/7.',
     features: [
       'AI-powered website chat widget (no scripted decision tree)',
       'Lead capture with CRM push (Zoho, HubSpot, or Google Sheets)',
-      'FAQ knowledge base — trained on your product/service content',
+      'FAQ knowledge base, trained on your product/service content',
       'Appointment booking with calendar integration',
       'Human handoff trigger when confidence is low',
       'Claude, GPT-4o, or Gemini as the underlying model',
@@ -351,7 +366,7 @@ const CHATBOT_PRICING_TIERS = [
     name: 'WhatsApp AI Chatbot',
     priceRange: '',
     description:
-      'A production-grade WhatsApp AI chatbot on Interakt, Wati, or AiSensy — integrated with your CRM, store, and support tools. Our most popular India deployment.',
+      'A production-grade WhatsApp AI chatbot on Interakt, Wati, or AiSensy, integrated with your CRM, store, and support tools. Our most popular India deployment.',
     features: [
       'WhatsApp Business API on Interakt, Wati, or AiSensy',
       'Zoho CRM / Freshdesk / Shopify / Shiprocket integration',
@@ -374,7 +389,7 @@ const CHATBOT_PRICING_TIERS = [
       'Website chat + WhatsApp + Freshdesk / Zoho Desk in one platform',
       'Unified conversation inbox with agent workspace',
       'Deep Zoho CRM / Tally / Shopify / Razorpay integration',
-      'Custom analytics dashboard — conversation volume, deflection, CSAT',
+      'Custom analytics dashboard, conversation volume, deflection, CSAT',
       'Multi-language auto-detection across all channels',
       'Role-based admin access for your support team',
       '90-day post-launch support and optimisation window',
@@ -398,7 +413,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'basics',
     question: 'What is the difference between an AI chatbot and a scripted chatbot?',
     answer:
-      "A scripted chatbot follows a fixed decision tree — it works only if the customer clicks the expected buttons and breaks the moment someone types something unexpected. An AI chatbot uses a large language model to understand natural language intent, respond conversationally, and handle questions the script never anticipated. It also takes actions: checking your Shopify order status, updating Zoho CRM, sending a Razorpay payment link — things a scripted bot simply cannot do.",
+      "A scripted chatbot follows a fixed decision tree, it works only if the customer clicks the expected buttons and breaks the moment someone types something unexpected. An AI chatbot uses a large language model to understand natural language intent, respond conversationally, and handle questions the script never anticipated. It also takes actions: checking your Shopify order status, updating Zoho CRM, sending a Razorpay payment link, things a scripted bot simply cannot do.",
   },
   {
     category: 'basics',
@@ -410,13 +425,13 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'basics',
     question: 'Will the chatbot understand customer questions it was not specifically trained on?',
     answer:
-      "Yes — that is the core advantage of AI over scripted bots. Large language models understand intent, not just keywords. A customer asking 'where is my parcel', 'has my order shipped', or 'track my delivery yaar' will all be understood as the same question. The bot reads your Shiprocket/Delhivery data and replies accurately — regardless of how the customer phrases it.",
+      "Yes, that is the core advantage of AI over scripted bots. Large language models understand intent, not just keywords. A customer asking 'where is my parcel', 'has my order shipped', or 'track my delivery yaar' will all be understood as the same question. The bot reads your Shiprocket/Delhivery data and replies accurately, regardless of how the customer phrases it.",
   },
   {
     category: 'basics',
     question: 'What happens when the chatbot cannot answer a question?',
     answer:
-      "Every chatbot we build includes a confidence threshold — if the model is not sure, it escalates to a human agent rather than guessing. We set this up with a context handover (the agent sees the full conversation history) so the customer does not have to repeat themselves. You control where escalations go: a specific WhatsApp number, a Freshdesk ticket, a Zoho CRM task, or a Slack notification.",
+      "Every chatbot we build includes a confidence threshold, if the model is not sure, it escalates to a human agent rather than guessing. We set this up with a context handover (the agent sees the full conversation history) so the customer does not have to repeat themselves. You control where escalations go: a specific WhatsApp number, a Freshdesk ticket, a Zoho CRM task, or a Slack notification.",
   },
 
   /* ── WhatsApp & Channels ── */
@@ -424,7 +439,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'whatsapp',
     question: 'Can you build a WhatsApp AI chatbot for my business?',
     answer:
-      "Yes — WhatsApp chatbots are our most common India deployment. We build on Interakt, Wati, AiSensy, and Yellow.ai — all Meta-approved WhatsApp Business Solution Providers. The chatbot integrates with your Shopify store, Zoho CRM, Freshdesk, or Google Sheets so it can take real actions, not just reply with text. Deployed on your WhatsApp Business account with your branding.",
+      "Yes, WhatsApp chatbots are our most common India deployment. We build on Interakt, Wati, AiSensy, and Yellow.ai: all Meta-approved WhatsApp Business Solution Providers. The chatbot integrates with your Shopify store, Zoho CRM, Freshdesk, or Google Sheets so it can take real actions, not just reply with text. Deployed on your WhatsApp Business account with your branding.",
   },
   {
     category: 'whatsapp',
@@ -436,13 +451,13 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'whatsapp',
     question: 'Does my business need a WhatsApp Business API account first?',
     answer:
-      "No — we handle the WhatsApp Business API setup as part of the project. We work with you to choose the right WhatsApp BSP (Interakt, Wati, or AiSensy based on your volume and budget), complete Meta Business verification, and set up your account. Most Indian businesses are verified and live within 5–7 business days of submitting documents.",
+      "No, we handle the WhatsApp Business API setup as part of the project. We work with you to choose the right WhatsApp BSP (Interakt, Wati, or AiSensy based on your volume and budget), complete Meta Business verification, and set up your account. Most Indian businesses are verified and live within 5–7 business days of submitting documents.",
   },
   {
     category: 'whatsapp',
-    question: 'Can the chatbot send proactive WhatsApp messages — not just respond?',
+    question: 'Can the chatbot send proactive WhatsApp messages, not just respond?',
     answer:
-      "Yes — using WhatsApp template messages (pre-approved by Meta). Common use cases: order shipped notifications, payment confirmation, appointment reminders, follow-up messages to leads who went quiet, and re-engagement campaigns. We set up the template approval process and integrate the broadcast into your Razorpay/Shopify/Zoho workflow so triggers fire automatically.",
+      "Yes, using WhatsApp template messages (pre-approved by Meta). Common use cases: order shipped notifications, payment confirmation, appointment reminders, follow-up messages to leads who went quiet, and re-engagement campaigns. We set up the template approval process and integrate the broadcast into your Razorpay/Shopify/Zoho workflow so triggers fire automatically.",
   },
 
   /* ── India-Specific ── */
@@ -450,7 +465,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'india',
     question: 'Can the chatbot respond in Hindi and regional languages?',
     answer:
-      "Yes. We configure chatbots to detect the language the customer writes in and respond in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, Kannada, Bengali, and other languages using multilingual LLM capabilities. Language detection is automatic — one bot handles all languages without separate bots per language.",
+      "Yes. We configure chatbots to detect the language the customer writes in and respond in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, Kannada, Bengali, and other languages using multilingual LLM capabilities. Language detection is automatic: one bot handles all languages without separate bots per language.",
   },
   {
     category: 'india',
@@ -466,7 +481,7 @@ const CHATBOT_FAQ_ITEMS = [
   },
   {
     category: 'india',
-    question: 'Can the chatbot handle Razorpay payment links — sending and confirming payments?',
+    question: 'Can the chatbot handle Razorpay payment links, sending and confirming payments?',
     answer:
       "Yes. We integrate Razorpay webhooks so the chatbot can: generate and send a payment link on WhatsApp when a customer confirms an order, receive the payment success webhook, confirm the transaction to the customer, and log the payment to Zoho CRM or Tally automatically. This replaces manual payment follow-ups entirely.",
   },
@@ -476,25 +491,25 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build an AI chatbot?',
     answer:
-      "A focused website or WhatsApp chatbot goes from kickoff to live in 2–3 weeks. Multi-channel chatbots with deeper CRM/ERP integrations take 4–6 weeks. The timeline depends on the number of integrations and how many conversation flows we need to build — we give you a firm estimate after a 45-minute discovery call.",
+      "A focused website or WhatsApp chatbot goes from kickoff to live in 2–3 weeks. Multi-channel chatbots with deeper CRM/ERP integrations take 4–6 weeks. The timeline depends on the number of integrations and how many conversation flows we need to build, we give you a firm estimate after a 45-minute discovery call.",
   },
   {
     category: 'process',
     question: 'What do I need to provide before you start building?',
     answer:
-      "Access to your WhatsApp Business account (or we set it up), API keys for the tools we integrate (Zoho, Shopify, Razorpay, etc.), your product/service content for training the knowledge base (FAQs, product catalogue, pricing — even a Google Doc works), and your brand guidelines (tone, language preferences). We send a structured onboarding form after the discovery call.",
+      "Access to your WhatsApp Business account (or we set it up), API keys for the tools we integrate (Zoho, Shopify, Razorpay, etc.), your product/service content for training the knowledge base (FAQs, product catalogue, pricing, even a Google Doc works), and your brand guidelines (tone, language preferences). We send a structured onboarding form after the discovery call.",
   },
   {
     category: 'process',
     question: 'How do you train the chatbot on my specific business content?',
     answer:
-      "We build a knowledge base from your existing content — website copy, FAQs, product descriptions, pricing documents, support scripts. We process this into vector embeddings (RAG architecture) so the chatbot retrieves relevant context before answering. You update the knowledge base through a simple admin panel — no technical skills required.",
+      "We build a knowledge base from your existing content, website copy, FAQs, product descriptions, pricing documents, support scripts. We process this into vector embeddings (RAG architecture) so the chatbot retrieves relevant context before answering. You update the knowledge base through a simple admin panel, no technical skills required.",
   },
   {
     category: 'process',
     question: 'What happens after the chatbot goes live?',
     answer:
-      "Every project includes a 30-day post-launch window. We monitor conversation logs, tune responses where the bot underperforms, fix any integration issues, and run a training session for your team. After 30 days, you manage the chatbot through the admin dashboard — or continue on an optional monthly retainer for ongoing optimisation and new conversation flows.",
+      "Every project includes a 30-day post-launch window. We monitor conversation logs, tune responses where the bot underperforms, fix any integration issues, and run a training session for your team. After 30 days, you manage the chatbot through the admin dashboard, or continue on an optional monthly retainer for ongoing optimisation and new conversation flows.",
   },
 
   /* ── Pricing & ROI ── */
@@ -502,19 +517,19 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI chatbot cost in India?',
     answer:
-      "FactoryJet AI chatbots are fixed-price and scoped to your build — a focused website chatbot, a WhatsApp AI chatbot with CRM integration, or a multi-channel platform (website + WhatsApp + support portal). Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing surprises. Separately, LLM API costs (typically ₹3,000–₹15,000/month for most Indian SMB volumes) are billed directly by model providers.",
+      "FactoryJet AI chatbots are fixed-price and scoped to your build: a focused website chatbot, a WhatsApp AI chatbot with CRM integration, or a multi-channel platform (website + WhatsApp + support portal). Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing surprises. Separately, LLM API costs (typically ₹3,000–₹15,000/month for most Indian SMB volumes) are billed directly by model providers.",
   },
   {
     category: 'pricing',
     question: 'What is the typical return on investment for an Indian business chatbot?',
     answer:
-      "The most common ROI comes from support labour savings. A WhatsApp chatbot handling 70% of queries replaces 1–2 support executives at a fraction of the cost — payback in 3–6 months for most businesses. Secondary ROI: leads that now get an instant response instead of waiting 4–6 hours convert at significantly higher rates. Most clients see measurable improvement within 30 days of launch.",
+      "The most common ROI comes from support labour savings. A WhatsApp chatbot handling 70% of queries replaces 1–2 support executives at a fraction of the cost, payback in 3–6 months for most businesses. Secondary ROI: leads that now get an instant response instead of waiting 4–6 hours convert at significantly higher rates. Most clients see measurable improvement within 30 days of launch.",
   },
   {
     category: 'pricing',
     question: 'Are there ongoing costs after the chatbot is built?',
     answer:
-      "Two types: LLM API costs (₹3,000–₹15,000/month for typical Indian SMB chat volumes — billed directly by model providers, we do not mark these up) and your WhatsApp BSP subscription (Interakt/Wati/AiSensy charge separately based on message volume). FactoryJet charges nothing ongoing unless you choose a monthly retainer for optimisation.",
+      "Two types: LLM API costs (₹3,000–₹15,000/month for typical Indian SMB chat volumes, billed directly by model providers, we do not mark these up) and your WhatsApp BSP subscription (Interakt/Wati/AiSensy charge separately based on message volume). FactoryJet charges nothing ongoing unless you choose a monthly retainer for optimisation.",
   },
   {
     category: 'pricing',
@@ -541,6 +556,10 @@ const faqSchema = {
 export default function AIChatbotINPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="ai-chatbot-in-faq-schema"
         type="application/ld+json"
@@ -576,13 +595,19 @@ export default function AIChatbotINPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+          { name: 'AI Chatbot', url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_chatbot_hero" />}
           eyebrow="AI CHATBOT DEVELOPMENT · INDIA"
           headline="AI Chatbots Built for Indian Customers, Live in 2–3 Weeks"
-          lead="Your customers are asking the same WhatsApp questions 200 times a day. Your team is drowning in queries that an AI chatbot can handle instantly — in Hindi, English, or any regional language — while pushing data directly into Zoho, Shopify, and Razorpay. Fixed price. No ongoing SaaS fee."
+          lead="Your customers are asking the same WhatsApp questions 200 times a day. Your team is drowning in queries that an AI chatbot can handle instantly, in Hindi, English, or any regional language, while pushing data directly into Zoho, Shopify, and Razorpay. Fixed price. No ongoing SaaS fee."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
@@ -598,7 +623,7 @@ export default function AIChatbotINPage() {
                 WHATSAPP AI CHATBOT IN ACTION
               </p>
               <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                600+ WhatsApp queries resolved automatically — every day, without a single extra hire.
+                600+ WhatsApp queries resolved automatically: every day, without a single extra hire.
               </p>
               <div className="mt-6 space-y-3">
                 {[
@@ -618,7 +643,7 @@ export default function AIChatbotINPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  Runs 24/7 in Hindi, English, and regional languages — no sick leave, no salary.
+                  Runs 24/7 in Hindi, English, and regional languages, no sick leave, no salary.
                 </p>
               </div>
             </div>
@@ -638,7 +663,7 @@ export default function AIChatbotINPage() {
         <ServiceExplanation
           eyebrow="AI CHATBOT EXPLAINED"
           headline="Why an AI Chatbot Is Nothing Like the Scripted Bots You Have Tried"
-          lead="Scripted chatbots break the moment a customer asks something unexpected. AI chatbots understand intent in plain language, take real actions in your systems, and improve over time — with no script to maintain."
+          lead="Scripted chatbots break the moment a customer asks something unexpected. AI chatbots understand intent in plain language, take real actions in your systems, and improve over time, with no script to maintain."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -662,7 +687,7 @@ export default function AIChatbotINPage() {
                 ))}
               </div>
               <p>
-                The scripted chatbots most Indian businesses have tried — button-click menus, keyword matching, decision trees — fail 40–60% of conversations because customers do not behave the way the script expects. They use different words, mix languages, ask follow-up questions, or type something the script never anticipated. The bot breaks, the customer leaves, and your team picks up the mess.
+                The scripted chatbots most Indian businesses have tried, button-click menus, keyword matching, decision trees, fail 40–60% of conversations because customers do not behave the way the script expects. They use different words, mix languages, ask follow-up questions, or type something the script never anticipated. The bot breaks, the customer leaves, and your team picks up the mess.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -698,7 +723,7 @@ export default function AIChatbotINPage() {
                 </p>
               </div>
               <p>
-                FactoryJet AI chatbots are built on large language models — Claude, GPT-4o, or Gemini — with a retrieval layer trained on your specific business content: product catalogue, pricing, policies, FAQ answers. The bot understands what your customer means, checks your live data (Shopify orders, Zoho CRM, Shiprocket tracking), and takes action or escalates intelligently. No script to maintain, no tree to update every time you change your pricing.
+                FactoryJet AI chatbots are built on large language models: Claude, GPT-4o, or Gemini, with a retrieval layer trained on your specific business content: product catalogue, pricing, policies, FAQ answers. The bot understands what your customer means, checks your live data (Shopify orders, Zoho CRM, Shiprocket tracking), and takes action or escalates intelligently. No script to maintain, no tree to update every time you change your pricing.
               </p>
             </>
           }
@@ -716,7 +741,7 @@ export default function AIChatbotINPage() {
                 {[
                   {
                     scenario: 'Customer types in Hindi',
-                    scripted: 'Breaks — only English supported',
+                    scripted: 'Breaks, only English supported',
                     ai: 'Understands, responds in Hindi automatically',
                   },
                   {
@@ -726,7 +751,7 @@ export default function AIChatbotINPage() {
                   },
                   {
                     scenario: 'Check Shopify order status',
-                    scripted: 'Cannot — no system integration',
+                    scripted: 'Cannot, no system integration',
                     ai: 'Queries Shopify live, replies with status in 3 sec',
                   },
                   {
@@ -737,7 +762,7 @@ export default function AIChatbotINPage() {
                   {
                     scenario: 'Knowledge base update',
                     scripted: 'Rebuild the decision tree',
-                    ai: 'Upload a document — done in minutes',
+                    ai: 'Upload a document, done in minutes',
                   },
                 ].map((row) => (
                   <div key={row.scenario} className="px-7 py-4">
@@ -763,12 +788,12 @@ export default function AIChatbotINPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is answering the same WhatsApp messages on repeat"
-          lead="The biggest hidden cost in most Indian businesses is not salary — it is repetition. Your support staff spend 60–70% of their time on questions with the same 10 answers. An AI chatbot eliminates that entirely."
+          lead="The biggest hidden cost in most Indian businesses is not salary, it is repetition. Your support staff spend 60–70% of their time on questions with the same 10 answers. An AI chatbot eliminates that entirely."
           pillars={[
             {
               icon: '💬',
               title: 'WhatsApp support is your most expensive bottleneck',
-              body: "500 million Indians use WhatsApp. Your customers are on it. Your team manages it manually — typing the same answers, sending the same tracking links, fielding the same pricing questions — all day, every day. One AI chatbot handles 70%+ of these automatically, in the customer's language, at 2 AM.",
+              body: "500 million Indians use WhatsApp. Your customers are on it. Your team manages it manually, typing the same answers, sending the same tracking links, fielding the same pricing questions: all day, every day. One AI chatbot handles 70%+ of these automatically, in the customer's language, at 2 AM.",
             },
             {
               icon: '⏱️',
@@ -778,7 +803,7 @@ export default function AIChatbotINPage() {
             {
               icon: '🔄',
               title: 'Scripted chatbots create more problems than they solve',
-              body: "You tried a button-menu chatbot — it confused customers, increased escalations, and your team spent more time managing the bot than it saved. AI chatbots are fundamentally different: they understand intent, handle unexpected questions, integrate with your real systems, and get smarter over time. The failure mode of scripted bots is not an AI problem.",
+              body: "You tried a button-menu chatbot, it confused customers, increased escalations, and your team spent more time managing the bot than it saved. AI chatbots are fundamentally different: they understand intent, handle unexpected questions, integrate with your real systems, and get smarter over time. The failure mode of scripted bots is not an AI problem.",
             },
           ]}
         />
@@ -795,7 +820,7 @@ export default function AIChatbotINPage() {
         <ServiceExplanation
           eyebrow="TECHNOLOGY"
           headline="The technology stack behind your AI chatbot"
-          lead="We do not have a preferred vendor — we pick the right model and platform for your business, channel, and data sensitivity requirements. Every architectural decision is documented."
+          lead="We do not have a preferred vendor, we pick the right model and platform for your business, channel, and data sensitivity requirements. Every architectural decision is documented."
           reverseOnDesktop
           body={
             <>
@@ -830,7 +855,7 @@ export default function AIChatbotINPage() {
                 </table>
               </div>
               <p>
-                For data-sensitive sectors — healthcare, BFSI, legal — we deploy private LLM setups where your data never leaves your infrastructure. No third-party model provider sees your customer conversations.
+                For data-sensitive sectors, healthcare, BFSI, legal, we deploy private LLM setups where your data never leaves your infrastructure. No third-party model provider sees your customer conversations.
               </p>
             </>
           }
@@ -864,7 +889,7 @@ export default function AIChatbotINPage() {
                   },
                   {
                     name: 'B2B Ordering Chatbot',
-                    desc: 'Lets your dealers place orders, check stock, download GST invoices on WhatsApp — 24/7.',
+                    desc: 'Lets your dealers place orders, check stock, download GST invoices on WhatsApp, 24/7.',
                   },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
@@ -928,10 +953,10 @@ export default function AIChatbotINPage() {
         {/* ── 9. INDIA MARKET CONTEXT ───────────────────────────────────────── */}
         <CityContextSection
           eyebrow="INDIA CHATBOT MARKET"
-          headline="500 million WhatsApp users. Your customers expect to chat — not call."
+          headline="500 million WhatsApp users. Your customers expect to chat, not call."
           leadParagraphs={[
-            "India is the world's largest WhatsApp market, with over 500 million active users. 87% of Indian consumers prefer messaging over phone calls for customer support — yet most Indian businesses still handle WhatsApp manually, with teams typing the same answers hundreds of times a day. The businesses deploying AI chatbots now are compounding a customer experience advantage their competitors cannot easily close.",
-            "The India chatbot market is projected to exceed ₹8,200 Cr by 2028, growing at 28% CAGR. The growth is driven not by large enterprises — most of them already have chatbots — but by SMBs in D2C, real estate, EdTech, healthcare, and B2B distribution discovering that AI chatbots are now affordable enough to deploy at any scale.",
+            "India is the world's largest WhatsApp market, with over 500 million active users. 87% of Indian consumers prefer messaging over phone calls for customer support, yet most Indian businesses still handle WhatsApp manually, with teams typing the same answers hundreds of times a day. The businesses deploying AI chatbots now are compounding a customer experience advantage their competitors cannot easily close.",
+            "The India chatbot market is projected to exceed ₹8,200 Cr by 2028, growing at 28% CAGR. The growth is driven not by large enterprises: most of them already have chatbots, but by SMBs in D2C, real estate, EdTech, healthcare, and B2B distribution discovering that AI chatbots are now affordable enough to deploy at any scale.",
           ]}
           bodySlot={
             <>
@@ -970,11 +995,11 @@ export default function AIChatbotINPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Scripted Chatbot Tool vs. Freelancer vs. No-Code Builder"
-          lead="Fixed price, full ownership, Indian business stack out of the box — here is the honest comparison."
+          lead="Fixed price, full ownership, Indian business stack out of the box, here is the honest comparison."
           pullQuote={{
             stat: 'Fixed price',
             caption:
-              'scoped to your build — AI chatbot with natural language understanding, Hindi support, Zoho CRM integration, and full code ownership. No SaaS subscription. No decision tree to maintain. Quoted up front after a free discovery call, so you know the full cost before work starts.',
+              'scoped to your build, AI chatbot with natural language understanding, Hindi support, Zoho CRM integration, and full code ownership. No SaaS subscription. No decision tree to maintain. Quoted up front after a free discovery call, so you know the full cost before work starts.',
           }}
           columns={CHATBOT_COMPARISON_COLUMNS}
           rows={CHATBOT_COMPARISON_ROWS}
@@ -1000,7 +1025,7 @@ export default function AIChatbotINPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Start"
-          lead="The questions we answer on every Indian AI chatbot discovery call — answered honestly, without the runaround."
+          lead="The questions we answer on every Indian AI chatbot discovery call, answered honestly, without the runaround."
           categories={CHATBOT_FAQ_CATEGORIES}
           items={CHATBOT_FAQ_ITEMS}
         />
@@ -1013,7 +1038,7 @@ export default function AIChatbotINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free AI Chatbot Strategy Call"
-            sub="Tell us your biggest support or lead-response bottleneck. We will map out exactly which chatbot type fits your business and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 12 years."
+            sub="Tell us your biggest support or lead-response bottleneck. We will map out exactly which chatbot type fits your business and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure: an honest assessment from engineers who have been building for Indian businesses for 12 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. No SaaS lock-in."

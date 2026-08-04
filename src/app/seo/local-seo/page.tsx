@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -49,6 +50,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/local-seo', languages: seoSubServiceAlternatesIN['local-seo'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/local-seo#webpage',
+  url: 'https://factoryjet.com/seo/local-seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -141,6 +156,10 @@ const LOCAL_COMPARISON_ROWS = [
 export default function LocalSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="local-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="local-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
@@ -155,10 +174,15 @@ export default function LocalSeoPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'Local SEO', url: 'https://factoryjet.com/seo/local-seo' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_local_seo_hero" />}
           eyebrow="LOCAL SEO SERVICES · INDIA"
-          headline="Local SEO Services in India — Get Found on Google When People Near You Are Ready to Buy"
+          headline="Local SEO Services in India, Get Found on Google When People Near You Are Ready to Buy"
           lead="When someone close by searches Google for what you sell, Google shows three businesses on a small map right at the top. If yours is not one of the three, people just pick someone else. We help small businesses across India show up there. We set up and look after your free Google listing, make sure your business details are the same everywhere online, help you get more reviews, and build pages that bring in nearby customers. No long contracts, and everything we do stays yours."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Google listing looked after', '"Near me" searches', 'No long contracts']}
@@ -167,7 +191,7 @@ export default function LocalSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Local SEO Agency — 500+ Sites, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Local SEO Agency, 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

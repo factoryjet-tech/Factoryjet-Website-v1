@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { webDesignAlternates } from '@/data/hreflangMap';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -128,7 +129,9 @@ export const metadata: Metadata = {
   title: 'Web Design UK | Conversion-Focused Website Design | FactoryJet',
   description:
     'FactoryJet is a UK web design agency. Fast, conversion-focused website design on Next.js, WordPress, Webflow, Framer, and Shopify. Fixed scope, you own the code. Get a free quote.',
-  alternates: { canonical: CANONICAL },
+  // Emits the same cluster the India and US web-design pages emit, so the
+  // en-GB reciprocal actually resolves. Previously canonical-only.
+  alternates: { canonical: CANONICAL, languages: webDesignAlternates },
   openGraph: {
     title: 'Web Design UK | Conversion-Focused Website Design | FactoryJet',
     description:

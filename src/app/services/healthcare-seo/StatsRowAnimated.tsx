@@ -24,21 +24,21 @@ const STATS: StatItem[] = [
     countTo: 500,
     suffix: 'businesses served',
     label: 'across 10+ industries including healthcare',
-    body: 'We have worked with medical, dental, health tech, and healthcare staffing clients alongside our broader SMB portfolio — enough to know where generalist SEO agencies fall short in regulated verticals.',
+    body: 'We have worked with medical, dental, health tech, and healthcare staffing clients alongside our broader SMB portfolio, enough to know where generalist SEO agencies fall short in regulated verticals.',
   },
   {
     value: 'YMYL',
     countTo: null,
     suffix: 'specialist',
     label: 'E-E-A-T built in from the first draft',
-    body: 'Healthcare content lives or dies on E-E-A-T. We build provider bylines, licensed citations, and verifiable credentials into every page from the start — not as a fix when rankings plateau after months of investment.',
+    body: 'Healthcare content lives or dies on E-E-A-T. We build provider bylines, licensed citations, and verifiable credentials into every page from the start, not as a fix when rankings plateau after months of investment.',
   },
   {
     value: 'Google + AI',
     countTo: null,
     suffix: 'both covered',
     label: 'map pack + AI citations in one monthly report',
-    body: 'Patients search Google Maps and ask ChatGPT for provider recommendations. We optimize for both and report both — map pack positions, organic rankings, and AI-engine citations side by side every month.',
+    body: 'Patients search Google Maps and ask ChatGPT for provider recommendations. We optimize for both and report both, map pack positions, organic rankings, and AI-engine citations side by side every month.',
   },
 ];
 
@@ -108,7 +108,7 @@ function StatCard({ stat }: { stat: StatItem }) {
 
   return (
     <div ref={ref}>
-      {/* Large number — display font, orange, stacked block layout */}
+      {/* Large number, display font, orange, stacked block layout */}
       <p
         className="fj-display font-bold"
         style={{
@@ -122,7 +122,7 @@ function StatCard({ stat }: { stat: StatItem }) {
       >
         {displayValue}
       </p>
-      {/* Suffix sits directly below the number — no inline wrapping */}
+      {/* Suffix sits directly below the number, no inline wrapping */}
       <p
         className="mt-1 font-fj-body font-semibold"
         style={{

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Jaipur | FactoryJet',
     description:
-      'Professional website design company in Jaipur — Next.js, SEO, and GA4 included. 7-day delivery. Serving Malviya Nagar, C-Scheme, Sitapura & Sanganer.',
+      'Professional website design company in Jaipur: Next.js, SEO, and GA4 included. 7-day delivery. Serving Malviya Nagar, C-Scheme, Sitapura & Sanganer.',
     url: 'https://factoryjet.com/web-design/jaipur',
     images: [
       {
@@ -89,6 +90,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/jaipur#webpage',
+  url: 'https://factoryjet.com/web-design/jaipur',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -139,31 +154,31 @@ const JPR_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Jaipur's market — whether that's an international buyer sourcing jewellery or Jaipuri handicrafts, a tourism operator targeting overseas travellers, or an IT startup in Malviya Nagar. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Jaipur's market, whether that's an international buyer sourcing jewellery or Jaipuri handicrafts, a tourism operator targeting overseas travellers, or an IT startup in Malviya Nagar. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, jewellery showcase galleries, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, jewellery showcase galleries, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Jaipur-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Jaipur-specific local SEO targeting built in.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -194,13 +209,13 @@ const JPR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Jaipur web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,7 +235,7 @@ const JPR_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -240,7 +255,7 @@ const JPR_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Jaipur businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Jaipur businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -252,7 +267,7 @@ const JPR_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Jaipur Local ── */
@@ -260,19 +275,19 @@ const JPR_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for jewellery exporters and handicraft businesses in Jaipur?',
     answer:
-      "Yes — jewellery exporters, gemstone dealers, and handicraft manufacturers are a core client profile for us in Jaipur. Jaipur is India's largest jewellery hub and accounts for a significant share of India's gemstone exports. We build B2B websites with product catalog architecture, gemstone specification displays, export credential sections, and RFQ forms designed for international buyers in the US, EU, and UAE.",
+      "Yes, jewellery exporters, gemstone dealers, and handicraft manufacturers are a core client profile for us in Jaipur. Jaipur is India's largest jewellery hub and accounts for a significant share of India's gemstone exports. We build B2B websites with product catalog architecture, gemstone specification displays, export credential sections, and RFQ forms designed for international buyers in the US, EU, and UAE.",
   },
   {
     category: 'local',
     question: 'Can you build tourism and hospitality websites for Jaipur businesses?',
     answer:
-      "Yes. Jaipur draws 5M+ tourists annually as Rajasthan's Pink City and one of India's Golden Triangle destinations. We build hotel booking sites, heritage haveli websites, tour operator platforms, and travel experience portals — with booking engine integrations, multilingual support for international visitors, and SEO targeting global travel searches.",
+      "Yes. Jaipur draws 5M+ tourists annually as Rajasthan's Pink City and one of India's Golden Triangle destinations. We build hotel booking sites, heritage haveli websites, tour operator platforms, and travel experience portals, with booking engine integrations, multilingual support for international visitors, and SEO targeting global travel searches.",
   },
   {
     category: 'local',
     question: "Do you know Jaipur's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Jaipur's business geography as part of discovery — from Malviya Nagar's IT hub and C-Scheme's premium commercial zone to Sitapura Industrial Area's export units, Sanganer's textile printing clusters, and MI Road's high-street retail. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Jaipur's business geography as part of discovery, from Malviya Nagar's IT hub and C-Scheme's premium commercial zone to Sitapura Industrial Area's export units, Sanganer's textile printing clusters, and MI Road's high-street retail. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -286,7 +301,7 @@ const JPR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -310,7 +325,7 @@ const JPR_FAQ_ITEMS = [
     category: 'support',
     question: 'Can you help Jaipur businesses sell internationally through their website?',
     answer:
-      "Absolutely. Many Jaipur jewellery and handicraft exporters need websites that attract B2B buyers from the US, UK, EU, and UAE. We build English-language websites with international trust signals — export credentials, GJEPC membership display, international payment options, and SEO targeting high-intent buyer searches like 'wholesale Jaipur jewellery exporter' from overseas markets.",
+      "Absolutely. Many Jaipur jewellery and handicraft exporters need websites that attract B2B buyers from the US, UK, EU, and UAE. We build English-language websites with international trust signals, export credentials, GJEPC membership display, international payment options, and SEO targeting high-intent buyer searches like 'wholesale Jaipur jewellery exporter' from overseas markets.",
   },
   {
     category: 'pricing',
@@ -441,31 +456,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Jaipur market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Jaipur competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Jaipur local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Jaipur local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -489,6 +504,10 @@ const speakableSchema = {
 export default function JaipurWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="jpr-local-business-schema"
         type="application/ld+json"
@@ -518,6 +537,11 @@ export default function JaipurWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Jaipur', url: 'https://factoryjet.com/web-design/jaipur' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
@@ -547,26 +571,26 @@ export default function JaipurWebDesignPage() {
           eyebrow="JAIPUR MARKET"
           headline="Why Your Jaipur Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Jaipur is not just Rajasthan's capital — it is India's jewellery hub, one of the world's largest gemstone-cutting centres, and a handicraft export powerhouse that ships Jaipuri prints, blue pottery, and block-printed textiles to buyers across the US, EU, and UAE. The city's 750,000+ SMEs span jewellery manufacturing in Sitapura and Johri Bazaar, textile printing in Sanganer, tourism and hospitality around the walled city, IT and startup activity in Malviya Nagar, and high-street retail along MI Road and C-Scheme. Jaipur's gemstone and jewellery sector alone contributes billions to India's export economy.",
-            "This creates a web design requirement that is deeply specific to Jaipur: a Sitapura jewellery exporter needs a completely different site architecture from a heritage haveli hotel on Amer Road or a SaaS startup in Malviya Nagar. International B2B buyers from the US, EU, and UAE research Indian jewellery suppliers for weeks before making contact — your website is your export brochure, credibility signal, and first sales rep combined. Tourism operators need booking systems and multilingual content for global travellers. Handicraft exporters need a product showcase that communicates craft heritage and production capacity in equal measure.",
-            "Rajasthan's government has been actively investing in the startup ecosystem through iStart Rajasthan, with thousands of registered startups and a growing community of founders building digital-first businesses. Jaipur's digital adoption is accelerating — and the businesses that build high-performing websites now will capture the search rankings, buyer first impressions, and digital credibility their slower competitors are conceding every week.",
+            "Jaipur is not just Rajasthan's capital, it is India's jewellery hub, one of the world's largest gemstone-cutting centres, and a handicraft export powerhouse that ships Jaipuri prints, blue pottery, and block-printed textiles to buyers across the US, EU, and UAE. The city's 750,000+ SMEs span jewellery manufacturing in Sitapura and Johri Bazaar, textile printing in Sanganer, tourism and hospitality around the walled city, IT and startup activity in Malviya Nagar, and high-street retail along MI Road and C-Scheme. Jaipur's gemstone and jewellery sector alone contributes billions to India's export economy.",
+            "This creates a web design requirement that is deeply specific to Jaipur: a Sitapura jewellery exporter needs a completely different site architecture from a heritage haveli hotel on Amer Road or a SaaS startup in Malviya Nagar. International B2B buyers from the US, EU, and UAE research Indian jewellery suppliers for weeks before making contact: your website is your export brochure, credibility signal, and first sales rep combined. Tourism operators need booking systems and multilingual content for global travellers. Handicraft exporters need a product showcase that communicates craft heritage and production capacity in equal measure.",
+            "Rajasthan's government has been actively investing in the startup ecosystem through iStart Rajasthan, with thousands of registered startups and a growing community of founders building digital-first businesses. Jaipur's digital adoption is accelerating, and the businesses that build high-performing websites now will capture the search rankings, buyer first impressions, and digital credibility their slower competitors are conceding every week.",
           ]}
           stats={[
             {
               value: '5M+',
-              label: 'Annual tourists to Jaipur — one of India\'s most visited cities and part of the Golden Triangle circuit',
+              label: 'Annual tourists to Jaipur: one of India\'s most visited cities and part of the Golden Triangle circuit',
               sourceUrl: 'https://tourism.rajasthan.gov.in/',
               sourceLabel: 'Rajasthan Tourism',
             },
             {
               value: '₹40,000 Cr+',
-              label: "India's jewellery export value from Jaipur — India's single largest jewellery manufacturing and export hub",
+              label: "India's jewellery export value from Jaipur, India's single largest jewellery manufacturing and export hub",
               sourceUrl: 'https://www.gjepc.org/',
               sourceLabel: 'GJEPC',
             },
             {
               value: '10,000+',
-              label: 'Startups registered under iStart Rajasthan — Jaipur is the state\'s fastest-growing tech ecosystem',
+              label: 'Startups registered under iStart Rajasthan, Jaipur is the state\'s fastest-growing tech ecosystem',
               sourceUrl: 'https://istart.rajasthan.gov.in/',
               sourceLabel: 'iStart Rajasthan',
             },
@@ -577,12 +601,12 @@ export default function JaipurWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · JAIPUR"
           headline="What 'Web Design' Actually Means for a Jaipur Business"
-          lead="Jaipur's economy runs on three very different buyer behaviours — international B2B buyers researching jewellery and handicraft suppliers, global tourists booking heritage experiences, and domestic consumers and retail buyers deciding quickly on mobile. Each needs a very different web strategy. FactoryJet builds for all three."
+          lead="Jaipur's economy runs on three very different buyer behaviours, international B2B buyers researching jewellery and handicraft suppliers, global tourists booking heritage experiences, and domestic consumers and retail buyers deciding quickly on mobile. Each needs a very different web strategy. FactoryJet builds for all three."
           body={
             <>
               <p>
                 For Jaipur&apos;s jewellery exporters, gemstone dealers, and handicraft
-                manufacturers — the website needs to project product authenticity, export
+                manufacturers: the website needs to project product authenticity, export
                 credentials, and craftsmanship heritage to international buyers in the US, EU,
                 and UAE. These buyers research Indian suppliers for weeks before making contact.
                 The site needs to answer their due-diligence questions: certifications,
@@ -591,8 +615,8 @@ export default function JaipurWebDesignPage() {
                 product catalog systems, and lead-capture flows designed for B2B export sales.
               </p>
               <p>
-                For tourism and hospitality businesses — heritage havelis, tour operators,
-                boutique hotels, and cultural experience providers — the challenge is converting
+                For tourism and hospitality businesses, heritage havelis, tour operators,
+                boutique hotels, and cultural experience providers: the challenge is converting
                 global travel research into direct bookings. We build tourism sites with
                 booking engine integrations, multilingual content for international visitors,
                 high-quality imagery galleries, and SEO targeting travel searches from the UK,
@@ -685,7 +709,7 @@ export default function JaipurWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Jaipur Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -695,7 +719,7 @@ export default function JaipurWebDesignPage() {
             {
               icon: '🏗️',
               title: 'Next.js, not WordPress. The performance gap is real.',
-              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Jaipur businesses competing on Google's Core Web Vitals — especially jewellery and tourism sites where global buyers expect instant load times — that gap directly affects rankings and conversions.",
+              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Jaipur businesses competing on Google's Core Web Vitals, especially jewellery and tourism sites where global buyers expect instant load times, that gap directly affects rankings and conversions.",
             },
             {
               icon: '📋',
@@ -721,7 +745,7 @@ export default function JaipurWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -730,9 +754,9 @@ export default function JaipurWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -746,11 +770,11 @@ export default function JaipurWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Jaipur Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Jaipur deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Jaipur deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={JPR_COMPARISON_COLUMNS}
           rows={JPR_COMPARISON_ROWS}
@@ -761,26 +785,26 @@ export default function JaipurWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="JAIPUR × WEB DESIGN"
           headline="Web Design for Jaipur's Key Industries"
-          lead="From jewellery exporters and handicraft manufacturers to tourism operators and IT startups — Jaipur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From jewellery exporters and handicraft manufacturers to tourism operators and IT startups, Jaipur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Jewellery & Gemstones',
               description:
-                "Jaipur is India's single largest jewellery manufacturing and export hub — home to thousands of manufacturers, gemstone cutters, and jewellery exporters with clients across the US, EU, UAE, and Japan. Jewellery export websites need product catalog architecture, gemstone specification displays, certifications (GJEPC, BIS hallmark), export credential sections, and RFQ forms designed for international wholesale buyers.",
+                "Jaipur is India's single largest jewellery manufacturing and export hub, home to thousands of manufacturers, gemstone cutters, and jewellery exporters with clients across the US, EU, UAE, and Japan. Jewellery export websites need product catalog architecture, gemstone specification displays, certifications (GJEPC, BIS hallmark), export credential sections, and RFQ forms designed for international wholesale buyers.",
               example:
                 'Jewellery manufacturers, gemstone exporters, and wholesale dealers in Sitapura, Johri Bazaar, and Sirsi Road targeting international B2B buyers.',
             },
             {
               name: 'Handicrafts & Textiles',
               description:
-                "Jaipur's handicraft ecosystem spans block-printed textiles in Sanganer, blue pottery workshops, hand-embroidered garments, and leathercraft — exported globally and sold to premium retail buyers. These businesses need product showcase websites that communicate craft heritage, production capacity, and customisation options. Multilingual content and international B2B inquiry flows are standard.",
+                "Jaipur's handicraft ecosystem spans block-printed textiles in Sanganer, blue pottery workshops, hand-embroidered garments, and leathercraft, exported globally and sold to premium retail buyers. These businesses need product showcase websites that communicate craft heritage, production capacity, and customisation options. Multilingual content and international B2B inquiry flows are standard.",
               example:
                 'Block-printing studios and textile exporters in Sanganer, handicraft exporters in Jaipur targeting premium retail buyers in the US and Europe.',
             },
             {
               name: 'Tourism & Hospitality',
               description:
-                "Jaipur draws 5M+ tourists annually as Rajasthan's Pink City and a key stop on the Golden Triangle. Heritage havelis, boutique hotels, tour operators, and cultural experience providers all need digital presence designed for global travel research. Booking engine integrations, multilingual content, high-quality imagery, and SEO targeting international travel searches — combined with WhatsApp booking flows for domestic guests.",
+                "Jaipur draws 5M+ tourists annually as Rajasthan's Pink City and a key stop on the Golden Triangle. Heritage havelis, boutique hotels, tour operators, and cultural experience providers all need digital presence designed for global travel research. Booking engine integrations, multilingual content, high-quality imagery, and SEO targeting international travel searches, combined with WhatsApp booking flows for domestic guests.",
               example:
                 'Heritage hotels, boutique havelis, tour operators, and cultural experience businesses in and around the Pink City targeting domestic and international travellers.',
             },
@@ -801,7 +825,7 @@ export default function JaipurWebDesignPage() {
             {
               name: 'Real Estate & Construction',
               description:
-                "Jaipur's real estate market is one of Rajasthan's fastest-growing — from Mansarovar and Vaishali Nagar residential projects to commercial developments near the airport and on the Delhi–Jaipur corridor. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA registration details, and lead-capture forms.",
+                "Jaipur's real estate market is one of Rajasthan's fastest-growing, from Mansarovar and Vaishali Nagar residential projects to commercial developments near the airport and on the Delhi–Jaipur corridor. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA registration details, and lead-capture forms.",
               example:
                 'Residential developers, commercial real estate firms, and construction companies operating across Jaipur and the Delhi–Jaipur Expressway corridor.',
             },
@@ -819,7 +843,7 @@ export default function JaipurWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Jaipur Businesses"
-          lead="The questions we answer on every Jaipur discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Jaipur discovery call, answered here, without the runaround."
           categories={JPR_FAQ_CATEGORIES}
           items={JPR_FAQ_ITEMS}
         />

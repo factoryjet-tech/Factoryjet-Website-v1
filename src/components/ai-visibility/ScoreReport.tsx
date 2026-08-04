@@ -162,7 +162,7 @@ export default function ScoreReport({
               {shown.map((q) => (
                 <li key={q.ordinal} className="avc-qrow avc-qrow--shown">
                   <span className="avc-qmark avc-qmark--ok" aria-hidden="true">✓</span>
-                  <span className="font-fj-body">{q.text}{q.rank ? ` — named #${q.rank}` : ''}</span>
+                  <span className="font-fj-body">{q.text}{q.rank ? `, named #${q.rank}` : ''}</span>
                 </li>
               ))}
             </ul>

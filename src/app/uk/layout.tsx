@@ -21,7 +21,7 @@ export default function UKLayout({
           Keeping the shared layout lean lets the service and city pages (which
           use neither) hit 100/100 without loading unused bytes. */}
 
-      {/* Skip-link style only — Clash fallback metrics are in src/index.css */}
+      {/* Skip-link style only, Clash fallback metrics are in src/index.css */}
       <style>{`
         .uk-skip-link {
           position: absolute;

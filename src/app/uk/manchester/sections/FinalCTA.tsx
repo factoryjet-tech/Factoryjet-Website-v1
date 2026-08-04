@@ -7,7 +7,7 @@ import { CheckCircle2, MessageCircle, Mail, Phone } from "lucide-react";
 import LeadFormInline from "@/components/LeadFormInline";
 
 const TRUST_POINTS = [
-  "Free quote — no obligation",
+  "Free quote, no obligation",
   "Response within 4 business hours",
   "Fixed-price projects, no hidden fees",
   "90-day post-launch support included",
@@ -84,7 +84,7 @@ export default function FinalCTA() {
             >
               Manchester&apos;s digital economy is worth £5 billion and growing.
               Your website should reflect the ambition of the city you operate
-              in — fast, intelligent, visible, and engineered to convert.
+              in, fast, intelligent, visible, and engineered to convert.
               FactoryJet builds AI-native websites on Next.js 15 at a fixed, transparent quote, with guaranteed Lighthouse scores
               and AI search visibility baked into every page.
             </p>
@@ -145,7 +145,7 @@ export default function FinalCTA() {
               region="uk"
               source="uk_manchester_final_cta"
               heading="Get your free Manchester quote"
-              subheading="Just your name and email to start — we reply within 4 business hours."
+              subheading="Just your name and email to start, we reply within 4 business hours."
             />
           </div>
 

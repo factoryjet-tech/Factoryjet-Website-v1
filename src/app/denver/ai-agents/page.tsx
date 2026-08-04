@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
   description:
-    'Custom AI agents for Denver businesses — customer support, lead gen & booking. Built for Denver\'s outdoor, tech & startup economy. Fixed-price. Get a quote.',
+    'Custom AI agents for Denver businesses, customer support, lead gen & booking. Built for Denver\'s outdoor, tech & startup economy. Fixed-price. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
+   JSON-LD Schema (Service + HowTo + Breadcrumb), faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'AI Agents & Chatbot Development — Denver, CO',
+  name: 'AI Agents & Chatbot Development | Denver, CO',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
@@ -103,31 +103,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery & Use-Case Mapping',
+      name: 'Day 1 | Discovery & Use-Case Mapping',
       text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Architecture & Data Planning',
+      name: 'Day 2 | Architecture & Data Planning',
       text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Build & Integrate',
+      name: 'Days 3–4 | Build & Integrate',
       text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Testing & Optimization',
+      name: 'Days 5–6 | Testing & Optimization',
       text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch & Training',
+      name: 'Day 7 | Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
   ],
@@ -153,7 +153,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Outdoor & Active Lifestyle Brands',
     description:
-      'Denver is the outdoor industry\'s backyard. Gear brands, ski and snowboard companies, cycling businesses, and adventure tour operators use AI agents to handle product questions, size and fit guidance, equipment recommendations, and order support — freeing the team to focus on product development and partnerships.',
+      'Denver is the outdoor industry\'s backyard. Gear brands, ski and snowboard companies, cycling businesses, and adventure tour operators use AI agents to handle product questions, size and fit guidance, equipment recommendations, and order support, freeing the team to focus on product development and partnerships.',
     example: 'Outdoor DTC brands report 60–70% fewer repetitive product Q&A tickets.',
     linkLabel: 'Talk to our team',
     linkHref: '/contact',
@@ -161,7 +161,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Tech Startups & SaaS Companies',
     description:
-      'Denver\'s tech corridor — LoDo, RiNo, the Denver Tech Center — is home to a growing cluster of SaaS companies and startups. AI agents handle inbound trial inquiries, qualify leads from marketing campaigns, route support tickets, and give onboarding guidance automatically — letting lean startup teams punch above their weight.',
+      'Denver\'s tech corridor: LoDo, RiNo, the Denver Tech Center, is home to a growing cluster of SaaS companies and startups. AI agents handle inbound trial inquiries, qualify leads from marketing campaigns, route support tickets, and give onboarding guidance automatically, letting lean startup teams punch above their weight.',
     example: 'SaaS companies report 25–35% fewer first-tier support tickets within 60 days.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -169,7 +169,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Real Estate & Property Management',
     description:
-      'Denver\'s real estate market has been one of the most active in the country. AI agents qualify inbound buyer and renter leads the moment a form is submitted, answer listing-specific questions at any hour, schedule property tours directly to agent calendars, and follow up automatically — without a coordinator managing the inbox.',
+      'Denver\'s real estate market has been one of the most active in the country. AI agents qualify inbound buyer and renter leads the moment a form is submitted, answer listing-specific questions at any hour, schedule property tours directly to agent calendars, and follow up automatically, without a coordinator managing the inbox.',
     example: 'Denver real estate teams book 30–40% more showings from the same ad spend.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
@@ -177,7 +177,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Cannabis & Dispensary Businesses',
     description:
-      'Colorado\'s regulated cannabis market requires careful customer education — product types, potency, effects, medical vs. recreational, purchase limits, and in-store vs. delivery options. AI agents handle these FAQ conversations at scale, across website and SMS, educating customers before they visit and answering the questions your budtenders answer fifty times a day.',
+      'Colorado\'s regulated cannabis market requires careful customer education, product types, potency, effects, medical vs. recreational, purchase limits, and in-store vs. delivery options. AI agents handle these FAQ conversations at scale, across website and SMS, educating customers before they visit and answering the questions your budtenders answer fifty times a day.',
     example: 'Dispensary teams reclaim 3–5 hours per day of repetitive phone and chat volume.',
     linkLabel: 'Get a quote',
     linkHref: '#pricing',
@@ -185,7 +185,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Healthcare & Wellness',
     description:
-      'Denver\'s health-conscious culture has driven explosive growth in wellness studios, integrative clinics, and physical therapy practices. AI agents handle appointment booking, new patient intake, insurance and service questions, and after-hours inquiries — filling schedule gaps without a front desk employee available 24/7.',
+      'Denver\'s health-conscious culture has driven explosive growth in wellness studios, integrative clinics, and physical therapy practices. AI agents handle appointment booking, new patient intake, insurance and service questions, and after-hours inquiries, filling schedule gaps without a front desk employee available 24/7.',
     example: 'Wellness practices fill 25–35% more appointment slots from after-hours web traffic.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -193,7 +193,7 @@ const DENVER_INDUSTRIES = [
   {
     name: 'Hospitality & Tourism',
     description:
-      'Denver\'s proximity to world-class skiing, hiking, and mountain destinations drives huge hospitality and tourism demand. Boutique hotels, rental property managers, tour operators, and mountain town businesses use AI agents to handle booking inquiries, availability questions, local recommendations, and activity FAQs — capturing leads around the clock across every season.',
+      'Denver\'s proximity to world-class skiing, hiking, and mountain destinations drives huge hospitality and tourism demand. Boutique hotels, rental property managers, tour operators, and mountain town businesses use AI agents to handle booking inquiries, availability questions, local recommendations, and activity FAQs, capturing leads around the clock across every season.',
     example: 'Hospitality businesses capture 35–45% more bookings from after-hours traffic.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -211,13 +211,13 @@ const DENVER_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '02',
     title: 'Design',
     description:
-      'We design the conversation flows, escalation logic, integration architecture, and agent behavior. You approve the design document before a line of code is written — no surprises at launch.',
+      'We design the conversation flows, escalation logic, integration architecture, and agent behavior. You approve the design document before a line of code is written, no surprises at launch.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Engineering the agent against your tech stack with weekly demos. You test the working agent during the build — not just at the end. Feedback is incorporated before we advance to the next phase.',
+      'Engineering the agent against your tech stack with weekly demos. You test the working agent during the build, not just at the end. Feedback is incorporated before we advance to the next phase.',
   },
   {
     number: '04',
@@ -242,14 +242,14 @@ const ROI_STATS = [
   },
   {
     value: '<5s',
-    label: 'agent response time vs. hours for a human — the biggest driver of lead close rates',
+    label: 'agent response time vs. hours for a human: the biggest driver of lead close rates',
     microcopy: 'speed determines whether you get the deal',
     categoryLabel: 'RESPONSE SPEED',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
-    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    label: 'milestone-paid with full code ownership, 12+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch, no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -257,7 +257,7 @@ const ROI_STATS = [
 const MARKET_STATS = [
   {
     value: '3×',
-    label: 'faster lead response via AI agent vs. email — directly linked to higher close rates',
+    label: 'faster lead response via AI agent vs. email, directly linked to higher close rates',
     microcopy: 'Harvard Business Review Lead Response Study',
     categoryLabel: 'LEAD CONVERSION',
   },
@@ -366,7 +366,7 @@ const PRICING_TIERS = [
     name: 'Starter',
     priceRange: 'Fixed-price',
     description:
-      'One focused AI agent for your highest-impact use case. Perfect for Denver businesses adding their first AI agent to handle a single workflow — support, lead capture, or booking.',
+      'One focused AI agent for your highest-impact use case. Perfect for Denver businesses adding their first AI agent to handle a single workflow, support, lead capture, or booking.',
     features: [
       'Single-intent agent (support, lead capture, or booking)',
       'Trained on your FAQs, docs, or product catalog',
@@ -432,13 +432,13 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What is an AI agent for a business?',
     answer:
-      'An AI agent is software that handles multi-step tasks autonomously — answering customer questions, qualifying leads, booking appointments, processing orders, or routing support tickets — using large language models like GPT-4o or Claude. Unlike a chatbot that just responds to messages, an AI agent can take actions: look up live data from your CRM, update records, send follow-up emails, or trigger workflows in connected tools. For Denver businesses dealing with high-volume customer interactions, an AI agent handles the routine work so your team focuses on growth.',
+      'An AI agent is software that handles multi-step tasks autonomously, answering customer questions, qualifying leads, booking appointments, processing orders, or routing support tickets, using large language models like GPT-4o or Claude. Unlike a chatbot that just responds to messages, an AI agent can take actions: look up live data from your CRM, update records, send follow-up emails, or trigger workflows in connected tools. For Denver businesses dealing with high-volume customer interactions, an AI agent handles the routine work so your team focuses on growth.',
   },
   {
     category: 'what-is',
     question: 'What is the difference between an AI agent and a regular chatbot?',
     answer:
-      'A chatbot is reactive — it waits for a message and responds. An AI agent is action-oriented — it can receive a trigger, make decisions based on content, take multi-step actions across connected tools, and report back. For example, a chatbot tells a customer their order is delayed. An AI agent sees the delay, looks up the order, contacts the fulfillment partner, updates the CRM record, and drafts a proactive apology email — all automatically. The agent does the work; the chatbot just communicates.',
+      'A chatbot is reactive, it waits for a message and responds. An AI agent is action-oriented, it can receive a trigger, make decisions based on content, take multi-step actions across connected tools, and report back. For example, a chatbot tells a customer their order is delayed. An AI agent sees the delay, looks up the order, contacts the fulfillment partner, updates the CRM record, and drafts a proactive apology email: all automatically. The agent does the work; the chatbot just communicates.',
   },
   {
     category: 'what-is',
@@ -450,14 +450,14 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'Which AI models power FactoryJet agents?',
     answer:
-      'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Denver customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow — not the most expensive one on the market.',
+      'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Denver customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow, not the most expensive one on the market.',
   },
 
   {
     category: 'what-is',
     question: 'Can a Denver AI agent connect to tools like HubSpot, Shopify, and Google Calendar?',
     answer:
-      'Yes — AI agents integrate natively with the platforms Denver businesses already use. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal team alerts, and Twilio for SMS. Most Denver businesses are already on standard platforms, which means 70–80% of the integration work is already done. We build the AI agent layer on top — you keep your existing stack.',
+      'Yes, AI agents integrate natively with the platforms Denver businesses already use. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal team alerts, and Twilio for SMS. Most Denver businesses are already on standard platforms, which means 70–80% of the integration work is already done. We build the AI agent layer on top, you keep your existing stack.',
   },
 
   /* ── AI Agents in Denver ── */
@@ -465,13 +465,13 @@ const FAQ_ITEMS = [
     category: 'denver',
     question: 'Is Denver a strong market for AI agent adoption?',
     answer:
-      'Yes. Denver consistently ranks among the top US metros for startup activity, tech adoption, and digital commerce growth. The city\'s mix of tech-native transplants, outdoor industry digital brands, and a growing SaaS ecosystem means customers expect fast, accurate digital responses. Denver businesses that deploy AI agents report particularly strong results in after-hours lead capture — a critical advantage given the city\'s active lifestyle culture, which has people browsing and buying outside traditional business hours.',
+      'Yes. Denver consistently ranks among the top US metros for startup activity, tech adoption, and digital commerce growth. The city\'s mix of tech-native transplants, outdoor industry digital brands, and a growing SaaS ecosystem means customers expect fast, accurate digital responses. Denver businesses that deploy AI agents report particularly strong results in after-hours lead capture: a critical advantage given the city\'s active lifestyle culture, which has people browsing and buying outside traditional business hours.',
   },
   {
     category: 'denver',
     question: 'What Denver-specific business problems do AI agents solve?',
     answer:
-      'Three Denver-specific advantages: First, the outdoor and lifestyle economy runs 24/7 — customers research gear, book experiences, and ask product questions at all hours, especially around ski season and summer adventures. Second, Denver\'s labor market is tight and wages have risen significantly — an AI agent handles 65% of your support inbound without adding payroll. Third, Denver\'s population growth brings a constant stream of new residents finding local businesses online. First-response advantage is decisive.',
+      'Three Denver-specific advantages: First, the outdoor and lifestyle economy runs 24/7, customers research gear, book experiences, and ask product questions at all hours, especially around ski season and summer adventures. Second, Denver\'s labor market is tight and wages have risen significantly: an AI agent handles 65% of your support inbound without adding payroll. Third, Denver\'s population growth brings a constant stream of new residents finding local businesses online. First-response advantage is decisive.',
   },
   {
     category: 'denver',
@@ -481,15 +481,15 @@ const FAQ_ITEMS = [
   },
   {
     category: 'denver',
-    question: 'Can an AI agent handle seasonal volume spikes — like ski season or summer camping season?',
+    question: 'Can an AI agent handle seasonal volume spikes, like ski season or summer camping season?',
     answer:
-      'Yes — and this is one of the strongest use cases for Denver businesses. Seasonal spikes in outdoor retail, hospitality, and tour operators can triple inbound volume in a matter of weeks. An AI agent scales automatically — it handles 5 conversations or 500 with the same response time and quality. You don\'t need to hire and train seasonal support staff just to answer the same questions you answered last year.',
+      'Yes, and this is one of the strongest use cases for Denver businesses. Seasonal spikes in outdoor retail, hospitality, and tour operators can triple inbound volume in a matter of weeks. An AI agent scales automatically, it handles 5 conversations or 500 with the same response time and quality. You don\'t need to hire and train seasonal support staff just to answer the same questions you answered last year.',
   },
   {
     category: 'denver',
     question: 'Do AI agents work for Denver\'s cannabis and dispensary industry?',
     answer:
-      'Yes, with important caveats around compliance. AI agents handle educational FAQ conversations — product types, effects, dosage guidance, purchase limits, in-store vs. delivery options, and age verification flows — without making medical claims or violating advertising regulations. We design cannabis AI agents carefully: the agent educates and directs customers to in-store consultations for medical questions, while handling the high-volume general inquiries that clog your phone lines and chat.',
+      'Yes, with important caveats around compliance. AI agents handle educational FAQ conversations, product types, effects, dosage guidance, purchase limits, in-store vs. delivery options, and age verification flows, without making medical claims or violating advertising regulations. We design cannabis AI agents carefully: the agent educates and directs customers to in-store consultations for medical questions, while handling the high-volume general inquiries that clog your phone lines and chat.',
   },
 
   /* ── Process & Timeline ── */
@@ -497,32 +497,32 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI agent development process look like?',
     answer:
-      'Five stages: Discover (we map your top customer interactions, review your tools and docs, define success metrics), Design (conversation flows, escalation logic, integration architecture — you approve before we build), Build (develop and connect to your stack with weekly demos), Test & Tune (run through hundreds of real scenarios, fix errors, tighten thresholds), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with something you can see and test.',
+      'Five stages: Discover (we map your top customer interactions, review your tools and docs, define success metrics), Design (conversation flows, escalation logic, integration architecture, you approve before we build), Build (develop and connect to your stack with weekly demos), Test & Tune (run through hundreds of real scenarios, fix errors, tighten thresholds), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with something you can see and test.',
   },
   {
     category: 'process',
     question: 'How long does it take to build and launch an AI agent?',
     answer:
-      'A single-purpose agent — a support agent for your top 20 questions or a lead capture agent for one landing page — goes from kickoff to live in 2–3 weeks. Multi-intent agents with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or channels run 6–10 weeks. Timeline is confirmed after the discovery session, not upfront.',
+      'A single-purpose agent: a support agent for your top 20 questions or a lead capture agent for one landing page, goes from kickoff to live in 2–3 weeks. Multi-intent agents with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or channels run 6–10 weeks. Timeline is confirmed after the discovery session, not upfront.',
   },
   {
     category: 'process',
     question: 'Will I see progress during the build, or just get a final delivery?',
     answer:
-      'Weekly demos throughout. Every stage ends with a working demo you can test with real questions and give feedback on. Most clients find that interacting with the agent mid-build changes what they want it to do — and we build that flexibility in. Nothing is a surprise at launch.',
+      'Weekly demos throughout. Every stage ends with a working demo you can test with real questions and give feedback on. Most clients find that interacting with the agent mid-build changes what they want it to do, and we build that flexibility in. Nothing is a surprise at launch.',
   },
   {
     category: 'process',
     question: 'What happens after the AI agent launches?',
     answer:
-      'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Denver team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
+      'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Denver team. After 30 days you can continue on a monthly retainer or manage it yourself: the dashboard is built for non-technical operators.',
   },
 
   {
     category: 'process',
     question: 'Can a Denver AI agent run on my website, Instagram, and WhatsApp simultaneously?',
     answer:
-      'Yes — multi-channel deployment is included on Growth and Enterprise plans. A single AI agent handles conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS — with consistent, on-brand answers on every channel. Denver outdoor and lifestyle brands with strong social audiences see 35–50% of inbound inquiries through Instagram and Facebook, not just the website. One agent, one configuration, all channels covered.',
+      'Yes, multi-channel deployment is included on Growth and Enterprise plans. A single AI agent handles conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS, with consistent, on-brand answers on every channel. Denver outdoor and lifestyle brands with strong social audiences see 35–50% of inbound inquiries through Instagram and Facebook, not just the website. One agent, one configuration, all channels covered.',
   },
 
   /* ── Pricing & ROI ── */
@@ -530,13 +530,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI agent cost for a Denver business?',
     answer:
-      'FactoryJet\'s AI agents are priced fixed-price and scoped to your build — the main drivers are the number of intents, integrations, and channels. The Starter tier covers a single-purpose agent; the Growth tier covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs; and the Enterprise tier covers fully custom systems. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.',
+      'FactoryJet\'s AI agents are priced fixed-price and scoped to your build: the main drivers are the number of intents, integrations, and channels. The Starter tier covers a single-purpose agent; the Growth tier covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard: the most popular option for Denver SMBs; and the Enterprise tier covers fully custom systems. Every project is quoted up front after a free discovery call, no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery, without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
   },
   {
     category: 'pricing',
@@ -548,14 +548,14 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the agent is built?',
     answer:
-      'Two types: API usage (a modest monthly amount for most Denver SMB agent volumes — paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
+      'Two types: API usage (a modest monthly amount for most Denver SMB agent volumes, paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
   },
 
   {
     category: 'pricing',
     question: 'Is there a payment plan for Denver AI agent projects, or is everything due at kickoff?',
     answer:
-      'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth and Enterprise engagements, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, and 20% at launch. Payments align with working deliverables you can interact with — not with project calendar dates. No large upfront commitment before you\'ve seen the Denver AI agent handling real business scenarios.',
+      'FactoryJet uses milestone-based payments, 50% at kickoff and 50% at delivery for Starter projects. For Growth and Enterprise engagements, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, and 20% at launch. Payments align with working deliverables you can interact with, not with project calendar dates. No large upfront commitment before you\'ve seen the Denver AI agent handling real business scenarios.',
   },
 
   /* ── Trust & Results ── */
@@ -563,7 +563,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Is customer data safe with an AI agent?',
     answer:
-      'We use API-level integrations only — no screen scraping. We enforce least-privilege data access and implement full audit trails on every conversation. For regulated industries in Denver — healthcare, legal, cannabis — we configure the agent to avoid storing PII and can use private LLM deployments. All conversation logs are owned by you.',
+      'We use API-level integrations only, no screen scraping. We enforce least-privilege data access and implement full audit trails on every conversation. For regulated industries in Denver, healthcare, legal, cannabis, we configure the agent to avoid storing PII and can use private LLM deployments. All conversation logs are owned by you.',
   },
   {
     category: 'trust',
@@ -575,13 +575,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can an AI agent handle multiple languages for Denver\'s diverse customer base?',
     answer:
-      'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For Denver businesses with Spanish-speaking customers — common across the metro — we configure the agent to detect language automatically and respond in kind. Multi-language support is included on Growth and Enterprise plans.',
+      'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For Denver businesses with Spanish-speaking customers, common across the metro, we configure the agent to detect language automatically and respond in kind. Multi-language support is included on Growth and Enterprise plans.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a local Denver AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it, weeks, not months), and SMB depth (500+ small business projects, we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
   },
   {
     category: 'trust',
@@ -648,7 +648,7 @@ export default function DenverAIAgentsPage() {
         formSlot={<HeroInlineForm region="us" source="us_denver_ai_agents_hero" />}
           eyebrow="AI AGENTS · DENVER, CO"
           headline="Denver Businesses Are Capturing More Leads While the Mountains Are Still Dark"
-          lead="Denver's market is competitive, seasonal, and increasingly digital-first. FactoryJet builds custom AI agents for Denver businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Denver agency."
+          lead="Denver's market is competitive, seasonal, and increasingly digital-first. FactoryJet builds custom AI agents for Denver businesses, customer support, lead generation, appointment booking, and e-commerce automation, that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Denver agency."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -661,7 +661,7 @@ export default function DenverAIAgentsPage() {
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                AI AGENTS IN ACTION — DENVER
+                AI AGENTS IN ACTION, DENVER
               </p>
               <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
                 65% of support tickets handled before your team gets to the office.
@@ -684,7 +684,7 @@ export default function DenverAIAgentsPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  All three resolved automatically, 24/7 — without a single new hire.
+                  All three resolved automatically, 24/7, without a single new hire.
                 </p>
               </div>
             </div>
@@ -700,8 +700,8 @@ export default function DenverAIAgentsPage() {
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI AGENTS EXPLAINED"
-          headline="What Is an AI Agent — and Why Denver Businesses Need One Now"
-          lead="An AI agent that understands what someone is asking, connects to your live business data, and takes action — is a fundamentally different product than a FAQ widget or a form that sends an email."
+          headline="What Is an AI Agent, and Why Denver Businesses Need One Now"
+          lead="An AI agent that understands what someone is asking, connects to your live business data, and takes action, is a fundamentally different product than a FAQ widget or a form that sends an email."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -723,7 +723,7 @@ export default function DenverAIAgentsPage() {
                 ))}
               </div>
               <p>
-                Most Denver businesses think they already have a chatbot — because they have a live chat widget that pings someone on the team. That&apos;s not an AI agent. That&apos;s a notification. An AI agent built on GPT-4o or Claude actually understands the customer&apos;s question, knows your products and policies, and gives a complete, accurate answer in under 5 seconds — without your team being in the loop.
+                Most Denver businesses think they already have a chatbot, because they have a live chat widget that pings someone on the team. That&apos;s not an AI agent. That&apos;s a notification. An AI agent built on GPT-4o or Claude actually understands the customer&apos;s question, knows your products and policies, and gives a complete, accurate answer in under 5 seconds, without your team being in the loop.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -757,11 +757,11 @@ export default function DenverAIAgentsPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  Denver&apos;s customers don&apos;t wait. They go with the business that answers first — whether it&apos;s noon or midnight.
+                  Denver&apos;s customers don&apos;t wait. They go with the business that answers first, whether it&apos;s noon or midnight.
                 </p>
               </div>
               <p>
-                Denver is growing fast — new businesses and residents arriving constantly, outdoor season bringing demand spikes, and competitors who already have AI agents responding before you do. An AI agent doesn&apos;t take days off for ski weekends, doesn&apos;t fall behind during peak seasons, and handles the top 65% of your inbound volume automatically. Your team handles the work that actually needs a human.
+                Denver is growing fast, new businesses and residents arriving constantly, outdoor season bringing demand spikes, and competitors who already have AI agents responding before you do. An AI agent doesn&apos;t take days off for ski weekends, doesn&apos;t fall behind during peak seasons, and handles the top 65% of your inbound volume automatically. Your team handles the work that actually needs a human.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -804,12 +804,12 @@ export default function DenverAIAgentsPage() {
                   {
                     step: '01',
                     title: 'Customer sends a message',
-                    desc: 'Website widget, WhatsApp, SMS, or Messenger — any channel your Denver customers reach out on.',
+                    desc: 'Website widget, WhatsApp, SMS, or Messenger, any channel your Denver customers reach out on.',
                   },
                   {
                     step: '02',
                     title: 'AI understands the intent',
-                    desc: 'GPT-4o or Claude reads the question — even if poorly phrased — and identifies what\'s being asked.',
+                    desc: 'GPT-4o or Claude reads the question, even if poorly phrased, and identifies what\'s being asked.',
                   },
                   {
                     step: '03',
@@ -819,7 +819,7 @@ export default function DenverAIAgentsPage() {
                   {
                     step: '04',
                     title: 'Responds or escalates',
-                    desc: 'Sends an accurate answer in seconds — or routes to a human with the full conversation transcript.',
+                    desc: 'Sends an accurate answer in seconds, or routes to a human with the full conversation transcript.',
                   },
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
@@ -864,22 +864,22 @@ export default function DenverAIAgentsPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your customers don't wait for business hours. Your competitors with AI agents don't either."
-          lead="Denver's market is growing, seasonal, and increasingly competitive. The businesses pulling ahead are the ones that respond first — automatically, at any hour, regardless of what season it is."
+          lead="Denver's market is growing, seasonal, and increasingly competitive. The businesses pulling ahead are the ones that respond first: automatically, at any hour, regardless of what season it is."
           pillars={[
             {
               icon: '⏱',
               title: 'Seasonal spikes shouldn\'t require emergency hiring',
-              body: 'Ski season, summer adventure season, SXSW-equivalent events — Denver businesses face predictable demand spikes that overwhelm lean support teams. An AI agent scales automatically. It handles 5 conversations or 500 with the same response time. You don\'t hire and train seasonal staff just to answer the same questions you answered last year.',
+              body: 'Ski season, summer adventure season, SXSW-equivalent events, Denver businesses face predictable demand spikes that overwhelm lean support teams. An AI agent scales automatically. It handles 5 conversations or 500 with the same response time. You don\'t hire and train seasonal staff just to answer the same questions you answered last year.',
             },
             {
               icon: '📉',
               title: 'Denver\'s tight labor market makes repetitive work expensive',
-              body: 'Colorado\'s labor market is competitive. Wages are up, turnover is high, and good customer-facing employees are hard to keep. An AI agent handles 60–70% of your inbound volume automatically — the repetitive questions that don\'t require human judgment — so your team works on the customer interactions that actually need them.',
+              body: 'Colorado\'s labor market is competitive. Wages are up, turnover is high, and good customer-facing employees are hard to keep. An AI agent handles 60–70% of your inbound volume automatically: the repetitive questions that don\'t require human judgment, so your team works on the customer interactions that actually need them.',
             },
             {
               icon: '💸',
               title: 'Local Denver agency rates reflect local Denver costs',
-              body: 'A Denver AI agency building at LoDo rates will quote enterprise-level prices for the same chatbot FactoryJet delivers at a fraction of the cost, fixed-price. The difference is our engineering team is specialized — serving US businesses for 12 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
+              body: 'A Denver AI agency building at LoDo rates will quote enterprise-level prices for the same chatbot FactoryJet delivers at a fraction of the cost, fixed-price. The difference is our engineering team is specialized, serving US businesses for 12 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
             },
           ]}
         />
@@ -896,7 +896,7 @@ export default function DenverAIAgentsPage() {
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Strategy Call to Live AI Agent in 2–5 Weeks"
-          lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent — not a slide deck about one."
+          lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent, not a slide deck about one."
           stages={DENVER_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–5 WEEKS TO LAUNCH · WEEKLY DEMOS THROUGHOUT"
         />
@@ -935,22 +935,22 @@ export default function DenverAIAgentsPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not a Denver agency with a RiNo loft office. That's the whole point."
-          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The AI agents we build don't live in a demo — they run in production, handling real customer conversations every day."
+          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The AI agents we build don't live in a demo, they run in production, handling real customer conversations every day."
           pillars={[
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A Denver AI agency has account managers, coordinators, and a sales team to feed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
+              body: 'A Denver AI agency has account managers, coordinators, and a sales team to feed. We don\'t. When you brief us, an engineer reads it, not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '💡',
               title: 'SMB depth, not startup theory',
-              body: 'We\'ve built for outdoor brands, real estate teams, healthcare practices, restaurants, and SaaS companies. We know where complexity actually lives inside a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
+              body: 'We\'ve built for outdoor brands, real estate teams, healthcare practices, restaurants, and SaaS companies. We know where complexity actually lives inside a 15-person business: the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
             },
             {
               icon: '🔒',
               title: 'You own everything. Always.',
-              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset — not a dependency.',
+              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset, not a dependency.',
             },
           ]}
         />
@@ -959,7 +959,7 @@ export default function DenverAIAgentsPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything Denver Businesses Ask Before Building an AI Agent"
-          lead="No jargon. No runaround. The questions we get on every Denver strategy call — answered straight."
+          lead="No jargon. No runaround. The questions we get on every Denver strategy call, answered straight."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -970,7 +970,7 @@ export default function DenverAIAgentsPage() {
             variant="dark"
             eyebrow="READY TO START"
             headline="Book a 30-Minute AI Agent Strategy Call"
-            sub="We'll review your current support or lead flow, identify where an AI agent would make the biggest difference for your Denver business, and give you a fixed-price estimate — before you commit to anything."
+            sub="We'll review your current support or lead flow, identify where an AI agent would make the biggest difference for your Denver business, and give you a fixed-price estimate, before you commit to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
             objectionHandler="Most Denver clients see full ROI within 90 days. Free call, fixed price, no hidden fees."

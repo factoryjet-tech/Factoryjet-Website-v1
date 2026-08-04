@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Indore | FactoryJet',
     description:
-      'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
+      'Professional web design company in Indore: Next.js, SEO, and GA4 included. 7-day delivery. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
     url: 'https://factoryjet.com/web-design/indore',
     images: [
       {
@@ -90,11 +91,25 @@ export const metadata: Metadata = {
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
 
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/indore#webpage',
+  url: 'https://factoryjet.com/web-design/indore',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet — Web Design Indore',
+  name: 'FactoryJet | Web Design Indore',
   description:
     'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/indore',
@@ -145,31 +160,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
-      text: 'We learn your business, your Indore market segment, your goals, and what the website must do for your specific audience — whether that is coaching institute enrolments, D2C orders, or B2B enquiries.',
+      name: 'Day 1 | Discovery Call',
+      text: 'We learn your business, your Indore market segment, your goals, and what the website must do for your specific audience, whether that is coaching institute enrolments, D2C orders, or B2B enquiries.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We map your site architecture, research your top Indore competitors, identify your priority keywords, and draft the first version of your page copy.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'Your bespoke Figma design is created at 375px mobile-first through to 1440px desktop. You receive a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: 'Your approved design is built in Next.js — fast, mobile-first, and SEO-optimised. Indore local schema markup added. Razorpay / UPI checkout integrated where required. Google Analytics and Search Console connected.',
+      name: 'Days 5–6 | Development & SEO',
+      text: 'Your approved design is built in Next.js, fast, mobile-first, and SEO-optimised. Indore local schema markup added. Razorpay / UPI checkout integrated where required. Google Analytics and Search Console connected.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live on Cloudflare Pages. You receive the full codebase in your GitHub, Figma design files, and a recorded handover walkthrough.',
     },
   ],
@@ -195,31 +210,31 @@ const INDORE_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Indore's market — whether that's a coaching student in Vijay Nagar searching for NEET prep, a D2C buyer browsing your Shopify store, a wholesale fabric buyer from Scheme 54, or a Pithampur manufacturer being researched by an international procurement team. We audit your top three competitors and agree the sitemap and content plan. — Day 1",
+      "We map your ideal customer profile against Indore's market, whether that's a coaching student in Vijay Nagar searching for NEET prep, a D2C buyer browsing your Shopify store, a wholesale fabric buyer from Scheme 54, or a Pithampur manufacturer being researched by an international procurement team. We audit your top three competitors and agree the sitemap and content plan.: Day 1",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal — enquiry form fills, WhatsApp clicks, Razorpay checkout, or course enrolments. You approve the design before development starts. — Days 2–3',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal, enquiry form fills, WhatsApp clicks, Razorpay checkout, or course enrolments. You approve the design before development starts.: Days 2–3',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp automation, Razorpay / UPI checkout, booking flows, and any third-party APIs your business uses (Zoho, Tally, Shiprocket). Performance budgets enforced from the first commit. — Days 4–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp automation, Razorpay / UPI checkout, booking flows, and any third-party APIs your business uses (Zoho, Tally, Shiprocket). Performance budgets enforced from the first commit.: Days 4–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Indore-specific local SEO targeting built in — not sold as an add-on. — Day 6',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Indore-specific local SEO targeting built in, not sold as an add-on.: Day 6',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS configured on Cloudflare Pages, GA4 and GTM set up, Search Console verified. Full codebase delivered to your GitHub. Recorded handover walkthrough in Hindi or English — your team is fully self-sufficient from day one. 30-day post-launch support window included. — Day 7+',
+      'DNS configured on Cloudflare Pages, GA4 and GTM set up, Search Console verified. Full codebase delivered to your GitHub. Recorded handover walkthrough in Hindi or English: your team is fully self-sufficient from day one. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -250,7 +265,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: '7 din mein website ban sakti hai kya?',
     answer:
-      'Haan, bilkul. FactoryJet ki 7-day delivery guarantee written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch — sab 7 din mein. Agar deadline miss ho toh payment nahi dena padta.',
+      'Haan, bilkul. FactoryJet ki 7-day delivery guarantee written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch, sab 7 din mein. Agar deadline miss ho toh payment nahi dena padta.',
   },
   {
     category: 'pricing',
@@ -262,7 +277,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Indore web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with account managers, strategy departments, and expensive office space in Vijay Nagar or AB Road. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites. You pay for the build, not our overhead.",
+      "We are a specialised web engineering team, not a full-service agency with account managers, strategy departments, and expensive office space in Vijay Nagar or AB Road. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. We have been building websites. You pay for the build, not our overhead.",
   },
 
   /* ── What's Included ── */
@@ -276,13 +291,13 @@ const INDORE_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you integrate Razorpay and UPI payment gateways?',
     answer:
-      'Yes — Razorpay, PayU, and UPI QR code integrations are standard for e-commerce and booking projects. Indore businesses selling D2C products or collecting course fees benefit from one-tap checkout flows with Razorpay\'s Indian-optimised payment stack. We wire up webhooks for order confirmation emails and Shiprocket / Delhivery dispatch notifications.',
+      'Yes: Razorpay, PayU, and UPI QR code integrations are standard for e-commerce and booking projects. Indore businesses selling D2C products or collecting course fees benefit from one-tap checkout flows with Razorpay\'s Indian-optimised payment stack. We wire up webhooks for order confirmation emails and Shiprocket / Delhivery dispatch notifications.',
   },
   {
     category: 'included',
     question: 'Do you build WhatsApp chatbots for Indore businesses?',
     answer:
-      'Yes. WhatsApp Business API automation is one of our most requested add-ons — particularly for Indore coaching institutes handling admissions, D2C brands following up on cart abandonment, and real estate developers qualifying leads. A WhatsApp chatbot typically captures 3–5x more enquiries than a contact form alone because buyers message the way they already communicate. See our WhatsApp automation service.',
+      'Yes. WhatsApp Business API automation is one of our most requested add-ons, particularly for Indore coaching institutes handling admissions, D2C brands following up on cart abandonment, and real estate developers qualifying leads. A WhatsApp chatbot typically captures 3–5x more enquiries than a contact form alone because buyers message the way they already communicate. See our WhatsApp automation service.',
   },
   {
     category: 'included',
@@ -296,25 +311,25 @@ const INDORE_FAQ_ITEMS = [
     category: 'technical',
     question: 'Will my website rank on Google for Indore searches?',
     answer:
-      'Technical SEO is built into every project: JSON-LD LocalBusiness schema with Indore areaServed markup, optimised title and meta templates targeting "web design Indore" and related queries, Core Web Vitals green on mobile, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank in 1–2 weeks. Competitive service + location queries like "coaching institute Indore" or "ecommerce website Indore" take 3–6 months on a new domain — but the technical foundation is fully in place from day one.',
+      'Technical SEO is built into every project: JSON-LD LocalBusiness schema with Indore areaServed markup, optimised title and meta templates targeting "web design Indore" and related queries, Core Web Vitals green on mobile, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank in 1–2 weeks. Competitive service + location queries like "coaching institute Indore" or "ecommerce website Indore" take 3–6 months on a new domain, but the technical foundation is fully in place from day one.',
   },
   {
     category: 'technical',
     question: 'What tech stack do you use, and why does it matter for Indore businesses?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G — significantly faster than WordPress, which renders server-side and fires 40–60 database queries per page load. For Indore businesses competing on Google's Core Web Vitals ranking signals, that performance gap over a WordPress competitor is real and measurable. No shared hosting server crashes, no plugin conflicts.",
+      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G, significantly faster than WordPress, which renders server-side and fires 40–60 database queries per page load. For Indore businesses competing on Google's Core Web Vitals ranking signals, that performance gap over a WordPress competitor is real and measurable. No shared hosting server crashes, no plugin conflicts.",
   },
   {
     category: 'technical',
     question: 'How does the site perform on mobile for Indore users?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout. Given that 75%+ of Indian web traffic is mobile — often on 4G with variable speeds — mobile performance is non-negotiable and tested on real devices before delivery.',
+      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout. Given that 75%+ of Indian web traffic is mobile, often on 4G with variable speeds, mobile performance is non-negotiable and tested on real devices before delivery.',
   },
   {
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks, Razorpay checkout initiations) are configured from day one so you are tracking revenue-relevant actions. Search Console is verified and your sitemap submitted. We walk you through both tools in the handover session.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks, Razorpay checkout initiations) are configured from day one so you are tracking revenue-relevant actions. Search Console is verified and your sitemap submitted. We walk you through both tools in the handover session.',
   },
 
   /* ── Indore Local ── */
@@ -322,31 +337,31 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Which is the best web design company in Indore?',
     answer:
-      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served — far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
+      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served, far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
   },
   {
     category: 'local',
     question: 'Do you build websites for coaching institutes in Indore?',
     answer:
-      "Yes — Indore is Madhya Pradesh's coaching capital, with hundreds of IIT-JEE, NEET, UPSC, and CA coaching centres competing for students online. We build coaching institute websites with batch schedule pages, faculty profiles, result showcases, student testimonial sections, and admission enquiry forms with WhatsApp follow-up automation. Local SEO targets queries like 'best IIT coaching in Indore' and 'NEET coaching Vijay Nagar'.",
+      "Yes: Indore is Madhya Pradesh's coaching capital, with hundreds of IIT-JEE, NEET, UPSC, and CA coaching centres competing for students online. We build coaching institute websites with batch schedule pages, faculty profiles, result showcases, student testimonial sections, and admission enquiry forms with WhatsApp follow-up automation. Local SEO targets queries like 'best IIT coaching in Indore' and 'NEET coaching Vijay Nagar'.",
   },
   {
     category: 'local',
     question: 'Can you build ecommerce websites for Indore D2C and textile businesses?',
     answer:
-      "Absolutely. Indore's D2C ecosystem is growing fast — FMCG brands, snack exporters, artificial jewellery makers, and fabric wholesalers in Scheme 54 and AB Road are all building direct sales channels. We build ecommerce sites on Shopify or custom Next.js with Razorpay checkout, Shiprocket dispatch, and WhatsApp order notifications. See our ecommerce development Indore service for full details.",
+      "Absolutely. Indore's D2C ecosystem is growing fast: FMCG brands, snack exporters, artificial jewellery makers, and fabric wholesalers in Scheme 54 and AB Road are all building direct sales channels. We build ecommerce sites on Shopify or custom Next.js with Razorpay checkout, Shiprocket dispatch, and WhatsApp order notifications. See our ecommerce development Indore service for full details.",
   },
   {
     category: 'local',
     question: 'Do you know Indore well enough to write relevant local copy?',
     answer:
-      "Yes. We research Indore's business geography as part of every project — from Vijay Nagar's retail and coaching corridors and Scheme 78's IT Park to Pithampur's auto-component manufacturers and the D2C brands growing out of AB Road and Palasia. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level searches, which is where Indore SMBs win most of their inbound leads.",
+      "Yes. We research Indore's business geography as part of every project, from Vijay Nagar's retail and coaching corridors and Scheme 78's IT Park to Pithampur's auto-component manufacturers and the D2C brands growing out of AB Road and Palasia. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level searches, which is where Indore SMBs win most of their inbound leads.",
   },
   {
     category: 'local',
     question: 'Do you visit our Indore office for meetings?',
     answer:
-      'We work fully remotely — which is exactly how we keep your costs fixed and predictable without cutting any corners on quality. All discovery calls and design reviews happen over Google Meet or Zoom, in IST-friendly hours (10 AM–7 PM). We support both Hindi and English throughout the project. Most clients find the remote model faster and more flexible than waiting for in-person agency availability.',
+      'We work fully remotely, which is exactly how we keep your costs fixed and predictable without cutting any corners on quality. All discovery calls and design reviews happen over Google Meet or Zoom, in IST-friendly hours (10 AM–7 PM). We support both Hindi and English throughout the project. Most clients find the remote model faster and more flexible than waiting for in-person agency availability.',
   },
   {
     category: 'local',
@@ -356,9 +371,9 @@ const INDORE_FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'Website ke liye konsa platform better hai — Shopify ya custom website?',
+    question: 'Website ke liye konsa platform better hai: Shopify ya custom website?',
     answer:
-      "Yeh aapke business type par depend karta hai. Agar aap products sell karte ho aur jaldi launch chahiye, toh Shopify best hai — Razorpay, WhatsApp, aur Shiprocket integration ke saath. Agar aap coaching institute, service business, ya complex web app banana chahte ho, toh custom Next.js better hoga — zyada flexibility, faster loading, aur aapka khud ka codebase. FactoryJet dono banata hai — call karke discuss kar sakte ho.",
+      "Yeh aapke business type par depend karta hai. Agar aap products sell karte ho aur jaldi launch chahiye, toh Shopify best hai: Razorpay, WhatsApp, aur Shiprocket integration ke saath. Agar aap coaching institute, service business, ya complex web app banana chahte ho, toh custom Next.js better hoga, zyada flexibility, faster loading, aur aapka khud ka codebase. FactoryJet dono banata hai, call karke discuss kar sakte ho.",
   },
 
   /* ── Support & Ownership ── */
@@ -366,7 +381,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in of any kind.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in of any kind.',
   },
   {
     category: 'support',
@@ -378,7 +393,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'support',
     question: 'What happens if something breaks after launch?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime — server crashes, plugin conflicts, database failures — simply do not apply. The biggest category of failure is already off the table.',
+      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply. The biggest category of failure is already off the table.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -500,6 +515,10 @@ export default function IndoreWebDesignPage() {
   return (
     <>
       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
         id="indore-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -528,10 +547,15 @@ export default function IndoreWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Indore', url: 'https://factoryjet.com/web-design/indore' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         {/*
-          Design: Aurora orb background — orange glow on cream (#FAFAF7).
+          Design: Aurora orb background, orange glow on cream (#FAFAF7).
           Glassmorphism trust badges. Browser mockup right slot.
           H1 exact-match: "Web Design Company in Indore"
         */}
@@ -539,7 +563,7 @@ export default function IndoreWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_indore_hero" />}
           eyebrow="WEB DESIGN · INDORE"
           headline="Web Design Company in Indore"
-          lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance, Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Indore is Madhya Pradesh's commercial capital, home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance, Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',
@@ -554,7 +578,7 @@ export default function IndoreWebDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         {/*
           Stats bento: Dark charcoal grid, orange accent numbers.
-          Maxi stats style — 2025 bento grid trend.
+          Maxi stats style, 2025 bento grid trend.
         */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
@@ -568,28 +592,28 @@ export default function IndoreWebDesignPage() {
         */}
         <CityContextSection
           eyebrow="INDORE MARKET"
-          headline="Why Your Indore Web Presence Is a Business Asset — Not a Line Item"
+          headline="Why Your Indore Web Presence Is a Business Asset, Not a Line Item"
           leadParagraphs={[
-            "Indore is not just Madhya Pradesh's largest city — it is Central India's fastest-growing commercial hub. With 65,000+ registered SMEs, an IT sector generating ₹4,038 crore in software exports in FY 2024–25, and a startup ecosystem anchored by IIM Indore and IIT Indore, the city punches well above its population weight. Scheme 78 IT Park and Bengali Square are drawing investment from mid-sized tech firms and startups that previously only considered Pune or Hyderabad. The city has won the Swachh Survekshan award for the cleanest city in India seven consecutive times — a detail that speaks to the organised, business-friendly civic environment that attracts serious entrepreneurs.",
-            "Indore's business diversity creates a wide range of digital requirements: a Vijay Nagar coaching institute competes for NEET and IIT-JEE students on Google with the same urgency as a Bandra D2C brand competes for Shopify orders. An AB Road textile exporter needs a B2B website that projects quality and certifications to international buyers; a Palasia restaurant chain needs a mobile-first site that loads in under two seconds during peak dinner-time traffic. A Scheme 78 SaaS startup needs a conversion-optimised marketing site that matches the credibility of their Bengaluru or Delhi peers. FactoryJet builds for all of these profiles — because we start with the buyer in mind, not the template.",
-            "The businesses winning in Indore's search results are not necessarily the largest — they are the ones with the fastest, best-structured web presence. A 1-second improvement in page load time increases conversions by 7%. A properly built FAQ section indexed by Google can double inbound enquiry volume. These are not abstract metrics — they are the difference between a website that earns its cost in 30 days and one that sits unused on a business card.",
+            "Indore is not just Madhya Pradesh's largest city, it is Central India's fastest-growing commercial hub. With 65,000+ registered SMEs, an IT sector generating ₹4,038 crore in software exports in FY 2024–25, and a startup ecosystem anchored by IIM Indore and IIT Indore, the city punches well above its population weight. Scheme 78 IT Park and Bengali Square are drawing investment from mid-sized tech firms and startups that previously only considered Pune or Hyderabad. The city has won the Swachh Survekshan award for the cleanest city in India seven consecutive times: a detail that speaks to the organised, business-friendly civic environment that attracts serious entrepreneurs.",
+            "Indore's business diversity creates a wide range of digital requirements: a Vijay Nagar coaching institute competes for NEET and IIT-JEE students on Google with the same urgency as a Bandra D2C brand competes for Shopify orders. An AB Road textile exporter needs a B2B website that projects quality and certifications to international buyers; a Palasia restaurant chain needs a mobile-first site that loads in under two seconds during peak dinner-time traffic. A Scheme 78 SaaS startup needs a conversion-optimised marketing site that matches the credibility of their Bengaluru or Delhi peers. FactoryJet builds for all of these profiles, because we start with the buyer in mind, not the template.",
+            "The businesses winning in Indore's search results are not necessarily the largest, they are the ones with the fastest, best-structured web presence. A 1-second improvement in page load time increases conversions by 7%. A properly built FAQ section indexed by Google can double inbound enquiry volume. These are not abstract metrics, they are the difference between a website that earns its cost in 30 days and one that sits unused on a business card.",
           ]}
           stats={[
             {
               value: '65,000+',
-              label: "Registered SMEs in Indore — Central India's densest business concentration",
+              label: "Registered SMEs in Indore: Central India's densest business concentration",
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'MSME Ministry India',
             },
             {
               value: '₹4,038 Cr',
-              label: "Indore's IT and software exports in FY 2024–25 — up 7% year-on-year",
+              label: "Indore's IT and software exports in FY 2024–25, up 7% year-on-year",
               sourceUrl: 'https://nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: '500+',
-              label: 'Active startups in Indore — supported by IIM Indore, IIT Indore, and TiE Indore',
+              label: 'Active startups in Indore, supported by IIM Indore, IIT Indore, and TiE Indore',
               sourceUrl: 'https://mp.tie.org/',
               sourceLabel: 'TiE Indore MP',
             },
@@ -609,7 +633,7 @@ export default function IndoreWebDesignPage() {
             <>
               <p>
                 For Indore&apos;s coaching institutes, EdTech platforms, and professional education
-                businesses — concentrated in Vijay Nagar, Navlakha, and South Tukoganj — a website
+                businesses, concentrated in Vijay Nagar, Navlakha, and South Tukoganj: a website
                 needs to convert search intent into enquiry form fills and WhatsApp messages before
                 a student walks through the door. That means fast mobile load times, batch schedule
                 pages, faculty credentialing, result showcases, and automated follow-up flows that
@@ -617,20 +641,20 @@ export default function IndoreWebDesignPage() {
               </p>
               <p>
                 For Indore&apos;s D2C brands, FMCG exporters, textile wholesalers, and retail
-                businesses — operating from AB Road, Scheme 54, and Palasia — the website is the
+                businesses, operating from AB Road, Scheme 54, and Palasia: the website is the
                 primary sales channel. Sub-1.5-second load times on 4G, above-the-fold product
                 display, Razorpay one-tap checkout, and Shiprocket dispatch notifications. Mobile-
                 first, every time, because 75%+ of Indore&apos;s consumer web traffic arrives on mobile.
               </p>
               <p>
                 For Indore&apos;s Pithampur manufacturers, IT companies in Scheme 78, and B2B service
-                businesses — the website is the first due-diligence filter. International buyers and
+                businesses: the website is the first due-diligence filter. International buyers and
                 enterprise procurement teams research vendors for weeks before making contact. The
                 site needs to project technical authority, display certifications, and provide a
                 frictionless RFQ or demo-request flow. FactoryJet builds these with authority-first
                 architecture, product catalog systems, and lead-capture designed for longer sales
                 cycles. Every FactoryJet Indore project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window — with a codebase you own outright.
+                development, SEO, GA4, and a 30-day support window, with a codebase you own outright.
               </p>
             </>
           }
@@ -715,17 +739,17 @@ export default function IndoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Indore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Indore's market moves fast — whether you are launching a new coaching batch in June or opening a Shopify store before Diwali. Waiting 10 weeks for an agency to deliver a website you briefed in September is not a plan — it is lost revenue. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Indore's market moves fast, whether you are launching a new coaching batch in June or opening a Shopify store before Diwali. Waiting 10 weeks for an agency to deliver a website you briefed in September is not a plan, it is lost revenue. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
               title: 'Next.js, not WordPress. The performance gap is real.',
-              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN nodes in Mumbai, Singapore, and 300+ other locations. The result: sub-1.5s load times on Indian 4G networks versus 4–6s for a typical WordPress site. For Indore businesses competing on Google's Core Web Vitals signals — whether you are a coaching institute or a D2C brand — that gap directly affects your search rankings.",
+              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN nodes in Mumbai, Singapore, and 300+ other locations. The result: sub-1.5s load times on Indian 4G networks versus 4–6s for a typical WordPress site. For Indore businesses competing on Google's Core Web Vitals signals, whether you are a coaching institute or a D2C brand, that gap directly affects your search rankings.",
             },
             {
               icon: '📋',
@@ -746,7 +770,7 @@ export default function IndoreWebDesignPage() {
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         {/*
-          3 real FactoryJet clients — used on Mumbai page, contextualised for Indore.
+          3 real FactoryJet clients, used on Mumbai page, contextualised for Indore.
           Plus anonymised Indore-specific case studies in the copy below.
         */}
         <PortfolioShowcase
@@ -755,7 +779,7 @@ export default function IndoreWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering. Similar work available for Indore home décor and lifestyle brands.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -764,9 +788,9 @@ export default function IndoreWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is a B2B engineering consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture — credentials display, project portfolio, and technical SEO targeting high-value engineering queries. The same B2B-authority approach applies to Indore manufacturers and IT services companies targeting international clients.',
+                'Formative Concepts is a B2B engineering consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture, credentials display, project portfolio, and technical SEO targeting high-value engineering queries. The same B2B-authority approach applies to Indore manufacturers and IT services companies targeting international clients.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -780,11 +804,11 @@ export default function IndoreWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Indore Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Indore deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Indore deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={INDORE_COMPARISON_COLUMNS}
           rows={INDORE_COMPARISON_ROWS}
@@ -793,68 +817,68 @@ export default function IndoreWebDesignPage() {
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         {/*
-          E-E-A-T local signal — CRITICAL for ranking.
+          E-E-A-T local signal, CRITICAL for ranking.
           Very specific to Indore industries. Never generic.
           References: Pithampur, Scheme 78, Vijay Nagar, AB Road, coaching capital.
         */}
         <IndustriesGrid variant="cards"
           eyebrow="INDORE × WEB DESIGN"
           headline="Web Design for Indore's Key Industries"
-          lead="From Vijay Nagar coaching institutes to Pithampur manufacturers to Scheme 78 IT startups — Indore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From Vijay Nagar coaching institutes to Pithampur manufacturers to Scheme 78 IT startups, Indore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'D2C Brands & FMCG',
               description:
-                "Indore is Central India's fastest-growing D2C hub — home to FMCG exporters, snack brands, artificial jewellery makers, spice exporters, and food processors that are building direct consumer channels. These businesses need Shopify or custom ecommerce sites with Razorpay one-tap checkout, Shiprocket dispatch automation, and WhatsApp order notifications. Mobile-first is non-negotiable: 75% of D2C traffic arrives on mobile 4G. We also work with Mumbai and Delhi buyers who source from Indore — your website is your pitch to them.",
+                "Indore is Central India's fastest-growing D2C hub, home to FMCG exporters, snack brands, artificial jewellery makers, spice exporters, and food processors that are building direct consumer channels. These businesses need Shopify or custom ecommerce sites with Razorpay one-tap checkout, Shiprocket dispatch automation, and WhatsApp order notifications. Mobile-first is non-negotiable: 75% of D2C traffic arrives on mobile 4G. We also work with Mumbai and Delhi buyers who source from Indore: your website is your pitch to them.",
               example:
                 'FMCG exporters on AB Road, snack and spice brands building D2C channels, artificial jewellery wholesalers in Scheme 54, and food processing businesses on Sanwer Road.',
             },
             {
               name: 'Textile & Garments',
               description:
-                "Indore has a long tradition in textile trading and garment manufacturing — with wholesale fabric markets in Scheme 54, boutiques across MG Road and Vijay Nagar, and fabric exporters supplying D2C fashion brands nationally. Ecommerce for fabric wholesalers requires B2B catalog architecture with bulk pricing, GST invoice generation, and a fast WhatsApp inquiry flow. Boutique D2C sites need fast product photography display, size guide pages, and Razorpay checkout. We build both.",
+                "Indore has a long tradition in textile trading and garment manufacturing, with wholesale fabric markets in Scheme 54, boutiques across MG Road and Vijay Nagar, and fabric exporters supplying D2C fashion brands nationally. Ecommerce for fabric wholesalers requires B2B catalog architecture with bulk pricing, GST invoice generation, and a fast WhatsApp inquiry flow. Boutique D2C sites need fast product photography display, size guide pages, and Razorpay checkout. We build both.",
               example:
                 'Wholesale fabric exporters in Scheme 54, boutiques in MG Road and Vijay Nagar, garment manufacturers supplying national D2C brands, and handloom and silk traders.',
             },
             {
               name: 'Manufacturing & Engineering',
               description:
-                "Pithampur — Indore's industrial satellite 30 km away — is one of Central India's largest industrial hubs, housing auto-component manufacturers, pharmaceutical bulk-drug producers, chemical plants, and engineering goods exporters. These businesses need websites that project technical authority to international B2B procurement teams: ISO and IATF certifications display, manufacturing capacity specifications, product data sheets, and a frictionless RFQ system. Sanwer Road Industrial Area and AKVN Dewas also have a growing cluster of SME manufacturers needing digital upgrades.",
+                "Pithampur, Indore's industrial satellite 30 km away, is one of Central India's largest industrial hubs, housing auto-component manufacturers, pharmaceutical bulk-drug producers, chemical plants, and engineering goods exporters. These businesses need websites that project technical authority to international B2B procurement teams: ISO and IATF certifications display, manufacturing capacity specifications, product data sheets, and a frictionless RFQ system. Sanwer Road Industrial Area and AKVN Dewas also have a growing cluster of SME manufacturers needing digital upgrades.",
               example:
                 'Auto-component manufacturers in Pithampur, engineering goods exporters on Sanwer Road, pharmaceutical bulk drug producers, and chemical manufacturers targeting international buyers.',
             },
             {
               name: 'EdTech & Coaching Institutes',
               description:
-                "Indore is Madhya Pradesh's coaching capital — with hundreds of IIT-JEE, NEET, UPSC, CA, and MBA coaching centres concentrated in Vijay Nagar, Navlakha, and Bhawarkua. Digital enrolment has overtaken walk-ins as the primary lead source: parents and students search Google before they visit. Coaching institute websites need batch schedule pages, faculty profiles, past result showcases, and WhatsApp enquiry automation that captures leads at 11 PM as effectively as at 11 AM. Local SEO targets queries like 'best NEET coaching Vijay Nagar Indore'.",
+                "Indore is Madhya Pradesh's coaching capital, with hundreds of IIT-JEE, NEET, UPSC, CA, and MBA coaching centres concentrated in Vijay Nagar, Navlakha, and Bhawarkua. Digital enrolment has overtaken walk-ins as the primary lead source: parents and students search Google before they visit. Coaching institute websites need batch schedule pages, faculty profiles, past result showcases, and WhatsApp enquiry automation that captures leads at 11 PM as effectively as at 11 AM. Local SEO targets queries like 'best NEET coaching Vijay Nagar Indore'.",
               example:
                 'IIT-JEE and NEET coaching centres in Vijay Nagar, UPSC and CA coaching institutes, MBA prep centres, school tuition franchises, and edtech startups building online course platforms.',
             },
             {
               name: 'Real Estate & Construction',
               description:
-                "Indore's rapid urbanisation — driven by Scheme 54, Scheme 78, Super Corridor, and Nipania — is fuelling serious real estate and construction activity. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA registration display, and lead-capture forms that route enquiries to the right sales manager. Local SEO targeting Scheme 54 new projects or '2BHK flats in Bicholi Hapsi' is built into every real estate site we deliver.",
+                "Indore's rapid urbanisation, driven by Scheme 54, Scheme 78, Super Corridor, and Nipania, is fuelling serious real estate and construction activity. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA registration display, and lead-capture forms that route enquiries to the right sales manager. Local SEO targeting Scheme 54 new projects or '2BHK flats in Bicholi Hapsi' is built into every real estate site we deliver.",
               example:
                 'Residential developers in Scheme 54 and Nipania, commercial property brokers on AB Road, construction firms active in the Super Corridor, and interior design firms serving Indore\'s growing housing market.',
             },
             {
               name: 'Restaurants & Food Businesses',
               description:
-                "Indore is famous across India for its street food culture — from Sarafa Bazaar to Chappan Dukan — and this has translated into a thriving restaurant, cloud kitchen, and packaged food business ecosystem. Restaurant websites need fast-loading menu pages, Zomato and Swiggy deep-link CTAs, and a Google Maps integration that shows up on 'restaurants near me' searches. Packaged food and snack brands need a Shopify store with pan-India Shiprocket delivery and WhatsApp broadcast capability.",
+                "Indore is famous across India for its street food culture, from Sarafa Bazaar to Chappan Dukan, and this has translated into a thriving restaurant, cloud kitchen, and packaged food business ecosystem. Restaurant websites need fast-loading menu pages, Zomato and Swiggy deep-link CTAs, and a Google Maps integration that shows up on 'restaurants near me' searches. Packaged food and snack brands need a Shopify store with pan-India Shiprocket delivery and WhatsApp broadcast capability.",
               example:
                 'Restaurant chains serving Vijay Nagar and Palasia, cloud kitchens, packaged snack brands building D2C channels, sweet shops shipping nationally, and food franchise businesses.',
             },
             {
               name: 'IT Companies & Startups',
               description:
-                "Scheme 78 IT Park and the Super Corridor are attracting a growing cluster of software companies, SaaS startups, and digital agencies — supported by IIM Indore, IIT Indore, and IIST alumni. For IT companies and startups, the website is a sales tool, a talent magnet, and a credibility signal for enterprise clients. We build SaaS marketing sites, enterprise IT services sites, and product landing pages with Lighthouse 100/100 performance — because Indore's IT founders know the difference between a fast site and a slow one.",
+                "Scheme 78 IT Park and the Super Corridor are attracting a growing cluster of software companies, SaaS startups, and digital agencies, supported by IIM Indore, IIT Indore, and IIST alumni. For IT companies and startups, the website is a sales tool, a talent magnet, and a credibility signal for enterprise clients. We build SaaS marketing sites, enterprise IT services sites, and product landing pages with Lighthouse 100/100 performance, because Indore's IT founders know the difference between a fast site and a slow one.",
               example:
                 'SaaS startups in Scheme 78, IT services companies targeting US and European clients, software product companies, and digital marketing agencies in the Bengali Square cluster.',
             },
             {
               name: 'Healthcare & Clinics',
               description:
-                "Indore's healthcare sector is anchored by major hospital groups — Bombay Hospital, CHL Hospital, Choithram Hospital, and Medanta Indore — and supported by hundreds of specialist clinics, diagnostic centres, and wellness businesses. Clinic websites need appointment booking integrations, doctor profile pages with specialisations, Google Maps presence, and local SEO targeting 'dermatologist in Vijay Nagar' or 'orthopaedic surgeon Indore' searches. Healthcare is one of the highest-converting local SEO categories — the right site structure generates a measurable uptick in appointment bookings within 60 days.",
+                "Indore's healthcare sector is anchored by major hospital groups: Bombay Hospital, CHL Hospital, Choithram Hospital, and Medanta Indore, and supported by hundreds of specialist clinics, diagnostic centres, and wellness businesses. Clinic websites need appointment booking integrations, doctor profile pages with specialisations, Google Maps presence, and local SEO targeting 'dermatologist in Vijay Nagar' or 'orthopaedic surgeon Indore' searches. Healthcare is one of the highest-converting local SEO categories: the right site structure generates a measurable uptick in appointment bookings within 60 days.",
               example:
                 'Specialist clinics in Vijay Nagar and Bhawarkua, diagnostic chains, dental practices, physiotherapy and wellness centres, and healthcare SaaS platforms built by Indore IT founders.',
             },
@@ -882,7 +906,7 @@ export default function IndoreWebDesignPage() {
               Web Design Across All of Indore
             </h2>
             <p className="font-fj-body text-fj-neutral-500 mb-10 max-w-2xl" style={{ fontSize: '1rem' }}>
-              We serve businesses across every locality in Indore — from the commercial corridors of
+              We serve businesses across every locality in Indore, from the commercial corridors of
               Vijay Nagar and AB Road to the industrial clusters of Pithampur and Sanwer Road. Remote
               delivery means zero compromise on speed, quality, or price wherever you are based.
             </p>
@@ -944,11 +968,11 @@ export default function IndoreWebDesignPage() {
               className="fj-display font-semibold text-fj-ink mb-4"
               style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', letterSpacing: '-0.02em' }}
             >
-              We Recommend the Right Platform for Your Business — Not the Easiest One for Us
+              We Recommend the Right Platform for Your Business, Not the Easiest One for Us
             </h2>
             <p className="font-fj-body text-fj-neutral-500 mb-12 max-w-2xl" style={{ fontSize: '1rem' }}>
               Most Indore web agencies build everything on WordPress because it is the platform they know.
-              FactoryJet is platform-agnostic — we evaluate your business goals, traffic expectations,
+              FactoryJet is platform-agnostic, we evaluate your business goals, traffic expectations,
               and team capabilities before recommending a tech stack. Here is how we think about each option.
             </p>
 
@@ -976,7 +1000,7 @@ export default function IndoreWebDesignPage() {
                 </div>
                 <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
                   High-performance React framework deployed to Cloudflare CDN. Static pages load under
-                  1.5 seconds on Indian 4G — significantly faster than server-rendered alternatives.
+                  1.5 seconds on Indian 4G, significantly faster than server-rendered alternatives.
                   Lighthouse 100/100 is achievable by default. No monthly plugin overhead. Full codebase
                   ownership. Our top pick for businesses where speed, SEO, and performance matter.
                 </p>
@@ -1009,9 +1033,9 @@ export default function IndoreWebDesignPage() {
                   </div>
                 </div>
                 <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
-                  The most widely used CMS globally — and for good reason. WordPress is excellent for
+                  The most widely used CMS globally, and for good reason. WordPress is excellent for
                   content-heavy sites, blogs, and service businesses where your team wants to manage
-                  pages without developer help. FactoryJet builds custom WordPress themes from scratch —
+                  pages without developer help. FactoryJet builds custom WordPress themes from scratch,
                   no pre-packaged templates, no Elementor drag-and-drop bloat that tanks your performance.
                   We tune WordPress installs to achieve Core Web Vitals green before handover.
                 </p>
@@ -1047,8 +1071,8 @@ export default function IndoreWebDesignPage() {
                   For D2C and retail businesses that want to sell online quickly, Shopify is the
                   fastest path to a reliable store. Razorpay, PhonePe, UPI, and Shiprocket all
                   integrate natively. Inventory management, abandoned cart recovery, and discount
-                  logic are built in. FactoryJet builds Shopify stores with custom Liquid themes —
-                  not off-the-shelf templates — and wires up WhatsApp order notifications and
+                  logic are built in. FactoryJet builds Shopify stores with custom Liquid themes,
+                  not off-the-shelf templates, and wires up WhatsApp order notifications and
                   Shiprocket dispatch automation from day one.
                 </p>
                 <p
@@ -1080,10 +1104,10 @@ export default function IndoreWebDesignPage() {
                   </div>
                 </div>
                 <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
-                  Webflow suits businesses that need a visually flexible CMS — where the marketing or
+                  Webflow suits businesses that need a visually flexible CMS, where the marketing or
                   design team wants to control layout and content without writing code. It delivers
                   strong performance out of the box and a clean CMS editor. FactoryJet builds custom
-                  Webflow projects when the use case calls for it — typically for design agencies,
+                  Webflow projects when the use case calls for it, typically for design agencies,
                   creative studios, and marketing-led businesses that need frequent visual updates.
                 </p>
                 <p
@@ -1115,7 +1139,7 @@ export default function IndoreWebDesignPage() {
                   </div>
                 </div>
                 <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
-                  Some businesses have requirements that no off-the-shelf platform can handle cleanly —
+                  Some businesses have requirements that no off-the-shelf platform can handle cleanly,
                   complex booking engines, multi-tenant portals, B2B procurement systems, or custom
                   workflow automation. FactoryJet builds fully bespoke solutions in Next.js with
                   PostgreSQL, Firebase, or Supabase backends. Scope and architecture defined per
@@ -1150,11 +1174,11 @@ export default function IndoreWebDesignPage() {
                   </div>
                 </div>
                 <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
-                  Wix and Squarespace are good starting points — but they have a ceiling. Performance
+                  Wix and Squarespace are good starting points, but they have a ceiling. Performance
                   is constrained by the platform, SEO customisation is limited, and you can never
                   export your full site. Many Indore businesses outgrow them within 12–18 months.
                   FactoryJet migrates businesses off Wix and Squarespace to custom Next.js or
-                  WordPress builds — with zero downtime, full SEO redirect mapping, and no loss of
+                  WordPress builds, with zero downtime, full SEO redirect mapping, and no loss of
                   Google rankings in the transition.
                 </p>
                 <p
@@ -1170,7 +1194,7 @@ export default function IndoreWebDesignPage() {
             <div className="mt-10 rounded-2xl border border-fj-neutral-200 bg-fj-cream px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <p className="font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem' }}>
                 Not sure which platform is right for your Indore business? We will tell you honestly
-                on the discovery call — even if the answer is "stick with what you have."
+                on the discovery call, even if the answer is "stick with what you have."
               </p>
               <a
                 href="#faq"
@@ -1200,7 +1224,7 @@ export default function IndoreWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Indore Businesses"
-          lead="The questions we answer on every Indore discovery call — answered here, without the runaround. Hindi aur English dono mein."
+          lead="The questions we answer on every Indore discovery call, answered here, without the runaround. Hindi aur English dono mein."
           categories={INDORE_FAQ_CATEGORIES}
           items={INDORE_FAQ_ITEMS}
         />
@@ -1214,7 +1238,7 @@ export default function IndoreWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Get Indore's Fastest Website? Let's Build It in 7 Days."
-          sub="Join 500+ businesses who chose FactoryJet for professional websites that actually perform. Indore's business community is growing fast — coaching institutes, D2C brands, IT startups, and manufacturers are all competing online. Every week without a high-performing website is ground you are giving to a competitor who showed up with a better one. Get your free quote today — no obligation, response within 4 hours."
+          sub="Join 500+ businesses who chose FactoryJet for professional websites that actually perform. Indore's business community is growing fast, coaching institutes, D2C brands, IT startups, and manufacturers are all competing online. Every week without a high-performing website is ground you are giving to a competitor who showed up with a better one. Get your free quote today, no obligation, response within 4 hours."
           primaryCta={{ label: 'Get Free Indore Website Quote', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your full codebase delivered on launch day."

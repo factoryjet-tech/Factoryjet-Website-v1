@@ -84,7 +84,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Principal, Formative Concepts',
     city: 'Pune, MH',
     quote:
-      'As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm — structured data, fast load, and project showcase pages that actually rank on Google.',
+      'As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm, structured data, fast load, and project showcase pages that actually rank on Google.',
     industry: 'MEP / BIM Consulting · SEO',
     warmAvatar: true,
     avatarUrl: '/images/testimonials/arif-k.webp',
@@ -619,7 +619,7 @@ export default function TestimonialsSection({
             className="font-fj-mono"
             style={{ fontSize: '11px', letterSpacing: '0.06em' }}
           >
-            Want to verify? Every URL is live — open it, run PageSpeed.
+            Want to verify? Every URL is live, open it, run PageSpeed.
           </span>
         </div>
 

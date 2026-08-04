@@ -108,6 +108,19 @@ const MDU_COMPARISON_ROWS = [
   },
 ];
 
+// Freshness signal, see the sibling city pages. Keep honest: bump when the
+// page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/madurai#webpage',
+  url: 'https://factoryjet.com/web-design/madurai',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -129,7 +142,7 @@ export default function Page() {
     eyebrow: 'WEB DESIGN · MADURAI',
     headline: "Madurai's Growing Businesses Deserve a Website That Works as Hard as They Do",
     subheadline:
-      "Tamil Nadu's second-largest city is a hub for textiles, engineering, healthcare, and one of India's most iconic temple tourism destinations. Your website should help you compete beyond city limits — and win.",
+      "Tamil Nadu's second-largest city is a hub for textiles, engineering, healthcare, and one of India's most iconic temple tourism destinations. Your website should help you compete beyond city limits, and win.",
     primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
     secondaryCTA: { label: 'View Our Work', href: '/portfolio' },
     stats: [
@@ -141,9 +154,9 @@ export default function Page() {
 
   const cityContextProps = {
     eyebrow: 'MADURAI MARKET',
-    headline: "Tamil Nadu's Second City — Rich in Commerce, Heritage, and Ambition",
+    headline: "Tamil Nadu's Second City: Rich in Commerce, Heritage, and Ambition",
     leadParagraphs: [
-      "Madurai is more than the temple city. It is a significant textile and garment manufacturing hub, a growing center for auto parts and engineering components, and home to some of Tamil Nadu's most reputed hospitals and medical colleges. The city's MSME sector — spanning trading, manufacturing, and services — employs hundreds of thousands and supplies markets across India and overseas.",
+      "Madurai is more than the temple city. It is a significant textile and garment manufacturing hub, a growing center for auto parts and engineering components, and home to some of Tamil Nadu's most reputed hospitals and medical colleges. The city's MSME sector, spanning trading, manufacturing, and services, employs hundreds of thousands and supplies markets across India and overseas.",
       "As digital adoption accelerates across South India, Madurai businesses that invest in credible websites gain outsized advantages: ranking on Google for district-wide searches, attracting out-of-city clients, and projecting the kind of professionalism that closes larger deals. A well-built website is the single best growth investment for a Madurai SME.",
     ],
     stats: [
@@ -165,7 +178,7 @@ export default function Page() {
       },
       {
         title: 'SME-Friendly Fixed Pricing',
-        body: 'You get a clear, fixed quote after a free consultation — affordable for Madurai MSMEs without compromising on quality or performance.',
+        body: 'You get a clear, fixed quote after a free consultation, affordable for Madurai MSMEs without compromising on quality or performance.',
       },
       {
         title: 'Tamil Nadu Market Expertise',
@@ -173,7 +186,7 @@ export default function Page() {
       },
       {
         title: 'Lighthouse 100 Performance',
-        body: 'Every site scores green on Core Web Vitals — fast on Madurai 4G networks, instant on broadband.',
+        body: 'Every site scores green on Core Web Vitals, fast on Madurai 4G networks, instant on broadband.',
       },
     ],
   }
@@ -192,12 +205,12 @@ export default function Page() {
     {
       step: '03',
       title: 'Design & Build',
-      description: 'Design and development run in parallel. Real progress every day — not sequential hand-offs.',
+      description: 'Design and development run in parallel. Real progress every day, not sequential hand-offs.',
     },
     {
       step: '04',
       title: 'Review & Launch',
-      description: 'Two rounds of revisions, then your site goes live — most standard projects within 7 days.',
+      description: 'Two rounds of revisions, then your site goes live: most standard projects within 7 days.',
     },
   ]
 
@@ -215,7 +228,7 @@ export default function Page() {
     {
       icon: '🏥',
       name: 'Healthcare & Hospitals',
-      description: 'Patient-friendly websites for Madurai hospitals, specialist clinics, and diagnostic centres — built for local search.',
+      description: 'Patient-friendly websites for Madurai hospitals, specialist clinics, and diagnostic centres, built for local search.',
     },
     {
       icon: '🎓',
@@ -290,23 +303,23 @@ const MDU_FAQ_ITEMS = [
   { category: 'pricing', question: 'What does a website cost for a Madurai business?', answer: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep." },
   { category: 'pricing', question: 'Do you offer installment payment options?', answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger hospital or educational institution websites we can structure 3-stage payments.' },
   { category: 'pricing', question: 'Are there monthly fees after the website is built?', answer: 'No mandatory monthly fees. Hosting, domain, and optional maintenance are separate and clearly quoted before you sign.' },
-  { category: 'pricing', question: 'Is the pricing affordable for small Madurai businesses?', answer: "Yes. Our Starter scope is specifically designed for SMEs and MSMEs. We don't compromise on quality — we've built efficient processes that let us deliver premium websites at accessible prices." },
+  { category: 'pricing', question: 'Is the pricing affordable for small Madurai businesses?', answer: "Yes. Our Starter scope is specifically designed for SMEs and MSMEs. We don't compromise on quality. We've built efficient processes that let us deliver premium websites at accessible prices." },
   { category: 'process', question: 'How does the 7-day website delivery work?', answer: 'After kickoff call and content submission, design and development happen in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.' },
   { category: 'process', question: 'What information do I need to provide to get started?', answer: 'Your business logo, basic information about your services, and any existing photos or content. We guide you through a structured brief that takes under 30 minutes.' },
   { category: 'process', question: 'How many revisions can I request?', answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat rate communicated upfront.' },
   { category: 'process', question: 'Do you write the website content for me?', answer: 'Yes. Professional copywriting is included in all packages. We write in clear, professional English and you review and approve everything before launch.' },
-  { category: 'technical', question: 'Will my Madurai business rank on Google?', answer: 'Every site is built with on-page SEO best practices — proper heading structure, meta tags, schema markup, Google Maps integration, and fast loading. For ongoing content SEO we offer separate retainer packages.' },
+  { category: 'technical', question: 'Will my Madurai business rank on Google?', answer: 'Every site is built with on-page SEO best practices, proper heading structure, meta tags, schema markup, Google Maps integration, and fast loading. For ongoing content SEO we offer separate retainer packages.' },
   { category: 'technical', question: 'Will the website work on mobile phones?', answer: 'All our builds are mobile-first. Given that most Madurai users browse on smartphones, this is non-negotiable. We test across iOS and Android at multiple screen sizes.' },
   { category: 'technical', question: 'Can the website support Tamil language content?', answer: 'Yes. We can build bilingual Tamil + English websites for businesses targeting local consumers. Proper Unicode rendering and font support for Tamil script is included.' },
   { category: 'technical', question: 'Can I update the website content myself?', answer: 'Yes. WordPress builds include a CMS training session so you can manage your own content. For Next.js builds we provide a simple editing workflow.' },
   { category: 'ecommerce', question: 'Can you build an online store for my Madurai retail business?', answer: 'Yes. We build Shopify and custom e-commerce sites for retail, D2C, and wholesale businesses. You get a clear, fixed quote up front after a free consultation.' },
-  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.' },
+  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes: Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.' },
   { category: 'ecommerce', question: 'Can you build an online booking system for my hotel or tour operator?', answer: 'Yes. We integrate booking forms, availability calendars, and WhatsApp booking flows for Madurai hospitality and tourism businesses.' },
-  { category: 'ecommerce', question: 'Can you build a patient appointment booking system for a hospital?', answer: 'Yes. We build hospital websites with online appointment booking, department pages, doctor profiles, and patient enquiry forms — all optimized for local Madurai search.' },
-  { category: 'local', question: 'Do you build websites for textile exporters in Madurai?', answer: "Yes. We build export-facing product catalogues, company profile sites, and B2B inquiry portals for Madurai's textile, garment, and dyeing industry — targeting domestic buyers and international importers." },
+  { category: 'ecommerce', question: 'Can you build a patient appointment booking system for a hospital?', answer: 'Yes. We build hospital websites with online appointment booking, department pages, doctor profiles, and patient enquiry forms: all optimized for local Madurai search.' },
+  { category: 'local', question: 'Do you build websites for textile exporters in Madurai?', answer: "Yes. We build export-facing product catalogues, company profile sites, and B2B inquiry portals for Madurai's textile, garment, and dyeing industry, targeting domestic buyers and international importers." },
   { category: 'local', question: 'Can you build a website for a Madurai hospital or medical college?', answer: "Yes. We build comprehensive hospital websites with specialty department pages, doctor profiles, appointment booking, and local SEO optimized for searches across Madurai, Dindigul, and Virudhunagar districts." },
   { category: 'local', question: 'Do you support Tamil-language websites for local customers?', answer: "Yes. We build Tamil + English bilingual websites for businesses targeting local Madurai consumers. Our Enterprise tier includes full bilingual content support with proper Tamil script rendering." },
-  { category: 'local', question: 'Can you help a Madurai business attract customers from other Tamil Nadu cities?', answer: "Absolutely. Many Madurai clients — especially hospitals, colleges, and manufacturers — use their websites to attract patients, students, and buyers from Tirunelveli, Dindigul, Ramanathapuram, and beyond. We design and optimize for that reach." },
+  { category: 'local', question: 'Can you help a Madurai business attract customers from other Tamil Nadu cities?', answer: "Absolutely. Many Madurai clients, especially hospitals, colleges, and manufacturers, use their websites to attract patients, students, and buyers from Tirunelveli, Dindigul, Ramanathapuram, and beyond. We design and optimize for that reach." },
 
   // Money-query coverage, added 2026-06-11
   {
@@ -344,31 +357,31 @@ const MDU_FAQ_ITEMS = [
       {
         '@type': 'HowToStep',
         position: 1,
-        name: 'Day 1 — Discovery Call',
+        name: 'Day 1 | Discovery Call',
         text: `We learn your business, your Madurai market, your goals, and what you need the website to do.`,
       },
       {
         '@type': 'HowToStep',
         position: 2,
-        name: 'Day 2 — Strategy & Structure',
+        name: 'Day 2 | Strategy & Structure',
         text: `We map your site architecture, research your Madurai competitors, identify your top keywords, and write the first draft of your page copy.`,
       },
       {
         '@type': 'HowToStep',
         position: 3,
-        name: 'Days 3–4 — Design',
-        text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+        name: 'Days 3–4 | Design',
+        text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
       },
       {
         '@type': 'HowToStep',
         position: 4,
-        name: 'Days 5–6 — Development & SEO',
-        text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Madurai local schema markup added. Google Analytics and Search Console connected.`,
+        name: 'Days 5–6 | Development & SEO',
+        text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Madurai local schema markup added. Google Analytics and Search Console connected.`,
       },
       {
         '@type': 'HowToStep',
         position: 5,
-        name: 'Day 7 — Launch',
+        name: 'Day 7 | Launch',
         text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
       },
     ],
@@ -387,13 +400,17 @@ const MDU_FAQ_ITEMS = [
 
   const finalCTAProps = {
     headline: "Ready to Put Madurai's Best Businesses Online?",
-    sub: "Join 500+ businesses that trust FactoryJet. Whether you're a textile exporter, a hospital, an engineering manufacturer, or a retail brand — we deliver a world-class website in 7 days.",
+    sub: "Join 500+ businesses that trust FactoryJet. Whether you're a textile exporter, a hospital, an engineering manufacturer, or a retail brand, we deliver a world-class website in 7 days.",
     primaryCta: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
     secondaryCta: { label: 'View Portfolio', href: '/portfolio' },
   }
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="mdu-local-business-schema"
         type="application/ld+json"
@@ -427,7 +444,7 @@ const MDU_FAQ_ITEMS = [
       <BigThreeTrustBlock />
       <CityContextSection {...cityContextProps} />
       <ServiceExplanation
-          headline="Madurai Has Many Business Types — We Serve All of Them"
+          headline="Madurai Has Many Business Types, We Serve All of Them"
           lead="From MSME manufacturers in Kappalur to hospital chains in Anna Nagar, and from engineering exporters to temple tourism operators, Madurai's business diversity is its strength. We build websites that serve each segment's unique needs."
           rightSlot={
             <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
@@ -441,7 +458,7 @@ const MDU_FAQ_ITEMS = [
                 </div>
                 <div>
                   <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Local / Retail, Healthcare &amp; Services (Anna Nagar / KK Nagar / SS Colony)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Google Maps optimization, patient or customer reviews, service menus, and clear contact CTAs. Local Madurai consumers search on mobile — your site must load fast and make it easy to act.</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Google Maps optimization, patient or customer reviews, service menus, and clear contact CTAs. Local Madurai consumers search on mobile: your site must load fast and make it easy to act.</p>
                 </div>
               </div>
             </div>
@@ -455,7 +472,7 @@ const MDU_FAQ_ITEMS = [
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
@@ -463,8 +480,8 @@ const MDU_FAQ_ITEMS = [
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
-              description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+              title: 'Formative Concepts | Pune',
+              description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -476,10 +493,10 @@ const MDU_FAQ_ITEMS = [
       <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Madurai Agency vs. Freelancer"
-          lead="Not all web design options in Madurai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Madurai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
-            caption: 'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={MDU_COMPARISON_COLUMNS}
           rows={MDU_COMPARISON_ROWS}
@@ -491,7 +508,7 @@ const MDU_FAQ_ITEMS = [
       <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Madurai Businesses"
-          lead="Everything Madurai businesses ask before starting a project — answered straight."
+          lead="Everything Madurai businesses ask before starting a project, answered straight."
           categories={MDU_FAQ_CATEGORIES}
           items={MDU_FAQ_ITEMS}
         />

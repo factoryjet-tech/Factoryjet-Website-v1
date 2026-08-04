@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design & Development Services USA | FactoryJet',
     description:
-      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps — delivered in 7 days, engineered for measurable outcomes.',
+      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps, delivered in 7 days, engineered for measurable outcomes.',
     url: 'https://factoryjet.com/services',
     siteName: 'FactoryJet',
     type: 'website',
@@ -48,31 +48,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
+      name: 'Days 3–4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
+      name: 'Days 5–6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
@@ -188,7 +188,7 @@ const SERVICES = [
     eyebrow: 'AI · NEW',
     title: 'AI Agent Development',
     description:
-      'Custom AI agents that qualify leads, answer customer questions, and automate repetitive workflows — 24/7, no extra headcount.',
+      'Custom AI agents that qualify leads, answer customer questions, and automate repetitive workflows, 24/7, no extra headcount.',
     href: '/services/ai-agents',
     cta: 'See AI Agent Services',
     featured: false,
@@ -239,7 +239,7 @@ const FAQS = [
   },
   {
     q: 'Can you really deliver a website in 7 days?',
-    a: 'Yes — for standard business websites up to 5 pages. We\'ve done it 500+ times. The 7-day clock starts the day you approve the Figma design. If we miss the deadline for any reason on our end, you don\'t pay.',
+    a: 'Yes, for standard business websites up to 5 pages. We\'ve done it 500+ times. The 7-day clock starts the day you approve the Figma design. If we miss the deadline for any reason on our end, you don\'t pay.',
   },
   {
     q: 'How do you keep pricing lower than typical agency quotes?',
@@ -255,11 +255,11 @@ const FAQS = [
   },
   {
     q: 'Which platform do you build on?',
-    a: 'Most business sites go on Next.js (our default — fastest performance, Lighthouse 100). We also build on WordPress, Shopify, and Webflow depending on your content management needs. We\'ll recommend the right fit on the discovery call.',
+    a: 'Most business sites go on Next.js (our default, fastest performance, Lighthouse 100). We also build on WordPress, Shopify, and Webflow depending on your content management needs. We\'ll recommend the right fit on the discovery call.',
   },
   {
     q: 'Do you work with US small businesses specifically?',
-    a: 'That\'s our entire focus for FactoryJet\'s US division. We\'ve worked with 500+ businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and other US cities. Our whole process — pricing, delivery, communication hours — is designed around US SMBs.',
+    a: 'That\'s our entire focus for FactoryJet\'s US division. We\'ve worked with 500+ businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and other US cities. Our whole process, pricing, delivery, communication hours, is designed around US SMBs.',
   },
   {
     q: 'What industries do you serve?',
@@ -279,15 +279,15 @@ const FAQS = [
   },
   {
     q: 'What\'s an AI agent, and does my small business actually need one?',
-    a: 'An AI agent is a software program that handles repetitive tasks — answering customer questions, qualifying leads, routing support tickets, sending follow-up emails. If you\'re manually handling any of those at scale, an AI agent probably saves you 10–30 hours a week. We scope them honestly — if you don\'t need one yet, we\'ll tell you.',
+    a: 'An AI agent is a software program that handles repetitive tasks, answering customer questions, qualifying leads, routing support tickets, sending follow-up emails. If you\'re manually handling any of those at scale, an AI agent probably saves you 10–30 hours a week. We scope them honestly, if you don\'t need one yet, we\'ll tell you.',
   },
   {
     q: 'How does AI automation differ from AI agent development?',
-    a: 'AI automation connects your existing tools (CRM, email, calendar, Slack) and triggers actions based on rules. AI agents are more autonomous — they reason, make decisions, and respond dynamically. Most businesses start with automation and add agents as they scale.',
+    a: 'AI automation connects your existing tools (CRM, email, calendar, Slack) and triggers actions based on rules. AI agents are more autonomous, they reason, make decisions, and respond dynamically. Most businesses start with automation and add agents as they scale.',
   },
   {
     q: 'Do you build websites for law firms?',
-    a: 'Yes. We have a dedicated law firm website design service with attorney-specific conversion patterns — practice area pages, attorney bio templates, case result displays, consultation booking forms, and local SEO optimization for city + practice area terms.',
+    a: 'Yes. We have a dedicated law firm website design service with attorney-specific conversion patterns, practice area pages, attorney bio templates, case result displays, consultation booking forms, and local SEO optimization for city + practice area terms.',
   },
   {
     q: 'Can you build a real estate website with MLS/IDX listings?',
@@ -299,7 +299,7 @@ const FAQS = [
   },
   {
     q: 'What happens if I need changes after the site is live?',
-    a: 'Minor text and image changes are included in the first 30 days after launch. After that, we offer flexible retainer packages or fixed-price change requests. Nothing is open-ended — every piece of post-launch work is priced upfront.',
+    a: 'Minor text and image changes are included in the first 30 days after launch. After that, we offer flexible retainer packages or fixed-price change requests. Nothing is open-ended: every piece of post-launch work is priced upfront.',
   },
   {
     q: 'Do you provide website maintenance?',
@@ -307,7 +307,7 @@ const FAQS = [
   },
   {
     q: 'Can you help with SEO after the website is built?',
-    a: 'We handle technical SEO setup as part of every build — site speed, structured data, meta tags, sitemap, Core Web Vitals. For ongoing SEO (content, link building, local citations), we offer separate SEO retainers.',
+    a: 'We handle technical SEO setup as part of every build, site speed, structured data, meta tags, sitemap, Core Web Vitals. For ongoing SEO (content, link building, local citations), we offer separate SEO retainers.',
   },
   {
     q: 'How is FactoryJet different from Fiverr or Upwork freelancers?',
@@ -319,7 +319,7 @@ const FAQS = [
   },
   {
     q: 'Can I see examples of websites you\'ve built for US businesses?',
-    a: 'Yes — visit our portfolio at factoryjet.com/portfolio to see live case studies. We also share Figma design files and Lighthouse scores on request.',
+    a: 'Yes, visit our portfolio at factoryjet.com/portfolio to see live case studies. We also share Figma design files and Lighthouse scores on request.',
   },
 ];
 
@@ -415,7 +415,7 @@ export default function USServicesHubPage() {
         <section className="relative overflow-hidden" style={{ minHeight: 'clamp(360px, 45vw, 520px)' }}>
           <Image
             src="/images/services/services-hub-hero.webp"
-            alt="Designer\'s desk with Figma mockups, keyboard, and wireframes — FactoryJet web design studio"
+            alt="Designer\'s desk with Figma mockups, keyboard, and wireframes, FactoryJet web design studio"
             fill
             className="object-cover object-center"
             sizes="100vw"
@@ -458,7 +458,7 @@ export default function USServicesHubPage() {
               }}
             >
               Fixed price confirmed upfront. Delivered in 7 days.
-              Milestone-paid — same Figma design, same Next.js engineering, full code ownership.
+              Milestone-paid, same Figma design, same Next.js engineering, full code ownership.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

@@ -258,7 +258,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* ── What is B2B ecommerce — image split ── */}
+        {/* ── What is B2B ecommerce, image split ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
@@ -364,7 +364,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* ── ERP integration — image split (flipped) ── */}
+        {/* ── ERP integration, image split (flipped) ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
@@ -546,7 +546,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* ── Process — image left + steps right ── */}
+        {/* ── Process, image left + steps right ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
@@ -731,7 +731,7 @@ export default function B2BEcommercePage() {
           items={FAQ_ITEMS}
         />
 
-        {/* ── CTA — 2 col with proof card ── */}
+        {/* ── CTA, 2 col with proof card ── */}
         <section className="pp-sec tint" id="final-cta">
           <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'start' }}>
             {/* Left: copy + buttons */}

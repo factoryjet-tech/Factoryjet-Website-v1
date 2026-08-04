@@ -190,7 +190,7 @@ export default function Pricing() {
             hourly rates and no surprise invoices. The table below shows what is
             included in each service and the main factors that shape the scope,
             so you know exactly what you are paying for. We quote the full,
-            written price up front after a free discovery call — before any work
+            written price up front after a free discovery call, before any work
             starts.
           </p>
         </div>
@@ -252,7 +252,7 @@ export default function Pricing() {
                       borderTop: "1px solid #E2E8F0",
                     }}
                   >
-                    {/* Service — highlighted column */}
+                    {/* Service, highlighted column */}
                     <div
                       className="px-6 py-6"
                       style={{

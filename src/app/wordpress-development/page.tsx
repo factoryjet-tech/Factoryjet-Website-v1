@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -110,7 +111,7 @@ const WP_SERVICES = [
   {
     name: 'Custom WordPress Theme Development',
     description:
-      'A WordPress theme built from scratch in Figma and coded as a clean, block-editor-compatible theme — no page builder bloat, no Elementor dependency, no 200KB CSS framework just to style a paragraph. Mobile-first, Lighthouse 90+ on delivery, fully editable from the WordPress admin.',
+      'A WordPress theme built from scratch in Figma and coded as a clean, block-editor-compatible theme, no page builder bloat, no Elementor dependency, no 200KB CSS framework just to style a paragraph. Mobile-first, Lighthouse 90+ on delivery, fully editable from the WordPress admin.',
     example: 'Custom themes load 4–6× faster than Elementor-built pages with the same visual design.',
     linkLabel: 'See theme examples',
     linkHref: '/portfolio',
@@ -118,7 +119,7 @@ const WP_SERVICES = [
   {
     name: 'WooCommerce Store Development',
     description:
-      'Complete WooCommerce store from scratch — custom theme, product catalogue, Razorpay + UPI payment integration, GST-compliant invoicing, Shiprocket logistics, WhatsApp order notifications, and a live launch. India-optimized checkout flow designed to reduce cart abandonment on mobile.',
+      'Complete WooCommerce store from scratch, custom theme, product catalogue, Razorpay + UPI payment integration, GST-compliant invoicing, Shiprocket logistics, WhatsApp order notifications, and a live launch. India-optimized checkout flow designed to reduce cart abandonment on mobile.',
     example: 'WooCommerce with Razorpay handles UPI, cards, net banking, EMI, and BNPL in one integration.',
     linkLabel: 'Get a WooCommerce Quote',
     linkHref: '/contact',
@@ -135,7 +136,7 @@ const WP_SERVICES = [
     name: 'WordPress Plugin Development',
     description:
       'Custom WordPress plugin development for functionality that off-the-shelf plugins cannot deliver: custom post types, advanced ACF field structures, REST API integrations with Indian SaaS tools (Razorpay, Zoho, Tally, Shiprocket), and custom Gutenberg blocks for your editorial team.',
-    example: 'No plugin bloat — we build lean, single-purpose plugins that do not affect page speed.',
+    example: 'No plugin bloat, we build lean, single-purpose plugins that do not affect page speed.',
     linkLabel: 'Discuss Your Requirements',
     linkHref: '/contact',
   },
@@ -162,19 +163,19 @@ const WP_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Platform Decision',
     description:
-      'A 30-minute audit of your business, goals, and existing digital presence. We confirm whether WordPress is the right platform for your needs — or whether Next.js or Shopify would serve you better. No upsell agenda. Platform recommendation is honest and based on your requirements, not our margin.',
+      'A 30-minute audit of your business, goals, and existing digital presence. We confirm whether WordPress is the right platform for your needs, or whether Next.js or Shopify would serve you better. No upsell agenda. Platform recommendation is honest and based on your requirements, not our margin.',
   },
   {
     number: '02',
     title: 'Design & Theme Development',
     description:
-      'Full Figma mockups for homepage, inner pages, and mobile. You approve every screen before we write a line of PHP. Custom WordPress theme — no Elementor, no WPBakery, no premium theme with 40 files renamed. Clean, purpose-built code that your team can maintain.',
+      'Full Figma mockups for homepage, inner pages, and mobile. You approve every screen before we write a line of PHP. Custom WordPress theme, no Elementor, no WPBakery, no premium theme with 40 files renamed. Clean, purpose-built code that your team can maintain.',
   },
   {
     number: '03',
     title: 'Development & Plugin Integration',
     description:
-      'Theme development with daily commits to your GitHub repo. Staging URL available within 48 hours. WooCommerce configured with Razorpay + UPI, Shiprocket rate calculator, GST invoice setup, WhatsApp notifications, and only the plugins your site actually needs — nothing extra.',
+      'Theme development with daily commits to your GitHub repo. Staging URL available within 48 hours. WooCommerce configured with Razorpay + UPI, Shiprocket rate calculator, GST invoice setup, WhatsApp notifications, and only the plugins your site actually needs, nothing extra.',
   },
   {
     number: '04',
@@ -193,7 +194,7 @@ const WP_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const WP_STATS = [
   {
     value: '43%',
-    label: 'of all websites on the internet run on WordPress — the most used CMS in the world by far',
+    label: 'of all websites on the internet run on WordPress: the most used CMS in the world by far',
     microcopy: 'W3Techs CMS market share data, 2025',
     categoryLabel: 'MARKET SHARE',
   },
@@ -205,7 +206,7 @@ const WP_STATS = [
   },
   {
     value: '7 Days',
-    label: 'delivery guarantee for standard WordPress business sites — theme, pages, SEO, and launch',
+    label: 'delivery guarantee for standard WordPress business sites, theme, pages, SEO, and launch',
     microcopy: 'the fastest professional WordPress build timeline in India',
     categoryLabel: 'DELIVERY',
   },
@@ -214,19 +215,19 @@ const WP_STATS = [
 const WP_MARKET_STATS = [
   {
     value: '43%',
-    label: 'of all websites globally run on WordPress — more than the next 10 CMS platforms combined',
+    label: 'of all websites globally run on WordPress, more than the next 10 CMS platforms combined',
     sourceUrl: 'https://w3techs.com/technologies/overview/content_management',
     sourceLabel: 'W3Techs CMS Report 2025',
   },
   {
     value: '5.6M+',
-    label: 'WordPress websites in India — the largest WordPress market in Asia-Pacific',
+    label: 'WordPress websites in India: the largest WordPress market in Asia-Pacific',
     sourceUrl: 'https://trends.builtwith.com/cms/WordPress',
     sourceLabel: 'BuiltWith Technology Trends',
   },
   {
     value: '7 days',
-    label: 'standard delivery for a custom WordPress site from FactoryJet — at a fixed price scoped up front',
+    label: 'standard delivery for a custom WordPress site from FactoryJet, at a fixed price scoped up front',
     sourceUrl: 'https://factoryjet.com/wordpress-development',
     sourceLabel: 'FactoryJet',
   },
@@ -332,11 +333,11 @@ const WP_PRICING_TIERS = [
     name: 'Starter Site',
     priceRange: '',
     description:
-      'A custom WordPress theme with up to 5 pages — ideal for new businesses, service providers, and consultants who need a professional web presence without the agency price tag.',
+      'A custom WordPress theme with up to 5 pages, ideal for new businesses, service providers, and consultants who need a professional web presence without the agency price tag.',
     features: [
-      'Custom Figma design — homepage + up to 4 inner pages',
+      'Custom Figma design, homepage + up to 4 inner pages',
       'WordPress theme built to match Figma exactly',
-      'Block-editor compatible — no Elementor dependency',
+      'Block-editor compatible, no Elementor dependency',
       'Contact form with email + WhatsApp routing',
       'Mobile-first, Lighthouse 85+ performance',
       'On-page SEO: title tags, meta, schema markup',
@@ -350,7 +351,7 @@ const WP_PRICING_TIERS = [
     name: 'Growth Site',
     priceRange: '',
     description:
-      'A complete WordPress business site — custom theme, up to 8 pages, speed optimization, technical SEO, blog setup, and everything needed to rank and convert in India.',
+      'A complete WordPress business site, custom theme, up to 8 pages, speed optimization, technical SEO, blog setup, and everything needed to rank and convert in India.',
     features: [
       'Everything in Starter, plus:',
       'Up to 8 pages including blog archive and post template',
@@ -369,7 +370,7 @@ const WP_PRICING_TIERS = [
     name: 'WooCommerce Store',
     priceRange: '',
     description:
-      'A full WooCommerce store built for the Indian market — Razorpay + UPI, GST invoicing, Shiprocket logistics, custom theme, and a checkout flow designed to reduce cart abandonment on mobile.',
+      'A full WooCommerce store built for the Indian market: Razorpay + UPI, GST invoicing, Shiprocket logistics, custom theme, and a checkout flow designed to reduce cart abandonment on mobile.',
     features: [
       'Everything in Growth Site, plus:',
       'WooCommerce setup with full product catalogue import',
@@ -400,25 +401,25 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does WordPress development cost in India in 2025?',
     answer:
-      "FactoryJet's WordPress pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing install, a complete business site (5–8 pages, custom design, SEO, speed optimization, and launch), or a WooCommerce store with Razorpay, GST invoicing, and Shiprocket. Every tier is quoted up front after a free discovery call with fixed scope — no discovery fees, no 'it depends' surprises. Because you work directly with a specialised team rather than a full-service agency with account managers and overhead, you get production-grade work, faster, with full code ownership.",
+      "FactoryJet's WordPress pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing install, a complete business site (5–8 pages, custom design, SEO, speed optimization, and launch), or a WooCommerce store with Razorpay, GST invoicing, and Shiprocket. Every tier is quoted up front after a free discovery call with fixed scope, no discovery fees, no 'it depends' surprises. Because you work directly with a specialised team rather than a full-service agency with account managers and overhead, you get production-grade work, faster, with full code ownership.",
   },
   {
     category: 'pricing',
     question: 'How does the 7-day WordPress delivery guarantee work?',
     answer:
-      "The 7-day guarantee applies to standard WordPress business sites: 5–8 pages, custom theme, contact forms, basic SEO, GA4, and launch. The clock starts from design sign-off — not from first call. Day 1–2: Figma design delivered and approved. Day 3–5: WordPress theme built and staging URL live. Day 6: content loaded, SEO configured, speed tested. Day 7: DNS transfer and launch. WooCommerce stores (14–21 days) and large multi-page sites are scoped separately with their own timelines.",
+      "The 7-day guarantee applies to standard WordPress business sites: 5–8 pages, custom theme, contact forms, basic SEO, GA4, and launch. The clock starts from design sign-off, not from first call. Day 1–2: Figma design delivered and approved. Day 3–5: WordPress theme built and staging URL live. Day 6: content loaded, SEO configured, speed tested. Day 7: DNS transfer and launch. WooCommerce stores (14–21 days) and large multi-page sites are scoped separately with their own timelines.",
   },
   {
     category: 'pricing',
-    question: "What's included in FactoryJet's WordPress pricing — any hidden costs?",
+    question: "What's included in FactoryJet's WordPress pricing, any hidden costs?",
     answer:
-      'No hidden costs. Every quote is fixed-price and itemised. What is NOT included in our development fee and billed separately: WordPress hosting (we recommend Cloudflare Pages + AWS LightSail, or WP Engine India — both affordable monthly plans paid to the host directly), premium plugins if required (most builds use only free or custom-built plugins), domain renewal (a small annual fee paid to your registrar), and ongoing maintenance if you want it (a fixed monthly retainer scoped to your needs). We tell you the full cost of ownership before you sign off.',
+      'No hidden costs. Every quote is fixed-price and itemised. What is NOT included in our development fee and billed separately: WordPress hosting (we recommend Cloudflare Pages + AWS LightSail, or WP Engine India, both affordable monthly plans paid to the host directly), premium plugins if required (most builds use only free or custom-built plugins), domain renewal (a small annual fee paid to your registrar), and ongoing maintenance if you want it (a fixed monthly retainer scoped to your needs). We tell you the full cost of ownership before you sign off.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than other WordPress agencies in India?',
     answer:
-      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed price scoped up front. We have been building websites. That experience is priced into the quality, not the overhead.",
+      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup, at a fixed price scoped up front. We have been building websites. That experience is priced into the quality, not the overhead.",
   },
 
   /* ── WordPress vs. Alternatives ── */
@@ -430,21 +431,21 @@ const WP_FAQ_ITEMS = [
   },
   {
     category: 'platform',
-    question: 'WooCommerce vs. Shopify for Indian businesses — which is better?',
+    question: 'WooCommerce vs. Shopify for Indian businesses, which is better?',
     answer:
-      "WooCommerce: No platform subscription fee, full code ownership, unlimited customization, and works on any Indian hosting. Best for: businesses that want zero monthly SaaS cost, need deep WooCommerce customization (wholesale portals, custom checkout flows), or already have a WordPress site. Shopify: Managed infrastructure, faster to launch for pure D2C, better for brands processing ₹5 crore+/month who want zero server management. It carries a higher recurring platform subscription. Both support Razorpay, UPI, GST, and Shiprocket natively. We build both — we will recommend the one that actually fits your business.",
+      "WooCommerce: No platform subscription fee, full code ownership, unlimited customization, and works on any Indian hosting. Best for: businesses that want zero monthly SaaS cost, need deep WooCommerce customization (wholesale portals, custom checkout flows), or already have a WordPress site. Shopify: Managed infrastructure, faster to launch for pure D2C, better for brands processing ₹5 crore+/month who want zero server management. It carries a higher recurring platform subscription. Both support Razorpay, UPI, GST, and Shiprocket natively. We build both, we will recommend the one that actually fits your business.",
   },
   {
     category: 'platform',
-    question: 'Is WordPress still relevant in 2025 — or should I choose something modern?',
+    question: 'Is WordPress still relevant in 2025, or should I choose something modern?',
     answer:
-      "WordPress powers 43% of all websites globally as of 2025 — more than the next 10 CMS platforms combined. It is not going anywhere. The misconception is that WordPress equals slow, bloated sites. That is Elementor and shared GoDaddy hosting. A properly built WordPress site — custom theme, no page builder, Redis caching on Cloudflare — delivers Lighthouse 90+ and Core Web Vitals green. The block editor is excellent. WooCommerce is the most flexible e-commerce platform in the world. WordPress is absolutely the right choice for most Indian SMBs.",
+      "WordPress powers 43% of all websites globally as of 2025, more than the next 10 CMS platforms combined. It is not going anywhere. The misconception is that WordPress equals slow, bloated sites. That is Elementor and shared GoDaddy hosting. A properly built WordPress site, custom theme, no page builder, Redis caching on Cloudflare, delivers Lighthouse 90+ and Core Web Vitals green. The block editor is excellent. WooCommerce is the most flexible e-commerce platform in the world. WordPress is absolutely the right choice for most Indian SMBs.",
   },
   {
     category: 'platform',
     question: 'Can WordPress handle a large news site or high-traffic blog in India?',
     answer:
-      "Yes — WordPress was built for content publishing and news sites. It powers some of the world's largest media properties. For high-traffic Indian news and media sites, we configure: Cloudflare with aggressive page caching, Redis object caching on AWS, lazy-loading for media-heavy posts, WP-CLI for bulk content operations, and custom archive/category templates optimised for mobile news consumption. Editorial workflows (custom post types, contributor roles, editorial calendar) are configured as standard for news builds.",
+      "Yes, WordPress was built for content publishing and news sites. It powers some of the world's largest media properties. For high-traffic Indian news and media sites, we configure: Cloudflare with aggressive page caching, Redis object caching on AWS, lazy-loading for media-heavy posts, WP-CLI for bulk content operations, and custom archive/category templates optimised for mobile news consumption. Editorial workflows (custom post types, contributor roles, editorial calendar) are configured as standard for news builds.",
   },
 
   /* ── Technical & Hosting ── */
@@ -452,25 +453,25 @@ const WP_FAQ_ITEMS = [
     category: 'technical',
     question: 'What WordPress hosting do you recommend for Indian businesses?',
     answer:
-      "Our recommendations for Indian WordPress sites: (1) Cloudflare Pages + AWS LightSail — best performance-to-cost ratio, Indian CDN edge nodes, Cloudflare caching and DDoS protection. (2) WP Engine India — fully managed WordPress hosting, automated updates, daily backups, and built-in Redis. (3) Kinsta India — premium managed hosting on Google Cloud. Hosting is paid directly to the host on an affordable monthly plan. We do NOT recommend GoDaddy shared hosting or Hostgator for production WordPress sites — they are the primary reason Indian WordPress sites load in 8+ seconds.",
+      "Our recommendations for Indian WordPress sites: (1) Cloudflare Pages + AWS LightSail, best performance-to-cost ratio, Indian CDN edge nodes, Cloudflare caching and DDoS protection. (2) WP Engine India, fully managed WordPress hosting, automated updates, daily backups, and built-in Redis. (3) Kinsta India, premium managed hosting on Google Cloud. Hosting is paid directly to the host on an affordable monthly plan. We do NOT recommend GoDaddy shared hosting or Hostgator for production WordPress sites, they are the primary reason Indian WordPress sites load in 8+ seconds.",
   },
   {
     category: 'technical',
     question: 'How do you optimize a WordPress site for speed in India?',
     answer:
-      "Our WordPress speed optimization process: (1) Server migration from shared hosting to Cloudflare + AWS LightSail or WP Engine India. (2) Redis object caching to reduce database queries. (3) Full-page caching via WP Rocket or custom Nginx config. (4) Image conversion to WebP with lazy loading below the fold. (5) Plugin audit — we remove everything unused and replace bloated plugins with lighter alternatives or custom code. (6) Critical CSS inlining to eliminate render-blocking resources. (7) Cloudflare CDN for static assets. Average result: 8-second GoDaddy site → 1.8-second Lighthouse 90+ site.",
+      "Our WordPress speed optimization process: (1) Server migration from shared hosting to Cloudflare + AWS LightSail or WP Engine India. (2) Redis object caching to reduce database queries. (3) Full-page caching via WP Rocket or custom Nginx config. (4) Image conversion to WebP with lazy loading below the fold. (5) Plugin audit, we remove everything unused and replace bloated plugins with lighter alternatives or custom code. (6) Critical CSS inlining to eliminate render-blocking resources. (7) Cloudflare CDN for static assets. Average result: 8-second GoDaddy site → 1.8-second Lighthouse 90+ site.",
   },
   {
     category: 'technical',
     question: 'How do you handle WordPress security for Indian businesses?',
     answer:
-      "Indian WordPress sites are high-value targets for automated bots — unmanaged sites are typically compromised within 12 months. Our security setup: Wordfence Security with real-time malware scanning and firewall rules, WP admin URL randomized (not /wp-admin), login attempt limiting and two-factor authentication for admin users, disabling of XML-RPC, file editing disabled from the WordPress admin, daily automated backups to S3 with 30-day retention, and regular core and plugin updates as part of our maintenance plans.",
+      "Indian WordPress sites are high-value targets for automated bots, unmanaged sites are typically compromised within 12 months. Our security setup: Wordfence Security with real-time malware scanning and firewall rules, WP admin URL randomized (not /wp-admin), login attempt limiting and two-factor authentication for admin users, disabling of XML-RPC, file editing disabled from the WordPress admin, daily automated backups to S3 with 30-day retention, and regular core and plugin updates as part of our maintenance plans.",
   },
   {
     category: 'technical',
     question: 'Will my WordPress site rank on Google India?',
     answer:
-      "Yes — every WordPress site we build includes full technical SEO: Yoast or Rank Math configured with XML sitemap, schema markup for your business type (Organization, LocalBusiness, Article, Product), canonical URLs, and Open Graph tags. Title and meta templates are set for all page types. We submit to Google Search Console on launch day and verify crawl status within 48 hours. Core Web Vitals are green before launch — Google confirmed CWV as a ranking signal for Indian mobile search. Blog and landing page keyword strategy available as an add-on.",
+      "Yes: every WordPress site we build includes full technical SEO: Yoast or Rank Math configured with XML sitemap, schema markup for your business type (Organization, LocalBusiness, Article, Product), canonical URLs, and Open Graph tags. Title and meta templates are set for all page types. We submit to Google Search Console on launch day and verify crawl status within 48 hours. Core Web Vitals are green before launch, Google confirmed CWV as a ranking signal for Indian mobile search. Blog and landing page keyword strategy available as an add-on.",
   },
 
   /* ── WooCommerce & India Commerce ── */
@@ -484,25 +485,25 @@ const WP_FAQ_ITEMS = [
     category: 'woocommerce',
     question: 'Can you set up GST-compliant invoicing in WooCommerce?',
     answer:
-      "Yes — GST compliance is standard in every WooCommerce store we build. We configure: GSTIN capture at checkout for B2B buyers, HSN code mapping at the product level, automatic GST invoice generation at order placement (using WooCommerce PDF Invoices or a custom plugin), GST-inclusive and GST-exclusive price display based on buyer type, and GSTR-1 compatible export for your CA. For D2C brands, we integrate with Zoho Books or Tally via API for automated accounting sync.",
+      "Yes, GST compliance is standard in every WooCommerce store we build. We configure: GSTIN capture at checkout for B2B buyers, HSN code mapping at the product level, automatic GST invoice generation at order placement (using WooCommerce PDF Invoices or a custom plugin), GST-inclusive and GST-exclusive price display based on buyer type, and GSTR-1 compatible export for your CA. For D2C brands, we integrate with Zoho Books or Tally via API for automated accounting sync.",
   },
   {
     category: 'woocommerce',
     question: 'Can you integrate Shiprocket with WooCommerce for Indian logistics?',
     answer:
-      "Yes — Shiprocket integration is standard in our Indian WooCommerce builds. We configure: real-time shipping rate calculation at checkout from 15+ courier partners (Delhivery, Bluedart, XpressBees, Ekart, Shadowfax), automated AWB generation on order placement, tracking updates pushed to customers via WhatsApp and SMS, automated NDR (non-delivery report) workflows, and a returns portal. For high-volume stores, we integrate Delhivery or Bluedart directly via API for custom SLAs and branded tracking pages.",
+      "Yes, Shiprocket integration is standard in our Indian WooCommerce builds. We configure: real-time shipping rate calculation at checkout from 15+ courier partners (Delhivery, Bluedart, XpressBees, Ekart, Shadowfax), automated AWB generation on order placement, tracking updates pushed to customers via WhatsApp and SMS, automated NDR (non-delivery report) workflows, and a returns portal. For high-volume stores, we integrate Delhivery or Bluedart directly via API for custom SLAs and branded tracking pages.",
   },
   {
     category: 'woocommerce',
     question: 'Can you set up COD (Cash on Delivery) in WooCommerce with fraud prevention?',
     answer:
-      "Yes — COD setup is standard for Indian WooCommerce stores where COD typically accounts for 30–50% of orders. We configure: COD as a payment option with optional extra fee or PIN code filtering (disable COD in non-serviceable pin codes), prepaid discount incentive to shift COD buyers to digital payment, Razorpay Thirdwatch or ShipRocket's built-in COD verification call for high-risk orders, and WhatsApp order confirmation for COD orders to reduce RTO (Return to Origin). RTO reduction from WhatsApp confirmation: typically 15–20% improvement.",
+      "Yes, COD setup is standard for Indian WooCommerce stores where COD typically accounts for 30–50% of orders. We configure: COD as a payment option with optional extra fee or PIN code filtering (disable COD in non-serviceable pin codes), prepaid discount incentive to shift COD buyers to digital payment, Razorpay Thirdwatch or ShipRocket's built-in COD verification call for high-risk orders, and WhatsApp order confirmation for COD orders to reduce RTO (Return to Origin). RTO reduction from WhatsApp confirmation: typically 15–20% improvement.",
   },
   {
     category: 'woocommerce',
     question: 'Can WooCommerce handle WooCommerce-to-Shopify migration or vice versa?',
     answer:
-      "Yes — we handle migrations in both directions. WooCommerce-to-Shopify: products, customers, order history, and reviews migrated with full URL redirect mapping. Shopify-to-WooCommerce: useful for brands that want to eliminate the Shopify subscription fee and gain more customization control. In both cases, we map every changed URL to a 301 redirect before DNS switch, test the full checkout flow on staging, and migrate all payment and logistics integrations. Zero downtime on launch day.",
+      "Yes, we handle migrations in both directions. WooCommerce-to-Shopify: products, customers, order history, and reviews migrated with full URL redirect mapping. Shopify-to-WooCommerce: useful for brands that want to eliminate the Shopify subscription fee and gain more customization control. In both cases, we map every changed URL to a 301 redirect before DNS switch, test the full checkout flow on staging, and migrate all payment and logistics integrations. Zero downtime on launch day.",
   },
 
   /* ── Support & Maintenance ── */
@@ -516,25 +517,25 @@ const WP_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own my WordPress theme code after the project?',
     answer:
-      "Yes — 100% ownership. The full WordPress theme code is delivered to your GitHub on launch day. You own every PHP file, every CSS file, every ACF field configuration, and all plugin customizations. You can hire any WordPress developer in India or globally to maintain or extend it — no FactoryJet dependency baked in. We document the theme structure, custom post types, and any non-obvious configuration during the handover walkthrough. You will not need archaeology to understand what we built.",
+      "Yes, 100% ownership. The full WordPress theme code is delivered to your GitHub on launch day. You own every PHP file, every CSS file, every ACF field configuration, and all plugin customizations. You can hire any WordPress developer in India or globally to maintain or extend it, no FactoryJet dependency baked in. We document the theme structure, custom post types, and any non-obvious configuration during the handover walkthrough. You will not need archaeology to understand what we built.",
   },
   {
     category: 'support',
     question: 'What happens if my WordPress site gets hacked?',
     answer:
-      "For sites on our maintenance plan: we respond within 4 hours, restore from the most recent clean backup, audit and remove the malware, patch the vulnerability that was exploited, and harden the security configuration. For sites not on a maintenance plan, we offer emergency malware removal at a fixed flat fee — with a post-cleanup report detailing what was compromised and how. We recommend moving to a maintenance plan immediately after any compromise, as rehacked sites are common without systematic hardening.",
+      "For sites on our maintenance plan: we respond within 4 hours, restore from the most recent clean backup, audit and remove the malware, patch the vulnerability that was exploited, and harden the security configuration. For sites not on a maintenance plan, we offer emergency malware removal at a fixed flat fee, with a post-cleanup report detailing what was compromised and how. We recommend moving to a maintenance plan immediately after any compromise, as rehacked sites are common without systematic hardening.",
   },
   {
     category: 'support',
     question: 'Can you manage plugin updates without breaking my WordPress site?',
     answer:
-      "Yes — plugin update management is one of the highest-risk activities on a WordPress site. Our process: we run all updates on a staging clone first, test critical user flows (contact forms, checkout, login, any custom functionality) before applying to production, and roll back immediately if anything breaks. For sites with custom plugin integrations or heavily modified themes, we do a compatibility review before major WordPress core updates. This process prevents the 'I updated plugins and now my site is broken' emergency — which we fix at cost for maintenance clients.",
+      "Yes, plugin update management is one of the highest-risk activities on a WordPress site. Our process: we run all updates on a staging clone first, test critical user flows (contact forms, checkout, login, any custom functionality) before applying to production, and roll back immediately if anything breaks. For sites with custom plugin integrations or heavily modified themes, we do a compatibility review before major WordPress core updates. This process prevents the 'I updated plugins and now my site is broken' emergency, which we fix at cost for maintenance clients.",
   },
   {
     category: 'support',
     question: 'Can your team train my staff to manage WordPress content?',
     answer:
-      "Yes — training is included in every project. We deliver a recorded screen-share walkthrough (30–45 minutes) covering: adding and editing pages in the block editor, publishing blog posts with images and SEO metadata, updating contact information and business hours, managing WooCommerce products and orders (for e-commerce builds), and handling common questions. The recording is yours to keep and share with future staff. For larger teams, we offer 1:1 training sessions at a fixed hourly rate quoted up front.",
+      "Yes, training is included in every project. We deliver a recorded screen-share walkthrough (30–45 minutes) covering: adding and editing pages in the block editor, publishing blog posts with images and SEO metadata, updating contact information and business hours, managing WooCommerce products and orders (for e-commerce builds), and handling common questions. The recording is yours to keep and share with future staff. For larger teams, we offer 1:1 training sessions at a fixed hourly rate quoted up front.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -542,19 +543,19 @@ const WP_FAQ_ITEMS = [
     category: 'platform',
     question: 'Who is the best web development company in India?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: senior engineers on every build, 7-day delivery for standard sites, and a fixed written price. The best web development agency in India for you depends on what you are building — the best website development company in India for a content site is not always the best web development services in India pick for a custom web app. Whoever you compare, including any best website development services in India claim, apply three checks: who writes the code, is the price fixed, and do you own everything at the end.',
+      'For small and mid-size businesses, FactoryJet makes a strong case: senior engineers on every build, 7-day delivery for standard sites, and a fixed written price. The best web development agency in India for you depends on what you are building: the best website development company in India for a content site is not always the best web development services in India pick for a custom web app. Whoever you compare, including any best website development services in India claim, apply three checks: who writes the code, is the price fixed, and do you own everything at the end.',
   },
   {
     category: 'platform',
     question: 'What are the top 10 web development companies in India?',
     answer:
-      'Published lists of the top 10 web development companies in India — and the matching top 10 website development companies in India — skew toward big outsourcing firms with big-company pricing. FactoryJet competes in that conversation for small and mid-size businesses: senior-led, fixed-price, no layers between you and the engineer. Use any list as a shortlist, then compare written prices and live work.',
+      'Published lists of the top 10 web development companies in India, and the matching top 10 website development companies in India, skew toward big outsourcing firms with big-company pricing. FactoryJet competes in that conversation for small and mid-size businesses: senior-led, fixed-price, no layers between you and the engineer. Use any list as a shortlist, then compare written prices and live work.',
   },
   {
     category: 'pricing',
     question: 'How much does website development cost in India?',
     answer:
-      'Website development cost in India varies widely — a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
+      'Website development cost in India varies widely: a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
   },
 ];
 
@@ -610,13 +611,17 @@ export default function WordPressDevelopmentPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'WordPress Development', url: 'https://factoryjet.com/wordpress-development' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="wordpress_development_hero" />}
           eyebrow="WORDPRESS DEVELOPMENT · INDIA"
-          headline="WordPress Built Right — Fast, Secure, and Ranked"
-          lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites — at a fixed price scoped to your build. In 7 days."
+          headline="WordPress Built Right: Fast, Secure, and Ranked"
+          lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites, at a fixed price scoped to your build. In 7 days."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites built',
@@ -637,8 +642,8 @@ export default function WordPressDevelopmentPage() {
                 {[
                   { label: 'Typical Indian WP site (GoDaddy + Elementor)', value: '8.4s load' },
                   { label: 'FactoryJet build (Cloudflare + custom theme)', value: '1.6s load' },
-                  { label: 'Lighthouse score — typical Indian WP site', value: '38 / 100' },
-                  { label: 'Lighthouse score — FactoryJet build', value: '94 / 100' },
+                  { label: 'Lighthouse score, typical Indian WP site', value: '38 / 100' },
+                  { label: 'Lighthouse score: FactoryJet build', value: '94 / 100' },
                 ].map((row) => (
                   <div
                     key={row.label}
@@ -675,8 +680,8 @@ export default function WordPressDevelopmentPage() {
         {/* ── 4. WORDPRESS EXPLAINED ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WORDPRESS FOR INDIAN BUSINESSES"
-          headline="WordPress Is the Right Choice for Most Indian SMBs — If Built Correctly"
-          lead="WordPress powers 43% of the internet for a reason. It is the most flexible CMS ever built. The problem is not WordPress — it is the way most Indian agencies build on it: premium themes, Elementor, 60 plugins, and GoDaddy shared hosting."
+          headline="WordPress Is the Right Choice for Most Indian SMBs, If Built Correctly"
+          lead="WordPress powers 43% of the internet for a reason. It is the most flexible CMS ever built. The problem is not WordPress, it is the way most Indian agencies build on it: premium themes, Elementor, 60 plugins, and GoDaddy shared hosting."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -704,15 +709,15 @@ export default function WordPressDevelopmentPage() {
                 WordPress is the right foundation for most Indian SMBs: it is affordable, the admin is
                 learnable in one session, and it has the largest plugin ecosystem in the world. The mistake
                 is confusing &quot;WordPress&quot; with &quot;Elementor on GoDaddy shared hosting.&quot;
-                A properly built WordPress site — custom PHP theme, no page builders, Redis object caching
-                on Cloudflare — delivers Lighthouse 90+ and loads in under 2 seconds on Indian 4G.
+                A properly built WordPress site, custom PHP theme, no page builders, Redis object caching
+                on Cloudflare, delivers Lighthouse 90+ and loads in under 2 seconds on Indian 4G.
               </p>
 
               {/* Key WordPress metrics for India */}
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
                   { value: '43%', label: 'of all websites globally run on WordPress' },
-                  { value: '5.6M+', label: 'WordPress sites in India — largest in APAC' },
+                  { value: '5.6M+', label: 'WordPress sites in India, largest in APAC' },
                   { value: '7 Days', label: 'standard WordPress build delivery' },
                 ].map((b) => (
                   <div
@@ -741,14 +746,14 @@ export default function WordPressDevelopmentPage() {
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
                   We are honest about platform choice. If your requirements call for Next.js or Shopify,
-                  we will tell you that — even if it means a bigger build cost.
+                  we will tell you that, even if it means a bigger build cost.
                 </p>
               </div>
 
               <p>
                 FactoryJet has built WordPress sites for Indian businesses. We know the
                 difference between a WordPress site that embarrasses you in a client meeting and one that
-                wins business. We build the latter — with or without WooCommerce, at a price that makes
+                wins business. We build the latter, with or without WooCommerce, at a price that makes
                 the investment rational.
               </p>
             </>
@@ -760,7 +765,7 @@ export default function WordPressDevelopmentPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Platform Decision Guide — India
+                  Platform Decision Guide, India
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
@@ -813,17 +818,17 @@ export default function WordPressDevelopmentPage() {
             {
               icon: '🐌',
               title: 'Elementor + shared hosting = 8 seconds on Indian 4G.',
-              body: 'Elementor loads 200KB of CSS and 100KB of JavaScript before rendering a single pixel. GoDaddy shared hosting serves pages from a server that might be in the US or Singapore. The result on Indian 4G: 8–12 second load times, a Lighthouse score in the 30s, and Core Web Vitals that are red across the board. FactoryJet builds custom PHP themes — no Elementor, no WPBakery, no visual page builders. Lightweight code on Cloudflare with Redis caching: Lighthouse 90+ standard.',
+              body: 'Elementor loads 200KB of CSS and 100KB of JavaScript before rendering a single pixel. GoDaddy shared hosting serves pages from a server that might be in the US or Singapore. The result on Indian 4G: 8–12 second load times, a Lighthouse score in the 30s, and Core Web Vitals that are red across the board. FactoryJet builds custom PHP themes, no Elementor, no WPBakery, no visual page builders. Lightweight code on Cloudflare with Redis caching: Lighthouse 90+ standard.',
             },
             {
               icon: '🔓',
               title: '60,000 WordPress plugins. Most of them are security liabilities.',
-              body: 'The average Indian WordPress site runs 40–80 plugins. Each plugin is a potential attack surface. Unmanaged WordPress sites are typically compromised within 12 months — by automated bots scanning for known plugin vulnerabilities, brute-force login attacks, and SQL injection via unmaintained plugins. FactoryJet builds with the minimum required plugins (typically 8–12), implements Wordfence with custom firewall rules, randomises the wp-admin URL, and sets up daily backups to S3. Security is not an afterthought.',
+              body: 'The average Indian WordPress site runs 40–80 plugins. Each plugin is a potential attack surface. Unmanaged WordPress sites are typically compromised within 12 months, by automated bots scanning for known plugin vulnerabilities, brute-force login attacks, and SQL injection via unmaintained plugins. FactoryJet builds with the minimum required plugins (typically 8–12), implements Wordfence with custom firewall rules, randomises the wp-admin URL, and sets up daily backups to S3. Security is not an afterthought.',
             },
             {
               icon: '📉',
               title: 'A slow WordPress site is invisible to Google India.',
-              body: "Google confirmed Core Web Vitals as a ranking signal in 2021 — and has been strengthening it since. A site that loads in 8 seconds on Indian 4G and fails LCP and CLS is being actively penalised in search rankings. FactoryJet's technical SEO setup includes Yoast or Rank Math configuration, schema markup for your business type, XML sitemap submission, and Core Web Vitals optimisation to green before launch. Your site ranks before the competition that is still fighting with their GoDaddy dashboard.",
+              body: "Google confirmed Core Web Vitals as a ranking signal in 2021, and has been strengthening it since. A site that loads in 8 seconds on Indian 4G and fails LCP and CLS is being actively penalised in search rankings. FactoryJet's technical SEO setup includes Yoast or Rank Math configuration, schema markup for your business type, XML sitemap submission, and Core Web Vitals optimisation to green before launch. Your site ranks before the competition that is still fighting with their GoDaddy dashboard.",
             },
           ]}
         />
@@ -840,7 +845,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 7. TECH STACK ────────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR WORDPRESS TECH STACK"
-          headline="WordPress Built for Indian Businesses — Not Elementor Installed on GoDaddy"
+          headline="WordPress Built for Indian Businesses, Not Elementor Installed on GoDaddy"
           lead="Every tool we use is chosen for performance on Indian mobile networks, compatibility with Indian payment methods, and long-term maintainability by your own team."
           reverseOnDesktop
           body={
@@ -859,31 +864,31 @@ export default function WordPressDevelopmentPage() {
                 )}
               </div>
               <p>
-                <strong className="font-semibold text-fj-ink">Custom PHP theme + Gutenberg</strong> — Every
-                site starts as a Figma design. The theme is built in PHP from scratch — no Elementor,
+                <strong className="font-semibold text-fj-ink">Custom PHP theme + Gutenberg</strong>: Every
+                site starts as a Figma design. The theme is built in PHP from scratch, no Elementor,
                 no premium theme, no 200-file parent/child theme stack. Gutenberg block editor is
                 configured so your team can update content without touching code.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">WooCommerce + Razorpay</strong> — For
+                <strong className="font-semibold text-fj-ink">WooCommerce + Razorpay</strong>, For
                 e-commerce builds, WooCommerce is configured with Razorpay covering UPI, cards, net
                 banking, EMI, and digital wallets. GST invoicing and Shiprocket are configured as standard.
                 COD with Thirdwatch fraud detection for high-risk orders.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Cloudflare + Redis caching</strong> — We
+                <strong className="font-semibold text-fj-ink">Cloudflare + Redis caching</strong>, We
                 move sites from shared hosting to Cloudflare Pages + AWS LightSail or WP Engine India.
                 Redis object caching reduces database queries by 80–90%. Full-page caching via WP
                 Rocket or custom Nginx config. Result: 8-second sites become 1.6-second sites.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">ACF Pro + custom post types</strong> —
+                <strong className="font-semibold text-fj-ink">ACF Pro + custom post types</strong>,
                 Advanced Custom Fields for structured data (team members, services, case studies, FAQs)
                 with clean, queryable database storage. Custom post types designed so your editors can
                 update structured content from a simple admin interface.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Yoast SEO + schema markup</strong> — Full
+                <strong className="font-semibold text-fj-ink">Yoast SEO + schema markup</strong>, Full
                 technical SEO configuration: XML sitemap, Open Graph, Twitter Card, canonical URLs,
                 BreadcrumbList, Organization, LocalBusiness, Article, Product, or FAQ schema based on
                 your site type. Every schema validated in Google Rich Results Test before launch.
@@ -906,7 +911,7 @@ export default function WordPressDevelopmentPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  WordPress Tech Stack — India
+                  WordPress Tech Stack, India
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-8">
@@ -1034,9 +1039,9 @@ export default function WordPressDevelopmentPage() {
           eyebrow="WORDPRESS IN INDIA"
           headline="5.6 Million WordPress Sites in India. Most of Them Are Slow, Insecure, and Invisible on Google."
           leadParagraphs={[
-            "WordPress is by far the most popular CMS in India — powering over 5.6 million websites across SMBs, news and media, education, healthcare, real estate, NGOs, and professional services. It is the default choice for Indian business owners who need a web presence without a large development budget. The problem is not the platform — it is the ecosystem of cheap themes, bloated page builders, and shared hosting that most Indian WordPress sites are built on.",
+            "WordPress is by far the most popular CMS in India, powering over 5.6 million websites across SMBs, news and media, education, healthcare, real estate, NGOs, and professional services. It is the default choice for Indian business owners who need a web presence without a large development budget. The problem is not the platform, it is the ecosystem of cheap themes, bloated page builders, and shared hosting that most Indian WordPress sites are built on.",
             "FactoryJet has been building WordPress sites for Indian businesses. We have built for startups in Bangalore, clinics in Chennai, NGOs in Delhi, real estate portals in Mumbai, and news sites in Hyderabad. We understand what an Indian SMB at ₹50 lakh to ₹5 crore revenue actually needs from a website: it needs to load fast on a ₹12,000 Redmi phone on Jio 4G, rank for the right keywords on Google India, and be updatable by a non-technical team without breaking.",
-            "The WooCommerce opportunity in India is significant. India's D2C e-commerce market crossed ₹35,000 crore in 2024 and is growing at 38% annually. Many of these brands start on Shopify — and eventually migrate to WooCommerce when the recurring Shopify subscription fee stops making sense at their scale. WooCommerce with Razorpay is the lowest total-cost-of-ownership e-commerce stack in India for brands at ₹50 lakh to ₹5 crore annual GMV.",
+            "The WooCommerce opportunity in India is significant. India's D2C e-commerce market crossed ₹35,000 crore in 2024 and is growing at 38% annually. Many of these brands start on Shopify, and eventually migrate to WooCommerce when the recurring Shopify subscription fee stops making sense at their scale. WooCommerce with Razorpay is the lowest total-cost-of-ownership e-commerce stack in India for brands at ₹50 lakh to ₹5 crore annual GMV.",
           ]}
           bodySlot={
             <>
@@ -1087,7 +1092,7 @@ export default function WordPressDevelopmentPage() {
           pullQuote={{
             stat: 'Fixed-price',
             caption:
-              'scoped up front — same Figma-first design, clean PHP theme, Lighthouse audit, and technical SEO you would expect from a premium Indian agency project, without the agency overhead.',
+              'scoped up front, same Figma-first design, clean PHP theme, Lighthouse audit, and technical SEO you would expect from a premium Indian agency project, without the agency overhead.',
           }}
           columns={WP_COMPARISON_COLUMNS}
           rows={WP_COMPARISON_ROWS}
@@ -1098,7 +1103,7 @@ export default function WordPressDevelopmentPage() {
         <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six WordPress Services for Indian Businesses"
-          lead="From a custom theme to a WooCommerce store with Razorpay and GST — we scope the right engagement for your business, budget, and timeline."
+          lead="From a custom theme to a WooCommerce store with Razorpay and GST, we scope the right engagement for your business, budget, and timeline."
           sectors={WP_SERVICES}
         />
 
@@ -1106,7 +1111,7 @@ export default function WordPressDevelopmentPage() {
         <ServiceExplanation
           eyebrow="INDUSTRIES WE BUILD FOR"
           headline="WordPress for Every Indian Industry That Needs a Web Presence"
-          lead="WordPress is the right platform across industries — from a 5-page clinic website to a 50,000-product WooCommerce store. We have built in all of them."
+          lead="WordPress is the right platform across industries, from a 5-page clinic website to a 50,000-product WooCommerce store. We have built in all of them."
           body={
             <>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-hidden>
@@ -1138,7 +1143,7 @@ export default function WordPressDevelopmentPage() {
                 Healthcare sites need LocalBusiness + Physician schema and HIPAA-safe contact forms.
                 Real estate portals need property CPT with map search and IDX feeds. News sites need
                 Article schema, AMP, and editorial workflow CPTs. We build for the specifics of each
-                industry — not a generic WordPress template with the logo swapped.
+                industry, not a generic WordPress template with the logo swapped.
               </p>
             </>
           }
@@ -1199,7 +1204,7 @@ export default function WordPressDevelopmentPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Build on WordPress"
-          lead="The questions we answer on every Indian WordPress discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Indian WordPress discovery call, answered here, without the runaround."
           categories={WP_FAQ_CATEGORIES}
           items={WP_FAQ_ITEMS}
         />
@@ -1208,22 +1213,22 @@ export default function WordPressDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="500+ sites built. 12 years of WordPress. We know what actually ranks and converts in India."
-          lead="FactoryJet has been building WordPress sites for Indian businesses — long before Elementor existed, long before GoDaddy became the default Indian hosting choice. We know the difference between a WordPress site built to look impressive in a proposal and one built to rank, load fast, and convert visitors into leads."
+          lead="FactoryJet has been building WordPress sites for Indian businesses, long before Elementor existed, long before GoDaddy became the default Indian hosting choice. We know the difference between a WordPress site built to look impressive in a proposal and one built to rank, load fast, and convert visitors into leads."
           pillars={[
             {
               icon: '🇮🇳',
-              title: 'Built for India — Razorpay, GST, Shiprocket, Indian 4G performance.',
+              title: 'Built for India | Razorpay, GST, Shiprocket, Indian 4G performance.',
               body: 'Most WordPress agencies in India build from global templates and call it custom. FactoryJet builds India-first: Razorpay UPI as the default WooCommerce payment method, GST invoicing at order placement, Shiprocket logistics integration, Cloudflare CDN with Indian edge nodes, WebP images for 4G load times, and contact forms with WhatsApp routing for the Indian preference for messaging over email. Every site is built for how Indian users actually browse.',
             },
             {
               icon: '⚡',
               title: 'No Elementor. No bloat. Lighthouse 90+ is the minimum, not the goal.',
-              body: 'We do not use Elementor, WPBakery, or any visual page builder. Custom PHP themes, Gutenberg block editor, and Redis caching on Cloudflare. The result is a site that loads in 1.5–2 seconds on Indian 4G (vs. 8–12 seconds with Elementor on GoDaddy), passes Core Web Vitals, and scores 90+ on Lighthouse. We deliver Lighthouse reports with every build — not as a marketing claim, but as a project deliverable.',
+              body: 'We do not use Elementor, WPBakery, or any visual page builder. Custom PHP themes, Gutenberg block editor, and Redis caching on Cloudflare. The result is a site that loads in 1.5–2 seconds on Indian 4G (vs. 8–12 seconds with Elementor on GoDaddy), passes Core Web Vitals, and scores 90+ on Lighthouse. We deliver Lighthouse reports with every build, not as a marketing claim, but as a project deliverable.',
             },
             {
               icon: '🔒',
               title: 'Your WordPress code. Your GitHub. Your credentials. On launch day.',
-              body: 'Every line of PHP, every custom post type configuration, every ACF field group — delivered to your GitHub on launch day. You own it completely. Any WordPress developer in India can maintain and extend it — you are not locked into FactoryJet. We document the theme architecture, plugin configuration, and non-obvious implementation decisions during the handover walkthrough. Your site will not become a black box the moment we hand it over.',
+              body: 'Every line of PHP, every custom post type configuration, every ACF field group, delivered to your GitHub on launch day. You own it completely. Any WordPress developer in India can maintain and extend it, you are not locked into FactoryJet. We document the theme architecture, plugin configuration, and non-obvious implementation decisions during the handover walkthrough. Your site will not become a black box the moment we hand it over.',
             },
           ]}
         />
@@ -1233,7 +1238,7 @@ export default function WordPressDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO BUILD"
-            headline="Book a WordPress Audit — We'll Tell You Exactly What to Fix"
+            headline="Book a WordPress Audit. We'll Tell You Exactly What to Fix"
             sub="In 30 minutes, we will audit your current website or business requirements, identify what is costing you speed and rankings, recommend the right WordPress architecture and hosting stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who have built 500+ sites."
             primaryCta={{ label: 'Book Your Free WordPress Audit', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

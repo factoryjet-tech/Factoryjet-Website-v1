@@ -149,7 +149,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      aria-label="FactoryJet Liverpool — hero"
+      aria-label="FactoryJet Liverpool, hero"
       className="relative flex min-h-screen w-full items-start justify-center overflow-hidden"
       style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
     >
@@ -160,10 +160,10 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Layer 1 — WebGL mesh gradient (lazy, client only) */}
+      {/* Layer 1: WebGL mesh gradient (lazy, client only) */}
       <MeshGradient />
 
-      {/* Layer 1b — Hero image */}
+      {/* Layer 1b, Hero image */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -171,7 +171,7 @@ export default function Hero() {
       >
         <Image
           src="/images/uk/liverpool/hero-liverpool.webp"
-          alt="Liverpool waterfront and Albert Dock — digital agency backdrop"
+          alt="Liverpool waterfront and Albert Dock, digital agency backdrop"
           fill
           sizes="100vw"
           priority
@@ -182,7 +182,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Layer 2 — Liverpool skyline SVG: Liver Building + Albert Dock cranes */}
+      {/* Layer 2, Liverpool skyline SVG: Liver Building + Albert Dock cranes */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1600 200"
@@ -191,18 +191,18 @@ export default function Hero() {
         style={{ height: 200, zIndex: 1, color: "rgba(255,255,255,0.05)" }}
       >
         <g ref={skylineRef} fill="currentColor">
-          {/* Left buildings — low rise waterfront */}
+          {/* Left buildings, low rise waterfront */}
           <rect x="0" y="150" width="50" height="50" />
           <rect x="52" y="140" width="35" height="60" />
           <rect x="90" y="155" width="45" height="45" />
 
-          {/* Liver Building — left tower with peaked top and clock face */}
+          {/* Liver Building, left tower with peaked top and clock face */}
           <rect x="145" y="60" width="52" height="140" />
           <polygon points="145,60 171,30 197,60" />
           <circle cx="171" cy="52" r="8" fill="none" stroke="currentColor" strokeWidth="2" />
           <rect x="163" y="25" width="16" height="10" />
 
-          {/* Liver Building — right tower */}
+          {/* Liver Building, right tower */}
           <rect x="210" y="65" width="50" height="135" />
           <polygon points="210,65 235,35 260,65" />
           <circle cx="235" cy="57" r="8" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -221,7 +221,7 @@ export default function Hero() {
           <rect x="458" y="130" width="55" height="70" />
           <rect x="516" y="110" width="38" height="90" />
 
-          {/* Albert Dock cranes — simple L-shaped forms */}
+          {/* Albert Dock cranes, simple L-shaped forms */}
           {/* Crane 1 */}
           <rect x="565" y="100" width="8" height="100" />
           <rect x="540" y="100" width="60" height="8" />
@@ -268,7 +268,7 @@ export default function Hero() {
         </g>
       </svg>
 
-      {/* Layer 3 — Grain */}
+      {/* Layer 3, Grain */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
@@ -282,7 +282,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Stat watermarks — absolute atmospheric layer, z-index:0, never adds height */}
+      {/* Stat watermarks, absolute atmospheric layer, z-index:0, never adds height */}
       <div
         aria-hidden="true"
         className="pointer-events-none hidden select-none lg:flex items-end justify-center"
@@ -321,7 +321,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Watermark "LIV" — desktop only */}
+      {/* Watermark "LIV", desktop only */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute hidden select-none lg:block font-clash"
@@ -339,7 +339,7 @@ export default function Hero() {
         LIV
       </span>
 
-      {/* Layer 4 — Content */}
+      {/* Layer 4, Content */}
       <div
         className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-[18vh] pb-24 text-center sm:px-8"
         style={{ zIndex: 10 }}
@@ -395,7 +395,7 @@ export default function Hero() {
               lineHeight: 1.6,
             }}
           >
-            From Albert Dock to the Baltic Triangle — we build websites, AI
+            From Albert Dock to the Baltic Triangle, we build websites, AI
             agents, and AI SEO systems that put Liverpool businesses ahead of
             the curve.
           </p>

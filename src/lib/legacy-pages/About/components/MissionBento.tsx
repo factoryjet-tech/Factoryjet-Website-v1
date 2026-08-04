@@ -30,7 +30,7 @@ const MissionBento = () => {
               </div>
               <h4 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Our Mission</h4>
               <p className="text-blue-100 text-sm md:text-base lg:text-lg leading-relaxed">
-                To empower small and medium businesses with world-class digital solutions that accelerate growth, improve efficiency, and build lasting competitive advantages—all at prices that make sense for growing companies.
+                To empower small and medium businesses with world-class digital solutions that accelerate growth, improve efficiency, and build lasting competitive advantages: all at prices that make sense for growing companies.
               </p>
             </div>
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10">

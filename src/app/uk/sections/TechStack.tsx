@@ -26,7 +26,7 @@ const TECH: Tech[] = [
     id: "nextjs",
     name: "Next.js 15 (React Framework)",
     description:
-      "Server-side rendering, static site generation, and incremental static regeneration deliver websites that load in under two seconds and score 90+ on Google Lighthouse Performance. Websites that load in one second convert at three times the rate of sites that take five seconds. This is not marginal optimisation — it directly impacts your revenue.",
+      "Server-side rendering, static site generation, and incremental static regeneration deliver websites that load in under two seconds and score 90+ on Google Lighthouse Performance. Websites that load in one second convert at three times the rate of sites that take five seconds. This is not marginal optimisation, it directly impacts your revenue.",
     colClass: "lg:col-span-5 lg:col-start-1",
     offsetPx: 0,
     parallax: 40,
@@ -37,7 +37,7 @@ const TECH: Tech[] = [
     id: "tailwind",
     name: "Tailwind CSS 4",
     description:
-      "Utility-first CSS that eliminates stylesheet bloat. Our sites have smaller CSS bundles, faster paint times, and pixel-perfect responsive layouts across every device and screen size — from mobile to ultra-wide desktop.",
+      "Utility-first CSS that eliminates stylesheet bloat. Our sites have smaller CSS bundles, faster paint times, and pixel-perfect responsive layouts across every device and screen size, from mobile to ultra-wide desktop.",
     colClass: "lg:col-span-5 lg:col-start-8",
     offsetPx: 72,
     parallax: -60,
@@ -48,7 +48,7 @@ const TECH: Tech[] = [
     id: "gsap",
     name: "GSAP & Framer Motion",
     description:
-      "Premium, performant animations that enhance user experience without sacrificing page speed. Purposeful motion that guides attention and increases engagement — not flashy effects that slow your site down.",
+      "Premium, performant animations that enhance user experience without sacrificing page speed. Purposeful motion that guides attention and increases engagement, not flashy effects that slow your site down.",
     colClass: "lg:col-span-5 lg:col-start-2",
     offsetPx: 36,
     parallax: 30,
@@ -59,7 +59,7 @@ const TECH: Tech[] = [
     id: "ai-workflow",
     name: "AI-Augmented Development Workflow",
     description:
-      "We use AI throughout our development process — from design generation to code review to quality assurance. This is not a marketing gimmick; it is the operational advantage that allows us to deliver 2–3x faster than traditional agencies while maintaining higher quality standards, and it is why we can price at a fixed, transparent quote without cutting corners.",
+      "We use AI throughout our development process, from design generation to code review to quality assurance. This is not a marketing gimmick; it is the operational advantage that allows us to deliver 2–3x faster than traditional agencies while maintaining higher quality standards, and it is why we can price at a fixed, transparent quote without cutting corners.",
     colClass: "lg:col-span-5 lg:col-start-7",
     offsetPx: 96,
     parallax: -45,
@@ -70,7 +70,7 @@ const TECH: Tech[] = [
     id: "ai-crawler",
     name: "AI Crawler Optimisation",
     description:
-      "Every site we build is configured from day one for readability by Google, ChatGPT (GPTBot), Claude (ClaudeBot), Perplexity (PerplexityBot), and Google AI Overviews. Most UK websites accidentally block these crawlers via Cloudflare’s default settings — making them invisible to the fastest-growing search channels.",
+      "Every site we build is configured from day one for readability by Google, ChatGPT (GPTBot), Claude (ClaudeBot), Perplexity (PerplexityBot), and Google AI Overviews. Most UK websites accidentally block these crawlers via Cloudflare’s default settings, making them invisible to the fastest-growing search channels.",
     colClass: "lg:col-span-6 lg:col-start-4",
     offsetPx: 48,
     parallax: 50,
@@ -309,14 +309,14 @@ export default function TechStack() {
             The technology your website is built on determines how fast it
             loads, how well it ranks, and how effectively it converts visitors
             into customers. Most UK web agencies still build on WordPress and
-            PHP — technology that was cutting-edge in 2010. FactoryJet builds
+            PHP, technology that was cutting-edge in 2010. FactoryJet builds
             exclusively on the modern stack that the world’s best technology
             companies use, and we believe this matters more than most
             businesses realise.
           </p>
         </div>
 
-        {/* Floating tech badges — asymmetric, parallax on scroll */}
+        {/* Floating tech badges, asymmetric, parallax on scroll */}
         <div
           ref={gridRef}
           className="mt-20 grid grid-cols-1 gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-8"
@@ -327,7 +327,7 @@ export default function TechStack() {
         </div>
       </div>
 
-      {/* Code ticker — marquee */}
+      {/* Code ticker, marquee */}
       <div
         className="relative w-full"
         style={{

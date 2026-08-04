@@ -102,7 +102,7 @@ export default function BigThreeTrustBlock({
               </p>
             )}
 
-            {/* Illustration — businesses stat */}
+            {/* Illustration, businesses stat */}
             {illustrations?.businesses && (
               <div className="mb-4">
                 <Image
@@ -135,7 +135,7 @@ export default function BigThreeTrustBlock({
               style={{ fontSize: '0.9375rem', lineHeight: 1.65, maxWidth: '420px' }}
             >
               Websites designed and built for US small businesses, Shopify stores,
-              B2B companies, and DTC brands. Affordable web design services —
+              B2B companies, and DTC brands. Affordable web design services,
               at a fixed, transparent price, your codebase delivered in full,
               and a 7-day delivery guarantee.
             </p>
@@ -164,17 +164,17 @@ export default function BigThreeTrustBlock({
             </Link>
           </div>
 
-          {/* ── Vertical divider — desktop only ───────────────────────── */}
+          {/* ── Vertical divider, desktop only ───────────────────────── */}
           <div
             className="hidden lg:block self-stretch"
             style={{ background: 'rgba(240,90,40,0.20)' }}
             aria-hidden="true"
           />
 
-          {/* ── Right panel — two stacked stats ───────────────────────── */}
+          {/* ── Right panel: two stacked stats ───────────────────────── */}
           <div className="lg:pl-14 flex flex-col gap-8">
 
-            {/* Stat 1 — 7-day delivery */}
+            {/* Stat 1, 7-day delivery */}
             <div>
               {illustrations?.delivery && (
                 <div className="mb-3">
@@ -208,7 +208,7 @@ export default function BigThreeTrustBlock({
                 className="mt-1.5 font-fj-body text-fj-neutral-500"
                 style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
               >
-                Custom web design, live in 7 days — or you don&apos;t pay
+                Custom web design, live in 7 days, or you don&apos;t pay
               </p>
             </div>
 
@@ -218,7 +218,7 @@ export default function BigThreeTrustBlock({
               style={{ height: '1px', background: 'rgba(240,90,40,0.16)', borderRadius: 1 }}
             />
 
-            {/* Stat 2 — Fixed Price fixed price */}
+            {/* Stat 2: Fixed Price fixed price */}
             <div>
               {illustrations?.savings && (
                 <div className="mb-3">
@@ -252,7 +252,7 @@ export default function BigThreeTrustBlock({
                 className="mt-1.5 font-fj-body text-fj-neutral-500"
                 style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
               >
-                One quote before we start — no hourly billing, no scope surprises
+                One quote before we start, no hourly billing, no scope surprises
               </p>
             </div>
 

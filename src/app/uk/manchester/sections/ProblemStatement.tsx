@@ -7,9 +7,9 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 
 const BODY_PARAGRAPHS = [
-  "Walk through the Northern Quarter, Spinningfields, or MediaCityUK and you'll find businesses investing heavily in physical spaces — fit-outs, branding, location. Then visit their websites. Slow-loading WordPress themes last updated in 2021. Mobile experiences that feel like desktop afterthoughts. No conversion architecture. No schema markup. Zero visibility in AI search results.",
+  "Walk through the Northern Quarter, Spinningfields, or MediaCityUK and you'll find businesses investing heavily in physical spaces, fit-outs, branding, location. Then visit their websites. Slow-loading WordPress themes last updated in 2021. Mobile experiences that feel like desktop afterthoughts. No conversion architecture. No schema markup. Zero visibility in AI search results.",
   "This is the reality across Manchester's SME landscape. While the city's digital infrastructure is world-class, most local business websites are not. They sit below the fold of Google's local pack, invisible to ChatGPT, Perplexity, and Claude when potential customers ask \"who builds websites in Manchester?\" or \"best web agency near Deansgate.\"",
-  "The Manchester web design market is crowded — there are over 1,000 agencies operating in the city region. But crowded doesn't mean good. Most are template shops: WordPress installs with premium themes, basic contact forms, and no performance engineering. They charge premium agency fees for websites that score 40–60 on Google Lighthouse, take 4–6 seconds to load on mobile, and have zero AI search visibility.",
+  "The Manchester web design market is crowded, there are over 1,000 agencies operating in the city region. But crowded doesn't mean good. Most are template shops: WordPress installs with premium themes, basic contact forms, and no performance engineering. They charge premium agency fees for websites that score 40–60 on Google Lighthouse, take 4–6 seconds to load on mobile, and have zero AI search visibility.",
 ];
 
 export default function ProblemStatement() {
@@ -55,7 +55,7 @@ export default function ProblemStatement() {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
 
-        {/* ── H2 — architectural heading ───────────────────────────────── */}
+        {/* ── H2, architectural heading ───────────────────────────────── */}
         <h2
           ref={headingRef}
           className="font-clash"
@@ -71,7 +71,7 @@ export default function ProblemStatement() {
           Convert.
         </h2>
 
-        {/* ── Pull quote — full container width ────────────────────────── */}
+        {/* ── Pull quote, full container width ────────────────────────── */}
         <blockquote
           ref={pullRef}
           style={{
@@ -95,7 +95,7 @@ export default function ProblemStatement() {
           </p>
         </blockquote>
 
-        {/* ── Body copy + sticky image — 60/40 split ───────────────────── */}
+        {/* ── Body copy + sticky image, 60/40 split ───────────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start mt-12">
 
           {/* LEFT 60%: body paragraphs */}
@@ -118,7 +118,7 @@ export default function ProblemStatement() {
             ))}
           </div>
 
-          {/* RIGHT 40%: photography — sticky on desktop, stacks below on mobile */}
+          {/* RIGHT 40%: photography, sticky on desktop, stacks below on mobile */}
           <div className="lg:col-span-2">
             <div className="rounded-2xl overflow-hidden shadow-lg sticky top-8">
               <Image

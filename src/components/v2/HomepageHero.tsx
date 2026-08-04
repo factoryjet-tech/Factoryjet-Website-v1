@@ -35,14 +35,14 @@ export function HomepageHero() {
               WEB DESIGN AGENCY
             </span>
 
-            {/* Headline — Clash Display 700, tight tracking */}
+            {/* Headline: Clash Display 700, tight tracking */}
             <h1 className="font-clash font-bold text-[clamp(2.75rem,5vw,3.5rem)] leading-[1.05] tracking-tight text-fj-ink">
               Your Website. 7 Days. Guaranteed.
             </h1>
 
             {/* Subtext */}
             <p className="font-inter text-lg text-[#64748B] max-w-[480px] leading-relaxed">
-              Professional websites for US small businesses — delivered in 7 days, fixed-price, with full code ownership.
+              Professional websites for US small businesses, delivered in 7 days, fixed-price, with full code ownership.
             </p>
 
             {/* CTAs */}
@@ -90,7 +90,7 @@ export function HomepageHero() {
                 </div>
               </div>
 
-              {/* Browser content area — placeholder UI skeleton */}
+              {/* Browser content area, placeholder UI skeleton */}
               <div className="aspect-video bg-[#F8FAFC] relative overflow-hidden">
                 <div className="absolute inset-0 p-4 flex flex-col gap-3">
                   <div className="w-1/3 h-3.5 bg-[rgba(240,90,40,0.20)] rounded-full" />

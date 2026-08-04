@@ -139,7 +139,7 @@ export const faqData: FAQCategory[] = [
         popular: true,
         answer: (
           <div className="space-y-3">
-            <p className="font-bold text-jet-navy">No—and that's exactly the point.</p>
+            <p className="font-bold text-jet-navy">No, and that's exactly the point.</p>
             <p>"AI-Native" doesn't mean "AI-Only." It means intelligently combining AI efficiency with human expertise.</p>
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 bg-slate-50 p-4 rounded-lg">

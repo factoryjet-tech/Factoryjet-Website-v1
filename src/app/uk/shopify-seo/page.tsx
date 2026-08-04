@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/shopify-seo-og.webp', width: 1200, height: 630, alt: 'Shopify SEO Services UK — FactoryJet' }],
+    images: [{ url: '/images/uk/shopify-seo-og.webp', width: 1200, height: 630, alt: 'Shopify SEO Services UK: FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };

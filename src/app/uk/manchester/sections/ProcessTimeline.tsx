@@ -22,7 +22,7 @@ const STEPS = [
     days: "DAYS 6–10",
     title: "UI/UX Design & Animation Choreography",
     description:
-      "Design in code, not Figma. Every section is built as a React component with responsive breakpoints, GSAP scroll animations, and Lenis smooth scroll. You see the actual website in a staging environment — not a static mockup that looks nothing like the final product.",
+      "Design in code, not Figma. Every section is built as a React component with responsive breakpoints, GSAP scroll animations, and Lenis smooth scroll. You see the actual website in a staging environment, not a static mockup that looks nothing like the final product.",
   },
   {
     days: "DAYS 11–18",
@@ -34,7 +34,7 @@ const STEPS = [
     days: "DAY 19+",
     title: "Launch, Indexing & 90-Day Support",
     description:
-      "Deploy to your domain, submit to Google Search Console, configure analytics, and begin monitoring indexation. You get 90 days of post-launch support including bug fixes, content updates, and performance monitoring — included, not invoiced separately.",
+      "Deploy to your domain, submit to Google Search Console, configure analytics, and begin monitoring indexation. You get 90 days of post-launch support including bug fixes, content updates, and performance monitoring, included, not invoiced separately.",
   },
 ];
 
@@ -217,13 +217,13 @@ export default function ProcessTimeline() {
             marginBottom: "64px",
           }}
         >
-          From Brief to Live in Manchester — Our 5-Step Process
+          From Brief to Live in Manchester: Our 5-Step Process
         </h2>
 
         {/* ── Timeline ───────────────────────────────────────────────── */}
         <div className="relative">
 
-          {/* Vertical line — desktop center */}
+          {/* Vertical line, desktop center */}
           <div
             ref={desktopLineRef}
             className="hidden md:block absolute inset-y-0 pointer-events-none"
@@ -235,7 +235,7 @@ export default function ProcessTimeline() {
             }}
           />
 
-          {/* Vertical line — mobile left (centered on 64px node) */}
+          {/* Vertical line, mobile left (centered on 64px node) */}
           <div
             ref={mobileLineRef}
             className="md:hidden absolute inset-y-0 pointer-events-none"

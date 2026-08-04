@@ -11,7 +11,7 @@ import AuModalButton from './components/AuModalButton';
 import './au-home.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /au — Australia home page, "The Arch". Built 2026-06-11.
+   /au: Australia home page, "The Arch". Built 2026-06-11.
    Source of truth: research/mockup-au-home-v3.html (approved). All copy,
    22 FAQs, comparison table and city blurbs verbatim. Australian English.
    Bespoke AU header (UK pattern), SiteFooter with AU_FOOTER_COLUMNS.
@@ -29,7 +29,7 @@ const WA_HREF =
 export const metadata: Metadata = {
   title: 'Web Design Agency Australia | Websites Live in 7 Days | FactoryJet',
   description:
-    'FactoryJet is a web design agency for Australian businesses — website development, ecommerce web design, Shopify stores and SEO services. Built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.',
+    'FactoryJet is a web design agency for Australian businesses, website development, ecommerce web design, Shopify stores and SEO services. Built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.',
   alternates: {
     canonical: CANONICAL,
     languages: auHubAlternates,
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Agency Australia | Websites Live in 7 Days | FactoryJet',
     description:
-      'Web design, website development, ecommerce and SEO services for Australian businesses — built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.',
+      'Web design, website development, ecommerce and SEO services for Australian businesses, built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet — Web Design Agency Australia' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet: Web Design Agency Australia' }],
     locale: 'en_AU',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Agency Australia | Websites Live in 7 Days | FactoryJet',
     description:
-      'Web design, ecommerce and SEO for Australian businesses — built by senior engineers, live in 7 days.',
+      'Web design, ecommerce and SEO for Australian businesses, built by senior engineers, live in 7 days.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Data — FAQs (verbatim from mockup v3), days, comparison, cities, cases
+   Data: FAQs (verbatim from mockup v3), days, comparison, cities, cases
 ───────────────────────────────────────────────────────────────────────────── */
 
 type FaqGroup = { label: string; items: { q: string; a: string }[] };
@@ -68,48 +68,48 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
   {
     label: 'Getting started',
     items: [
-      { q: 'Can you really build a website in 7 days?', a: "Yes — for sites up to 5 pages, 7 days is our standard timeline, not a stretch goal. It works because senior engineers build from day one, scope is fixed before we start, and you approve the design on day 2. Larger sites and e-commerce builds get a fixed timeline up front." },
-      { q: 'Do you work with businesses anywhere in Australia?', a: "Yes. We work with businesses in every state and territory, fully remote, with calls scheduled in your time zone (AEST/AEDT, ACST or AWST). Most of our Australian clients are in Sydney, Melbourne, Brisbane, Perth, Adelaide and the Gold Coast — and we're adding Canberra, Sunshine Coast and Hobart." },
-      { q: 'What do you need from me to get started?', a: "One 30-minute call and whatever you already have — your logo, a few photos, links to sites you like. We handle the rest, including writing your copy. If you have nothing but a business name, that's genuinely fine; about a third of our clients start exactly there." },
-      { q: 'I already have a website. Can you rebuild or fix it?', a: "Yes, and rebuilds are about half our work. We'll audit your current site first — speed, SEO, conversion blockers — and tell you honestly whether it needs a rebuild or just targeted fixes. Your existing content, rankings and Google Business Profile carry over; we set up redirects so you don't lose traffic." },
+      { q: 'Can you really build a website in 7 days?', a: "Yes, for sites up to 5 pages, 7 days is our standard timeline, not a stretch goal. It works because senior engineers build from day one, scope is fixed before we start, and you approve the design on day 2. Larger sites and e-commerce builds get a fixed timeline up front." },
+      { q: 'Do you work with businesses anywhere in Australia?', a: "Yes. We work with businesses in every state and territory, fully remote, with calls scheduled in your time zone (AEST/AEDT, ACST or AWST). Most of our Australian clients are in Sydney, Melbourne, Brisbane, Perth, Adelaide and the Gold Coast, and we're adding Canberra, Sunshine Coast and Hobart." },
+      { q: 'What do you need from me to get started?', a: "One 30-minute call and whatever you already have: your logo, a few photos, links to sites you like. We handle the rest, including writing your copy. If you have nothing but a business name, that's genuinely fine; about a third of our clients start exactly there." },
+      { q: 'I already have a website. Can you rebuild or fix it?', a: "Yes, and rebuilds are about half our work. We'll audit your current site first, speed, SEO, conversion blockers, and tell you honestly whether it needs a rebuild or just targeted fixes. Your existing content, rankings and Google Business Profile carry over; we set up redirects so you don't lose traffic." },
     ],
   },
   {
     label: 'Process & timeline',
     items: [
       { q: 'What does the 7-day process actually look like, day by day?', a: 'Day 1 is your brief and strategy call. Day 2 you get the homepage design concept to approve. Day 3 we design every page. Days 4–5 senior engineers build it and wire in content, SEO and analytics. Day 6 is your feedback round and performance tuning. Day 7 we launch on your domain and hand over with training.' },
-      { q: 'Who actually builds my website?', a: 'Senior engineers and designers with 12+ years of combined product experience — the same team that has shipped 500+ business websites and stores. No work is passed to juniors or subcontractors, and you can talk to the founder directly at any point.' },
-      { q: 'How many revisions do I get?', a: "The process has two formal approval points — design concept on day 2 and the full review on day 6 — and we keep iterating within those until you're happy. What we don't do is open-ended scope changes mid-build; new pages or features after kickoff get quoted separately so your timeline holds." },
-      { q: "What if I'm slow to respond — does the 7 days still count?", a: "The 7 days are working days where we have what we need from you. If you go quiet for a week mid-project, the clock pauses and resumes when you're back. No penalties, no drama — we just pick up where we left off." },
+      { q: 'Who actually builds my website?', a: 'Senior engineers and designers with 12+ years of combined product experience: the same team that has shipped 500+ business websites and stores. No work is passed to juniors or subcontractors, and you can talk to the founder directly at any point.' },
+      { q: 'How many revisions do I get?', a: "The process has two formal approval points, design concept on day 2 and the full review on day 6, and we keep iterating within those until you're happy. What we don't do is open-ended scope changes mid-build; new pages or features after kickoff get quoted separately so your timeline holds." },
+      { q: "What if I'm slow to respond, does the 7 days still count?", a: "The 7 days are working days where we have what we need from you. If you go quiet for a week mid-project, the clock pauses and resumes when you're back. No penalties, no drama, we just pick up where we left off." },
     ],
   },
   {
     label: 'Services & platforms',
     items: [
-      { q: 'Do you build on Shopify, WordPress or something custom?', a: "Both, depending on the job. Online stores are usually Shopify — our Shopify website developers build custom themes, not template re-skins. Business and marketing sites are custom-coded on Next.js, which is how we hit 100/100 performance scores. We'll recommend the platform that fits, and we'll tell you if the cheaper option is the right one." },
-      { q: 'Can you handle ecommerce web design for an Australian store — GST, AUD, Afterpay?', a: "Yes. Ecommerce builds ship with AUD pricing, GST-ready checkout and invoicing, Australian shipping zones, and local payment options like Afterpay and Zip where your platform supports them. We've shipped stores in home décor, fashion, B2B wholesale and food." },
-      { q: 'Do you do SEO, or just build the website?', a: "Both — and that's the point. Every site launches with technical SEO done: schema, metadata, sitemaps, Core Web Vitals. Beyond that we run ongoing SEO services across Australia — local SEO for your city, content, link building and Google Business Profile — as a month-to-month engagement, not a lock-in contract." },
-      { q: "What's AI SEO, and do I actually need it?", a: "AI SEO (sometimes called GEO) is making sure your business shows up when people ask ChatGPT, Perplexity or Google's AI Overviews for recommendations — which is already how a growing share of Australians find services. We run AI SEO audits that show exactly where you appear today, then fix the gaps. If your customers research before buying, yes, you need it." },
-      { q: 'Can you build a customer portal, booking system or web app?', a: 'Yes — web app development is a core service, not a side offer. Booking systems, quote calculators, customer portals, dashboards and internal tools. We scope tightly, build in weeks not months, and you own the code outright.' },
-      { q: 'Do you also build AI agents or chatbots?', a: "Yes. We build AI agents trained on your business — they quote, qualify leads, answer product questions and book appointments around the clock. Unlike generic chatbot widgets, they're wired into your actual systems, so the answers are real, not canned." },
+      { q: 'Do you build on Shopify, WordPress or something custom?', a: "Both, depending on the job. Online stores are usually Shopify: our Shopify website developers build custom themes, not template re-skins. Business and marketing sites are custom-coded on Next.js, which is how we hit 100/100 performance scores. We'll recommend the platform that fits, and we'll tell you if the cheaper option is the right one." },
+      { q: 'Can you handle ecommerce web design for an Australian store: GST, AUD, Afterpay?', a: "Yes. Ecommerce builds ship with AUD pricing, GST-ready checkout and invoicing, Australian shipping zones, and local payment options like Afterpay and Zip where your platform supports them. We've shipped stores in home décor, fashion, B2B wholesale and food." },
+      { q: 'Do you do SEO, or just build the website?', a: "Both, and that's the point. Every site launches with technical SEO done: schema, metadata, sitemaps, Core Web Vitals. Beyond that we run ongoing SEO services across Australia, local SEO for your city, content, link building and Google Business Profile, as a month-to-month engagement, not a lock-in contract." },
+      { q: "What's AI SEO, and do I actually need it?", a: "AI SEO (sometimes called GEO) is making sure your business shows up when people ask ChatGPT, Perplexity or Google's AI Overviews for recommendations, which is already how a growing share of Australians find services. We run AI SEO audits that show exactly where you appear today, then fix the gaps. If your customers research before buying, yes, you need it." },
+      { q: 'Can you build a customer portal, booking system or web app?', a: 'Yes, web app development is a core service, not a side offer. Booking systems, quote calculators, customer portals, dashboards and internal tools. We scope tightly, build in weeks not months, and you own the code outright.' },
+      { q: 'Do you also build AI agents or chatbots?', a: "Yes. We build AI agents trained on your business, they quote, qualify leads, answer product questions and book appointments around the clock. Unlike generic chatbot widgets, they're wired into your actual systems, so the answers are real, not canned." },
     ],
   },
   {
     label: 'Pricing & ownership',
     items: [
-      { q: 'How much does a website cost in Australia?', a: "It depends on scope — pages, e-commerce, integrations. Tell us what you need and you'll get a fixed quote within one business day, before any commitment. No hourly billing, no surprise invoices. As a rule of thumb, we're priced for small business budgets, not enterprise retainers." },
-      { q: 'Do I own my website, or am I renting it?', a: 'You own everything — domain, code, design and content — from the day it launches. No proprietary platform holding your site hostage, no exit fees. If you ever leave, you take the whole thing with you.' },
-      { q: 'Are there lock-in contracts for support or SEO?', a: "No. Support and SEO are month-to-month, cancel anytime. We think retainers should be earned by results, not enforced by contracts — and most clients stay because the monthly reporting shows exactly what they're getting." },
-      { q: "What's included after launch?", a: "Every launch includes handover training, analytics already wired in, and 30 days of fixes on us. After that you choose: run it yourself, or keep us on month-to-month for updates, SEO and improvements. Both are fine — it's your site either way." },
+      { q: 'How much does a website cost in Australia?', a: "It depends on scope, pages, e-commerce, integrations. Tell us what you need and you'll get a fixed quote within one business day, before any commitment. No hourly billing, no surprise invoices. As a rule of thumb, we're priced for small business budgets, not enterprise retainers." },
+      { q: 'Do I own my website, or am I renting it?', a: 'You own everything, domain, code, design and content, from the day it launches. No proprietary platform holding your site hostage, no exit fees. If you ever leave, you take the whole thing with you.' },
+      { q: 'Are there lock-in contracts for support or SEO?', a: "No. Support and SEO are month-to-month, cancel anytime. We think retainers should be earned by results, not enforced by contracts, and most clients stay because the monthly reporting shows exactly what they're getting." },
+      { q: "What's included after launch?", a: "Every launch includes handover training, analytics already wired in, and 30 days of fixes on us. After that you choose: run it yourself, or keep us on month-to-month for updates, SEO and improvements. Both are fine. It's your site either way." },
     ],
   },
   {
     label: 'SEO & results',
     items: [
-      { q: 'How do I choose the best web design agency in Australia?', a: "Ask three questions any good agency should answer instantly: Who exactly will build my site — seniors or juniors? What's the fixed timeline and what happens if it slips? And can I see live sites with their performance scores? Top web design agencies will answer all three without flinching. If you get vague answers about \"our process,\" keep looking." },
-      { q: 'Will my website actually rank on Google?', a: "A new website doesn't rank by magic — but it can be built so ranking is possible: clean structure, fast load, proper schema, city-relevant content. That's standard in every build. For competitive terms like \"web design Sydney\" or your industry's money keywords, ongoing local SEO does the heavy lifting, and we'll give you an honest read on the timeline before you spend a dollar." },
-      { q: 'How fast will my website be? Does speed really matter?', a: "We target 100/100 Google Lighthouse scores and green Core Web Vitals on every build — and yes, it matters: Google uses speed in rankings, and slow checkouts are a leading cause of abandoned carts. Most agency sites in Australia score 40–70 on mobile. Test ours, or any of our clients', on pagespeed.web.dev." },
-      { q: 'Can you measure whether the website actually brings in leads?', a: "Yes — every site launches with conversion tracking configured: form submissions, phone taps, WhatsApp clicks and booking events, all visible in a simple monthly report. You'll know exactly how many enquiries the site produced, not just how many people visited." },
+      { q: 'How do I choose the best web design agency in Australia?', a: "Ask three questions any good agency should answer instantly: Who exactly will build my site, seniors or juniors? What's the fixed timeline and what happens if it slips? And can I see live sites with their performance scores? Top web design agencies will answer all three without flinching. If you get vague answers about \"our process,\" keep looking." },
+      { q: 'Will my website actually rank on Google?', a: "A new website doesn't rank by magic, but it can be built so ranking is possible: clean structure, fast load, proper schema, city-relevant content. That's standard in every build. For competitive terms like \"web design Sydney\" or your industry's money keywords, ongoing local SEO does the heavy lifting, and we'll give you an honest read on the timeline before you spend a dollar." },
+      { q: 'How fast will my website be? Does speed really matter?', a: "We target 100/100 Google Lighthouse scores and green Core Web Vitals on every build, and yes, it matters: Google uses speed in rankings, and slow checkouts are a leading cause of abandoned carts. Most agency sites in Australia score 40–70 on mobile. Test ours, or any of our clients', on pagespeed.web.dev." },
+      { q: 'Can you measure whether the website actually brings in leads?', a: "Yes: every site launches with conversion tracking configured: form submissions, phone taps, WhatsApp clicks and booking events, all visible in a simple monthly report. You'll know exactly how many enquiries the site produced, not just how many people visited." },
     ],
   },
 ];
@@ -118,7 +118,7 @@ const DAYS = [
   { dn: 'Day 1', t: 'Brief & strategy', d: '30-min call, goals, sitemap and copy direction locked.' },
   { dn: 'Day 2', t: 'Design concept', d: 'Homepage design in your inbox for approval.' },
   { dn: 'Day 3', t: 'Full design', d: 'Every page designed in your brand.' },
-  { dn: 'Day 4', t: 'Build', d: 'Senior engineers code it — no page builders.' },
+  { dn: 'Day 4', t: 'Build', d: 'Senior engineers code it, no page builders.' },
   { dn: 'Day 5', t: 'Content & SEO', d: 'Copy, metadata, schema and analytics wired in.' },
   { dn: 'Day 6', t: 'Review & polish', d: 'Your feedback round, performance tuning.' },
   { dn: 'Day 7', t: 'Launch', d: 'Live on your domain, training handover included.' },
@@ -193,7 +193,7 @@ const HOW_TO_SCHEMA = {
   step: DAYS.map((d, i) => ({
     '@type': 'HowToStep',
     position: i + 1,
-    name: `${d.dn} — ${d.t}`,
+    name: `${d.dn} | ${d.t}`,
     text: d.d,
   })),
 };
@@ -207,7 +207,7 @@ const SPEAKABLE_SCHEMA = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Inline SVG helpers — sprite sheet referenced via <use>, no emoji anywhere
+   Inline SVG helpers, sprite sheet referenced via <use>, no emoji anywhere
 ───────────────────────────────────────────────────────────────────────────── */
 
 function IconSprite() {
@@ -250,7 +250,7 @@ export default function AUHomePage() {
   return (
     <>
       {/* Plain <script> (not next/script) so JSON-LD is embedded in the static
-          export HTML — crawlers don't need JS execution to see the schemas. */}
+          export HTML, crawlers don't need JS execution to see the schemas. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -281,7 +281,7 @@ export default function AUHomePage() {
                   </span>
                 </h1>
                 <p className="lead rise r4">
-                  {"FactoryJet is the web design agency Australian businesses call when they're done waiting — website development, e-commerce, Shopify stores and SEO, delivered by "}
+                  {"FactoryJet is the web design agency Australian businesses call when they're done waiting, website development, e-commerce, Shopify stores and SEO, delivered by "}
                   <b>senior engineers, fixed scope, one founder you can actually call.</b>
                   {' No agency runaround, no six-week discovery phase.'}
                 </p>
@@ -302,7 +302,7 @@ export default function AUHomePage() {
                 <div className="sun" />
                 <div className="arch-echo" />
                 <div className="arch">
-                  {/* Decorative composite — hero TEXT stays LCP, so alt="" + eager (no lazy pop-in) */}
+                  {/* Decorative composite, hero TEXT stays LCP, so alt="" + eager (no lazy pop-in) */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <picture>
                     <source
@@ -351,15 +351,15 @@ export default function AUHomePage() {
           <section id="services">
             <div className="wrap">
               <span className="eyebrow">What we build</span>
-              <h2>Everything your business needs <span className="it">online</span> — one team, one timeline.</h2>
+              <h2>Everything your business needs <span className="it">online</span>: one team, one timeline.</h2>
               <p className="lead" style={{ maxWidth: 640 }}>
-                {"Pick the service you need now. Add the rest when you're ready — the same engineers handle all of it, so nothing gets lost between vendors."}
+                {"Pick the service you need now. Add the rest when you're ready: the same engineers handle all of it, so nothing gets lost between vendors."}
               </p>
               <div className="bento">
                 <div className="bcard b-lg room-peach">
                   <span className="bico" style={{ color: 'var(--orange-d)' }}><Ic id="i-monitor" /></span>
                   <h3>Web Design &amp; Website Development</h3>
-                  <p>{"Custom web design services and website development, built on Next.js by a team that's shipped 500+ sites. Mobile-first, accessible, and fast enough to score 100/100 on Google's performance tests — because slow sites lose Australian customers to faster competitors."}</p>
+                  <p>{"Custom web design services and website development, built on Next.js by a team that's shipped 500+ sites. Mobile-first, accessible, and fast enough to score 100/100 on Google's performance tests, because slow sites lose Australian customers to faster competitors."}</p>
                   <div className="mini">
                     <div><b>7 days</b><span>typical build, up to 5 pages</span></div>
                     <div><b>100/100</b><span>Lighthouse target</span></div>
@@ -370,25 +370,25 @@ export default function AUHomePage() {
                 <div className="bcard b-sm room-green">
                   <span className="bico" style={{ color: 'var(--green)' }}><Ic id="i-cart" /></span>
                   <h3>E-commerce Web Design &amp; Shopify Stores</h3>
-                  <p>Ecommerce website development and Shopify builds by certified Shopify website developers — AUD payments, GST-ready checkout, Afterpay/Zip integration and shipping zones configured for Australian carriers from day one.</p>
+                  <p>Ecommerce website development and Shopify builds by certified Shopify website developers: AUD payments, GST-ready checkout, Afterpay/Zip integration and shipping zones configured for Australian carriers from day one.</p>
                   <Link className="blink" href="/services/ecommerce-development">Ecommerce web design <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3 room-lav">
                   <span className="bico" style={{ color: 'var(--lav)' }}><Ic id="i-cog" /></span>
                   <h3>Web App Development</h3>
-                  <p>Customer portals, booking systems, dashboards and internal tools — scoped tightly, shipped in weeks.</p>
+                  <p>Customer portals, booking systems, dashboards and internal tools, scoped tightly, shipped in weeks.</p>
                   <Link className="blink" href="/services/web-application-development">Web apps <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3">
                   <span className="bico" style={{ color: 'var(--orange-d)' }}><Ic id="i-chart" /></span>
-                  <h3>SEO Services — Local SEO to AI SEO</h3>
-                  <p>{"An SEO agency inside your web team: local SEO for your city, technical SEO, content, Google Business Profile — and AI SEO audits so you show up in ChatGPT and Google's AI results."}</p>
+                  <h3>SEO Services, Local SEO to AI SEO</h3>
+                  <p>{"An SEO agency inside your web team: local SEO for your city, technical SEO, content, Google Business Profile, and AI SEO audits so you show up in ChatGPT and Google's AI results."}</p>
                   <Link className="blink" href="/services/seo">SEO services Australia <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3">
                   <span className="bico" style={{ color: 'var(--green)' }}><Ic id="i-bot" /></span>
                   <h3>AI Agents &amp; Automation</h3>
-                  <p>Chat agents that answer like your best staff member — quoting, booking and qualifying leads while you sleep.</p>
+                  <p>Chat agents that answer like your best staff member, quoting, booking and qualifying leads while you sleep.</p>
                   <Link className="blink" href="/services/ai-agent-development">AI development <Ic id="i-arrow" /></Link>
                 </div>
               </div>
@@ -402,11 +402,11 @@ export default function AUHomePage() {
               <div>
                 <span className="eyebrow" style={{ color: 'var(--orange)' }}>Why businesses switch to us</span>
                 <h2>The traditional agency model wastes your <span style={{ fontStyle: 'italic', color: 'var(--orange)' }}>time</span>, not just your budget.</h2>
-                <p className="lead">{"Most Australian SMBs we talk to aren't unhappy with their agency's work — they're unhappy with the waiting. Six-week timelines, account managers between you and the people building, and change requests that take a fortnight."}</p>
+                <p className="lead">{"Most Australian SMBs we talk to aren't unhappy with their agency's work. They're unhappy with the waiting. Six-week timelines, account managers between you and the people building, and change requests that take a fortnight."}</p>
                 <div className="pain">
-                  <div className="p"><span className="pic"><Ic id="i-clock" /></span><div><b>&ldquo;Our site took 4 months to launch.&rdquo;</b><span>{"We ship up to 5 pages in 7 days, because senior engineers build from day one — there's no handoff chain."}</span></div></div>
+                  <div className="p"><span className="pic"><Ic id="i-clock" /></span><div><b>&ldquo;Our site took 4 months to launch.&rdquo;</b><span>{"We ship up to 5 pages in 7 days, because senior engineers build from day one. There's no handoff chain."}</span></div></div>
                   <div className="p"><span className="pic"><Ic id="i-mute" /></span><div><b>&ldquo;I never talk to the people doing the work.&rdquo;</b><span>You talk directly to the founder and the engineers. No account-manager telephone game.</span></div></div>
-                  <div className="p"><span className="pic"><Ic id="i-down" /></span><div><b>{"“It looks nice but doesn't bring in leads.”"}</b><span>Every page is built around one conversion action, with analytics wired in before launch — not bolted on after.</span></div></div>
+                  <div className="p"><span className="pic"><Ic id="i-down" /></span><div><b>{"“It looks nice but doesn't bring in leads.”"}</b><span>Every page is built around one conversion action, with analytics wired in before launch, not bolted on after.</span></div></div>
                 </div>
               </div>
               <div className="dash" aria-hidden="true">
@@ -430,8 +430,8 @@ export default function AUHomePage() {
           <section id="process">
             <div className="wrap">
               <span className="eyebrow">How the 7 days work</span>
-              <h2>From brief to live — in one <span className="it">working week.</span></h2>
-              <p className="lead" style={{ maxWidth: 620 }}>A fixed, transparent process. You know exactly what happens each day, and you see real progress — not status reports.</p>
+              <h2>From brief to live, in one <span className="it">working week.</span></h2>
+              <p className="lead" style={{ maxWidth: 620 }}>A fixed, transparent process. You know exactly what happens each day, and you see real progress, not status reports.</p>
               <div className="weekrail">
                 <div className="week">
                   {DAYS.map((d, i) => (
@@ -463,7 +463,7 @@ export default function AUHomePage() {
                     <tr><td>Who does the work</td><td>You</td><td>One generalist</td><td>Junior team, senior oversight</td><td className="fj ok">Senior engineers, every project</td></tr>
                     <tr><td>Design</td><td>Template</td><td>Varies</td><td>Custom</td><td className="fj ok">Custom, conversion-tested</td></tr>
                     <tr><td>Performance &amp; SEO</td><td className="no">Rarely optimised</td><td className="no">Depends on skillset</td><td>Often an add-on</td><td className="fj ok">100/100 target, SEO built in</td></tr>
-                    <tr><td>Who you talk to</td><td>—</td><td>The freelancer</td><td className="no">Account manager</td><td className="fj ok">The founder &amp; the builders</td></tr>
+                    <tr><td>Who you talk to</td><td>n/a</td><td>The freelancer</td><td className="no">Account manager</td><td className="fj ok">The founder &amp; the builders</td></tr>
                     <tr><td>After launch</td><td className="no">{"You're on your own"}</td><td className="no">Often unavailable</td><td>Retainer required</td><td className="fj ok">Month-to-month support, no lock-in</td></tr>
                   </tbody>
                 </table>
@@ -476,7 +476,7 @@ export default function AUHomePage() {
             <div className="wrap">
               <span className="eyebrow">Where we work</span>
               <h2>Built for Australian businesses, <span className="it">city by city.</span></h2>
-              <p className="lead" style={{ maxWidth: 600 }}>Web design, e-commerce and SEO services for businesses across Australia — fully remote, in your hours. Local market pages for our priority cities:</p>
+              <p className="lead" style={{ maxWidth: 600 }}>Web design, e-commerce and SEO services for businesses across Australia, fully remote, in your hours. Local market pages for our priority cities:</p>
               <div className="cities">
                 {CITIES.map((c) => (
                   <div className="city" key={c.code}>
@@ -508,7 +508,7 @@ export default function AUHomePage() {
                           src={c.img.replace('.webp', '-480.webp')}
                           srcSet={`${c.img.replace('.webp', '-480.webp')} 480w, ${c.img} 800w`}
                           sizes="(max-width: 880px) 92vw, 360px"
-                          alt={`${c.name} — website by FactoryJet`} width={480} height={270} loading="lazy"
+                          alt={`${c.name}, website by FactoryJet`} width={480} height={270} loading="lazy"
                         />
                       </picture>
                     </div>
@@ -533,7 +533,7 @@ export default function AUHomePage() {
               <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
                 <span className="eyebrow" style={{ justifyContent: 'center' }}>Questions, answered</span>
                 <h2>Frequently asked <span className="it">questions</span></h2>
-                <p className="lead">Straight answers, no sales script — 22 of the questions Australian business owners actually ask us.</p>
+                <p className="lead">Straight answers, no sales script, 22 of the questions Australian business owners actually ask us.</p>
               </div>
               <div className="faqwrap">
                 {FAQ_GROUPS.map((group, gi) => (
@@ -562,7 +562,7 @@ export default function AUHomePage() {
                 <div>
                   <span className="eyebrow">Talk to the Founder</span>
                   <h2>Returns on your <span className="it">time.</span></h2>
-                  <p>{"Book 30 minutes with Bhavesh — founder of FactoryJet. You'll leave with a clear scope, a fixed timeline and an honest answer on whether we're the right fit. No sales team, ever."}</p>
+                  <p>{"Book 30 minutes with Bhavesh, founder of FactoryJet. You'll leave with a clear scope, a fixed timeline and an honest answer on whether we're the right fit. No sales team, ever."}</p>
                 </div>
                 <div className="fbtns">
                   <a className="btn btn-orange" href={CALENDLY} target="_blank" rel="noopener noreferrer">
@@ -598,7 +598,7 @@ export default function AUHomePage() {
       <SiteFooter
         linkColumns={AU_FOOTER_COLUMNS}
         variant="dark"
-        tagline="Websites, e-commerce and web apps for Australian businesses — built properly by senior engineers, live in 7 days."
+        tagline="Websites, e-commerce and web apps for Australian businesses, built properly by senior engineers, live in 7 days."
       />
     </>
   );

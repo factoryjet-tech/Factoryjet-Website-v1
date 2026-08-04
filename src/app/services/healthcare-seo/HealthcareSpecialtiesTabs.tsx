@@ -16,7 +16,7 @@ const specialties = [
     number: '01',
     name: 'Dental practices',
     shortName: 'Dental',
-    why: '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30–60 new patients per month to organic alone — with zero ongoing ad spend once the map pack position is held.',
+    why: '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30–60 new patients per month to organic alone, with zero ongoing ad spend once the map pack position is held.',
     signal: 'Map pack + dental directory citations',
     signalDetail: 'Google Business Profile, Zocdoc, 1-800-Dentist, Healthgrades, review velocity.',
     stat: '550K+',
@@ -38,7 +38,7 @@ const specialties = [
     number: '03',
     name: 'Chiropractic and physical therapy',
     shortName: 'Chiro / PT',
-    why: 'Chiropractic and PT have high visit frequency — patients return weekly for months. A new patient acquired through SEO has a significantly higher lifetime value than a single-appointment specialty. "Chiropractor near me" and "physical therapist near me" both drive 200,000+ monthly searches nationally, with strong near-me intent that is almost entirely won in the Map Pack.',
+    why: 'Chiropractic and PT have high visit frequency, patients return weekly for months. A new patient acquired through SEO has a significantly higher lifetime value than a single-appointment specialty. "Chiropractor near me" and "physical therapist near me" both drive 200,000+ monthly searches nationally, with strong near-me intent that is almost entirely won in the Map Pack.',
     signal: 'Map pack dominance + GBP review velocity',
     signalDetail: 'Near-me ranking, review cadence program, citation building, GBP photo optimization.',
     stat: '200K+',
@@ -60,7 +60,7 @@ const specialties = [
     number: '05',
     name: 'Telehealth platforms',
     shortName: 'Telehealth',
-    why: 'Telehealth SEO is national-reach, content-led, and increasingly dependent on AI citations. When a patient asks ChatGPT "what is the best telehealth platform for anxiety" or "online psychiatry that takes insurance," the platforms with the strongest FAQ and condition-page E-E-A-T are cited. No map pack required — pure content and AI-citation strategy.',
+    why: 'Telehealth SEO is national-reach, content-led, and increasingly dependent on AI citations. When a patient asks ChatGPT "what is the best telehealth platform for anxiety" or "online psychiatry that takes insurance," the platforms with the strongest FAQ and condition-page E-E-A-T are cited. No map pack required, pure content and AI-citation strategy.',
     signal: 'AI citations + national organic + condition pages',
     signalDetail: 'FAQPage schema, condition hubs, insurance coverage pages, AI Overview positioning.',
     stat: '27K+',
@@ -71,7 +71,7 @@ const specialties = [
     number: '06',
     name: 'Orthopedics and sports medicine',
     shortName: 'Ortho',
-    why: 'Orthopedic and sports medicine practices handle high-value elective procedures (ACL repair, joint replacement, rotator cuff surgery) where the patient often researches extensively before choosing a surgeon. E-E-A-T-compliant procedure pages with surgeon bylines, peer-reviewed citations, and outcome data — structured for both Google and AI Overviews — capture this high-intent research phase.',
+    why: 'Orthopedic and sports medicine practices handle high-value elective procedures (ACL repair, joint replacement, rotator cuff surgery) where the patient often researches extensively before choosing a surgeon. E-E-A-T-compliant procedure pages with surgeon bylines, peer-reviewed citations, and outcome data, structured for both Google and AI Overviews, capture this high-intent research phase.',
     signal: 'E-E-A-T procedure pages + surgeon bylines + AI citations',
     signalDetail: 'Surgeon bio pages, procedure outcome pages, peer-reviewed citation integration, AIO positioning.',
     stat: 'High-value',
@@ -160,7 +160,7 @@ export default function HealthcareSpecialtiesTabs() {
             }}
           >
             <div className="flex flex-col lg:flex-row lg:gap-12">
-              {/* Left — main content */}
+              {/* Left, main content */}
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-5">
                   <span
@@ -186,7 +186,7 @@ export default function HealthcareSpecialtiesTabs() {
                 </p>
               </div>
 
-              {/* Right — signal card */}
+              {/* Right, signal card */}
               <div
                 className="mt-8 lg:mt-0 lg:w-[280px] lg:shrink-0"
               >
@@ -244,7 +244,7 @@ export default function HealthcareSpecialtiesTabs() {
           </div>
         </div>
 
-        {/* Bottom CTA — one primary per section */}
+        {/* Bottom CTA: one primary per section */}
         <div className="mt-8">
           <a
             href={CALENDLY}

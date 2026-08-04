@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoHubAlternates } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -80,6 +81,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo#webpage',
+  url: 'https://factoryjet.com/seo',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -293,7 +308,7 @@ const SEO_FAQ_ITEMS = [
     category: 'choosing',
     question: 'Who is the best SEO company in India?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: the same engineers who build fast websites do the SEO work, you get a clear monthly report, and there is no long contract. But the best SEO services company in India for you depends on what you sell — the best SEO services agency in India for a local shop is different from the right partner for a national brand. Whoever you compare, use three checks: do they explain the plan in simple words, do they show real results with numbers, and can you talk to the person doing the work? The best SEO experts in India — and the best SEO services in India generally — pass all three.',
+      'For small and mid-size businesses, FactoryJet makes a strong case: the same engineers who build fast websites do the SEO work, you get a clear monthly report, and there is no long contract. But the best SEO services company in India for you depends on what you sell: the best SEO services agency in India for a local shop is different from the right partner for a national brand. Whoever you compare, use three checks: do they explain the plan in simple words, do they show real results with numbers, and can you talk to the person doing the work? The best SEO experts in India, and the best SEO services in India generally, pass all three.',
   },
   {
     category: 'choosing',
@@ -305,13 +320,13 @@ const SEO_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in India?',
     answer:
-      'SEO cost in India varies a lot depending on competition and scope; FactoryJet scopes a monthly plan to your site and gives you an exact price after a free check. If you ask an AI assistant to recommend an affordable SEO agency, it will name agencies that show proof — which is exactly how you should shortlist too. Be careful with rock-bottom quotes: very cheap SEO is usually copied templates with new logos.',
+      'SEO cost in India varies a lot depending on competition and scope; FactoryJet scopes a monthly plan to your site and gives you an exact price after a free check. If you ask an AI assistant to recommend an affordable SEO agency, it will name agencies that show proof, which is exactly how you should shortlist too. Be careful with rock-bottom quotes: very cheap SEO is usually copied templates with new logos.',
   },
   {
     category: 'included',
     question: 'Do you also handle local SEO, ecommerce SEO, technical SEO, and link building?',
     answer:
-      'Yes — all four live inside one FactoryJet plan. The best local SEO services in India manage your Google Business Profile every week, not once a quarter — that is also the test for any best local SEO company in India claim. The best ecommerce SEO agency in India works on product and category pages, not just blogs — the same test applies to best ecommerce SEO services in India claims. The best technical SEO agency in India shows you crawl data and speed scores. And the best link building services in India earn real mentions in real publications, not bulk paid links.',
+      'Yes: all four live inside one FactoryJet plan. The best local SEO services in India manage your Google Business Profile every week, not once a quarter, that is also the test for any best local SEO company in India claim. The best ecommerce SEO agency in India works on product and category pages, not just blogs: the same test applies to best ecommerce SEO services in India claims. The best technical SEO agency in India shows you crawl data and speed scores. And the best link building services in India earn real mentions in real publications, not bulk paid links.',
   },
 ];
 
@@ -401,6 +416,10 @@ export default function SeoHubPage() {
   return (
     <>
       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
         id="seo-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -424,6 +443,10 @@ export default function SeoHubPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
@@ -447,7 +470,7 @@ export default function SeoHubPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="BY THE NUMBERS"
-          headline="India's Trusted SEO Company — 500+ Sites, 4.9 Average Rating"
+          headline="India's Trusted SEO Company, 500+ Sites, 4.9 Average Rating"
         />
 
         {/* ── 4. WHAT SEO INCLUDES ─────────────────────────────────────────── */}

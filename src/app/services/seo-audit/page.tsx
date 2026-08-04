@@ -14,7 +14,7 @@ import AuditFx from './AuditFx';
 import './seo-audit.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/seo-audit — built 2026-06-03. US SEO program.
+   /us/services/seo-audit, built 2026-06-03. US SEO program.
 
    Design: "reference-grade" system cloned from /us/services/ecommerce-seo (scoped
    under .aseo). Aurora hero with a CSS SEO-health report card (score gauge +
@@ -344,7 +344,7 @@ export default function SeoAuditServicePage() {
           </div>
         </div>
 
-        {/* 4. THREE LAYERS — glass cards */}
+        {/* 4. THREE LAYERS, glass cards */}
         <section className="glass-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 760 }}>
             <h2 data-reveal>A real SEO audit has <span className="it">three layers</span></h2>
@@ -382,7 +382,7 @@ export default function SeoAuditServicePage() {
           </div>
         </section>
 
-        {/* 5. SERVICES BENTO — what we audit */}
+        {/* 5. SERVICES BENTO, what we audit */}
         <section className="svc-sec">
           <div className="wrap">
             <div className="eyebrow" data-reveal>The SEO audit checklist</div>

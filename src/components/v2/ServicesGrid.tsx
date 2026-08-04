@@ -56,7 +56,7 @@ const SERVICES: Service[] = [
     num: '01',
     category: 'Web Development',
     name: 'Web Design & Development',
-    tagline: 'Custom websites engineered for speed, SEO, and conversions — shipped in 7 days.',
+    tagline: 'Custom websites engineered for speed, SEO, and conversions, shipped in 7 days.',
     timeline: '7-day delivery',
     timelineLabel: 'Delivery',
     deliverables: [
@@ -78,7 +78,7 @@ const SERVICES: Service[] = [
     num: '02',
     category: 'Web Development',
     name: 'Website Redesign',
-    tagline: 'Modernize your site without losing SEO equity — Core Web Vitals green in 7 days.',
+    tagline: 'Modernize your site without losing SEO equity: Core Web Vitals green in 7 days.',
     timeline: '7-day delivery',
     timelineLabel: 'Delivery',
     deliverables: [
@@ -100,7 +100,7 @@ const SERVICES: Service[] = [
     num: '03',
     category: 'E-Commerce',
     name: 'Shopify Development',
-    tagline: 'Custom Shopify stores built for conversion — fast, branded, and fully yours.',
+    tagline: 'Custom Shopify stores built for conversion, fast, branded, and fully yours.',
     timeline: '7–14 days',
     timelineLabel: 'Timeline',
     deliverables: [
@@ -166,7 +166,7 @@ const SERVICES: Service[] = [
     num: '06',
     category: 'AI Services',
     name: 'AI SEO',
-    tagline: 'Get found in Google AI Overviews, ChatGPT, Perplexity, and Gemini — not just search.',
+    tagline: 'Get found in Google AI Overviews, ChatGPT, Perplexity, and Gemini, not just search.',
     timeline: 'Ongoing · 30-day onboarding',
     timelineLabel: 'Engagement',
     deliverables: [
@@ -188,7 +188,7 @@ const SERVICES: Service[] = [
     num: '07',
     category: 'AI Services',
     name: 'AI Creative Studio',
-    tagline: 'Brand-consistent AI images, video, and ad creative — delivered in 48 hours.',
+    tagline: 'Brand-consistent AI images, video, and ad creative, delivered in 48 hours.',
     timeline: '48-hr turnaround',
     timelineLabel: 'Turnaround',
     deliverables: [
@@ -306,7 +306,7 @@ export default function ServicesGrid() {
               <span style={{ color: ORANGE }}>One accountable team.</span>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#666' }}>
-              From web design and Shopify development to AI agents and AI-powered SEO —
+              From web design and Shopify development to AI agents and AI-powered SEO,
               transparent, fixed-price quotes, 7-day delivery, every deliverable fully yours on handover.
             </p>
           </div>
@@ -360,7 +360,7 @@ export default function ServicesGrid() {
             {/* ── Main layout ─────────────────────────────────────────────── */}
             <div className="flex flex-col lg:flex-row" style={{ minHeight: 520 }}>
 
-              {/* LEFT: flat service list — desktop only */}
+              {/* LEFT: flat service list, desktop only */}
               <div
                 className="hidden lg:flex flex-col"
                 style={{
@@ -443,7 +443,7 @@ export default function ServicesGrid() {
                     'linear-gradient(145deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.86) 100%)',
                 }}
               >
-                {/* Background service image — rendered per active service at 12% opacity */}
+                {/* Background service image, rendered per active service at 12% opacity */}
                 {activeService.imageSrc && (
                   <div
                     aria-hidden="true"
@@ -533,7 +533,7 @@ export default function ServicesGrid() {
                   {activeService.num}
                 </div>
 
-                {/* Animated content — key forces remount → fade-in on change */}
+                {/* Animated content, key forces remount → fade-in on change */}
                 <div
                   key={activeId}
                   className="sv-panel-content relative flex flex-col h-full p-6 sm:p-8 lg:p-10"

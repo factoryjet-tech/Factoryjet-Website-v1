@@ -29,7 +29,7 @@ const SERVICES: Service[] = [
     imageAlt: "Modern website design for Liverpool businesses",
     imageSide: "right",
     body: [
-      "Liverpool's business landscape is as diverse as the city itself — logistics companies on the docks, creative agencies in the Baltic Triangle, hospitality groups on Albert Dock, life sciences firms in the Knowledge Quarter. Your website needs to convert visitors from all of them. We build in Next.js 15 with Tailwind CSS 4, GSAP animations, and Lighthouse scores that consistently hit 95+. Webflow and Framer builds for Liverpool's creative sector. WordPress for businesses that need content control. Every site is mobile-first, accessibility-compliant, and built to rank.",
+      "Liverpool's business landscape is as diverse as the city itself, logistics companies on the docks, creative agencies in the Baltic Triangle, hospitality groups on Albert Dock, life sciences firms in the Knowledge Quarter. Your website needs to convert visitors from all of them. We build in Next.js 15 with Tailwind CSS 4, GSAP animations, and Lighthouse scores that consistently hit 95+. Webflow and Framer builds for Liverpool's creative sector. WordPress for businesses that need content control. Every site is mobile-first, accessibility-compliant, and built to rank.",
     ],
     keywords:
       "web design Liverpool Webflow developer Liverpool Framer developer Liverpool AI web design Liverpool",
@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
     imageAlt: "E-commerce development for Liverpool businesses",
     imageSide: "left",
     body: [
-      "Velstar, Liverpool's own Shopify Platinum Partner, has set a high benchmark for e-commerce in the city. We match it at 50–60% of the price. From Shopify Plus builds for fashion brands targeting Misspap's demographic, to headless WooCommerce for B2B distributors supplying JLR and the NHS — we build e-commerce that converts, scales, and connects to your ERP and CRM from day one. Liverpool's port proximity makes it a natural distribution hub. Your store should reflect that operational ambition.",
+      "Velstar, Liverpool's own Shopify Platinum Partner, has set a high benchmark for e-commerce in the city. We match it at 50–60% of the price. From Shopify Plus builds for fashion brands targeting Misspap's demographic, to headless WooCommerce for B2B distributors supplying JLR and the NHS, we build e-commerce that converts, scales, and connects to your ERP and CRM from day one. Liverpool's port proximity makes it a natural distribution hub. Your store should reflect that operational ambition.",
     ],
     keywords:
       "Shopify Plus agency Liverpool B2B ecommerce Liverpool headless commerce Liverpool WooCommerce Liverpool",
@@ -53,14 +53,14 @@ const SERVICES: Service[] = [
     number: "03",
     name: "AI Agents",
     heading:
-      "Liverpool's AI Agent Agency — Before Anyone Else Claims the Title",
+      "Liverpool's AI Agent Agency: Before Anyone Else Claims the Title",
     image: "/images/uk/liverpool/service-ai-agents-liverpool.webp",
     imageAlt:
       "AI agent development for Liverpool logistics and port businesses",
     imageSide: "right",
     featured: true,
     body: [
-      "Search 'AI agents Liverpool' right now. You'll find near-zero competition. We're building that position for FactoryJet — and we're building AI agent infrastructure for Liverpool businesses that want to own their category before the incumbents wake up. Custom agentic AI for logistics routing and port operations. Multi-agent systems for NHS supply chain automation. AI chatbots for Liverpool's hospitality and tourism sector. MCP-integrated workflows for legal and financial services firms in Old Hall Street. The Baltic Triangle's creative studios are already asking for AI creative automation pipelines. We build all of it.",
+      "Search 'AI agents Liverpool' right now. You'll find near-zero competition. We're building that position for FactoryJet, and we're building AI agent infrastructure for Liverpool businesses that want to own their category before the incumbents wake up. Custom agentic AI for logistics routing and port operations. Multi-agent systems for NHS supply chain automation. AI chatbots for Liverpool's hospitality and tourism sector. MCP-integrated workflows for legal and financial services firms in Old Hall Street. The Baltic Triangle's creative studios are already asking for AI creative automation pipelines. We build all of it.",
     ],
     keywords:
       "AI agent development Liverpool agentic AI Liverpool AI automation Liverpool AI chatbot Liverpool AI for healthcare Liverpool AI for logistics Liverpool",
@@ -74,7 +74,7 @@ const SERVICES: Service[] = [
     imageAlt: "AI SEO and GEO services for Liverpool businesses",
     imageSide: "left",
     body: [
-      "Quirky Digital has 20 specialists and a Global Search Awards win. SEO Company Liverpool has been in the Royal Albert Dock for years. Six Digital serves national clients. But none of them are doing generative engine optimisation. None of them are building answer engine optimisation strategies for Liverpool businesses. None of them are making your content appear inside ChatGPT, Perplexity, and Claude when someone asks 'best logistics web design agency Liverpool' or 'AI automation company Liverpool.' We are. And because we're first, our clients rank first — in both Google and the AI answers that are replacing it.",
+      "Quirky Digital has 20 specialists and a Global Search Awards win. SEO Company Liverpool has been in the Royal Albert Dock for years. Six Digital serves national clients. But none of them are doing generative engine optimisation. None of them are building answer engine optimisation strategies for Liverpool businesses. None of them are making your content appear inside ChatGPT, Perplexity, and Claude when someone asks 'best logistics web design agency Liverpool' or 'AI automation company Liverpool.' We are. And because we're first, our clients rank first, in both Google and the AI answers that are replacing it.",
     ],
     keywords:
       "AI SEO agency Liverpool AI SEO Liverpool generative engine optimization Liverpool answer engine optimization Liverpool AI web design Liverpool",
@@ -387,7 +387,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Progress dots + active service name — desktop only */}
+        {/* Progress dots + active service name, desktop only */}
         <div
           className="pointer-events-none absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-5 lg:flex"
           aria-hidden="true"

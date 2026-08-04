@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -82,7 +83,7 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema — N8N_FAQ_SCHEMA is declared after N8N_FAQ_ITEMS below
+   JSON-LD Schema, N8N_FAQ_SCHEMA is declared after N8N_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
 
 const N8N_SERVICE_SCHEMA = {
@@ -135,7 +136,7 @@ const N8N_SERVICES = [
   {
     name: 'Lead Capture & CRM Automation',
     description:
-      'Every website form lead automatically enters your CRM, gets tagged, triggers a WhatsApp notification to your sales team, and starts an email follow-up sequence — without anyone touching a keyboard. Works with Zoho CRM, HubSpot, Leadsquared, and custom CRMs.',
+      'Every website form lead automatically enters your CRM, gets tagged, triggers a WhatsApp notification to your sales team, and starts an email follow-up sequence, without anyone touching a keyboard. Works with Zoho CRM, HubSpot, Leadsquared, and custom CRMs.',
     example: 'A D2C brand in Mumbai eliminated 2 hours of daily manual lead entry. Zero leads missed.',
     linkLabel: 'Automate your lead flow',
     linkHref: '/contact',
@@ -143,7 +144,7 @@ const N8N_SERVICES = [
   {
     name: 'Payment & Invoice Automation',
     description:
-      'When a Razorpay payment succeeds, n8n creates a GST-compliant invoice in Tally, sends a WhatsApp confirmation to the customer, updates the CRM deal stage, and notifies your operations team on Slack — all within 30 seconds, no manual action.',
+      'When a Razorpay payment succeeds, n8n creates a GST-compliant invoice in Tally, sends a WhatsApp confirmation to the customer, updates the CRM deal stage, and notifies your operations team on Slack: all within 30 seconds, no manual action.',
     example:
       'Razorpay → Tally invoice → WhatsApp confirmation → Zoho CRM update → Slack alert. End to end.',
     linkLabel: 'Connect Razorpay to Tally',
@@ -152,7 +153,7 @@ const N8N_SERVICES = [
   {
     name: 'E-Commerce Order Automation',
     description:
-      'Shopify orders trigger inventory updates, fulfillment requests to Shiprocket, tracking number dispatch via WhatsApp, review request messages post-delivery, and reorder alerts when stock drops below threshold — all automated.',
+      'Shopify orders trigger inventory updates, fulfillment requests to Shiprocket, tracking number dispatch via WhatsApp, review request messages post-delivery, and reorder alerts when stock drops below threshold: all automated.',
     example: 'A Shopify brand processes 400+ daily orders with zero manual fulfilment steps.',
     linkLabel: 'Automate your Shopify orders',
     linkHref: '/contact',
@@ -160,7 +161,7 @@ const N8N_SERVICES = [
   {
     name: 'WhatsApp Business API Workflows',
     description:
-      'Build multi-step WhatsApp automation: appointment reminders, order status updates, abandoned cart recovery sequences, lead nurturing flows, and payment reminder messages. All via official WhatsApp Business API — no grey-route risk.',
+      'Build multi-step WhatsApp automation: appointment reminders, order status updates, abandoned cart recovery sequences, lead nurturing flows, and payment reminder messages. All via official WhatsApp Business API, no grey-route risk.',
     example:
       'WhatsApp abandoned cart messages convert at 3× the rate of email for Indian consumers.',
     linkLabel: 'Build WhatsApp workflows',
@@ -169,7 +170,7 @@ const N8N_SERVICES = [
   {
     name: 'HR & Ops Automation',
     description:
-      'Employee onboarding workflows (document collection, account creation, welcome messages), leave approval chains, payroll data collection from attendance systems, and expense submission routing — all without chasing people on WhatsApp.',
+      'Employee onboarding workflows (document collection, account creation, welcome messages), leave approval chains, payroll data collection from attendance systems, and expense submission routing: all without chasing people on WhatsApp.',
     example: 'Cut onboarding admin time from 3 days to 4 hours for a 200-person Pune-based company.',
     linkLabel: 'Automate HR operations',
     linkHref: '/contact',
@@ -177,7 +178,7 @@ const N8N_SERVICES = [
   {
     name: 'Reporting & Analytics Automation',
     description:
-      'Pull data from Shopify, Razorpay, Zoho CRM, Google Analytics, and ad platforms every Monday morning and compile it into a formatted Google Sheets or Notion report — automatically emailed to your leadership team before the weekly review.',
+      'Pull data from Shopify, Razorpay, Zoho CRM, Google Analytics, and ad platforms every Monday morning and compile it into a formatted Google Sheets or Notion report: automatically emailed to your leadership team before the weekly review.',
     example: 'Weekly 45-minute reporting process fully automated. Board-ready reports every Monday at 8 AM.',
     linkLabel: 'Automate your reporting',
     linkHref: '/contact',
@@ -185,7 +186,7 @@ const N8N_SERVICES = [
   {
     name: 'Customer Support Automation',
     description:
-      'Incoming support tickets get categorised, assigned to the right team member, trigger auto-responses for common queries, and escalate unresolved issues after 24 hours — across email, WhatsApp, and Freshdesk/Zendesk.',
+      'Incoming support tickets get categorised, assigned to the right team member, trigger auto-responses for common queries, and escalate unresolved issues after 24 hours, across email, WhatsApp, and Freshdesk/Zendesk.',
     example: 'First-response time dropped from 6 hours to under 5 minutes for routine queries.',
     linkLabel: 'Automate support routing',
     linkHref: '/contact',
@@ -193,7 +194,7 @@ const N8N_SERVICES = [
   {
     name: 'Custom API Integrations',
     description:
-      'If your ERP, POS, or internal system has an API, n8n can connect it to everything else. We build custom n8n nodes and HTTP Request workflows to integrate tools that do not have official n8n support — including Tally Prime, custom ERPs, and legacy systems.',
+      'If your ERP, POS, or internal system has an API, n8n can connect it to everything else. We build custom n8n nodes and HTTP Request workflows to integrate tools that do not have official n8n support, including Tally Prime, custom ERPs, and legacy systems.',
     example: 'Built a custom Tally XML integration connecting a Mumbai wholesaler\'s ERP to Razorpay and Zoho.',
     linkLabel: 'Discuss your integration',
     linkHref: '/contact',
@@ -205,13 +206,13 @@ const N8N_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Automation Audit',
     description:
-      'We map every manual process in your business that consumes time: lead entry, invoice generation, order fulfilment notifications, reporting, follow-ups. You get a prioritised automation roadmap ranked by time saved and implementation effort — before we scope any work.',
+      'We map every manual process in your business that consumes time: lead entry, invoice generation, order fulfilment notifications, reporting, follow-ups. You get a prioritised automation roadmap ranked by time saved and implementation effort, before we scope any work.',
   },
   {
     number: '02',
     title: 'Workflow Design',
     description:
-      'We design the automation logic as a visual workflow diagram — showing every trigger, condition, action, and error path. You approve the logic before we write a single node. Edge cases are identified at design stage, not after deployment.',
+      'We design the automation logic as a visual workflow diagram, showing every trigger, condition, action, and error path. You approve the logic before we write a single node. Edge cases are identified at design stage, not after deployment.',
   },
   {
     number: '03',
@@ -223,7 +224,7 @@ const N8N_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '04',
     title: 'Testing & Error Handling',
     description:
-      'Every workflow is stress-tested: edge cases, API timeouts, malformed data, duplicate triggers, and rate limits. Error-handling branches are built so every failure generates an alert with actionable information — not a silent failure you discover three weeks later.',
+      'Every workflow is stress-tested: edge cases, API timeouts, malformed data, duplicate triggers, and rate limits. Error-handling branches are built so every failure generates an alert with actionable information, not a silent failure you discover three weeks later.',
   },
   {
     number: '05',
@@ -236,19 +237,19 @@ const N8N_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const N8N_STATS = [
   {
     value: '80%',
-    label: 'cost saving vs. Zapier — n8n self-hosted eliminates per-task fees entirely',
+    label: 'cost saving vs. Zapier, n8n self-hosted eliminates per-task fees entirely',
     microcopy: 'for Indian businesses running 50,000+ automations/month',
     categoryLabel: 'COST SAVING',
   },
   {
     value: '400+',
-    label: 'native n8n integrations — plus custom nodes for Razorpay, Tally, and Indian APIs',
+    label: 'native n8n integrations, plus custom nodes for Razorpay, Tally, and Indian APIs',
     microcopy: 'Zoho, HubSpot, Shopify, WhatsApp, Gmail, Slack, Google Sheets, and more',
     categoryLabel: 'INTEGRATIONS',
   },
   {
     value: '7 Days',
-    label: 'delivery for standard automation setups — 3–5 workflows, common integrations',
+    label: 'delivery for standard automation setups, 3–5 workflows, common integrations',
     microcopy: 'from automation audit sign-off to live deployment',
     categoryLabel: 'DELIVERY',
   },
@@ -257,13 +258,13 @@ const N8N_STATS = [
 const N8N_MARKET_STATS = [
   {
     value: '43B+',
-    label: 'UPI transactions processed in India in FY2024 — every one is an automation opportunity',
+    label: 'UPI transactions processed in India in FY2024: every one is an automation opportunity',
     sourceUrl: 'https://www.npci.org.in/statistics',
     sourceLabel: 'NPCI Annual Statistics',
   },
   {
     value: '500M+',
-    label: 'WhatsApp users in India — the highest-engagement channel for business automation',
+    label: 'WhatsApp users in India: the highest-engagement channel for business automation',
     sourceUrl: 'https://www.statista.com/statistics/1004581/india-whatsapp-users/',
     sourceLabel: 'Statista India Digital Report',
   },
@@ -286,7 +287,7 @@ const N8N_COMPARISON_ROWS = [
   {
     feature: 'Monthly cost (100K tasks/month)',
     values: [
-      'Server cost only — no per-task fees',
+      'Server cost only, no per-task fees',
       'High recurring SaaS fee (USD)',
       'Mid recurring SaaS fee (USD)',
       'No fee, but 40+ staff hours',
@@ -338,7 +339,7 @@ const N8N_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'INR pricing — no USD FX exposure',
+    feature: 'INR pricing, no USD FX exposure',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="zap" kind="no" />,
@@ -387,7 +388,7 @@ const N8N_PRICING_TIERS = [
     name: 'Growth',
     priceRange: '',
     description:
-      'A complete automation layer for a growing Indian business — covering sales, operations, payments, and WhatsApp communications. The most popular package for 10–50 person teams.',
+      'A complete automation layer for a growing Indian business, covering sales, operations, payments, and WhatsApp communications. The most popular package for 10–50 person teams.',
     features: [
       'Up to 10 automated workflows',
       '5 tool integrations',
@@ -435,31 +436,31 @@ const N8N_FAQ_ITEMS = [
     category: 'n8n',
     question: 'What is n8n and why should Indian businesses use it?',
     answer:
-      "n8n (pronounced 'n-eight-n') is an open-source workflow automation platform that connects your business tools and automates repetitive tasks. Unlike Zapier and Make.com which are SaaS platforms billed in USD with per-task pricing, n8n can be self-hosted on your own server — meaning you pay only for an affordable monthly server bill (on DigitalOcean or AWS Lightsail) instead of a steep recurring Zapier subscription for the same volume. For Indian businesses, this means automation that scales with your business without your costs scaling proportionally — and workflow data that stays in India.",
+      "n8n (pronounced 'n-eight-n') is an open-source workflow automation platform that connects your business tools and automates repetitive tasks. Unlike Zapier and Make.com which are SaaS platforms billed in USD with per-task pricing, n8n can be self-hosted on your own server, meaning you pay only for an affordable monthly server bill (on DigitalOcean or AWS Lightsail) instead of a steep recurring Zapier subscription for the same volume. For Indian businesses, this means automation that scales with your business without your costs scaling proportionally, and workflow data that stays in India.",
   },
   {
     category: 'n8n',
     question: 'How does n8n compare to Zapier for Indian businesses?',
     answer:
-      "n8n beats Zapier for most Indian businesses on three dimensions: cost (80–90% cheaper at scale because self-hosting eliminates per-task fees), Indian tool support (Zapier doesn't natively connect Razorpay, Tally, or WhatsApp Business API — n8n's open-source model means these integrations can be built), and data control (self-hosted n8n means your customer data, payment data, and CRM data never leaves your server). Zapier's advantage is simplicity for non-technical users — but FactoryJet builds and maintains your n8n workflows, so you get n8n's power without needing to manage it yourself.",
+      "n8n beats Zapier for most Indian businesses on three dimensions: cost (80–90% cheaper at scale because self-hosting eliminates per-task fees), Indian tool support (Zapier doesn't natively connect Razorpay, Tally, or WhatsApp Business API, n8n's open-source model means these integrations can be built), and data control (self-hosted n8n means your customer data, payment data, and CRM data never leaves your server). Zapier's advantage is simplicity for non-technical users, but FactoryJet builds and maintains your n8n workflows, so you get n8n's power without needing to manage it yourself.",
   },
   {
     category: 'n8n',
     question: 'How does n8n compare to Make.com (formerly Integromat)?',
     answer:
-      "Make.com and n8n are closer in power — both support complex multi-step workflows with conditional logic. Make.com is cloud-only (no self-hosting), charges per 'operation' in EUR/USD, and doesn't natively support Razorpay, Tally, or Indian-specific APIs. n8n is self-hostable, has a larger Indian community building custom nodes, and gives you complete workflow portability — your workflows are JSON files you own. For Indian businesses running high-volume automations, n8n self-hosted consistently wins on cost.",
+      "Make.com and n8n are closer in power, both support complex multi-step workflows with conditional logic. Make.com is cloud-only (no self-hosting), charges per 'operation' in EUR/USD, and doesn't natively support Razorpay, Tally, or Indian-specific APIs. n8n is self-hostable, has a larger Indian community building custom nodes, and gives you complete workflow portability: your workflows are JSON files you own. For Indian businesses running high-volume automations, n8n self-hosted consistently wins on cost.",
   },
   {
     category: 'n8n',
     question: 'What does n8n automation actually cost Indian businesses per month?',
     answer:
-      "Self-hosted n8n runs on an affordable monthly VPS (DigitalOcean Droplet, AWS Lightsail, or Hetzner). That server cost is your only ongoing fee — no per-task billing, no operation limits. Zapier for the same volume costs many times more on its Business plan. The FactoryJet build is a one-time fixed-price cost scoped up front — after that, your automation runs at server cost only. Most clients recover the build cost within 60 days from the Zapier subscription they cancel.",
+      "Self-hosted n8n runs on an affordable monthly VPS (DigitalOcean Droplet, AWS Lightsail, or Hetzner). That server cost is your only ongoing fee, no per-task billing, no operation limits. Zapier for the same volume costs many times more on its Business plan. The FactoryJet build is a one-time fixed-price cost scoped up front, after that, your automation runs at server cost only. Most clients recover the build cost within 60 days from the Zapier subscription they cancel.",
   },
   {
     category: 'n8n',
     question: 'Does n8n have a free version? Can I use n8n.cloud?',
     answer:
-      "n8n Community Edition is free and open-source — you self-host it on any server. n8n.cloud is their hosted SaaS plan with an affordable entry tier for a few thousand workflow executions a month — much more affordable than Zapier, but still with execution limits. For most Indian businesses doing serious automation volumes (10,000+ executions/month), FactoryJet recommends and deploys the self-hosted Community Edition on your VPS. We handle the entire setup, security hardening, SSL, backups, and updates — you just use the workflows.",
+      "n8n Community Edition is free and open-source, you self-host it on any server. n8n.cloud is their hosted SaaS plan with an affordable entry tier for a few thousand workflow executions a month, much more affordable than Zapier, but still with execution limits. For most Indian businesses doing serious automation volumes (10,000+ executions/month), FactoryJet recommends and deploys the self-hosted Community Edition on your VPS. We handle the entire setup, security hardening, SSL, backups, and updates, you just use the workflows.",
   },
 
   /* ── India-Specific Integrations ── */
@@ -467,31 +468,31 @@ const N8N_FAQ_ITEMS = [
     category: 'india',
     question: 'Can n8n connect to Razorpay for payment automation?',
     answer:
-      "Yes — Razorpay's webhook system is one of the cleanest in the Indian payments space. When a payment succeeds, fails, or is refunded, Razorpay fires a webhook that n8n catches and processes. From that trigger, n8n can: create a Tally invoice, update a CRM deal, send a WhatsApp payment confirmation, trigger a fulfilment workflow, update a Google Sheets ledger, or notify your finance team. FactoryJet has pre-built Razorpay webhook templates for the most common Indian payment automation patterns.",
+      "Yes, Razorpay's webhook system is one of the cleanest in the Indian payments space. When a payment succeeds, fails, or is refunded, Razorpay fires a webhook that n8n catches and processes. From that trigger, n8n can: create a Tally invoice, update a CRM deal, send a WhatsApp payment confirmation, trigger a fulfilment workflow, update a Google Sheets ledger, or notify your finance team. FactoryJet has pre-built Razorpay webhook templates for the most common Indian payment automation patterns.",
   },
   {
     category: 'india',
     question: 'Can n8n automate Tally for invoice generation and accounting?',
     answer:
-      "Yes — Tally integration is one of our most-requested India-specific builds. TallyPrime supports a REST API and XML-over-HTTP interface that n8n connects to via custom HTTP Request nodes. Common patterns: Razorpay payment → n8n → Tally voucher creation (sales receipt, invoice), WooCommerce/Shopify order → n8n → Tally sales invoice, Excel ledger upload → n8n → Tally journal entries. The integration requires TallyPrime 2.0+ and network access to the Tally application server. FactoryJet builds and tests all Tally automations in a staging environment before live deployment.",
+      "Yes, Tally integration is one of our most-requested India-specific builds. TallyPrime supports a REST API and XML-over-HTTP interface that n8n connects to via custom HTTP Request nodes. Common patterns: Razorpay payment → n8n → Tally voucher creation (sales receipt, invoice), WooCommerce/Shopify order → n8n → Tally sales invoice, Excel ledger upload → n8n → Tally journal entries. The integration requires TallyPrime 2.0+ and network access to the Tally application server. FactoryJet builds and tests all Tally automations in a staging environment before live deployment.",
   },
   {
     category: 'india',
     question: 'Can n8n automate WhatsApp Business messages?',
     answer:
-      "Yes — WhatsApp automation is one of the highest-ROI things we build for Indian businesses. n8n connects to WhatsApp Business API via official BSPs (Interakt, Wati, Gupshup, or 360Dialog) or directly via the Meta Cloud API. Common automations: order confirmation and tracking via WhatsApp, Razorpay payment receipt sent as WhatsApp message, abandoned cart recovery sequence, appointment reminders, lead follow-up drips, and support ticket updates. All messaging uses approved WhatsApp Business message templates — fully TRAI and Meta policy compliant.",
+      "Yes, WhatsApp automation is one of the highest-ROI things we build for Indian businesses. n8n connects to WhatsApp Business API via official BSPs (Interakt, Wati, Gupshup, or 360Dialog) or directly via the Meta Cloud API. Common automations: order confirmation and tracking via WhatsApp, Razorpay payment receipt sent as WhatsApp message, abandoned cart recovery sequence, appointment reminders, lead follow-up drips, and support ticket updates. All messaging uses approved WhatsApp Business message templates, fully TRAI and Meta policy compliant.",
   },
   {
     category: 'india',
     question: 'Can n8n connect to Zoho CRM, Zoho Books, or other Zoho products?',
     answer:
-      "Yes — Zoho has one of the most complete API ecosystems in the Indian B2B software market. n8n has native Zoho CRM, Zoho Books, Zoho Mail, and Zoho Desk nodes in the community node library. Common patterns we build: website lead → Zoho CRM contact + deal, Razorpay invoice paid → Zoho Books payment marked → customer notification, Zoho CRM deal won → onboarding workflow trigger, and Zoho Books purchase order → vendor WhatsApp notification. Zoho's OAuth2 integration with n8n is straightforward and stable.",
+      "Yes, Zoho has one of the most complete API ecosystems in the Indian B2B software market. n8n has native Zoho CRM, Zoho Books, Zoho Mail, and Zoho Desk nodes in the community node library. Common patterns we build: website lead → Zoho CRM contact + deal, Razorpay invoice paid → Zoho Books payment marked → customer notification, Zoho CRM deal won → onboarding workflow trigger, and Zoho Books purchase order → vendor WhatsApp notification. Zoho's OAuth2 integration with n8n is straightforward and stable.",
   },
   {
     category: 'india',
     question: 'Can n8n connect to Shiprocket or other Indian logistics platforms?',
     answer:
-      "Yes — Shiprocket has a REST API that n8n integrates with via HTTP Request nodes. We build: Shopify order placed → n8n → Shiprocket shipment created → AWB returned → tracking link sent to customer via WhatsApp, and NDR (non-delivery report) received → customer contacted via WhatsApp → re-delivery scheduled. We also build direct Delhivery, Ekart, and Bluedart API integrations for high-volume brands that need carrier-direct SLAs.",
+      "Yes, Shiprocket has a REST API that n8n integrates with via HTTP Request nodes. We build: Shopify order placed → n8n → Shiprocket shipment created → AWB returned → tracking link sent to customer via WhatsApp, and NDR (non-delivery report) received → customer contacted via WhatsApp → re-delivery scheduled. We also build direct Delhivery, Ekart, and Bluedart API integrations for high-volume brands that need carrier-direct SLAs.",
   },
 
   /* ── Timeline & Process ── */
@@ -499,45 +500,45 @@ const N8N_FAQ_ITEMS = [
     category: 'timeline',
     question: 'How long does it take to set up n8n automation for my business?',
     answer:
-      "Standard automation setups — 3–5 workflows connecting common tools (Razorpay, Zoho CRM, WhatsApp, Google Sheets) — are delivered in 7 days from audit sign-off. Growth-tier setups with 10 workflows and WhatsApp Business API take 2–3 weeks. Custom automation infrastructure with dedicated server setup, custom Tally integration, and complex multi-department workflows takes 3–6 weeks. Timeline depends on: number of workflows, whether custom API nodes need building, and how quickly you can provide API credentials and sandbox access.",
+      "Standard automation setups, 3–5 workflows connecting common tools (Razorpay, Zoho CRM, WhatsApp, Google Sheets), are delivered in 7 days from audit sign-off. Growth-tier setups with 10 workflows and WhatsApp Business API take 2–3 weeks. Custom automation infrastructure with dedicated server setup, custom Tally integration, and complex multi-department workflows takes 3–6 weeks. Timeline depends on: number of workflows, whether custom API nodes need building, and how quickly you can provide API credentials and sandbox access.",
   },
   {
     category: 'timeline',
     question: 'What information do you need from me to start the automation build?',
     answer:
-      "We start with a 45-minute automation audit call — you walk us through your current manual processes and we identify what should be automated first. To begin the build, we need: API credentials for each tool to be connected (we provide a secure credential collection form), sandbox/test account access where available, sample data for testing (e.g., a test Razorpay payment, a sample order), and sign-off on the workflow design diagrams we produce at the end of the audit. Most clients are ready to start within a week of the initial call.",
+      "We start with a 45-minute automation audit call, you walk us through your current manual processes and we identify what should be automated first. To begin the build, we need: API credentials for each tool to be connected (we provide a secure credential collection form), sandbox/test account access where available, sample data for testing (e.g., a test Razorpay payment, a sample order), and sign-off on the workflow design diagrams we produce at the end of the audit. Most clients are ready to start within a week of the initial call.",
   },
   {
     category: 'timeline',
     question: 'What do I receive at the end of the automation project?',
     answer:
-      'Deliverables on every FactoryJet automation project: exported n8n workflow JSON files (your workflows, your data), server deployment with SSL, basic auth or IP restriction, and automated backups, step-by-step documentation for each workflow including trigger conditions, logic, and maintenance instructions, a recorded walkthrough video of every workflow, error alert configuration so failures notify you immediately, and a 14-day post-launch support window. You own everything — workflows can be imported into any n8n instance.',
+      'Deliverables on every FactoryJet automation project: exported n8n workflow JSON files (your workflows, your data), server deployment with SSL, basic auth or IP restriction, and automated backups, step-by-step documentation for each workflow including trigger conditions, logic, and maintenance instructions, a recorded walkthrough video of every workflow, error alert configuration so failures notify you immediately, and a 14-day post-launch support window. You own everything, workflows can be imported into any n8n instance.',
   },
 
   /* ── Technical & Hosting ── */
   {
     category: 'technical',
-    question: 'Where is n8n hosted — can data stay within India?',
+    question: 'Where is n8n hosted, can data stay within India?',
     answer:
-      "Yes — n8n self-hosted means you choose the server location. We typically deploy on DigitalOcean Bangalore, AWS Mumbai (ap-south-1), or Hetzner Nuremberg depending on your data residency requirements and budget. All workflow execution data, credentials, and run history stays on your server. This is a significant advantage for businesses handling customer payment data, PII, or operating under sector-specific data localisation requirements. n8n.cloud (SaaS) stores data on n8n's EU servers if data localisation is not required.",
+      "Yes, n8n self-hosted means you choose the server location. We typically deploy on DigitalOcean Bangalore, AWS Mumbai (ap-south-1), or Hetzner Nuremberg depending on your data residency requirements and budget. All workflow execution data, credentials, and run history stays on your server. This is a significant advantage for businesses handling customer payment data, PII, or operating under sector-specific data localisation requirements. n8n.cloud (SaaS) stores data on n8n's EU servers if data localisation is not required.",
   },
   {
     category: 'technical',
-    question: 'Can n8n handle high-volume automation — thousands of triggers per day?',
+    question: 'Can n8n handle high-volume automation, thousands of triggers per day?',
     answer:
-      "Yes — n8n is built for production-grade automation at scale. A modest DigitalOcean 4GB Droplet handles 50,000–100,000 workflow executions per day reliably. For higher volumes, n8n supports queue mode with Redis and multiple worker instances — this is a horizontally scalable architecture. We have deployed n8n instances handling 500,000+ daily executions for e-commerce and fintech clients. The architecture is designed during the audit phase based on your expected automation volume.",
+      "Yes, n8n is built for production-grade automation at scale. A modest DigitalOcean 4GB Droplet handles 50,000–100,000 workflow executions per day reliably. For higher volumes, n8n supports queue mode with Redis and multiple worker instances, this is a horizontally scalable architecture. We have deployed n8n instances handling 500,000+ daily executions for e-commerce and fintech clients. The architecture is designed during the audit phase based on your expected automation volume.",
   },
   {
     category: 'technical',
     question: 'How do you keep the n8n instance secure?',
     answer:
-      "Every n8n deployment we build follows a security baseline: n8n runs behind a reverse proxy (nginx or Cloudflare Tunnel) with HTTPS/SSL, basic authentication or IP allowlisting on the n8n admin UI, no public exposure of the workflow editor unless explicitly required, encrypted credential storage (n8n encrypts all credentials at rest with your encryption key), automated daily backups to S3 or DigitalOcean Spaces, and automated n8n version update alerts. Credentials (API keys, OAuth tokens) are stored in n8n's encrypted credential vault — they never appear in workflow JSON exports.",
+      "Every n8n deployment we build follows a security baseline: n8n runs behind a reverse proxy (nginx or Cloudflare Tunnel) with HTTPS/SSL, basic authentication or IP allowlisting on the n8n admin UI, no public exposure of the workflow editor unless explicitly required, encrypted credential storage (n8n encrypts all credentials at rest with your encryption key), automated daily backups to S3 or DigitalOcean Spaces, and automated n8n version update alerts. Credentials (API keys, OAuth tokens) are stored in n8n's encrypted credential vault, they never appear in workflow JSON exports.",
   },
   {
     category: 'technical',
-    question: 'What happens when n8n releases an update — do I need to do anything?',
+    question: 'What happens when n8n releases an update, do I need to do anything?',
     answer:
-      "n8n releases updates regularly — major releases may include breaking changes to node APIs or new features. For clients on a maintenance retainer, FactoryJet monitors n8n release notes, tests updates on a staging instance, and applies updates to your production n8n with zero downtime. Without a retainer, we provide documentation on how to update your n8n Docker container or npm installation. We set up automated alerting for critical security patches so you are always informed even if not on retainer.",
+      "n8n releases updates regularly, major releases may include breaking changes to node APIs or new features. For clients on a maintenance retainer, FactoryJet monitors n8n release notes, tests updates on a staging instance, and applies updates to your production n8n with zero downtime. Without a retainer, we provide documentation on how to update your n8n Docker container or npm installation. We set up automated alerting for critical security patches so you are always informed even if not on retainer.",
   },
 
   /* ── Support & Maintenance ── */
@@ -545,31 +546,31 @@ const N8N_FAQ_ITEMS = [
     category: 'support',
     question: 'What ongoing support is included after the automation project?',
     answer:
-      "Every automation project includes a 14-day post-launch support window: bug fixes, credential refresh issues, minor workflow logic adjustments, and launch questions covered at no additional cost. After 14 days, FactoryJet offers automation maintenance retainers — a fixed monthly fee scoped to your needs — covering a set block of workflow adjustment hours per month, priority error response (24-hour fix SLA), n8n version update management, and monthly automation performance reviews.",
+      "Every automation project includes a 14-day post-launch support window: bug fixes, credential refresh issues, minor workflow logic adjustments, and launch questions covered at no additional cost. After 14 days, FactoryJet offers automation maintenance retainers: a fixed monthly fee scoped to your needs, covering a set block of workflow adjustment hours per month, priority error response (24-hour fix SLA), n8n version update management, and monthly automation performance reviews.",
   },
   {
     category: 'support',
-    question: 'What happens when a workflow breaks — who fixes it and how fast?',
+    question: 'What happens when a workflow breaks, who fixes it and how fast?',
     answer:
-      "Every automation we build includes error handling workflows that fire an alert (WhatsApp + email) when a step fails, with the exact error message and workflow name. For retainer clients, those alerts go to FactoryJet directly — we diagnose and fix the issue within 24 hours. Common causes of breaking changes: third-party API changes their authentication, a webhook URL changes, an API rate limit is hit, or a service goes down temporarily. Our error handling builds in retry logic for transient failures — most minor issues self-resolve without manual intervention.",
+      "Every automation we build includes error handling workflows that fire an alert (WhatsApp + email) when a step fails, with the exact error message and workflow name. For retainer clients, those alerts go to FactoryJet directly, we diagnose and fix the issue within 24 hours. Common causes of breaking changes: third-party API changes their authentication, a webhook URL changes, an API rate limit is hit, or a service goes down temporarily. Our error handling builds in retry logic for transient failures: most minor issues self-resolve without manual intervention.",
   },
   {
     category: 'support',
     question: 'Can I expand the automation setup after the initial project?',
     answer:
-      "Yes — n8n is designed to grow incrementally. Adding new workflows to an existing n8n instance is faster and cheaper than the initial build (no server setup, no credential configuration for already-connected tools). Retainer clients get a block of monthly workflow work included. One-off workflow additions are scoped per the complexity — simple 3-step workflows typically take a day and are quoted at a fixed price up front. We maintain a versioned backup of every workflow so additions never break existing automations.",
+      "Yes, n8n is designed to grow incrementally. Adding new workflows to an existing n8n instance is faster and cheaper than the initial build (no server setup, no credential configuration for already-connected tools). Retainer clients get a block of monthly workflow work included. One-off workflow additions are scoped per the complexity, simple 3-step workflows typically take a day and are quoted at a fixed price up front. We maintain a versioned backup of every workflow so additions never break existing automations.",
   },
   {
     category: 'support',
     question: 'Will I be able to manage and edit the workflows myself?',
     answer:
-      "Yes — n8n has a visual drag-and-drop workflow editor that non-technical users can navigate for simple edits. We provide a recorded walkthrough of your specific workflows and documentation explaining what each node does. For routine changes (updating an email template within a workflow, changing a Slack channel destination, adding an extra approval step) most clients self-manage after the first 30 days. Complex changes — new integrations, major logic overhauls, custom node development — are typically better handled by FactoryJet.",
+      "Yes, n8n has a visual drag-and-drop workflow editor that non-technical users can navigate for simple edits. We provide a recorded walkthrough of your specific workflows and documentation explaining what each node does. For routine changes (updating an email template within a workflow, changing a Slack channel destination, adding an extra approval step) most clients self-manage after the first 30 days. Complex changes, new integrations, major logic overhauls, custom node development, are typically better handled by FactoryJet.",
   },
   {
     category: 'support',
     question: 'Do you offer a retainer for ongoing automation development?',
     answer:
-      "Yes — FactoryJet's automation retainer plans are a fixed monthly fee scoped to your needs and cover: a set block of workflow development and adjustment hours, priority 24-hour error response, n8n version update management, monthly automation audit to identify new automation opportunities, and ongoing access to your dedicated automation engineer who knows your n8n instance. Retainer clients building automation over 6+ months consistently find it faster and more cost-effective than project-by-project engagements because there is no onboarding overhead on every new workflow.",
+      "Yes, FactoryJet's automation retainer plans are a fixed monthly fee scoped to your needs and cover: a set block of workflow development and adjustment hours, priority 24-hour error response, n8n version update management, monthly automation audit to identify new automation opportunities, and ongoing access to your dedicated automation engineer who knows your n8n instance. Retainer clients building automation over 6+ months consistently find it faster and more cost-effective than project-by-project engagements because there is no onboarding overhead on every new workflow.",
   },
 ];
 
@@ -614,13 +615,17 @@ export default function N8nAutomationPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'n8n Automation India', url: 'https://factoryjet.com/n8n-automation' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="n8n_automation_hero" />}
           eyebrow="n8n AUTOMATION · INDIA"
           headline="Stop Paying Zapier Every Month. Switch to n8n."
-          lead="Indian businesses on Zapier pay a steep recurring fee for high automation volumes. n8n self-hosted runs the same workflows for an affordable monthly server cost only — no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
+          lead="Indian businesses on Zapier pay a steep recurring fee for high automation volumes. n8n self-hosted runs the same workflows for an affordable monthly server cost only, no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -679,7 +684,7 @@ export default function N8nAutomationPage() {
         {/* ── 4. n8n EXPLAINED ─────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="n8n FOR INDIAN BUSINESSES"
-          headline="Why n8n — and Why Indian Businesses Are Switching from Zapier"
+          headline="Why n8n, and Why Indian Businesses Are Switching from Zapier"
           lead="Zapier and Make.com are built for US and European markets: USD pricing, US-centric integrations, and cloud-only architecture. n8n is open-source, self-hostable, and integrates with Indian tools that Zapier simply does not support."
           body={
             <>
@@ -708,7 +713,7 @@ export default function N8nAutomationPage() {
 
               <p>
                 n8n (open-source, 400+ integrations, self-hostable) is the most powerful automation
-                platform for Indian businesses — because it can be deployed on Indian servers, priced in
+                platform for Indian businesses, because it can be deployed on Indian servers, priced in
                 INR at server cost only, and extended with custom nodes for Indian tools like Razorpay,
                 Tally, and WhatsApp Business API. Zapier charges per task in USD and does not natively
                 connect India&apos;s business stack. FactoryJet builds the workflows, deploys the
@@ -755,7 +760,7 @@ export default function N8nAutomationPage() {
               <p>
                 FactoryJet has deployed n8n automation for Indian businesses across e-commerce,
                 fintech, logistics, SaaS, manufacturing, and professional services. We know the
-                integration quirks of Indian tools — Tally&apos;s XML-over-HTTP API, Razorpay&apos;s
+                integration quirks of Indian tools: Tally&apos;s XML-over-HTTP API, Razorpay&apos;s
                 webhook signature verification, WhatsApp BSP rate limits, and Zoho&apos;s OAuth token
                 refresh cycles. You do not learn those on the first build. We bring that knowledge to
                 every engagement.
@@ -819,22 +824,22 @@ export default function N8nAutomationPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is spending 40% of their week on tasks a computer could do in 30 seconds."
-          lead="Manual data entry, copy-pasting between tools, chasing approvals on WhatsApp, building the same weekly report from five spreadsheets — these tasks cost Indian SMBs 15–25 staff hours per week. That is several days of salaried time every month spent on work that n8n can automate in a weekend."
+          lead="Manual data entry, copy-pasting between tools, chasing approvals on WhatsApp, building the same weekly report from five spreadsheets, these tasks cost Indian SMBs 15–25 staff hours per week. That is several days of salaried time every month spent on work that n8n can automate in a weekend."
           pillars={[
             {
               icon: '💸',
-              title: 'Zapier is designed for the US market — Indian businesses pay a USD premium for half the functionality.',
-              body: "Zapier charges in USD with per-task pricing that scales aggressively, so high task volumes run up a steep monthly bill on its Business plan. Zapier does not natively support Razorpay, Tally, or WhatsApp Business API — the tools Indian businesses actually use. n8n self-hosted runs the same automation volume for an affordable monthly server cost only. FactoryJet builds all the Indian-specific integrations that Zapier's marketplace does not have.",
+              title: 'Zapier is designed for the US market | Indian businesses pay a USD premium for half the functionality.',
+              body: "Zapier charges in USD with per-task pricing that scales aggressively, so high task volumes run up a steep monthly bill on its Business plan. Zapier does not natively support Razorpay, Tally, or WhatsApp Business API: the tools Indian businesses actually use. n8n self-hosted runs the same automation volume for an affordable monthly server cost only. FactoryJet builds all the Indian-specific integrations that Zapier's marketplace does not have.",
             },
             {
               icon: '🔗',
-              title: 'Your business tools do not talk to each other — and every gap creates manual work.',
-              body: "Razorpay does not automatically update Zoho CRM. Tally does not send WhatsApp receipts. Shopify orders do not auto-create Shiprocket shipments. Every gap between your tools becomes a manual task — someone copies a payment amount, logs into Tally, creates an invoice, downloads it, and WhatsApps it to the customer. This is happening dozens of times a day in most Indian businesses. n8n eliminates every one of these gaps.",
+              title: 'Your business tools do not talk to each other | and every gap creates manual work.',
+              body: "Razorpay does not automatically update Zoho CRM. Tally does not send WhatsApp receipts. Shopify orders do not auto-create Shiprocket shipments. Every gap between your tools becomes a manual task, someone copies a payment amount, logs into Tally, creates an invoice, downloads it, and WhatsApps it to the customer. This is happening dozens of times a day in most Indian businesses. n8n eliminates every one of these gaps.",
             },
             {
               icon: '⚠️',
-              title: 'Manual processes break under growth — and the errors are invisible until they are expensive.',
-              body: "At 10 orders a day, a manual fulfilment process is manageable. At 100 orders, it is a bottleneck. At 500 orders, it is the reason your business is not growing. Manual processes also introduce errors: duplicate invoices, missed follow-ups, wrong inventory counts, payment confirmations sent to the wrong customer. Automation eliminates the error rate at scale — and the cost of n8n is a fraction of one fulfilment error that escalates into a customer dispute.",
+              title: 'Manual processes break under growth | and the errors are invisible until they are expensive.',
+              body: "At 10 orders a day, a manual fulfilment process is manageable. At 100 orders, it is a bottleneck. At 500 orders, it is the reason your business is not growing. Manual processes also introduce errors: duplicate invoices, missed follow-ups, wrong inventory counts, payment confirmations sent to the wrong customer. Automation eliminates the error rate at scale, and the cost of n8n is a fraction of one fulfilment error that escalates into a customer dispute.",
             },
           ]}
         />
@@ -851,7 +856,7 @@ export default function N8nAutomationPage() {
         {/* ── 7. TECH STACK ────────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR AUTOMATION TECH STACK"
-          headline="n8n Built for the Indian Business Stack — Not Adapted from US Templates"
+          headline="n8n Built for the Indian Business Stack, Not Adapted from US Templates"
           lead="Every integration we build is tested against the Indian tool ecosystem: Razorpay's webhook quirks, Tally's XML interface, WhatsApp BSP rate limits, and Zoho's OAuth cycles."
           reverseOnDesktop
           body={
@@ -870,29 +875,29 @@ export default function N8nAutomationPage() {
                 )}
               </div>
               <p>
-                <strong className="font-semibold text-fj-ink">n8n Community Edition</strong> — Self-hosted
+                <strong className="font-semibold text-fj-ink">n8n Community Edition</strong>, Self-hosted
                 on your VPS with Docker. All workflow execution data stays on your server. No per-task
                 billing, no USD pricing, no data leaving India unless you choose cloud hosting.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Razorpay + Tally integration</strong> — We
+                <strong className="font-semibold text-fj-ink">Razorpay + Tally integration</strong>, We
                 have pre-built Razorpay webhook handlers and Tally XML HTTP Request workflows that we
                 adapt and deploy for each client. Payment → invoice is typically a 4-node workflow that
                 runs in under 5 seconds.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">WhatsApp Business API</strong> — Connected
+                <strong className="font-semibold text-fj-ink">WhatsApp Business API</strong>, Connected
                 via official BSPs (Interakt, Wati, Gupshup) or Meta Cloud API directly. Full support
                 for template messages, session messages, interactive buttons, and media attachments.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Error handling architecture</strong> — Every
+                <strong className="font-semibold text-fj-ink">Error handling architecture</strong>: Every
                 workflow has a parallel error branch: failed executions generate WhatsApp + email alerts
                 with the exact error, automatic retries for transient failures (API timeouts, rate
                 limits), and dead-letter queue logging for manual review.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Deployment stack</strong> — n8n in Docker
+                <strong className="font-semibold text-fj-ink">Deployment stack</strong>, n8n in Docker
                 behind nginx reverse proxy with SSL, basic auth on the editor UI, automated PostgreSQL
                 or SQLite backups to S3, and Cloudflare Tunnel option for zero port-forwarding.
               </p>
@@ -914,7 +919,7 @@ export default function N8nAutomationPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  n8n Infrastructure Stack — India
+                  n8n Infrastructure Stack, India
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-8">
@@ -1042,9 +1047,9 @@ export default function N8nAutomationPage() {
           eyebrow="AUTOMATION IN INDIA"
           headline="India Processes 43 Billion UPI Transactions a Year. Most Businesses Still Process Them Manually."
           leadParagraphs={[
-            "India's digital payment and e-commerce infrastructure is among the most advanced in the world — Razorpay, UPI, GST, Shiprocket, and WhatsApp Business form a payment and logistics stack that most developed markets envy. But the automation layer connecting these tools is almost entirely absent in Indian SMBs. The result: finance teams manually keying Razorpay payments into Tally, operations staff WhatsApp-messaging tracking numbers to customers, and founders spending Sunday afternoons building the same weekly sales report from five different spreadsheets.",
+            "India's digital payment and e-commerce infrastructure is among the most advanced in the world: Razorpay, UPI, GST, Shiprocket, and WhatsApp Business form a payment and logistics stack that most developed markets envy. But the automation layer connecting these tools is almost entirely absent in Indian SMBs. The result: finance teams manually keying Razorpay payments into Tally, operations staff WhatsApp-messaging tracking numbers to customers, and founders spending Sunday afternoons building the same weekly sales report from five different spreadsheets.",
             "FactoryJet has built n8n automation for Indian businesses across e-commerce (Shopify + Razorpay + Shiprocket), B2B services (lead capture + Zoho CRM + WhatsApp nurturing), manufacturing (purchase order + vendor notification + ERP update), fintech (payment event → accounting → compliance log), and professional services (client onboarding + document collection + project kickoff). The automation patterns are different, but the underlying opportunity is the same: eliminate the repetitive work, reduce errors, and free your team for work that actually requires human judgment.",
-            "The Indian SMB automation market is at an inflection point. Zapier and Make.com are priced for US budgets — but the adoption of n8n self-hosted is accelerating in India because the cost case is overwhelming. FactoryJet is one of the few agencies in India with production-grade n8n deployment experience for the Indian business stack (Razorpay, Tally, WhatsApp BSP, Zoho, Shiprocket). We have built the integrations. We know the edge cases. We deploy in 7 days.",
+            "The Indian SMB automation market is at an inflection point. Zapier and Make.com are priced for US budgets, but the adoption of n8n self-hosted is accelerating in India because the cost case is overwhelming. FactoryJet is one of the few agencies in India with production-grade n8n deployment experience for the Indian business stack (Razorpay, Tally, WhatsApp BSP, Zoho, Shiprocket). We have built the integrations. We know the edge cases. We deploy in 7 days.",
           ]}
           bodySlot={
             <>
@@ -1053,7 +1058,7 @@ export default function N8nAutomationPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  Automation is not a technology project. It is a business efficiency decision — and
+                  Automation is not a technology project. It is a business efficiency decision, and
                   for Indian businesses, n8n makes that decision obvious.
                 </p>
               </div>
@@ -1088,11 +1093,11 @@ export default function N8nAutomationPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet (n8n) vs. Zapier vs. Make.com vs. Manual Process"
-          lead="The honest cost and capability comparison — relevant to Indian businesses running real automation at scale."
+          lead="The honest cost and capability comparison, relevant to Indian businesses running real automation at scale."
           pullQuote={{
             stat: 'Fixed-price',
             caption:
-              'one-time build cost scoped up front — then your automation runs at an affordable monthly server cost only. No per-task fees. No USD exposure. No Zapier invoice.',
+              'one-time build cost scoped up front, then your automation runs at an affordable monthly server cost only. No per-task fees. No USD exposure. No Zapier invoice.',
           }}
           columns={N8N_COMPARISON_COLUMNS}
           rows={N8N_COMPARISON_ROWS}
@@ -1118,7 +1123,7 @@ export default function N8nAutomationPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Automate with n8n"
-          lead="The questions we answer on every automation discovery call — including the ones people are too polite to ask on a sales call."
+          lead="The questions we answer on every automation discovery call, including the ones people are too polite to ask on a sales call."
           categories={N8N_FAQ_CATEGORIES}
           items={N8N_FAQ_ITEMS}
         />
@@ -1127,22 +1132,22 @@ export default function N8nAutomationPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We have built every Indian automation pattern. You benefit from what we already know."
-          lead="Most automation agencies in India have used Zapier or Make.com. Very few have production-grade n8n experience with the Indian business stack. FactoryJet has deployed n8n with Razorpay, Tally, WhatsApp BSP, Zoho, and Shiprocket integrations for real clients — not just in a sandbox."
+          lead="Most automation agencies in India have used Zapier or Make.com. Very few have production-grade n8n experience with the Indian business stack. FactoryJet has deployed n8n with Razorpay, Tally, WhatsApp BSP, Zoho, and Shiprocket integrations for real clients, not just in a sandbox."
           pillars={[
             {
               icon: '🇮🇳',
-              title: 'The Indian business stack — Razorpay, Tally, WhatsApp, Zoho — is what we specialise in.',
-              body: 'Zapier-focused agencies build workflows for HubSpot, Salesforce, and Slack. We build for Razorpay, Tally Prime, WhatsApp Business API, Zoho CRM, Shiprocket, and Delhivery. These are harder integrations — Tally\'s XML interface, Razorpay\'s webhook signature verification, WhatsApp BSP template approval cycles, and Zoho\'s OAuth token management all require experience that is genuinely rare. We have it. You do not have to pay for the learning curve.',
+              title: 'The Indian business stack | Razorpay, Tally, WhatsApp, Zoho | is what we specialise in.',
+              body: 'Zapier-focused agencies build workflows for HubSpot, Salesforce, and Slack. We build for Razorpay, Tally Prime, WhatsApp Business API, Zoho CRM, Shiprocket, and Delhivery. These are harder integrations: Tally\'s XML interface, Razorpay\'s webhook signature verification, WhatsApp BSP template approval cycles, and Zoho\'s OAuth token management all require experience that is genuinely rare. We have it. You do not have to pay for the learning curve.',
             },
             {
               icon: '🛡️',
-              title: 'Self-hosted n8n means your data stays in India — on your server, under your control.',
+              title: 'Self-hosted n8n means your data stays in India | on your server, under your control.',
               body: "Every automation we deploy runs on your VPS in an Indian AWS or DigitalOcean region. Customer payment data, lead contact details, CRM records, and invoice data never leave your infrastructure. For businesses with RBI data localisation requirements, fintech data sensitivity, or simply a preference for data sovereignty, self-hosted n8n is the only option that delivers full control. Zapier and Make.com cannot offer this.",
             },
             {
               icon: '📋',
               title: 'You own every workflow file. Zero lock-in. Any n8n engineer can maintain it.',
-              body: 'On handover day, you receive all n8n workflow JSON files exported from your instance, full documentation for every workflow, API credential management instructions, and a recorded walkthrough. The workflows are portable — import them to any n8n instance globally. No FactoryJet dependency baked in. If you hire an in-house engineer next year, they can maintain everything we built. We have seen too many Indian businesses locked into agencies that are the only ones who understand their automation. We build to be replaced.',
+              body: 'On handover day, you receive all n8n workflow JSON files exported from your instance, full documentation for every workflow, API credential management instructions, and a recorded walkthrough. The workflows are portable, import them to any n8n instance globally. No FactoryJet dependency baked in. If you hire an in-house engineer next year, they can maintain everything we built. We have seen too many Indian businesses locked into agencies that are the only ones who understand their automation. We build to be replaced.',
             },
           ]}
         />
@@ -1152,7 +1157,7 @@ export default function N8nAutomationPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO AUTOMATE"
-            headline="Book a Free Automation Audit — We'll Map What to Automate First"
+            headline="Book a Free Automation Audit. We'll Map What to Automate First"
             sub="In 45 minutes, we will walk through your current manual processes, identify the highest-ROI automation opportunities in your business, recommend the right n8n architecture for your tools, and give you a fixed price. No Zapier pitch. No SaaS upsell. Just an honest assessment from engineers who have built the Razorpay, Tally, WhatsApp, and Zoho integrations you actually need."
             primaryCta={{ label: 'Book Your Free Automation Audit', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See Use Cases', href: '#pricing' }}

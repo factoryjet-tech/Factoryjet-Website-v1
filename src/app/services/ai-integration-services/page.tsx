@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   JSON-LD Schema (Service + HowTo + Breadcrumb), faqSchema is declared after
    FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -86,7 +86,7 @@ const serviceSchema = {
   },
   serviceType: 'AI Integration Services',
   description:
-    'AI integration services for US small and medium businesses — connecting GPT-4o, Claude, and other AI models to existing CRM, e-commerce, support desk, and custom software platforms.',
+    'AI integration services for US small and medium businesses, connecting GPT-4o, Claude, and other AI models to existing CRM, e-commerce, support desk, and custom software platforms.',
   offers: [
     {
       '@type': 'Offer',
@@ -117,31 +117,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery & Use-Case Mapping',
+      name: 'Day 1 | Discovery & Use-Case Mapping',
       text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Architecture & Data Planning',
+      name: 'Day 2 | Architecture & Data Planning',
       text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Build & Integrate',
+      name: 'Days 3–4 | Build & Integrate',
       text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Testing & Optimization',
+      name: 'Days 5–6 | Testing & Optimization',
       text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch & Training',
+      name: 'Day 7 | Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
   ],
@@ -166,7 +166,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'CRM AI Integration',
     description:
-      'Adds AI-powered capabilities directly inside HubSpot, Salesforce, Pipedrive, or Zoho: one-click email draft generation based on contact history, AI lead scoring, automated follow-up suggestions, and meeting summary generation from call notes — without leaving the CRM your team already uses every day.',
+      'Adds AI-powered capabilities directly inside HubSpot, Salesforce, Pipedrive, or Zoho: one-click email draft generation based on contact history, AI lead scoring, automated follow-up suggestions, and meeting summary generation from call notes, without leaving the CRM your team already uses every day.',
     example: 'Sales reps cut email writing time from 45 min to 8 min per day.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -174,7 +174,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'E-Commerce AI Integration',
     description:
-      'Adds AI to Shopify, WooCommerce, or BigCommerce: automated product description generation for new SKUs, customer review sentiment analysis, personalized product recommendation APIs, and AI-written SEO metadata — connected directly to your existing store admin and product database.',
+      'Adds AI to Shopify, WooCommerce, or BigCommerce: automated product description generation for new SKUs, customer review sentiment analysis, personalized product recommendation APIs, and AI-written SEO metadata, connected directly to your existing store admin and product database.',
     example: 'Shopify brands see 18–25% higher conversion on AI-written product pages.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
@@ -182,7 +182,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'Support Desk AI Integration',
     description:
-      'Connects AI to Zendesk, Intercom, Freshdesk, or Help Scout to automatically classify and tag incoming tickets by topic and urgency, draft reply suggestions based on your knowledge base, detect customer sentiment, and surface related past tickets — before a support agent opens the conversation.',
+      'Connects AI to Zendesk, Intercom, Freshdesk, or Help Scout to automatically classify and tag incoming tickets by topic and urgency, draft reply suggestions based on your knowledge base, detect customer sentiment, and surface related past tickets, before a support agent opens the conversation.',
     example: 'Teams report 35% reduction in average handle time per ticket.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -190,7 +190,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'Document AI Integration',
     description:
-      'Reads, classifies, and extracts structured data from PDFs, scanned forms, contracts, and invoices — connected to your existing document storage (Google Drive, Box, SharePoint) and downstream tools (QuickBooks, your CRM, your database). No more opening documents one by one.',
+      'Reads, classifies, and extracts structured data from PDFs, scanned forms, contracts, and invoices, connected to your existing document storage (Google Drive, Box, SharePoint) and downstream tools (QuickBooks, your CRM, your database). No more opening documents one by one.',
     example: 'Processes 200+ documents per hour vs. 10–15 manually.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
@@ -198,7 +198,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'Custom App AI Integration',
     description:
-      'Embeds GPT-4o, Claude, or a fine-tuned model directly into your internal web app, admin panel, or customer-facing product via REST API. AI features appear as native parts of your existing interface — no separate tool for your team to learn, no new login to manage.',
+      'Embeds GPT-4o, Claude, or a fine-tuned model directly into your internal web app, admin panel, or customer-facing product via REST API. AI features appear as native parts of your existing interface, no separate tool for your team to learn, no new login to manage.',
     example: 'Most custom integrations go live in 2–3 weeks from kickoff.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -206,7 +206,7 @@ const INTEGRATION_TYPES = [
   {
     name: 'Database & Analytics AI Integration',
     description:
-      'Adds natural-language query capabilities to your existing databases (ask questions in plain English, get SQL results) and AI-powered anomaly detection to your reporting pipelines — flagging unusual patterns in revenue, inventory, or user behavior before they become problems.',
+      'Adds natural-language query capabilities to your existing databases (ask questions in plain English, get SQL results) and AI-powered anomaly detection to your reporting pipelines, flagging unusual patterns in revenue, inventory, or user behavior before they become problems.',
     example: 'Finance teams catch data anomalies days earlier than before.',
     linkLabel: 'Get a free assessment',
     linkHref: '/contact',
@@ -230,7 +230,7 @@ const INTEGRATION_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build',
     description:
-      'Development and integration testing with weekly demos. You see the AI working inside your actual tools during the build — not in a separate demo environment. Feedback is incorporated at every stage.',
+      'Development and integration testing with weekly demos. You see the AI working inside your actual tools during the build, not in a separate demo environment. Feedback is incorporated at every stage.',
   },
   {
     number: '04',
@@ -256,7 +256,7 @@ const ROI_STATS = [
   {
     value: 'Fixed Price',
     label: 'milestone-paid AI integration with full code ownership',
-    microcopy: 'specialized engineers, US-caliber output — predictable from quote to launch',
+    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -277,7 +277,7 @@ const MARKET_STATS = [
   {
     value: '18%',
     label: 'average conversion rate improvement on AI-generated product descriptions vs. manual copy',
-    microcopy: 'Shopify merchant study — FactoryJet client data',
+    microcopy: 'Shopify merchant study: FactoryJet client data',
     categoryLabel: 'CONVERSION IMPACT',
   },
 ];
@@ -439,13 +439,13 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What are AI integration services?',
     answer:
-      'AI integration services connect AI models — like GPT-4o, Claude, or Gemini — to your existing business software so those tools can generate, classify, extract, and summarize using real AI capabilities. Rather than replacing your software, AI integration adds intelligence to what you already use: your CRM writes follow-up drafts, your e-commerce platform generates product descriptions, your support desk classifies tickets automatically.',
+      'AI integration services connect AI models, like GPT-4o, Claude, or Gemini, to your existing business software so those tools can generate, classify, extract, and summarize using real AI capabilities. Rather than replacing your software, AI integration adds intelligence to what you already use: your CRM writes follow-up drafts, your e-commerce platform generates product descriptions, your support desk classifies tickets automatically.',
   },
   {
     category: 'what-is',
     question: 'How is AI integration different from building a custom AI app from scratch?',
     answer:
-      'Building from scratch creates a new application with AI built in — for workflows that don\'t exist in your current software. AI integration adds AI capabilities to tools you already have. Most businesses need both at different times: integrations first (faster, lower cost, immediate ROI from existing workflows) and custom builds later when current tools fundamentally can\'t do what you need.',
+      'Building from scratch creates a new application with AI built in, for workflows that don\'t exist in your current software. AI integration adds AI capabilities to tools you already have. Most businesses need both at different times: integrations first (faster, lower cost, immediate ROI from existing workflows) and custom builds later when current tools fundamentally can\'t do what you need.',
   },
   {
     category: 'what-is',
@@ -455,7 +455,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'what-is',
-    question: 'Which AI models can you integrate — GPT-4o, Claude, or others?',
+    question: 'Which AI models can you integrate: GPT-4o, Claude, or others?',
     answer:
       'We integrate GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), Gemini (Google), and open-source models like Mistral and LLaMA 3. Selection depends on your use case, cost sensitivity, and data privacy requirements. For most business integrations, GPT-4o or Claude gives the best accuracy-to-cost ratio. For regulated industries, we integrate self-hosted models that never send data to third-party providers.',
   },
@@ -465,19 +465,19 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI integration process look like?',
     answer:
-      'Four stages: Discover (audit your software stack, identify the highest-value AI integration points, define data flows), Design (API architecture, prompt engineering approach, how outputs surface in your existing UI), Build (develop and test with weekly demos — you see AI working in your actual tools), and Deploy (production launch with monitoring, documentation, and 30-day support). Most integrations don\'t require changes to your existing software UI.',
+      'Four stages: Discover (audit your software stack, identify the highest-value AI integration points, define data flows), Design (API architecture, prompt engineering approach, how outputs surface in your existing UI), Build (develop and test with weekly demos, you see AI working in your actual tools), and Deploy (production launch with monitoring, documentation, and 30-day support). Most integrations don\'t require changes to your existing software UI.',
   },
   {
     category: 'process',
     question: 'How long does it take to integrate AI into existing software?',
     answer:
-      'A single focused integration — AI email drafts in a CRM, or auto-classification in a help desk — goes from kickoff to production in 1–3 weeks. Multi-system integrations connecting 3–5 platforms take 4–6 weeks. Custom integrations with fine-tuned models or legacy APIs run 8–12 weeks. Timeline depends on the number of systems and how well-documented your current APIs are.',
+      'A single focused integration: AI email drafts in a CRM, or auto-classification in a help desk, goes from kickoff to production in 1–3 weeks. Multi-system integrations connecting 3–5 platforms take 4–6 weeks. Custom integrations with fine-tuned models or legacy APIs run 8–12 weeks. Timeline depends on the number of systems and how well-documented your current APIs are.',
   },
   {
     category: 'process',
     question: 'Will my team see progress during the build?',
     answer:
-      'Yes — weekly demos throughout. You see the AI working inside your actual tools during the build, not in an isolated demo environment. Most clients find early demos surface integration details they hadn\'t considered, and we build in room to course-correct at every stage.',
+      'Yes, weekly demos throughout. You see the AI working inside your actual tools during the build, not in an isolated demo environment. Most clients find early demos surface integration details they hadn\'t considered, and we build in room to course-correct at every stage.',
   },
   {
     category: 'process',
@@ -491,7 +491,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do AI integration services cost?',
     answer:
-      'FactoryJet\'s AI integrations are fixed-price and scoped to your build — the main drivers are how many systems you connect, the complexity of the API layer, and any model fine-tuning or compliance needs. Most US SMBs choose our Growth tier, covering multi-system AI integration with a unified API layer and monitoring. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements are scoped separately. All pricing is fixed and confirmed upfront after a free quote — no hourly billing, no scope creep.',
+      'FactoryJet\'s AI integrations are fixed-price and scoped to your build: the main drivers are how many systems you connect, the complexity of the API layer, and any model fine-tuning or compliance needs. Most US SMBs choose our Growth tier, covering multi-system AI integration with a unified API layer and monitoring. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements are scoped separately. All pricing is fixed and confirmed upfront after a free quote, no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',
@@ -509,7 +509,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the integration is built?',
     answer:
-      'One type: AI model API costs (paid directly to OpenAI, Anthropic, or Google at cost — not marked up by FactoryJet). Optional monthly retainer for prompt optimization or new integration points. There are no FactoryJet platform fees after delivery.',
+      'One type: AI model API costs (paid directly to OpenAI, Anthropic, or Google at cost, not marked up by FactoryJet). Optional monthly retainer for prompt optimization or new integration points. There are no FactoryJet platform fees after delivery.',
   },
 
   /* ── Technical & Security ── */
@@ -529,13 +529,13 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Can you integrate AI into a custom-built internal tool or legacy system?',
     answer:
-      'Yes — as long as the system has some form of data access (a database we can read, an API we can call, or files we can process). We\'ve integrated AI into legacy CRMs, custom admin panels, and ERP systems with limited modern API support. All integration points are documented during delivery.',
+      'Yes, as long as the system has some form of data access (a database we can read, an API we can call, or files we can process). We\'ve integrated AI into legacy CRMs, custom admin panels, and ERP systems with limited modern API support. All integration points are documented during delivery.',
   },
   {
     category: 'technical',
     question: 'Will AI integration require changes to the software my team uses?',
     answer:
-      'Usually no. Most AI integrations run as a background layer — the AI processes data and surfaces the result (a draft email, a classification, a suggested action) in your existing UI through the platform\'s native API. Your team uses the same software, just with AI-powered features added to it.',
+      'Usually no. Most AI integrations run as a background layer: the AI processes data and surfaces the result (a draft email, a classification, a suggested action) in your existing UI through the platform\'s native API. Your team uses the same software, just with AI-powered features added to it.',
   },
 
   /* ── Trust & Results ── */
@@ -549,13 +549,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can you fine-tune an AI model on our specific business data?',
     answer:
-      'Yes — on Enterprise tier projects. Fine-tuning trains a model on your specific content: product catalog, tone of voice, support ticket history, domain terminology. The result is a model that generates outputs that sound specifically like your business. Most valuable for high-volume, customer-facing outputs like product descriptions, support replies, or sales emails.',
+      'Yes, on Enterprise tier projects. Fine-tuning trains a model on your specific content: product catalog, tone of voice, support ticket history, domain terminology. The result is a model that generates outputs that sound specifically like your business. Most valuable for high-volume, customer-facing outputs like product descriptions, support replies, or sales emails.',
   },
   {
     category: 'trust',
     question: 'What are the most common first AI integrations US small businesses build?',
     answer:
-      'The four most common: (1) CRM email draft generation — sales reps get a personalized follow-up draft with one click; (2) support ticket auto-classification — tickets tagged before a human opens them; (3) product description generation — new SKUs get AI-written, SEO-optimized descriptions automatically; (4) document data extraction — invoices and forms read by AI with key fields populated in your database.',
+      'The four most common: (1) CRM email draft generation, sales reps get a personalized follow-up draft with one click; (2) support ticket auto-classification, tickets tagged before a human opens them; (3) product description generation, new SKUs get AI-written, SEO-optimized descriptions automatically; (4) document data extraction, invoices and forms read by AI with key fields populated in your database.',
   },
   {
     category: 'trust',
@@ -567,13 +567,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can AI integration work for a small team with no technical staff?',
     answer:
-      'Yes — that\'s the majority of what we build. Most integrations are invisible to end users: AI runs in the background, output appears in the tool your team already uses, nobody learns a new platform. Managers review AI output quality from a monitoring dashboard without engineering help. The AI is the hidden layer; your team\'s workflow stays familiar.',
+      'Yes, that\'s the majority of what we build. Most integrations are invisible to end users: AI runs in the background, output appears in the tool your team already uses, nobody learns a new platform. Managers review AI output quality from a monitoring dashboard without engineering help. The AI is the hidden layer; your team\'s workflow stays familiar.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects, we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
   },
 ];
 
@@ -633,8 +633,8 @@ export default function AIIntegrationServicesPage() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_ai_integration_services_hero" />}
           eyebrow="AI INTEGRATION SERVICES · USA"
-          headline="Add AI to the Tools You Already Use — Without Replacing Them"
-          lead="Your CRM, e-commerce platform, support desk, and internal apps can all be smarter — right now, without a wholesale software replacement. FactoryJet integrates GPT-4o and Claude into your existing stack so your team gets AI capabilities inside the tools they already know."
+          headline="Add AI to the Tools You Already Use, Without Replacing Them"
+          lead="Your CRM, e-commerce platform, support desk, and internal apps can all be smarter, right now, without a wholesale software replacement. FactoryJet integrates GPT-4o and Claude into your existing stack so your team gets AI capabilities inside the tools they already know."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -687,7 +687,7 @@ export default function AIIntegrationServicesPage() {
         <ServiceExplanation
           eyebrow="AI INTEGRATION EXPLAINED"
           headline="You Don't Need New Software. You Need AI Inside the Software You Have."
-          lead="The fastest path to AI ROI isn't replacing your tools — it's adding intelligence to the ones your team already uses and trusts."
+          lead="The fastest path to AI ROI isn't replacing your tools. It's adding intelligence to the ones your team already uses and trusts."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -709,7 +709,7 @@ export default function AIIntegrationServicesPage() {
                 ))}
               </div>
               <p>
-                Most businesses spend months evaluating AI tools, signing up for pilots, and trying to get teams to adopt new software — and the majority never actually ship anything. The faster path is different: keep the tools your team already knows and uses every day, and add AI capabilities directly inside them via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI works behind the scenes.
+                Most businesses spend months evaluating AI tools, signing up for pilots, and trying to get teams to adopt new software, and the majority never actually ship anything. The faster path is different: keep the tools your team already knows and uses every day, and add AI capabilities directly inside them via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI works behind the scenes.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -795,7 +795,7 @@ export default function AIIntegrationServicesPage() {
                   {
                     step: '02',
                     title: 'Integration fetches context',
-                    desc: 'Pulls relevant data from your software — contact history, product details, ticket content — to give the AI full context.',
+                    desc: 'Pulls relevant data from your software, contact history, product details, ticket content, to give the AI full context.',
                   },
                   {
                     step: '03',
@@ -805,7 +805,7 @@ export default function AIIntegrationServicesPage() {
                   {
                     step: '04',
                     title: 'Output surfaces in your existing UI',
-                    desc: 'The result appears inside the tool your team already uses — a draft email in HubSpot, a ticket tag in Zendesk, a description in Shopify.',
+                    desc: 'The result appears inside the tool your team already uses: a draft email in HubSpot, a ticket tag in Zendesk, a description in Shopify.',
                   },
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
@@ -855,17 +855,17 @@ export default function AIIntegrationServicesPage() {
             {
               icon: '⏱',
               title: 'Generic AI tools don\'t know your data',
-              body: 'ChatGPT and off-the-shelf AI copilots are powerful but generic. They don\'t know your customer history, your product catalog, your tone of voice, or your specific business rules. The result is outputs that need significant manual editing before they\'re usable — which means your team stops using them within weeks. AI integration connects the model to your actual data so outputs are immediately useful.',
+              body: 'ChatGPT and off-the-shelf AI copilots are powerful but generic. They don\'t know your customer history, your product catalog, your tone of voice, or your specific business rules. The result is outputs that need significant manual editing before they\'re usable, which means your team stops using them within weeks. AI integration connects the model to your actual data so outputs are immediately useful.',
             },
             {
               icon: '📉',
               title: 'SaaS AI add-ons charge per seat, forever',
-              body: 'Microsoft Copilot and Salesforce Einstein bill per user every month, and Intercom Fin bills by conversation. These fees compound: a 20-person team using multiple AI SaaS add-ons easily spends tens of thousands per year — for capabilities FactoryJet can integrate into your existing tools for a one-time fixed price, with AI costs going directly to the model provider at a fraction of the SaaS markup.',
+              body: 'Microsoft Copilot and Salesforce Einstein bill per user every month, and Intercom Fin bills by conversation. These fees compound: a 20-person team using multiple AI SaaS add-ons easily spends tens of thousands per year, for capabilities FactoryJet can integrate into your existing tools for a one-time fixed price, with AI costs going directly to the model provider at a fraction of the SaaS markup.',
             },
             {
               icon: '💸',
               title: 'Custom integrations used to require expensive US engineering teams',
-              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering — it\'s not a no-code project. US AI integration agencies charge a steep premium for this work. FactoryJet delivers the same engineering quality at fixed-price, with the same level of API architecture, prompt engineering, and production reliability.',
+              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering, it\'s not a no-code project. US AI integration agencies charge a steep premium for this work. FactoryJet delivers the same engineering quality at fixed-price, with the same level of API architecture, prompt engineering, and production reliability.',
             },
           ]}
         />
@@ -874,7 +874,7 @@ export default function AIIntegrationServicesPage() {
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Discovery to AI-Powered Software in 1–6 Weeks"
-          lead="A tight 4-stage process focused on getting AI working inside your existing tools as fast as possible — with full quality control built in at every step."
+          lead="A tight 4-stage process focused on getting AI working inside your existing tools as fast as possible, with full quality control built in at every step."
           stages={INTEGRATION_JOURNEY_STAGES}
           closingNote="4 STAGES · 1–12 WEEKS DEPENDING ON SCOPE · WEEKLY DEMOS THROUGHOUT"
         />
@@ -921,17 +921,17 @@ export default function AIIntegrationServicesPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We connect AI to your real tools. Not to a polished demo."
-          lead="12 years building production software for US businesses means we understand the messy reality of actual tech stacks — legacy APIs, undocumented fields, inconsistent data — and we build integrations that work in that reality."
+          lead="12 years building production software for US businesses means we understand the messy reality of actual tech stacks, legacy APIs, undocumented fields, inconsistent data, and we build integrations that work in that reality."
           pillars={[
             {
               icon: '⚡',
               title: 'Prompt engineering that actually performs',
-              body: 'A GPT-4o integration is only as good as the prompts behind it. Generic prompts give generic outputs your team won\'t use. We invest heavily in prompt engineering — building prompts that know your products, your tone, your customers, and your specific business rules. Every delivery includes a documented prompt library so you can see exactly how the AI is instructed.',
+              body: 'A GPT-4o integration is only as good as the prompts behind it. Generic prompts give generic outputs your team won\'t use. We invest heavily in prompt engineering, building prompts that know your products, your tone, your customers, and your specific business rules. Every delivery includes a documented prompt library so you can see exactly how the AI is instructed.',
             },
             {
               icon: '💡',
               title: 'We know your software stack',
-              body: 'We\'ve integrated AI into HubSpot, Shopify, Salesforce, Zendesk, QuickBooks, and dozens of custom-built applications. We know the API quirks, the rate limits, the webhook reliability issues, and the authentication patterns. We don\'t learn your stack at your expense — we bring experience with it to the project.',
+              body: 'We\'ve integrated AI into HubSpot, Shopify, Salesforce, Zendesk, QuickBooks, and dozens of custom-built applications. We know the API quirks, the rate limits, the webhook reliability issues, and the authentication patterns. We don\'t learn your stack at your expense, we bring experience with it to the project.',
             },
             {
               icon: '🔒',
@@ -945,7 +945,7 @@ export default function AIIntegrationServicesPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything You Need to Know Before Integrating AI into Your Software"
-          lead="No jargon. No runaround. The questions we get on every strategy call — answered straight."
+          lead="No jargon. No runaround. The questions we get on every strategy call, answered straight."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -956,7 +956,7 @@ export default function AIIntegrationServicesPage() {
             variant="dark"
             eyebrow="READY TO ADD AI TO YOUR STACK"
             headline="Book a 30-Minute AI Integration Strategy Call"
-            sub="We'll audit your current software stack, identify the highest-value integration opportunity, and give you a fixed-price estimate — before you commit to anything."
+            sub="We'll audit your current software stack, identify the highest-value integration opportunity, and give you a fixed-price estimate, before you commit to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
             objectionHandler="Most integrations pay for themselves within 60–90 days. Free call, fixed price, no hidden fees."

@@ -15,13 +15,13 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Charlotte NC: Small Business Pricing & Agency Guide 2026',
     description:
-      'Charlotte NC small business web design in 2026 — what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 100/100 site for $1,999.',
+      'Charlotte NC small business web design in 2026, what finance and healthcare SMBs need, what local agencies charge, and how to get a Lighthouse 100/100 site for $1,999.',
   },
   keyTakeaways: [
-    "Charlotte is a top-10 fastest-growing US metro — web design competition among SMBs is intense, especially in finance, healthcare, professional services, and real estate.",
+    "Charlotte is a top-10 fastest-growing US metro, web design competition among SMBs is intense, especially in finance, healthcare, professional services, and real estate.",
     'Charlotte local web design agencies charge $8,000–$18,000 for a 5-page professional site; equivalent quality is available for $1,999 from offshore agencies with US-hour project management.',
-    'Finance and professional services firms in Charlotte need trust-first design: clean typography, structured credentials, case studies, and schema markup — not flashy visuals.',
-    'Healthcare SMBs in Charlotte face the same ADA compliance requirements as any US business — WCAG 2.2 Level AA and HIPAA-aware contact forms are non-negotiable.',
+    'Finance and professional services firms in Charlotte need trust-first design: clean typography, structured credentials, case studies, and schema markup, not flashy visuals.',
+    'Healthcare SMBs in Charlotte face the same ADA compliance requirements as any US business, WCAG 2.2 Level AA and HIPAA-aware contact forms are non-negotiable.',
     'Charlotte real estate and construction businesses need performance-optimized image galleries, neighborhood-based local SEO, and mobile-first design for on-the-go buyers.',
     "A website built on Next.js with Lighthouse 100/100 scores gives Charlotte small businesses a measurable technical advantage over competitors still running slow WordPress template sites.",
     'FactoryJet delivers custom Charlotte NC websites in 7 days starting at $1,999 with full technical SEO, WCAG 2.2 compliance, and US business-hour support.',
@@ -29,19 +29,19 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does web design cost for a small business in Charlotte NC?',
-      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same Lighthouse 100/100 output for $1,999–$3,999. The gap is entirely explained by local overhead — Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
+      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour support (like FactoryJet) deliver the same Lighthouse 100/100 output for $1,999–$3,999. The gap is entirely explained by local overhead: Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
     },
     {
       q: 'What do finance and professional services businesses in Charlotte need from their website?',
-      a: "Charlotte's finance sector — banks, wealth management firms, accounting practices, and insurance agencies — needs trust-first web design: clean, readable typography, professional photography, credentials and certifications displayed prominently, client case studies or results, schema markup for financial services, HTTPS with strong security headers, and clear compliance language where required by FINRA or SEC. Avoid flashy animations — finance clients research and evaluate carefully, and visual gimmicks reduce perceived professionalism.",
+      a: "Charlotte's finance sector, banks, wealth management firms, accounting practices, and insurance agencies, needs trust-first web design: clean, readable typography, professional photography, credentials and certifications displayed prominently, client case studies or results, schema markup for financial services, HTTPS with strong security headers, and clear compliance language where required by FINRA or SEC. Avoid flashy animations, finance clients research and evaluate carefully, and visual gimmicks reduce perceived professionalism.",
     },
     {
       q: 'Do Charlotte healthcare businesses need special web design features?',
-      a: "Yes. Charlotte healthcare providers, dental practices, physical therapists, and wellness clinics need: WCAG 2.2 Level AA accessibility compliance (mandatory for ADA compliance), HIPAA-aware contact forms that don't store protected health information in unencrypted third-party systems, clear privacy policy pages, Google Business Profile optimization with correct service categories, schema markup for MedicalOrganization or MedicalClinic, and a mobile-first design — 67% of healthcare searches happen on mobile in Charlotte.",
+      a: "Yes. Charlotte healthcare providers, dental practices, physical therapists, and wellness clinics need: WCAG 2.2 Level AA accessibility compliance (mandatory for ADA compliance), HIPAA-aware contact forms that don't store protected health information in unencrypted third-party systems, clear privacy policy pages, Google Business Profile optimization with correct service categories, schema markup for MedicalOrganization or MedicalClinic, and a mobile-first design, 67% of healthcare searches happen on mobile in Charlotte.",
     },
     {
       q: 'How important is local SEO for Charlotte small businesses?',
-      a: "Critical. Charlotte is a fragmented local market — the city spans multiple counties and competes with suburbs like Ballantyne, Concord, and Huntersville for local search intent. A properly structured Charlotte small business website needs: NAP consistency (Name, Address, Phone) across the site and Google Business Profile, LocalBusiness schema markup with service-area specification, neighborhood-level content if serving specific parts of Charlotte, and Lighthouse SEO score of 100 to ensure full indexability.",
+      a: "Critical. Charlotte is a fragmented local market: the city spans multiple counties and competes with suburbs like Ballantyne, Concord, and Huntersville for local search intent. A properly structured Charlotte small business website needs: NAP consistency (Name, Address, Phone) across the site and Google Business Profile, LocalBusiness schema markup with service-area specification, neighborhood-level content if serving specific parts of Charlotte, and Lighthouse SEO score of 100 to ensure full indexability.",
     },
     {
       q: 'What makes a good web design agency for Charlotte NC businesses?',
@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What CMS or platform should Charlotte small businesses use in 2026?',
-      a: "For most Charlotte small businesses: Next.js (React framework) is the highest-performance option for custom sites — delivers Lighthouse 100/100 reliably and is Google's preferred technical stack. WordPress with a modern block theme is the best choice for businesses that need easy self-editing. Shopify is the right choice for Charlotte retail and e-commerce businesses. Avoid Wix, Squarespace, and GoDaddy Website Builder — they create technical SEO limitations and performance ceilings that are expensive to overcome later.",
+      a: "For most Charlotte small businesses: Next.js (React framework) is the highest-performance option for custom sites, delivers Lighthouse 100/100 reliably and is Google's preferred technical stack. WordPress with a modern block theme is the best choice for businesses that need easy self-editing. Shopify is the right choice for Charlotte retail and e-commerce businesses. Avoid Wix, Squarespace, and GoDaddy Website Builder, they create technical SEO limitations and performance ceilings that are expensive to overcome later.",
     },
     {
       q: 'How long does web design take for a Charlotte small business?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Charlotte small business consider FactoryJet over a local agency?',
-      a: "Consider FactoryJet if your priorities are: Lighthouse 100/100 performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999 — about at a fixed, transparent price. We've served 500+ US businesses with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else — FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
+      a: "Consider FactoryJet if your priorities are: Lighthouse 100/100 performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999, about at a fixed, transparent price. We've served 500+ US businesses with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else, FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -77,15 +77,15 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        Charlotte, NC added more than 100,000 new residents between 2020 and 2024, making it one of the five fastest-growing large metros in the United States. That population growth has translated directly into an explosion of small business formation — and a fiercely competitive local search environment where web design quality can determine whether your business shows up on Google's first page or disappears behind better-optimized competitors.
+        Charlotte, NC added more than 100,000 new residents between 2020 and 2024, making it one of the five fastest-growing large metros in the United States. That population growth has translated directly into an explosion of small business formation, and a fiercely competitive local search environment where web design quality can determine whether your business shows up on Google's first page or disappears behind better-optimized competitors.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Charlotte's SMB Web Design Landscape in 2026</h2>
       <p className="mb-4">
-        Charlotte's economy is anchored by finance — Bank of America and Wells Fargo both maintain significant Charlotte operations — but the SMB layer beneath the large employers includes thousands of independent financial advisors, accounting firms, insurance agencies, and professional services firms that all compete for the same local clients.
+        Charlotte's economy is anchored by finance, Bank of America and Wells Fargo both maintain significant Charlotte operations, but the SMB layer beneath the large employers includes thousands of independent financial advisors, accounting firms, insurance agencies, and professional services firms that all compete for the same local clients.
       </p>
       <p className="mb-4">
-        Healthcare is the second major sector. Charlotte's Atrium Health and Novant Health systems employ tens of thousands, but the ecosystem around them — specialist clinics, physical therapy practices, mental health providers, dental groups, and wellness businesses — represents a massive SMB market with distinct web design requirements.
+        Healthcare is the second major sector. Charlotte's Atrium Health and Novant Health systems employ tens of thousands, but the ecosystem around them, specialist clinics, physical therapy practices, mental health providers, dental groups, and wellness businesses, represents a massive SMB market with distinct web design requirements.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Finance and Professional Services Web Design in Charlotte</h2>
@@ -96,12 +96,12 @@ export const post: BlogPost = {
         The web design elements that matter most for Charlotte finance and professional services firms: clean, readable typography at 16px+ body size, professional photography (not stock photos), clearly organized service pages with specific descriptions (not vague "comprehensive solutions" language), case studies or results pages, HTTPS with strong security headers (critical for client trust), and schema markup for ProfessionalService or FinancialService.
       </p>
       <p className="mb-4">
-        What to avoid: auto-playing videos, excessive animations, cluttered navigation, and any element that slows mobile load time below a 90 Lighthouse Performance score. Finance clients are not impressed by visual complexity — they're reassured by clarity and speed.
+        What to avoid: auto-playing videos, excessive animations, cluttered navigation, and any element that slows mobile load time below a 90 Lighthouse Performance score. Finance clients are not impressed by visual complexity. They're reassured by clarity and speed.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Healthcare and Wellness Compliance in Charlotte</h2>
       <p className="mb-4">
-        Charlotte healthcare SMBs face a two-layer compliance requirement: ADA accessibility (WCAG 2.2 Level AA) and HIPAA-aware data handling for any online contact form that might collect health information. In 2026, these aren't optional — they're baseline requirements for any healthcare business operating in the United States.
+        Charlotte healthcare SMBs face a two-layer compliance requirement: ADA accessibility (WCAG 2.2 Level AA) and HIPAA-aware data handling for any online contact form that might collect health information. In 2026, these aren't optional. They're baseline requirements for any healthcare business operating in the United States.
       </p>
       <p className="mb-4">
         The ADA exposure is measurable: 4,605 federal ADA website lawsuits were filed in 2023, with small business settlements averaging $10,000–$50,000. A Charlotte dental practice or physical therapy clinic investing in a new website should confirm in writing that WCAG 2.2 Level AA is included in the standard build.
@@ -109,7 +109,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Local SEO for Charlotte Businesses</h2>
       <p className="mb-4">
-        Charlotte's geographic spread creates both opportunity and complexity for local SEO. The city's growth has pushed significant population and economic activity into suburbs like Ballantyne, Matthews, Concord, and Huntersville — each with distinct local search intent. A Charlotte HVAC company or real estate agent that optimizes only for "Charlotte NC" is missing significant search volume from neighboring areas.
+        Charlotte's geographic spread creates both opportunity and complexity for local SEO. The city's growth has pushed significant population and economic activity into suburbs like Ballantyne, Matthews, Concord, and Huntersville: each with distinct local search intent. A Charlotte HVAC company or real estate agent that optimizes only for "Charlotte NC" is missing significant search volume from neighboring areas.
       </p>
       <p className="mb-4">
         The technical foundations for Charlotte local SEO: NAP consistency across all pages and Google Business Profile, LocalBusiness schema markup specifying geographic service area, separate service pages for high-value Charlotte neighborhoods when relevant, Lighthouse SEO score of 100 to ensure full indexability, XML sitemap submitted to Google Search Console, and Core Web Vitals all green (LCP under 2.5s, CLS under 0.1, INP under 200ms).

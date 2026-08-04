@@ -16,11 +16,11 @@ const CATEGORIES = [
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Manchester?",
-    a: "Manchester web design costs vary enormously depending on the agency and scope, from budget template shops to premium bespoke studios. FactoryJet's pricing is fixed-price and scoped to your build — the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
+    a: "Manchester web design costs vary enormously depending on the agency and scope, from budget template shops to premium bespoke studios. FactoryJet's pricing is fixed-price and scoped to your build: the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
   },
   {
     q: "What is the best web design agency in Manchester?",
-    a: 'Manchester has over 1,000 web design agencies, with MadeByShape, Pixel Kicks, Soap Media, and Supremo among the most established. The "best" depends on your needs: if you want template WordPress, many local agencies will serve you. If you want AI-native, performance-engineered websites built on Next.js 15 with guaranteed SEO scores and AI search visibility, FactoryJet is purpose-built for that — at a fraction of the typical Manchester cost.',
+    a: 'Manchester has over 1,000 web design agencies, with MadeByShape, Pixel Kicks, Soap Media, and Supremo among the most established. The "best" depends on your needs: if you want template WordPress, many local agencies will serve you. If you want AI-native, performance-engineered websites built on Next.js 15 with guaranteed SEO scores and AI search visibility, FactoryJet is purpose-built for that, at a fraction of the typical Manchester cost.',
   },
   {
     q: "How long does it take to build a website in Manchester?",
@@ -28,14 +28,14 @@ const GENERAL_FAQS = [
   },
   {
     q: "Do I need a Manchester-based web designer?",
-    a: "No. What you need is a web design team that understands Manchester's market, competitive landscape, and customer behaviour — and delivers a website that performs on every technical metric. FactoryJet serves Manchester businesses remotely with UK-hours availability, direct engineer access, and deep local market research baked into every project.",
+    a: "No. What you need is a web design team that understands Manchester's market, competitive landscape, and customer behaviour, and delivers a website that performs on every technical metric. FactoryJet serves Manchester businesses remotely with UK-hours availability, direct engineer access, and deep local market research baked into every project.",
   },
 ];
 
 const TECHNOLOGY_FAQS = [
   {
     q: "What technology should my Manchester website use?",
-    a: "In 2026, the highest-performing websites use React-based frameworks like Next.js 15. WordPress still powers many Manchester business websites, but it is increasingly outperformed on Core Web Vitals, mobile speed, and AI search visibility. FactoryJet builds exclusively on Next.js 15 with Tailwind CSS 4 — the same stack used by Vercel, Notion, and TikTok.",
+    a: "In 2026, the highest-performing websites use React-based frameworks like Next.js 15. WordPress still powers many Manchester business websites, but it is increasingly outperformed on Core Web Vitals, mobile speed, and AI search visibility. FactoryJet builds exclusively on Next.js 15 with Tailwind CSS 4: the same stack used by Vercel, Notion, and TikTok.",
   },
   {
     q: "Will my website rank on Google in Manchester?",
@@ -62,7 +62,7 @@ const SERVICES_FAQS = [
   },
   {
     q: "Do you offer SEO services for Manchester businesses?",
-    a: "Yes — but not traditional SEO. We specialise in AI-powered SEO (GEO, AEO, AIO), which optimises your website for both Google and AI search systems including schema markup, structured data, server-side rendering, and expanded visible content.",
+    a: "Yes, but not traditional SEO. We specialise in AI-powered SEO (GEO, AEO, AIO), which optimises your website for both Google and AI search systems including schema markup, structured data, server-side rendering, and expanded visible content.",
   },
   {
     q: "What industries do you serve in Manchester?",
@@ -73,7 +73,7 @@ const SERVICES_FAQS = [
 const COMPARISONS_FAQS = [
   {
     q: "How does FactoryJet compare to a Manchester website design company that uses WordPress?",
-    a: "Most Manchester website design companies build on WordPress with premium themes and no performance engineering, charging premium fees for websites that score 40–60 on Lighthouse. FactoryJet builds on Next.js 15 — every site ships with Lighthouse 90+ performance, full schema markup, server-side rendering, and AI search visibility, typically at a meaningfully lower cost. Our pricing is fixed-price and scoped to your build, quoted up front after a free discovery call.",
+    a: "Most Manchester website design companies build on WordPress with premium themes and no performance engineering, charging premium fees for websites that score 40–60 on Lighthouse. FactoryJet builds on Next.js 15: every site ships with Lighthouse 90+ performance, full schema markup, server-side rendering, and AI search visibility, typically at a meaningfully lower cost. Our pricing is fixed-price and scoped to your build, quoted up front after a free discovery call.",
   },
   {
     q: "What makes a digital agency different from a traditional web development company?",
@@ -81,11 +81,11 @@ const COMPARISONS_FAQS = [
   },
   {
     q: "Should I hire an SEO agency separately from my web development company?",
-    a: "No. Hiring separately means paying twice — once for a website not built for search, and again for an agency retrofitting SEO onto a poor foundation. FactoryJet bakes search engine optimisation into every website from the architecture level.",
+    a: "No. Hiring separately means paying twice, once for a website not built for search, and again for an agency retrofitting SEO onto a poor foundation. FactoryJet bakes search engine optimisation into every website from the architecture level.",
   },
   {
     q: "Can FactoryJet help Manchester businesses appear in AI search results?",
-    a: "Yes — this is one of our core differentiators. We optimise for both Google and AI-powered search through Generative Engine Optimisation (GEO) and Answer Engine Optimisation (AEO). Every website includes the structured data and schema markup that AI systems need to cite your business.",
+    a: "Yes, this is one of our core differentiators. We optimise for both Google and AI-powered search through Generative Engine Optimisation (GEO) and Answer Engine Optimisation (AEO). Every website includes the structured data and schema markup that AI systems need to cite your business.",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function FAQ() {
           {/* ── RIGHT: grouped Q&A ─────────────────────────────────────── */}
           {/*
             Content is NEVER hidden behind accordions or JS toggles.
-            All 16 Q&As are static HTML — GPTBot, ClaudeBot, and
+            All 16 Q&As are static HTML: GPTBot, ClaudeBot, and
             PerplexityBot parse every word without executing JavaScript.
           */}
           <div className="lg:col-span-9">

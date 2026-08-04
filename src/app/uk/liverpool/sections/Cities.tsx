@@ -199,7 +199,7 @@ function CityCard({ city }: { city: City }) {
         }}
       />
 
-      {/* "You are here" badge — Liverpool only */}
+      {/* "You are here" badge, Liverpool only */}
       {city.active && (
         <span
           className="absolute"
@@ -409,7 +409,7 @@ export default function Cities() {
             }}
           >
             <p>
-              FactoryJet builds and ranks city pages across 10 UK cities —
+              FactoryJet builds and ranks city pages across 10 UK cities,
               each one a domain authority hub pointing search traffic back to
               your sector. The compounding effect of this network means that
               when you&rsquo;re a FactoryJet client in Liverpool, you&rsquo;re

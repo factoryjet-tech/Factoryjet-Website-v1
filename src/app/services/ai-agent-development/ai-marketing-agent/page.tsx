@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -25,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'AI Marketing Agent India | WhatsApp Automation | FactoryJet',
   description:
-    'AI marketing agents for Indian businesses — automate campaigns, WhatsApp broadcasts & Google/Meta Ads. Festival-aware AI in Hindi & English. Fixed price.',
+    'AI marketing agents for Indian businesses, automate campaigns, WhatsApp broadcasts & Google/Meta Ads. Festival-aware AI in Hindi & English. Fixed price.',
   keywords: [
     'AI marketing agent India',
     'WhatsApp broadcast automation India',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Marketing Agent India | WhatsApp Automation | FactoryJet',
     description:
-      'AI that plans, writes, and sends your Diwali campaign — while you run your business. WhatsApp broadcasts, social content, and ad optimisation built for India.',
+      'AI that plans, writes, and sends your Diwali campaign, while you run your business. WhatsApp broadcasts, social content, and ad optimisation built for India.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
     images: [
       {
@@ -78,8 +79,22 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas — faqSchema is declared after MARKETING_FAQ_ITEMS below
+   JSON-LD Schemas, faqSchema is declared after MARKETING_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -92,7 +107,7 @@ const serviceSchema = {
     
   },
   description:
-    'Custom AI marketing agents for Indian businesses — automate WhatsApp broadcasts, festival campaigns, social content, and Google/Meta Ads optimisation with vernacular language support.',
+    'Custom AI marketing agents for Indian businesses, automate WhatsApp broadcasts, festival campaigns, social content, and Google/Meta Ads optimisation with vernacular language support.',
   areaServed: 'IN',
   serviceType: 'AI Marketing Automation',
 };
@@ -123,7 +138,7 @@ const MARKETING_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '02',
     title: 'Strategy & Content Architecture',
     description:
-      'We design your campaign taxonomy — channel mix, audience segments, content pillars, approval workflow, and festival trigger logic. We document your brand voice so the AI writes copy that sounds like you, not like a robot.',
+      'We design your campaign taxonomy, channel mix, audience segments, content pillars, approval workflow, and festival trigger logic. We document your brand voice so the AI writes copy that sounds like you, not like a robot.',
   },
   {
     number: '03',
@@ -135,13 +150,13 @@ const MARKETING_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '04',
     title: 'Train & Test',
     description:
-      'The AI runs its first campaigns to a controlled audience segment — typically 500–2,000 contacts. We measure open rates, click-through rates, and revenue attribution. We refine the brand-voice model and segment logic before full rollout.',
+      'The AI runs its first campaigns to a controlled audience segment, typically 500–2,000 contacts. We measure open rates, click-through rates, and revenue attribution. We refine the brand-voice model and segment logic before full rollout.',
   },
   {
     number: '05',
     title: 'Launch & Optimise',
     description:
-      'Full deployment to your entire audience. The AI begins its autonomous learning loop — every campaign result tightens the model. Monthly performance reviews with campaign attribution data tied back to revenue.',
+      'Full deployment to your entire audience. The AI begins its autonomous learning loop: every campaign result tightens the model. Monthly performance reviews with campaign attribution data tied back to revenue.',
   },
 ];
 
@@ -169,7 +184,7 @@ const MARKETING_STATS = [
 const MARKETING_MARKET_STATS = [
   {
     value: '500M+',
-    label: "India is the world's largest WhatsApp market — your customers are already there",
+    label: "India is the world's largest WhatsApp market: your customers are already there",
     sourceUrl: 'https://meta.com/business/whatsapp-india-report-2024',
     sourceLabel: 'Meta Business India 2024',
   },
@@ -181,7 +196,7 @@ const MARKETING_MARKET_STATS = [
   },
   {
     value: '15+',
-    label: 'major festival windows annually — each one a revenue opportunity or a missed one',
+    label: 'major festival windows annually: each one a revenue opportunity or a missed one',
     sourceUrl: 'https://nasscom.in/knowledge-center/publications',
     sourceLabel: 'FactoryJet India Campaign Data',
   },
@@ -291,7 +306,7 @@ const MARKETING_INDUSTRIES = [
   {
     name: 'D2C E-Commerce',
     description:
-      'Festival campaigns, cart-abandonment WhatsApp sequences, post-purchase upsell flows, and influencer brief generation — all automated around your product catalogue and Shopify or Commerceflo store data.',
+      'Festival campaigns, cart-abandonment WhatsApp sequences, post-purchase upsell flows, and influencer brief generation: all automated around your product catalogue and Shopify or Commerceflo store data.',
     example: 'D2C brands using AI marketing agents see 2–3× higher festival season revenue vs. manual campaigns.',
   },
   {
@@ -321,7 +336,7 @@ const MARKETING_INDUSTRIES = [
   {
     name: 'Local Services',
     description:
-      'Review generation campaigns, seasonal service reminder broadcasts, referral programme automation, and Google Business Profile post generation — turning happy customers into visible social proof.',
+      'Review generation campaigns, seasonal service reminder broadcasts, referral programme automation, and Google Business Profile post generation, turning happy customers into visible social proof.',
     example: 'Local service businesses double Google review velocity within 60 days of AI agent deployment.',
   },
 ];
@@ -331,7 +346,7 @@ const MARKETING_PRICING_TIERS = [
     name: 'Content AI Starter',
     priceRange: '',
     description:
-      'AI-powered content generation for social and email — always-on marketing without the agency retainer.',
+      'AI-powered content generation for social and email, always-on marketing without the agency retainer.',
     features: [
       'AI social media content calendar (30 posts/month)',
       'Email campaign copy generation',
@@ -347,7 +362,7 @@ const MARKETING_PRICING_TIERS = [
     name: 'Full Marketing AI Platform',
     priceRange: '',
     description:
-      'WhatsApp broadcasts + email + social + ad optimisation — your full marketing stack on autopilot.',
+      'WhatsApp broadcasts + email + social + ad optimisation: your full marketing stack on autopilot.',
     features: [
       'Everything in Content AI Starter',
       'WhatsApp Business API broadcast automation',
@@ -399,13 +414,13 @@ const MARKETING_FAQ_ITEMS = [
     category: 'basics',
     question: 'What exactly is an AI marketing agent?',
     answer:
-      "An AI marketing agent is custom software that plans, creates, schedules, and optimises your marketing campaigns autonomously. Unlike SaaS tools that require manual input, a FactoryJet AI marketing agent reads your product catalogue, monitors competitor activity, generates campaign briefs, writes copy in your brand voice, and sends campaigns via WhatsApp, email, or social — all without daily human intervention.",
+      "An AI marketing agent is custom software that plans, creates, schedules, and optimises your marketing campaigns autonomously. Unlike SaaS tools that require manual input, a FactoryJet AI marketing agent reads your product catalogue, monitors competitor activity, generates campaign briefs, writes copy in your brand voice, and sends campaigns via WhatsApp, email, or social: all without daily human intervention.",
   },
   {
     category: 'basics',
     question: 'How is this different from tools like Mailchimp or Zoho Campaigns?',
     answer:
-      "Tools like Mailchimp or Zoho Campaigns are delivery platforms — you still write the strategy, create the content, and set the schedule manually. An AI marketing agent generates the strategy, writes the content, and learns which messages convert best over time. It acts like a junior marketing manager working 24/7 across every channel simultaneously.",
+      "Tools like Mailchimp or Zoho Campaigns are delivery platforms, you still write the strategy, create the content, and set the schedule manually. An AI marketing agent generates the strategy, writes the content, and learns which messages convert best over time. It acts like a junior marketing manager working 24/7 across every channel simultaneously.",
   },
   {
     category: 'basics',
@@ -417,7 +432,7 @@ const MARKETING_FAQ_ITEMS = [
     category: 'basics',
     question: 'Can the AI write content in Hindi or regional languages?',
     answer:
-      "Yes. The AI generates content in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, and Kannada alongside English — using LLM models fine-tuned for Indic language nuance. This is particularly powerful for WhatsApp broadcasts targeting Tier 2 and Tier 3 audiences where vernacular copy dramatically outperforms English-only messaging.",
+      "Yes. The AI generates content in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, and Kannada alongside English, using LLM models fine-tuned for Indic language nuance. This is particularly powerful for WhatsApp broadcasts targeting Tier 2 and Tier 3 audiences where vernacular copy dramatically outperforms English-only messaging.",
   },
 
   /* ── Campaigns & Channels ── */
@@ -431,13 +446,13 @@ const MARKETING_FAQ_ITEMS = [
     category: 'campaigns',
     question: 'Can the AI optimise Google Ads and Meta Ads budgets automatically?',
     answer:
-      "Yes — the agent integrates with Google Ads and Meta Ads APIs to monitor cost-per-click, conversion rate, and ROAS in real time. It surfaces budget reallocation suggestions (e.g., shift ₹5,000/day from underperforming ad sets to top performers during Diwali week) and can execute approved changes autonomously. You set the guardrails — daily budget caps, max CPA — and the AI works within them.",
+      "Yes: the agent integrates with Google Ads and Meta Ads APIs to monitor cost-per-click, conversion rate, and ROAS in real time. It surfaces budget reallocation suggestions (e.g., shift ₹5,000/day from underperforming ad sets to top performers during Diwali week) and can execute approved changes autonomously. You set the guardrails, daily budget caps, max CPA, and the AI works within them.",
   },
   {
     category: 'campaigns',
     question: 'How does WhatsApp broadcast automation work without getting flagged as spam?',
     answer:
-      "FactoryJet builds your broadcasts on the official WhatsApp Business API (not unofficial bulk-sender tools), which means messages are tied to your verified business profile. The AI manages opt-in lists, respects 24-hour conversation windows, throttles send volume to maintain quality scores, and personalises each message by name and purchase history — all practices that keep your template approval rates above 95%.",
+      "FactoryJet builds your broadcasts on the official WhatsApp Business API (not unofficial bulk-sender tools), which means messages are tied to your verified business profile. The AI manages opt-in lists, respects 24-hour conversation windows, throttles send volume to maintain quality scores, and personalises each message by name and purchase history: all practices that keep your template approval rates above 95%.",
   },
   {
     category: 'campaigns',
@@ -451,13 +466,13 @@ const MARKETING_FAQ_ITEMS = [
     category: 'india',
     question: 'Does the AI integrate with Zoho, CleverTap, and other Indian marketing tools?',
     answer:
-      "Yes. We build native integrations with Zoho MarketingHub, CleverTap, WebEngage, MoEngage, and Netcore Cloud — the most widely used marketing automation stacks in India. We also connect to WhatsApp via Interakt, Wati, or AiSensy, and to international platforms (HubSpot, ActiveCampaign, Klaviyo) if you are already using them. The AI acts as a layer on top of your existing stack, not a replacement.",
+      "Yes. We build native integrations with Zoho MarketingHub, CleverTap, WebEngage, MoEngage, and Netcore Cloud: the most widely used marketing automation stacks in India. We also connect to WhatsApp via Interakt, Wati, or AiSensy, and to international platforms (HubSpot, ActiveCampaign, Klaviyo) if you are already using them. The AI acts as a layer on top of your existing stack, not a replacement.",
   },
   {
     category: 'india',
     question: 'Can the AI segment Indian audiences by city, language, or purchase tier?',
     answer:
-      "Yes — audience segmentation is a core strength. The AI connects to your CRM or e-commerce platform (Shopify, WooCommerce, Commerceflo, Unicommerce) and auto-segments contacts by city, language preference, RFM score (Recency, Frequency, Monetary), product category interest, and festival purchase history. Campaign briefs are then generated per-segment, not one-size-fits-all.",
+      "Yes, audience segmentation is a core strength. The AI connects to your CRM or e-commerce platform (Shopify, WooCommerce, Commerceflo, Unicommerce) and auto-segments contacts by city, language preference, RFM score (Recency, Frequency, Monetary), product category interest, and festival purchase history. Campaign briefs are then generated per-segment, not one-size-fits-all.",
   },
   {
     category: 'india',
@@ -469,7 +484,7 @@ const MARKETING_FAQ_ITEMS = [
     category: 'india',
     question: 'What about mobile-first creative for Indian audiences on WhatsApp and Instagram?',
     answer:
-      "India is a mobile-first market — over 95% of WhatsApp and Instagram usage happens on phones. All AI-generated creatives are optimised for portrait format (9:16 for Stories and Reels, 4:5 for feed posts). WhatsApp message templates are kept under 160 characters for full preview on older Android devices. The agent prefers native WhatsApp catalogue links for product showcases over heavy PDF attachments.",
+      "India is a mobile-first market, over 95% of WhatsApp and Instagram usage happens on phones. All AI-generated creatives are optimised for portrait format (9:16 for Stories and Reels, 4:5 for feed posts). WhatsApp message templates are kept under 160 characters for full preview on older Android devices. The agent prefers native WhatsApp catalogue links for product showcases over heavy PDF attachments.",
   },
 
   /* ── Process & Timeline ── */
@@ -489,13 +504,13 @@ const MARKETING_FAQ_ITEMS = [
     category: 'process',
     question: 'Do we need to approve every campaign before it sends?',
     answer:
-      "You choose your approval model. Most clients start with a 'review and approve' workflow where the AI generates the full campaign brief and copy 72 hours before send — you approve with one click. Once you trust the output quality (typically after 2–3 months), you can switch to autonomous send with post-send reporting only. We recommend review mode for festival campaigns regardless.",
+      "You choose your approval model. Most clients start with a 'review and approve' workflow where the AI generates the full campaign brief and copy 72 hours before send, you approve with one click. Once you trust the output quality (typically after 2–3 months), you can switch to autonomous send with post-send reporting only. We recommend review mode for festival campaigns regardless.",
   },
   {
     category: 'process',
     question: 'How does the AI learn and improve over time?',
     answer:
-      "Every campaign feeds back into the AI's learning loop — open rates, click-through rates, WhatsApp reply rates, conversion events, and unsubscribes are all ingested. The AI updates its model of what subject lines, CTAs, send times, and copy styles work best for your audience. Most clients see measurable ROI improvement within 60–90 days of go-live.",
+      "Every campaign feeds back into the AI's learning loop, open rates, click-through rates, WhatsApp reply rates, conversion events, and unsubscribes are all ingested. The AI updates its model of what subject lines, CTAs, send times, and copy styles work best for your audience. Most clients see measurable ROI improvement within 60–90 days of go-live.",
   },
 
   /* ── Pricing & ROI ── */
@@ -515,7 +530,7 @@ const MARKETING_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Can we start with a small scope and expand the agent later?',
     answer:
-      "Yes — all our AI marketing agents are built modularly. Start with the Content AI Starter focused on social and email, then add the WhatsApp broadcast module, then the ad optimisation layer, and finally full autonomous campaign execution. Incremental upgrades are priced at the delta, not a full rebuild. Most clients expand within 6 months once they see ROI from the initial scope.",
+      "Yes: all our AI marketing agents are built modularly. Start with the Content AI Starter focused on social and email, then add the WhatsApp broadcast module, then the ad optimisation layer, and finally full autonomous campaign execution. Incremental upgrades are priced at the delta, not a full rebuild. Most clients expand within 6 months once they see ROI from the initial scope.",
   },
   {
     category: 'pricing',
@@ -542,6 +557,10 @@ const faqSchema = {
 export default function AIMarketingAgentINPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="ai-marketing-agent-in-faq-schema"
         type="application/ld+json"
@@ -577,13 +596,19 @@ export default function AIMarketingAgentINPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+          { name: 'AI Marketing Agent', url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_marketing_agent_hero" />}
           eyebrow="AI MARKETING AGENT · INDIA"
-          headline="AI That Plans, Writes & Sends Your Diwali Campaign — While You Run Your Business"
-          lead="WhatsApp broadcasts, festival campaigns, social content, and ad optimisation — automated with India-first AI that writes in Hindi, understands your festival calendar, and learns which messages drive revenue. Fixed price. No agency retainer."
+          headline="AI That Plans, Writes & Sends Your Diwali Campaign, While You Run Your Business"
+          lead="WhatsApp broadcasts, festival campaigns, social content, and ad optimisation, automated with India-first AI that writes in Hindi, understands your festival calendar, and learns which messages drive revenue. Fixed price. No agency retainer."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
@@ -605,7 +630,7 @@ export default function AIMarketingAgentINPage() {
                 {[
                   'Diwali brief generated → 847 contacts segmented by past purchase → Hindi + English variants ready',
                   'Meta Ads: ₹3,200/day budget reallocated from low-ROAS ad set to top performer automatically',
-                  'Instagram: 12 posts queued for next 30 days — AI-written captions, festival-themed creative',
+                  'Instagram: 12 posts queued for next 30 days: AI-written captions, festival-themed creative',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -619,7 +644,7 @@ export default function AIMarketingAgentINPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  Campaigns awaiting your one-click approval — then the AI sends, measures, and learns.
+                  Campaigns awaiting your one-click approval, then the AI sends, measures, and learns.
                 </p>
               </div>
             </div>
@@ -639,7 +664,7 @@ export default function AIMarketingAgentINPage() {
         <ServiceExplanation
           eyebrow="AI MARKETING AGENT EXPLAINED"
           headline="Why an AI Marketing Agent Is Nothing Like the Marketing Tools You Have Tried"
-          lead="SaaS marketing tools are delivery platforms — you still create the strategy, write the content, and set the schedule manually. An AI marketing agent generates the strategy, writes the copy, and learns what converts — running your campaigns 24/7 without a brief from you."
+          lead="SaaS marketing tools are delivery platforms, you still create the strategy, write the content, and set the schedule manually. An AI marketing agent generates the strategy, writes the copy, and learns what converts, running your campaigns 24/7 without a brief from you."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -663,7 +688,7 @@ export default function AIMarketingAgentINPage() {
                 ))}
               </div>
               <p>
-                The marketing tools most Indian businesses use — Mailchimp, Zoho Campaigns, Meta Ads Manager — require your team to log in every week, write the content, pick the audience, and hit send. An AI marketing agent does all of this autonomously. It reads your product catalogue, monitors your festival calendar, generates a campaign brief with copy and audience segmentation, and sends it — in Hindi and English — while you are running your business.
+                The marketing tools most Indian businesses use: Mailchimp, Zoho Campaigns, Meta Ads Manager, require your team to log in every week, write the content, pick the audience, and hit send. An AI marketing agent does all of this autonomously. It reads your product catalogue, monitors your festival calendar, generates a campaign brief with copy and audience segmentation, and sends it, in Hindi and English, while you are running your business.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -699,7 +724,7 @@ export default function AIMarketingAgentINPage() {
                 </p>
               </div>
               <p>
-                FactoryJet AI marketing agents are built on large language models — Claude, GPT-4o, or Gemini — with a campaign intelligence layer trained on your specific brand, audience segments, and festival calendar. The agent connects directly to your CRM, WhatsApp Business API, Meta Ads, and e-commerce platform so every campaign is informed by real customer data and every result feeds back into the next one.
+                FactoryJet AI marketing agents are built on large language models: Claude, GPT-4o, or Gemini, with a campaign intelligence layer trained on your specific brand, audience segments, and festival calendar. The agent connects directly to your CRM, WhatsApp Business API, Meta Ads, and e-commerce platform so every campaign is informed by real customer data and every result feeds back into the next one.
               </p>
             </>
           }
@@ -718,26 +743,26 @@ export default function AIMarketingAgentINPage() {
                   {
                     scenario: 'Diwali campaign brief',
                     manual: '2 weeks of planning, briefing, and back-and-forth with creative',
-                    ai: 'AI generates full brief in 24 hours — copy, segments, A/B variants ready',
+                    ai: 'AI generates full brief in 24 hours, copy, segments, A/B variants ready',
                   },
                   {
                     scenario: 'WhatsApp broadcast in Hindi',
-                    manual: 'Hire a Hindi copywriter, review, translate — 3–5 days',
+                    manual: 'Hire a Hindi copywriter, review, translate, 3–5 days',
                     ai: 'AI writes Hindi and Hinglish variants instantly from product data',
                   },
                   {
                     scenario: 'Meta Ads budget optimisation',
-                    manual: 'Check ads manager daily, reallocate manually — often too late',
+                    manual: 'Check ads manager daily, reallocate manually, often too late',
                     ai: 'AI monitors ROAS in real time, suggests reallocation during festival peak',
                   },
                   {
                     scenario: 'Monthly social content',
                     manual: '20–30 hours per month briefing and reviewing social posts',
-                    ai: 'AI generates 30 posts, schedules at peak times — reviewed in 1 hour',
+                    ai: 'AI generates 30 posts, schedules at peak times, reviewed in 1 hour',
                   },
                   {
                     scenario: 'Performance attribution',
-                    manual: 'Manual spreadsheet tracking — weeks after the campaign',
+                    manual: 'Manual spreadsheet tracking, weeks after the campaign',
                     ai: 'Revenue attribution dashboard updated in real time, per campaign',
                   },
                 ].map((row) => (
@@ -763,23 +788,23 @@ export default function AIMarketingAgentINPage() {
         {/* ── 5. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
-          headline="Your marketing team cannot outscale festival season — AI can"
+          headline="Your marketing team cannot outscale festival season, AI can"
           lead="Indian businesses have 15+ major revenue windows every year. Each one requires a new strategy, new content, new segmentation, and a new send. Most teams are scrambling two weeks before Diwali. An AI marketing agent starts preparing in October."
           pillars={[
             {
               icon: '🎆',
               title: 'Festival season is won or lost in the preparation window',
-              body: "40% of annual D2C revenue happens in the 45 days around Diwali. Brands that brief campaigns 14+ days out see 2–3× higher ROAS than those scrambling the week before. An AI marketing agent auto-generates festival briefs on a fixed calendar — your Diwali campaign is ready by October 10th, every year, without a single brief from you.",
+              body: "40% of annual D2C revenue happens in the 45 days around Diwali. Brands that brief campaigns 14+ days out see 2–3× higher ROAS than those scrambling the week before. An AI marketing agent auto-generates festival briefs on a fixed calendar: your Diwali campaign is ready by October 10th, every year, without a single brief from you.",
             },
             {
               icon: '📱',
-              title: 'WhatsApp is your highest-ROI channel — but most teams use it manually',
-              body: "India has 500M+ WhatsApp users with 65–80% open rates on business broadcasts — versus 18% for email. Yet most Indian businesses send WhatsApp campaigns manually, with no segmentation, no personalisation, and no A/B testing. An AI marketing agent sends segmented, personalised, Hindi-and-English broadcasts on the official Business API — at scale, with compliance built in.",
+              title: 'WhatsApp is your highest-ROI channel | but most teams use it manually',
+              body: "India has 500M+ WhatsApp users with 65–80% open rates on business broadcasts, versus 18% for email. Yet most Indian businesses send WhatsApp campaigns manually, with no segmentation, no personalisation, and no A/B testing. An AI marketing agent sends segmented, personalised, Hindi-and-English broadcasts on the official Business API, at scale, with compliance built in.",
             },
             {
               icon: '📉',
               title: 'Ad budgets leak while your team has other priorities',
-              body: "Most Indian SMBs leave 20–30% of their Meta and Google Ads budget performing below average — not because of bad strategy, but because nobody has time to optimise daily. An AI marketing agent monitors ROAS in real time and flags reallocation opportunities during peak windows, so your Diwali budget goes to the top-performing ad set, not the one you set up in August.",
+              body: "Most Indian SMBs leave 20–30% of their Meta and Google Ads budget performing below average, not because of bad strategy, but because nobody has time to optimise daily. An AI marketing agent monitors ROAS in real time and flags reallocation opportunities during peak windows, so your Diwali budget goes to the top-performing ad set, not the one you set up in August.",
             },
           ]}
         />
@@ -796,7 +821,7 @@ export default function AIMarketingAgentINPage() {
         <ServiceExplanation
           eyebrow="TECHNOLOGY"
           headline="The technology stack behind your AI marketing agent"
-          lead="We do not have a preferred vendor — we pick the right model, channel platform, and analytics layer for your business, audience size, and marketing maturity. Every architectural decision is documented and handed over."
+          lead="We do not have a preferred vendor, we pick the right model, channel platform, and analytics layer for your business, audience size, and marketing maturity. Every architectural decision is documented and handed over."
           reverseOnDesktop
           body={
             <>
@@ -830,7 +855,7 @@ export default function AIMarketingAgentINPage() {
                 </table>
               </div>
               <p>
-                For multi-language requirements, we configure language-specific prompt chains so your Gujarati audience in Ahmedabad gets festival copy that reads differently from your Hindi-speaking audience in Delhi — same product, same offer, different cultural resonance.
+                For multi-language requirements, we configure language-specific prompt chains so your Gujarati audience in Ahmedabad gets festival copy that reads differently from your Hindi-speaking audience in Delhi, same product, same offer, different cultural resonance.
               </p>
             </>
           }
@@ -846,11 +871,11 @@ export default function AIMarketingAgentINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { name: 'Festival Campaign AI', desc: 'Full Diwali, Navratri, Holi, and IPL campaign automation — brief generation, copy, WhatsApp send, and attribution in one flow.' },
+                  { name: 'Festival Campaign AI', desc: 'Full Diwali, Navratri, Holi, and IPL campaign automation | brief generation, copy, WhatsApp send, and attribution in one flow.' },
                   { name: 'WhatsApp Broadcast AI', desc: 'Official Business API broadcasts with Hindi/vernacular copy, audience segmentation, A/B testing, and TRAI-compliant opt-in management.' },
-                  { name: 'Social Content AI', desc: 'AI-generated Instagram captions, Facebook posts, and Reels scripts — scheduled at peak engagement windows, 30 posts/month minimum.' },
+                  { name: 'Social Content AI', desc: 'AI-generated Instagram captions, Facebook posts, and Reels scripts | scheduled at peak engagement windows, 30 posts/month minimum.' },
                   { name: 'Ad Budget Optimisation AI', desc: 'Real-time Google Ads and Meta Ads monitoring with budget reallocation signals tied to your festival calendar and ROAS targets.' },
-                  { name: 'Full-Stack Marketing AI', desc: 'All of the above unified — one AI engine managing WhatsApp, email, social, and ads with a shared audience intelligence layer.' },
+                  { name: 'Full-Stack Marketing AI', desc: 'All of the above unified | one AI engine managing WhatsApp, email, social, and ads with a shared audience intelligence layer.' },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
                     <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.name}</p>
@@ -916,7 +941,7 @@ export default function AIMarketingAgentINPage() {
           headline="500M WhatsApp users. 15 festival windows. One AI agent that handles all of it."
           leadParagraphs={[
             "Indian marketing is unlike any other market in the world. You have 15+ major festival revenue windows, 22 official languages, a WhatsApp-first consumer behaviour pattern, and Tier 2/3 cities growing faster than metros. Generic Western marketing automation tools were not designed for any of this.",
-            "FactoryJet's AI marketing agents are built India-first — with the festival calendar pre-loaded, Indic language models for vernacular copy, WhatsApp Business API compliance baked in, and integrations with the tools Indian businesses actually use (Zoho, CleverTap, WebEngage, Commerceflo, Unicommerce). Every agent we deliver is a competitive moat, not a commodity subscription.",
+            "FactoryJet's AI marketing agents are built India-first, with the festival calendar pre-loaded, Indic language models for vernacular copy, WhatsApp Business API compliance baked in, and integrations with the tools Indian businesses actually use (Zoho, CleverTap, WebEngage, Commerceflo, Unicommerce). Every agent we deliver is a competitive moat, not a commodity subscription.",
           ]}
           bodySlot={
             <>
@@ -955,7 +980,7 @@ export default function AIMarketingAgentINPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Marketing Agency vs. Freelancer vs. SaaS Tool"
-          lead="Fixed price, full ownership, Indian festival and WhatsApp automation out of the box — the honest comparison."
+          lead="Fixed price, full ownership, Indian festival and WhatsApp automation out of the box: the honest comparison."
           pullQuote={{
             stat: 'Fixed price',
             caption:
@@ -985,7 +1010,7 @@ export default function AIMarketingAgentINPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Start"
-          lead="The questions we answer on every Indian AI marketing agent discovery call — answered honestly, without the runaround."
+          lead="The questions we answer on every Indian AI marketing agent discovery call, answered honestly, without the runaround."
           categories={MARKETING_FAQ_CATEGORIES}
           items={MARKETING_FAQ_ITEMS}
         />
@@ -998,7 +1023,7 @@ export default function AIMarketingAgentINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free AI Marketing Strategy Call"
-            sub="Tell us your biggest marketing bottleneck — usually festival preparation, WhatsApp broadcast management, or content volume. We will map out exactly how an AI marketing agent fits your channels and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure."
+            sub="Tell us your biggest marketing bottleneck, usually festival preparation, WhatsApp broadcast management, or content volume. We will map out exactly how an AI marketing agent fits your channels and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Meta Ads ready. No agency lock-in."

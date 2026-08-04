@@ -13,7 +13,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import './small-business-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/small-business-seo — built 2026-06-03. US SEO program.
+   /us/services/small-business-seo, built 2026-06-03. US SEO program.
 
    Design: "Navigator (light)" system cloned from /us/services/local-seo (scoped
    under .sbseo). Light hero with a growth/leads card visual (replaces the map),

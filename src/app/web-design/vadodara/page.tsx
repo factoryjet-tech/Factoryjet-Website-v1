@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Vadodara | FactoryJet',
     description:
-      'Professional website design company in Vadodara — Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Makarpura, Waghodia, Savli, and Vadodara city businesses.',
+      'Professional website design company in Vadodara: Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Makarpura, Waghodia, Savli, and Vadodara city businesses.',
     url: 'https://factoryjet.com/web-design/vadodara',
     images: [
       {
@@ -89,6 +90,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/vadodara#webpage',
+  url: 'https://factoryjet.com/web-design/vadodara',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -139,31 +154,31 @@ const VDR_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Vadodara's industrial market — whether that's an international procurement team sourcing chemicals from GIDC Makarpura, a heavy engineering buyer evaluating Savli Industrial Estate suppliers, or a domestic pharma distributor. We audit your competitors and agree the sitemap and content plan before design begins. — Days 1–2",
+      "We map your ideal customer profile against Vadodara's industrial market, whether that's an international procurement team sourcing chemicals from GIDC Makarpura, a heavy engineering buyer evaluating Savli Industrial Estate suppliers, or a domestic pharma distributor. We audit your competitors and agree the sitemap and content plan before design begins.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, inquiry form, and product catalog section reviewed against your B2B conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, inquiry form, and product catalog section reviewed against your B2B conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. RFQ forms, WhatsApp integration, product catalog systems, PDF specification downloads, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. RFQ forms, WhatsApp integration, product catalog systems, PDF specification downloads, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Vadodara-specific local SEO targeting built in — GIDC Makarpura, Waghodia, Savli, and Baroda city searches. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Vadodara-specific local SEO targeting built in: GIDC Makarpura, Waghodia, Savli, and Baroda city searches.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -194,13 +209,13 @@ const VDR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Vadodara web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our administrative structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our administrative structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,7 +235,7 @@ const VDR_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      'We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.',
+      'We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.',
   },
   {
     category: 'included',
@@ -240,7 +255,7 @@ const VDR_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Vadodara businesses competing on Google's Core Web Vitals, that performance gap directly affects search rankings and international buyer first impressions.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Vadodara businesses competing on Google's Core Web Vitals, that performance gap directly affects search rankings and international buyer first impressions.",
   },
   {
     category: 'technical',
@@ -252,7 +267,7 @@ const VDR_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (RFQ form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (RFQ form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Vadodara Local ── */
@@ -260,7 +275,7 @@ const VDR_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for chemical and petrochemical companies in Vadodara?',
     answer:
-      'Yes — chemical exporters, petrochemical suppliers, and process engineering firms in the Vadodara-Ankleshwar chemical corridor are a core client profile. We build websites with product specification pages, SDS documentation systems, export credentials display, and RFQ forms designed for industrial buyers in the US, EU, and Middle East.',
+      'Yes, chemical exporters, petrochemical suppliers, and process engineering firms in the Vadodara-Ankleshwar chemical corridor are a core client profile. We build websites with product specification pages, SDS documentation systems, export credentials display, and RFQ forms designed for industrial buyers in the US, EU, and Middle East.',
   },
   {
     category: 'local',
@@ -272,7 +287,7 @@ const VDR_FAQ_ITEMS = [
     category: 'local',
     question: "Do you know Vadodara's industrial clusters well enough to write relevant copy?",
     answer:
-      "Yes. We research Vadodara's industrial geography as part of discovery — from GIDC Makarpura's auto ancillary and engineering cluster and GIDC Waghodia's diverse manufacturing base to Savli Industrial Estate's growing MSME belt, and the Vadodara-Ankleshwar petrochemical corridor — India's Chemical Valley. Local specificity in copy and LocalBusiness schema improves relevance for industry-level and geography-level searches.",
+      "Yes. We research Vadodara's industrial geography as part of discovery, from GIDC Makarpura's auto ancillary and engineering cluster and GIDC Waghodia's diverse manufacturing base to Savli Industrial Estate's growing MSME belt, and the Vadodara-Ankleshwar petrochemical corridor, India's Chemical Valley. Local specificity in copy and LocalBusiness schema improves relevance for industry-level and geography-level searches.",
   },
   {
     category: 'local',
@@ -286,7 +301,7 @@ const VDR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -429,31 +444,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
-      text: `We learn your business, your Vadodara market, your goals, and what you need the website to do — whether that's B2B export credibility, industrial RFQ generation, or domestic lead capture.`,
+      name: 'Day 1 | Discovery Call',
+      text: `We learn your business, your Vadodara market, your goals, and what you need the website to do, whether that's B2B export credibility, industrial RFQ generation, or domestic lead capture.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Vadodara competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Vadodara local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Vadodara local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -477,6 +492,10 @@ const speakableSchema = {
 export default function VadodaraWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="vdr-local-business-schema"
         type="application/ld+json"
@@ -506,13 +525,18 @@ export default function VadodaraWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Vadodara', url: 'https://factoryjet.com/web-design/vadodara' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_vadodara_hero" />}
           eyebrow="WEB DESIGN · VADODARA"
           headline="Website Design in Vadodara for Chemical Exporters, Engineering Manufacturers, and B2B Businesses"
-          lead="Vadodara (Baroda) is Gujarat's industrial and cultural capital — home to India's Chemical Valley, GIDC Makarpura's 10,000+ engineering and auto ancillary units, and heavy engineering giants like Alstom, ABB, and L&T. From the Vadodara-Ankleshwar petrochemical corridor to Savli Industrial Estate's MSME belt, Vadodara businesses compete for international B2B buyers every day. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Vadodara (Baroda) is Gujarat's industrial and cultural capital, home to India's Chemical Valley, GIDC Makarpura's 10,000+ engineering and auto ancillary units, and heavy engineering giants like Alstom, ABB, and L&T. From the Vadodara-Ankleshwar petrochemical corridor to Savli Industrial Estate's MSME belt, Vadodara businesses compete for international B2B buyers every day. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -535,26 +559,26 @@ export default function VadodaraWebDesignPage() {
           eyebrow="VADODARA MARKET"
           headline="Why Your Vadodara Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Vadodara is Gujarat's third-largest city and the industrial backbone of the Vadodara-Ankleshwar corridor — India's Chemical Valley. The city houses GAIL, IPCL/RIL Petrochemicals, GSFC, and GNFC alongside thousands of downstream chemical and specialty chemical manufacturers. GIDC Makarpura alone is one of India's largest and most diverse industrial estates — 10,000+ units producing auto ancillaries, precision engineering components, industrial machinery, and plastic products. Savli Industrial Estate and GIDC Waghodia extend this manufacturing base further into pharma and textile machinery. Maharaja Sayajirao University feeds a large, technically trained workforce that underpins Vadodara's R&D-linked manufacturing sector.",
-            "This creates a web design imperative unique to Vadodara: a petrochemical exporter needs a completely different site architecture from an auto ancillary manufacturer in GIDC Makarpura or a pharma company in the Waghodia belt. International procurement teams — sourcing chemicals from the US, EU, and Middle East — research Indian vendors for weeks before making contact. The website needs to answer their due-diligence questions: product grades, certifications, production capacity, delivery history, and a frictionless RFQ form. A heavy engineering supplier targeting Tier 1 automotive OEMs needs IATF compliance display, product datasheets, and an enquiry flow built for procurement systems. FactoryJet builds for both — and for every manufacturing and trading business in between.",
-            "Vadodara's MSME sector — 50,000+ registered units — is increasingly competing for international export orders that require credible, fast, and SEO-optimised digital presences. The businesses that invest in their website now are capturing the international buyer research share that slower competitors are conceding every quarter. The gap between a business with a high-performing site and one without is widening faster than most Vadodara MSMEs realise.",
+            "Vadodara is Gujarat's third-largest city and the industrial backbone of the Vadodara-Ankleshwar corridor: India's Chemical Valley. The city houses GAIL, IPCL/RIL Petrochemicals, GSFC, and GNFC alongside thousands of downstream chemical and specialty chemical manufacturers. GIDC Makarpura alone is one of India's largest and most diverse industrial estates, 10,000+ units producing auto ancillaries, precision engineering components, industrial machinery, and plastic products. Savli Industrial Estate and GIDC Waghodia extend this manufacturing base further into pharma and textile machinery. Maharaja Sayajirao University feeds a large, technically trained workforce that underpins Vadodara's R&D-linked manufacturing sector.",
+            "This creates a web design imperative unique to Vadodara: a petrochemical exporter needs a completely different site architecture from an auto ancillary manufacturer in GIDC Makarpura or a pharma company in the Waghodia belt. International procurement teams, sourcing chemicals from the US, EU, and Middle East, research Indian vendors for weeks before making contact. The website needs to answer their due-diligence questions: product grades, certifications, production capacity, delivery history, and a frictionless RFQ form. A heavy engineering supplier targeting Tier 1 automotive OEMs needs IATF compliance display, product datasheets, and an enquiry flow built for procurement systems. FactoryJet builds for both, and for every manufacturing and trading business in between.",
+            "Vadodara's MSME sector, 50,000+ registered units, is increasingly competing for international export orders that require credible, fast, and SEO-optimised digital presences. The businesses that invest in their website now are capturing the international buyer research share that slower competitors are conceding every quarter. The gap between a business with a high-performing site and one without is widening faster than most Vadodara MSMEs realise.",
           ]}
           stats={[
             {
               value: '50,000+',
-              label: "Registered MSMEs in Vadodara district — one of Gujarat's most concentrated industrial MSME bases",
+              label: "Registered MSMEs in Vadodara district: one of Gujarat's most concentrated industrial MSME bases",
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'Ministry of MSME',
             },
             {
               value: 'Chemical Valley',
-              label: "The Vadodara-Ankleshwar corridor — India's Chemical Valley — hosts GAIL, RIL Petrochemicals, GSFC, GNFC and thousands of downstream units",
+              label: "The Vadodara-Ankleshwar corridor: India's Chemical Valley, hosts GAIL, RIL Petrochemicals, GSFC, GNFC and thousands of downstream units",
               sourceUrl: 'https://gujchemicals.gujarat.gov.in/',
               sourceLabel: 'Gujarat Chemical Industries',
             },
             {
               value: '₹1.2L Cr',
-              label: "Vadodara district's estimated GDP — Gujarat's third-largest city economy and a key industrial export hub",
+              label: "Vadodara district's estimated GDP, Gujarat's third-largest city economy and a key industrial export hub",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -565,12 +589,12 @@ export default function VadodaraWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · VADODARA"
           headline="What 'Web Design' Actually Means for a Vadodara Business"
-          lead="Vadodara's economy runs on B2B industrial procurement — where buyers in the US, EU, Middle East, and across India research vendors digitally for weeks before making contact. A website that fails to answer procurement due-diligence questions costs real export orders. FactoryJet builds for the Vadodara industrial buyer journey."
+          lead="Vadodara's economy runs on B2B industrial procurement, where buyers in the US, EU, Middle East, and across India research vendors digitally for weeks before making contact. A website that fails to answer procurement due-diligence questions costs real export orders. FactoryJet builds for the Vadodara industrial buyer journey."
           body={
             <>
               <p>
                 For Vadodara&apos;s chemical exporters, petrochemical suppliers, and process
-                engineering firms — the website is the first filter in a multi-week procurement
+                engineering firms: the website is the first filter in a multi-week procurement
                 research process. International buyers sourcing from the Vadodara-Ankleshwar
                 Chemical Valley need to verify product grades, safety data, certifications,
                 production capacity, and export track record before initiating an RFQ. A website
@@ -580,7 +604,7 @@ export default function VadodaraWebDesignPage() {
                 RFQ flows designed for industrial procurement.
               </p>
               <p>
-                For GIDC Makarpura&apos;s engineering and auto ancillary manufacturers —
+                For GIDC Makarpura&apos;s engineering and auto ancillary manufacturers,
                 the website is a vendor qualification tool. Tier 1 and Tier 2 automotive OEMs,
                 heavy machinery buyers, and capital equipment procurement teams need to see
                 manufacturing certifications (IATF 16949, ISO 9001), process capabilities,
@@ -667,17 +691,17 @@ export default function VadodaraWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Vadodara Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Vadodara's manufacturing and export community moves on production schedules and procurement cycles — not agency timelines. Waiting 10 weeks for a website that should have been live before the trade show is not acceptable when international buyer outreach is happening now. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Vadodara's manufacturing and export community moves on production schedules and procurement cycles, not agency timelines. Waiting 10 weeks for a website that should have been live before the trade show is not acceptable when international buyer outreach is happening now. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
               title: 'Next.js, not WordPress. The performance gap is real.',
-              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on international networks — critical when a US procurement manager is evaluating a Vadodara chemical supplier at the same time as three competitors. A slow website is a disqualifier in the first 3 seconds.",
+              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on international networks, critical when a US procurement manager is evaluating a Vadodara chemical supplier at the same time as three competitors. A slow website is a disqualifier in the first 3 seconds.",
             },
             {
               icon: '📋',
@@ -703,7 +727,7 @@ export default function VadodaraWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -712,9 +736,9 @@ export default function VadodaraWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -728,11 +752,11 @@ export default function VadodaraWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Vadodara Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Vadodara deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Vadodara deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={VDR_COMPARISON_COLUMNS}
           rows={VDR_COMPARISON_ROWS}
@@ -743,47 +767,47 @@ export default function VadodaraWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="VADODARA × WEB DESIGN"
           headline="Web Design for Vadodara's Key Industries"
-          lead="From petrochemical exporters and heavy engineering manufacturers to pharma companies, auto ancillary MSMEs, and B2B trading firms — Vadodara's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From petrochemical exporters and heavy engineering manufacturers to pharma companies, auto ancillary MSMEs, and B2B trading firms, Vadodara's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Chemicals & Petrochemicals',
               description:
-                "The Vadodara-Ankleshwar corridor is India's Chemical Valley — home to GAIL, IPCL/RIL Petrochemicals, GSFC, GNFC, and thousands of downstream chemical manufacturers. Chemical exporters need websites that project product grades, safety certifications, production capacity, and export track record to international procurement teams in the US, EU, and Middle East. Product specification pages, SDS systems, and RFQ flows built for industrial buyers are standard.",
+                "The Vadodara-Ankleshwar corridor is India's Chemical Valley, home to GAIL, IPCL/RIL Petrochemicals, GSFC, GNFC, and thousands of downstream chemical manufacturers. Chemical exporters need websites that project product grades, safety certifications, production capacity, and export track record to international procurement teams in the US, EU, and Middle East. Product specification pages, SDS systems, and RFQ flows built for industrial buyers are standard.",
               example:
                 'Chemical exporters, specialty chemical manufacturers, and petrochemical downstream suppliers in the Vadodara-Ankleshwar corridor targeting international procurement teams.',
             },
             {
               name: 'Heavy Engineering & Machinery',
               description:
-                "Vadodara hosts Alstom's India headquarters, ABB's large manufacturing base, Bombardier's operations, and L&T's heavy engineering facilities — alongside thousands of local engineering equipment and industrial machinery manufacturers. Engineering companies need websites that project technical depth: capability pages, product datasheets, case studies, manufacturing certifications, and lead flows for high-value capital equipment procurement.",
+                "Vadodara hosts Alstom's India headquarters, ABB's large manufacturing base, Bombardier's operations, and L&T's heavy engineering facilities, alongside thousands of local engineering equipment and industrial machinery manufacturers. Engineering companies need websites that project technical depth: capability pages, product datasheets, case studies, manufacturing certifications, and lead flows for high-value capital equipment procurement.",
               example:
                 'Industrial machinery manufacturers, heavy engineering firms, and capital equipment suppliers in Vadodara targeting domestic and export buyers.',
             },
             {
               name: 'Auto Ancillary & Precision Engineering',
               description:
-                "GIDC Makarpura is one of India's largest and most diverse industrial estates — 10,000+ units producing auto ancillaries, precision engineering components, stampings, forgings, and plastic moulded parts. Auto ancillary businesses need websites optimised for Tier 1 and Tier 2 OEM vendor qualification: IATF 16949 display, manufacturing process descriptions, quality certifications, and a structured RFQ form.",
+                "GIDC Makarpura is one of India's largest and most diverse industrial estates, 10,000+ units producing auto ancillaries, precision engineering components, stampings, forgings, and plastic moulded parts. Auto ancillary businesses need websites optimised for Tier 1 and Tier 2 OEM vendor qualification: IATF 16949 display, manufacturing process descriptions, quality certifications, and a structured RFQ form.",
               example:
                 'Auto ancillary manufacturers, precision engineering component suppliers, and MSME manufacturers in GIDC Makarpura and Waghodia targeting OEM procurement.',
             },
             {
               name: 'Pharmaceuticals & Life Sciences',
               description:
-                "Vadodara has a growing pharmaceutical manufacturing base — supported by GIDC Waghodia and the broader Gujarat pharma corridor. Pharma companies need regulatory-compliant websites: GMP certification display, product documentation systems, USFDA/WHO-GMP credentials, and B2B lead flows for institutional procurement. The website is the primary vendor qualification touchpoint for domestic and export buyers.",
+                "Vadodara has a growing pharmaceutical manufacturing base, supported by GIDC Waghodia and the broader Gujarat pharma corridor. Pharma companies need regulatory-compliant websites: GMP certification display, product documentation systems, USFDA/WHO-GMP credentials, and B2B lead flows for institutional procurement. The website is the primary vendor qualification touchpoint for domestic and export buyers.",
               example:
                 'API producers, formulation manufacturers, pharma exporters, and life sciences companies operating from Vadodara and the Waghodia industrial belt.',
             },
             {
               name: 'Fertilizers & Agri-Inputs',
               description:
-                "Vadodara is home to GSFC (Gujarat State Fertilizers & Chemicals) and GNFC (Gujarat Narmada Valley Fertilizers & Chemicals) — two of India's largest fertilizer and agri-chemicals producers. Fertilizer and agri-input businesses need websites that project product range, nutrient profiles, dealer network information, and institutional procurement capabilities for bulk buyers and government agencies.",
+                "Vadodara is home to GSFC (Gujarat State Fertilizers & Chemicals) and GNFC (Gujarat Narmada Valley Fertilizers & Chemicals): two of India's largest fertilizer and agri-chemicals producers. Fertilizer and agri-input businesses need websites that project product range, nutrient profiles, dealer network information, and institutional procurement capabilities for bulk buyers and government agencies.",
               example:
                 'Fertilizer manufacturers, agri-chemical producers, and micro-nutrient suppliers targeting institutional buyers, government tenders, and dealer networks across India.',
             },
             {
               name: 'B2B Trading & Wholesale',
               description:
-                "Vadodara's strong trading community spans industrial consumables, packaging materials, construction supplies, and wholesale distribution. B2B trading businesses need websites that project product breadth, reliability, and supply chain depth to procurement managers. Product catalog systems, bulk inquiry forms, and trade credibility signals — optimised for domestic and export buyers — are the standard architecture.",
+                "Vadodara's strong trading community spans industrial consumables, packaging materials, construction supplies, and wholesale distribution. B2B trading businesses need websites that project product breadth, reliability, and supply chain depth to procurement managers. Product catalog systems, bulk inquiry forms, and trade credibility signals, optimised for domestic and export buyers, are the standard architecture.",
               example:
                 'Industrial consumable distributors, packaging material traders, construction supply wholesalers, and B2B trading firms operating from Vadodara.',
             },
@@ -801,7 +825,7 @@ export default function VadodaraWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Vadodara Businesses"
-          lead="The questions we answer on every Vadodara discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Vadodara discovery call, answered here, without the runaround."
           categories={VDR_FAQ_CATEGORIES}
           items={VDR_FAQ_ITEMS}
         />

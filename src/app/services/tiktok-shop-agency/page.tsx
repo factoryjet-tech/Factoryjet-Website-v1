@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { Users, Megaphone, ClipboardList, Video, Search, Workflow, Check } from 'lucide-react';
 
@@ -210,6 +211,11 @@ export default function TikTokShopAgencyPage() {
       <SiteHeader locale="us" />
 
       <main className="tts">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'TikTok Shop Agency', url: URL },
+        ]} />
         {/* HERO */}
         <section className="tts-hero">
           <div className="tts-wrap tts-hero-grid">

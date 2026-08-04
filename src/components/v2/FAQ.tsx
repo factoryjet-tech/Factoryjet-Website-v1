@@ -105,7 +105,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
         </span>
       </summary>
 
-      {/* Answer — in DOM even when closed; AI crawlers index it.
+      {/* Answer, in DOM even when closed; AI crawlers index it.
           Orange left-border accent when open (group-open: reads the <details open> attr). */}
       <div
         className="pb-6 pt-0.5 group-open:border-l-2 group-open:pl-4"
@@ -242,7 +242,7 @@ export default function FAQ({
                 Topics
               </p>
 
-              {/* Nav list — Linear Minimal style with left-border indicator */}
+              {/* Nav list, Linear Minimal style with left-border indicator */}
               <nav aria-label="FAQ topics">
                 <ul className="space-y-0.5" role="list">
                   {categories!.map((cat) => {
@@ -309,7 +309,7 @@ export default function FAQ({
                     className="scroll-mt-28"
                   >
                     <MotionFadeUp delay={ci * 0.04}>
-                      {/* Category header — thin orange accent bar + label */}
+                      {/* Category header, thin orange accent bar + label */}
                       <div className="mb-1 flex items-center gap-3 pb-4">
                         <div
                           className="h-[2px] w-6 flex-shrink-0"

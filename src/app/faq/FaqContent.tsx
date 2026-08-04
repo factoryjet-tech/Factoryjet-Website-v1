@@ -380,7 +380,7 @@ export default function FaqContent() {
       <Hero searchValue={searchQuery} onSearchChange={setSearchQuery} />
 
       {/* Trust signal */}
-      <LogoBar tagline="Trusted by 500+ US businesses — answered by the same team that built their sites" />
+      <LogoBar tagline="Trusted by 500+ US businesses, answered by the same team that built their sites" />
 
       {/* Popular questions quick links */}
       {!isSearching && <QuickLinks onSelectQuestion={handleSelectSearchResult} />}
@@ -443,7 +443,7 @@ export default function FaqContent() {
         variant="dark"
         eyebrow="STILL HAVE QUESTIONS?"
         headline="Can't find what you're looking for?"
-        sub="Our team answers every inquiry within 4 business hours. Talk to the founder — no commitment required."
+        sub="Our team answers every inquiry within 4 business hours. Talk to the founder, no commitment required."
         primaryCta={{ label: 'Talk to the Founder', href: '/contact' }}
         secondaryCta={{ label: 'Email Us', href: 'mailto:connect@factoryjet.com' }}
         objectionHandler="No commitment. No sales pitch. Just answers."

@@ -148,7 +148,7 @@ export default function DigitalLandscape() {
                 Google AI Overviews now appear in 42% of UK searches. ChatGPT
                 had 1.8 billion UK visits in eight months. Perplexity AI
                 processes 780 million queries monthly. And 54% of UK firms are
-                actively using AI — up from just 9% in 2023. The digital
+                actively using AI, up from just 9% in 2023. The digital
                 agencies that built their models around WordPress templates
                 and traditional SEO are not equipped for this reality.
               </p>
@@ -158,16 +158,16 @@ export default function DigitalLandscape() {
                 agency built from the ground up for how UK businesses need to
                 compete in 2026. We deliver enterprise-grade web design,
                 Shopify and WooCommerce e-commerce stores, custom AI agents,
-                and next-generation search optimisation — including generative
+                and next-generation search optimisation, including generative
                 engine optimisation (GEO), answer engine optimisation (AEO),
-                and AI optimisation (AIO) — at a fixed, transparent quote,
+                and AI optimisation (AIO), at a fixed, transparent quote,
                 with senior engineers and no agency overhead.
               </p>
               <p>
                 The United Kingdom has the largest AI sector in Europe and
                 the third largest globally, valued at £80.8 billion in 2026.
                 British businesses are adopting AI faster than almost anywhere
-                else — the proportion of UK firms actively using AI has leapt
+                else: the proportion of UK firms actively using AI has leapt
                 from 9% in 2023 to 25% in late 2024 to 54% in early 2026,
                 according to the British Chambers of Commerce. Yet a
                 significant gap remains: only 28% of UK businesses have fully
@@ -179,9 +179,9 @@ export default function DigitalLandscape() {
               </p>
               <p>
                 This gap represents one of the largest business opportunities
-                in UK digital services today. The companies that bridge it —
+                in UK digital services today. The companies that bridge it,
                 that make AI accessible, affordable, and practical for British
-                SMBs — will define the next era of UK business technology.
+                SMBs, will define the next era of UK business technology.
                 That is exactly what FactoryJet was built to do.
               </p>
               <p>
@@ -196,8 +196,8 @@ export default function DigitalLandscape() {
                 2025. And here is the number that should matter most to every
                 UK business owner: AI search traffic converts at 4.4 times
                 the rate of traditional organic search. UK businesses need a
-                digital partner that understands both worlds — traditional
-                search and AI-powered discovery — and builds for both from
+                digital partner that understands both worlds, traditional
+                search and AI-powered discovery, and builds for both from
                 day one.
               </p>
             </div>
@@ -217,7 +217,7 @@ export default function DigitalLandscape() {
               >
                 <Image
                   src="/images/uk/uk-landscape.jpg"
-                  alt="Modern UK technology and business landscape — London glass office towers at daylight"
+                  alt="Modern UK technology and business landscape, London glass office towers at daylight"
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   className="object-cover"
@@ -235,7 +235,7 @@ export default function DigitalLandscape() {
                 }}
               >
                 British businesses are adopting AI faster than almost anywhere
-                else in Europe — and FactoryJet is built for that reality.
+                else in Europe, and FactoryJet is built for that reality.
               </p>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function DigitalLandscape() {
                   "0 1px 3px rgba(0,0,0,0.04)";
               }}
             >
-              {/* Decorative progress ring — top right */}
+              {/* Decorative progress ring, top right */}
               <svg
                 aria-hidden="true"
                 width="64"
@@ -290,7 +290,7 @@ export default function DigitalLandscape() {
                   stroke="#E2E8F0"
                   strokeWidth="3"
                 />
-                {/* Fill — starts hidden (full offset), GSAP draws it in */}
+                {/* Fill, starts hidden (full offset), GSAP draws it in */}
                 <circle
                   data-ring-fill={s.ringPct}
                   cx="32"

@@ -9,7 +9,7 @@ import { useEffect } from 'react';
    - Crystal-glass cards: pointer mapped to the nearest card's on-screen center
      (3D :hover hit-testing is unreliable in Safari), plus a one-time auto-demo
      on first view so all three layers visibly animate.
-   No GSAP/Framer — keeps the page at a clean 100/100. Honors reduced-motion. */
+   No GSAP/Framer, keeps the page at a clean 100/100. Honors reduced-motion. */
 export default function EcomFx() {
   useEffect(() => {
     const root = document.querySelector('.aseo');

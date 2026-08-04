@@ -16,9 +16,9 @@ const STATS = [
 ];
 
 const PARAGRAPHS = [
-  "Manchester isn't just the second city — it's becoming the first choice for tech businesses that need proximity to talent, infrastructure, and capital without London's cost burden. The city topped the SAS AI Cities Index in both 2024 and 2025, ranking first nationally for AI job opportunities, innovation funding, and business activity. Neighbouring Salford rose to fifth in the same index, confirming the wider city-region's dominance.",
+  "Manchester isn't just the second city. It's becoming the first choice for tech businesses that need proximity to talent, infrastructure, and capital without London's cost burden. The city topped the SAS AI Cities Index in both 2024 and 2025, ranking first nationally for AI job opportunities, innovation funding, and business activity. Neighbouring Salford rose to fifth in the same index, confirming the wider city-region's dominance.",
   "The numbers tell the story: Greater Manchester's tech sector generates over £30 billion annually. Research from Barclays Eagle Labs confirms that Manchester benefits economically from its tech businesses more than any other UK city outside London. A study from Capital Enterprise shows that decision-makers at UK tech firms consider Manchester the UK's top destination for starting a new tech business.",
-  "Manchester's population has grown from 422,000 in 2000 to nearly 600,000 today, with forecasts pushing past 630,000 by the end of 2026. The city centre alone is projected to reach 100,000 residents. This growth is being absorbed around the core — Ancoats, the Northern Quarter, Salford Quays — exactly where businesses need high-converting websites to capture an audience that is young, digitally native, and spending.",
+  "Manchester's population has grown from 422,000 in 2000 to nearly 600,000 today, with forecasts pushing past 630,000 by the end of 2026. The city centre alone is projected to reach 100,000 residents. This growth is being absorbed around the core: Ancoats, the Northern Quarter, Salford Quays, exactly where businesses need high-converting websites to capture an audience that is young, digitally native, and spending.",
 ];
 
 export default function CityContext() {
@@ -143,7 +143,7 @@ export default function CityContext() {
             ))}
           </div>
 
-          {/* RIGHT: sticky stat sidebar — sticky on desktop only */}
+          {/* RIGHT: sticky stat sidebar, sticky on desktop only */}
           <div
             ref={statsRef}
             className="flex flex-col lg:sticky lg:top-[120px]"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -21,7 +22,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
   description:
-    'AI customer support agents for Indian businesses — deflect 70%+ of WhatsApp queries in Hindi & English. Integrated with Zoho, Freshdesk & Shopify. Fixed price.',
+    'AI customer support agents for Indian businesses, deflect 70%+ of WhatsApp queries in Hindi & English. Integrated with Zoho, Freshdesk & Shopify. Fixed price.',
   keywords: [
     'AI customer support India',
     'WhatsApp customer support AI India',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
-    description: 'Deflect 70%+ of WhatsApp support queries with AI. Order status, returns, FAQs in Hindi — integrated with Zoho Desk, Freshdesk, and Shopify.',
+    description: 'Deflect 70%+ of WhatsApp support queries with AI. Order status, returns, FAQs in Hindi, integrated with Zoho Desk, Freshdesk, and Shopify.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
     images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
@@ -53,6 +54,20 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -63,7 +78,7 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
     
   },
-  description: 'Custom AI customer support agents for Indian businesses — WhatsApp support, Freshdesk integration, Hindi and English handling, order status, returns, and FAQ automation.',
+  description: 'Custom AI customer support agents for Indian businesses: WhatsApp support, Freshdesk integration, Hindi and English handling, order status, returns, and FAQ automation.',
   areaServed: 'IN',
   serviceType: 'AI Customer Support Automation',
 };
@@ -88,17 +103,17 @@ const SUPPORT_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '02',
     title: 'Knowledge Base Build',
-    description: 'We build the AI\'s knowledge base from your existing content — FAQs, product descriptions, policies, support scripts, Notion docs, Google Sheets. We process this into a RAG knowledge base so the AI retrieves accurate, current information before answering.',
+    description: 'We build the AI\'s knowledge base from your existing content: FAQs, product descriptions, policies, support scripts, Notion docs, Google Sheets. We process this into a RAG knowledge base so the AI retrieves accurate, current information before answering.',
   },
   {
     number: '03',
     title: 'Integration Build',
-    description: 'We connect the AI to your live systems — Shopify for order data, Shiprocket for tracking, Razorpay for payment status, Tally for invoices, and Freshdesk or Zoho Desk for escalation routing. The bot answers with real data, not cached responses.',
+    description: 'We connect the AI to your live systems: Shopify for order data, Shiprocket for tracking, Razorpay for payment status, Tally for invoices, and Freshdesk or Zoho Desk for escalation routing. The bot answers with real data, not cached responses.',
   },
   {
     number: '04',
     title: 'Test & Tune',
-    description: 'We run the AI against 200+ real support queries — including Hindi queries, edge cases, and abuse patterns — reviewing accuracy and escalation triggers. We tune until the deflection rate and escalation accuracy meet agreed targets.',
+    description: 'We run the AI against 200+ real support queries, including Hindi queries, edge cases, and abuse patterns, reviewing accuracy and escalation triggers. We tune until the deflection rate and escalation accuracy meet agreed targets.',
   },
   {
     number: '05',
@@ -110,7 +125,7 @@ const SUPPORT_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const SUPPORT_STATS = [
   {
     value: '70%+',
-    label: 'of WhatsApp support queries deflected by AI — typical for Indian D2C and B2B deployments',
+    label: 'of WhatsApp support queries deflected by AI, typical for Indian D2C and B2B deployments',
     microcopy: 'FactoryJet client data',
     categoryLabel: 'DEFLECTION RATE',
   },
@@ -137,7 +152,7 @@ const SUPPORT_MARKET_STATS = [
   },
   {
     value: '500M+',
-    label: 'WhatsApp users in India — your customers are already expecting support there',
+    label: 'WhatsApp users in India: your customers are already expecting support there',
     sourceUrl: 'https://meta.com/business/whatsapp-india-report-2024',
     sourceLabel: 'Meta Business India 2024',
   },
@@ -252,32 +267,32 @@ const SUPPORT_COMPARISON_ROWS = [
 const SUPPORT_INDUSTRIES = [
   {
     name: 'D2C E-Commerce',
-    description: 'WhatsApp AI that handles order status, return requests, Shiprocket tracking, exchange processing, and product queries 24/7 — integrated with Shopify and Razorpay so every answer is backed by live data.',
+    description: 'WhatsApp AI that handles order status, return requests, Shiprocket tracking, exchange processing, and product queries 24/7, integrated with Shopify and Razorpay so every answer is backed by live data.',
     example: 'D2C brands see 70%+ WhatsApp ticket deflection within 30 days of deployment.',
   },
   {
     name: 'B2B Distribution',
-    description: 'Dealer and retailer support on WhatsApp — stock availability checks, order status, GST invoice retrieval from Tally, payment confirmation, and return processing without calling the sales team.',
+    description: 'Dealer and retailer support on WhatsApp, stock availability checks, order status, GST invoice retrieval from Tally, payment confirmation, and return processing without calling the sales team.',
     example: 'Distributors reduce inbound sales calls by 40% after WhatsApp support AI launch.',
   },
   {
     name: 'Financial Services',
-    description: 'AI handles loan status queries, EMI schedule requests, payment receipt confirmations, and KYC document checklist queries — with DPDP-compliant data handling and full audit trails.',
+    description: 'AI handles loan status queries, EMI schedule requests, payment receipt confirmations, and KYC document checklist queries, with DPDP-compliant data handling and full audit trails.',
     example: 'NBFCs cut loan query call volume by 50% with AI first-response on WhatsApp.',
   },
   {
     name: 'EdTech & Coaching',
-    description: 'Student support AI that handles fee receipt queries, course schedule questions, Razorpay payment confirmations, batch change requests, and study material links — 24/7 without a support team.',
+    description: 'Student support AI that handles fee receipt queries, course schedule questions, Razorpay payment confirmations, batch change requests, and study material links, 24/7 without a support team.',
     example: 'EdTech platforms reduce support staff requirements by 1 FTE per 5,000 students with AI.',
   },
   {
     name: 'Healthcare & Clinics',
-    description: 'Patient support AI for appointment rescheduling, report status queries, bill queries, and post-visit prescription questions — with DPDP-compliant patient data handling and doctor escalation routing.',
+    description: 'Patient support AI for appointment rescheduling, report status queries, bill queries, and post-visit prescription questions, with DPDP-compliant patient data handling and doctor escalation routing.',
     example: 'Clinics recover 2–3 hours of front-desk time per day after AI support deployment.',
   },
   {
     name: 'Real Estate',
-    description: 'Site visit confirmation, payment schedule queries, construction update requests, and registration document status — AI handles the high-volume post-booking support so your team focuses on new sales.',
+    description: 'Site visit confirmation, payment schedule queries, construction update requests, and registration document status, AI handles the high-volume post-booking support so your team focuses on new sales.',
     example: 'Developers reduce post-booking support team by 30% with AI first-response deployment.',
   },
 ];
@@ -286,7 +301,7 @@ const SUPPORT_PRICING_TIERS = [
   {
     name: 'WhatsApp Support AI',
     priceRange: '',
-    description: 'A focused AI customer support agent on WhatsApp — handles order status, FAQs, and returns with live Shopify and Shiprocket data.',
+    description: 'A focused AI customer support agent on WhatsApp, handles order status, FAQs, and returns with live Shopify and Shiprocket data.',
     features: [
       'WhatsApp Business API on Interakt, Wati, or AiSensy',
       'Shopify / WooCommerce order status integration',
@@ -353,47 +368,47 @@ const SUPPORT_FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'How does AI customer support differ from a scripted chatbot?',
-    answer: "A scripted chatbot works only if customers click the expected buttons and breaks the moment someone types naturally. An AI customer support agent understands natural language — 'where is my parcel', 'mera order kab aayega', 'show me my GST invoice' are all understood and answered accurately, using live data from your systems. The AI also handles follow-up questions within the same conversation without requiring the customer to restart.",
+    answer: "A scripted chatbot works only if customers click the expected buttons and breaks the moment someone types naturally. An AI customer support agent understands natural language, 'where is my parcel', 'mera order kab aayega', 'show me my GST invoice' are all understood and answered accurately, using live data from your systems. The AI also handles follow-up questions within the same conversation without requiring the customer to restart.",
   },
   {
     category: 'basics',
     question: 'What is the typical deflection rate for an AI support agent in India?',
-    answer: "For D2C e-commerce businesses, 65–75% deflection within 30 days of deployment is typical — meaning 65–75% of WhatsApp queries are fully resolved by the AI without any human involvement. B2B distribution businesses see similar rates, often higher because the queries are more predictable (stock levels, order status, invoice requests). Healthcare and financial services tend to see lower deflection (50–60%) due to compliance requirements for human sign-off on some query types.",
+    answer: "For D2C e-commerce businesses, 65–75% deflection within 30 days of deployment is typical, meaning 65–75% of WhatsApp queries are fully resolved by the AI without any human involvement. B2B distribution businesses see similar rates, often higher because the queries are more predictable (stock levels, order status, invoice requests). Healthcare and financial services tend to see lower deflection (50–60%) due to compliance requirements for human sign-off on some query types.",
   },
   {
     category: 'basics',
     question: 'What happens when the AI cannot resolve a query?',
-    answer: "Every AI support agent includes a confidence threshold and escalation path. When the AI is not confident in its answer, it says so honestly and routes the customer to a human agent in Freshdesk or Zoho Desk — with the full conversation transcript and a context summary so the agent does not ask the customer to repeat themselves. You control the escalation threshold, routing rules, and the human agent assignment logic.",
+    answer: "Every AI support agent includes a confidence threshold and escalation path. When the AI is not confident in its answer, it says so honestly and routes the customer to a human agent in Freshdesk or Zoho Desk, with the full conversation transcript and a context summary so the agent does not ask the customer to repeat themselves. You control the escalation threshold, routing rules, and the human agent assignment logic.",
   },
   {
     category: 'whatsapp',
     question: 'Can you build AI customer support specifically for WhatsApp?',
-    answer: "Yes — WhatsApp is our primary India support deployment. We build on Interakt, Wati, or AiSensy (all Meta-approved BSPs) with live Shopify, Shiprocket, and Razorpay integration so the bot can answer real questions about real orders. The bot handles inbound WhatsApp messages 24/7, responds in Hindi or English, and escalates to your team via a Freshdesk ticket or direct WhatsApp notification when it cannot resolve a query.",
+    answer: "Yes, WhatsApp is our primary India support deployment. We build on Interakt, Wati, or AiSensy (all Meta-approved BSPs) with live Shopify, Shiprocket, and Razorpay integration so the bot can answer real questions about real orders. The bot handles inbound WhatsApp messages 24/7, responds in Hindi or English, and escalates to your team via a Freshdesk ticket or direct WhatsApp notification when it cannot resolve a query.",
   },
   {
     category: 'whatsapp',
-    question: 'Can the AI handle proactive WhatsApp messages — not just replies?',
+    question: 'Can the AI handle proactive WhatsApp messages, not just replies?',
     answer: "Yes. Using WhatsApp template messages (Meta-approved), the AI can proactively send: order shipped notifications with tracking links, payment receipt confirmations, appointment reminders, and follow-up messages to customers who have open queries. We build these proactive triggers alongside the reactive support flows, so customers receive proactive updates before they need to ask.",
   },
   {
     category: 'whatsapp',
     question: 'Does the AI work on website chat as well as WhatsApp?',
-    answer: "Yes — our Multi-Channel Support Platform covers WhatsApp, embedded website chat widget, and your existing helpdesk (Freshdesk or Zoho Desk) from a single AI knowledge base. Customers on your website get the same accurate responses as customers on WhatsApp, and all conversations flow into a unified inbox for your human agents. One AI model, three channels.",
+    answer: "Yes: our Multi-Channel Support Platform covers WhatsApp, embedded website chat widget, and your existing helpdesk (Freshdesk or Zoho Desk) from a single AI knowledge base. Customers on your website get the same accurate responses as customers on WhatsApp, and all conversations flow into a unified inbox for your human agents. One AI model, three channels.",
   },
   {
     category: 'whatsapp',
     question: 'How does the AI handle customers who mix Hindi and English?',
-    answer: "Hinglish handling is standard in our India builds. The AI understands and responds to natural code-switching — a customer asking 'mujhe return karna hai, 3 days ho gaye' gets the same accurate return policy response as one asking 'I want to initiate a return'. Language detection is automatic and works at the query level, not the session level — so mid-conversation switches are handled smoothly.",
+    answer: "Hinglish handling is standard in our India builds. The AI understands and responds to natural code-switching: a customer asking 'mujhe return karna hai, 3 days ho gaye' gets the same accurate return policy response as one asking 'I want to initiate a return'. Language detection is automatic and works at the query level, not the session level, so mid-conversation switches are handled smoothly.",
   },
   {
     category: 'india',
     question: 'Can the AI fetch GST invoices and send them on WhatsApp?',
-    answer: "Yes — GST invoice fetching is a standard feature. We connect the AI to your Tally ERP, Zoho Books, or custom billing system and give it the ability to retrieve invoices by order ID or customer GSTIN. When a customer messages 'please send my GST bill' on WhatsApp, the AI retrieves the PDF and sends it directly in the chat. This is one of the highest-volume support requests for Indian B2B businesses and the AI handles it with zero human involvement.",
+    answer: "Yes, GST invoice fetching is a standard feature. We connect the AI to your Tally ERP, Zoho Books, or custom billing system and give it the ability to retrieve invoices by order ID or customer GSTIN. When a customer messages 'please send my GST bill' on WhatsApp, the AI retrieves the PDF and sends it directly in the chat. This is one of the highest-volume support requests for Indian B2B businesses and the AI handles it with zero human involvement.",
   },
   {
     category: 'india',
     question: 'Does the AI integrate with Indian logistics providers like Shiprocket and Delhivery?',
-    answer: "Yes. We integrate with Shiprocket, Delhivery, Blue Dart, DTDC, and other major Indian logistics APIs. When a customer asks 'where is my order', the AI checks the shipping status live from the logistics API and responds with the current status and expected delivery date. No ticket, no waiting — the customer gets a real answer in under 10 seconds.",
+    answer: "Yes. We integrate with Shiprocket, Delhivery, Blue Dart, DTDC, and other major Indian logistics APIs. When a customer asks 'where is my order', the AI checks the shipping status live from the logistics API and responds with the current status and expected delivery date. No ticket, no waiting: the customer gets a real answer in under 10 seconds.",
   },
   {
     category: 'india',
@@ -403,22 +418,22 @@ const SUPPORT_FAQ_ITEMS = [
   {
     category: 'india',
     question: 'Can the AI support agent process returns and exchanges directly?',
-    answer: "Yes — for Shopify and WooCommerce stores, we build return initiation flows where the AI checks your return policy, verifies order eligibility, creates the return request in your system, sends the pickup label or drop-off instructions, and updates the customer via WhatsApp throughout the process. Exchanges follow a similar flow. This eliminates the most time-consuming category of support interactions for D2C businesses.",
+    answer: "Yes, for Shopify and WooCommerce stores, we build return initiation flows where the AI checks your return policy, verifies order eligibility, creates the return request in your system, sends the pickup label or drop-off instructions, and updates the customer via WhatsApp throughout the process. Exchanges follow a similar flow. This eliminates the most time-consuming category of support interactions for D2C businesses.",
   },
   {
     category: 'process',
     question: 'How long does it take to build and deploy an AI customer support agent?',
-    answer: "A focused WhatsApp support bot (one channel, standard integrations) goes live in 2–3 weeks. A multi-channel platform with Freshdesk or Zoho Desk integration takes 4–5 weeks. Enterprise support automation with deep ERP integration takes 6–8 weeks. The biggest variable is knowledge base preparation — if you have well-documented FAQs and policies, we move faster.",
+    answer: "A focused WhatsApp support bot (one channel, standard integrations) goes live in 2–3 weeks. A multi-channel platform with Freshdesk or Zoho Desk integration takes 4–5 weeks. Enterprise support automation with deep ERP integration takes 6–8 weeks. The biggest variable is knowledge base preparation, if you have well-documented FAQs and policies, we move faster.",
   },
   {
     category: 'process',
     question: 'What content do you need from us to build the knowledge base?',
-    answer: "We can work with almost any format: FAQs in Google Docs, product descriptions from your Shopify admin, policy PDFs, existing support ticket exports from Freshdesk or Zendesk, WhatsApp conversation logs, or even a voice recording of your team answering common questions. We process and structure this content into the AI knowledge base — you do not need to reformat anything specifically for us.",
+    answer: "We can work with almost any format: FAQs in Google Docs, product descriptions from your Shopify admin, policy PDFs, existing support ticket exports from Freshdesk or Zendesk, WhatsApp conversation logs, or even a voice recording of your team answering common questions. We process and structure this content into the AI knowledge base, you do not need to reformat anything specifically for us.",
   },
   {
     category: 'process',
     question: 'How do we update the AI with new products, policies, or FAQs after launch?',
-    answer: "Through the admin dashboard — you upload new content (PDF, Google Doc, text), and the AI reprocesses the knowledge base without any code deployment. Most businesses update the knowledge base during product launches, policy changes, and festival season pricing updates. We build the update interface to be usable by non-technical team members.",
+    answer: "Through the admin dashboard, you upload new content (PDF, Google Doc, text), and the AI reprocesses the knowledge base without any code deployment. Most businesses update the knowledge base during product launches, policy changes, and festival season pricing updates. We build the update interface to be usable by non-technical team members.",
   },
   {
     category: 'process',
@@ -438,7 +453,7 @@ const SUPPORT_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Can we start with just WhatsApp support and add website chat later?',
-    answer: "Yes — we build modularly. Start with the WhatsApp Support AI, measure deflection and ROI, then add the website chat widget and Freshdesk integration as a second phase. Incremental additions are priced at the delta, not a full rebuild. Most clients expand to multi-channel within 6 months once they see the deflection metrics from WhatsApp.",
+    answer: "Yes, we build modularly. Start with the WhatsApp Support AI, measure deflection and ROI, then add the website chat widget and Freshdesk integration as a second phase. Incremental additions are priced at the delta, not a full rebuild. Most clients expand to multi-channel within 6 months once they see the deflection metrics from WhatsApp.",
   },
   {
     category: 'pricing',
@@ -460,6 +475,10 @@ const faqSchema = {
 export default function AICustomerSupportINPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="ai-customer-support-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="ai-customer-support-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script
@@ -487,12 +506,18 @@ export default function AICustomerSupportINPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+          { name: 'AI Customer Support', url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
+        ]} />
 
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_customer_support_hero" />}
           eyebrow="AI CUSTOMER SUPPORT · INDIA"
-          headline="70% of Your WhatsApp Support Queries Resolved Automatically — in Hindi and English"
-          lead="AI customer support agents that check Shopify orders, send Shiprocket tracking links, retrieve GST invoices from Tally, and process returns — 24/7 on WhatsApp, in Hindi and English, with Freshdesk escalation when needed. Fixed price. Live in 2–3 weeks."
+          headline="70% of Your WhatsApp Support Queries Resolved Automatically, in Hindi and English"
+          lead="AI customer support agents that check Shopify orders, send Shiprocket tracking links, retrieve GST invoices from Tally, and process returns, 24/7 on WhatsApp, in Hindi and English, with Freshdesk escalation when needed. Fixed price. Live in 2–3 weeks."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
@@ -538,7 +563,7 @@ export default function AICustomerSupportINPage() {
         <ServiceExplanation
           eyebrow="AI SUPPORT EXPLAINED"
           headline="Why an AI Support Agent Is Nothing Like the Scripted Chatbots You Have Tried"
-          lead="Scripted chatbots fail 40–60% of Indian support conversations because customers do not follow the script. AI support agents understand natural language, check your live systems, and respond accurately — in Hindi, Hinglish, or English."
+          lead="Scripted chatbots fail 40–60% of Indian support conversations because customers do not follow the script. AI support agents understand natural language, check your live systems, and respond accurately, in Hindi, Hinglish, or English."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -547,7 +572,7 @@ export default function AICustomerSupportINPage() {
                 ))}
               </div>
               <p>
-                The support bottleneck for most Indian businesses is not complex queries — it is volume. Your team fields the same 10 questions 200 times a day: where is my order, can I return this, please send my GST invoice, what is your return policy. An AI support agent handles all of these automatically, with real data from your systems, in the customer's language, at any hour. Your team focuses on the 25–30% of queries that genuinely need a human.
+                The support bottleneck for most Indian businesses is not complex queries, it is volume. Your team fields the same 10 questions 200 times a day: where is my order, can I return this, please send my GST invoice, what is your return policy. An AI support agent handles all of these automatically, with real data from your systems, in the customer's language, at any hour. Your team focuses on the 25–30% of queries that genuinely need a human.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -567,7 +592,7 @@ export default function AICustomerSupportINPage() {
                 </p>
               </div>
               <p>
-                FactoryJet AI support agents are built on large language models with a retrieval layer trained on your specific business content — policies, product catalogue, pricing, FAQs. The AI connects directly to your Shopify, Shiprocket, Razorpay, and Tally accounts via API so every answer is backed by live data. Escalations flow to Freshdesk or Zoho Desk with full context, so your human agents never start a conversation blind.
+                FactoryJet AI support agents are built on large language models with a retrieval layer trained on your specific business content, policies, product catalogue, pricing, FAQs. The AI connects directly to your Shopify, Shiprocket, Razorpay, and Tally accounts via API so every answer is backed by live data. Escalations flow to Freshdesk or Zoho Desk with full context, so your human agents never start a conversation blind.
               </p>
             </>
           }
@@ -578,10 +603,10 @@ export default function AICustomerSupportINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { scenario: 'Customer asks order status on WhatsApp', manual: 'Agent opens Shopify → copies tracking → replies — 3–5 minutes', ai: 'AI checks Shiprocket live, replies with tracking link — 3 seconds' },
-                  { scenario: 'B2B dealer needs GST invoice', manual: 'Agent finds invoice in Tally → exports PDF → sends on WhatsApp — 8 min', ai: 'AI fetches invoice from Tally API → sends PDF on WhatsApp — 5 sec' },
-                  { scenario: 'Customer wants to return an order', manual: 'Agent checks policy → verifies eligibility → raises return → notifies — 10 min', ai: 'AI checks eligibility → initiates return → sends pickup date — 45 sec' },
-                  { scenario: 'Support query arrives at midnight', manual: 'No response until 9 AM — customer frustrated', ai: 'AI responds in 30 seconds, resolves or escalates for morning' },
+                  { scenario: 'Customer asks order status on WhatsApp', manual: 'Agent opens Shopify → copies tracking → replies, 3–5 minutes', ai: 'AI checks Shiprocket live, replies with tracking link, 3 seconds' },
+                  { scenario: 'B2B dealer needs GST invoice', manual: 'Agent finds invoice in Tally → exports PDF → sends on WhatsApp, 8 min', ai: 'AI fetches invoice from Tally API → sends PDF on WhatsApp, 5 sec' },
+                  { scenario: 'Customer wants to return an order', manual: 'Agent checks policy → verifies eligibility → raises return → notifies, 10 min', ai: 'AI checks eligibility → initiates return → sends pickup date, 45 sec' },
+                  { scenario: 'Support query arrives at midnight', manual: 'No response until 9 AM, customer frustrated', ai: 'AI responds in 30 seconds, resolves or escalates for morning' },
                 ].map((row) => (
                   <div key={row.scenario} className="px-7 py-4">
                     <p className="font-fj-mono font-semibold text-fj-ink" style={{ fontSize: '0.75rem', letterSpacing: '0.04em' }}>{row.scenario}</p>
@@ -604,23 +629,23 @@ export default function AICustomerSupportINPage() {
 
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
-          headline="Your support team is answering the same WhatsApp messages on repeat — all day, every day"
-          lead="The highest-cost, lowest-value activity in most Indian businesses is answering the same 10 support questions 200 times a day. An AI customer support agent eliminates this entirely — freeing your team for conversations that actually require a human."
+          headline="Your support team is answering the same WhatsApp messages on repeat: all day, every day"
+          lead="The highest-cost, lowest-value activity in most Indian businesses is answering the same 10 support questions 200 times a day. An AI customer support agent eliminates this entirely, freeing your team for conversations that actually require a human."
           pillars={[
             {
               icon: '💬',
               title: 'WhatsApp support is your biggest operational bottleneck',
-              body: "87% of Indian consumers prefer WhatsApp for customer support. Your team manages it manually — typing the same order status reply, sending the same return policy text, forwarding the same GST invoice — hundreds of times daily. One AI support agent handles 70%+ of this automatically, in Hindi or English, at 2 AM on a Sunday.",
+              body: "87% of Indian consumers prefer WhatsApp for customer support. Your team manages it manually, typing the same order status reply, sending the same return policy text, forwarding the same GST invoice, hundreds of times daily. One AI support agent handles 70%+ of this automatically, in Hindi or English, at 2 AM on a Sunday.",
             },
             {
               icon: '⚠️',
               title: 'Manual support creates inconsistent customer experiences',
-              body: "When different agents give different answers about your return policy, or one agent sends a Tally invoice that another cannot find, you create customer confusion and internal chaos. An AI support agent gives the same accurate answer every time — trained on your definitive policies and connected to your live systems, not agent memory.",
+              body: "When different agents give different answers about your return policy, or one agent sends a Tally invoice that another cannot find, you create customer confusion and internal chaos. An AI support agent gives the same accurate answer every time, trained on your definitive policies and connected to your live systems, not agent memory.",
             },
             {
               icon: '📈',
-              title: 'Support team costs scale with volume — AI does not',
-              body: "Hiring another support agent adds ₹18,000–₹30,000/month with no guarantee of quality consistency. An AI support agent handles 2× the query volume at the same cost — and gets better over time as the knowledge base grows. For seasonal businesses with Diwali-driven support spikes, AI absorbs the volume without emergency hiring.",
+              title: 'Support team costs scale with volume | AI does not',
+              body: "Hiring another support agent adds ₹18,000–₹30,000/month with no guarantee of quality consistency. An AI support agent handles 2× the query volume at the same cost, and gets better over time as the knowledge base grows. For seasonal businesses with Diwali-driven support spikes, AI absorbs the volume without emergency hiring.",
             },
           ]}
         />
@@ -629,7 +654,7 @@ export default function AICustomerSupportINPage() {
           eyebrow="HOW WE BUILD"
           headline="From support audit to 70% query deflection in 2–3 weeks"
           stages={SUPPORT_JOURNEY_STAGES}
-          closingNote="Every AI support agent is tested against 200+ real support queries before going live. You review accuracy and escalation triggers — we fix any issues before your customers see it."
+          closingNote="Every AI support agent is tested against 200+ real support queries before going live. You review accuracy and escalation triggers, we fix any issues before your customers see it."
         />
 
         <ServiceExplanation
@@ -677,10 +702,10 @@ export default function AICustomerSupportINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { name: 'WhatsApp Order Support AI', desc: 'Order status, tracking, returns, and GST invoices — on WhatsApp, in Hindi and English, 24/7.' },
+                  { name: 'WhatsApp Order Support AI', desc: 'Order status, tracking, returns, and GST invoices | on WhatsApp, in Hindi and English, 24/7.' },
                   { name: 'B2B Dealer Support AI', desc: 'Stock availability, order status, invoice retrieval, and payment confirmation for dealers on WhatsApp.' },
                   { name: 'Multi-Channel Support Platform', desc: 'WhatsApp + website + Freshdesk unified inbox with AI first-response and human escalation routing.' },
-                  { name: 'BFSI Support AI', desc: 'Loan status, EMI schedules, payment receipts, and KYC queries — with DPDP-compliant data handling.' },
+                  { name: 'BFSI Support AI', desc: 'Loan status, EMI schedules, payment receipts, and KYC queries | with DPDP-compliant data handling.' },
                   { name: 'Proactive Support AI', desc: 'AI that sends shipment delay alerts, payment failure notices, and back-in-stock notifications before customers ask.' },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
@@ -717,8 +742,8 @@ export default function AICustomerSupportINPage() {
           eyebrow="INDIA SUPPORT AI MARKET"
           headline="87% of Indian consumers prefer WhatsApp support. Most businesses still handle it manually."
           leadParagraphs={[
-            "India is the world's largest WhatsApp market — and 87% of Indian consumers prefer messaging over phone calls for customer support. Yet most Indian businesses still handle their WhatsApp support queue with a team manually typing replies, looking up orders, and forwarding invoices. The businesses deploying AI support agents now are building a customer experience advantage that is increasingly difficult for manual-support competitors to close.",
-            "The India chatbot and AI support market is growing at 28% CAGR. The growth is driven not by large enterprises — most already have support automation — but by SMBs in D2C, B2B distribution, EdTech, healthcare, and financial services discovering that AI support agents are now affordable enough to deploy at any scale.",
+            "India is the world's largest WhatsApp market, and 87% of Indian consumers prefer messaging over phone calls for customer support. Yet most Indian businesses still handle their WhatsApp support queue with a team manually typing replies, looking up orders, and forwarding invoices. The businesses deploying AI support agents now are building a customer experience advantage that is increasingly difficult for manual-support competitors to close.",
+            "The India chatbot and AI support market is growing at 28% CAGR. The growth is driven not by large enterprises: most already have support automation, but by SMBs in D2C, B2B distribution, EdTech, healthcare, and financial services discovering that AI support agents are now affordable enough to deploy at any scale.",
           ]}
           bodySlot={
             <>
@@ -740,7 +765,7 @@ export default function AICustomerSupportINPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. In-House Support Team vs. Scripted Chatbot vs. Generic SaaS"
-          lead="Fixed price, full ownership, Indian support stack out of the box — the honest comparison."
+          lead="Fixed price, full ownership, Indian support stack out of the box: the honest comparison."
           pullQuote={{ stat: 'Fixed price', caption: 'AI customer support agent handling WhatsApp queries in Hindi and English, with live Shopify and Shiprocket integration, Freshdesk escalation, and full code ownership. No monthly SaaS fee.' }}
           columns={SUPPORT_COMPARISON_COLUMNS}
           rows={SUPPORT_COMPARISON_ROWS}
@@ -764,7 +789,7 @@ export default function AICustomerSupportINPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Automate Your Support"
-          lead="The questions we answer on every Indian AI customer support discovery call — answered honestly, without the runaround."
+          lead="The questions we answer on every Indian AI customer support discovery call, answered honestly, without the runaround."
           categories={SUPPORT_FAQ_CATEGORIES}
           items={SUPPORT_FAQ_ITEMS}
         />

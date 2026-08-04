@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -675,6 +676,20 @@ const FAQ_ITEMS: FAQItem[] = [
    FAQPage mainEntity is derived from FAQ_ITEMS so the schema can never drift
    from what a human reads on the page. */
 
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/digital-marketing/pune#webpage',
+  url: 'https://factoryjet.com/digital-marketing/pune',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -730,6 +745,10 @@ export default function DigitalMarketingPunePage() {
   return (
     <>
       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
         id="in-dm-pune-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -760,6 +779,11 @@ export default function DigitalMarketingPunePage() {
       <SiteHeader locale="in" />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Digital Marketing', url: 'https://factoryjet.com/digital-marketing' },
+          { name: 'Pune', url: CANONICAL },
+        ]} />
         <Hero
           eyebrow="DIGITAL MARKETING AGENCY · PUNE"
           headline="A Digital Marketing Agency in Pune That Brings You Real Customers"

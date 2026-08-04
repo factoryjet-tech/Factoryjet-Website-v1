@@ -27,7 +27,7 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Zap,
     title: "Next.js 15 Foundation",
     description:
-      "Server-side rendered React that loads in under 1.5 seconds. The same framework Vercel, Notion, and TikTok use — now for Manchester businesses.",
+      "Server-side rendered React that loads in under 1.5 seconds. The same framework Vercel, Notion, and TikTok use, now for Manchester businesses.",
     image: {
       src: "/images/manchester/mockup-responsive.webp",
       alt: "Responsive website design mockup showing desktop and mobile",
@@ -47,7 +47,7 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Code,
     title: "Tailwind CSS 4 Styling",
     description:
-      "Every Manchester website ships with under 20KB of CSS — compared to 200–500KB typical of WordPress theme builders.",
+      "Every Manchester website ships with under 20KB of CSS, compared to 200–500KB typical of WordPress theme builders.",
   },
   {
     icon: Target,
@@ -118,7 +118,7 @@ export default function ServiceExplanation() {
       card.style.transitionDelay = `${i * 150}ms`;
     });
 
-    const REVEAL_DURATION = 700; // ms — matches transition duration above
+    const REVEAL_DURATION = 700; // ms, matches transition duration above
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -205,7 +205,7 @@ export default function ServiceExplanation() {
           >
             FactoryJet doesn&apos;t build websites. We engineer digital revenue
             machines. Every Manchester project starts with conversion
-            architecture — mapping the exact journey from first visit to
+            architecture, mapping the exact journey from first visit to
             qualified lead.
           </p>
         </div>
@@ -216,7 +216,7 @@ export default function ServiceExplanation() {
           style={{ gap: "20px" }}
         >
 
-          {/* FEATURED CARD — spans 2 columns */}
+          {/* FEATURED CARD, spans 2 columns */}
           <div
             ref={featuredRef}
             className="lg:col-span-2 rounded-xl"
@@ -228,7 +228,7 @@ export default function ServiceExplanation() {
           >
             <div className="flex flex-col lg:flex-row gap-10">
 
-              {/* 60% — text side */}
+              {/* 60%, text side */}
               <div style={{ flex: "0 0 60%" }}>
                 <div
                   className="flex items-center justify-center rounded-full mb-5"
@@ -242,19 +242,19 @@ export default function ServiceExplanation() {
                   className="font-clash"
                   style={{ fontSize: "24px", color: "#0a0f1c", marginBottom: "12px", fontWeight: 700, lineHeight: 1.2 }}
                 >
-                  Schema Stack for AI Visibility — GEO &amp; AEO Built In
+                  Schema Stack for AI Visibility, GEO &amp; AEO Built In
                 </p>
 
                 <p style={{ fontSize: "16px", color: "#374151", lineHeight: 1.65 }}>
                   Every page ships with LocalBusiness, Service, FAQPage,
                   BreadcrumbList, and HowTo structured data. This is GEO and
-                  AEO — when someone asks Claude or ChatGPT &ldquo;who does web
+                  AEO, when someone asks Claude or ChatGPT &ldquo;who does web
                   design in Manchester?&rdquo;, schema-rich pages are what get
                   cited.
                 </p>
               </div>
 
-              {/* 40% — checklist side */}
+              {/* 40%, checklist side */}
               <div
                 className="flex flex-col justify-center"
                 style={{ flex: "0 0 40%" }}
@@ -278,7 +278,7 @@ export default function ServiceExplanation() {
             </div>
           </div>
 
-          {/* STANDARD CARDS — 2×2 grid inside the 2-col outer grid */}
+          {/* STANDARD CARDS, 2×2 grid inside the 2-col outer grid */}
           <div
             ref={standardGridRef}
             className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start"

@@ -168,7 +168,7 @@ export default function DigitalLandscape() {
                 Jewellery Quarter&rsquo;s 700 independent craftspeople to Goldman
                 Sachs engineers coding in Brindleyplace, from Deutsche Bank&rsquo;s
                 2,000-strong technology hub to JLR&rsquo;s design studios in the
-                West Midlands — Birmingham&rsquo;s economy is broader, deeper, and
+                West Midlands: Birmingham&rsquo;s economy is broader, deeper, and
                 faster-moving than most agency websites acknowledge.
               </p>
               <p>
@@ -204,7 +204,7 @@ export default function DigitalLandscape() {
                 }}
               >
                 &ldquo;Birmingham has the youngest average population of any
-                major UK city outside London — median age 34.4. Digital adoption
+                major UK city outside London, median age 34.4. Digital adoption
                 is native, not adopted.&rdquo;
               </blockquote>
             </figure>

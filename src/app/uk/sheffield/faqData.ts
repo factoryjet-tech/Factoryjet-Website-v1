@@ -13,7 +13,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Do I need any technical knowledge?",
-    a: "None at all. We handle everything: domain setup, hosting, SSL, Google Analytics, Search Console, and even write the copy if you need it. After launch we give you a simple guide to update text and images yourself — no developer needed.",
+    a: "None at all. We handle everything: domain setup, hosting, SSL, Google Analytics, Search Console, and even write the copy if you need it. After launch we give you a simple guide to update text and images yourself, no developer needed.",
   },
   {
     q: "Will my website rank in Sheffield searches?",

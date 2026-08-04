@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Bangalore | FactoryJet',
     description:
-      'Professional website design company in Bangalore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Koramangala, Whitefield, HSR Layout, Electronic City.',
+      'Professional website design company in Bangalore: Next.js, SEO, and GA4 included. 7-day delivery. Serving Koramangala, Whitefield, HSR Layout, Electronic City.',
     url: 'https://factoryjet.com/web-design/bangalore',
     images: [
       {
@@ -87,6 +88,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/bangalore#webpage',
+  url: 'https://factoryjet.com/web-design/bangalore',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -145,31 +160,31 @@ const BLR_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Bangalore's market — whether that's an enterprise IT buyer evaluating vendors in Whitefield, a SaaS prospect researching tools in Koramangala, or a D2C consumer shopping on mobile. We audit your top three competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Bangalore's market, whether that's an enterprise IT buyer evaluating vendors in Whitefield, a SaaS prospect researching tools in Koramangala, or a D2C consumer shopping on mobile. We audit your top three competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, demo request systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, demo request systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Bangalore-specific local SEO targeting built in — not sold as an add-on. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Bangalore-specific local SEO targeting built in, not sold as an add-on.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -200,13 +215,13 @@ const BLR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Bangalore web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with account managers, strategy layers, and large office overheads in Koramangala. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites. You pay for the build, not our overhead.",
+      "We are a specialised web engineering team, not a full-service agency with account managers, strategy layers, and large office overheads in Koramangala. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. We have been building websites. You pay for the build, not our overhead.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,13 +235,13 @@ const BLR_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you write the content for my website?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content — detailed service pages, blog posts, and city landing pages — is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
+      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content, detailed service pages, blog posts, and city landing pages, is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
   },
   {
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -246,7 +261,7 @@ const BLR_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on, and why does it matter?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks — significantly faster than WordPress. For Bangalore businesses competing on Google's Core Web Vitals ranking signals, that performance gap is real and measurable.",
+      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks, significantly faster than WordPress. For Bangalore businesses competing on Google's Core Web Vitals ranking signals, that performance gap is real and measurable.",
   },
   {
     category: 'technical',
@@ -258,7 +273,7 @@ const BLR_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo requests) are configured from day one. Search Console is verified and the sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo requests) are configured from day one. Search Console is verified and the sitemap submitted.',
   },
 
   /* ── Bangalore Local ── */
@@ -266,19 +281,19 @@ const BLR_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for IT companies and SaaS startups in Bangalore?',
     answer:
-      "Yes — IT services, SaaS product companies, and enterprise software firms are a core client profile for us in Bangalore. We build sites with product demo flows, case study architecture, technical capability pages, and lead-capture forms designed for B2B SaaS sales cycles. We serve clients across Koramangala, Whitefield, Electronic City, Indiranagar, and HSR Layout.",
+      "Yes: IT services, SaaS product companies, and enterprise software firms are a core client profile for us in Bangalore. We build sites with product demo flows, case study architecture, technical capability pages, and lead-capture forms designed for B2B SaaS sales cycles. We serve clients across Koramangala, Whitefield, Electronic City, Indiranagar, and HSR Layout.",
   },
   {
     category: 'local',
     question: 'Can you build websites for D2C and consumer brands in Bangalore?',
     answer:
-      "Yes. Bangalore's consumer startup ecosystem is thriving — from lifestyle brands in Indiranagar to health-tech D2C companies in Koramangala. D2C websites need sub-1.5s load times on 4G, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. We build these mobile-first, every time.",
+      "Yes. Bangalore's consumer startup ecosystem is thriving, from lifestyle brands in Indiranagar to health-tech D2C companies in Koramangala. D2C websites need sub-1.5s load times on 4G, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. We build these mobile-first, every time.",
   },
   {
     category: 'local',
     question: "Do you know Bangalore's tech and business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Bangalore's business geography as part of discovery — from Koramangala's startup corridor and Whitefield's IT parks to Electronic City's tech campus cluster and Indiranagar's premium retail strip. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level searches.",
+      "Yes. We research Bangalore's business geography as part of discovery, from Koramangala's startup corridor and Whitefield's IT parks to Electronic City's tech campus cluster and Indiranagar's premium retail strip. Local specificity in copy and LocalBusiness schema (areaServed) improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -292,7 +307,7 @@ const BLR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -304,7 +319,7 @@ const BLR_FAQ_ITEMS = [
     category: 'support',
     question: 'What happens if something breaks after launch?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime — server crashes, plugin conflicts, database failures — simply do not apply.',
+      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply.',
   },
   {
     category: 'support',
@@ -435,31 +450,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Bangalore market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Bangalore competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Bangalore local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Bangalore local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -483,6 +498,10 @@ const speakableSchema = {
 export default function BangaloreWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="blr-local-business-schema"
         type="application/ld+json"
@@ -512,13 +531,18 @@ export default function BangaloreWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Bangalore', url: 'https://factoryjet.com/web-design/bangalore' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_bangalore_hero" />}
           eyebrow="WEB DESIGN · BANGALORE"
           headline="Website Design in Bangalore Built for Startups, IT Companies, and D2C Brands"
-          lead="Bangalore drives $20B+ in annual IT exports, hosts 15,000+ registered startups, and is India's fastest-growing D2C city. Koramangala, Whitefield, HSR Layout, and Electronic City are home to businesses that compete globally — and your website is the first impression every buyer gets. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Bangalore drives $20B+ in annual IT exports, hosts 15,000+ registered startups, and is India's fastest-growing D2C city. Koramangala, Whitefield, HSR Layout, and Electronic City are home to businesses that compete globally, and your website is the first impression every buyer gets. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -539,28 +563,28 @@ export default function BangaloreWebDesignPage() {
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="BANGALORE MARKET"
-          headline="Why Your Bangalore Web Presence Is a Competitive Advantage — Not a Checkbox"
+          headline="Why Your Bangalore Web Presence Is a Competitive Advantage, Not a Checkbox"
           leadParagraphs={[
-            "Bangalore is India's technology capital — contributing $20B+ annually in IT and software exports and housing over 15,000 registered startups as of 2024. The city's ecosystem spans enterprise IT outsourcing firms in Whitefield and Electronic City, SaaS product companies and D2C brands in Koramangala and HSR Layout, and a rapidly growing medtech and edtech sector across Indiranagar and Jayanagar. More than any other Indian city, Bangalore's businesses compete for global buyers — US enterprise procurement teams evaluating offshore IT vendors, international investors screening SaaS companies, and Indian consumer segments reached primarily through digital channels.",
-            "This creates a web design challenge unique to Bangalore: an IT services firm targeting Fortune 500 US clients needs a completely different site architecture from a D2C health brand selling to Indian consumers on Instagram. A SaaS startup pitching seed-stage investors needs different content hierarchy from an established engineering services company building its RFP response pipeline. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template.",
-            "Bangalore's competitive density means the gap between a high-performing website and an average one is measured in qualified leads per month, not aesthetics. A 1-second load improvement increases conversion by 7%. A properly structured case study page indexed by Google can become your highest-converting sales asset. These are the outcomes FactoryJet is engineered to deliver — in 7 days.",
+            "Bangalore is India's technology capital, contributing $20B+ annually in IT and software exports and housing over 15,000 registered startups as of 2024. The city's ecosystem spans enterprise IT outsourcing firms in Whitefield and Electronic City, SaaS product companies and D2C brands in Koramangala and HSR Layout, and a rapidly growing medtech and edtech sector across Indiranagar and Jayanagar. More than any other Indian city, Bangalore's businesses compete for global buyers, US enterprise procurement teams evaluating offshore IT vendors, international investors screening SaaS companies, and Indian consumer segments reached primarily through digital channels.",
+            "This creates a web design challenge unique to Bangalore: an IT services firm targeting Fortune 500 US clients needs a completely different site architecture from a D2C health brand selling to Indian consumers on Instagram. A SaaS startup pitching seed-stage investors needs different content hierarchy from an established engineering services company building its RFP response pipeline. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template.",
+            "Bangalore's competitive density means the gap between a high-performing website and an average one is measured in qualified leads per month, not aesthetics. A 1-second load improvement increases conversion by 7%. A properly structured case study page indexed by Google can become your highest-converting sales asset. These are the outcomes FactoryJet is engineered to deliver, in 7 days.",
           ]}
           stats={[
             {
               value: '$20B+',
-              label: "Bangalore's annual IT and software exports — India's largest tech city by export value",
+              label: "Bangalore's annual IT and software exports: India's largest tech city by export value",
               sourceUrl: 'https://nasscom.in/knowledge-center/publications',
               sourceLabel: 'NASSCOM Annual Report',
             },
             {
               value: '15,000+',
-              label: 'Registered startups in Bangalore — India\'s largest startup ecosystem',
+              label: 'Registered startups in Bangalore: India\'s largest startup ecosystem',
               sourceUrl: 'https://www.startupindia.gov.in/',
               sourceLabel: 'Startup India Dashboard',
             },
             {
               value: '₹7.5L Cr',
-              label: "Bangalore's estimated GDP — one of India's fastest-growing major city economies",
+              label: "Bangalore's estimated GDP: one of India's fastest-growing major city economies",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -571,13 +595,13 @@ export default function BangaloreWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · BANGALORE"
           headline="What 'Web Design' Actually Means for a Bangalore Business"
-          lead="Bangalore's economy runs on two very different buyer behaviours — B2B enterprise and SaaS buyers doing weeks of vendor research, and D2C consumers deciding in under 10 seconds on mobile. Both demand very different web strategies. FactoryJet builds for both."
+          lead="Bangalore's economy runs on two very different buyer behaviours, B2B enterprise and SaaS buyers doing weeks of vendor research, and D2C consumers deciding in under 10 seconds on mobile. Both demand very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
                 For Bangalore&apos;s IT services firms, SaaS companies, and enterprise software
-                businesses — companies in Whitefield, Electronic City, Manyata Tech Park, and
-                Koramangala — a website needs to project technical credibility, delivery capability,
+                businesses, companies in Whitefield, Electronic City, Manyata Tech Park, and
+                Koramangala: a website needs to project technical credibility, delivery capability,
                 and client track record. US and EU procurement teams research vendors for months
                 before making contact. The site needs to answer their evaluation questions clearly:
                 technology stack, engagement models, case studies, certifications, and a
@@ -587,7 +611,7 @@ export default function BangaloreWebDesignPage() {
               </p>
               <p>
                 For Bangalore&apos;s D2C brands, consumer startups, and service businesses in
-                Indiranagar, Bandra, Koramangala, and Jayanagar — the challenge is entirely
+                Indiranagar, Bandra, Koramangala, and Jayanagar: the challenge is entirely
                 different. Consumers arriving on mobile from Instagram or Google search make
                 decisions in seconds. The site needs to load under 1.5 seconds on a 4G connection,
                 present the product or service above the fold, and make the next step obvious. We
@@ -672,12 +696,12 @@ export default function BangaloreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bangalore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Bangalore moves fast — a startup waiting 16 weeks for a website they briefed in April is losing ground to the competitor that shipped in week one. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Bangalore moves fast: a startup waiting 16 weeks for a website they briefed in April is losing ground to the competitor that shipped in week one. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -708,7 +732,7 @@ export default function BangaloreWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -717,9 +741,9 @@ export default function BangaloreWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with an authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO targeting high-value engineering queries.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with an authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO targeting high-value engineering queries.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -733,11 +757,11 @@ export default function BangaloreWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Bangalore Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Bangalore deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Bangalore deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={BLR_COMPARISON_COLUMNS}
           rows={BLR_COMPARISON_ROWS}
@@ -748,40 +772,40 @@ export default function BangaloreWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="BANGALORE × WEB DESIGN"
           headline="Web Design for Bangalore's Key Industries"
-          lead="From Whitefield IT parks to Koramangala startups to Indiranagar D2C brands — Bangalore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From Whitefield IT parks to Koramangala startups to Indiranagar D2C brands, Bangalore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'IT Services & Software',
               description:
-                "Bangalore is India's largest IT outsourcing hub — home to Infosys, Wipro, TCS campuses, and thousands of mid-size and boutique IT services firms. These businesses compete for US, EU, and APAC enterprise contracts. Their websites need to project technical delivery capability, CMMI and ISO certifications, client case studies, and frictionless contact flows for global procurement teams.",
+                "Bangalore is India's largest IT outsourcing hub, home to Infosys, Wipro, TCS campuses, and thousands of mid-size and boutique IT services firms. These businesses compete for US, EU, and APAC enterprise contracts. Their websites need to project technical delivery capability, CMMI and ISO certifications, client case studies, and frictionless contact flows for global procurement teams.",
               example:
                 'IT outsourcing firms in Whitefield, Electronic City, and Manyata Tech Park targeting enterprise clients in the US, UK, and Europe.',
             },
             {
               name: 'SaaS & Product Startups',
               description:
-                "Bangalore is home to India's most active SaaS ecosystem — from seed-stage startups to Series B companies scaling globally. SaaS websites need product demo flows, pricing page architecture, case study libraries, and lead-capture forms designed for free-trial and demo-request conversion. We build for both PLG and sales-led SaaS motions.",
+                "Bangalore is home to India's most active SaaS ecosystem, from seed-stage startups to Series B companies scaling globally. SaaS websites need product demo flows, pricing page architecture, case study libraries, and lead-capture forms designed for free-trial and demo-request conversion. We build for both PLG and sales-led SaaS motions.",
               example:
                 'B2B SaaS startups in Koramangala, HSR Layout, and Indiranagar targeting global SMB and enterprise buyers.',
             },
             {
               name: 'D2C & Consumer Brands',
               description:
-                "Bangalore's D2C ecosystem has produced some of India's most successful consumer brands — health, wellness, lifestyle, and personal care companies that reach consumers directly through digital channels. D2C websites need to convert mobile visitors in under 10 seconds: sub-1.5s load times, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration.",
+                "Bangalore's D2C ecosystem has produced some of India's most successful consumer brands, health, wellness, lifestyle, and personal care companies that reach consumers directly through digital channels. D2C websites need to convert mobile visitors in under 10 seconds: sub-1.5s load times, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration.",
               example:
                 'D2C health, lifestyle, and personal care brands in Indiranagar, Koramangala, and Jayanagar selling to consumers across India.',
             },
             {
               name: 'Professional & Consulting',
               description:
-                "Bangalore's management consulting, legal, CA/CS, and HR consulting sector is growing alongside its tech ecosystem. For these businesses, the website is the first qualification filter — does this firm look credible enough to engage? We build authority-first sites with service capability pages, team credentials, and lead-capture flows that convert research into booked consultations.",
+                "Bangalore's management consulting, legal, CA/CS, and HR consulting sector is growing alongside its tech ecosystem. For these businesses, the website is the first qualification filter, does this firm look credible enough to engage? We build authority-first sites with service capability pages, team credentials, and lead-capture flows that convert research into booked consultations.",
               example:
                 'Management consulting, legal, CA/CS firms, and HR companies serving Bangalore\'s corporate and startup ecosystem.',
             },
             {
               name: 'Healthcare & Medtech',
               description:
-                "Bangalore has become India's medtech hub — home to a growing cluster of medical device companies, health-tech startups, and hospital groups. Medtech B2B websites need regulatory compliance awareness, clinical evidence display, and institutional procurement lead flows. Hospital and clinic websites need appointment booking integrations, doctor profiles, and local SEO.",
+                "Bangalore has become India's medtech hub, home to a growing cluster of medical device companies, health-tech startups, and hospital groups. Medtech B2B websites need regulatory compliance awareness, clinical evidence display, and institutional procurement lead flows. Hospital and clinic websites need appointment booking integrations, doctor profiles, and local SEO.",
               example:
                 'Medical device companies, health-tech startups, hospital groups, and diagnostic chains serving Bangalore and South India.',
             },
@@ -806,7 +830,7 @@ export default function BangaloreWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Bangalore Businesses"
-          lead="The questions we answer on every Bangalore discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Bangalore discovery call, answered here, without the runaround."
           categories={BLR_FAQ_CATEGORIES}
           items={BLR_FAQ_ITEMS}
         />

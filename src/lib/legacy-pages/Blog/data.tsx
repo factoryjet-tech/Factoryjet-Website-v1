@@ -41,7 +41,7 @@ export const POSTS: BlogPost[] = [
       <>
         <p id="intro">
           <span className="float-left text-6xl font-bold text-jetBlue mr-3 mt-[-8px] font-display">T</span>
-          he manufacturing floor sleeps, but the global market does not. For factory owners in India, the biggest leak in their sales funnel isn't price or quality—it's <strong>time</strong>. When a potential buyer in Germany or the US lands on your site at 3 AM IST, who greets them?
+          he manufacturing floor sleeps, but the global market does not. For factory owners in India, the biggest leak in their sales funnel isn't price or quality. It's <strong>time</strong>. When a potential buyer in Germany or the US lands on your site at 3 AM IST, who greets them?
         </p>
         <p>
           In 2024, the "Contact Us" form is the graveyard of leads. Modern B2B buyers demand instant gratification. Enter the <strong>AI Chatbot</strong>: your silent, 24/7 salesman that speaks 50 languages and knows your inventory by heart.
@@ -105,7 +105,7 @@ export const POSTS: BlogPost[] = [
 
         <h2 className="font-display font-bold text-gray-900 mt-10 mb-6">Programmatic SEO for Part Numbers</h2>
         <p>
-          Industrial buyers search for specific part numbers (e.g., "DIN 933 Hex Bolt M12"). A manual blog post won't cut it. You need <strong>Programmatic SEO</strong>—automatically generating thousands of landing pages for each SKU in your catalog.
+          Industrial buyers search for specific part numbers (e.g., "DIN 933 Hex Bolt M12"). A manual blog post won't cut it. You need <strong>Programmatic SEO</strong>: automatically generating thousands of landing pages for each SKU in your catalog.
         </p>
 
         <NativeAd />

@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Workflow Automation for Charlotte NC Businesses | FactoryJet',
   description:
-    'AI workflow automation for Charlotte businesses — financial services, logistics, healthcare intake & CRM sync. Cut 40–65% of manual task time. Fixed-price.',
+    'AI workflow automation for Charlotte businesses, financial services, logistics, healthcare intake & CRM sync. Cut 40–65% of manual task time. Fixed-price.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
+   JSON-LD Schema (Service + HowTo + Breadcrumb), faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'AI Workflow Automation — Charlotte, NC',
+  name: 'AI Workflow Automation | Charlotte, NC',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
@@ -94,7 +94,7 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: 'Starter Workflow Automation',
-      description: 'A single focused workflow automation — lead follow-up, invoice processing, or a specific data sync.',
+      description: 'A single focused workflow automation, lead follow-up, invoice processing, or a specific data sync.',
     },
     {
       '@type': 'Offer',
@@ -120,31 +120,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery & Use-Case Mapping',
+      name: 'Day 1 | Discovery & Use-Case Mapping',
       text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Architecture & Data Planning',
+      name: 'Day 2 | Architecture & Data Planning',
       text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Build & Integrate',
+      name: 'Days 3–4 | Build & Integrate',
       text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Testing & Optimization',
+      name: 'Days 5–6 | Testing & Optimization',
       text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch & Training',
+      name: 'Day 7 | Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
   ],
@@ -170,7 +170,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'Banking, Fintech & Financial Services',
     description:
-      'Charlotte is one of the largest financial centers in the US — home to Bank of America, Wells Fargo East Coast HQ, and Truist, plus a deep ecosystem of credit unions, wealth management firms, insurance companies, and fintech startups. AI automation handles client onboarding workflows, document collection and verification routing, compliance reporting from multiple systems, billing and payment processing, and audit-ready audit trail generation — with the structured exception handling that regulated industries require.',
+      'Charlotte is one of the largest financial centers in the US, home to Bank of America, Wells Fargo East Coast HQ, and Truist, plus a deep ecosystem of credit unions, wealth management firms, insurance companies, and fintech startups. AI automation handles client onboarding workflows, document collection and verification routing, compliance reporting from multiple systems, billing and payment processing, and audit-ready audit trail generation, with the structured exception handling that regulated industries require.',
     example: 'Financial services firms recover 15–20 hours per week of manual compliance and onboarding work.',
     linkLabel: 'Talk to our team',
     linkHref: '/contact',
@@ -178,7 +178,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'Logistics, Supply Chain & Distribution',
     description:
-      'Charlotte is a major Southeast logistics hub with significant warehouse and distribution infrastructure. AI automation processes shipping documents, extracts data from bills of lading and delivery confirmations, syncs tracking data across carrier systems, routes exceptions for review, and generates on-time delivery and cost reporting — eliminating the manual document handling that slows operations and creates data entry errors.',
+      'Charlotte is a major Southeast logistics hub with significant warehouse and distribution infrastructure. AI automation processes shipping documents, extracts data from bills of lading and delivery confirmations, syncs tracking data across carrier systems, routes exceptions for review, and generates on-time delivery and cost reporting, eliminating the manual document handling that slows operations and creates data entry errors.',
     example: 'Logistics companies process shipping documents 70% faster with AI extraction and routing.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -186,7 +186,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'Healthcare & Health Systems',
     description:
-      'Atrium Health and Novant Health anchor a large healthcare ecosystem in Charlotte, with hundreds of independent practices, clinics, and healthcare-adjacent businesses. AI automation handles patient intake and pre-appointment communication workflows, insurance verification routing, prior authorization document processing, referral coordination, billing workflow triage, and compliance reporting — with HIPAA-aligned data handling and audit trail requirements built in.',
+      'Atrium Health and Novant Health anchor a large healthcare ecosystem in Charlotte, with hundreds of independent practices, clinics, and healthcare-adjacent businesses. AI automation handles patient intake and pre-appointment communication workflows, insurance verification routing, prior authorization document processing, referral coordination, billing workflow triage, and compliance reporting, with HIPAA-aligned data handling and audit trail requirements built in.',
     example: 'Healthcare practices reclaim 10–15 admin hours per week with patient communication automation.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
@@ -194,7 +194,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'Manufacturing & Industrial',
     description:
-      'Charlotte\'s manufacturing sector — aerospace components, automotive parts, food processing, and industrial equipment — generates high-volume procurement, quality, and compliance workflows. AI automation handles purchase order processing, vendor invoice routing, quality inspection report generation, compliance documentation, and supply chain status reporting from your ERP or operations systems — reducing the back-office load that grows with production volume.',
+      'Charlotte\'s manufacturing sector, aerospace components, automotive parts, food processing, and industrial equipment, generates high-volume procurement, quality, and compliance workflows. AI automation handles purchase order processing, vendor invoice routing, quality inspection report generation, compliance documentation, and supply chain status reporting from your ERP or operations systems, reducing the back-office load that grows with production volume.',
     example: 'Manufacturers reduce procurement processing time by 50–65% with document automation.',
     linkLabel: 'Get a quote',
     linkHref: '#pricing',
@@ -202,7 +202,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'Professional Services & Consulting',
     description:
-      'Charlotte\'s professional services sector — law firms, accounting practices, management consultants, HR firms, and insurance agencies — uses AI automation to streamline client onboarding, contract routing for signatures, billing and invoicing workflows, compliance reporting, and CRM data sync — freeing professionals from administrative overhead and letting them focus on billable work.',
+      'Charlotte\'s professional services sector, law firms, accounting practices, management consultants, HR firms, and insurance agencies, uses AI automation to streamline client onboarding, contract routing for signatures, billing and invoicing workflows, compliance reporting, and CRM data sync, freeing professionals from administrative overhead and letting them focus on billable work.',
     example: 'Professional services firms recover 12–18 hours per week of billable time from automation.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -210,7 +210,7 @@ const CHARLOTTE_INDUSTRIES = [
   {
     name: 'E-Commerce & Retail Brands',
     description:
-      'Charlotte-based DTC and retail brands use AI automation to handle order processing workflows, inventory sync across channels, customer follow-up sequences, return and refund processing, vendor payment scheduling, and marketing performance reporting — creating a reliable operational backbone that keeps pace with growth without adding headcount.',
+      'Charlotte-based DTC and retail brands use AI automation to handle order processing workflows, inventory sync across channels, customer follow-up sequences, return and refund processing, vendor payment scheduling, and marketing performance reporting, creating a reliable operational backbone that keeps pace with growth without adding headcount.',
     example: 'E-commerce brands process orders and sync inventory 60% faster with automation.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -234,7 +234,7 @@ const CHARLOTTE_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build',
     description:
-      'We develop and test in a staging environment with weekly demos. You see the automation working against real business scenarios during the build — not just at the end. Compliance-sensitive clients can review the audit trail in staging.',
+      'We develop and test in a staging environment with weekly demos. You see the automation working against real business scenarios during the build, not just at the end. Compliance-sensitive clients can review the audit trail in staging.',
   },
   {
     number: '04',
@@ -246,7 +246,7 @@ const CHARLOTTE_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '05',
     title: 'Deploy & Train',
     description:
-      'Live launch with monitoring, team training, and a 30-day support window. Your operations team sees every workflow run and exception in the monitoring dashboard — nothing runs silently, and your compliance team has the audit access they need.',
+      'Live launch with monitoring, team training, and a 30-day support window. Your operations team sees every workflow run and exception in the monitoring dashboard, nothing runs silently, and your compliance team has the audit access they need.',
   },
 ];
 
@@ -259,14 +259,14 @@ const ROI_STATS = [
   },
   {
     value: '60s',
-    label: 'automated lead follow-up response vs. hours waiting for a sales rep — direct pipeline impact',
+    label: 'automated lead follow-up response vs. hours waiting for a sales rep, direct pipeline impact',
     microcopy: 'faster follow-up directly increases qualified pipeline',
     categoryLabel: 'LEAD SPEED',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
-    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    label: 'milestone-paid with full code ownership, 12+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch, no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -280,7 +280,7 @@ const MARKET_STATS = [
   },
   {
     value: '2–4mo',
-    label: 'typical payback period for AI workflow automation — based on staff hours reclaimed',
+    label: 'typical payback period for AI workflow automation, based on staff hours reclaimed',
     microcopy: 'most Charlotte clients recover build cost within one quarter',
     categoryLabel: 'PAYBACK PERIOD',
   },
@@ -383,10 +383,10 @@ const PRICING_TIERS = [
     priceRange: 'Fixed-price',
     name: 'Starter',
     description:
-      'A single focused workflow automation — lead follow-up, invoice processing, or a specific data sync. Perfect for Charlotte businesses automating their first workflow.',
+      'A single focused workflow automation, lead follow-up, invoice processing, or a specific data sync. Perfect for Charlotte businesses automating their first workflow.',
     features: [
       'One workflow automation (lead nurture, invoice, or data sync)',
-      'AI decision layer (classify, extract, route — not just move data)',
+      'AI decision layer (classify, extract, route, not just move data)',
       'Integration with up to 3 platforms via API or webhook',
       'Full audit trail: every run logged with inputs and outputs',
       'Error handling with Slack or email failure notifications',
@@ -454,7 +454,7 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'How is AI workflow automation different from Zapier or Make.com?',
     answer:
-      'Zapier and Make.com route data between apps when specific triggers fire — they\'re great for simple, predictable data moving. AI workflow automation adds a layer of intelligence on top: it reads a document and extracts structured data, classifies a request and routes it to the correct department, makes branching decisions based on content, writes a personalized response, or generates an audit-ready log entry. For Charlotte businesses with compliance requirements or complex document workflows, that intelligence layer handles the edge cases that Zapier can\'t.',
+      'Zapier and Make.com route data between apps when specific triggers fire, they\'re great for simple, predictable data moving. AI workflow automation adds a layer of intelligence on top: it reads a document and extracts structured data, classifies a request and routes it to the correct department, makes branching decisions based on content, writes a personalized response, or generates an audit-ready log entry. For Charlotte businesses with compliance requirements or complex document workflows, that intelligence layer handles the edge cases that Zapier can\'t.',
   },
   {
     category: 'what-is',
@@ -473,7 +473,7 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'Can AI automation connect to Charlotte banking, healthcare, and logistics platforms with full audit trails?',
     answer:
-      'Yes — AI workflow automation integrates with the platforms Charlotte\'s regulated industries use. Common connections include Salesforce and nCino for financial services, Epic and Meditech for healthcare, QuickBooks and SAP for accounting, and major TMS and WMS platforms for logistics. For Charlotte banking and healthcare clients, every integration includes an immutable audit log — every workflow run recorded with inputs, decision logic, outputs, and timestamps — as standard, not as a separate line item.',
+      'Yes, AI workflow automation integrates with the platforms Charlotte\'s regulated industries use. Common connections include Salesforce and nCino for financial services, Epic and Meditech for healthcare, QuickBooks and SAP for accounting, and major TMS and WMS platforms for logistics. For Charlotte banking and healthcare clients, every integration includes an immutable audit log: every workflow run recorded with inputs, decision logic, outputs, and timestamps, as standard, not as a separate line item.',
   },
 
   /* ── AI Automation in Charlotte ── */
@@ -481,13 +481,13 @@ const FAQ_ITEMS = [
     category: 'charlotte',
     question: 'Why is Charlotte a strong market for AI workflow automation?',
     answer:
-      'Three Charlotte-specific factors make automation especially valuable. First, the financial services concentration — Bank of America, Wells Fargo, Truist, and hundreds of fintech and professional services firms create compliance-heavy, document-intensive workflows that are exactly where structured AI automation performs best. Second, Charlotte is a major Southeast logistics hub — high-volume shipping document workflows are ideal automation candidates. Third, Atrium Health, Novant Health, and their supplier networks create significant healthcare administrative workflows that AI automation handles reliably with proper compliance controls.',
+      'Three Charlotte-specific factors make automation especially valuable. First, the financial services concentration: Bank of America, Wells Fargo, Truist, and hundreds of fintech and professional services firms create compliance-heavy, document-intensive workflows that are exactly where structured AI automation performs best. Second, Charlotte is a major Southeast logistics hub, high-volume shipping document workflows are ideal automation candidates. Third, Atrium Health, Novant Health, and their supplier networks create significant healthcare administrative workflows that AI automation handles reliably with proper compliance controls.',
   },
   {
     category: 'charlotte',
     question: 'Can AI workflow automation handle compliance requirements for Charlotte financial and healthcare businesses?',
     answer:
-      'Yes. Compliance-aware automation is a core capability for Charlotte\'s regulated industries. Every workflow we build includes a full audit trail — every run logged with inputs, decision logic, outputs, and timestamps. We use least-privilege data access so the automation touches only what it needs. For financial services, we build logging that maps to your control framework. For healthcare workflows, we follow HIPAA-aligned data handling and can build on self-hosted infrastructure so sensitive data never leaves your environment.',
+      'Yes. Compliance-aware automation is a core capability for Charlotte\'s regulated industries. Every workflow we build includes a full audit trail: every run logged with inputs, decision logic, outputs, and timestamps. We use least-privilege data access so the automation touches only what it needs. For financial services, we build logging that maps to your control framework. For healthcare workflows, we follow HIPAA-aligned data handling and can build on self-hosted infrastructure so sensitive data never leaves your environment.',
   },
   {
     category: 'charlotte',
@@ -499,13 +499,13 @@ const FAQ_ITEMS = [
     category: 'charlotte',
     question: 'How does AI automation help Charlotte logistics and supply chain businesses?',
     answer:
-      'Charlotte\'s logistics and distribution companies deal with high volumes of shipping documents — bills of lading, delivery confirmations, commercial invoices, carrier status updates. AI automation extracts structured data from these documents regardless of format, validates required fields, routes exceptions for human review, syncs data to your TMS or ERP, and generates reporting dashboards — processing documents at a speed and consistency that manual review can\'t match, without a proportional headcount increase.',
+      'Charlotte\'s logistics and distribution companies deal with high volumes of shipping documents, bills of lading, delivery confirmations, commercial invoices, carrier status updates. AI automation extracts structured data from these documents regardless of format, validates required fields, routes exceptions for human review, syncs data to your TMS or ERP, and generates reporting dashboards, processing documents at a speed and consistency that manual review can\'t match, without a proportional headcount increase.',
   },
   {
     category: 'charlotte',
     question: 'How does AI automation support Charlotte healthcare and health system businesses?',
     answer:
-      'Healthcare-adjacent businesses in Charlotte — specialty practices, healthcare staffing firms, medical device distributors, and suppliers to Atrium or Novant — use AI automation for patient intake communication workflows, insurance verification document routing, prior authorization processing, referral coordination, billing workflow triage, and compliance reporting. We build with HIPAA-aligned data handling and audit trail requirements as standard for healthcare clients — not as add-ons.',
+      'Healthcare-adjacent businesses in Charlotte, specialty practices, healthcare staffing firms, medical device distributors, and suppliers to Atrium or Novant, use AI automation for patient intake communication workflows, insurance verification document routing, prior authorization processing, referral coordination, billing workflow triage, and compliance reporting. We build with HIPAA-aligned data handling and audit trail requirements as standard for healthcare clients, not as add-ons.',
   },
 
   /* ── Process & Timeline ── */
@@ -513,19 +513,19 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI workflow automation development process look like?',
     answer:
-      'Five stages: Discover (we map your highest-value workflows, document the decision logic, identify integration points, and flag compliance or audit trail requirements), Design (specify workflow logic, exception handling, data transformations, and compliance controls), Build (develop and test in a staging environment with weekly demos), Validate (run against real business scenarios and tune edge cases — compliance clients review audit trail outputs in staging), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with a working demo.',
+      'Five stages: Discover (we map your highest-value workflows, document the decision logic, identify integration points, and flag compliance or audit trail requirements), Design (specify workflow logic, exception handling, data transformations, and compliance controls), Build (develop and test in a staging environment with weekly demos), Validate (run against real business scenarios and tune edge cases, compliance clients review audit trail outputs in staging), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with a working demo.',
   },
   {
     category: 'process',
     question: 'How long does it take to build and deploy AI workflow automation?',
     answer:
-      'A single focused workflow — lead follow-up automation, invoice processing, or a specific data sync — goes from kickoff to production in 2–3 weeks. Multi-workflow automation platforms connecting several systems take 4–6 weeks. Enterprise automation with complex compliance logic, financial or healthcare system integrations, and multiple departments typically runs 8–12 weeks. Timeline depends on the number of systems involved, compliance requirements, and how well-documented your current process is.',
+      'A single focused workflow, lead follow-up automation, invoice processing, or a specific data sync, goes from kickoff to production in 2–3 weeks. Multi-workflow automation platforms connecting several systems take 4–6 weeks. Enterprise automation with complex compliance logic, financial or healthcare system integrations, and multiple departments typically runs 8–12 weeks. Timeline depends on the number of systems involved, compliance requirements, and how well-documented your current process is.',
   },
   {
     category: 'process',
     question: 'Will I see the automation working during the build?',
     answer:
-      'Yes. Weekly demos at every stage of the build. You see the automation run against real examples from your actual workflow during development — not just at launch. Charlotte clients in regulated industries can review the audit trail and exception routing behavior in the staging environment before go-live, so your compliance team has confidence in what\'s being deployed.',
+      'Yes. Weekly demos at every stage of the build. You see the automation run against real examples from your actual workflow during development, not just at launch. Charlotte clients in regulated industries can review the audit trail and exception routing behavior in the staging environment before go-live, so your compliance team has confidence in what\'s being deployed.',
   },
   {
     category: 'process',
@@ -538,7 +538,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'Can Charlotte compliance, legal, or risk teams review the automation logic before it goes live?',
     answer:
-      'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a dedicated staging period where your Charlotte compliance, legal, or risk team can review the automation\'s decision logic, exception handling, and audit trail outputs before any production data is processed. For financial services and healthcare clients, this review ensures your internal control team — and your auditors — have full visibility. We document the automation architecture in a format designed for SOC 2, HIPAA, and banking audit review.',
+      'Yes, compliance review before deployment is built into every regulated-industry engagement. We run a dedicated staging period where your Charlotte compliance, legal, or risk team can review the automation\'s decision logic, exception handling, and audit trail outputs before any production data is processed. For financial services and healthcare clients, this review ensures your internal control team, and your auditors, have full visibility. We document the automation architecture in a format designed for SOC 2, HIPAA, and banking audit review.',
   },
 
   /* ── Pricing & ROI ── */
@@ -546,13 +546,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost for a Charlotte business?',
     answer:
-      'FactoryJet\'s AI workflow automation is fixed-price and scoped to your build — the main drivers are the number of workflows, the systems involved, and your compliance requirements. The Starter tier covers a focused single-workflow build, the Growth tier covers a multi-workflow platform connecting 3–5 systems with an operations dashboard (the most popular option for Charlotte SMBs), and the Enterprise tier covers complex compliance logic, financial or healthcare system integrations, and multi-department coverage. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.',
+      'FactoryJet\'s AI workflow automation is fixed-price and scoped to your build: the main drivers are the number of workflows, the systems involved, and your compliance requirements. The Starter tier covers a focused single-workflow build, the Growth tier covers a multi-workflow platform connecting 3–5 systems with an operations dashboard (the most popular option for Charlotte SMBs), and the Enterprise tier covers complex compliance logic, financial or healthcare system integrations, and multi-department coverage. Every project is quoted up front after a free discovery call, no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 12+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery, without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote, and no bloated project team staffed to justify a larger invoice.',
   },
   {
     category: 'pricing',
@@ -564,14 +564,14 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the automation is built?',
     answer:
-      'Two types: platform costs (n8n self-hosted is free; Make.com runs $9–$29/month for most SMB workflow volumes) and AI model API costs (typically $20–$100/month depending on how much AI reasoning your workflows use — paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
+      'Two types: platform costs (n8n self-hosted is free; Make.com runs $9–$29/month for most SMB workflow volumes) and AI model API costs (typically $20–$100/month depending on how much AI reasoning your workflows use, paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
   },
 
   {
     category: 'pricing',
     question: 'Do Charlotte financial services or healthcare businesses pay extra for compliance architecture in automation builds?',
     answer:
-      'No surprise add-ons. Full audit trail logging, least-privilege data access, self-hosted infrastructure options, and HIPAA-aligned data handling are included in our Enterprise tier — not separate line items added after scoping. For most Charlotte financial services and logistics clients, the Growth tier already includes the audit trail and exception handling they need. We scope this accurately during discovery so your budget commitment is firm before any work begins.',
+      'No surprise add-ons. Full audit trail logging, least-privilege data access, self-hosted infrastructure options, and HIPAA-aligned data handling are included in our Enterprise tier, not separate line items added after scoping. For most Charlotte financial services and logistics clients, the Growth tier already includes the audit trail and exception handling they need. We scope this accurately during discovery so your budget commitment is firm before any work begins.',
   },
 
   /* ── Trust & Results ── */
@@ -579,13 +579,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Is my business data safe in automated workflows?',
     answer:
-      'We use API-level integrations and enforce least-privilege access — the automation only touches the data it needs for the specific workflow. Every run is logged with a full audit trail. For Charlotte financial services, healthcare, and logistics clients handling sensitive transaction or patient data, we can build on self-hosted infrastructure (n8n self-hosted) so data never leaves your environment. We share our security architecture during the discovery call.',
+      'We use API-level integrations and enforce least-privilege access: the automation only touches the data it needs for the specific workflow. Every run is logged with a full audit trail. For Charlotte financial services, healthcare, and logistics clients handling sensitive transaction or patient data, we can build on self-hosted infrastructure (n8n self-hosted) so data never leaves your environment. We share our security architecture during the discovery call.',
   },
   {
     category: 'trust',
     question: 'What happens when an automated workflow fails or hits an edge case?',
     answer:
-      'Every workflow we build has explicit error handling: if a step fails, the system logs the error, notifies your designated team member via Slack or email, and either retries automatically or queues the item for manual review. Nothing fails silently. The monitoring dashboard shows exactly where a workflow stopped and why. For compliance-sensitive workflows, the exception is routed to human review — the automation never guesses on a compliance decision.',
+      'Every workflow we build has explicit error handling: if a step fails, the system logs the error, notifies your designated team member via Slack or email, and either retries automatically or queues the item for manual review. Nothing fails silently. The monitoring dashboard shows exactly where a workflow stopped and why. For compliance-sensitive workflows, the exception is routed to human review: the automation never guesses on a compliance decision.',
   },
   {
     category: 'trust',
@@ -597,13 +597,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can AI automation replace our existing Zapier or Make.com workflows?',
     answer:
-      'Often yes — and with added AI capability and compliance controls. We audit your existing automations during discovery and either migrate them to the new platform, leave simple ones in place, or rebuild them with AI decision-making and proper audit trail logging added on top. We don\'t replace things that are working well just to bill more hours.',
+      'Often yes, and with added AI capability and compliance controls. We audit your existing automations during discovery and either migrate them to the new platform, leave simple ones in place, or rebuild them with AI decision-making and proper audit trail logging added on top. We don\'t replace things that are working well just to bill more hours.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a local Charlotte automation agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it, weeks, not quarters), and SMB depth (500+ small business projects, we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
   },
 ];
 
@@ -664,7 +664,7 @@ export default function CharlotteAIAutomationPage() {
         formSlot={<HeroInlineForm region="us" source="us_charlotte_ai_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · CHARLOTTE, NC"
           headline="Charlotte's Financial District, Health Systems, and Logistics Companies Are Automating the Workflows That Don't Need a Human"
-          lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows — financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at fixed-price vs a local agency."
+          lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows, financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at fixed-price vs a local agency."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -677,10 +677,10 @@ export default function CharlotteAIAutomationPage() {
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                AI AUTOMATION IN ACTION — CHARLOTTE
+                AI AUTOMATION IN ACTION, CHARLOTTE
               </p>
               <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                40–65% of manual process time eliminated — before the first meeting.
+                40–65% of manual process time eliminated, before the first meeting.
               </p>
               <div className="mt-6 space-y-3">
                 {[
@@ -700,7 +700,7 @@ export default function CharlotteAIAutomationPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  All three running automatically — full audit trail, no manual intervention required.
+                  All three running automatically, full audit trail, no manual intervention required.
                 </p>
               </div>
             </div>
@@ -716,8 +716,8 @@ export default function CharlotteAIAutomationPage() {
         {/* ── 3. WHAT IS AI AUTOMATION ─────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI WORKFLOW AUTOMATION EXPLAINED"
-          headline="What Is AI Workflow Automation — and Why Charlotte Businesses Need It Now"
-          lead="AI workflow automation is not just Zapier with more steps. It's an intelligent layer that reads, decides, and acts — handling the compliance-sensitive, document-heavy workflows your team currently does manually, with a full audit trail built in."
+          headline="What Is AI Workflow Automation, and Why Charlotte Businesses Need It Now"
+          lead="AI workflow automation is not just Zapier with more steps. It's an intelligent layer that reads, decides, and acts, handling the compliance-sensitive, document-heavy workflows your team currently does manually, with a full audit trail built in."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -739,7 +739,7 @@ export default function CharlotteAIAutomationPage() {
                 ))}
               </div>
               <p>
-                Most Charlotte businesses have workflows that are half-automated. A Zapier trigger moves data, but someone still has to read the document, classify the request, route it to the right department, and generate the audit entry. AI workflow automation handles all of that — including the intelligence layer that Zapier can&apos;t. And for Charlotte&apos;s financial and healthcare industries, every automated action is logged with a full, reviewable audit trail.
+                Most Charlotte businesses have workflows that are half-automated. A Zapier trigger moves data, but someone still has to read the document, classify the request, route it to the right department, and generate the audit entry. AI workflow automation handles all of that, including the intelligence layer that Zapier can&apos;t. And for Charlotte&apos;s financial and healthcare industries, every automated action is logged with a full, reviewable audit trail.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -777,7 +777,7 @@ export default function CharlotteAIAutomationPage() {
                 </p>
               </div>
               <p>
-                The workflows that consume the most time — document processing, compliance routing, lead follow-up, data sync — are also the most predictable. They run the same steps, just with different inputs each time. AI workflow automation handles those steps automatically, scales with your volume, and maintains the audit trail that Charlotte&apos;s regulated industries require.
+                The workflows that consume the most time, document processing, compliance routing, lead follow-up, data sync, are also the most predictable. They run the same steps, just with different inputs each time. AI workflow automation handles those steps automatically, scales with your volume, and maintains the audit trail that Charlotte&apos;s regulated industries require.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -820,22 +820,22 @@ export default function CharlotteAIAutomationPage() {
                   {
                     step: '01',
                     title: 'A trigger fires',
-                    desc: 'Form submission, email received, document uploaded, new CRM record, scheduled time — any defined event starts the workflow.',
+                    desc: 'Form submission, email received, document uploaded, new CRM record, scheduled time, any defined event starts the workflow.',
                   },
                   {
                     step: '02',
                     title: 'AI reads and decides',
-                    desc: 'GPT-4o or Claude reads the input — including unstructured documents, PDFs, and compliance forms — and decides what to do next based on content.',
+                    desc: 'GPT-4o or Claude reads the input, including unstructured documents, PDFs, and compliance forms, and decides what to do next based on content.',
                   },
                   {
                     step: '03',
                     title: 'Takes multi-step action',
-                    desc: 'Updates your CRM, routes a document for approval, syncs data to your ERP or accounting system, sends a follow-up, generates an audit log entry — or all of the above.',
+                    desc: 'Updates your CRM, routes a document for approval, syncs data to your ERP or accounting system, sends a follow-up, generates an audit log entry, or all of the above.',
                   },
                   {
                     step: '04',
                     title: 'Logs and notifies on exceptions',
-                    desc: 'Every run is logged with full audit trail. If a step fails or hits a compliance edge case, your team is notified via Slack or email — and the item is queued for human review.',
+                    desc: 'Every run is logged with full audit trail. If a step fails or hits a compliance edge case, your team is notified via Slack or email, and the item is queued for human review.',
                   },
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
@@ -879,23 +879,23 @@ export default function CharlotteAIAutomationPage() {
         {/* ── 4. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
-          headline="Your team is processing the same compliance-sensitive documents on repeat — and it's costing more than you think."
-          lead="Charlotte's financial, logistics, and healthcare industries create high-volume, document-heavy workflows. The people handling those workflows manually are your most expensive resource. AI automation handles the processing — so your people handle the decisions."
+          headline="Your team is processing the same compliance-sensitive documents on repeat, and it's costing more than you think."
+          lead="Charlotte's financial, logistics, and healthcare industries create high-volume, document-heavy workflows. The people handling those workflows manually are your most expensive resource. AI automation handles the processing, so your people handle the decisions."
           pillars={[
             {
               icon: '📋',
-              title: 'Compliance workflows need precision — not manual effort',
-              body: 'Financial and healthcare workflows in Charlotte don\'t just need to be done — they need to be done correctly, documented, and auditable. Every time a human processes a compliance document manually, there\'s a risk of missed fields, routing errors, and gaps in the audit trail. AI automation handles the extraction, validation, routing, and logging with the consistency that compliance requires — and flags anything that doesn\'t fit the expected pattern for human review.',
+              title: 'Compliance workflows need precision | not manual effort',
+              body: 'Financial and healthcare workflows in Charlotte don\'t just need to be done, they need to be done correctly, documented, and auditable. Every time a human processes a compliance document manually, there\'s a risk of missed fields, routing errors, and gaps in the audit trail. AI automation handles the extraction, validation, routing, and logging with the consistency that compliance requires, and flags anything that doesn\'t fit the expected pattern for human review.',
             },
             {
               icon: '📦',
               title: 'Charlotte\'s logistics volume is growing faster than headcount can keep up',
-              body: 'Charlotte is a major Southeast distribution hub. Shipping document volume grows with each new client and contract. Manual document processing — extracting data from bills of lading, syncing carrier updates, routing delivery exceptions — scales with headcount. AI automation processes documents in seconds, regardless of volume, without a proportional increase in staff.',
+              body: 'Charlotte is a major Southeast distribution hub. Shipping document volume grows with each new client and contract. Manual document processing, extracting data from bills of lading, syncing carrier updates, routing delivery exceptions, scales with headcount. AI automation processes documents in seconds, regardless of volume, without a proportional increase in staff.',
             },
             {
               icon: '💸',
               title: 'Charlotte agency rates reflect Uptown overhead, not output',
-              body: 'A Charlotte automation agency building in Uptown or South End will quote enterprise-level rates for the same workflow FactoryJet delivers at a fraction of the cost. The difference is our engineering team is specialized — serving US businesses for 12 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
+              body: 'A Charlotte automation agency building in Uptown or South End will quote enterprise-level rates for the same workflow FactoryJet delivers at a fraction of the cost. The difference is our engineering team is specialized, serving US businesses for 12 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
             },
           ]}
         />
@@ -912,7 +912,7 @@ export default function CharlotteAIAutomationPage() {
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Strategy Call to Live Automation in 2–6 Weeks"
-          lead="A structured 5-stage process that keeps you informed at every step and delivers working automation — not a slide deck about automation."
+          lead="A structured 5-stage process that keeps you informed at every step and delivers working automation, not a slide deck about automation."
           stages={CHARLOTTE_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–6 WEEKS TO LAUNCH · WEEKLY DEMOS THROUGHOUT"
         />
@@ -951,12 +951,12 @@ export default function CharlotteAIAutomationPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not an Uptown Charlotte agency with South End rates. That's the whole point."
-          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The automations we build don't live in a demo — they run in production, processing real compliance documents, routing real leads, and syncing real data every day."
+          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The automations we build don't live in a demo, they run in production, processing real compliance documents, routing real leads, and syncing real data every day."
           pillars={[
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A Charlotte automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
+              body: 'A Charlotte automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it, not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '🔐',
@@ -966,7 +966,7 @@ export default function CharlotteAIAutomationPage() {
             {
               icon: '🔒',
               title: 'You own everything. Always.',
-              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full automation codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset — not a dependency.',
+              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full automation codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset, not a dependency.',
             },
           ]}
         />
@@ -975,7 +975,7 @@ export default function CharlotteAIAutomationPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything Charlotte Businesses Ask Before Building AI Workflow Automation"
-          lead="No jargon. No runaround. The questions we get on every Charlotte strategy call — answered straight."
+          lead="No jargon. No runaround. The questions we get on every Charlotte strategy call, answered straight."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -986,7 +986,7 @@ export default function CharlotteAIAutomationPage() {
             variant="dark"
             eyebrow="READY TO START"
             headline="Book a 30-Minute Workflow Automation Strategy Call"
-            sub="We'll map your highest-volume workflows, identify where AI automation would make the biggest difference for your Charlotte business — including any compliance and audit trail requirements — and give you a fixed-price estimate before you commit to anything."
+            sub="We'll map your highest-volume workflows, identify where AI automation would make the biggest difference for your Charlotte business, including any compliance and audit trail requirements, and give you a fixed-price estimate before you commit to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
             objectionHandler="Most Charlotte clients see full ROI within one quarter. Free call, fixed price, no hidden fees."

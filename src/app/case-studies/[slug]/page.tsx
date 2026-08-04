@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
@@ -230,7 +231,7 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
 
       <div className="relative mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
-          {/* LEFT — eyebrow + headline + tagline + stats */}
+          {/* LEFT, eyebrow + headline + tagline + stats */}
           <div className="lg:col-span-7">
             <Eyebrow>Case Study · {cs.category ?? cs.industry}</Eyebrow>
             <Heading as="h1" size="hero" className="mt-4 text-fj-ink">
@@ -265,7 +266,7 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
             )}
           </div>
 
-          {/* RIGHT — client logo + meta */}
+          {/* RIGHT, client logo + meta */}
           <div className="lg:col-span-5">
             <div
               className="flex h-full min-h-[260px] flex-col justify-between rounded-2xl border border-black/[0.08] bg-white p-7"
@@ -803,7 +804,7 @@ function FounderBannerSection({ teaser }: { teaser?: string }) {
       eyebrow="Want results like this?"
       bio={
         teaser
-          ? `${teaser} Hi, I'm Bhavesh, founder of FactoryJet. I run every discovery call myself — so by minute 10 we already know whether what you need pays for itself, and how fast.`
+          ? `${teaser} Hi, I'm Bhavesh, founder of FactoryJet. I run every discovery call myself, so by minute 10 we already know whether what you need pays for itself, and how fast.`
           : undefined
       }
     />
@@ -953,6 +954,11 @@ export default async function CaseStudyPage({ params }: Props) {
 
       <SiteHeader />
       <main>
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Case Studies', url: 'https://factoryjet.com/case-studies' },
+          { name: cs.headline, url: `https://factoryjet.com/case-studies/${slug}` },
+        ]} />
         <HeroSection cs={cs} />
         <AtAGlanceSection tiles={cs.glanceTiles ?? []} />
         <ChallengeSection body={cs.challenge} pullQuote={cs.challengePullQuote} />

@@ -75,7 +75,7 @@ export default function Hero({
         backgroundColor: '#FAFAF7',
       }}
     >
-      {/* Bottom shimmer separator — orange */}
+      {/* Bottom shimmer separator, orange */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
         style={{
@@ -195,7 +195,7 @@ function HeroContent({
         </div>
       )}
 
-      {/* Eyebrow — orange by default; navy when accent='navy' */}
+      {/* Eyebrow, orange by default; navy when accent='navy' */}
       {eyebrow && (
         <p className="fj-eyebrow mb-3" style={isNavy ? { color: '#103A5E' } : undefined}>
           {eyebrow}
@@ -220,7 +220,7 @@ function HeroContent({
         </p>
       )}
 
-      {/* Inline form slot — rendered when provided (the form becomes the CTA) */}
+      {/* Inline form slot, rendered when provided (the form becomes the CTA) */}
       {formSlot}
 
       {/* ── CTAs ──────────────────────────────────────────────────────── */}
@@ -292,7 +292,7 @@ function HeroContent({
                 <span className="h-[3px] w-[3px] rounded-full bg-fj-neutral-300" aria-hidden="true" />
               )}
               <span className="flex items-center gap-1.5">
-                {/* Checkmark circle — orange by default, navy when accent='navy' */}
+                {/* Checkmark circle, orange by default, navy when accent='navy' */}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <circle cx="7" cy="7" r="6.5" fill={isNavy ? 'rgba(16,58,94,0.08)' : 'rgba(240,90,40,0.08)'} stroke={isNavy ? 'rgba(16,58,94,0.28)' : 'rgba(240,90,40,0.28)'} strokeWidth="0.75"/>
                   <path d="M4.5 7l2 2L9.5 4.5" stroke={isNavy ? '#103A5E' : '#F05A28'} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>

@@ -61,55 +61,55 @@ export default function LeedsPage() {
 
   return (
     <main id="main-content">
-      {/* Section 1: Hero — Dark, immersive, cinematic */}
+      {/* Section 1: Hero: Dark, immersive, cinematic */}
       <Hero />
 
-      {/* StatsBar — 4 animated market stats, white bg, immediately below hero */}
+      {/* StatsBar, 4 animated market stats, white bg, immediately below hero */}
       <StatsBar />
 
-      {/* Section 2: MarqueeTicker — Trust signals scrolling ticker */}
+      {/* Section 2: MarqueeTicker, Trust signals scrolling ticker */}
       <MarqueeTicker />
 
-      {/* Section 3: CityContext — Editorial split layout, Blue-50 bg */}
+      {/* Section 3: CityContext: Editorial split layout, Blue-50 bg */}
       <CityContext />
 
-      {/* Section 4: ProblemStatement — Full-width dramatic typography */}
+      {/* Section 4: ProblemStatement, Full-width dramatic typography */}
       <ProblemStatement />
 
-      {/* Section 5: ServiceExplanation — Bento card grid, Gray-50 bg */}
+      {/* Section 5: ServiceExplanation: Bento card grid, Gray-50 bg */}
       <ServiceExplanation />
 
-      {/* Section 6: CompetitorComparison — Magazine-style editorial table */}
+      {/* Section 6: CompetitorComparison, Magazine-style editorial table */}
       <CompetitorComparison />
 
-      {/* MidPageCTA — Jet Blue full-width band */}
+      {/* MidPageCTA, Jet Blue full-width band */}
       <MidPageCTA />
 
-      {/* Section 7: ProcessTimeline — Signature GSAP horizontal scroll, dark bg */}
+      {/* Section 7: ProcessTimeline: Signature GSAP horizontal scroll, dark bg */}
       <ProcessTimeline />
 
-      {/* Section 8: IndustriesGrid — Asymmetric bento with icons */}
+      {/* Section 8: IndustriesGrid, Asymmetric bento with icons */}
       <IndustriesGrid />
 
-      {/* Section 9: CaseStudy — Before/After split with animated counters */}
+      {/* Section 9: CaseStudy, Before/After split with animated counters */}
       <CaseStudy />
 
-      {/* Section 10: AIVisibility — Dark section, GEO/AEO/SSR info cards */}
+      {/* Section 10: AIVisibility: Dark section, GEO/AEO/SSR info cards */}
       <AIVisibility />
 
-      {/* Section 11: Pricing — Clean table with highlighted FactoryJet column */}
+      {/* Section 11: Pricing, Clean table with highlighted FactoryJet column */}
       <Pricing />
 
-      {/* Section 12: FAQ — Fully expanded, no accordions */}
+      {/* Section 12: FAQ: Fully expanded, no accordions */}
       <FAQ />
 
-      {/* Section 13: SocialProof — Dark, statistics and testimonials */}
+      {/* Section 13: SocialProof: Dark, statistics and testimonials */}
       <SocialProof />
 
-      {/* LogoMarquee 2 — Industry logos, scrolls right at 45 s */}
+      {/* LogoMarquee 2: Industry logos, scrolls right at 45 s */}
       <LogoMarquee direction="right" speed={45} />
 
-      {/* Section 14: FinalCTA — Dark conversion section with embedded form */}
+      {/* Section 14: FinalCTA, Dark conversion section with embedded form */}
       <FinalCTA />
 
       {/* Footer */}

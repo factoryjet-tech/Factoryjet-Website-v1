@@ -155,7 +155,7 @@ export default function AiVisibilityCheckerPage() {
       <JsonLd id="ld-breadcrumb" data={breadcrumbSchema} />
 
       <main className="platpage avc">
-        {/* HERO — dot-grid atmosphere, tool card is the one memorable moment */}
+        {/* HERO, dot-grid atmosphere, tool card is the one memorable moment */}
         <section className="pp-dotgrid" id="top" style={{ scrollMarginTop: 80 }}>
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px, 7vh, 84px)', paddingBottom: 'clamp(44px, 7vh, 84px)' }}>
             <div className="avc-hero-grid">
@@ -209,7 +209,7 @@ export default function AiVisibilityCheckerPage() {
           </div>
         </section>
 
-        {/* HOW IT WORKS — a real 4-step sequence */}
+        {/* HOW IT WORKS: a real 4-step sequence */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <h2>From your website to a scored report</h2>
@@ -284,7 +284,7 @@ export default function AiVisibilityCheckerPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* FINAL CTA — on tint, brand orange (no dark room) */}
+        {/* FINAL CTA, on tint, brand orange (no dark room) */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow avc-final">
             <p className="pp-eyebrow">// see where you stand</p>

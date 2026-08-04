@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Visakhapatnam | FactoryJet',
     description:
-      'Professional website design company in Visakhapatnam — Next.js, SEO, and GA4 included. 7-day delivery. Serving Rushikonda IT SEZ, MVP Colony, Madhurawada, Beach Road.',
+      'Professional website design company in Visakhapatnam: Next.js, SEO, and GA4 included. 7-day delivery. Serving Rushikonda IT SEZ, MVP Colony, Madhurawada, Beach Road.',
     url: 'https://factoryjet.com/web-design/visakhapatnam',
     images: [
       {
@@ -89,6 +90,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/visakhapatnam#webpage',
+  url: 'https://factoryjet.com/web-design/visakhapatnam',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -139,31 +154,31 @@ const VIZAG_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Visakhapatnam's market — whether that's a port logistics company in the harbour area, an IT startup in Rushikonda SEZ, a pharma manufacturer in Gajuwaka, or a tourism operator on Beach Road. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Visakhapatnam's market, whether that's a port logistics company in the harbour area, an IT startup in Rushikonda SEZ, a pharma manufacturer in Gajuwaka, or a tourism operator on Beach Road. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Visakhapatnam-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Visakhapatnam-specific local SEO targeting built in.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -194,13 +209,13 @@ const VIZAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Visakhapatnam web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -220,7 +235,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -240,7 +255,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Visakhapatnam businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Visakhapatnam businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -252,7 +267,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Visakhapatnam Local ── */
@@ -260,19 +275,19 @@ const VIZAG_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for IT and tech companies in Visakhapatnam?',
     answer:
-      "Yes — IT companies, software firms, and tech startups in Rushikonda IT SEZ and Madhurawada are a core client profile for us in Vizag. With Google's AI City investment accelerating tech workforce growth in the region, businesses that establish a strong web presence now will own the search rankings when Vizag's digital economy fully activates.",
+      "Yes: IT companies, software firms, and tech startups in Rushikonda IT SEZ and Madhurawada are a core client profile for us in Vizag. With Google's AI City investment accelerating tech workforce growth in the region, businesses that establish a strong web presence now will own the search rankings when Vizag's digital economy fully activates.",
   },
   {
     category: 'local',
     question: 'Can you build websites for petrochemical and industrial companies in Vizag?',
     answer:
-      "Yes. Visakhapatnam's industrial corridor — HPCL refinery, ONGC operations, RINL Vizag Steel, and the Gajuwaka industrial estate — houses some of Andhra Pradesh's largest companies. Industrial and B2B businesses need websites that project technical capability, safety credentials, and procurement contact architecture for institutional buyers.",
+      "Yes. Visakhapatnam's industrial corridor: HPCL refinery, ONGC operations, RINL Vizag Steel, and the Gajuwaka industrial estate, houses some of Andhra Pradesh's largest companies. Industrial and B2B businesses need websites that project technical capability, safety credentials, and procurement contact architecture for institutional buyers.",
   },
   {
     category: 'local',
     question: "Do you know Visakhapatnam's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Vizag's business geography as part of discovery — from Rushikonda IT SEZ's tech corridor and Madhurawada's emerging commercial zone to Gajuwaka's industrial belt, the Steel Plant township, MVP Colony's commercial hub, and Beach Road's tourism and hospitality strip. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Vizag's business geography as part of discovery, from Rushikonda IT SEZ's tech corridor and Madhurawada's emerging commercial zone to Gajuwaka's industrial belt, the Steel Plant township, MVP Colony's commercial hub, and Beach Road's tourism and hospitality strip. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -286,7 +301,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -310,7 +325,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'support',
     question: 'Can FactoryJet help Vizag businesses prepare for the AI City digital influx?',
     answer:
-      "Absolutely. As Google's ₹85,000 Cr AI City investment brings thousands of high-income tech workers to Visakhapatnam, businesses across tourism, hospitality, retail, and professional services will compete for a digitally-savvy audience that discovers everything online first. We build the websites and SEO foundations that will capture that audience — the businesses acting now own the rankings when the workforce arrives.",
+      "Absolutely. As Google's ₹85,000 Cr AI City investment brings thousands of high-income tech workers to Visakhapatnam, businesses across tourism, hospitality, retail, and professional services will compete for a digitally-savvy audience that discovers everything online first. We build the websites and SEO foundations that will capture that audience: the businesses acting now own the rankings when the workforce arrives.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -435,31 +450,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Visakhapatnam market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Vizag competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Visakhapatnam local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Visakhapatnam local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -483,6 +498,10 @@ const speakableSchema = {
 export default function VisakhapatnamWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="vizag-local-business-schema"
         type="application/ld+json"
@@ -512,13 +531,18 @@ export default function VisakhapatnamWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Visakhapatnam', url: 'https://factoryjet.com/web-design/visakhapatnam' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_visakhapatnam_hero" />}
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
           headline="Website Design in Visakhapatnam for Businesses at the Edge of India's AI City Boom"
-          lead="Visakhapatnam is India's next major tech hub — Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Visakhapatnam is India's next major tech hub: Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -541,26 +565,26 @@ export default function VisakhapatnamWebDesignPage() {
           eyebrow="VISAKHAPATNAM MARKET"
           headline="Why Your Vizag Web Presence Is the Investment That Will Compound"
           leadParagraphs={[
-            "Visakhapatnam is undergoing the most significant economic transformation of any Indian city right now. Google's ₹85,000 Cr ($10 billion) AI City investment — announced as part of Andhra Pradesh's landmark infrastructure deal — is set to bring thousands of highly-skilled technology workers, research facilities, and global tech companies to the city. This is not future speculation; Andhra Pradesh has committed land, infrastructure, and policy support at a scale that will reshape Vizag's economy over the next decade.",
+            "Visakhapatnam is undergoing the most significant economic transformation of any Indian city right now. Google's ₹85,000 Cr ($10 billion) AI City investment, announced as part of Andhra Pradesh's landmark infrastructure deal, is set to bring thousands of highly-skilled technology workers, research facilities, and global tech companies to the city. This is not future speculation; Andhra Pradesh has committed land, infrastructure, and policy support at a scale that will reshape Vizag's economy over the next decade.",
             "Visakhapatnam already has substantial industrial depth: HPCL's refinery and ONGC's eastern operations anchor the petrochemical sector; RINL Vizag Steel is one of India's largest integrated steel plants; the port is one of India's busiest by cargo tonnage; and Rushikonda IT SEZ plus Madhurawada are already home to major IT and BPO operations. The city's IT workforce is growing at over 50% year-on-year, and Andhra Pradesh's government has been aggressive in attracting global tech investment.",
-            "The opportunity for Vizag businesses is clear and time-sensitive: the businesses that build a strong digital presence now will own the Google rankings when this workforce arrives. A tourism operator on Beach Road, a co-working space in Madhurawada, a restaurant near the Steel Plant township, or an IT services firm in Rushikonda SEZ — all of them benefit from being indexed, ranked, and converting traffic before competition intensifies. FactoryJet builds websites designed to rank and convert from day one.",
+            "The opportunity for Vizag businesses is clear and time-sensitive: the businesses that build a strong digital presence now will own the Google rankings when this workforce arrives. A tourism operator on Beach Road, a co-working space in Madhurawada, a restaurant near the Steel Plant township, or an IT services firm in Rushikonda SEZ: all of them benefit from being indexed, ranked, and converting traffic before competition intensifies. FactoryJet builds websites designed to rank and convert from day one.",
           ]}
           stats={[
             {
               value: '₹85,000 Cr',
-              label: "Google's AI City investment in Visakhapatnam — one of India's largest single tech infrastructure commitments",
+              label: "Google's AI City investment in Visakhapatnam: one of India's largest single tech infrastructure commitments",
               sourceUrl: 'https://www.ap.gov.in/',
               sourceLabel: 'Government of Andhra Pradesh',
             },
             {
               value: '50%+',
-              label: 'IT hiring growth rate in Visakhapatnam — among the fastest-growing tech talent markets in India',
+              label: 'IT hiring growth rate in Visakhapatnam, among the fastest-growing tech talent markets in India',
               sourceUrl: 'https://www.nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: 'Top 5',
-              label: "Visakhapatnam Port's ranking among India's major ports by cargo tonnage — the gateway to AP's industrial economy",
+              label: "Visakhapatnam Port's ranking among India's major ports by cargo tonnage: the gateway to AP's industrial economy",
               sourceUrl: 'https://www.vpa.gov.in/',
               sourceLabel: 'Visakhapatnam Port Authority',
             },
@@ -571,12 +595,12 @@ export default function VisakhapatnamWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
           headline="What 'Web Design' Actually Means for a Vizag Business in 2025"
-          lead="Visakhapatnam's economy spans industrial B2B businesses, fast-growing IT companies, port and logistics operators, and a tourism sector that is about to see a significant influx of high-income tech workers. Each of these sectors has very different web requirements — and very different windows of opportunity."
+          lead="Visakhapatnam's economy spans industrial B2B businesses, fast-growing IT companies, port and logistics operators, and a tourism sector that is about to see a significant influx of high-income tech workers. Each of these sectors has very different web requirements, and very different windows of opportunity."
           body={
             <>
               <p>
-                For Visakhapatnam&apos;s industrial businesses — petrochemical companies, steel
-                sector suppliers, port logistics operators, and pharma manufacturers — the website
+                For Visakhapatnam&apos;s industrial businesses, petrochemical companies, steel
+                sector suppliers, port logistics operators, and pharma manufacturers: the website
                 is a B2B credibility tool. Procurement managers at large corporations and
                 institutional buyers research vendors extensively before making contact. The site
                 needs to project technical capability, safety compliance, certifications, and a
@@ -585,11 +609,11 @@ export default function VisakhapatnamWebDesignPage() {
               </p>
               <p>
                 For IT companies, software firms, and tech startups in Rushikonda SEZ and
-                Madhurawada — the priority is positioning as a credible technology partner before
+                Madhurawada: the priority is positioning as a credible technology partner before
                 the AI City growth wave arrives and competition intensifies. Product-led
                 architecture, case study display, and conversion flows designed for enterprise
-                sales. For consumer-facing businesses — hospitality, tourism, retail, restaurants,
-                and professional services — mobile-first speed and conversion-optimised design are
+                sales. For consumer-facing businesses, hospitality, tourism, retail, restaurants,
+                and professional services, mobile-first speed and conversion-optimised design are
                 non-negotiable for a digitally-native audience.
               </p>
               <p>
@@ -676,12 +700,12 @@ export default function VisakhapatnamWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Visakhapatnam Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Vizag's business opportunity is accelerating — the AI City growth wave is already underway. Waiting 14 weeks for a website that should have been live in Q1 is not a strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Vizag's business opportunity is accelerating: the AI City growth wave is already underway. Waiting 14 weeks for a website that should have been live in Q1 is not a strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -712,7 +736,7 @@ export default function VisakhapatnamWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -721,9 +745,9 @@ export default function VisakhapatnamWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -737,11 +761,11 @@ export default function VisakhapatnamWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Hyderabad/Vizag Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Visakhapatnam deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Visakhapatnam deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={VIZAG_COMPARISON_COLUMNS}
           rows={VIZAG_COMPARISON_ROWS}
@@ -752,12 +776,12 @@ export default function VisakhapatnamWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="VISAKHAPATNAM × WEB DESIGN"
           headline="Web Design for Visakhapatnam's Key Industries"
-          lead="From IT and AI companies in Rushikonda SEZ to petrochemical giants in Gajuwaka, port logistics operators, pharma manufacturers, tourism operators, and defence-adjacent businesses — Vizag's economy is one of India's most diverse. FactoryJet builds for each of them."
+          lead="From IT and AI companies in Rushikonda SEZ to petrochemical giants in Gajuwaka, port logistics operators, pharma manufacturers, tourism operators, and defence-adjacent businesses, Vizag's economy is one of India's most diverse. FactoryJet builds for each of them."
           sectors={[
             {
               name: 'IT & AI Tech Companies',
               description:
-                "Rushikonda IT SEZ and Madhurawada are Visakhapatnam's growing technology corridor — hosting major IT services companies, BPO operations, and a rapidly expanding startup ecosystem. With Google's AI City investment accelerating tech workforce growth, IT companies need websites that position them as credible technology partners before competition intensifies. Product-led architecture, service capability pages, case study systems, and lead flows for enterprise sales cycles.",
+                "Rushikonda IT SEZ and Madhurawada are Visakhapatnam's growing technology corridor, hosting major IT services companies, BPO operations, and a rapidly expanding startup ecosystem. With Google's AI City investment accelerating tech workforce growth, IT companies need websites that position them as credible technology partners before competition intensifies. Product-led architecture, service capability pages, case study systems, and lead flows for enterprise sales cycles.",
               example:
                 'IT services firms, software companies, BPO operations, and tech startups in Rushikonda IT SEZ and Madhurawada targeting enterprise and government clients.',
             },
@@ -771,28 +795,28 @@ export default function VisakhapatnamWebDesignPage() {
             {
               name: 'Steel & Manufacturing',
               description:
-                "RINL Vizag Steel — one of India's largest integrated steel plants — anchors an entire ecosystem of steel sector suppliers, equipment manufacturers, and logistics companies in the Steel Plant township and surrounding areas. Supplier websites in this sector need to project manufacturing scale, quality certifications, and supply reliability to procurement teams at RINL and its global customers.",
+                "RINL Vizag Steel: one of India's largest integrated steel plants, anchors an entire ecosystem of steel sector suppliers, equipment manufacturers, and logistics companies in the Steel Plant township and surrounding areas. Supplier websites in this sector need to project manufacturing scale, quality certifications, and supply reliability to procurement teams at RINL and its global customers.",
               example:
                 'Steel sector suppliers, equipment manufacturers, and raw material traders serving RINL Vizag Steel and the broader manufacturing ecosystem.',
             },
             {
               name: 'Port & Shipping Logistics',
               description:
-                "Visakhapatnam Port is one of India's busiest ports by cargo tonnage — handling container, bulk, and liquid cargo for Andhra Pradesh's industrial economy and beyond. Logistics companies, shipping agents, freight forwarders, and port services businesses need websites that project operational capability, service range, and reliability credentials to cargo owners and shipping lines globally.",
+                "Visakhapatnam Port is one of India's busiest ports by cargo tonnage, handling container, bulk, and liquid cargo for Andhra Pradesh's industrial economy and beyond. Logistics companies, shipping agents, freight forwarders, and port services businesses need websites that project operational capability, service range, and reliability credentials to cargo owners and shipping lines globally.",
               example:
                 'Shipping agents, freight forwarders, port logistics companies, and customs brokers operating in and around Visakhapatnam Port.',
             },
             {
               name: 'Pharmaceuticals & Life Sciences',
               description:
-                "Visakhapatnam has a growing pharmaceutical and life sciences cluster — benefiting from Andhra Pradesh's overall pharma strength. Pharma manufacturers, API producers, and contract research organisations need regulatory-compliant copy, GMP certification display, product documentation systems, and B2B lead flows for institutional procurement from domestic and international buyers.",
+                "Visakhapatnam has a growing pharmaceutical and life sciences cluster, benefiting from Andhra Pradesh's overall pharma strength. Pharma manufacturers, API producers, and contract research organisations need regulatory-compliant copy, GMP certification display, product documentation systems, and B2B lead flows for institutional procurement from domestic and international buyers.",
               example:
                 'Pharmaceutical manufacturers, API producers, and contract research organisations in the Vizag pharma cluster targeting domestic and international institutional buyers.',
             },
             {
               name: 'Tourism & Hospitality',
               description:
-                "Visakhapatnam has one of India's most scenic coastlines — Beach Road, Ramakrishna Beach, and the surrounding hill stations are established tourism assets. As the AI City investment brings thousands of high-income tech workers to Vizag, the tourism, hospitality, and food & beverage sector will see a significant demand increase. Hotels, resorts, restaurants, and tourism operators need mobile-first websites with booking systems and local SEO to capture this audience.",
+                "Visakhapatnam has one of India's most scenic coastlines: Beach Road, Ramakrishna Beach, and the surrounding hill stations are established tourism assets. As the AI City investment brings thousands of high-income tech workers to Vizag, the tourism, hospitality, and food & beverage sector will see a significant demand increase. Hotels, resorts, restaurants, and tourism operators need mobile-first websites with booking systems and local SEO to capture this audience.",
               example:
                 'Hotels, beach resorts, restaurants, tourism operators, and hospitality businesses targeting the Beach Road corridor and the incoming AI City workforce.',
             },
@@ -810,7 +834,7 @@ export default function VisakhapatnamWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Visakhapatnam Businesses"
-          lead="The questions we answer on every Vizag discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Vizag discovery call, answered here, without the runaround."
           categories={VIZAG_FAQ_CATEGORIES}
           items={VIZAG_FAQ_ITEMS}
         />
@@ -820,7 +844,7 @@ export default function VisakhapatnamWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Visakhapatnam Website?"
-          sub="Visakhapatnam is on the edge of India's biggest AI City transformation — Google's ₹85,000 Cr investment, 50%+ IT hiring growth, and one of India's most diverse industrial economies. The businesses that get their digital presence sorted now will own the search rankings when the tech workforce arrives. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          sub="Visakhapatnam is on the edge of India's biggest AI City transformation: Google's ₹85,000 Cr investment, 50%+ IT hiring growth, and one of India's most diverse industrial economies. The businesses that get their digital presence sorted now will own the search rankings when the tech workforce arrives. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

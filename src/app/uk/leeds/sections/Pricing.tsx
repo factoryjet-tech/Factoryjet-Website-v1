@@ -171,7 +171,7 @@ export default function Pricing() {
           >
             <thead>
               <tr>
-                {/* Service — highlighted */}
+                {/* Service, highlighted */}
                 <th
                   className="text-left uppercase"
                   style={{
@@ -212,7 +212,7 @@ export default function Pricing() {
                   key={service}
                   style={{ background: i % 2 === 0 ? "white" : "#FAFBFC" }}
                 >
-                  {/* Service — highlighted */}
+                  {/* Service, highlighted */}
                   <td
                     style={{
                       padding: "14px 20px",

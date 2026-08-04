@@ -22,7 +22,7 @@ export default function FinalCTAUS() {
       />
       <div className="relative mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
-          {/* Left — founder-led ask */}
+          {/* Left, founder-led ask */}
           <div>
             <p className="font-fj-mono font-semibold uppercase" style={{ fontSize: '11px', letterSpacing: '0.16em', color: '#F05A28' }}>
               Before you commit
@@ -62,7 +62,7 @@ export default function FinalCTAUS() {
             </div>
           </div>
 
-          {/* Right — real client proof beside the ask */}
+          {/* Right, real client proof beside the ask */}
           <div style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 18, padding: 20 }}>
             <div className="flex items-center gap-3" style={{ marginBottom: 14 }}>
               <Image src="/images/testimonials/ricky-belle-maison-160.webp" alt="Ricky B, Belle Maison" width={46} height={46} style={{ borderRadius: '50%', objectFit: 'cover' }} />

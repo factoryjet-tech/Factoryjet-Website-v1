@@ -169,7 +169,7 @@ export default function DigitalLandscape() {
               <p>
                 Liverpool isn&rsquo;t just a city with a remarkable past. It&rsquo;s
                 a city with an extraordinary digital present. The Liverpool City
-                Region generates £43.3 billion in GDP — and with an £11 billion
+                Region generates £43.3 billion in GDP, and with an £11 billion
                 investment pipeline actively reshaping the waterfront, the
                 Knowledge Quarter, and Bramley-Moore Dock, the businesses that
                 own their digital presence right now will capture
@@ -180,16 +180,16 @@ export default function DigitalLandscape() {
                 Bramley-Moore Dock in August 2025 is the headline act. But
                 behind it sits a £5.5 billion Liverpool Waters regeneration
                 scheme, a 450-acre Knowledge Quarter housing the city&rsquo;s
-                life sciences and deep-tech sector, and the LCR Freeport —
+                life sciences and deep-tech sector, and the LCR Freeport,
                 positioning Liverpool as the UK&rsquo;s premier Atlantic gateway
                 once more. Peel Ports already handles approximately 45% of
                 UK-US trade flows. JLR Halewood manufactures Range Rover Evoque
                 and Discovery Sport for global export.
               </p>
               <p>
-                For Liverpool&rsquo;s 14,000 businesses — from logistics
+                For Liverpool&rsquo;s 14,000 businesses, from logistics
                 operators in Merseyside to creative studios in the Baltic
-                Triangle — the digital opportunity is enormous. And competition
+                Triangle: the digital opportunity is enormous. And competition
                 in AI web design, AI SEO, and AI agent development in Liverpool
                 is, right now, effectively zero.
               </p>
@@ -251,7 +251,7 @@ export default function DigitalLandscape() {
                       "0 1px 3px rgba(0,0,0,0.04)";
                   }}
                 >
-                  {/* Decorative progress ring — 80×80, top-right corner */}
+                  {/* Decorative progress ring, 80×80, top-right corner */}
                   <svg
                     aria-hidden="true"
                     width="80"
@@ -276,7 +276,7 @@ export default function DigitalLandscape() {
                       stroke="#E2E8F0"
                       strokeWidth="3"
                     />
-                    {/* Fill — starts hidden, GSAP draws it in on scroll */}
+                    {/* Fill, starts hidden, GSAP draws it in on scroll */}
                     <circle
                       data-ring-fill={s.ringPct}
                       data-ring-color={s.ringColor}
@@ -296,7 +296,7 @@ export default function DigitalLandscape() {
                     />
                   </svg>
 
-                  {/* Text — relative + z-index:10 so it always sits above the ring */}
+                  {/* Text, relative + z-index:10 so it always sits above the ring */}
                   <div
                     className="font-clash"
                     style={{

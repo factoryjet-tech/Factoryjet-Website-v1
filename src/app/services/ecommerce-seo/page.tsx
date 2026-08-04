@@ -14,7 +14,7 @@ import EcomFx from './EcomFx';
 import './ecommerce-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/ecommerce-seo — built 2026-06-02. Page #4 of the US SEO program.
+   /us/services/ecommerce-seo, built 2026-06-02. Page #4 of the US SEO program.
 
    Design: reference-grade (aurora-gradient depth, Google product rich-result hero,
    distinct 3D crystal-glass "three layers" cards, glass platform strip,
@@ -154,7 +154,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'Who is the best ecommerce SEO agency in USA?',
-        a: 'For product-based SMBs, FactoryJet makes a strong case: engineers who build ecommerce stores run the SEO on them, so technical fixes actually ship instead of dying in an audit PDF. The best ecommerce SEO services in USA share three traits worth filtering for — product and collection page expertise (not just blog content), structured data that wins rich results, and reporting tied to revenue rather than rankings. Whoever you shortlist, ask to see a before/after on a product catalog comparable to yours.',
+        a: 'For product-based SMBs, FactoryJet makes a strong case: engineers who build ecommerce stores run the SEO on them, so technical fixes actually ship instead of dying in an audit PDF. The best ecommerce SEO services in USA share three traits worth filtering for, product and collection page expertise (not just blog content), structured data that wins rich results, and reporting tied to revenue rather than rankings. Whoever you shortlist, ask to see a before/after on a product catalog comparable to yours.',
       },
     ],
   },
@@ -474,7 +474,7 @@ export default function EcommerceSeoServicePage() {
           </div>
         </section>
 
-        {/* 4. THREE LAYERS — glass cards */}
+        {/* 4. THREE LAYERS, glass cards */}
         <section className="glass-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 760 }}>
             <h2 data-reveal>Ecommerce SEO has <span className="it">three layers</span></h2>

@@ -7,7 +7,7 @@ import { getFileLastMod } from '@/lib/sitemap-helpers'
    route family per Report 26. The per-slug entries (and the index URL) are
    now emitted by sitemap-case-studies/sitemap.ts using the new CASE_STUDIES
    data source at src/data/case-studies/index.ts. The legacy `/case/` topNav
-   entry is removed from this sitemap — Bhavesh deletes the legacy /case
+   entry is removed from this sitemap, Bhavesh deletes the legacy /case
    route after production verification of the 301 redirects.
    ──────────────────────────────────────────────────────────────────────────── */
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Noida | FactoryJet',
     description:
-      'Professional website design company in Noida — Next.js, SEO, and GA4 included. 7-day delivery. Serving Sector 62, Sector 18, Film City, NSEZ, and Greater Noida.',
+      'Professional website design company in Noida: Next.js, SEO, and GA4 included. 7-day delivery. Serving Sector 62, Sector 18, Film City, NSEZ, and Greater Noida.',
     url: 'https://factoryjet.com/web-design/noida',
     images: [
       {
@@ -85,6 +86,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/noida#webpage',
+  url: 'https://factoryjet.com/web-design/noida',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -135,31 +150,31 @@ const NOIDA_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Noida's market — whether that's an enterprise buyer evaluating an IT services firm in Sector 62, a B2B buyer researching a pharma company in NSEZ, a media buyer browsing Film City production houses, or a D2C consumer on the Noida Expressway corridor. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Noida's market, whether that's an enterprise buyer evaluating an IT services firm in Sector 62, a B2B buyer researching a pharma company in NSEZ, a media buyer browsing Film City production houses, or a D2C consumer on the Noida Expressway corridor. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, demo request flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, demo request flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Noida-specific local SEO targeting built in — "web design Noida" is its own search market, distinct from Delhi. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Noida-specific local SEO targeting built in, "web design Noida" is its own search market, distinct from Delhi.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -190,13 +205,13 @@ const NOIDA_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Noida web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -216,7 +231,7 @@ const NOIDA_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -230,13 +245,13 @@ const NOIDA_FAQ_ITEMS = [
     category: 'technical',
     question: 'Will my website rank on Google India?',
     answer:
-      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks. Importantly, 'web design Noida' is its own distinct search market from Delhi — so Noida-specific SEO targeting is built into every project for Noida clients.",
+      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks. Importantly, 'web design Noida' is its own distinct search market from Delhi, so Noida-specific SEO targeting is built into every project for Noida clients.",
   },
   {
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Noida businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Noida businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -248,7 +263,7 @@ const NOIDA_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo request clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo request clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Noida Local ── */
@@ -256,7 +271,7 @@ const NOIDA_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for IT companies and startups in Sector 62 and the Noida Expressway corridor?',
     answer:
-      "Yes — IT services companies, SaaS startups, BPO/ITES firms, and tech-enabled businesses in Sector 62, Sector 63, and the Noida Expressway corridor are a core client profile. We build product-led and service authority websites designed to generate enterprise leads and qualified demo requests — with B2B buyer journey architecture, technical SEO, and performance that holds up under corporate procurement scrutiny.",
+      "Yes: IT services companies, SaaS startups, BPO/ITES firms, and tech-enabled businesses in Sector 62, Sector 63, and the Noida Expressway corridor are a core client profile. We build product-led and service authority websites designed to generate enterprise leads and qualified demo requests, with B2B buyer journey architecture, technical SEO, and performance that holds up under corporate procurement scrutiny.",
   },
   {
     category: 'local',
@@ -268,7 +283,7 @@ const NOIDA_FAQ_ITEMS = [
     category: 'local',
     question: "Do you know Noida's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Noida's business geography as part of every discovery — from Sector 62's IT corridor and Sector 18's commercial retail hub to NSEZ (Noida Special Economic Zone) for exporters, Film City for media, and Greater Noida's automotive and manufacturing belt. Noida has distinct search intent from Delhi NCR broadly — local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Noida's business geography as part of every discovery, from Sector 62's IT corridor and Sector 18's commercial retail hub to NSEZ (Noida Special Economic Zone) for exporters, Film City for media, and Greater Noida's automotive and manufacturing belt. Noida has distinct search intent from Delhi NCR broadly, local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
   {
     category: 'local',
@@ -282,7 +297,7 @@ const NOIDA_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -425,31 +440,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Noida market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Noida competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Noida local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Noida local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -473,6 +488,10 @@ const speakableSchema = {
 export default function NoidaWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="noida-local-business-schema"
         type="application/ld+json"
@@ -502,13 +521,18 @@ export default function NoidaWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Noida', url: 'https://factoryjet.com/web-design/noida' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_noida_hero" />}
           eyebrow="WEB DESIGN · NOIDA"
           headline="Website Design in Noida for IT Firms, Media Companies, and Delhi-NCR's Fastest-Growing Startups"
-          lead="Noida is Delhi-NCR's IT capital — home to India's largest software and BPO corridor, Film City's media cluster, NSEZ's export zone, and an emerging D2C and EdTech startup ecosystem. From Sector 62's IT corridor to the Noida Expressway's tech parks, Noida businesses compete nationally and globally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Noida is Delhi-NCR's IT capital, home to India's largest software and BPO corridor, Film City's media cluster, NSEZ's export zone, and an emerging D2C and EdTech startup ecosystem. From Sector 62's IT corridor to the Noida Expressway's tech parks, Noida businesses compete nationally and globally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -531,9 +555,9 @@ export default function NoidaWebDesignPage() {
           eyebrow="NOIDA MARKET"
           headline="Why Your Noida Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Noida is not a suburb of Delhi — it is India's IT and media capital in its own right. Sector 62 and the surrounding IT corridor houses offices and development centres for HCL, Infosys, Wipro, Adobe, Samsung, and hundreds of mid-sized software companies and BPO/ITES firms. Film City in Sector 16A is one of India's premier media production hubs. NSEZ (Noida Special Economic Zone) hosts export-oriented manufacturers. The Noida Expressway corridor is home to a growing wave of D2C brands, EdTech startups, and SaaS companies. Greater Noida's automotive and manufacturing belt extends the city's economic footprint further.",
-            "This creates a web design opportunity unique to Noida: an IT services firm in Sector 62 needs a completely different site architecture from a production house near Film City, a pharma exporter in NSEZ, or a D2C brand on the Noida Expressway. Enterprise buyers researching IT vendors do weeks of due diligence. A B2B buyer evaluating an NSEZ exporter needs certifications and capacity detail. A consumer D2C brand needs mobile-first speed and instant checkout. FactoryJet builds for all of them — because we start every project with the buyer journey in mind, not the template.",
-            "'Web design Noida' is its own distinct search market. Buyers and prospects searching for Noida-based businesses use Noida-specific queries — not generic Delhi NCR terms. The businesses that rank for those queries, with fast-loading sites and credibility-first architecture, capture the leads that their slower competitors are conceding every week.",
+            "Noida is not a suburb of Delhi, it is India's IT and media capital in its own right. Sector 62 and the surrounding IT corridor houses offices and development centres for HCL, Infosys, Wipro, Adobe, Samsung, and hundreds of mid-sized software companies and BPO/ITES firms. Film City in Sector 16A is one of India's premier media production hubs. NSEZ (Noida Special Economic Zone) hosts export-oriented manufacturers. The Noida Expressway corridor is home to a growing wave of D2C brands, EdTech startups, and SaaS companies. Greater Noida's automotive and manufacturing belt extends the city's economic footprint further.",
+            "This creates a web design opportunity unique to Noida: an IT services firm in Sector 62 needs a completely different site architecture from a production house near Film City, a pharma exporter in NSEZ, or a D2C brand on the Noida Expressway. Enterprise buyers researching IT vendors do weeks of due diligence. A B2B buyer evaluating an NSEZ exporter needs certifications and capacity detail. A consumer D2C brand needs mobile-first speed and instant checkout. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template.",
+            "'Web design Noida' is its own distinct search market. Buyers and prospects searching for Noida-based businesses use Noida-specific queries, not generic Delhi NCR terms. The businesses that rank for those queries, with fast-loading sites and credibility-first architecture, capture the leads that their slower competitors are conceding every week.",
           ]}
           stats={[
             {
@@ -544,13 +568,13 @@ export default function NoidaWebDesignPage() {
             },
             {
               value: 'Film City',
-              label: "India's major media and OTT production hub — over 40 studios and production houses in Sector 16A",
+              label: "India's major media and OTT production hub, over 40 studios and production houses in Sector 16A",
               sourceUrl: 'https://www.filmcitynoida.com/',
               sourceLabel: 'Film City Noida',
             },
             {
               value: '₹1.4L Cr',
-              label: "Noida's estimated GDP contribution to Delhi-NCR — one of India's fastest-growing urban economies",
+              label: "Noida's estimated GDP contribution to Delhi-NCR: one of India's fastest-growing urban economies",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -561,12 +585,12 @@ export default function NoidaWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · NOIDA"
           headline="What 'Web Design' Actually Means for a Noida Business"
-          lead="Noida's economy runs on two very different buyer behaviours — enterprise and B2B buyers doing weeks of vendor evaluation, and direct-to-consumer or startup buyers deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
+          lead="Noida's economy runs on two very different buyer behaviours, enterprise and B2B buyers doing weeks of vendor evaluation, and direct-to-consumer or startup buyers deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
                 For Noida&apos;s IT services firms, BPO/ITES companies, pharma exporters in NSEZ,
-                and media production houses near Film City — the website is a sales and credibility
+                and media production houses near Film City: the website is a sales and credibility
                 instrument. Enterprise buyers spend weeks evaluating vendors. B2B procurement teams
                 check for capability pages, client credentials, case studies, certifications, and
                 frictionless contact flows. We build these sites with authority-first architecture,
@@ -574,10 +598,10 @@ export default function NoidaWebDesignPage() {
               </p>
               <p>
                 For D2C brands on the Noida Expressway, EdTech and SaaS startups in Greater Noida,
-                and consumer retail businesses in Sector 18 — the challenge is different. These
+                and consumer retail businesses in Sector 18: the challenge is different. These
                 buyers decide in seconds. Mobile-first speed, conversion-optimised hero sections,
                 instant CTAs, and Razorpay checkout are the priorities. Lighthouse 90+ on mobile
-                is not optional — it is the baseline.
+                is not optional, it is the baseline.
               </p>
               <p>
                 Every FactoryJet Noida project covers discovery, Figma prototyping, Next.js
@@ -657,7 +681,7 @@ export default function NoidaWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Noida Businesses Choose FactoryJet Over Local Delhi NCR Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -693,7 +717,7 @@ export default function NoidaWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -702,9 +726,9 @@ export default function NoidaWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -718,11 +742,11 @@ export default function NoidaWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Noida/Delhi NCR Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Noida deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Noida deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={NOIDA_COMPARISON_COLUMNS}
           rows={NOIDA_COMPARISON_ROWS}
@@ -733,26 +757,26 @@ export default function NoidaWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="NOIDA × WEB DESIGN"
           headline="Web Design for Noida's Key Industries"
-          lead="From IT services firms and BPO companies to media production houses, NSEZ exporters, D2C startups, and pharma manufacturers — Noida's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From IT services firms and BPO companies to media production houses, NSEZ exporters, D2C startups, and pharma manufacturers, Noida's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'IT & Software Services',
               description:
-                "Noida's Sector 62, 63, and 65 corridor is one of India's densest IT clusters — home to HCL Technologies, Infosys, Wipro, Adobe, Samsung R&D, and hundreds of mid-sized software companies, product firms, and offshore development centres. IT services websites need authority-first architecture: capability deep-dives, case study systems, technology stack showcases, and lead-capture flows designed for enterprise procurement cycles.",
+                "Noida's Sector 62, 63, and 65 corridor is one of India's densest IT clusters, home to HCL Technologies, Infosys, Wipro, Adobe, Samsung R&D, and hundreds of mid-sized software companies, product firms, and offshore development centres. IT services websites need authority-first architecture: capability deep-dives, case study systems, technology stack showcases, and lead-capture flows designed for enterprise procurement cycles.",
               example:
                 'Software development companies, IT services firms, and offshore development centres in Sector 62, Sector 63, and the Noida Expressway corridor targeting enterprise buyers in the US, EU, and Australia.',
             },
             {
               name: 'Media & Entertainment',
               description:
-                "Film City in Sector 16A is one of India's premier media production hubs — home to production houses, OTT studios, post-production facilities, advertising agencies, and media companies. These businesses need showreel-integrated layouts, video-forward design, talent and services showcase pages, and inquiry flows optimised for commissioning conversations and brand partnerships.",
+                "Film City in Sector 16A is one of India's premier media production hubs, home to production houses, OTT studios, post-production facilities, advertising agencies, and media companies. These businesses need showreel-integrated layouts, video-forward design, talent and services showcase pages, and inquiry flows optimised for commissioning conversations and brand partnerships.",
               example:
                 'Production houses, OTT studios, post-production companies, and advertising agencies in and around Film City, Sector 16A.',
             },
             {
               name: 'E-Commerce & D2C',
               description:
-                "Noida's Expressway corridor and sectors like 135 and 137 house a growing cluster of D2C brands, e-commerce companies, and digital-first retail businesses. These brands need mobile-first speed, conversion-optimised product pages, Razorpay checkout, Shiprocket integration, and SEO targeting high-intent buyer queries. Performance is everything — every second of load time costs real revenue.",
+                "Noida's Expressway corridor and sectors like 135 and 137 house a growing cluster of D2C brands, e-commerce companies, and digital-first retail businesses. These brands need mobile-first speed, conversion-optimised product pages, Razorpay checkout, Shiprocket integration, and SEO targeting high-intent buyer queries. Performance is everything: every second of load time costs real revenue.",
               example:
                 'D2C brands, online retailers, and e-commerce businesses operating from the Noida Expressway corridor and Greater Noida targeting national and international consumers.',
             },
@@ -766,14 +790,14 @@ export default function NoidaWebDesignPage() {
             {
               name: 'BPO / ITES & Consulting',
               description:
-                "Noida is one of India's top BPO and ITES destinations — with major operations from companies like HCL, Genpact, EXL Service, and hundreds of mid-sized BPO firms. These businesses need professional services websites projecting operational scale, client credential display, service capability pages, and lead forms designed for enterprise procurement teams.",
+                "Noida is one of India's top BPO and ITES destinations, with major operations from companies like HCL, Genpact, EXL Service, and hundreds of mid-sized BPO firms. These businesses need professional services websites projecting operational scale, client credential display, service capability pages, and lead forms designed for enterprise procurement teams.",
               example:
                 'BPO companies, KPO firms, ITES providers, and management consulting companies in Sector 62, Sector 125, and the Noida Expressway corridor.',
             },
             {
               name: 'EdTech & SaaS Startups',
               description:
-                "Noida and Greater Noida are home to a growing EdTech and SaaS startup ecosystem — supported by proximity to IIT Delhi, the National Capital Region's talent pool, and investor networks. Startup websites need product-led architecture, investor credibility signals, demo request flows, pricing pages, and performance designed for rapid iteration. First impressions close or lose seed-stage credibility in seconds.",
+                "Noida and Greater Noida are home to a growing EdTech and SaaS startup ecosystem, supported by proximity to IIT Delhi, the National Capital Region's talent pool, and investor networks. Startup websites need product-led architecture, investor credibility signals, demo request flows, pricing pages, and performance designed for rapid iteration. First impressions close or lose seed-stage credibility in seconds.",
               example:
                 "EdTech platforms, SaaS companies, and tech startups emerging from Noida and Greater Noida targeting Indian and global growth markets.",
             },
@@ -791,7 +815,7 @@ export default function NoidaWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Noida Businesses"
-          lead="The questions we answer on every Noida discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Noida discovery call, answered here, without the runaround."
           categories={NOIDA_FAQ_CATEGORIES}
           items={NOIDA_FAQ_ITEMS}
         />

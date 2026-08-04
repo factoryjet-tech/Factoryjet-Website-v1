@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -49,6 +50,20 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://factoryjet.com/seo/seo-audit', languages: seoSubServiceAlternatesIN['seo-audit'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/seo/seo-audit#webpage',
+  url: 'https://factoryjet.com/seo/seo-audit',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const serviceSchema = {
@@ -140,6 +155,10 @@ const AUDIT_COMPARISON_ROWS = [
 export default function SeoAuditPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script id="audit-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="audit-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
@@ -154,10 +173,15 @@ export default function SeoAuditPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'SEO', url: 'https://factoryjet.com/seo' },
+          { name: 'SEO Audit', url: 'https://factoryjet.com/seo/seo-audit' },
+        ]} />
         <Hero
         formSlot={<HeroInlineForm region="in" source="seo_seo_audit_hero" />}
           eyebrow="SEO AUDIT SERVICES · INDIA"
-          headline="SEO Audit Services in India — Find Out Exactly Why Your Website Isn't Ranking"
+          headline="SEO Audit Services in India, Find Out Exactly Why Your Website Isn't Ranking"
           lead="If your website is not showing up on Google, you need to know why before you spend a rupee fixing it. Our SEO audit is a full health check of your website. We look at everything that decides where you rank, then show you exactly what is wrong and what to fix first. You get a clear, plain-English report with a to-do list, ranked by what matters most. Start with a free first check, with no strings and no obligation. The report is yours to keep, whether you work with us or not."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Free first check', 'Plain-English report', 'Ranked to-do list']}
@@ -166,7 +190,7 @@ export default function SeoAuditPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted SEO Audit Agency — 500+ Sites, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted SEO Audit Agency, 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

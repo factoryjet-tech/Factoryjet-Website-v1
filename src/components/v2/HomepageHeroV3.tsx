@@ -111,7 +111,7 @@ export default function HomepageHeroV3() {
       style={{ backgroundColor: '#FAFAF7' }}
     >
       {/* ── Background atmosphere ── */}
-      {/* Blue bloom — top right */}
+      {/* Blue bloom, top right */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute"
@@ -124,7 +124,7 @@ export default function HomepageHeroV3() {
           borderRadius: '50%',
         }}
       />
-      {/* Orange bloom — bottom left */}
+      {/* Orange bloom, bottom left */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute"
@@ -207,7 +207,7 @@ export default function HomepageHeroV3() {
               ref={subRef}
               className="font-fj-body text-[17px] leading-[1.65] text-[#64748B] max-w-[420px] mb-10 opacity-0"
             >
-              Professional websites for US small businesses — delivered in a week, at a fixed, transparent price.
+              Professional websites for US small businesses, delivered in a week, at a fixed, transparent price.
             </p>
 
             {/* CTAs */}
@@ -254,11 +254,11 @@ export default function HomepageHeroV3() {
             </div>
           </div>
 
-          {/* ──────────────── RIGHT — free-floating ──────────────── */}
+          {/* ──────────────── RIGHT, free-floating ──────────────── */}
           {/* No glass container. Elements float directly on the cream background. */}
           <div className="relative hidden lg:block" style={{ height: '560px' }}>
 
-            {/* Crosshair — horizontal */}
+            {/* Crosshair, horizontal */}
             <div
               ref={crosshairHRef}
               aria-hidden="true"
@@ -272,7 +272,7 @@ export default function HomepageHeroV3() {
                 transform: 'translateY(-50%) scaleX(0)',
               }}
             />
-            {/* Crosshair — vertical */}
+            {/* Crosshair, vertical */}
             <div
               ref={crosshairVRef}
               aria-hidden="true"
@@ -287,7 +287,7 @@ export default function HomepageHeroV3() {
               }}
             />
 
-            {/* ── Central Gauge — floats directly on cream ── */}
+            {/* ── Central Gauge, floats directly on cream ── */}
             <div
               ref={gaugeRef}
               className="absolute opacity-0"
@@ -302,9 +302,9 @@ export default function HomepageHeroV3() {
                 width="240"
                 height="240"
                 viewBox="0 0 240 240"
-                aria-label="Delivery engine — 7-day build cycle"
+                aria-label="Delivery engine, 7-day build cycle"
               >
-                {/* Outer circle — dark */}
+                {/* Outer circle, dark */}
                 <circle cx="120" cy="120" r="112" fill="#080E1B" />
                 {/* Subtle outer ring */}
                 <circle cx="120" cy="120" r="112" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
@@ -315,7 +315,7 @@ export default function HomepageHeroV3() {
                 <line x1="120" y1="10" x2="120" y2="230" stroke="rgba(255,255,255,0.05)" strokeWidth="0.75" />
                 <line x1="10" y1="120" x2="230" y2="120" stroke="rgba(255,255,255,0.05)" strokeWidth="0.75" />
 
-                {/* Orange delivery sector arc — roughly 120° */}
+                {/* Orange delivery sector arc, roughly 120° */}
                 {/* Sector from top (12 o'clock) sweeping clockwise ~120° */}
                 <path
                   d="M120,120 L120,10 A110,110 0 0,1 215.4,175 Z"
@@ -537,7 +537,7 @@ export default function HomepageHeroV3() {
               </div>
             </div>
 
-            {/* Subtle glow behind gauge — reinforces float without a panel */}
+            {/* Subtle glow behind gauge, reinforces float without a panel */}
             <div
               aria-hidden="true"
               className="absolute pointer-events-none rounded-full"

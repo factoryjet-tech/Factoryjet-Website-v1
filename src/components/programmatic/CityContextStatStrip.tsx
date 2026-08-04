@@ -34,7 +34,7 @@ export default function CityContextStatStrip({
     <section className="bg-white">
       <div className="mx-auto max-w-container-xl px-6 py-section-y lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left — lead (5/12) */}
+          {/* Left, lead (5/12) */}
           <div className="lg:col-span-5">
             <div className="mb-6 inline-flex items-center font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
               {eyebrow}
@@ -45,7 +45,7 @@ export default function CityContextStatStrip({
             <p className="mt-6 text-body-lg text-slate">{leadParagraph}</p>
           </div>
 
-          {/* Right — 3 stat cards (7/12) */}
+          {/* Right, 3 stat cards (7/12) */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {stats.map((stat) => (

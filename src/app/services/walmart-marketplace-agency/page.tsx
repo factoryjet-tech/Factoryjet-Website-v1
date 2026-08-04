@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 import { ShieldCheck, Megaphone, ClipboardList, Search, Target, Workflow, Check } from 'lucide-react';
 
@@ -214,6 +215,11 @@ export default function WalmartMarketplaceAgencyPage() {
       <SiteHeader locale="us" />
 
       <main className="wmp">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'Walmart Marketplace Agency', url: URL },
+        ]} />
         {/* HERO */}
         <section className="wmp-hero">
           <div className="wmp-wrap wmp-hero-grid">

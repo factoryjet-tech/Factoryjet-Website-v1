@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 
 import { aiSeoAlternates } from '@/data/hreflangMap';
@@ -13,7 +14,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /ai-seo — India AI SEO service page ("The Answer Card — Director's Cut")
+   /ai-seo, India AI SEO service page ("The Answer Card, Director's Cut")
    Built 2026-06-11 from approved mockup-india-ai-seo-v2.html.
 
    Closes: 89 homeless India AI-SEO Tier-1 keywords + live 404 (footer/hub
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — AI SEO services (GEO + AEO) for Indian businesses',
+        alt: 'FactoryJet, AI SEO services (GEO + AEO) for Indian businesses',
       },
     ],
     locale: 'en_IN',
@@ -93,7 +94,7 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data — 22 across 5 categories. Conversational, simple words, answer-
+   FAQ data, 22 across 5 categories. Conversational, simple words, answer-
    first, NO pricing figures. Carries all 23 country-level money keywords.
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -111,43 +112,43 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'What is AI SEO in simple words?',
     answer:
-      'It means making your website easy for AI tools — ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews — to find, understand, and mention when people ask them questions. Old SEO got you a spot in Google\'s list of links. AI SEO gets your business named inside the AI\'s answer.',
+      'It means making your website easy for AI tools: ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews, to find, understand, and mention when people ask them questions. Old SEO got you a spot in Google\'s list of links. AI SEO gets your business named inside the AI\'s answer.',
   },
   {
     category: 'what',
     question: 'Who is the best AI SEO agency in India?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: engineers do the work, you see citations per engine every month, and there is no long contract. The honest answer depends on your size — we wrote a full comparison of the best AI SEO company in India options, including our competitors, with sources you can check. The test that matters: ask any agency to show you AI citations they earned, engine by engine.',
+      'For small and mid-size businesses, FactoryJet makes a strong case: engineers do the work, you see citations per engine every month, and there is no long contract. The honest answer depends on your size, we wrote a full comparison of the best AI SEO company in India options, including our competitors, with sources you can check. The test that matters: ask any agency to show you AI citations they earned, engine by engine.',
   },
   {
     category: 'what',
     question: 'What is the difference between GEO and AEO?',
     answer:
-      'Two names for nearly the same work. GEO (generative engine optimization) targets AI tools that write answers, like ChatGPT and Perplexity. AEO (answer engine optimization) targets anything that gives a direct answer, including Google AI Overviews. The actual work — clear answers, the hidden code AI reads, real mentions — is nearly identical. Never pay twice for two acronyms.',
+      'Two names for nearly the same work. GEO (generative engine optimization) targets AI tools that write answers, like ChatGPT and Perplexity. AEO (answer engine optimization) targets anything that gives a direct answer, including Google AI Overviews. The actual work, clear answers, the hidden code AI reads, real mentions, is nearly identical. Never pay twice for two acronyms.',
   },
   {
     category: 'what',
     question: 'Is this the same as the best generative engine optimization services in India would offer?',
     answer:
-      'Yes — generative engine optimization is part of every plan, not a separate product. The best generative engine optimization agency in India — or the best GEO agency in India, same thing in fewer letters — is simply the one that shows proof per engine and explains the work in plain words. That is the standard we hold ourselves to, and the one you should hold anyone to.',
+      'Yes, generative engine optimization is part of every plan, not a separate product. The best generative engine optimization agency in India, or the best GEO agency in India, same thing in fewer letters, is simply the one that shows proof per engine and explains the work in plain words. That is the standard we hold ourselves to, and the one you should hold anyone to.',
   },
   {
     category: 'what',
     question: 'What are the top 10 AI SEO agencies in India?',
     answer:
-      'We researched and published that exact list — the top 10 AI SEO companies in India, every entry verified on its own website, including agencies that compete with us. The same names hold if you search the top 10 AI SEO services in India or the top 10 generative engine optimization agencies in India. Read it on our blog and check every claim yourself.',
+      'We researched and published that exact list: the top 10 AI SEO companies in India, every entry verified on its own website, including agencies that compete with us. The same names hold if you search the top 10 AI SEO services in India or the top 10 generative engine optimization agencies in India. Read it on our blog and check every claim yourself.',
   },
   {
     category: 'what',
     question: 'Which is the best AEO agency in India?',
     answer:
-      'A ranking of the top 10 AEO agencies in India looks nearly identical to the AI SEO list, because the work overlaps almost completely. The best answer engine optimization agency in India — and the best answer engine optimization services in India generally — engineer answer-first pages and schema, then show you where Google AI Overviews and chat tools actually used them. Ask for that proof before you sign anything.',
+      'A ranking of the top 10 AEO agencies in India looks nearly identical to the AI SEO list, because the work overlaps almost completely. The best answer engine optimization agency in India, and the best answer engine optimization services in India generally, engineer answer-first pages and schema, then show you where Google AI Overviews and chat tools actually used them. Ask for that proof before you sign anything.',
   },
 
   // ── Will it work for me? ─────────────────────────────────────────────────
   {
     category: 'fit',
-    question: 'My customers are on WhatsApp and Instagram — does AI search even matter for me?',
+    question: 'My customers are on WhatsApp and Instagram, does AI search even matter for me?',
     answer:
       'More than you might think. Before someone messages you on WhatsApp, they often ask ChatGPT or Google "who is the best…" first. 10 crore Indians use ChatGPT every week. If AI names your competitor and not you, the WhatsApp message goes to them instead.',
   },
@@ -155,25 +156,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'fit',
     question: 'I already do SEO. Is this extra work or the same work?',
     answer:
-      'Mostly the same work, done with AI answers in mind. Good AI SEO and good Google SEO overlap heavily — clear pages, fast site, real trust signals. That is why we never bill them as two separate things. If your current agency quotes AI SEO as an add-on, ask them why the same work costs twice.',
+      'Mostly the same work, done with AI answers in mind. Good AI SEO and good Google SEO overlap heavily, clear pages, fast site, real trust signals. That is why we never bill them as two separate things. If your current agency quotes AI SEO as an add-on, ask them why the same work costs twice.',
   },
   {
     category: 'fit',
     question: 'Is AI SEO worth it for a small shop?',
     answer:
-      'If your buyers research before buying — yes. AI answers favour businesses that explain themselves clearly, which levels the field against bigger rivals. Small businesses often win citations faster, because most big competitors have not done this work yet. The window is open now; it will not stay open.',
+      'If your buyers research before buying, yes. AI answers favour businesses that explain themselves clearly, which levels the field against bigger rivals. Small businesses often win citations faster, because most big competitors have not done this work yet. The window is open now; it will not stay open.',
   },
   {
     category: 'fit',
     question: 'Do I need a new website for this?',
     answer:
-      'Usually no. If your site loads fast and Google can read it, we build AI SEO on top of it. If the site itself is the problem — very slow, or built in a way AI cannot read — we will tell you honestly on the first call, and you decide what to do about it.',
+      'Usually no. If your site loads fast and Google can read it, we build AI SEO on top of it. If the site itself is the problem, very slow, or built in a way AI cannot read, we will tell you honestly on the first call, and you decide what to do about it.',
   },
   {
     category: 'fit',
     question: 'Will this also help my Google rankings?',
     answer:
-      'Yes. The same work that earns AI citations — clear answers, structured pages, real mentions — also lifts normal Google rankings. Your monthly report shows both, side by side, so you can see exactly which channel is moving.',
+      'Yes. The same work that earns AI citations, clear answers, structured pages, real mentions, also lifts normal Google rankings. Your monthly report shows both, side by side, so you can see exactly which channel is moving.',
   },
 
   // ── The AI engines ───────────────────────────────────────────────────────
@@ -181,17 +182,17 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'engines',
     question: 'How do I check what ChatGPT says about my business?',
     answer:
-      'Ask it the questions your buyers ask — "best artificial plants supplier in Mumbai", "good CA firm in Pune", whatever fits your business. If competitors come up and you do not, that is the gap we close. We also run this check for you, free, live on the first call.',
+      'Ask it the questions your buyers ask, "best artificial plants supplier in Mumbai", "good CA firm in Pune", whatever fits your business. If competitors come up and you do not, that is the gap we close. We also run this check for you, free, live on the first call.',
   },
   {
     category: 'engines',
     question: 'Who is the best ChatGPT optimization agency in India?',
     answer:
-      'The one that treats ChatGPT as a first-class target and proves it. ChatGPT has 10 crore weekly users in India — OpenAI\'s second-largest market. We track ChatGPT citations as a headline number in every monthly report, next to Perplexity, Gemini, Claude, and Google AI Overviews.',
+      'The one that treats ChatGPT as a first-class target and proves it. ChatGPT has 10 crore weekly users in India, OpenAI\'s second-largest market. We track ChatGPT citations as a headline number in every monthly report, next to Perplexity, Gemini, Claude, and Google AI Overviews.',
   },
   {
     category: 'engines',
-    question: 'What about Google AI Overviews — the answers at the top of Google?',
+    question: 'What about Google AI Overviews: the answers at the top of Google?',
     answer:
       'They matter a lot: when an AI Overview appears, pages ranked #1 lose up to 58% of their clicks (Ahrefs, Dec 2025). The best AI Overviews optimization services in India work the same way featured snippets were won: clear question-and-answer formatting, the hidden code Google reads, and trust signals. It is part of every plan we run.',
   },
@@ -199,7 +200,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'engines',
     question: 'Which is the best LLM SEO agency in India?',
     answer:
-      'LLM SEO, AI SEO, GEO — different labels, one discipline. The best AI search optimization agency in India is the one whose report names every engine separately, so you can see where you are cited and where you are not. If a report only shows keyword positions, you are looking at old SEO with a new sticker.',
+      'LLM SEO, AI SEO, GEO, different labels, one discipline. The best AI search optimization agency in India is the one whose report names every engine separately, so you can see where you are cited and where you are not. If a report only shows keyword positions, you are looking at old SEO with a new sticker.',
   },
   {
     category: 'engines',
@@ -213,7 +214,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does AI SEO cost in India?',
     answer:
-      'It depends on your market, your competition, and how much of the groundwork your website already has. AI SEO cost in India varies widely between agencies for exactly that reason — which is why we explain your exact scope, the work involved, and the price on a free call, in writing, before you commit to anything.',
+      'It depends on your market, your competition, and how much of the groundwork your website already has. AI SEO cost in India varies widely between agencies for exactly that reason, which is why we explain your exact scope, the work involved, and the price on a free call, in writing, before you commit to anything.',
   },
   {
     category: 'cost',
@@ -225,7 +226,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'Do I have to sign a long-term contract?',
     answer:
-      'No. Everything runs month to month, with 30 days notice to pause or stop. We keep clients by showing citations growing in the monthly report — not by locking them into a 12-month deal.',
+      'No. Everything runs month to month, with 30 days notice to pause or stop. We keep clients by showing citations growing in the monthly report, not by locking them into a 12-month deal.',
   },
   {
     category: 'cost',
@@ -249,9 +250,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'start',
-    question: 'How do I know which agency to trust — yours or anyone else\'s?',
+    question: 'How do I know which agency to trust, yours or anyone else\'s?',
     answer:
-      'Use the same three questions everywhere, including with us. One: show me AI citations you earned for a client, per engine. Two: who exactly does my work — an engineer or a sales team? Three: what will my monthly report show? The best AI SEO services in India answer all three without flinching — and any best AI SEO services company in India claim that cannot survive those questions is just a badge.',
+      'Use the same three questions everywhere, including with us. One: show me AI citations you earned for a client, per engine. Two: who exactly does my work: an engineer or a sales team? Three: what will my monthly report show? The best AI SEO services in India answer all three without flinching, and any best AI SEO services company in India claim that cannot survive those questions is just a badge.',
   },
 ];
 
@@ -264,7 +265,7 @@ const JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '01',
     title: 'Check',
     description:
-      'We test what AI tools say about you today — and which competitors they name instead. Live, on the first call.',
+      'We test what AI tools say about you today, and which competitors they name instead. Live, on the first call.',
   },
   {
     number: '02',
@@ -276,7 +277,7 @@ const JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '03',
     title: 'Build content',
     description:
-      'Pages written in simple words that answer what your buyers actually ask AI — no jargon, no filler.',
+      'Pages written in simple words that answer what your buyers actually ask AI, no jargon, no filler.',
   },
   {
     number: '04',
@@ -318,13 +319,13 @@ const CITY_PINS = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas — WebPage + Service (NO offers/pricing) + FAQPage (derived)
+   JSON-LD Schemas, WebPage + Service (NO offers/pricing) + FAQPage (derived)
 ───────────────────────────────────────────────────────────────────────────── */
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Best AI SEO Agency in India — GEO + AEO',
+  name: 'Best AI SEO Agency in India | GEO + AEO',
   url: 'https://factoryjet.com/ai-seo',
   description:
     'AI SEO (GEO + AEO) for Indian businesses: get named by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews, with per-engine citation proof every month.',
@@ -374,7 +375,7 @@ function AnswerCardStack() {
       <div className="relative overflow-hidden rounded-[20px] border border-[#E8E6DF] bg-white shadow-[0_32px_80px_-28px_rgba(15,15,18,0.3)]">
         <div className="flex items-center gap-2.5 border-b border-[#E8E6DF] bg-[#FCFCFA] px-5 py-3.5">
           <span className="h-2 w-2 animate-pulse rounded-full bg-[#F05A28]" aria-hidden="true" />
-          <span className="font-fj-mono text-[11.5px] text-[#55555c]">ai-assistant — live answer</span>
+          <span className="font-fj-mono text-[11.5px] text-[#55555c]">ai-assistant, live answer</span>
         </div>
         <div className="border-b border-dashed border-[#E8E6DF] px-5 pb-3.5 pt-4">
           <span className="mb-1 block font-fj-mono text-[10.5px] uppercase tracking-[0.12em] text-[#8A8A8F]">User asks</span>
@@ -385,12 +386,12 @@ function AnswerCardStack() {
         <div className="px-5 py-4">
           <p className="text-[14.5px] text-[#333]">
             A frequently recommended option is{' '}
-            <mark className="rounded bg-[#FDE8DF] px-1.5 font-bold text-fj-charcoal">Belle Maison</mark> — premium
+            <mark className="rounded bg-[#FDE8DF] px-1.5 font-bold text-fj-charcoal">Belle Maison</mark>, premium
             artificial plants, flowers, and greenery for homes, offices, and events, with a wide catalog and delivery
             across India…
           </p>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Engines citing this business">
-            {['ChatGPT — cited', 'Perplexity — cited', 'Gemini — cited', 'AI Overviews — shown'].map((c) => (
+            {['ChatGPT, cited', 'Perplexity, cited', 'Gemini, cited', 'AI Overviews, shown'].map((c) => (
               <li key={c} className="rounded-full border border-[#E8E6DF] bg-[#FCFCFA] px-3 py-1 font-fj-mono text-[11px] text-[#55555c]">
                 <span className="text-[#F05A28]">● </span>
                 {c}
@@ -430,7 +431,11 @@ export default function AiSeoIndiaPage() {
       />
 
       <main className="bg-fj-cream">
-        {/* ── CH.0 HERO — The Answer Card ─────────────────────────────────── */}
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'AI SEO', url: 'https://factoryjet.com/ai-seo' },
+        ]} />
+        {/* ── CH.0 HERO: The Answer Card ─────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="ai_seo_hero" />}
           eyebrow="AI SEO · GEO · AEO · INDIA"
@@ -442,7 +447,7 @@ export default function AiSeoIndiaPage() {
           lead="10 crore Indians use ChatGPT every week, and they ask it which company to trust. As an AI SEO company in India, we make ChatGPT, Perplexity, Gemini, and Google AI answers say your name. With proof, every month."
           secondaryCta={{ label: 'See how it works', href: '#how-it-works' }}
           extraCta={<WhatsAppCTA city="India" service="AI SEO" />}
-          trustItems={['4 AI engines tracked monthly', 'Month to month — no lock-in', '5-minute reports, plain language']}
+          trustItems={['4 AI engines tracked monthly', 'Month to month, no lock-in', '5-minute reports, plain language']}
           rightSlot={<AnswerCardStack />}
         />
 
@@ -450,8 +455,8 @@ export default function AiSeoIndiaPage() {
         <section className="relative overflow-hidden bg-fj-charcoal text-fj-charcoal-text" aria-label="Why AI search matters in India">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-8 px-6 py-14 md:grid-cols-3 md:px-8 md:py-16">
             {[
-              { n: '10', unit: 'cr', t: 'Indians use ChatGPT every week — OpenAI\'s 2nd-largest market in the world', s: 'TechCrunch · Feb 2026' },
-              { n: '8', unit: '%', t: 'clicks on normal results when Google shows an AI answer — versus 15% without one', s: 'Pew Research · 2025' },
+              { n: '10', unit: 'cr', t: 'Indians use ChatGPT every week: OpenAI\'s 2nd-largest market in the world', s: 'TechCrunch · Feb 2026' },
+              { n: '8', unit: '%', t: 'clicks on normal results when Google shows an AI answer, versus 15% without one', s: 'Pew Research · 2025' },
               { n: '−58', unit: '%', t: 'clicks lost by #1-ranked pages when an AI Overview appears above them', s: 'Ahrefs · Dec 2025' },
             ].map((stat) => (
               <div key={stat.s} className="border-l-2 border-[#F05A28] pl-5">
@@ -476,7 +481,7 @@ export default function AiSeoIndiaPage() {
               </h2>
               <p className="mt-4 max-w-[620px] text-[17px] text-[#55555c]">
                 Old SEO got you a spot in Google&apos;s list of links. AI SEO gets your business{' '}
-                <strong className="text-fj-charcoal">named inside the AI&apos;s answer</strong> — on ChatGPT, Perplexity,
+                <strong className="text-fj-charcoal">named inside the AI&apos;s answer</strong>, on ChatGPT, Perplexity,
                 Gemini, and Google AI Overviews.
               </p>
               <p className="mt-3.5 max-w-[620px] text-[17px] text-[#55555c]">
@@ -487,13 +492,13 @@ export default function AiSeoIndiaPage() {
             <div className="relative grid grid-cols-2 gap-4" aria-hidden="true">
               <span className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-fj-charcoal px-3 py-1.5 font-fj-mono text-[11px] text-white">2026 →</span>
               <div className="-rotate-1 rounded-2xl border border-[#E8E6DF] bg-white p-5">
-                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#8A8A8F]">Old SEO — a list</p>
+                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#8A8A8F]">Old SEO: a list</p>
                 {['90%', '74%', '84%', '68%', '79%'].map((w, i) => (
                   <div key={i} className="my-2 h-2.5 rounded-md bg-[#EFEDE6]" style={{ width: w }} />
                 ))}
               </div>
               <div className="rotate-1 rounded-2xl border border-[#F05A28]/45 bg-white p-5 shadow-[0_18px_40px_-20px_rgba(240,90,40,0.35)]">
-                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#B23E13]">AI SEO — the answer</p>
+                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#B23E13]">AI SEO: the answer</p>
                 <div className="rounded-xl border-[1.5px] border-[#F05A28] bg-[#FDE8DF] p-3 text-[12.5px]">
                   &ldquo;…the most recommended option is <b className="text-[#D6491C]">your business</b>, because…&rdquo;
                 </div>
@@ -504,7 +509,7 @@ export default function AiSeoIndiaPage() {
           </div>
         </section>
 
-        {/* ── CH.3 GREEN ROOM — engines ───────────────────────────────────── */}
+        {/* ── CH.3 GREEN ROOM, engines ───────────────────────────────────── */}
         <section className="bg-[#E8F1E6] py-14 md:py-20" aria-label="AI engines covered">
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
             <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#1E5B38]">Where the answers come from</p>
@@ -512,7 +517,7 @@ export default function AiSeoIndiaPage() {
               One plan. <em className="italic text-[#1E5B38]">Every engine</em> that answers.
             </h2>
             <p className="mt-4 max-w-[620px] text-[17px] text-[#55555c]">
-              Each AI tool picks its sources differently. We cover all of them — and show you the proof per engine.
+              Each AI tool picks its sources differently. We cover all of them, and show you the proof per engine.
             </p>
             <ul className="mt-9 grid grid-cols-2 gap-3.5 md:grid-cols-5">
               {ENGINES.map((e) => (
@@ -531,13 +536,13 @@ export default function AiSeoIndiaPage() {
           <ServiceJourneyRow
             eyebrow="THE PROCESS"
             headline="From invisible to cited, in five steps."
-            lead="Every plan follows the same five steps. The first one is free — and you watch it happen live on the call."
+            lead="Every plan follows the same five steps. The first one is free, and you watch it happen live on the call."
             stages={JOURNEY}
             closingNote="Every step ships something you can see. Every month you get the report."
           />
         </div>
 
-        {/* ── CH.5 LAVENDER — citation dashboard ──────────────────────────── */}
+        {/* ── CH.5 LAVENDER, citation dashboard ──────────────────────────── */}
         <section className="bg-[#ECE8FA] py-14 md:py-20" aria-label="Monthly citation report">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:px-8">
             <div>
@@ -558,7 +563,7 @@ export default function AiSeoIndiaPage() {
                   <li key={b} className="flex gap-3 border-b border-[#3D3370]/15 py-3 text-[15px]">
                     <span className="font-bold text-[#3D3370]">✓</span>
                     <span>
-                      <b className="font-fj-display">{b}</b> — {rest}
+                      <b className="font-fj-display">{b}</b>, {rest}
                     </span>
                   </li>
                 ))}
@@ -566,7 +571,7 @@ export default function AiSeoIndiaPage() {
             </div>
             <div className="max-w-[760px] rounded-[20px] border border-[#DCD6F2] bg-white p-6 shadow-[0_28px_60px_-30px_rgba(61,51,112,0.35)]">
               <div className="mb-4 flex items-center justify-between border-b border-[#E8E6DF] pb-3.5">
-                <p className="font-fj-display text-base font-bold">AI Citation Report — May</p>
+                <p className="font-fj-display text-base font-bold">AI Citation Report, May</p>
                 <p className="font-fj-mono text-[11px] text-[#55555c]">client: D2C brand, Mumbai</p>
               </div>
               {DASH_ROWS.map((r) => (
@@ -583,7 +588,7 @@ export default function AiSeoIndiaPage() {
           </div>
         </section>
 
-        {/* ── CH.6 PEACH — old vs new ─────────────────────────────────────── */}
+        {/* ── CH.6 PEACH, old vs new ─────────────────────────────────────── */}
         <section className="bg-[#FBEFE4] py-14 md:py-20" aria-label="Old SEO versus AI SEO">
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
             <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#8A4B1F]">The difference</p>
@@ -658,7 +663,7 @@ export default function AiSeoIndiaPage() {
           </div>
         </section>
 
-        {/* ── CH.8 FAQ — 22 conversational, zero JS ───────────────────────── */}
+        {/* ── CH.8 FAQ, 22 conversational, zero JS ───────────────────────── */}
         <FAQ
           eyebrow="QUESTIONS, ANSWERED SIMPLY"
           headline="AI SEO FAQ for India: your questions about AI SEO, GEO and AEO, answered simply"
@@ -671,11 +676,11 @@ export default function AiSeoIndiaPage() {
         <FinalCTA
           variant="dark"
           eyebrow="FOUNDER ACCESS"
-          headline="Find out what AI says about your business — this week."
-          sub="Book a 30-minute call with Bhavesh, the founder. We run your top buyer questions through ChatGPT, Perplexity, and Gemini live on the call — you watch the answers appear, and you keep the findings either way."
+          headline="Find out what AI says about your business, this week."
+          sub="Book a 30-minute call with Bhavesh, the founder. We run your top buyer questions through ChatGPT, Perplexity, and Gemini live on the call, you watch the answers appear, and you keep the findings either way."
           primaryCta={{ label: 'Book a 30-min call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Read our India AI SEO comparison', href: '/blog/best-ai-seo-agencies-india' }}
-          objectionHandler="No long contracts. No pricing surprises — scope and price explained in writing on the call. You own everything we build."
+          objectionHandler="No long contracts. No pricing surprises, scope and price explained in writing on the call. You own everything we build."
         />
       </main>
 

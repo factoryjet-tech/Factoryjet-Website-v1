@@ -110,7 +110,7 @@ const AISEO_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
     name: 'Essential',
     priceRange: '',
     description:
-      'AI SEO foundations — structured data, AI crawler access, and local ranking setup. Ideal for businesses starting their SEO journey.',
+      'AI SEO foundations, structured data, AI crawler access, and local ranking setup. Ideal for businesses starting their SEO journey.',
     features: [
       'JSON-LD schema for AI search',
       'GPTBot, ClaudeBot, PerplexityBot access',
@@ -125,7 +125,7 @@ const AISEO_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
     name: 'Growth',
     priceRange: '',
     description:
-      'Full AI SEO engine — content strategy, AI Overview optimisation, link acquisition, and conversion tracking.',
+      'Full AI SEO engine, content strategy, AI Overview optimisation, link acquisition, and conversion tracking.',
     features: [
       'AI Overview + featured snippet targeting',
       'ChatGPT & Gemini brand visibility',
@@ -170,17 +170,17 @@ const PRICING_DATA: Record<TabKey, {
 }> = {
   web: {
     headline: 'Website Design & Development',
-    lead: 'Every tier ships with a Figma design system, Next.js codebase, JSON-LD schema, GA4, and a recorded handover — from day one. Starter sites go live in 7 days. Growth and Scale projects are scoped and scheduled on your first call.',
+    lead: 'Every tier ships with a Figma design system, Next.js codebase, JSON-LD schema, GA4, and a recorded handover, from day one. Starter sites go live in 7 days. Growth and Scale projects are scoped and scheduled on your first call.',
     tiers: WEB_TIERS,
   },
   ecom: {
     headline: 'E-Commerce Development',
-    lead: 'From Shopify D2C stores to headless B2B platforms — built for the Indian market with Razorpay, UPI, GST invoicing, and WhatsApp Commerce out of the box. Every store is mobile-first, AI-ready, and built for conversion.',
+    lead: 'From Shopify D2C stores to headless B2B platforms, built for the Indian market with Razorpay, UPI, GST invoicing, and WhatsApp Commerce out of the box. Every store is mobile-first, AI-ready, and built for conversion.',
     tiers: ECOM_TIERS,
   },
   aiseo: {
-    headline: 'AI SEO — Get Found on Google, ChatGPT & Gemini',
-    lead: 'Traditional SEO gets you on Google. AI SEO gets you into Google AI Overviews, ChatGPT answers, Perplexity results, and Gemini summaries — where the next generation of buyers are searching. Monthly retainer, no long-term contracts.',
+    headline: 'AI SEO: Get Found on Google, ChatGPT & Gemini',
+    lead: 'Traditional SEO gets you on Google. AI SEO gets you into Google AI Overviews, ChatGPT answers, Perplexity results, and Gemini summaries, where the next generation of buyers are searching. Monthly retainer, no long-term contracts.',
     footnote: 'Monthly retainer. Cancel anytime with 30 days notice. Onboarding takes 30 days.',
     tiers: AISEO_TIERS,
   },

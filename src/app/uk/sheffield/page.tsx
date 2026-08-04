@@ -49,12 +49,12 @@ const WHY_BENEFITS = [
   {
     num: "01",
     title: "Speed That Competes",
-    desc: "AI-assisted build process cuts time by 80% — enterprise quality, 7-day delivery. Most Sheffield agencies take 6–12 weeks.",
+    desc: "AI-assisted build process cuts time by 80%, enterprise quality, 7-day delivery. Most Sheffield agencies take 6–12 weeks.",
   },
   {
     num: "02",
     title: "Built for Sheffield Search",
-    desc: "Sheffield-specific SEO from day one — local schema, Google Business Profile integration, and keyword-optimised content.",
+    desc: "Sheffield-specific SEO from day one, local schema, Google Business Profile integration, and keyword-optimised content.",
   },
   {
     num: "03",
@@ -139,7 +139,7 @@ const CRED_STATS = [
 const AI_FEATURES = [
   {
     title: "AI Chatbot Integration",
-    desc: "Your website qualifies leads and books appointments automatically — 24/7. Sheffield businesses report 3× more after-hours enquiries.",
+    desc: "Your website qualifies leads and books appointments automatically, 24/7. Sheffield businesses report 3× more after-hours enquiries.",
   },
   {
     title: "AI-Powered SEO",
@@ -172,7 +172,7 @@ const STATS = [
     prefix: "",
     suffix: "",
     display: "7",
-    label: "Days to go from brief to live website — guaranteed",
+    label: "Days to go from brief to live website, guaranteed",
   },
   {
     id: "lighthouse",
@@ -376,7 +376,7 @@ export default function SheffieldPage() {
   return (
     <>
       {/* ════════════════════════════════════════════════════════════════
-          SECTION 1 — STICKY NAV
+          SECTION 1, STICKY NAV
           Transparent → backdrop-blur on scroll. Clash Display wordmark.
       ════════════════════════════════════════════════════════════════ */}
       {/* ── JSON-LD Structured Data ──────────────────────────────────── */}
@@ -498,7 +498,7 @@ export default function SheffieldPage() {
               Get Free Quote
               <span className="hidden sm:inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
             </button>
-            {/* Hamburger — mobile only */}
+            {/* Hamburger, mobile only */}
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
@@ -539,13 +539,13 @@ export default function SheffieldPage() {
 
       <main id="main-content">
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 2 — HERO
+            SECTION 2, HERO
             Exactly 100vh. Pollinations.ai bg. SplitText H1.
             Design Signature Moment #1.
         ════════════════════════════════════════════════════════════════ */}
         <section className="relative h-screen flex items-center bg-white overflow-hidden">
 
-          {/* Jet Blue 3px rule — pinned to top of page */}
+          {/* Jet Blue 3px rule, pinned to top of page */}
           <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#F05A28] z-[60]" />
 
           {/* Dot grid background */}
@@ -558,7 +558,7 @@ export default function SheffieldPage() {
             }}
           />
 
-          {/* Radial spotlight — faint Jet Blue glow from top */}
+          {/* Radial spotlight, faint Jet Blue glow from top */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -570,10 +570,10 @@ export default function SheffieldPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 pt-24 pb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center">
 
-              {/* ── Left column — watermark clipped here ─────────────── */}
+              {/* ── Left column, watermark clipped here ─────────────── */}
               <div className="relative flex flex-col" style={{ overflow: "hidden" }}>
 
-                {/* "SHEFFIELD" watermark — absolutely positioned, clipped by parent overflow:hidden */}
+                {/* "SHEFFIELD" watermark, absolutely positioned, clipped by parent overflow:hidden */}
                 <span
                   aria-hidden="true"
                   className="font-clash absolute left-0 top-1/2 -translate-y-1/2 text-[#0a0a0a] select-none pointer-events-none z-0 whitespace-nowrap leading-none"
@@ -592,13 +592,13 @@ export default function SheffieldPage() {
                   WEB DESIGN SHEFFIELD · SOUTH YORKSHIRE
                 </p>
 
-                {/* H1 — 3 explicit lines */}
+                {/* H1, 3 explicit lines */}
                 <h1
                   ref={headingRef}
                   className="relative z-10 font-clash text-[#0a0a0a] font-bold leading-[1.05] tracking-[-0.04em] mb-4"
                   style={{ fontSize: "clamp(40px, 4.8vw, 68px)", opacity: 1 }}
                 >
-                  Web Design Sheffield —<br />
+                  Web Design Sheffield, <br />
                   Built &amp; Live in<br />
                   <span className="text-[#F05A28]">7 Days</span>
                 </h1>
@@ -639,7 +639,7 @@ export default function SheffieldPage() {
                   </Link>
                 </div>
 
-                {/* Trust chips — 2 cols on mobile */}
+                {/* Trust chips, 2 cols on mobile */}
                 <div className="relative z-10 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-2">
                   {TRUST_CHIPS.map((chip) => (
                     <span
@@ -666,7 +666,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 3 — MARQUEE BAND
+            SECTION 3, MARQUEE BAND
             Dark #111118, 80px, CSS-only infinite ticker.
         ════════════════════════════════════════════════════════════════ */}
         <div
@@ -683,7 +683,7 @@ export default function SheffieldPage() {
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 4 — WHY SHEFFIELD SMBs CHOOSE FACTORYJET
+            SECTION 4, WHY SHEFFIELD SMBs CHOOSE FACTORYJET
             bg #F8F9FA, min-h-screen. Split layout 55/45.
             GSAP: left slides from left, right from right on scroll.
         ════════════════════════════════════════════════════════════════ */}
@@ -709,10 +709,10 @@ export default function SheffieldPage() {
                 <p className="text-[16px] text-[#343A40] leading-[1.7] mb-8 max-w-[520px]">
                   Sheffield has always been a city that builds things that last. Every
                   site we build is engineered for speed, search visibility, and lead
-                  generation — not just appearances.
+                  generation, not just appearances.
                 </p>
 
-                {/* Benefit rows — tighter gap */}
+                {/* Benefit rows, tighter gap */}
                 <div className="flex flex-col">
                   {WHY_BENEFITS.map((b, i) => (
                     <div
@@ -775,7 +775,7 @@ export default function SheffieldPage() {
                   <p className="text-[12px] text-[#6B7280] pt-2 border-t border-[#E9ECEF]">
                     Our AI-assisted process is{" "}
                     <span className="font-bold text-[#B23E13]">up to 8× faster</span>{" "}
-                    than traditional Sheffield agencies — zero compromise on quality.
+                    than traditional Sheffield agencies, zero compromise on quality.
                   </p>
                 </div>
 
@@ -791,7 +791,7 @@ export default function SheffieldPage() {
                     Fixed-price, quoted up front
                   </p>
                   <p className="text-[13px] text-[#343A40] leading-[1.6]">
-                    Every Sheffield project is fixed-price and scoped to your build. The main drivers are page count, design depth, and any integrations you need. You get one quote up front after a free discovery call, so you know the full cost before work starts — and it typically lands well below what a traditional Sheffield agency charges.
+                    Every Sheffield project is fixed-price and scoped to your build. The main drivers are page count, design depth, and any integrations you need. You get one quote up front after a free discovery call, so you know the full cost before work starts, and it typically lands well below what a traditional Sheffield agency charges.
                   </p>
                   <p className="text-[12px] text-[#6B7280] pt-3 border-t border-[#E9ECEF]">
                     No hidden extras. No lock-in contracts. Everything included.
@@ -803,7 +803,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 5 — SERVICES BENTO GRID
+            SECTION 5, SERVICES BENTO GRID
             bg #FFFFFF, min-h-screen. Irregular grid. AI card featured.
             Design Signature Moment #3.
         ════════════════════════════════════════════════════════════════ */}
@@ -827,7 +827,7 @@ export default function SheffieldPage() {
               </h2>
               <p className="text-[16px] text-[#6B7280] leading-[1.75]">
                 Whether you&rsquo;re a sole trader in Broomhill, a retail shop on Ecclesall
-                Road, or a manufacturer in Attercliffe — we build the digital presence your
+                Road, or a manufacturer in Attercliffe, we build the digital presence your
                 Sheffield business needs to compete.
               </p>
             </div>
@@ -853,7 +853,7 @@ export default function SheffieldPage() {
                 </div>
               </div>
 
-              {/* AI — featured, spans 2 rows */}
+              {/* AI, featured, spans 2 rows */}
               <div className="bento-ai group rounded-2xl border-2 border-[#F05A28] bg-[#F05A28] p-5 md:p-7 flex flex-col gap-4 hover:shadow-[0_0_40px_rgba(0,82,204,0.35)] transition-all duration-300">
                 {/* Blinking cursor element */}
                 <div className="flex items-center gap-3">
@@ -867,7 +867,7 @@ export default function SheffieldPage() {
                 </h3>
                 <p className="text-[14px] text-white/80 leading-[1.7] flex-1">
                   The next generation of Sheffield web design. Integrated AI chatbots that
-                  qualify leads, answer questions, and book appointments — 24 hours a day,
+                  qualify leads, answer questions, and book appointments, 24 hours a day,
                   7 days a week. No extra staff required.
                 </p>
                 <div className="mt-2 p-4 rounded-xl bg-white/10 border border-white/15 flex flex-col gap-2">
@@ -952,7 +952,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 6 — STATS BAND
+            SECTION 6, STATS BAND
             bg #0a0a0a, min-h-screen. Oversized numbers, count-up.
             Design Signature Moment #4 + pull-quote Moment #5.
         ════════════════════════════════════════════════════════════════ */}
@@ -1024,7 +1024,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 7 — 7-DAY PROCESS
+            SECTION 7, 7-DAY PROCESS
             bg #F8F9FA. Horizontal timeline desktop, vertical mobile.
             GSAP: steps stagger left → right on scroll.
         ════════════════════════════════════════════════════════════════ */}
@@ -1050,7 +1050,7 @@ export default function SheffieldPage() {
 
             {/* Timeline */}
             <div className="relative">
-              {/* Connecting line — desktop only */}
+              {/* Connecting line, desktop only */}
               <div className="hidden lg:block absolute top-[24px] left-[calc(10%+1px)] right-[calc(10%+1px)] h-[1px] bg-[#E9ECEF] z-0" />
 
               <div className="flex flex-col lg:flex-row gap-10 lg:gap-4">
@@ -1106,7 +1106,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 8 — AI ADVANTAGE
+            SECTION 8, AI ADVANTAGE
             bg #111118 dark. Split 55/45. Chat mockup right.
             GSAP: left/right slide on scroll.
         ════════════════════════════════════════════════════════════════ */}
@@ -1176,13 +1176,13 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 9 — PRICING
-            Dynamic import (ssr:false) — eliminates hydration mismatch.
+            SECTION 9, PRICING
+            Dynamic import (ssr:false), eliminates hydration mismatch.
         ════════════════════════════════════════════════════════════════ */}
         <PricingSection />
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 10 — TESTIMONIALS
+            SECTION 10, TESTIMONIALS
             bg #F8F9FA. Staggered 3-card grid. Jet Blue left border.
         ════════════════════════════════════════════════════════════════ */}
         <section
@@ -1239,8 +1239,8 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 11 — FAQ
-            bg #FFFFFF. Accordion — useState + CSS max-height transition.
+            SECTION 11, FAQ
+            bg #FFFFFF. Accordion, useState + CSS max-height transition.
             Chevron rotates. Active question = Jet Blue.
         ════════════════════════════════════════════════════════════════ */}
         <section id="faq" className="bg-white border-t border-[#E9ECEF]">
@@ -1302,7 +1302,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 12 — LOCAL CREDIBILITY
+            SECTION 12, LOCAL CREDIBILITY
             bg #F05A28 full-bleed. GSAP count-up on 4 stats.
             SHEFFIELD watermark.
         ════════════════════════════════════════════════════════════════ */}
@@ -1331,7 +1331,7 @@ export default function SheffieldPage() {
                 className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-white mb-6"
                 style={{ fontSize: "clamp(28px, 3.6vw, 48px)" }}
               >
-                Sheffield{"\u2019"}s digital opportunity is massive — most businesses are missing it
+                Sheffield{"\u2019"}s digital opportunity is massive: most businesses are missing it
               </h2>
               <p className="text-[16px] text-white/70 leading-[1.7]">
                 We built FactoryJet to fix that. Sheffield deserves world-class websites at transparent prices.
@@ -1357,7 +1357,7 @@ export default function SheffieldPage() {
         </section>
 
         {/* ════════════════════════════════════════════════════════════════
-            SECTION 13 — FINAL CTA
+            SECTION 13, FINAL CTA
             bg #0a0a0a. 50/50 split. Contact info + lead form.
             Jet Orange submit. SHEFFIELD watermark bottom-right.
         ════════════════════════════════════════════════════════════════ */}
@@ -1662,7 +1662,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
           <div className="h-7 w-20 rounded-lg bg-[#FF6B35] cursor-pointer" onClick={onCtaClick} />
         </div>
 
-        {/* Hero skeleton area — light */}
+        {/* Hero skeleton area, light */}
         <div className="flex-1 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] relative overflow-hidden flex flex-col justify-center px-5 gap-3 min-h-[120px]">
           <div
             className="absolute inset-0 flex items-center justify-center font-clash font-bold text-[#0a0a0a]/[0.04] select-none pointer-events-none"
@@ -1680,7 +1680,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
           </div>
         </div>
 
-        {/* Stats row — Jet Blue cards */}
+        {/* Stats row, Jet Blue cards */}
         <div className="flex gap-3">
           {[
             { label: "7 Days", sub: "Delivery" },
@@ -1701,7 +1701,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
           ))}
         </div>
 
-        {/* Feature cards row — light */}
+        {/* Feature cards row, light */}
         <div className="grid grid-cols-3 gap-3">
           {["⚡ Speed", "📍 Local SEO", "💷 Pricing"].map((label) => (
             <div
@@ -1845,7 +1845,7 @@ function AIChatMockup() {
             <p className="text-[13px] text-white leading-[1.6]" suppressHydrationWarning>
               Great question! Our{" "}
               <span className="font-semibold">Starter package is fixed-price and quoted up front</span>
-              {" "}— that{"\u2019"}s a full 5-page custom site, Sheffield local SEO,
+              {" "}, that{"\u2019"}s a full 5-page custom site, Sheffield local SEO,
               and delivered in 5 days. Want me to book a free 30-min call?
             </p>
           </div>

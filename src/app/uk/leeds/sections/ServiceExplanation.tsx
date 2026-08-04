@@ -46,7 +46,7 @@ const STANDARD_CARDS: StandardCard[] = [
   },
   {
     icon: Zap,
-    title: "AI SEO — GEO, AEO & AI Search Visibility",
+    title: "AI SEO | GEO, AEO & AI Search Visibility",
     description:
       "Your customers are asking ChatGPT, Perplexity, and Google AI Overviews for recommendations. We build citation-ready content, optimise for AI crawlers, and implement the schema markup that gets your Leeds business mentioned. No other Leeds agency offers this.",
     image: {
@@ -58,7 +58,7 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Target,
     title: "Conversion-Engineered Forms",
     description:
-      "Multi-step forms with auto-advance, inline validation, and progress indicators. Every form tracks submissions as Google Ads conversions — so you know exactly which traffic sources generate leads, not just clicks.",
+      "Multi-step forms with auto-advance, inline validation, and progress indicators. Every form tracks submissions as Google Ads conversions, so you know exactly which traffic sources generate leads, not just clicks.",
     image: {
       src: "/images/leeds/mockup-dashboard.webp",
       alt: "Web analytics dashboard showing traffic growth",
@@ -128,7 +128,7 @@ export default function ServiceExplanation() {
       card.style.transitionDelay = `${i * 150}ms`;
     });
 
-    const REVEAL_DURATION = 700; // ms — matches transition duration above
+    const REVEAL_DURATION = 700; // ms, matches transition duration above
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -200,7 +200,7 @@ export default function ServiceExplanation() {
               marginBottom: "16px",
             }}
           >
-            Everything Your Leeds Business Needs to Compete — and Win — Online
+            Everything Your Leeds Business Needs to Compete, and Win, Online
           </h2>
 
           <p
@@ -212,7 +212,7 @@ export default function ServiceExplanation() {
               lineHeight: 1.7,
             }}
           >
-            FactoryJet designs and develops websites on Next.js 15, Tailwind CSS 4, and WordPress — the right technology for your business goals. Whether you need a modern React application or a WordPress site with advanced customisation, we deliver websites that score 90+ on Google Lighthouse Performance, load in under two seconds, and are built for both human visitors and AI crawlers.
+            FactoryJet designs and develops websites on Next.js 15, Tailwind CSS 4, and WordPress: the right technology for your business goals. Whether you need a modern React application or a WordPress site with advanced customisation, we deliver websites that score 90+ on Google Lighthouse Performance, load in under two seconds, and are built for both human visitors and AI crawlers.
           </p>
         </div>
 
@@ -222,7 +222,7 @@ export default function ServiceExplanation() {
           style={{ gap: "20px" }}
         >
 
-          {/* FEATURED CARD — spans 2 columns */}
+          {/* FEATURED CARD, spans 2 columns */}
           <div
             ref={featuredRef}
             className="lg:col-span-2 rounded-xl"
@@ -234,7 +234,7 @@ export default function ServiceExplanation() {
           >
             <div className="flex flex-col lg:flex-row gap-10">
 
-              {/* 60% — text side */}
+              {/* 60%, text side */}
               <div style={{ flex: "0 0 60%" }}>
                 <div
                   className="flex items-center justify-center rounded-full mb-5"
@@ -252,11 +252,11 @@ export default function ServiceExplanation() {
                 </p>
 
                 <p style={{ fontSize: "16px", color: "#374151", lineHeight: 1.65 }}>
-                  Whether you are a financial services firm near Leeds Trinity, a fashion brand in the Victoria Quarter, or a legal practice in the city centre — we build websites that convert visitors into clients. Next.js 15, Tailwind CSS 4, WordPress, and headless CMS builds. Mobile-first responsive, Lighthouse 90+ guaranteed. Every build is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts.
+                  Whether you are a financial services firm near Leeds Trinity, a fashion brand in the Victoria Quarter, or a legal practice in the city centre, we build websites that convert visitors into clients. Next.js 15, Tailwind CSS 4, WordPress, and headless CMS builds. Mobile-first responsive, Lighthouse 90+ guaranteed. Every build is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts.
                 </p>
               </div>
 
-              {/* 40% — checklist side */}
+              {/* 40%, checklist side */}
               <div
                 className="flex flex-col justify-center"
                 style={{ flex: "0 0 40%" }}
@@ -280,7 +280,7 @@ export default function ServiceExplanation() {
             </div>
           </div>
 
-          {/* STANDARD CARDS — 2×2 grid inside the 2-col outer grid */}
+          {/* STANDARD CARDS, 2×2 grid inside the 2-col outer grid */}
           <div
             ref={standardGridRef}
             className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start"

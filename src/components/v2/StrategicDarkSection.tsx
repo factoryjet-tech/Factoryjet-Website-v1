@@ -87,7 +87,7 @@ export default function StrategicDarkSection({
         backgroundSize: '28px 28px, 100% 100%',
       }}
     >
-      {/* ── Aurora orb — orange, top-right ──────────────────────────────── */}
+      {/* ── Aurora orb, orange, top-right ──────────────────────────────── */}
       <div
         className="pointer-events-none absolute -right-32 -top-32 h-[680px] w-[680px] rounded-full"
         style={{
@@ -96,7 +96,7 @@ export default function StrategicDarkSection({
         }}
         aria-hidden="true"
       />
-      {/* ── Aurora orb — amber, bottom-left ──────────────────────────────── */}
+      {/* ── Aurora orb, amber, bottom-left ──────────────────────────────── */}
       <div
         className="pointer-events-none absolute -bottom-32 -left-16 h-[520px] w-[520px] rounded-full"
         style={{
@@ -105,7 +105,7 @@ export default function StrategicDarkSection({
         }}
         aria-hidden="true"
       />
-      {/* ── Aurora orb — warm accent, center-left ────────────────────────── */}
+      {/* ── Aurora orb, warm accent, center-left ────────────────────────── */}
       <div
         className="pointer-events-none absolute left-[15%] top-[30%] h-[360px] w-[360px] rounded-full"
         style={{
@@ -170,7 +170,7 @@ export default function StrategicDarkSection({
                 boxShadow: '0 0 0 1px rgba(240,90,40,0.20), 0 4px 32px rgba(0,0,0,0.55), 0 1px 0 0 rgba(255,255,255,0.07) inset',
               }}
             >
-              {/* Crystal inner highlight — thin shimmer line across top (only when no image) */}
+              {/* Crystal inner highlight, thin shimmer line across top (only when no image) */}
               {!pillar.image && (
                 <div
                   className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"

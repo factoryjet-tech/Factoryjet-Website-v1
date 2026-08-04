@@ -108,6 +108,19 @@ const CHN_COMPARISON_ROWS = [
   },
 ];
 
+// Freshness signal, see the sibling city pages. Keep honest: bump when the
+// page's content actually changes.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/chennai#webpage',
+  url: 'https://factoryjet.com/web-design/chennai',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -129,7 +142,7 @@ export default function Page() {
     eyebrow: 'WEB DESIGN · CHENNAI',
     headline: "Chennai's Auto & IT Corridor Needs a Website That Performs",
     subheadline:
-      "From Ambattur's manufacturing estates to OMR's IT corridor, Chennai businesses compete on a national and global stage. Your website should reflect that ambition — fast, credible, and built to convert.",
+      "From Ambattur's manufacturing estates to OMR's IT corridor, Chennai businesses compete on a national and global stage. Your website should reflect that ambition, fast, credible, and built to convert.",
     primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
     secondaryCTA: { label: 'View Our Work', href: '/portfolio' },
     stats: [
@@ -143,7 +156,7 @@ export default function Page() {
     eyebrow: 'CHENNAI MARKET',
     headline: "India's Auto Capital and a Rising IT Powerhouse",
     leadParagraphs: [
-      "Chennai is the undisputed automotive capital of India — home to Hyundai, Ford, BMW, and hundreds of Tier-1 and Tier-2 suppliers concentrated in Ambattur, Guindy, and Sriperumbudur. Simultaneously, the OMR IT corridor has made Chennai a top-5 software export city, with global MNCs and growing product startups calling it home.",
+      "Chennai is the undisputed automotive capital of India, home to Hyundai, Ford, BMW, and hundreds of Tier-1 and Tier-2 suppliers concentrated in Ambattur, Guindy, and Sriperumbudur. Simultaneously, the OMR IT corridor has made Chennai a top-5 software export city, with global MNCs and growing product startups calling it home.",
       "For businesses here, a weak website means lost RFQs, missed B2B partnerships, and invisible digital presence in a city that increasingly runs on credibility signals. Whether you're a component manufacturer needing a supplier portal or an IT firm targeting overseas clients, your website is your 24/7 sales representative.",
     ],
     stats: [
@@ -187,7 +200,7 @@ export default function Page() {
     {
       step: '02',
       title: 'Strategy & Wireframe',
-      description: 'We map your site structure and user flows — built around how Chennai buyers actually evaluate vendors.',
+      description: 'We map your site structure and user flows, built around how Chennai buyers actually evaluate vendors.',
     },
     {
       step: '03',
@@ -197,7 +210,7 @@ export default function Page() {
     {
       step: '04',
       title: 'Review & Launch',
-      description: 'You review, we refine, and your site goes live — typically within 7 days of kickoff.',
+      description: 'You review, we refine, and your site goes live, typically within 7 days of kickoff.',
     },
   ]
 
@@ -292,18 +305,18 @@ const CHN_FAQ_ITEMS = [
   { category: 'process', question: 'What do I need to provide to get started?', answer: 'We need your brand assets (logo, colors if any), basic business information, and any existing content. We guide you through a simple brief that takes under 30 minutes.' },
   { category: 'process', question: 'How many revisions are included?', answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat hourly rate communicated upfront.' },
   { category: 'process', question: 'Do you handle copywriting?', answer: 'Yes. All our packages include professional copywriting. You review and approve all text before the site goes live.' },
-  { category: 'technical', question: 'Will my site rank on Google?', answer: 'We build every site with on-page SEO best practices — proper heading structure, meta tags, schema markup, and fast loading. For ongoing content SEO, we offer separate retainer packages.' },
+  { category: 'technical', question: 'Will my site rank on Google?', answer: 'We build every site with on-page SEO best practices, proper heading structure, meta tags, schema markup, and fast loading. For ongoing content SEO, we offer separate retainer packages.' },
   { category: 'technical', question: 'Is the site mobile-friendly?', answer: 'Every site is built mobile-first. We test across iOS and Android at multiple screen sizes before delivery.' },
   { category: 'technical', question: 'What technology do you use?', answer: 'Most sites are built on Next.js for performance or WordPress for client-editable content. We recommend the right stack for your needs and budget.' },
   { category: 'technical', question: 'Can I edit the site myself after launch?', answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds, we provide a simple content editing workflow or can integrate a headless CMS.' },
   { category: 'ecommerce', question: 'Can you build an online store for my Chennai business?', answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. You get a fixed quote up front after a free consultation.' },
-  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue integrations are standard. UPI and net banking are supported out of the box.' },
+  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes: Razorpay, PayU, and CCAvenue integrations are standard. UPI and net banking are supported out of the box.' },
   { category: 'ecommerce', question: 'Can you build a B2B ordering portal for my manufacturing business?', answer: 'Yes. We build custom dealer/distributor portals with login-protected pricing, order tracking, and catalogue management.' },
   { category: 'ecommerce', question: 'Do you handle product photography or catalogue content?', answer: "We don't do in-house photography but can coordinate with Chennai-based product photographers. We handle layout, upload, and optimization of all product images." },
   { category: 'local', question: 'Do you serve businesses in Ambattur and Guindy industrial estates?', answer: "Yes. We have experience building supplier portals, company profiles, and product catalogues for manufacturing businesses across Ambattur, Guindy, Sriperumbudur, and Perungalathur." },
   { category: 'local', question: 'Can you build websites for IT companies on OMR?', answer: "Absolutely. From startup landing pages in Perungudi to established IT services firms in Sholinganallur, we design modern, credibility-focused websites for Chennai's tech corridor." },
   { category: 'local', question: 'Do you work with Tamil-language content or bilingual sites?', answer: "Yes. We can build bilingual (English + Tamil) websites for businesses targeting local consumers. Proper UTF-8 encoding and font rendering for Tamil script is included." },
-  { category: 'local', question: 'Can you help a Chennai business target overseas clients?', answer: "Yes. Many of our Chennai clients — especially in IT services and manufacturing — use their websites to attract UK, US, and Middle East buyers. We design for international credibility while keeping INR pricing." },
+  { category: 'local', question: 'Can you help a Chennai business target overseas clients?', answer: "Yes. Many of our Chennai clients, especially in IT services and manufacturing, use their websites to attract UK, US, and Middle East buyers. We design for international credibility while keeping INR pricing." },
 
   // Money-query coverage, added 2026-06-11
   {
@@ -341,31 +354,31 @@ const CHN_FAQ_ITEMS = [
       {
         '@type': 'HowToStep',
         position: 1,
-        name: 'Day 1 — Discovery Call',
+        name: 'Day 1 | Discovery Call',
         text: `We learn your business, your Chennai market, your goals, and what you need the website to do.`,
       },
       {
         '@type': 'HowToStep',
         position: 2,
-        name: 'Day 2 — Strategy & Structure',
+        name: 'Day 2 | Strategy & Structure',
         text: `We map your site architecture, research your Chennai competitors, identify your top keywords, and write the first draft of your page copy.`,
       },
       {
         '@type': 'HowToStep',
         position: 3,
-        name: 'Days 3–4 — Design',
-        text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+        name: 'Days 3–4 | Design',
+        text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
       },
       {
         '@type': 'HowToStep',
         position: 4,
-        name: 'Days 5–6 — Development & SEO',
-        text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Chennai local schema markup added. Google Analytics and Search Console connected.`,
+        name: 'Days 5–6 | Development & SEO',
+        text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Chennai local schema markup added. Google Analytics and Search Console connected.`,
       },
       {
         '@type': 'HowToStep',
         position: 5,
-        name: 'Day 7 — Launch',
+        name: 'Day 7 | Launch',
         text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
       },
     ],
@@ -391,6 +404,10 @@ const CHN_FAQ_ITEMS = [
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="chn-local-business-schema"
         type="application/ld+json"
@@ -425,7 +442,7 @@ const CHN_FAQ_ITEMS = [
       <CityContextSection {...cityContextProps} />
       <ServiceExplanation
           headline="Two Chennai Markets, One Design Partner"
-          lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments — each needing a completely different web strategy. We design for both."
+          lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments: each needing a completely different web strategy. We design for both."
           rightSlot={
             <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
               <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
@@ -434,7 +451,7 @@ const CHN_FAQ_ITEMS = [
               <div className="space-y-5">
                 <div>
                   <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Auto &amp; Manufacturing (Ambattur / Guindy / Sriperumbudur)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously — your website must project quality.</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously: your website must project quality.</p>
                 </div>
                 <div>
                   <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>IT &amp; Services / Consumer (OMR / Anna Nagar / Adyar)</p>
@@ -452,7 +469,7 @@ const CHN_FAQ_ITEMS = [
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
@@ -460,8 +477,8 @@ const CHN_FAQ_ITEMS = [
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
-              description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+              title: 'Formative Concepts | Pune',
+              description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -473,10 +490,10 @@ const CHN_FAQ_ITEMS = [
       <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Chennai Agency vs. Freelancer"
-          lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
-            caption: 'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={CHN_COMPARISON_COLUMNS}
           rows={CHN_COMPARISON_ROWS}
@@ -488,7 +505,7 @@ const CHN_FAQ_ITEMS = [
       <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Chennai Businesses"
-          lead="Everything Chennai businesses ask before starting a project — answered straight."
+          lead="Everything Chennai businesses ask before starting a project, answered straight."
           categories={CHN_FAQ_CATEGORIES}
           items={CHN_FAQ_ITEMS}
         />

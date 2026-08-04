@@ -289,7 +289,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     headlineMetric: {
       label: 'Pipeline Influenced in 6 Months',
       value: '$360K USD',
-      note: '≈ ₹3 Cr equivalent — driven by modernized portfolio + GEO SEO',
+      note: '≈ ₹3 Cr equivalent, driven by modernized portfolio + GEO SEO',
     },
     resultsMetrics: [
       { label: 'Pipeline (6 Mo)', value: '$360K USD' },
@@ -300,14 +300,14 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Hosting', value: 'Cloudflare Edge' },
     ],
     challenge:
-      'Impulse Branding was stuck on a legacy hand-coded HTML site that was impossible to update without a developer. This rigidity meant their portfolio was always outdated, costing them bids on major contracts. They needed a rapid transformation to showcase their new architectural projects before a major industry summit — a hard calendar deadline that left no room for a 90-day rebuild. They also needed the new site to be editable by their non-technical team so the portfolio would never go stale again.',
+      'Impulse Branding was stuck on a legacy hand-coded HTML site that was impossible to update without a developer. This rigidity meant their portfolio was always outdated, costing them bids on major contracts. They needed a rapid transformation to showcase their new architectural projects before a major industry summit: a hard calendar deadline that left no room for a 90-day rebuild. They also needed the new site to be editable by their non-technical team so the portfolio would never go stale again.',
     challengePullQuote:
       'We were losing bids before they even saw our best work, because our best work was not on the site yet.',
     approach:
-      'We picked WordPress + Breakdance specifically because the visual builder lets a non-technical team add a new project page in under fifteen minutes — no developer required. The two-week build was sequenced around the summit date: discovery and design system in week one, page builds and content migration in week two, with the GEO/AIO SEO layer baked into the page templates from day one rather than bolted on later. Cloudflare went in front for performance and caching so the team would not need to think about hosting infrastructure post-launch.',
+      'We picked WordPress + Breakdance specifically because the visual builder lets a non-technical team add a new project page in under fifteen minutes, no developer required. The two-week build was sequenced around the summit date: discovery and design system in week one, page builds and content migration in week two, with the GEO/AIO SEO layer baked into the page templates from day one rather than bolted on later. Cloudflare went in front for performance and caching so the team would not need to think about hosting infrastructure post-launch.',
     techStack: ['WordPress', 'Breakdance', 'PHP', 'MySQL', 'Cloudflare'],
     solution:
-      'FactoryJet executed a lightning-fast migration to a modern WordPress + Breakdance setup in just 14 days. We built a dynamic portfolio system that allows their non-technical team to upload projects instantly. The site was optimized for Generative Engine Optimization — structured data, citation-friendly section markup, and FAQ blocks — so the brand started showing up in AI answer engines for its niche queries. Cloudflare handled CDN, image optimization, and edge caching.',
+      'FactoryJet executed a lightning-fast migration to a modern WordPress + Breakdance setup in just 14 days. We built a dynamic portfolio system that allows their non-technical team to upload projects instantly. The site was optimized for Generative Engine Optimization, structured data, citation-friendly section markup, and FAQ blocks, so the brand started showing up in AI answer engines for its niche queries. Cloudflare handled CDN, image optimization, and edge caching.',
     results:
       'Inside six months the modern stack drove a 125% increase in organic traffic and influenced roughly $360K USD in pipeline revenue (about ₹3 Cr equivalent). The portfolio is now updated weekly by the in-house team, the summit launch hit on schedule, and the bid win-rate climbed meaningfully because prospects could see current work the moment they landed on the site.',
     imageUrl: '/images/case-studies/impulse-branding-migration-hero.jpg',
@@ -322,7 +322,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'What does Generative Engine Optimization (GEO) actually add?',
-        a: 'GEO is the discipline of structuring content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews) cite you. We add structured data, citation-friendly section markup, named-entity reinforcement, and FAQ blocks — the things AI engines look for when picking sources.',
+        a: 'GEO is the discipline of structuring content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews) cite you. We add structured data, citation-friendly section markup, named-entity reinforcement, and FAQ blocks: the things AI engines look for when picking sources.',
       },
       {
         q: 'How can a 14-day build still be SEO-strong?',
@@ -330,11 +330,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'What was the deciding factor in winning more bids?',
-        a: 'The portfolio. Prospects on legacy sites were seeing 2-year-old work and bouncing. Once the team could publish a finished project the same week it shipped, the perceived activity level of the firm jumped — which translated directly to win-rate.',
+        a: 'The portfolio. Prospects on legacy sites were seeing 2-year-old work and bouncing. Once the team could publish a finished project the same week it shipped, the perceived activity level of the firm jumped, which translated directly to win-rate.',
       },
       {
         q: 'Is the 14-day timeline repeatable?',
-        a: 'For sites in the 15–25 page range with a clear brand and existing content assets, yes. The bottleneck is usually content readiness, not development speed — we ship up to 5-page sites in 7 days under our standard delivery guarantee.',
+        a: 'For sites in the 15–25 page range with a clear brand and existing content assets, yes. The bottleneck is usually content readiness, not development speed, we ship up to 5-page sites in 7 days under our standard delivery guarantee.',
       },
     ],
   },
@@ -354,7 +354,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: 'From Zero to 5,000 Monthly Global Visitors: BIM Consultancy Wins International Leads',
     summary:
-      'Formative Concepts had zero digital footprint and depended entirely on referrals — capping their ability to win international contracts. FactoryJet launched a 20+ page digital ecosystem engineered for consultative SEO and AI answer-engine citation, generating 30+ qualified international leads in the first four months.',
+      'Formative Concepts had zero digital footprint and depended entirely on referrals, capping their ability to win international contracts. FactoryJet launched a 20+ page digital ecosystem engineered for consultative SEO and AI answer-engine citation, generating 30+ qualified international leads in the first four months.',
     category: 'Corporate',
     heroStats: [
       { value: '5,000+', label: 'Monthly global visitors' },
@@ -378,7 +378,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     headlineMetric: {
       label: 'Monthly International Visitors (4 Months In)',
       value: '5,000+',
-      note: 'From zero — pure organic, no paid spend',
+      note: 'From zero, pure organic, no paid spend',
     },
     resultsMetrics: [
       { label: 'Revenue (4 Mo)', value: '$108K USD' },
@@ -389,16 +389,16 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'AI Citation Appearances', value: 'Growing' },
     ],
     challenge:
-      'Formative Concepts, a specialized MEP and BIM consultancy, had zero digital footprint. They relied entirely on word-of-mouth, limiting their ability to attract international clients. Decision-makers shopping for BIM consultancy run technical search queries — they want to see evidence of capability before they reach out — and Formative Concepts simply was not showing up. The brand needed a digital presence that demonstrated technical depth and established trust on first visit, not after a 30-minute discovery call.',
+      'Formative Concepts, a specialized MEP and BIM consultancy, had zero digital footprint. They relied entirely on word-of-mouth, limiting their ability to attract international clients. Decision-makers shopping for BIM consultancy run technical search queries, they want to see evidence of capability before they reach out, and Formative Concepts simply was not showing up. The brand needed a digital presence that demonstrated technical depth and established trust on first visit, not after a 30-minute discovery call.',
     challengePullQuote:
       'We were invisible to the international clients we most wanted to win.',
     approach:
-      'We treated the site as a credibility engine, not a brochure. The content strategy was built around "consultative SEO" — answering the specific technical queries that BIM decision-makers actually type, rather than chasing high-volume generic keywords. Every page was structured so an AI answer engine could lift a clean, citable paragraph. We picked Gatsby + Contentful so the team could iterate content quickly while keeping the static-site performance profile that international visitors on slower connections need.',
+      'We treated the site as a credibility engine, not a brochure. The content strategy was built around "consultative SEO", answering the specific technical queries that BIM decision-makers actually type, rather than chasing high-volume generic keywords. Every page was structured so an AI answer engine could lift a clean, citable paragraph. We picked Gatsby + Contentful so the team could iterate content quickly while keeping the static-site performance profile that international visitors on slower connections need.',
     techStack: ['React', 'Gatsby', 'Contentful', 'Netlify'],
     solution:
       'We launched a comprehensive 20+ page digital ecosystem covering services, sector expertise, case studies, and technical resources. The content strategy was engineered for consultative SEO, targeting specific technical queries used by decision-makers (e.g., "MEP coordination for healthcare projects", "Revit family standards"). By optimizing for AIO, the brand began appearing in AI-generated answers for niche BIM queries. Contentful gave the in-house team a friendly editor for ongoing content updates.',
     results:
-      'In the first four months the site went from zero traffic to 5,000+ monthly international visitors and produced 30+ qualified international leads — generating roughly $108K USD in revenue (equivalent to about ₹90 Lakh). The "international" framing was no accident: decision-makers in the US, UK, and Middle East were the highest-value prospects, and the consultative SEO strategy was tuned for exactly those queries.',
+      'In the first four months the site went from zero traffic to 5,000+ monthly international visitors and produced 30+ qualified international leads, generating roughly $108K USD in revenue (equivalent to about ₹90 Lakh). The "international" framing was no accident: decision-makers in the US, UK, and Middle East were the highest-value prospects, and the consultative SEO strategy was tuned for exactly those queries.',
     imageUrl: '/images/case-studies/formative-concepts-bim-hero.jpg',
     ogImageUrl: '/images/case-studies/formative-concepts-bim-og.png',
     publishedDate: '2026-05-28',
@@ -419,11 +419,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'How did a brand-new site generate 5,000 monthly visitors in 4 months?',
-        a: 'Niche technical queries have much lower competition than generic terms. By being one of the few sites that answers the specific question a BIM coordinator is searching, the page ranks fast — often inside 6–8 weeks for long-tail technical queries.',
+        a: 'Niche technical queries have much lower competition than generic terms. By being one of the few sites that answers the specific question a BIM coordinator is searching, the page ranks fast, often inside 6–8 weeks for long-tail technical queries.',
       },
       {
         q: 'Can the same playbook work for a US consultancy?',
-        a: 'Yes — and the cost ratio is even more favorable in the US, where consultative SEO can carry deal sizes of $50K–$500K. The technical query landscape is the same; we just translate the local examples and certifications.',
+        a: 'Yes, and the cost ratio is even more favorable in the US, where consultative SEO can carry deal sizes of $50K–$500K. The technical query landscape is the same; we just translate the local examples and certifications.',
       },
     ],
   },
@@ -443,7 +443,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: '70% Operational Efficiency Gain: Custom ERPNext for a Food Processing Manufacturer',
     summary:
-      'GroFresh was running a multi-million-dollar food processing operation on Tally and disjointed spreadsheets — creating data silos, inventory leakage, and delayed financial reporting. FactoryJet replaced the legacy stack with a custom ERPNext implementation tailored to food-processing workflows, improving overall operational efficiency by 70%.',
+      'GroFresh was running a multi-million-dollar food processing operation on Tally and disjointed spreadsheets, creating data silos, inventory leakage, and delayed financial reporting. FactoryJet replaced the legacy stack with a custom ERPNext implementation tailored to food-processing workflows, improving overall operational efficiency by 70%.',
     category: 'Manufacturing',
     heroStats: [
       { value: '+70%', label: 'Operational efficiency' },
@@ -482,10 +482,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     challengePullQuote:
       'We were a multi-million-dollar operation making decisions on week-old spreadsheets.',
     approach:
-      'We chose ERPNext as the foundation because it gives manufacturers a serious, modular ERP without the seven-figure license cost of SAP or Oracle. The implementation was sequenced module-by-module — procurement and inventory first (the highest-leakage area), then production planning, then finance integration — so the plant kept running while each module went live. Every workflow was mapped to existing GroFresh practice before being digitized, so the change-management burden stayed manageable.',
+      'We chose ERPNext as the foundation because it gives manufacturers a serious, modular ERP without the seven-figure license cost of SAP or Oracle. The implementation was sequenced module-by-module, procurement and inventory first (the highest-leakage area), then production planning, then finance integration, so the plant kept running while each module went live. Every workflow was mapped to existing GroFresh practice before being digitized, so the change-management burden stayed manageable.',
     techStack: ['ERPNext', 'Python', 'PostgreSQL', 'Docker', 'AWS'],
     solution:
-      'We replaced their legacy systems with a custom ERPNext implementation tailored to food-processing workflows. The new system digitized everything from raw material sourcing to final dispatch — batch tracking, yield reporting, expiry management, and lot traceability all live in one system. Real-time dashboards now provide the leadership team with instant insights into production yields and wastage. The whole stack runs on Postgres in Docker containers on AWS for predictable scaling.',
+      'We replaced their legacy systems with a custom ERPNext implementation tailored to food-processing workflows. The new system digitized everything from raw material sourcing to final dispatch, batch tracking, yield reporting, expiry management, and lot traceability all live in one system. Real-time dashboards now provide the leadership team with instant insights into production yields and wastage. The whole stack runs on Postgres in Docker containers on AWS for predictable scaling.',
     results:
       'Overall operational efficiency improved by 70%. Paper-based workflows dropped by 90%. Data latency went from week-old reports to real-time dashboards. Plant managers can now spot a yield drop in the morning and adjust the same shift, instead of finding out at month-end. Finance closes the books in days instead of weeks, and procurement orders against actual consumption instead of historical averages.',
     imageUrl: '/images/case-studies/grofresh-manufacturing-erp-hero.jpg',
@@ -504,7 +504,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'What does the 70% efficiency gain actually measure?',
-        a: 'A blended index across order-to-cash cycle time, production yield variance, inventory leakage, and finance close speed. Each subcomponent improved 40–90% — the 70% is the weighted average.',
+        a: 'A blended index across order-to-cash cycle time, production yield variance, inventory leakage, and finance close speed. Each subcomponent improved 40–90%: the 70% is the weighted average.',
       },
       {
         q: 'How does food-specific workflow differ from generic ERPNext?',
@@ -512,7 +512,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'Can a US manufacturer get the same outcome?',
-        a: 'Yes — and the regulatory layer (FDA, FSMA traceability requirements) is actually easier to handle in a customized ERPNext build than in off-the-shelf US ERP packages. The implementation playbook transfers directly.',
+        a: 'Yes, and the regulatory layer (FDA, FSMA traceability requirements) is actually easier to handle in a customized ERPNext build than in off-the-shelf US ERP packages. The implementation playbook transfers directly.',
       },
     ],
   },
@@ -532,7 +532,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: 'Generating 500+ Organic Leads via High-Performance Design',
     summary:
-      'As a creative agency, Fliying Pixel needed a website that walked the talk — visually impressive and rigorously optimized for conversion. FactoryJet built a WIX Studio site layered with custom SEO/AIO strategy, generating 500+ qualified leads from organic traffic without paid ads.',
+      'As a creative agency, Fliying Pixel needed a website that walked the talk, visually impressive and rigorously optimized for conversion. FactoryJet built a WIX Studio site layered with custom SEO/AIO strategy, generating 500+ qualified leads from organic traffic without paid ads.',
     category: 'Corporate',
     heroStats: [
       { value: '500+', label: 'Organic leads' },
@@ -567,20 +567,20 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Bounce Rate', value: '-31%' },
     ],
     challenge:
-      'As a creative agency, Fliying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak — it was not converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO). The site had to look like it was made by a creative agency you would actually hire, while still moving the prospect through a clear inquiry funnel and feeding the CRM cleanly enough that the team could follow up the same day.',
+      'As a creative agency, Fliying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak, it was not converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO). The site had to look like it was made by a creative agency you would actually hire, while still moving the prospect through a clear inquiry funnel and feeding the CRM cleanly enough that the team could follow up the same day.',
     challengePullQuote:
       'A portfolio that looks beautiful but does not convert is a luxury we could not afford.',
     approach:
-      'We split the design and the conversion architecture into two parallel tracks. The design track focused on what every creative agency cares about — the portfolio shots, the typography, the motion — while the CRO track quietly engineered the conversion funnel beneath it: above-the-fold inquiry forms, exit-intent capture, content-pillar landing pages mapped to specific service queries, and Velo-driven personalization for returning visitors. WIX Studio was the platform pick because it gave the design team the visual fidelity they needed without slowing the build.',
+      'We split the design and the conversion architecture into two parallel tracks. The design track focused on what every creative agency cares about: the portfolio shots, the typography, the motion, while the CRO track quietly engineered the conversion funnel beneath it: above-the-fold inquiry forms, exit-intent capture, content-pillar landing pages mapped to specific service queries, and Velo-driven personalization for returning visitors. WIX Studio was the platform pick because it gave the design team the visual fidelity they needed without slowing the build.',
     techStack: ['Wix Studio', 'Velo API', 'Google Analytics 4', 'Zapier'],
     solution:
       'We deployed a visually rich website with highly optimized conversion funnels. We utilized WIX Studio for its design flexibility but superimposed a custom SEO and AIO strategy layer. By creating high-value content pillars around their services, we drove a massive influx of organic traffic. Velo API powered the dynamic case-study filtering; Zapier wired inquiries into the CRM with immediate Slack alerts.',
     results:
-      'Over 500 qualified leads from organic traffic alone — zero paid spend. Traffic grew 300% in the same window, and client retention hit 95%. The team now spends discovery calls qualifying down a full inbound pipeline instead of chasing outbound prospects cold.',
+      'Over 500 qualified leads from organic traffic alone, zero paid spend. Traffic grew 300% in the same window, and client retention hit 95%. The team now spends discovery calls qualifying down a full inbound pipeline instead of chasing outbound prospects cold.',
     imageUrl: '/images/case-studies/fliying-pixel-agency-hero.jpg',
     ogImageUrl: '/images/case-studies/fliying-pixel-agency-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'Agency portfolio that does not convert? We balance stunning design with rigorous CRO — no paid ads required.',
+    ctaTeaser: 'Agency portfolio that does not convert? We balance stunning design with rigorous CRO, no paid ads required.',
     relatedSlugs: ['impulse-branding-migration', 'belle-maison-ecommerce-success'],
     faqs: [
       {
@@ -601,7 +601,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'How does Velo API factor in?',
-        a: 'Velo lets us add real backend logic to a WIX site — dynamic case-study filtering, returning-visitor personalization, and CRM webhooks. It is what turns a brochure WIX site into a working sales tool.',
+        a: 'Velo lets us add real backend logic to a WIX site, dynamic case-study filtering, returning-visitor personalization, and CRM webhooks. It is what turns a brochure WIX site into a working sales tool.',
       },
     ],
   },
@@ -621,7 +621,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: '300% Organic Traffic Surge: Local SEO for a B2B Logistics Operator',
     summary:
-      'In B2B logistics, trust is currency — and Rukman Transport had a minimal digital presence that did not reflect their fleet size or reliability. FactoryJet overhauled their brand identity, executed a hyper-local SEO strategy, and drove a 300% increase in organic search visibility for high-intent industrial transport queries.',
+      'In B2B logistics, trust is currency, and Rukman Transport had a minimal digital presence that did not reflect their fleet size or reliability. FactoryJet overhauled their brand identity, executed a hyper-local SEO strategy, and drove a 300% increase in organic search visibility for high-intent industrial transport queries.',
     category: 'Logistics',
     heroStats: [
       { value: '+300%', label: 'Organic traffic' },
@@ -658,14 +658,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge:
       'In the competitive logistics sector, trust is currency. Rukman Transport had a minimal digital presence that did not reflect their fleet size or reliability. They were losing local B2B contracts to competitors who simply looked more professional online. Procurement teams short-listing logistics partners would search, find a thin website with no fleet photos, no safety credentials, and no proof of operational scale, and quietly drop them from the bid list before the sales team ever heard about it.',
     challengePullQuote:
-      'We were the size we claimed to be — the site just did not show it.',
+      'We were the size we claimed to be: the site just did not show it.',
     approach:
-      'We treated this as a credibility problem first and an SEO problem second. Step one was rebuilding the brand assets — fleet photography, safety credentials, contract case studies — so when a procurement team did land on the site, the firm looked the size it actually was. Step two layered hyper-local SEO on top: Google Business Profile completeness, location-specific landing pages, and schema markup that fed search engines structured information about service area, fleet capacity, and safety record.',
+      'We treated this as a credibility problem first and an SEO problem second. Step one was rebuilding the brand assets, fleet photography, safety credentials, contract case studies, so when a procurement team did land on the site, the firm looked the size it actually was. Step two layered hyper-local SEO on top: Google Business Profile completeness, location-specific landing pages, and schema markup that fed search engines structured information about service area, fleet capacity, and safety record.',
     techStack: ['WordPress', 'Yoast SEO', 'Google Maps API', 'Schema Markup'],
     solution:
-      'We overhauled their digital brand identity and executed a hyper-local SEO strategy. We optimized their Google My Business profile end-to-end — every category, every service, every photo, every FAQ. The new WordPress + Yoast SEO stack carried structured data for service area and fleet capabilities. The site highlighted fleet capabilities and safety records prominently, with dedicated microsites for each service vertical. The result was a 300% increase in organic search visibility for high-intent keywords like "industrial transport".',
+      'We overhauled their digital brand identity and executed a hyper-local SEO strategy. We optimized their Google My Business profile end-to-end: every category, every service, every photo, every FAQ. The new WordPress + Yoast SEO stack carried structured data for service area and fleet capabilities. The site highlighted fleet capabilities and safety records prominently, with dedicated microsites for each service vertical. The result was a 300% increase in organic search visibility for high-intent keywords like "industrial transport".',
     results:
-      'A 300% increase in organic search visibility, a 150% lift in calls from Google Business Profile, and a measurable jump in B2B contracts secured. Procurement teams now find a firm that looks the size it is — and the inquiry-to-contract conversion rate jumped alongside the visibility, because the brand finally backed up the search ranking.',
+      'A 300% increase in organic search visibility, a 150% lift in calls from Google Business Profile, and a measurable jump in B2B contracts secured. Procurement teams now find a firm that looks the size it is, and the inquiry-to-contract conversion rate jumped alongside the visibility, because the brand finally backed up the search ranking.',
     imageUrl: '/images/case-studies/rukman-transport-logistics-hero.jpg',
     ogImageUrl: '/images/case-studies/rukman-transport-logistics-og.png',
     publishedDate: '2026-05-28',
@@ -678,11 +678,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'How does Google Business Profile (GBP) drive B2B logistics leads?',
-        a: 'Procurement teams Google "industrial transport near me" or "B2B logistics [city]" and pick from the local pack. A fully optimized GBP — every category filled, every photo current, every review responded to — gets you into that pack and into the call queue.',
+        a: 'Procurement teams Google "industrial transport near me" or "B2B logistics [city]" and pick from the local pack. A fully optimized GBP: every category filled, every photo current, every review responded to, gets you into that pack and into the call queue.',
       },
       {
         q: 'What kind of schema markup did the site use?',
-        a: 'LocalBusiness, MovingCompany, Service, and FAQPage schemas covering service area, fleet specs, certifications, and common questions. Schema is what helps search engines display rich snippets — which directly drives click-through rate.',
+        a: 'LocalBusiness, MovingCompany, Service, and FAQPage schemas covering service area, fleet specs, certifications, and common questions. Schema is what helps search engines display rich snippets, which directly drives click-through rate.',
       },
       {
         q: 'How do you measure "B2B contracts secured"?',
@@ -690,7 +690,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'Can a US logistics operator follow the same playbook?',
-        a: 'Directly. Local SEO for B2B logistics in US metros (Dallas, Atlanta, Chicago, LA) is extremely winnable — most operators still have weak GBP profiles. The playbook is identical; only the city pages and certifications change.',
+        a: 'Directly. Local SEO for B2B logistics in US metros (Dallas, Atlanta, Chicago, LA) is extremely winnable: most operators still have weak GBP profiles. The playbook is identical; only the city pages and certifications change.',
       },
     ],
   },

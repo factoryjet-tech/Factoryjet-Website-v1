@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Nagpur | FactoryJet',
     description:
-      'Professional website design company in Nagpur — Next.js, SEO, and GA4 included. 7-day delivery. Serving MIHAN SEZ, Butibori MIDC, Hingna Industrial Estate, and Nagpur city businesses.',
+      'Professional website design company in Nagpur: Next.js, SEO, and GA4 included. 7-day delivery. Serving MIHAN SEZ, Butibori MIDC, Hingna Industrial Estate, and Nagpur city businesses.',
     url: 'https://factoryjet.com/web-design/nagpur',
     images: [
       {
@@ -90,6 +91,20 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design/nagpur#webpage',
+  url: 'https://factoryjet.com/web-design/nagpur',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -140,31 +155,31 @@ const NAG_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Nagpur's market — whether that's a logistics company serving 24h multi-modal connectivity to all metros, a MIHAN SEZ IT firm, a Butibori MIDC manufacturer, or an agri-exporter shipping GI-tagged Nagpur oranges. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Nagpur's market, whether that's a logistics company serving 24h multi-modal connectivity to all metros, a MIHAN SEZ IT firm, a Butibori MIDC manufacturer, or an agri-exporter shipping GI-tagged Nagpur oranges. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Nagpur-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Nagpur-specific local SEO targeting built in.: Day 6–7',
   },
   {
     number: '05',
     title: 'Launch & Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
   },
 ];
 
@@ -195,13 +210,13 @@ const NAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Nagpur web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -221,7 +236,7 @@ const NAG_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you provide website hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
   },
   {
     category: 'included',
@@ -241,7 +256,7 @@ const NAG_FAQ_ITEMS = [
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Nagpur businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Nagpur businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -253,7 +268,7 @@ const NAG_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
   /* ── Nagpur Local ── */
@@ -261,25 +276,25 @@ const NAG_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for logistics and transport companies in Nagpur?',
     answer:
-      "Yes — logistics, warehousing, and transport businesses are a core client profile for us in Nagpur. The city's Zero Mile location at the geographic centre of India makes it the natural hub for multi-modal freight operations connecting all metros. We build websites with operations display, fleet capability sections, trade lane coverage, and RFQ flows optimised for domestic shippers and national procurement teams.",
+      "Yes, logistics, warehousing, and transport businesses are a core client profile for us in Nagpur. The city's Zero Mile location at the geographic centre of India makes it the natural hub for multi-modal freight operations connecting all metros. We build websites with operations display, fleet capability sections, trade lane coverage, and RFQ flows optimised for domestic shippers and national procurement teams.",
   },
   {
     category: 'local',
     question: 'Can you build websites for MIHAN SEZ tenants and IT companies in Nagpur?',
     answer:
-      "Yes. MIHAN — India's largest SEZ with ₹35,000 Cr investment — is home to BPO operations, IT services firms, and aviation-linked businesses. These companies need websites built for national and international client acquisition: authority-first architecture, clear service capability pages, and lead flows designed for B2B sales cycles. TCS, Infosys, and HCL presence in the MIHAN IT SEZ sets the credibility benchmark — your website needs to match.",
+      "Yes. MIHAN: India's largest SEZ with ₹35,000 Cr investment, is home to BPO operations, IT services firms, and aviation-linked businesses. These companies need websites built for national and international client acquisition: authority-first architecture, clear service capability pages, and lead flows designed for B2B sales cycles. TCS, Infosys, and HCL presence in the MIHAN IT SEZ sets the credibility benchmark: your website needs to match.",
   },
   {
     category: 'local',
     question: 'Do you build websites for agri-export businesses and orange traders in Nagpur?',
     answer:
-      "Yes. Nagpur oranges are GI-tagged — a mark of quality that international buyers recognise. Agri-exporters, orange traders, and food processing businesses in Nagpur need websites that project GI certification credentials, export compliance, product grade and sourcing information, and frictionless inquiry flows for buyers in the UAE, UK, and Southeast Asia. We build these sites with B2B buyer-research architecture and technical SEO targeting international English-language search queries.",
+      "Yes. Nagpur oranges are GI-tagged: a mark of quality that international buyers recognise. Agri-exporters, orange traders, and food processing businesses in Nagpur need websites that project GI certification credentials, export compliance, product grade and sourcing information, and frictionless inquiry flows for buyers in the UAE, UK, and Southeast Asia. We build these sites with B2B buyer-research architecture and technical SEO targeting international English-language search queries.",
   },
   {
     category: 'local',
     question: "Do you know Nagpur's business districts well enough to write relevant copy?",
     answer:
-      "Yes. We research Nagpur's business geography as part of discovery — from Butibori MIDC (Maharashtra's second-largest industrial estate) and Hingna Industrial Estate's manufacturing clusters, to MIHAN's SEZ and airport hub, the Zero Mile commercial district, and Vidarbha's cotton and textile belt. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Nagpur's business geography as part of discovery, from Butibori MIDC (Maharashtra's second-largest industrial estate) and Hingna Industrial Estate's manufacturing clusters, to MIHAN's SEZ and airport hub, the Zero Mile commercial district, and Vidarbha's cotton and textile belt. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
   },
 
   /* ── Support & Ownership ── */
@@ -287,7 +302,7 @@ const NAG_FAQ_ITEMS = [
     category: 'support',
     question: 'Do I own the website after it is built?',
     answer:
-      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
   },
   {
     category: 'support',
@@ -317,7 +332,7 @@ const NAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Do you offer a discount for Butibori MIDC or Hingna MIDC manufacturers?',
     answer:
-      "We don't offer location-based discounts — but our Starter tier is built precisely for MSME manufacturers in Butibori and Hingna who need a credible, fast, mobile-first web presence quickly. It covers 5 pages, LocalBusiness schema, contact form, WhatsApp integration, and GA4 — everything a manufacturer needs to start generating online enquiries.",
+      "We don't offer location-based discounts, but our Starter tier is built precisely for MSME manufacturers in Butibori and Hingna who need a credible, fast, mobile-first web presence quickly. It covers 5 pages, LocalBusiness schema, contact form, WhatsApp integration, and GA4, everything a manufacturer needs to start generating online enquiries.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -442,31 +457,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery Call',
+      name: 'Day 1 | Discovery Call',
       text: `We learn your business, your Nagpur market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Strategy & Structure',
+      name: 'Day 2 | Strategy & Structure',
       text: `We map your site architecture, research your Nagpur competitors, identify your top keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Design',
+      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Nagpur local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Development & SEO',
+      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Nagpur local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch',
+      name: 'Day 7 | Launch',
       text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
     },
   ],
@@ -490,6 +505,10 @@ const speakableSchema = {
 export default function NagpurWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="nag-local-business-schema"
         type="application/ld+json"
@@ -519,13 +538,18 @@ export default function NagpurWebDesignPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Nagpur', url: 'https://factoryjet.com/web-design/nagpur' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_nagpur_hero" />}
           eyebrow="WEB DESIGN · NAGPUR"
           headline="Website Design in Nagpur for Logistics Companies, MIHAN SEZ Businesses, and Central India's Growing Enterprises"
-          lead="Nagpur sits at the geographic dead-centre of India — the Zero Mile marker — making it the country's most strategically located logistics and trade hub. MIHAN, India's largest SEZ with ₹35,000 Cr investment, is transforming the city into a national aviation and IT hub. From Butibori MIDC's industrial belt and Hingna's manufacturing corridor to the city's growing agri-export community and 500+ logistics firms, Nagpur businesses have never had more to compete for. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Nagpur sits at the geographic dead-centre of India: the Zero Mile marker, making it the country's most strategically located logistics and trade hub. MIHAN, India's largest SEZ with ₹35,000 Cr investment, is transforming the city into a national aviation and IT hub. From Butibori MIDC's industrial belt and Hingna's manufacturing corridor to the city's growing agri-export community and 500+ logistics firms, Nagpur businesses have never had more to compete for. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -548,26 +572,26 @@ export default function NagpurWebDesignPage() {
           eyebrow="NAGPUR MARKET"
           headline="Why Your Nagpur Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Nagpur is Central India's most strategically significant commercial city — positioned at India's geographic centre with rail, road, and air connectivity to every major metro within 12 hours. The city's logistics identity runs deep: 500+ freight and warehousing companies operate from Nagpur, taking advantage of the Zero Mile advantage that reduces transit times in all directions. MIHAN — the Multi-modal International Hub and Airport Nagpur — is India's largest Special Economic Zone, attracting BPO operations, IT services firms, and aviation-linked manufacturing. Butibori MIDC, Maharashtra's second-largest industrial estate, houses over 700 manufacturing units spanning textiles, engineering goods, food processing, and chemicals.",
-            "This creates a web design landscape unique to Nagpur: a logistics company in Butibori needs a completely different site architecture from an IT firm in MIHAN SEZ, an orange agri-exporter serving UAE and UK buyers, or a textile trader in Vidarbha's cotton belt. B2B buyers researching freight partners, manufacturers vetting suppliers, and international buyers sourcing GI-tagged Nagpur oranges all have different due-diligence requirements. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template.",
-            "Nagpur's business community is at an inflection point — MIHAN investment is drawing national attention, IT hiring is growing, and the logistics sector is expanding. Businesses that invest in a high-performing digital presence now capture the search rankings and buyer first impressions before the market becomes saturated. Every week without a fast, credible website is ground conceded to a competitor who already has one.",
+            "Nagpur is Central India's most strategically significant commercial city, positioned at India's geographic centre with rail, road, and air connectivity to every major metro within 12 hours. The city's logistics identity runs deep: 500+ freight and warehousing companies operate from Nagpur, taking advantage of the Zero Mile advantage that reduces transit times in all directions. MIHAN: the Multi-modal International Hub and Airport Nagpur, is India's largest Special Economic Zone, attracting BPO operations, IT services firms, and aviation-linked manufacturing. Butibori MIDC, Maharashtra's second-largest industrial estate, houses over 700 manufacturing units spanning textiles, engineering goods, food processing, and chemicals.",
+            "This creates a web design landscape unique to Nagpur: a logistics company in Butibori needs a completely different site architecture from an IT firm in MIHAN SEZ, an orange agri-exporter serving UAE and UK buyers, or a textile trader in Vidarbha's cotton belt. B2B buyers researching freight partners, manufacturers vetting suppliers, and international buyers sourcing GI-tagged Nagpur oranges all have different due-diligence requirements. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template.",
+            "Nagpur's business community is at an inflection point: MIHAN investment is drawing national attention, IT hiring is growing, and the logistics sector is expanding. Businesses that invest in a high-performing digital presence now capture the search rankings and buyer first impressions before the market becomes saturated. Every week without a fast, credible website is ground conceded to a competitor who already has one.",
           ]}
           stats={[
             {
               value: '₹35,000 Cr',
-              label: 'Total investment in MIHAN SEZ — India\'s largest Special Economic Zone, driving IT, aviation, and manufacturing growth in Nagpur',
+              label: 'Total investment in MIHAN SEZ: India\'s largest Special Economic Zone, driving IT, aviation, and manufacturing growth in Nagpur',
               sourceUrl: 'https://www.maharashtraindustrial.com/',
               sourceLabel: 'MIDC Maharashtra',
             },
             {
               value: 'Zero Mile',
-              label: 'Nagpur\'s geographic dead-centre of India — the shortest rail and road access point to all major metros simultaneously',
+              label: 'Nagpur\'s geographic dead-centre of India: the shortest rail and road access point to all major metros simultaneously',
               sourceUrl: 'https://nagpur.gov.in/',
               sourceLabel: 'Nagpur District',
             },
             {
               value: '700+ units',
-              label: 'Manufacturing units in Butibori MIDC — Maharashtra\'s second-largest industrial estate, spanning textiles, engineering, and food processing',
+              label: 'Manufacturing units in Butibori MIDC: Maharashtra\'s second-largest industrial estate, spanning textiles, engineering, and food processing',
               sourceUrl: 'https://www.midc.in/',
               sourceLabel: 'MIDC',
             },
@@ -578,12 +602,12 @@ export default function NagpurWebDesignPage() {
         <ServiceExplanation
           eyebrow="WEB DESIGN · NAGPUR"
           headline="What 'Web Design' Actually Means for a Nagpur Business"
-          lead="Nagpur's economy runs on two very different buyer behaviours — B2B industrial and logistics buyers doing structured vendor research, and domestic SMB owners deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
+          lead="Nagpur's economy runs on two very different buyer behaviours, B2B industrial and logistics buyers doing structured vendor research, and domestic SMB owners deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
                 For Nagpur&apos;s logistics companies, MIDC manufacturers, agri-exporters, and
-                MIHAN SEZ businesses — the website needs to project operational capability, industry
+                MIHAN SEZ businesses: the website needs to project operational capability, industry
                 certifications, and geographic advantage to buyers and procurement teams across
                 India and internationally. These buyers research vendors before shortlisting. The
                 site needs to answer their due-diligence questions: fleet capacity, warehouse
@@ -593,7 +617,7 @@ export default function NagpurWebDesignPage() {
               </p>
               <p>
                 For IT and BPO firms in MIHAN SEZ, professional services businesses in the city
-                centre, and retail and consumer brands growing in Nagpur&apos;s urban market —
+                centre, and retail and consumer brands growing in Nagpur&apos;s urban market,
                 the challenge is different. IT firms pitching national and global clients need
                 service capability pages and credibility signals that match Pune and Hyderabad
                 standards. Consumer retail brands need mobile-first speed and conversion-optimised
@@ -677,7 +701,7 @@ export default function NagpurWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Nagpur Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -713,7 +737,7 @@ export default function NagpurWebDesignPage() {
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison — Mumbai',
+              title: 'Belle Maison | Mumbai',
               description:
                 "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
@@ -722,9 +746,9 @@ export default function NagpurWebDesignPage() {
             },
             {
               industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts — Pune',
+              title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -738,11 +762,11 @@ export default function NagpurWebDesignPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Nagpur Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Nagpur deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          lead="Not all web design options in Nagpur deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={NAG_COMPARISON_COLUMNS}
           rows={NAG_COMPARISON_ROWS}
@@ -753,47 +777,47 @@ export default function NagpurWebDesignPage() {
         <IndustriesGrid variant="cards"
           eyebrow="NAGPUR × WEB DESIGN"
           headline="Web Design for Nagpur's Key Industries"
-          lead="From logistics companies and MIDC manufacturers to MIHAN SEZ IT firms, agri-exporters, and growing service businesses — Nagpur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          lead="From logistics companies and MIDC manufacturers to MIHAN SEZ IT firms, agri-exporters, and growing service businesses, Nagpur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
               name: 'Logistics & Warehousing',
               description:
-                "Nagpur's Zero Mile location makes it India's logistics sweet spot — equidistant from all major metros by rail, road, and air. 500+ freight, warehousing, and 3PL companies operate from Nagpur to serve national supply chains. These businesses need websites that display fleet capacity, warehouse footprint, trade lane coverage, certifications, and RFQ flows — optimised for domestic shippers and national procurement teams running vendor assessments.",
+                "Nagpur's Zero Mile location makes it India's logistics sweet spot, equidistant from all major metros by rail, road, and air. 500+ freight, warehousing, and 3PL companies operate from Nagpur to serve national supply chains. These businesses need websites that display fleet capacity, warehouse footprint, trade lane coverage, certifications, and RFQ flows, optimised for domestic shippers and national procurement teams running vendor assessments.",
               example:
                 'Freight forwarders, 3PL warehousing companies, and transport fleet operators leveraging the Zero Mile advantage to serve pan-India supply chains.',
             },
             {
               name: 'Manufacturing & MIDC',
               description:
-                "Butibori MIDC — Maharashtra's second-largest industrial estate — and Hingna Industrial Estate house over 700 manufacturing units spanning textiles, engineering goods, food processing, packaging, and chemicals. MSME manufacturers need websites that project production capacity, quality certifications, product specifications, and inquiry flows designed for domestic and export procurement cycles. B2B buyers from across India research manufacturers online before visiting.",
+                "Butibori MIDC, Maharashtra's second-largest industrial estate, and Hingna Industrial Estate house over 700 manufacturing units spanning textiles, engineering goods, food processing, packaging, and chemicals. MSME manufacturers need websites that project production capacity, quality certifications, product specifications, and inquiry flows designed for domestic and export procurement cycles. B2B buyers from across India research manufacturers online before visiting.",
               example:
                 'MSME manufacturers in Butibori MIDC and Hingna Industrial Estate targeting domestic procurement teams and export buyers.',
             },
             {
               name: 'Agri-Export & Orange Trade',
               description:
-                "Nagpur oranges are GI-tagged — internationally recognised for their quality and distinct flavour. Agri-exporters, orange processing businesses, and food export companies need websites that display GI certification, export compliance credentials, product grades, cold storage capacity, and inquiry flows for buyers in the UAE, UK, Europe, and Southeast Asia. Technical SEO targeting international English-language buyer searches is built in from day one.",
+                "Nagpur oranges are GI-tagged, internationally recognised for their quality and distinct flavour. Agri-exporters, orange processing businesses, and food export companies need websites that display GI certification, export compliance credentials, product grades, cold storage capacity, and inquiry flows for buyers in the UAE, UK, Europe, and Southeast Asia. Technical SEO targeting international English-language buyer searches is built in from day one.",
               example:
                 'Agri-exporters, orange trading companies, and food processing businesses in Nagpur and Vidarbha targeting international retail and wholesale buyers.',
             },
             {
               name: 'IT & BPO (MIHAN SEZ)',
               description:
-                "MIHAN SEZ is transforming Nagpur into a significant IT and BPO hub — TCS, Infosys, and HCL operate from the MIHAN IT SEZ, setting the credibility benchmark for all tech businesses in the city. IT services firms, BPO operations, and SaaS startups emerging from the MIHAN ecosystem need websites built for national and international client acquisition: authority-first architecture, service capability pages, and lead flows designed for enterprise sales cycles.",
+                "MIHAN SEZ is transforming Nagpur into a significant IT and BPO hub: TCS, Infosys, and HCL operate from the MIHAN IT SEZ, setting the credibility benchmark for all tech businesses in the city. IT services firms, BPO operations, and SaaS startups emerging from the MIHAN ecosystem need websites built for national and international client acquisition: authority-first architecture, service capability pages, and lead flows designed for enterprise sales cycles.",
               example:
                 'IT services companies, BPO operations, and tech startups operating from MIHAN SEZ targeting national enterprise clients and international outsourcing buyers.',
             },
             {
               name: 'Cotton, Textiles & Mining Support',
               description:
-                "Vidarbha is one of India's premier cotton-producing regions, and the coal and mining sector in the broader Nagpur-Chandrapur belt generates significant B2B trade. Cotton ginners, textile processors, and mining support businesses need websites designed for bulk commodity buyers and procurement teams — product specifications, compliance documentation, and RFQ forms that meet international buyer standards.",
+                "Vidarbha is one of India's premier cotton-producing regions, and the coal and mining sector in the broader Nagpur-Chandrapur belt generates significant B2B trade. Cotton ginners, textile processors, and mining support businesses need websites designed for bulk commodity buyers and procurement teams, product specifications, compliance documentation, and RFQ forms that meet international buyer standards.",
               example:
                 'Cotton ginners, textile traders, and mining support service companies in Nagpur and the Vidarbha region targeting domestic and export buyers.',
             },
             {
               name: 'Professional Services',
               description:
-                "Nagpur has a strong CA, legal, and consulting community serving Vidarbha's large business sector — including statutory compliance work for MIDC manufacturers, tax advisory for MIHAN SEZ tenants, and corporate legal services for the region's trading and logistics companies. For these businesses, the website is the first qualification filter — does this firm look credible enough to engage? We build authority-first sites with service capability pages, credential display, and lead-capture flows that convert research into booked consultations.",
+                "Nagpur has a strong CA, legal, and consulting community serving Vidarbha's large business sector, including statutory compliance work for MIDC manufacturers, tax advisory for MIHAN SEZ tenants, and corporate legal services for the region's trading and logistics companies. For these businesses, the website is the first qualification filter, does this firm look credible enough to engage? We build authority-first sites with service capability pages, credential display, and lead-capture flows that convert research into booked consultations.",
               example:
                 "CA and CS firms, corporate law practices, management consulting firms, and chartered accountants serving Nagpur's industrial and commercial business community.",
             },
@@ -811,7 +835,7 @@ export default function NagpurWebDesignPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Common Questions from Nagpur Businesses"
-          lead="The questions we answer on every Nagpur discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Nagpur discovery call, answered here, without the runaround."
           categories={NAG_FAQ_CATEGORIES}
           items={NAG_FAQ_ITEMS}
         />

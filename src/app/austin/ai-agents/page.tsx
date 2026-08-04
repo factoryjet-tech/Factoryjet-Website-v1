@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Austin TX Businesses | FactoryJet',
   description:
-    'Custom AI agents for Austin businesses — customer support, lead gen & e-commerce automation. Serve Austin\'s tech and hospitality market 24/7. Fixed-price.',
+    'Custom AI agents for Austin businesses, customer support, lead gen & e-commerce automation. Serve Austin\'s tech and hospitality market 24/7. Fixed-price.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
+   JSON-LD Schema (Service + HowTo + Breadcrumb), faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'AI Agents & Chatbot Development — Austin, TX',
+  name: 'AI Agents & Chatbot Development | Austin, TX',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
@@ -103,31 +103,31 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 — Discovery & Use-Case Mapping',
+      name: 'Day 1 | Discovery & Use-Case Mapping',
       text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 — Architecture & Data Planning',
+      name: 'Day 2 | Architecture & Data Planning',
       text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 — Build & Integrate',
+      name: 'Days 3–4 | Build & Integrate',
       text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 — Testing & Optimization',
+      name: 'Days 5–6 | Testing & Optimization',
       text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 — Launch & Training',
+      name: 'Day 7 | Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
   ],
@@ -153,7 +153,7 @@ const AUSTIN_INDUSTRIES = [
   {
     name: 'Tech & SaaS Companies',
     description:
-      'Silicon Hills companies use AI agents to handle inbound product questions, qualify trial sign-ups, route support tickets by severity, and update CRM records automatically — without adding headcount to a team already under Austin\'s notoriously tight tech hiring pressure.',
+      'Silicon Hills companies use AI agents to handle inbound product questions, qualify trial sign-ups, route support tickets by severity, and update CRM records automatically, without adding headcount to a team already under Austin\'s notoriously tight tech hiring pressure.',
     example: 'SaaS companies report 25–35% reduction in support ticket volume within 60 days.',
     linkLabel: 'Talk to our team',
     linkHref: '/contact',
@@ -161,7 +161,7 @@ const AUSTIN_INDUSTRIES = [
   {
     name: 'Restaurants, Bars & Food Service',
     description:
-      'Austin\'s restaurant scene is relentless — reservations, catering inquiries, dietary questions, event bookings, and menu questions pour in 24/7 across multiple channels. AI agents handle it all automatically, capture catering leads at midnight, and connect to OpenTable or Resy for live reservation checks.',
+      'Austin\'s restaurant scene is relentless, reservations, catering inquiries, dietary questions, event bookings, and menu questions pour in 24/7 across multiple channels. AI agents handle it all automatically, capture catering leads at midnight, and connect to OpenTable or Resy for live reservation checks.',
     example: 'Restaurant groups reduce front-of-house admin by 3–4 hours per day.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -177,7 +177,7 @@ const AUSTIN_INDUSTRIES = [
   {
     name: 'Healthcare & Wellness',
     description:
-      'Austin healthcare practices — from Ascension Seton-affiliated clinics to independent wellness studios — use AI agents to handle appointment requests, answer insurance and service questions, collect intake information, and fill schedule gaps from after-hours website traffic without a front desk employee on call.',
+      'Austin healthcare practices, from Ascension Seton-affiliated clinics to independent wellness studios, use AI agents to handle appointment requests, answer insurance and service questions, collect intake information, and fill schedule gaps from after-hours website traffic without a front desk employee on call.',
     example: 'Wellness practices fill 25–35% more appointment slots from after-hours inquiries.',
     linkLabel: 'Get a quote',
     linkHref: '#pricing',
@@ -185,7 +185,7 @@ const AUSTIN_INDUSTRIES = [
   {
     name: 'Music, Events & Entertainment',
     description:
-      'Austin\'s live music and events industry runs around the clock. AI agents handle venue booking inquiries, ticket FAQs, event logistics questions, and artist booking requests — capturing leads from fans and promoters who reach out outside business hours, especially around SXSW, ACL, and Formula 1 season.',
+      'Austin\'s live music and events industry runs around the clock. AI agents handle venue booking inquiries, ticket FAQs, event logistics questions, and artist booking requests, capturing leads from fans and promoters who reach out outside business hours, especially around SXSW, ACL, and Formula 1 season.',
     example: 'Event businesses capture 40%+ more booking inquiries from off-hours traffic.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -193,7 +193,7 @@ const AUSTIN_INDUSTRIES = [
   {
     name: 'E-Commerce & Retail Brands',
     description:
-      'Austin-based DTC and retail brands use AI agents connected to Shopify or WooCommerce to handle order status inquiries, returns, product questions, and restock notifications automatically — deflecting the repetitive support volume and letting the team focus on growth.',
+      'Austin-based DTC and retail brands use AI agents connected to Shopify or WooCommerce to handle order status inquiries, returns, product questions, and restock notifications automatically, deflecting the repetitive support volume and letting the team focus on growth.',
     example: 'DTC brands report 60–70% fewer "where\'s my order?" tickets in the first month.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -211,13 +211,13 @@ const AUSTIN_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '02',
     title: 'Design',
     description:
-      'We design the conversation flows, escalation logic, integration architecture, and agent behavior. You approve the design document before a line of code is written — no surprises at launch.',
+      'We design the conversation flows, escalation logic, integration architecture, and agent behavior. You approve the design document before a line of code is written, no surprises at launch.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Engineering the agent against your tech stack with weekly demos. You interact with the working agent during the build — not just at the end. Feedback is incorporated before we advance to the next phase.',
+      'Engineering the agent against your tech stack with weekly demos. You interact with the working agent during the build, not just at the end. Feedback is incorporated before we advance to the next phase.',
   },
   {
     number: '04',
@@ -242,14 +242,14 @@ const ROI_STATS = [
   },
   {
     value: '<5s',
-    label: 'agent response time vs. hours for a human — the biggest driver of lead close rates',
+    label: 'agent response time vs. hours for a human: the biggest driver of lead close rates',
     microcopy: 'speed determines whether you get the deal',
     categoryLabel: 'RESPONSE SPEED',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
-    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    label: 'milestone-paid with full code ownership, 12+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch, no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -257,7 +257,7 @@ const ROI_STATS = [
 const MARKET_STATS = [
   {
     value: '3×',
-    label: 'faster lead response via AI agent vs. email — directly linked to higher close rates',
+    label: 'faster lead response via AI agent vs. email, directly linked to higher close rates',
     microcopy: 'Harvard Business Review Lead Response Study',
     categoryLabel: 'LEAD CONVERSION',
   },
@@ -366,7 +366,7 @@ const PRICING_TIERS = [
     priceRange: 'Fixed-price',
     name: 'Starter',
     description:
-      'One focused AI agent for your highest-impact use case. Perfect for Austin businesses adding their first AI agent to handle a single workflow — support, lead capture, or booking.',
+      'One focused AI agent for your highest-impact use case. Perfect for Austin businesses adding their first AI agent to handle a single workflow, support, lead capture, or booking.',
     features: [
       'Single-intent agent (support, lead capture, or booking)',
       'Trained on your FAQs, docs, or product catalog',
@@ -432,13 +432,13 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What is an AI agent for a business?',
     answer:
-      'An AI agent is software that handles multi-step tasks autonomously — answering customer questions, qualifying leads, booking appointments, processing orders, or routing support tickets — using large language models like GPT-4o or Claude. Unlike a simple chatbot that just responds to messages, an AI agent can take actions: look up live data from your CRM, update records, send follow-up emails, or trigger workflows in connected tools. For Austin businesses dealing with high-volume customer interactions, an AI agent handles the routine work so your team focuses on what requires human judgment.',
+      'An AI agent is software that handles multi-step tasks autonomously, answering customer questions, qualifying leads, booking appointments, processing orders, or routing support tickets, using large language models like GPT-4o or Claude. Unlike a simple chatbot that just responds to messages, an AI agent can take actions: look up live data from your CRM, update records, send follow-up emails, or trigger workflows in connected tools. For Austin businesses dealing with high-volume customer interactions, an AI agent handles the routine work so your team focuses on what requires human judgment.',
   },
   {
     category: 'what-is',
     question: 'What is the difference between an AI agent and a regular chatbot?',
     answer:
-      'A chatbot is reactive — it waits for a message and responds. An AI agent is proactive and action-oriented — it can receive a trigger (a form fill, an email, an order event), make decisions based on the content, take multi-step actions across connected tools, and report back. For example, a chatbot tells a customer their order is delayed. An AI agent sees the delay, looks up the order, contacts the fulfillment partner, updates the CRM record, and drafts a proactive apology email — all automatically.',
+      'A chatbot is reactive, it waits for a message and responds. An AI agent is proactive and action-oriented, it can receive a trigger (a form fill, an email, an order event), make decisions based on the content, take multi-step actions across connected tools, and report back. For example, a chatbot tells a customer their order is delayed. An AI agent sees the delay, looks up the order, contacts the fulfillment partner, updates the CRM record, and drafts a proactive apology email: all automatically.',
   },
   {
     category: 'what-is',
@@ -450,14 +450,14 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'Which AI models power FactoryJet agents?',
     answer:
-      'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Austin customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We choose the model that fits your workflow — not the most expensive one.',
+      'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Austin customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We choose the model that fits your workflow, not the most expensive one.',
   },
 
   {
     category: 'what-is',
     question: 'Can an AI agent connect to my existing tools like HubSpot, Shopify, or Google Calendar?',
     answer:
-      'Yes — AI agents integrate natively with the platforms Austin businesses already run on. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal alerts, and Twilio for SMS. Most Austin businesses already have 70–80% of the integration infrastructure in place because they\'re on standard platforms. We build the agent layer on top — you don\'t rebuild your stack.',
+      'Yes, AI agents integrate natively with the platforms Austin businesses already run on. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal alerts, and Twilio for SMS. Most Austin businesses already have 70–80% of the integration infrastructure in place because they\'re on standard platforms. We build the agent layer on top, you don\'t rebuild your stack.',
   },
 
   /* ── AI Agents in Austin ── */
@@ -465,13 +465,13 @@ const FAQ_ITEMS = [
     category: 'austin',
     question: 'Is Austin a good market for AI agent adoption?',
     answer:
-      'Austin is one of the fastest AI-adoption markets in the US. The tech community normalizes AI tools faster than most cities — customers in Austin expect digital-first interactions and respond well to fast, accurate automated responses. The startup culture rewards businesses that move quickly. Early AI agent adopters in Austin\'s hospitality, real estate, and professional services sectors are already seeing competitive advantages: capturing leads other businesses are losing after hours, reducing support overhead in a tight labor market.',
+      'Austin is one of the fastest AI-adoption markets in the US. The tech community normalizes AI tools faster than most cities, customers in Austin expect digital-first interactions and respond well to fast, accurate automated responses. The startup culture rewards businesses that move quickly. Early AI agent adopters in Austin\'s hospitality, real estate, and professional services sectors are already seeing competitive advantages: capturing leads other businesses are losing after hours, reducing support overhead in a tight labor market.',
   },
   {
     category: 'austin',
     question: 'What Austin-specific business problems do AI agents solve?',
     answer:
-      'Three Austin-specific problems: First, the labor market — Austin\'s tech wages are high and good support staff are hard to keep. An AI agent handles 65% of your inbound without adding headcount. Second, the 24/7 economy — Austin\'s restaurant, hospitality, and entertainment scene runs all hours. Leads and bookings come in at 11 p.m. and 2 a.m. A competitor with an AI agent captures those. You don\'t. Third, the growth wave — Austin is adding businesses and residents faster than most US metros. Every week there are new potential customers searching for vendors, and first response wins.',
+      'Three Austin-specific problems: First, the labor market, Austin\'s tech wages are high and good support staff are hard to keep. An AI agent handles 65% of your inbound without adding headcount. Second, the 24/7 economy: Austin\'s restaurant, hospitality, and entertainment scene runs all hours. Leads and bookings come in at 11 p.m. and 2 a.m. A competitor with an AI agent captures those. You don\'t. Third, the growth wave, Austin is adding businesses and residents faster than most US metros. Every week there are new potential customers searching for vendors, and first response wins.',
   },
   {
     category: 'austin',
@@ -483,13 +483,13 @@ const FAQ_ITEMS = [
     category: 'austin',
     question: 'Do AI agents work for Austin restaurant and hospitality businesses?',
     answer:
-      'Yes — hospitality is one of the highest-ROI use cases in Austin. AI agents handle reservation inquiries (connected to OpenTable or Resy), private event and catering inquiries, menu and dietary questions, gift card requests, and general FAQs — 24/7, across your website, Google Business Chat, Facebook Messenger, and SMS simultaneously. During SXSW or ACL, when inquiry volume spikes 3–5×, the agent handles the surge without your team being overwhelmed.',
+      'Yes, hospitality is one of the highest-ROI use cases in Austin. AI agents handle reservation inquiries (connected to OpenTable or Resy), private event and catering inquiries, menu and dietary questions, gift card requests, and general FAQs, 24/7, across your website, Google Business Chat, Facebook Messenger, and SMS simultaneously. During SXSW or ACL, when inquiry volume spikes 3–5×, the agent handles the surge without your team being overwhelmed.',
   },
   {
     category: 'austin',
     question: 'Can an AI agent help an Austin real estate team capture more leads?',
     answer:
-      'Absolutely. Austin\'s real estate market moves fast — a buyer searching for listings at 10 p.m. goes with the agent who responds first. An AI agent engages that lead immediately, qualifies their budget and timeline, answers questions about specific listings, and books a showing directly to the agent\'s calendar. When the agent checks their calendar in the morning, the appointment is already there. Real estate teams using AI agents report 30–40% more showings booked from the same ad spend.',
+      'Absolutely. Austin\'s real estate market moves fast: a buyer searching for listings at 10 p.m. goes with the agent who responds first. An AI agent engages that lead immediately, qualifies their budget and timeline, answers questions about specific listings, and books a showing directly to the agent\'s calendar. When the agent checks their calendar in the morning, the appointment is already there. Real estate teams using AI agents report 30–40% more showings booked from the same ad spend.',
   },
 
   /* ── Process & Timeline ── */
@@ -497,32 +497,32 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI agent development process look like?',
     answer:
-      'Five stages: Discover (we map your top customer interactions, review your tools and docs, define success metrics), Design (conversation flows, escalation logic, integration architecture — you approve before we build), Build (develop and connect to your stack with weekly demos), Test & Tune (run through hundreds of real scenarios, fix errors, tighten thresholds), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with something you can see and test.',
+      'Five stages: Discover (we map your top customer interactions, review your tools and docs, define success metrics), Design (conversation flows, escalation logic, integration architecture, you approve before we build), Build (develop and connect to your stack with weekly demos), Test & Tune (run through hundreds of real scenarios, fix errors, tighten thresholds), and Deploy (live launch with monitoring, team training, and 30-day support). Every stage ends with something you can see and test.',
   },
   {
     category: 'process',
     question: 'How long does it take to build and launch an AI agent?',
     answer:
-      'A single-purpose agent — a support agent for your top 20 questions or a lead capture agent for one landing page — goes from kickoff to live in 2–3 weeks. Multi-intent agents with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or channels run 6–10 weeks. Timeline is confirmed after the discovery session, not before.',
+      'A single-purpose agent: a support agent for your top 20 questions or a lead capture agent for one landing page, goes from kickoff to live in 2–3 weeks. Multi-intent agents with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or channels run 6–10 weeks. Timeline is confirmed after the discovery session, not before.',
   },
   {
     category: 'process',
     question: 'Will I see progress during the build, or just get a final delivery?',
     answer:
-      'Weekly demos throughout. Every stage ends with a working demo you can test with real questions and give feedback on. Most clients find that interacting with the agent mid-build changes what they want it to do — and we build that flexibility in. Nothing is a surprise at launch.',
+      'Weekly demos throughout. Every stage ends with a working demo you can test with real questions and give feedback on. Most clients find that interacting with the agent mid-build changes what they want it to do, and we build that flexibility in. Nothing is a surprise at launch.',
   },
   {
     category: 'process',
     question: 'What happens after the AI agent launches?',
     answer:
-      'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Austin team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
+      'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Austin team. After 30 days you can continue on a monthly retainer or manage it yourself: the dashboard is built for non-technical operators.',
   },
 
   {
     category: 'process',
     question: 'Can an Austin AI agent deploy on my website, Instagram DMs, and WhatsApp at the same time?',
     answer:
-      'Yes — multi-channel deployment is standard on Growth and Enterprise plans. A single AI agent handles customer conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS simultaneously — with consistent answers and tone on every channel. Austin businesses with active social audiences see 30–50% of their lead inquiries coming through Instagram and Facebook, not just the website. One agent covers all of it.',
+      'Yes, multi-channel deployment is standard on Growth and Enterprise plans. A single AI agent handles customer conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS simultaneously, with consistent answers and tone on every channel. Austin businesses with active social audiences see 30–50% of their lead inquiries coming through Instagram and Facebook, not just the website. One agent covers all of it.',
   },
 
   /* ── Pricing & ROI ── */
@@ -530,13 +530,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI agent cost for an Austin business?',
     answer:
-      'Pricing is fixed-price and scoped to your build — the main drivers are how many intents the agent handles, which systems it integrates with, and how many channels it deploys to. The single-purpose Starter agent is the entry point. The Growth tier covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Austin SMBs. Custom enterprise agents add fine-tuning and multi-channel deployment. Every project is quoted and confirmed up front after a free discovery call — no hourly billing, no scope creep.',
+      'Pricing is fixed-price and scoped to your build: the main drivers are how many intents the agent handles, which systems it integrates with, and how many channels it deploys to. The single-purpose Starter agent is the entry point. The Growth tier covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard: the most popular option for Austin SMBs. Custom enterprise agents add fine-tuning and multi-channel deployment. Every project is quoted and confirmed up front after a free discovery call, no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery, without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
   },
   {
     category: 'pricing',
@@ -548,14 +548,14 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the agent is built?',
     answer:
-      'Two types: API usage (a modest monthly amount for most Austin SMB agent volumes — paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
+      'Two types: API usage (a modest monthly amount for most Austin SMB agent volumes, paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
   },
 
   {
     category: 'pricing',
     question: 'Is there a payment plan, or do I pay the full cost upfront?',
     answer:
-      'FactoryJet uses milestone-based payments — 50% at project kickoff and 50% at delivery for Starter builds. For Growth and Enterprise projects, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, 20% at launch. Your payments align with working deliverables you can test — not with dates on a calendar. No large upfront risk before you\'ve seen the Austin AI agent working on real customer scenarios.',
+      'FactoryJet uses milestone-based payments, 50% at project kickoff and 50% at delivery for Starter builds. For Growth and Enterprise projects, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, 20% at launch. Your payments align with working deliverables you can test, not with dates on a calendar. No large upfront risk before you\'ve seen the Austin AI agent working on real customer scenarios.',
   },
 
   /* ── Trust & Results ── */
@@ -563,13 +563,13 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Is customer data safe with an AI agent?',
     answer:
-      'We use API-level integrations only — no screen scraping. We enforce least-privilege data access and implement full audit trails on every conversation. For regulated industries in Austin — healthcare practices affiliated with Ascension Seton or St. David\'s, legal firms, financial advisors — we configure the agent to avoid storing PII and can use private LLM deployments. All conversation logs are owned by you.',
+      'We use API-level integrations only, no screen scraping. We enforce least-privilege data access and implement full audit trails on every conversation. For regulated industries in Austin, healthcare practices affiliated with Ascension Seton or St. David\'s, legal firms, financial advisors, we configure the agent to avoid storing PII and can use private LLM deployments. All conversation logs are owned by you.',
   },
   {
     category: 'trust',
     question: 'Can an AI agent handle Spanish-speaking customers?',
     answer:
-      'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For Austin businesses with Spanish-speaking customers — common in the Austin area — we configure the agent to detect language automatically and respond in kind. Multi-language is included on Growth and Enterprise plans at no extra cost.',
+      'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For Austin businesses with Spanish-speaking customers, common in the Austin area, we configure the agent to detect language automatically and respond in kind. Multi-language is included on Growth and Enterprise plans at no extra cost.',
   },
   {
     category: 'trust',
@@ -581,7 +581,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Austin AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects — we understand what operations look like inside a 10-person Austin business, not just enterprise AI theory). Austin agencies add Silicon Hills overhead to their rates. We don\'t.',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it, weeks, not months), and SMB depth (500+ small business projects, we understand what operations look like inside a 10-person Austin business, not just enterprise AI theory). Austin agencies add Silicon Hills overhead to their rates. We don\'t.',
   },
   {
     category: 'trust',
@@ -648,7 +648,7 @@ export default function AustinAIAgentsPage() {
         formSlot={<HeroInlineForm region="us" source="us_austin_ai_agents_hero" />}
           eyebrow="AI AGENTS · AUSTIN, TX"
           headline="Austin Businesses Win More Customers When an AI Agent Responds First"
-          lead="Austin's market is fast, competitive, and always on. FactoryJet builds custom AI agents for Austin businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Austin agency."
+          lead="Austin's market is fast, competitive, and always on. FactoryJet builds custom AI agents for Austin businesses, customer support, lead generation, appointment booking, and e-commerce automation, that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Austin agency."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -661,7 +661,7 @@ export default function AustinAIAgentsPage() {
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                AI AGENTS IN ACTION — AUSTIN
+                AI AGENTS IN ACTION, AUSTIN
               </p>
               <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
                 65% of support tickets handled before your team gets to the office.
@@ -684,7 +684,7 @@ export default function AustinAIAgentsPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  All three resolved automatically, 24/7 — without a single new hire.
+                  All three resolved automatically, 24/7, without a single new hire.
                 </p>
               </div>
             </div>
@@ -700,8 +700,8 @@ export default function AustinAIAgentsPage() {
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI AGENTS EXPLAINED"
-          headline="What Is an AI Agent — and Why Austin Businesses Need One Now"
-          lead="An AI agent that understands what someone is asking, connects to your live business data, and takes action — is a fundamentally different product than a FAQ widget or a form that sends an email."
+          headline="What Is an AI Agent, and Why Austin Businesses Need One Now"
+          lead="An AI agent that understands what someone is asking, connects to your live business data, and takes action, is a fundamentally different product than a FAQ widget or a form that sends an email."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -723,7 +723,7 @@ export default function AustinAIAgentsPage() {
                 ))}
               </div>
               <p>
-                Most Austin businesses think they already have a chatbot — because they have a live chat widget that pings someone on the team. That&apos;s not an AI agent. That&apos;s a notification. An AI agent built on GPT-4o or Claude actually understands the customer&apos;s question, knows your products and policies, and gives a complete, accurate answer in under 5 seconds — without your team being in the loop.
+                Most Austin businesses think they already have a chatbot, because they have a live chat widget that pings someone on the team. That&apos;s not an AI agent. That&apos;s a notification. An AI agent built on GPT-4o or Claude actually understands the customer&apos;s question, knows your products and policies, and gives a complete, accurate answer in under 5 seconds, without your team being in the loop.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -761,7 +761,7 @@ export default function AustinAIAgentsPage() {
                 </p>
               </div>
               <p>
-                Austin is growing fast — new businesses, new residents, new competition every month. An AI agent doesn&apos;t take vacations, doesn&apos;t need benefits, and doesn&apos;t fall behind during SXSW or ACL week when your inbox explodes. It handles the top 65% of your inbound volume automatically, so your team handles what actually requires a human.
+                Austin is growing fast, new businesses, new residents, new competition every month. An AI agent doesn&apos;t take vacations, doesn&apos;t need benefits, and doesn&apos;t fall behind during SXSW or ACL week when your inbox explodes. It handles the top 65% of your inbound volume automatically, so your team handles what actually requires a human.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -804,12 +804,12 @@ export default function AustinAIAgentsPage() {
                   {
                     step: '01',
                     title: 'Customer sends a message',
-                    desc: 'Website widget, WhatsApp, SMS, or Messenger — any channel your Austin customers use.',
+                    desc: 'Website widget, WhatsApp, SMS, or Messenger, any channel your Austin customers use.',
                   },
                   {
                     step: '02',
                     title: 'AI understands the intent',
-                    desc: 'GPT-4o or Claude reads the question — even if poorly phrased — and identifies what\'s being asked.',
+                    desc: 'GPT-4o or Claude reads the question, even if poorly phrased, and identifies what\'s being asked.',
                   },
                   {
                     step: '03',
@@ -819,7 +819,7 @@ export default function AustinAIAgentsPage() {
                   {
                     step: '04',
                     title: 'Responds or escalates',
-                    desc: 'Sends an accurate answer in seconds — or routes to a human with the full conversation transcript.',
+                    desc: 'Sends an accurate answer in seconds, or routes to a human with the full conversation transcript.',
                   },
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
@@ -864,7 +864,7 @@ export default function AustinAIAgentsPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Austin's market never sleeps. Your support team does."
-          lead="Austin is growing faster than almost any US city. New businesses, new residents, new competition — every week. The businesses capturing that growth are the ones responding first. Right now, some of your competitors are doing it automatically."
+          lead="Austin is growing faster than almost any US city. New businesses, new residents, new competition: every week. The businesses capturing that growth are the ones responding first. Right now, some of your competitors are doing it automatically."
           pillars={[
             {
               icon: '⏱',
@@ -874,12 +874,12 @@ export default function AustinAIAgentsPage() {
             {
               icon: '📉',
               title: 'Your team is answering the same questions on repeat',
-              body: 'For most Austin businesses, 60–70% of support volume is the same questions: availability, pricing, order status, service details, how to book. An AI agent handles all of them automatically, around the clock — freeing your team for the work that actually requires a human. In Austin\'s tight labor market, that efficiency is real money.',
+              body: 'For most Austin businesses, 60–70% of support volume is the same questions: availability, pricing, order status, service details, how to book. An AI agent handles all of them automatically, around the clock, freeing your team for the work that actually requires a human. In Austin\'s tight labor market, that efficiency is real money.',
             },
             {
               icon: '💸',
               title: 'Austin agency rates are some of the highest in the South',
-              body: 'Austin AI agencies benefit from the same tech wage inflation as the rest of Silicon Hills, so build costs for comparable work run at enterprise-level rates locally. FactoryJet delivers the same quality at a fraction of the cost, fixed-price — specialized engineers who have been serving US businesses for 12 years, without the 6th Street overhead.',
+              body: 'Austin AI agencies benefit from the same tech wage inflation as the rest of Silicon Hills, so build costs for comparable work run at enterprise-level rates locally. FactoryJet delivers the same quality at a fraction of the cost, fixed-price, specialized engineers who have been serving US businesses for 12 years, without the 6th Street overhead.',
             },
           ]}
         />
@@ -896,7 +896,7 @@ export default function AustinAIAgentsPage() {
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Strategy Call to Live AI Agent in 2–5 Weeks"
-          lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent — not a slide deck about one."
+          lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent, not a slide deck about one."
           stages={AUSTIN_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–5 WEEKS TO LAUNCH · WEEKLY DEMOS THROUGHOUT"
         />
@@ -935,22 +935,22 @@ export default function AustinAIAgentsPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not an Austin agency with a Congress Ave office. That's exactly the point."
-          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The AI agents we build don't live in a demo — they run in production, handling real customer conversations every day."
+          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The AI agents we build don't live in a demo, they run in production, handling real customer conversations every day."
           pillars={[
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'An Austin AI agency has account managers, project coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
+              body: 'An Austin AI agency has account managers, project coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it, not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '💡',
               title: 'SMB depth, not startup theory',
-              body: 'We\'ve built for restaurants, real estate teams, e-commerce brands, law firms, and healthcare practices. We know where the complexity actually lives inside a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
+              body: 'We\'ve built for restaurants, real estate teams, e-commerce brands, law firms, and healthcare practices. We know where the complexity actually lives inside a 15-person business: the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
             },
             {
               icon: '🔒',
               title: 'You own everything. Always.',
-              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset — not a dependency.',
+              body: 'No vendor lock-in, no SaaS subscriptions, no proprietary platforms you can\'t leave. We deliver the full codebase, all API credentials, and documentation. If you outgrow us or want to take it in-house, you walk away with an asset, not a dependency.',
             },
           ]}
         />
@@ -959,7 +959,7 @@ export default function AustinAIAgentsPage() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything Austin Businesses Ask Before Building an AI Agent"
-          lead="No jargon. No runaround. The questions we get on every Austin strategy call — answered straight."
+          lead="No jargon. No runaround. The questions we get on every Austin strategy call, answered straight."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -970,7 +970,7 @@ export default function AustinAIAgentsPage() {
             variant="dark"
             eyebrow="READY TO START"
             headline="Book a 30-Minute AI Agent Strategy Call"
-            sub="We'll review your current support or lead flow, identify where an AI agent would make the biggest difference for your Austin business, and give you a fixed-price estimate — before you commit to anything."
+            sub="We'll review your current support or lead flow, identify where an AI agent would make the biggest difference for your Austin business, and give you a fixed-price estimate, before you commit to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
             objectionHandler="Most Austin clients see full ROI within 90 days. Free call, fixed price, no hidden fees."

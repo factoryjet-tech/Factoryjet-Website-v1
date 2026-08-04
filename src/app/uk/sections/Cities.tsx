@@ -358,7 +358,7 @@ export default function Cities() {
               maxWidth: 960,
             }}
           >
-            Local Expertise, National Reach — FactoryJet in Your City
+            Local Expertise, National Reach, FactoryJet in Your City
           </h2>
 
           <span
@@ -381,14 +381,14 @@ export default function Cities() {
               FactoryJet delivers tailored digital solutions to businesses
               across every major UK city. Each city page features local market
               data, named competitor comparisons, city-specific pricing
-              benchmarks, and industry-relevant examples — because a financial
+              benchmarks, and industry-relevant examples, because a financial
               services firm in Leeds has different digital needs than a tech
               startup in Bristol or a fashion brand in Manchester.
             </p>
             <p>
               Click your city to see local pricing comparisons, competitor
               analysis, and services tailored to your market. Do not see your
-              city listed? Contact us — we serve businesses across the entire
+              city listed? Contact us, we serve businesses across the entire
               United Kingdom, regardless of location.
             </p>
           </div>

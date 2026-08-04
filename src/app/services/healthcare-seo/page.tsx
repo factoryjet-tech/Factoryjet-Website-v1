@@ -21,7 +21,7 @@ import HealthcareSpecialtiesTabs from './HealthcareSpecialtiesTabs';
 import StatsRowAnimated from './StatsRowAnimated';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/healthcare-seo — v2 rebuild 2026-06-13
+   /us/services/healthcare-seo, v2 rebuild 2026-06-13
 
    Primary keywords (highest-CPC cluster on DataForSEO gap list):
      seo agency healthcare        1,900 vol  KD 2   CPC $215.84
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/services/healthcare-seo.webp',
         width: 1344,
         height: 1024,
-        alt: 'FactoryJet — Healthcare SEO agency for US medical practices and health companies',
+        alt: 'FactoryJet, Healthcare SEO agency for US medical practices and health companies',
       },
     ],
     locale: 'en_US',
@@ -107,26 +107,26 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Section data — pillars, journey stages
+   Section data, pillars, journey stages
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PILLARS = [
   {
-    title: 'YMYL E-E-A-T is not optional — it is the ranking floor for health content',
+    title: 'YMYL E-E-A-T is not optional | it is the ranking floor for health content',
     body:
-      'Health content falls under Google\'s "Your Money or Your Life" category, where weak Experience, Expertise, Authoritativeness, and Trustworthiness signals earn manual quality reviews and ranking suppression. Provider bylines with credentials, About pages with verifiable licensure, peer-reviewed citations, and clear editorial policies are not best practices — they are the minimum requirement before Google will rank your healthcare content. Most generalist SEO agencies run a standard technical checklist and wonder why rankings do not respond. As a healthcare SEO agency, we build E-E-A-T into every page from the first draft, not as a fix when rankings plateau.',
+      'Health content falls under Google\'s "Your Money or Your Life" category, where weak Experience, Expertise, Authoritativeness, and Trustworthiness signals earn manual quality reviews and ranking suppression. Provider bylines with credentials, About pages with verifiable licensure, peer-reviewed citations, and clear editorial policies are not best practices, they are the minimum requirement before Google will rank your healthcare content. Most generalist SEO agencies run a standard technical checklist and wonder why rankings do not respond. As a healthcare SEO agency, we build E-E-A-T into every page from the first draft, not as a fix when rankings plateau.',
     image: '/images/services/healthcare-seo-eeat.webp',
     imageAlt: 'Medical professional reviewing E-E-A-T compliant healthcare content with peer-reviewed citations',
   },
   {
-    title: '84% of patients check reviews before choosing a provider — and review signals directly affect rankings',
+    title: '84% of patients check reviews before choosing a provider | and review signals directly affect rankings',
     body:
-      'According to rater8\'s 2025 Patient Survey, 84% of patients check online reviews before selecting a new healthcare provider. What most practices miss: review velocity and review count are confirmed Google Business Profile ranking signals, they add E-E-A-T signals to organic rankings, and ChatGPT and Perplexity surface practices with strong review authority when patients ask for recommendations. Three ranking systems, one input. A healthcare SEO agency that does not run a systematic review-request workflow for your practice is leaving the highest-leverage signal untouched. We build and run that workflow for every local retainer — HIPAA-compliant, with response templates for positive and negative reviews.',
+      'According to rater8\'s 2025 Patient Survey, 84% of patients check online reviews before selecting a new healthcare provider. What most practices miss: review velocity and review count are confirmed Google Business Profile ranking signals, they add E-E-A-T signals to organic rankings, and ChatGPT and Perplexity surface practices with strong review authority when patients ask for recommendations. Three ranking systems, one input. A healthcare SEO agency that does not run a systematic review-request workflow for your practice is leaving the highest-leverage signal untouched. We build and run that workflow for every local retainer: HIPAA-compliant, with response templates for positive and negative reviews.',
   },
   {
     title: 'Default GA4 on a patient-facing site creates HIPAA liability most SEO agencies never mention',
     body:
-      'Standard Google Analytics 4 implementation on a healthcare website can expose Protected Health Information through referral URLs, form submission events, and session data — creating HIPAA liability that has nothing to do with SEO performance, but everything to do with whether you can keep running digital marketing. Google\'s GA4 Business Associate Agreement covers limited use cases that most healthcare sites do not satisfy out of the box. A healthcare SEO agency that fires standard GA4 onto a patient-facing site without reviewing this is a compliance risk, not a marketing asset. We audit your GA4 configuration for HIPAA-risk events as part of every engagement baseline, before a single ranking dollar is spent.',
+      'Standard Google Analytics 4 implementation on a healthcare website can expose Protected Health Information through referral URLs, form submission events, and session data, creating HIPAA liability that has nothing to do with SEO performance, but everything to do with whether you can keep running digital marketing. Google\'s GA4 Business Associate Agreement covers limited use cases that most healthcare sites do not satisfy out of the box. A healthcare SEO agency that fires standard GA4 onto a patient-facing site without reviewing this is a compliance risk, not a marketing asset. We audit your GA4 configuration for HIPAA-risk events as part of every engagement baseline, before a single ranking dollar is spent.',
     image: '/images/services/healthcare-seo-hipaa.webp',
     imageAlt: 'HIPAA-compliant analytics dashboard configuration for healthcare website',
   },
@@ -137,25 +137,25 @@ const HEALTHCARE_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '01',
     title: 'Healthcare SEO audit',
     description:
-      'We crawl your site and Google Business Profile the way a patient would — E-E-A-T signals, YMYL red flags, local citations, analytics configuration, structured data, and the near-me and condition queries you should rank for but do not. Output: a healthcare SEO scorecard scoped to your practice type and market, and a prioritized 90-day roadmap. The audit is a standalone deliverable. You own it whether or not you continue to a retainer.',
+      'We crawl your site and Google Business Profile the way a patient would: E-E-A-T signals, YMYL red flags, local citations, analytics configuration, structured data, and the near-me and condition queries you should rank for but do not. Output: a healthcare SEO scorecard scoped to your practice type and market, and a prioritized 90-day roadmap. The audit is a standalone deliverable. You own it whether or not you continue to a retainer.',
   },
   {
     number: '02',
     title: 'Technical and compliance baseline',
     description:
-      'We resolve E-E-A-T gaps (provider bylines, credentials, citations), audit your GA4 implementation for HIPAA-risk events and configure appropriate exclusions, fix medical schema (MedicalClinic, Physician, FAQPage, LocalBusiness), correct NAP inconsistencies across directories, and address Core Web Vitals issues. Structural work that unlocks everything else — ranking signals that have been suppressed can recover quickly once the compliance baseline is clean.',
+      'We resolve E-E-A-T gaps (provider bylines, credentials, citations), audit your GA4 implementation for HIPAA-risk events and configure appropriate exclusions, fix medical schema (MedicalClinic, Physician, FAQPage, LocalBusiness), correct NAP inconsistencies across directories, and address Core Web Vitals issues. Structural work that unlocks everything else, ranking signals that have been suppressed can recover quickly once the compliance baseline is clean.',
   },
   {
     number: '03',
     title: 'Local authority and map pack',
     description:
-      'We optimize your Google Business Profile for every category and service offered, build citation coverage across the 40+ directories Google cross-references (including medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Zocdoc, and relevant specialty boards), and implement a review-request workflow that grows review velocity sustainably. The Google Map Pack captures 42% of local search clicks — for most private practices, this is the highest-leverage ranking asset we work on.',
+      'We optimize your Google Business Profile for every category and service offered, build citation coverage across the 40+ directories Google cross-references (including medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Zocdoc, and relevant specialty boards), and implement a review-request workflow that grows review velocity sustainably. The Google Map Pack captures 42% of local search clicks, for most private practices, this is the highest-leverage ranking asset we work on.',
   },
   {
     number: '04',
     title: 'YMYL-compliant content',
     description:
-      'We write condition, service, and FAQ content that answers the queries patients search — structured for Google ranking and AI-engine citation. Every page carries a licensed provider byline, peer-reviewed citations where clinical claims are made, and schema (MedicalCondition, Physician, FAQPage). No thin content, no LLM boilerplate, no pages that will trigger a YMYL quality review. Dental SEO content, service-line pages, condition pages, and local landing pages all follow the same E-E-A-T process.',
+      'We write condition, service, and FAQ content that answers the queries patients search, structured for Google ranking and AI-engine citation. Every page carries a licensed provider byline, peer-reviewed citations where clinical claims are made, and schema (MedicalCondition, Physician, FAQPage). No thin content, no LLM boilerplate, no pages that will trigger a YMYL quality review. Dental SEO content, service-line pages, condition pages, and local landing pages all follow the same E-E-A-T process.',
   },
   {
     number: '05',
@@ -189,7 +189,7 @@ const PRICING_TIERS = [
     price: 'Custom quote',
     cadence: 'per month',
     description:
-      'For private practices that need to dominate local search — dental, medical, chiropractic, therapy, optometry — and fill their appointment calendar.',
+      'For private practices that need to dominate local search, dental, medical, chiropractic, therapy, optometry, and fill their appointment calendar.',
     features: [
       'All audit deliverables included',
       'GBP optimization + review strategy',
@@ -206,7 +206,7 @@ const PRICING_TIERS = [
     price: 'Custom quote',
     cadence: 'per month',
     description:
-      'Full-stack SEO agency for healthcare companies: E-E-A-T content, map pack, AI citations, and HIPAA-safe analytics — all in one retainer.',
+      'Full-stack SEO agency for healthcare companies: E-E-A-T content, map pack, AI citations, and HIPAA-safe analytics: all in one retainer.',
     features: [
       'Everything in Local Practice Growth',
       'YMYL-compliant condition/service content',
@@ -238,7 +238,7 @@ const PRICING_TIERS = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data — 25 conversational items in 6 categories
+   FAQ data, 25 conversational items in 6 categories
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -256,7 +256,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'What is healthcare SEO and why does it matter for my practice?',
     answer:
-      'Healthcare SEO is optimizing medical and health websites so they rank in Google and get cited by AI engines when patients search for providers or conditions. It matters because 77% of patients search online before booking a healthcare appointment — and in 2023, online search officially surpassed physician referrals as the leading way Americans find new doctors. If you are not ranking, patients are finding your competitors. Healthcare SEO adds a compliance layer on top of standard SEO: YMYL E-E-A-T signals, HIPAA-safe analytics, medical schema types, and Google Business Profile optimization. An agency that skips that layer will leave you with technical work done and rankings that still do not respond.',
+      'Healthcare SEO is optimizing medical and health websites so they rank in Google and get cited by AI engines when patients search for providers or conditions. It matters because 77% of patients search online before booking a healthcare appointment, and in 2023, online search officially surpassed physician referrals as the leading way Americans find new doctors. If you are not ranking, patients are finding your competitors. Healthcare SEO adds a compliance layer on top of standard SEO: YMYL E-E-A-T signals, HIPAA-safe analytics, medical schema types, and Google Business Profile optimization. An agency that skips that layer will leave you with technical work done and rankings that still do not respond.',
   },
   {
     category: 'what',
@@ -268,19 +268,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'What types of healthcare organizations do you work with as a healthcare SEO agency?',
     answer:
-      'We work with private practices (dental, medical, chiropractic, optometry, therapy, dermatology), multi-location clinics, healthcare staffing agencies, medical device companies, health tech and telehealth platforms, and healthcare SaaS businesses. The right SEO strategy differs across types — a dental practice needs map pack dominance; a health tech company needs E-E-A-T content and AI citations. We scope each engagement to your specific growth goal.',
+      'We work with private practices (dental, medical, chiropractic, optometry, therapy, dermatology), multi-location clinics, healthcare staffing agencies, medical device companies, health tech and telehealth platforms, and healthcare SaaS businesses. The right SEO strategy differs across types: a dental practice needs map pack dominance; a health tech company needs E-E-A-T content and AI citations. We scope each engagement to your specific growth goal.',
   },
   {
     category: 'what',
     question: 'Can a generalist SEO agency handle healthcare SEO effectively?',
     answer:
-      'They can do the commodity work — title tags, page speed, backlinks. But they will likely miss the YMYL E-E-A-T layer, which is where Google penalizes weak healthcare content. They may implement GA4 in a way that creates HIPAA risk. They will probably not know the schema types that earn medical rich results, or how GBP categories interact with local healthcare queries. Healthcare SEO has enough domain-specific rules that a generalist agency without healthcare experience will leave the highest-value work undone. If you want an SEO agency for healthcare companies, you need one that has actually worked inside the YMYL framework.',
+      'They can do the commodity work, title tags, page speed, backlinks. But they will likely miss the YMYL E-E-A-T layer, which is where Google penalizes weak healthcare content. They may implement GA4 in a way that creates HIPAA risk. They will probably not know the schema types that earn medical rich results, or how GBP categories interact with local healthcare queries. Healthcare SEO has enough domain-specific rules that a generalist agency without healthcare experience will leave the highest-value work undone. If you want an SEO agency for healthcare companies, you need one that has actually worked inside the YMYL framework.',
   },
   {
     category: 'what',
     question: 'How long before I see results from healthcare SEO?',
     answer:
-      'Technical and E-E-A-T fixes — schema, GBP optimization, bylines, citations — can improve rankings within 4–8 weeks because they unlock pages Google was previously suppressing under YMYL review. Local map pack movement typically shows within 2–3 months once citation and GBP work is complete. Content and authority work compounds over 3–6 months. Healthcare SEO has a longer initial setup than a typical ecommerce site because the compliance baseline takes time — but once built, it is a durable competitive advantage most practices never invest in.',
+      'Technical and E-E-A-T fixes, schema, GBP optimization, bylines, citations, can improve rankings within 4–8 weeks because they unlock pages Google was previously suppressing under YMYL review. Local map pack movement typically shows within 2–3 months once citation and GBP work is complete. Content and authority work compounds over 3–6 months. Healthcare SEO has a longer initial setup than a typical ecommerce site because the compliance baseline takes time, but once built, it is a durable competitive advantage most practices never invest in.',
   },
 
   // ── Local & map pack ──────────────────────────────────────────────────────
@@ -288,13 +288,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'local',
     question: 'How do I get my medical practice to rank in the Google Map Pack near me searches?',
     answer:
-      'Map pack ranking for a medical practice depends on three factors: proximity to the searcher, Google Business Profile completeness and activity, and NAP (name, address, phone) consistency across directories. We optimize your GBP primary and secondary categories, add services and attributes, build citation coverage across the 40+ directories Google cross-references (Healthgrades, Zocdoc, Vitals, Yelp, Apple Maps, and general directories), and implement a review-request workflow. The Google 3-Pack captures 42% of local search clicks — for most private practices, ranking there is the single highest-ROI SEO investment.',
+      'Map pack ranking for a medical practice depends on three factors: proximity to the searcher, Google Business Profile completeness and activity, and NAP (name, address, phone) consistency across directories. We optimize your GBP primary and secondary categories, add services and attributes, build citation coverage across the 40+ directories Google cross-references (Healthgrades, Zocdoc, Vitals, Yelp, Apple Maps, and general directories), and implement a review-request workflow. The Google 3-Pack captures 42% of local search clicks, for most private practices, ranking there is the single highest-ROI SEO investment.',
   },
   {
     category: 'local',
     question: 'What is the difference between local SEO and map pack SEO for healthcare practices?',
     answer:
-      'Local SEO is broader — it covers organic page-one rankings for location-based queries like "physical therapist Austin." Map pack SEO is specifically about earning one of the three GBP listings in the map results above the organic results. Both matter: patients click both map listings and organic links. A new-to-market practice should prioritize the map pack first; an established practice with strong GBP rankings should expand to organic local landing pages for surrounding neighborhoods and specific conditions or services.',
+      'Local SEO is broader, it covers organic page-one rankings for location-based queries like "physical therapist Austin." Map pack SEO is specifically about earning one of the three GBP listings in the map results above the organic results. Both matter: patients click both map listings and organic links. A new-to-market practice should prioritize the map pack first; an established practice with strong GBP rankings should expand to organic local landing pages for surrounding neighborhoods and specific conditions or services.',
   },
   {
     category: 'local',
@@ -306,7 +306,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'local',
     question: 'Can you help with Healthgrades, Zocdoc, and specialty medical directories?',
     answer:
-      'Yes. Beyond the 40+ general citation directories (Google, Apple Maps, Yelp, Facebook), we build and verify listings on medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Castle Connolly, Zocdoc, RateMDs, and relevant specialty boards. Each directory has its own verification process and optimization parameters — we handle all of it. Consistent, accurate listings across these directories strengthen both GBP ranking signals and the trustworthiness signals Google evaluates under YMYL.',
+      'Yes. Beyond the 40+ general citation directories (Google, Apple Maps, Yelp, Facebook), we build and verify listings on medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Castle Connolly, Zocdoc, RateMDs, and relevant specialty boards. Each directory has its own verification process and optimization parameters, we handle all of it. Consistent, accurate listings across these directories strengthen both GBP ranking signals and the trustworthiness signals Google evaluates under YMYL.',
   },
   {
     category: 'local',
@@ -320,13 +320,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'dental',
     question: 'What is dental SEO and how is it different from general healthcare SEO?',
     answer:
-      'Dental SEO is the subset of healthcare SEO focused on dental practices: family dentistry, cosmetic dentistry, orthodontics, oral surgery, and dental implants. It is more map-pack-intensive than most healthcare categories because nearly every dental query shows a 3-pack — "dentist near me," "emergency dentist," "dental implants [city]." Beyond map pack, dental SEO also covers high-value service pages (Invisalign, cosmetic dentistry, implants) that carry significant per-appointment revenue and rank well with proper E-E-A-T content. We handle dental SEO as a primary service category — GBP optimization, dental directory citations, review strategy, and service-page content — within the same month-to-month retainer model.',
+      'Dental SEO is the subset of healthcare SEO focused on dental practices: family dentistry, cosmetic dentistry, orthodontics, oral surgery, and dental implants. It is more map-pack-intensive than most healthcare categories because nearly every dental query shows a 3-pack, "dentist near me," "emergency dentist," "dental implants [city]." Beyond map pack, dental SEO also covers high-value service pages (Invisalign, cosmetic dentistry, implants) that carry significant per-appointment revenue and rank well with proper E-E-A-T content. We handle dental SEO as a primary service category: GBP optimization, dental directory citations, review strategy, and service-page content, within the same month-to-month retainer model.',
   },
   {
     category: 'dental',
     question: 'How do I rank my dental practice for "dentist near me" searches?',
     answer:
-      '"Dentist near me" and related near-me searches are almost exclusively won in the Google Map Pack, not organic results. To rank there: your GBP needs to be fully optimized for every dental category (General Dentist, Cosmetic Dentist, Orthodontist — whichever applies), have strong review count and score, and be backed by consistent NAP across dental directories (Zocdoc, 1-800-Dentist, Healthgrades, local dental association listings). We also optimize your website\'s LocalBusiness schema and MedicalClinic markup so Google has structured confirmation of your practice address and services. Proximity matters but it is not the only factor — a practice 1.5 miles away with 180 reviews and a complete GBP beats a competitor 0.5 miles away with 20 reviews and an incomplete listing.',
+      '"Dentist near me" and related near-me searches are almost exclusively won in the Google Map Pack, not organic results. To rank there: your GBP needs to be fully optimized for every dental category (General Dentist, Cosmetic Dentist, Orthodontist, whichever applies), have strong review count and score, and be backed by consistent NAP across dental directories (Zocdoc, 1-800-Dentist, Healthgrades, local dental association listings). We also optimize your website\'s LocalBusiness schema and MedicalClinic markup so Google has structured confirmation of your practice address and services. Proximity matters but it is not the only factor: a practice 1.5 miles away with 180 reviews and a complete GBP beats a competitor 0.5 miles away with 20 reviews and an incomplete listing.',
   },
   {
     category: 'dental',
@@ -338,7 +338,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'dental',
     question: 'Can dental SEO help with cosmetic dentistry and high-value procedures?',
     answer:
-      'Yes, and this is where organic rankings (not just map pack) become important. Queries like "dental implants [city]," "Invisalign provider [city]," and "cosmetic dentist near me" have significant commercial intent and per-appointment value. We build YMYL-compliant service pages for each high-value procedure — with provider byline, cited clinical information, before/after case examples, and schema (MedicalProcedure, Physician). These pages can rank both in organic results and trigger AI-engine citations when patients ask ChatGPT or Perplexity for cosmetic dentist recommendations.',
+      'Yes, and this is where organic rankings (not just map pack) become important. Queries like "dental implants [city]," "Invisalign provider [city]," and "cosmetic dentist near me" have significant commercial intent and per-appointment value. We build YMYL-compliant service pages for each high-value procedure, with provider byline, cited clinical information, before/after case examples, and schema (MedicalProcedure, Physician). These pages can rank both in organic results and trigger AI-engine citations when patients ask ChatGPT or Perplexity for cosmetic dentist recommendations.',
   },
 
   // ── YMYL & E-E-A-T ───────────────────────────────────────────────────────
@@ -346,7 +346,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'eeat',
     question: 'What does YMYL mean and why does it affect my healthcare website rankings?',
     answer:
-      '"Your Money or Your Life" is Google\'s classification for content that could affect a reader\'s health, finances, or safety. Healthcare is the canonical YMYL category. Google\'s quality raters apply higher scrutiny to YMYL pages, and the algorithm reflects this — weak E-E-A-T signals (no author, no credentials, no citations) often cause healthcare content to rank below its link profile would predict. For patient-facing medical content, E-E-A-T is not a bonus you layer on later; it is the prerequisite before any other SEO signal can work.',
+      '"Your Money or Your Life" is Google\'s classification for content that could affect a reader\'s health, finances, or safety. Healthcare is the canonical YMYL category. Google\'s quality raters apply higher scrutiny to YMYL pages, and the algorithm reflects this, weak E-E-A-T signals (no author, no credentials, no citations) often cause healthcare content to rank below its link profile would predict. For patient-facing medical content, E-E-A-T is not a bonus you layer on later; it is the prerequisite before any other SEO signal can work.',
   },
   {
     category: 'eeat',
@@ -358,7 +358,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'eeat',
     question: 'Do you handle AI-engine citations for healthcare companies and practices?',
     answer:
-      'Yes. ChatGPT, Perplexity, and Google AI Overviews are increasingly where patients start their healthcare searches — "best dermatologist in [city]," "what is the recovery time for [procedure]," "explain [condition] to me." Getting cited in those answers requires strong third-party brand mentions, structured FAQ and condition pages with answer-first formatting, and schema that AI engines can extract. We structure content and earn citations specifically for AI-engine visibility and report AI citations alongside Google rankings every month.',
+      'Yes. ChatGPT, Perplexity, and Google AI Overviews are increasingly where patients start their healthcare searches, "best dermatologist in [city]," "what is the recovery time for [procedure]," "explain [condition] to me." Getting cited in those answers requires strong third-party brand mentions, structured FAQ and condition pages with answer-first formatting, and schema that AI engines can extract. We structure content and earn citations specifically for AI-engine visibility and report AI citations alongside Google rankings every month.',
   },
   {
     category: 'eeat',
@@ -378,19 +378,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'hipaa',
     question: 'Can I run Google Ads for my medical practice without violating HIPAA?',
     answer:
-      'Yes, with guardrails. Google\'s healthcare and medicine ads policy requires certification for some categories. The HIPAA interaction with remarketing pixels means you cannot retarget users who visited condition-specific pages without a proper BAA with Google. Standard remarketing audiences built from site visitors are high-risk for HIPAA-covered entities. We configure your analytics and ad tracking with these constraints in mind — you can still run effective Google Ads, just with the compliance guardrails in place from day one.',
+      'Yes, with guardrails. Google\'s healthcare and medicine ads policy requires certification for some categories. The HIPAA interaction with remarketing pixels means you cannot retarget users who visited condition-specific pages without a proper BAA with Google. Standard remarketing audiences built from site visitors are high-risk for HIPAA-covered entities. We configure your analytics and ad tracking with these constraints in mind, you can still run effective Google Ads, just with the compliance guardrails in place from day one.',
   },
   {
     category: 'hipaa',
     question: 'What schema types are most valuable for healthcare websites?',
     answer:
-      'The highest-impact schema types for healthcare: MedicalClinic (clinics and practices — enables rich results with address, hours, and specialties), Physician (individual provider pages — shows name, specialty, and credentials), MedicalCondition and MedicalProcedure (condition and service pages — helps AI engines extract and cite your answers), FAQPage (question-answer content — drives featured snippets and AI citations), and LocalBusiness with MedicalSpecialty (reinforces GBP data for map pack). We implement all applicable schema types as part of the technical baseline.',
+      'The highest-impact schema types for healthcare: MedicalClinic (clinics and practices, enables rich results with address, hours, and specialties), Physician (individual provider pages, shows name, specialty, and credentials), MedicalCondition and MedicalProcedure (condition and service pages, helps AI engines extract and cite your answers), FAQPage (question-answer content, drives featured snippets and AI citations), and LocalBusiness with MedicalSpecialty (reinforces GBP data for map pack). We implement all applicable schema types as part of the technical baseline.',
   },
   {
     category: 'hipaa',
     question: 'Do you work with health tech and telehealth companies, not just brick-and-mortar practices?',
     answer:
-      'Yes. Health tech and telehealth have different SEO priorities than a physical practice — the map pack matters less, but national organic rankings, condition-page authority, and AI-engine citations matter significantly more. We build E-E-A-T-compliant content strategies for health tech companies, handle the technical SEO for Next.js and React health apps, and position platforms to be cited by AI engines when users ask for condition management tools or telehealth options. HIPAA analytics configuration is equally critical for health tech — often more so, because platforms handle more patient-side data than a typical practice website.',
+      'Yes. Health tech and telehealth have different SEO priorities than a physical practice: the map pack matters less, but national organic rankings, condition-page authority, and AI-engine citations matter significantly more. We build E-E-A-T-compliant content strategies for health tech companies, handle the technical SEO for Next.js and React health apps, and position platforms to be cited by AI engines when users ask for condition management tools or telehealth options. HIPAA analytics configuration is equally critical for health tech, often more so, because platforms handle more patient-side data than a typical practice website.',
   },
 
   // ── Pricing & engagement ───────────────────────────────────────────────────
@@ -398,7 +398,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pricing',
     question: 'How much does hiring a healthcare SEO agency cost?',
     answer:
-      'Healthcare SEO scope depends on practice type, market competitiveness, number of locations, existing technical health, and whether you need HIPAA analytics work, content, or local optimization as the priority. We quote each engagement individually rather than publishing fixed rates — you get a clear scope and price before any work starts, with no annual contracts. Book a discovery call and we will scope it on the spot based on your specific situation.',
+      'Healthcare SEO scope depends on practice type, market competitiveness, number of locations, existing technical health, and whether you need HIPAA analytics work, content, or local optimization as the priority. We quote each engagement individually rather than publishing fixed rates, you get a clear scope and price before any work starts, with no annual contracts. Book a discovery call and we will scope it on the spot based on your specific situation.',
   },
   {
     category: 'pricing',
@@ -410,13 +410,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pricing',
     question: 'Do you require annual contracts for healthcare SEO?',
     answer:
-      'No. Every healthcare SEO retainer is month-to-month. If we are not earning our keep — rankings improving, GBP calls increasing, new patients attributable to organic — you can leave with one billing-cycle notice. The work should retain you, not the paperwork. Most practices continue voluntarily because the map pack positions and organic rankings keep delivering new patient volume.',
+      'No. Every healthcare SEO retainer is month-to-month. If we are not earning our keep, rankings improving, GBP calls increasing, new patients attributable to organic, you can leave with one billing-cycle notice. The work should retain you, not the paperwork. Most practices continue voluntarily because the map pack positions and organic rankings keep delivering new patient volume.',
   },
   {
     category: 'pricing',
     question: 'What makes FactoryJet different from other healthcare SEO agencies?',
     answer:
-      'Three differences matter: First, we build the HIPAA-analytics and YMYL E-E-A-T compliance baseline before content or links — not as an afterthought. Most healthcare SEO agencies skip this because it is not billable on a "number of keywords" basis. Second, we report AI citations (ChatGPT, Perplexity, Google AI Overviews) alongside map pack and organic rankings in every monthly report — because that is where a growing share of patient discovery happens. Third, founder access: you talk to the person doing the work, not an account manager. Every retainer includes direct access to the founder for questions, strategy, and quarterly reviews.',
+      'Three differences matter: First, we build the HIPAA-analytics and YMYL E-E-A-T compliance baseline before content or links, not as an afterthought. Most healthcare SEO agencies skip this because it is not billable on a "number of keywords" basis. Second, we report AI citations (ChatGPT, Perplexity, Google AI Overviews) alongside map pack and organic rankings in every monthly report, because that is where a growing share of patient discovery happens. Third, founder access: you talk to the person doing the work, not an account manager. Every retainer includes direct access to the founder for questions, strategy, and quarterly reviews.',
   },
 ];
 
@@ -427,7 +427,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Healthcare SEO Agency — SEO Agency for Healthcare Companies & Medical Practices',
+  name: 'Healthcare SEO Agency | SEO Agency for Healthcare Companies & Medical Practices',
   url: 'https://factoryjet.com/services/healthcare-seo',
   description:
     'Healthcare SEO agency for US medical practices, clinics, and health companies. We build YMYL E-E-A-T signals, dominate local map packs, implement HIPAA-safe analytics, and earn AI citations. Senior-led, month-to-month.',
@@ -651,19 +651,19 @@ function StatsRow() {
               value: '500+',
               suffix: 'businesses served',
               label: 'across 10+ industries including healthcare',
-              body: 'We have worked with medical, dental, health tech, and healthcare staffing clients alongside our broader SMB portfolio — enough to know where generalist SEO agencies fall short in regulated verticals.',
+              body: 'We have worked with medical, dental, health tech, and healthcare staffing clients alongside our broader SMB portfolio, enough to know where generalist SEO agencies fall short in regulated verticals.',
             },
             {
               value: 'YMYL',
               suffix: 'specialist',
               label: 'E-E-A-T built in from the first draft',
-              body: 'Healthcare content lives or dies on E-E-A-T. We build provider bylines, licensed citations, and verifiable credentials into every page from the start — not as a fix when rankings plateau after months of investment.',
+              body: 'Healthcare content lives or dies on E-E-A-T. We build provider bylines, licensed citations, and verifiable credentials into every page from the start, not as a fix when rankings plateau after months of investment.',
             },
             {
               value: 'Google + AI',
               suffix: 'both covered',
               label: 'map pack + AI citations in one monthly report',
-              body: 'Patients search Google Maps and ask ChatGPT for provider recommendations. We optimize for both and report both — map pack positions, organic rankings, and AI-engine citations side by side every month.',
+              body: 'Patients search Google Maps and ask ChatGPT for provider recommendations. We optimize for both and report both, map pack positions, organic rankings, and AI-engine citations side by side every month.',
             },
           ].map((stat) => (
             <div key={stat.value}>
@@ -861,7 +861,7 @@ function HealthcareSpecialtiesSection() {
       number: '01',
       name: 'Dental practices',
       why:
-        '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30–60 new patients per month to organic alone — with zero ongoing ad spend once the map pack position is held.',
+        '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30–60 new patients per month to organic alone, with zero ongoing ad spend once the map pack position is held.',
       signal: 'Map pack + dental directory citations',
     },
     {
@@ -875,7 +875,7 @@ function HealthcareSpecialtiesSection() {
       number: '03',
       name: 'Chiropractic and physical therapy',
       why:
-        'Chiropractic and PT have high visit frequency — patients return weekly for months. A new patient acquired through SEO has a significantly higher lifetime value than a single-appointment specialty. "Chiropractor near me" and "physical therapist near me" both drive 200,000+ monthly searches nationally, with strong near-me intent that is almost entirely won in the Map Pack.',
+        'Chiropractic and PT have high visit frequency, patients return weekly for months. A new patient acquired through SEO has a significantly higher lifetime value than a single-appointment specialty. "Chiropractor near me" and "physical therapist near me" both drive 200,000+ monthly searches nationally, with strong near-me intent that is almost entirely won in the Map Pack.',
       signal: 'Map pack dominance + GBP review velocity',
     },
     {
@@ -889,14 +889,14 @@ function HealthcareSpecialtiesSection() {
       number: '05',
       name: 'Telehealth platforms',
       why:
-        'Telehealth SEO is national-reach, content-led, and increasingly dependent on AI citations. When a patient asks ChatGPT "what is the best telehealth platform for anxiety" or "online psychiatry that takes insurance," the platforms with the strongest FAQ and condition-page E-E-A-T are cited. No map pack required — pure content and AI-citation strategy.',
+        'Telehealth SEO is national-reach, content-led, and increasingly dependent on AI citations. When a patient asks ChatGPT "what is the best telehealth platform for anxiety" or "online psychiatry that takes insurance," the platforms with the strongest FAQ and condition-page E-E-A-T are cited. No map pack required, pure content and AI-citation strategy.',
       signal: 'AI citations + national organic + condition pages',
     },
     {
       number: '06',
       name: 'Orthopedics and sports medicine',
       why:
-        'Orthopedic and sports medicine practices handle high-value elective procedures (ACL repair, joint replacement, rotator cuff surgery) where the patient often researches extensively before choosing a surgeon. E-E-A-T-compliant procedure pages with surgeon bylines, peer-reviewed citations, and outcome data — structured for both Google and AI Overviews — capture this high-intent research phase.',
+        'Orthopedic and sports medicine practices handle high-value elective procedures (ACL repair, joint replacement, rotator cuff surgery) where the patient often researches extensively before choosing a surgeon. E-E-A-T-compliant procedure pages with surgeon bylines, peer-reviewed citations, and outcome data, structured for both Google and AI Overviews, capture this high-intent research phase.',
       signal: 'E-E-A-T procedure pages + surgeon bylines + AI citations',
     },
   ];
@@ -1034,7 +1034,7 @@ function HealthcareSEOPricingGrid() {
             className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            Healthcare SEO scope varies significantly by practice type, market competitiveness, and number of locations. We quote each engagement individually rather than publishing flat rates — you get a clear scope and price before any work starts, with no annual contracts. Start with an audit and move to a retainer once you see where the highest-value opportunity is.
+            Healthcare SEO scope varies significantly by practice type, market competitiveness, and number of locations. We quote each engagement individually rather than publishing flat rates, you get a clear scope and price before any work starts, with no annual contracts. Start with an audit and move to a retainer once you see where the highest-value opportunity is.
           </p>
         </div>
 
@@ -1189,7 +1189,7 @@ function HealthcareSEOPricingGrid() {
             fontWeight: 500,
           }}
         >
-          Month-to-month. Full data ownership from day one. Start with an audit — no required retainer.
+          Month-to-month. Full data ownership from day one. Start with an audit, no required retainer.
         </p>
       </div>
     </section>
@@ -1205,7 +1205,7 @@ function ReviewedBy() {
     >
       <p className="font-fj-body" style={{ color: 'rgba(15,15,18,0.50)', fontSize: '0.8125rem' }}>
         <span style={{ fontWeight: 600, color: 'rgba(15,15,18,0.70)' }}>Written and reviewed by Bhavesh Barot</span>
-        {' '}— Founder, FactoryJet. Last reviewed:{' '}
+        {' '}: Founder, FactoryJet. Last reviewed:{' '}
         <time dateTime="2026-06-13">{REVIEWED_DATE}</time>.
       </p>
     </div>
@@ -1251,9 +1251,9 @@ export default function HealthcareSeoServicePage() {
       {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
       {/*
         NON-NEGOTIABLES (2026-06-13):
-        - Hero fits single viewport on desktop + mobile — no scroll required
+        - Hero fits single viewport on desktop + mobile, no scroll required
         - Lead ≤ 2 sentences, ≤ 50 words
-        - rightSlot hidden on mobile (hidden lg:block) — preserves text LCP
+        - rightSlot hidden on mobile (hidden lg:block), preserves text LCP
         - Gradient accent on primary noun in headline (CSS only, zero perf cost)
         - Image max-h capped so it never forces hero taller than viewport
       */}
@@ -1270,7 +1270,7 @@ export default function HealthcareSeoServicePage() {
             that does the compliance work other agencies skip.
           </>
         }
-        lead="77% of patients search online before booking — and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
+        lead="77% of patients search online before booking, and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
         secondaryCta={{
           label: 'See our approach',
           href: '#pricing',
@@ -1285,7 +1285,7 @@ export default function HealthcareSeoServicePage() {
           <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
             <Image
               src="/images/services/healthcare-seo.webp"
-              alt="Healthcare SEO agency — doctor reviewing patient acquisition analytics on laptop"
+              alt="Healthcare SEO agency, doctor reviewing patient acquisition analytics on laptop"
               width={1344}
               height={1024}
               className="w-full object-cover max-h-[520px]"
@@ -1297,25 +1297,25 @@ export default function HealthcareSeoServicePage() {
         }
       />
 
-      {/* ─── 2. Quick Answer block — sourced stats ────────────────────────── */}
+      {/* ─── 2. Quick Answer block, sourced stats ────────────────────────── */}
       <QuickAnswerBlock />
 
-      {/* ─── 3. Stats row — animated counters (client component) ─────────── */}
+      {/* ─── 3. Stats row, animated counters (client component) ─────────── */}
       <StatsRowAnimated />
 
       {/* ─── 4. Reviewed-by byline ───────────────────────────────────────── */}
       <ReviewedBy />
 
-      {/* ─── 5. Service explanation — what healthcare SEO covers ─────────── */}
+      {/* ─── 5. Service explanation, what healthcare SEO covers ─────────── */}
       {/*
         DESIGN RULE (2026-06-13): Table extracted to its own full-width section below.
-        Table inside a 2-col left body prop clips its rightmost columns — always
+        Table inside a 2-col left body prop clips its rightmost columns, always
         put data tables in standalone sections with overflow-x-auto.
         rightSlot fills dead space with AI map-pack image below Quick Facts.
       */}
       <ServiceExplanation
         eyebrow="WHAT HEALTHCARE SEO COVERS"
-        headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific — and it is where rankings stall."
+        headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific, and it is where rankings stall."
         lead="For a SaaS company, SEO is technical and content work. For a medical practice or health company, there is an entire compliance and trust layer underneath: YMYL E-E-A-T, HIPAA-safe analytics, medical schema types, Google Business Profile for patient acquisition, and specialty directory coverage. The agencies that skip that layer leave healthcare clients wondering why their rankings do not reflect their link profile or content investment."
         body={
           <>
@@ -1323,7 +1323,7 @@ export default function HealthcareSeoServicePage() {
               className="mt-6 font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
             >
-              As a full-stack SEO agency for healthcare companies, we cover: the technical E-E-A-T baseline (provider bylines, citations, About pages, schema), Google Business Profile optimization and citation building for local practices, HIPAA-safe analytics configuration, condition and service content authored with licensed provider attribution, and AI-citation positioning so your practice is cited when patients ask ChatGPT or Perplexity for provider recommendations. Monthly reporting separates map pack positions from organic sessions from AI citations — so you know exactly where patient acquisition is coming from.
+              As a full-stack SEO agency for healthcare companies, we cover: the technical E-E-A-T baseline (provider bylines, citations, About pages, schema), Google Business Profile optimization and citation building for local practices, HIPAA-safe analytics configuration, condition and service content authored with licensed provider attribution, and AI-citation positioning so your practice is cited when patients ask ChatGPT or Perplexity for provider recommendations. Monthly reporting separates map pack positions from organic sessions from AI citations, so you know exactly where patient acquisition is coming from.
             </p>
             <p
               className="mt-4 font-fj-body text-fj-neutral-600"
@@ -1376,7 +1376,7 @@ export default function HealthcareSeoServicePage() {
                 {
                   stat: 'YMYL',
                   detail:
-                    'Google applies elevated quality review to all healthcare content — bylines + citations are ranking prerequisites.',
+                    'Google applies elevated quality review to all healthcare content, bylines + citations are ranking prerequisites.',
                 },
               ].map((f) => (
                 <li key={f.stat} className="flex items-start gap-3">
@@ -1405,7 +1405,7 @@ export default function HealthcareSeoServicePage() {
         }
       />
 
-      {/* ─── 5b. Data table — full-width standalone (extracted from left col) ── */}
+      {/* ─── 5b. Data table, full-width standalone (extracted from left col) ── */}
       {/*
         DESIGN RULE: tables always go in standalone full-width sections.
         Never nest a multi-column table inside a 2-col layout's body prop.
@@ -1416,19 +1416,19 @@ export default function HealthcareSeoServicePage() {
         </div>
       </section>
 
-      {/* ─── 6. Strategic dark — 3 problems most agencies miss ───────────── */}
+      {/* ─── 6. Strategic dark, 3 problems most agencies miss ───────────── */}
       <StrategicDarkSection
         eyebrow="WHY HEALTHCARE SEO IS DIFFERENT"
-        headline="Three healthcare SEO failures that stall rankings — and that most agencies never fix."
+        headline="Three healthcare SEO failures that stall rankings, and that most agencies never fix."
         lead="The highest-impact gaps in healthcare SEO sit below the standard SEO checklist. These are the three places most generalist agencies leave money on the table."
         pillars={PILLARS}
       />
 
-      {/* ─── 7. Specialties — interactive tabs (client component) ───────── */}
+      {/* ─── 7. Specialties, interactive tabs (client component) ───────── */}
       <HealthcareSpecialtiesTabs />
 
-      {/* ─── 8. Process — visual intro + 5-step journey ──────────────────── */}
-      {/* Visual break image before the 5-step cards — reduces text density */}
+      {/* ─── 8. Process, visual intro + 5-step journey ──────────────────── */}
+      {/* Visual break image before the 5-step cards, reduces text density */}
       <div
         className="relative w-full overflow-hidden"
         style={{ maxHeight: '400px', backgroundColor: '#0F0F12' }}
@@ -1443,7 +1443,7 @@ export default function HealthcareSeoServicePage() {
           style={{ maxHeight: '400px' }}
           loading="lazy"
         />
-        {/* Gradient overlays — top and bottom fade to blend with adjacent sections */}
+        {/* Gradient overlays, top and bottom fade to blend with adjacent sections */}
         <div
           className="absolute inset-x-0 top-0 h-24 pointer-events-none"
           style={{ background: 'linear-gradient(to bottom, rgba(15,15,18,0.85) 0%, transparent 100%)' }}
@@ -1485,12 +1485,12 @@ export default function HealthcareSeoServicePage() {
         closingNote="Every step ships a deliverable. Every month you see map pack positions, organic rankings, and AI citations in one consolidated report."
       />
 
-      {/* ─── 8b. Mid-page modal CTA — lower-friction path after specialties ── */}
+      {/* ─── 8b. Mid-page modal CTA, lower-friction path after specialties ── */}
       <FinalCTA
         variant="light"
         eyebrow="FREE HEALTHCARE SEO AUDIT"
         headline="Not sure where your practice stands? Start with a free audit."
-        sub="We'll review your Google Business Profile, top service pages, and local rankings — and send you a prioritized fix list within 48 hours. No sales call required to get started."
+        sub="We'll review your Google Business Profile, top service pages, and local rankings, and send you a prioritized fix list within 48 hours. No sales call required to get started."
         primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See our approach', href: '#pricing' }}
       />
@@ -1499,7 +1499,7 @@ export default function HealthcareSeoServicePage() {
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs agencies, freelancers, and in-house teams."
-        lead="Four ways healthcare organizations approach SEO — and where a healthcare-specialist, compliance-aware model differs in practice."
+        lead="Four ways healthcare organizations approach SEO, and where a healthcare-specialist, compliance-aware model differs in practice."
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },
           { label: 'Generalist Agency' },
@@ -1569,17 +1569,17 @@ export default function HealthcareSeoServicePage() {
         footer="Comparison reflects typical offerings in each category as of June 2026. Individual providers vary."
       />
 
-      {/* ─── 10. Pricing — custom 4-card grid ────────────────────────────── */}
+      {/* ─── 10. Pricing, custom 4-card grid ────────────────────────────── */}
       <HealthcareSEOPricingGrid />
 
       {/* ─── 11. Industries served ───────────────────────────────────────── */}
       <IndustriesGrid />
 
-      {/* ─── 12. FAQ — 25 items, 6 categories ────────────────────────────── */}
+      {/* ─── 12. FAQ, 25 items, 6 categories ────────────────────────────── */}
       <FAQ
         eyebrow="HEALTHCARE SEO FAQ"
         headline="Healthcare SEO questions, answered plainly."
-        lead="Questions from practice owners, health tech founders, and dental office managers. If yours is not below, send it in — answers usually come back within 24 hours."
+        lead="Questions from practice owners, health tech founders, and dental office managers. If yours is not below, send it in, answers usually come back within 24 hours."
         categories={FAQ_CATEGORIES}
         items={FAQ_ITEMS}
       />

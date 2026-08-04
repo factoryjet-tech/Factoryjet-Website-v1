@@ -229,7 +229,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                 }`
               )}
 
-              {/* Desktop Dropdown — Services (3 items, compact) */}
+              {/* Desktop Dropdown: Services (3 items, compact) */}
               {item.hasDropdown && item.hasMegaMenu && activeDropdown === item.label && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 flex items-start gap-2">
                   {/* Services dropdown */}
@@ -267,7 +267,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                     ))}
                   </div>
 
-                  {/* Child Services Mega Menu — appears on hover of any service with children */}
+                  {/* Child Services Mega Menu, appears on hover of any service with children */}
                   {activeChildPanel && item.submenu?.find(s => s.label === activeChildPanel)?.children && (
                     <div
                       className="bg-white backdrop-blur-xl rounded-2xl border border-gray-100 shadow-2xl shadow-black/10 p-2 w-[260px]"
@@ -292,7 +292,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                 </div>
               )}
 
-              {/* Desktop Dropdown — Regular (Locations, Resources) */}
+              {/* Desktop Dropdown: Regular (Locations, Resources) */}
               {item.hasDropdown && !item.hasMegaMenu && activeDropdown === item.label && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
                   <div className="bg-white backdrop-blur-xl rounded-2xl border border-gray-100 shadow-2xl shadow-black/10 p-3 w-80 max-h-[80vh] overflow-y-auto">

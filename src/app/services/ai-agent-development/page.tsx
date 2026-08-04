@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -25,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'AI Agent Development Company India | Custom AI Agents | FactoryJet',
   description:
-    'AI agent development company in India — WhatsApp AI, customer support, sales & workflow bots. AI automation agency for Indian businesses. Integrated with Zoho & Razorpay. Fixed price. Deployed in weeks.',
+    'AI agent development company in India: WhatsApp AI, customer support, sales & workflow bots. AI automation agency for Indian businesses. Integrated with Zoho & Razorpay. Fixed price. Deployed in weeks.',
   keywords: [
     'AI agent development company India',
     'AI agent development companies India',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Agent Development Company India | Custom AI Agents | FactoryJet',
     description:
-      'Custom AI agents, WhatsApp automation, and AI-native workflows for Indian businesses. Fixed price. Deployed in weeks — not months.',
+      'Custom AI agents, WhatsApp automation, and AI-native workflows for Indian businesses. Fixed price. Deployed in weeks, not months.',
     url: 'https://factoryjet.com/services/ai-agent-development',
     images: [
       {
@@ -83,8 +84,22 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas — faqSchema is declared after IN_FAQ_ITEMS below
+   JSON-LD Schemas, faqSchema is declared after IN_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
+
+// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
+// dateModified; these pages carried none. Keep this honest: bump it when the
+// page's content actually changes, not on every unrelated deploy.
+const PAGE_MODIFIED = '2026-08-04';
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development',
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -129,7 +144,7 @@ const IN_AI_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discover',
     description:
-      'A 60-minute strategy call. We map your highest-value automation opportunities — WhatsApp overload, manual data entry, repetitive support queries — and size the ROI before a single line of code is written.',
+      'A 60-minute strategy call. We map your highest-value automation opportunities: WhatsApp overload, manual data entry, repetitive support queries, and size the ROI before a single line of code is written.',
   },
   {
     number: '02',
@@ -141,13 +156,13 @@ const IN_AI_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build',
     description:
-      "Engineering against your stack with weekly demos. Built modularly — WhatsApp integration, CRM connectors, GST logic — so you see it working throughout and can give feedback before it's finished.",
+      "Engineering against your stack with weekly demos. Built modularly: WhatsApp integration, CRM connectors, GST logic, so you see it working throughout and can give feedback before it's finished.",
   },
   {
     number: '04',
     title: 'Train & Test',
     description:
-      'We run the agent against real business scenarios — Hindi queries, GST edge cases, peak order volumes — tune the prompts and guardrails, and stress-test until it performs reliably.',
+      'We run the agent against real business scenarios: Hindi queries, GST edge cases, peak order volumes, tune the prompts and guardrails, and stress-test until it performs reliably.',
   },
   {
     number: '05',
@@ -166,7 +181,7 @@ const IN_AI_STATS = [
   },
   {
     value: '500M+',
-    label: 'WhatsApp Business users in India — your customers are already there',
+    label: 'WhatsApp Business users in India: your customers are already there',
     microcopy: 'Meta India, 2024',
     categoryLabel: 'WHATSAPP REACH',
   },
@@ -181,7 +196,7 @@ const IN_AI_STATS = [
 const IN_MARKET_STATS = [
   {
     value: '₹65,000 Cr+',
-    label: "India AI market projected by 2027 — fastest-growing in Asia-Pacific",
+    label: "India AI market projected by 2027, fastest-growing in Asia-Pacific",
     sourceUrl: 'https://nasscom.in/ai-report-2024',
     sourceLabel: 'NASSCOM AI Report 2024',
   },
@@ -218,7 +233,7 @@ const IN_COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['2–6 weeks', '3–6 months', '4–8 weeks', 'Ongoing — never "done"'],
+    values: ['2–6 weeks', '3–6 months', '4–8 weeks', 'Ongoing, never "done"'],
   },
   {
     feature: 'WhatsApp AI integration',
@@ -298,7 +313,7 @@ const IN_INDUSTRIES = [
   {
     name: 'D2C E-Commerce',
     description:
-      'WhatsApp AI that handles order status queries, processes returns, sends Shiprocket shipping updates, and upsells on abandoned carts — integrated with your Shopify or WooCommerce store. Handles 100+ concurrent WhatsApp conversations without adding headcount.',
+      'WhatsApp AI that handles order status queries, processes returns, sends Shiprocket shipping updates, and upsells on abandoned carts, integrated with your Shopify or WooCommerce store. Handles 100+ concurrent WhatsApp conversations without adding headcount.',
     example: 'D2C brands report 70%+ ticket deflection within 30 days.',
     linkLabel: 'See e-commerce AI',
     linkHref: '/services/ecommerce-development',
@@ -306,7 +321,7 @@ const IN_INDUSTRIES = [
   {
     name: 'Real Estate & PropTech',
     description:
-      'AI that qualifies leads from 99acres, MagicBricks, and Housing.com, sends personalised WhatsApp follow-ups, books site visit slots, and routes hot leads to your sales team — all logged to Zoho or LeadSquared automatically.',
+      'AI that qualifies leads from 99acres, MagicBricks, and Housing.com, sends personalised WhatsApp follow-ups, books site visit slots, and routes hot leads to your sales team: all logged to Zoho or LeadSquared automatically.',
     example: 'Builders report 40% more site visits booked without adding telecallers.',
   },
   {
@@ -318,19 +333,19 @@ const IN_INDUSTRIES = [
   {
     name: 'EdTech & Coaching',
     description:
-      'WhatsApp enrolment bots that answer course questions, collect payment via Razorpay, send onboarding material, and track attendance — reducing the admin burden on counsellors so they focus on conversions, not coordination.',
+      'WhatsApp enrolment bots that answer course questions, collect payment via Razorpay, send onboarding material, and track attendance, reducing the admin burden on counsellors so they focus on conversions, not coordination.',
     example: 'EdTech platforms report 3× faster lead-to-enrolment conversions.',
   },
   {
     name: 'Healthcare & Diagnostics',
     description:
-      'Appointment scheduling bots on WhatsApp, patient intake form automation, prescription reminder agents, and document extraction from medical reports — built with privacy-first architecture and full audit trails for DPDP compliance.',
+      'Appointment scheduling bots on WhatsApp, patient intake form automation, prescription reminder agents, and document extraction from medical reports, built with privacy-first architecture and full audit trails for DPDP compliance.',
     example: 'Clinics recover 4–5 hours of front-desk admin time per provider per week.',
   },
   {
     name: 'Manufacturing & B2B',
     description:
-      'Purchase order processing agents that extract line items from PDFs, match against Tally inventory, trigger reorder alerts, and route approvals via WhatsApp — eliminating manual data entry from your supply chain workflows.',
+      'Purchase order processing agents that extract line items from PDFs, match against Tally inventory, trigger reorder alerts, and route approvals via WhatsApp, eliminating manual data entry from your supply chain workflows.',
     example: 'B2B firms process 500+ POs/hour vs. 8–10 manually.',
   },
 ];
@@ -344,7 +359,7 @@ const IN_PRICING_TIERS = [
     features: [
       'Single-workflow AI agent (WhatsApp support, lead qualifier, or invoice processor)',
       'Connects to 1–2 existing tools (Zoho CRM, Razorpay, Freshdesk, or WhatsApp)',
-      'Simple admin dashboard — no code required to operate',
+      'Simple admin dashboard, no code required to operate',
       'Claude, GPT-4o, or Gemini as the underlying model',
       'QA, prompt tuning, and guardrail setup included',
       '14-day post-launch support window',
@@ -362,7 +377,7 @@ const IN_PRICING_TIERS = [
       'WhatsApp Business API on Interakt, Wati, or AiSensy',
       'Razorpay payment event automation',
       'Hindi + English language support in agent responses',
-      'Custom analytics dashboard — no third-party BI tool needed',
+      'Custom analytics dashboard, no third-party BI tool needed',
       'Team training session in Hindi or English + documentation',
       '30-day post-launch support window',
     ],
@@ -404,7 +419,7 @@ const IN_FAQ_ITEMS = [
     category: 'what-are-agents',
     question: 'What is an AI agent and how is it different from a chatbot?',
     answer:
-      'A chatbot answers questions. An AI agent takes action. A chatbot replies to typed messages. An AI agent connects to your systems — WhatsApp, Zoho CRM, Razorpay, Tally, Freshdesk — reads inputs from multiple sources, makes decisions, and completes multi-step workflows without manual direction. It can check stock, update a CRM record, send a WhatsApp message, process a GST invoice, and report back — all automatically, in sequence.',
+      'A chatbot answers questions. An AI agent takes action. A chatbot replies to typed messages. An AI agent connects to your systems: WhatsApp, Zoho CRM, Razorpay, Tally, Freshdesk, reads inputs from multiple sources, makes decisions, and completes multi-step workflows without manual direction. It can check stock, update a CRM record, send a WhatsApp message, process a GST invoice, and report back: all automatically, in sequence.',
   },
   {
     category: 'what-are-agents',
@@ -422,7 +437,7 @@ const IN_FAQ_ITEMS = [
     category: 'what-are-agents',
     question: 'Which AI models power these agents?',
     answer:
-      "We use Claude (Anthropic), GPT-4o (OpenAI), Gemini (Google), and open-source models like Mistral and LLaMA depending on your workflow, cost sensitivity, and data privacy requirements. For orchestration we use LangChain, LangGraph, n8n, and Make.com. We don't have a preferred vendor — we pick the right model for each use case and explain the reasoning in plain language.",
+      "We use Claude (Anthropic), GPT-4o (OpenAI), Gemini (Google), and open-source models like Mistral and LLaMA depending on your workflow, cost sensitivity, and data privacy requirements. For orchestration we use LangChain, LangGraph, n8n, and Make.com. We don't have a preferred vendor, we pick the right model for each use case and explain the reasoning in plain language.",
   },
 
   /* ── India-Specific ── */
@@ -430,7 +445,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Can you build AI agents that work over WhatsApp?',
     answer:
-      'Yes — WhatsApp AI is one of our most common India deployments. We build agents on Interakt, Wati, AiSensy, and Yellow.ai that qualify leads, answer product questions, send order updates, book appointments, and escalate to human agents when needed. The AI reads your Shopify/WooCommerce, Zoho CRM, or Google Sheets in real time and responds in Hindi, English, or any regional language.',
+      'Yes, WhatsApp AI is one of our most common India deployments. We build agents on Interakt, Wati, AiSensy, and Yellow.ai that qualify leads, answer product questions, send order updates, book appointments, and escalate to human agents when needed. The AI reads your Shopify/WooCommerce, Zoho CRM, or Google Sheets in real time and responds in Hindi, English, or any regional language.',
   },
   {
     category: 'india',
@@ -442,7 +457,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Can an AI agent handle GST and compliance workflows?',
     answer:
-      'Yes. We build agents that extract invoice data, validate GSTINs via the GST portal API, calculate IGST/SGST/CGST automatically, flag mismatches, and push data to your accounting software — eliminating hours of monthly manual reconciliation. The agent creates an audit trail for every transaction it processes, which makes CA reviews significantly faster.',
+      'Yes. We build agents that extract invoice data, validate GSTINs via the GST portal API, calculate IGST/SGST/CGST automatically, flag mismatches, and push data to your accounting software, eliminating hours of monthly manual reconciliation. The agent creates an audit trail for every transaction it processes, which makes CA reviews significantly faster.',
   },
   {
     category: 'india',
@@ -456,25 +471,25 @@ const IN_FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI agent development process look like from start to finish?',
     answer:
-      'Five stages: Discover (60-minute call to map workflows and size ROI), Architect (design agent logic, integrations, and guardrails — you approve before we build), Build (weekly demos throughout), Train & Test (real scenarios including Hindi queries, GST edge cases, peak volumes), and Deploy (launch with monitoring, dashboards, recorded handover in Hindi or English).',
+      'Five stages: Discover (60-minute call to map workflows and size ROI), Architect (design agent logic, integrations, and guardrails, you approve before we build), Build (weekly demos throughout), Train & Test (real scenarios including Hindi queries, GST edge cases, peak volumes), and Deploy (launch with monitoring, dashboards, recorded handover in Hindi or English).',
   },
   {
     category: 'process',
     question: 'How long does it take to build and deploy an AI agent?',
     answer:
-      "Simple single-workflow agents — a WhatsApp support bot, a lead qualifier, an invoice processor — go from kickoff to live in 2–3 weeks. Multi-workflow platforms with CRM and WhatsApp integrations take 4–6 weeks. Enterprise systems run 8–12 weeks. We give you a firm timeline after the discovery call, not before, because scope drives everything.",
+      "Simple single-workflow agents: a WhatsApp support bot, a lead qualifier, an invoice processor, go from kickoff to live in 2–3 weeks. Multi-workflow platforms with CRM and WhatsApp integrations take 4–6 weeks. Enterprise systems run 8–12 weeks. We give you a firm timeline after the discovery call, not before, because scope drives everything.",
   },
   {
     category: 'process',
     question: 'Will I see progress during the build, or is it a black box?',
     answer:
-      "Weekly demos throughout — no exceptions. After every stage we show you what's been built and how it behaves. You can give feedback, adjust the logic, and reprioritise features before we move on. Most clients find that seeing the agent working early changes their thinking about what's possible, and we build room for that.",
+      "Weekly demos throughout, no exceptions. After every stage we show you what's been built and how it behaves. You can give feedback, adjust the logic, and reprioritise features before we move on. Most clients find that seeing the agent working early changes their thinking about what's possible, and we build room for that.",
   },
   {
     category: 'process',
     question: 'What happens after the AI agent launches?',
     answer:
-      "Every engagement includes a 30-day post-launch support window. During that period we fix bugs, tune the agent's behavior based on real usage, and run a training session for your team. After 30 days, you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators and all code and API keys are yours.",
+      "Every engagement includes a 30-day post-launch support window. During that period we fix bugs, tune the agent's behavior based on real usage, and run a training session for your team. After 30 days, you can continue on a monthly retainer or manage it yourself: the dashboard is built for non-technical operators and all code and API keys are yours.",
   },
 
   /* ── Pricing & ROI ── */
@@ -482,7 +497,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI agent development cost in India?',
     answer:
-      "AI agent development cost depends on scope. A focused single-workflow agent is the entry point. Most Indian businesses need a Growth-tier build covering multiple interconnected agents, CRM/WhatsApp integrations, and a management dashboard, while enterprise multi-agent platforms are larger. Every project is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts — no hourly billing surprises.",
+      "AI agent development cost depends on scope. A focused single-workflow agent is the entry point. Most Indian businesses need a Growth-tier build covering multiple interconnected agents, CRM/WhatsApp integrations, and a management dashboard, while enterprise multi-agent platforms are larger. Every project is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts, no hourly billing surprises.",
   },
   {
     category: 'pricing',
@@ -494,7 +509,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there ongoing costs after the AI agent build is complete?',
     answer:
-      "Two types: LLM API costs (typically ₹5,000–₹25,000/month for most Indian SMB volumes — these go directly to model providers, we don't mark them up) and optionally a FactoryJet retainer for ongoing optimisation or new features. The retainer is optional; many clients self-manage after the handoff.",
+      "Two types: LLM API costs (typically ₹5,000–₹25,000/month for most Indian SMB volumes, these go directly to model providers, we don't mark them up) and optionally a FactoryJet retainer for ongoing optimisation or new features. The retainer is optional; many clients self-manage after the handoff.",
   },
 
   /* ── Technical & Integrations ── */
@@ -502,19 +517,19 @@ const IN_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do I need a technical team to manage the AI agent after launch?',
     answer:
-      "No. We build every agent with a non-technical operator in mind. The management dashboard lets you see what the agent is doing, review flagged items, adjust thresholds, and pause or resume workflows — without touching code. We include a recorded training walkthrough in Hindi or English specific to your agent.",
+      "No. We build every agent with a non-technical operator in mind. The management dashboard lets you see what the agent is doing, review flagged items, adjust thresholds, and pause or resume workflows, without touching code. We include a recorded training walkthrough in Hindi or English specific to your agent.",
   },
   {
     category: 'technical',
     question: 'Can you build AI agents for niche Indian business workflows?',
     answer:
-      "Yes — most of what we build is custom. We've built agents for jewellery GST compliance, EdTech enrolment funnels, pharmaceutical distribution reorders, NBFC loan application intake, and hospital patient scheduling. The underlying architecture is the same; the workflow logic, prompts, and data connections are built specifically for your process.",
+      "Yes: most of what we build is custom. We've built agents for jewellery GST compliance, EdTech enrolment funnels, pharmaceutical distribution reorders, NBFC loan application intake, and hospital patient scheduling. The underlying architecture is the same; the workflow logic, prompts, and data connections are built specifically for your process.",
   },
   {
     category: 'technical',
     question: 'What happens if we switch software platforms after the agent is built?',
     answer:
-      'We architect agents with modular integration layers — the agent logic is separated from the connector code. Switching from Freshdesk to Zoho Desk, or from Razorpay to PayU, typically means updating the integration module, not rebuilding the agent from scratch. Days of work, not months.',
+      'We architect agents with modular integration layers: the agent logic is separated from the connector code. Switching from Freshdesk to Zoho Desk, or from Razorpay to PayU, typically means updating the integration module, not rebuilding the agent from scratch. Days of work, not months.',
   },
 
   /* ── Trust & Results ── */
@@ -522,13 +537,13 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'Is my business data safe with an AI agent?',
     answer:
-      'Yes. We use API-level integrations (no screen scraping), enforce least-privilege data access so the agent only reads what it needs, and implement full audit trails on every action. For regulated sectors — BFSI, healthcare, legal — we can deploy private LLM setups that process your data without sending it to third-party model providers.',
+      'Yes. We use API-level integrations (no screen scraping), enforce least-privilege data access so the agent only reads what it needs, and implement full audit trails on every action. For regulated sectors: BFSI, healthcare, legal, we can deploy private LLM setups that process your data without sending it to third-party model providers.',
   },
   {
     category: 'trust',
     question: 'What happens if the AI agent makes a mistake or gives a wrong answer?',
     answer:
-      "Every agent includes confidence thresholds (if the model isn't sure, it escalates to a human rather than guessing), guardrails on high-stakes actions (the agent asks for approval before processing payments, sending bulk WhatsApp messages, or updating critical records), and a full action log for auditing. No AI system is 100% accurate — responsible design means errors are surfaced and correctable, not silent.",
+      "Every agent includes confidence thresholds (if the model isn't sure, it escalates to a human rather than guessing), guardrails on high-stakes actions (the agent asks for approval before processing payments, sending bulk WhatsApp messages, or updating critical records), and a full action log for auditing. No AI system is 100% accurate, responsible design means errors are surfaced and correctable, not silent.",
   },
   {
     category: 'trust',
@@ -540,7 +555,7 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring an Indian IT firm for AI development?',
     answer:
-      "Three differences: structure (flat team — you brief an engineer, that engineer builds it, no account manager layers), SMB depth (500+ small business projects, we understand what a 15-person business actually looks like operationally), and transparency (fixed-price contracts, weekly demos, and you own everything at the end — no lock-in).",
+      "Three differences: structure (flat team, you brief an engineer, that engineer builds it, no account manager layers), SMB depth (500+ small business projects, we understand what a 15-person business actually looks like operationally), and transparency (fixed-price contracts, weekly demos, and you own everything at the end, no lock-in).",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -548,13 +563,13 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'Which is the best AI agent development company in India?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: fixed-price projects, senior engineers, weekly demos, and you own the code at the end. If you are searching for the best company to automate my business with AI agents, that is the test to apply. The best AI agency in India for you depends on the job — the best AI automation agency in India for support tickets is not automatically the best AI chatbot development company in India for sales. Whoever you compare, including any best AI development company in India or best AI agent development services in India claim, ask: who scopes the project, is the price fixed, and who owns the result?',
+      'For small and mid-size businesses, FactoryJet makes a strong case: fixed-price projects, senior engineers, weekly demos, and you own the code at the end. If you are searching for the best company to automate my business with AI agents, that is the test to apply. The best AI agency in India for you depends on the job: the best AI automation agency in India for support tickets is not automatically the best AI chatbot development company in India for sales. Whoever you compare, including any best AI development company in India or best AI agent development services in India claim, ask: who scopes the project, is the price fixed, and who owns the result?',
   },
   {
     category: 'trust',
     question: 'What are the top 10 AI agent development companies in India?',
     answer:
-      'Lists of the top 10 AI agent development companies in India age fast — this field changes every quarter. The same is true for the top 10 AI automation agencies in India. FactoryJet competes in that set for small and mid-size businesses: fixed pricing, senior-led builds, no lock-in. Use any list as a shortlist, then ask each name to show a working agent, not slides.',
+      'Lists of the top 10 AI agent development companies in India age fast, this field changes every quarter. The same is true for the top 10 AI automation agencies in India. FactoryJet competes in that set for small and mid-size businesses: fixed pricing, senior-led builds, no lock-in. Use any list as a shortlist, then ask each name to show a working agent, not slides.',
   },
   {
     category: 'pricing',
@@ -582,6 +597,10 @@ export default function AIAgentDevelopmentINPage() {
   return (
     <>
       {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         id="ai-agents-in-faq-schema"
         type="application/ld+json"
@@ -616,13 +635,18 @@ export default function AIAgentDevelopmentINPage() {
       />
 
       <main className="bg-fj-cream">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Services', url: 'https://factoryjet.com/services' },
+          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+        ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_hero" />}
           eyebrow="AI AGENT DEVELOPMENT COMPANY · INDIA"
-          headline="AI Agent Development Company in India — Custom Agents for Your Business, Deployed in Weeks"
-          lead="Your competitors are automating the WhatsApp queues, GST workflows, and manual data entry that cost your team 20+ hours a week. FactoryJet builds custom AI agents that connect your Indian business stack — Zoho, Razorpay, Tally, Shiprocket, WhatsApp — and work around the clock without adding headcount."
+          headline="AI Agent Development Company in India: Custom Agents for Your Business, Deployed in Weeks"
+          lead="Your competitors are automating the WhatsApp queues, GST workflows, and manual data entry that cost your team 20+ hours a week. FactoryJet builds custom AI agents that connect your Indian business stack: Zoho, Razorpay, Tally, Shiprocket, WhatsApp, and work around the clock without adding headcount."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
@@ -637,7 +661,7 @@ export default function AIAgentDevelopmentINPage() {
                 WHATSAPP AI IN ACTION
               </p>
               <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                840 WhatsApp queries handled in a single day — zero additional hires.
+                840 WhatsApp queries handled in a single day, zero additional hires.
               </p>
               <div className="mt-6 space-y-3">
                 {[
@@ -657,7 +681,7 @@ export default function AIAgentDevelopmentINPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  All three workflows run 24/7, 365 days a year — no salary, no sick leave.
+                  All three workflows run 24/7, 365 days a year, no salary, no sick leave.
                 </p>
               </div>
             </div>
@@ -670,7 +694,7 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="India's AI Agent Development Company — 500+ Businesses, 25 Years of Building"
+          headline="India's AI Agent Development Company, 500+ Businesses, 25 Years of Building"
         />
 
         {/* ── 4. AI AGENT SERVICES GRID (WARM BLOOM BENTO) ────────────────── */}
@@ -678,7 +702,7 @@ export default function AIAgentDevelopmentINPage() {
           className="relative overflow-hidden py-10 md:py-14"
           style={{ background: 'radial-gradient(ellipse 55% 50% at 85% 15%, rgba(240,90,40,0.07) 0%, transparent 70%) #FAFAF7' }}
         >
-          {/* secondary bloom — bottom-left */}
+          {/* secondary bloom, bottom-left */}
           <div
             className="pointer-events-none absolute bottom-0 left-1/4 h-52 w-52 rounded-full"
             style={{ background: 'radial-gradient(circle, rgba(240,90,40,0.04) 0%, transparent 70%)' }}
@@ -702,7 +726,7 @@ export default function AIAgentDevelopmentINPage() {
               className="mb-8 mt-2 font-fj-body text-fj-neutral-500"
               style={{ fontSize: '0.9375rem', lineHeight: 1.6, maxWidth: '540px' }}
             >
-              Pick the agent built for your workflow — or let us recommend the right stack for your business.
+              Pick the agent built for your workflow, or let us recommend the right stack for your business.
             </p>
 
             {/* Bento grid */}
@@ -754,7 +778,7 @@ export default function AIAgentDevelopmentINPage() {
                       className="mt-1.5 font-fj-body text-fj-neutral-500"
                       style={{ fontSize: '0.875rem', lineHeight: 1.6 }}
                     >
-                      Eliminate repetitive hand-offs between your apps. Trigger actions across Zoho, WhatsApp, Razorpay, and Tally — automatically.
+                      Eliminate repetitive hand-offs between your apps. Trigger actions across Zoho, WhatsApp, Razorpay, and Tally: automatically.
                     </p>
                     <a
                       href="/services/ai-agent-development/ai-workflow-automation"
@@ -765,7 +789,7 @@ export default function AIAgentDevelopmentINPage() {
                     </a>
                   </div>
 
-                  {/* Right panel — flow diagram (hidden on mobile) */}
+                  {/* Right panel, flow diagram (hidden on mobile) */}
                   <div
                     className="hidden sm:flex shrink-0 flex-col items-center justify-center gap-1 rounded-xl px-3 py-4"
                     style={{ minWidth: '118px', borderLeft: '0.5px solid rgba(240,90,40,0.18)', background: 'rgba(240,90,40,0.03)' }}
@@ -783,7 +807,7 @@ export default function AIAgentDevelopmentINPage() {
                       <line x1="6" y1="0" x2="6" y2="10" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2"/>
                       <path d="M2 8l4 5 4-5" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                     </svg>
-                    {/* Step 2 — highlighted */}
+                    {/* Step 2, highlighted */}
                     <div
                       className="w-full rounded-lg px-2 py-1.5 text-center"
                       style={{ background: '#B23E13', border: '0.5px solid #D04820' }}
@@ -931,7 +955,7 @@ export default function AIAgentDevelopmentINPage() {
         <ServiceExplanation
           eyebrow="AI EXPLAINED"
           headline="What Is an AI Agent, and Why Does Your Business Need One?"
-          lead="A chatbot answers questions. An AI agent takes action — connecting to WhatsApp, Zoho, Razorpay, Tally, and your other tools to complete entire workflows automatically, without a human directing every step."
+          lead="A chatbot answers questions. An AI agent takes action, connecting to WhatsApp, Zoho, Razorpay, Tally, and your other tools to complete entire workflows automatically, without a human directing every step."
           body={
             <>
               {/* Capability chip strip */}
@@ -956,7 +980,7 @@ export default function AIAgentDevelopmentINPage() {
                 ))}
               </div>
               <p>
-                Most Indian business owners have seen WhatsApp chatbots — scripted menus that break the moment someone asks an unexpected question. An AI agent is fundamentally different. Built on large language models (Claude, GPT-4o, Gemini), it understands intent, reads from your live data sources, and takes action — qualifying a lead, updating a Zoho record, processing a Razorpay payment event, sending a follow-up WhatsApp — all without a human directing each step.
+                Most Indian business owners have seen WhatsApp chatbots, scripted menus that break the moment someone asks an unexpected question. An AI agent is fundamentally different. Built on large language models (Claude, GPT-4o, Gemini), it understands intent, reads from your live data sources, and takes action, qualifying a lead, updating a Zoho record, processing a Razorpay payment event, sending a follow-up WhatsApp: all without a human directing each step.
               </p>
 
               {/* 3-col benefit cards */}
@@ -997,7 +1021,7 @@ export default function AIAgentDevelopmentINPage() {
               </div>
 
               <p>
-                The result is software that works more like a capable employee than a rules engine. It handles peak volumes that overwhelm your human staff, works at 2 AM when your customer places an order, and never calls in sick. Unlike hiring, it costs a fixed amount to build and runs at near-zero marginal cost afterward. FactoryJet has been building software for businesses like yours — we know exactly which workflows are ready for AI and which still need a human touch.
+                The result is software that works more like a capable employee than a rules engine. It handles peak volumes that overwhelm your human staff, works at 2 AM when your customer places an order, and never calls in sick. Unlike hiring, it costs a fixed amount to build and runs at near-zero marginal cost afterward. FactoryJet has been building software for businesses like yours, we know exactly which workflows are ready for AI and which still need a human touch.
               </p>
 
               {/* Industry grid */}
@@ -1094,12 +1118,12 @@ export default function AIAgentDevelopmentINPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is buried in work that AI can handle"
-          lead="Most Indian SMBs have the same three bottlenecks: an overflowing WhatsApp inbox, hours of manual data entry across disconnected systems, and a sales team spending more time on admin than selling. These are not people problems — they are automation gaps."
+          lead="Most Indian SMBs have the same three bottlenecks: an overflowing WhatsApp inbox, hours of manual data entry across disconnected systems, and a sales team spending more time on admin than selling. These are not people problems, they are automation gaps."
           pillars={[
             {
               icon: '💬',
               title: 'WhatsApp overload is eating your team alive',
-              body: "Your customer support team handles the same 10 questions 200 times a day — order status, pricing, product availability. An AI agent answers all of them instantly, in the customer's language, at 2 AM. Your human team focuses on the 20% of queries that actually need a person.",
+              body: "Your customer support team handles the same 10 questions 200 times a day, order status, pricing, product availability. An AI agent answers all of them instantly, in the customer's language, at 2 AM. Your human team focuses on the 20% of queries that actually need a person.",
             },
             {
               icon: '📋',
@@ -1126,12 +1150,12 @@ export default function AIAgentDevelopmentINPage() {
         <ServiceExplanation
           eyebrow="TECHNOLOGY"
           headline="The AI stack we use to build your agent"
-          lead="We don't have a preferred vendor — we pick the right tool for each layer of your agent based on your workflow, data sensitivity, and cost requirements."
+          lead="We don't have a preferred vendor, we pick the right tool for each layer of your agent based on your workflow, data sensitivity, and cost requirements."
           reverseOnDesktop
           body={
             <>
               <p>
-                Every AI agent we build is assembled from best-in-class components: a large language model for reasoning, an orchestration framework for workflow logic, and connectors for each of your business tools. We document every architectural decision so your team understands exactly what was built and why — no vendor lock-in.
+                Every AI agent we build is assembled from best-in-class components: a large language model for reasoning, an orchestration framework for workflow logic, and connectors for each of your business tools. We document every architectural decision so your team understands exactly what was built and why, no vendor lock-in.
               </p>
               {/* Tech stack table */}
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white" aria-hidden>
@@ -1162,7 +1186,7 @@ export default function AIAgentDevelopmentINPage() {
                 </table>
               </div>
               <p>
-                For data-sensitive use cases — BFSI, healthcare, legal — we can deploy private LLM setups that process your data on your own infrastructure, with no data leaving your environment. All data flows are documented during delivery.
+                For data-sensitive use cases: BFSI, healthcare, legal, we can deploy private LLM setups that process your data on your own infrastructure, with no data leaving your environment. All data flows are documented during delivery.
               </p>
             </>
           }
@@ -1180,7 +1204,7 @@ export default function AIAgentDevelopmentINPage() {
                 {[
                   {
                     name: 'AI Chatbot',
-                    desc: 'Instant answers for your website visitors, 24/7 — no human required.',
+                    desc: 'Instant answers for your website visitors, 24/7, no human required.',
                     href: '/services/ai-agent-development/ai-chatbot',
                   },
                   {
@@ -1210,7 +1234,7 @@ export default function AIAgentDevelopmentINPage() {
                   },
                   {
                     name: 'Workflow Automation Agent',
-                    desc: 'Trigger actions across Zoho, Razorpay, Tally, and Slack — automatically.',
+                    desc: 'Trigger actions across Zoho, Razorpay, Tally, and Slack: automatically.',
                     href: '/services/ai-agent-development/ai-workflow-automation',
                   },
                 ].map((item) => (
@@ -1292,10 +1316,10 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 9. INDIA MARKET CONTEXT ───────────────────────────────────────── */}
         <CityContextSection
           eyebrow="INDIA AI MARKET"
-          headline="India's AI adoption is accelerating — the window to move first is closing"
+          headline="India's AI adoption is accelerating: the window to move first is closing"
           leadParagraphs={[
-            "India's AI market is projected to exceed ₹65,000 Cr by 2027, driven by the country's massive WhatsApp user base, the rapid digitisation of SMBs post-GST, and the availability of affordable LLM APIs. D2C brands, real estate firms, EdTech platforms, BFSI companies, and B2B manufacturers are already deploying AI agents to automate customer interactions, streamline compliance, and cut operational costs — without adding headcount.",
-            "Indian businesses that automate now are compounding an operational advantage that becomes harder and harder for competitors to close. The question is not whether to adopt AI — it is whether you move before or after your competition does.",
+            "India's AI market is projected to exceed ₹65,000 Cr by 2027, driven by the country's massive WhatsApp user base, the rapid digitisation of SMBs post-GST, and the availability of affordable LLM APIs. D2C brands, real estate firms, EdTech platforms, BFSI companies, and B2B manufacturers are already deploying AI agents to automate customer interactions, streamline compliance, and cut operational costs, without adding headcount.",
+            "Indian businesses that automate now are compounding an operational advantage that becomes harder and harder for competitors to close. The question is not whether to adopt AI, it is whether you move before or after your competition does.",
           ]}
           bodySlot={
             <>
@@ -1327,7 +1351,7 @@ export default function AIAgentDevelopmentINPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Indian IT Firm vs. Freelancer vs. No-Code Tools"
-          lead="Fixed price, full ownership, Indian business stack out of the box — here is the honest comparison."
+          lead="Fixed price, full ownership, Indian business stack out of the box, here is the honest comparison."
           pullQuote={{
             stat: 'Fixed price',
             caption:
@@ -1342,7 +1366,7 @@ export default function AIAgentDevelopmentINPage() {
         <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI Agent Development Services for Every Major Indian Industry"
-          lead="Every sector, built to India-specific workflows — WhatsApp, GST, Razorpay, Zoho, and your actual business stack."
+          lead="Every sector, built to India-specific workflows: WhatsApp, GST, Razorpay, Zoho, and your actual business stack."
           sectors={IN_INDUSTRIES}
         />
 
@@ -1353,11 +1377,11 @@ export default function AIAgentDevelopmentINPage() {
           headline="What Indian founders say after we build their AI agents"
         />
 
-        {/* ── 14. FAQ (LIGHT — buffer before next dark) ─────────────────────── */}
+        {/* ── 14. FAQ (LIGHT, buffer before next dark) ─────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Start"
-          lead="The questions we answer on every Indian AI agent discovery call — answered here, without the runaround."
+          lead="The questions we answer on every Indian AI agent discovery call, answered here, without the runaround."
           categories={IN_FAQ_CATEGORIES}
           items={IN_FAQ_ITEMS}
         />
@@ -1368,7 +1392,7 @@ export default function AIAgentDevelopmentINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free AI Strategy Call"
-            sub="Tell us your biggest operational bottleneck. We will map out exactly which workflows are ready for AI and give you a fixed-price estimate before we write a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 12 years."
+            sub="Tell us your biggest operational bottleneck. We will map out exactly which workflows are ready for AI and give you a fixed-price estimate before we write a single line of code. No pitch, no pressure: an honest assessment from engineers who have been building for Indian businesses for 12 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. 500+ businesses served."

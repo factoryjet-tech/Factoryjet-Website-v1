@@ -207,7 +207,7 @@ export default function CheckerTool() {
         </label>
       </div>
 
-      {/* Honeypot — hidden from real users */}
+      {/* Honeypot, hidden from real users */}
       <input
         type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" placeholder="Company URL"
         value={honeypot} onChange={(e) => setHoneypot(e.target.value)}

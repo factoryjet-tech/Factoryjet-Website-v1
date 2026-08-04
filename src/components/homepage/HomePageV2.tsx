@@ -28,19 +28,19 @@ const FAQ_ITEMS = [
   {
     question: 'What exactly does FactoryJet do?',
     answer:
-      'FactoryJet builds high-performance websites, Shopify and custom e-commerce stores, and AI SEO campaigns for growing businesses — primarily in India, the US, and the UK. We combine fast delivery (7-day guarantee on starter sites), a Next.js tech stack, and AI-native SEO to help businesses generate more leads and revenue online.',
+      'FactoryJet builds high-performance websites, Shopify and custom e-commerce stores, and AI SEO campaigns for growing businesses, primarily in India, the US, and the UK. We combine fast delivery (7-day guarantee on starter sites), a Next.js tech stack, and AI-native SEO to help businesses generate more leads and revenue online.',
     category: 'general',
   },
   {
     question: 'How is FactoryJet different from a typical web agency?',
     answer:
-      'Three things: fixed-price quotes confirmed up front (no surprise invoices), a 7-day delivery guarantee on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers — something most agencies charge extra for, or skip entirely.',
+      'Three things: fixed-price quotes confirmed up front (no surprise invoices), a 7-day delivery guarantee on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers, something most agencies charge extra for, or skip entirely.',
     category: 'general',
   },
   {
     question: 'Do you work with small businesses or only large companies?',
     answer:
-      'Primarily small and medium businesses — sole traders, D2C brands, B2B service firms, retail chains, and professional practices. Our pricing is fixed-price and scoped to your project, so we are accessible to early-stage businesses while also having the capacity for complex multi-platform builds.',
+      'Primarily small and medium businesses, sole traders, D2C brands, B2B service firms, retail chains, and professional practices. Our pricing is fixed-price and scoped to your project, so we are accessible to early-stage businesses while also having the capacity for complex multi-platform builds.',
     category: 'general',
   },
   {
@@ -52,13 +52,13 @@ const FAQ_ITEMS = [
   {
     question: 'How much does a website cost?',
     answer:
-      'Every project is fixed-price and scoped to your build. The main drivers are the number of pages, custom design and functionality, and any integrations — a simple 5-page business site is at the lighter end, while a fully custom Next.js build or a D2C store with advanced features sits higher. You get a clear, all-in quote up front after a free consultation, so there are no surprises once we review your brief.',
+      'Every project is fixed-price and scoped to your build. The main drivers are the number of pages, custom design and functionality, and any integrations: a simple 5-page business site is at the lighter end, while a fully custom Next.js build or a D2C store with advanced features sits higher. You get a clear, all-in quote up front after a free consultation, so there are no surprises once we review your brief.',
     category: 'web',
   },
   {
     question: 'How fast can you build my website?',
     answer:
-      'Starter sites (5 pages) ship in 7 days — that is our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts from the day your brand assets and content are in our shared workspace.',
+      'Starter sites (5 pages) ship in 7 days, that is our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts from the day your brand assets and content are in our shared workspace.',
     category: 'web',
   },
   {
@@ -88,19 +88,19 @@ const FAQ_ITEMS = [
   {
     question: 'Can you build a B2B wholesale store for Indian buyers?',
     answer:
-      'Yes. Our Shop Pro tier is specifically designed for B2B and wholesale — wholesale buyer accounts with approval workflows, tiered pricing (retail vs. dealer vs. distributor), bulk ordering, GST-compliant invoicing, and trade-only product visibility. We have built B2B stores for clients in artificial plants, home décor, and industrial supplies.',
+      'Yes. Our Shop Pro tier is specifically designed for B2B and wholesale, wholesale buyer accounts with approval workflows, tiered pricing (retail vs. dealer vs. distributor), bulk ordering, GST-compliant invoicing, and trade-only product visibility. We have built B2B stores for clients in artificial plants, home décor, and industrial supplies.',
     category: 'ecommerce',
   },
   {
     question: 'Do you support Indian payment gateways?',
     answer:
-      'Yes — Razorpay, PayU, Cashfree, PhonePe, UPI, and Cash on Delivery are all supported. We also configure EMI options and buy-now-pay-later integrations where applicable. GST invoicing is automated at checkout.',
+      'Yes: Razorpay, PayU, Cashfree, PhonePe, UPI, and Cash on Delivery are all supported. We also configure EMI options and buy-now-pay-later integrations where applicable. GST invoicing is automated at checkout.',
     category: 'ecommerce',
   },
   {
     question: 'Can you integrate WhatsApp Commerce?',
     answer:
-      'Yes. WhatsApp Commerce integration — via the WhatsApp Business API — allows customers to browse products, place orders, and receive order updates directly within WhatsApp. This is particularly effective for D2C brands in India where WhatsApp drives a significant share of repeat purchases.',
+      'Yes. WhatsApp Commerce integration, via the WhatsApp Business API, allows customers to browse products, place orders, and receive order updates directly within WhatsApp. This is particularly effective for D2C brands in India where WhatsApp drives a significant share of repeat purchases.',
     category: 'ecommerce',
   },
   {
@@ -130,19 +130,19 @@ const FAQ_ITEMS = [
   {
     question: 'How many revision rounds are included?',
     answer:
-      'Starter includes two structured revision rounds. Growth includes three. Scale projects are scoped individually and typically include more flexibility. Each revision round is done in Figma with a shared comment thread — no back-and-forth emails. Development does not begin until you have signed off on the final design.',
+      'Starter includes two structured revision rounds. Growth includes three. Scale projects are scoped individually and typically include more flexibility. Each revision round is done in Figma with a shared comment thread, no back-and-forth emails. Development does not begin until you have signed off on the final design.',
     category: 'process',
   },
   {
     question: 'What happens after the site launches?',
     answer:
-      'Every project includes a 30-day post-launch support window for bug fixes, training questions, and minor copy edits. After that, you can move to a maintenance plan (content updates, dependency upgrades, performance monitoring) or self-manage — your team has the codebase and can take it to any developer.',
+      'Every project includes a 30-day post-launch support window for bug fixes, training questions, and minor copy edits. After that, you can move to a maintenance plan (content updates, dependency upgrades, performance monitoring) or self-manage: your team has the codebase and can take it to any developer.',
     category: 'process',
   },
   {
     question: 'What do I need to provide to get started?',
     answer:
-      'Brand assets (logo, colours, fonts), any existing content you want to carry forward, and access to your current domain registrar. We handle everything else — copywriting brief, imagery sourcing, dev environment, hosting setup, and analytics configuration. The more context you give us on your customers and competitors, the sharper the first design round will be.',
+      'Brand assets (logo, colours, fonts), any existing content you want to carry forward, and access to your current domain registrar. We handle everything else, copywriting brief, imagery sourcing, dev environment, hosting setup, and analytics configuration. The more context you give us on your customers and competitors, the sharper the first design round will be.',
     category: 'process',
   },
   {
@@ -154,7 +154,7 @@ const FAQ_ITEMS = [
   {
     question: 'How will I rank on Google after launch?',
     answer:
-      'Every FactoryJet project ships with technical SEO foundations built in — JSON-LD schema, Core Web Vitals green, hreflang where applicable, sitemap submission to Google Search Console, and AI crawler access. This gives you a strong starting position. Ongoing ranking improvement — especially for competitive service keywords — requires the AI SEO retainer or a content plan, which we can scope on your first call.',
+      'Every FactoryJet project ships with technical SEO foundations built in: JSON-LD schema, Core Web Vitals green, hreflang where applicable, sitemap submission to Google Search Console, and AI crawler access. This gives you a strong starting position. Ongoing ranking improvement, especially for competitive service keywords, requires the AI SEO retainer or a content plan, which we can scope on your first call.',
     category: 'process',
   },
 ] as const;
@@ -162,17 +162,17 @@ const FAQ_ITEMS = [
 /* --- Portfolio Cards -------------------------------------------------- */
 const PORTFOLIO_CARDS = [
   {
-    industry: 'Decorative Lighting — D2C Ecommerce',
-    title: 'Belle Maison — Decorative LED Lighting Store',
+    industry: 'Decorative Lighting: D2C Ecommerce',
+    title: 'Belle Maison | Decorative LED Lighting Store',
     description:
-      'Full Shopify D2C store for a Mumbai-based decorative LED lighting brand — chandeliers, pendant lights, wall sconces, and smart home lighting. 200+ SKUs, AI product recommendations, and WhatsApp Commerce integrated. 7-day delivery from brief to launch.',
+      'Full Shopify D2C store for a Mumbai-based decorative LED lighting brand, chandeliers, pendant lights, wall sconces, and smart home lighting. 200+ SKUs, AI product recommendations, and WhatsApp Commerce integrated. 7-day delivery from brief to launch.',
     imageSrc: '/images/portfolio/belle-maison.webp',
     stat1: '200+ SKUs live',
     stat2: '7-day delivery',
   },
   {
-    industry: 'Professional Services — Web Design',
-    title: 'Formative Concepts — MEP & BIM Consulting',
+    industry: 'Professional Services: Web Design',
+    title: 'Formative Concepts | MEP & BIM Consulting',
     description:
       'Professional website for a leading MEP and BIM drafting consultancy that works with the world\'s largest construction companies. Designed to project credibility and technical authority to enterprise procurement teams across global markets.',
     imageSrc: '/images/portfolio/bombay-petals.webp',
@@ -186,17 +186,17 @@ const WHY_FJ_PILLARS = [
   {
     icon: '⚡',
     title: '7-Day Delivery Guarantee',
-    body: 'Starter sites go live in 7 days — not 6 weeks. We reverse-engineer your deadline, not pad a timeline to justify a retainer. Every milestone is in the project brief before we start.',
+    body: 'Starter sites go live in 7 days, not 6 weeks. We reverse-engineer your deadline, not pad a timeline to justify a retainer. Every milestone is in the project brief before we start.',
   },
   {
     icon: '₹',
     title: 'Pricing is fixed and published upfront',
-    body: 'Indian market rates for comparable Next.js work from a US or traditional agency run 2–3× higher. FactoryJet delivers the same tech stack, the same design quality, and the same performance benchmarks — at a fraction of the price.',
+    body: 'Indian market rates for comparable Next.js work from a US or traditional agency run 2–3× higher. FactoryJet delivers the same tech stack, the same design quality, and the same performance benchmarks, at a fraction of the price.',
   },
   {
     icon: '🤖',
     title: 'AI-Native by Default',
-    body: 'Every site we build is configured for Google AI Overviews, ChatGPT, Perplexity, and Gemini from day one — not as an add-on. JSON-LD schema, AI crawler access, and entity-rich content are standard on every project.',
+    body: 'Every site we build is configured for Google AI Overviews, ChatGPT, Perplexity, and Gemini from day one, not as an add-on. JSON-LD schema, AI crawler access, and entity-rich content are standard on every project.',
   },
 ];
 
@@ -206,7 +206,7 @@ const JOURNEY_STAGES = [
     number: '01',
     title: 'Discovery',
     description:
-      'A 30-minute call. We map your goals, audience, and competitive landscape. You leave with a sitemap and a timeline — before any money changes hands.',
+      'A 30-minute call. We map your goals, audience, and competitive landscape. You leave with a sitemap and a timeline, before any money changes hands.',
   },
   {
     number: '02',
@@ -218,7 +218,7 @@ const JOURNEY_STAGES = [
     number: '03',
     title: 'Build',
     description:
-      'Next.js engineering against your stack. Performance budgets enforced from commit one. Daily progress visible in the shared workspace — no black-box weeks.',
+      'Next.js engineering against your stack. Performance budgets enforced from commit one. Daily progress visible in the shared workspace, no black-box weeks.',
   },
   {
     number: '04',
@@ -238,7 +238,7 @@ const JOURNEY_STAGES = [
 export default function HomePageV2() {
   return (
     <>
-      {/* 1 — Hero (cream, light — India v2) */}
+      {/* 1: Hero (cream, light, India v2) */}
       <Hero
         formSlot={<HeroInlineForm region="in" source="home_root_hero" />}
         announcementPill={{
@@ -259,10 +259,10 @@ export default function HomePageV2() {
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
       />
 
-      {/* 2 — Logo bar (light) */}
+      {/* 2, Logo bar (light) */}
       <LogoBar tagline="Trusted by 500+ businesses across India, the US, and the UK" />
 
-      {/* 3 — Big Three Trust Block (cream) */}
+      {/* 3, Big Three Trust Block (cream) */}
       <BigThreeTrustBlock
         eyebrow="WHY FACTORYJET"
         illustrations={{
@@ -272,25 +272,25 @@ export default function HomePageV2() {
         }}
       />
 
-      {/* 4 — Services Grid (white) */}
+      {/* 4, Services Grid (white) */}
       <ServicesGrid />
 
-      {/* 5 — Why FactoryJet (DARK) */}
+      {/* 5, Why FactoryJet (DARK) */}
       <StrategicDarkSection
         eyebrow="THE FACTORYJET DIFFERENCE"
         headline="Why 500+ businesses choose FactoryJet"
-        lead="Speed, price, and AI-native tech — not a trade-off, all three at once."
+        lead="Speed, price, and AI-native tech, not a trade-off, all three at once."
         pillars={WHY_FJ_PILLARS}
       />
 
-      {/* 6 — How We Work (white — buffer after dark) */}
+      {/* 6, How We Work (white, buffer after dark) */}
       <ServiceJourneyRow
         eyebrow="HOW WE WORK"
-        headline="From brief to live site — our 5-step delivery engine"
+        headline="From brief to live site: our 5-step delivery engine"
         stages={JOURNEY_STAGES}
       />
 
-      {/* 7 — Portfolio (cream) */}
+      {/* 7, Portfolio (cream) */}
       <PortfolioShowcase
         eyebrow="RECENT WORK"
         headline="What our clients look like after FactoryJet."
@@ -299,18 +299,18 @@ export default function HomePageV2() {
         ctaLabel="View full portfolio"
       />
 
-      {/* 8 — Pricing — 3 tabs (cream — buffer before dark) */}
+      {/* 8, Pricing, 3 tabs (cream, buffer before dark) */}
       <HomePricingTabs />
       <GetFreeQuoteCTA />
 
-      {/* 9 — Testimonials (DARK) */}
+      {/* 9, Testimonials (DARK) */}
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
         headline="4.9/5 across 150+ reviews from India, US & UK."
       />
 
-      {/* 10 — FAQ (light — buffer before final dark) */}
+      {/* 10, FAQ (light, buffer before final dark) */}
       <FAQ
         eyebrow="COMMON QUESTIONS"
         headline="Everything you need to know before starting your project"
@@ -318,12 +318,12 @@ export default function HomePageV2() {
         items={FAQ_ITEMS}
       />
 
-      {/* 11 — Final CTA (DARK) */}
+      {/* 11, Final CTA (DARK) */}
       <FinalCTA
         variant="dark"
         eyebrow="READY TO START"
         headline="Your website should be working as hard as you are."
-        sub="500+ businesses have launched on FactoryJet. Starter sites go live in 7 days. Growth projects in 2–3 weeks. Tell us what you need — we will have a sitemap ready within 72 hours."
+        sub="500+ businesses have launched on FactoryJet. Starter sites go live in 7 days. Growth projects in 2–3 weeks. Tell us what you need, we will have a sitemap ready within 72 hours."
         primaryCta={{ label: 'Start Your Project', modal: true, region: 'in' }}
         secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
         objectionHandler="No long-term contracts. No hidden charges. Cancel AI SEO anytime with 30 days notice."

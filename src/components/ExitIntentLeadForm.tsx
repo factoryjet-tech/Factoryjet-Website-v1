@@ -186,7 +186,7 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
                 autoComplete="tel" className={inputCls} style={inputStyle}
               />
 
-              {/* Honeypot — off-screen, hidden from real users */}
+              {/* Honeypot, off-screen, hidden from real users */}
               <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, overflow: 'hidden' }}>
                 <label>Company website
                   <input type="text" name="company_website" tabIndex={-1} autoComplete="off"

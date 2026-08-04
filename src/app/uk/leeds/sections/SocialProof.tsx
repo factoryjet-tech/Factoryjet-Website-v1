@@ -8,14 +8,14 @@ const TESTIMONIALS = [
     role: "Director, GPSUK",
     image: "/images/leeds/person-1.webp",
     quote:
-      "FactoryJet built our entire B2B promotional products store from the ground up — complete RFQ management, credit management, and an image visualiser. It's not a template shop; it's a proper enterprise e-commerce platform built exactly to our workflow.",
+      "FactoryJet built our entire B2B promotional products store from the ground up, complete RFQ management, credit management, and an image visualiser. It's not a template shop; it's a proper enterprise e-commerce platform built exactly to our workflow.",
   },
   {
     name: "Ricky",
     role: "Founder, Belle Maison",
     image: "/images/leeds/person-2.webp",
     quote:
-      "We needed a store that handled both B2B and B2C for artificial plants, flowers, and LED lighting. FactoryJet built the full e-commerce platform and then did SEO, GEO, and AEO — we now show up in AI search results alongside Google.",
+      "We needed a store that handled both B2B and B2C for artificial plants, flowers, and LED lighting. FactoryJet built the full e-commerce platform and then did SEO, GEO, and AEO, we now show up in AI search results alongside Google.",
   },
   {
     name: "Kiran M.",
@@ -109,7 +109,7 @@ export default function SocialProof() {
                 >
                   <Image
                     src={image}
-                    alt={`${name} — ${role}`}
+                    alt={`${name}, ${role}`}
                     width={56}
                     height={56}
                     className="w-full h-full object-cover rounded-full"

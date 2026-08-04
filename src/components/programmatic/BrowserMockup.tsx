@@ -40,7 +40,7 @@ export function BrowserMockup({
     >
       {/* Browser chrome top bar */}
       <div className="flex items-center gap-3 border-b border-border-soft bg-bg-soft px-4 py-3">
-        {/* Traffic light dots — 30% opacity, restrained */}
+        {/* Traffic light dots, 30% opacity, restrained */}
         <div className="flex gap-1.5" aria-hidden>
           <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]/30" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]/30" />

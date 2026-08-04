@@ -89,7 +89,7 @@ export default function PortfolioShowcase({
             </h2>
           </div>
 
-          {/* Desktop CTA — hidden on mobile, shown at md */}
+          {/* Desktop CTA, hidden on mobile, shown at md */}
           {ctaHref && (
             <Link
               href={ctaHref}
@@ -194,7 +194,7 @@ export default function PortfolioShowcase({
           ))}
         </div>
 
-        {/* Mobile CTA — only shown on small screens */}
+        {/* Mobile CTA, only shown on small screens */}
         {ctaHref && (
           <div className="mt-10 flex justify-center md:hidden">
             <Link

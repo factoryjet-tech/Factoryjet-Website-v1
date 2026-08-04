@@ -53,7 +53,7 @@ export default function FinalCTA() {
         maxWidth: "100vw",
       }}
     >
-      {/* Decorative stat watermarks — behind content */}
+      {/* Decorative stat watermarks, behind content */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {WATERMARKS.map((w) => (
           <span
@@ -148,7 +148,7 @@ export default function FinalCTA() {
             chapter. Whether you&rsquo;re a logistics operator at Peel Ports, a
             creative studio in the Baltic Triangle, a hospitality group near
             Bramley-Moore Dock, or a life sciences firm in the Knowledge Quarter
-            — we build digital systems that match your ambition and beat your
+, we build digital systems that match your ambition and beat your
             existing agency&rsquo;s price by 50–60%.
           </p>
 

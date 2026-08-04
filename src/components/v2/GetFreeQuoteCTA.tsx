@@ -21,7 +21,7 @@ export interface GetFreeQuoteCTAProps {
 
 export default function GetFreeQuoteCTA({
   headline = 'Get Your Free Project Quote',
-  sub = 'Tell us what you need — we\'ll send a timeline, scope, and fixed-price estimate within 24 hours. No commitment. No agency jargon.',
+  sub = 'Tell us what you need, we\'ll send a timeline, scope, and fixed-price estimate within 24 hours. No commitment. No agency jargon.',
 }: GetFreeQuoteCTAProps) {
   return (
     <section
@@ -36,7 +36,7 @@ export default function GetFreeQuoteCTA({
       <div className="mx-auto max-w-[720px] px-6 md:px-8 text-center">
 
         {/* Eyebrow */}
-        <p className="fj-eyebrow">FREE QUOTE — NO COMMITMENT</p>
+        <p className="fj-eyebrow">FREE QUOTE, NO COMMITMENT</p>
 
         {/* Headline */}
         <h2
