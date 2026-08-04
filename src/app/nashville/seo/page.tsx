@@ -241,7 +241,7 @@ export default function NashvilleSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="nseo">
+      <main className="nseo">
         {/* HERO */}
         <section className="hero">
           <div className="wrap hero-grid">
@@ -462,7 +462,7 @@ export default function NashvilleSeoPage() {
             <p className="fine">SEO services in Nashville, TN, billed month-to-month, with a free audit and no setup fee. Also in Nashville: <Link href="/nashville/web-design">web design</Link> and <Link href="/nashville/ecommerce-development">e-commerce development</Link>. See <Link href="/services/seo">US SEO services</Link>. More US cities: <Link href="/cleveland/seo">Cleveland SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link> · <Link href="/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

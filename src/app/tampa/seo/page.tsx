@@ -200,7 +200,7 @@ export default function TampaSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="tseo">
+      <main className="tseo">
         {/* HERO */}
         <section className="hero">
           <div className="wrap hero-grid">
@@ -389,7 +389,7 @@ export default function TampaSeoPage() {
             <p className="fine">Local SEO · fixed-price · month-to-month · free audit · no setup fee · <Link href="/services/seo">US SEO services</Link></p>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

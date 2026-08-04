@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -427,92 +428,99 @@ const CHN_FAQ_ITEMS = [
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <SiteHeader locale="in" />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-          { name: 'Chennai', url: 'https://factoryjet.com/web-design/chennai' },
-        ]}
-      />
-      <Hero
-        formSlot={<HeroInlineForm region="in" source="web_design_chennai_hero" />} {...heroProps} />
-      <HeroBrowserMockup />
-      <LogoBar />
-      <BigThreeTrustBlock />
-      <CityContextSection {...cityContextProps} />
-      <ServiceExplanation
-          headline="Two Chennai Markets, One Design Partner"
-          lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments: each needing a completely different web strategy. We design for both."
-          rightSlot={
-            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
-              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                What Your Buyers Care About
-              </p>
-              <div className="space-y-5">
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Auto &amp; Manufacturing (Ambattur / Guindy / Sriperumbudur)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously: your website must project quality.</p>
-                </div>
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>IT &amp; Services / Consumer (OMR / Anna Nagar / Adyar)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Fast-loading SaaS landing pages, service portfolio sites, and D2C storefronts. These audiences expect modern design, instant mobile loading, and clear value propositions.</p>
+      <main>
+      <Breadcrumbs items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Chennai', url: 'https://factoryjet.com/web-design/chennai' },
+          ]} />
+        <BreadcrumbSchema
+          items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Chennai', url: 'https://factoryjet.com/web-design/chennai' },
+          ]}
+        />
+        <Hero
+          formSlot={<HeroInlineForm region="in" source="web_design_chennai_hero" />} {...heroProps} />
+        <HeroBrowserMockup />
+        <LogoBar />
+        <BigThreeTrustBlock />
+        <CityContextSection {...cityContextProps} />
+        <ServiceExplanation
+            headline="Two Chennai Markets, One Design Partner"
+            lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments: each needing a completely different web strategy. We design for both."
+            rightSlot={
+              <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+                <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                  What Your Buyers Care About
+                </p>
+                <div className="space-y-5">
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Auto &amp; Manufacturing (Ambattur / Guindy / Sriperumbudur)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously: your website must project quality.</p>
+                  </div>
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>IT &amp; Services / Consumer (OMR / Anna Nagar / Adyar)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">Fast-loading SaaS landing pages, service portfolio sites, and D2C storefronts. These audiences expect modern design, instant mobile loading, and clear value propositions.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          }
-        />
-      <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Chennai Website in 7 Days" />
-      <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison | Mumbai',
-              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
-              imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Lighthouse 95+',
-              stat2: 'Commerceflo · B2B',
-            },
-            {
-              industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts | Pune',
-              description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
-              imageSrc: '/images/portfolio/formative-concepts.webp',
-              stat1: 'B2B authority site',
-              stat2: 'SEO + Next.js',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-      <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Chennai Agency vs. Freelancer"
-          lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
-          pullQuote={{
-            stat: '7 days',
-            caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
-          }}
-          columns={CHN_COMPARISON_COLUMNS}
-          rows={CHN_COMPARISON_ROWS}
-          footer="Comparison reflects typical Chennai market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
-        />
-      <IndustriesGrid />
-        <GetFreeQuoteCTA />
-      <TestimonialsSection />
-      <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Chennai Businesses"
-          lead="Everything Chennai businesses ask before starting a project, answered straight."
-          categories={CHN_FAQ_CATEGORIES}
-          items={CHN_FAQ_ITEMS}
-        />
-      <FinalCTA {...finalCTAProps} />
-      {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
-      <WebDesignCityLinksIN currentCity="chennai" />
+            }
+          />
+        <StrategicDarkSection {...darkSectionProps} />
+        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Chennai Website in 7 Days" />
+        <PortfolioShowcase
+            eyebrow="RECENT WORK"
+            headline="What India's businesses look like after FactoryJet."
+            cards={[
+              {
+                industry: 'Wholesale Distribution · Commerceflo',
+                title: 'Belle Maison | Mumbai',
+                description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+                imageSrc: '/images/portfolio/belle-maison.webp',
+                stat1: 'Lighthouse 95+',
+                stat2: 'Commerceflo · B2B',
+              },
+              {
+                industry: 'MEP / BIM Consulting · SEO',
+                title: 'Formative Concepts | Pune',
+                description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+                imageSrc: '/images/portfolio/formative-concepts.webp',
+                stat1: 'B2B authority site',
+                stat2: 'SEO + Next.js',
+              },
+            ]}
+            ctaHref="/portfolio"
+            ctaLabel="View full portfolio"
+          />
+        <ComparisonTable
+            eyebrow="HOW WE COMPARE"
+            headline="FactoryJet vs. Chennai Agency vs. Freelancer"
+            lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+            pullQuote={{
+              stat: '7 days',
+              caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            }}
+            columns={CHN_COMPARISON_COLUMNS}
+            rows={CHN_COMPARISON_ROWS}
+            footer="Comparison reflects typical Chennai market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
+          />
+        <IndustriesGrid />
+          <GetFreeQuoteCTA />
+        <TestimonialsSection />
+        <FAQ
+            eyebrow="FREQUENTLY ASKED QUESTIONS"
+            headline="Common Questions from Chennai Businesses"
+            lead="Everything Chennai businesses ask before starting a project, answered straight."
+            categories={CHN_FAQ_CATEGORIES}
+            items={CHN_FAQ_ITEMS}
+          />
+        <FinalCTA {...finalCTAProps} />
+        {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
+        <WebDesignCityLinksIN currentCity="chennai" />
 
+      </main>
       <SiteFooter locale="in" />
     </>
   )

@@ -49,8 +49,10 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      <h1 className="sr-only">Refund Policy</h1>
-      <RefundPolicy />
+      <main>
+        <h1 className="sr-only">Refund Policy</h1>
+        <RefundPolicy />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

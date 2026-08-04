@@ -54,7 +54,9 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      <ContactView />
+      <main>
+        <ContactView />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

@@ -256,445 +256,447 @@ export default function ColoradoSpringsSEOPage() {
   return (
     <>
       <SiteHeader />
+      <main>
 
-      <div className="cosseo">
-        <div id="cursorGlow" className="cursor-glow" aria-hidden="true"></div>
+        <div className="cosseo">
+          <div id="cursorGlow" className="cursor-glow" aria-hidden="true"></div>
 
-        {/* ===== HERO ===== */}
-        <section className="hero-section">
-          <div className="hero-grid">
-            {/* LEFT */}
-            <div className="hero-left">
-              <span className="eyebrow reveal">Colorado Springs SEO Company</span>
-              <h1 className="hero-h1 reveal d1">
-                Colorado Springs runs on{' '}
-                <span className="g-text">precision.</span>
-              </h1>
+          {/* ===== HERO ===== */}
+          <section className="hero-section">
+            <div className="hero-grid">
+              {/* LEFT */}
+              <div className="hero-left">
+                <span className="eyebrow reveal">Colorado Springs SEO Company</span>
+                <h1 className="hero-h1 reveal d1">
+                  Colorado Springs runs on{' '}
+                  <span className="g-text">precision.</span>
+                </h1>
 
-              <div className="hero-proof-chips" id="proofChips">
-                <span className="proof-chip" id="chip1">
-                  <span className="chip-dot" />
-                  250+ Aerospace Companies -- COS Market
-                </span>
-                <span className="proof-chip" id="chip2">
-                  <span className="chip-dot" />
-                  4 Military Installations
-                </span>
+                <div className="hero-proof-chips" id="proofChips">
+                  <span className="proof-chip" id="chip1">
+                    <span className="chip-dot" />
+                    250+ Aerospace Companies -- COS Market
+                  </span>
+                  <span className="proof-chip" id="chip2">
+                    <span className="chip-dot" />
+                    4 Military Installations
+                  </span>
+                </div>
+
+                <p className="hero-sub reveal d2">
+                  From defense contractors in Briargate to restaurants in Old Colorado City, this market rewards businesses that show up exactly when buyers search. We make sure that is you.
+                </p>
+
+                <HeroInlineForm region="us" source="colorado_springs_seo_hero" submitLabel="Get my free SEO audit" />
+                <div className="hero-ctas reveal d3">
+                  <a href={CALENDLY} className="btn-ghost">Talk to the founder</a>
+                  <a href="#process" className="btn-ghost">
+                    See Local Results
+                    <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div className="hero-trust reveal d4">
+                  <span>500+ businesses ranked</span>
+                  <span className="hero-trust-dot" />
+                  <span>10 years of SEO expertise</span>
+                </div>
               </div>
 
-              <p className="hero-sub reveal d2">
-                From defense contractors in Briargate to restaurants in Old Colorado City, this market rewards businesses that show up exactly when buyers search. We make sure that is you.
-              </p>
+              {/* RIGHT: IMAGE */}
+              <div className="hero-right">
+                <div className="hero-img-wrap">
+                  <Image
+                    src="/images/us/colorado-springs/seo/hero.webp"
+                    alt="Aerial view of Colorado Springs with Pikes Peak at sunset"
+                    className="hero-img"
+                    width={800}
+                    height={600}
+                    priority
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                  />
+                </div>
 
-              <HeroInlineForm region="us" source="colorado_springs_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="hero-ctas reveal d3">
-                <a href={CALENDLY} className="btn-ghost">Talk to the founder</a>
-                <a href="#process" className="btn-ghost">
-                  See Local Results
-                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </a>
-              </div>
-
-              <div className="hero-trust reveal d4">
-                <span>500+ businesses ranked</span>
-                <span className="hero-trust-dot" />
-                <span>10 years of SEO expertise</span>
+                {/* Glass floating chips */}
+                <div className="hero-glass-chips">
+                  <div className="glass-chip gc1" id="gc1">
+                    <div className="gc-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                        <circle cx="12" cy="9" r="2.5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div>Home Services Briargate</div>
+                      <div className="gc-label">#1 local result</div>
+                    </div>
+                  </div>
+                  <div className="glass-chip gc2" id="gc2">
+                    <div className="gc-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div>HVAC Fort Carson Area</div>
+                      <div className="gc-label">Map Pack</div>
+                    </div>
+                  </div>
+                  <div className="glass-chip gc3" id="gc3">
+                    <div className="gc-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div>Defense Contractor COS</div>
+                      <div className="gc-label">Page 1</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </section>
 
-            {/* RIGHT: IMAGE */}
-            <div className="hero-right">
-              <div className="hero-img-wrap">
-                <Image
-                  src="/images/us/colorado-springs/seo/hero.webp"
-                  alt="Aerial view of Colorado Springs with Pikes Peak at sunset"
-                  className="hero-img"
-                  width={800}
-                  height={600}
-                  priority
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
-                />
+          {/* ===== LOCAL MARKET STATS ===== */}
+          <section className="stats-section">
+            <div className="wrap">
+              <div className="stats-headline">
+                <span className="eyebrow reveal">By The Numbers</span>
+                <h2 className="reveal d1">The Colorado Springs market by the numbers.</h2>
               </div>
 
-              {/* Glass floating chips */}
-              <div className="hero-glass-chips">
-                <div className="glass-chip gc1" id="gc1">
-                  <div className="gc-icon">
+              <div className="stats-grid">
+                <div className="stat-card card-hover reveal">
+                  <div className="stat-num">
+                    <span className="stat-counter" data-target="500" data-suffix="K+">0K+</span>
+                  </div>
+                  <div className="stat-label">City population -- 2nd largest in Colorado</div>
+                </div>
+                <div className="stat-card card-hover reveal d1">
+                  <div className="stat-num">
+                    <span className="stat-counter" data-target="250" data-suffix="+">0+</span>
+                  </div>
+                  <div className="stat-label">Aerospace and defense companies in the metro</div>
+                </div>
+                <div className="stat-card card-hover reveal d2">
+                  <div className="stat-num">
+                    <span className="stat-counter" data-target="4" data-suffix="">0</span>
+                  </div>
+                  <div className="stat-label">US military installations -- Peterson, Schriever, Carson, Air Force Academy</div>
+                </div>
+                <div className="stat-card card-hover reveal d3">
+                  <div className="stat-num">
+                    $<span className="stat-counter" data-target="130" data-suffix="K">0K</span>
+                  </div>
+                  <div className="stat-label">Average aerospace sector wage -- the highest-intent B2B buyers in the market</div>
+                </div>
+              </div>
+
+              <div className="stats-note reveal">
+                This is not a typical regional market. The defense and aerospace sector alone generates B2B demand that most local agencies do not know how to capture. The buyers are specific, the search terms are technical, and the content has to earn their trust.
+              </div>
+            </div>
+          </section>
+
+          {/* ===== INDUSTRIES BENTO ===== */}
+          <section className="industries-section">
+            <div className="wrap">
+              <span className="eyebrow reveal">Industry SEO</span>
+              <h2 className="reveal d1">Every Colorado Springs industry searches differently. We rank for all of them.</h2>
+
+              <div className="bento-grid">
+                {/* Large dark tile: Aerospace */}
+                <div className="bento-card bc-dark card-hover reveal">
+                  <span className="b-eyebrow">Aerospace + Defense</span>
+                  <h3>High-value B2B searches that require technical authority.</h3>
+                  <p style={{ marginTop: '14px' }}>
+                    &quot;Defense contractor facility management COS&quot; pulls decision-makers with real budgets. Ranking here requires topic depth, E-E-A-T authorship, and technical content that generic agencies cannot produce. We build it.
+                  </p>
+                </div>
+
+                {/* Large orange tile: Military */}
+                <div className="bento-card bc-orange card-hover reveal d1">
+                  <span className="b-eyebrow">Military + Gov Services</span>
+                  <h3>Four bases mean constant PCS demand. That requires hyper-local targeting.</h3>
+                  <p style={{ marginTop: '14px' }}>
+                    Peterson Space Force Base. Schriever. Fort Carson. The Air Force Academy. Service providers near each installation compete for a rotating audience of military families who need to make decisions fast. Location-specific pages win this.
+                  </p>
+                </div>
+
+                {/* Regular tiles */}
+                <div className="bento-card bc-lav card-hover reveal d2">
+                  <h3>Healthcare</h3>
+                  <p style={{ color: 'var(--n700)' }}>
+                    UCHealth and Centura dominate. Private practices and specialists compete for &quot;near me&quot; intent queries. That is a winnable game with the right content and citation strategy.
+                  </p>
+                </div>
+
+                <div className="bento-card bc-green card-hover reveal d1">
+                  <h3>Home Services</h3>
+                  <p style={{ color: 'var(--n700)' }}>
+                    High competition, high volume. HVAC, plumbing, roofing. Neighborhood-level pages targeting Briargate, Rockrimmon, and Powers Corridor are the differentiator that separates top results from page three.
+                  </p>
+                </div>
+
+                <div className="bento-card bc-peach card-hover reveal d2">
+                  <h3>Tourism + Hospitality</h3>
+                  <p style={{ color: 'var(--n700)' }}>
+                    5 million visitors per year. Garden of the Gods. Pikes Peak. The Air Force Academy. Seasonal SEO and voice search optimization are not optional for businesses in this segment.
+                  </p>
+                </div>
+
+                <div className="bento-card bc-paper card-hover reveal d3">
+                  <h3>Real Estate</h3>
+                  <p style={{ color: 'var(--n600)' }}>
+                    Military PCS moves create predictable demand spikes. Ranking for &quot;homes near Fort Carson&quot; captures buyers who have 30 days to close. Timing and hyper-local targeting matter more here than almost anywhere else.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ===== SEARCH LANDSCAPE ===== */}
+          <section className="landscape-section">
+            <div className="wrap">
+              <span className="eyebrow-d reveal">Competitive Landscape</span>
+              <h2 className="reveal d1">Your competitors have a head start. Here is how to close the gap.</h2>
+
+              <div style={{ height: '32px' }} />
+
+              <p className="landscape-opener reveal">
+                Elite SEO Consulting and Intero Digital have deep roots in Colorado Springs. We are not pretending local competition does not exist.
+              </p>
+
+              <div className="landscape-pivot reveal d1">
+                What we bring that local agencies cannot: a dedicated national team running competitive gap analysis, content production, and technical SEO in parallel. Not one person juggling all three.
+              </div>
+
+              <div className="dark-cards-grid">
+                <div className="dark-card reveal">
+                  <div className="dark-card-icon">
                     <svg viewBox="0 0 24 24">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                      <circle cx="12" cy="9" r="2.5" />
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
                     </svg>
                   </div>
-                  <div>
-                    <div>Home Services Briargate</div>
-                    <div className="gc-label">#1 local result</div>
-                  </div>
+                  <h3>Competitor Intelligence</h3>
+                  <p>
+                    Full keyword gap analysis on your top 3 local competitors. Not just head terms. The long-tail neighborhood and intent keywords they rank for that you are currently invisible on. Delivered in week one.
+                  </p>
                 </div>
-                <div className="glass-chip gc2" id="gc2">
-                  <div className="gc-icon">
+                <div className="dark-card reveal d1">
+                  <div className="dark-card-icon">
                     <svg viewBox="0 0 24 24">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                     </svg>
                   </div>
-                  <div>
-                    <div>HVAC Fort Carson Area</div>
-                    <div className="gc-label">Map Pack</div>
-                  </div>
+                  <h3>Production Speed</h3>
+                  <p>
+                    7-day campaign launch. Most Colorado Springs agencies spend four to six weeks on onboarding before touching your rankings. We start with your most valuable pages on day one and build from there.
+                  </p>
                 </div>
-                <div className="glass-chip gc3" id="gc3">
-                  <div className="gc-icon">
+                <div className="dark-card reveal d2">
+                  <div className="dark-card-icon">
                     <svg viewBox="0 0 24 24">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                   </div>
-                  <div>
-                    <div>Defense Contractor COS</div>
-                    <div className="gc-label">Page 1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== LOCAL MARKET STATS ===== */}
-        <section className="stats-section">
-          <div className="wrap">
-            <div className="stats-headline">
-              <span className="eyebrow reveal">By The Numbers</span>
-              <h2 className="reveal d1">The Colorado Springs market by the numbers.</h2>
-            </div>
-
-            <div className="stats-grid">
-              <div className="stat-card card-hover reveal">
-                <div className="stat-num">
-                  <span className="stat-counter" data-target="500" data-suffix="K+">0K+</span>
-                </div>
-                <div className="stat-label">City population -- 2nd largest in Colorado</div>
-              </div>
-              <div className="stat-card card-hover reveal d1">
-                <div className="stat-num">
-                  <span className="stat-counter" data-target="250" data-suffix="+">0+</span>
-                </div>
-                <div className="stat-label">Aerospace and defense companies in the metro</div>
-              </div>
-              <div className="stat-card card-hover reveal d2">
-                <div className="stat-num">
-                  <span className="stat-counter" data-target="4" data-suffix="">0</span>
-                </div>
-                <div className="stat-label">US military installations -- Peterson, Schriever, Carson, Air Force Academy</div>
-              </div>
-              <div className="stat-card card-hover reveal d3">
-                <div className="stat-num">
-                  $<span className="stat-counter" data-target="130" data-suffix="K">0K</span>
-                </div>
-                <div className="stat-label">Average aerospace sector wage -- the highest-intent B2B buyers in the market</div>
-              </div>
-            </div>
-
-            <div className="stats-note reveal">
-              This is not a typical regional market. The defense and aerospace sector alone generates B2B demand that most local agencies do not know how to capture. The buyers are specific, the search terms are technical, and the content has to earn their trust.
-            </div>
-          </div>
-        </section>
-
-        {/* ===== INDUSTRIES BENTO ===== */}
-        <section className="industries-section">
-          <div className="wrap">
-            <span className="eyebrow reveal">Industry SEO</span>
-            <h2 className="reveal d1">Every Colorado Springs industry searches differently. We rank for all of them.</h2>
-
-            <div className="bento-grid">
-              {/* Large dark tile: Aerospace */}
-              <div className="bento-card bc-dark card-hover reveal">
-                <span className="b-eyebrow">Aerospace + Defense</span>
-                <h3>High-value B2B searches that require technical authority.</h3>
-                <p style={{ marginTop: '14px' }}>
-                  &quot;Defense contractor facility management COS&quot; pulls decision-makers with real budgets. Ranking here requires topic depth, E-E-A-T authorship, and technical content that generic agencies cannot produce. We build it.
-                </p>
-              </div>
-
-              {/* Large orange tile: Military */}
-              <div className="bento-card bc-orange card-hover reveal d1">
-                <span className="b-eyebrow">Military + Gov Services</span>
-                <h3>Four bases mean constant PCS demand. That requires hyper-local targeting.</h3>
-                <p style={{ marginTop: '14px' }}>
-                  Peterson Space Force Base. Schriever. Fort Carson. The Air Force Academy. Service providers near each installation compete for a rotating audience of military families who need to make decisions fast. Location-specific pages win this.
-                </p>
-              </div>
-
-              {/* Regular tiles */}
-              <div className="bento-card bc-lav card-hover reveal d2">
-                <h3>Healthcare</h3>
-                <p style={{ color: 'var(--n700)' }}>
-                  UCHealth and Centura dominate. Private practices and specialists compete for &quot;near me&quot; intent queries. That is a winnable game with the right content and citation strategy.
-                </p>
-              </div>
-
-              <div className="bento-card bc-green card-hover reveal d1">
-                <h3>Home Services</h3>
-                <p style={{ color: 'var(--n700)' }}>
-                  High competition, high volume. HVAC, plumbing, roofing. Neighborhood-level pages targeting Briargate, Rockrimmon, and Powers Corridor are the differentiator that separates top results from page three.
-                </p>
-              </div>
-
-              <div className="bento-card bc-peach card-hover reveal d2">
-                <h3>Tourism + Hospitality</h3>
-                <p style={{ color: 'var(--n700)' }}>
-                  5 million visitors per year. Garden of the Gods. Pikes Peak. The Air Force Academy. Seasonal SEO and voice search optimization are not optional for businesses in this segment.
-                </p>
-              </div>
-
-              <div className="bento-card bc-paper card-hover reveal d3">
-                <h3>Real Estate</h3>
-                <p style={{ color: 'var(--n600)' }}>
-                  Military PCS moves create predictable demand spikes. Ranking for &quot;homes near Fort Carson&quot; captures buyers who have 30 days to close. Timing and hyper-local targeting matter more here than almost anywhere else.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== SEARCH LANDSCAPE ===== */}
-        <section className="landscape-section">
-          <div className="wrap">
-            <span className="eyebrow-d reveal">Competitive Landscape</span>
-            <h2 className="reveal d1">Your competitors have a head start. Here is how to close the gap.</h2>
-
-            <div style={{ height: '32px' }} />
-
-            <p className="landscape-opener reveal">
-              Elite SEO Consulting and Intero Digital have deep roots in Colorado Springs. We are not pretending local competition does not exist.
-            </p>
-
-            <div className="landscape-pivot reveal d1">
-              What we bring that local agencies cannot: a dedicated national team running competitive gap analysis, content production, and technical SEO in parallel. Not one person juggling all three.
-            </div>
-
-            <div className="dark-cards-grid">
-              <div className="dark-card reveal">
-                <div className="dark-card-icon">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                </div>
-                <h3>Competitor Intelligence</h3>
-                <p>
-                  Full keyword gap analysis on your top 3 local competitors. Not just head terms. The long-tail neighborhood and intent keywords they rank for that you are currently invisible on. Delivered in week one.
-                </p>
-              </div>
-              <div className="dark-card reveal d1">
-                <div className="dark-card-icon">
-                  <svg viewBox="0 0 24 24">
-                    <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
-                </div>
-                <h3>Production Speed</h3>
-                <p>
-                  7-day campaign launch. Most Colorado Springs agencies spend four to six weeks on onboarding before touching your rankings. We start with your most valuable pages on day one and build from there.
-                </p>
-              </div>
-              <div className="dark-card reveal d2">
-                <div className="dark-card-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <h3>E-E-A-T Standards</h3>
-                <p>
-                  Every page written to Google&apos;s highest quality standard. Expertise, experience, authoritativeness, trustworthiness. These are the signals that determine who wins competitive local markets like COS.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== NEIGHBORHOODS ===== */}
-        <section className="neighborhoods-section">
-          <div className="wrap">
-            <span className="eyebrow reveal">Neighborhood SEO</span>
-            <h2 className="reveal d1">Your customers search by neighborhood. We target every one.</h2>
-            <p className="lead reveal d2">
-              &quot;Near me&quot; searches have grown 200% in three years. Ranking for &quot;Colorado Springs HVAC company&quot; is good. Ranking for &quot;HVAC repair Briargate&quot; is better and less competitive.
-            </p>
-
-            <div className="chips-scroll" id="chipsScroll">
-              <span className="n-chip">Downtown COS</span>
-              <span className="n-chip">Broadmoor</span>
-              <span className="n-chip">Briargate</span>
-              <span className="n-chip">Old Colorado City</span>
-              <span className="n-chip">Manitou Springs</span>
-              <span className="n-chip">Woodmen Road</span>
-              <span className="n-chip">Fountain</span>
-              <span className="n-chip">Black Forest</span>
-              <span className="n-chip">Rockrimmon</span>
-              <span className="n-chip">Northgate</span>
-              <span className="n-chip">Chapel Hills</span>
-              <span className="n-chip">Academy Blvd</span>
-              <span className="n-chip">Powers Corridor</span>
-              <span className="n-chip">Monument</span>
-              <span className="n-chip">Security-Widefield</span>
-              <span className="n-chip">Interquest</span>
-            </div>
-
-            <div className="neighborhoods-note reveal">
-              We create dedicated landing pages for the neighborhoods where your revenue actually comes from. Not just the generic city term that every competitor is also chasing.
-            </div>
-          </div>
-        </section>
-
-        {/* ===== PROCESS ===== */}
-        <section className="process-section" id="process">
-          <div className="wrap">
-            <span className="eyebrow reveal">How It Works</span>
-            <h2 className="reveal d1">What a Colorado Springs SEO campaign actually looks like.</h2>
-
-            <div className="process-steps">
-              <div className="process-step reveal">
-                <div className="step-num">1</div>
-                <div>
-                  <div className="step-week">Wk 1</div>
-                  <div className="step-title">Competitive Audit</div>
-                  <div className="step-desc">Keyword gaps, technical debt, local citation health, competitor positioning.</div>
-                </div>
-              </div>
-              <div className="process-step reveal d1">
-                <div className="step-num">2</div>
-                <div>
-                  <div className="step-week">Wk 1 - 2</div>
-                  <div className="step-title">Technical Foundation</div>
-                  <div className="step-desc">Core Web Vitals, schema markup, crawl coverage, site architecture clean-up.</div>
-                </div>
-              </div>
-              <div className="process-step reveal d2">
-                <div className="step-num">3</div>
-                <div>
-                  <div className="step-week">Wk 2 - 3</div>
-                  <div className="step-title">GBP Optimization</div>
-                  <div className="step-desc">Google Business Profile, Map Pack targeting, local citation builds for COS neighborhoods.</div>
-                </div>
-              </div>
-              <div className="process-step reveal d3">
-                <div className="step-num">4</div>
-                <div>
-                  <div className="step-week">Wk 2 - 8</div>
-                  <div className="step-title">Content Production</div>
-                  <div className="step-desc">Neighborhood pages, service pages, topical authority content. Written by humans, reviewed for E-E-A-T.</div>
-                </div>
-              </div>
-              <div className="process-step reveal d4">
-                <div className="step-num">5</div>
-                <div>
-                  <div className="step-week">Ongoing</div>
-                  <div className="step-title">Authority Building</div>
-                  <div className="step-desc">Link acquisition, digital PR, review velocity, and monthly ranking reports with clear attribution.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== TEAM ===== */}
-        <section className="team-section">
-          <div className="wrap">
-            <span className="eyebrow-d reveal">The Team</span>
-            <h2 className="reveal d1">The SEO team Colorado Springs businesses hire when they are serious about growth.</h2>
-
-            <div className="team-grid">
-              <div className="team-img-wrap reveal">
-                <Image
-                  src="/images/us/colorado-springs/seo/team.webp"
-                  alt="FactoryJet SEO team Colorado Springs"
-                  width={600}
-                  height={500}
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-
-              <div className="team-right reveal d1">
-                <div className="founder-card">
-                  <div className="founder-name">Bhavesh Barot</div>
-                  <div className="founder-role">Founder, FactoryJet</div>
-                  <p className="founder-quote">
-                    &quot;Returns on your time. If your rankings are not moving within 90 days, we find out why and we fix it.&quot;
+                  <h3>E-E-A-T Standards</h3>
+                  <p>
+                    Every page written to Google&apos;s highest quality standard. Expertise, experience, authoritativeness, trustworthiness. These are the signals that determine who wins competitive local markets like COS.
                   </p>
                 </div>
-
-                <div className="team-trust-chips">
-                  <span className="trust-chip"><span className="tc-dot" />500+ businesses ranked</span>
-                  <span className="trust-chip"><span className="tc-dot" />12+ years expertise</span>
-                  <span className="trust-chip"><span className="tc-dot" />7-day launch guarantee</span>
-                </div>
-
-                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '14.5px', lineHeight: '1.65' }}>
-                  Every campaign gets a dedicated strategist, a content writer with category expertise, and a technical SEO lead. Not a junior account manager relaying messages to a team you never meet.
-                </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ===== FAQ ===== */}
-        <section className="faq-section">
-          <div className="wrap">
-            <span className="eyebrow reveal">FAQs</span>
-            <h2 className="reveal d1">Questions Colorado Springs business owners ask us before they start.</h2>
+          {/* ===== NEIGHBORHOODS ===== */}
+          <section className="neighborhoods-section">
+            <div className="wrap">
+              <span className="eyebrow reveal">Neighborhood SEO</span>
+              <h2 className="reveal d1">Your customers search by neighborhood. We target every one.</h2>
+              <p className="lead reveal d2">
+                &quot;Near me&quot; searches have grown 200% in three years. Ranking for &quot;Colorado Springs HVAC company&quot; is good. Ranking for &quot;HVAC repair Briargate&quot; is better and less competitive.
+              </p>
 
-            <div className="faq-layout">
-              {/* Sidebar nav */}
-              <nav className="faq-nav">
-                {FAQ_GROUPS.map((g, i) => (
-                  <a key={g.id} href={`#${g.id}`} className={i === 0 ? 'faq-nav-link active' : 'faq-nav-link'}>{g.label}</a>
-                ))}
-              </nav>
+              <div className="chips-scroll" id="chipsScroll">
+                <span className="n-chip">Downtown COS</span>
+                <span className="n-chip">Broadmoor</span>
+                <span className="n-chip">Briargate</span>
+                <span className="n-chip">Old Colorado City</span>
+                <span className="n-chip">Manitou Springs</span>
+                <span className="n-chip">Woodmen Road</span>
+                <span className="n-chip">Fountain</span>
+                <span className="n-chip">Black Forest</span>
+                <span className="n-chip">Rockrimmon</span>
+                <span className="n-chip">Northgate</span>
+                <span className="n-chip">Chapel Hills</span>
+                <span className="n-chip">Academy Blvd</span>
+                <span className="n-chip">Powers Corridor</span>
+                <span className="n-chip">Monument</span>
+                <span className="n-chip">Security-Widefield</span>
+                <span className="n-chip">Interquest</span>
+              </div>
 
-              {/* FAQ content */}
-              <div className="faq-content">
-                {FAQ_GROUPS.map((g) => (
-                  <div className="faq-category reveal" id={g.id} key={g.id}>
-                    <span className="faq-cat-label">{g.label}</span>
-                    {g.items.map((it) => (
-                      <details key={it.q}>
-                        <summary>{it.q}</summary>
-                        <div className="faq-answer">{it.a}</div>
-                      </details>
-                    ))}
+              <div className="neighborhoods-note reveal">
+                We create dedicated landing pages for the neighborhoods where your revenue actually comes from. Not just the generic city term that every competitor is also chasing.
+              </div>
+            </div>
+          </section>
+
+          {/* ===== PROCESS ===== */}
+          <section className="process-section" id="process">
+            <div className="wrap">
+              <span className="eyebrow reveal">How It Works</span>
+              <h2 className="reveal d1">What a Colorado Springs SEO campaign actually looks like.</h2>
+
+              <div className="process-steps">
+                <div className="process-step reveal">
+                  <div className="step-num">1</div>
+                  <div>
+                    <div className="step-week">Wk 1</div>
+                    <div className="step-title">Competitive Audit</div>
+                    <div className="step-desc">Keyword gaps, technical debt, local citation health, competitor positioning.</div>
                   </div>
-                ))}
-              </div>{/* /faq-content */}
-            </div>{/* /faq-layout */}
-          </div>
-        </section>
+                </div>
+                <div className="process-step reveal d1">
+                  <div className="step-num">2</div>
+                  <div>
+                    <div className="step-week">Wk 1 - 2</div>
+                    <div className="step-title">Technical Foundation</div>
+                    <div className="step-desc">Core Web Vitals, schema markup, crawl coverage, site architecture clean-up.</div>
+                  </div>
+                </div>
+                <div className="process-step reveal d2">
+                  <div className="step-num">3</div>
+                  <div>
+                    <div className="step-week">Wk 2 - 3</div>
+                    <div className="step-title">GBP Optimization</div>
+                    <div className="step-desc">Google Business Profile, Map Pack targeting, local citation builds for COS neighborhoods.</div>
+                  </div>
+                </div>
+                <div className="process-step reveal d3">
+                  <div className="step-num">4</div>
+                  <div>
+                    <div className="step-week">Wk 2 - 8</div>
+                    <div className="step-title">Content Production</div>
+                    <div className="step-desc">Neighborhood pages, service pages, topical authority content. Written by humans, reviewed for E-E-A-T.</div>
+                  </div>
+                </div>
+                <div className="process-step reveal d4">
+                  <div className="step-num">5</div>
+                  <div>
+                    <div className="step-week">Ongoing</div>
+                    <div className="step-title">Authority Building</div>
+                    <div className="step-desc">Link acquisition, digital PR, review velocity, and monthly ranking reports with clear attribution.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-        {/* ===== FINAL CTA ===== */}
-        <section className="final-cta">
-          <div className="wrap">
-            <h2 className="reveal">See exactly who is outranking you in Colorado Springs.</h2>
-            <p className="lead reveal d1">
-              Free 30-minute audit. We will pull your Google positions for your top 10 keywords, show you your real competitors, and give you a clear action plan.
-            </p>
-            <a href={CALENDLY} className="btn-white reveal d2">
-              Get My Free COS Audit
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
-            <p style={{ marginTop: '28px', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
-              Also in Colorado Springs:{' '}
-              <Link href="/services/web-design" style={{ color: 'rgba(255,255,255,0.8)' }}>web design</Link>
-              {' '}and{' '}
-              <Link href="/services/seo" style={{ color: 'rgba(255,255,255,0.8)' }}>US SEO services</Link>.
-            </p>
-          </div>
-        </section>
+          {/* ===== TEAM ===== */}
+          <section className="team-section">
+            <div className="wrap">
+              <span className="eyebrow-d reveal">The Team</span>
+              <h2 className="reveal d1">The SEO team Colorado Springs businesses hire when they are serious about growth.</h2>
 
-      </div>{/* /cosseo */}
+              <div className="team-grid">
+                <div className="team-img-wrap reveal">
+                  <Image
+                    src="/images/us/colorado-springs/seo/team.webp"
+                    alt="FactoryJet SEO team Colorado Springs"
+                    width={600}
+                    height={500}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
 
+                <div className="team-right reveal d1">
+                  <div className="founder-card">
+                    <div className="founder-name">Bhavesh Barot</div>
+                    <div className="founder-role">Founder, FactoryJet</div>
+                    <p className="founder-quote">
+                      &quot;Returns on your time. If your rankings are not moving within 90 days, we find out why and we fix it.&quot;
+                    </p>
+                  </div>
+
+                  <div className="team-trust-chips">
+                    <span className="trust-chip"><span className="tc-dot" />500+ businesses ranked</span>
+                    <span className="trust-chip"><span className="tc-dot" />12+ years expertise</span>
+                    <span className="trust-chip"><span className="tc-dot" />7-day launch guarantee</span>
+                  </div>
+
+                  <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '14.5px', lineHeight: '1.65' }}>
+                    Every campaign gets a dedicated strategist, a content writer with category expertise, and a technical SEO lead. Not a junior account manager relaying messages to a team you never meet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ===== FAQ ===== */}
+          <section className="faq-section">
+            <div className="wrap">
+              <span className="eyebrow reveal">FAQs</span>
+              <h2 className="reveal d1">Questions Colorado Springs business owners ask us before they start.</h2>
+
+              <div className="faq-layout">
+                {/* Sidebar nav */}
+                <nav className="faq-nav">
+                  {FAQ_GROUPS.map((g, i) => (
+                    <a key={g.id} href={`#${g.id}`} className={i === 0 ? 'faq-nav-link active' : 'faq-nav-link'}>{g.label}</a>
+                  ))}
+                </nav>
+
+                {/* FAQ content */}
+                <div className="faq-content">
+                  {FAQ_GROUPS.map((g) => (
+                    <div className="faq-category reveal" id={g.id} key={g.id}>
+                      <span className="faq-cat-label">{g.label}</span>
+                      {g.items.map((it) => (
+                        <details key={it.q}>
+                          <summary>{it.q}</summary>
+                          <div className="faq-answer">{it.a}</div>
+                        </details>
+                      ))}
+                    </div>
+                  ))}
+                </div>{/* /faq-content */}
+              </div>{/* /faq-layout */}
+            </div>
+          </section>
+
+          {/* ===== FINAL CTA ===== */}
+          <section className="final-cta">
+            <div className="wrap">
+              <h2 className="reveal">See exactly who is outranking you in Colorado Springs.</h2>
+              <p className="lead reveal d1">
+                Free 30-minute audit. We will pull your Google positions for your top 10 keywords, show you your real competitors, and give you a clear action plan.
+              </p>
+              <a href={CALENDLY} className="btn-white reveal d2">
+                Get My Free COS Audit
+                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+              <p style={{ marginTop: '28px', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+                Also in Colorado Springs:{' '}
+                <Link href="/services/web-design" style={{ color: 'rgba(255,255,255,0.8)' }}>web design</Link>
+                {' '}and{' '}
+                <Link href="/services/seo" style={{ color: 'rgba(255,255,255,0.8)' }}>US SEO services</Link>.
+              </p>
+            </div>
+          </section>
+
+        </div>{/* /cosseo */}
+
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
 
       {/* ===== JSON-LD SCHEMA ===== */}

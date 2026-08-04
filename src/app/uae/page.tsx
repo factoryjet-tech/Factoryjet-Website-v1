@@ -152,7 +152,9 @@ export default function Page() {
       />
 
       <SiteHeader locale="uae" />
-      <UaePage />
+      <main>
+        <UaePage />
+      </main>
       <SiteFooter locale="uae" />
     </>
   )

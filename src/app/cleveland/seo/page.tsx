@@ -240,7 +240,7 @@ export default function ClevelandSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="clseo">
+      <main className="clseo">
         {/* HERO */}
         <section className="hero">
           <div className="wrap hero-grid">
@@ -459,7 +459,7 @@ export default function ClevelandSeoPage() {
             <p className="fine">SEO services in Cleveland, Ohio, month-to-month, free audit, no setup fee. Also in Cleveland: <Link href="/cleveland/web-design">web design</Link>. See <Link href="/services/seo">US SEO services</Link> and our <Link href="/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link>.</p>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

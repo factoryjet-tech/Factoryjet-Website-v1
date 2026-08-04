@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import BlogPage from '@/pages/Blog'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -68,20 +69,26 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      {/* Breadcrumb Structured Data */}
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com' },
-        { name: 'Blog', url: 'https://factoryjet.com/blog' },
-      ]} />
+      <main>
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Blog', url: 'https://factoryjet.com/blog' },
+        ]} />
+        {/* Breadcrumb Structured Data */}
+        <BreadcrumbSchema items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Blog', url: 'https://factoryjet.com/blog' },
+        ]} />
 
-      {/* Blog Listing Structured Data */}
-      <script
-        id="blog-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
-      />
+        {/* Blog Listing Structured Data */}
+        <script
+          id="blog-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
+        />
 
-      <BlogPage />
+        <BlogPage />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

@@ -558,7 +558,7 @@ export default function CharlotteSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="cseo">
+      <main className="cseo">
         {/* HERO: editorial type + skyline-chart band */}
         <section className="hero">
           <div className="wrap hero-copy">
@@ -920,7 +920,7 @@ export default function CharlotteSeoPage() {
             <p className="fine">Local SEO billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/charlotte/web-design">web design</Link>, <Link href="/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/charlotte/ai-automation">AI automation</Link>. <Link href="/services/seo">US SEO services</Link>. More US cities: <Link href="/cleveland/seo">Cleveland SEO</Link> · <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
-      </div>
+      </main>
 
       <ExitIntentLeadForm
         region="us"

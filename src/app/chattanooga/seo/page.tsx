@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -306,7 +307,12 @@ export default function ChattanoogaSeoPage() {
         ]}
       />
 
-      <div className="cseo">
+      <main className="cseo">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'US SEO Services', url: 'https://factoryjet.com/services/seo' },
+          { name: 'Chattanooga SEO', url: CANONICAL },
+        ]} />
         {/* 1 HERO - The Itinerary */}
         <section className="hero">
           <div className="wrap">
@@ -684,7 +690,7 @@ export default function ChattanoogaSeoPage() {
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

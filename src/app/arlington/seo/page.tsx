@@ -265,7 +265,7 @@ export default function ArlingtonSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="aseo">
+      <main className="aseo">
 
         {/* HERO */}
         <section className="hero">
@@ -546,7 +546,7 @@ export default function ArlingtonSeoPage() {
           </div>
         </section>
 
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

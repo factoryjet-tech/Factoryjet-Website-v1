@@ -495,779 +495,781 @@ export default function HuntingtonBeachSEO() {
       />
       <div className="hbseo">
         <SiteHeader />
+        <main>
 
-        {/* ── HERO ─────────────────────────────────────────────────────── */}
-        <section className="hero">
-          <div className="wrap hero-grid">
-            {/* Left: copy */}
-            <div>
-              <div className="loc rise"><b />&nbsp;Huntington Beach, CA</div>
-              <h1 className="rise d1">
-                Huntington Beach <span className="it">SEO company</span><br />
-                for businesses that need<br />the map pack, not a report.
-              </h1>
-              <p className="lead rise d2">
-                We get Huntington Beach and Orange County businesses into Google's three
-                map results and into the AI answers that increasingly sit above them.
-                Month to month, senior people doing the work, free audit first.
-              </p>
-              <div className="hstat rise d3">
-                <div className="n">
-                  <span className="star">★</span>&nbsp;5.0
-                  <span className="l">/ 500+ clients</span>
+          {/* ── HERO ─────────────────────────────────────────────────────── */}
+          <section className="hero">
+            <div className="wrap hero-grid">
+              {/* Left: copy */}
+              <div>
+                <div className="loc rise"><b />&nbsp;Huntington Beach, CA</div>
+                <h1 className="rise d1">
+                  Huntington Beach <span className="it">SEO company</span><br />
+                  for businesses that need<br />the map pack, not a report.
+                </h1>
+                <p className="lead rise d2">
+                  We get Huntington Beach and Orange County businesses into Google's three
+                  map results and into the AI answers that increasingly sit above them.
+                  Month to month, senior people doing the work, free audit first.
+                </p>
+                <div className="hstat rise d3">
+                  <div className="n">
+                    <span className="star">★</span>&nbsp;5.0
+                    <span className="l">/ 500+ clients</span>
+                  </div>
+                  <div className="sep" />
+                  <div className="n">7 days<span className="l">&nbsp;to start</span></div>
+                  <div className="sep" />
+                  <div className="n">No<span className="l">&nbsp;setup fee</span></div>
                 </div>
-                <div className="sep" />
-                <div className="n">7 days<span className="l">&nbsp;to start</span></div>
-                <div className="sep" />
-                <div className="n">No<span className="l">&nbsp;setup fee</span></div>
+                <HeroInlineForm region="us" source="huntington_beach_seo_hero" submitLabel="Get my free SEO audit" />
+                <div className="cta-row rise d4">
+                  <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                    Talk to the founder
+                  </a>
+                </div>
               </div>
-              <HeroInlineForm region="us" source="huntington_beach_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="cta-row rise d4">
-                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  Talk to the founder
-                </a>
+
+              {/* Right: search visibility sequence card */}
+              <div className="hero-vis float">
+                {/* Floating chips */}
+                <div className="schip ch1">
+                  <div className="k">"seo company near me"</div>
+                  <div className="v">14,800 / mo</div>
+                </div>
+                <div className="schip ch2">
+                  <div className="cdot" />
+                  <div className="ct2">Difficulty 24 / 100</div>
+                </div>
+
+                <div className="surfcard">
+                  {/* Header */}
+                  <div className="sc-head">
+                    <div className="sc-title">HB visibility: the usual sequence</div>
+                    <div className="sc-live">
+                      <b />
+                      <span>LIVE</span>
+                    </div>
+                  </div>
+
+                  {/* Ocean area */}
+                  <div className="sc-ocean">
+                    <div className="swellmark">
+                      <div className="sw-val">Top 3</div>
+                      <div className="sw-lbl">the only spot that pays</div>
+                    </div>
+                  </div>
+
+                  {/* Sequence rows */}
+                  <div className="sc-forecast">
+                    {FORECAST.map(({ day, label, pct, badge }) => (
+                      <div className="sf-row" key={day}>
+                        <div className="sf-day">{day}</div>
+                        <div className="sf-label">{label}</div>
+                        <div className="sf-bar-wrap">
+                          <div className="sf-bar" style={{ width: `${pct}%` }} />
+                        </div>
+                        <div className={`sf-badge ${badge}`}>{badge === 'prime' ? 'PRIME' : badge === 'fair' ? 'GOOD' : 'NOW'}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
+          </section>
 
-            {/* Right: search visibility sequence card */}
-            <div className="hero-vis float">
-              {/* Floating chips */}
-              <div className="schip ch1">
-                <div className="k">"seo company near me"</div>
-                <div className="v">14,800 / mo</div>
-              </div>
-              <div className="schip ch2">
-                <div className="cdot" />
-                <div className="ct2">Difficulty 24 / 100</div>
+          {/* ── ANSWER FIRST ─────────────────────────────────────────────── */}
+          <section id="answer" style={{ paddingTop: 0, paddingBottom: '72px' }}>
+            <div className="wrap">
+              <div className="bluf rise">
+                <p>
+                  <strong>Short answer:</strong> SEO in Huntington Beach is done by a handful of Orange County
+                  studios, several national agencies that publish a page for every city, and specialist firms
+                  like FactoryJet. The work itself is not mysterious. It is four jobs: make your Google Business
+                  Profile good enough to hold one of the three map spots that sit above everything else, publish
+                  pages that answer what Surf City customers actually type, fix the technical faults keeping those
+                  pages out of the index, and earn enough real Orange County mentions that Google treats you as
+                  an established business rather than a new listing. Nobody needs a contract to find out which
+                  of the four is broken. That takes about thirty minutes.
+                </p>
               </div>
 
-              <div className="surfcard">
-                {/* Header */}
-                <div className="sc-head">
-                  <div className="sc-title">HB visibility: the usual sequence</div>
-                  <div className="sc-live">
-                    <b />
-                    <span>LIVE</span>
+              <div className="grid2">
+                <div className="ucard">
+                  <div className="pill">Job one</div>
+                  <h3>The map pack</h3>
+                  <p>
+                    Three businesses appear above the organic results when somebody searches locally. Google picks
+                    them on relevance, distance and prominence. Relevance and prominence are things you can change.
+                    Distance is why a Main Street business and a Beach Boulevard business are effectively in two
+                    different markets. <Link href="/services/local-seo">Local SEO</Link> is the work that moves the
+                    first two.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Job two</div>
+                  <h3>The pages underneath</h3>
+                  <p>
+                    Google reads your website to decide what your profile is even about. One honest page per service,
+                    written the way a customer would describe the problem, does more than twenty thin blog posts.
+                    This is also where border coverage lives: Fountain Valley, Westminster, Seal Beach.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Job three</div>
+                  <h3>The technical floor</h3>
+                  <p>
+                    Speed on a phone, clean structure, schema, no crawl traps, no duplicate listings fighting each
+                    other. None of it wins anything on its own, all of it can quietly cap everything else. Our{' '}
+                    <Link href="/services/seo-audit">SEO audit</Link> exists to find out which of these applies to you.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Job four</div>
+                  <h3>Proof that you are real</h3>
+                  <p>
+                    Reviews, local press, Chamber and association pages, sponsorships, supplier mentions. Prominence
+                    is the slow ingredient and the one that keeps working. It is also what an AI engine checks when
+                    it decides whether to name you in an answer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── DARK STATS (the page's only dark section) ─────────────────── */}
+          <section className="dark">
+            <div className="wrap">
+              <div className="eyebrow">Real search data</div>
+              <h2>What Huntington Beach search demand actually looks like.</h2>
+              <p className="lead">
+                Pulled from DataForSEO for the US market in July 2026. We are including the unflattering
+                number as well as the encouraging ones.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/huntington-beach/seo/huntington-beach-seo-hero.webp"
+                  alt="Huntington Beach coastline and downtown, where beach visitor traffic meets an established Orange County resident market"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="statgrid">
+                <div className="scard">
+                  <div className="n">50 / mo</div>
+                  <div className="l">
+                    Searches for "huntington beach seo", with "seo huntington beach" adding the same again.
+                    The city term is small. A campaign built on it alone is the wrong campaign.
+                  </div>
+                  <div className="src">DataForSEO, US, July 2026</div>
+                </div>
+                <div className="scard">
+                  <div className="n">14,800</div>
+                  <div className="l">
+                    Monthly searches for "seo company near me". This is where the volume genuinely sits, and
+                    Google resolves it by location, so you compete for it without ever seeing the phrase.
+                  </div>
+                  <div className="src">DataForSEO, US, July 2026</div>
+                </div>
+                <div className="scard">
+                  <div className="n">24 / 100</div>
+                  <div className="l">
+                    Keyword difficulty for that same term. Low for the volume behind it. Local intent stays
+                    winnable because proximity resets the ranking rules in your favour.
+                  </div>
+                  <div className="src">DataForSEO keyword difficulty</div>
+                </div>
+                <div className="scard">
+                  <div className="n">11M+</div>
+                  <div className="l">
+                    Visitors a year to Huntington Beach, most arriving with a phone and no idea which local
+                    business to pick. Their entire shortlist is whatever Google shows them.
+                  </div>
+                  <div className="src">Visit Huntington Beach</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── HOW HARD IS IT REALLY ────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">The honest read</div>
+              <h2>How hard is it actually to rank in Huntington Beach?</h2>
+              <p className="lead">
+                Easier than it feels from where you are sitting, and here is the data behind that claim
+                rather than a reassurance.
+              </p>
+              <div className="cmpwrap">
+                <table className="data">
+                  <thead>
+                    <tr>
+                      <th>Keyword</th>
+                      <th>Searches / month</th>
+                      <th>Difficulty</th>
+                      <th>What it means for you</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {KEYWORDS.map(({ kw, vol, kd, read }) => (
+                      <tr key={kw}>
+                        <td className="kw">{kw}</td>
+                        <td className="num">{vol}</td>
+                        <td className="num">{kd}</td>
+                        <td className="mut">{read}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="note">Volumes and difficulty scores from DataForSEO, US market, pulled 26 July 2026.</p>
+              <p className="body">
+                Read the difficulty column again. Scores in the twenties and thirties, on a scale that runs to a
+                hundred, are not a fortress. They are an unattended shop. The reason the Huntington Beach results
+                feel immovable is not that the businesses holding those positions are formidable, it is that most
+                of them optimised once, several years ago, and have not been challenged since. A profile with no
+                posts and a website last touched in a previous decade holds its spot right up until somebody
+                consistent shows up.
+              </p>
+              <p className="body">
+                Note also what the city term is worth. Fifty searches a month at zero difficulty is worth owning,
+                and we will own it, but nobody funds a business on it. The money is in the near me family, in
+                category searches such as roofer, dentist, physio or surf lessons plus Huntington Beach, and in
+                the questions people ask before they are ready to call. That is the keyword set we actually build
+                toward, and it is why our <Link href="/services/seo">US SEO services</Link> lead with categories
+                rather than city names.
+              </p>
+            </div>
+          </section>
+
+          {/* ── LOCAL ECONOMY ────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">The local economy</div>
+              <h2>What actually pays the bills in Huntington Beach.</h2>
+              <p className="lead">
+                Search strategy that ignores how a city earns its money is just a template with the name
+                swapped. Here is what drives demand here, and what that does to the search results.
+              </p>
+              <div className="grid3">
+                {SECTORS.map(({ pill, h, p }) => (
+                  <div className="ucard" key={h}>
+                    <div className="pill">{pill}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="body">
+                The pattern across all six: the loud categories are contested and the quiet ones are not. Realtors
+                and restaurants fight hard. Marine services, industrial suppliers, trades serving ageing coastal
+                housing, and specialist B2B firms mostly do not fight at all, because their owners assume search
+                is for consumer businesses. That assumption is worth money to whoever ignores it first. If you run
+                an owner-operated business in one of those quiet categories, our{' '}
+                <Link href="/services/small-business-seo">small business SEO</Link> scope is built for exactly that
+                situation.
+              </p>
+            </div>
+          </section>
+
+          {/* ── GEOGRAPHY ────────────────────────────────────────────────── */}
+          <section className="room-blue">
+            <div className="wrap">
+              <div className="eyebrow">Geography</div>
+              <h2>The map does not respect city limits. Neither does Google.</h2>
+              <p className="lead">
+                Huntington Beach is long, narrow and pressed against the coast, and that shape has real
+                consequences for who shows up in whose map pack.
+              </p>
+              <div style={{ margin: '36px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/huntington-beach/seo/huntington-beach-oc-market.webp"
+                  alt="Huntington Beach business districts, from Main Street retail to the inland commercial corridors that serve Orange County residents"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <p className="body">
+                Google answers a near me search from wherever the person is standing. In a compact, round city that
+                is a detail. In Huntington Beach, which stretches for miles along the coast across four zip codes,
+                it is the whole game. Somebody standing at the pier and somebody standing at Bella Terra are getting
+                materially different results for the same words. Meanwhile the southeast of the city sits closer to
+                Fountain Valley and Costa Mesa businesses than to downtown ones, so residents there are routinely
+                served a business in another city entirely. If your service area content stops at the city line,
+                you have conceded that ground without being told.
+              </p>
+              <div className="grid3">
+                {DISTRICTS.map(({ pill, h, p }) => (
+                  <div className="ucard" key={h}>
+                    <div className="pill">{pill}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="districts">
+                Border cities that show up in Huntington Beach map results and that we cover in the same
+                engagement: <b>Fountain Valley</b>, <b>Westminster</b>, <b>Costa Mesa</b>, <b>Newport Beach</b>,
+                <b> Seal Beach</b>, <b>Garden Grove</b> and <b>Los Alamitos</b>.
+              </p>
+            </div>
+          </section>
+
+          {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">Who we work with</div>
+              <h2>The categories where this actually pays in Surf City.</h2>
+              <p className="lead">
+                Not every business needs a search campaign. These are the ones where the map pack decides
+                the month.
+              </p>
+              <div className="grid3">
+                {[
+                  {
+                    pill: 'Trades and home services',
+                    h: 'Roofing, HVAC, plumbing, windows, solar',
+                    p: 'The highest intent searches in the city and the fastest to convert. A homeowner near the water with a failing condenser in August is not researching, they are choosing from three map results. Ranking here is mostly profile quality, review velocity and honest service pages, not clever content.',
+                  },
+                  {
+                    pill: 'Restaurants and hospitality',
+                    h: 'Food, bars, hotels, vacation rentals',
+                    p: 'The most contested category in Huntington Beach, so we avoid the head-on fight. The wins are in the sub-niches: specific cuisines, the harbour waterfront, the highway corridor away from Main Street, and the dietary and occasion searches that nobody has written a page for.',
+                  },
+                  {
+                    pill: 'Health and wellness',
+                    h: 'Dental, physio, chiropractic, dermatology, med spas',
+                    p: 'Review-decided categories serving an older, higher-income resident base. We treat the review system as core infrastructure rather than an afterthought, because in these map packs it outweighs almost everything else.',
+                  },
+                  {
+                    pill: 'Marine and coastal services',
+                    h: 'Boat services, rentals, lessons, tours',
+                    p: 'Huntington Harbour and the waterfront generate activity-specific searches that almost nobody has optimised for. Low volume, but the queries are so precise that a single good page can own one outright.',
+                  },
+                  {
+                    pill: 'Professional services',
+                    h: 'Law, accounting, financial advice, consulting',
+                    p: 'Slower decisions and higher values, which means the content has to answer real questions rather than list credentials. This is also where AI answers matter most, because people increasingly ask an assistant before they ask a friend.',
+                  },
+                  {
+                    pill: 'B2B and industrial',
+                    h: 'Suppliers, fabricators, contract manufacturers',
+                    p: 'The quietest search surface in the city. Buyers search in very specific technical language, competition is nearly absent, and one contract can be worth a year of everything else. Chronically overlooked because owners assume search is a consumer channel.',
+                  },
+                ].map(({ pill, h, p }) => (
+                  <div className="ucard" key={h}>
+                    <div className="pill">{pill}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── LISTICLE ─────────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">Warning signs</div>
+              <h2>7 signs your Huntington Beach business is losing customers to search right now.</h2>
+              <p className="lead">
+                Each one is a direct revenue leak. Most can be closed inside the first sixty days.
+              </p>
+              <ul className="listicle-list">
+                {LISTICLE.map(({ n, h, p }) => (
+                  <li key={n}>
+                    <div className="li-n">{n}</div>
+                    <div>
+                      <div className="li-h">{h}</div>
+                      <div className="li-p">{p}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* ── NAMED COMPETITORS ────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">The other agencies</div>
+              <h2>Who else turns up when you search for a Huntington Beach SEO company.</h2>
+              <p className="lead">
+                You are going to compare us against these firms, so here they are with their real numbers,
+                described fairly. Several of them are good.
+              </p>
+
+              <div className="grid2">
+                <div className="ucard">
+                  <div className="pill">Most visible</div>
+                  <h3>Thrive Internet Marketing Agency</h3>
+                  <p>
+                    thriveagency.com is the most visible name across the results we sampled: eleven appearances at
+                    an average position of 3.8. A large, multi-office agency with a page for what feels like every
+                    city and service combination in the country, and they rank internationally too, holding first
+                    place for "agentur marketing" at around 720 searches a month and "agences marketing digital"
+                    at around 590. If you want a deep bench, formal account structure and a big brand name on the
+                    invoice, they are a legitimate choice. The trade-off is that you are unlikely to have the
+                    founder on your monthly call.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Closest in approach</div>
+                  <h3>Lesser Media</h3>
+                  <p>
+                    lessermedia.com appears four times at an average position of 11.8, and they are a genuine
+                    local specialist rather than a generalist. Their page-one keywords show the method: position 4
+                    for "seo springfield" and "seo stamford" at roughly 110 searches a month each, position 3 for
+                    "ppc san antonio" at around 90. That is patient, city-by-city work and it clearly functions.
+                    Where we differ: we fold AI answer visibility into the same engagement rather than treating it
+                    as a separate product, and we publish the underlying search data on the page, as here.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">The benchmark</div>
+                  <h3>Charlotte SEO Firm</h3>
+                  <p>
+                    charlotteseofirm.com is worth naming even though they are not in California, because they are
+                    the clearest example of what owning a city looks like. Position 1 for both "charlotte seo
+                    companies" and "charlotte seo company" at around 880 searches a month each, and position 1 for
+                    "charlotte nc seo". One city, taken completely. When you evaluate any agency including us, that
+                    is the question worth asking: show me a city you actually own, not a wall of logos.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">The rest of the field</div>
+                  <h3>Straight North, Helium SEO, TastyPlacement and others</h3>
+                  <p>
+                    Straight North is strong on B2B lead generation. Helium SEO leans on measurement.
+                    TastyPlacement appears rarely but places very high when it does, at an average position of 2.0.
+                    Elit-Web, Tiger29 and Synchronicity Designs round out the field. If paid search or pure lead
+                    generation is your real requirement rather than local organic, some of these will fit you
+                    better than we will, and we would rather say so now than three months in.
+                  </p>
+                </div>
+              </div>
+
+              <div className="cmpwrap">
+                <table className="data">
+                  <thead>
+                    <tr>
+                      <th>Domain</th>
+                      <th>Times seen on these results</th>
+                      <th>Average position</th>
+                      <th>What they are</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {RIVALS.map(({ d, seen, pos, note }) => (
+                      <tr key={d}>
+                        <td className="kw">{d}</td>
+                        <td className="num">{seen}</td>
+                        <td className="num">{pos}</td>
+                        <td className="mut">{note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="note">SERP appearance counts and average positions from DataForSEO, US market, July 2026.</p>
+
+              <p className="body">
+                <strong>Where FactoryJet actually stands.</strong> We are the challenger on this results page and
+                pretending otherwise would be insulting. We have 44 referring domains. Coalition Technologies, one
+                of the larger agencies competing in this space, has somewhere around 2,800. Our own best local
+                positions right now are number 10 for "local seo nashville" and number 8 for "seo agency austin
+                texas": one on page one, one knocking on the door. We are telling you this because it is the exact
+                position most Huntington Beach businesses are in, and because the method currently moving those
+                two pages is the same one we would run for you. If your priority is hiring the agency with the
+                biggest link profile, that is not us. If your priority is senior people doing the work on a month
+                to month agreement, with the data shown rather than summarised, that part we can back.
+              </p>
+            </div>
+          </section>
+
+          {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
+          <section className="room-lav">
+            <div className="wrap">
+              <div className="eyebrow">What you get</div>
+              <h2>One engagement, the whole stack, every month.</h2>
+              <p className="lead">
+                No package tiers, no feature gates, nothing important sitting behind an upgrade.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/shared/factoryjet-senior-engineer.webp"
+                  alt="A FactoryJet engineer reviewing technical SEO data, because senior people do the delivery rather than hand it to an account manager"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="grid2">
+                {[
+                  {
+                    h: 'Technical SEO and site health',
+                    p: 'Page speed on a phone, crawl and index issues, schema markup for local business, service and FAQ, internal linking, and the structured data that makes AI citation possible at all. This layer never wins on its own and always caps everything else when it is broken.',
+                  },
+                  {
+                    h: 'Google Business Profile management',
+                    p: 'Every field completed properly, real photos added on a schedule, service descriptions written in customer language, weekly posts tied to Huntington Beach events and seasonal demand, Q&A answered, and a review system that produces a steady drip rather than a suspicious burst.',
+                  },
+                  {
+                    h: 'Local content that answers real questions',
+                    p: 'One to two substantial pieces a month aimed at your highest-value Huntington Beach and Orange County queries, including the border coverage most local sites skip. Structured answer-first so it can be lifted into a featured snippet or an AI answer.',
+                  },
+                  {
+                    h: 'Orange County link earning',
+                    p: 'The Huntington Beach Independent, the Orange County Register where there is a real story, the Chamber, Visit Huntington Beach, the downtown business association, event and sponsorship pages, and category directories in surf, marine, trades and property. No paid schemes.',
+                  },
+                  {
+                    h: 'AI answer visibility',
+                    p: 'We structure the site so Google AI Overviews, ChatGPT and Perplexity can cite you, then check per engine whether they do and report it monthly. Detailed on our AI SEO service page, and included here rather than sold separately.',
+                  },
+                  {
+                    h: 'Reporting and a live call',
+                    p: 'Calls and form fills from organic, profile call volume and direction requests, ranking movement on your priority queries, AI citation status, technical health, and what competitors did. Then a conversation with someone who did the work, not a dashboard login.',
+                  },
+                ].map(({ h, p }) => (
+                  <div className="ucard" key={h}>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── PROCESS ──────────────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">How it works</div>
+              <h2>From audit to map pack in four steps.</h2>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="A FactoryJet founder-led audit call, thirty minutes mapping the Huntington Beach search opportunity with no obligation"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="grid4">
+                {[
+                  {
+                    n: '01',
+                    h: 'Free audit call',
+                    p: 'Thirty minutes on your profile, your site health, where you sit for your main local queries, and what the three businesses above you are doing that you are not. You keep the priority list either way.',
+                  },
+                  {
+                    n: '02',
+                    h: 'Scope and kickoff',
+                    p: 'One flat monthly fee scoped to your category, your locations and your starting point. Access setup and the technical baseline take about a week. No extended onboarding theatre.',
+                  },
+                  {
+                    n: '03',
+                    h: 'Fix, publish, earn',
+                    p: 'Technical faults in weeks one and two. Profile and citation work from week two. Content and local link earning from week three, then on a steady monthly rhythm that does not stop.',
+                  },
+                  {
+                    n: '04',
+                    h: 'Measure and adapt',
+                    p: 'Monthly review against your actual Huntington Beach competitors, a written plan for the next thirty days, and a change of direction when the data says so rather than when the contract renews.',
+                  },
+                ].map(({ n, h, p }) => (
+                  <div className="ucard" key={n}>
+                    <div className="pill">{n}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── COMPARISON ───────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">How we compare</div>
+              <h2>FactoryJet against a traditional Orange County agency.</h2>
+              <p className="lead">
+                Including the row where we come off worse, because you would find it anyway.
+              </p>
+              <div className="cmpwrap">
+                <table className="cmp">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th className="fjh">FactoryJet</th>
+                      <th>Traditional Agency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COMPARE.map(({ k, fj, alt, hl }) => (
+                      <tr key={k}>
+                        <td className="k">{k}</td>
+                        <td className="fj">
+                          {hl ? <span className="hl">{fj}</span> : fj}
+                        </td>
+                        <td className="alt">{alt}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* ── PROOF ────────────────────────────────────────────────────── */}
+          <section className="room-blue proof">
+            <div className="wrap">
+              <div className="eyebrow">What we can actually back</div>
+              <h2>Senior delivery, founder-led strategy, results tracked to the phone.</h2>
+              <p className="lead">
+                We measure calls and form fills, not ranking screenshots, because only one of those two
+                things pays a payroll.
+              </p>
+              <div className="quote">
+                <p>
+                  "FactoryJet's team is as senior as any agency I've worked with, but they communicate like
+                  a partner, not a vendor. We saw profile call volume double in the first two months and organic
+                  leads follow in month four."
+                </p>
+                <div className="byline">
+                  <div className="avatar">B</div>
+                  <div>
+                    <div className="nm">Ricky B, Belle Maison</div>
+                    <div className="ti">Retail and home decor, US market</div>
                   </div>
                 </div>
+              </div>
+              <div style={{ margin: '32px 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/huntington-beach/seo/huntington-beach-seo-results.webp"
+                  alt="A Huntington Beach business owner reviewing local search performance across the Orange County market"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="clients">
+                {['Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
+                  (c) => <span key={c}>{c}</span>
+                )}
+              </div>
+            </div>
+          </section>
 
-                {/* Ocean area */}
-                <div className="sc-ocean">
-                  <div className="swellmark">
-                    <div className="sw-val">Top 3</div>
-                    <div className="sw-lbl">the only spot that pays</div>
+          {/* ── INTERNAL LINKS ───────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">Go deeper</div>
+              <h2>The rest of the detail, if you want it before you call.</h2>
+              <p className="lead">
+                Everything on this page is the Huntington Beach version of a wider programme. These pages
+                go further into each part of it.
+              </p>
+              <div className="linkgrid">
+                {NEXT_LINKS.map(({ href, h, p }) => (
+                  <Link className="linkcard" href={href} key={href}>
+                    <div className="lh">{h}</div>
+                    <div className="lp">{p}</div>
+                    <span className="go">Read more</span>
+                  </Link>
+                ))}
+              </div>
+              <p className="districts">
+                Comparing markets? We publish the same depth for other US cities, including{' '}
+                <Link href="/austin/seo">SEO in Austin</Link>, <Link href="/nashville/seo">SEO in Nashville</Link>{' '}
+                and <Link href="/tampa/seo">SEO in Tampa</Link>. Austin and Nashville are the two markets where
+                our own pages currently rank, which is why we point at them rather than at a case study we
+                cannot show you.
+              </p>
+            </div>
+          </section>
+
+          {/* ── FAQ ──────────────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">Questions answered</div>
+              <h2>What Huntington Beach owners ask before they start.</h2>
+              <p className="lead">
+                These are the questions people actually search alongside local SEO, answered the way we
+                would answer them on the phone.
+              </p>
+              <div className="faqgrid">
+                <nav aria-label="FAQ categories">
+                  <div className="faqnav">
+                    {FAQ_GROUPS.map((g) => (
+                      <a href={`#faq-${g.id}`} key={g.id}>
+                        {g.label}<span className="ct">{g.items.length}</span>
+                      </a>
+                    ))}
                   </div>
-                </div>
-
-                {/* Sequence rows */}
-                <div className="sc-forecast">
-                  {FORECAST.map(({ day, label, pct, badge }) => (
-                    <div className="sf-row" key={day}>
-                      <div className="sf-day">{day}</div>
-                      <div className="sf-label">{label}</div>
-                      <div className="sf-bar-wrap">
-                        <div className="sf-bar" style={{ width: `${pct}%` }} />
-                      </div>
-                      <div className={`sf-badge ${badge}`}>{badge === 'prime' ? 'PRIME' : badge === 'fair' ? 'GOOD' : 'NOW'}</div>
+                  <p className="faqhelp">
+                    Something not covered? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a> and
+                    we will answer it live.
+                  </p>
+                </nav>
+                <div>
+                  {FAQ_GROUPS.map((g) => (
+                    <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
+                      <div className="ch">{g.label}</div>
+                      {g.items.map((it) => (
+                        <details key={it.q}>
+                          <summary>{it.q}</summary>
+                          <p>{it.a}</p>
+                        </details>
+                      ))}
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ── ANSWER FIRST ─────────────────────────────────────────────── */}
-        <section id="answer" style={{ paddingTop: 0, paddingBottom: '72px' }}>
-          <div className="wrap">
-            <div className="bluf rise">
-              <p>
-                <strong>Short answer:</strong> SEO in Huntington Beach is done by a handful of Orange County
-                studios, several national agencies that publish a page for every city, and specialist firms
-                like FactoryJet. The work itself is not mysterious. It is four jobs: make your Google Business
-                Profile good enough to hold one of the three map spots that sit above everything else, publish
-                pages that answer what Surf City customers actually type, fix the technical faults keeping those
-                pages out of the index, and earn enough real Orange County mentions that Google treats you as
-                an established business rather than a new listing. Nobody needs a contract to find out which
-                of the four is broken. That takes about thirty minutes.
+          {/* ── FINAL CTA ────────────────────────────────────────────────── */}
+          <section className="final">
+            <div className="wrap">
+              <div className="eyebrow">Ready to start</div>
+              <h2>
+                Let's find out what is actually<br />
+                <span className="it">holding your Huntington Beach listing back.</span>
+              </h2>
+              <p className="lead">
+                A free thirty-minute audit. Where you stand, what your three map pack competitors are doing,
+                and the three moves with the biggest effect. No obligation and no pressure.
+              </p>
+              <div className="cta-row">
+                <ModalCTAButton
+                  label="Get your free SEO audit"
+                  region="us"
+                  modalVariant="seo"
+                  btnVariant="primary-light"
+                />
+                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  Talk to the founder
+                </a>
+              </div>
+              <p className="fine">
+                Month to month &middot; free audit &middot; no setup fee &middot; senior delivery &middot; serving Huntington Beach and Orange County
               </p>
             </div>
+          </section>
 
-            <div className="grid2">
-              <div className="ucard">
-                <div className="pill">Job one</div>
-                <h3>The map pack</h3>
-                <p>
-                  Three businesses appear above the organic results when somebody searches locally. Google picks
-                  them on relevance, distance and prominence. Relevance and prominence are things you can change.
-                  Distance is why a Main Street business and a Beach Boulevard business are effectively in two
-                  different markets. <Link href="/services/local-seo">Local SEO</Link> is the work that moves the
-                  first two.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Job two</div>
-                <h3>The pages underneath</h3>
-                <p>
-                  Google reads your website to decide what your profile is even about. One honest page per service,
-                  written the way a customer would describe the problem, does more than twenty thin blog posts.
-                  This is also where border coverage lives: Fountain Valley, Westminster, Seal Beach.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Job three</div>
-                <h3>The technical floor</h3>
-                <p>
-                  Speed on a phone, clean structure, schema, no crawl traps, no duplicate listings fighting each
-                  other. None of it wins anything on its own, all of it can quietly cap everything else. Our{' '}
-                  <Link href="/services/seo-audit">SEO audit</Link> exists to find out which of these applies to you.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Job four</div>
-                <h3>Proof that you are real</h3>
-                <p>
-                  Reviews, local press, Chamber and association pages, sponsorships, supplier mentions. Prominence
-                  is the slow ingredient and the one that keeps working. It is also what an AI engine checks when
-                  it decides whether to name you in an answer.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── DARK STATS (the page's only dark section) ─────────────────── */}
-        <section className="dark">
-          <div className="wrap">
-            <div className="eyebrow">Real search data</div>
-            <h2>What Huntington Beach search demand actually looks like.</h2>
-            <p className="lead">
-              Pulled from DataForSEO for the US market in July 2026. We are including the unflattering
-              number as well as the encouraging ones.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/huntington-beach/seo/huntington-beach-seo-hero.webp"
-                alt="Huntington Beach coastline and downtown, where beach visitor traffic meets an established Orange County resident market"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="statgrid">
-              <div className="scard">
-                <div className="n">50 / mo</div>
-                <div className="l">
-                  Searches for "huntington beach seo", with "seo huntington beach" adding the same again.
-                  The city term is small. A campaign built on it alone is the wrong campaign.
-                </div>
-                <div className="src">DataForSEO, US, July 2026</div>
-              </div>
-              <div className="scard">
-                <div className="n">14,800</div>
-                <div className="l">
-                  Monthly searches for "seo company near me". This is where the volume genuinely sits, and
-                  Google resolves it by location, so you compete for it without ever seeing the phrase.
-                </div>
-                <div className="src">DataForSEO, US, July 2026</div>
-              </div>
-              <div className="scard">
-                <div className="n">24 / 100</div>
-                <div className="l">
-                  Keyword difficulty for that same term. Low for the volume behind it. Local intent stays
-                  winnable because proximity resets the ranking rules in your favour.
-                </div>
-                <div className="src">DataForSEO keyword difficulty</div>
-              </div>
-              <div className="scard">
-                <div className="n">11M+</div>
-                <div className="l">
-                  Visitors a year to Huntington Beach, most arriving with a phone and no idea which local
-                  business to pick. Their entire shortlist is whatever Google shows them.
-                </div>
-                <div className="src">Visit Huntington Beach</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── HOW HARD IS IT REALLY ────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">The honest read</div>
-            <h2>How hard is it actually to rank in Huntington Beach?</h2>
-            <p className="lead">
-              Easier than it feels from where you are sitting, and here is the data behind that claim
-              rather than a reassurance.
-            </p>
-            <div className="cmpwrap">
-              <table className="data">
-                <thead>
-                  <tr>
-                    <th>Keyword</th>
-                    <th>Searches / month</th>
-                    <th>Difficulty</th>
-                    <th>What it means for you</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {KEYWORDS.map(({ kw, vol, kd, read }) => (
-                    <tr key={kw}>
-                      <td className="kw">{kw}</td>
-                      <td className="num">{vol}</td>
-                      <td className="num">{kd}</td>
-                      <td className="mut">{read}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="note">Volumes and difficulty scores from DataForSEO, US market, pulled 26 July 2026.</p>
-            <p className="body">
-              Read the difficulty column again. Scores in the twenties and thirties, on a scale that runs to a
-              hundred, are not a fortress. They are an unattended shop. The reason the Huntington Beach results
-              feel immovable is not that the businesses holding those positions are formidable, it is that most
-              of them optimised once, several years ago, and have not been challenged since. A profile with no
-              posts and a website last touched in a previous decade holds its spot right up until somebody
-              consistent shows up.
-            </p>
-            <p className="body">
-              Note also what the city term is worth. Fifty searches a month at zero difficulty is worth owning,
-              and we will own it, but nobody funds a business on it. The money is in the near me family, in
-              category searches such as roofer, dentist, physio or surf lessons plus Huntington Beach, and in
-              the questions people ask before they are ready to call. That is the keyword set we actually build
-              toward, and it is why our <Link href="/services/seo">US SEO services</Link> lead with categories
-              rather than city names.
-            </p>
-          </div>
-        </section>
-
-        {/* ── LOCAL ECONOMY ────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">The local economy</div>
-            <h2>What actually pays the bills in Huntington Beach.</h2>
-            <p className="lead">
-              Search strategy that ignores how a city earns its money is just a template with the name
-              swapped. Here is what drives demand here, and what that does to the search results.
-            </p>
-            <div className="grid3">
-              {SECTORS.map(({ pill, h, p }) => (
-                <div className="ucard" key={h}>
-                  <div className="pill">{pill}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-            <p className="body">
-              The pattern across all six: the loud categories are contested and the quiet ones are not. Realtors
-              and restaurants fight hard. Marine services, industrial suppliers, trades serving ageing coastal
-              housing, and specialist B2B firms mostly do not fight at all, because their owners assume search
-              is for consumer businesses. That assumption is worth money to whoever ignores it first. If you run
-              an owner-operated business in one of those quiet categories, our{' '}
-              <Link href="/services/small-business-seo">small business SEO</Link> scope is built for exactly that
-              situation.
-            </p>
-          </div>
-        </section>
-
-        {/* ── GEOGRAPHY ────────────────────────────────────────────────── */}
-        <section className="room-blue">
-          <div className="wrap">
-            <div className="eyebrow">Geography</div>
-            <h2>The map does not respect city limits. Neither does Google.</h2>
-            <p className="lead">
-              Huntington Beach is long, narrow and pressed against the coast, and that shape has real
-              consequences for who shows up in whose map pack.
-            </p>
-            <div style={{ margin: '36px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/huntington-beach/seo/huntington-beach-oc-market.webp"
-                alt="Huntington Beach business districts, from Main Street retail to the inland commercial corridors that serve Orange County residents"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <p className="body">
-              Google answers a near me search from wherever the person is standing. In a compact, round city that
-              is a detail. In Huntington Beach, which stretches for miles along the coast across four zip codes,
-              it is the whole game. Somebody standing at the pier and somebody standing at Bella Terra are getting
-              materially different results for the same words. Meanwhile the southeast of the city sits closer to
-              Fountain Valley and Costa Mesa businesses than to downtown ones, so residents there are routinely
-              served a business in another city entirely. If your service area content stops at the city line,
-              you have conceded that ground without being told.
-            </p>
-            <div className="grid3">
-              {DISTRICTS.map(({ pill, h, p }) => (
-                <div className="ucard" key={h}>
-                  <div className="pill">{pill}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-            <p className="districts">
-              Border cities that show up in Huntington Beach map results and that we cover in the same
-              engagement: <b>Fountain Valley</b>, <b>Westminster</b>, <b>Costa Mesa</b>, <b>Newport Beach</b>,
-              <b> Seal Beach</b>, <b>Garden Grove</b> and <b>Los Alamitos</b>.
-            </p>
-          </div>
-        </section>
-
-        {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">Who we work with</div>
-            <h2>The categories where this actually pays in Surf City.</h2>
-            <p className="lead">
-              Not every business needs a search campaign. These are the ones where the map pack decides
-              the month.
-            </p>
-            <div className="grid3">
-              {[
-                {
-                  pill: 'Trades and home services',
-                  h: 'Roofing, HVAC, plumbing, windows, solar',
-                  p: 'The highest intent searches in the city and the fastest to convert. A homeowner near the water with a failing condenser in August is not researching, they are choosing from three map results. Ranking here is mostly profile quality, review velocity and honest service pages, not clever content.',
-                },
-                {
-                  pill: 'Restaurants and hospitality',
-                  h: 'Food, bars, hotels, vacation rentals',
-                  p: 'The most contested category in Huntington Beach, so we avoid the head-on fight. The wins are in the sub-niches: specific cuisines, the harbour waterfront, the highway corridor away from Main Street, and the dietary and occasion searches that nobody has written a page for.',
-                },
-                {
-                  pill: 'Health and wellness',
-                  h: 'Dental, physio, chiropractic, dermatology, med spas',
-                  p: 'Review-decided categories serving an older, higher-income resident base. We treat the review system as core infrastructure rather than an afterthought, because in these map packs it outweighs almost everything else.',
-                },
-                {
-                  pill: 'Marine and coastal services',
-                  h: 'Boat services, rentals, lessons, tours',
-                  p: 'Huntington Harbour and the waterfront generate activity-specific searches that almost nobody has optimised for. Low volume, but the queries are so precise that a single good page can own one outright.',
-                },
-                {
-                  pill: 'Professional services',
-                  h: 'Law, accounting, financial advice, consulting',
-                  p: 'Slower decisions and higher values, which means the content has to answer real questions rather than list credentials. This is also where AI answers matter most, because people increasingly ask an assistant before they ask a friend.',
-                },
-                {
-                  pill: 'B2B and industrial',
-                  h: 'Suppliers, fabricators, contract manufacturers',
-                  p: 'The quietest search surface in the city. Buyers search in very specific technical language, competition is nearly absent, and one contract can be worth a year of everything else. Chronically overlooked because owners assume search is a consumer channel.',
-                },
-              ].map(({ pill, h, p }) => (
-                <div className="ucard" key={h}>
-                  <div className="pill">{pill}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── LISTICLE ─────────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">Warning signs</div>
-            <h2>7 signs your Huntington Beach business is losing customers to search right now.</h2>
-            <p className="lead">
-              Each one is a direct revenue leak. Most can be closed inside the first sixty days.
-            </p>
-            <ul className="listicle-list">
-              {LISTICLE.map(({ n, h, p }) => (
-                <li key={n}>
-                  <div className="li-n">{n}</div>
-                  <div>
-                    <div className="li-h">{h}</div>
-                    <div className="li-p">{p}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ── NAMED COMPETITORS ────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">The other agencies</div>
-            <h2>Who else turns up when you search for a Huntington Beach SEO company.</h2>
-            <p className="lead">
-              You are going to compare us against these firms, so here they are with their real numbers,
-              described fairly. Several of them are good.
-            </p>
-
-            <div className="grid2">
-              <div className="ucard">
-                <div className="pill">Most visible</div>
-                <h3>Thrive Internet Marketing Agency</h3>
-                <p>
-                  thriveagency.com is the most visible name across the results we sampled: eleven appearances at
-                  an average position of 3.8. A large, multi-office agency with a page for what feels like every
-                  city and service combination in the country, and they rank internationally too, holding first
-                  place for "agentur marketing" at around 720 searches a month and "agences marketing digital"
-                  at around 590. If you want a deep bench, formal account structure and a big brand name on the
-                  invoice, they are a legitimate choice. The trade-off is that you are unlikely to have the
-                  founder on your monthly call.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Closest in approach</div>
-                <h3>Lesser Media</h3>
-                <p>
-                  lessermedia.com appears four times at an average position of 11.8, and they are a genuine
-                  local specialist rather than a generalist. Their page-one keywords show the method: position 4
-                  for "seo springfield" and "seo stamford" at roughly 110 searches a month each, position 3 for
-                  "ppc san antonio" at around 90. That is patient, city-by-city work and it clearly functions.
-                  Where we differ: we fold AI answer visibility into the same engagement rather than treating it
-                  as a separate product, and we publish the underlying search data on the page, as here.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">The benchmark</div>
-                <h3>Charlotte SEO Firm</h3>
-                <p>
-                  charlotteseofirm.com is worth naming even though they are not in California, because they are
-                  the clearest example of what owning a city looks like. Position 1 for both "charlotte seo
-                  companies" and "charlotte seo company" at around 880 searches a month each, and position 1 for
-                  "charlotte nc seo". One city, taken completely. When you evaluate any agency including us, that
-                  is the question worth asking: show me a city you actually own, not a wall of logos.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">The rest of the field</div>
-                <h3>Straight North, Helium SEO, TastyPlacement and others</h3>
-                <p>
-                  Straight North is strong on B2B lead generation. Helium SEO leans on measurement.
-                  TastyPlacement appears rarely but places very high when it does, at an average position of 2.0.
-                  Elit-Web, Tiger29 and Synchronicity Designs round out the field. If paid search or pure lead
-                  generation is your real requirement rather than local organic, some of these will fit you
-                  better than we will, and we would rather say so now than three months in.
-                </p>
-              </div>
-            </div>
-
-            <div className="cmpwrap">
-              <table className="data">
-                <thead>
-                  <tr>
-                    <th>Domain</th>
-                    <th>Times seen on these results</th>
-                    <th>Average position</th>
-                    <th>What they are</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {RIVALS.map(({ d, seen, pos, note }) => (
-                    <tr key={d}>
-                      <td className="kw">{d}</td>
-                      <td className="num">{seen}</td>
-                      <td className="num">{pos}</td>
-                      <td className="mut">{note}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="note">SERP appearance counts and average positions from DataForSEO, US market, July 2026.</p>
-
-            <p className="body">
-              <strong>Where FactoryJet actually stands.</strong> We are the challenger on this results page and
-              pretending otherwise would be insulting. We have 44 referring domains. Coalition Technologies, one
-              of the larger agencies competing in this space, has somewhere around 2,800. Our own best local
-              positions right now are number 10 for "local seo nashville" and number 8 for "seo agency austin
-              texas": one on page one, one knocking on the door. We are telling you this because it is the exact
-              position most Huntington Beach businesses are in, and because the method currently moving those
-              two pages is the same one we would run for you. If your priority is hiring the agency with the
-              biggest link profile, that is not us. If your priority is senior people doing the work on a month
-              to month agreement, with the data shown rather than summarised, that part we can back.
-            </p>
-          </div>
-        </section>
-
-        {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
-        <section className="room-lav">
-          <div className="wrap">
-            <div className="eyebrow">What you get</div>
-            <h2>One engagement, the whole stack, every month.</h2>
-            <p className="lead">
-              No package tiers, no feature gates, nothing important sitting behind an upgrade.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/shared/factoryjet-senior-engineer.webp"
-                alt="A FactoryJet engineer reviewing technical SEO data, because senior people do the delivery rather than hand it to an account manager"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="grid2">
-              {[
-                {
-                  h: 'Technical SEO and site health',
-                  p: 'Page speed on a phone, crawl and index issues, schema markup for local business, service and FAQ, internal linking, and the structured data that makes AI citation possible at all. This layer never wins on its own and always caps everything else when it is broken.',
-                },
-                {
-                  h: 'Google Business Profile management',
-                  p: 'Every field completed properly, real photos added on a schedule, service descriptions written in customer language, weekly posts tied to Huntington Beach events and seasonal demand, Q&A answered, and a review system that produces a steady drip rather than a suspicious burst.',
-                },
-                {
-                  h: 'Local content that answers real questions',
-                  p: 'One to two substantial pieces a month aimed at your highest-value Huntington Beach and Orange County queries, including the border coverage most local sites skip. Structured answer-first so it can be lifted into a featured snippet or an AI answer.',
-                },
-                {
-                  h: 'Orange County link earning',
-                  p: 'The Huntington Beach Independent, the Orange County Register where there is a real story, the Chamber, Visit Huntington Beach, the downtown business association, event and sponsorship pages, and category directories in surf, marine, trades and property. No paid schemes.',
-                },
-                {
-                  h: 'AI answer visibility',
-                  p: 'We structure the site so Google AI Overviews, ChatGPT and Perplexity can cite you, then check per engine whether they do and report it monthly. Detailed on our AI SEO service page, and included here rather than sold separately.',
-                },
-                {
-                  h: 'Reporting and a live call',
-                  p: 'Calls and form fills from organic, profile call volume and direction requests, ranking movement on your priority queries, AI citation status, technical health, and what competitors did. Then a conversation with someone who did the work, not a dashboard login.',
-                },
-              ].map(({ h, p }) => (
-                <div className="ucard" key={h}>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROCESS ──────────────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">How it works</div>
-            <h2>From audit to map pack in four steps.</h2>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="A FactoryJet founder-led audit call, thirty minutes mapping the Huntington Beach search opportunity with no obligation"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="grid4">
-              {[
-                {
-                  n: '01',
-                  h: 'Free audit call',
-                  p: 'Thirty minutes on your profile, your site health, where you sit for your main local queries, and what the three businesses above you are doing that you are not. You keep the priority list either way.',
-                },
-                {
-                  n: '02',
-                  h: 'Scope and kickoff',
-                  p: 'One flat monthly fee scoped to your category, your locations and your starting point. Access setup and the technical baseline take about a week. No extended onboarding theatre.',
-                },
-                {
-                  n: '03',
-                  h: 'Fix, publish, earn',
-                  p: 'Technical faults in weeks one and two. Profile and citation work from week two. Content and local link earning from week three, then on a steady monthly rhythm that does not stop.',
-                },
-                {
-                  n: '04',
-                  h: 'Measure and adapt',
-                  p: 'Monthly review against your actual Huntington Beach competitors, a written plan for the next thirty days, and a change of direction when the data says so rather than when the contract renews.',
-                },
-              ].map(({ n, h, p }) => (
-                <div className="ucard" key={n}>
-                  <div className="pill">{n}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPARISON ───────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">How we compare</div>
-            <h2>FactoryJet against a traditional Orange County agency.</h2>
-            <p className="lead">
-              Including the row where we come off worse, because you would find it anyway.
-            </p>
-            <div className="cmpwrap">
-              <table className="cmp">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th className="fjh">FactoryJet</th>
-                    <th>Traditional Agency</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARE.map(({ k, fj, alt, hl }) => (
-                    <tr key={k}>
-                      <td className="k">{k}</td>
-                      <td className="fj">
-                        {hl ? <span className="hl">{fj}</span> : fj}
-                      </td>
-                      <td className="alt">{alt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROOF ────────────────────────────────────────────────────── */}
-        <section className="room-blue proof">
-          <div className="wrap">
-            <div className="eyebrow">What we can actually back</div>
-            <h2>Senior delivery, founder-led strategy, results tracked to the phone.</h2>
-            <p className="lead">
-              We measure calls and form fills, not ranking screenshots, because only one of those two
-              things pays a payroll.
-            </p>
-            <div className="quote">
-              <p>
-                "FactoryJet's team is as senior as any agency I've worked with, but they communicate like
-                a partner, not a vendor. We saw profile call volume double in the first two months and organic
-                leads follow in month four."
-              </p>
-              <div className="byline">
-                <div className="avatar">B</div>
-                <div>
-                  <div className="nm">Ricky B, Belle Maison</div>
-                  <div className="ti">Retail and home decor, US market</div>
-                </div>
-              </div>
-            </div>
-            <div style={{ margin: '32px 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/huntington-beach/seo/huntington-beach-seo-results.webp"
-                alt="A Huntington Beach business owner reviewing local search performance across the Orange County market"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="clients">
-              {['Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
-                (c) => <span key={c}>{c}</span>
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* ── INTERNAL LINKS ───────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">Go deeper</div>
-            <h2>The rest of the detail, if you want it before you call.</h2>
-            <p className="lead">
-              Everything on this page is the Huntington Beach version of a wider programme. These pages
-              go further into each part of it.
-            </p>
-            <div className="linkgrid">
-              {NEXT_LINKS.map(({ href, h, p }) => (
-                <Link className="linkcard" href={href} key={href}>
-                  <div className="lh">{h}</div>
-                  <div className="lp">{p}</div>
-                  <span className="go">Read more</span>
-                </Link>
-              ))}
-            </div>
-            <p className="districts">
-              Comparing markets? We publish the same depth for other US cities, including{' '}
-              <Link href="/austin/seo">SEO in Austin</Link>, <Link href="/nashville/seo">SEO in Nashville</Link>{' '}
-              and <Link href="/tampa/seo">SEO in Tampa</Link>. Austin and Nashville are the two markets where
-              our own pages currently rank, which is why we point at them rather than at a case study we
-              cannot show you.
-            </p>
-          </div>
-        </section>
-
-        {/* ── FAQ ──────────────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">Questions answered</div>
-            <h2>What Huntington Beach owners ask before they start.</h2>
-            <p className="lead">
-              These are the questions people actually search alongside local SEO, answered the way we
-              would answer them on the phone.
-            </p>
-            <div className="faqgrid">
-              <nav aria-label="FAQ categories">
-                <div className="faqnav">
-                  {FAQ_GROUPS.map((g) => (
-                    <a href={`#faq-${g.id}`} key={g.id}>
-                      {g.label}<span className="ct">{g.items.length}</span>
-                    </a>
-                  ))}
-                </div>
-                <p className="faqhelp">
-                  Something not covered? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a> and
-                  we will answer it live.
-                </p>
-              </nav>
-              <div>
-                {FAQ_GROUPS.map((g) => (
-                  <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
-                    <div className="ch">{g.label}</div>
-                    {g.items.map((it) => (
-                      <details key={it.q}>
-                        <summary>{it.q}</summary>
-                        <p>{it.a}</p>
-                      </details>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FINAL CTA ────────────────────────────────────────────────── */}
-        <section className="final">
-          <div className="wrap">
-            <div className="eyebrow">Ready to start</div>
-            <h2>
-              Let's find out what is actually<br />
-              <span className="it">holding your Huntington Beach listing back.</span>
-            </h2>
-            <p className="lead">
-              A free thirty-minute audit. Where you stand, what your three map pack competitors are doing,
-              and the three moves with the biggest effect. No obligation and no pressure.
-            </p>
-            <div className="cta-row">
-              <ModalCTAButton
-                label="Get your free SEO audit"
-                region="us"
-                modalVariant="seo"
-                btnVariant="primary-light"
-              />
-              <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                Talk to the founder
-              </a>
-            </div>
-            <p className="fine">
-              Month to month &middot; free audit &middot; no setup fee &middot; senior delivery &middot; serving Huntington Beach and Orange County
-            </p>
-          </div>
-        </section>
-
+        </main>
         <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
       </div>
     </>

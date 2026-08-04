@@ -758,210 +758,212 @@ export default function ShopifySeoServicePage() {
       />
 
       <SiteHeader />
+      <main>
 
-      {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_services_shopify_seo_hero" />}
-        eyebrow="SHOPIFY SEO SERVICES"
-        headline={
-          <>
-            Shopify SEO that grows store revenue, <br className="hidden md:block" />
-            not just rankings.
-          </>
-        }
-        lead="We fix the Shopify-specific issues that quietly cap your rankings, duplicate URLs, thin collections, app bloat, then rank your products and collections in Google and get your store cited by AI engines. One retainer. Monthly reports you can read in five minutes."
-        secondaryCta={{
-          label: 'See pricing',
-          href: '#pricing',
-        }}
-        trustItems={[
-          'Senior engineers who build Shopify stores',
-          'Month-to-month, no annual lock-in',
-          'Google rankings + AI citations on one report',
-        ]}
-      />
+        {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
+        <Hero
+          formSlot={<HeroInlineForm region="us" source="us_services_shopify_seo_hero" />}
+          eyebrow="SHOPIFY SEO SERVICES"
+          headline={
+            <>
+              Shopify SEO that grows store revenue, <br className="hidden md:block" />
+              not just rankings.
+            </>
+          }
+          lead="We fix the Shopify-specific issues that quietly cap your rankings, duplicate URLs, thin collections, app bloat, then rank your products and collections in Google and get your store cited by AI engines. One retainer. Monthly reports you can read in five minutes."
+          secondaryCta={{
+            label: 'See pricing',
+            href: '#pricing',
+          }}
+          trustItems={[
+            'Senior engineers who build Shopify stores',
+            'Month-to-month, no annual lock-in',
+            'Google rankings + AI citations on one report',
+          ]}
+        />
 
-      {/* ─── 2. Stats row ────────────────────────────────────────────────── */}
-      <StatsRow />
+        {/* ─── 2. Stats row ────────────────────────────────────────────────── */}
+        <StatsRow />
 
-      {/* ─── 3. Service explanation, what Shopify SEO is ────────────────── */}
-      <ServiceExplanation
-        eyebrow="WHAT SHOPIFY SEO COVERS"
-        headline="Shopify can rank brilliantly. Out of the box, it usually doesn't."
-        lead="Shopify handles SSL, mobile, and sitemaps for you, then quietly works against you with duplicate product URLs, thin collection pages, and app-injected JavaScript that drags down Core Web Vitals. A generalist SEO audit rarely catches the Shopify-specific issues. That gap is exactly what we close."
-        body={
-          <>
-            <p
-              className="mt-6 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              We work the full stack of Shopify SEO: the technical plumbing (canonicals, duplicate URLs, collection architecture, schema), real content on the collection and product pages that ship nearly empty, Core Web Vitals recovery, and the authority and structure that get your store cited by Google AI Overviews, ChatGPT, and Perplexity. Because we also{' '}
-              <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">build Shopify stores</Link>, we fix performance and theme issues at the code level, not with another plugin.
-            </p>
-            <p
-              className="mt-4 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              On a different platform? Our broader{' '}
-              <Link href="/services/ecommerce-seo" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce SEO service</Link>{' '}
-              covers WooCommerce, Magento, and custom stores with the same playbook.
-            </p>
-          </>
-        }
-        rightSlot={
-          <div
-            className="rounded-2xl border p-7"
-            style={{
-              borderColor: 'rgba(15,15,18,0.10)',
-              backgroundColor: '#FFFFFF',
-              boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-            }}
-          >
-            <p
-              className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
-            >
-              Our approach
-            </p>
-            <p
-              className="mt-4 fj-display font-bold"
+        {/* ─── 3. Service explanation, what Shopify SEO is ────────────────── */}
+        <ServiceExplanation
+          eyebrow="WHAT SHOPIFY SEO COVERS"
+          headline="Shopify can rank brilliantly. Out of the box, it usually doesn't."
+          lead="Shopify handles SSL, mobile, and sitemaps for you, then quietly works against you with duplicate product URLs, thin collection pages, and app-injected JavaScript that drags down Core Web Vitals. A generalist SEO audit rarely catches the Shopify-specific issues. That gap is exactly what we close."
+          body={
+            <>
+              <p
+                className="mt-6 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                We work the full stack of Shopify SEO: the technical plumbing (canonicals, duplicate URLs, collection architecture, schema), real content on the collection and product pages that ship nearly empty, Core Web Vitals recovery, and the authority and structure that get your store cited by Google AI Overviews, ChatGPT, and Perplexity. Because we also{' '}
+                <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">build Shopify stores</Link>, we fix performance and theme issues at the code level, not with another plugin.
+              </p>
+              <p
+                className="mt-4 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                On a different platform? Our broader{' '}
+                <Link href="/services/ecommerce-seo" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce SEO service</Link>{' '}
+                covers WooCommerce, Magento, and custom stores with the same playbook.
+              </p>
+            </>
+          }
+          rightSlot={
+            <div
+              className="rounded-2xl border p-7"
               style={{
-                color: '#0F0F12',
-                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.02em',
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
               }}
             >
-              Fix the plumbing first.
-            </p>
-            <p
-              className="mt-3 font-fj-body font-semibold"
-              style={{ color: '#0F0F12', fontSize: '1rem' }}
-            >
-              Technical wins ship in weeks, content compounds for months.
-            </p>
-            <p
-              className="mt-3 font-fj-body"
-              style={{
-                color: 'rgba(15,15,18,0.65)',
-                fontSize: '0.875rem',
-                lineHeight: 1.55,
-              }}
-            >
-              We sequence the fast technical wins, canonical and duplicate-URL fixes, schema, Core Web Vitals, before the slower-compounding content and authority work, so you see movement early.
-            </p>
-          </div>
-        }
-      />
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                Our approach
+              </p>
+              <p
+                className="mt-4 fj-display font-bold"
+                style={{
+                  color: '#0F0F12',
+                  fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Fix the plumbing first.
+              </p>
+              <p
+                className="mt-3 font-fj-body font-semibold"
+                style={{ color: '#0F0F12', fontSize: '1rem' }}
+              >
+                Technical wins ship in weeks, content compounds for months.
+              </p>
+              <p
+                className="mt-3 font-fj-body"
+                style={{
+                  color: 'rgba(15,15,18,0.65)',
+                  fontSize: '0.875rem',
+                  lineHeight: 1.55,
+                }}
+              >
+                We sequence the fast technical wins, canonical and duplicate-URL fixes, schema, Core Web Vitals, before the slower-compounding content and authority work, so you see movement early.
+              </p>
+            </div>
+          }
+        />
 
-      {/* ─── 4. Strategic dark, why Shopify needs specialist SEO ────────── */}
-      <StrategicDarkSection
-        eyebrow="WHY SHOPIFY NEEDS SPECIALIST SEO"
-        headline="Three Shopify problems a generalist SEO audit will miss."
-        lead="The highest-impact Shopify SEO issues live in how Shopify itself builds and serves pages. Here is what most SEO agencies and apps never fix."
-        pillars={PILLARS}
-      />
+        {/* ─── 4. Strategic dark, why Shopify needs specialist SEO ────────── */}
+        <StrategicDarkSection
+          eyebrow="WHY SHOPIFY NEEDS SPECIALIST SEO"
+          headline="Three Shopify problems a generalist SEO audit will miss."
+          lead="The highest-impact Shopify SEO issues live in how Shopify itself builds and serves pages. Here is what most SEO agencies and apps never fix."
+          pillars={PILLARS}
+        />
 
-      {/* ─── 5. Service journey, 5-step process ─────────────────────────── */}
-      <ServiceJourneyRow
-        eyebrow="OUR 5-STEP SHOPIFY SEO PROCESS"
-        headline="From audit to compounding rankings and citations."
-        lead="Every engagement follows the same five steps. The audit defines the roadmap. The roadmap drives the retainer. Everything is measured monthly. No black boxes."
-        stages={SHOPIFY_SEO_JOURNEY}
-        closingNote="Every step ships a deliverable. Every month you see what changed and what it moved."
-      />
+        {/* ─── 5. Service journey, 5-step process ─────────────────────────── */}
+        <ServiceJourneyRow
+          eyebrow="OUR 5-STEP SHOPIFY SEO PROCESS"
+          headline="From audit to compounding rankings and citations."
+          lead="Every engagement follows the same five steps. The audit defines the roadmap. The roadmap drives the retainer. Everything is measured monthly. No black boxes."
+          stages={SHOPIFY_SEO_JOURNEY}
+          closingNote="Every step ships a deliverable. Every month you see what changed and what it moved."
+        />
 
-      {/* ─── 6. Comparison vs apps / freelancer / generalist agency ──────── */}
-      <ComparisonTable
-        eyebrow="HOW WE COMPARE"
-        headline="FactoryJet vs SEO apps, freelancers, and generalist agencies."
-        lead="The four ways most Shopify stores try to do SEO, and where a Shopify-specialist, engineer-led model differs."
-        columns={[
-          { label: 'FactoryJet', isFactoryJet: true },
-          { label: 'SEO Apps' },
-          { label: 'Freelancer' },
-          { label: 'Generalist Agency' },
-        ]}
-        rows={[
-          {
-            feature: 'Pricing model',
-            values: ['Custom quote, month-to-month', 'Monthly app fee', 'Hourly', 'Retainer (often annual)'],
-          },
-          {
-            feature: 'Shopify-specific expertise',
-            values: [
-              <CompareIcon key="fj-exp" kind="yes" />,
-              <CompareIcon key="app-exp" kind="partial" />,
-              <CompareIcon key="free-exp" kind="partial" />,
-              <CompareIcon key="gen-exp" kind="no" />,
-            ],
-          },
-          {
-            feature: 'Fixes duplicate-URL & canonical issues',
-            values: [
-              <CompareIcon key="fj-dup" kind="yes" />,
-              <CompareIcon key="app-dup" kind="no" />,
-              <CompareIcon key="free-dup" kind="partial" />,
-              <CompareIcon key="gen-dup" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Collection & product page content',
-            values: [
-              <CompareIcon key="fj-con" kind="yes" />,
-              <CompareIcon key="app-con" kind="no" />,
-              <CompareIcon key="free-con" kind="partial" />,
-              <CompareIcon key="gen-con" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'AI citations (ChatGPT / Perplexity / AIO)',
-            values: [
-              <CompareIcon key="fj-ai" kind="yes" />,
-              <CompareIcon key="app-ai" kind="no" />,
-              <CompareIcon key="free-ai" kind="no" />,
-              <CompareIcon key="gen-ai" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Code & data ownership Day 1',
-            values: [
-              <CompareIcon key="fj-own" kind="yes" />,
-              <CompareIcon key="app-own" kind="partial" />,
-              <CompareIcon key="free-own" kind="yes" />,
-              <CompareIcon key="gen-own" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Contract terms',
-            values: ['Month-to-month', 'Per app', 'Hourly', 'Annual common'],
-          },
-        ]}
-        footer="Comparison reflects typical offerings in each category as of 2026-06-03. Individual providers vary."
-      />
+        {/* ─── 6. Comparison vs apps / freelancer / generalist agency ──────── */}
+        <ComparisonTable
+          eyebrow="HOW WE COMPARE"
+          headline="FactoryJet vs SEO apps, freelancers, and generalist agencies."
+          lead="The four ways most Shopify stores try to do SEO, and where a Shopify-specialist, engineer-led model differs."
+          columns={[
+            { label: 'FactoryJet', isFactoryJet: true },
+            { label: 'SEO Apps' },
+            { label: 'Freelancer' },
+            { label: 'Generalist Agency' },
+          ]}
+          rows={[
+            {
+              feature: 'Pricing model',
+              values: ['Custom quote, month-to-month', 'Monthly app fee', 'Hourly', 'Retainer (often annual)'],
+            },
+            {
+              feature: 'Shopify-specific expertise',
+              values: [
+                <CompareIcon key="fj-exp" kind="yes" />,
+                <CompareIcon key="app-exp" kind="partial" />,
+                <CompareIcon key="free-exp" kind="partial" />,
+                <CompareIcon key="gen-exp" kind="no" />,
+              ],
+            },
+            {
+              feature: 'Fixes duplicate-URL & canonical issues',
+              values: [
+                <CompareIcon key="fj-dup" kind="yes" />,
+                <CompareIcon key="app-dup" kind="no" />,
+                <CompareIcon key="free-dup" kind="partial" />,
+                <CompareIcon key="gen-dup" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Collection & product page content',
+              values: [
+                <CompareIcon key="fj-con" kind="yes" />,
+                <CompareIcon key="app-con" kind="no" />,
+                <CompareIcon key="free-con" kind="partial" />,
+                <CompareIcon key="gen-con" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'AI citations (ChatGPT / Perplexity / AIO)',
+              values: [
+                <CompareIcon key="fj-ai" kind="yes" />,
+                <CompareIcon key="app-ai" kind="no" />,
+                <CompareIcon key="free-ai" kind="no" />,
+                <CompareIcon key="gen-ai" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Code & data ownership Day 1',
+              values: [
+                <CompareIcon key="fj-own" kind="yes" />,
+                <CompareIcon key="app-own" kind="partial" />,
+                <CompareIcon key="free-own" kind="yes" />,
+                <CompareIcon key="gen-own" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Contract terms',
+              values: ['Month-to-month', 'Per app', 'Hourly', 'Annual common'],
+            },
+          ]}
+          footer="Comparison reflects typical offerings in each category as of 2026-06-03. Individual providers vary."
+        />
 
-      {/* ─── 7. Pricing, custom 4-card grid ─────────────────────────────── */}
-      <ShopifySeoPricingGrid />
+        {/* ─── 7. Pricing, custom 4-card grid ─────────────────────────────── */}
+        <ShopifySeoPricingGrid />
 
-      {/* ─── 8. Industries served (DARK) ─────────────────────────────────── */}
-      <IndustriesGrid />
+        {/* ─── 8. Industries served (DARK) ─────────────────────────────────── */}
+        <IndustriesGrid />
 
-      {/* ─── 9. FAQ ──────────────────────────────────────────────────────── */}
-      <FAQ
-        eyebrow="SHOPIFY SEO FAQ"
-        headline="Shopify SEO questions, answered the way Bhavesh would on a call."
-        lead="If your question is not below, send a written brief, answers usually come back inside 24 hours."
-        categories={FAQ_CATEGORIES}
-        items={FAQ_ITEMS}
-      />
+        {/* ─── 9. FAQ ──────────────────────────────────────────────────────── */}
+        <FAQ
+          eyebrow="SHOPIFY SEO FAQ"
+          headline="Shopify SEO questions, answered the way Bhavesh would on a call."
+          lead="If your question is not below, send a written brief, answers usually come back inside 24 hours."
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+        />
 
-      {/* ─── 10. Closing CTA, TalkToFounder full dark ───────────────────── */}
-      <TalkToFounder
-        variant="full"
-        theme="dark"
-        eyebrow="FOUNDER ACCESS"
-      />
+        {/* ─── 10. Closing CTA, TalkToFounder full dark ───────────────────── */}
+        <TalkToFounder
+          variant="full"
+          theme="dark"
+          eyebrow="FOUNDER ACCESS"
+        />
 
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

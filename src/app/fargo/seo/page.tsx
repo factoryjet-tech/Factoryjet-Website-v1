@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -557,7 +558,12 @@ export default function FargoSeoPage() {
         ]}
       />
 
-      <div className="fseo">
+      <main className="fseo">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'US SEO Services', url: 'https://factoryjet.com/services/seo' },
+          { name: 'Fargo SEO', url: CANONICAL },
+        ]} />
         {/* 1 HERO - The Radius */}
         <section className="hero">
           <div className="wrap">
@@ -1063,7 +1069,7 @@ export default function FargoSeoPage() {
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

@@ -33,7 +33,9 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      <ThankYouContent />
+      <main>
+        <ThankYouContent />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

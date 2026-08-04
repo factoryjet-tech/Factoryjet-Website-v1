@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { notFound } from 'next/navigation'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
@@ -173,11 +174,18 @@ export default async function Page({ params }: Props) {
       )}
 
       <SiteHeader locale="us" />
-      <BlogPostPage
-        post={post}
-        relatedPosts={getRelatedPosts(post, POSTS)}
-        relatedServices={getRelatedServices(post)}
-      />
+      <main>
+      <Breadcrumbs items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Blog', url: 'https://factoryjet.com/blog' },
+        { name: post.title, url: `https://factoryjet.com/blog/${resolvedParams.slug}` },
+      ]} />
+        <BlogPostPage
+          post={post}
+          relatedPosts={getRelatedPosts(post, POSTS)}
+          relatedServices={getRelatedServices(post)}
+        />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

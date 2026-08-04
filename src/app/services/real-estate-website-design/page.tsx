@@ -619,7 +619,7 @@ export default function RealEstateWebsiteDesignPage() {
       />
 
       {/* ── 6. SERVICE JOURNEY ── */}
-      <div id="process">
+      <main id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Market Strategy to Live Site: 5 Stages"
@@ -627,7 +627,7 @@ export default function RealEstateWebsiteDesignPage() {
           stages={journeyStages}
           closingNote="5 STAGES · 7-DAY DELIVERY · IDX INTEGRATION INCLUDED · FREE QUOTE IN 24 HOURS"
         />
-      </div>
+      </main>
 
       {/* ── 7. WHO WE BUILD FOR ── */}
       <IndustriesGrid

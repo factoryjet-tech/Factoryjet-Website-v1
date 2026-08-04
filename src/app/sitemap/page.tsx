@@ -49,7 +49,9 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      <SitemapPage />
+      <main>
+        <SitemapPage />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

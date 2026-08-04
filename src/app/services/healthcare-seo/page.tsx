@@ -1247,350 +1247,352 @@ export default function HealthcareSeoServicePage() {
       />
 
       <SiteHeader />
+      <main>
 
-      {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
-      {/*
-        NON-NEGOTIABLES (2026-06-13):
-        - Hero fits single viewport on desktop + mobile, no scroll required
-        - Lead ≤ 2 sentences, ≤ 50 words
-        - rightSlot hidden on mobile (hidden lg:block), preserves text LCP
-        - Gradient accent on primary noun in headline (CSS only, zero perf cost)
-        - Image max-h capped so it never forces hero taller than viewport
-      */}
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_services_healthcare_seo_hero" />}
-        eyebrow="HEALTHCARE SEO AGENCY"
-        headline={
-          <>
-            The SEO agency for{' '}
-            <span className="bg-gradient-to-r from-[#F05A28] to-[#FF8C5A] bg-clip-text text-transparent">
-              healthcare companies
-            </span>
-            <br className="hidden md:block" />
-            that does the compliance work other agencies skip.
-          </>
-        }
-        lead="77% of patients search online before booking, and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
-        secondaryCta={{
-          label: 'See our approach',
-          href: '#pricing',
-        }}
-        trustItems={[
-          '77% of patients search online before booking',
-          'YMYL E-E-A-T built into every page',
-          'Map pack + AI citations in one monthly report',
-        ]}
-        rightSlot={
-          /* hidden on mobile — image is never the LCP element; desktop-only visual */
-          <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
-            <Image
-              src="/images/services/healthcare-seo.webp"
-              alt="Healthcare SEO agency, doctor reviewing patient acquisition analytics on laptop"
-              width={1344}
-              height={1024}
-              className="w-full object-cover max-h-[520px]"
-              priority={false}
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-          </div>
-        }
-      />
-
-      {/* ─── 2. Quick Answer block, sourced stats ────────────────────────── */}
-      <QuickAnswerBlock />
-
-      {/* ─── 3. Stats row, animated counters (client component) ─────────── */}
-      <StatsRowAnimated />
-
-      {/* ─── 4. Reviewed-by byline ───────────────────────────────────────── */}
-      <ReviewedBy />
-
-      {/* ─── 5. Service explanation, what healthcare SEO covers ─────────── */}
-      {/*
-        DESIGN RULE (2026-06-13): Table extracted to its own full-width section below.
-        Table inside a 2-col left body prop clips its rightmost columns, always
-        put data tables in standalone sections with overflow-x-auto.
-        rightSlot fills dead space with AI map-pack image below Quick Facts.
-      */}
-      <ServiceExplanation
-        eyebrow="WHAT HEALTHCARE SEO COVERS"
-        headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific, and it is where rankings stall."
-        lead="For a SaaS company, SEO is technical and content work. For a medical practice or health company, there is an entire compliance and trust layer underneath: YMYL E-E-A-T, HIPAA-safe analytics, medical schema types, Google Business Profile for patient acquisition, and specialty directory coverage. The agencies that skip that layer leave healthcare clients wondering why their rankings do not reflect their link profile or content investment."
-        body={
-          <>
-            <p
-              className="mt-6 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              As a full-stack SEO agency for healthcare companies, we cover: the technical E-E-A-T baseline (provider bylines, citations, About pages, schema), Google Business Profile optimization and citation building for local practices, HIPAA-safe analytics configuration, condition and service content authored with licensed provider attribution, and AI-citation positioning so your practice is cited when patients ask ChatGPT or Perplexity for provider recommendations. Monthly reporting separates map pack positions from organic sessions from AI citations, so you know exactly where patient acquisition is coming from.
-            </p>
-            <p
-              className="mt-4 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              Need SEO for a non-healthcare business? Our{' '}
-              <Link href="/services/local-seo" className="text-[#B23E13] font-medium underline underline-offset-2">
-                local SEO service
-              </Link>{' '}
-              covers any category, and our{' '}
-              <Link href="/services/seo" className="text-[#B23E13] font-medium underline underline-offset-2">
-                core SEO service
-              </Link>{' '}
-              applies the same E-E-A-T and AI-citation playbook to non-regulated industries.
-            </p>
-          </>
-        }
-        rightSlot={
-          <div
-            className="rounded-2xl border p-7"
-            style={{
-              borderColor: 'rgba(15,15,18,0.10)',
-              backgroundColor: '#FFFFFF',
-              boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-            }}
-          >
-            <p
-              className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
-            >
-              Quick facts
-            </p>
-            <ul className="mt-5 space-y-4">
-              {[
-                {
-                  stat: '2023',
-                  detail:
-                    'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
-                },
-                {
-                  stat: '94%',
-                  detail:
-                    'of prospective patients choose their provider based on online reputation.',
-                },
-                {
-                  stat: '50%+',
-                  detail:
-                    'increase in patient calls when a practice ranks in the Google Map Pack.',
-                },
-                {
-                  stat: 'YMYL',
-                  detail:
-                    'Google applies elevated quality review to all healthcare content, bylines + citations are ranking prerequisites.',
-                },
-              ].map((f) => (
-                <li key={f.stat} className="flex items-start gap-3">
-                  <span
-                    className="fj-display font-bold shrink-0"
-                    style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
-                  >
-                    {f.stat}
-                  </span>
-                  <p
-                    className="font-fj-body"
-                    style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
-                  >
-                    {f.detail}
-                  </p>
-                </li>
-              ))}
-            </ul>
-            <p
-              className="mt-5 font-fj-body"
-              style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
-            >
-              Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
-            </p>
-          </div>
-        }
-      />
-
-      {/* ─── 5b. Data table, full-width standalone (extracted from left col) ── */}
-      {/*
-        DESIGN RULE: tables always go in standalone full-width sections.
-        Never nest a multi-column table inside a 2-col layout's body prop.
-      */}
-      <section className="pb-14 md:pb-20" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-          <HealthcareDataTable />
-        </div>
-      </section>
-
-      {/* ─── 6. Strategic dark, 3 problems most agencies miss ───────────── */}
-      <StrategicDarkSection
-        eyebrow="WHY HEALTHCARE SEO IS DIFFERENT"
-        headline="Three healthcare SEO failures that stall rankings, and that most agencies never fix."
-        lead="The highest-impact gaps in healthcare SEO sit below the standard SEO checklist. These are the three places most generalist agencies leave money on the table."
-        pillars={PILLARS}
-      />
-
-      {/* ─── 7. Specialties, interactive tabs (client component) ───────── */}
-      <HealthcareSpecialtiesTabs />
-
-      {/* ─── 8. Process, visual intro + 5-step journey ──────────────────── */}
-      {/* Visual break image before the 5-step cards, reduces text density */}
-      <div
-        className="relative w-full overflow-hidden"
-        style={{ maxHeight: '400px', backgroundColor: '#0F0F12' }}
-        aria-hidden="true"
-      >
-        <Image
-          src="/images/services/healthcare-seo-process.webp"
-          alt="Healthcare SEO strategy session with ranking charts showing upward trend"
-          width={1344}
-          height={768}
-          className="w-full object-cover opacity-80"
-          style={{ maxHeight: '400px' }}
-          loading="lazy"
+        {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
+        {/*
+          NON-NEGOTIABLES (2026-06-13):
+          - Hero fits single viewport on desktop + mobile, no scroll required
+          - Lead ≤ 2 sentences, ≤ 50 words
+          - rightSlot hidden on mobile (hidden lg:block), preserves text LCP
+          - Gradient accent on primary noun in headline (CSS only, zero perf cost)
+          - Image max-h capped so it never forces hero taller than viewport
+        */}
+        <Hero
+          formSlot={<HeroInlineForm region="us" source="us_services_healthcare_seo_hero" />}
+          eyebrow="HEALTHCARE SEO AGENCY"
+          headline={
+            <>
+              The SEO agency for{' '}
+              <span className="bg-gradient-to-r from-[#F05A28] to-[#FF8C5A] bg-clip-text text-transparent">
+                healthcare companies
+              </span>
+              <br className="hidden md:block" />
+              that does the compliance work other agencies skip.
+            </>
+          }
+          lead="77% of patients search online before booking, and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
+          secondaryCta={{
+            label: 'See our approach',
+            href: '#pricing',
+          }}
+          trustItems={[
+            '77% of patients search online before booking',
+            'YMYL E-E-A-T built into every page',
+            'Map pack + AI citations in one monthly report',
+          ]}
+          rightSlot={
+            /* hidden on mobile — image is never the LCP element; desktop-only visual */
+            <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
+              <Image
+                src="/images/services/healthcare-seo.webp"
+                alt="Healthcare SEO agency, doctor reviewing patient acquisition analytics on laptop"
+                width={1344}
+                height={1024}
+                className="w-full object-cover max-h-[520px]"
+                priority={false}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+            </div>
+          }
         />
-        {/* Gradient overlays, top and bottom fade to blend with adjacent sections */}
-        <div
-          className="absolute inset-x-0 top-0 h-24 pointer-events-none"
-          style={{ background: 'linear-gradient(to bottom, rgba(15,15,18,0.85) 0%, transparent 100%)' }}
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
-          style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.90) 0%, transparent 100%)' }}
-        />
-        {/* Floating caption */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="text-center px-6">
-            <p
-              className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#F05A28' }}
-            >
-              OUR 5-STEP HEALTHCARE SEO PROCESS
-            </p>
-            <p
-              className="mt-2 fj-display font-semibold"
+
+        {/* ─── 2. Quick Answer block, sourced stats ────────────────────────── */}
+        <QuickAnswerBlock />
+
+        {/* ─── 3. Stats row, animated counters (client component) ─────────── */}
+        <StatsRowAnimated />
+
+        {/* ─── 4. Reviewed-by byline ───────────────────────────────────────── */}
+        <ReviewedBy />
+
+        {/* ─── 5. Service explanation, what healthcare SEO covers ─────────── */}
+        {/*
+          DESIGN RULE (2026-06-13): Table extracted to its own full-width section below.
+          Table inside a 2-col left body prop clips its rightmost columns, always
+          put data tables in standalone sections with overflow-x-auto.
+          rightSlot fills dead space with AI map-pack image below Quick Facts.
+        */}
+        <ServiceExplanation
+          eyebrow="WHAT HEALTHCARE SEO COVERS"
+          headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific, and it is where rankings stall."
+          lead="For a SaaS company, SEO is technical and content work. For a medical practice or health company, there is an entire compliance and trust layer underneath: YMYL E-E-A-T, HIPAA-safe analytics, medical schema types, Google Business Profile for patient acquisition, and specialty directory coverage. The agencies that skip that layer leave healthcare clients wondering why their rankings do not reflect their link profile or content investment."
+          body={
+            <>
+              <p
+                className="mt-6 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                As a full-stack SEO agency for healthcare companies, we cover: the technical E-E-A-T baseline (provider bylines, citations, About pages, schema), Google Business Profile optimization and citation building for local practices, HIPAA-safe analytics configuration, condition and service content authored with licensed provider attribution, and AI-citation positioning so your practice is cited when patients ask ChatGPT or Perplexity for provider recommendations. Monthly reporting separates map pack positions from organic sessions from AI citations, so you know exactly where patient acquisition is coming from.
+              </p>
+              <p
+                className="mt-4 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                Need SEO for a non-healthcare business? Our{' '}
+                <Link href="/services/local-seo" className="text-[#B23E13] font-medium underline underline-offset-2">
+                  local SEO service
+                </Link>{' '}
+                covers any category, and our{' '}
+                <Link href="/services/seo" className="text-[#B23E13] font-medium underline underline-offset-2">
+                  core SEO service
+                </Link>{' '}
+                applies the same E-E-A-T and AI-citation playbook to non-regulated industries.
+              </p>
+            </>
+          }
+          rightSlot={
+            <div
+              className="rounded-2xl border p-7"
               style={{
-                color: '#FAFAF7',
-                fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.02em',
-                textShadow: '0 2px 16px rgba(0,0,0,0.60)',
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
               }}
             >
-              Audit → Compliance → Rankings → Content → Report
-            </p>
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                Quick facts
+              </p>
+              <ul className="mt-5 space-y-4">
+                {[
+                  {
+                    stat: '2023',
+                    detail:
+                      'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
+                  },
+                  {
+                    stat: '94%',
+                    detail:
+                      'of prospective patients choose their provider based on online reputation.',
+                  },
+                  {
+                    stat: '50%+',
+                    detail:
+                      'increase in patient calls when a practice ranks in the Google Map Pack.',
+                  },
+                  {
+                    stat: 'YMYL',
+                    detail:
+                      'Google applies elevated quality review to all healthcare content, bylines + citations are ranking prerequisites.',
+                  },
+                ].map((f) => (
+                  <li key={f.stat} className="flex items-start gap-3">
+                    <span
+                      className="fj-display font-bold shrink-0"
+                      style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
+                    >
+                      {f.stat}
+                    </span>
+                    <p
+                      className="font-fj-body"
+                      style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                    >
+                      {f.detail}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              <p
+                className="mt-5 font-fj-body"
+                style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
+              >
+                Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
+              </p>
+            </div>
+          }
+        />
+
+        {/* ─── 5b. Data table, full-width standalone (extracted from left col) ── */}
+        {/*
+          DESIGN RULE: tables always go in standalone full-width sections.
+          Never nest a multi-column table inside a 2-col layout's body prop.
+        */}
+        <section className="pb-14 md:pb-20" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <HealthcareDataTable />
+          </div>
+        </section>
+
+        {/* ─── 6. Strategic dark, 3 problems most agencies miss ───────────── */}
+        <StrategicDarkSection
+          eyebrow="WHY HEALTHCARE SEO IS DIFFERENT"
+          headline="Three healthcare SEO failures that stall rankings, and that most agencies never fix."
+          lead="The highest-impact gaps in healthcare SEO sit below the standard SEO checklist. These are the three places most generalist agencies leave money on the table."
+          pillars={PILLARS}
+        />
+
+        {/* ─── 7. Specialties, interactive tabs (client component) ───────── */}
+        <HealthcareSpecialtiesTabs />
+
+        {/* ─── 8. Process, visual intro + 5-step journey ──────────────────── */}
+        {/* Visual break image before the 5-step cards, reduces text density */}
+        <div
+          className="relative w-full overflow-hidden"
+          style={{ maxHeight: '400px', backgroundColor: '#0F0F12' }}
+          aria-hidden="true"
+        >
+          <Image
+            src="/images/services/healthcare-seo-process.webp"
+            alt="Healthcare SEO strategy session with ranking charts showing upward trend"
+            width={1344}
+            height={768}
+            className="w-full object-cover opacity-80"
+            style={{ maxHeight: '400px' }}
+            loading="lazy"
+          />
+          {/* Gradient overlays, top and bottom fade to blend with adjacent sections */}
+          <div
+            className="absolute inset-x-0 top-0 h-24 pointer-events-none"
+            style={{ background: 'linear-gradient(to bottom, rgba(15,15,18,0.85) 0%, transparent 100%)' }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
+            style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.90) 0%, transparent 100%)' }}
+          />
+          {/* Floating caption */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="text-center px-6">
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#F05A28' }}
+              >
+                OUR 5-STEP HEALTHCARE SEO PROCESS
+              </p>
+              <p
+                className="mt-2 fj-display font-semibold"
+                style={{
+                  color: '#FAFAF7',
+                  fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                  textShadow: '0 2px 16px rgba(0,0,0,0.60)',
+                }}
+              >
+                Audit → Compliance → Rankings → Content → Report
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <ServiceJourneyRow
-        eyebrow="OUR 5-STEP HEALTHCARE SEO PROCESS"
-        headline="From audit to map pack rankings, AI citations, and a full patient-acquisition report."
-        lead="Every healthcare engagement follows the same five steps. The audit defines the compliance and opportunity baseline. The roadmap drives the retainer. Every step ships a deliverable."
-        stages={HEALTHCARE_SEO_JOURNEY}
-        closingNote="Every step ships a deliverable. Every month you see map pack positions, organic rankings, and AI citations in one consolidated report."
-      />
+        <ServiceJourneyRow
+          eyebrow="OUR 5-STEP HEALTHCARE SEO PROCESS"
+          headline="From audit to map pack rankings, AI citations, and a full patient-acquisition report."
+          lead="Every healthcare engagement follows the same five steps. The audit defines the compliance and opportunity baseline. The roadmap drives the retainer. Every step ships a deliverable."
+          stages={HEALTHCARE_SEO_JOURNEY}
+          closingNote="Every step ships a deliverable. Every month you see map pack positions, organic rankings, and AI citations in one consolidated report."
+        />
 
-      {/* ─── 8b. Mid-page modal CTA, lower-friction path after specialties ── */}
-      <FinalCTA
-        variant="light"
-        eyebrow="FREE HEALTHCARE SEO AUDIT"
-        headline="Not sure where your practice stands? Start with a free audit."
-        sub="We'll review your Google Business Profile, top service pages, and local rankings, and send you a prioritized fix list within 48 hours. No sales call required to get started."
-        primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
-        secondaryCta={{ label: 'See our approach', href: '#pricing' }}
-      />
+        {/* ─── 8b. Mid-page modal CTA, lower-friction path after specialties ── */}
+        <FinalCTA
+          variant="light"
+          eyebrow="FREE HEALTHCARE SEO AUDIT"
+          headline="Not sure where your practice stands? Start with a free audit."
+          sub="We'll review your Google Business Profile, top service pages, and local rankings, and send you a prioritized fix list within 48 hours. No sales call required to get started."
+          primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'See our approach', href: '#pricing' }}
+        />
 
-      {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}
-      <ComparisonTable
-        eyebrow="HOW WE COMPARE"
-        headline="FactoryJet vs agencies, freelancers, and in-house teams."
-        lead="Four ways healthcare organizations approach SEO, and where a healthcare-specialist, compliance-aware model differs in practice."
-        columns={[
-          { label: 'FactoryJet', isFactoryJet: true },
-          { label: 'Generalist Agency' },
-          { label: 'Freelancer' },
-          { label: 'In-House' },
-        ]}
-        rows={[
-          {
-            feature: 'Contract terms',
-            values: ['Month-to-month', 'Annual common', 'Hourly / project', 'Fixed salary'],
-          },
-          {
-            feature: 'YMYL E-E-A-T expertise',
-            values: [
-              <CompareIcon key="fj-eeat" kind="yes" />,
-              <CompareIcon key="gen-eeat" kind="partial" />,
-              <CompareIcon key="free-eeat" kind="partial" />,
-              <CompareIcon key="house-eeat" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'HIPAA-safe analytics review',
-            values: [
-              <CompareIcon key="fj-hipaa" kind="yes" />,
-              <CompareIcon key="gen-hipaa" kind="no" />,
-              <CompareIcon key="free-hipaa" kind="no" />,
-              <CompareIcon key="house-hipaa" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Google Business Profile + map pack',
-            values: [
-              <CompareIcon key="fj-gbp" kind="yes" />,
-              <CompareIcon key="gen-gbp" kind="partial" />,
-              <CompareIcon key="free-gbp" kind="partial" />,
-              <CompareIcon key="house-gbp" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Medical schema (MedicalClinic, Physician)',
-            values: [
-              <CompareIcon key="fj-schema" kind="yes" />,
-              <CompareIcon key="gen-schema" kind="no" />,
-              <CompareIcon key="free-schema" kind="partial" />,
-              <CompareIcon key="house-schema" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'AI citations (ChatGPT / Perplexity / AIO)',
-            values: [
-              <CompareIcon key="fj-ai" kind="yes" />,
-              <CompareIcon key="gen-ai" kind="no" />,
-              <CompareIcon key="free-ai" kind="no" />,
-              <CompareIcon key="house-ai" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Dental SEO + specialty directories',
-            values: [
-              <CompareIcon key="fj-dental" kind="yes" />,
-              <CompareIcon key="gen-dental" kind="partial" />,
-              <CompareIcon key="free-dental" kind="partial" />,
-              <CompareIcon key="house-dental" kind="no" />,
-            ],
-          },
-        ]}
-        footer="Comparison reflects typical offerings in each category as of June 2026. Individual providers vary."
-      />
+        {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}
+        <ComparisonTable
+          eyebrow="HOW WE COMPARE"
+          headline="FactoryJet vs agencies, freelancers, and in-house teams."
+          lead="Four ways healthcare organizations approach SEO, and where a healthcare-specialist, compliance-aware model differs in practice."
+          columns={[
+            { label: 'FactoryJet', isFactoryJet: true },
+            { label: 'Generalist Agency' },
+            { label: 'Freelancer' },
+            { label: 'In-House' },
+          ]}
+          rows={[
+            {
+              feature: 'Contract terms',
+              values: ['Month-to-month', 'Annual common', 'Hourly / project', 'Fixed salary'],
+            },
+            {
+              feature: 'YMYL E-E-A-T expertise',
+              values: [
+                <CompareIcon key="fj-eeat" kind="yes" />,
+                <CompareIcon key="gen-eeat" kind="partial" />,
+                <CompareIcon key="free-eeat" kind="partial" />,
+                <CompareIcon key="house-eeat" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'HIPAA-safe analytics review',
+              values: [
+                <CompareIcon key="fj-hipaa" kind="yes" />,
+                <CompareIcon key="gen-hipaa" kind="no" />,
+                <CompareIcon key="free-hipaa" kind="no" />,
+                <CompareIcon key="house-hipaa" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Google Business Profile + map pack',
+              values: [
+                <CompareIcon key="fj-gbp" kind="yes" />,
+                <CompareIcon key="gen-gbp" kind="partial" />,
+                <CompareIcon key="free-gbp" kind="partial" />,
+                <CompareIcon key="house-gbp" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Medical schema (MedicalClinic, Physician)',
+              values: [
+                <CompareIcon key="fj-schema" kind="yes" />,
+                <CompareIcon key="gen-schema" kind="no" />,
+                <CompareIcon key="free-schema" kind="partial" />,
+                <CompareIcon key="house-schema" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'AI citations (ChatGPT / Perplexity / AIO)',
+              values: [
+                <CompareIcon key="fj-ai" kind="yes" />,
+                <CompareIcon key="gen-ai" kind="no" />,
+                <CompareIcon key="free-ai" kind="no" />,
+                <CompareIcon key="house-ai" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Dental SEO + specialty directories',
+              values: [
+                <CompareIcon key="fj-dental" kind="yes" />,
+                <CompareIcon key="gen-dental" kind="partial" />,
+                <CompareIcon key="free-dental" kind="partial" />,
+                <CompareIcon key="house-dental" kind="no" />,
+              ],
+            },
+          ]}
+          footer="Comparison reflects typical offerings in each category as of June 2026. Individual providers vary."
+        />
 
-      {/* ─── 10. Pricing, custom 4-card grid ────────────────────────────── */}
-      <HealthcareSEOPricingGrid />
+        {/* ─── 10. Pricing, custom 4-card grid ────────────────────────────── */}
+        <HealthcareSEOPricingGrid />
 
-      {/* ─── 11. Industries served ───────────────────────────────────────── */}
-      <IndustriesGrid />
+        {/* ─── 11. Industries served ───────────────────────────────────────── */}
+        <IndustriesGrid />
 
-      {/* ─── 12. FAQ, 25 items, 6 categories ────────────────────────────── */}
-      <FAQ
-        eyebrow="HEALTHCARE SEO FAQ"
-        headline="Healthcare SEO questions, answered plainly."
-        lead="Questions from practice owners, health tech founders, and dental office managers. If yours is not below, send it in, answers usually come back within 24 hours."
-        categories={FAQ_CATEGORIES}
-        items={FAQ_ITEMS}
-      />
+        {/* ─── 12. FAQ, 25 items, 6 categories ────────────────────────────── */}
+        <FAQ
+          eyebrow="HEALTHCARE SEO FAQ"
+          headline="Healthcare SEO questions, answered plainly."
+          lead="Questions from practice owners, health tech founders, and dental office managers. If yours is not below, send it in, answers usually come back within 24 hours."
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+        />
 
-      {/* ─── 13. Closing CTA ─────────────────────────────────────────────── */}
-      <TalkToFounder
-        variant="full"
-        theme="dark"
-        eyebrow="FOUNDER ACCESS"
-      />
+        {/* ─── 13. Closing CTA ─────────────────────────────────────────────── */}
+        <TalkToFounder
+          variant="full"
+          theme="dark"
+          eyebrow="FOUNDER ACCESS"
+        />
 
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

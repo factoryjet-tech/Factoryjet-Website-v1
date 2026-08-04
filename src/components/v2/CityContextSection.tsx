@@ -95,9 +95,11 @@ export default function CityContextSection({
           </MotionFadeUp>
 
           {/* ── Right, stat data panels (5/12) ───────────────────────── */}
-          <div className="flex flex-col gap-4 lg:col-span-5">
+          {/* <ul>/<li>: rulebook rule 10. Preflight zeroes list styling. */}
+          <ul className="flex flex-col gap-4 lg:col-span-5">
             {stats.map((s, i) => (
-              <MotionFadeUp key={i} delay={i * 0.1}>
+              <li key={i}>
+              <MotionFadeUp delay={i * 0.1}>
                 {/*
                  * Wrapper carries `group` and the outer hover ring — sits
                  * outside overflow-hidden so the ring is never clipped.
@@ -185,8 +187,9 @@ export default function CityContextSection({
 
                 </div>
               </MotionFadeUp>
+              </li>
             ))}
-          </div>
+          </ul>
 
         </div>
       </div>

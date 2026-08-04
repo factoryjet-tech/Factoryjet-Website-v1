@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -427,106 +428,113 @@ const SRT_FAQ_ITEMS = [
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <SiteHeader locale="in" />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-          { name: 'Surat', url: 'https://factoryjet.com/web-design/surat' },
-        ]}
-      />
-      <Hero
-        formSlot={<HeroInlineForm region="in" source="web_design_surat_hero" />} {...heroProps} />
-      <HeroBrowserMockup />
-      <LogoBar />
-      <BigThreeTrustBlock />
-      <CityContextSection {...cityContextProps} />
-      <ServiceExplanation
-          headline="Surat Businesses Sell Locally and Globally, We Design for Both"
-          lead="Surat's economy spans high-value B2B export trades and a thriving local consumer market. The web strategy for a diamond exporter is completely different from a Vesu retail brand, we understand both."
-          rightSlot={
-            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
-              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                What Your Buyers Care About
-              </p>
-              <div className="space-y-5">
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / Diamond &amp; Textile Export (GIDC Sachin / Hazira / Ring Road)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Credibility, certifications, product specifications, and professional imagery. International buyers research suppliers online before making contact: your website is your digital showroom.</p>
-                </div>
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>D2C / Consumer &amp; Retail (Adajan / Vesu / City Light)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Clean design, fast mobile loading, and clear CTAs. Local Surat consumers respond to modern aesthetics, WhatsApp integration, and easy ways to enquire or buy.</p>
+      <main>
+      <Breadcrumbs items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Surat', url: 'https://factoryjet.com/web-design/surat' },
+          ]} />
+        <BreadcrumbSchema
+          items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Surat', url: 'https://factoryjet.com/web-design/surat' },
+          ]}
+        />
+        <Hero
+          formSlot={<HeroInlineForm region="in" source="web_design_surat_hero" />} {...heroProps} />
+        <HeroBrowserMockup />
+        <LogoBar />
+        <BigThreeTrustBlock />
+        <CityContextSection {...cityContextProps} />
+        <ServiceExplanation
+            headline="Surat Businesses Sell Locally and Globally, We Design for Both"
+            lead="Surat's economy spans high-value B2B export trades and a thriving local consumer market. The web strategy for a diamond exporter is completely different from a Vesu retail brand, we understand both."
+            rightSlot={
+              <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+                <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                  What Your Buyers Care About
+                </p>
+                <div className="space-y-5">
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / Diamond &amp; Textile Export (GIDC Sachin / Hazira / Ring Road)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">Credibility, certifications, product specifications, and professional imagery. International buyers research suppliers online before making contact: your website is your digital showroom.</p>
+                  </div>
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>D2C / Consumer &amp; Retail (Adajan / Vesu / City Light)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">Clean design, fast mobile loading, and clear CTAs. Local Surat consumers respond to modern aesthetics, WhatsApp integration, and easy ways to enquire or buy.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          }
-        />
-      <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Surat Website in 7 Days" />
-      <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison | Mumbai',
-              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
-              imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Lighthouse 95+',
-              stat2: 'Commerceflo · B2B',
-            },
-            {
-              industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts | Pune',
-              description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
-              imageSrc: '/images/portfolio/formative-concepts.webp',
-              stat1: 'B2B authority site',
-              stat2: 'SEO + Next.js',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-      <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Surat Agency vs. Freelancer"
-          lead="Not all web design options in Surat deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
-          pullQuote={{
-            stat: '7 days',
-            caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
-          }}
-          columns={SRT_COMPARISON_COLUMNS}
-          rows={SRT_COMPARISON_ROWS}
-          footer="Comparison reflects typical Surat market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
-        />
-      <IndustriesGrid />
-        <GetFreeQuoteCTA />
-      <TestimonialsSection />
-      <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Surat Businesses"
-          lead="Everything Surat businesses ask before starting a project, answered straight."
-          categories={SRT_FAQ_CATEGORIES}
-          items={SRT_FAQ_ITEMS}
-        />
-      <FinalCTA {...finalCTAProps} />
-      {/* Cross-silo link to the Surat digital marketing page */}
-      <section className="border-t border-fj-ink/10 bg-white px-6 py-10 md:px-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-base leading-relaxed text-fj-ink/75">
-            A website only pays for itself once buyers find it. If you also need traffic and
-            enquiries, see our{' '}
-            <a href="/digital-marketing/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">
-              digital marketing agency services in Surat
-            </a>
-            , covering Google, ads, WhatsApp and AI search.
-          </p>
-        </div>
-      </section>
+            }
+          />
+        <StrategicDarkSection {...darkSectionProps} />
+        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Surat Website in 7 Days" />
+        <PortfolioShowcase
+            eyebrow="RECENT WORK"
+            headline="What India's businesses look like after FactoryJet."
+            cards={[
+              {
+                industry: 'Wholesale Distribution · Commerceflo',
+                title: 'Belle Maison | Mumbai',
+                description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+                imageSrc: '/images/portfolio/belle-maison.webp',
+                stat1: 'Lighthouse 95+',
+                stat2: 'Commerceflo · B2B',
+              },
+              {
+                industry: 'MEP / BIM Consulting · SEO',
+                title: 'Formative Concepts | Pune',
+                description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+                imageSrc: '/images/portfolio/formative-concepts.webp',
+                stat1: 'B2B authority site',
+                stat2: 'SEO + Next.js',
+              },
+            ]}
+            ctaHref="/portfolio"
+            ctaLabel="View full portfolio"
+          />
+        <ComparisonTable
+            eyebrow="HOW WE COMPARE"
+            headline="FactoryJet vs. Surat Agency vs. Freelancer"
+            lead="Not all web design options in Surat deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+            pullQuote={{
+              stat: '7 days',
+              caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            }}
+            columns={SRT_COMPARISON_COLUMNS}
+            rows={SRT_COMPARISON_ROWS}
+            footer="Comparison reflects typical Surat market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
+          />
+        <IndustriesGrid />
+          <GetFreeQuoteCTA />
+        <TestimonialsSection />
+        <FAQ
+            eyebrow="FREQUENTLY ASKED QUESTIONS"
+            headline="Common Questions from Surat Businesses"
+            lead="Everything Surat businesses ask before starting a project, answered straight."
+            categories={SRT_FAQ_CATEGORIES}
+            items={SRT_FAQ_ITEMS}
+          />
+        <FinalCTA {...finalCTAProps} />
+        {/* Cross-silo link to the Surat digital marketing page */}
+        <section className="border-t border-fj-ink/10 bg-white px-6 py-10 md:px-8">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-base leading-relaxed text-fj-ink/75">
+              A website only pays for itself once buyers find it. If you also need traffic and
+              enquiries, see our{' '}
+              <a href="/digital-marketing/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                digital marketing agency services in Surat
+              </a>
+              , covering Google, ads, WhatsApp and AI search.
+            </p>
+          </div>
+        </section>
 
-      {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
-      <WebDesignCityLinksIN currentCity="surat" />
+        {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
+        <WebDesignCityLinksIN currentCity="surat" />
 
+      </main>
       <SiteFooter locale="in" />
     </>
   )

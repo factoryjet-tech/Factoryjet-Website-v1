@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import Link from 'next/link';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -447,7 +448,12 @@ export default function SiouxFallsSeoPage() {
         ]}
       />
 
-      <div className="sfseo">
+      <main className="sfseo">
+      <Breadcrumbs items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'US SEO Services', url: 'https://factoryjet.com/services/seo' },
+          { name: 'Sioux Falls SEO', url: CANONICAL },
+        ]} />
         {/* 1 HERO - The Trust Vault */}
         <section className="hero">
           <div className="wrap">
@@ -911,7 +917,7 @@ export default function SiouxFallsSeoPage() {
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

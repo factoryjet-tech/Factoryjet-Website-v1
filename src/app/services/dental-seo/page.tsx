@@ -291,7 +291,7 @@ export default function DentalSEOPage() {
       />
 
       <SiteHeader />
-      <div className="dseo">
+      <main className="dseo">
 
       {/* Cursor glow */}
       <div className="cursor-glow" id="dseo-cursor-glow" aria-hidden="true"></div>
@@ -974,7 +974,7 @@ export default function DentalSEOPage() {
 })();
 `}</Script>
 
-      </div>
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

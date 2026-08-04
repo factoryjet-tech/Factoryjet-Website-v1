@@ -410,7 +410,7 @@ export default function AustinSeoPage() {
       <SiteHeader />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="aseo">
+      <main className="aseo">
         {/* HERO: glass depth stack */}
         <section className="hero">
           <div className="wrap hero-grid">
@@ -778,7 +778,7 @@ export default function AustinSeoPage() {
             ))}
           </div>
         </section>
-      </div>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

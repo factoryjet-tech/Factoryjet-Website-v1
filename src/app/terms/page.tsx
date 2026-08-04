@@ -49,8 +49,10 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="us" />
-      <h1 className="sr-only">Terms and Conditions</h1>
-      <TermsAndConditions />
+      <main>
+        <h1 className="sr-only">Terms and Conditions</h1>
+        <TermsAndConditions />
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

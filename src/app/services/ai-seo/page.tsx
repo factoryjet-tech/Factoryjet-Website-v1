@@ -1612,226 +1612,228 @@ export default function AiSeoServicePage() {
       />
 
       <SiteHeader />
+      <main>
 
-      {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_services_ai_seo_hero" />}
-        eyebrow="AI SEO AGENCY (USA)"
-        headline={
-          <>
-            AI SEO agency for US businesses. <br className="hidden md:block" />
-            Rank in Google. Get cited by ChatGPT.
-          </>
-        }
-        lead="Our AI SEO services cover both signals on one retainer: classic Google rankings, plus citations inside ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. Monthly reports you can read in five minutes."
-        secondaryCta={{
-          label: 'See pricing',
-          href: '#pricing',
-        }}
-        trustItems={[
-          'Senior engineers, not SDRs',
-          'Month-to-month, no annual lock-in',
-          'Code & data ownership from day one',
-        ]}
-      />
+        {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
+        <Hero
+          formSlot={<HeroInlineForm region="us" source="us_services_ai_seo_hero" />}
+          eyebrow="AI SEO AGENCY (USA)"
+          headline={
+            <>
+              AI SEO agency for US businesses. <br className="hidden md:block" />
+              Rank in Google. Get cited by ChatGPT.
+            </>
+          }
+          lead="Our AI SEO services cover both signals on one retainer: classic Google rankings, plus citations inside ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. Monthly reports you can read in five minutes."
+          secondaryCta={{
+            label: 'See pricing',
+            href: '#pricing',
+          }}
+          trustItems={[
+            'Senior engineers, not SDRs',
+            'Month-to-month, no annual lock-in',
+            'Code & data ownership from day one',
+          ]}
+        />
 
-      {/* ─── 1b. AI SEO explained - answer-first definitional block (additive GEO pass) ─── */}
-      <AiSeoExplained />
+        {/* ─── 1b. AI SEO explained - answer-first definitional block (additive GEO pass) ─── */}
+        <AiSeoExplained />
 
-      {/* ─── 2. Stats row (custom, replaces BigThreeTrustBlock) ──────────── */}
-      <StatsRow />
+        {/* ─── 2. Stats row (custom, replaces BigThreeTrustBlock) ──────────── */}
+        <StatsRow />
 
-      {/* ─── 3. Service explanation - the SEO → AI SEO shift ─────────────── */}
-      <ServiceExplanation
-        eyebrow="THE AI SEARCH SHIFT"
-        headline="Google rankings still matter. But they are not the whole story anymore."
-        lead="A meaningful and growing share of US search traffic now happens inside AI assistants (ChatGPT, Perplexity, Claude, Gemini), and Google itself increasingly answers queries with AI Overviews above the blue links. If your site is not engineered to be cited by these engines, you are losing traffic that no traditional SEO audit will surface."
-        body={
-          <>
-            <p
-              className="mt-6 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT or Perplexity. AI engines extract structured answers, weight source credibility, and treat third-party citations as authority signals. Keyword density and backlink volume, the old playbook, matter less. Schema, structured Q&amp;A, and verifiable expertise matter more.
-            </p>
-            <p
-              className="mt-4 font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-            >
-              Our retainers cover both signals. You get monthly reporting on AI-citation count per engine alongside traditional Google rank changes, so you can see which traffic source is moving and decide where to lean in.
-            </p>
-          </>
-        }
-        rightSlot={
-          <div
-            className="rounded-2xl border p-7"
-            style={{
-              borderColor: 'rgba(15,15,18,0.10)',
-              backgroundColor: '#FFFFFF',
-              boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-            }}
-          >
-            <p
-              className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
-            >
-              Our approach
-            </p>
-            <p
-              className="mt-4 fj-display font-bold"
+        {/* ─── 3. Service explanation - the SEO → AI SEO shift ─────────────── */}
+        <ServiceExplanation
+          eyebrow="THE AI SEARCH SHIFT"
+          headline="Google rankings still matter. But they are not the whole story anymore."
+          lead="A meaningful and growing share of US search traffic now happens inside AI assistants (ChatGPT, Perplexity, Claude, Gemini), and Google itself increasingly answers queries with AI Overviews above the blue links. If your site is not engineered to be cited by these engines, you are losing traffic that no traditional SEO audit will surface."
+          body={
+            <>
+              <p
+                className="mt-6 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT or Perplexity. AI engines extract structured answers, weight source credibility, and treat third-party citations as authority signals. Keyword density and backlink volume, the old playbook, matter less. Schema, structured Q&amp;A, and verifiable expertise matter more.
+              </p>
+              <p
+                className="mt-4 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
+              >
+                Our retainers cover both signals. You get monthly reporting on AI-citation count per engine alongside traditional Google rank changes, so you can see which traffic source is moving and decide where to lean in.
+              </p>
+            </>
+          }
+          rightSlot={
+            <div
+              className="rounded-2xl border p-7"
               style={{
-                color: '#0F0F12',
-                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.02em',
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
               }}
             >
-              Both signals, every month.
-            </p>
-            <p
-              className="mt-3 font-fj-body font-semibold"
-              style={{ color: '#0F0F12', fontSize: '1rem' }}
-            >
-              Google rankings AND AI citations on the same retainer.
-            </p>
-            <p
-              className="mt-3 font-fj-body"
-              style={{
-                color: 'rgba(15,15,18,0.65)',
-                fontSize: '0.875rem',
-                lineHeight: 1.55,
-              }}
-            >
-              Most SEO agencies pick one. We treat both as a single integrated workflow because the underlying work (schema, structure, expert content, third-party citations) earns both kinds of traffic.
-            </p>
-          </div>
-        }
-      />
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                Our approach
+              </p>
+              <p
+                className="mt-4 fj-display font-bold"
+                style={{
+                  color: '#0F0F12',
+                  fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+                  lineHeight: 1.15,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Both signals, every month.
+              </p>
+              <p
+                className="mt-3 font-fj-body font-semibold"
+                style={{ color: '#0F0F12', fontSize: '1rem' }}
+              >
+                Google rankings AND AI citations on the same retainer.
+              </p>
+              <p
+                className="mt-3 font-fj-body"
+                style={{
+                  color: 'rgba(15,15,18,0.65)',
+                  fontSize: '0.875rem',
+                  lineHeight: 1.55,
+                }}
+              >
+                Most SEO agencies pick one. We treat both as a single integrated workflow because the underlying work (schema, structure, expert content, third-party citations) earns both kinds of traffic.
+              </p>
+            </div>
+          }
+        />
 
-      {/* ─── 3a. GEO + AEO services detail ───────────────────────────────── */}
-      <GeoAeoServices />
+        {/* ─── 3a. GEO + AEO services detail ───────────────────────────────── */}
+        <GeoAeoServices />
 
-      {/* ─── 3b. Cited AI-search stats (additive GEO pass) ───────────────── */}
-      <AiSearchStats />
+        {/* ─── 3b. Cited AI-search stats (additive GEO pass) ───────────────── */}
+        <AiSearchStats />
 
-      {/* ─── 4. Strategic dark - why old SEO misses AI ───────────────────── */}
-      <StrategicDarkSection
-        eyebrow="WHY OLD SEO MISSES THE AI ERA"
-        headline="Three reasons most SEO agencies are still optimizing for 2018."
-        lead="The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT, Perplexity, Claude, or Google AI Overviews. Here is what most SEO agencies are still missing."
-        pillars={PILLARS}
-      />
+        {/* ─── 4. Strategic dark - why old SEO misses AI ───────────────────── */}
+        <StrategicDarkSection
+          eyebrow="WHY OLD SEO MISSES THE AI ERA"
+          headline="Three reasons most SEO agencies are still optimizing for 2018."
+          lead="The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT, Perplexity, Claude, or Google AI Overviews. Here is what most SEO agencies are still missing."
+          pillars={PILLARS}
+        />
 
-      {/* ─── 5. Service journey - 5-step AI SEO process ──────────────────── */}
-      <ServiceJourneyRow
-        eyebrow="OUR 5-STEP AI SEO PROCESS"
-        headline="From audit to compounding citations, in 90 days."
-        lead="Every engagement follows the same five-step process. The audit defines the roadmap. The roadmap drives the retainer. The retainer is measured monthly. No black boxes."
-        stages={AI_SEO_JOURNEY}
-        closingNote="Every step ships a deliverable. Every month you see what changed and what it cost."
-      />
+        {/* ─── 5. Service journey - 5-step AI SEO process ──────────────────── */}
+        <ServiceJourneyRow
+          eyebrow="OUR 5-STEP AI SEO PROCESS"
+          headline="From audit to compounding citations, in 90 days."
+          lead="Every engagement follows the same five-step process. The audit defines the roadmap. The roadmap drives the retainer. The retainer is measured monthly. No black boxes."
+          stages={AI_SEO_JOURNEY}
+          closingNote="Every step ships a deliverable. Every month you see what changed and what it cost."
+        />
 
-      {/* ─── 6. Comparison vs WebFX, Ignite, SEO Discovery ───────────────── */}
-      <ComparisonTable
-        eyebrow="HOW WE COMPARE"
-        headline="FactoryJet against three agencies you will actually meet on this search."
-        lead="WebFX, Thrive Agency and Onely all appear on the US results pages for AI SEO terms. They are good at genuinely different things. This table is about delivery shape, not about who is better."
-        columns={[
-          { label: 'FactoryJet', isFactoryJet: true },
-          { label: 'WebFX' },
-          { label: 'Thrive Agency' },
-          { label: 'Onely' },
-        ]}
-        rows={[
-          {
-            feature: 'Core strength',
-            values: [
-              'Answer-layer visibility across four AI engines',
-              'Enterprise scale and in-house platform',
-              'Full-service marketing across several languages',
-              'Technical SEO, rendering and crawl depth',
-            ],
-          },
-          {
-            feature: 'AI engines reported monthly',
-            values: [
-              'ChatGPT + Perplexity + Claude + Gemini + Google AIO',
-              'Google AIO focus',
-              'Google AIO focus',
-              'Technical foundations rather than per-engine counts',
-            ],
-          },
-          {
-            feature: 'Who runs your account',
-            values: [
-              'The founder plus senior engineers',
-              'Account team',
-              'Account team',
-              'Technical specialists',
-            ],
-          },
-          {
-            feature: 'Code & data ownership Day 1',
-            values: [
-              <CompareIcon key="fj-data" kind="yes" />,
-              <CompareIcon key="webfx-data" kind="partial" />,
-              <CompareIcon key="thrive-data" kind="partial" />,
-              <CompareIcon key="onely-data" kind="partial" />,
-            ],
-          },
-          {
-            feature: 'Contract terms',
-            values: [
-              'Month to month',
-              'Longer terms common',
-              'Promotes no long-term contracts',
-              'Project and retainer',
-            ],
-          },
-          {
-            feature: 'Authority footprint',
-            values: [
-              'Challenger: 44 referring domains',
-              'Established incumbent',
-              'Established incumbent',
-              'Established specialist',
-            ],
-          },
-        ]}
-        footer="Delivery-model comparison based on publicly stated positioning and on DataForSEO US SERP data pulled 2026-07-26. No pricing is compared because none of these agencies publish rates."
-      />
+        {/* ─── 6. Comparison vs WebFX, Ignite, SEO Discovery ───────────────── */}
+        <ComparisonTable
+          eyebrow="HOW WE COMPARE"
+          headline="FactoryJet against three agencies you will actually meet on this search."
+          lead="WebFX, Thrive Agency and Onely all appear on the US results pages for AI SEO terms. They are good at genuinely different things. This table is about delivery shape, not about who is better."
+          columns={[
+            { label: 'FactoryJet', isFactoryJet: true },
+            { label: 'WebFX' },
+            { label: 'Thrive Agency' },
+            { label: 'Onely' },
+          ]}
+          rows={[
+            {
+              feature: 'Core strength',
+              values: [
+                'Answer-layer visibility across four AI engines',
+                'Enterprise scale and in-house platform',
+                'Full-service marketing across several languages',
+                'Technical SEO, rendering and crawl depth',
+              ],
+            },
+            {
+              feature: 'AI engines reported monthly',
+              values: [
+                'ChatGPT + Perplexity + Claude + Gemini + Google AIO',
+                'Google AIO focus',
+                'Google AIO focus',
+                'Technical foundations rather than per-engine counts',
+              ],
+            },
+            {
+              feature: 'Who runs your account',
+              values: [
+                'The founder plus senior engineers',
+                'Account team',
+                'Account team',
+                'Technical specialists',
+              ],
+            },
+            {
+              feature: 'Code & data ownership Day 1',
+              values: [
+                <CompareIcon key="fj-data" kind="yes" />,
+                <CompareIcon key="webfx-data" kind="partial" />,
+                <CompareIcon key="thrive-data" kind="partial" />,
+                <CompareIcon key="onely-data" kind="partial" />,
+              ],
+            },
+            {
+              feature: 'Contract terms',
+              values: [
+                'Month to month',
+                'Longer terms common',
+                'Promotes no long-term contracts',
+                'Project and retainer',
+              ],
+            },
+            {
+              feature: 'Authority footprint',
+              values: [
+                'Challenger: 44 referring domains',
+                'Established incumbent',
+                'Established incumbent',
+                'Established specialist',
+              ],
+            },
+          ]}
+          footer="Delivery-model comparison based on publicly stated positioning and on DataForSEO US SERP data pulled 2026-07-26. No pricing is compared because none of these agencies publish rates."
+        />
 
-      {/* ─── 6b. Named competitor field (real page-1 keywords) ───────── */}
-      <CompetitorField />
+        {/* ─── 6b. Named competitor field (real page-1 keywords) ───────── */}
+        <CompetitorField />
 
-      {/* ─── 7. Pricing - custom 4-card grid ─────────────────────────────── */}
-      <AiSeoPricingGrid />
+        {/* ─── 7. Pricing - custom 4-card grid ─────────────────────────────── */}
+        <AiSeoPricingGrid />
 
-      {/* ─── 8. Industries served (DARK) ─────────────────────────────────── */}
-      <IndustriesGrid />
+        {/* ─── 8. Industries served (DARK) ─────────────────────────────────── */}
+        <IndustriesGrid />
 
-      {/* ─── 9. Case study placeholder (light buffer between dark sections) */}
-      <CaseStudyPlaceholder />
+        {/* ─── 9. Case study placeholder (light buffer between dark sections) */}
+        <CaseStudyPlaceholder />
 
-      {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ───────── */}
-      <AiVisibilityCtaBand />
+        {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ───────── */}
+        <AiVisibilityCtaBand />
 
-      {/* ─── 10. FAQ - 21 across 5 categories ────────────────────────────── */}
-      <FAQ
-        eyebrow="AI SEO FAQ"
-        headline="Fifty-two questions, answered the way Bhavesh would on the discovery call."
-        lead="If your question is not below, send a written brief. Answers usually come back inside 24 hours."
-        categories={FAQ_CATEGORIES}
-        items={FAQ_ITEMS}
-      />
+        {/* ─── 10. FAQ - 21 across 5 categories ────────────────────────────── */}
+        <FAQ
+          eyebrow="AI SEO FAQ"
+          headline="Fifty-two questions, answered the way Bhavesh would on the discovery call."
+          lead="If your question is not below, send a written brief. Answers usually come back inside 24 hours."
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+        />
 
-      {/* ─── 11. Closing CTA - TalkToFounder full dark ───────────────────── */}
-      <TalkToFounder
-        variant="full"
-        theme="dark"
-        eyebrow="FOUNDER ACCESS"
-      />
+        {/* ─── 11. Closing CTA - TalkToFounder full dark ───────────────────── */}
+        <TalkToFounder
+          variant="full"
+          theme="dark"
+          eyebrow="FOUNDER ACCESS"
+        />
 
+      </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

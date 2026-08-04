@@ -155,9 +155,10 @@ export default function StrategicDarkSection({
         </div>
 
         {/* Pillar cards */}
-        <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-8">
+        {/* <ul>/<li>: rulebook rule 10. Preflight zeroes list styling. */}
+        <ul className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-8">
           {pillars.map((pillar, i) => (
-            <div
+            <li
               key={i}
               className={`group relative overflow-hidden rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${pillar.image ? '' : 'p-5 lg:p-6'}`}
               style={{
@@ -259,9 +260,9 @@ export default function StrategicDarkSection({
                   {pillar.body}
                 </p>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -430,92 +431,99 @@ const MDU_FAQ_ITEMS = [
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <SiteHeader locale="in" />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-          { name: 'Madurai', url: 'https://factoryjet.com/web-design/madurai' },
-        ]}
-      />
-      <Hero
-        formSlot={<HeroInlineForm region="in" source="web_design_madurai_hero" />} {...heroProps} />
-      <HeroBrowserMockup />
-      <LogoBar />
-      <BigThreeTrustBlock />
-      <CityContextSection {...cityContextProps} />
-      <ServiceExplanation
-          headline="Madurai Has Many Business Types, We Serve All of Them"
-          lead="From MSME manufacturers in Kappalur to hospital chains in Anna Nagar, and from engineering exporters to temple tourism operators, Madurai's business diversity is its strength. We build websites that serve each segment's unique needs."
-          rightSlot={
-            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
-              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                What Your Buyers Care About
-              </p>
-              <div className="space-y-5">
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / Manufacturing &amp; Export (Kappalur SIDCO / Mattuthavani)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Product specifications, export certifications, capacity statements, and professional imagery. B2B and international buyers form impressions from your website before ever calling you.</p>
-                </div>
-                <div>
-                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Local / Retail, Healthcare &amp; Services (Anna Nagar / KK Nagar / SS Colony)</p>
-                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Google Maps optimization, patient or customer reviews, service menus, and clear contact CTAs. Local Madurai consumers search on mobile: your site must load fast and make it easy to act.</p>
+      <main>
+      <Breadcrumbs items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Madurai', url: 'https://factoryjet.com/web-design/madurai' },
+          ]} />
+        <BreadcrumbSchema
+          items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+            { name: 'Madurai', url: 'https://factoryjet.com/web-design/madurai' },
+          ]}
+        />
+        <Hero
+          formSlot={<HeroInlineForm region="in" source="web_design_madurai_hero" />} {...heroProps} />
+        <HeroBrowserMockup />
+        <LogoBar />
+        <BigThreeTrustBlock />
+        <CityContextSection {...cityContextProps} />
+        <ServiceExplanation
+            headline="Madurai Has Many Business Types, We Serve All of Them"
+            lead="From MSME manufacturers in Kappalur to hospital chains in Anna Nagar, and from engineering exporters to temple tourism operators, Madurai's business diversity is its strength. We build websites that serve each segment's unique needs."
+            rightSlot={
+              <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+                <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                  What Your Buyers Care About
+                </p>
+                <div className="space-y-5">
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / Manufacturing &amp; Export (Kappalur SIDCO / Mattuthavani)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">Product specifications, export certifications, capacity statements, and professional imagery. B2B and international buyers form impressions from your website before ever calling you.</p>
+                  </div>
+                  <div>
+                    <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Local / Retail, Healthcare &amp; Services (Anna Nagar / KK Nagar / SS Colony)</p>
+                    <p className="mt-1 font-fj-body text-sm text-[#525252]">Google Maps optimization, patient or customer reviews, service menus, and clear contact CTAs. Local Madurai consumers search on mobile: your site must load fast and make it easy to act.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          }
-        />
-      <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Madurai Website in 7 Days" />
-      <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Wholesale Distribution · Commerceflo',
-              title: 'Belle Maison | Mumbai',
-              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
-              imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Lighthouse 95+',
-              stat2: 'Commerceflo · B2B',
-            },
-            {
-              industry: 'MEP / BIM Consulting · SEO',
-              title: 'Formative Concepts | Pune',
-              description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
-              imageSrc: '/images/portfolio/formative-concepts.webp',
-              stat1: 'B2B authority site',
-              stat2: 'SEO + Next.js',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-      <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Madurai Agency vs. Freelancer"
-          lead="Not all web design options in Madurai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
-          pullQuote={{
-            stat: '7 days',
-            caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
-          }}
-          columns={MDU_COMPARISON_COLUMNS}
-          rows={MDU_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
-        />
-      <IndustriesGrid />
-        <GetFreeQuoteCTA />
-      <TestimonialsSection />
-      <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Madurai Businesses"
-          lead="Everything Madurai businesses ask before starting a project, answered straight."
-          categories={MDU_FAQ_CATEGORIES}
-          items={MDU_FAQ_ITEMS}
-        />
-      <FinalCTA {...finalCTAProps} />
-      {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
-      <WebDesignCityLinksIN currentCity="madurai" />
+            }
+          />
+        <StrategicDarkSection {...darkSectionProps} />
+        <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Madurai Website in 7 Days" />
+        <PortfolioShowcase
+            eyebrow="RECENT WORK"
+            headline="What India's businesses look like after FactoryJet."
+            cards={[
+              {
+                industry: 'Wholesale Distribution · Commerceflo',
+                title: 'Belle Maison | Mumbai',
+                description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+                imageSrc: '/images/portfolio/belle-maison.webp',
+                stat1: 'Lighthouse 95+',
+                stat2: 'Commerceflo · B2B',
+              },
+              {
+                industry: 'MEP / BIM Consulting · SEO',
+                title: 'Formative Concepts | Pune',
+                description: 'Authority-building website for an MEP drafting and BIM consulting firm, credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+                imageSrc: '/images/portfolio/formative-concepts.webp',
+                stat1: 'B2B authority site',
+                stat2: 'SEO + Next.js',
+              },
+            ]}
+            ctaHref="/portfolio"
+            ctaLabel="View full portfolio"
+          />
+        <ComparisonTable
+            eyebrow="HOW WE COMPARE"
+            headline="FactoryJet vs. Madurai Agency vs. Freelancer"
+            lead="Not all web design options in Madurai deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+            pullQuote={{
+              stat: '7 days',
+              caption: 'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            }}
+            columns={MDU_COMPARISON_COLUMNS}
+            rows={MDU_COMPARISON_ROWS}
+            footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          />
+        <IndustriesGrid />
+          <GetFreeQuoteCTA />
+        <TestimonialsSection />
+        <FAQ
+            eyebrow="FREQUENTLY ASKED QUESTIONS"
+            headline="Common Questions from Madurai Businesses"
+            lead="Everything Madurai businesses ask before starting a project, answered straight."
+            categories={MDU_FAQ_CATEGORIES}
+            items={MDU_FAQ_ITEMS}
+          />
+        <FinalCTA {...finalCTAProps} />
+        {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
+        <WebDesignCityLinksIN currentCity="madurai" />
 
+      </main>
       <SiteFooter locale="in" />
     </>
   )

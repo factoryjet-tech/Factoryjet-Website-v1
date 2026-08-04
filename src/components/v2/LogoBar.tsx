@@ -98,9 +98,15 @@ export default function LogoBar({
         `}</style>
 
         <div className="logo-marquee-track" aria-hidden="false">
-          {/* Primary set */}
+          {/* Primary set. Wrapped in a <ul> for rule 10 (median 110 <li> on
+              AI-Overview-cited pages); `contents` keeps the <li> as direct flex
+              children so the marquee layout is unchanged. The duplicate set
+              below stays plain spans on purpose: it exists only to make the
+              loop seamless, and marking it up as list items would pad the
+              count with content that is not really there. */}
+          <ul className="contents">
           {LOGOS.map((name) => (
-            <span
+            <li
               key={`a-${name}`}
               className="fj-display shrink-0 font-medium text-fj-ink"
               style={{
@@ -112,8 +118,9 @@ export default function LogoBar({
               }}
             >
               {name}
-            </span>
+            </li>
           ))}
+          </ul>
 
           {/* Duplicate set for seamless loop */}
           {LOGOS.map((name) => (

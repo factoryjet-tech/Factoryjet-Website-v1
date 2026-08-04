@@ -680,7 +680,7 @@ export default function WebApplicationDevelopmentPage() {
       />
 
       {/* ── 7. SERVICE JOURNEY ── */}
-      <div id="process">
+      <main id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Concept to Production-Ready App: Five Structured Phases"
@@ -688,7 +688,7 @@ export default function WebApplicationDevelopmentPage() {
           stages={journeyStages}
           closingNote="5 PHASES · FIXED PRICE · 60-DAY BUG WARRANTY · FULL SOURCE CODE HANDOFF"
         />
-      </div>
+      </main>
 
       {/* ── 8. CITY CONTEXT ── */}
       <CityContextSection

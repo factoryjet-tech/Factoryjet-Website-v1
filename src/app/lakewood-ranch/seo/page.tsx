@@ -439,689 +439,691 @@ export default function LakewoodRanchSEO() {
       />
       <div className="lrseo">
         <SiteHeader />
+        <main>
 
-        {/* ── HERO ─────────────────────────────────────────────────────── */}
-        <section className="hero">
-          <div className="wrap hero-grid">
-            {/* Left: copy */}
-            <div>
-              <div className="loc rise"><b />&nbsp;Lakewood Ranch, FL</div>
-              <h1 className="rise d1">
-                Lakewood Ranch <span className="it">SEO company</span><br />
-                for businesses in Manatee<br />and Sarasota County.
-              </h1>
-              <p className="lead rise d2">
-                We get Lakewood Ranch businesses into the Google map pack, onto page one for
-                category searches, and quoted in AI answers. Most of the community has a Bradenton
-                or Sarasota address while everyone searches for "Lakewood Ranch". That gap is
-                usually the first thing worth fixing.
-              </p>
-              <div className="hstat rise d3">
-                <div className="n">
-                  <span className="star">★</span>&nbsp;5.0
-                  <span className="l">/ 500+ clients</span>
-                </div>
-                <div className="sep" />
-                <div className="n">2<span className="l">&nbsp;counties covered</span></div>
-                <div className="sep" />
-                <div className="n">7 days<span className="l">&nbsp;to start</span></div>
-              </div>
-              <HeroInlineForm region="us" source="lakewood_ranch_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="cta-row rise d4">
-                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  Talk to the founder
-                </a>
-              </div>
-            </div>
-
-            {/* Right: blueprint/survey grid visual */}
-            <div className="hero-vis float">
-              {/* Floating chips */}
-              <div className="schip ch1">
-                <div className="k">Core ZIP</div>
-                <div className="v">34202</div>
-              </div>
-              <div className="schip ch2">
-                <div className="cdot" />
-                <div className="ct2">Two counties, one name</div>
-              </div>
-
-              <div className="surveycard">
-                {/* Header */}
-                <div className="sv-head">
-                  <div className="sv-title">LWR Search Territory Survey</div>
-                  <div className="sv-coord">27.41&#176;N 82.39&#176;W</div>
-                </div>
-
-                {/* Map area with parcels */}
-                <div className="sv-map">
-                  {/* Territory parcels */}
-                  <div className="parcel p1">Country Club &amp; Greenbrook</div>
-                  <div className="parcel p2">Main Street</div>
-                  <div className="parcel p3 p-you">YOU</div>
-                  <div className="parcel p4">Waterside Place</div>
-                  <div className="parcel p5">Azario &middot; Star Farms &middot; Lorraine Lakes</div>
-
-                  {/* Plot markers */}
-                  <div className="plotmark p1" />
-                  <div className="sv-label l1">HOT</div>
-
-                  <div className="plotmark p2" />
-                  <div className="sv-label l2">HOT</div>
-
-                  <div className="plotmark p3" />
-                  <div className="sv-label l3">OPEN</div>
-                </div>
-
-                {/* Footer */}
-                <div className="sv-footer">
-                  <div className="stat">
-                    <div className="sv-v">65K+</div>
-                    <div className="sv-l">residents</div>
-                  </div>
-                  <div className="sdiv" />
-                  <div className="stat">
-                    <div className="sv-v">#1</div>
-                    <div className="sv-l">US planned community</div>
-                  </div>
-                  <div className="sdiv" />
-                  <div className="stat">
-                    <div className="sv-v">34202</div>
-                    <div className="sv-l">core ZIP</div>
-                  </div>
-                  <div className="sdiv" />
-                  <div className="stat">
-                    <div className="sv-v">2</div>
-                    <div className="sv-l">counties</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── ANSWER FIRST ─────────────────────────────────────────────── */}
-        <section style={{ paddingTop: 0, paddingBottom: '60px' }}>
-          <div className="wrap">
-            <div className="bluf rise">
-              <p>
-                <strong>Short answer:</strong> FactoryJet does SEO for Lakewood Ranch businesses,
-                and so do a handful of national agencies you will meet further down this page.
-                Local SEO here means three jobs. Getting your Google Business Profile into the
-                three-result map pack when somebody in 34202, 34211 or 34240 searches your category.
-                Getting your website pages to rank underneath that map pack. And getting your
-                business named when a new arrival asks ChatGPT or Google's AI answer for a
-                recommendation. The Lakewood Ranch complication is that the community is not an
-                incorporated city, so most addresses here read Bradenton or Sarasota while every
-                resident says "Lakewood Ranch". Closing that gap is normally the first move and it
-                costs nothing but attention.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── MARKET DATA (only dark section) ──────────────────────────── */}
-        <section className="dark">
-          <div className="wrap">
-            <div className="eyebrow">Measured, not guessed</div>
-            <h2>What the numbers actually say about this market.</h2>
-            <p className="lead">
-              Live keyword data pulled from DataForSEO in July 2026, plus our own Search Console
-              figures. Including the ones that are not flattering.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/lakewood-ranch/seo/lakewood-ranch-seo-hero.webp"
-                alt="Lakewood Ranch, Florida: a master-planned community spanning Manatee and Sarasota counties where new residents search for every local service"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="statgrid">
-              <div className="scard">
-                <div className="n">14,800</div>
-                <div className="l">US searches a month for "seo company near me", the query every agency on this SERP is chasing. Keyword difficulty 24.</div>
-                <div className="src">DataForSEO, US, July 2026</div>
-              </div>
-              <div className="scard">
-                <div className="n">0</div>
-                <div className="l">Keyword difficulty on city-modified local SEO queries such as "local seo austin" and "charlotte local seo". The place-based version of the search is the winnable one.</div>
-                <div className="src">DataForSEO, US, July 2026</div>
-              </div>
-              <div className="scard">
-                <div className="n">7.7</div>
-                <div className="l">Our own average Google position for "lakewood ranch seo company" across 262 impressions in the last 90 days. Top of page two on most screens. We are the challenger here.</div>
-                <div className="src">Google Search Console, FactoryJet, July 2026</div>
-              </div>
-              <div className="scard">
-                <div className="n">44</div>
-                <div className="l">Referring domains pointing at factoryjet.com. Coalition Technologies, one of the larger names in this category, has roughly 2,800. We are not going to pretend otherwise.</div>
-                <div className="src">DataForSEO backlink index, July 2026</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── LOCAL SUBSTANCE ──────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">Lakewood Ranch, specifically</div>
-            <h2>Five things about this town that change how the SEO work is done.</h2>
-            <p className="lead">
-              These are the details an agency running a template misses, and they are the details
-              that decide whether a local campaign works here.
-            </p>
-            <div className="grid2">
-              <div className="ucard">
-                <div className="pill">The address problem</div>
-                <h3>The town everybody names is not the town on your listing</h3>
-                <p>
-                  Lakewood Ranch is a census-designated place built on former Schroeder-Manatee Ranch
-                  land, straddling the county line east of I-75. It is not an incorporated city, so
-                  it has no postal identity of its own. The villages north of University Parkway,
-                  Country Club, Greenbrook, Summerfield, Riverwalk, Central Park, Del Webb, Mallory
-                  Park, Polo Run, carry Bradenton addresses in 34202, 34211 and 34212. Waterside, to
-                  the south in Sarasota County, carries a Sarasota address in 34240. Google reads the
-                  address on your profile. Your customers type the community name. If those two
-                  things never meet on your website, you are half-visible by design.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Two centres, two catchments</div>
-                <h3>Main Street and Waterside are not the same market</h3>
-                <p>
-                  There are two town centres here and they behave differently. Main Street at
-                  Lakewood Ranch sits on the Manatee side and serves the older, established villages.
-                  Waterside Place opened later on the Sarasota side and pulls the newer households
-                  plus the Sunday farmers market crowd. University Town Center and Nathan Benderson
-                  Park sit down at the University Parkway interchange and draw from both. Because
-                  distance is a genuine weighting factor in map results, a business at one end and a
-                  business at the other get different rankings for the identical search. Any strategy
-                  that treats Lakewood Ranch as a single point on a map is leaving half the community
-                  on the table.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">What pays the bills here</div>
-                <h3>Healthcare, construction fallout, and money management</h3>
-                <p>
-                  The local economy is not general. Healthcare is the heavyweight: Lakewood Ranch
-                  Medical Center, Sarasota Memorial's Lakewood Ranch campus, and a dense layer of
-                  dental, orthopedic, dermatology, physical therapy and aesthetics practices serving
-                  an older-skewing population. Then everything downstream of continuous home
-                  building: roofing, pool, pest, lawn, remodel, shutters. Then wealth management,
-                  estate law and CPA work for retirees. Add youth and amateur sport bringing weekend
-                  visitors, plus a modest office corridor around Lakewood Ranch Corporate Park. Those
-                  categories have completely different search patterns and none of them respond to
-                  the same content plan.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">Two seasons that matter</div>
-                <h3>Snowbirds arrive, then storms rearrange everything</h3>
-                <p>
-                  Roughly November through April, a meaningful share of the audience physically
-                  arrives, lifting demand for medical, wellness, dining and home services, then
-                  leaves again. June through November is hurricane season, and a single storm
-                  reorders demand for roofing, tree work, restoration and generators inside 48 hours.
-                  Ian in 2022 and the Helene and Milton pair in 2024 both did exactly that to this
-                  stretch of coast. An agency running the same twelve-month calendar it uses for a
-                  client in Ohio will be publishing the wrong thing twice a year, every year.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">How hard the SERP really is</div>
-                <h3>Soft market, national squatters, closing window</h3>
-                <p>
-                  Honest read from the live data: the agencies ranking on these queries are national
-                  and regional operators, not Lakewood Ranch businesses. Meanwhile the difficulty
-                  numbers split cleanly. The generic "near me" searches sit between 24 and 41 on the
-                  difficulty scale and are fought over nationally. The city-modified versions score at
-                  the very bottom. Practically, that means the category-plus-place searches your
-                  customers actually use are winnable now, by a business with a decent site and a
-                  properly maintained profile. That will not be true forever.
-                </p>
-              </div>
-              <div className="ucard">
-                <div className="pill">So is it worth it here</div>
-                <h3>Yes for most categories, and here is when it is not</h3>
-                <p>
-                  If your customers search before they buy, and in healthcare, home services, legal,
-                  financial and personal services they overwhelmingly do, then local SEO in Lakewood
-                  Ranch has an unusually good ratio right now: high-intent audience, constant new
-                  arrivals with no brand loyalty, and weak incumbents. Where it is not worth it: if
-                  your work comes from one builder relationship, or a wholesale contract, or a
-                  referral network you already trust. We will tell you that on the call rather than
-                  after six months.
-                </p>
-              </div>
-            </div>
-            <p className="districts">
-              Villages, districts and nearby towns we cover:
-              <b> Country Club</b>, <b>Greenbrook</b>, <b>Summerfield</b>, <b>Riverwalk</b>,
-              <b> Central Park</b>, <b>Del Webb</b>, <b>Cresswind</b>, <b>Esplanade</b>,
-              <b> Mallory Park</b>, <b>Polo Run</b>, <b>Indigo</b>, <b>Star Farms</b>,
-              <b> Azario</b>, <b>Lorraine Lakes</b>, <b>Waterside</b>, <b>Lakehouse Cove</b>,
-              <b> Shoreview</b>, <b>University Park</b>, <b>Bradenton</b>, <b>Sarasota</b>,
-              <b> Ellenton</b>, <b>Parrish</b> and <b>Palmetto</b>.
-            </p>
-          </div>
-        </section>
-
-        {/* ── COMPETITORS ──────────────────────────────────────────────── */}
-        <section className="room-lav">
-          <div className="wrap">
-            <div className="eyebrow">Who else ranks for this</div>
-            <h2>The agencies you will actually be comparing us against.</h2>
-            <p className="lead">
-              We pulled the live US SERPs for these queries in July 2026. Here is who showed up,
-              what they are genuinely good at, and where we are different. None of this is
-              guesswork and none of it is a hit piece.
-            </p>
-            <div className="grid2">
-              {RIVALS.map((r) => (
-                <div className="ucard" key={r.name}>
-                  <div className="pill">{r.domain}</div>
-                  <h3>{r.name}</h3>
-                  <p style={{ fontFamily: 'var(--mono)', fontSize: '12.5px', color: '#B23E13', margin: '0 0 10px' }}>
-                    {r.stat}
-                  </p>
-                  <p style={{ marginBottom: '10px' }}><strong>What they do well.</strong> {r.good}</p>
-                  <p><strong>Where we differ.</strong> {r.diff}</p>
-                </div>
-              ))}
-            </div>
-            <div className="bluf" style={{ marginTop: '28px', maxWidth: '100%' }}>
-              <p>
-                <strong>And our own position, unvarnished.</strong> FactoryJet has 44 referring
-                domains. Coalition Technologies has roughly 2,800. We sit at position 10 for "local
-                seo nashville" and position 8 for "seo agency austin texas". This very page averages
-                position 7.7 for "lakewood ranch seo company" across 262 impressions in the last 90
-                days, which is the top of page two. We are the challenger in this category and we
-                would rather say it here than have you find out later. What we can offer is senior
-                people working directly on your account, a fast start, and local detail nobody
-                running a template will match. If your category genuinely needs a link profile in
-                the thousands to compete, we will tell you that on the audit call.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">Who we work with</div>
-            <h2>Built for the categories this community actually searches for.</h2>
-            <p className="lead">
-              Every one of these maps to something real about the local population: an older median
-              age, continuous home building, and a steady flow of arrivals with no existing provider.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/lakewood-ranch/seo/lakewood-ranch-buyer-intent-dashboard.webp"
-                alt="Local search demand data for Lakewood Ranch, Florida service categories shown on an analytics dashboard"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="grid3">
-              {[
-                {
-                  pill: 'Healthcare and dental',
-                  h: 'Medical, dental, orthopedic and physical therapy practices',
-                  p: 'The densest category here, and the one where reviews carry the most weight. New arrivals look for a primary care doctor and a dentist almost immediately, and retirees research specialists carefully and then stay for years. We build the profile and the service pages that get you into that shortlist.',
-                },
-                {
-                  pill: 'Home services',
-                  h: 'Roofing, HVAC, pool, pest, lawn and remodel',
-                  p: 'Continuous home building means continuous downstream demand, and hurricane season means sudden spikes. We build for both: evergreen service pages that hold rankings through the quiet months, and storm-response content and profile posts prepared before they are needed.',
-                },
-                {
-                  pill: 'Financial and legal',
-                  h: 'Wealth management, estate law, CPAs and elder law',
-                  p: 'A retiree-heavy population generates unusually strong demand for estate planning, tax and wealth work. These are high-consideration searches where a thin website loses the enquiry before anyone calls. Content depth and trust signals do most of the work in this category.',
-                },
-                {
-                  pill: 'Wellness and fitness',
-                  h: 'Gyms, physical therapy, med spas and studios',
-                  p: 'Active lifestyle is a core part of how this community sees itself, and new residents look for a gym or a studio within weeks of arriving. Getting into the map pack before they commit somewhere else is the whole game in this category.',
-                },
-                {
-                  pill: 'Restaurants and retail',
-                  h: 'Restaurants, cafes and local retail at Main Street and Waterside',
-                  p: 'Two town centres means two different discovery patterns, plus a seasonal swing when the winter population arrives. Profile photos, posts tied to real local events, and content that answers the "best somewhere near me" question all pull weight here.',
-                },
-                {
-                  pill: 'Family services',
-                  h: 'Tutors, childcare, pet services and personal services',
-                  p: 'Families moving in look for every recurring service at once, usually in the same fortnight. Being in the map pack for your category during that window creates a relationship that renews on its own for years afterwards.',
-                },
-              ].map(({ pill, h, p }) => (
-                <div className="ucard" key={h}>
-                  <div className="pill">{pill}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── LISTICLE ─────────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">Warning signs</div>
-            <h2>9 signs your Lakewood Ranch business is losing search to somebody worse than you.</h2>
-            <p className="lead">
-              Each one is fixable, and most of them are fixable within the first month.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/lakewood-ranch/seo/lakewood-ranch-new-resident-seo.webp"
-                alt="A new Lakewood Ranch resident searching on a phone for a local service provider shortly after moving in"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <ul className="listicle-list">
-              {LISTICLE.map(({ n, h, p }) => (
-                <li key={n}>
-                  <div className="li-n">{n}</div>
-                  <div>
-                    <div className="li-h">{h}</div>
-                    <div className="li-p">{p}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">What you get</div>
-            <h2>One scope, the whole stack, every month.</h2>
-            <p className="lead">
-              No package tiers and no feature gates. The work below is what a local campaign needs,
-              so it is all in.
-            </p>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/shared/factoryjet-senior-engineer.webp"
-                alt="A FactoryJet senior engineer reviewing technical SEO audit data on screen"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="grid2">
-              {[
-                {
-                  h: 'Technical foundation',
-                  p: 'Core Web Vitals, crawl and index management, LocalBusiness, Service and FAQPage schema, mobile rendering, and the structured data that AI answer engines rely on. Boring, unglamorous, and the reason everything else works.',
-                },
-                {
-                  h: 'Google Business Profile, properly maintained',
-                  p: 'Correct primary category, every service and attribute filled, real photos, weekly posts tied to actual local events rather than generic filler, Q&A managed, and a steady review strategy. Both counties handled separately where you have two locations.',
-                },
-                {
-                  h: 'Pages that name the place and the service',
-                  p: 'One well-built page per service per area, written to cover Lakewood Ranch and the Bradenton or Sarasota address that sits underneath it, structured for featured snippets and AI citation, and internally linked so your pages do not compete with each other.',
-                },
-                {
-                  h: 'Local citations and links, county by county',
-                  p: 'Manatee and Sarasota each have their own chambers, directories and news outlets. We work the Lakewood Ranch Business Alliance, the local Observer papers, county and regional publications, and category-specific directories. Nothing bought.',
-                },
-                {
-                  h: 'AI search visibility',
-                  p: 'Relocating households frequently ask an assistant before they know a single local name. We write answer-first, mark up entities cleanly, and target the sources those models already quote, so your business turns up in the recommendation rather than the tenth link.',
-                },
-                {
-                  h: 'Reporting on calls, not screenshots',
-                  p: 'Tracked calls and form fills from organic, Business Profile call volume, ranking movement on your primary queries, Core Web Vitals status, and what competitors changed. Then a live monthly call and a written plan for the next thirty days.',
-                },
-              ].map(({ h, p }) => (
-                <div className="ucard" key={h}>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROCESS ──────────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">How it works</div>
-            <h2>From audit to ranking in four steps.</h2>
-            <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet founder running a free 30 minute SEO audit call with a local business owner"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="grid4">
-              {[
-                { n: '01', h: 'Free audit call', p: 'Thirty minutes on your profile health, site condition, current positions and what your three nearest competitors are doing. You leave with a prioritised list either way.' },
-                { n: '02', h: 'Scope and kickoff', p: 'A flat monthly scope agreed against your category and goals, then the technical baseline inside seven days.' },
-                { n: '03', h: 'Build and publish', p: 'Technical fixes in weeks one and two. Business Profile work from week two. Pages and local link work from week three.' },
-                { n: '04', h: 'Track, report, adapt', p: 'Monthly review on calls and leads, a written thirty-day plan, competitor monitoring and a live strategy call.' },
-              ].map(({ n, h, p }) => (
-                <div className="ucard" key={n}>
-                  <div className="pill">{n}</div>
-                  <h3>{h}</h3>
-                  <p>{p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPARISON ───────────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">How we compare</div>
-            <h2>FactoryJet against a conventional agency engagement.</h2>
-            <div className="cmpwrap">
-              <table className="cmp">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th className="fjh">FactoryJet</th>
-                    <th>Traditional agency</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARE.map(({ k, fj, alt, hl }) => (
-                    <tr key={k}>
-                      <td className="k">{k}</td>
-                      <td className="fj">{hl ? <span className="hl">{fj}</span> : fj}</td>
-                      <td className="alt">{alt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROOF ────────────────────────────────────────────────────── */}
-        <section className="room-lav">
-          <div className="wrap">
-            <div className="eyebrow">What clients say</div>
-            <h2>Senior engineers, founder-led strategy, month to month.</h2>
-            <p className="lead">
-              We track calls and bookings rather than ranking screenshots, and we do not publish
-              case study numbers we cannot evidence.
-            </p>
-            <div
-              className="quote"
-              style={{ background: '#FFFFFF', border: '1px solid rgba(26,23,18,.10)' }}
-            >
-              <p style={{ color: '#1A1712' }}>
-                "We started getting calls from people who had never heard of us before, just found
-                us on Google and called. That is exactly what we needed and exactly what FactoryJet
-                delivered."
-              </p>
-              <div className="byline">
-                <div className="avatar">A</div>
-                <div>
-                  <div className="nm">Arif S, Formative Concepts</div>
-                  <div className="ti" style={{ color: '#56524A' }}>MEP and BIM consulting, US market</div>
-                </div>
-              </div>
-            </div>
-            <div style={{ margin: '32px 0 0', borderRadius: '20px', overflow: 'hidden' }}>
-              <img
-                src="/images/us/lakewood-ranch/seo/lakewood-ranch-affluent-community.webp"
-                alt="Streets and retail at a Lakewood Ranch, Florida town centre where local businesses compete for map pack visibility"
-                width={1200}
-                height={600}
-                loading="lazy"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </div>
-            <div className="clients">
-              {['Formative Concepts', 'Belle Maison', 'Impulse Branding', '500+ businesses served'].map(
-                (c) => (
-                  <span
-                    key={c}
-                    style={{ background: '#FFFFFF', border: '1px solid rgba(26,23,18,.10)', color: '#1A1712' }}
-                  >
-                    {c}
-                  </span>
-                )
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ──────────────────────────────────────────────────────── */}
-        <section className="room-peach">
-          <div className="wrap">
-            <div className="eyebrow">Questions answered</div>
-            <h2>What Lakewood Ranch owners ask before they hire anyone.</h2>
-            <p className="lead">
-              These are the questions people genuinely search alongside these queries, answered
-              straight. No numbers invented, no pressure applied.
-            </p>
-            <div className="faqgrid">
-              <nav aria-label="FAQ categories">
-                <div className="faqnav">
-                  {FAQ_GROUPS.map((g) => (
-                    <a href={`#faq-${g.id}`} key={g.id}>
-                      {g.label}<span className="ct">{g.items.length}</span>
-                    </a>
-                  ))}
-                </div>
-                <p className="faqhelp">
-                  More questions? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a>.
-                </p>
-              </nav>
+          {/* ── HERO ─────────────────────────────────────────────────────── */}
+          <section className="hero">
+            <div className="wrap hero-grid">
+              {/* Left: copy */}
               <div>
-                {FAQ_GROUPS.map((g) => (
-                  <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
-                    <div className="ch">{g.label}</div>
-                    {g.items.map((it) => (
-                      <details key={it.q}>
-                        <summary>{it.q}</summary>
-                        <p>{it.a}</p>
-                      </details>
-                    ))}
+                <div className="loc rise"><b />&nbsp;Lakewood Ranch, FL</div>
+                <h1 className="rise d1">
+                  Lakewood Ranch <span className="it">SEO company</span><br />
+                  for businesses in Manatee<br />and Sarasota County.
+                </h1>
+                <p className="lead rise d2">
+                  We get Lakewood Ranch businesses into the Google map pack, onto page one for
+                  category searches, and quoted in AI answers. Most of the community has a Bradenton
+                  or Sarasota address while everyone searches for "Lakewood Ranch". That gap is
+                  usually the first thing worth fixing.
+                </p>
+                <div className="hstat rise d3">
+                  <div className="n">
+                    <span className="star">★</span>&nbsp;5.0
+                    <span className="l">/ 500+ clients</span>
+                  </div>
+                  <div className="sep" />
+                  <div className="n">2<span className="l">&nbsp;counties covered</span></div>
+                  <div className="sep" />
+                  <div className="n">7 days<span className="l">&nbsp;to start</span></div>
+                </div>
+                <HeroInlineForm region="us" source="lakewood_ranch_seo_hero" submitLabel="Get my free SEO audit" />
+                <div className="cta-row rise d4">
+                  <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                    Talk to the founder
+                  </a>
+                </div>
+              </div>
+
+              {/* Right: blueprint/survey grid visual */}
+              <div className="hero-vis float">
+                {/* Floating chips */}
+                <div className="schip ch1">
+                  <div className="k">Core ZIP</div>
+                  <div className="v">34202</div>
+                </div>
+                <div className="schip ch2">
+                  <div className="cdot" />
+                  <div className="ct2">Two counties, one name</div>
+                </div>
+
+                <div className="surveycard">
+                  {/* Header */}
+                  <div className="sv-head">
+                    <div className="sv-title">LWR Search Territory Survey</div>
+                    <div className="sv-coord">27.41&#176;N 82.39&#176;W</div>
+                  </div>
+
+                  {/* Map area with parcels */}
+                  <div className="sv-map">
+                    {/* Territory parcels */}
+                    <div className="parcel p1">Country Club &amp; Greenbrook</div>
+                    <div className="parcel p2">Main Street</div>
+                    <div className="parcel p3 p-you">YOU</div>
+                    <div className="parcel p4">Waterside Place</div>
+                    <div className="parcel p5">Azario &middot; Star Farms &middot; Lorraine Lakes</div>
+
+                    {/* Plot markers */}
+                    <div className="plotmark p1" />
+                    <div className="sv-label l1">HOT</div>
+
+                    <div className="plotmark p2" />
+                    <div className="sv-label l2">HOT</div>
+
+                    <div className="plotmark p3" />
+                    <div className="sv-label l3">OPEN</div>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="sv-footer">
+                    <div className="stat">
+                      <div className="sv-v">65K+</div>
+                      <div className="sv-l">residents</div>
+                    </div>
+                    <div className="sdiv" />
+                    <div className="stat">
+                      <div className="sv-v">#1</div>
+                      <div className="sv-l">US planned community</div>
+                    </div>
+                    <div className="sdiv" />
+                    <div className="stat">
+                      <div className="sv-v">34202</div>
+                      <div className="sv-l">core ZIP</div>
+                    </div>
+                    <div className="sdiv" />
+                    <div className="stat">
+                      <div className="sv-v">2</div>
+                      <div className="sv-l">counties</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── ANSWER FIRST ─────────────────────────────────────────────── */}
+          <section style={{ paddingTop: 0, paddingBottom: '60px' }}>
+            <div className="wrap">
+              <div className="bluf rise">
+                <p>
+                  <strong>Short answer:</strong> FactoryJet does SEO for Lakewood Ranch businesses,
+                  and so do a handful of national agencies you will meet further down this page.
+                  Local SEO here means three jobs. Getting your Google Business Profile into the
+                  three-result map pack when somebody in 34202, 34211 or 34240 searches your category.
+                  Getting your website pages to rank underneath that map pack. And getting your
+                  business named when a new arrival asks ChatGPT or Google's AI answer for a
+                  recommendation. The Lakewood Ranch complication is that the community is not an
+                  incorporated city, so most addresses here read Bradenton or Sarasota while every
+                  resident says "Lakewood Ranch". Closing that gap is normally the first move and it
+                  costs nothing but attention.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ── MARKET DATA (only dark section) ──────────────────────────── */}
+          <section className="dark">
+            <div className="wrap">
+              <div className="eyebrow">Measured, not guessed</div>
+              <h2>What the numbers actually say about this market.</h2>
+              <p className="lead">
+                Live keyword data pulled from DataForSEO in July 2026, plus our own Search Console
+                figures. Including the ones that are not flattering.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-seo-hero.webp"
+                  alt="Lakewood Ranch, Florida: a master-planned community spanning Manatee and Sarasota counties where new residents search for every local service"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="statgrid">
+                <div className="scard">
+                  <div className="n">14,800</div>
+                  <div className="l">US searches a month for "seo company near me", the query every agency on this SERP is chasing. Keyword difficulty 24.</div>
+                  <div className="src">DataForSEO, US, July 2026</div>
+                </div>
+                <div className="scard">
+                  <div className="n">0</div>
+                  <div className="l">Keyword difficulty on city-modified local SEO queries such as "local seo austin" and "charlotte local seo". The place-based version of the search is the winnable one.</div>
+                  <div className="src">DataForSEO, US, July 2026</div>
+                </div>
+                <div className="scard">
+                  <div className="n">7.7</div>
+                  <div className="l">Our own average Google position for "lakewood ranch seo company" across 262 impressions in the last 90 days. Top of page two on most screens. We are the challenger here.</div>
+                  <div className="src">Google Search Console, FactoryJet, July 2026</div>
+                </div>
+                <div className="scard">
+                  <div className="n">44</div>
+                  <div className="l">Referring domains pointing at factoryjet.com. Coalition Technologies, one of the larger names in this category, has roughly 2,800. We are not going to pretend otherwise.</div>
+                  <div className="src">DataForSEO backlink index, July 2026</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── LOCAL SUBSTANCE ──────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">Lakewood Ranch, specifically</div>
+              <h2>Five things about this town that change how the SEO work is done.</h2>
+              <p className="lead">
+                These are the details an agency running a template misses, and they are the details
+                that decide whether a local campaign works here.
+              </p>
+              <div className="grid2">
+                <div className="ucard">
+                  <div className="pill">The address problem</div>
+                  <h3>The town everybody names is not the town on your listing</h3>
+                  <p>
+                    Lakewood Ranch is a census-designated place built on former Schroeder-Manatee Ranch
+                    land, straddling the county line east of I-75. It is not an incorporated city, so
+                    it has no postal identity of its own. The villages north of University Parkway,
+                    Country Club, Greenbrook, Summerfield, Riverwalk, Central Park, Del Webb, Mallory
+                    Park, Polo Run, carry Bradenton addresses in 34202, 34211 and 34212. Waterside, to
+                    the south in Sarasota County, carries a Sarasota address in 34240. Google reads the
+                    address on your profile. Your customers type the community name. If those two
+                    things never meet on your website, you are half-visible by design.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Two centres, two catchments</div>
+                  <h3>Main Street and Waterside are not the same market</h3>
+                  <p>
+                    There are two town centres here and they behave differently. Main Street at
+                    Lakewood Ranch sits on the Manatee side and serves the older, established villages.
+                    Waterside Place opened later on the Sarasota side and pulls the newer households
+                    plus the Sunday farmers market crowd. University Town Center and Nathan Benderson
+                    Park sit down at the University Parkway interchange and draw from both. Because
+                    distance is a genuine weighting factor in map results, a business at one end and a
+                    business at the other get different rankings for the identical search. Any strategy
+                    that treats Lakewood Ranch as a single point on a map is leaving half the community
+                    on the table.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">What pays the bills here</div>
+                  <h3>Healthcare, construction fallout, and money management</h3>
+                  <p>
+                    The local economy is not general. Healthcare is the heavyweight: Lakewood Ranch
+                    Medical Center, Sarasota Memorial's Lakewood Ranch campus, and a dense layer of
+                    dental, orthopedic, dermatology, physical therapy and aesthetics practices serving
+                    an older-skewing population. Then everything downstream of continuous home
+                    building: roofing, pool, pest, lawn, remodel, shutters. Then wealth management,
+                    estate law and CPA work for retirees. Add youth and amateur sport bringing weekend
+                    visitors, plus a modest office corridor around Lakewood Ranch Corporate Park. Those
+                    categories have completely different search patterns and none of them respond to
+                    the same content plan.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">Two seasons that matter</div>
+                  <h3>Snowbirds arrive, then storms rearrange everything</h3>
+                  <p>
+                    Roughly November through April, a meaningful share of the audience physically
+                    arrives, lifting demand for medical, wellness, dining and home services, then
+                    leaves again. June through November is hurricane season, and a single storm
+                    reorders demand for roofing, tree work, restoration and generators inside 48 hours.
+                    Ian in 2022 and the Helene and Milton pair in 2024 both did exactly that to this
+                    stretch of coast. An agency running the same twelve-month calendar it uses for a
+                    client in Ohio will be publishing the wrong thing twice a year, every year.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">How hard the SERP really is</div>
+                  <h3>Soft market, national squatters, closing window</h3>
+                  <p>
+                    Honest read from the live data: the agencies ranking on these queries are national
+                    and regional operators, not Lakewood Ranch businesses. Meanwhile the difficulty
+                    numbers split cleanly. The generic "near me" searches sit between 24 and 41 on the
+                    difficulty scale and are fought over nationally. The city-modified versions score at
+                    the very bottom. Practically, that means the category-plus-place searches your
+                    customers actually use are winnable now, by a business with a decent site and a
+                    properly maintained profile. That will not be true forever.
+                  </p>
+                </div>
+                <div className="ucard">
+                  <div className="pill">So is it worth it here</div>
+                  <h3>Yes for most categories, and here is when it is not</h3>
+                  <p>
+                    If your customers search before they buy, and in healthcare, home services, legal,
+                    financial and personal services they overwhelmingly do, then local SEO in Lakewood
+                    Ranch has an unusually good ratio right now: high-intent audience, constant new
+                    arrivals with no brand loyalty, and weak incumbents. Where it is not worth it: if
+                    your work comes from one builder relationship, or a wholesale contract, or a
+                    referral network you already trust. We will tell you that on the call rather than
+                    after six months.
+                  </p>
+                </div>
+              </div>
+              <p className="districts">
+                Villages, districts and nearby towns we cover:
+                <b> Country Club</b>, <b>Greenbrook</b>, <b>Summerfield</b>, <b>Riverwalk</b>,
+                <b> Central Park</b>, <b>Del Webb</b>, <b>Cresswind</b>, <b>Esplanade</b>,
+                <b> Mallory Park</b>, <b>Polo Run</b>, <b>Indigo</b>, <b>Star Farms</b>,
+                <b> Azario</b>, <b>Lorraine Lakes</b>, <b>Waterside</b>, <b>Lakehouse Cove</b>,
+                <b> Shoreview</b>, <b>University Park</b>, <b>Bradenton</b>, <b>Sarasota</b>,
+                <b> Ellenton</b>, <b>Parrish</b> and <b>Palmetto</b>.
+              </p>
+            </div>
+          </section>
+
+          {/* ── COMPETITORS ──────────────────────────────────────────────── */}
+          <section className="room-lav">
+            <div className="wrap">
+              <div className="eyebrow">Who else ranks for this</div>
+              <h2>The agencies you will actually be comparing us against.</h2>
+              <p className="lead">
+                We pulled the live US SERPs for these queries in July 2026. Here is who showed up,
+                what they are genuinely good at, and where we are different. None of this is
+                guesswork and none of it is a hit piece.
+              </p>
+              <div className="grid2">
+                {RIVALS.map((r) => (
+                  <div className="ucard" key={r.name}>
+                    <div className="pill">{r.domain}</div>
+                    <h3>{r.name}</h3>
+                    <p style={{ fontFamily: 'var(--mono)', fontSize: '12.5px', color: '#B23E13', margin: '0 0 10px' }}>
+                      {r.stat}
+                    </p>
+                    <p style={{ marginBottom: '10px' }}><strong>What they do well.</strong> {r.good}</p>
+                    <p><strong>Where we differ.</strong> {r.diff}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="bluf" style={{ marginTop: '28px', maxWidth: '100%' }}>
+                <p>
+                  <strong>And our own position, unvarnished.</strong> FactoryJet has 44 referring
+                  domains. Coalition Technologies has roughly 2,800. We sit at position 10 for "local
+                  seo nashville" and position 8 for "seo agency austin texas". This very page averages
+                  position 7.7 for "lakewood ranch seo company" across 262 impressions in the last 90
+                  days, which is the top of page two. We are the challenger in this category and we
+                  would rather say it here than have you find out later. What we can offer is senior
+                  people working directly on your account, a fast start, and local detail nobody
+                  running a template will match. If your category genuinely needs a link profile in
+                  the thousands to compete, we will tell you that on the audit call.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">Who we work with</div>
+              <h2>Built for the categories this community actually searches for.</h2>
+              <p className="lead">
+                Every one of these maps to something real about the local population: an older median
+                age, continuous home building, and a steady flow of arrivals with no existing provider.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-buyer-intent-dashboard.webp"
+                  alt="Local search demand data for Lakewood Ranch, Florida service categories shown on an analytics dashboard"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="grid3">
+                {[
+                  {
+                    pill: 'Healthcare and dental',
+                    h: 'Medical, dental, orthopedic and physical therapy practices',
+                    p: 'The densest category here, and the one where reviews carry the most weight. New arrivals look for a primary care doctor and a dentist almost immediately, and retirees research specialists carefully and then stay for years. We build the profile and the service pages that get you into that shortlist.',
+                  },
+                  {
+                    pill: 'Home services',
+                    h: 'Roofing, HVAC, pool, pest, lawn and remodel',
+                    p: 'Continuous home building means continuous downstream demand, and hurricane season means sudden spikes. We build for both: evergreen service pages that hold rankings through the quiet months, and storm-response content and profile posts prepared before they are needed.',
+                  },
+                  {
+                    pill: 'Financial and legal',
+                    h: 'Wealth management, estate law, CPAs and elder law',
+                    p: 'A retiree-heavy population generates unusually strong demand for estate planning, tax and wealth work. These are high-consideration searches where a thin website loses the enquiry before anyone calls. Content depth and trust signals do most of the work in this category.',
+                  },
+                  {
+                    pill: 'Wellness and fitness',
+                    h: 'Gyms, physical therapy, med spas and studios',
+                    p: 'Active lifestyle is a core part of how this community sees itself, and new residents look for a gym or a studio within weeks of arriving. Getting into the map pack before they commit somewhere else is the whole game in this category.',
+                  },
+                  {
+                    pill: 'Restaurants and retail',
+                    h: 'Restaurants, cafes and local retail at Main Street and Waterside',
+                    p: 'Two town centres means two different discovery patterns, plus a seasonal swing when the winter population arrives. Profile photos, posts tied to real local events, and content that answers the "best somewhere near me" question all pull weight here.',
+                  },
+                  {
+                    pill: 'Family services',
+                    h: 'Tutors, childcare, pet services and personal services',
+                    p: 'Families moving in look for every recurring service at once, usually in the same fortnight. Being in the map pack for your category during that window creates a relationship that renews on its own for years afterwards.',
+                  },
+                ].map(({ pill, h, p }) => (
+                  <div className="ucard" key={h}>
+                    <div className="pill">{pill}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ── INTERNAL LINKS ───────────────────────────────────────────── */}
-        <section>
-          <div className="wrap">
-            <div className="eyebrow">Keep reading</div>
-            <h2>Related services and other markets we work in.</h2>
-            <p className="lead">
-              If you want the service detail rather than the local detail, start here. The city
-              pages below include our own real positions, good and bad.
-            </p>
-            <div className="grid3">
-              {SERVICE_LINKS.map(({ href, h, p }) => (
-                <a
-                  className="ucard"
-                  key={href}
-                  href={href}
-                  style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
-                >
-                  <h3 style={{ color: '#B23E13' }}>{h}</h3>
-                  <p>{p}</p>
+          {/* ── LISTICLE ─────────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">Warning signs</div>
+              <h2>9 signs your Lakewood Ranch business is losing search to somebody worse than you.</h2>
+              <p className="lead">
+                Each one is fixable, and most of them are fixable within the first month.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-new-resident-seo.webp"
+                  alt="A new Lakewood Ranch resident searching on a phone for a local service provider shortly after moving in"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <ul className="listicle-list">
+                {LISTICLE.map(({ n, h, p }) => (
+                  <li key={n}>
+                    <div className="li-n">{n}</div>
+                    <div>
+                      <div className="li-h">{h}</div>
+                      <div className="li-p">{p}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">What you get</div>
+              <h2>One scope, the whole stack, every month.</h2>
+              <p className="lead">
+                No package tiers and no feature gates. The work below is what a local campaign needs,
+                so it is all in.
+              </p>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/shared/factoryjet-senior-engineer.webp"
+                  alt="A FactoryJet senior engineer reviewing technical SEO audit data on screen"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="grid2">
+                {[
+                  {
+                    h: 'Technical foundation',
+                    p: 'Core Web Vitals, crawl and index management, LocalBusiness, Service and FAQPage schema, mobile rendering, and the structured data that AI answer engines rely on. Boring, unglamorous, and the reason everything else works.',
+                  },
+                  {
+                    h: 'Google Business Profile, properly maintained',
+                    p: 'Correct primary category, every service and attribute filled, real photos, weekly posts tied to actual local events rather than generic filler, Q&A managed, and a steady review strategy. Both counties handled separately where you have two locations.',
+                  },
+                  {
+                    h: 'Pages that name the place and the service',
+                    p: 'One well-built page per service per area, written to cover Lakewood Ranch and the Bradenton or Sarasota address that sits underneath it, structured for featured snippets and AI citation, and internally linked so your pages do not compete with each other.',
+                  },
+                  {
+                    h: 'Local citations and links, county by county',
+                    p: 'Manatee and Sarasota each have their own chambers, directories and news outlets. We work the Lakewood Ranch Business Alliance, the local Observer papers, county and regional publications, and category-specific directories. Nothing bought.',
+                  },
+                  {
+                    h: 'AI search visibility',
+                    p: 'Relocating households frequently ask an assistant before they know a single local name. We write answer-first, mark up entities cleanly, and target the sources those models already quote, so your business turns up in the recommendation rather than the tenth link.',
+                  },
+                  {
+                    h: 'Reporting on calls, not screenshots',
+                    p: 'Tracked calls and form fills from organic, Business Profile call volume, ranking movement on your primary queries, Core Web Vitals status, and what competitors changed. Then a live monthly call and a written plan for the next thirty days.',
+                  },
+                ].map(({ h, p }) => (
+                  <div className="ucard" key={h}>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── PROCESS ──────────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">How it works</div>
+              <h2>From audit to ranking in four steps.</h2>
+              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet founder running a free 30 minute SEO audit call with a local business owner"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="grid4">
+                {[
+                  { n: '01', h: 'Free audit call', p: 'Thirty minutes on your profile health, site condition, current positions and what your three nearest competitors are doing. You leave with a prioritised list either way.' },
+                  { n: '02', h: 'Scope and kickoff', p: 'A flat monthly scope agreed against your category and goals, then the technical baseline inside seven days.' },
+                  { n: '03', h: 'Build and publish', p: 'Technical fixes in weeks one and two. Business Profile work from week two. Pages and local link work from week three.' },
+                  { n: '04', h: 'Track, report, adapt', p: 'Monthly review on calls and leads, a written thirty-day plan, competitor monitoring and a live strategy call.' },
+                ].map(({ n, h, p }) => (
+                  <div className="ucard" key={n}>
+                    <div className="pill">{n}</div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── COMPARISON ───────────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">How we compare</div>
+              <h2>FactoryJet against a conventional agency engagement.</h2>
+              <div className="cmpwrap">
+                <table className="cmp">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th className="fjh">FactoryJet</th>
+                      <th>Traditional agency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COMPARE.map(({ k, fj, alt, hl }) => (
+                      <tr key={k}>
+                        <td className="k">{k}</td>
+                        <td className="fj">{hl ? <span className="hl">{fj}</span> : fj}</td>
+                        <td className="alt">{alt}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* ── PROOF ────────────────────────────────────────────────────── */}
+          <section className="room-lav">
+            <div className="wrap">
+              <div className="eyebrow">What clients say</div>
+              <h2>Senior engineers, founder-led strategy, month to month.</h2>
+              <p className="lead">
+                We track calls and bookings rather than ranking screenshots, and we do not publish
+                case study numbers we cannot evidence.
+              </p>
+              <div
+                className="quote"
+                style={{ background: '#FFFFFF', border: '1px solid rgba(26,23,18,.10)' }}
+              >
+                <p style={{ color: '#1A1712' }}>
+                  "We started getting calls from people who had never heard of us before, just found
+                  us on Google and called. That is exactly what we needed and exactly what FactoryJet
+                  delivered."
+                </p>
+                <div className="byline">
+                  <div className="avatar">A</div>
+                  <div>
+                    <div className="nm">Arif S, Formative Concepts</div>
+                    <div className="ti" style={{ color: '#56524A' }}>MEP and BIM consulting, US market</div>
+                  </div>
+                </div>
+              </div>
+              <div style={{ margin: '32px 0 0', borderRadius: '20px', overflow: 'hidden' }}>
+                <img
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-affluent-community.webp"
+                  alt="Streets and retail at a Lakewood Ranch, Florida town centre where local businesses compete for map pack visibility"
+                  width={1200}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div className="clients">
+                {['Formative Concepts', 'Belle Maison', 'Impulse Branding', '500+ businesses served'].map(
+                  (c) => (
+                    <span
+                      key={c}
+                      style={{ background: '#FFFFFF', border: '1px solid rgba(26,23,18,.10)', color: '#1A1712' }}
+                    >
+                      {c}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </section>
+
+          {/* ── FAQ ──────────────────────────────────────────────────────── */}
+          <section className="room-peach">
+            <div className="wrap">
+              <div className="eyebrow">Questions answered</div>
+              <h2>What Lakewood Ranch owners ask before they hire anyone.</h2>
+              <p className="lead">
+                These are the questions people genuinely search alongside these queries, answered
+                straight. No numbers invented, no pressure applied.
+              </p>
+              <div className="faqgrid">
+                <nav aria-label="FAQ categories">
+                  <div className="faqnav">
+                    {FAQ_GROUPS.map((g) => (
+                      <a href={`#faq-${g.id}`} key={g.id}>
+                        {g.label}<span className="ct">{g.items.length}</span>
+                      </a>
+                    ))}
+                  </div>
+                  <p className="faqhelp">
+                    More questions? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a>.
+                  </p>
+                </nav>
+                <div>
+                  {FAQ_GROUPS.map((g) => (
+                    <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
+                      <div className="ch">{g.label}</div>
+                      {g.items.map((it) => (
+                        <details key={it.q}>
+                          <summary>{it.q}</summary>
+                          <p>{it.a}</p>
+                        </details>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── INTERNAL LINKS ───────────────────────────────────────────── */}
+          <section>
+            <div className="wrap">
+              <div className="eyebrow">Keep reading</div>
+              <h2>Related services and other markets we work in.</h2>
+              <p className="lead">
+                If you want the service detail rather than the local detail, start here. The city
+                pages below include our own real positions, good and bad.
+              </p>
+              <div className="grid3">
+                {SERVICE_LINKS.map(({ href, h, p }) => (
+                  <a
+                    className="ucard"
+                    key={href}
+                    href={href}
+                    style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
+                  >
+                    <h3 style={{ color: '#B23E13' }}>{h}</h3>
+                    <p>{p}</p>
+                  </a>
+                ))}
+              </div>
+              <div className="grid2" style={{ marginTop: '18px' }}>
+                {CITY_LINKS.map(({ href, h, p }) => (
+                  <a
+                    className="ucard"
+                    key={href}
+                    href={href}
+                    style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
+                  >
+                    <h3 style={{ color: '#B23E13' }}>{h}</h3>
+                    <p>{p}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── FINAL CTA ────────────────────────────────────────────────── */}
+          <section className="final">
+            <div className="wrap">
+              <div className="eyebrow">Ready to start</div>
+              <h2>
+                The Lakewood Ranch SERP is being held by agencies<br />
+                <span className="it">that have never been here.</span>
+              </h2>
+              <p className="lead">
+                Free thirty-minute audit. We show you where you stand, what the businesses near you
+                are doing, and the three moves with the biggest effect. If the answer is that you do
+                not need us, we will say that too.
+              </p>
+              <div className="cta-row">
+                <ModalCTAButton
+                  label="Get your free SEO audit"
+                  region="us"
+                  modalVariant="seo"
+                  btnVariant="primary-light"
+                />
+                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+                  Talk to the founder
                 </a>
-              ))}
+              </div>
+              <p className="fine">
+                Month to month &middot; free audit &middot; no setup fee &middot; senior engineers &middot; Manatee and Sarasota County
+              </p>
             </div>
-            <div className="grid2" style={{ marginTop: '18px' }}>
-              {CITY_LINKS.map(({ href, h, p }) => (
-                <a
-                  className="ucard"
-                  key={href}
-                  href={href}
-                  style={{ textDecoration: 'none', display: 'block', color: 'inherit' }}
-                >
-                  <h3 style={{ color: '#B23E13' }}>{h}</h3>
-                  <p>{p}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+          </section>
 
-        {/* ── FINAL CTA ────────────────────────────────────────────────── */}
-        <section className="final">
-          <div className="wrap">
-            <div className="eyebrow">Ready to start</div>
-            <h2>
-              The Lakewood Ranch SERP is being held by agencies<br />
-              <span className="it">that have never been here.</span>
-            </h2>
-            <p className="lead">
-              Free thirty-minute audit. We show you where you stand, what the businesses near you
-              are doing, and the three moves with the biggest effect. If the answer is that you do
-              not need us, we will say that too.
-            </p>
-            <div className="cta-row">
-              <ModalCTAButton
-                label="Get your free SEO audit"
-                region="us"
-                modalVariant="seo"
-                btnVariant="primary-light"
-              />
-              <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                Talk to the founder
-              </a>
-            </div>
-            <p className="fine">
-              Month to month &middot; free audit &middot; no setup fee &middot; senior engineers &middot; Manatee and Sarasota County
-            </p>
-          </div>
-        </section>
-
+        </main>
         <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
       </div>
     </>

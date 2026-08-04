@@ -261,9 +261,10 @@ export default function TestimonialsSection({
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[60fr_40fr] lg:items-start lg:gap-12">
 
           {/* ── LEFT: testimonial cards ─────────────────────────────────── */}
-          <div className="flex flex-col gap-5">
+          {/* <ul>/<li>: rulebook rule 10. Preflight zeroes list styling. */}
+          <ul className="flex flex-col gap-5">
             {testimonials.map((t) => (
-              <div
+              <li
                 key={t.initials}
                 className="rounded-2xl p-6 lg:p-7"
                 style={{
@@ -354,9 +355,9 @@ export default function TestimonialsSection({
                 >
                   {t.industry}
                 </span>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
 
           {/* ── RIGHT: aggregate proof panel ────────────────────────────── */}
           <div className="lg:sticky lg:top-24">
