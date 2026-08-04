@@ -61,7 +61,7 @@ const AgencyInfo: React.FC = () => {
                </div>
                <div className="text-3xl font-bold text-primary mb-1">AI + Human</div>
                <div className="text-base font-bold text-navy mb-1">Expertise</div>
-               <div className="text-sm text-gray-500">25+ Years Experience</div>
+               <div className="text-sm text-gray-500">12+ Years Experience</div>
             </div>
 
             <div className="bg-gradient-to-br from-blue-50/50 to-orange-50/50 rounded-2xl p-8 border border-blue-100 hover:-translate-y-1 transition-transform duration-300 text-center group">

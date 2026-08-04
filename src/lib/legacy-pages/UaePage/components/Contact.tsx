@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Calendar } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock } from 'lucide-react';
 import LeadFormInline from '@/components/LeadFormInline';
 
 /**
@@ -60,17 +60,20 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Office Card */}
+                    {/* Coverage card. 2026-08-04: replaced an "Office / Dubai Internet City /
+                        Schedule a visit" card. FactoryJet has no Dubai office (owner-confirmed);
+                        the company operates from Bengaluru, which is what the LocalBusiness
+                        schema on this page correctly states. */}
                     <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5 flex items-center gap-5 hover:bg-white/[0.05] transition-colors group/card">
                         <div className="w-14 h-14 bg-[#10B981]/20 rounded-full flex items-center justify-center text-[#10B981] group-hover/card:scale-110 transition-transform">
                             <MapPin size={28} />
                         </div>
                         <div>
-                            <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-0.5">Office</p>
-                            <span className="text-xl font-bold text-white tracking-tight block">Dubai Internet City</span>
-                            <button type="button" className="flex items-center gap-1.5 mt-1 text-xs text-[#0052CC] hover:text-white transition-colors font-medium">
-                                <Calendar size={12} /> Schedule a visit
-                            </button>
+                            <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-0.5">Serving</p>
+                            <span className="text-xl font-bold text-white tracking-tight block">Dubai and the wider UAE</span>
+                            <div className="flex items-center gap-1.5 mt-1 text-xs text-gray-500">
+                                <Clock size={12} className="text-[#FF6B35]" /> Remote team, UAE business hours
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,9 +83,9 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-bold text-white mb-5">Why Top Brands Choose Us</h3>
                     <div className="grid grid-cols-2 gap-3">
                          {[
-                             "25+ Years Experience", "98% Client Satisfaction",
+                             "12+ Years Experience", "98% Client Satisfaction",
                              "Bilingual Team (Ar/En)", "500+ Successful Projects",
-                             "UAE Market Expertise", "Local Dubai Support"
+                             "UAE Market Expertise", "UAE Business-Hours Support"
                          ].map((text, i) => (
                              <div key={i} className="flex items-center gap-2.5 text-sm text-gray-400">
                                  <CheckCircle2 size={16} className="text-primary flex-shrink-0" />

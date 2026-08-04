@@ -52,7 +52,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                     {/* 1. Top Badge (Compact) */}
                     <div className={`inline-flex items-center gap-2 bg-[#10B981]/15 border border-[#10B981]/40 px-5 py-2 rounded-full w-fit mb-4 transition-opacity duration-700 ${mounted ? 'opacity-100' : 'opacity-0'}`}>
                         <Star size={13} className="text-[#10B981] fill-[#10B981]" />
-                        <span className="text-[13px] font-semibold text-white tracking-wide">#1 Rated Web Design Agency in Dubai</span>
+                        {/* 2026-08-04: was "#1 Rated Web Design Agency in Dubai", an unearned
+                            ranking claim with no rating body, award or source behind it. Replaced
+                            with the 4.9 average rating, which is a real measured figure. */}
+                        <span className="text-[13px] font-semibold text-white tracking-wide">4.9 average client rating</span>
                     </div>
 
                     {/* 2. Main Headline (Optimized Size) */}

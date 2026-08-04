@@ -7,24 +7,28 @@ export const HERO_CONTENT = {
 
 export const MILESTONES: Milestone[] = [
   {
-    phase: "Phase 1: Early Days",
+    // 2026-08-04: FactoryJet was founded in 2014 (foundingDate in Organization schema).
+    // Phases 1 and 2 predate the company, so they are labelled as the founding team's prior
+    // experience rather than company history. This is what produced the "25 years" claim that
+    // PRODUCT.md rules out.
+    phase: "Before FactoryJet: Our founding team's ERP years",
     period: "2000-2010",
     focus: "Custom software development and ERP implementations",
     description: [
-      "We started implementing traditional ERP systems (SAP, Oracle, custom solutions) for mid-market companies. These early years taught us:",
+      "Before FactoryJet existed, our founding team implemented traditional ERP systems (SAP, Oracle, custom solutions) for mid-market companies. Those years taught us:",
       "• The complexity of enterprise implementations",
       "• The importance of change management",
       "• How to deliver on time and on budget",
       "• The value of long-term client relationships"
     ],
-    milestone: "Implemented ERP for 50+ mid-market companies, establishing deep expertise in manufacturing, distribution, and retail sectors."
+    milestone: "Implemented ERP for 50+ mid-market companies, building deep expertise in manufacturing, distribution, and retail sectors."
   },
   {
-    phase: "Phase 2: Web & Digital Expansion",
+    phase: "Web & Digital Expansion (FactoryJet founded 2014)",
     period: "2010-2015",
     focus: "Website design, e-commerce platforms, digital marketing",
     description: [
-      "As the digital revolution accelerated, we expanded into:",
+      "As the digital revolution accelerated, the team moved into web work, and FactoryJet was founded in 2014:",
       "• WordPress and custom website development",
       "• Early e-commerce platforms (Magento, WooCommerce)",
       "• SEO and digital marketing services",

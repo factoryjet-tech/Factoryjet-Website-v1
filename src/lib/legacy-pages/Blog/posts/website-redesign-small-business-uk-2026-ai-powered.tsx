@@ -300,7 +300,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
       </div>
     </>
   ),
