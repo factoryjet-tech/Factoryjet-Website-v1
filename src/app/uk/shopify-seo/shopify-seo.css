@@ -471,3 +471,13 @@
  .uk-sseo .faq-grid { grid-template-columns: 1fr !important; }
  
 }
+
+/* list-reset for card grids (2026-08-03).
+   The card grids are real <ul>/<ol> now so the list items count toward
+   rule 10 in the AI-SEO rulebook. These grids are plain display:grid, so
+   stripping the list defaults makes the markup change purely semantic. */
+.col-2, .col-3, .col-4, .stack, .process-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

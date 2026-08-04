@@ -625,8 +625,8 @@ export default function ShopifySeoPage() {
       <span className="eyebrow">SHOPIFY SEO RESULTS</span>
       <h2 style={{ marginTop: '12px' }}>UK Shopify stores on what changed after FactoryJet</h2>
     </div>
-    <div className="col-3">
-      <div className="card">
+    <ul className="col-3">
+      <li className="card">
         <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>+57 positions</div>
@@ -637,8 +637,8 @@ export default function ShopifySeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, UK; Shopify Plus</p>
         </div>
-      </div>
-      <div className="card">
+      </li>
+      <li className="card">
         <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>3.2× organic sessions</div>
@@ -649,8 +649,8 @@ export default function ShopifySeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK; Shopify Advanced</p>
         </div>
-      </div>
-      <div className="card">
+      </li>
+      <li className="card">
         <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>Page 1 in 5 months</div>
@@ -661,8 +661,8 @@ export default function ShopifySeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK; Shopify</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -795,40 +795,40 @@ export default function ShopifySeoPage() {
 
       {/* Accordion */}
       <div>
-        <div id="faq-shopify" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
+        <ul id="faq-shopify" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">SHOPIFY-SPECIFIC</p>
           </div>
-          <details className="faq-item">
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">Why is Shopify SEO different from other platforms?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify has several SEO characteristics unique to the platform that generic SEO agencies often mishandle. The most significant: Shopify&#8217;s URL structure creates duplicate product pages for every collection a product belongs to (/products/slug AND /collections/collection-name/products/slug). Shopify&#8217;s Liquid templating language controls how content is rendered; and many themes render important SEO content (collection descriptions, FAQs, structured data) in ways that reduce its crawlability or weighting. Shopify&#8217;s faceted navigation generates thin filter combination pages that waste crawl budget. And Shopify&#8217;s sitemap generation can include pages you do not want indexed. These are all fixable; but they require understanding Liquid, not just generic SEO tools.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">What is the Shopify duplicate URL problem and how does FactoryJet fix it?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify creates two crawlable URLs for every product: /products/your-product-slug (the product&#8217;s permanent URL) and /collections/your-collection-name/products/your-product-slug (the product URL within a specific collection). If a product belongs to 5 collections, Shopify creates 6 crawlable versions of the same product page. Unless your theme implements canonical tags correctly in Liquid, Google sees these as 6 different pages competing against each other and diluting link equity. FactoryJet audits the canonical tag implementation in your Shopify theme, ensures all collection-scoped product URLs have a canonical pointing to /products/slug, and removes duplicate product URLs from your sitemap.xml. For large stores, this can recover 40&#8211;70% of wasted crawl budget.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">Does Shopify&#8217;s native SEO cover what I need, or do I need a separate agency?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify&#8217;s native SEO features; editable meta titles and descriptions, auto-generated sitemaps, the 301 redirect manager, and alt text on product images; cover the basics. They do not handle: canonical tag strategy for duplicate product URLs, faceted navigation crawl budget management, above-the-fold collection page content, schema markup beyond basic Product schema, Core Web Vitals optimisation at the theme code level, or link building. For UK Shopify stores that want to rank competitively on commercial category terms, Shopify&#8217;s native features are necessary but not sufficient. FactoryJet layers a full SEO strategy on top of Shopify&#8217;s native functionality.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">Can FactoryJet do Shopify SEO for Shopify Plus stores?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Shopify Plus SEO has specific advantages and requirements. Shopify Plus gives you access to the checkout.liquid file (useful for conversion rate optimisation and tracking), more control over URL structure and canonical behaviour, and better support for internationalisation through Shopify Markets. For UK Shopify Plus brands, we handle B2B ecommerce SEO (separate B2B store SEO, wholesale category pages), international hreflang if expanding beyond UK, and enterprise-scale crawl budget management for stores with 10,000-plus SKUs. Shopify Plus SEO is a larger engagement by default; the stores are more complex, the keyword opportunities are bigger, and the technical debt from rapid growth is typically higher.</p></div>
-          </details>
-        </div>
+          </details></li>
+        </ul>
 
         <div id="faq-process" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">

@@ -419,7 +419,7 @@ export default function EcommerceDevelopmentUKPage() {
                 No build skips these, regardless of platform or catalogue size.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Platform selection matched to goals', d: 'We do not default to our favourite platform. We look at your catalogue, integrations, and team before recommending Shopify, WooCommerce, Magento, or custom, and we will tell you if a simpler option saves you money and hassle.' },
                 { n: '02', t: 'Conversion-first product and checkout design', d: 'Product pages and checkout built to remove friction, not just look good in a portfolio. Clear pricing, trust signals, and a checkout that does not lose people at the last step.' },
@@ -428,15 +428,15 @@ export default function EcommerceDevelopmentUKPage() {
                 { n: '05', t: 'On-page and technical ecommerce SEO', d: 'Category and product pages structured to rank, plus the technical foundation, site speed, crawlability, structured data, that Google and AI engines both need to trust a store.' },
                 { n: '06', t: 'Full code handover with a walkthrough', d: 'When we hand the project over, you get the full codebase and a proper walkthrough of how it works, not just a login and a wave goodbye.' },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -475,12 +475,12 @@ export default function EcommerceDevelopmentUKPage() {
               <span className="eyebrow">How we work</span>
               <h2>From first call to launched store in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Discovery &amp; platform fit</h3><p className="mt-4">We look at your catalogue, integrations, and goals, and recommend the platform that actually fits, not the one we push on everyone.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Design &amp; build</h3><p className="mt-4">Conversion-first product pages, checkout, and design work, built by senior engineers on the platform we agreed on.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Integration &amp; QA</h3><p className="mt-4">Payments, stock, CRM, and any other systems connected and tested properly, on real devices, before anything goes near customers.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Launch &amp; handover</h3><p className="mt-4">Your store goes live, you get the full codebase and a walkthrough, and we stay close for the weeks right after launch.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>Discovery &amp; platform fit</h3><p className="mt-4">We look at your catalogue, integrations, and goals, and recommend the platform that actually fits, not the one we push on everyone.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Design &amp; build</h3><p className="mt-4">Conversion-first product pages, checkout, and design work, built by senior engineers on the platform we agreed on.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Integration &amp; QA</h3><p className="mt-4">Payments, stock, CRM, and any other systems connected and tested properly, on real devices, before anything goes near customers.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Launch &amp; handover</h3><p className="mt-4">Your store goes live, you get the full codebase and a walkthrough, and we stay close for the weeks right after launch.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -583,17 +583,17 @@ export default function EcommerceDevelopmentUKPage() {
                 real ecommerce build work, including us. Talk to a few and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {ECOM_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for ecommerce development terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
@@ -668,8 +668,8 @@ export default function EcommerceDevelopmentUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -677,8 +677,8 @@ export default function EcommerceDevelopmentUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

@@ -386,40 +386,40 @@ export default function SeoAuditUKPage() {
                 detail if you want it.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="card">
                 <h3>A prioritised findings list</h3>
                 <p className="mt-4">Every issue ranked by likely impact on rankings and enquiries, not by how alarming it looks in a template.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A technical health scorecard</h3>
                 <p className="mt-4">Crawlability, indexing, Core Web Vitals, and speed, marked clearly so you know what is actually broken versus cosmetic.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A content and on-page review</h3>
                 <p className="mt-4">Where your pages are thin, off-topic, or missing the structure that helps both Google and AI engines understand them.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A backlink and authority summary</h3>
                 <p className="mt-4">What is helping you, what looks risky, and where a previous agency may have taken a shortcut that is now working against you.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>An AI-visibility snapshot</h3>
                 <p className="mt-4">Whether ChatGPT, Gemini, Perplexity, and Google AI Overviews name your business today, tested against the questions your buyers actually ask.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A walkthrough call, not just a document</h3>
                 <p className="mt-4">We explain the findings in plain English and answer questions live, rather than leaving you to interpret a report alone.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A 90-day action plan</h3>
                 <p className="mt-4">The fixes worth doing first, in order, so you know where to start whether you hire us or someone else.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>An honest read on your previous SEO work</h3>
                 <p className="mt-4">If a past agency did good work, we say so. If something was missed or mishandled, we tell you plainly.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -433,7 +433,7 @@ export default function SeoAuditUKPage() {
                 Not a black box. Here is exactly what we look at, and why each one matters.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Technical health', d: <>Crawlability, indexing, site speed, and Core Web Vitals. If Google or an AI crawler cannot read or load your pages properly, nothing else on this list matters yet.</> },
                 { n: '02', t: 'On-page and content quality', d: <>Whether each page targets a real question people ask, says something specific, and is structured so a reader, and an engine, can find the answer fast.</> },
@@ -443,15 +443,15 @@ export default function SeoAuditUKPage() {
                 { n: '06', t: 'AI visibility across ChatGPT, Gemini, Perplexity, and AI Overviews', d: <>We run the questions your buyers would actually ask, the same check that anchors our dedicated <a href="/uk/ai-seo" style={{ color: '#B23E13', textDecoration: 'underline' }}>AI SEO</a> service, and note where you get named, where a competitor gets named instead, and where nobody gets named at all.</> },
                 { n: '07', t: 'A prioritised 90-day action list', d: <>Everything above gets ranked by what will move the needle first, so the audit ends in a plan, not just a diagnosis.</> },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -489,12 +489,12 @@ export default function SeoAuditUKPage() {
               <span className="eyebrow">How it works</span>
               <h2>From booking a call to a ranked action list, in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Book a short call</h3><p className="mt-4">Tell us about your site and what is bothering you: slow rankings, a redesign gone wrong, traffic that dropped. Fifteen minutes is usually enough.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>We run the audit</h3><p className="mt-4">Technical, content, backlinks, schema, and AI visibility, checked by the team and reviewed personally before anything is written up.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>We walk you through it</h3><p className="mt-4">A plain-English call through the findings, in order of what matters most, with time for your questions.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>You decide what happens next</h3><p className="mt-4">Keep the plan and run it yourself, bring it to another agency, or work with us. No obligation either way.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>Book a short call</h3><p className="mt-4">Tell us about your site and what is bothering you: slow rankings, a redesign gone wrong, traffic that dropped. Fifteen minutes is usually enough.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>We run the audit</h3><p className="mt-4">Technical, content, backlinks, schema, and AI visibility, checked by the team and reviewed personally before anything is written up.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>We walk you through it</h3><p className="mt-4">A plain-English call through the findings, in order of what matters most, with time for your questions.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>You decide what happens next</h3><p className="mt-4">Keep the plan and run it yourself, bring it to another agency, or work with us. No obligation either way.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -592,17 +592,17 @@ export default function SeoAuditUKPage() {
                 agencies doing real audit and SEO work, including us. Talk to more than one and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AUDIT_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO audit terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
@@ -677,8 +677,8 @@ export default function SeoAuditUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -686,8 +686,8 @@ export default function SeoAuditUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

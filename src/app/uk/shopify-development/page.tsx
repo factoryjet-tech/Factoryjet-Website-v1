@@ -950,40 +950,40 @@ export default function ShopifyDevelopmentPage() {
 
       {/* Accordion */}
       <div>
-        <div id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
+        <ul id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">PRICING & TIMELINE</p>
           </div>
-          <details className="faq-item">
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">How much does a custom Shopify store cost in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>FactoryJet builds custom Shopify stores for UK brands on a scoped, milestone-paid basis. A custom Liquid theme on an existing store starts from a confirmed quote after our 30-minute discovery call; we price after we understand scope, not before. UK Shopify agencies typically charge &#163;10,000&#8211;&#163;50,000 for the same work. What you pay us includes: Figma design (homepage, PDP, collection, cart), Liquid build, app configuration, technical SEO, Lighthouse performance audit, and code delivery to your GitHub on launch day. No hourly billing, no scope-creep invoices.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">How long does a Shopify store build take in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>A custom theme applied to an existing store takes 2&#8211;3 weeks from design sign-off. A full Shopify store build from scratch; theme, product catalogue, payment configuration, shipping, apps, and launch; takes 3&#8211;5 weeks. Shopify Plus or headless Hydrogen builds run 6&#8211;10 weeks depending on B2B complexity, number of storefronts, or custom app requirements. We give you a firm timeline after the discovery session, not a range, because scope drives everything.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">Do you offer a 7-day delivery guarantee for Shopify?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Our 7-day delivery guarantee covers standard Shopify store builds and custom theme applications to existing stores. Not all Shopify projects qualify; complex migrations, multi-storefront Plus builds, or stores with large product catalogues take longer by necessity. For straightforward builds: custom theme design, core pages, payment setup, and launch; we deliver in 7 days. We confirm this during discovery.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">How does FactoryJet quote Shopify development work?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>We scope every Shopify build upfront, then quote it: no hourly billing, no scope-creep invoices. Building Shopify stores for brands since Shopify launched in 2006 means we estimate accurately on the first call, so the quote you sign is what you pay. Payment is split into milestones: typically a deposit before design, a second payment at development kick-off, and a final payment at launch; so you are never paying for work that has not been delivered.</p></div>
-          </details>
-        </div>
+          </details></li>
+        </ul>
 
         <div id="faq-platform" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">

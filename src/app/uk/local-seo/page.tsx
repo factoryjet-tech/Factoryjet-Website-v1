@@ -380,7 +380,7 @@ export default function LocalSeoUKPage() {
                 every FactoryJet local SEO programme, in the order we tackle it.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Google Business Profile optimisation', d: 'A full profile build-out: categories, services, attributes, photos, and posts kept current, not a one-time claim and forget.' },
                 { n: '02', t: 'Citation cleanup and consistency', d: 'Your name, address, and phone matched exactly across the directories that matter, and the wrong or duplicate ones fixed.' },
@@ -390,15 +390,15 @@ export default function LocalSeoUKPage() {
                 { n: '06', t: 'Technical local schema', d: 'LocalBusiness structured data implemented properly, so Google and AI engines get your name, address, hours, and service area right every time.' },
                 { n: '07', t: 'AI-answer visibility tracking', d: 'We check whether ChatGPT, Gemini, and Google AI Overviews actually name you when someone asks for your kind of business nearby, and report it like any other metric.' },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -437,12 +437,12 @@ export default function LocalSeoUKPage() {
               <span className="eyebrow">How we work</span>
               <h2>From audit to ranked, locally and in AI answers, in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Local visibility audit</h3><p className="mt-4">We check your Google Business Profile, citations, reviews, current map pack position, and whether AI assistants name you today.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Profile fully optimised, citations cleaned and matched, and LocalBusiness schema implemented properly across your pages.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Content and reviews</h3><p className="mt-4">Real location pages written properly, and a review generation system switched on and running.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Track and compound</h3><p className="mt-4">Map pack position, organic rankings, and AI-answer visibility reported monthly, with the plan tuned to what is actually moving.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>Local visibility audit</h3><p className="mt-4">We check your Google Business Profile, citations, reviews, current map pack position, and whether AI assistants name you today.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Profile fully optimised, citations cleaned and matched, and LocalBusiness schema implemented properly across your pages.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Content and reviews</h3><p className="mt-4">Real location pages written properly, and a review generation system switched on and running.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Track and compound</h3><p className="mt-4">Map pack position, organic rankings, and AI-answer visibility reported monthly, with the plan tuned to what is actually moving.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -544,17 +544,17 @@ export default function LocalSeoUKPage() {
                 real local SEO work, including us. Talk to a few and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {LOCAL_SEO_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for local SEO terms, July 2026. Listing is not endorsement,
               and we are one option among them.
@@ -631,8 +631,8 @@ export default function LocalSeoUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -640,8 +640,8 @@ export default function LocalSeoUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

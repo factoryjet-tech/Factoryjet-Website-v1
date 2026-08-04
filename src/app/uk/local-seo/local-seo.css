@@ -531,3 +531,13 @@
 .uk-localseo .demand-bar {height:4px;background:var(--n100);border-radius:99px;margin-top:8px;overflow:hidden}
 .uk-localseo .demand-bar i {display:block;height:100%;border-radius:99px;background:var(--orange)}
 .uk-localseo .demand-kd {font-family:var(--fm);font-size:10px;color:var(--n400);margin-top:5px}
+
+/* list-reset for card grids (2026-08-03).
+   The card grids are real <ul>/<ol> now so the list items count toward
+   rule 10 in the AI-SEO rulebook. These grids are plain display:grid, so
+   stripping the list defaults makes the markup change purely semantic. */
+.col-2, .col-3, .col-4, .stack, .process-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

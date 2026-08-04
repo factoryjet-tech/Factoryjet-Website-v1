@@ -340,40 +340,40 @@ export default function SeoUKPage() {
                 programme covers all eight.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="card">
                 <h3>Technical SEO foundation</h3>
                 <p className="mt-4">Site speed, mobile performance, crawlability, indexing, and structured data. We clear the errors that quietly stop pages from ranking, and ship fixes in server-rendered HTML so Google and AI crawlers read them without running JavaScript.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>On-page and content SEO</h3>
                 <p className="mt-4">Each page targets one clear thing people search for, states the answer near the top, and reads like the source an engine would quote. We build genuine depth around real buyer questions, not padding that adds nothing.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Local SEO</h3>
                 <p className="mt-4">Google Business Profile, consistent name, address, and phone signals, local reviews, and pages built for the areas you serve. For any business with a location or service area, this is often the fastest route to enquiries.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Ecommerce SEO</h3>
                 <p className="mt-4">Category and product pages, clean handling of filters and variants, fast loading, and product schema so your items appear in search and shopping results, and get named when shoppers ask a chatbot for the best option.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Links and digital PR</h3>
                 <p className="mt-4">Credible mentions on sites the search engines and AI models already trust. Quality beats quantity now, so we earn relevant, real links rather than chasing volume that can quietly hurt you.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>AI answers and GEO</h3>
                 <p className="mt-4">Entity data, schema, answer-first structure, and the wording that decides whether ChatGPT, Gemini, Perplexity, and Google AI Overviews name your business. This is the part a traditional SEO agency usually skips.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Keyword and competitor research</h3>
                 <p className="mt-4">We map the exact phrases your buyers use with live UK search data, weigh difficulty against intent, and study who is ranking now. The output is a short list of terms you can realistically win.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Reporting and measurement</h3>
                 <p className="mt-4">Regular reporting on rankings, organic traffic, and enquiries, plus where you appear in AI answers and AI Overviews. Plain language, tied to your business, readable in five minutes.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -387,7 +387,7 @@ export default function SeoUKPage() {
                 A repeatable method, not a black box. Here is the work, in the order we do it.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Audit and benchmark', d: 'We check the technical health of your site, where you rank today, and where you show up in AI answers, so we know the starting line before we touch anything.' },
                 { n: '02', t: 'Research the demand', d: 'We map the exact searches your buyers use with live UK data, weigh difficulty against intent, and separate the quick wins from the terms worth a longer fight.' },
@@ -397,15 +397,15 @@ export default function SeoUKPage() {
                 { n: '06', t: 'Earn links and mentions', d: 'Digital PR and citations on sites that already have trust, because being named elsewhere is a large part of being ranked, and of being named in an AI answer.' },
                 { n: '07', t: 'Measure and compound', d: 'We track rankings, enquiries, and where you get named across engines month on month, double down on what moves, and keep the content fresh so you stay found.' },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -445,12 +445,12 @@ export default function SeoUKPage() {
               <span className="eyebrow">How we work</span>
               <h2>From audit to ranked and cited in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>SEO audit</h3><p className="mt-4">We check technical health, rankings, and AI visibility, and show you where you appear today and where a competitor is ahead.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Technical fixes, on-page structure, schema, and crawler access. The fast wins that change how engines read you within weeks.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Content and authority</h3><p className="mt-4">Answer-first pages, topical depth, local and ecommerce work, and credible links that get you ranked and named in AI answers.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Measure and compound</h3><p className="mt-4">Monthly reporting on rankings, enquiries, and AI visibility, with the plan tuned to what is actually moving.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>SEO audit</h3><p className="mt-4">We check technical health, rankings, and AI visibility, and show you where you appear today and where a competitor is ahead.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Technical fixes, on-page structure, schema, and crawler access. The fast wins that change how engines read you within weeks.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Content and authority</h3><p className="mt-4">Answer-first pages, topical depth, local and ecommerce work, and credible links that get you ranked and named in AI answers.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Measure and compound</h3><p className="mt-4">Monthly reporting on rankings, enquiries, and AI visibility, with the plan tuned to what is actually moving.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -552,17 +552,17 @@ export default function SeoUKPage() {
                 real search work, including us. Talk to a few and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO agency terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
@@ -637,8 +637,8 @@ export default function SeoUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -646,8 +646,8 @@ export default function SeoUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

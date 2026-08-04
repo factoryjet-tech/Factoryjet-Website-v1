@@ -381,40 +381,40 @@ export default function AiAgentsUKPage() {
                 agent reliable, secure, and worth running in production. Every FactoryJet build covers all eight.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="card">
                 <h3>Workflow mapping</h3>
                 <p className="mt-4">We find the process that is actually worth automating and where it breaks today, so the build targets real friction inside your business, not a generic use case.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Custom agent design</h3>
                 <p className="mt-4">The agent is designed around your CRM, helpdesk, inbox, or WhatsApp as they already exist, not a generic bot that expects you to change how you work.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Customer support &amp; AI chatbot development</h3>
                 <p className="mt-4">Trained on your real documentation so it can answer common questions directly, escalate cleanly when a case needs a person, and improve as it sees more of your traffic.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>AI workflow automation</h3>
                 <p className="mt-4">Moving information between the tools you already run: updating a CRM, triggering a follow-up, syncing an order into fulfilment, without someone doing it by hand.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Secure integration</h3>
                 <p className="mt-4">Access scoped to exactly what each agent needs, credentials handled properly, and nothing touching a system you have not approved.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Testing with real data</h3>
                 <p className="mt-4">Before launch, every agent is run against your real conversations, tickets, or records, not a scripted demo, so it holds up on day one.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Monitoring and guardrails</h3>
                 <p className="mt-4">Every agent ships with monitoring and clear escalation rules, so you can see what it did and catch a mistake before a customer does.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Ownership and ROI measurement</h3>
                 <p className="mt-4">You own the agent, the code, and the integrations. We track the outcome that matters, tickets resolved, hours saved, meetings booked, and report it monthly.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -428,7 +428,7 @@ export default function AiAgentsUKPage() {
                 A repeatable method, not a black box. Here is the work, in the order we do it.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Map the workflow', d: 'We find the process that is worth automating and where it currently breaks, so the plan targets real friction, not a buzzword.' },
                 { n: '02', t: 'Design around your tools', d: 'The agent is designed to fit your CRM, helpdesk, inbox, or WhatsApp as they already exist, not the other way round.' },
@@ -438,15 +438,15 @@ export default function AiAgentsUKPage() {
                 { n: '06', t: 'Measure ROI monthly', d: 'Tickets resolved, hours saved, meetings booked, whatever the outcome is, we report it against a number, not a feeling.' },
                 { n: '07', t: 'Iterate', d: 'Agents get tuned as your business changes. Nothing gets shipped once and left to drift.' },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -485,12 +485,12 @@ export default function AiAgentsUKPage() {
               <span className="eyebrow">How we work</span>
               <h2>From audit to running in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Automation audit</h3><p className="mt-4">We map your workflows and tools and find the highest-value process to automate first, free, before you commit to anything.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Design &amp; build</h3><p className="mt-4">The agent is designed around your systems, then built and tested against your real data, not a scripted demo.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Integrate &amp; launch</h3><p className="mt-4">Securely wired into your tools and launched with monitoring from day one, so you see what it does from the start.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Measure &amp; iterate</h3><p className="mt-4">Monthly reporting on the outcome that matters, with the agent tuned as your business and tools change.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>Automation audit</h3><p className="mt-4">We map your workflows and tools and find the highest-value process to automate first, free, before you commit to anything.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Design &amp; build</h3><p className="mt-4">The agent is designed around your systems, then built and tested against your real data, not a scripted demo.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Integrate &amp; launch</h3><p className="mt-4">Securely wired into your tools and launched with monitoring from day one, so you see what it does from the start.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Measure &amp; iterate</h3><p className="mt-4">Monthly reporting on the outcome that matters, with the agent tuned as your business and tools change.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -588,17 +588,17 @@ export default function AiAgentsUKPage() {
                 real automation and agent-building work, including us. Talk to a few and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {AI_AUTOMATION_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for AI automation terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
@@ -673,8 +673,8 @@ export default function AiAgentsUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -682,8 +682,8 @@ export default function AiAgentsUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

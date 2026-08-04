@@ -266,18 +266,18 @@ export default function WebDesignUKPage() {
                     ownership at the end.
                   </p>
                 </div>
-                <div className="col-2 mt-8">
-                  <div className="card">
+                <ul className="col-2 mt-8">
+                  <li className="card">
                     <div className="stat-num">2.3&times;</div>
                     <p className="mb-2" style={{ color: 'var(--ink)', fontWeight: 600, marginTop: 8 }}>Mobile add-to-cart lift</p>
                     <p style={{ fontSize: 13 }}>vs. a generic theme, averaged across our ecommerce builds.</p>
-                  </div>
-                  <div className="card">
+                  </li>
+                  <li className="card">
                     <div className="stat-num">&lt;1.5s</div>
                     <p className="mb-2" style={{ color: 'var(--ink)', fontWeight: 600, marginTop: 8 }}>Typical mobile load</p>
                     <p style={{ fontSize: 13 }}>on delivery, measured in Lighthouse before handover.</p>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
 
               <div className="card" style={{ padding: 8 }}>
@@ -313,40 +313,40 @@ export default function WebDesignUKPage() {
                 ranks, loads, and turns visitors into customers. Every FactoryJet build covers all eight.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="card">
                 <h3>Conversion-first structure</h3>
                 <p className="mt-4">Layout, hierarchy, and calls to action arranged around the one decision your visitor is trying to make. Clear next step on every page, trust signals placed where doubt appears, and no dead ends. It is the same discipline a dedicated ux agency brings to a build, applied from the first wireframe instead of bolted on after launch.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Responsive, mobile-first design</h3>
                 <p className="mt-4">Most UK web traffic is on a phone, so we design for the small screen first. Responsive web design means the site reflows cleanly from mobile to desktop, with tap targets, type, and images sized for real thumbs. It is the first thing to check when you compare a responsive web design agency against a template seller: whether the layout genuinely adapts, or just shrinks.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Speed and Core Web Vitals</h3>
                 <p className="mt-4">Loading speed is a ranking factor and a conversion factor. We build for green Core Web Vitals (LCP, CLS, and INP) and audit them in Lighthouse before handover, so the site is fast on a mid-range phone, not just on office wifi.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>On-page SEO and schema</h3>
                 <p className="mt-4">Title tags, meta descriptions, heading structure, clean URLs, internal links, and structured data are built in from the start. Professional web design and SEO are the same job, not two invoices.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Accessibility</h3>
                 <p className="mt-4">We build to WCAG guidance: proper contrast, keyboard navigation, alt text, and semantic markup. An accessible site reaches more customers and reads more clearly to search engines and AI crawlers.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>A content management system</h3>
                 <p className="mt-4">You should be able to change your own text, images, and pages without a developer on call. Every build ships with a CMS matched to your platform and a short handover so your team is confident from day one.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Analytics and conversion tracking</h3>
                 <p className="mt-4">A website you cannot measure is a guess. We wire up Google Analytics and conversion tracking so you can see which pages bring enquiries and where visitors drop off.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Ownership and maintainability</h3>
                 <p className="mt-4">Clean, documented code pushed to your GitHub, built so any competent developer can pick it up later. You are never locked into one agency to keep your own website running.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -431,12 +431,12 @@ export default function WebDesignUKPage() {
               <span className="eyebrow">How it works</span>
               <h2>From brief to live in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Discovery</h3><p className="mt-4">We map your customers, goals, and the pages that must earn their trust before anyone opens a design tool.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Design</h3><p className="mt-4">Custom, conversion-first web design, reviewed with you before a single line of code is written.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Build</h3><p className="mt-4">Engineered on your chosen platform: fast, responsive, SEO-ready, and accessible.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Launch</h3><p className="mt-4">We ship, hand over the code to your GitHub, and stay on for support afterwards.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>Discovery</h3><p className="mt-4">We map your customers, goals, and the pages that must earn their trust before anyone opens a design tool.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Design</h3><p className="mt-4">Custom, conversion-first web design, reviewed with you before a single line of code is written.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Build</h3><p className="mt-4">Engineered on your chosen platform: fast, responsive, SEO-ready, and accessible.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Launch</h3><p className="mt-4">We ship, hand over the code to your GitHub, and stay on for support afterwards.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -621,8 +621,8 @@ export default function WebDesignUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -630,8 +630,8 @@ export default function WebDesignUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>

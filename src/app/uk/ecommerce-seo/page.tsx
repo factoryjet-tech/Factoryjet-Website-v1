@@ -741,8 +741,8 @@ export default function EcommerceSeoPage() {
       <span className="eyebrow">CLIENT RESULTS</span>
       <h2 style={{ marginTop: '12px' }}>UK ecommerce brands on what FactoryJet SEO changed</h2>
     </div>
-    <div className="col-3">
-      <div className="card">
+    <ul className="col-3">
+      <li className="card">
         <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>+57 positions</div>
@@ -753,8 +753,8 @@ export default function EcommerceSeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, London</p>
         </div>
-      </div>
-      <div className="card">
+      </li>
+      <li className="card">
         <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>3.2× organic revenue</div>
@@ -765,8 +765,8 @@ export default function EcommerceSeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK</p>
         </div>
-      </div>
-      <div className="card">
+      </li>
+      <li className="card">
         <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
           <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
           <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>Page 1 · 6 target terms</div>
@@ -777,8 +777,8 @@ export default function EcommerceSeoPage() {
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -905,40 +905,40 @@ export default function EcommerceSeoPage() {
 
       {/* Accordion */}
       <div>
-        <div id="faq-service" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
+        <ul id="faq-service" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">ABOUT THE SERVICE</p>
           </div>
-          <details className="faq-item">
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">What does an ecommerce SEO agency actually do for UK brands?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>An ecommerce SEO agency drives organic revenue from your existing product catalogue by improving how search engines find, crawl, index, and rank your store pages. Concretely: technical audits that fix crawlability issues, category page optimisation that targets commercial search queries, product page SEO targeting long-tail transactional searches, link building to grow domain authority, and content strategy for informational queries that sit above your commercial pages in the purchase funnel. FactoryJet also builds the actual Shopify or WooCommerce store where needed; meaning our SEO work and development work are integrated, not siloed.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">How long does ecommerce SEO take to work in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Technical SEO and on-page work; canonicalisation, sitemap fixes, Core Web Vitals, meta and H1 rewrites; typically produces first ranking improvements in 6&#8211;8 weeks. For UK ecommerce category pages targeting competitive terms like &#8220;home decor UK&#8221; or &#8220;women&#8217;s trainers online&#8221;, meaningful position improvements typically appear in 3&#8211;4 months. Organic revenue growth that outpaces your paid channels takes 6&#8211;9 months in most UK markets. SEO compounds over time; months 6&#8211;12 typically produce better results than months 1&#8211;6 from the same fixed monthly investment.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">How does FactoryJet measure ecommerce SEO success?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Organic revenue is the primary metric; tracked via GA4 ecommerce events with proper source/medium attribution to organic search. Secondary metrics are: organic sessions (from Google Search Console), organic conversion rate (GA4), organic share of total revenue, and keyword position movements on commercial terms (GSC query data). We do not lead our reporting with third-party rank tracker data; it is inaccurate and not your revenue source. Every client engagement begins with a GA4 ecommerce event audit to ensure revenue attribution is working before we start reporting it.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li>
+          <li><details className="faq-item">
             <summary>
               <span className="q-text">Which ecommerce platforms does FactoryJet support for SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify (all plans including Shopify Plus), WooCommerce, Magento (1.x and 2.x), and BigCommerce. As a Shopify SEO agency with an in-house development team, we go past the audit stage: for Shopify clients we fix Liquid-level issues directly; incorrect canonical tag implementations, JavaScript-rendered content that Googlebot cannot crawl, theme-generated duplicate pages; within the same engagement. For WooCommerce, we work directly with the site&#8217;s WordPress installation, Yoast/RankMath configuration, and custom post type SEO. Magento SEO includes faceted navigation handling, enterprise crawl budget management, and category tree optimisation.</p></div>
-          </details>
-        </div>
+          </details></li>
+        </ul>
 
         <div id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">

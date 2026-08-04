@@ -332,40 +332,40 @@ export default function AiSeoUKPage() {
                 easiest correct answer to find, read, and trust. Every FactoryJet AI SEO programme covers all eight.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="card">
                 <h3>Entity and schema foundation</h3>
                 <p className="mt-4">Structured data and a clean entity profile so Google and AI models know exactly who you are, what you do, and why to trust you. Shipped in server-rendered HTML that AI crawlers read without running JavaScript.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Answer-first content</h3>
                 <p className="mt-4">The answer stated in the first two lines, then the detail. Engines lift the top of a well-structured page, so pages built this way are the ones that get quoted in AI Overviews and chatbot replies.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Answer engine optimization</h3>
                 <p className="mt-4">Question-style headings, FAQ structure, and concise extractable answers that match how people actually ask, so your page becomes the source an answer engine pulls from.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Generative engine optimization</h3>
                 <p className="mt-4">The wording, sources, and third-party mentions that decide whether a model names your brand. We make your business the specific, credible option an engine reaches for in your category.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Technical AI crawlability</h3>
                 <p className="mt-4">We make sure AI crawlers such as GPTBot, PerplexityBot, and Google-Extended can reach and read your pages, and that speed and indexing never block you from an answer.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Traditional rankings, still</h3>
                 <p className="mt-4">On-page, technical, and content SEO that earns real Google rankings. AI answers are built on the same index, so strong rankings are the raw material an AI answer draws from.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>Authority and digital PR</h3>
                 <p className="mt-4">Credible mentions on sites the models already trust. Being cited elsewhere is a large part of why an engine decides your business is worth naming.</p>
-              </div>
-              <div className="card">
+              </li>
+              <li className="card">
                 <h3>AI visibility measurement</h3>
                 <p className="mt-4">We run the prompts your buyers run across ChatGPT, Gemini, and Perplexity, log where you appear, and report the gap we are closing, alongside normal rankings and enquiries.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -379,7 +379,7 @@ export default function AiSeoUKPage() {
                 A repeatable method, not a black box. Here is the work, in the order we do it.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
               {[
                 { n: '01', t: 'Map the prompts', d: 'We find the exact questions your buyers ask ChatGPT, Gemini, Perplexity, and Google, and check where you show up today. That gap is the plan.' },
                 { n: '02', t: 'Fix the entity and schema', d: 'We set clean structured data and entity signals so engines are certain who you are, then confirm it renders in the raw HTML an AI crawler sees.' },
@@ -389,15 +389,15 @@ export default function AiSeoUKPage() {
                 { n: '06', t: 'Clear the technical path', d: 'Speed, indexing, and crawler access for GPTBot, PerplexityBot, and Google-Extended, so nothing blocks you from the answer.' },
                 { n: '07', t: 'Measure and compound', d: 'We track where you get named across engines month on month, double down on what moves, and keep the content fresh so you stay cited.' },
               ].map((s) => (
-                <div key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -436,12 +436,12 @@ export default function AiSeoUKPage() {
               <span className="eyebrow">How we work</span>
               <h2>From audit to cited in four stages</h2>
             </div>
-            <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>AI visibility audit</h3><p className="mt-4">We run your buyer prompts across the major engines and show you where you appear, and where a competitor is named instead.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Entity, schema, technical fixes, and crawler access. The fast wins that change how engines read you within weeks.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Content and authority</h3><p className="mt-4">Answer-first pages, topical depth, and credible mentions that get you named in AI answers and climbing in AI Overviews.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Measure and compound</h3><p className="mt-4">Monthly reporting on AI visibility, rankings, and enquiries, with the plan tuned to what is actually moving.</p></div>
-            </div>
+            <ol className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
+              <li className="card"><span className="stage-num">01</span><h3>AI visibility audit</h3><p className="mt-4">We run your buyer prompts across the major engines and show you where you appear, and where a competitor is named instead.</p></li>
+              <li className="card"><span className="stage-num">02</span><h3>Foundation</h3><p className="mt-4">Entity, schema, technical fixes, and crawler access. The fast wins that change how engines read you within weeks.</p></li>
+              <li className="card"><span className="stage-num">03</span><h3>Content and authority</h3><p className="mt-4">Answer-first pages, topical depth, and credible mentions that get you named in AI answers and climbing in AI Overviews.</p></li>
+              <li className="card"><span className="stage-num">04</span><h3>Measure and compound</h3><p className="mt-4">Monthly reporting on AI visibility, rankings, and enquiries, with the plan tuned to what is actually moving.</p></li>
+            </ol>
           </div>
         </section>
 
@@ -539,17 +539,17 @@ export default function AiSeoUKPage() {
                 real search and AI-visibility work, including us. Talk to a few and pick the fit.
               </p>
             </div>
-            <div className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {AI_SEO_AGENCIES.map((a, i) => (
-                <div key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for AI SEO and GEO terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
@@ -624,8 +624,8 @@ export default function AiSeoUKPage() {
                       <span className="faq-cat-bar" />
                       <p className="faq-cat-label">{c.label}</p>
                     </div>
-                    {FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <details key={f.question} className="faq-item">
+                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
+                      <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
                           <span className="chevron">
@@ -633,8 +633,8 @@ export default function AiSeoUKPage() {
                           </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details>
-                    ))}
+                      </details></li>
+                    ))}</ul>
                   </div>
                 ))}
               </div>
