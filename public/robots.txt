@@ -34,6 +34,18 @@ Disallow: /wishlist/
 Disallow: /compare/
 Disallow: /api/
 Disallow: /admin/
+
+# /_next/ holds build internals we do not want crawled, EXCEPT /_next/static/,
+# which is where the JS and CSS a crawler needs to render the page live.
+# Blocking all of /_next/ cost us 3,714 refused bingbot fetches in the 30 days
+# to 2026-08-03 (165,541 in March) — measured via pipeline/research/bing_webmaster.py.
+# Our pages are statically generated so the text survives an unrendered fetch,
+# but Bing renders worse than Google and there is no upside to refusing it.
+# Allow precedes Disallow so first-match crawlers also resolve it correctly;
+# Google and Bing both take the longest match regardless of order.
+# No /_next/image rule needed: next.config sets images.unoptimized, so the
+# optimizer endpoint is never used and images serve from /images/... directly.
+Allow: /_next/static/
 Disallow: /_next/
 
 # ─── AI retrieval / search bots — explicitly allowed ───

@@ -1,0 +1,5563 @@
+{
+  "site": "https://factoryjet.com/",
+  "sites": [
+    {
+      "AuthenticationCode": "[redacted]",
+      "DnsVerificationCode": "[redacted]",
+      "IsVerified": true,
+      "Url": "https://factoryjet.com/"
+    },
+    {
+      "AuthenticationCode": "[redacted]",
+      "DnsVerificationCode": "[redacted]",
+      "IsVerified": true,
+      "Url": "https://flyingpixel.in/"
+    },
+    {
+      "AuthenticationCode": "[redacted]",
+      "DnsVerificationCode": "[redacted]",
+      "IsVerified": true,
+      "Url": "https://impulsebranding.in/"
+    },
+    {
+      "AuthenticationCode": "[redacted]",
+      "DnsVerificationCode": "[redacted]",
+      "IsVerified": true,
+      "Url": "https://rdbtravels.com/"
+    },
+    {
+      "AuthenticationCode": "[redacted]",
+      "DnsVerificationCode": "[redacted]",
+      "IsVerified": true,
+      "Url": "https://yadaventranceautomation.com/"
+    }
+  ],
+  "quota": {
+    "DailyQuota": 10000,
+    "MonthlyQuota": 280000
+  },
+  "feeds": [
+    {
+      "Compressed": false,
+      "FileSize": 0,
+      "LastCrawled": "2026-08-02",
+      "Status": "Success",
+      "Submitted": null,
+      "Type": "Sitemap Index",
+      "Url": "https://factoryjet.com/sitemap.xml",
+      "UrlCount": 449
+    }
+  ],
+  "crawl": [
+    {
+      "AllOtherCodes": 86,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 93,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 6,
+      "Date": "2026-02-04",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 86,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 89,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 2,
+      "Date": "2026-02-05",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 86,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 86,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 2,
+      "Date": "2026-02-06",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 86,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 86,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 3,
+      "Date": "2026-02-07",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 7,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 1,
+      "Date": "2026-02-08",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 8,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 11,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 4,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 5,
+      "Date": "2026-02-09",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 11,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 2,
+      "Date": "2026-02-10",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 2,
+      "Date": "2026-02-11",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 21,
+      "Date": "2026-02-12",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 2,
+      "Date": "2026-02-13",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 4,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 4,
+      "CrawledPages": 6,
+      "Date": "2026-02-14",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 4,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 4,
+      "CrawledPages": 7,
+      "Date": "2026-02-15",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 10,
+      "Date": "2026-02-16",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 9,
+      "Date": "2026-02-17",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 9,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 4,
+      "CrawledPages": 6,
+      "Date": "2026-02-18",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 66,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 7,
+      "CrawledPages": 8,
+      "Date": "2026-02-19",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 66,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 33,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 33,
+      "CrawledPages": 57,
+      "Date": "2026-02-20",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 272,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 1,
+      "Code302": 0,
+      "Code4xx": 599,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 599,
+      "CrawledPages": 604,
+      "Date": "2026-02-21",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 579,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 2,
+      "Code302": 0,
+      "Code4xx": 901,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 907,
+      "CrawledPages": 905,
+      "Date": "2026-02-22",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 778,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 9,
+      "Code301": 2,
+      "Code302": 0,
+      "Code4xx": 763,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 764,
+      "CrawledPages": 784,
+      "Date": "2026-02-23",
+      "DnsFailures": 0,
+      "InIndex": 4,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 1031,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 10,
+      "Code301": 2,
+      "Code302": 0,
+      "Code4xx": 787,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 789,
+      "CrawledPages": 792,
+      "Date": "2026-02-24",
+      "DnsFailures": 0,
+      "InIndex": 5,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 1231,
+      "BlockedByRobotsTxt": 0,
+      "Code2xx": 13,
+      "Code301": 2,
+      "Code302": 0,
+      "Code4xx": 795,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 795,
+      "CrawledPages": 798,
+      "Date": "2026-02-25",
+      "DnsFailures": 0,
+      "InIndex": 6,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 1579,
+      "BlockedByRobotsTxt": 122,
+      "Code2xx": 13,
+      "Code301": 3,
+      "Code302": 0,
+      "Code4xx": 175,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 175,
+      "CrawledPages": 716,
+      "Date": "2026-02-26",
+      "DnsFailures": 0,
+      "InIndex": 6,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 2194,
+      "BlockedByRobotsTxt": 516,
+      "Code2xx": 14,
+      "Code301": 4,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 17,
+      "CrawledPages": 924,
+      "Date": "2026-02-27",
+      "DnsFailures": 0,
+      "InIndex": 6,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 3056,
+      "BlockedByRobotsTxt": 1138,
+      "Code2xx": 14,
+      "Code301": 4,
+      "Code302": 0,
+      "Code4xx": 9,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 724,
+      "Date": "2026-02-28",
+      "DnsFailures": 0,
+      "InIndex": 7,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 3904,
+      "BlockedByRobotsTxt": 1756,
+      "Code2xx": 15,
+      "Code301": 4,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 7,
+      "CrawledPages": 1015,
+      "Date": "2026-03-01",
+      "DnsFailures": 0,
+      "InIndex": 8,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 4580,
+      "BlockedByRobotsTxt": 2381,
+      "Code2xx": 14,
+      "Code301": 5,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 1150,
+      "Date": "2026-03-02",
+      "DnsFailures": 0,
+      "InIndex": 9,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 5317,
+      "BlockedByRobotsTxt": 3071,
+      "Code2xx": 14,
+      "Code301": 6,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 12,
+      "CrawledPages": 1282,
+      "Date": "2026-03-03",
+      "DnsFailures": 0,
+      "InIndex": 9,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 6167,
+      "BlockedByRobotsTxt": 3881,
+      "Code2xx": 16,
+      "Code301": 7,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 1255,
+      "Date": "2026-03-04",
+      "DnsFailures": 0,
+      "InIndex": 10,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 7002,
+      "BlockedByRobotsTxt": 4671,
+      "Code2xx": 17,
+      "Code301": 7,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 715,
+      "Date": "2026-03-05",
+      "DnsFailures": 0,
+      "InIndex": 10,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 7756,
+      "BlockedByRobotsTxt": 5359,
+      "Code2xx": 17,
+      "Code301": 10,
+      "Code302": 0,
+      "Code4xx": 9,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 746,
+      "Date": "2026-03-06",
+      "DnsFailures": 0,
+      "InIndex": 10,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8137,
+      "BlockedByRobotsTxt": 5663,
+      "Code2xx": 18,
+      "Code301": 10,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 114,
+      "Date": "2026-03-07",
+      "DnsFailures": 0,
+      "InIndex": 9,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8171,
+      "BlockedByRobotsTxt": 5674,
+      "Code2xx": 18,
+      "Code301": 10,
+      "Code302": 0,
+      "Code4xx": 12,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 12,
+      "CrawledPages": 42,
+      "Date": "2026-03-08",
+      "DnsFailures": 0,
+      "InIndex": 8,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8209,
+      "BlockedByRobotsTxt": 5697,
+      "Code2xx": 17,
+      "Code301": 11,
+      "Code302": 0,
+      "Code4xx": 18,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 81,
+      "Date": "2026-03-09",
+      "DnsFailures": 0,
+      "InIndex": 8,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8240,
+      "BlockedByRobotsTxt": 5719,
+      "Code2xx": 17,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 19,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 19,
+      "CrawledPages": 73,
+      "Date": "2026-03-10",
+      "DnsFailures": 0,
+      "InIndex": 7,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8264,
+      "BlockedByRobotsTxt": 5738,
+      "Code2xx": 18,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 21,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 21,
+      "CrawledPages": 71,
+      "Date": "2026-03-11",
+      "DnsFailures": 0,
+      "InIndex": 5,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8264,
+      "BlockedByRobotsTxt": 5738,
+      "Code2xx": 18,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 11,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 11,
+      "CrawledPages": 51,
+      "Date": "2026-03-12",
+      "DnsFailures": 0,
+      "InIndex": 5,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8302,
+      "BlockedByRobotsTxt": 5772,
+      "Code2xx": 18,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 43,
+      "Date": "2026-03-13",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8304,
+      "BlockedByRobotsTxt": 5773,
+      "Code2xx": 18,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 10,
+      "Date": "2026-03-14",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8308,
+      "BlockedByRobotsTxt": 5778,
+      "Code2xx": 18,
+      "Code301": 12,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 16,
+      "Date": "2026-03-15",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8313,
+      "BlockedByRobotsTxt": 5783,
+      "Code2xx": 18,
+      "Code301": 13,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 7,
+      "CrawledPages": 17,
+      "Date": "2026-03-16",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8316,
+      "BlockedByRobotsTxt": 5785,
+      "Code2xx": 18,
+      "Code301": 13,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 8,
+      "CrawledPages": 19,
+      "Date": "2026-03-17",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8318,
+      "BlockedByRobotsTxt": 5787,
+      "Code2xx": 19,
+      "Code301": 14,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 22,
+      "Date": "2026-03-18",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8323,
+      "BlockedByRobotsTxt": 5792,
+      "Code2xx": 19,
+      "Code301": 14,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 7,
+      "CrawledPages": 20,
+      "Date": "2026-03-19",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8323,
+      "BlockedByRobotsTxt": 5792,
+      "Code2xx": 19,
+      "Code301": 14,
+      "Code302": 0,
+      "Code4xx": 9,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 27,
+      "Date": "2026-03-20",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8333,
+      "BlockedByRobotsTxt": 5801,
+      "Code2xx": 19,
+      "Code301": 17,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 19,
+      "Date": "2026-03-21",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8340,
+      "BlockedByRobotsTxt": 5808,
+      "Code2xx": 19,
+      "Code301": 18,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 22,
+      "Date": "2026-03-22",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8340,
+      "BlockedByRobotsTxt": 5808,
+      "Code2xx": 19,
+      "Code301": 18,
+      "Code302": 0,
+      "Code4xx": 4,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 4,
+      "CrawledPages": 17,
+      "Date": "2026-03-23",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8350,
+      "BlockedByRobotsTxt": 5816,
+      "Code2xx": 19,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 38,
+      "Date": "2026-03-24",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8333,
+      "BlockedByRobotsTxt": 5819,
+      "Code2xx": 20,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 17,
+      "Date": "2026-03-25",
+      "DnsFailures": 0,
+      "InIndex": 3,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8134,
+      "BlockedByRobotsTxt": 5824,
+      "Code2xx": 20,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 8,
+      "Date": "2026-03-26",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 8134,
+      "BlockedByRobotsTxt": 5824,
+      "Code2xx": 20,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 4,
+      "Date": "2026-03-27",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 7706,
+      "BlockedByRobotsTxt": 5821,
+      "Code2xx": 21,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 2,
+      "Date": "2026-03-28",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 7580,
+      "BlockedByRobotsTxt": 5820,
+      "Code2xx": 21,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 8,
+      "Date": "2026-03-29",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 7363,
+      "BlockedByRobotsTxt": 5813,
+      "Code2xx": 19,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 3,
+      "Date": "2026-03-30",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 7138,
+      "BlockedByRobotsTxt": 5777,
+      "Code2xx": 18,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 6,
+      "Date": "2026-03-31",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 6934,
+      "BlockedByRobotsTxt": 5737,
+      "Code2xx": 17,
+      "Code301": 20,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 8,
+      "Date": "2026-04-01",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 6519,
+      "BlockedByRobotsTxt": 5510,
+      "Code2xx": 15,
+      "Code301": 23,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 11,
+      "Date": "2026-04-02",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 5959,
+      "BlockedByRobotsTxt": 5140,
+      "Code2xx": 15,
+      "Code301": 22,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 26,
+      "Date": "2026-04-03",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 5373,
+      "BlockedByRobotsTxt": 4717,
+      "Code2xx": 15,
+      "Code301": 22,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 6,
+      "Date": "2026-04-04",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 4819,
+      "BlockedByRobotsTxt": 4295,
+      "Code2xx": 15,
+      "Code301": 22,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 8,
+      "Date": "2026-04-05",
+      "DnsFailures": 0,
+      "InIndex": 2,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 4233,
+      "BlockedByRobotsTxt": 3844,
+      "Code2xx": 14,
+      "Code301": 24,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 8,
+      "Date": "2026-04-06",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 3658,
+      "BlockedByRobotsTxt": 3303,
+      "Code2xx": 15,
+      "Code301": 24,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 7,
+      "Date": "2026-04-07",
+      "DnsFailures": 0,
+      "InIndex": 1,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 3106,
+      "BlockedByRobotsTxt": 2776,
+      "Code2xx": 14,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 5,
+      "Date": "2026-04-08",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 2692,
+      "BlockedByRobotsTxt": 2390,
+      "Code2xx": 15,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 12,
+      "Date": "2026-04-09",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 1940,
+      "BlockedByRobotsTxt": 1669,
+      "Code2xx": 15,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 3,
+      "Date": "2026-04-10",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 1940,
+      "BlockedByRobotsTxt": 1669,
+      "Code2xx": 15,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 4,
+      "Date": "2026-04-11",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 1144,
+      "BlockedByRobotsTxt": 921,
+      "Code2xx": 14,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 6,
+      "Date": "2026-04-12",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 1144,
+      "BlockedByRobotsTxt": 921,
+      "Code2xx": 14,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 8,
+      "Date": "2026-04-13",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 353,
+      "BlockedByRobotsTxt": 230,
+      "Code2xx": 14,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 3,
+      "Date": "2026-04-14",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 302,
+      "BlockedByRobotsTxt": 192,
+      "Code2xx": 15,
+      "Code301": 24,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 8,
+      "Date": "2026-04-15",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 279,
+      "BlockedByRobotsTxt": 173,
+      "Code2xx": 15,
+      "Code301": 23,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 6,
+      "Date": "2026-04-16",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 255,
+      "BlockedByRobotsTxt": 152,
+      "Code2xx": 17,
+      "Code301": 23,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 26,
+      "Date": "2026-04-17",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 234,
+      "BlockedByRobotsTxt": 132,
+      "Code2xx": 18,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 14,
+      "Date": "2026-04-18",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 234,
+      "BlockedByRobotsTxt": 132,
+      "Code2xx": 18,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 5,
+      "Date": "2026-04-19",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 227,
+      "BlockedByRobotsTxt": 127,
+      "Code2xx": 19,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 6,
+      "Date": "2026-04-20",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 218,
+      "BlockedByRobotsTxt": 119,
+      "Code2xx": 20,
+      "Code301": 28,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 10,
+      "Date": "2026-04-21",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 215,
+      "BlockedByRobotsTxt": 116,
+      "Code2xx": 21,
+      "Code301": 27,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 64,
+      "Date": "2026-04-22",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 215,
+      "BlockedByRobotsTxt": 116,
+      "Code2xx": 21,
+      "Code301": 27,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 31,
+      "Date": "2026-04-23",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 211,
+      "BlockedByRobotsTxt": 112,
+      "Code2xx": 21,
+      "Code301": 27,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 53,
+      "Date": "2026-04-24",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 2
+    },
+    {
+      "AllOtherCodes": 204,
+      "BlockedByRobotsTxt": 106,
+      "Code2xx": 22,
+      "Code301": 29,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 64,
+      "Date": "2026-04-25",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 201,
+      "BlockedByRobotsTxt": 103,
+      "Code2xx": 22,
+      "Code301": 29,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 45,
+      "Date": "2026-04-26",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 192,
+      "BlockedByRobotsTxt": 93,
+      "Code2xx": 21,
+      "Code301": 28,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 58,
+      "Date": "2026-04-27",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 192,
+      "BlockedByRobotsTxt": 89,
+      "Code2xx": 18,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 51,
+      "Date": "2026-04-28",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 180,
+      "BlockedByRobotsTxt": 81,
+      "Code2xx": 21,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 42,
+      "Date": "2026-04-29",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 176,
+      "BlockedByRobotsTxt": 76,
+      "Code2xx": 19,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 78,
+      "Date": "2026-04-30",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 20,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 56,
+      "Date": "2026-05-01",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 19,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 1,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 51,
+      "Date": "2026-05-02",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 3
+    },
+    {
+      "AllOtherCodes": 174,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 24,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 40,
+      "Date": "2026-05-03",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 174,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 24,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 4,
+      "CrawledPages": 47,
+      "Date": "2026-05-04",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 174,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 23,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 66,
+      "Date": "2026-05-05",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 22,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 83,
+      "Date": "2026-05-06",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 22,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 25,
+      "Date": "2026-05-07",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 23,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 53,
+      "Date": "2026-05-08",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 23,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 50,
+      "Date": "2026-05-09",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 23,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 33,
+      "Date": "2026-05-10",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 23,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 19,
+      "Date": "2026-05-11",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 176,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 35,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 48,
+      "Date": "2026-05-12",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 39,
+      "Code301": 22,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 81,
+      "Date": "2026-05-13",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 176,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 51,
+      "Code301": 23,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 190,
+      "Date": "2026-05-14",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 176,
+      "BlockedByRobotsTxt": 74,
+      "Code2xx": 51,
+      "Code301": 23,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 210,
+      "Date": "2026-05-15",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 59,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 177,
+      "Date": "2026-05-16",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 175,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 59,
+      "Code301": 25,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 165,
+      "Date": "2026-05-17",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 63,
+      "Code301": 27,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 235,
+      "Date": "2026-05-18",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 180,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 60,
+      "Code301": 28,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 236,
+      "Date": "2026-05-19",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 178,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 61,
+      "Code301": 29,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 185,
+      "Date": "2026-05-20",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 77,
+      "Code301": 30,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 216,
+      "Date": "2026-05-21",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 180,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 87,
+      "Code301": 30,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 126,
+      "Date": "2026-05-22",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 184,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 89,
+      "Code301": 30,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 178,
+      "Date": "2026-05-23",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 187,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 88,
+      "Code301": 31,
+      "Code302": 0,
+      "Code4xx": 0,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 0,
+      "CrawledPages": 93,
+      "Date": "2026-05-24",
+      "DnsFailures": 0,
+      "InIndex": 0,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 178,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 100,
+      "Code301": 24,
+      "Code302": 0,
+      "Code4xx": 9,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 329,
+      "Date": "2026-05-25",
+      "DnsFailures": 0,
+      "InIndex": 66,
+      "InLinks": 4
+    },
+    {
+      "AllOtherCodes": 178,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 96,
+      "Code301": 22,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 278,
+      "Date": "2026-05-26",
+      "DnsFailures": 0,
+      "InIndex": 72,
+      "InLinks": 5
+    },
+    {
+      "AllOtherCodes": 177,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 95,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 195,
+      "Date": "2026-05-27",
+      "DnsFailures": 0,
+      "InIndex": 72,
+      "InLinks": 5
+    },
+    {
+      "AllOtherCodes": 182,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 100,
+      "Code301": 18,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 261,
+      "Date": "2026-05-28",
+      "DnsFailures": 0,
+      "InIndex": 81,
+      "InLinks": 5
+    },
+    {
+      "AllOtherCodes": 183,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 100,
+      "Code301": 17,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 299,
+      "Date": "2026-05-29",
+      "DnsFailures": 0,
+      "InIndex": 83,
+      "InLinks": 5
+    },
+    {
+      "AllOtherCodes": 182,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 101,
+      "Code301": 16,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 188,
+      "Date": "2026-05-30",
+      "DnsFailures": 0,
+      "InIndex": 82,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 182,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 101,
+      "Code301": 16,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 143,
+      "Date": "2026-05-31",
+      "DnsFailures": 0,
+      "InIndex": 82,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 185,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 98,
+      "Code301": 17,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 339,
+      "Date": "2026-06-01",
+      "DnsFailures": 0,
+      "InIndex": 80,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 193,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 96,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 2,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 2,
+      "CrawledPages": 251,
+      "Date": "2026-06-02",
+      "DnsFailures": 0,
+      "InIndex": 82,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 193,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 102,
+      "Code301": 19,
+      "Code302": 0,
+      "Code4xx": 1,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 1,
+      "CrawledPages": 306,
+      "Date": "2026-06-03",
+      "DnsFailures": 0,
+      "InIndex": 86,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 204,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 105,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 8,
+      "Code5xx": 0,
+      "ConnectionTimeout": 1,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 269,
+      "Date": "2026-06-04",
+      "DnsFailures": 0,
+      "InIndex": 87,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 205,
+      "BlockedByRobotsTxt": 75,
+      "Code2xx": 105,
+      "Code301": 26,
+      "Code302": 0,
+      "Code4xx": 18,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 401,
+      "Date": "2026-06-05",
+      "DnsFailures": 0,
+      "InIndex": 87,
+      "InLinks": 6
+    },
+    {
+      "AllOtherCodes": 219,
+      "BlockedByRobotsTxt": 79,
+      "Code2xx": 125,
+      "Code301": 37,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 256,
+      "Date": "2026-06-06",
+      "DnsFailures": 0,
+      "InIndex": 101,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 220,
+      "BlockedByRobotsTxt": 79,
+      "Code2xx": 137,
+      "Code301": 44,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 344,
+      "Date": "2026-06-07",
+      "DnsFailures": 0,
+      "InIndex": 113,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 225,
+      "BlockedByRobotsTxt": 82,
+      "Code2xx": 155,
+      "Code301": 58,
+      "Code302": 0,
+      "Code4xx": 3,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 3,
+      "CrawledPages": 558,
+      "Date": "2026-06-08",
+      "DnsFailures": 0,
+      "InIndex": 128,
+      "InLinks": 7
+    },
+    {
+      "AllOtherCodes": 218,
+      "BlockedByRobotsTxt": 83,
+      "Code2xx": 188,
+      "Code301": 67,
+      "Code302": 0,
+      "Code4xx": 5,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 5,
+      "CrawledPages": 746,
+      "Date": "2026-06-09",
+      "DnsFailures": 0,
+      "InIndex": 148,
+      "InLinks": 8
+    },
+    {
+      "AllOtherCodes": 218,
+      "BlockedByRobotsTxt": 83,
+      "Code2xx": 188,
+      "Code301": 67,
+      "Code302": 0,
+      "Code4xx": 8,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 10,
+      "CrawledPages": 481,
+      "Date": "2026-06-10",
+      "DnsFailures": 0,
+      "InIndex": 148,
+      "InLinks": 8
+    },
+    {
+      "AllOtherCodes": 224,
+      "BlockedByRobotsTxt": 83,
+      "Code2xx": 190,
+      "Code301": 75,
+      "Code302": 0,
+      "Code4xx": 20,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 21,
+      "CrawledPages": 246,
+      "Date": "2026-06-11",
+      "DnsFailures": 0,
+      "InIndex": 150,
+      "InLinks": 9
+    },
+    {
+      "AllOtherCodes": 228,
+      "BlockedByRobotsTxt": 84,
+      "Code2xx": 207,
+      "Code301": 100,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 219,
+      "Date": "2026-06-12",
+      "DnsFailures": 0,
+      "InIndex": 166,
+      "InLinks": 9
+    },
+    {
+      "AllOtherCodes": 235,
+      "BlockedByRobotsTxt": 86,
+      "Code2xx": 247,
+      "Code301": 117,
+      "Code302": 0,
+      "Code4xx": 18,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 30,
+      "CrawledPages": 392,
+      "Date": "2026-06-13",
+      "DnsFailures": 0,
+      "InIndex": 201,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 241,
+      "BlockedByRobotsTxt": 90,
+      "Code2xx": 264,
+      "Code301": 131,
+      "Code302": 0,
+      "Code4xx": 23,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 35,
+      "CrawledPages": 375,
+      "Date": "2026-06-14",
+      "DnsFailures": 0,
+      "InIndex": 214,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 247,
+      "BlockedByRobotsTxt": 90,
+      "Code2xx": 274,
+      "Code301": 141,
+      "Code302": 0,
+      "Code4xx": 21,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 21,
+      "CrawledPages": 414,
+      "Date": "2026-06-15",
+      "DnsFailures": 0,
+      "InIndex": 228,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 247,
+      "BlockedByRobotsTxt": 90,
+      "Code2xx": 274,
+      "Code301": 142,
+      "Code302": 0,
+      "Code4xx": 17,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 20,
+      "CrawledPages": 433,
+      "Date": "2026-06-16",
+      "DnsFailures": 0,
+      "InIndex": 228,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 251,
+      "BlockedByRobotsTxt": 90,
+      "Code2xx": 284,
+      "Code301": 147,
+      "Code302": 0,
+      "Code4xx": 14,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 17,
+      "CrawledPages": 461,
+      "Date": "2026-06-17",
+      "DnsFailures": 0,
+      "InIndex": 239,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 261,
+      "BlockedByRobotsTxt": 92,
+      "Code2xx": 298,
+      "Code301": 151,
+      "Code302": 0,
+      "Code4xx": 24,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 39,
+      "CrawledPages": 548,
+      "Date": "2026-06-18",
+      "DnsFailures": 0,
+      "InIndex": 253,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 260,
+      "BlockedByRobotsTxt": 95,
+      "Code2xx": 319,
+      "Code301": 158,
+      "Code302": 0,
+      "Code4xx": 23,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 38,
+      "CrawledPages": 408,
+      "Date": "2026-06-19",
+      "DnsFailures": 0,
+      "InIndex": 266,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 260,
+      "BlockedByRobotsTxt": 99,
+      "Code2xx": 334,
+      "Code301": 179,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 361,
+      "Date": "2026-06-20",
+      "DnsFailures": 0,
+      "InIndex": 281,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 260,
+      "BlockedByRobotsTxt": 101,
+      "Code2xx": 341,
+      "Code301": 187,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 230,
+      "Date": "2026-06-21",
+      "DnsFailures": 0,
+      "InIndex": 283,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 276,
+      "BlockedByRobotsTxt": 106,
+      "Code2xx": 334,
+      "Code301": 191,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 241,
+      "Date": "2026-06-22",
+      "DnsFailures": 0,
+      "InIndex": 288,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 281,
+      "BlockedByRobotsTxt": 106,
+      "Code2xx": 339,
+      "Code301": 200,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 20,
+      "CrawledPages": 479,
+      "Date": "2026-06-23",
+      "DnsFailures": 0,
+      "InIndex": 297,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 266,
+      "BlockedByRobotsTxt": 108,
+      "Code2xx": 361,
+      "Code301": 213,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 20,
+      "CrawledPages": 479,
+      "Date": "2026-06-24",
+      "DnsFailures": 0,
+      "InIndex": 304,
+      "InLinks": 10
+    },
+    {
+      "AllOtherCodes": 275,
+      "BlockedByRobotsTxt": 109,
+      "Code2xx": 356,
+      "Code301": 217,
+      "Code302": 0,
+      "Code4xx": 18,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 20,
+      "CrawledPages": 410,
+      "Date": "2026-06-25",
+      "DnsFailures": 0,
+      "InIndex": 310,
+      "InLinks": 11
+    },
+    {
+      "AllOtherCodes": 287,
+      "BlockedByRobotsTxt": 114,
+      "Code2xx": 361,
+      "Code301": 238,
+      "Code302": 0,
+      "Code4xx": 12,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 12,
+      "CrawledPages": 273,
+      "Date": "2026-06-26",
+      "DnsFailures": 0,
+      "InIndex": 322,
+      "InLinks": 12
+    },
+    {
+      "AllOtherCodes": 278,
+      "BlockedByRobotsTxt": 115,
+      "Code2xx": 408,
+      "Code301": 251,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 7,
+      "CrawledPages": 308,
+      "Date": "2026-06-27",
+      "DnsFailures": 0,
+      "InIndex": 329,
+      "InLinks": 12
+    },
+    {
+      "AllOtherCodes": 278,
+      "BlockedByRobotsTxt": 115,
+      "Code2xx": 408,
+      "Code301": 250,
+      "Code302": 0,
+      "Code4xx": 11,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 11,
+      "CrawledPages": 757,
+      "Date": "2026-06-28",
+      "DnsFailures": 0,
+      "InIndex": 329,
+      "InLinks": 12
+    },
+    {
+      "AllOtherCodes": 303,
+      "BlockedByRobotsTxt": 116,
+      "Code2xx": 399,
+      "Code301": 263,
+      "Code302": 0,
+      "Code4xx": 8,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 8,
+      "CrawledPages": 663,
+      "Date": "2026-06-29",
+      "DnsFailures": 0,
+      "InIndex": 337,
+      "InLinks": 12
+    },
+    {
+      "AllOtherCodes": 298,
+      "BlockedByRobotsTxt": 117,
+      "Code2xx": 408,
+      "Code301": 276,
+      "Code302": 0,
+      "Code4xx": 10,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 10,
+      "CrawledPages": 390,
+      "Date": "2026-06-30",
+      "DnsFailures": 0,
+      "InIndex": 340,
+      "InLinks": 12
+    },
+    {
+      "AllOtherCodes": 299,
+      "BlockedByRobotsTxt": 119,
+      "Code2xx": 416,
+      "Code301": 285,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 8,
+      "CrawledPages": 604,
+      "Date": "2026-07-01",
+      "DnsFailures": 0,
+      "InIndex": 349,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 295,
+      "BlockedByRobotsTxt": 119,
+      "Code2xx": 426,
+      "Code301": 304,
+      "Code302": 0,
+      "Code4xx": 17,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 552,
+      "Date": "2026-07-02",
+      "DnsFailures": 0,
+      "InIndex": 355,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 300,
+      "BlockedByRobotsTxt": 121,
+      "Code2xx": 506,
+      "Code301": 318,
+      "Code302": 0,
+      "Code4xx": 27,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 43,
+      "CrawledPages": 969,
+      "Date": "2026-07-03",
+      "DnsFailures": 0,
+      "InIndex": 390,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 303,
+      "BlockedByRobotsTxt": 121,
+      "Code2xx": 510,
+      "Code301": 328,
+      "Code302": 0,
+      "Code4xx": 36,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 53,
+      "CrawledPages": 577,
+      "Date": "2026-07-04",
+      "DnsFailures": 0,
+      "InIndex": 420,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 302,
+      "BlockedByRobotsTxt": 125,
+      "Code2xx": 520,
+      "Code301": 335,
+      "Code302": 0,
+      "Code4xx": 14,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 532,
+      "Date": "2026-07-05",
+      "DnsFailures": 0,
+      "InIndex": 425,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 316,
+      "BlockedByRobotsTxt": 126,
+      "Code2xx": 511,
+      "Code301": 342,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 521,
+      "Date": "2026-07-06",
+      "DnsFailures": 0,
+      "InIndex": 432,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 313,
+      "BlockedByRobotsTxt": 127,
+      "Code2xx": 515,
+      "Code301": 355,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 418,
+      "Date": "2026-07-07",
+      "DnsFailures": 0,
+      "InIndex": 434,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 304,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 507,
+      "Code301": 391,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 17,
+      "CrawledPages": 454,
+      "Date": "2026-07-08",
+      "DnsFailures": 0,
+      "InIndex": 423,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 295,
+      "BlockedByRobotsTxt": 131,
+      "Code2xx": 509,
+      "Code301": 396,
+      "Code302": 0,
+      "Code4xx": 12,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 799,
+      "Date": "2026-07-09",
+      "DnsFailures": 0,
+      "InIndex": 423,
+      "InLinks": 15
+    },
+    {
+      "AllOtherCodes": 294,
+      "BlockedByRobotsTxt": 131,
+      "Code2xx": 509,
+      "Code301": 397,
+      "Code302": 0,
+      "Code4xx": 14,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 16,
+      "CrawledPages": 651,
+      "Date": "2026-07-10",
+      "DnsFailures": 0,
+      "InIndex": 423,
+      "InLinks": 15
+    },
+    {
+      "AllOtherCodes": 299,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 498,
+      "Code301": 400,
+      "Code302": 0,
+      "Code4xx": 11,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 549,
+      "Date": "2026-07-11",
+      "DnsFailures": 0,
+      "InIndex": 421,
+      "InLinks": 14
+    },
+    {
+      "AllOtherCodes": 304,
+      "BlockedByRobotsTxt": 130,
+      "Code2xx": 489,
+      "Code301": 395,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 550,
+      "Date": "2026-07-12",
+      "DnsFailures": 0,
+      "InIndex": 422,
+      "InLinks": 15
+    },
+    {
+      "AllOtherCodes": 308,
+      "BlockedByRobotsTxt": 130,
+      "Code2xx": 495,
+      "Code301": 388,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 20,
+      "CrawledPages": 1122,
+      "Date": "2026-07-13",
+      "DnsFailures": 0,
+      "InIndex": 432,
+      "InLinks": 16
+    },
+    {
+      "AllOtherCodes": 314,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 487,
+      "Code301": 387,
+      "Code302": 0,
+      "Code4xx": 19,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 21,
+      "CrawledPages": 790,
+      "Date": "2026-07-14",
+      "DnsFailures": 0,
+      "InIndex": 433,
+      "InLinks": 16
+    },
+    {
+      "AllOtherCodes": 311,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 492,
+      "Code301": 384,
+      "Code302": 0,
+      "Code4xx": 23,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 24,
+      "CrawledPages": 937,
+      "Date": "2026-07-15",
+      "DnsFailures": 0,
+      "InIndex": 440,
+      "InLinks": 16
+    },
+    {
+      "AllOtherCodes": 321,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 483,
+      "Code301": 380,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 628,
+      "Date": "2026-07-16",
+      "DnsFailures": 0,
+      "InIndex": 442,
+      "InLinks": 17
+    },
+    {
+      "AllOtherCodes": 315,
+      "BlockedByRobotsTxt": 129,
+      "Code2xx": 493,
+      "Code301": 378,
+      "Code302": 0,
+      "Code4xx": 17,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 541,
+      "Date": "2026-07-17",
+      "DnsFailures": 0,
+      "InIndex": 442,
+      "InLinks": 17
+    },
+    {
+      "AllOtherCodes": 335,
+      "BlockedByRobotsTxt": 128,
+      "Code2xx": 473,
+      "Code301": 377,
+      "Code302": 0,
+      "Code4xx": 16,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 17,
+      "CrawledPages": 700,
+      "Date": "2026-07-18",
+      "DnsFailures": 0,
+      "InIndex": 445,
+      "InLinks": 17
+    },
+    {
+      "AllOtherCodes": 326,
+      "BlockedByRobotsTxt": 127,
+      "Code2xx": 479,
+      "Code301": 370,
+      "Code302": 0,
+      "Code4xx": 20,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 21,
+      "CrawledPages": 575,
+      "Date": "2026-07-19",
+      "DnsFailures": 0,
+      "InIndex": 445,
+      "InLinks": 18
+    },
+    {
+      "AllOtherCodes": 315,
+      "BlockedByRobotsTxt": 127,
+      "Code2xx": 487,
+      "Code301": 365,
+      "Code302": 0,
+      "Code4xx": 24,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 26,
+      "CrawledPages": 466,
+      "Date": "2026-07-20",
+      "DnsFailures": 0,
+      "InIndex": 444,
+      "InLinks": 19
+    },
+    {
+      "AllOtherCodes": 313,
+      "BlockedByRobotsTxt": 126,
+      "Code2xx": 485,
+      "Code301": 364,
+      "Code302": 0,
+      "Code4xx": 13,
+      "Code5xx": 0,
+      "ConnectionTimeout": 1,
+      "ContainsMalware": 0,
+      "CrawlErrors": 14,
+      "CrawledPages": 672,
+      "Date": "2026-07-21",
+      "DnsFailures": 0,
+      "InIndex": 446,
+      "InLinks": 19
+    },
+    {
+      "AllOtherCodes": 317,
+      "BlockedByRobotsTxt": 126,
+      "Code2xx": 480,
+      "Code301": 359,
+      "Code302": 0,
+      "Code4xx": 20,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 22,
+      "CrawledPages": 655,
+      "Date": "2026-07-22",
+      "DnsFailures": 0,
+      "InIndex": 445,
+      "InLinks": 19
+    },
+    {
+      "AllOtherCodes": 313,
+      "BlockedByRobotsTxt": 123,
+      "Code2xx": 481,
+      "Code301": 357,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 547,
+      "Date": "2026-07-23",
+      "DnsFailures": 0,
+      "InIndex": 444,
+      "InLinks": 19
+    },
+    {
+      "AllOtherCodes": 321,
+      "BlockedByRobotsTxt": 123,
+      "Code2xx": 473,
+      "Code301": 353,
+      "Code302": 0,
+      "Code4xx": 12,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 12,
+      "CrawledPages": 738,
+      "Date": "2026-07-24",
+      "DnsFailures": 0,
+      "InIndex": 443,
+      "InLinks": 23
+    },
+    {
+      "AllOtherCodes": 312,
+      "BlockedByRobotsTxt": 123,
+      "Code2xx": 478,
+      "Code301": 350,
+      "Code302": 0,
+      "Code4xx": 18,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 481,
+      "Date": "2026-07-25",
+      "DnsFailures": 0,
+      "InIndex": 446,
+      "InLinks": 23
+    },
+    {
+      "AllOtherCodes": 290,
+      "BlockedByRobotsTxt": 123,
+      "Code2xx": 499,
+      "Code301": 347,
+      "Code302": 0,
+      "Code4xx": 8,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 945,
+      "Date": "2026-07-26",
+      "DnsFailures": 0,
+      "InIndex": 446,
+      "InLinks": 28
+    },
+    {
+      "AllOtherCodes": 305,
+      "BlockedByRobotsTxt": 123,
+      "Code2xx": 492,
+      "Code301": 342,
+      "Code302": 0,
+      "Code4xx": 17,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 24,
+      "CrawledPages": 1078,
+      "Date": "2026-07-27",
+      "DnsFailures": 0,
+      "InIndex": 443,
+      "InLinks": 28
+    },
+    {
+      "AllOtherCodes": 294,
+      "BlockedByRobotsTxt": 121,
+      "Code2xx": 511,
+      "Code301": 340,
+      "Code302": 0,
+      "Code4xx": 15,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 949,
+      "Date": "2026-07-28",
+      "DnsFailures": 0,
+      "InIndex": 455,
+      "InLinks": 29
+    },
+    {
+      "AllOtherCodes": 290,
+      "BlockedByRobotsTxt": 119,
+      "Code2xx": 511,
+      "Code301": 324,
+      "Code302": 0,
+      "Code4xx": 15,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 18,
+      "CrawledPages": 993,
+      "Date": "2026-07-29",
+      "DnsFailures": 0,
+      "InIndex": 455,
+      "InLinks": 29
+    },
+    {
+      "AllOtherCodes": 266,
+      "BlockedByRobotsTxt": 114,
+      "Code2xx": 530,
+      "Code301": 319,
+      "Code302": 0,
+      "Code4xx": 11,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 13,
+      "CrawledPages": 800,
+      "Date": "2026-07-30",
+      "DnsFailures": 0,
+      "InIndex": 457,
+      "InLinks": 29
+    },
+    {
+      "AllOtherCodes": 243,
+      "BlockedByRobotsTxt": 113,
+      "Code2xx": 548,
+      "Code301": 313,
+      "Code302": 0,
+      "Code4xx": 8,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 8,
+      "CrawledPages": 944,
+      "Date": "2026-07-31",
+      "DnsFailures": 0,
+      "InIndex": 458,
+      "InLinks": 29
+    },
+    {
+      "AllOtherCodes": 228,
+      "BlockedByRobotsTxt": 109,
+      "Code2xx": 555,
+      "Code301": 307,
+      "Code302": 0,
+      "Code4xx": 6,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 6,
+      "CrawledPages": 807,
+      "Date": "2026-08-01",
+      "DnsFailures": 0,
+      "InIndex": 459,
+      "InLinks": 30
+    },
+    {
+      "AllOtherCodes": 259,
+      "BlockedByRobotsTxt": 108,
+      "Code2xx": 515,
+      "Code301": 303,
+      "Code302": 0,
+      "Code4xx": 7,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 9,
+      "CrawledPages": 806,
+      "Date": "2026-08-02",
+      "DnsFailures": 0,
+      "InIndex": 455,
+      "InLinks": 31
+    },
+    {
+      "AllOtherCodes": 259,
+      "BlockedByRobotsTxt": 107,
+      "Code2xx": 511,
+      "Code301": 299,
+      "Code302": 0,
+      "Code4xx": 9,
+      "Code5xx": 0,
+      "ConnectionTimeout": 0,
+      "ContainsMalware": 0,
+      "CrawlErrors": 10,
+      "CrawledPages": 881,
+      "Date": "2026-08-03",
+      "DnsFailures": 0,
+      "InIndex": 455,
+      "InLinks": 34
+    }
+  ],
+  "traffic": [
+    {
+      "Clicks": 0,
+      "Date": "2025-04-04",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-04-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-15",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-16",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-18",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-20",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-21",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-22",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-23",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-25",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-26",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-28",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-05-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-02",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-03",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-05",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-07",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-08",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-11",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-12",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-14",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-20",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-27",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-06-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-06",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-07",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-08",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-14",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-17",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-20",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-21",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-30",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-07-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-05",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-11",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-18",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-08-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-09-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-10-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-11-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2025-12-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-01-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-02-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-03-09",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-27",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-30",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-03-31",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-25",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-26",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-27",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-28",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-29",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-04-30",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-01",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-02",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-03",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-04",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-05",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-06",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-07",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-08",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-10",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-11",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-12",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-13",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-14",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-15",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-16",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-17",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-18",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-19",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-20",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-21",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-22",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-23",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-24",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-25",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-26",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-27",
+      "Impressions": 6
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-28",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-29",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-30",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-05-31",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-01",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-02",
+      "Impressions": 5
+    },
+    {
+      "Clicks": 2,
+      "Date": "2026-06-03",
+      "Impressions": 6
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-04",
+      "Impressions": 6
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-05",
+      "Impressions": 5
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-06",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-07",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-06-08",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-09",
+      "Impressions": 0
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-10",
+      "Impressions": 6
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-06-11",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-12",
+      "Impressions": 29
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-13",
+      "Impressions": 19
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-14",
+      "Impressions": 13
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-15",
+      "Impressions": 3
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-16",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-17",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-18",
+      "Impressions": 5
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-19",
+      "Impressions": 8
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-20",
+      "Impressions": 27
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-21",
+      "Impressions": 5
+    },
+    {
+      "Clicks": 2,
+      "Date": "2026-06-22",
+      "Impressions": 12
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-06-23",
+      "Impressions": 7
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-24",
+      "Impressions": 39
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-25",
+      "Impressions": 14
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-26",
+      "Impressions": 4
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-27",
+      "Impressions": 1
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-28",
+      "Impressions": 14
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-29",
+      "Impressions": 8
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-06-30",
+      "Impressions": 6
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-01",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-02",
+      "Impressions": 7
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-03",
+      "Impressions": 18
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-04",
+      "Impressions": 2
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-05",
+      "Impressions": 10
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-06",
+      "Impressions": 9
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-07",
+      "Impressions": 8
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-08",
+      "Impressions": 17
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-09",
+      "Impressions": 21
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-10",
+      "Impressions": 9
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-11",
+      "Impressions": 5
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-12",
+      "Impressions": 12
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-13",
+      "Impressions": 32
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-14",
+      "Impressions": 116
+    },
+    {
+      "Clicks": 3,
+      "Date": "2026-07-15",
+      "Impressions": 128
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-16",
+      "Impressions": 93
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-17",
+      "Impressions": 83
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-18",
+      "Impressions": 110
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-19",
+      "Impressions": 51
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-20",
+      "Impressions": 63
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-21",
+      "Impressions": 65
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-22",
+      "Impressions": 50
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-23",
+      "Impressions": 95
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-24",
+      "Impressions": 62
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-25",
+      "Impressions": 104
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-26",
+      "Impressions": 79
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-27",
+      "Impressions": 126
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-28",
+      "Impressions": 160
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-29",
+      "Impressions": 178
+    },
+    {
+      "Clicks": 1,
+      "Date": "2026-07-30",
+      "Impressions": 244
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-07-31",
+      "Impressions": 131
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-08-01",
+      "Impressions": 109
+    },
+    {
+      "Clicks": 0,
+      "Date": "2026-08-02",
+      "Impressions": 188
+    }
+  ],
+  "issues": []
+}
