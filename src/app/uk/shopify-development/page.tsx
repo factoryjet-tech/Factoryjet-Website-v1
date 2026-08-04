@@ -950,74 +950,68 @@ export default function ShopifyDevelopmentPage() {
 
       {/* Accordion */}
       <div>
-        <ul id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
+        <div id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">PRICING & TIMELINE</p>
           </div>
-          <li><details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">How much does a custom Shopify store cost in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>FactoryJet builds custom Shopify stores for UK brands on a scoped, milestone-paid basis. A custom Liquid theme on an existing store starts from a confirmed quote after our 30-minute discovery call; we price after we understand scope, not before. UK Shopify agencies typically charge &#163;10,000&#8211;&#163;50,000 for the same work. What you pay us includes: Figma design (homepage, PDP, collection, cart), Liquid build, app configuration, technical SEO, Lighthouse performance audit, and code delivery to your GitHub on launch day. No hourly billing, no scope-creep invoices.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How long does a Shopify store build take in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>A custom theme applied to an existing store takes 2&#8211;3 weeks from design sign-off. A full Shopify store build from scratch; theme, product catalogue, payment configuration, shipping, apps, and launch; takes 3&#8211;5 weeks. Shopify Plus or headless Hydrogen builds run 6&#8211;10 weeks depending on B2B complexity, number of storefronts, or custom app requirements. We give you a firm timeline after the discovery session, not a range, because scope drives everything.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Do you offer a 7-day delivery guarantee for Shopify?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Our 7-day delivery guarantee covers standard Shopify store builds and custom theme applications to existing stores. Not all Shopify projects qualify; complex migrations, multi-storefront Plus builds, or stores with large product catalogues take longer by necessity. For straightforward builds: custom theme design, core pages, payment setup, and launch; we deliver in 7 days. We confirm this during discovery.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How does FactoryJet quote Shopify development work?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>We scope every Shopify build upfront, then quote it: no hourly billing, no scope-creep invoices. Building Shopify stores for brands since Shopify launched in 2006 means we estimate accurately on the first call, so the quote you sign is what you pay. Payment is split into milestones: typically a deposit before design, a second payment at development kick-off, and a final payment at launch; so you are never paying for work that has not been delivered.</p></div>
-          </details></li>
-        </ul>
+          </details></li></ul>
+        </div>
 
         <div id="faq-platform" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">PLATFORM & TECH</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">Do I need Shopify Plus, or will standard Shopify work?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Standard Shopify works well for most UK DTC brands doing under &#163;500K&#8211;&#163;1M per year in revenue. Shopify Plus is worth the investment when you need: custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net terms, multi-storefront management, advanced Shopify Flow automation, or dedicated Shopify support. As a Shopify Plus agency, we make this assessment during discovery, and we would rather point you to a standard Shopify agency UK build than sell you Plus you do not need.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What is headless Shopify (Hydrogen) and does my store need it?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Headless Shopify rebuilds your storefront in Hydrogen (React/Remix) while keeping Shopify as the backend for inventory, orders, and checkout. The result is sub-1-second page loads, full design freedom, and custom UX impossible within standard Liquid. Most UK brands under &#163;3M per year do not need headless; the additional build and maintenance cost outweighs the benefit. Above that, a meaningful conversion rate improvement typically pays for it within 6&#8211;12 months.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Can you build custom Shopify apps or integrate third-party apps?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes to both. We integrate any Shopify App Store app into your theme: reviews (Yotpo, Okendo, Judge.me), subscriptions (ReCharge, Skio), loyalty (Smile.io, LoyaltyLion), upsell (CartHook, ReConvert), and more. When off-the-shelf solutions do not fit your workflow, we build custom private apps using Shopify&#8217;s GraphQL Admin API and Polaris design system. All app integrations are styled to match your theme; no floating widget boxes or mismatched UI.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Can you build a Shopify B2B wholesale portal for UK trade customers?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Shopify B2B is a core use case for UK wholesalers and trade brands. For Shopify Plus clients, we configure the native B2B features: company accounts, contact management, custom price lists per company, net payment terms (net-30, net-60), tax exemptions (relevant for UK VAT-registered trade accounts), and a dedicated B2B storefront with password-protected catalogue access. For standard Shopify, we implement B2B via apps such as Wholesale Gorilla, WholesaleX, or Locksmith for catalogue gating.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-migrations" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
@@ -1025,34 +1019,31 @@ export default function ShopifyDevelopmentPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">MIGRATIONS</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">Can you migrate my WooCommerce store to Shopify?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. WooCommerce to Shopify is one of our most common migrations for UK brands. We export all products (with variants, metafields, and images), customers, and order history. We map your existing URL structure and implement 301 redirects for every product and collection URL to protect your SEO equity. We test the full checkout flow on the staging store before switching DNS, so launch day has zero downtime. Most UK WooCommerce-to-Shopify migrations are complete in 3&#8211;4 weeks.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What other platforms can you migrate to Shopify?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>We have migrated UK stores from WooCommerce, Magento (1.x and 2.x), BigCommerce, PrestaShop, Squarespace Commerce, Wix eCommerce, Volusion, and custom-built platforms. Migration complexity depends on your product catalogue size, number of metafields, and whether you have complex pricing rules or customer segments that need rebuilding in Shopify&#8217;s data model. UK-specific considerations include VAT setup, Royal Mail and DPD shipping integration, and UK payment providers (Stripe, PayPal, Klarna, Clearpay).</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Will my SEO rankings survive a migration to Shopify?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes, if the migration is done correctly. Before any migration, we audit your current URL structure, identify which product and collection pages have Google UK rankings worth protecting, and build the redirect map before we touch anything. We implement 301 redirects for every changed URL, submit the new sitemap to Google Search Console on launch day, and monitor organic traffic for 30 days post-launch. Most UK brands see rankings recover fully within 6&#8211;8 weeks.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How long does a Shopify migration take for a UK brand?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>A standard WooCommerce or Magento to Shopify migration takes 3&#8211;5 weeks from kickoff to DNS switch. This includes: pre-migration audit (3&#8211;5 days), redirect mapping (2&#8211;3 days), product and customer data migration (3&#8211;7 days depending on catalogue size), theme setup on the Shopify staging environment (5&#8211;10 days), QA and staging review (3&#8211;5 days), and DNS cutover with post-launch monitoring. Complex migrations with custom pricing rules, large product catalogues of 5,000-plus SKUs, or multi-language requirements take 6&#8211;10 weeks. We give you a firm timeline on the discovery call once we have reviewed your current store.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-seo" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
@@ -1060,34 +1051,31 @@ export default function ShopifyDevelopmentPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">SEO & PERFORMANCE</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">Will my Shopify store be optimised for Google UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Technical SEO is included in every build. This covers: optimised title tags and meta descriptions for all product, collection, and page templates; Product schema markup for Google Shopping eligibility; BreadcrumbList schema; canonical URLs to handle Shopify&#8217;s duplicate URL patterns (?variant= URLs); compressed images with descriptive alt tags; sitemap.xml submission to Google Search Console; and Core Web Vitals optimisation. Collection page content and blog strategy are available as add-ons.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What Lighthouse score will my Shopify store get?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Our custom Liquid themes consistently score 90&#8211;97 on Lighthouse Performance (Shopify&#8217;s infrastructure caps some scores vs. static sites) and 100 on Accessibility, Best Practices, and SEO. Headless Hydrogen builds typically score 95-plus on Performance. We run a PageSpeed Insights audit before every handover; you see the scores before you sign off. We do not launch a store that fails Core Web Vitals.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Does FactoryJet optimise Shopify stores for AI search and ChatGPT?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Shopify stores built by FactoryJet include AEO (Answer Engine Optimisation) for ChatGPT, Perplexity, and Google AI Overviews: Product schema with price, availability, and review aggregation; FAQPage schema targeting &#8220;best [product]&#8221;, &#8220;how to [use product]&#8221;, and &#8220;is [product] worth it&#8221; queries; and BreadcrumbList schema for category pages. Stores built with AEO get cited in AI-generated answers; a growing traffic source that compounds with traditional SEO.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What Core Web Vitals does FactoryJet target on Shopify stores?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Core Web Vitals targets for all Shopify builds: LCP (Largest Contentful Paint) under 2.5 seconds on mobile; INP (Interaction to Next Paint) under 200ms; CLS (Cumulative Layout Shift) under 0.1. We achieve this through hero image preloading with fetchPriority="high", font-display:swap on all web fonts, deferred non-critical JavaScript, image lazy loading below the fold with explicit width and height attributes to prevent layout shift, and theme code optimisation to remove unused CSS. We test on PageSpeed Insights with real-world Chrome UX data before handover, because CrUX field data is what Google uses for ranking.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-working" style={{ scrollMarginTop: '112px' }}>
@@ -1095,34 +1083,31 @@ export default function ShopifyDevelopmentPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">WORKING WITH US</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">Do I own my Shopify theme code after the project?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes; 100%. The full theme codebase is delivered to your GitHub repository on launch day. You own every line of Liquid, every custom section schema, and all app integration code. Any Shopify developer can work with it in the future. No lock-in, no proprietary framework, no FactoryJet platform subscription required to keep your store running.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How is FactoryJet different from hiring a UK Shopify agency?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Three differences matter: price (scoped and quoted upfront, no hourly billing), speed (3&#8211;5 weeks vs. 3&#8211;6 months at most UK agencies), and ownership (full code delivery on launch day, not held behind a retainer). We have built 500-plus Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page, not just what looks good in a proposal. And as a Certified Shopify Partner, we have passed Shopify&#8217;s own technical assessment.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Who is the best Shopify development agency in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>For SMB and DTC brands in the UK, FactoryJet makes a strong case: Certified Shopify Development Partner status, custom themes built by senior engineers, upfront quotes, and 7-day delivery on standard store builds. The best Shopify development agency UK for your specific situation depends on scope. A brand heading to Shopify Plus needs a certified Shopify Plus agency UK, while a first store needs speed and conversion fundamentals. Whoever you evaluate among UK Shopify development companies, ask for store speed scores, Lighthouse audits, and conversion before/afters; not just portfolio screenshots.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Does FactoryJet offer ongoing Shopify support after launch?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers ongoing monthly support: dedicated Shopify development hours, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes new collection page builds, app integrations, Klaviyo flow updates, seasonal landing pages for peak trading periods (Christmas, Black Friday, January sales), and performance optimisation reviews.</p></div>
-          </details>
+          </details></li></ul>
         </div>
       </div>
     </div>

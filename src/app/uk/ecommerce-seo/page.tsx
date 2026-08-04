@@ -905,74 +905,68 @@ export default function EcommerceSeoPage() {
 
       {/* Accordion */}
       <div>
-        <ul id="faq-service" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
+        <div id="faq-service" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">ABOUT THE SERVICE</p>
           </div>
-          <li><details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">What does an ecommerce SEO agency actually do for UK brands?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>An ecommerce SEO agency drives organic revenue from your existing product catalogue by improving how search engines find, crawl, index, and rank your store pages. Concretely: technical audits that fix crawlability issues, category page optimisation that targets commercial search queries, product page SEO targeting long-tail transactional searches, link building to grow domain authority, and content strategy for informational queries that sit above your commercial pages in the purchase funnel. FactoryJet also builds the actual Shopify or WooCommerce store where needed; meaning our SEO work and development work are integrated, not siloed.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How long does ecommerce SEO take to work in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Technical SEO and on-page work; canonicalisation, sitemap fixes, Core Web Vitals, meta and H1 rewrites; typically produces first ranking improvements in 6&#8211;8 weeks. For UK ecommerce category pages targeting competitive terms like &#8220;home decor UK&#8221; or &#8220;women&#8217;s trainers online&#8221;, meaningful position improvements typically appear in 3&#8211;4 months. Organic revenue growth that outpaces your paid channels takes 6&#8211;9 months in most UK markets. SEO compounds over time; months 6&#8211;12 typically produce better results than months 1&#8211;6 from the same fixed monthly investment.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How does FactoryJet measure ecommerce SEO success?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Organic revenue is the primary metric; tracked via GA4 ecommerce events with proper source/medium attribution to organic search. Secondary metrics are: organic sessions (from Google Search Console), organic conversion rate (GA4), organic share of total revenue, and keyword position movements on commercial terms (GSC query data). We do not lead our reporting with third-party rank tracker data; it is inaccurate and not your revenue source. Every client engagement begins with a GA4 ecommerce event audit to ensure revenue attribution is working before we start reporting it.</p></div>
-          </details></li>
-          <li><details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Which ecommerce platforms does FactoryJet support for SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify (all plans including Shopify Plus), WooCommerce, Magento (1.x and 2.x), and BigCommerce. As a Shopify SEO agency with an in-house development team, we go past the audit stage: for Shopify clients we fix Liquid-level issues directly; incorrect canonical tag implementations, JavaScript-rendered content that Googlebot cannot crawl, theme-generated duplicate pages; within the same engagement. For WooCommerce, we work directly with the site&#8217;s WordPress installation, Yoast/RankMath configuration, and custom post type SEO. Magento SEO includes faceted navigation handling, enterprise crawl budget management, and category tree optimisation.</p></div>
-          </details></li>
-        </ul>
+          </details></li></ul>
+        </div>
 
         <div id="faq-pricing" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
           <div className="faq-cat-header">
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">PRICING & CONTRACTS</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">How much does ecommerce SEO cost in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>FactoryJet prices ecommerce SEO engagements based on: the size of your product catalogue, your current organic baseline (a store with 200 technical SEO issues needs more initial work than one with 20), the competitive landscape for your category keywords, and the scope of ongoing work you need. We quote after the free audit call; not before; because ecommerce SEO pricing requires understanding what is broken before we can tell you what it costs to fix. We are competitive in the UK market; ask us on the call.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Do you offer month-to-month ecommerce SEO contracts?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. All FactoryJet ecommerce SEO engagements are month-to-month. There is no annual lock-in. We believe monthly contracts are the right model for SEO: they align our incentives with your results, they prevent the common UK agency pattern of selling 12-month contracts on a pitch and then coasting, and they keep us accountable every single month. The only time we ask for a longer commitment is for larger technical migrations that require a known runway; and we will explain the reason clearly before asking.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Is a technical SEO audit included, or is it an additional charge?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>The technical audit in month one is included in the monthly engagement cost. We do not charge separately for the audit that we need to do the work correctly; that would be like a doctor charging for a diagnosis before deciding whether to treat you. The audit is our baseline. The free pre-engagement audit (available via the discovery call) covers your GSC performance, Core Web Vitals status, and top indexation issues. The full technical audit in month one is deeper: a complete crawl, canonical mapping, duplicate content analysis, schema validation, and site speed profiling.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What does month 1 of an ecommerce SEO engagement include?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Month 1 is foundation work. We run a full technical crawl of your ecommerce store, pull 12 months of Google Search Console data, audit your GA4 ecommerce event setup, and deliver a prioritised fix list. The technical audit covers: crawlability issues (canonicals, sitemaps, robots.txt, redirect chains), Core Web Vitals status on your top commercial pages, schema markup gaps, and duplicate content from platform-generated URLs. We also analyse your current organic keyword rankings and identify the 10&#8211;20 category or product pages with highest priority for immediate optimisation. Quick wins implemented in month 1 typically include meta title and H1 rewrites on your highest-traffic pages and schema markup fixes for Google Shopping eligibility. First ranking movements typically appear in weeks 6&#8211;8 after technical fixes are indexed.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-technical" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
@@ -980,34 +974,31 @@ export default function EcommerceSeoPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">TECHNICAL SEO</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">How does Shopify ecommerce SEO differ from WooCommerce SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Shopify and WooCommerce generate different default technical SEO issues. Shopify creates duplicate product URLs (products appearing under both /products/ and /collections/), faceted navigation pages that waste crawl budget, and has limited canonical tag flexibility within the platform. WooCommerce SEO is managed through the WordPress layer; Yoast or RankMath; and has more flexibility but also more common configuration errors (wrong canonical settings, noindex accidentally applied to category pages). FactoryJet&#8217;s in-house Shopify dev team handles Shopify-specific Liquid issues directly; our WooCommerce work goes through the WordPress and WP-admin layer.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What is category page SEO and why does it matter most for UK ecommerce?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Category page SEO is the practice of optimising collection or category pages (e.g., &#8220;Women&#8217;s Trainers&#8221;, &#8220;Artificial Plants&#8221;, &#8220;Leather Sofas&#8221;) for high-volume commercial search terms. These pages typically rank for the highest-volume queries in ecommerce (&#8220;women&#8217;s trainers UK&#8221;, &#8220;buy artificial plants UK&#8221;) because Google reads category pages as the most relevant match for category-intent searches. An unoptimised category page; no H1, no above-the-fold content, no FAQ, no internal links; is invisible to Google for competitive terms. Category pages typically drive 55&#8211;65% of ecommerce organic revenue. They are where we start.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What schema markup do you implement for ecommerce SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>For UK ecommerce stores: Product schema with price, availability, and review aggregation for Google Shopping eligibility and rich results. FAQPage schema on category pages targeting informational queries. BreadcrumbList schema for correct display of your site hierarchy in Google search results. Organization schema on the homepage. Where relevant: AggregateRating for stores with reviews, Offer for price and availability, and VideoObject for product demonstration videos. All schema is validated through Google&#8217;s Rich Results Test before deployment and monitored in Google Search Console for errors.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How do you handle Core Web Vitals for ecommerce stores?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Core Web Vitals are part of every ecommerce SEO engagement. The most common failures for UK ecommerce stores: LCP above 2.5 seconds caused by unoptimised hero images on category pages (we fix with next-gen image formats, explicit dimensions, and fetchpriority preloading); CLS above 0.1 caused by dynamic content loading without reserved space (we fix with explicit image and container dimensions in theme templates); and INP above 200ms caused by third-party scripts (we audit and defer non-essential scripts). We test using PageSpeed Insights with mobile throttling, which uses real Chrome UX field data. Core Web Vitals directly affect your Google search rankings, so we treat them as SEO work, not a separate technical project.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-ai" style={{ marginBottom: '40px', scrollMarginTop: '112px' }}>
@@ -1015,34 +1006,31 @@ export default function EcommerceSeoPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">AI &amp; FUTURE SEO</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">What is AEO and why does it matter for UK ecommerce?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>AEO (Answer Engine Optimisation) is optimising your ecommerce content to appear in AI-generated answers from ChatGPT, Perplexity, Google AI Overviews, and other AI search interfaces. For UK ecommerce, this means: structured FAQ content on category pages targeting &#8220;what is the best [product] UK&#8221; queries; Product schema that AI search engines can parse for price and availability; and brand mention optimisation that builds the signals AI systems use to recommend products. FactoryJet includes AEO signals; schema, FAQ structure, and answer-first content; in every ecommerce SEO engagement as standard.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Will AI Overviews hurt my UK ecommerce organic traffic?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Google AI Overviews have reduced click-through rates for some informational queries; search types like &#8220;how to clean trainers&#8221; where users get the answer in the Overview without clicking. For UK ecommerce commercial queries (&#8220;buy women&#8217;s trainers UK&#8221;, &#8220;best leather sofa under &#163;500 UK&#8221;) Google AI Overviews typically show shopping carousels and product listings, not AI-generated text answers. The effect is less severe for transactional ecommerce queries than for informational content. We monitor UK client GSC data for AI Overview overlap and adjust content strategy where needed.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">How do you optimise ecommerce stores for AI shopping recommendations?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>AI shopping recommendations from ChatGPT, Perplexity, and Google Shopping Graph require a different optimisation approach from traditional SEO. The key signals are: structured Product schema with accurate price, availability, and review data that AI systems can reliably parse; brand mention frequency in third-party editorial content (review sites, press coverage, industry directories); category-level FAQ content targeting &#8220;what is the best [product category] UK&#8221; queries; and accurate business data in Google Business Profile. FactoryJet includes AI citation optimisation as standard in ecommerce SEO engagements. We track AI mentions alongside GSC data and adjust content strategy based on which AI-cited queries are sending referral traffic.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What is the difference between AEO and traditional SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Traditional SEO optimises for 10 blue links in Google search results; AEO (Answer Engine Optimisation) optimises for AI-generated answers in ChatGPT, Google AI Overviews, and Perplexity. For ecommerce they are complementary. Traditional SEO targets transactional queries (&#8220;buy leather sofa UK&#8221;) where users click through to browse products; AEO targets informational queries at the top of the funnel (&#8220;what is the best leather sofa for a small living room UK&#8221;) where AI answers now appear. AEO signals include FAQPage schema, answer-first structured content, citation-worthy statistics and named sources, and brand authority signals. FactoryJet integrates AEO into every ecommerce SEO engagement because AI is now a primary product discovery channel for UK consumers.</p></div>
-          </details>
+          </details></li></ul>
         </div>
 
         <div id="faq-results" style={{ scrollMarginTop: '112px' }}>
@@ -1050,34 +1038,31 @@ export default function EcommerceSeoPage() {
             <div className="faq-cat-bar"></div>
             <p className="faq-cat-label">RESULTS & REPORTING</p>
           </div>
-          <details className="faq-item">
+          <ul className="faq-list"><li><details className="faq-item">
             <summary>
               <span className="q-text">Who is the best ecommerce SEO agency in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>For UK ecommerce brands that want revenue-focused SEO with month-to-month contracts and an in-house Shopify development team, FactoryJet makes a strong case. The best ecommerce SEO company UK for your store depends on platform (Shopify, WooCommerce, Magento), catalogue size, current organic baseline, and budget. Whoever you consider among UK ecommerce SEO companies, ask to see Google Search Console screenshots; not rank tracker dashboards; for client case studies, ask for the contract terms explicitly, and ask what happens in month one before any rankings move. Those three questions separate genuine ecommerce SEO agencies from agencies that sell SEO.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">What results can UK ecommerce brands expect from FactoryJet SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Results depend on your starting point, platform, and category competitiveness. Typical outcomes for UK ecommerce clients: technical SEO fixes drive first ranking improvements in weeks 6&#8211;8; category page optimisation produces measurable position improvements in months 2&#8211;4; organic revenue growth visible in GA4 typically appears in months 4&#8211;6 as new rankings send consistent traffic; months 6&#8211;12 typically produce 2&#8211;4x the organic sessions of months 1&#8211;3 as rankings compound and content matures. We do not guarantee specific ranking positions because Google&#8217;s algorithm is not within our control. We do guarantee the quality and scope of the work delivered each month, and our month-to-month contracts mean you can assess progress after month 2 and decide whether to continue.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Do you provide monthly reports, and what do they include?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes. Monthly reports cover: organic sessions (GSC, month-over-month and year-over-year), organic revenue and transactions (GA4 ecommerce events with source/medium breakdown), keyword position movements for the priority commercial terms we target, Core Web Vitals status (PageSpeed Insights mobile and desktop), work completed in the month (Liquid edits, schema updates, content additions), and work planned for next month with rationale. We do not pad reports with metrics disconnected from revenue. If organic sessions went up but organic revenue did not, we say so and explain why. Reports are delivered in Google Slides or Notion, with a monthly video call to walk through the data.</p></div>
-          </details>
-          <details className="faq-item">
+          </details></li><li><details className="faq-item">
             <summary>
               <span className="q-text">Can you help UK brands expand ecommerce SEO internationally?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
             <div className="faq-ans"><p>Yes, though international ecommerce SEO is a separate engagement from UK-only SEO. For UK brands expanding to the EU, US, or Australia, the key components are: hreflang tag implementation across the site to tell Google which version to serve in each country; country-specific keyword research (search volume and intent differ significantly between UK and US for the same product category); separate URL structures for each market (/, /eu/, /au/ subdirectories or ccTLDs); and localised on-page content with correct spelling, pricing, and cultural references for each target market. FactoryJet has built international ecommerce SEO structures for clients expanding beyond the UK. We recommend starting with one international market and proving the model before scaling to multiple regions.</p></div>
-          </details>
+          </details></li></ul>
         </div>
       </div>
     </div>

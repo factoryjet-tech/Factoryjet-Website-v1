@@ -24,8 +24,10 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 
-const HUBS = ['seo', 'web-design', 'ecommerce-development', 'ai-agents', 'ai-seo',
+const ARG_HUBS = process.argv.filter(a => !a.startsWith('--')).slice(2)
+const ALL_HUBS = ['seo', 'web-design', 'ecommerce-development', 'ai-agents', 'ai-seo',
   'local-seo', 'seo-audit', 'shopify-development', 'ecommerce-seo', 'shopify-seo']
+const HUBS = ARG_HUBS.length ? ARG_HUBS : ALL_HUBS
 
 const CONTAINER = /className="(?:[^"]*\s)?(col-2|col-3|col-4|stack|process-grid)(?:\s[^"]*)?"/
 const DRY = process.argv.includes('--dry')
@@ -135,42 +137,11 @@ for (const hub of HUBS) {
     faqWrapped = 1
   }
 
-  /* Shape B (3 hubs): literal sibling <details className="faq-item"> blocks.
-   *
-   * The first attempt at this replaced every <details> in the file and used
-   * lastIndexOf to find the end of the run, which reached past the FAQ section
-   * and produced unbalanced JSX on ecommerce-seo. Reverted.
-   *
-   * This version walks tags instead: find the div that DIRECTLY contains the run,
-   * convert that one div to <ul>, and convert only its direct <details> children.
-   * Same matcher used for the card grids, so the blast radius is bounded. */
-  if (!faqWrapped && src.includes('<details className="faq-item">')) {
-    const firstDetails = src.indexOf('<details className="faq-item">')
-    // Walk outward to the nearest enclosing <div ...> that contains it.
-    let parent = -1, probe = firstDetails
-    while (probe > 0) {
-      const cand = src.lastIndexOf('<div', probe - 1)
-      if (cand === -1) break
-      const end = matchDiv(src, cand)
-      if (end > firstDetails) { parent = cand; break }
-      probe = cand
-    }
-    if (parent !== -1) {
-      const pOpenEnd = openTagEnd(src, parent)
-      const pClose = matchDiv(src, parent)
-      let inner = src.slice(pOpenEnd, pClose - 6)
-      const n = (inner.match(/<details className="faq-item">/g) || []).length
-      if (n > 1) {
-        inner = inner
-          .replace(/<details className="faq-item">/g, '<li><details className="faq-item">')
-          .replace(/<\/details>/g, '</details></li>')
-        const pOpen = src.slice(parent, pOpenEnd)
-        const newOpen = pOpen === '<div>' ? '<ul className="faq-list">' : '<ul' + pOpen.slice(4)
-        src = src.slice(0, parent) + newOpen + inner + '</ul>' + src.slice(pClose)
-        faqWrapped = n
-      }
-    }
-  }
+  /* Shape B is NOT handled here. The three hubs with literal FAQ markup
+     (shopify-development, ecommerce-seo, shopify-seo) are handled by
+     scripts/uk-hub-faq-lists.mjs, which walks their several category containers
+     properly. An earlier attempt to do it in this script converted only the first
+     container and produced invalid HTML (a header div as a direct child of a ul). */
   if (faqWrapped) console.log(`     + FAQ list wrapped`)
 
   if (src !== before) {
