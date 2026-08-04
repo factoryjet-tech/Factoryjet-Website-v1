@@ -171,7 +171,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="text-xs text-gray-500 mb-10 italic">
-        Data based on FactoryJet&apos;s analysis of 500+ India web projects and current market rates.
+        Data based on FactoryJet&apos;s analysis of 500+ web projects across India, the US, the UK and the UAE, plus current market rates.
       </p>
 
       {/* ── What Goes Into the Price ───────────────────────────────────────── */}
@@ -436,7 +436,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="text-gray-700 mb-10">
-        According to FactoryJet&apos;s analysis of 500+ India web projects, <strong>60% of businesses
+        According to FactoryJet&apos;s analysis of 500+ web projects across India, the US, the UK and the UAE, <strong>60% of businesses
         that hired cheap freelancers first came back for a rebuild within 18 months.</strong> A
         ₹8,000 website might save you money today but cost ₹40,000 to rebuild in 6 months.
       </p>

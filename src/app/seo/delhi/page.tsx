@@ -495,7 +495,7 @@ export default function SeoDelhi() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY DELHI BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Delhi market context ─────────────────────────────────────── */}

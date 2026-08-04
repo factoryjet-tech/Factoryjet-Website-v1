@@ -117,7 +117,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'Have you worked with businesses similar to mine in the Gulf Coast market?',
-        a: 'We have served 500+ businesses across the US including tourism and hospitality, energy services, marine, healthcare, professional services, and retail. The Corpus Christi market is structurally similar to other port cities we have worked in: layered buyer types, seasonal surges, and a B2B sector that sits beside the consumer market. We apply that cross-market pattern recognition to your specific category.',
+        a: 'We have served 500+ businesses across the US, UK, UAE and India, including tourism and hospitality, energy services, marine, healthcare, professional services, and retail. The Corpus Christi market is structurally similar to other port cities we have worked in: layered buyer types, seasonal surges, and a B2B sector that sits beside the consumer market. We apply that cross-market pattern recognition to your specific category.',
       },
     ],
   },

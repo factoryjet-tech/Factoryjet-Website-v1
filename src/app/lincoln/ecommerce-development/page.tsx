@@ -291,7 +291,7 @@ export default function Page() {
             },
             {
               title: 'Built to Convert',
-              body: "Pretty stores that don't convert are expensive billboards. Every section, CTA, and checkout flow is optimized around conversion data from 500+ stores we've launched across the US.",
+              body: "Pretty stores that don't convert are expensive billboards. Every section, CTA, and checkout flow is optimized around conversion data from 500+ stores we've launched across the US, UK, UAE and India.",
             },
           ]}
         />

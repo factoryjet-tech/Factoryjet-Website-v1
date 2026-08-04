@@ -117,7 +117,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'Have you worked with Northeast US businesses before?',
-        a: 'Yes. We have served 500+ businesses across competitive US markets including New England markets with similar characteristics: university-adjacent demand, strong hospitality and healthcare sectors, and a professional services base. We apply the cross-market pattern recognition to every Providence engagement.',
+        a: 'Yes. We have served 500+ businesses across competitive markets in the US, UK, UAE and India, including New England markets with similar characteristics: university-adjacent demand, strong hospitality and healthcare sectors, and a professional services base. We apply the cross-market pattern recognition to every Providence engagement.',
       },
     ],
   },

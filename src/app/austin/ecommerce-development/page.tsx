@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Austin TX | 7-Day Delivery, Fixed-Price | FactoryJet',
     description:
-      'Custom Shopify & WooCommerce stores built in 7 days: fixed-price vs local benchmarks. 500+ US brands served. No fluff. Just results.',
+      'Custom Shopify & WooCommerce stores built in 7 days: fixed-price vs local benchmarks. 500+ brands served across the US, UK, UAE and India. No fluff. Just results.',
     url: 'https://factoryjet.com/austin/ecommerce-development',
     images: [
       {
@@ -341,7 +341,7 @@ export default function AustinEcommerceDevelopmentPage() {
           eyebrow="WHY FACTORYJET"
           headline="What an Austin Agency Charges vs. FactoryJet"
           lead={
-            "Agencies like Geek Powered Studios, GLIDE®, and Bryt Designs do solid work. We're not disputing that. But they're built for clients with enterprise-level budgets and 3-month timelines. If you're an Austin small business who needs a professional online store without mortgaging a quarter of your annual revenue to get it, FactoryJet is the answer.\n\nWe run a senior-only engineering team with US-hour project management: fixed-price, milestone-paid, with full code ownership at handoff. You get enterprise-level execution at small-business prices and predictable cost from quote to launch. Over 500 US businesses have made that trade. Most of them wish they'd found us a year earlier."
+            "Agencies like Geek Powered Studios, GLIDE®, and Bryt Designs do solid work. We're not disputing that. But they're built for clients with enterprise-level budgets and 3-month timelines. If you're an Austin small business who needs a professional online store without mortgaging a quarter of your annual revenue to get it, FactoryJet is the answer.\n\nWe run a senior-only engineering team with US-hour project management: fixed-price, milestone-paid, with full code ownership at handoff. You get enterprise-level execution at small-business prices and predictable cost from quote to launch. Over 500 businesses across the US, UK, UAE and India have made that trade. Most of them wish they'd found us a year earlier."
           }
           pillars={[
             {

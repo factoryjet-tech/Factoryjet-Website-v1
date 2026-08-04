@@ -307,7 +307,7 @@ export default function NewYorkWebDesignPage() {
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
         />
 
-        <LogoBar tagline="Trusted by 500+ US businesses from New York to San Francisco" />
+        <LogoBar tagline="Trusted by 500+ businesses from New York to San Francisco and across the UK, UAE and India" />
 
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"

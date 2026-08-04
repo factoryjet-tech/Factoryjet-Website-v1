@@ -588,6 +588,7 @@ export default function WhatsAppChatbotINPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. One goal: your results."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 4. STATS BENTO (DARK) ─────────────────────────────────────────── */}
@@ -870,7 +871,7 @@ export default function WhatsAppChatbotINPage() {
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
-                    title: '500+ businesses served across India',
+                    title: '500+ businesses served across India, the US, the UK and the UAE',
                     desc: '12+ years building for Indian businesses. We know Razorpay, Zoho, Shiprocket, and the Indian payments stack inside out.',
                   },
                   {

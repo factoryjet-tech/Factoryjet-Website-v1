@@ -3,7 +3,7 @@ import { CityData, services } from '@/data/uk'
 import HeroInlineForm from '@/components/HeroInlineForm'
 import UkFooter from '@/app/uk/sections/Footer'
 import { getCityDepth } from '@/data/countries/gb/cityDepth'
-import { getCityMarket } from '@/data/countries/gb/cityMarket'
+import { getCityMarket, type CityMarket } from '@/data/countries/gb/cityMarket'
 
 /**
  * UK city hub, rebuilt 2026-08-03.
@@ -104,9 +104,42 @@ const UK_HUBS = [
 
 const fmt = (n: number) => n.toLocaleString('en-GB')
 
+/** "a, b and c" — plain English, no Oxford comma before the final "and". */
+const listSentence = (items: string[]) =>
+  items.length <= 1
+    ? (items[0] ?? '')
+    : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`
+
+/**
+ * The "who else builds websites here" answer.
+ *
+ * 2026-08-04: this used to name `city.localAgencies['web-design']`, which is
+ * template-generated data in src/data/countries/gb/cities/*.json. In 13 of the
+ * 20 cities those firms do not exist ("Oxford Web Design", "Digital Oxford",
+ * "Creative Solutions Oxford"), so 13 live pages were naming invented
+ * competitors inside FAQPage schema. Now it names the real page-one domains
+ * measured from the SERP (CITY_MARKET.competitors, the same source the
+ * "Who else ranks" section on this page already renders).
+ *
+ * If there is no measured market data for a city, the answer keeps the honest
+ * framing and names NOBODY. It never falls back to localAgencies.
+ */
+function buildCompetitorAnswer(city: CityData, market: CityMarket | undefined) {
+  const named = [...(market?.competitors ?? [])]
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 3)
+    .map((c) => c.domain)
+
+  if (named.length === 0) {
+    return `There is a real local market here, and plenty of agencies competing in it. We are not going to pretend otherwise. Get more than one quote before you commit. If another team is the better fit for your project, that is a good outcome.`
+  }
+
+  return `There is a real local market, and we would rather name it than pretend otherwise. ${listSentence(named)} are among the agencies currently ranking on page one for web design in ${city.name}. Get more than one quote. If another team is the better fit for your project, that is a good outcome.`
+}
+
 /** 22 questions. City-specific where the data genuinely supports it, generic and
  *  honest where it does not. No invented metrics, no client claims. */
-function buildFaqs(city: CityData) {
+function buildFaqs(city: CityData, market: CityMarket | undefined) {
   const ind = city.primaryIndustries
   const areas = city.cityAreas
   return [
@@ -123,7 +156,7 @@ function buildFaqs(city: CityData) {
     { q: `Do I need a local ${city.name} agency?`,
       a: `Only if the work genuinely needs someone on site, and website work does not. What matters is whether the team understands your market and answers the phone. Local presence is worth paying for in trades and hospitality fit-outs, not in web development.` },
     { q: `Who else builds websites in ${city.name}?`,
-      a: `There is a real local market, and we would rather name it than pretend otherwise. ${(city.localAgencies['web-design'] ?? []).slice(0, 3).join(', ')} all work in this city. Get more than one quote. If another team is the better fit for your project, that is a good outcome.` },
+      a: buildCompetitorAnswer(city, market) },
     { q: 'How long does a website take to build?',
       a: 'A straightforward brochure site is usually a few weeks from brief to launch. A store, or anything with integrations into systems you already run, takes longer because the work is data and integration rather than design. You get a phased timeline with milestones after scoping, not a guess on the first call.' },
     { q: 'What does a website cost?',
@@ -168,9 +201,9 @@ const H2 =
 const LEAD = 'mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600'
 
 export default function CityHubPage({ city }: CityHubPageProps) {
-  const faqs = buildFaqs(city)
   const depth = getCityDepth(city.slug)
   const market = getCityMarket(city.slug)
+  const faqs = buildFaqs(city, market)
   const topTerm = market?.terms?.[0]
 
   const faqSchema = {

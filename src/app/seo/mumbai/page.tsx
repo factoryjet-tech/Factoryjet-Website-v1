@@ -523,7 +523,7 @@ export default function SeoMumbaiPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY MUMBAI BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Six SEO services ──────────────────────────────────────────── */}

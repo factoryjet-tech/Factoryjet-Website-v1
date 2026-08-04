@@ -298,7 +298,7 @@ export default function Page() {
             },
             {
               title: 'Conversion-Focused',
-              body: "A store that looks good but doesn't convert is an expensive hobby. Every design decision we make, layout, CTAs, checkout flow, upsells, is grounded in e-commerce conversion data from 500+ stores across the US.",
+              body: "A store that looks good but doesn't convert is an expensive hobby. Every design decision we make, layout, CTAs, checkout flow, upsells, is grounded in e-commerce conversion data from 500+ stores across the US, UK, UAE and India.",
             },
           ]}
         />

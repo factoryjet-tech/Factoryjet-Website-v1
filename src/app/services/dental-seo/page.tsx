@@ -344,7 +344,7 @@ export default function DentalSEOPage() {
                 <div className="avatar">V</div>
               </div>
               <span className="trust-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span>Trusted by 500+ US businesses</span>
+              <span>Trusted by 500+ businesses across the US, UK, UAE and India</span>
             </div>
           </div>
 

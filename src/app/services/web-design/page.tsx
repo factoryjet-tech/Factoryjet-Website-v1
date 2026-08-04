@@ -556,7 +556,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites: most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day, no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites: most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day, no retainer required to keep your site online). We\'ve delivered 500+ websites for businesses across the US, UK, UAE and India, in every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -1144,7 +1144,7 @@ export default function WebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not a template shop with a custom logo. That's the point."
-          lead="FactoryJet has built 500+ production websites for real US businesses. Every site starts in Figma, gets built with clean code, and ships with a Lighthouse audit you can verify yourself."
+          lead="FactoryJet has built 500+ production websites for real businesses across the US, UK, UAE and India. Every site starts in Figma, gets built with clean code, and ships with a Lighthouse audit you can verify yourself."
           pillars={[
             {
               icon: '⚡',

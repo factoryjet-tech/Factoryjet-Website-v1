@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Charlotte small business consider FactoryJet over a local agency?',
-      a: "Consider FactoryJet if your priorities are: Lighthouse 95+ performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999, about at a fixed, transparent price. We've served 500+ US businesses with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else, FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
+      a: "Consider FactoryJet if your priorities are: Lighthouse 95+ performance (we guarantee it on every project), 7-day delivery, full technical SEO included, WCAG 2.2 compliance, and a starting price of $1,999, about at a fixed, transparent price. We've served 500+ businesses across the US, UK, UAE and India, with named US client references available. If you need weekly in-person meetings, a local Charlotte agency is the better fit. For everything else, FactoryJet delivers. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (

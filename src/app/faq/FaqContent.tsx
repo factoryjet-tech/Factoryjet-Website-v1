@@ -380,7 +380,7 @@ export default function FaqContent() {
       <Hero searchValue={searchQuery} onSearchChange={setSearchQuery} />
 
       {/* Trust signal */}
-      <LogoBar tagline="Trusted by 500+ US businesses, answered by the same team that built their sites" />
+      <LogoBar tagline="Trusted by 500+ businesses across the US, UK, UAE and India, answered by the same team that built their sites" />
 
       {/* Popular questions quick links */}
       {!isSearching && <QuickLinks onSelectQuestion={handleSelectSearchResult} />}

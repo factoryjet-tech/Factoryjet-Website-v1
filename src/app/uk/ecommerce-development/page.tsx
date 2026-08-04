@@ -343,7 +343,7 @@ export default function EcommerceDevelopmentUKPage() {
                     and the founder stays involved on every build, not just the pitch.
                   </p>
                   <p>
-                    We have delivered 500+ projects for real UK ecommerce brands, and the standard does not drop
+                    We have delivered 500+ projects for real ecommerce brands across the UK, the US, the UAE and India, and the standard does not drop
                     because a project is smaller. You get the same code quality, the same review, and full
                     ownership of everything we build, on Shopify, WooCommerce, Magento, or a custom stack.
                   </p>

@@ -25,18 +25,6 @@
     "seo": 900,
     "aiAgents": 0
   },
-  "localAgencies": {
-    "web-design": [
-      "Nottingham Digital",
-      "Web Squared",
-      "Bolt Design"
-    ],
-    "seo": [
-      "Nottingham SEO",
-      "Local Search Pro",
-      "Digital Insight"
-    ]
-  },
   "keyStats": {
     "digitalBusinessGrowth": "14% YoY",
     "smeCount": 16000,

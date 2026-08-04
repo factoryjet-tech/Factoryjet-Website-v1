@@ -17,9 +17,26 @@ import Link from 'next/link';
  * Pure server component.
  */
 
+/**
+ * Default (US-market) description rendered by the showcase variant.
+ * Byte-identical to the string this component has always hardcoded — do not edit.
+ * Non-US pages pass their own `description` instead.
+ */
+const DEFAULT_DESCRIPTION =
+  'Websites designed and built for US small businesses, Shopify stores, ' +
+  'B2B companies, and DTC brands. Affordable web design services, ' +
+  'at a fixed, transparent price, your codebase delivered in full, ' +
+  'and a 7-day delivery guarantee.';
+
 export interface BigThreeTrustBlockProps {
   eyebrow?: string;
   headline?: string;
+  /**
+   * Body copy under the 523+ figure in showcase mode.
+   * Defaults to the US-market string above; pass a market-appropriate string
+   * on non-US pages. Ignored by variant='statement'.
+   */
+  description?: string;
   /**
    * Render mode.
    *  - undefined / 'showcase' (default): the hardcoded US stat block
@@ -41,6 +58,7 @@ export interface BigThreeTrustBlockProps {
 export default function BigThreeTrustBlock({
   eyebrow,
   headline,
+  description = DEFAULT_DESCRIPTION,
   variant,
   illustrations,
 }: BigThreeTrustBlockProps) {
@@ -134,10 +152,7 @@ export default function BigThreeTrustBlock({
               className="mt-4 font-fj-body text-fj-neutral-600"
               style={{ fontSize: '0.9375rem', lineHeight: 1.65, maxWidth: '420px' }}
             >
-              Websites designed and built for US small businesses, Shopify stores,
-              B2B companies, and DTC brands. Affordable web design services,
-              at a fixed, transparent price, your codebase delivered in full,
-              and a 7-day delivery guarantee.
+              {description}
             </p>
 
             {/* CTA pill */}

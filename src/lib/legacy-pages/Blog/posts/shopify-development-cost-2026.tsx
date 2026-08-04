@@ -134,7 +134,7 @@ export const post: BlogPost = {
         $100,000&rdquo; tells you nothing about what you actually need to budget.
       </p>
       <p className="mb-8">
-        At FactoryJet, we&apos;ve built over 500 Shopify stores for US small businesses. Here are the
+        At FactoryJet, we&apos;ve built over 500 Shopify stores for small businesses across the US, UK, UAE and India. Here are the
         real numbers, organized by what you&apos;re actually buying, verified against current 2026
         market data.
       </p>
@@ -559,7 +559,7 @@ export const post: BlogPost = {
         How FactoryJet Prices Shopify Development
       </h2>
       <p className="mb-4">
-        Across 500+ Shopify stores built for US small businesses, FactoryJet has found that most
+        Across 500+ Shopify stores built for small businesses in the US, UK, UAE and India, FactoryJet has found that most
         growing brands fall into one of three project types.
       </p>
       <p className="mb-4">
@@ -692,7 +692,7 @@ export const post: BlogPost = {
         If you&apos;re trying to figure out where your specific build lands, the fastest path is a
         30-minute scoping call. FactoryJet has built{' '}
         <a href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
-          500+ stores for US small businesses
+          500+ stores for small businesses across the US, UK, UAE and India
         </a>{' '}
         and can give you a fixed-price quote within 24 hours.
       </p>

@@ -918,7 +918,7 @@ export default function WordPressDevelopmentPage() {
           variant="dark"
           eyebrow="START WITH A FREE CONSULTATION"
           headline="Book a WordPress Consultation and Get a Scope and Quote in 48 Hours"
-          sub="In 30 minutes, we'll review your current site, understand your goals, and tell you exactly what a custom WordPress build would include: the page structure, technical architecture, timeline, and fixed cost. No pitch deck. No discovery retainer. Just a straight assessment from engineers who've built 500+ WordPress sites for US businesses."
+          sub="In 30 minutes, we'll review your current site, understand your goals, and tell you exactly what a custom WordPress build would include: the page structure, technical architecture, timeline, and fixed cost. No pitch deck. No discovery retainer. Just a straight assessment from engineers who've built 500+ WordPress sites for businesses across the US, UK, UAE and India."
           primaryCta={{ label: 'Book Your Free WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Website Redesign Services', href: '/services/website-redesign' }}
           objectionHandler="Fixed price, quoted upfront. Custom theme, no page builders. Free consultation first."

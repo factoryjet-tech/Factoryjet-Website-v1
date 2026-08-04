@@ -903,7 +903,8 @@ export default function WebDesignServicePage() {
         {/* ── 3. BIG THREE TRUST BLOCK ──────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="India's Trusted Web Design Company, 500+ Websites Delivered, 25 Years of Building"
+          headline="India's Trusted Web Design Company, 500+ Websites Delivered, 12+ Years of Building"
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 4. WHAT GREAT WEB DESIGN ACTUALLY DOES ───────────────────────────── */}

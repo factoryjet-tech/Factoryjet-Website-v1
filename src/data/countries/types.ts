@@ -24,9 +24,12 @@ export interface CityData {
     seo: number
     aiAgents: number
   }
-  localAgencies: {
-    [serviceSlug: string]: string[]
-  }
+  // REMOVED 2026-08-04: `localAgencies`. It held template-generated competitor
+  // names ("Oxford Web Design", "Digital Oxford", "Leicester SEO Agency") for
+  // firms that do not exist, and the UK city hub was naming them in a visible
+  // FAQ and in FAQPage schema. Real, measured competitors now come from
+  // src/data/countries/gb/cityMarket.ts (DataForSEO SERP data). The field is
+  // gone from the type as well as the data so it cannot be quietly re-added.
   keyStats: {
     digitalBusinessGrowth: string
     smeCount: number

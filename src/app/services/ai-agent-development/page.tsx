@@ -694,7 +694,8 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="India's AI Agent Development Company, 500+ Businesses, 25 Years of Building"
+          headline="India's AI Agent Development Company, 500+ Businesses, 12+ Years of Building"
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 4. AI AGENT SERVICES GRID (WARM BLOOM BENTO) ────────────────── */}

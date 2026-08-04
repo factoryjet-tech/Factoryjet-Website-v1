@@ -501,8 +501,8 @@ export const post: BlogPost = {
         the moment you build infrastructure your business runs on for the next decade.
       </p>
       <p className="mb-4">
-        FactoryJet has launched over 500 business websites and stores for clients in the US and
-        internationally. We know exactly what a 7-day Shopify build looks like and what it takes to
+        FactoryJet has launched over 500 business websites and stores for clients across the US, UK,
+        UAE and India. We know exactly what a 7-day Shopify build looks like and what it takes to
         make it convert.
       </p>
       <p className="mb-6">

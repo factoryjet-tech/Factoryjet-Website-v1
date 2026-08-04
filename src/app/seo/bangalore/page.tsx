@@ -499,7 +499,7 @@ export default function SeoBangalore() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY BANGALORE BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Six SEO services ─────────────────────────────────────────── */}

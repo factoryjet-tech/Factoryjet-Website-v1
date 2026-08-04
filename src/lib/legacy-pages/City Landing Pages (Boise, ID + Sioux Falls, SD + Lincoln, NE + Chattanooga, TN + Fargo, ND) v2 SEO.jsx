@@ -483,7 +483,7 @@ function LandingPage({ cityKey }) {
         {/* ── TRUST BAR ── */}
         <section className="fj-trust" aria-label="Trust indicators">
           <div className="fj-trust-inner">
-            {["500+ Projects Delivered","25+ Years Combined Experience","98% Client Satisfaction","Global Team, Local Focus"].map((t,i)=><div key={i} className="fj-trust-item"><Check s={16}/> {t}</div>)}
+            {["500+ Projects Delivered","12+ Years Combined Experience","98% Client Satisfaction","Global Team, Local Focus"].map((t,i)=><div key={i} className="fj-trust-item"><Check s={16}/> {t}</div>)}
           </div>
         </section>
 

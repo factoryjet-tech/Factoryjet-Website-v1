@@ -1,8 +1,8 @@
 import { Milestone, ValueItem, ReasonItem, TeamMember, Testimonial, FAQItem } from './data.types';
 
 export const HERO_CONTENT = {
-  headline: "About FactoryJet - Your Trusted Digital Transformation Partner for 25+ Years",
-  subHeadline: "FactoryJet is India's leading digital transformation company, empowering 500+ small and medium businesses across India and emerging markets with world-class web design, e-commerce, AI-powered digital marketing, CRM, and ERP solutions. Founded on the principle that every business deserves enterprise-grade technology at SMB-friendly prices, we've delivered ₹100+ crore in measurable business value with 98% client satisfaction.",
+  headline: "About FactoryJet - Your Trusted Digital Transformation Partner for 12+ Years",
+  subHeadline: "FactoryJet is India's leading digital transformation company, empowering 500+ small and medium businesses across India, the US, the UK and the UAE with world-class web design, e-commerce, AI-powered digital marketing, CRM, and ERP solutions. Founded on the principle that every business deserves enterprise-grade technology at SMB-friendly prices, we've delivered ₹100+ crore in measurable business value with 98% client satisfaction.",
 };
 
 export const MILESTONES: Milestone[] = [

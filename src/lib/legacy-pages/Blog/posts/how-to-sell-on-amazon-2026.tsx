@@ -219,7 +219,7 @@ export const post: BlogPost = {
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
         <p className="font-semibold text-orange-900 mb-2">Not sure your product's margin actually works after Amazon's fees?</p>
         <p className="text-orange-800 mb-3">
-          Get a free, no-pitch teardown of your listing and fee math. FactoryJet has helped 500+ US brands sell profitably on Amazon, TikTok Shop, and their own stores, and the founder replies within 24 hours.
+          Get a free, no-pitch teardown of your listing and fee math. FactoryJet has helped 500+ brands across the US, UK, UAE and India sell profitably on Amazon, TikTok Shop, and their own stores, and the founder replies within 24 hours.
         </p>
         <a
           href="/contact"

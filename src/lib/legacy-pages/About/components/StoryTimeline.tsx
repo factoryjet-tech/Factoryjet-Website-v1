@@ -50,7 +50,7 @@ const StoryTimeline = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-4 md:mb-6 tracking-tight px-4 md:px-0"
           >
-            25+ Years of <br />
+            12+ Years of <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-jetBlue via-blue-400 to-jetBlue">
               Digital Evolution
             </span>

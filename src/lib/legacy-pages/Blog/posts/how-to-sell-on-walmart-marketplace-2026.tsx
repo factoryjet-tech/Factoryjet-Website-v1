@@ -201,7 +201,7 @@ export const post: BlogPost = {
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
         <p className="font-semibold text-orange-900 mb-2">Not sure your brand is approval-ready for Walmart?</p>
         <p className="text-orange-800 mb-3">
-          Get a free, no-pitch application readiness review. FactoryJet has helped 500+ US brands sell profitably on Walmart Marketplace, Amazon, and TikTok Shop, and the founder replies within 24 hours.
+          Get a free, no-pitch application readiness review. FactoryJet has helped 500+ brands across the US, UK, UAE and India sell profitably on Walmart Marketplace, Amazon, and TikTok Shop, and the founder replies within 24 hours.
         </p>
         <a
           href="/contact"

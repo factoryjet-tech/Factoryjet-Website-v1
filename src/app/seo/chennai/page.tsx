@@ -383,7 +383,7 @@ export default function SeoChennai() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="WHY CHENNAI BUSINESSES TRUST US" headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 25 Years Building" />
+        <BigThreeTrustBlock variant="statement" eyebrow="WHY CHENNAI BUSINESSES TRUST US" headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building" />
 
         <IndustriesGrid
           variant="cards"

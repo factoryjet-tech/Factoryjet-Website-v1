@@ -425,6 +425,7 @@ export default function SuratEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -726,7 +727,7 @@ export default function SuratEcommercePage() {
           variant="dark"
           eyebrow="READY TO LAUNCH"
           headline="Your Surat Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ Indian brands who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."

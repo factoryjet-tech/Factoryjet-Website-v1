@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build an ecommerce store for my Denver CO business?',
-      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 for a standard 50-product Shopify setup with 7-day delivery. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ US businesses across Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 for a standard 50-product Shopify setup with 7-day delivery. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ businesses across the US, UK, UAE and India, including clients in Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
     },
   ],
   content: (

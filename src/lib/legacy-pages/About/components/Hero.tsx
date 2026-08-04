@@ -37,7 +37,7 @@ const Hero = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-jetBlue to-jetBlue/70">
             Transformation Partner
           </span> <br />
-          for 25+ Years
+          for 12+ Years
         </motion.h1>
 
         <motion.p

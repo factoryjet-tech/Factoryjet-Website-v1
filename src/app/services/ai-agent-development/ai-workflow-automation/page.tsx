@@ -249,7 +249,7 @@ const WORKFLOW_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '500+ India SMB projects',
+    feature: '500+ SMB projects (India, US, UK, UAE)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="nc" kind="no" />,
@@ -550,6 +550,7 @@ export default function AIWorkflowAutomationINPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. One goal: your results."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         <ServiceExplanation

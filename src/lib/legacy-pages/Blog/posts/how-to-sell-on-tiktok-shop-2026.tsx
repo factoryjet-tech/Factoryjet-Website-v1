@@ -168,7 +168,7 @@ export const post: BlogPost = {
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
         <p className="font-semibold text-orange-900 mb-2">Not sure TikTok Shop is the right channel to start with?</p>
         <p className="text-orange-800 mb-3">
-          Get a free, no-pitch teardown of your marketplace mix. FactoryJet has helped 500+ US brands sell across TikTok Shop, Amazon, and their own stores, and the founder replies within 24 hours.
+          Get a free, no-pitch teardown of your marketplace mix. FactoryJet has helped 500+ brands across the US, UK, UAE and India sell across TikTok Shop, Amazon, and their own stores, and the founder replies within 24 hours.
         </p>
         <a
           href="/contact"

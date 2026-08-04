@@ -445,7 +445,9 @@ const SRT_FAQ_ITEMS = [
           formSlot={<HeroInlineForm region="in" source="web_design_surat_hero" />} {...heroProps} />
         <HeroBrowserMockup />
         <LogoBar />
-        <BigThreeTrustBlock />
+        <BigThreeTrustBlock
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+        />
         <CityContextSection {...cityContextProps} />
         <ServiceExplanation
             headline="Surat Businesses Sell Locally and Globally, We Design for Both"

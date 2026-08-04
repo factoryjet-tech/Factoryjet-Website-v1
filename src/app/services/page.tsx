@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design & Development Services USA | FactoryJet',
     description:
-      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps, delivered in 7 days, engineered for measurable outcomes.',
+      '500+ websites built for businesses across the US, UK, UAE and India. Custom web design, Shopify development, AI agents, and web apps, delivered in 7 days, engineered for measurable outcomes.',
     url: 'https://factoryjet.com/services',
     siteName: 'FactoryJet',
     type: 'website',

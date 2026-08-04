@@ -109,7 +109,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Who should I talk to about choosing between BigCommerce and Shopify?',
-      a: "If you want a clear-eyed breakdown of which platform fits your store's revenue, payment setup, and growth plan, without someone trying to sell you one over the other, book 30 minutes with the FactoryJet team. We have built on both platforms for 500+ businesses across the US.",
+      a: "If you want a clear-eyed breakdown of which platform fits your store's revenue, payment setup, and growth plan, without someone trying to sell you one over the other, book 30 minutes with the FactoryJet team. We have built on both platforms for 500+ businesses across the US, UK, UAE and India.",
     },
   ],
   content: (

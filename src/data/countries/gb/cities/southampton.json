@@ -25,18 +25,6 @@
     "seo": 900,
     "aiAgents": 0
   },
-  "localAgencies": {
-    "web-design": [
-      "Southampton Web Design",
-      "South Coast Digital",
-      "Creative Web"
-    ],
-    "seo": [
-      "Southampton SEO",
-      "South Coast Marketing",
-      "Local Search South"
-    ]
-  },
   "keyStats": {
     "digitalBusinessGrowth": "12% YoY",
     "smeCount": 12500,

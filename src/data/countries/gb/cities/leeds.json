@@ -25,18 +25,6 @@
     "seo": 1200,
     "aiAgents": 0
   },
-  "localAgencies": {
-    "web-design": [
-      "Parallax",
-      "Electric House",
-      "Substrakt"
-    ],
-    "seo": [
-      "Wildcat Digital",
-      "Blur Digital",
-      "Nettl Leeds"
-    ]
-  },
   "keyStats": {
     "digitalBusinessGrowth": "18% YoY",
     "smeCount": 38000,

@@ -131,7 +131,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-8">
-        We&apos;ve built over 500 Shopify stores for US small businesses at FactoryJet. The cost
+        We&apos;ve built over 500 Shopify stores for small businesses across the US, UK, UAE and India at FactoryJet. The cost
         breakdowns below are based on what we&apos;ve seen across real projects, verified against
         current 2026 data from{' '}
         <a

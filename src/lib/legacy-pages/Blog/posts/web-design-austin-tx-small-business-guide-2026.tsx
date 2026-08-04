@@ -151,7 +151,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Austin TX Small Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds custom websites for Austin small businesses starting at $1,999, with 7-day delivery, Lighthouse 95+ scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We've served 500+ US businesses across Texas and beyond.
+        FactoryJet builds custom websites for Austin small businesses starting at $1,999, with 7-day delivery, Lighthouse 95+ scores, full technical SEO, Austin-specific local schema, and US business-hour project management. We've served 500+ businesses across the US, UK, UAE and India, including plenty across Texas.
       </p>
       <p className="mb-4">
         Our Austin clients get: custom Next.js builds (no templates), WCAG 2.2 accessibility compliance, Core Web Vitals green scores, full code ownership, 30-day post-launch support, and a fixed-price contract with itemized scope. Pricing is fixed and published upfront.

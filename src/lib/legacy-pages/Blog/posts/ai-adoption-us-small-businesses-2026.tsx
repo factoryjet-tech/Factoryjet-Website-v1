@@ -226,7 +226,7 @@ export const post: BlogPost = {
           Want to see where your business sits on this spectrum?
         </p>
         <p className="text-orange-800 mb-3">
-          FactoryJet has worked with 500+ US small businesses on their website and e-commerce
+          FactoryJet has worked with 500+ small businesses across the US, UK, UAE and India on their website and e-commerce
           infrastructure.
         </p>
         <a
@@ -385,7 +385,7 @@ export const post: BlogPost = {
           Need help figuring out which AI tools make sense for your business?
         </p>
         <p className="text-gray-300 mb-4">
-          FactoryJet has built AI-integrated websites and Shopify stores for 500+ US businesses. We
+          FactoryJet has built AI-integrated websites and Shopify stores for 500+ businesses across the US, UK, UAE and India. We
           deliver in 7 days.
         </p>
         <a

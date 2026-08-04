@@ -516,7 +516,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US e-commerce agency?',
     answer:
-      'Three things: price (fixed-price, specialized team serving US businesses), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: price (fixed-price, specialized team serving US businesses), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for businesses across the US, UK, UAE and India. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -782,6 +782,7 @@ export default function EcommerceDevelopmentPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses served. 12 years of e-commerce. US brands trust the results."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 3. WHAT GREAT E-COMMERCE LOOKS LIKE ─────────────────────────── */}
@@ -1183,7 +1184,7 @@ export default function EcommerceDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We've built e-commerce. We know what actually moves revenue."
-          lead="FactoryJet has delivered 500+ projects for US businesses across every e-commerce platform. We know which design decisions move the needle on conversion, and which ones just look good in an agency proposal."
+          lead="FactoryJet has delivered 500+ projects for businesses across the US, UK, UAE and India on every e-commerce platform. We know which design decisions move the needle on conversion, and which ones just look good in an agency proposal."
           pillars={[
             {
               icon: '📐',
@@ -1213,7 +1214,7 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team, designer,
                   developer, and QA, not a single freelancer juggling five other projects. As a custom ecommerce
-                  development company, we&apos;ve shipped 500+ stores for US businesses, from first-store DTC
+                  development company, we&apos;ve shipped 500+ stores for businesses across the US, UK, UAE and India, from first-store DTC
                   brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
                 </p>
                 <p>

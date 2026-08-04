@@ -393,7 +393,7 @@ export const post: BlogPost = {
         <div>
           <p className="font-semibold text-gray-900">Bhavesh Barot</p>
           <p className="text-sm text-gray-600">
-            Founder, FactoryJet. Bhavesh has led web design, e-commerce, and SEO programs for 500+ US small businesses. He tracks AI search visibility across ChatGPT, Gemini, and Perplexity as part of every client engagement, and writes about what actually moves the needle.
+            Founder, FactoryJet. Bhavesh has led web design, e-commerce, and SEO programs for 500+ small businesses across the US, UK, UAE and India. He tracks AI search visibility across ChatGPT, Gemini, and Perplexity as part of every client engagement, and writes about what actually moves the needle.
           </p>
         </div>
       </div>

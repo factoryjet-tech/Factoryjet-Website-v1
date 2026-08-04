@@ -369,7 +369,7 @@ export const post: BlogPost = {
         <div>
           <p className="font-semibold text-gray-900">Bhavesh Barot</p>
           <p className="text-sm text-gray-600">
-            Founder, FactoryJet. Bhavesh has built and optimized websites for 500+ US small businesses and tracks AI search visibility as part of every client engagement. He writes about what actually moves the needle in GEO, not what agencies want you to believe does.
+            Founder, FactoryJet. Bhavesh has built and optimized websites for 500+ small businesses across the US, UK, UAE and India and tracks AI search visibility as part of every client engagement. He writes about what actually moves the needle in GEO, not what agencies want you to believe does.
           </p>
         </div>
       </div>

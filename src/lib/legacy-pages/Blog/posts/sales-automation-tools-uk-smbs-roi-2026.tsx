@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '141',
   slug: "sales-automation-tools-uk-smbs-roi-2026",
   title: "17 Sales Automation Tools UK SMBs Actually Use in 2026 (Ranked by ROI)",
-  excerpt: "UK SMBs report the highest ROI from CRM-native automation (HubSpot, Pipedrive), followed by email sequencing tools and AI voice agents that handle qualification calls. This ranking reflects real adoption data from 500+ UK businesses, weighted by payback period and revenue impact per £ spent.",
+  excerpt: "UK SMBs report the highest ROI from CRM-native automation (HubSpot, Pipedrive), followed by email sequencing tools and AI voice agents that handle qualification calls. This ranking reflects real adoption data from 500+ businesses across the UK, the US, the UAE and India, weighted by payback period and revenue impact per £ spent.",
   category: "Emerging Tech",
   author: 'Bhavesh Barot',
   date: "May 07, 2026",

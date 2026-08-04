@@ -774,7 +774,8 @@ export default function ShopifyDevelopmentPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="India's Trusted Shopify Website Development Company, 120+ Stores, 25 Years of E-Commerce"
+          headline="India's Trusted Shopify Website Development Company, 120+ Stores, 12+ Years of E-Commerce"
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         {/* ── 4. SHOPIFY EXPLAINED ─────────────────────────────────────────── */}
