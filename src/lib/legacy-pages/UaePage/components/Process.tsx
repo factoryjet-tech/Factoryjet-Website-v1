@@ -1,14 +1,18 @@
 import React from 'react';
 import { Search, PenTool, FileText, Code, CheckCircle, Rocket, BookOpen, Settings } from 'lucide-react';
 
+// 2026-08-04: these steps previously ran "Week 1-2" through "Week 12-13", a 13-week timeline that
+// contradicted both the "5-7 Days" delivery stat on this same page and FactoryJet's sitewide 7-day
+// delivery guarantee. Owner confirmed 7 days is the correct figure. Day numbering follows the
+// canonical sequence already used on the web-design pages: Day 1 Discovery through Day 7 Launch.
 const steps = [
-  { step: 1, title: "Discovery & Strategy", time: "Week 1-2", desc: "Understand business goals, analyze competition, identify target audience, define success metrics, create project roadmap.", icon: Search },
-  { step: 2, title: "Design & Prototyping", time: "Week 2-4", desc: "Create wireframes, design mockups, develop clickable prototypes, gather feedback, finalize visual direction.", icon: PenTool },
-  { step: 3, title: "Content Development", time: "Week 2-4", desc: "Strategic copywriting, SEO optimization, image sourcing, video integration, brand messaging alignment.", icon: FileText },
-  { step: 4, title: "Development & Build", time: "Week 4-10", desc: "Convert designs to code, implement functionality, integrate CMS, setup analytics, optimize performance.", icon: Code },
-  { step: 5, title: "Testing & QA", time: "Week 9-11", desc: "Cross-browser testing, device testing, performance optimization, security audit, accessibility compliance.", icon: CheckCircle },
-  { step: 6, title: "Launch & Deploy", time: "Week 11-12", desc: "Domain setup, SSL installation, DNS configuration, final backups, monitoring activation.", icon: Rocket },
-  { step: 7, title: "Training & Handover", time: "Week 12-13", desc: "CMS training, documentation delivery, best practices guidance, ongoing support setup.", icon: BookOpen },
+  { step: 1, title: "Discovery & Strategy", time: "Day 1", desc: "Understand business goals, analyze competition, identify target audience, define success metrics, create project roadmap.", icon: Search },
+  { step: 2, title: "Design & Prototyping", time: "Day 2", desc: "Create wireframes, design mockups, develop clickable prototypes, gather feedback, finalize visual direction.", icon: PenTool },
+  { step: 3, title: "Content Development", time: "Day 3", desc: "Strategic copywriting, SEO optimization, image sourcing, video integration, brand messaging alignment.", icon: FileText },
+  { step: 4, title: "Development & Build", time: "Days 4-5", desc: "Convert designs to code, implement functionality, integrate CMS, setup analytics, optimize performance.", icon: Code },
+  { step: 5, title: "Testing & QA", time: "Day 6", desc: "Cross-browser testing, device testing, performance optimization, security audit, accessibility compliance.", icon: CheckCircle },
+  { step: 6, title: "Launch & Deploy", time: "Day 7", desc: "Domain setup, SSL installation, DNS configuration, final backups, monitoring activation.", icon: Rocket },
+  { step: 7, title: "Training & Handover", time: "Day 7", desc: "CMS training, documentation delivery, best practices guidance, ongoing support setup.", icon: BookOpen },
   { step: 8, title: "Optimization & Support", time: "Ongoing", desc: "Performance monitoring, security updates, content updates, continuous improvement, monthly reporting.", icon: Settings },
 ];
 
@@ -63,7 +67,7 @@ const Process: React.FC = () => {
                             className="bg-white p-6 sm:p-8 rounded-2xl shadow-[0_4px_16px_rgba(0,82,204,0.1)] hover:shadow-[0_15px_30px_rgba(0,82,204,0.15)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group border-l-[4px]"
                             style={{ borderLeftColor: color }}
                          >
-                            {/* Week Pill */}
+                            {/* Timing Pill */}
                             <div className="flex justify-between items-start mb-4">
                                 <div className="p-3 rounded-lg bg-gray-50 text-navy group-hover:scale-110 transition-transform duration-300">
                                    <step.icon size={28} style={{ color: color }} strokeWidth={1.5} />

@@ -16,7 +16,7 @@ const features = [
   { 
     icon: Zap, 
     label: "Delivery Speed", 
-    fj: "2-4 Weeks (AI-Powered)", 
+    fj: "7 Days (AI-Powered)",
     trad: "3-6 Months", 
     free: "Unpredictable",
   },

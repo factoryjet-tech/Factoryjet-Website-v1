@@ -4,7 +4,7 @@ import { Plus } from 'lucide-react';
 export const faqData = [
   {
     question: "How long does website development take?",
-    answer: "A standard corporate website typically takes 2-4 weeks from design to launch. Complex e-commerce platforms or custom web applications may require 6-10 weeks. We provide a detailed timeline during our initial consultation."
+    answer: "A standard corporate website goes from discovery to launch in 7 days. Complex e-commerce platforms or custom web applications take longer, because the work is data and integration rather than design. We give you a detailed timeline during the initial consultation, before any work starts."
   },
   {
     question: "What platforms do you recommend?",
