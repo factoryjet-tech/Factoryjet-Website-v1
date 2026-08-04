@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Hyderabad',
-    '@id': 'https://www.wikidata.org/wiki/Q1361',
+    '@id': 'https://www.wikidata.org/wiki/Q1361', // Wikidata label: Hyderabad (capital of Telangana, India)
   },
   description:
     'Custom ecommerce development for Hyderabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

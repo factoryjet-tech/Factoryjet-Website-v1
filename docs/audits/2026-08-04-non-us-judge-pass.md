@@ -143,7 +143,7 @@ Blog posts are where invented statistics hide, and they did. Judges were require
 | `/blog/website-redesign-small-business-uk-2026-ai-powered` | "**68%** of UK buyers abandon sites… according to **Google's 2025 consumer research**" | Real Google/SOASTA figure is 53%, not UK-specific, predates 2017 |
 | same page | "WCAG 2.2 AA became a **legal requirement** for UK businesses in October 2025" | False. FactoryJet's own web-design page states the correct position |
 | `/blog/what-does-web-design-agency-do-2026` | "penalties that **start at £8.7 million or 4%** of global turnover" | Second instance of the same GDPR error. £8.7m pairs with 2%; it is a ceiling, not a floor |
-| same page | "every **100ms** delay costs 7% conversions" | 10× overstatement of the real per-second figure, repeated into the FAQ |
+| ~~same page~~ | ~~"every **100ms** delay costs 7% conversions"~~ | **RETRACTED 2026-08-04. This was an audit error, not a page error.** Akamai's 2017 Online Retail Performance Report says verbatim: "100-millisecond delay in website load time can hurt conversion rates by 7 percent". Verified against the primary source. The figure was always correct; it only lacked attribution, which has now been added. See §7.4 |
 
 Plus a set of **named-source citations that could not be found at all** — reported as unverified,
 not invented, because absence of a search result is not proof: a Clutch "500 US small businesses"
@@ -293,21 +293,32 @@ whether the pages tell the truth about the business.
 
 ---
 
-## 6. One decision needed from Bhavesh
+## 6. Pricing — DECIDED 2026-08-04: it stays
 
 **40 of 94 blog posts publish FactoryJet's own prices.** Verified from source with a tightened
-matcher that excludes competitor pricing and third-party tool costs.
+matcher that excludes competitor pricing and third-party tool costs. The figures are consistent
+(`$1,999` web design, `$2,999`/`$2,499` stores, `£3,000` AI agents, `£500/month` SEO).
 
-The figures are consistent — `$1,999` web design, `$2,999`/`$2,499` stores, `£3,000` AI agents,
-`£500/month` SEO — which reads as a deliberate content decision, not an accident.
+**The owner has confirmed this is deliberate.** The blog carries *directional costing* on purpose,
+to qualify buyers before they book a call. That is a legitimate strategy, and it is the kind of
+concrete detail AI answer engines can extract and cite.
 
-That conflicts with the standing "no pricing" rule the rubric encodes as W5. Both cannot stand.
+So the old W5 check ("no FactoryJet pricing figures") was wrong, not the pages. It was a house rule
+dressed up as a quality signal, and it flagged 40 pages that were working as intended.
 
-This is a business call, so nothing was changed. Two options:
-1. **Pricing stays** — then W5 should be removed from the rubric, because a check nobody intends to
-   pass is noise that hides real findings.
-2. **Pricing goes** — then it is a scripted removal across 40 files, and the previous scrub's broken
-   sentences (§4) need repairing at the same time.
+**W5 has been rewritten as a framing check** in both `docs/PERFECT-PAGE-RUBRIC.md` and
+`scripts/audit-perfect-page.mjs`: a price must read as what it is, an indicative range or a starting
+point rather than a bare number a reader could mistake for a firm quote. Ambiguity fails; publishing
+a price does not.
+
+**What still needed fixing was the language, not the numbers.** A previous automated price-scrub had
+run and left broken sentences live, while failing to remove the prices it targeted:
+
+> "Our pricing sits at a fixed, transparent price, and we deliver in 2–4 weeks"
+> "a starting price of $1,999, about at a fixed, transparent price"
+> "while charging 50% to at a fixed, transparent price"
+
+Those were repaired, and the surviving prices were made unambiguous as directional ranges.
 
 ---
 
@@ -333,6 +344,18 @@ these.
    mention. But "500+ businesses across India, the US, the UK and the UAE" is a correct combined
    claim; 104 of the 175 were fine. Only single-market scoping is the defect.
 
+4. **"every 100ms delay costs 7% conversions" was NOT wrong.** A judge called it a 10× overstatement
+   of the real per-second figure. When the remediation pass went looking for the correct source, it
+   found the claim is verbatim Akamai: *"100-millisecond delay in website load time can hurt
+   conversion rates by 7 percent"*, Online Retail Performance Report, 2017. Confirmed by fetching
+   the primary source directly. The page was right and the audit was wrong. The only real defect
+   was a missing citation, now added.
+
+   This is the failure mode the rubric warns about in reverse: a judge can be confidently wrong
+   about a *correct* claim just as easily as it can miss a false one. **A "verified wrong" verdict
+   deserves the same primary-source check as a "verified right" one.** Nine of the ten held up; this
+   one did not.
+
 One process note for the next run: judge agents were writing temp files into a shared scratchpad
 directory and two of them overwrote each other's working files mid-run. Both re-ran in isolated
 directories and re-verified their quotes, so no finding was affected. Later batches were given
@@ -340,23 +363,40 @@ batch-scoped directories. **Give every judge its own scratch directory next time
 
 ---
 
-## 8. Fix order
+## 8. Fix order and status
 
-Ranked by harm per unit of work, not by points.
+Ranked by harm per unit of work, not by points. **Items 1 to 7 were remediated on 2026-08-04.**
 
-1. **`/uae`** — one page, four separate untrue statements, including a Dubai office that is a
-   Bengaluru address in schema. Highest harm-to-effort ratio on the site.
-2. **UK invented competitor agencies** — 13 pages, one JSON data file. Naming firms that do not
-   exist, directly beneath a list of firms that do.
-3. **The India US-copy leak** — 54 pages, one component.
-4. **"25 years"** — 17 files, against an explicit written rule and the site's own schema.
-5. **The scoped "500+" claims** — 70 statements in 57 files. Mechanical rephrase to the combined
-   form already used correctly 104 times.
-6. **The 10 verified-wrong blog citations in §1.5** — each is one sentence. Get the real number from
-   Bhavesh or remove the claim. **Do not invent a replacement.**
-7. **Six Wikidata IDs** — resolve programmatically against the API.
-8. **FAQ schema drift on 3 pages, duplicate JSON-LD on ~6 blog posts.**
-9. **Stale content** — the two World Cup posts, then the defunct-company references.
+| # | Item | Status |
+|---|---|---|
+| 1 | **`/uae`** — Dubai office card against a Bengaluru address in schema, "#1 Rated" with nothing behind it, 12+ vs 25+ years on one page, three incompatible delivery times | ✅ Fixed and **verified against live HTML**. Owner confirmed no Dubai office |
+| 2 | **UK invented competitor agencies**, 13 pages | ✅ Fixed. FAQ now names real ranking domains from `CITY_MARKET` (DataForSEO); the fake `localAgencies` data deleted from 20 city JSONs so it cannot return |
+| 3 | **India US-copy leak**, 54 pages | ✅ Fixed via an optional `description` prop. The ~105 US pages render byte-identical |
+| 4 | **"25 years"**, 17 files | ✅ Fixed to 12+ years. The About timeline that produced the claim was relabelled as the founding team's pre-2014 experience. Owner confirmed founding year 2014 |
+| 5 | **Scoped "500+" claims**, 70 statements in 57 files | ✅ Fixed to the combined form. 4 remain, all legitimate ("Fortune 500", a third-party survey *of* 500 businesses) |
+| 6 | **Wrong blog citations** | ✅ Fixed. 9 corrected, re-attributed or deleted with fetch-verified primary sources. **1 was retracted as an audit error** (see §7.4). 3 further bad stats found and fixed during the work |
+| 7 | **Six Wikidata IDs** pointing at two aircraft, a cabaret, a French commune, an Italian comune and the wrong Indian city | ✅ Fixed and verified against the live API by label **and** country. All 13 now carry their resolved label inline so a wrong ID is visible on sight |
+| 8 | FAQ schema drift on 3 pages; duplicate JSON-LD on ~6 blog posts | ⬜ Open |
+| 9 | Stale content: the two World Cup posts, defunct-company references (Northern Rock, SmileDirectClub, Dunzo), FID vs INP | ⬜ Open |
 
-Items 1–5 are roughly 80% of the honesty exposure and are all template or data fixes rather than
-page-by-page content work.
+**Also fixed, arising from owner decisions on 2026-08-04:**
+
+- **"ISO certified" removed from 31 files** plus one prose sentence that implied FactoryJet holds
+  ISO 27001. Owner confirmed there is no certification. Zero claims remain.
+- **"98% Client Satisfaction" confirmed real** by the owner and deliberately preserved byte-identical
+  everywhere, including on lines that were edited for other reasons.
+- **Pricing language repaired.** A previous automated price-scrub (commits `b798a73` then `f23e97a`)
+  had left **43 fragments across 25 files**, 15 of which did not parse as English. One had eaten a
+  whole clause, leaving a list that promised "four factors" and delivered three. All repaired; no
+  price removed.
+- **`/services/ecommerce-development` re-framed.** The audit called this "an India page reading as a
+  US page". That was wrong: it is in **both** the US and India sitemaps, parents 13 India city pages
+  and links 13 US city pages. It is genuinely dual-market, and the real defect was copy and
+  `areaServed` schema claiming US exclusivity. Now framed across all four markets.
+
+**Still open and needing an owner decision:**
+
+- The `/services/ecommerce-development` **page title** had "USA" removed. That is ranking-affecting
+  and was not explicitly requested. Easy to revert.
+- That page's **hreflang still declares `en-US` + `x-default` only** while it sits in two sitemaps
+  and serves four markets. This is the structural root of the mistarget and needs its own pass.

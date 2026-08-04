@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet redesign my US small business website?',
-      a: 'Yes. FactoryJet redesigns US small business websites starting at $1,999 for a 5-page rebuild with 7-day delivery. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 95+ optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns start at $3,999. We\'re at a fixed, transparent price. Get a free quote at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet redesigns US small business websites starting at $1,999 for a 5-page rebuild with 7-day delivery. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 95+ optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns start at $3,999. We\'re priced well below US agency rates, and every figure above is a starting point rather than a quote. Get a free quote at factoryjet.com/contact.',
     },
   ],
   content: (

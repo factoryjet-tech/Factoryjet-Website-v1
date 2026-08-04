@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Chennai',
-    '@id': 'https://www.wikidata.org/wiki/Q1352',
+    '@id': 'https://www.wikidata.org/wiki/Q1352', // Wikidata label: Chennai (capital of Tamil Nadu, India)
   },
   description:
     'Custom ecommerce development for Chennai businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

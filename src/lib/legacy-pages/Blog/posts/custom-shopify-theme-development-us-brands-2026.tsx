@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does a custom Shopify theme cost for a US brand in 2026?',
-      a: "Real US pricing in 2026 lands in three tiers. A focused custom theme on Online Store 2.0, built on Liquid with custom sections, runs $5,000-$15,000 for a US SMB brand with a defined scope and brand system already in place. A full custom theme with extensive PDP customization, custom cart drawer, and 15-20 reusable sections runs $15,000-$30,000. A headless Hydrogen storefront on Shopify Plus with custom checkout, multi-region routing, and React-based component library runs $35,000-$75,000+. US Shopify agencies typically price 2-4x higher for the same scope. FactoryJet builds custom themes starting at $3,999 with fixed-price scope and Lighthouse 95+ as a delivery requirement.",
+      a: "Real US pricing in 2026 lands in three tiers. A focused custom theme on Online Store 2.0, built on Liquid with custom sections, runs $5,000-$15,000 for a US SMB brand with a defined scope and brand system already in place. A full custom theme with extensive PDP customization, custom cart drawer, and 15-20 reusable sections runs $15,000-$30,000. A headless Hydrogen storefront on Shopify Plus with custom checkout, multi-region routing, and React-based component library runs $35,000-$75,000+. US Shopify agencies typically price 2-4x higher for the same scope. FactoryJet builds custom themes from $3,999, with the fixed price set out in a scope document and Lighthouse 95+ as a delivery requirement.",
     },
     {
       q: 'Should I build my custom Shopify theme on Liquid (Online Store 2.0) or Hydrogen?',

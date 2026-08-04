@@ -59,7 +59,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        Selling AI automation services in 2026 means positioning yourself as a business-outcome partner, not a tech vendor. Lead with measurable ROI, time saved, costs cut, revenue captured, then build vertical-specific use-case libraries and publish transparent project pricing. Prove value with named case studies and live demos before asking for commitment. At FactoryJet, we start most SMB automations at £3,000 and close deals by showing exactly what the system will do on day one.
+        Selling AI automation services in 2026 means positioning yourself as a business-outcome partner, not a tech vendor. Lead with measurable ROI, time saved, costs cut, revenue captured, then build vertical-specific use-case libraries and publish transparent project pricing. Prove value with named case studies and live demos before asking for commitment. At FactoryJet, we start most SMB automations at around £3,000 and close deals by showing exactly what the system will do on day one, with the price fixed in the scope document.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Selling AI Automation in 2026 Is Different (and Easier)</h2>

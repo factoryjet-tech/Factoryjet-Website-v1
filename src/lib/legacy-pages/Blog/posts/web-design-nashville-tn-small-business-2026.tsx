@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What are Nashville web design agencies charging for e-commerce sites in 2026?',
-      a: "Nashville agencies charge $12,000–$35,000 for custom e-commerce builds (Shopify or WooCommerce). Template-based Shopify setups with basic customization run $3,000–$8,000 locally. FactoryJet builds production-ready Shopify stores for Nashville businesses starting at $2,499, with custom theme development, Lighthouse 95+, full product setup, and payment gateway integration. For Nashville retail and DTC brands, this is the fastest path to a competitive online store.",
+      a: "Nashville agencies charge $12,000–$35,000 for custom e-commerce builds (Shopify or WooCommerce). Template-based Shopify setups with basic customization run $3,000–$8,000 locally. FactoryJet builds production-ready Shopify stores for Nashville businesses from an indicative $2,499, with custom theme development, Lighthouse 95+, full product setup, and payment gateway integration. For Nashville retail and DTC brands, this is the fastest path to a competitive online store.",
     },
     {
       q: 'Do Nashville healthcare and wellness businesses need special web design compliance?',

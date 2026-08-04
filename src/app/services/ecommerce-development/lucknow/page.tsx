@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Lucknow',
-    '@id': 'https://www.wikidata.org/wiki/Q72234',
+    '@id': 'https://www.wikidata.org/wiki/Q47916', // Wikidata label: Lucknow (capital of Uttar Pradesh, India)
   },
   description:
     'Custom ecommerce development for Lucknow businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

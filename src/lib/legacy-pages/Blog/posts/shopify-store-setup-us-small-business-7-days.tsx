@@ -159,7 +159,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers in 7 Days</h2>
       <p className="mb-4">
-        FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 95+ optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
+        FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. That covers the standard scope below; anything beyond it is quoted on a call. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 95+ optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
       </p>
       <p className="mb-4">
         We serve US small businesses coast to coast, from outdoor brands and manufacturers in{' '}

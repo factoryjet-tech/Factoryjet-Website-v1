@@ -69,7 +69,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which platform does FactoryJet recommend for US small businesses?',
-      a: "It depends on your numbers. We recommend Shopify for US stores under $500K/year in revenue, businesses with no in-house technical resource, and any DTC brand that needs to launch in under 2 weeks. We recommend WooCommerce for stores over $500K/year, businesses already running WordPress for content marketing, and B2B catalogs that need custom pricing rules, net-30 terms, or wholesale tiers. FactoryJet builds both with 7-day delivery: Shopify packages start at $2,499, WooCommerce at $2,999. You can book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min and we'll recommend the right platform for your specific situation.",
+      a: "It depends on your numbers. We recommend Shopify for US stores under $500K/year in revenue, businesses with no in-house technical resource, and any DTC brand that needs to launch in under 2 weeks. We recommend WooCommerce for stores over $500K/year, businesses already running WordPress for content marketing, and B2B catalogs that need custom pricing rules, net-30 terms, or wholesale tiers. FactoryJet builds both with 7-day delivery: Shopify packages start at $2,499 and WooCommerce at $2,999, with the final figure confirmed once the product count is known. You can book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min and we'll recommend the right platform for your specific situation.",
     },
   ],
   content: (

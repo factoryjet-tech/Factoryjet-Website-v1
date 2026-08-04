@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to build a Shopify store from scratch?',
-      a: 'The cost to build a Shopify store from scratch depends on your approach. A developer doing everything from scratch, custom design, custom Liquid theme, app integration, product upload, payment configuration, typically runs $3,000–$15,000. A template-based store built by an agency (selecting a premium theme, customizing it, and setting it up for launch) runs $1,500–$5,000. FactoryJet\'s template store tier starts at $2,999 and includes Shopify setup, product upload up to 50 items, payment configuration, and a mobile-first build, delivered in 7 days.',
+      a: 'The cost to build a Shopify store from scratch depends on your approach. A developer doing everything from scratch, custom design, custom Liquid theme, app integration, product upload, payment configuration, typically runs $3,000–$15,000. A template-based store built by an agency (selecting a premium theme, customizing it, and setting it up for launch) runs $1,500–$5,000. FactoryJet\'s template store tier starts at $2,999 and includes Shopify setup, product upload up to 50 items, payment configuration, and a mobile-first build, delivered in 7 days. The tiers are starting points, checked against your actual catalogue on a call.',
     },
     {
       q: 'What is the total shopify website cost for a small business?',

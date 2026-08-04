@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Jaipur',
-    '@id': 'https://www.wikidata.org/wiki/Q39654',
+    '@id': 'https://www.wikidata.org/wiki/Q66485', // Wikidata label: Jaipur (capital of Rajasthan, India)
   },
   description:
     'Custom ecommerce development for Jaipur businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

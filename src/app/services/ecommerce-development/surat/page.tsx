@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Surat',
-    '@id': 'https://www.wikidata.org/wiki/Q170166',
+    '@id': 'https://www.wikidata.org/wiki/Q4629', // Wikidata label: Surat (city in Gujarat, India)
   },
   description:
     'Custom ecommerce development for Surat businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

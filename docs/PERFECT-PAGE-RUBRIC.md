@@ -371,7 +371,7 @@ confounded in the underlying data and cannot be separated by it.
 
 Skip Category N entirely on `product`, `category`, `article` and `utility` profiles.
 
-### Category W. Writing quality (13 weight)
+### Category W. Writing quality (15 weight)
 
 | id | Check | Tier | Weight | Threshold |
 |---|---|---|---|---|
@@ -379,9 +379,19 @@ Skip Category N entirely on `product`, `category`, `article` and `utility` profi
 | W2 | Plain register, roughly 5th to 7th grade | 🟢 | 3 | Verified finding: 5th to 7th grade copy converts at 11.1%, roughly 56% above dense professional register (Unbounce Conversion Benchmark Report, 464M+ visitors) |
 | W3 | Jargon explained on first use | 🟢 | 3 | Every domain term the target reader might not know |
 | W4 | Not commodity content | 🔵 | 4 | **AI-judged.** If it reads interchangeably with any competitor's page on the same topic, it fails. Google: "Don't just recycle what others on the internet have already said" |
+| W5 | Price figures are unambiguously framed | 🟢 | 2 | **AI-judged.** Any price the page states for its own services must be readable as what it is: an indicative range, a starting point, or a firm quote. A bare number a reader could mistake for a quote fails. Competitor pricing and third-party tool costs are not in scope |
 
 W4 is the check most pages fail and the hardest to fake. It is also the only one Google names
 directly as a differentiator for AI systems.
+
+**W5 is a framing check, not a ban.** An earlier version of this rubric scored "no pricing figures
+anywhere", which is a house rule rather than a quality signal, and it produced 40 flagged pages on a
+site that had deliberately chosen to publish directional costing. Publishing indicative prices is a
+legitimate strategy: it qualifies buyers before the call and it is exactly the kind of concrete
+detail AI answer engines can extract and cite. What fails is ambiguity, a number with no indication
+of whether it is a floor, a range, or a fixed quote, and prices that contradict a scoping-call
+promise elsewhere on the same page. If a project genuinely bans pricing, express that as a house
+rule in Category H instead, where it belongs.
 
 ### Category M. Rich media (4 weight)
 

@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Pune',
-    '@id': 'https://www.wikidata.org/wiki/Q1538',
+    '@id': 'https://www.wikidata.org/wiki/Q1538', // Wikidata label: Pune (city in Maharashtra, India)
   },
   description:
     'Custom ecommerce development for Pune businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

@@ -426,7 +426,14 @@ const CHECKS = [
   // Deterministic detection cannot tell OUR price from a competitor's price or a
   // third-party API cost quoted as market context. Verified 2026-08-04: most hits
   // are comparison-table and pass-through costs, not FactoryJet pricing. Judged.
-  ['W5','writing','No FactoryJet pricing figures',2,null,true],
+  //
+  // 2026-08-04, policy change by the owner: publishing prices is DELIBERATE. The blog
+  // carries directional costing on purpose, to qualify buyers before the call. So this
+  // is no longer "no pricing figures" (a house rule masquerading as a quality signal,
+  // which flagged 40 pages that were working as intended). It is now a FRAMING check:
+  // a price must read as what it is. Fails only when a bare number could be mistaken
+  // for a firm quote, or when it contradicts a scoping-call promise on the same page.
+  ['W5','writing','Price figures unambiguously framed',2,null,true],
   // M
   ['M1','media','Comparison table where topic compares',2,(m)=>PROFILES[m.profile].compares?m.tables>=1:null],
   ['M2','media','3+ content images with alt',2,(m)=>m.profile==='hub'?null:m.imgsWithAlt>=3],

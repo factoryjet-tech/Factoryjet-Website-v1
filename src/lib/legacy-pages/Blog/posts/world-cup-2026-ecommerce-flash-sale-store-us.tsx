@@ -192,11 +192,19 @@ export const post: BlogPost = {
         will face almost no competition from established US retailers.
       </p>
       <p className="mb-8">
-        The economic case is real. FIFA&apos;s own economic impact study for the 2026 tournament
-        projected $5 billion in direct US economic activity across host cities over the tournament
-        period, cited in the bid documents submitted to Congress ahead of the hosting decision. That
-        money flows somewhere. For small businesses with a functioning online store, a meaningful
-        fraction of it can flow to you.
+        The economic case is real. A{' '}
+        <a
+          href="https://inside.fifa.com/organisation/media-releases/fifa-wto-study-estimates-usd-47-billion-economic-output-from-fifa-club-world"
+          className="text-blue-600 underline hover:text-blue-800"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          FIFA study produced with the World Trade Organization
+        </a>{' '}
+        projected that the 2026 World Cup would generate USD 30.5 billion in gross output and USD
+        17.2 billion in GDP in the United States, supporting roughly 185,000 full-time-equivalent
+        jobs. That money flows somewhere. For small businesses with a functioning online store, a
+        meaningful fraction of it can flow to you.
       </p>
 
       <hr className="my-8 border-gray-200" />
@@ -281,8 +289,9 @@ export const post: BlogPost = {
       </div>
       <p className="text-sm text-gray-500 mb-8">
         <em>
-          Range estimates based on Shopify&apos;s merchant commerce trend reports and National Retail
-          Federation sports merchandise category data.
+          These ranges are FactoryJet&apos;s own estimates, based on typical small-store pricing in
+          each category. They are not published figures from Shopify, the NRF, or any other third
+          party, so treat them as planning guidance rather than benchmark data.
         </em>
       </p>
 

@@ -142,7 +142,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Miami FL Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds English and bilingual websites for Miami small businesses starting at $1,999 (English) and $2,999 (English + Spanish). Every project delivers Lighthouse 95+ scores, full technical SEO, neighborhood-level local schema, hreflang implementation for bilingual builds, and US business-hour project management. 7-day delivery on 5-page builds.
+        FactoryJet builds English and bilingual websites for Miami small businesses from $1,999 (English) and $2,999 (English + Spanish), with the final scope and price agreed on a call. Every project delivers Lighthouse 95+ scores, full technical SEO, neighborhood-level local schema, hreflang implementation for bilingual builds, and US business-hour project management. 7-day delivery on 5-page builds.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>

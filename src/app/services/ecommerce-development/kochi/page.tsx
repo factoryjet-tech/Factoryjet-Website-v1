@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Kochi',
-    '@id': 'https://www.wikidata.org/wiki/Q131183',
+    '@id': 'https://www.wikidata.org/wiki/Q1800', // Wikidata label: Kochi (city in Kerala, India)
   },
   description:
     'Custom ecommerce development for Kochi businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

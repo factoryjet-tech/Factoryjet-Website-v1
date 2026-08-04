@@ -123,7 +123,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Mumbai',
-    '@id': 'https://www.wikidata.org/wiki/Q1156',
+    '@id': 'https://www.wikidata.org/wiki/Q1156', // Wikidata label: Mumbai (capital of Maharashtra, India)
   },
   description:
     'Custom ecommerce development for Mumbai businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and AI-native stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

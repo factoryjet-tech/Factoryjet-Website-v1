@@ -41,7 +41,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does GEO cost?',
-      a: "GEO services typically run $1,500–$5,000/month from a specialized agency, bundled with broader content and SEO work. Standalone GEO-only retainers are uncommon because the tactics (creating original research, building citations, getting brand mentions across authoritative sources) are intertwined with standard content marketing and link building. FactoryJet includes GEO tracking and optimization within AI SEO retainers starting at $1,999/month. Enterprise GEO programs at firms like First Page Sage start higher, expect $5,000–$15,000/month for enterprise B2B engagements.",
+      a: "GEO services typically run $1,500–$5,000/month from a specialized agency, bundled with broader content and SEO work. Standalone GEO-only retainers are uncommon because the tactics (creating original research, building citations, getting brand mentions across authoritative sources) are intertwined with standard content marketing and link building. FactoryJet includes GEO tracking and optimization within AI SEO retainers starting at $1,999/month, sized to your catalogue and market on a scoping call. Enterprise GEO programs at firms like First Page Sage start higher, expect $5,000–$15,000/month for enterprise B2B engagements.",
     },
     {
       q: 'What is the best GEO agency for ecommerce?',

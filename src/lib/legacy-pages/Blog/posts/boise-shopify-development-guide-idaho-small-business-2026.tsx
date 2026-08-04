@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to build a Shopify store for a Boise business?',
-      a: "Boise local agencies: Mode Effect, Crush, Collide, and the broader Treasure Valley shop list, typically quote $6,000–$25,000 for a custom Shopify build with timelines running 6–14 weeks. The bulk of that cost is design and theme customization, not the underlying Shopify engineering. FactoryJet builds equivalent Shopify stores for Boise businesses starting at $2,999 with 7-day delivery on standard builds, and fully custom ecommerce builds from $3,999. The technical work is the same regardless of who builds it: Shopify Online Store 2.0 theme architecture, Idaho sales tax setup, payment gateway integration, schema markup, Lighthouse performance tuning. The pricing difference is structural, not a quality difference.",
+      a: "Boise local agencies: Mode Effect, Crush, Collide, and the broader Treasure Valley shop list, typically quote $6,000–$25,000 for a custom Shopify build with timelines running 6–14 weeks. The bulk of that cost is design and theme customization, not the underlying Shopify engineering. FactoryJet builds equivalent Shopify stores for Boise businesses from $2,999 with 7-day delivery on standard builds, and fully custom ecommerce builds from $3,999. Those are starting points, confirmed in writing after a scoping call. The technical work is the same regardless of who builds it: Shopify Online Store 2.0 theme architecture, Idaho sales tax setup, payment gateway integration, schema markup, Lighthouse performance tuning. The pricing difference is structural, not a quality difference.",
     },
     {
       q: 'When should a Boise business pick custom Shopify development over an off-the-shelf theme?',

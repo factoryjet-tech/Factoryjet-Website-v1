@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Kolkata',
-    '@id': 'https://www.wikidata.org/wiki/Q1348',
+    '@id': 'https://www.wikidata.org/wiki/Q1348', // Wikidata label: Kolkata (capital of West Bengal, India)
   },
   description:
     'Custom ecommerce development for Kolkata businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

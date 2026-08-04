@@ -32,7 +32,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much should a US small business pay a web design agency in 2026?',
-      a: "For a professional 5–8 page custom website, budget $1,999–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Offshore agencies with US-hour support (like FactoryJet) charge $1,999–$6,000 for equivalent quality. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
+      a: "For a professional 5–8 page custom website, budget $1,999–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Offshore agencies with US-hour support (like FactoryJet) charge an indicative $1,999–$6,000 for equivalent quality, fixed once the page count is agreed. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
     },
     {
       q: 'Is it safe to hire an offshore web design agency for my US business?',

@@ -40,7 +40,7 @@ const faqs = [
     },
     {
       q: 'Will Google be replaced by AI search?',
-      a: "Not in 2026. Google's market share remains above 89% globally. AI search tools like Perplexity and ChatGPT are growing, but from a small base. Perplexity reports approximately 15 million daily active users versus Google's 8.5 billion daily searches. They are additive channels, not Google replacements.",
+      a: "Not in 2026. Google's market share remains above 89% globally. AI search tools like Perplexity and ChatGPT are growing, but from a small base. Perplexity's CEO said the product handled 780 million queries across the whole of May 2025, while Google processes roughly 8.5 billion searches every single day. They are additive channels, not Google replacements.",
     },
     {
       q: 'What SEO strategies no longer work in 2026?',
@@ -214,7 +214,16 @@ export const post: BlogPost = {
       <p>
         "SEO is dead" gets published every year. In 2026, the argument finally has some real
         ammunition: Google AI Overviews are intercepting informational queries, ChatGPT search is
-        growing, Perplexity has tens of millions of daily users, and zero-click search rates have
+        growing, Perplexity{' '}
+        <a
+          href="https://techcrunch.com/2025/06/05/perplexity-received-780-million-queries-last-month-ceo-says/"
+          className="text-blue-600 underline hover:text-blue-800"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          handled 780 million queries in May 2025
+        </a>
+        , and zero-click search rates have
         climbed. If you have been watching your informational blog traffic decline, you have
         first-hand evidence that something has changed.
       </p>

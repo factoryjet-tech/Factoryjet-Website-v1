@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Ahmedabad',
-    '@id': 'https://www.wikidata.org/wiki/Q1070',
+    '@id': 'https://www.wikidata.org/wiki/Q1070', // Wikidata label: Ahmedabad (city in Gujarat, India)
   },
   description:
     'Custom ecommerce development for Ahmedabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

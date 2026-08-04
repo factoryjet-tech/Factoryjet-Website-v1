@@ -90,7 +90,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can I get a professional website for under ₹50,000 in India?',
-      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet builds professional websites starting at ₹25,000. Anything under ₹15,000 from an agency should be examined carefully, at that price point, expect template designs with minimal customisation.',
+      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet builds professional websites starting at ₹25,000, with the exact figure agreed once we know the page count and features. Anything under ₹15,000 from an agency should be examined carefully, at that price point, expect template designs with minimal customisation.',
     },
     {
       q: 'How much does a WordPress website cost in India?',

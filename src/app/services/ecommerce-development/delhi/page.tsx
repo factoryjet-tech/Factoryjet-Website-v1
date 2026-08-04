@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Delhi',
-    '@id': 'https://www.wikidata.org/wiki/Q1353',
+    '@id': 'https://www.wikidata.org/wiki/Q1353', // Wikidata label: Delhi (city and union territory, India)
   },
   description:
     'Custom ecommerce development for Delhi businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

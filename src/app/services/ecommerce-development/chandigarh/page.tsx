@@ -117,7 +117,7 @@ const serviceSchema = {
   areaServed: {
     '@type': 'City',
     name: 'Chandigarh',
-    '@id': 'https://www.wikidata.org/wiki/Q43009',
+    '@id': 'https://www.wikidata.org/wiki/Q43433', // Wikidata label: Chandigarh (Union Territory, capital of Punjab and Haryana, India)
   },
   description:
     'Custom ecommerce development for Chandigarh businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',

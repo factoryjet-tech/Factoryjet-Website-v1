@@ -32,7 +32,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which is the best AI SEO company in UK for small businesses?',
-      a: 'For small businesses, the shortlist is FactoryJet (month-to-month terms, all four AI engines tracked, scope and price agreed on a call), Convert Digital (from £550/mo, AI SEO standard in every package) and The SEO Works (free LLM audit, SME-friendly). All three give small businesses what most agencies hide: a concrete entry point and straightforward terms. That combination is the fastest filter for finding the best AI SEO services in UK markets, and the test any best AI SEO services company in UK shortlist should start with.',
+      a: 'For small businesses, the shortlist is FactoryJet (month-to-month terms, all four AI engines tracked, indicative from £500/mo with final scope agreed on a call), Convert Digital (from £550/mo, AI SEO standard in every package) and The SEO Works (free LLM audit, SME-friendly). All three give small businesses what most agencies hide: a concrete entry point and straightforward terms. That combination is the fastest filter for finding the best AI SEO services in UK markets, and the test any best AI SEO services company in UK shortlist should start with.',
     },
     {
       q: 'What are the top 10 AI SEO agencies in UK?',
@@ -40,7 +40,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does AI SEO cost in UK?',
-      a: 'AI SEO cost in UK runs roughly £550–£6,000 per month. Verified published prices: Convert Digital £550–£6,000/mo with AI SEO in every tier, Reposition £750–£3,000/mo packages. FactoryJet scopes and quotes per engagement instead of publishing a rate card, with month-to-month terms. Most UK specialists (Found, Blue Array, Varn, GA Agency, Passion Digital) do not publish pricing either, so ask for the number in writing before any discovery call.',
+      a: 'AI SEO cost in UK runs roughly £550–£6,000 per month. Verified published prices: Convert Digital £550–£6,000/mo with AI SEO in every tier, Reposition £750–£3,000/mo packages. FactoryJet publishes an indicative entry point of £500/mo and fixes the exact figure after a scoping call, with month-to-month terms. Most UK specialists (Found, Blue Array, Varn, GA Agency, Passion Digital) do not publish pricing either, so ask for the number in writing before any discovery call.',
     },
     {
       q: 'Which is the best GEO agency in UK?',
@@ -174,7 +174,7 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">FactoryJet (us)</td>
               <td className="p-3 border">Serving UK remotely</td>
               <td className="p-3 border">GEO + AEO in one retainer; ChatGPT, Perplexity, Claude, Gemini + AI Overviews tracked monthly</td>
-              <td className="p-3 border font-semibold">No, transparent quote after scoping call</td>
+              <td className="p-3 border font-semibold">Indicative from £500/mo; fixed quote after scoping call</td>
               <td className="p-3 border">SMBs &amp; ecommerce wanting transparent scoping, no lock-in</td>
             </tr>
             <tr className="bg-gray-50">

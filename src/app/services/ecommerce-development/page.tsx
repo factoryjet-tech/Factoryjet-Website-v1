@@ -29,31 +29,31 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
+  title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
   description:
-    'Hire ecommerce developers from a custom ecommerce development company. High-converting Shopify, WooCommerce & custom stores for US businesses. Fixed-price, quoted upfront.',
+    'Hire ecommerce developers for Shopify, WooCommerce & custom stores. We build for brands in India, the US, the UK and the UAE. Fixed-price, quoted upfront.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
     description:
-      'Hire ecommerce developers for custom online stores. Shopify, WooCommerce & custom ecommerce development for US businesses. Fixed-price, quoted upfront.',
+      'Hire ecommerce developers for custom online stores. Shopify, WooCommerce & custom ecommerce development for brands in India, the US, the UK and the UAE.',
     url: 'https://factoryjet.com/services/ecommerce-development',
     images: [
       {
         url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development USA',
+        alt: 'FactoryJet - E-Commerce Development',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
     description:
-      'Hire ecommerce developers: a custom ecommerce development company for US businesses. Fixed-price, milestone-paid.',
+      'Hire ecommerce developers: a custom ecommerce development company serving India, the US, the UK and the UAE. Fixed-price, milestone-paid.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -95,20 +95,25 @@ const webPageSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'E-Commerce Development Services USA',
+  name: 'E-Commerce Development Services',
   provider: {
     '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    
+
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States',
-  },
+  // This hub is the canonical parent for 13 India city pages and links 13 US
+  // city pages, so areaServed lists every market we actually deliver in rather
+  // than claiming the United States alone.
+  areaServed: [
+    { '@type': 'Country', name: 'India' },
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'United Arab Emirates' },
+  ],
   serviceType: 'E-Commerce Development',
   description:
-    'Custom e-commerce development for US businesses. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. fixed-price, milestone-paid.',
+    'Custom e-commerce development for businesses in India, the US, the UK and the UAE. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. fixed-price, milestone-paid.',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -203,7 +208,7 @@ const ECOMM_STATS = [
   {
     value: '500+',
     label: 'businesses served across web design, e-commerce, and custom software',
-    microcopy: 'FactoryJet has been building for US clients for 12+ years',
+    microcopy: 'FactoryJet has been building for clients in India, the US, the UK and the UAE for 12+ years',
     categoryLabel: 'TRACK RECORD',
   },
   {
@@ -284,7 +289,7 @@ const INDUSTRIES = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US E-Commerce Agency' },
+  { label: 'Traditional Agency' },
   { label: 'Freelancer' },
   { label: 'DIY (Squarespace/Wix)' },
 ] as const;
@@ -474,7 +479,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep e-commerce pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid: every store is scoped upfront with no hourly billing and no scope-creep invoices. Building e-commerce for US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover, and full code ownership at handoff.',
+      'We work fixed-price and milestone-paid: every store is scoped upfront with no hourly billing and no scope-creep invoices. Twelve years of building the same kinds of stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover, and full code ownership at handoff.',
   },
 
   /* ── Migrations ── */
@@ -514,9 +519,9 @@ const FAQ_ITEMS = [
   /* ── Working With Us ── */
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a US e-commerce agency?',
+    question: 'How is FactoryJet different from a US or UK e-commerce agency?',
     answer:
-      'Three things: price (fixed-price, specialized team serving US businesses), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for businesses across the US, UK, UAE and India. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: price (we are an India-based engineering team, so a fixed-price build costs a fraction of a comparable US or UK agency quote), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for businesses across India, the US, the UK and the UAE. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -571,7 +576,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does it cost to hire ecommerce developers?',
     answer:
-      'FactoryJet works on fixed-price scopes rather than open-ended hourly rates. The cost depends on the build: a platform store, an advanced store with subscription or B2B logic, or a fully custom ecommerce platform, and every scope is quoted up front on a free discovery call. If you want to hire ecommerce developers on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. US freelance ecommerce developers typically bill hourly with no ceiling, which is why most businesses prefer our fixed-scope model.',
+      'FactoryJet works on fixed-price scopes rather than open-ended hourly rates. The cost depends on the build: a platform store, an advanced store with subscription or B2B logic, or a fully custom ecommerce platform, and every scope is quoted up front on a free discovery call. If you want to hire ecommerce developers on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. Freelance ecommerce developers typically bill hourly with no ceiling, which is why most businesses prefer our fixed-scope model.',
   },
   {
     category: 'trust',
@@ -589,7 +594,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Do you build custom ecommerce platforms, or only Shopify and WooCommerce stores?',
     answer:
-      'Both. Most US businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms can\'t support your product logic, multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling, we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
+      'Both. Most businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms can\'t support your product logic, multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling, we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
   },
 
   // ── Money-query coverage, added 2026-06-11 ──
@@ -699,7 +704,7 @@ export default function EcommerceDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Ecommerce Development USA | Shopify & Custom Stores | FactoryJet",
+          "name": "Ecommerce Development | Shopify & Custom Stores | FactoryJet",
           "url": "https://factoryjet.com/services/ecommerce-development/",
           "speakable": {
             "@type": "SpeakableSpecification",
@@ -724,9 +729,9 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · USA"
+          eyebrow="E-COMMERCE DEVELOPMENT"
           headline="An Online Store That Sells on Any Platform, at Any Scale"
-          lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores, designed in Figma, engineered for conversion: fixed-price, milestone-paid, and predictable from quote to launch."
+          lead="Most e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores, designed in Figma, engineered for conversion: fixed-price, milestone-paid, and predictable from quote to launch."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -781,7 +786,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 12 years of e-commerce. US brands trust the results."
+          headline="500+ businesses served. 12 years of e-commerce. Four markets trust the results."
           description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
@@ -851,7 +856,7 @@ export default function EcommerceDevelopmentPage() {
                 </p>
               </div>
               <p>
-                FactoryJet designs every e-commerce store around conversion: where the size guide goes, when the sticky cart appears, how the mobile PDP stacks, what trust signals appear above the fold, and how the checkout flow handles hesitation. We&apos;ve built 120+ Shopify stores and hundreds of WooCommerce and custom builds across the US. The data from those builds informs every decision we make on the next one.
+                FactoryJet designs every e-commerce store around conversion: where the size guide goes, when the sticky cart appears, how the mobile PDP stacks, what trust signals appear above the fold, and how the checkout flow handles hesitation. We&apos;ve built 120+ Shopify stores and hundreds of WooCommerce and custom builds for brands in India, the US, the UK and the UAE. The data from those builds informs every decision we make on the next one.
               </p>
               <p>
                 We&apos;re platform-agnostic. Shopify, WooCommerce, BigCommerce, headless Next.js, we recommend the right stack for your catalog, your team&apos;s technical comfort, and your revenue stage. Then we build it properly, hand over the code, and get out of the way.
@@ -915,8 +920,8 @@ export default function EcommerceDevelopmentPage() {
             },
             {
               icon: '💸',
-              title: 'US e-commerce agencies charge several times more for this',
-              body: 'A mid-tier US e-commerce agency bills a multiple of what we charge for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit: fixed-price, milestone-paid, with full code ownership at handoff. We have been building e-commerce for US clients.',
+              title: 'US and UK agencies charge several times more for this',
+              body: 'A mid-tier US or UK e-commerce agency bills a multiple of what we charge for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit: fixed-price, milestone-paid, with full code ownership at handoff. We are an India-based engineering team, and we have been shipping e-commerce for clients in the US, the UK and the UAE for over a decade.',
             },
           ]}
         />
@@ -934,7 +939,7 @@ export default function EcommerceDevelopmentPage() {
         <IndustriesGrid
           variant="cards"
           eyebrow="WHAT WE BUILD"
-          headline="Six E-Commerce Services for US Businesses"
+          headline="Six E-Commerce Services for Growing Brands"
           lead="From a Shopify launch to a fully custom marketplace, we scope the right engagement for your platform, catalog complexity, and revenue stage."
           sectors={ECOMM_SERVICES}
         />
@@ -1159,7 +1164,7 @@ export default function EcommerceDevelopmentPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Timelines reflect typical US market ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
+          footer="Timelines reflect typical agency and freelancer ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
         />
 
         {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
@@ -1184,7 +1189,7 @@ export default function EcommerceDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We've built e-commerce. We know what actually moves revenue."
-          lead="FactoryJet has delivered 500+ projects for businesses across the US, UK, UAE and India on every e-commerce platform. We know which design decisions move the needle on conversion, and which ones just look good in an agency proposal."
+          lead="FactoryJet has delivered 500+ projects for businesses across India, the US, the UK and the UAE on every e-commerce platform. We know which design decisions move the needle on conversion, and which ones just look good in an agency proposal."
           pillars={[
             {
               icon: '📐',
@@ -1214,8 +1219,8 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team, designer,
                   developer, and QA, not a single freelancer juggling five other projects. As a custom ecommerce
-                  development company, we&apos;ve shipped 500+ stores for businesses across the US, UK, UAE and India, from first-store DTC
-                  brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
+                  development company, we&apos;ve delivered 500+ projects for businesses across India, the US, the UK and the UAE,
+                  from first-store DTC brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
                 </p>
                 <p>
                   You can hire a dedicated ecommerce developer for a fixed-scope build, or keep a team on retainer for

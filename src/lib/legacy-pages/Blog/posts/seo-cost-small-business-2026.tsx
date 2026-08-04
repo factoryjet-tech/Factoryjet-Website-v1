@@ -88,7 +88,7 @@ const faqs = [
     },
     {
       q: 'Does FactoryJet offer SEO services for US small businesses?',
-      a: 'Yes. FactoryJet builds SEO programs for US small businesses starting at $1,499/month. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
+      a: 'Yes. FactoryJet builds SEO programs for US small businesses from $1,499/month, with the retainer sized to your market on a call. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
     },
   ];
 

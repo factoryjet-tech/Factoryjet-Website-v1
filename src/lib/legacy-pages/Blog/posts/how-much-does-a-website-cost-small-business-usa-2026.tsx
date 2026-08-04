@@ -184,7 +184,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What $1,999 Gets You from FactoryJet</h2>
       <p className="mb-4">
-        FactoryJet's $1,999 starting price includes everything a US small business needs to launch a competitive professional website: custom Next.js design (no templates purchased), up to 5 pages, Lighthouse 95+ scores on all four metrics (verified with PageSpeed proof on delivery), WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, US business-hour project management, US-governed contract, and full code + hosting ownership transferred at final payment.
+        FactoryJet's $1,999 entry price is the starting point for a standard build, and it includes everything a US small business needs to launch a competitive professional website: custom Next.js design (no templates purchased), up to 5 pages, Lighthouse 95+ scores on all four metrics (verified with PageSpeed proof on delivery), WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, Core Web Vitals optimization), mobile-first responsive design, 30 days post-launch support, US business-hour project management, US-governed contract, and full code + hosting ownership transferred at final payment.
       </p>
       <p className="mb-4">
         Delivery: 7 days from kickoff when content is provided at project start. 97% of projects delivered on time. 500+ businesses served.
