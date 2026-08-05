@@ -62,17 +62,34 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+          {/* 2026-08-04: the article list had no heading of its own. The page's only H2 was
+              the newsletter block, so nothing on the page announced what the list actually is. */}
+          {filteredPosts.length > 0 && (
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-6 md:mb-8">
+              {activeCategory === 'All'
+                ? `All articles (${filteredPosts.length})`
+                : `${activeCategory} (${filteredPosts.length})`}
+            </h2>
+          )}
+
+          {/* Bento Grid.
+              2026-08-04: was a <div> of <article> cards. This page is literally a list of
+              posts and rendered zero list items, which is the single highest-weighted
+              structural check in the perfect-page rubric (X1) and the main way an answer
+              engine reads a directory page. Now a real <ul>/<li>. Tailwind's preflight
+              already strips list markers and padding from <ul>, and the <li> carries the
+              grid item's height, so this renders identically. */}
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr list-none p-0 m-0">
             {filteredPosts.map((post, index) => (
-              <BlogCard 
-                key={post.id} 
-                post={post} 
-                index={index} 
-                onClick={handlePostClick}
-              />
+              <li key={post.id} className="h-full">
+                <BlogCard
+                  post={post}
+                  index={index}
+                  onClick={handlePostClick}
+                />
+              </li>
             ))}
-          </div>
+          </ul>
 
           {/* Newsletter Section */}
           <div className="mt-12 md:mt-20 bg-[#0F0F12] rounded-2xl md:rounded-3xl p-6 md:p-12 text-center md:text-left relative overflow-hidden">
@@ -82,11 +99,17 @@ const App: React.FC = () => {
 
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
               <div className="max-w-xl">
+                {/* 2026-08-04: was "Join 10,000+ Factory Owners" over "Get the latest
+                    manufacturing insights". Unreplaced template boilerplate: FactoryJet is not
+                    a manufacturing publication and has no verified 10,000-subscriber list, so
+                    it was an invented figure aimed at the wrong audience, and it was the only
+                    H2 on the page. No subscriber count replaces it, because there is no
+                    confirmed number to use. */}
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-white mb-3 md:mb-4">
-                  Join 10,000+ Factory Owners
+                  Get new posts by email
                 </h2>
                 <p className="text-white/90 text-sm md:text-lg">
-                  Get the latest manufacturing insights delivered straight to your inbox. No spam, ever.
+                  Practical writing on web design, e-commerce, AI search and digital growth, sent when we publish. No spam, ever.
                 </p>
               </div>
               <div className="w-full md:w-auto flex-shrink-0">
