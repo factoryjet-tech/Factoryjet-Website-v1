@@ -152,13 +152,49 @@ def main():
               for r in rep.rows}
 
     # CHECK 4 — the outcome check. Everything above can look right and still not work.
-    pv = counts.get("page_view", (0, 0))[0]
-    if pv == 0:
-        fail("GA4 recorded ZERO page_view in the last 7 days. Whatever the container "
-             "says, pageviews are not arriving. (If the config tag was only just "
-             "published, allow 24h and re-run before acting on this.)")
+    #
+    # Three windows, because one is not enough. The 7-day window ENDS YESTERDAY (GA4
+    # has no complete "today"), so on the day you publish a fix it cannot possibly
+    # show the fix working, and reporting a bare FAIL there is misleading. Today and
+    # realtime cover the gap. Realtime is the only one that reflects a change made
+    # minutes ago.
+    from google.analytics.data_v1beta.types import RunRealtimeReportRequest
+
+    pv_7d = counts.get("page_view", (0, 0))[0]
+
+    today_rep = data.run_report(RunReportRequest(
+        property=GA4_PROPERTY,
+        date_ranges=[DateRange(start_date="today", end_date="today")],
+        dimensions=[Dimension(name="eventName")],
+        metrics=[Metric(name="eventCount")], limit=50))
+    pv_today = sum(int(r.metric_values[0].value) for r in today_rep.rows
+                   if r.dimension_values[0].value == "page_view")
+
+    rt = data.run_realtime_report(RunRealtimeReportRequest(
+        property=GA4_PROPERTY, metrics=[Metric(name="screenPageViews")], limit=1))
+    pv_rt = sum(int(r.metric_values[0].value) for r in rt.rows) if rt.rows else 0
+
+    # How long has the current container version been live? GTM fingerprints are
+    # epoch milliseconds. A fix published an hour ago has not had time to prove itself.
+    try:
+        published = datetime.datetime.fromtimestamp(int(live["fingerprint"]) / 1000)
+        hours_live = (datetime.datetime.now() - published).total_seconds() / 3600
+    except Exception:
+        published, hours_live = None, 999
+
+    if pv_rt or pv_today:
+        note(f"page_view IS arriving (realtime {pv_rt}, today {pv_today}, last 7 days {pv_7d})")
+    elif pv_7d:
+        note(f"page_view last 7 days: {pv_7d} (none yet today, which is normal on low traffic)")
+    elif hours_live < 48:
+        warn(f"No page_view in any window, but the live container is only "
+             f"{hours_live:.1f}h old ({published:%Y-%m-%d %H:%M}). Too early to call it. "
+             f"Google caches gtm.js, so returning visitors keep the old container for a "
+             f"while. Re-run tomorrow. If it is still zero then, it is a real break.")
     else:
-        note(f"GA4 page_view last 7 days: {pv}")
+        fail("GA4 recorded ZERO page_view in the last 7 days, today, and realtime, and "
+             "the container has been live for more than 48h. Pageviews are genuinely "
+             "not arriving.")
 
     # CHECK 5 — a lead event that fires but is not flagged is invisible to Ads bidding.
     admin = AnalyticsAdminServiceClient(credentials=service_account.Credentials.from_service_account_file(
