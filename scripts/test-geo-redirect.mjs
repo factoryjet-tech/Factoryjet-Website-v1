@@ -37,8 +37,13 @@ expect('US human /seo/hyderabad → US seo',
   decideNaRedirect({ path: '/seo/hyderabad', country: 'US', userAgent: CHROME }), '/services/seo')
 expect('US human /seo (hub) → US seo',
   decideNaRedirect({ path: '/seo', country: 'US', userAgent: CHROME }), '/services/seo')
-expect('US human /services/ai-agent-development/ai-voice-agent → US ai-agents',
-  decideNaRedirect({ path: '/services/ai-agent-development/ai-voice-agent', country: 'US', userAgent: CHROME }), '/services/ai-agents')
+// Changed 2026-08-06: the agent cluster was retargeted from India to the US, so a
+// North American visitor now belongs on it. The old rule bounced every US visitor
+// off the page, which made the retarget meaningless.
+expect('US human /services/ai-agent-development/ai-voice-agent → NOT redirected (cluster is US-owned)',
+  decideNaRedirect({ path: '/services/ai-agent-development/ai-voice-agent', country: 'US', userAgent: CHROME }), null)
+expect('US human /services/ai-agent-development (hub) → NOT redirected (cluster is US-owned)',
+  decideNaRedirect({ path: '/services/ai-agent-development', country: 'US', userAgent: CHROME }), null)
 expect('US human /ai-seo → US ai-seo',
   decideNaRedirect({ path: '/ai-seo', country: 'US', userAgent: CHROME }), '/services/ai-seo')
 expect('US human /n8n-automation → US ai-workflow-automation',
@@ -121,8 +126,13 @@ expect('IN human /services/web-design → /web-design',
   decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
 expect('IN human /services/seo → /seo',
   decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), '/seo')
-expect('IN human /services/ai-agents → /services/ai-agent-development',
-  decideInRedirect({ path: '/services/ai-agents', country: 'IN', userAgent: CHROME }), '/services/ai-agent-development')
+// Changed 2026-08-06: /services/ai-agent-development is now the US page, so it is
+// no longer a valid India destination. There is no India twin for the agent
+// cluster, and routing India traffic from one US page to another is not a mirror.
+expect('IN human /services/ai-agents → NOT redirected (no India twin for the agent cluster)',
+  decideInRedirect({ path: '/services/ai-agents', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /services/ai-agent-development → NOT redirected (US page, no mirror)',
+  decideInRedirect({ path: '/services/ai-agent-development', country: 'IN', userAgent: CHROME }), null)
 expect('IN human trailing slash normalised',
   decideInRedirect({ path: '/services/ai-seo/', country: 'IN', userAgent: CHROME }), '/ai-seo')
 expect('country case-insensitive',
