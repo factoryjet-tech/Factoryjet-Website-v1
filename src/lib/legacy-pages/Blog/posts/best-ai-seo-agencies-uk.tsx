@@ -1,118 +1,139 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// NOTE ON FIGURES (re-verified 6 August 2026 by direct fetch of the source PDF and every agency
+// site). Every Ofcom number below was read out of Online Nation 2025 (PDF, page 30 for the search
+// figures, pages 31 to 32 for the referral and click-through figures). Do not edit any figure on
+// this page without re-fetching the source first. Inherited stats are not verified stats.
+//
+// Changes made on 6 August 2026:
+//   - Two earlier claims ("54% of UK adults use AI tools" and a Deloitte Digital Consumer Trends
+//     citation) could not be found in either source and were cut, along with every price figure.
+//   - The shortlist was rebuilt from scratch. Screaming Frog, The SEO Works, Passion Digital, Varn
+//     and GA Agency carried over. Impression, Rise at Seven, ClickSlice and Charle are new. Found,
+//     Blue Array, Reposition and Convert Digital came off (reasons are in the methodology section).
+//   - The Pew click-through finding is a US study that Ofcom reproduces as a UK proxy. It is
+//     labelled as such rather than presented as a UK measurement.
+//   - The 4.5% / 2.2% e-commerce referral split excludes computer and technology queries. Ofcom's
+//     chart says so; this page says so too.
+//
+// Office locations come from each agency's own site as fetched on 6 August 2026, not from press
+// coverage or founding history. Rise at Seven lists "Manchester, London & New York"; Varn lists a
+// London office and a Bath office; Impression's link points at impressiondigital.com because
+// impression.co.uk 301-redirects cross-host.
+//
+// This page carries NO pricing figures or currency amounts by house rule.
+
 export const post: BlogPost = {
   id: '228',
   slug: 'best-ai-seo-agencies-uk',
   title: 'The 10 Best AI SEO Agencies in the UK (2026)',
   excerpt:
-    '54% of UK adults now use AI tools like ChatGPT, and they ask it which businesses to trust. We compared the 10 best AI SEO agencies in the UK on specialty, pricing, and verifiable proof. Yes, we are on the list, with full disclosure.',
+    'A UK-only list. ChatGPT logged 1.8 billion UK visits in the first eight months of 2025, and UK buyers now ask it which agency to hire. We checked 10 UK AI SEO agencies on their own websites and compared what each can actually verify. Yes, we are on the list, with full disclosure.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
   readTime: '13 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-uk-2026.webp',
   meta: {
-    title: 'The 10 Best AI SEO Agencies in the UK (2026)',
+    // 51 chars. Covers both the "agencies" and "companies" phrasings, which GSC shows are
+    // separate query families in the UK, not synonyms Google resolves for us.
+    title: '10 Best AI SEO Agencies & Companies in the UK (2026)',
     description:
-      '54% of UK adults use AI tools, and they ask which businesses to trust. The 10 best AI SEO agencies in the UK compared on specialty, pricing, and proof.',
+      'The best AI SEO agencies, companies and consultancies in the UK, each verified on its own site on 6 August 2026 and compared on GEO, AEO and AI search.',
   },
   keyTakeaways: [
-    'Our researched top 10: FactoryJet (disclosed self-inclusion), Found, Blue Array, The SEO Works, Screaming Frog, Varn, Reposition, Convert Digital, GA Agency, and Passion Digital. Every entry verified on its own website on 06/11/2026.',
-    '54% of UK adults now use AI tools like ChatGPT, Copilot or Gemini (79% of 16–24s, Ofcom Online Nation 2025). ChatGPT logged 1.8 billion UK visits in the first eight months of 2025.',
-    'AI SEO cost in UK runs roughly £550–£6,000/month. Only 2 of the 10 agencies publish pricing outright: Convert Digital (£550–£6,000/mo) and Reposition (£750–£3,000/mo bands). FactoryJet scopes and quotes each engagement individually, month-to-month, with no published rate card.',
-    'Nine of ten current page-one results for this query are listicles, and at least six are agency self-published lists. Transparent self-inclusion with a checkable methodology is the established pattern.',
-    'GEO, AEO, and LLM SEO are overlapping labels for the same workflow. If an agency quotes generative engine optimization as a separate line item on top of AI SEO, you are being billed twice.',
-    'Filter any shortlist on three things: per-engine citation reporting (ChatGPT, Perplexity, Claude, Gemini, not just Google), who actually executes the work, and contract terms.',
+    'This is a UK-only shortlist. If you are hiring for a United States or India business, the agencies here are the wrong ones, and we link you to the right page in the first paragraph.',
+    'Our researched top 10: FactoryJet (disclosed self-inclusion), Screaming Frog, The SEO Works, Passion Digital, Impression, Rise at Seven, Varn, GA Agency, ClickSlice, and Charle. Every entry was verified by fetching its own website on 6 August 2026.',
+    'ChatGPT recorded 1.8 billion UK visits in the first eight months of 2025, up from 368 million a year earlier (Ofcom, Online Nation 2025). About 30 percent of keyword searches now return an AI Overview.',
+    'Two sets of labels get confused here. GEO, AEO, LLM SEO and AIO are overlapping names for one workflow, so if a supplier quotes generative engine optimisation on top of AI SEO you are paying twice. And AI SEO agency, company, firm, consultancy and provider are not different products either, they are different words for the same shortlist.',
+    'Filter any UK shortlist on three things: per-engine reporting across ChatGPT, Perplexity, Claude and Gemini rather than Google alone, who actually executes the work, and the notice period.',
+    'Seven agencies that appear on other UK lists are missing from ours: two blocked our checks, four had no AI search service line we could find, and one is not a UK business. We name all seven and give the reason for each.',
   ],
   faqs: [
     {
-      q: 'Who is the best AI SEO agency in UK?',
-      a: 'It depends on your size and stack. FactoryJet leads for SMBs and ecommerce brands that want transparent, quote-based scoping and multi-engine citation tracking; Found leads for enterprise consumer brands with its Luminr platform; Convert Digital is the strongest budget entry at £550/mo with AI SEO included in every tier.',
+      q: 'Who is the best AI SEO agency in the UK?',
+      a: 'It depends on your size and stack. FactoryJet leads for UK SMBs and ecommerce brands wanting engineers on the work and per-engine reporting with no long lock-in. Screaming Frog leads for technical teams that want log-file evidence. The SEO Works and Passion Digital lead for mid-market and B2B buyers.',
     },
     {
-      q: 'Which is the best AI SEO company in UK for small businesses?',
-      a: 'For small businesses, the shortlist is FactoryJet (month-to-month terms, all four AI engines tracked, indicative from £500/mo with final scope agreed on a call), Convert Digital (from £550/mo, AI SEO standard in every package) and The SEO Works (free LLM audit, SME-friendly). All three give small businesses what most agencies hide: a concrete entry point and straightforward terms. That combination is the fastest filter for finding the best AI SEO services in UK markets, and the test any best AI SEO services company in UK shortlist should start with.',
+      q: 'Which is the best AI SEO company in the UK for small businesses?',
+      a: 'FactoryJet (month-to-month terms, all four major AI engines tracked), The SEO Works (a free website review as a low-risk first step) and Varn (a fixed-scope AI Visibility Framework audit you can buy once). All three give a small business a concrete entry point and a clear scope.',
     },
     {
-      q: 'What are the top 10 AI SEO agencies in UK?',
-      a: 'Our researched 2026 list: FactoryJet, Found, Blue Array, The SEO Works, Screaming Frog, Varn, Reposition, Convert Digital, GA Agency, and Passion Digital. The same ten hold up whether you search for the top 10 AI SEO companies in UK or the top 10 AI SEO services in UK, verified on specialty, pricing transparency, and provable differentiators. No pay-to-play placements.',
+      q: 'What are the top 10 AI SEO agencies in the UK?',
+      a: 'Our researched 2026 list: FactoryJet, Screaming Frog, The SEO Works, Passion Digital, Impression, Rise at Seven, Varn, GA Agency, ClickSlice, and Charle. The same ten hold whether you search for the top 10 AI SEO companies in the UK or the top 10 AI SEO services in the UK.',
     },
     {
-      q: 'How much does AI SEO cost in UK?',
-      a: 'AI SEO cost in UK runs roughly £550–£6,000 per month. Verified published prices: Convert Digital £550–£6,000/mo with AI SEO in every tier, Reposition £750–£3,000/mo packages. FactoryJet publishes an indicative entry point of £500/mo and fixes the exact figure after a scoping call, with month-to-month terms. Most UK specialists (Found, Blue Array, Varn, GA Agency, Passion Digital) do not publish pricing either, so ask for the number in writing before any discovery call.',
+      q: 'How much does AI SEO cost in the UK?',
+      a: 'Almost no UK AI SEO agency publishes rates, so you have to ask. What you can compare is the shape of the deal: monthly retainer, fixed-scope audit, or day rate. Get the number in writing before the discovery call, and ask what it buys in month four rather than month one.',
     },
     {
-      q: 'Which is the best GEO agency in UK?',
-      a: 'Blue Array and Varn are the strongest dedicated GEO specialists: Blue Array with proprietary GEO frameworks and multi-model sentiment reporting, Varn with its productised AI Visibility Framework audit. FactoryJet covers GEO and AEO in one SMB-priced retainer. Any list of the top 10 generative engine optimization agencies in UK should include all three.',
+      q: 'Which is the best GEO agency in the UK?',
+      a: 'Impression and Passion Digital run the deepest dedicated generative engine optimisation practices we could verify. Impression sells GEO as a named service and publishes a GEO case study. Passion Digital splits AI search into five sub-services. FactoryJet covers GEO and AEO inside one retainer.',
     },
     {
-      q: 'Which is the best AEO agency in UK?',
-      a: 'AEO (answer engine optimization) and GEO overlap heavily, so the best AEO agency in UK is usually a GEO specialist by another name, and the top 10 AEO agencies in UK would look nearly identical to our main table. GA Agency runs separate GEO and AEO service lines with its BuzzWatch tracking tool; The SEO Works bundles AEO with published case-study numbers; FactoryJet covers both acronyms in one workflow.',
+      q: 'Which is the best AEO agency in the UK?',
+      a: 'AEO and GEO overlap almost completely, so the best AEO agency in the UK is usually a GEO specialist under a different label. ClickSlice runs separate Answer Engine Optimisation and Generative Engine Optimisation pages, and The SEO Works lists AEO Services and GEO Services as distinct lines.',
     },
     {
-      q: 'Who offers the best answer engine optimization services in UK?',
-      a: 'Look for agencies that engineer answer-first content and schema rather than selling the acronym: GA Agency (entity markup, evidence engineering), The SEO Works (answer-first restructuring plus a free LLM audit), and FactoryJet (FAQ and schema architecture engineered for verbatim AI extraction). The best answer engine optimization agency in UK terms is the one that shows you extracted answers, not just rankings.',
+      q: 'Who is the best ChatGPT optimisation agency in the UK?',
+      a: 'Screaming Frog does the most measurable ChatGPT work, using its own Log File Analyser to separate AI bot traffic into training, indexing and live-citation crawls, plus commercial prompt tracking. ChatGPT logged 1.8 billion UK visits in the first eight months of 2025, so this is no longer niche.',
     },
     {
-      q: 'Which is the best generative engine optimization agency in UK?',
-      a: 'Blue Array has the deepest dedicated generative engine optimization practice among UK independents, with proprietary frameworks and OpenAI/Gemini/Meta reporting. For SMBs, FactoryJet delivers the best generative engine optimization services in UK budgets can actually absorb: GEO is included in standard retainers, not sold as a premium add-on.',
+      q: 'Can a UK agency actually get my brand into ChatGPT and Perplexity answers?',
+      a: 'It can improve your odds, not guarantee a result. AI answers are re-generated per query and vary between runs, so any agency promising a fixed position is overselling. What a good agency controls is the input: crawlable server-rendered content, schema matching the page, and clear entity signals.',
     },
     {
-      q: 'Who is the best ChatGPT optimization agency in UK?',
-      a: 'Screaming Frog does the most measurable ChatGPT work: AI bot log-file analysis and commercial prompt tracking. FactoryJet treats ChatGPT as a first-class target alongside Perplexity, Claude, and Gemini, with per-engine citation counts reported monthly. ChatGPT logged 1.8 billion UK visits in the first eight months of 2025 (Ofcom), so this is no longer a niche channel.',
+      q: 'Which is the best LLM SEO agency in the UK?',
+      a: 'LLM SEO is the same discipline as AI SEO and GEO under another label. Passion Digital runs LLM Performance Tracking as a named sub-service, the strongest measurement offer we verified. For SMB delivery with transparent scoping and month-to-month terms, FactoryJet.',
     },
     {
-      q: 'Which is the best LLM SEO agency in UK?',
-      a: 'LLM SEO is the same discipline as AI SEO/GEO under a different label. Found (with its Luminr LLM-tracking platform) and Passion Digital (LLM Performance Tracking sub-service) are the strongest at measurement; FactoryJet is the strongest at SMB delivery with transparent, quote-based scoping.',
-    },
-    {
-      q: 'Who provides the best AI Overviews optimization services in UK?',
-      a: 'Passion Digital has a dedicated AIO Optimisation service for Google AI Overviews and AI Mode. The SEO Works publishes AI Overview case numbers (93% of clients appearing in AI Overviews, per its service page). FactoryJet optimizes for AI Overviews using the same answer-first formatting that wins featured snippets, reported monthly.',
-    },
-    {
-      q: 'Which is the best AI search optimization agency in UK?',
-      a: 'Screaming Frog brands its service AI Search Optimisation and backs it with log-file evidence of AI bot behaviour, the most technical approach on this list. For businesses that want AI search optimization bundled with classic SEO in one predictable monthly engagement, FactoryJet and Convert Digital are the strongest picks.',
-    },
-    {
-      q: 'What does generative engine optimization cost in UK?',
-      a: 'Generative engine optimization cost in UK typically lands inside normal AI SEO retainers, around £550–£6,000/mo at published-price agencies. If you are asking how much does generative engine optimization cost in UK as a separate line item, be cautious: GEO and AI SEO are one workflow, and an agency quoting both separately is billing twice for the same work.',
-    },
-    {
-      q: 'What is AI SEO?',
-      a: 'AI SEO is optimizing a website so AI engines (ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews) cite it when answering buyer questions. It builds on traditional SEO but adds schema-rich answer formatting, structured FAQ blocks, entity optimization, and third-party citation acquisition.',
-    },
-    {
-      q: 'What is the difference between GEO and AEO?',
-      a: 'GEO (generative engine optimization) targets engines that generate answers: ChatGPT, Perplexity, Claude, Gemini. AEO (answer engine optimization) targets any engine returning a direct answer, including Google AI Overviews and featured snippets. The underlying work overlaps almost completely; judge agencies on the work, not the acronym.',
-    },
-    {
-      q: 'Why does AI SEO matter for UK businesses in 2026?',
-      a: '54% of UK adults now use AI tools such as ChatGPT, Copilot or Gemini (79% of 16–24s, Ofcom Online Nation 2025). 75% of online UK adults read AI-generated search summaries at least sometimes, and roughly 30% of Google searches now show AI Overviews. Buyers ask AI which businesses to trust; uncited businesses are invisible in the answer.',
-    },
-    {
-      q: 'How do I measure whether AI SEO is working?',
-      a: 'Track three things monthly: citation count per AI engine for your money queries, Google AI Overview appearances, and AI-referral sessions in analytics. Any agency on this list should report at least the first; walk away from anyone reporting only classic rankings.',
-    },
-    {
-      q: 'Can I do AI SEO in-house?',
-      a: 'Partially. Schema, FAQ formatting, and answer-first content restructuring are learnable. The hard parts are entity optimization, multi-engine citation tracking, and third-party citation acquisition, which is why most in-house teams start with an external audit (Varn, The SEO Works, and FactoryJet all offer one) and keep execution mixed.',
+      q: 'Who provides the best AI Overviews optimisation services in the UK?',
+      a: 'Passion Digital has a dedicated AIO Optimisation service for Google AI Overviews and AI Mode. Varn benchmarks AI Overview and AI Mode visibility inside its AI Visibility Framework. FactoryJet optimises for AI Overviews using the same answer-first formatting that wins featured snippets.',
     },
     {
       q: 'Is there a good AI SEO agency in London?',
-      a: 'London hosts most of this list: Found, Reposition, GA Agency, and Passion Digital are all London-based, and Blue Array and Varn keep London offices. FactoryJet serves London businesses remotely with dedicated London AI SEO coverage.',
+      a: 'London hosts most of this list. Passion Digital sits in Holborn, GA Agency and ClickSlice are London agencies, and Charle is a London Shopify specialist. Competition for London queries is the fiercest in the UK, so a London brand needs sharper entity and sector signals than a regional one.',
     },
     {
-      q: 'What about AI SEO for businesses outside London, like Glasgow, Manchester, or Brighton?',
-      a: 'AI engines answer local queries too, and competition outside London is dramatically thinner. Convert Digital is Brighton-based; The SEO Works covers the North from Sheffield and Leeds. FactoryJet runs dedicated AI SEO pages for Glasgow, Manchester, Brighton, Cardiff, and 20+ UK cities.',
+      q: 'What about AI SEO for businesses outside London, in Manchester, Leeds or Glasgow?',
+      a: 'AI engines answer local queries too, and the answer pool outside London is far thinner. The SEO Works runs offices in Sheffield, Leeds, Manchester and Birmingham. Impression is Nottingham-based and Rise at Seven now lists Manchester. FactoryJet serves the whole UK remotely, with city pages for Manchester, Glasgow, Cardiff and Brighton.',
     },
     {
-      q: 'Do UK AI SEO agencies require long contracts?',
-      a: 'Mixed. FactoryJet is month-to-month with one billing-cycle notice; Convert Digital sells notice-period exits rather than fixed terms; Screaming Frog works on day rates. Larger agencies typically quote 6–12 month engagements. Given how fast AI search changes, shorter terms keep the agency accountable.',
+      q: 'What is the difference between an AI SEO agency and an AI SEO consultancy in the UK?',
+      a: 'A consultancy diagnoses and hands you a roadmap, usually as a fixed-scope audit. An agency executes month after month. Varn sells the consultancy shape as a named framework. Most UK buyers start with an audit to size the gap, then decide whether to keep execution in-house.',
     },
     {
-      q: 'How long does AI SEO take to show results?',
-      a: 'Faster than classic SEO when the foundation is sound: schema and answer-block changes can earn AI citations within 4–8 weeks, because AI engines re-crawl and re-synthesize faster than Google re-ranks. A realistic UK benchmark: meaningful citation growth inside 90 days, compounding from there.',
+      q: 'Is there a good AI SEO agency near me?',
+      a: 'Probably not in your town, and it matters less than you think. Only a handful of UK agencies sell AI search as a named service at all, and the work (robots.txt, schema, answer formatting, log-file analysis) is done remotely whatever the postcode. Search by sector instead of by distance, then judge the monthly report.',
+    },
+    {
+      q: 'How do I choose between AI SEO companies in the UK?',
+      a: 'Put them side by side on four things: which engines they track and report separately, whether GEO sits inside the retainer or on top of it, who actually executes the work, and the notice period. Ignore the label on the tin. An AI SEO company, firm and consultancy are competing for the same job.',
+    },
+    {
+      q: 'What do UK AI SEO solutions actually include?',
+      a: 'A real scope has five parts: crawl access for the named retrieval bots, server-rendered content, schema that matches the visible page, entity and citation work off your own site, and per-engine measurement against a fixed prompt set. Anything sold as an AI SEO solution without those five is conventional SEO with new packaging.',
+    },
+    {
+      q: 'What is AI SEO?',
+      a: 'AI SEO is optimising a website so AI engines cite it when answering buyer questions. It builds on traditional SEO and adds answer-first formatting, structured FAQ blocks, schema matching the visible page, entity clarity, and citations on sites the models already read. The target is being named in the answer.',
+    },
+    {
+      q: 'What is the difference between GEO and AEO?',
+      a: 'GEO, generative engine optimisation, targets engines that write answers: ChatGPT, Perplexity, Claude and Gemini. AEO, answer engine optimisation, targets anything returning a direct answer, including Google AI Overviews and featured snippets. The work overlaps almost completely, so judge on the work, not the acronym.',
+    },
+    {
+      q: 'Why does AI SEO matter for UK businesses in 2026?',
+      a: 'Ofcom reports ChatGPT took 1.8 billion UK visits in the first eight months of 2025, up from 368 million a year earlier, and that about 30 percent of keyword searches return an AI Overview. Pew Research found users who see an AI Overview are roughly half as likely to click a link.',
+    },
+    {
+      q: 'How long does AI SEO take to show results in the UK?',
+      a: 'Faster than classic SEO when the technical foundation is sound. Schema and answer-block changes can earn AI citations within four to eight weeks, because AI engines re-crawl and re-synthesise faster than Google re-ranks. A realistic UK benchmark is citation growth inside 90 days.',
+    },
+    {
+      q: 'Should an ecommerce brand pick a different AI SEO agency?',
+      a: 'Usually yes. Ecommerce AI search depends on product data, feeds and category structure as much as content. Charle runs Ecommerce AI SEO and Ecommerce GEO as named services for Shopify brands. FactoryJet works on ecommerce catalogues directly. A content-only agency struggles with product-level visibility.',
     },
   ],
   content: (
@@ -120,41 +141,55 @@ export const post: BlogPost = {
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer</p>
         <p className="text-amber-800">
-          The best AI SEO agency in the UK for SMBs and ecommerce brands is FactoryJet (yes, this
-          is our list, and we explain exactly why we put ourselves first below). For enterprise
-          consumer brands it&apos;s Found; for technical, evidence-driven teams it&apos;s Screaming
-          Frog; on a tight budget it&apos;s Convert Digital at £550/month.
+          For UK SMBs and ecommerce brands the pick is FactoryJet (our own list, methodology at
+          the bottom). For technical teams wanting evidence rather than promises, Screaming Frog.
+          For multi-region UK coverage with separate GEO and AEO lines, The SEO Works. For Shopify,
+          Charle. For published generative engine optimisation proof, Impression.
         </p>
       </div>
 
       <p className="mb-4">
-        Here&apos;s why this question suddenly matters: <strong>54% of UK adults now use AI tools
-        like ChatGPT, Copilot or Gemini, rising to 79% of 16–24 year olds</strong> (Ofcom, Online
-        Nation 2025). ChatGPT alone logged <strong>1.8 billion UK visits in the first eight months
-        of 2025</strong>, nearly five times the year before. When those users ask &quot;who should I
-        hire?&quot;, AI engines answer with citations, and businesses that aren&apos;t cited
-        don&apos;t exist in the answer. Before you shortlist anyone, it is worth two minutes to{' '}
+        <strong>This is a UK-only list.</strong> Every agency below serves UK businesses and was
+        checked on its own website on 6 August 2026. Hiring for a business in the United States?
+        This is the wrong page. Start at our{' '}
+        <a href="/services/ai-seo" className="text-orange-600 underline">
+          US AI SEO services page
+        </a>{' '}
+        or the{' '}
+        <a href="/blog/best-ai-seo-agencies-usa" className="text-orange-600 underline">
+          10 best AI SEO agencies in the USA
+        </a>
+        . Hiring in India? Use the{' '}
+        <a href="/blog/best-ai-seo-agencies-india" className="text-orange-600 underline">
+          India list
+        </a>
+        . Same discipline, completely different shortlist.
+      </p>
+
+      <p className="mb-4">
+        Why UK buyers are asking now: ChatGPT recorded{' '}
+        <strong>1.8 billion UK visits in the first eight months of 2025</strong>, up from 368
+        million in the same period of 2024 (Ofcom, Online Nation 2025), and about{' '}
+        <strong>30 percent of keyword searches now return an AI Overview</strong>. The businesses an
+        AI engine names get the enquiry. Before you shortlist anyone, spend two minutes and{' '}
         <a href="/ai-visibility-checker" className="text-orange-600 underline">
           check whether ChatGPT, Perplexity and Google AI Overviews mention your business
-        </a>{' '}
-        today.
+        </a>
+        .
       </p>
       <p className="mb-4">
-        We researched every agency below on its own website and in the live SERPs on 06/11/2026. No
-        pay-to-play, no invented review scores. <strong>Disclosure, up front:</strong> FactoryJet
-        appears at #1 on its own list. Every agency that currently wins this search query does the
-        same. We verified it (nine of ten page-one results are listicles, at least six of them
-        self-published). What we add is honesty about it, a methodology you can check, and nine real
-        competitors with their actual strengths, including where they beat us. For the detail on how
-        we run this for UK clients specifically, see our{' '}
+        <strong>Disclosure, up front.</strong> FactoryJet appears at number one on its own list. So
+        does nearly every UK agency ranking for this query. What we add is saying so, plus a
+        methodology you can check and a named list of who we left off. For how we run this for UK
+        clients, see our{' '}
         <a href="/uk/ai-seo" className="text-orange-600 underline">
-          UK AI SEO service
+          AI SEO agency UK service
         </a>
         .
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
-        Top 10 AI SEO agencies in UK: comparison table
+        The 10 best AI SEO agencies and companies in the UK: comparison table
       </h2>
       <div className="overflow-x-auto mb-6">
         <table className="min-w-full border-collapse border border-gray-300">
@@ -162,9 +197,8 @@ export const post: BlogPost = {
             <tr>
               <th className="p-3 border text-left">#</th>
               <th className="p-3 border text-left">Agency</th>
-              <th className="p-3 border text-left">HQ</th>
-              <th className="p-3 border text-left">AI SEO specialty</th>
-              <th className="p-3 border text-left">Published pricing</th>
+              <th className="p-3 border text-left">Base</th>
+              <th className="p-3 border text-left">AI search capability verified on their site</th>
               <th className="p-3 border text-left">Best for</th>
             </tr>
           </thead>
@@ -172,256 +206,437 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="p-3 border">1</td>
               <td className="p-3 border font-semibold">FactoryJet (us)</td>
-              <td className="p-3 border">Serving UK remotely</td>
-              <td className="p-3 border">GEO + AEO in one retainer; ChatGPT, Perplexity, Claude, Gemini + AI Overviews tracked monthly</td>
-              <td className="p-3 border font-semibold">Indicative from £500/mo; fixed quote after scoping call</td>
-              <td className="p-3 border">SMBs &amp; ecommerce wanting transparent scoping, no lock-in</td>
+              <td className="p-3 border">Serving the UK remotely</td>
+              <td className="p-3 border">GEO and AEO in one retainer; ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews tracked monthly</td>
+              <td className="p-3 border">SMBs and ecommerce, no long lock-in</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">2</td>
-              <td className="p-3 border font-semibold">Found</td>
-              <td className="p-3 border">London</td>
-              <td className="p-3 border">Luminr LLM-tracking platform; &quot;Everysearch™&quot;</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">Enterprise consumer brands</td>
+              <td className="p-3 border font-semibold">Screaming Frog</td>
+              <td className="p-3 border">Henley-on-Thames</td>
+              <td className="p-3 border">AI Search Optimisation: AI bot log-file analysis, prompt tracking, AI A/B testing, sentiment analysis</td>
+              <td className="p-3 border">Technical, evidence-led teams</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">3</td>
-              <td className="p-3 border font-semibold">Blue Array</td>
-              <td className="p-3 border">Reading</td>
-              <td className="p-3 border">Proprietary GEO frameworks; OpenAI/Gemini/Meta sentiment reporting</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">Larger orgs &amp; in-house teams</td>
+              <td className="p-3 border font-semibold">The SEO Works</td>
+              <td className="p-3 border">Sheffield, London, Leeds, Manchester, Birmingham</td>
+              <td className="p-3 border">Separate AI Search, GEO, AEO and AI SEO lines; publishes an Entitymap and an Info for AI and LLMs page</td>
+              <td className="p-3 border">SMEs to mid-market, multi-region UK</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">4</td>
-              <td className="p-3 border font-semibold">The SEO Works</td>
-              <td className="p-3 border">Sheffield</td>
-              <td className="p-3 border">GEO + AEO with published case numbers; free LLM audit</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">SMEs to mid-market</td>
+              <td className="p-3 border font-semibold">Passion Digital</td>
+              <td className="p-3 border">Holborn, London</td>
+              <td className="p-3 border">Five named AI Search sub-services: GEO, AIO Optimisation, Deep Research, LLM Performance Tracking, Entity Optimisation</td>
+              <td className="p-3 border">B2B and professional services</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">5</td>
-              <td className="p-3 border font-semibold">Screaming Frog</td>
-              <td className="p-3 border">Henley-on-Thames</td>
-              <td className="p-3 border">AI bot log-file analysis; prompt tracking; A/B tests</td>
-              <td className="p-3 border">Day rate (on request)</td>
-              <td className="p-3 border">Technical, data-driven teams</td>
+              <td className="p-3 border font-semibold">Impression</td>
+              <td className="p-3 border">Nottingham</td>
+              <td className="p-3 border">GEO as a named SEO service, with a published GEO case study and its own Alexis and Velocity tooling</td>
+              <td className="p-3 border">B2B, SaaS, fintech, ecommerce</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">6</td>
-              <td className="p-3 border font-semibold">Varn</td>
-              <td className="p-3 border">Wiltshire + London</td>
-              <td className="p-3 border">Productised &quot;AI Visibility Framework&quot; audit</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">B2B, publishers, healthcare</td>
+              <td className="p-3 border font-semibold">Rise at Seven</td>
+              <td className="p-3 border">Manchester and London</td>
+              <td className="p-3 border">AI Visibility and GEO service line, plus a public category leaderboard and multi-channel search report</td>
+              <td className="p-3 border">Consumer and content-led search</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">7</td>
-              <td className="p-3 border font-semibold">Reposition</td>
-              <td className="p-3 border">London</td>
-              <td className="p-3 border">Entity-based SEO + AI briefings</td>
-              <td className="p-3 border">Partial: £750–£3,000/mo bands</td>
-              <td className="p-3 border">Performance-led SMBs</td>
+              <td className="p-3 border font-semibold">Varn</td>
+              <td className="p-3 border">Bath and London</td>
+              <td className="p-3 border">Productised AI Visibility Framework in LITE and COMPLETE tiers, with schema and entity recommendations</td>
+              <td className="p-3 border">Buyers who want a fixed-scope audit first</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">8</td>
-              <td className="p-3 border font-semibold">Convert Digital</td>
-              <td className="p-3 border">Brighton</td>
-              <td className="p-3 border">AI SEO standard in every tier; llm.txt + citeable content</td>
-              <td className="p-3 border font-semibold">Yes: £550–£6,000/mo</td>
-              <td className="p-3 border">Small businesses on a budget</td>
+              <td className="p-3 border font-semibold">GA Agency</td>
+              <td className="p-3 border">London</td>
+              <td className="p-3 border">GEO service page plus BuzzWatch AI brand visibility tracking; multilingual and international SEO</td>
+              <td className="p-3 border">International, multilingual brands</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">9</td>
-              <td className="p-3 border font-semibold">GA Agency</td>
-              <td className="p-3 border">London</td>
-              <td className="p-3 border">BuzzWatch AI-visibility tool; multilingual GEO, 50+ countries</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">International/multilingual brands</td>
+              <td className="p-3 border font-semibold">ClickSlice</td>
+              <td className="p-3 border">Shoreditch, London</td>
+              <td className="p-3 border">Separate AEO and GEO pages plus ChatGPT Ads; covers ChatGPT, Perplexity, Gemini, Claude, Copilot and Grok</td>
+              <td className="p-3 border">London SMBs and ecommerce</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">10</td>
-              <td className="p-3 border font-semibold">Passion Digital</td>
-              <td className="p-3 border">London</td>
-              <td className="p-3 border">Five productised AI-search sub-services incl. DRX deep research</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">B2B &amp; professional services</td>
+              <td className="p-3 border font-semibold">Charle</td>
+              <td className="p-3 border">London and Manchester</td>
+              <td className="p-3 border">Ecommerce AI SEO and Ecommerce GEO as named services, alongside Shopify Plus build and agentic commerce</td>
+              <td className="p-3 border">Shopify and Shopify Plus brands</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p className="mb-4">
-        Only two of ten publish prices outright. Keep that in mind when you compare quotes: opacity is the
-        norm in this market, and it favours the agency, not you.
+        Almost none of them publish rates, so the comparison that helps is capability and
+        reporting.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">The 10 best AI SEO agencies in the UK, reviewed</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        AI SEO agency, company, firm or consultancy: what the UK labels mean
+      </h2>
+      <p className="mb-4">
+        The words are mostly interchangeable, and the ten above answer all of them. What each label
+        signals in practice:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>AI SEO agency.</strong> The common self-description. Implies ongoing delivery on a retainer, with a team rather than one person.</li>
+        <li><strong>AI SEO company.</strong> Interchangeable with agency. Sometimes signals in-house tooling, like Screaming Frog&apos;s Log File Analyser or Impression&apos;s Alexis and Velocity, but there is no reliable rule.</li>
+        <li><strong>AI SEO firm.</strong> An American import UK buyers type anyway. No distinct meaning here, and nobody on this list uses it about themselves.</li>
+        <li><strong>AI SEO consultancy or consultant.</strong> This one does mean something: diagnosis and a roadmap as a fixed-scope audit, with execution left to you. Varn sells that shape openly.</li>
+        <li><strong>AI SEO solutions or provider.</strong> Procurement language, common in tenders. Read it as a request for a written scope, not a different product.</li>
+        <li><strong>GEO, AEO, LLM SEO, AIO, AI search optimisation.</strong> Service names, not organisation types. Overlapping slices of one workflow, which several agencies here sell as separate pages.</li>
+        <li><strong>What no label tells you.</strong> Which engines get reported separately, who executes, and the notice period. Those three decide the outcome.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">What the UK numbers say about AI search in 2026</h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>ChatGPT took <strong>1.8 billion UK visits</strong> in the first eight months of 2025, up from 368 million in the same period of 2024.</li>
+        <li>ChatGPT had <strong>252 million UK web visits in August 2025</strong>, up 156 percent year on year, making it the second-largest search service in the UK.</li>
+        <li>Google still handles roughly <strong>3 billion UK web searches a month</strong>, so AI search is additive rather than a replacement.</li>
+        <li>Gemini grew 146 percent, Claude 138 percent and Perplexity 100 percent in UK traffic in the year to August 2025, from much smaller bases.</li>
+        <li>About <strong>30 percent of keyword searches</strong> return an AI Overview, rising to as much as 34 percent of non-branded searches.</li>
+        <li>YouGov research quoted by Ofcom found <strong>53 percent of UK people</strong> say they often see AI summaries.</li>
+        <li>Ecommerce and shopping took <strong>4.5 percent of ChatGPT outgoing UK referrals</strong> in the year to August 2025, against 2.2 percent for Google. Note the scope: Ofcom&apos;s chart excludes computer and technology queries, which are the largest category for both.</li>
+        <li>Users who see an AI Overview are <strong>almost half as likely to click through</strong>, and more likely to end the session entirely (26 percent against 16 percent). Six months after a first ChatGPT visit, their Google Search clicks fall 26 percent. Both are US studies that Ofcom reproduces as a UK proxy, so read them as direction, not magnitude.</li>
+      </ul>
+      <p className="mb-4">
+        Source:{' '}
+        <a
+          href="https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/online-nation/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          Ofcom, Online Nation 2025
+        </a>
+        , page 30 for the search figures and pages 31 to 32 for referrals and click-through.
+        Ofcom&apos;s underlying sources are Similarweb, YouGov and Pew Research.
+      </p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        The 10 best AI SEO agencies and companies in the UK, reviewed
+      </h2>
 
       <h3 className="text-xl font-bold mt-6 mb-3">
-        1. FactoryJet: best for SMBs and ecommerce brands (disclosure: this is us)
+        1. FactoryJet: best for UK SMBs and ecommerce (disclosure: this is us)
       </h3>
       <p className="mb-4">
-        We build and optimize for AI search the way we build websites: senior engineers, transparent
-        scoping, no annual lock-in. Every retainer covers both Google and the four major AI engines
-        (ChatGPT, Perplexity, Claude, and Gemini) plus Google AI Overviews, with per-engine citation
-        counts reported monthly.
-      </p>
-      <p className="mb-4">
-        <strong>Why we rank ourselves first for SMBs:</strong> transparent scoping on every
-        engagement, month-to-month terms, and engineers, not account managers, running the work.
-        Where competitors beat us: if you&apos;re a FTSE-250 consumer brand wanting a London
-        boardroom presence, Found or Brainlabs-scale agencies are a better cultural fit. We&apos;re
-        honest about that.{' '}
-        <a href="/uk/ai-seo" className="text-orange-600 underline">See our UK AI SEO service →</a>
+        Senior engineers, transparent scoping, no annual lock-in, per-engine reporting every month.
+        Where competitors beat us: for a London boardroom presence and a large account team, Passion
+        Digital or Impression fit better.{' '}
+        <a href="/uk/ai-seo" className="text-orange-600 underline">See our AI SEO agency UK service</a>.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">2. Found: best for enterprise consumer brands</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">2. Screaming Frog: best technical evidence</h3>
       <p className="mb-4">
-        London-based Found runs a dedicated AI SEO service line under its &quot;Everysearch™&quot;
-        banner, tracking LLM performance through Luminr, its proprietary AI-visibility platform. A
-        named Chief AI Officer (Dora Moldovan) has commented on Google AI Mode&apos;s UK launch on
-        BBC radio. Clients include Puma, TOMS, and Toolstation. Pricing not published.
+        Yes, the SEO Spider company. Its{' '}
+        <a
+          href="https://www.screamingfrog.co.uk/ai-search-optimisation/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          AI Search Optimisation service
+        </a>{' '}
+        runs on its own Log File Analyser, so the AI bot analysis is evidence of what actually
+        fetched your pages. Around that sit outreach to AI-cited pages, sentiment analysis, A/B
+        testing on experiment pages, and high-buying-intent prompt tracking with GA4 AI referral
+        data. Start here if you want experiments, not promises.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">3. Blue Array: best dedicated GEO practice</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">3. The SEO Works: best multi-region UK coverage</h3>
       <p className="mb-4">
-        Reading-based, B Corp certified, organic-search only. Blue Array&apos;s generative engine
-        optimisation service covers AI word-association and sentiment analysis, citation gap
-        analysis, and reporting across OpenAI, Gemini, and Meta models, with proprietary GEO
-        frameworks. The only approved GOV.UK Digital Marketplace SEO supplier, per its site.
+        Its{' '}
+        <a
+          href="https://www.seoworks.co.uk/services/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          services menu
+        </a>{' '}
+        lists AI Search, GEO Services, AEO Services and AI SEO as four distinct lines, and the site
+        publishes an Entitymap and an Info for AI and LLMs page. That is the discipline practised in
+        public rather than described. A free website review makes the first conversation low risk.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">4. The SEO Works: best published proof</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">4. Passion Digital: best productised AI menu</h3>
       <p className="mb-4">
-        Sheffield HQ with London and Leeds offices. Its GEO/AEO service page publishes numbers most
-        agencies won&apos;t: a 2,000% increase in LLM referrals in under a year for one client, a
-        78% sales uplift attributed to AI referrals for a coffee brand, and a claim that 93% of
-        clients already appear in AI Overviews. Offers a free LLM audit, a low-risk first step.
+        The most granular AI search menu in London:{' '}
+        <a
+          href="https://passion.digital/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          five separate sub-services
+        </a>{' '}
+        covering GEO, AIO Optimisation, Deep Research, LLM Performance Tracking and Entity
+        Optimisation. Strongest when you want one piece of the work, not a whole retainer.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. Screaming Frog: best technical evidence</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. Impression: best published GEO proof</h3>
       <p className="mb-4">
-        Yes, the SEO Spider company. Its AI Search Optimisation service analyses AI bot log files
-        (training vs indexing vs live-citation crawls), tracks commercial prompts, and A/B tests
-        pages against AI-bot visits. Day-rate model. If you want experiments and evidence rather
-        than retainer promises, start here.
+        <a
+          href="https://www.impressiondigital.com/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          Generative Engine Optimisation
+        </a>{' '}
+        is sold as a named service under SEO. Its case study claims a GEO strategy securing more
+        than 47,000 clicks in a year for Tensar, a B2B manufacturing client, and it runs two
+        in-house tools, Alexis and Velocity. The named client makes it the most checkable
+        proof-of-work here.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. Varn: best productised audit</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. Rise at Seven: best for content-led AI visibility</h3>
       <p className="mb-4">
-        Wiltshire-based with a London office, Varn sells a named &quot;AI Visibility Framework&quot;:
-        a benchmark audit of where your brand is surfaced, cited or referenced across LLMs, with
-        sentiment and competitor benchmarking. A rare concrete, order-able GEO product in a market
-        of bespoke consultancy.
+        Search-first content marketing agency running{' '}
+        <a
+          href="https://riseatseven.com/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          AI Visibility and GEO
+        </a>{' '}
+        alongside digital PR and social search, plus a public category leaderboard. Best fit when
+        what blocks your AI visibility is that nobody writes about you, which is more common than a
+        technical gap.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">7. Reposition: best for published package bands</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">7. Varn: best fixed-scope audit</h3>
       <p className="mb-4">
-        London agency publishing SEO package bands (£750–£3,000/mo) directly in its site navigation,
-        transparency we respect. Entity-based SEO with AI-formatted content; case studies include
-        Hugo Boss and UK Flooring Direct.
+        Varn sells a named{' '}
+        <a
+          href="https://varn.co.uk/services/ai-search-innovation/ai-visibility-framework/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          AI Visibility Framework
+        </a>{' '}
+        in two tiers. LITE is a snapshot audit with competitor benchmarking and no long-term
+        commitment. COMPLETE adds LLM content analysis, a technical audit for AI readiness, schema
+        and entity recommendations, and a prioritised roadmap.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">8. Convert Digital: best budget entry</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">8. GA Agency: best for international brands</h3>
       <p className="mb-4">
-        Brighton-based, and the only agency on this list with full transparent pricing AND a
-        no-upcharge policy: AI SEO is &quot;a standard deliverable across all monthly SEO packages…
-        not an opportunity to upcharge.&quot; Bronze starts at £550/mo. For sole traders and small
-        UK businesses, this is the lowest-risk way to start.
+        Its{' '}
+        <a
+          href="https://ga.agency/en/services/generative-engine-optimisation/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          GEO service
+        </a>{' '}
+        pairs multilingual work across 18 languages with BuzzWatch, its own AI brand visibility
+        tracker, covering Google AI Overviews, Bing Copilot and Gemini as well as ChatGPT and
+        Perplexity. The pick if your UK site is one market of several.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">9. GA Agency: best for international brands</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">9. ClickSlice: best London acronym specialist</h3>
       <p className="mb-4">
-        Soho-based with in-house specialists across six languages. Its BuzzWatch tool monitors brand
-        mentions across ChatGPT, AI Overviews, Gemini, Copilot and Perplexity in 50+ countries and
-        20+ languages. If you sell across Europe, this is the strongest multilingual GEO offer in
-        the UK. Case studies include Expedia and Calzedonia.
+        Runs{' '}
+        <a
+          href="https://www.clickslice.co.uk/answer-engine-optimisation-aeo-services/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          Answer Engine Optimisation
+        </a>{' '}
+        and GEO as separate service pages, plus ChatGPT Ads, covering ChatGPT, Perplexity, Gemini,
+        Claude, Copilot and Grok. It states on its own site that it was the first agency ChatGPT
+        recommended for the best SEO agency in London. Treat that as self-reported: AI answers
+        change between runs, so nobody can verify it afterwards, including us.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">10. Passion Digital: best productised menu</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">10. Charle: best for Shopify and ecommerce</h3>
       <p className="mb-4">
-        Holborn-based Google Premier Partner with five distinct AI-search sub-services: AIO
-        Optimisation, Deep Research (via its DRX tool), LLM Performance Tracking, Entity
-        Optimisation, and GEO strategy. The most granular service menu in London; strongest for B2B
-        and professional services.
+        A{' '}
+        <a
+          href="https://www.charle.co.uk/"
+          className="text-orange-600 underline"
+          target="_blank"
+          rel="noopener"
+        >
+          Shopify agency
+        </a>{' '}
+        with Ecommerce AI SEO and Ecommerce GEO as named services, next to Shopify Plus builds,
+        agentic commerce and Klaviyo. Ecommerce AI visibility depends on product data and category
+        structure as much as content, so a build-capable agency has a real advantage.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">How much does AI SEO cost in UK?</h2>
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="p-3 border text-left">Tier</th>
-              <th className="p-3 border text-left">Monthly cost</th>
-              <th className="p-3 border text-left">Verified example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="p-3 border font-semibold">Budget / small business</td>
-              <td className="p-3 border">£550–£1,500</td>
-              <td className="p-3 border">Convert Digital Bronze–Silver (AI SEO included)</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border font-semibold">SMB growth</td>
-              <td className="p-3 border">£1,500–£3,000</td>
-              <td className="p-3 border">Reposition packages</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border font-semibold">Mid-market</td>
-              <td className="p-3 border">£2,500–£6,000</td>
-              <td className="p-3 border">Convert Digital Gold–Bespoke</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border font-semibold">Enterprise / day-rate</td>
-              <td className="p-3 border">Custom</td>
-              <td className="p-3 border">Screaming Frog day rates; Found, Blue Array, GA Agency on quote</td>
-            </tr>
-          </tbody>
-        </table>
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        AI SEO agencies in London: what is different about that market
+      </h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>The answer pool is crowded. An AI engine asked for a London agency has hundreds of credible candidates, so weak entity signals get filtered out first.</li>
+        <li>Agency listicles dominate the citation set, so being named on third-party lists matters more in London than anywhere else in the UK.</li>
+        <li>Local schema alone does not help. There is no map pack inside an AI answer, so a Google Business Profile is not the lever it is for a trades business.</li>
+        <li>Sector language beats geography. &quot;Fintech AI search agency&quot; is a winnable answer; &quot;London agency&quot; usually is not.</li>
+        <li>London brands often already rank well in Google, which makes AI Overview click loss more painful, not less.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        AI SEO companies outside London: where the UK ones actually are
+      </h2>
+      <p className="mb-4">
+        Searching for an AI SEO agency near you? All ten cluster into seven places, so for most of
+        the country the nearest one is not near at all.
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Manchester:</strong> Rise at Seven, plus offices for The SEO Works, Impression and Charle. The densest cluster outside London.</li>
+        <li><strong>Sheffield, Leeds and Birmingham:</strong> The SEO Works. No other agency here has a base in any of the three.</li>
+        <li><strong>Nottingham:</strong> Impression&apos;s headquarters, and the only East Midlands entry.</li>
+        <li><strong>Henley-on-Thames, Oxfordshire:</strong> Screaming Frog, the Thames Valley option for log-file work.</li>
+        <li><strong>Bath and Wiltshire:</strong> Varn, the only South West entry, and the one selling an audit rather than a retainer.</li>
+        <li><strong>Scotland and Wales:</strong> nobody here is headquartered in Glasgow, Edinburgh or Cardiff. Those businesses buy remotely.</li>
+        <li><strong>North East England and Northern Ireland:</strong> no Newcastle or Belfast base either. The North East is the largest genuine gap in UK coverage.</li>
+        <li><strong>Bristol, Liverpool, Southampton and the rest:</strong> served remotely. Local presence is not a service line any of the ten sell.</li>
+        <li><strong>Why proximity is the wrong filter.</strong> The deliverables are robots.txt rules, schema, answer-first restructuring, log-file analysis and prompt tracking. None needs someone in your building, and a monthly report tells you more than a postcode.</li>
+        <li><strong>Where we fit:</strong> FactoryJet serves the UK remotely, with city pages for{' '}
+          <a href="/uk/manchester" className="text-orange-600 underline">Manchester</a>,{' '}
+          <a href="/uk/glasgow" className="text-orange-600 underline">Glasgow</a>,{' '}
+          <a href="/uk/cardiff" className="text-orange-600 underline">Cardiff</a> and{' '}
+          <a href="/uk/brighton" className="text-orange-600 underline">Brighton</a>, and the AI
+          search scope on one national page rather than repeated per city.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">What a UK AI SEO agency actually does</h2>
+      <p className="mb-4">
+        An agency that cannot describe the work in these terms is selling classic SEO with a new
+        label.
+      </p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">Crawl access, rendering and structure</h3>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>Naming every retrieval bot explicitly in robots.txt: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended.</li>
+        <li>Never letting a retrieval bot inherit from a wildcard rule. One wrong line removes you from a whole platform, silently.</li>
+        <li>Server-rendering anything load-bearing, because AI crawlers do not run JavaScript, and keeping redirects to a single 301 or 308 hop.</li>
+        <li>One H1 per page, strict H1 to H2 to H3 descent, and an answer-first block that answers the page question in 40 to 65 self-contained words.</li>
+        <li>Lists over prose. A list item is a self-contained retrievable unit, which is why cited pages carry far more of them.</li>
+      </ul>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">Schema, entities and measurement</h3>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>FAQPage JSON-LD generated from the same array the page renders, never hand-written twice. Schema that disagrees with the visible page is a trust problem.</li>
+        <li>Organization schema with sameAs pointing at real profiles, BreadcrumbList on nested pages, Person schema for a named author, and an honest dateModified.</li>
+        <li>Entity clarity: consistent naming, a Knowledge Graph or Wikidata presence where warranted, and disambiguation from similarly named companies.</li>
+        <li>A fixed prompt set per client, tracked per engine, baselined before any work starts.</li>
+        <li>GA4 referral segmentation for chatgpt.com, perplexity.ai, claude.ai and gemini.google.com, plus server log analysis to confirm retrieval bots are fetching the pages you changed.</li>
+      </ul>
+
+      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
+        <p className="font-semibold text-orange-900 mb-2">
+          Before you talk to any agency on this list
+        </p>
+        <p className="text-orange-800 mb-3">
+          Get your own baseline first. Two minutes, and it changes every conversation afterwards.
+        </p>
+        <a
+          href="/ai-visibility-checker"
+          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
+        >
+          Check your AI visibility free
+        </a>
       </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        How UK AI SEO agencies charge, and how to compare quotes
+      </h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Monthly retainer.</strong> The default. Ask what is in month one versus month six, because front-loaded audits flatter the first invoice.</li>
+        <li><strong>Fixed-scope audit.</strong> Varn sells this shape openly. Good for sizing the gap before committing.</li>
+        <li><strong>Day rate.</strong> Screaming Frog works this way. Suits experiment-led programmes where scope cannot be fixed up front.</li>
+        <li><strong>Bundled into SEO.</strong> Several UK agencies fold GEO into normal SEO. That is the honest structure, because it is one workflow.</li>
+        <li><strong>Sold as a separate line.</strong> If GEO is quoted on top of AI SEO, ask what work exists in one and not the other. Usually the answer is none.</li>
+        <li><strong>Notice period.</strong> The most underrated term in the contract. AI search changes quarterly, so short notice is worth more than a small discount.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">
+        Twelve questions to ask a UK AI SEO agency before you sign
+      </h2>
+      <ol className="list-decimal pl-6 mb-6 space-y-2">
+        <li>Can I see a sample monthly report with citation counts broken out per engine?</li>
+        <li>Which engines do you track, and which do you not track?</li>
+        <li>Who writes the schema, and will they talk to my developers directly?</li>
+        <li>How do you take a baseline before the work starts?</li>
+        <li>What is your prompt set, and how did you choose it?</li>
+        <li>Do you check my robots.txt against the current bot names, and how often?</li>
+        <li>What happens if my site is client-rendered?</li>
+        <li>Is GEO included in the retainer or billed on top?</li>
+        <li>Who executes: the person in this room, or a team I have not met?</li>
+        <li>What is the notice period, and what do I keep if I leave?</li>
+        <li>What have you changed in your own approach in the last six months?</li>
+        <li>What would make you tell me not to buy this?</li>
+      </ol>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Red flags in a UK AI SEO pitch</h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>A guaranteed position in ChatGPT or Perplexity. Answers are re-generated per query, so nobody can guarantee one.</li>
+        <li>A proprietary &quot;AI ranking factor&quot; nobody else knows about.{' '}
+          <a
+            href="https://developers.google.com/search/docs/appearance/ai-features"
+            className="text-orange-600 underline"
+            target="_blank"
+            rel="noopener"
+          >
+            Google&apos;s own documentation
+          </a>{' '}
+          says there are no additional requirements or special optimisations for AI Overviews and AI Mode.</li>
+        <li>Reporting that shows only keyword positions behind an AI-themed cover page.</li>
+        <li>Selling llms.txt as a technical necessity. The same Google page says you do not need new machine-readable or AI text files, and there is no evidence it is a citation lever.</li>
+        <li>Charging separately for GEO, AEO and AI SEO when the deliverables are identical.</li>
+        <li>Case study numbers with no client, no date and no way to check them.</li>
+        <li>Automated link building or directory blasts sold as AI citation building. That is a link scheme, and the risk lands on your domain.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Methodology, and what we excluded</h2>
       <p className="mb-4">
-        One-time audits: FactoryJet scopes its{' '}
+        We verified every agency by fetching its own website on 6 August 2026 and reading the
+        service pages, capabilities and office details. Nothing here comes from a directory, a review
+        aggregator or another listicle. FactoryJet&apos;s position is disclosed self-placement. No
+        agency paid to appear. Agencies on other UK lists but not on ours:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Blue Array</strong> and <strong>Distinctly</strong>: their sites blocked automated verification on 6 August 2026, so we could not confirm any claim first hand. Not a judgement on either agency, just a rule applied evenly.</li>
+        <li><strong>Found</strong>: on 6 August 2026 the sitemap at wearefound.com listed a single landing page, so we could not verify a live AI SEO service line.</li>
+        <li><strong>Convert Digital</strong>: no AI SEO or GEO service page found on convert-digital.co.uk on 6 August 2026.</li>
+        <li><strong>Reposition</strong>: no AI search, GEO or AEO line in its services menu on 6 August 2026.</li>
+        <li><strong>HikeMyTraffic</strong>: ranks for UK queries but is based in Noida, India, so it fails the UK-only rule. It appears on our India list instead.</li>
+        <li><strong>Builtvisible</strong>: no longer operating independently, and no current dedicated AI SEO service page.</li>
+      </ul>
+      <p className="mb-4">
+        Sources: Ofcom Online Nation 2025 (pages 30 to 32); agency service pages fetched 6 August
+        2026. If we cannot open the source, the number does not go on the page. Related reading:{' '}
+        <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
+          is GEO replacing SEO
+        </a>
+        ,{' '}
+        <a href="/blog/best-geo-ai-visibility-tools-2026" className="text-orange-600 underline">
+          the best GEO and AI visibility tools
+        </a>
+        , and our{' '}
         <a href="/uk/seo-audit" className="text-orange-600 underline">
           UK SEO and AI visibility audit
-        </a>{' '}
-        per client rather than publishing a flat fee; The SEO Works offers a free entry-level LLM
-        audit; Varn&apos;s AI Visibility Framework is quoted on request. And on generative engine
-        optimization cost in UK specifically: GEO is not a separate product; it should live inside
-        the retainer, not on top of it.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">How to choose between them</h2>
-      <p className="mb-4">
-        Three filters separate real AI SEO capability from rebadged classic SEO, and all three
-        assume you already understand{' '}
-        <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
-          why GEO builds on SEO rather than replacing it
         </a>
-        . First,{' '}
-        <strong>per-engine reporting</strong>: ask for a sample monthly report with citation counts
-        for ChatGPT, Perplexity, Claude, and Gemini separately. Most agencies track only Google AI
-        Overviews. Second, <strong>who does the work</strong>: AI SEO is engineering-heavy (schema,
-        llms.txt, log-file analysis); if a strategist presents and a mystery team executes, quality
-        varies. Third, <strong>contract terms</strong>: AI search changes quarterly, so
-        month-to-month or short-notice terms keep your agency honest.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Methodology</h2>
-      <p className="mb-4">
-        We verified every agency on its own website on 06/11/2026: service pages, published pricing,
-        office addresses, and at least one differentiator each that can be checked at the source. We
-        excluded agencies that rank in UK listicles but aren&apos;t UK-based (HikeMyTraffic, Noida,
-        India) or no longer operate independently (Builtvisible, acquired by Brave Bison, March
-        2025, no current dedicated AI SEO service page). FactoryJet&apos;s inclusion and position
-        are disclosed self-placement, the same practice used by at least six of the ten current
-        page-one results for this query. No agency paid to appear.
-      </p>
-      <p className="mb-4">
-        Sources: Ofcom Online Nation 2025; Ofcom &quot;From apps to AI search&quot; (2025); Deloitte
-        Digital Consumer Trends 2025 (UK); agency service pages verified 06/11/2026.
+        .
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
@@ -430,7 +645,7 @@ export const post: BlogPost = {
         </p>
         <p className="text-orange-800 mb-3">
           Bhavesh runs every discovery call himself. Start with a 30-minute call or a full AI
-          visibility audit: you&apos;ll know your citation gaps within a week.
+          visibility audit.
         </p>
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"

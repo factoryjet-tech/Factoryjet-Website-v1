@@ -87,7 +87,8 @@ const nextConfig = {
   ...(process.env.NODE_ENV !== 'production' && {
     redirects: async () => [
       // Cannibalization consolidation (2026-07-25) — prod layer is /public/_redirects
-      { source: '/services/generative-engine-optimization', destination: '/services/ai-seo',    permanent: true },
+      // generative-engine-optimization redirect REMOVED 2026-08-06: the page was
+      // rebuilt in full. GEO/AEO measured as a distinct ~1,900/mo US market at KD 0-6.
       { source: '/services/ai-agency',                       destination: '/services/ai-agents', permanent: true },
       { source: '/services/whatsapp-chatbot',                destination: '/services/ai-chatbot-development', permanent: true },
       // UK sitemap legacy URLs

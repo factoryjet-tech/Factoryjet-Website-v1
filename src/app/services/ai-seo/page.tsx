@@ -25,10 +25,44 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
    Build:     Custom 4-card pricing grid inline (PricingTiers is 3-tuple-strict).
               Custom 3-stat row inline (BigThreeTrustBlock content is hardcoded).
               IndustriesGrid is self-contained (no props), generic enough to reuse.
-              FAQ block: 27 FAQs across 5 categories.
+              FAQ block: 23 FAQs across 6 categories.
               Closing CTA: TalkToFounder (full + dark).
-   Schema:    WebPage + BreadcrumbList + Service + FAQPage + Organization JSON-LD.
+   Schema:    WebPage + BreadcrumbList + Service + FAQPage + ItemList + Organization JSON-LD.
+              Every schema const declared below is rendered into a script tag. Do not add
+              one without wiring it up, and do not emit the same schema twice.
    Hreflang:  aiSeoAlternates (bilingual cluster - see src/data/hreflangMap.ts).
+
+   2026-08-06 deepening pass. Targets "ai seo agency" and "ai seo services", both KD 0-2,
+   both sitting at position 8-14 on 20,300 impressions and 50 clicks in 90 days.
+     - Answer-first block under the hero rewritten so "what is AI SEO" and "what does an
+       AI SEO agency do" both resolve inside the first two sentences.
+     - New AiSeoChanges section: 36 named-capability list items using real crawler,
+       schema.org and tooling names. List density is the one rulebook rule the site
+       measurably fails (73 li against a 110 benchmark).
+     - Three ChatGPT answers corrected. They named GPTBot as the citation lever, but
+       OpenAI documents GPTBot as training-only and OAI-SearchBot as the search gate.
+     - FAQ consolidated 52 -> 23 to pay for the additions and pull the page back under
+       the depth ceiling in docs/AI-SEO-RULEBOOK.md rule 8. Merges, not deletions,
+       except for the DIY and tool-shopping questions, which are blog intent.
+     - Duplicate webPageSchema script tag removed. Person author added.
+
+   2026-08-06 verification pass (same day). The deepening pass left the page at roughly
+   5,670 rendered words, over the hard 5,000 ceiling in rule 8. Fixed by trimming prose
+   across sections rather than deleting any section: 2 competitor cards dropped from
+   COMPETITORS (SEO.co and Yes Optimist, neither an AI-search competitor), 5 near-duplicate
+   FAQs merged or removed, and roughly 400 words of padding cut from the journey, pillars,
+   stats, comparison and GEO/AEO blocks. Projected rendered main ~4,890.
+   Also corrected here:
+     - "Most retainers run 18+ months voluntarily" removed from StatsRow. Unverifiable
+       client-tenure claim, and the FAQ version of it had already been cut.
+     - "Coalition Technologies ... somewhere near 2,800 referring domains" removed. Third
+       party metric we never verified.
+     - Case-study block no longer promises a specific quarter that has already arrived.
+     - Pricing footnote said "Milestone-paid. No required retainers." on a page selling
+       three retainers. Corrected to month-to-month.
+     - One en dash in PILLARS removed (house rule is no em or en dashes in copy).
+     - GEO/AEO h2 no longer exact-matches the head term of the sibling page at
+       /services/generative-engine-optimization. That page owns it; this one links to it.
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -36,15 +70,15 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI SEO Agency in the USA: AI SEO Services, GEO + AEO',
+  title: 'AI SEO Agency in the USA: AI SEO Services and AI Search Visibility',
   description:
-    'AI SEO agency for US businesses. FactoryJet is the AI SEO company behind AI SEO services, generative engine optimization and answer engine optimization, all on one month-to-month retainer.',
+    'AI SEO agency for US businesses. FactoryJet is the AI SEO company behind AI SEO services that get you cited by ChatGPT, Perplexity, Claude and Google AI Overviews, on one month-to-month retainer.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI SEO Agency in the USA: AI SEO Services, GEO + AEO',
+    title: 'AI SEO Agency in the USA: AI SEO Services and AI Search Visibility',
     description:
-      'AI SEO agency for US businesses. FactoryJet is the AI SEO company behind AI SEO services, generative engine optimization and answer engine optimization, all on one month-to-month retainer.',
+      'AI SEO agency for US businesses. FactoryJet is the AI SEO company behind AI SEO services that get you cited by ChatGPT, Perplexity, Claude and Google AI Overviews, on one month-to-month retainer.',
     url: 'https://factoryjet.com/services/ai-seo',
     images: [
       {
@@ -58,9 +92,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI SEO Agency in the USA: AI SEO Services, GEO + AEO',
+    title: 'AI SEO Agency in the USA: AI SEO Services and AI Search Visibility',
     description:
-      'AI SEO agency for US businesses. AI SEO services, generative engine optimization and answer engine optimization on one retainer. Get cited by ChatGPT, Perplexity and Google AI Overviews.',
+      'AI SEO agency for US businesses. AI SEO services on one retainer, built so ChatGPT, Perplexity, Claude and Google AI Overviews cite you by name.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -88,17 +122,17 @@ const PILLARS = [
   {
     title: 'Blue-link optimization ignores the answer layer',
     body:
-      'Traditional SEO chases keyword rankings on the search results page. AI engines extract structured answers and cite the most credible source. If your content is keyword-rich but not structured for direct extraction, AI engines will not cite you, even if you rank #1 on Google.',
+      'Traditional SEO chases keyword rankings. AI engines extract a structured answer and cite the most credible source. Keyword-rich content that is not structured for extraction does not get cited, even at position one.',
   },
   {
     title: 'Citations need schema, not just authority',
     body:
-      'Google AI Overviews and Perplexity prioritize schema-rich answers with clear question–answer pairs. Old-school SEO buries answers in long-form prose; modern AI SEO surfaces them in FAQPage, HowTo, and Article schemas that machines can extract verbatim.',
+      'Google AI Overviews and Perplexity favour schema-rich answers with clear question and answer pairs. Old-school SEO buries the answer in long prose. Modern AI SEO surfaces it in FAQPage, HowTo and Article markup a machine can lift verbatim.',
   },
   {
     title: 'Multi-engine coverage is a different competence',
     body:
-      'Each AI engine has its own retrieval mechanics. ChatGPT indexes via web search; Perplexity ranks by source credibility; Claude blends curated training with live fetch. Optimizing for one does not optimize for all, and most SEO agencies only optimize for Google.',
+      'Each engine has its own retrieval mechanics. ChatGPT leans on web search, Perplexity ranks by source credibility, Claude blends training with live fetch. Optimising for one does not optimise for all.',
   },
 ];
 
@@ -107,31 +141,31 @@ const AI_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '01',
     title: 'Audit',
     description:
-      'We map every AI citation you have today, the gaps competitors fill, and the schema / content fixes that close them. Output: a GEO/AEO scorecard plus a 90-day roadmap.',
+      'We map every AI citation you hold today, the gaps competitors fill, and the fixes that close them. Output: a GEO and AEO scorecard plus a 90-day roadmap.',
   },
   {
     number: '02',
     title: 'Architecture',
     description:
-      'We restructure your site\'s schema, FAQ blocks, HowTo snippets, and content hierarchy so AI engines can extract answers verbatim. No content rewrite, just structural surgery.',
+      'We restructure schema, FAQ blocks, HowTo snippets and content hierarchy so engines can extract answers verbatim. Structural surgery, not a content rewrite.',
   },
   {
     number: '03',
     title: 'Content',
     description:
-      'We produce 4–8 AI-citable articles per month, written to answer the queries your buyers ask AI assistants. Real authorship signals. Real expert depth. Not LLM-spammed boilerplate.',
+      'Four to eight AI-citable articles a month, written to answer what your buyers ask AI assistants. Real authorship, real depth, no LLM boilerplate.',
   },
   {
     number: '04',
     title: 'Distribution',
     description:
-      'We acquire third-party citations from sources AI engines trust: industry publications, podcasts, expert directories, structured data partnerships. Citations beget citations.',
+      'Third-party citations from sources the engines already trust: publications, podcasts, expert directories, data partnerships. Citations beget citations.',
   },
   {
     number: '05',
     title: 'Measure',
     description:
-      'Monthly: AI-citation count per engine, Google rank changes, revenue attribution. You see what is moving and what is not. We adjust scope monthly. No annual lock-in.',
+      'Monthly: citation count per engine, Google rank changes, revenue attribution. Scope is adjusted monthly. No annual lock-in.',
   },
 ];
 
@@ -203,8 +237,176 @@ const PRICING_TIERS = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data - 21 across 5 categories
+   FAQ data - 23 buyer questions across 6 categories.
+
+   Consolidated 2026-08-06 from 52, then trimmed again in the same-day verification pass.
+   The old set had genuine overlap (four separate
+   entries answered "GEO vs SEO", three answered "how do I show up in ChatGPT")
+   and it pushed the page to roughly 7,000 rendered words, well past the depth
+   ceiling in docs/AI-SEO-RULEBOOK.md rule 8. Near-duplicates were merged rather
+   than deleted, and the DIY/tool-shopping questions were dropped because they are
+   blog intent, not agency-buying intent.
+
+   Two entries were added: the robots.txt crawler question and the LLM SEO
+   question. Three ChatGPT answers were corrected: they told readers to unblock
+   GPTBot, but OpenAI documents GPTBot as training-only and OAI-SearchBot as the
+   crawler that actually gates ChatGPT search answers.
+
+   FAQPage JSON-LD is generated by mapping over this array. There is no second
+   hand-written copy anywhere in this file. Keep it that way.
 ───────────────────────────────────────────────────────────────────────────── */
+
+const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
+  // ── A. What AI SEO is (5) ──────────────────────────────────────────────
+  {
+    category: 'what',
+    question: 'What is AI SEO?',
+    answer:
+      'AI SEO is the practice of optimizing a website so AI engines cite it as a source when they answer a question. It overlaps with traditional SEO, you still need clean structure, fast pages and real authority, then adds three things on top: retrieval-crawler access, schema-rich answer formatting, and third-party citations the engines read as credibility.',
+  },
+  {
+    category: 'what',
+    question: 'What is the difference between GEO, AEO, LLM SEO and AI SEO?',
+    answer:
+      'Mostly the label. GEO, generative engine optimization, leans toward engines that write answers: ChatGPT, Perplexity, Claude and Gemini. AEO, answer engine optimization, leans toward direct answers including Google AI Overviews and featured snippets. LLM SEO and AI search optimization are the same job again. Buy the work, not the acronym. One retainer covers all of it.',
+  },
+  {
+    category: 'what',
+    question: 'How does AI SEO differ from traditional SEO, and do I lose my Google rankings?',
+    answer:
+      'Traditional SEO optimizes for position in a list of links. AI SEO optimizes for being quoted inside a generated answer. You do not trade one for the other. Most of the work that earns a citation, schema, structure, expert content and third-party mentions, also improves Google position, so every monthly report carries both numbers.',
+  },
+  {
+    category: 'what',
+    question: 'What does answer engine optimization do?',
+    answer:
+      'It makes one specific answer on your page liftable. An answer engine wants roughly 40 to 60 words that resolve the question, near the top of a clearly labelled section, backed by schema. AEO is the formatting half of AI SEO, and sold alone it fails, because it builds no authority.',
+  },
+  {
+    category: 'what',
+    question: 'How do I pick an AI SEO agency?',
+    answer:
+      'Three checks, and they filter fast. One: does the agency track citations across ChatGPT, Perplexity, Claude and Gemini, or only Google AI Overviews? Most track only Google. Two: does a senior practitioner run your account, or an account manager relaying to an unnamed team? Three: will they put a per-engine citation count in writing every month?',
+  },
+
+  // ── B. AI engines (5) ──────────────────────────────────────────────────
+  {
+    category: 'engines',
+    question: 'Which AI engines do you optimize for?',
+    answer:
+      'All four major generative engines, ChatGPT, Perplexity, Claude and Gemini, plus Google AI Overviews. We track citation frequency in each one monthly. Most competitors focus on AI Overviews because it reuses their existing Google playbook. We treat ChatGPT and Perplexity as first-class targets, because that is where mid-market US buyers increasingly start their research.',
+  },
+  {
+    category: 'engines',
+    question: 'Which AI crawlers do I need to allow in robots.txt?',
+    answer:
+      'Name each one rather than relying on a wildcard. The retrieval crawlers that decide citation are OAI-SearchBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User and Googlebot. GPTBot and ClaudeBot are training crawlers, so blocking them is a rights decision rather than a visibility one. Google-Extended and Applebot-Extended control training and grounding separately. OpenAI says a robots.txt change takes roughly 24 hours to register.',
+  },
+  {
+    category: 'engines',
+    question: 'How do I rank in ChatGPT answers, and how does ChatGPT decide what to cite?',
+    answer:
+      'Four things, in order. Allow OAI-SearchBot, because OpenAI states that sites opted out of it will not be shown in ChatGPT search answers. Put a direct answer in the first 40 to 60 words under each heading so it can be lifted whole. Get into the ordinary web results ChatGPT searches behind the scenes. Then earn mentions on sites it already treats as reliable. Heavy client-side JavaScript hurts you more here than on Google.',
+  },
+  {
+    category: 'engines',
+    question: 'Is Perplexity worth optimizing for?',
+    answer:
+      'Yes, especially for B2B and research-heavy buying journeys. Perplexity shows its sources in every answer, which makes it the easiest engine to measure yourself against. People using it are usually deep in research and close to a decision, so cited traffic tends to convert better than typical blue-link traffic.',
+  },
+  {
+    category: 'engines',
+    question: 'How do I show up in Google AI Overviews, and why am I not getting one?',
+    answer:
+      'Two different problems. Showing up means answer-first formatting, schema, and enough authority that Google is comfortable quoting you. Seeing no Overview at all usually means Google judged the query too ambiguous, commercial or sensitive. Overviews also appear and vanish week to week, so judge it over a month, never a day.',
+  },
+
+  // ── C. Methodology (6) ─────────────────────────────────────────────────
+  {
+    category: 'method',
+    question: 'What is included in the AI visibility audit?',
+    answer:
+      'Four parts. A GEO and AEO scan of how many citations you hold today across ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. A competitive gap report showing where rivals get cited and you do not. A schema and crawl-access assessment listing what is missing or broken. And a 90-day roadmap in priority order, plus a strategy call with Bhavesh.',
+  },
+  {
+    category: 'method',
+    question: 'What schema do you add to my site?',
+    answer:
+      'At minimum: Organization with a sameAs list that genuinely resolves, WebPage with an honest dateModified, BreadcrumbList, Article with a named Person author, and FAQPage. HowTo where the topic is a real procedure. For stores, Product, Offer and AggregateRating. For services, Service. All in JSON-LD, all checked in Rich Results Test and the Schema Markup Validator before it deploys.',
+  },
+  {
+    category: 'method',
+    question: 'How do you produce AI-citable content?',
+    answer:
+      'Each article is briefed by a senior strategist, written by someone with verifiable expertise, edited for answer-extractability, and marked up with FAQPage, HowTo or Article schema. We do not ship LLM-generated boilerplate. Generic model output is exactly the thing that does not get quoted, and the engines are getting better at spotting it.',
+  },
+  {
+    category: 'method',
+    question: 'How do you acquire third-party citations, and do you do link building?',
+    answer:
+      'We pitch your named experts to industry publications, podcasts, expert directories and data partnerships that AI engines already crawl. It overlaps with link building, but the deliverable is a named mention and source attribution rather than anchor text. No bulk guest posts, no PBNs, nothing that trips Google spam policies.',
+  },
+  {
+    category: 'method',
+    question: 'What moves AI search visibility fastest?',
+    answer:
+      'Three levers, in this order. Unblock the retrieval crawlers. Add a clean answer block plus FAQPage schema to your top ten commercial pages. Get named on two or three third-party sites the engines already retrieve. That is weeks of work, not quarters. Everything after it is the slow compounding part, and there is no shortcut through that half.',
+  },
+  {
+    category: 'method',
+    question: 'Do you offer LLM SEO services, and is that the same as AI SEO?',
+    answer:
+      'Same work, different label. LLM SEO services means getting large language models to name your business in an answer, which is what our AI SEO services do. If a shop quotes AI SEO and LLM SEO as two separate line items, ask what sits in the second that is not already in the first. In our experience, nothing.',
+  },
+
+  // ── D. Measurement (2) ─────────────────────────────────────────────────
+  {
+    category: 'measure',
+    question: 'How do you track AI citations?',
+    answer:
+      'We run scripted prompt sets across ChatGPT, Perplexity, Claude and Gemini for your target queries and log every citation we see. We also track Google AI Overview appearances and classic rank positions. The same prompt set runs on the same cadence, so month-to-month movement means something instead of reflecting a reworded question.',
+  },
+  {
+    category: 'measure',
+    question: 'What do I actually get in the monthly report?',
+    answer:
+      'Citation count per engine and query coverage against named competitors. Google rank changes, AI Overview appearances, impressions and clicks pulled from Search Console. Organic and AI-referral sessions with conversions where tracking is wired in. Each number ties back to a line on the 90-day roadmap, so you can see plan against actual.',
+  },
+
+  // ── E. Pricing & engagement (3) ────────────────────────────────────────
+  {
+    category: 'pricing',
+    question: 'Why no annual contracts, and what happens if I cancel?',
+    answer:
+      'AI search shifts every quarter, so locking you into twelve months on a playbook that may need to change at month four is not how we want to work. You give one billing-cycle notice. We finish the current month, hand over all in-flight work, and transfer schema and content assets to your team. Everything we built is yours from day one.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can I start with just the audit?',
+    answer:
+      'Yes. The AI visibility audit is a complete deliverable, and many clients use it as a one-time strategic input and implement the roadmap with their own team. If you continue into a retainer within 30 days, the audit fee is credited against your first month. Either way, you own all audit deliverables outright.',
+  },
+  {
+    category: 'pricing',
+    question: 'How is AI SEO priced in the US?',
+    answer:
+      'Almost nobody publishes a rate, and a rate without scope tells you nothing. What drives the number: how many pages need structural work, how competitive your money queries are, how many engines you want tracked, whether content is produced or only restructured, and whether citation work is in scope. All of that gets scoped on a call.',
+  },
+
+  // ── F. Agencies and scope (2) ──────────────────────────────────────────
+  {
+    category: 'compare',
+    question: 'Why would I pick FactoryJet over a bigger AI SEO company?',
+    answer:
+      'Sometimes you should not, and it is fairer to say so. We have 53 referring domains. Established competitors on these results pages have thousands. If the safest logo on the invoice is your criterion, hire the incumbent. We win on delivery shape: the founder runs the account, you get per-engine citation counts instead of a rankings PDF, and terms are month to month.',
+  },
+  {
+    category: 'compare',
+    question: 'Is there a difference between generative engine optimization services and AI SEO services?',
+    answer:
+      'Not in practice. Generative engine optimization services describe the same work as AI SEO services, with a narrower emphasis on engines that write answers. If a generative engine optimization company quotes you one number for AI SEO and a second for GEO, ask what sits in the second line item that is not already in the first. Usually the honest answer is nothing.',
+  },
+];
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'what', label: 'What is AI SEO' },
@@ -213,344 +415,6 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'measure', label: 'Measurement' },
   { key: 'pricing', label: 'Pricing & engagement' },
   { key: 'compare', label: 'Agencies & tools' },
-];
-
-const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  // ── A. What is AI SEO (5) ──────────────────────────────────────────────
-  {
-    category: 'what',
-    question: 'What is AI SEO?',
-    answer:
-      'AI SEO is the practice of optimizing a website so that AI engines (ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews) cite it as a source when answering user questions. It overlaps with traditional SEO (you still need clean structure, fast load times, and authority signals) but adds new requirements: schema-rich answer formatting, structured FAQ and HowTo blocks, and third-party citation acquisition that AI engines treat as credibility signals.',
-  },
-  {
-    category: 'what',
-    question: 'GEO vs AEO: what is the difference?',
-    answer:
-      'GEO stands for generative engine optimization, which means optimizing for AI engines that generate answers (ChatGPT, Perplexity, Claude, Gemini). AEO stands for answer engine optimization, which means optimizing for any engine that returns a direct answer instead of a list of links, including Google AI Overviews and traditional featured snippets. In practice the two overlap heavily, and our retainers cover both. Most agencies pick one buzzword; the underlying work is largely the same.',
-  },
-  {
-    category: 'what',
-    question: 'Why does AI SEO matter in 2026?',
-    answer:
-      'A meaningful and growing share of US search traffic in 2026 happens inside AI assistants rather than starting on Google. Even searches that do start on Google increasingly end with an AI Overview answer above the blue links. If your site is not engineered to be cited by the AI layer, you lose traffic that no traditional SEO audit will surface, and that traffic gap compounds month over month as more search shifts away from blue links.',
-  },
-  {
-    category: 'what',
-    question: 'How does AI SEO differ from traditional SEO?',
-    answer:
-      'Traditional SEO optimizes for ranking position in Google\'s blue-link results. AI SEO optimizes for citation inside AI-generated answers. The mechanics differ: AI engines extract structured answers, weight source credibility heavily, and treat third-party citations as authority signals. Keyword density and backlink volume, the staples of old-school SEO, matter less. Schema, structured Q&A, and verifiable expertise matter more.',
-  },
-  {
-    category: 'what',
-    question: 'Do I need to give up on Google rankings?',
-    answer:
-      'No. Google rankings still drive a large share of organic traffic and revenue, especially for transactional queries. AI SEO is additive: most of the work that earns AI citations (schema, structure, expert content, third-party citations) also improves Google rankings. Every retainer reports both AI-citation metrics and Google rank changes so you see both signals moving.',
-  },
-
-  // ── B. AI engines (4) ──────────────────────────────────────────────────
-  {
-    category: 'engines',
-    question: 'Which AI engines do you optimize for?',
-    answer:
-      'All four major generative engines (ChatGPT, Perplexity, Claude, and Gemini) plus Google AI Overviews. We track citation frequency in each engine monthly. Most competitors focus on Google AI Overviews because it overlaps with their existing SEO playbook; we treat ChatGPT and Perplexity as first-class targets because that is where younger and mid-market US buyers increasingly start their research.',
-  },
-  {
-    category: 'engines',
-    question: 'How does ChatGPT decide what to cite?',
-    answer:
-      'ChatGPT primarily uses Bing-style web search for live information, augmented by its training data for general knowledge. To be cited, a page needs to (a) be crawlable by GPTBot, (b) have clear question–answer structure or schema, (c) appear in the top web-search results for the query, and (d) carry credibility signals like authorship, freshness, and third-party citations. We optimize for all four.',
-  },
-  {
-    category: 'engines',
-    question: 'Is Perplexity worth optimizing for?',
-    answer:
-      'Yes, especially for B2B and research-heavy buyer journeys. Perplexity emphasizes source citation prominently in every answer and skews toward credibility-weighted ranking. A well-cited page on Perplexity drives high-intent referral traffic at conversion rates often above Google blue-link traffic. Mid-market buyers in tech, finance, and professional services are particularly active there.',
-  },
-  {
-    category: 'engines',
-    question: 'What about Google AI Overviews?',
-    answer:
-      'Google AI Overviews matter because they sit above the blue links and increasingly absorb the click that would have gone to position 1 through 3. We optimize for AI Overview inclusion the same way we optimize for traditional featured snippets, using clear answer formatting, schema markup and authority signals, and we report AI Overview appearances monthly alongside traditional rank tracking.',
-  },
-
-  // ── C. Methodology (5) ─────────────────────────────────────────────────
-  {
-    category: 'method',
-    question: 'What is included in the AI visibility audit?',
-    answer:
-      'The audit covers: (1) a full GEO/AEO scan, meaning how many citations your site has across ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews today, (2) a competitive citation gap report showing which competitors are being cited where you are not, (3) a schema and structural assessment listing what is missing or broken, and (4) a 90-day roadmap with prioritized fixes. Deliverable: a written report plus a strategy call with Bhavesh.',
-  },
-  {
-    category: 'method',
-    question: 'How do you produce AI-citable content?',
-    answer:
-      'Each article is briefed by a senior strategist, written by a subject-matter expert with verifiable credentials, edited for clarity and answer-extractability, and structured with the schema AI engines extract verbatim (FAQPage, HowTo, Article). We do not use LLM-generated boilerplate. AI engines actively demote LLM-spammed content; expert-authored, structurally clean content is the only durable path.',
-  },
-  {
-    category: 'method',
-    question: 'What schema do you add to my site?',
-    answer:
-      'At minimum: Organization, WebPage, BreadcrumbList, Article, FAQPage, and HowTo where applicable. For e-commerce sites we add Product, AggregateRating, and Offer. For service businesses we add Service and AggregateRating. Schema is implemented in JSON-LD (the format Google and Perplexity prefer) and validated against schema.org and the Google Rich Results Test before deployment.',
-  },
-  {
-    category: 'method',
-    question: 'How do you acquire third-party citations?',
-    answer:
-      'We pitch your subject-matter experts as named sources to industry publications, podcasts, expert directories, and structured data partnerships that AI engines crawl. This is not link building in the old sense. We are after named citations and source attribution, not anchor-text backlinks. Citations from credible third parties compound the credibility signal that AI engines weight heavily.',
-  },
-  {
-    category: 'method',
-    question: 'Do you do link building?',
-    answer:
-      'We do citation acquisition, which overlaps with link building but is not the same. The deliverable is named third-party mentions of your experts and products, in publications, podcasts and directories, that AI engines treat as credibility signals. We do not do bulk guest-post placements, PBN links, or any tactic that violates Google\'s spam guidelines. Quality over volume, every time.',
-  },
-
-  // ── D. Measurement (3) ─────────────────────────────────────────────────
-  {
-    category: 'measure',
-    question: 'How do you track AI citations?',
-    answer:
-      'We run scripted prompts across ChatGPT, Perplexity, Claude, and Gemini for your target queries and log every citation we see. We also track Google AI Overview appearances and traditional rank positions. Results go into a monthly report you can read in five minutes: citation count per engine, query coverage, and changes vs the prior month.',
-  },
-  {
-    category: 'measure',
-    question: 'What metrics do I get monthly?',
-    answer:
-      'Three categories: (1) AI citation metrics, meaning count per engine, query coverage and share of voice against competitors, (2) Google metrics, meaning rank changes, AI Overview appearances, impressions and clicks, and (3) business attribution, meaning organic sessions, AI-referral sessions, conversions, and revenue where tracking is wired in. Every metric ties back to the 90-day roadmap so you see progress against plan.',
-  },
-  {
-    category: 'measure',
-    question: 'What does success look like in 90 days?',
-    answer:
-      'A typical 90-day Growth retainer outcome: 30–60% increase in AI citation count across the four major engines, 10–20 new Google AI Overview appearances on target queries, schema deployed across 80%+ of relevant pages, and 4–12 net-new AI-citable articles shipped. The audit roadmap is sequenced so the highest-impact fixes ship in the first 30 days.',
-  },
-
-  // ── E. Pricing & engagement (4) ────────────────────────────────────────
-  {
-    category: 'pricing',
-    question: 'Why no annual contracts?',
-    answer:
-      'AI search is evolving every quarter. Locking clients into 12-month contracts on a playbook that may need to change at month 4 is not how we want to work. Month-to-month forces us to keep proving value. If we are not moving citations, you should be able to leave. Most of our retainers run 18+ months voluntarily, and that is the bar we set for ourselves.',
-  },
-  {
-    category: 'pricing',
-    question: 'What if my needs grow mid-retainer?',
-    answer:
-      'You can move tiers anytime with one billing-period notice. Most clients start on Growth, see citation momentum at month 3 or 4, and step up to Scale. A few skip to Scale or Enterprise after the audit reveals a larger gap than expected. Tier changes never trigger setup fees or onboarding charges, because the underlying engagement is continuous.',
-  },
-  {
-    category: 'pricing',
-    question: 'Can I start with just the audit?',
-    answer:
-      'Yes. The AI visibility audit is a complete deliverable. Many clients use it as a one-time strategic input, implement the roadmap with their own team, and return for retainer support later. If you do continue into a retainer within 30 days, the audit fee is credited against your first month. Either way, you own all audit deliverables outright.',
-  },
-  {
-    category: 'pricing',
-    question: 'What happens if I cancel?',
-    answer:
-      'You give one billing-cycle notice. We finish the current month, hand over all in-flight work, transfer schema and content assets to your team, and provide a wind-down briefing. Everything we built is yours from day one: no IP transfer fees, no withholding of credentials. The relationship ends cleanly so the door stays open for re-engagement later.',
-  },
-
-  // ── F. Choosing an agency (6) - money-query coverage, added 2026-06-11 ──
-  {
-    category: 'what',
-    question: 'How do I pick an AI SEO agency?',
-    answer:
-      'Three checks, and they filter fast. One: does the agency track citations across ChatGPT, Perplexity, Claude and Gemini, or only Google AI Overviews? Most track only Google. Two: does a senior practitioner run your account, or an account manager relaying to an unnamed team? Three: will they put a per-engine citation count in writing every month? Any AI SEO company that answers all three cleanly is worth a call, including us. If you want a ranked shortlist instead of a hire, our roundup of the best AI SEO agencies in the USA compares ten shops openly.',
-  },
-  {
-    category: 'what',
-    question: 'Do I need an AEO agency, a GEO agency, or both?',
-    answer:
-      'Both, from one team. AEO (answer engine optimization) and GEO (generative engine optimization) describe overlapping work, so a generative engine optimization agency and an answer engine optimization agency are usually doing the same job under different labels. FactoryJet covers both on one retainer: schema and answer-block architecture on the AEO side, citation acquisition and content engineered for generative engines on the GEO side. If a shop sells you one acronym without the other, you are buying half the workflow and paying full price for it.',
-  },
-  {
-    category: 'what',
-    question: 'Which AI SEO agencies actually show up for these searches?',
-    answer:
-      'On the US results pages for AI SEO terms, the recurring names are Thrive Agency, Searchbloom, WebFX, Spicy Margarita, Onely, SEO.co and Yes Optimist. They are not interchangeable. Onely holds position 1 for technical seo service (1,900 searches a month). Searchbloom holds position 1 for search marketing agency (1,000 a month). Spicy Margarita sits around position 3 for ai seo agency itself. We compare all of them, and say where they beat us, in the comparison section on this page and in our full listicle of the best AI SEO agencies in the USA.',
-  },
-  {
-    category: 'engines',
-    question: 'Who can help my business show up in ChatGPT results?',
-    answer:
-      'An AI SEO agency that treats ChatGPT as a first-class target, not a Google add-on. The workflow: make your site crawlable by GPTBot, structure answers so they can be extracted verbatim, win placement in the web results ChatGPT searches behind the scenes, and build the third-party citations it treats as credibility signals. That is what FactoryJet retainers do, and the same four steps work for Perplexity, Claude and Gemini. The test for any ChatGPT optimization agency is simple: ask for a per-engine citation count before and after. Ours starts with the AI visibility audit.',
-  },
-  {
-    category: 'method',
-    question: 'Is there an agency that does SEO for AI Overviews?',
-    answer:
-      'Yes. FactoryJet optimizes for Google AI Overviews on every retainer. Whether you call it AI Overviews optimization, LLM SEO or AI search optimization, the mechanics are the same: answer-first formatting, schema markup, and authority signals that earn inclusion above the blue links. The standard to hold any agency to is that Overview appearances get reported monthly alongside classic rank tracking. That is the line between a practitioner and a dashboard reseller.',
-  },
-  {
-    category: 'pricing',
-    question: 'How is AI SEO priced in the US?',
-    answer:
-      'Almost nobody in this market publishes a rate, and a rate without scope tells you nothing anyway. What actually drives the number: how many pages need structural work, how competitive your money queries are, how many AI engines you want tracked, whether content gets produced or only restructured, and whether third-party citation work is in scope. FactoryJet scopes all of that on a free call before anything starts, so you see the plan before you commit. Generative engine optimization sits inside that same scope. It is not a second invoice.',
-  },
-
-  /* ── G. Search behaviour and definitions (10) ────────────────────────────
-     Questions below are real People Also Ask entries pulled from live US
-     SERPs on 2026-07-26. Answers written from scratch. */
-  {
-    category: 'what',
-    question: 'What does SEO mean in AI?',
-    answer:
-      'Same discipline, different surface. SEO is the work of making a site easy to find and easy to trust. In AI search that surface is the answer an assistant writes, not a list of ten blue links. So the goal moves from ranking to being one of the sources the model quotes by name. The plumbing is familiar: crawlability, structure, credibility. What comes out the other end is different.',
-  },
-  {
-    category: 'what',
-    question: 'What does answer engine optimization do?',
-    answer:
-      'It makes a specific answer on your page liftable. An answer engine wants roughly 40 to 60 words that resolve the question cleanly, sitting near the top of a clearly labelled section, backed by schema that tells the machine what it is reading. AEO is the formatting and markup half of AI SEO. It does not build authority on its own, which is why it fails when it is sold alone.',
-  },
-  {
-    category: 'what',
-    question: 'What is AI SEO called now?',
-    answer:
-      'Depends who is selling it. You will see AI SEO, GEO (generative engine optimization), AEO (answer engine optimization), LLM SEO, AI search optimization and a few worse ones. They describe roughly the same job. GEO leans toward ChatGPT and Perplexity, AEO leans toward direct answers including Google AI Overviews, and the rest are labels. Buy the work, not the acronym.',
-  },
-  {
-    category: 'what',
-    question: 'Is SEO dying out, or is it just evolving?',
-    answer:
-      'The easy version is dying. Pew found people click a normal result 8% of the time when Google shows an AI summary, against 15% when it does not. That is a real hit and it lands hardest on thin pages built to catch a search and nothing else. What survives is content an AI can quote and a brand it is comfortable naming. Fewer clicks, higher stakes per click, and the work moves upstream into structure and credibility.',
-  },
-  {
-    category: 'what',
-    question: 'Is GEO replacing SEO?',
-    answer:
-      'No. GEO sits on top of SEO, it does not replace it. AI engines still lean on the open web to decide what is credible, so a slow, uncrawlable site with no authority will not be rescued by GEO tactics. Anyone telling you to stop doing SEO and only do GEO is selling a rebrand of the same retainer.',
-  },
-  {
-    category: 'what',
-    question: 'What is the difference between SEO and GEO?',
-    answer:
-      'SEO is about placement in a list. GEO is about being quoted inside a written answer. In SEO you fight for a position. In GEO there is no position, only whether the model picked you as a source and named you. That changes what you optimise: short direct answers near the top of each section, clean schema, and third-party mentions the engine has already seen elsewhere.',
-  },
-  {
-    category: 'what',
-    question: 'What are the 4 types of SEO?',
-    answer:
-      'Technical (can engines crawl and render your site), on-page (titles, headings, content, schema), off-page (links, mentions, reputation), and local (maps, Google Business Profile, city pages). AI SEO is not a fifth type. It is a new requirement threaded through all four, which is why bolting it on as a separate product rarely works.',
-  },
-  {
-    category: 'what',
-    question: 'What is an example of AEO?',
-    answer:
-      'Take a question your buyers actually ask, put it in as a heading, answer it in the first two sentences underneath in plain words, then mark it up with FAQPage schema. That is AEO in one move. This page does it: the block directly under the hero answers what is AI SEO in one paragraph before any selling starts.',
-  },
-  {
-    category: 'what',
-    question: 'Is AEO better than SEO?',
-    answer:
-      'It is not a choice. AEO makes your content extractable. SEO makes it findable and credible in the first place. Do AEO on a site nobody trusts and nothing happens. Do SEO without AEO and you rank while somebody else gets quoted. We run them as one workflow because splitting them is a billing decision, not a technical one.',
-  },
-  {
-    category: 'what',
-    question: 'What is the new version of SEO?',
-    answer:
-      'There is no new version, there is a new reader. The rules of credibility did not change. What changed is that the reader is often a model compressing your page into three sentences for a human. Your content has to survive that compression and still come out with your name attached.',
-  },
-
-  /* ── H. Engine mechanics (4) ─────────────────────────────────────────── */
-  {
-    category: 'engines',
-    question: 'How do I rank in ChatGPT answers?',
-    answer:
-      'Four things, in order. Let GPTBot crawl you, and go check your robots.txt right now because plenty of sites block it by accident. Put a direct answer in the first 40 to 60 words under each heading so it can be lifted whole. Get into the regular web results ChatGPT searches behind the scenes, which means ordinary SEO still applies. Then earn mentions on sites the model already treats as reliable. Heavy client-side JavaScript hurts you more here than it does on Google.',
-  },
-  {
-    category: 'engines',
-    question: 'How do I increase my brand visibility in ChatGPT?',
-    answer:
-      'Start by measuring it, because most businesses never have. Run your twenty highest-intent buyer questions through ChatGPT and write down whether you get named at all. Then fix the two levers that move fastest: extractable answer formatting on your commercial pages, and third-party mentions on sources the engine already retrieves. Our free AI visibility checker does the measuring part for you.',
-  },
-  {
-    category: 'engines',
-    question: 'How do I show up in Google AI Overviews, and why am I not getting one?',
-    answer:
-      'Two different problems. Showing up means answer-first formatting, schema, and enough authority that Google is comfortable quoting you. Not seeing an Overview at all usually means Google decided the query is too ambiguous, too commercial, or too sensitive, since health and finance queries get held back deliberately. Overviews also appear and vanish on the same query week to week, so judge it over a month, never over a day.',
-  },
-  {
-    category: 'engines',
-    question: 'Is Perplexity good at citing sources, and is it better than ChatGPT?',
-    answer:
-      'Perplexity cites more visibly than any other assistant, which makes it the easiest engine to measure yourself against. Better than ChatGPT is the wrong frame. Perplexity is a research tool, ChatGPT is a general assistant with far more users. For B2B and considered purchases, Perplexity punches above its size because the people using it are already deep in research mode and close to a decision.',
-  },
-
-  /* ── I. Doing the work (4) ───────────────────────────────────────────── */
-  {
-    category: 'method',
-    question: 'Can I use AI to do my own SEO?',
-    answer:
-      'Use it where being wrong is cheap: clustering keywords, drafting outlines, spotting gaps in your own coverage, writing schema, summarising competitor pages. Do not use it to write the finished article. Engines are getting better at spotting generic model output, and generic output is exactly what does not get quoted. Rough rule: AI for research and structure, humans for claims and judgment.',
-  },
-  {
-    category: 'method',
-    question: 'How do I optimise content for AI search without losing my voice?',
-    answer:
-      'Front-load, do not flatten. Answer the question in the first two sentences under the heading, then say the interesting thing you actually wanted to say. The direct answer is what gets extracted. The rest is what makes someone book a call after they land. Where people go wrong is turning every page into a bland FAQ dump, which gets you quoted and immediately forgotten.',
-  },
-  {
-    category: 'method',
-    question: 'What moves AI search visibility fastest?',
-    answer:
-      'Three levers, in this order. Unblock the AI crawlers. Add a clean answer block plus FAQPage schema to your top ten commercial pages. Get named on two or three third-party sites the engines already retrieve. That is weeks of work, not quarters. Everything after it is the slow compounding part, and there is no shortcut through that half.',
-  },
-  {
-    category: 'method',
-    question: 'How do I learn AI SEO as a beginner?',
-    answer:
-      'Pick one real site, ideally your own, and try to get one page quoted. Read the official search engine documentation before anyone else, learn to read Search Console, then learn schema, because schema is the piece that carries over cleanly from classic SEO into AI search. Skip anything promising a secret method. There is not one, there is only whether a machine can read your page and whether anyone credible has vouched for you.',
-  },
-
-  /* ── J. Agencies, tools and scope (6) ────────────────────────────────── */
-  {
-    category: 'compare',
-    question: 'How do the main US AI SEO agencies compare?',
-    answer:
-      'They are strong at different things, and the keyword data shows it. Onely holds position 1 for technical seo service (1,900 searches a month) and technical seo agency (720), so it is the pick when your blocker is rendering and crawlability. Searchbloom holds position 1 for search marketing agency (1,000 a month) and works revenue-first. Spicy Margarita sits around position 3 for ai seo agency itself, making it the closest AI-native competitor on this page. Thrive Agency has the broadest footprint of anyone here, including top spots on German and French marketing queries. WebFX brings enterprise scale. Match the shape of the shop to the shape of your problem.',
-  },
-  {
-    category: 'compare',
-    question: 'Why would I pick FactoryJet over a bigger AI SEO company?',
-    answer:
-      'Sometimes you should not, and it is fairer to say that out loud. We have 44 referring domains. Established competitors on these same results pages have thousands. If your buying criterion is the safest logo on the invoice, hire the incumbent. Where we win is delivery shape: the founder runs your account, you get per-engine citation counts instead of a rankings PDF, and terms are month to month. Our own strongest US positions today are tenth for local seo nashville and eighth for seo agency austin texas. We would rather show you that than invent a case study.',
-  },
-  {
-    category: 'compare',
-    question: 'What is the best software for answer engine optimization?',
-    answer:
-      'There is no settled winner yet, and anyone declaring one is usually affiliate-linking. The category splits three ways: AI visibility trackers that check whether you get mentioned, classic SEO suites bolting on AI modules, and schema and content tooling. What matters more than the brand is whether the tool prompts the engines the way your buyers actually phrase things. A tracker running generic head terms will hand you comforting nonsense.',
-  },
-  {
-    category: 'compare',
-    question: 'What is the best free AI tool for SEO?',
-    answer:
-      'For research and drafting, the free tiers of the major assistants are genuinely useful and you do not need to pay for that part. For measurement, free tooling is thin, which is why we built a free AI visibility checker on this site. Free tools are good for finding the problem. Fixing it is where the work is.',
-  },
-  {
-    category: 'compare',
-    question: 'Is there a difference between generative engine optimization services and AI SEO services?',
-    answer:
-      'Not in practice. Generative engine optimization services describe the same work as AI SEO services with a narrower emphasis on engines that write answers. If a generative engine optimization company quotes you one number for AI SEO and a second for GEO, ask what is in the second line item that is not already in the first. In our experience the honest answer is nothing.',
-  },
-  {
-    category: 'compare',
-    question: 'Should I hire an AI SEO agency or do it in-house?',
-    answer:
-      'Mixed usually wins. Schema, FAQ formatting and answer-first restructuring are learnable and worth owning internally, because they touch every page you will ever publish. Multi-engine citation tracking, entity work and third-party citation acquisition are harder and slower to build from zero. Most teams that get this right start with an outside audit, keep execution split, and hire the agency for the parts that need tooling they will not build themselves.',
-  },
-
-  /* ── K. Scope and cost drivers (1) ───────────────────────────────────── */
-  {
-    category: 'pricing',
-    question: 'How much should I pay for search engine optimization?',
-    answer:
-      'We will not quote a number without scope, because a number without scope is a trap. The things that actually drive it: how many pages need structural work, how competitive your money queries are, how many AI engines you want tracked, whether content is produced or only restructured, and whether third-party citation work is included. A ten-page local service site and a 5,000-product store are not the same job. Get the scope in writing, then compare quotes on scope rather than on headline rate.',
-  },
 ];
 
 /**
@@ -565,11 +429,11 @@ const COMPETITORS = [
     domain: 'thriveagency.com',
     url: 'https://thriveagency.com/',
     strength:
-      'The widest footprint of anyone on this set of results, and it appears more often than any other name we tracked. Full-service: SEO, paid, social and web under one roof.',
+      'The widest footprint on this set of results, and the name that turned up most often. Full-service: SEO, paid, social and web under one roof.',
     proof:
       'Position 1 for agentur marketing (720/mo) and agences marketing digital (590/mo), German and French queries, plus 5 star google rated (320/mo).',
     difference:
-      'Those rankings tell you Thrive is a broad multi-language marketing shop, not an AI-search boutique. If you want one vendor for every channel, that is a rational pick. We only do search, and we report citations per AI engine instead of a blended marketing dashboard.',
+      'Those rankings say broad multi-language marketing shop, not AI-search boutique. If you want one vendor for every channel, that is a rational pick. We only do search, and we report citations per engine.',
   },
   {
     name: 'Searchbloom',
@@ -589,20 +453,20 @@ const COMPETITORS = [
     strength:
       'Scale. A large in-house team, its own reporting platform, and the depth to run enterprise programmes alongside paid media and CRO.',
     proof:
-      'Appears on five of the AI SEO results pages we tracked, averaging position 11.4. Its keyword footprint is far too broad to summarise in one line.',
+      'Appears on five of the AI SEO results pages we tracked, averaging position 11.4.',
     difference:
-      'With WebFX you get an account team. With us you get the founder on the call and senior engineers doing the work. That is a real trade: they have depth we do not, and we have directness they cannot offer at their size.',
+      'With WebFX you get an account team. With us you get the founder on the call. They have depth we do not, and we have directness they cannot offer at their size.',
   },
   {
     name: 'Spicy Margarita',
     domain: 'spicymargarita.co',
     url: 'https://www.spicymargarita.co/',
     strength:
-      'The closest thing here to an AI-SEO native, and the only competitor in this set ranking on page one for the exact term this page targets.',
+      'The closest thing here to an AI-SEO native, and the only one in this set on page one for the exact term this page targets.',
     proof:
       'Position 3 for ai seo agency (1,000/mo), position 3 for ai powered seo services (70/mo), position 2 for seo briefs (70/mo).',
     difference:
-      'They are ahead of us on this query today and we are not going to pretend otherwise. Where we differ is engine coverage breadth, and the fact that we ship the site changes ourselves rather than handing over a brief for someone else to implement.',
+      'They are ahead of us on this query today and we will not pretend otherwise. We differ on engine coverage breadth, and on shipping the site changes ourselves rather than handing over a brief.',
   },
   {
     name: 'Onely',
@@ -613,29 +477,7 @@ const COMPETITORS = [
     proof:
       'Position 1 for technical seo service (1,900/mo), technical seo agency (720/mo) and its own brand term (480/mo).',
     difference:
-      'If your blocker is that AI crawlers cannot render your pages, hire the technical specialist. If your blocker is that nothing on your site is quotable once it is rendered, that is the half we do.',
-  },
-  {
-    name: 'SEO.co',
-    domain: 'seo.co',
-    url: 'https://seo.co/',
-    strength:
-      'City and state level SEO at volume, plus a genuine link-earning practice rather than a bulk placement operation.',
-    proof:
-      'Position 1 for durham seo (260/mo), arkansas seo companies (210/mo) and earned links (110/mo).',
-    difference:
-      'Their strength is geographic coverage across a lot of markets. Ours is the answer layer. Of everyone on this list, we overlap with them least.',
-  },
-  {
-    name: 'Yes Optimist',
-    domain: 'yesoptimist.com',
-    url: 'https://www.yesoptimist.com/',
-    strength:
-      'B2B SaaS content done properly, with a focused service list instead of a sprawling one.',
-    proof:
-      'Position 3 for seo saas (590/mo) and seo agency for b2b (90/mo), position 1 for its own brand (140/mo).',
-    difference:
-      'If you are a SaaS company buying content-led growth, they belong on your shortlist. We only beat them if AI citation tracking and technical schema work matter more to you than editorial volume.',
+      'If AI crawlers cannot render your pages, hire the technical specialist. If nothing on your site is quotable once it is rendered, that is the half we do.',
   },
 ];
 
@@ -643,21 +485,37 @@ const COMPETITORS = [
    JSON-LD Schema (WebPage + BreadcrumbList + Service + FAQPage + Organization)
 ───────────────────────────────────────────────────────────────────────────── */
 
+/**
+ * PAGE_MODIFIED - the honest last-substantive-edit date. Update it only when the
+ * page content actually changes, never on a routine build.
+ */
+const PAGE_MODIFIED = '2026-08-06';
+
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  dateModified: '2026-08-04',
-  name: 'AI SEO Agency in the USA: AI SEO Services, GEO + AEO',
+  '@id': 'https://factoryjet.com/services/ai-seo#webpage',
+  dateModified: PAGE_MODIFIED,
+  name: 'AI SEO Agency in the USA: AI SEO Services and AI Search Visibility',
   url: 'https://factoryjet.com/services/ai-seo',
   description:
     'AI SEO agency for US businesses. AI SEO services, generative engine optimization and answer engine optimization on one retainer, covering ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews.',
   inLanguage: 'en-US',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhaveshbarot/',
+    jobTitle: 'Founder, FactoryJet',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  about: { '@id': 'https://factoryjet.com/#organization' },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['[data-speakable]'],
   },
   isPartOf: {
     '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
@@ -804,7 +662,7 @@ function StatsRow() {
               value: '0',
               suffix: 'annual contracts',
               label: 'month-to-month, always',
-              body: 'Cancel with one billing-cycle notice. Most retainers run 18+ months voluntarily, because proof comes from continued momentum, not from contract teeth.',
+              body: 'Cancel with one billing-cycle notice. You stay because the citation count is moving, not because a contract says you have to.',
             },
             {
               value: '90-day',
@@ -900,7 +758,7 @@ function AiSeoPricingGrid() {
             className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            Start with an audit. Move into a retainer when you see momentum. Step up to enterprise when scope demands it. No annual contracts, and full code and data ownership from day one.
+            Start with an audit. Move into a retainer when you see momentum. No annual contracts, and full code and data ownership from day one.
           </p>
         </div>
 
@@ -1066,7 +924,7 @@ function AiSeoPricingGrid() {
             fontWeight: 500,
           }}
         >
-          Milestone-paid. Full code ownership from day one. No required retainers.
+          Month-to-month. Full code and data ownership from day one. No annual lock-in.
         </p>
       </div>
     </section>
@@ -1099,13 +957,13 @@ function CaseStudyPlaceholder() {
             letterSpacing: '-0.025em',
           }}
         >
-          Real client AI-visibility case studies land Q3 2026.
+          Named AI-visibility case studies are still in progress.
         </h2>
         <p
           className="mt-5 mx-auto max-w-[640px] font-fj-body text-fj-neutral-600"
           style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
         >
-          We are shipping the first five named case studies (Belle Maison, GroFresh Agro, Impulse Branding, RDB Travels and Shevvaa) alongside hard before and after metrics. In the meantime, talk to Bhavesh for live references and walk-throughs of work in flight.
+          We would rather publish nothing than publish a number we cannot show the working for. Until the first write-ups are ready, ask Bhavesh for live references.
         </p>
         <div className="mt-8">
           <Link
@@ -1153,15 +1011,35 @@ function AiSeoExplained() {
           style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
           data-speakable
         >
-          AI SEO is the work of getting your website named and quoted by AI answer tools like
-          ChatGPT, Perplexity, Claude, Gemini, and Google&apos;s AI Overviews. An AI SEO agency does
-          that work for you: it structures your pages so a clean answer can be lifted out, adds
-          schema code machines can read, and earns the third-party mentions those engines treat as
-          proof you are credible. AI SEO services sit on the same foundation as regular SEO, clean
-          site structure and real authority, then add the answer layer on top. FactoryJet is an AI
-          SEO company built around exactly that split, and the fastest way to compare AI SEO agencies
-          is to ask each one for a per-engine citation count rather than a rankings screenshot.
+          AI SEO is the work of getting a website named and quoted inside AI-generated answers, in
+          ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews. An AI SEO agency does four
+          jobs for you: it opens crawler access so retrieval bots like OAI-SearchBot and
+          Claude-SearchBot can read the site, it restructures pages so a clean short answer can be
+          lifted out, it ships schema.org markup in JSON-LD that machines can parse, and it earns the
+          third-party mentions those engines treat as proof you are credible. AI SEO services sit on
+          the same foundation as regular SEO, then add the answer layer on top.
         </p>
+        <ul className="mt-6 space-y-2.5" role="list">
+          {[
+            'Access: robots.txt rules that name every retrieval bot instead of leaving them to a wildcard',
+            'Structure: question-shaped headings with a 40 to 60 word answer directly underneath',
+            'Markup: Organization, WebPage, BreadcrumbList, FAQPage, HowTo and Article in JSON-LD',
+            'Credibility: named third-party citations on sources the engines already retrieve',
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-2.5 font-fj-body"
+              style={{ color: 'rgba(15,15,18,0.78)', fontSize: '0.9375rem', lineHeight: 1.55 }}
+            >
+              <span
+                className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                style={{ backgroundColor: '#B23E13' }}
+                aria-hidden="true"
+              />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
         <div className="mt-6 border-l-2 pl-5 py-1" style={{ borderLeftColor: '#F05A28' }}>
           <p
             className="fj-display font-semibold text-fj-ink"
@@ -1169,6 +1047,13 @@ function AiSeoExplained() {
           >
             In one line: regular SEO helps you rank in a list of blue links. AI SEO helps you get
             picked as the answer.
+          </p>
+          <p
+            className="mt-3 font-fj-body"
+            style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.6 }}
+          >
+            The fastest way to compare AI SEO agencies is to ask each one for a per-engine citation
+            count rather than a rankings screenshot.
           </p>
         </div>
       </div>
@@ -1184,7 +1069,7 @@ const AI_SEARCH_STATS = [
   {
     value: '8%',
     label:
-      'Share of Google searches where people click through to a website when an AI summary appears, against 15% when there is no AI summary. Links inside the summary itself get clicked just 1% of the time.',
+      'Of Google searches where an AI summary appears, people click through to a website, against 15% when there is no summary. Links inside the summary get clicked 1% of the time.',
     sourceUrl:
       'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/',
     sourceLabel: 'Pew Research Center, 2025',
@@ -1192,7 +1077,7 @@ const AI_SEARCH_STATS = [
   {
     value: '2 billion',
     label:
-      'People a month now use Google AI Overviews, the AI answer box that sits above the blue links, up from 1.5 billion earlier in 2025.',
+      'People a month use Google AI Overviews, the answer box above the blue links, up from 1.5 billion earlier in 2025.',
     sourceUrl:
       'https://techcrunch.com/2025/07/23/googles-ai-overviews-have-2b-monthly-users-ai-mode-100m-in-the-us-and-india/',
     sourceLabel: 'Google via TechCrunch, 2025',
@@ -1200,7 +1085,7 @@ const AI_SEARCH_STATS = [
   {
     value: '~800M',
     label:
-      'People use OpenAI ChatGPT, with the company saying close to 10% of the world now uses its tools. More buyers start their research inside an AI assistant every quarter.',
+      'People use ChatGPT, with OpenAI saying close to 10% of the world uses its tools. More buyers start research inside an AI assistant every quarter.',
     sourceUrl:
       'https://fortune.com/2025/04/14/sam-altman-openai-user-base-doubled-few-weeks-10-of-world-uses-system/',
     sourceLabel: 'Fortune / OpenAI, 2025',
@@ -1239,7 +1124,7 @@ function AiSearchStats() {
             className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            Three data points on where US search is heading. Every figure links to the original source.
+            Three data points on where US search is heading. Every figure links to its source.
           </p>
         </div>
 
@@ -1309,32 +1194,34 @@ function GeoAeoServices() {
     {
       title: 'Generative engine optimization (GEO)',
       body:
-        'Getting your brand named inside answers written by ChatGPT, Perplexity, Claude and Gemini. A generative engine optimization agency that only ever shows you Google data is not doing this part of the job.',
+        'Getting your brand named inside answers written by ChatGPT, Perplexity, Claude and Gemini. An agency that only ever shows you Google data is not doing this part.',
       items: [
         'Per-engine citation baseline, then monthly tracking',
         'Answer-first content architecture on commercial pages',
-        'Entity work so a model knows what your business actually is',
-        'Crawl access for GPTBot, ClaudeBot and PerplexityBot',
+        'Entity work in Wikidata and the Knowledge Graph so a model knows what you are',
+        'Retrieval access for OAI-SearchBot, Claude-SearchBot and PerplexityBot',
       ],
     },
     {
       title: 'Answer engine optimization (AEO)',
       body:
-        'Getting your content into direct answers: Google AI Overviews, featured snippets, and the answer box any engine puts above its links. Answer engine optimization services live or die on whether a machine can lift a clean short answer out of your page.',
+        'Getting your content into direct answers: Google AI Overviews, featured snippets, and the answer box above the links. Answer engine optimization lives or dies on whether a machine can lift a clean short answer out of your page.',
       items: [
         'FAQPage, HowTo and Article schema in JSON-LD',
         'Question-shaped headings on every money page',
         'AI Overview appearance tracking, reported monthly',
         'Featured snippet formatting on informational pages',
+        'Schema validated in Rich Results Test before it ships',
       ],
     },
     {
       title: 'ChatGPT SEO and AI search optimization',
       body:
-        'The practical version of both, aimed at where your buyers actually ask. SEO for ChatGPT is mostly crawl access, plus extractability, plus being present in the web results it searches behind the scenes. AI driven SEO services that skip the third one are selling half a method.',
+        'The practical version of both, aimed at where your buyers actually ask. SEO for ChatGPT is crawl access, plus extractability, plus being present in the web results it searches behind the scenes. Skip the third and you are selling half a method.',
       items: [
         'Prompt-set testing against your real buyer questions',
         'Web-result presence, which ChatGPT leans on heavily',
+        'Bing Webmaster Tools and IndexNow wired up',
         'Perplexity source-credibility work',
         'Gemini and Google AI Overview coverage',
       ],
@@ -1354,15 +1241,14 @@ function GeoAeoServices() {
               letterSpacing: '-0.025em',
             }}
           >
-            Generative engine optimization services and answer engine optimization services, on one
-            retainer.
+            GEO and AEO are the two halves of AI SEO, and we run both on one retainer.
           </h2>
           <p
             className="mt-4 max-w-[680px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            Two acronyms, one workflow. Here is what each half actually covers, and why we refuse to
-            bill them as separate products.
+            Two acronyms, one workflow. Here is what each half covers, and why we refuse to bill
+            them as separate products.
           </p>
         </div>
 
@@ -1414,9 +1300,191 @@ function GeoAeoServices() {
           className="mt-8 max-w-[760px] font-fj-body"
           style={{ color: 'rgba(15,15,18,0.72)', fontSize: '1rem', lineHeight: 1.65 }}
         >
-          One retainer, one scope, one invoice. If a generative engine optimization company quotes
-          GEO on top of AI SEO, ask what sits in the second line item that is not already in the
-          first. Usually the answer is nothing.
+          One retainer, one scope, one invoice. If a shop quotes GEO on top of AI SEO, ask what is
+          in the second line item that is not already in the first. For the GEO half on its own, our{' '}
+          <Link
+            href="/services/generative-engine-optimization"
+            className="font-semibold underline"
+            style={{ color: '#B23E13' }}
+          >
+            generative engine optimization services
+          </Link>{' '}
+          page covers it in detail.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * AI_SEO_CHANGES - the named-capability block (added 2026-08-06). Real crawler
+ * names, real schema.org types, real tooling. Deliberately list-heavy: a list
+ * item is a self-contained retrievable unit, and list density is the structural
+ * signal we measured ourselves as being short on.
+ *
+ * Crawler roles below are taken from the vendors' own documentation, fetch-verified
+ * 2026-08-06. Do not edit a bot's described role without re-reading the source:
+ *   OpenAI     https://developers.openai.com/api/docs/bots
+ *   Anthropic  https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+ */
+const AI_SEO_CHANGES = [
+  {
+    title: 'Retrieval access in robots.txt',
+    body:
+      'The cheapest way to go invisible is to block the wrong bot by accident. Retrieval crawlers and training crawlers are different things.',
+    items: [
+      'OAI-SearchBot allowed, because that is the crawler gating ChatGPT search answers',
+      'GPTBot decided on purpose, since OpenAI documents it as training only',
+      'ChatGPT-User and OAI-AdsBot handled as their own separate cases',
+      'Claude-SearchBot and Claude-User named outright, never left to a wildcard',
+      'ClaudeBot treated as the training crawler Anthropic says it is',
+      'PerplexityBot and Perplexity-User both listed by name',
+      'Google-Extended and Applebot-Extended set to match your actual rights policy',
+      'Bingbot access checked, since ChatGPT search leans on Bing-style web results',
+      'Content-Signal line kept consistent with the allow and disallow rules above it',
+    ],
+  },
+  {
+    title: 'Structured data that matches the page',
+    body:
+      'Google requires markup to describe what a reader actually sees. Schema that contradicts the visible page is a trust problem, not a shortcut.',
+    items: [
+      'Organization with a sameAs list of profiles that genuinely resolve',
+      'WebPage carrying an honest dateModified rather than a build timestamp',
+      'Article with a real named author of type Person',
+      'BreadcrumbList on every nested URL',
+      'FAQPage generated from the same array the visible FAQ renders',
+      'HowTo only where the topic is genuinely a procedure',
+      'Service, Product, Offer and AggregateRating where they truthfully apply',
+      'ItemList on comparison and roundup pages',
+      'Every block checked in Rich Results Test and the Schema Markup Validator',
+    ],
+  },
+  {
+    title: 'Indexing, freshness and entity signals',
+    body:
+      'Getting quoted starts with getting fetched, then re-fetched. Most sites lose here quietly, through stale sitemaps and redirect chains nobody checks.',
+    items: [
+      'Sitemap index split by section, with no redirecting URLs listed inside it',
+      'IndexNow pings so Bing and Yandex see a change the same day',
+      'Search Console URL Inspection API used to confirm the rendered version',
+      'Bing Webmaster Tools verified, because it feeds more than Bing',
+      'Canonical tags plus hreflang with a real x-default, not a guessed one',
+      'Redirects kept to a single 301 hop, never a two-hop chain',
+      'Wikidata and Knowledge Graph entity work so a model knows who you are',
+      'llms.txt published, with the honest note that no engine is known to read it',
+      'Business name, address and profile data kept consistent across crawled sources',
+    ],
+  },
+  {
+    title: 'Rendering, speed and page hygiene',
+    body:
+      'AI crawlers are less forgiving than a browser. Anything that only exists after JavaScript runs is, to most of them, content you did not publish.',
+    items: [
+      'Load-bearing copy server-rendered into the initial HTML',
+      'Nothing important appearing only after hydration',
+      'Core Web Vitals held at INP under 200ms and CLS near zero',
+      'LCP element identified, then made text or a preloaded image',
+      'Answer blocks placed inside the first third of the page',
+      'Exactly one h1, strict h1 to h2 to h3 descent, no skipped levels',
+      'Tables and lists shipped as real markup instead of styled divs',
+      'Alt text written for meaning rather than for keywords',
+      'Accordion and tab content still present in the DOM when collapsed',
+    ],
+  },
+];
+
+/**
+ * AiSeoChanges - capability-density section (added 2026-08-06). Cream background,
+ * white cards, orange top cap: same card pattern as GeoAeoServices and AiSearchStats.
+ */
+function AiSeoChanges() {
+  return (
+    <section className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[820px]">
+          <p className="fj-eyebrow">WHAT ACTUALLY CHANGES</p>
+          <h2
+            className="fj-display font-semibold text-fj-ink mt-3"
+            style={{
+              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+            }}
+          >
+            What an AI SEO agency changes on your site, named item by named item.
+          </h2>
+          <p
+            className="mt-4 max-w-[720px] font-fj-body text-fj-neutral-600"
+            style={{ fontSize: '1rem', lineHeight: 1.65 }}
+          >
+            Four groups of work, thirty-six specific changes. If an AI SEO company cannot hand you a
+            list this specific, you are buying a report rather than an implementation.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {AI_SEO_CHANGES.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border p-7"
+              style={{
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
+                borderTop: '3px solid #F05A28',
+              }}
+            >
+              <h3
+                className="fj-display font-semibold text-fj-ink"
+                style={{ fontSize: '1.25rem', lineHeight: 1.25, letterSpacing: '-0.015em' }}
+              >
+                {group.title}
+              </h3>
+              <p
+                className="mt-3 font-fj-body"
+                style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.6 }}
+              >
+                {group.body}
+              </p>
+              <ul className="mt-5 space-y-2.5" role="list">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 font-fj-body"
+                    style={{ color: 'rgba(15,15,18,0.78)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                  >
+                    <span
+                      className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                      style={{ backgroundColor: '#B23E13' }}
+                      aria-hidden="true"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p
+          className="mt-8 max-w-[820px] font-fj-body"
+          style={{ color: 'rgba(15,15,18,0.72)', fontSize: '1rem', lineHeight: 1.65 }}
+        >
+          One honest caveat, because it cuts against how this service is usually sold. Google states
+          in its own documentation that you do not need special AI files or special schema.org markup
+          to appear in AI Overviews or AI Mode. The list above is not a secret ruleset, it is
+          ordinary excellent SEO plus extractability.{' '}
+          <a
+            href="https://developers.google.com/search/docs/appearance/ai-features"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline"
+            style={{ color: '#B23E13' }}
+          >
+            Google Search Central, AI features and your website
+          </a>
+          .
         </p>
       </div>
     </section>
@@ -1455,10 +1523,9 @@ function CompetitorField() {
             className="mt-4 max-w-[720px] font-fj-body text-fj-neutral-600"
             style={{ fontSize: '1rem', lineHeight: 1.65 }}
           >
-            These seven show up repeatedly on the US results pages for AI SEO terms. The keyword
-            positions and volumes below are real, pulled from DataForSEO on 26 July 2026. We have
-            included the ones that beat us, because a comparison that only flatters the author is
-            not a comparison.
+            These five show up repeatedly on the US results pages for AI SEO terms. The positions
+            and volumes below are real, pulled from DataForSEO on 26 July 2026. The ones that beat
+            us are in here too.
           </p>
         </div>
 
@@ -1531,27 +1598,25 @@ function CompetitorField() {
             className="mt-4 max-w-[820px] font-fj-body"
             style={{ color: 'rgba(15,15,18,0.78)', fontSize: '1rem', lineHeight: 1.7 }}
           >
-            We have 44 referring domains. Coalition Technologies, which also turns up on these
-            results pages, has somewhere near 2,800. Authority is our binding constraint, and it is
-            the reason we compete on low-competition long-tail terms and on delivery model rather
-            than on brute domain strength. Our strongest US positions right now are tenth for local
-            seo nashville and eighth for seo agency austin texas. Those come from the same dataset
-            that produced the cards above.
+            We have 53 referring domains, measured 3 August 2026. The established names on these
+            results pages have far more. Authority is our binding constraint, which is why we
+            compete on low-competition long-tail terms and on delivery model rather than brute
+            domain strength. Our strongest US positions right now are tenth for local seo nashville
+            and eighth for seo agency austin texas.
           </p>
           <p
             className="mt-4 max-w-[820px] font-fj-body"
             style={{ color: 'rgba(15,15,18,0.78)', fontSize: '1rem', lineHeight: 1.7 }}
           >
-            That is the trade. You get a smaller shop where the founder runs the account and the
-            reporting is per engine rather than per dashboard. You do not get the domain weight of a
-            twenty-year-old incumbent. If the second thing matters more to you, hire the incumbent,
-            and go in knowing what you bought.
+            That is the trade. A smaller shop, the founder on the account, reporting per engine
+            rather than per dashboard, and none of the domain weight of a twenty-year-old incumbent.
+            If the last one matters most, hire the incumbent.
           </p>
           <p
             className="mt-5 font-fj-body"
             style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.6 }}
           >
-            Want a ranked shortlist instead of a hire? Our{' '}
+            Shortlisting rather than hiring? Our{' '}
             <Link
               href="/blog/best-ai-seo-agencies-usa"
               className="font-semibold underline"
@@ -1559,8 +1624,7 @@ function CompetitorField() {
             >
               roundup of the best AI SEO agencies in the USA
             </Link>{' '}
-            reviews ten shops including several above. That page is for shortlisting. This one is
-            for hiring.
+            reviews ten shops including several above.
           </p>
         </div>
       </div>
@@ -1575,11 +1639,7 @@ function CompetitorField() {
 export default function AiSeoServicePage() {
   return (
     <>
-      {/* JSON-LD schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
+      {/* JSON-LD schemas. One block per schema, no duplicates. */}
       <script
         id="ai-seo-webpage-schema"
         type="application/ld+json"
@@ -1646,20 +1706,14 @@ export default function AiSeoServicePage() {
         <ServiceExplanation
           eyebrow="THE AI SEARCH SHIFT"
           headline="Google rankings still matter. But they are not the whole story anymore."
-          lead="A meaningful and growing share of US search traffic now happens inside AI assistants (ChatGPT, Perplexity, Claude, Gemini), and Google itself increasingly answers queries with AI Overviews above the blue links. If your site is not engineered to be cited by these engines, you are losing traffic that no traditional SEO audit will surface."
+          lead="A growing share of US search now happens inside AI assistants, and Google answers more queries with AI Overviews above the blue links. If your site is not engineered to be cited by those engines, you are losing traffic no traditional SEO audit will surface."
           body={
             <>
               <p
                 className="mt-6 font-fj-body text-fj-neutral-600"
                 style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
               >
-                The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT or Perplexity. AI engines extract structured answers, weight source credibility, and treat third-party citations as authority signals. Keyword density and backlink volume, the old playbook, matter less. Schema, structured Q&amp;A, and verifiable expertise matter more.
-              </p>
-              <p
-                className="mt-4 font-fj-body text-fj-neutral-600"
-                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-              >
-                Our retainers cover both signals. You get monthly reporting on AI-citation count per engine alongside traditional Google rank changes, so you can see which traffic source is moving and decide where to lean in.
+                Our retainers cover both signals: AI-citation count per engine alongside Google rank changes, monthly, so you can see which source is moving.
               </p>
             </>
           }
@@ -1703,7 +1757,7 @@ export default function AiSeoServicePage() {
                   lineHeight: 1.55,
                 }}
               >
-                Most SEO agencies pick one. We treat both as a single integrated workflow because the underlying work (schema, structure, expert content, third-party citations) earns both kinds of traffic.
+                Most SEO agencies pick one. We treat both as one workflow, because the underlying work earns both kinds of traffic.
               </p>
             </div>
           }
@@ -1712,6 +1766,9 @@ export default function AiSeoServicePage() {
         {/* ─── 3a. GEO + AEO services detail ───────────────────────────────── */}
         <GeoAeoServices />
 
+        {/* ─── 3a2. Named-capability detail (added 2026-08-06) ─────────────── */}
+        <AiSeoChanges />
+
         {/* ─── 3b. Cited AI-search stats (additive GEO pass) ───────────────── */}
         <AiSearchStats />
 
@@ -1719,7 +1776,7 @@ export default function AiSeoServicePage() {
         <StrategicDarkSection
           eyebrow="WHY OLD SEO MISSES THE AI ERA"
           headline="Three reasons most SEO agencies are still optimizing for 2018."
-          lead="The mechanics that win in Google rankings are not the same mechanics that win citations in ChatGPT, Perplexity, Claude, or Google AI Overviews. Here is what most SEO agencies are still missing."
+          lead="What wins a Google ranking is not what wins a citation in ChatGPT, Perplexity, Claude or Google AI Overviews. Here is what most SEO agencies still miss."
           pillars={PILLARS}
         />
 
@@ -1727,7 +1784,7 @@ export default function AiSeoServicePage() {
         <ServiceJourneyRow
           eyebrow="OUR 5-STEP AI SEO PROCESS"
           headline="From audit to compounding citations, in 90 days."
-          lead="Every engagement follows the same five-step process. The audit defines the roadmap. The roadmap drives the retainer. The retainer is measured monthly. No black boxes."
+          lead="The audit defines the roadmap. The roadmap drives the retainer. The retainer is measured monthly. No black boxes."
           stages={AI_SEO_JOURNEY}
           closingNote="Every step ships a deliverable. Every month you see what changed and what it cost."
         />
@@ -1736,7 +1793,7 @@ export default function AiSeoServicePage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet against three agencies you will actually meet on this search."
-          lead="WebFX, Thrive Agency and Onely all appear on the US results pages for AI SEO terms. They are good at genuinely different things. This table is about delivery shape, not about who is better."
+          lead="WebFX, Thrive Agency and Onely all appear on the US results pages for AI SEO terms, and they are good at different things. This table is about delivery shape."
           columns={[
             { label: 'FactoryJet', isFactoryJet: true },
             { label: 'WebFX' },
@@ -1792,14 +1849,14 @@ export default function AiSeoServicePage() {
             {
               feature: 'Authority footprint',
               values: [
-                'Challenger: 44 referring domains',
+                'Challenger: 53 referring domains',
                 'Established incumbent',
                 'Established incumbent',
                 'Established specialist',
               ],
             },
           ]}
-          footer="Delivery-model comparison based on publicly stated positioning and on DataForSEO US SERP data pulled 2026-07-26. No pricing is compared because none of these agencies publish rates."
+          footer="Based on publicly stated positioning and DataForSEO US SERP data pulled 2026-07-26. No rates are compared because none of these agencies publish them."
         />
 
         {/* ─── 6b. Named competitor field (real page-1 keywords) ───────── */}
@@ -1817,10 +1874,10 @@ export default function AiSeoServicePage() {
         {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ───────── */}
         <AiVisibilityCtaBand />
 
-        {/* ─── 10. FAQ - 21 across 5 categories ────────────────────────────── */}
+        {/* ─── 10. FAQ - 23 across 6 categories ────────────────────────────── */}
         <FAQ
           eyebrow="AI SEO FAQ"
-          headline="Fifty-two questions, answered the way Bhavesh would on the discovery call."
+          headline="Twenty-three questions, answered the way Bhavesh would on the discovery call."
           lead="If your question is not below, send a written brief. Answers usually come back inside 24 hours."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}

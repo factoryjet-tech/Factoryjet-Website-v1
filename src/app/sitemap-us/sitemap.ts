@@ -65,6 +65,26 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/healthcare-seo',                       source: 'src/app/services/healthcare-seo/page.tsx' },
   { path: '/services/law-firm-seo',                         source: 'src/app/services/law-firm-seo/page.tsx' },
   { path: '/services/ai-seo',                              source: 'src/app/services/ai-seo/page.tsx' },
+  { path: '/services/generative-engine-optimization',      source: 'src/app/services/generative-engine-optimization/page.tsx' },
+  { path: '/services/shopify-plus-agency',                 source: 'src/app/services/shopify-plus-agency/page.tsx' },
+  // ── AI agent cluster, moved from sitemap-india 2026-08-06 ──────────────────
+  // Retargeted to the US: measured demand 8,250/mo, median KD 6, vs 1,711
+  // impressions and 9 clicks earned over the prior 90 days.
+  { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
+  { path: '/services/ai-agent-development/ai-chatbot',     source: 'src/app/services/ai-agent-development/ai-chatbot/page.tsx' },
+  { path: '/services/ai-agent-development/ai-customer-support', source: 'src/app/services/ai-agent-development/ai-customer-support/page.tsx' },
+  { path: '/services/ai-agent-development/ai-marketing-agent',  source: 'src/app/services/ai-agent-development/ai-marketing-agent/page.tsx' },
+  { path: '/services/ai-agent-development/ai-sales-agent', source: 'src/app/services/ai-agent-development/ai-sales-agent/page.tsx' },
+  { path: '/services/ai-agent-development/ai-scheduling-agent', source: 'src/app/services/ai-agent-development/ai-scheduling-agent/page.tsx' },
+  { path: '/services/ai-agent-development/ai-voice-agent', source: 'src/app/services/ai-agent-development/ai-voice-agent/page.tsx' },
+  { path: '/services/ai-agent-development/ai-workflow-automation', source: 'src/app/services/ai-agent-development/ai-workflow-automation/page.tsx' },
+  // ── Manufacturer/distributor capability spokes, added 2026-08-06 ───────────
+  // Built as LLM-citation and sales-collateral assets, NOT SEO pages: the whole
+  // US vertical-agent keyword space measured 7 keywords / 730 per month / zero
+  // commercial intent. Judge these on citation rate, never on organic traffic.
+  { path: '/services/ai-agent-development/rfq-bidding-agent',              source: 'src/app/services/ai-agent-development/rfq-bidding-agent/page.tsx' },
+  { path: '/services/ai-agent-development/manufacturing-operations-agent', source: 'src/app/services/ai-agent-development/manufacturing-operations-agent/page.tsx' },
+  { path: '/services/ai-agent-development/procurement-supply-chain-agent', source: 'src/app/services/ai-agent-development/procurement-supply-chain-agent/page.tsx' },
   { path: '/services/ai-chatbot-development',              source: 'src/app/services/ai-chatbot-development/page.tsx' },
   { path: '/services/ai-integration-services',             source: 'src/app/services/ai-integration-services/page.tsx' },
   { path: '/services/ai-workflow-automation',              source: 'src/app/services/ai-workflow-automation/page.tsx' },

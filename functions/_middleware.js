@@ -58,8 +58,10 @@ export const EXEMPT_CRAWLER_UA = [
 export const INDIA_TO_US_RULES = [
   // ecommerce city pages — sub-paths only; the bare hub /services/ecommerce-development is US-owned
   { match: (p) => p.startsWith('/services/ecommerce-development/'), target: '/services/ecommerce-development' },
-  // India AI-agent hub + sub-pages → US /services/ai-agents
-  { match: (p) => p === '/services/ai-agent-development' || p.startsWith('/services/ai-agent-development/'), target: '/services/ai-agents' },
+  // REMOVED 2026-08-06: /services/ai-agent-development was retargeted from India to
+  // the US (measured demand 8,250/mo, median KD 6). This rule was bouncing every
+  // North American visitor off the page, so the retarget would have been pointless
+  // while it stood. The cluster is now US-owned and serves NA traffic directly.
   // India web-design hub + city pages → US /services/web-design
   { match: (p) => p === '/web-design' || p.startsWith('/web-design/'), target: '/services/web-design' },
   // India SEO hub + city + discipline pages → US /services/seo
@@ -97,7 +99,10 @@ export const US_TO_INDIA_RULES = [
   { match: (p) => p === '/services/ai-seo',               target: '/ai-seo' },
   { match: (p) => p === '/services/shopify-development',  target: '/shopify-development' },
   { match: (p) => p === '/services/wordpress-development', target: '/wordpress-development' },
-  { match: (p) => p === '/services/ai-agents',            target: '/services/ai-agent-development' },
+  // REMOVED 2026-08-06: this sent Indian visitors from /services/ai-agents to
+  // /services/ai-agent-development, which is now the US page. There is no India
+  // twin for the agent cluster any more, so India traffic stays on the US page
+  // rather than being routed to a second US page.
 ]
 
 /** Drop a trailing slash (except root) so `/web-design/` and a target with no slash

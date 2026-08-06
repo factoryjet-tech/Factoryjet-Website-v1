@@ -4,26 +4,27 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '229',
   slug: 'best-ai-seo-agencies-india',
-  title: "India's 10 Best AI SEO Agencies (2026)",
+  title: '10 Best AI SEO Agencies in India (2026)',
   excerpt:
-    'India-only list. India has 100 million weekly ChatGPT users, and they ask AI which companies to trust. We compared the 10 best AI SEO agencies in India on services, pricing and proof. Yes, we are on the list, with full disclosure. Hiring for a US business instead? Use our US AI SEO page.',
+    'Ten India-based AI SEO agencies, compared on what they actually sell, who does the work, and whether they publish anything a buyer can check. We are on the list at number one and we say so up front, with nine real competitors described fairly. Hiring for a US business instead? Start at our US AI SEO page.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
   readTime: '12 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-india-2026.webp',
   meta: {
-    title: "India's 10 Best AI SEO Agencies (2026): Services and Proof",
+    title: '10 Best AI SEO Agencies in India (2026) + 3 Questions to Ask',
     description:
-      'India-focused list for Indian businesses. India has 100M weekly ChatGPT users asking which companies to trust. The 10 best AI SEO agencies in India compared on services, real pricing and proof.',
+      '10 India-based AI SEO agencies compared on services and proof, each checked on its own site. Yes, we are on the list, disclosed. Plus 3 questions to ask.',
   },
   keyTakeaways: [
-    'Our researched top 10: FactoryJet (disclosed self-inclusion), Qoulomb, Infidigit, Techmagnate, PageTraffic, Black Marlin Technologies, RepIndia, ZeroAdo, HikeMyTraffic, and SEO Discovery. Every entry is India-based and was verified on its own website on 06/11/2026.',
-    'India has 100 million weekly ChatGPT users, making it OpenAI’s second-largest market after the US (TechCrunch, Feb 2026). Indian buyers now ask AI which agency, store or service to trust.',
-    'AI SEO cost in India runs ₹15,000–₹1,00,000/month for most businesses (Black Marlin’s published band); specialist GEO retainers run ₹1.5–8.5 lakh/month (Qoulomb publishes $1,000–$10,000/mo).',
-    'Six of the current top-ten Google results for this India query are agency self-published listicles. The self-ranking playbook demonstrably works, and we follow it with full disclosure.',
-    'When Google shows an AI summary, clicks on normal results drop from 15% to 8% (Pew Research, 2025), and #1-ranked pages lose up to 58% of clicks under AI Overviews (Ahrefs, Dec 2025).',
+    'Our researched top 10: FactoryJet (disclosed self-inclusion), Qoulomb, Infidigit, Techmagnate, PageTraffic, Black Marlin Technologies, RepIndia, ZeroAdo, HikeMyTraffic, and SEO Discovery. All India-based, each checked on its own website on 06/11/2026 and re-checked on 08/06/2026 (nine of the ten first-hand). The methodology section lists exactly what changed and which entry we could not re-open.',
+    'India has 100 million weekly ChatGPT users, making it OpenAI’s second-largest market after the US (TechCrunch, 15 February 2026). Indian buyers now ask AI which agency, store or service to trust.',
+    'Only a minority of Indian AI SEO agencies publish anything about cost, and the ones that do move their numbers. A band we recorded in June no longer matched the same page in August, so read the agency’s own page on the day you shortlist, not any roundup including this one.',
+    'Six of the top-ten Google results for this India query, checked on 06/11/2026, were agency self-published listicles. None of the six disclosed it. We run the same play and disclose it in the first screen.',
+    'When Google shows an AI summary, clicks on normal results fall to 8% from 15% (Pew Research Center, July 2025), and on informational searches the top-ranking page gets 58% fewer clicks on average when an AI Overview is present (Ahrefs, 300,000 keywords).',
     'Three questions expose weak agencies: show me AI citations per engine; who exactly does my work; what will my monthly report show.',
+    'Fastest way to start: run a free check of whether ChatGPT, Perplexity and Google AI Overviews mention your business today, then take that result to every agency you shortlist.',
   ],
   faqs: [
     {
@@ -32,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which is the best AI SEO company in India for small businesses?',
-      a: 'FactoryJet, Black Marlin Technologies, and ZeroAdo are the most small-business-friendly. Black Marlin publishes AI SEO prices from ₹15,000/month. ZeroAdo lets you cancel anytime. FactoryJet gives monthly per-engine citation reports, and that proof test is the fastest way to find the best AI SEO services in India. It is also the first question worth asking on any India shortlist.',
+      a: 'FactoryJet, Black Marlin Technologies, and ZeroAdo are the most small-business-friendly. Black Marlin is one of the few that publishes packages openly on its own site instead of quoting only. ZeroAdo sells month-to-month with no lock-in. FactoryJet gives monthly per-engine citation reports, and that proof test is the fastest way to find the best AI SEO services in India.',
     },
     {
       q: 'What are the top 10 AI SEO agencies in India?',
@@ -40,23 +41,15 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does AI SEO cost in India?',
-      a: 'AI SEO cost in India runs from ₹15,000 to ₹1,00,000 per month for most businesses (Black Marlin’s published band). Specialist GEO retainers for competitive niches run ₹1.5 lakh to ₹8.5 lakh per month (Qoulomb publishes $1,000–$10,000/month). That is roughly a 15–20% premium over traditional SEO, not double.',
-    },
-    {
-      q: 'Which is the best GEO agency in India?',
-      a: 'GEO means generative engine optimization, which is getting AI tools to mention your business. Qoulomb has a dedicated GEO service line for B2B, Black Marlin runs a dedicated GEO services page, and FactoryJet includes GEO in every retainer instead of selling it separately. Any honest ranking of the top 10 generative engine optimization agencies in India starts with those three checks.',
+      a: 'It is a monthly retainer, and the spread is wide. Four things move it: how many pages need rebuilding, how competitive your category is, whether GEO is bundled or billed separately, and whether an engineer or a junior executive does the work. Most Indian agencies quote rather than publish. Ask for scope in writing before you compare any two numbers, because the same figure can buy very different work.',
     },
     {
       q: 'Which is the best AEO agency in India?',
-      a: 'AEO means answer engine optimization, which is getting your business into direct answers like Google AI Overviews. Qoulomb literally titles itself an AEO and GEO agency. HikeMyTraffic covers AEO alongside AI SEO and GEO. FactoryJet treats AEO and GEO as one job, because the work overlaps almost completely. A list of the top 10 AEO agencies in India would look nearly identical to our main table.',
-    },
-    {
-      q: 'Who offers the best answer engine optimization services in India?',
-      a: 'Look for three things: structured FAQ content, schema markup, and proof of AI citations. Qoulomb, HikeMyTraffic, and FactoryJet all sell answer engine optimization; FactoryJet is the one that reports citations per engine (ChatGPT, Perplexity, Claude, Gemini) every month. That reporting test beats any best answer engine optimization agency in India award badge.',
+      a: 'AEO means answer engine optimization, which is getting your business into direct answers like Google AI Overviews. Qoulomb titles itself an AEO and GEO agency. HikeMyTraffic covers AEO alongside AI SEO and GEO. FactoryJet treats AEO and GEO as one job, because the work overlaps almost completely, and reports citations per engine every month. That reporting test beats any award badge. A list of the top 10 AEO agencies in India would look nearly identical to our main table.',
     },
     {
       q: 'Which is the best generative engine optimization agency in India?',
-      a: 'For enterprises, Infidigit (entity-level optimization, clients like Myntra and Flipkart). For B2B startups, Qoulomb. For SMBs that want the best generative engine optimization services in India inside a normal retainer instead of a costly add-on, FactoryJet.',
+      a: 'GEO means generative engine optimization, which is getting AI tools to mention your business. For enterprises, Infidigit (entity-level work, with published case studies for Myntra and Flipkart Seller Hub). For B2B startups, Qoulomb, which runs a dedicated GEO service line. Black Marlin runs a separate GEO services page. For SMBs that want the best generative engine optimization services in India inside a normal retainer instead of a costly add-on, FactoryJet.',
     },
     {
       q: 'Who is the best ChatGPT optimization agency in India?',
@@ -68,15 +61,11 @@ export const post: BlogPost = {
     },
     {
       q: 'Who provides the best AI Overviews optimization services in India?',
-      a: 'Google AI Overviews sit above normal results and absorb clicks. Pages ranked #1 lose up to 58% of clicks when an Overview appears (Ahrefs, Dec 2025). Infidigit, PageTraffic, and FactoryJet all optimize for Overview inclusion using answer-first content and schema.',
-    },
-    {
-      q: 'Which is the best AI search optimization agency in India?',
-      a: 'HikeMyTraffic covers the widest acronym stack (AI SEO, GEO, AEO, AIO, SXO). SEO Discovery rebuilt its services around AI-driven search. FactoryJet keeps it simpler: one retainer, four AI engines plus Google, monthly proof.',
+      a: 'Google AI Overviews sit above normal results and absorb clicks. Ahrefs measured the top-ranking page getting 58% fewer clicks on average when an Overview is present, across 300,000 informational keywords, comparing December 2025 with December 2023. Infidigit, PageTraffic, and FactoryJet all optimize for Overview inclusion using answer-first content and schema.',
     },
     {
       q: 'What does generative engine optimization cost in India?',
-      a: 'Generative engine optimization cost in India typically adds 15 to 20 percent to a standard SEO budget. PageTraffic’s own research puts GEO packages at $1,500–$10,000/month. If you are asking how much does generative engine optimization cost in India as a separate bill on top of AI SEO, it should not be one. It is one workflow, one price.',
+      a: 'If you are asking what GEO costs as a separate bill on top of AI SEO, our view is that it should not be one. The schema, answer formatting and entity work that wins AI citations is the same work that wins AI Overviews. When an agency prices GEO as a premium add-on, ask which specific tasks sit in the add-on and not in the base retainer. Often the honest answer is none.',
     },
     {
       q: 'What is AI SEO in simple words?',
@@ -88,7 +77,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why does AI SEO matter for Indian businesses in 2026?',
-      a: 'India has 100 million weekly ChatGPT users, OpenAI’s second-largest market after the US (TechCrunch, Feb 2026). And when Google shows an AI summary, people click normal results only 8% of the time versus 15% without one (Pew Research, 2025). If AI tools do not mention your business, those buyers never see you.',
+      a: 'India has 100 million weekly ChatGPT users, OpenAI’s second-largest market after the US (TechCrunch, 15 February 2026). And when Google shows an AI summary, people click a normal result in 8% of visits versus 15% when there is no summary (Pew Research Center, July 2025). If AI tools do not mention your business, those buyers never see you.',
     },
     {
       q: 'How do I check if an AI SEO agency is real or just renamed old SEO?',
@@ -96,7 +85,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does AI SEO take to show results in India?',
-      a: 'Usually faster than old-style SEO. Schema and answer-format changes can earn AI citations in 4–8 weeks because AI tools refresh their sources faster than Google re-ranks pages. A fair benchmark: visible citation growth within 90 days.',
+      a: 'Usually faster than old-style SEO. Schema and answer-format changes can earn AI citations in 4 to 8 weeks because AI tools refresh their sources faster than Google re-ranks pages. A fair benchmark: visible citation growth within 90 days.',
     },
     {
       q: 'Is there a good AI SEO agency in Bangalore or Mumbai?',
@@ -104,11 +93,23 @@ export const post: BlogPost = {
     },
     {
       q: 'Do Indian AI SEO agencies serve US and UK clients?',
-      a: 'Yes, widely. Qoulomb says about half its clients are US brands. HikeMyTraffic ranks for UK queries from Noida. FactoryJet runs dedicated US and UK operations with country-specific pages, scope and reporting. If you are a US business reading this India list, the page you actually want is our US AI SEO services page at /services/ai-seo, or our separate roundup of the best AI SEO agencies in the USA.',
+      a: 'Yes, widely. Qoulomb sells to B2B brands well outside India. HikeMyTraffic ranks for UK queries from Noida. FactoryJet runs dedicated US and UK operations with country-specific pages, scope and reporting. If you are a US business reading this India list, the page you actually want is our US AI SEO services page at /services/ai-seo, or our separate roundup of the best AI SEO agencies in the USA.',
     },
     {
       q: 'What should a monthly AI SEO report include?',
       a: 'Three sections: AI citations per engine (ChatGPT, Perplexity, Claude, Gemini) for your money queries, Google data (rankings, AI Overview appearances, clicks), and business numbers (leads and sales from organic plus AI referrals). If a report only shows keyword positions, you are not buying AI SEO.',
+    },
+    {
+      q: 'How do I check whether ChatGPT already mentions my business?',
+      a: 'Ask ChatGPT, Perplexity and Gemini the exact question a buyer would ask, such as "best CA firm in Pune" or "who makes industrial valves in Gujarat", and see whether you are named. Do it in a fresh chat with no memory of you. If you are missing from all three, that is your baseline. Our free AI visibility checker runs the same test across engines and saves the result.',
+    },
+    {
+      q: 'Should I hire an Indian agency or an agency in my own country?',
+      a: 'Judge the work, not the postcode. An Indian agency is the right call when your buyers are in India, when you want engineering depth at Indian rates, or when the agency already ranks for the terms you want. Hire locally when your category needs on-the-ground PR or local-language nuance the agency cannot cover. We run India and US work as separate operations for exactly that reason.',
+    },
+    {
+      q: 'What happens on a discovery call with FactoryJet?',
+      a: 'Thirty minutes with Bhavesh, not a sales team. We look at whether AI engines currently name you, which queries your buyers actually type, and what is structurally blocking citation on your site. You leave with a plain-language read of where you stand, whether or not you hire us. Book it from our contact page or the button at the end of this article.',
     },
   ],
   content: (
@@ -116,55 +117,84 @@ export const post: BlogPost = {
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer, for India</p>
         <p className="text-amber-800">
-          India first: every agency below is based in India and works mainly with Indian businesses.
-          For small and mid-size Indian companies the pick is FactoryJet (yes, this is our own list,
-          with full disclosure and a methodology you can check). For funded B2B startups it&apos;s
-          Qoulomb. For enterprise brands it&apos;s Infidigit or Techmagnate. For the lowest published
-          entry price it&apos;s Black Marlin.
+          Every agency below is based in India and works mainly with Indian businesses. For small
+          and mid-size companies the pick is FactoryJet (yes, this is our own list, disclosed, with a
+          methodology you can check). For funded B2B startups it&apos;s Qoulomb. For enterprise
+          brands it&apos;s Infidigit, or Techmagnate in a regulated category. For an agency that
+          publishes its packages instead of hiding them behind a form, it&apos;s Black Marlin.
         </p>
       </div>
 
       <p className="mb-4">
         <strong>Reading this from the United States?</strong> Then this is the wrong page. Everything
-        below assumes an India brief: Indian agencies, Indian buyers, rupee budgets. If you want to
-        hire for a US business, go straight to our{' '}
+        below assumes an India brief. To hire for a US business, go to our{' '}
         <a href="/services/ai-seo" className="text-orange-600 underline">
           US AI SEO services page
-        </a>{' '}
-        for hiring, or read the{' '}
+        </a>
+        , or read the{' '}
         <a href="/blog/best-ai-seo-agencies-usa" className="text-orange-600 underline">
           10 best AI SEO agencies in the USA
         </a>{' '}
-        if you are still building a shortlist. Same discipline, completely different market and
-        completely different shortlist.
+        if you are still building a shortlist.
       </p>
 
       <p className="mb-4">
-        Why this matters in India now: <strong>India has 100 million weekly ChatGPT users, OpenAI&apos;s
-        second-largest market in the world</strong> (TechCrunch, February 2026). People don&apos;t
-        just ask ChatGPT for recipes. They ask it which web agency to hire, which SEO company to
-        trust, and increasingly which store to buy from, the first step toward{' '}
+        Why this matters in India now:{' '}
+        <strong>
+          India has 100 million weekly ChatGPT users, OpenAI&apos;s second-largest market in the
+          world
+        </strong>{' '}
+        (
+        <a
+          href="https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          TechCrunch, 15 February 2026
+        </a>
+        ). Indian buyers now ask ChatGPT which agency to hire, which SEO company to trust, and
+        increasingly which store to buy from, the first step toward{' '}
         <a href="/agentic-commerce" className="text-orange-600 underline">
           AI agents that complete the purchase on the shopper&apos;s behalf
         </a>
         . If AI tools never mention your business, those buyers never find you.
       </p>
       <p className="mb-4">
-        One more number worth knowing: when Google shows an AI summary at the top of results, people
-        click the normal links only <strong>8% of the time, versus 15% without one</strong> (Pew
-        Research Center, 2025). The answer box is eating the clicks, which is why so many Indian
-        marketers are now asking{' '}
+        And when Google shows an AI summary at the top of results, people click a normal link in{' '}
+        <strong>8% of visits, against 15% when there is no summary</strong> (
+        <a
+          href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          Pew Research Center, July 2025
+        </a>
+        , from 68,879 real Google searches). Ahrefs put a sharper number on the same problem: with an
+        AI Overview present, the top-ranking page takes{' '}
+        <strong>58% fewer clicks on average</strong> (
+        <a
+          href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          Ahrefs, 300,000 informational keywords, December 2025 against December 2023
+        </a>
+        ). The answer box is eating the clicks, which is why Indian marketers are asking{' '}
         <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
-          whether GEO is replacing SEO or simply building on top of it
+          whether GEO is replacing SEO
         </a>
         . AI SEO is how you get inside the answer box.
       </p>
       <p className="mb-4">
-        <strong>Full disclosure:</strong> FactoryJet is #1 on its own list. We checked the current
-        Google results for this exact India search: six of the top ten are agencies ranking their own
-        self-published lists (Qoulomb, RepIndia, ZeroAdo, HikeMyTraffic, Black Marlin, SEO Discovery
-        all do it). We&apos;re doing the same thing, openly, with nine real Indian competitors fairly
-        described, including where they beat us.
+        <strong>Full disclosure, before you read a single ranking:</strong> FactoryJet is #1 on its
+        own list. When we checked the Google results for this exact India search on 06/11/2026, six
+        of the top ten were agencies ranking their own self-published lists (Qoulomb, RepIndia,
+        ZeroAdo, HikeMyTraffic, Black Marlin and SEO Discovery). Not one of the six said so on the
+        page. We run the same play and say so in the first screen, with nine real competitors
+        described fairly, including where they beat us.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
@@ -178,7 +208,7 @@ export const post: BlogPost = {
               <th className="p-3 border text-left">Agency</th>
               <th className="p-3 border text-left">City</th>
               <th className="p-3 border text-left">Known for</th>
-              <th className="p-3 border text-left">Published pricing</th>
+              <th className="p-3 border text-left">Pricing posture</th>
               <th className="p-3 border text-left">Best for</th>
             </tr>
           </thead>
@@ -188,47 +218,47 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">FactoryJet (us)</td>
               <td className="p-3 border">Vadodara, serving all metros</td>
               <td className="p-3 border">GEO + AEO in one retainer; 4 AI engines tracked monthly</td>
-              <td className="p-3 border font-semibold">Yes, plans explained before you sign</td>
+              <td className="p-3 border font-semibold">Scope and plan explained in writing before you sign</td>
               <td className="p-3 border">SMBs that want proof, not promises</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">2</td>
               <td className="p-3 border font-semibold">Qoulomb</td>
-              <td className="p-3 border">Bengaluru</td>
-              <td className="p-3 border">B2B-only AEO &amp; GEO; ~50% US clients</td>
-              <td className="p-3 border font-semibold">Yes, published in its own FAQ</td>
+              <td className="p-3 border">Bengaluru (HSR Layout)</td>
+              <td className="p-3 border">B2B-only AI SEO / GEO practice</td>
+              <td className="p-3 border">Quote only (no public pricing found 08/06/2026)</td>
               <td className="p-3 border">Funded B2B/SaaS startups</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">3</td>
               <td className="p-3 border font-semibold">Infidigit</td>
               <td className="p-3 border">Mumbai</td>
-              <td className="p-3 border">Enterprise GEO; Infigrowth SaaS platform</td>
-              <td className="p-3 border">No</td>
-              <td className="p-3 border">Large brands (Myntra, Flipkart, Zee5)</td>
+              <td className="p-3 border">Enterprise SEO at scale; Infigrowth SaaS platform</td>
+              <td className="p-3 border">Quote only</td>
+              <td className="p-3 border">Large brands (Myntra, Flipkart Seller Hub, Zee5)</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">4</td>
               <td className="p-3 border font-semibold">Techmagnate</td>
               <td className="p-3 border">New Delhi</td>
               <td className="p-3 border">LLM SEO launch with national press; since 2006</td>
-              <td className="p-3 border">No</td>
+              <td className="p-3 border">Quote only</td>
               <td className="p-3 border">Enterprise &amp; regulated industries</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border">5</td>
               <td className="p-3 border font-semibold">PageTraffic</td>
-              <td className="p-3 border">New Delhi</td>
-              <td className="p-3 border">20+ years SEO + GEO; publishes GEO cost research</td>
-              <td className="p-3 border">Partial (guide: $1,500–$10,000/mo)</td>
+              <td className="p-3 border">New Delhi (also Mumbai, London, Chicago)</td>
+              <td className="p-3 border">Running since 2002; AI SEO added to a classic SEO shop</td>
+              <td className="p-3 border">Quote only</td>
               <td className="p-3 border">SMBs wanting a veteran shop</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">6</td>
               <td className="p-3 border font-semibold">Black Marlin</td>
               <td className="p-3 border">Noida</td>
-              <td className="p-3 border">Dedicated GEO page; lowest published entry</td>
-              <td className="p-3 border font-semibold">Yes, lowest published entry band</td>
+              <td className="p-3 border">Dedicated GEO, AEO and LLM SEO service pages</td>
+              <td className="p-3 border font-semibold">Publishes packages openly on its own site</td>
               <td className="p-3 border">Budget-conscious startups</td>
             </tr>
             <tr className="bg-white">
@@ -236,7 +266,7 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">RepIndia</td>
               <td className="p-3 border">New Delhi</td>
               <td className="p-3 border">Full-stack national agency; 4 city offices</td>
-              <td className="p-3 border">No</td>
+              <td className="p-3 border">Quote only</td>
               <td className="p-3 border">Brands wanting SEO + social + ORM together</td>
             </tr>
             <tr className="bg-gray-50">
@@ -244,7 +274,7 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">ZeroAdo</td>
               <td className="p-3 border">New Delhi</td>
               <td className="p-3 border">Pay-as-you-go, cancel anytime</td>
-              <td className="p-3 border">Tiered (numbers on request)</td>
+              <td className="p-3 border">Tiered, numbers on request</td>
               <td className="p-3 border">SMBs that hate lock-ins</td>
             </tr>
             <tr className="bg-white">
@@ -252,111 +282,121 @@ export const post: BlogPost = {
               <td className="p-3 border font-semibold">HikeMyTraffic</td>
               <td className="p-3 border">Noida</td>
               <td className="p-3 border">Widest acronym stack: AI SEO/GEO/AEO/AIO/SXO</td>
-              <td className="p-3 border">No</td>
+              <td className="p-3 border">Quote only</td>
               <td className="p-3 border">One retainer covering everything</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border">10</td>
               <td className="p-3 border font-semibold">SEO Discovery</td>
               <td className="p-3 border">Mohali</td>
-              <td className="p-3 border">150+ staff; AI-driven rebuild of services</td>
-              <td className="p-3 border">No</td>
+              <td className="p-3 border">Large in-house team claimed; AI-driven rebuild of services</td>
+              <td className="p-3 border">Quote only</td>
               <td className="p-3 border">Non-metro budget buyers</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p className="mb-4">
-        Only three of ten publish real numbers. Remember that when you collect quotes.
+        Almost every Indian AI SEO agency quotes rather than publishes. Treat that as normal, not
+        sinister, but it does mean you shortlist on scope, not on price. A band we recorded in June
+        did not match the same page in August, so <strong>no roundup, ours included, is a reliable
+        source for what an agency charges today.</strong> Everything above was checked on the
+        agency&apos;s own website, not a directory. The methodology at the end lists what was checked
+        and what changed.
       </p>
-
       <h2 className="text-2xl font-bold mt-8 mb-4">The 10 best AI SEO agencies in India, reviewed</h2>
 
       <h3 className="text-xl font-bold mt-6 mb-3">
         1. FactoryJet: best for Indian SMBs that want proof (disclosure: this is us)
       </h3>
       <p className="mb-4">
-        We are engineers first. Every AI SEO retainer covers Google <strong>and</strong> the four
-        big AI engines (ChatGPT, Perplexity, Claude and Gemini) plus Google AI Overviews. Every
-        month you get a report showing citations per engine, in plain language you can read in five
-        minutes. Before you talk to us or anyone else, you can{' '}
+        We are engineers first. Every AI SEO retainer covers Google <strong>and</strong> the four big
+        AI engines (ChatGPT, Perplexity, Claude and Gemini) plus AI Overviews. In the retainer:
+      </p>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li>Citation tracking across ChatGPT, Perplexity, Claude and Gemini, reported per engine, not merged into one vanity score.</li>
+        <li>Google AI Overview appearance tracking for your money queries alongside normal rankings.</li>
+        <li>Schema, entity and answer-format work done by the engineers who build the site.</li>
+        <li>Technical SEO to a 100/100 Lighthouse standard, because slow pages lose in both systems.</li>
+        <li>A monthly report you can read in five minutes, ending in leads, not impressions.</li>
+        <li>No annual lock-in, and scope agreed in writing before anything starts.</li>
+      </ul>
+      <p className="mb-4">
+        Where competitors beat us: if you are Myntra-sized, Infidigit&apos;s enterprise muscle fits
+        better, and if you need BFSI compliance experience, Techmagnate has more of it. Before you
+        talk to us or to anyone here, you can{' '}
         <a href="/ai-visibility-checker" className="text-orange-600 underline">
           check for free whether ChatGPT, Perplexity and Google AI Overviews mention your business
-        </a>{' '}
-        right now.
-      </p>
-      <p className="mb-4">
-        Why we rank ourselves first for Indian small businesses: the same engineers who build 100/100
-        Lighthouse websites do the schema and structure work AI engines need; scope and price are
-        explained clearly before you sign; and there are no annual lock-ins. Where competitors beat
-        us: if you&apos;re Myntra-sized, Infidigit&apos;s enterprise muscle fits better. We say so
-        honestly.{' '}
-        <a href="/ai-seo" className="text-orange-600 underline">See what our India AI SEO work covers</a>, or
-        our broader <a href="/seo" className="text-orange-600 underline">India SEO services</a>
-      </p>
-      <p className="mb-4">
-        One clarification, because it decides which page you should be on. Our India work and our US
-        work are run as separate operations with separate pages, separate scope and separate
-        reporting. If your customers are in the United States rather than India, stop reading this
-        list and start at our{' '}
-        <a href="/services/ai-seo" className="text-orange-600 underline">
-          US AI SEO services page
         </a>
-        , which covers generative engine optimization and answer engine optimization for US
-        businesses. The agencies on this page are excellent for India and mostly wrong for a US brief.
+        . See what our{' '}
+        <a href="/ai-seo" className="text-orange-600 underline">
+          India AI SEO work
+        </a>{' '}
+        and{' '}
+        <a href="/seo" className="text-orange-600 underline">
+          India SEO services
+        </a>{' '}
+        cover, then start on our{' '}
+        <a href="/contact" className="text-orange-600 underline">
+          contact page
+        </a>
+        .
       </p>
-
       <h3 className="text-xl font-bold mt-6 mb-3">2. Qoulomb: best for Indian B2B startups</h3>
       <p className="mb-4">
-        Bengaluru-based (HSR Layout), B2B-only, and refreshingly direct: its homepage FAQ publishes
-        pricing of $1,000–$10,000 per month. Dedicated GEO and AI SEO service line optimizing for
-        GPT mentions, AI Overviews, and Perplexity. About half its clients are US brands. It
-        currently ranks #1 on its own self-listicle for this exact query, which tells you it can
-        execute.
+        Bengaluru-based, with a real HSR Layout address on its own site, and B2B-only. It carries AI
+        SEO, GEO and AEO as named service lines rather than add-ons. No public pricing, so expect a
+        quote. When we checked on 06/11/2026 it ranked #1 on its own self-listicle for this query,
+        which at minimum tells you it can execute the thing it sells.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">3. Infidigit: best for Indian enterprises</h3>
       <p className="mb-4">
-        Mumbai-based, founded 2017, 150+ specialists, with clients like Myntra, Flipkart, Zee5, and
-        ICICI Prudential. Runs entity-level GEO/AEO work plus its own SEO SaaS platform, Infigrowth.
-        No published pricing, enterprise quotes only. The safest enterprise pick in India.
+        Mumbai-based, with a large in-house SEO team and published case studies for Myntra (organic
+        revenue up 187%), Flipkart Seller Hub and Zee5. Runs entity-level work plus its own SEO SaaS
+        platform, Infigrowth. Enterprise quotes only, no published pricing. If your problem is scale
+        rather than starting from zero, this is the safest enterprise pick in India.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">4. Techmagnate: best for regulated industries</h3>
       <p className="mb-4">
-        Delhi-based, founded 2006 by Sarvesh Bagla, Google Premier Partner. Formally launched LLM
-        SEO services (covered in Free Press Journal) and Agentic AI marketing services (The
-        Tribune). Strongest in BFSI, healthcare and automotive, where compliance matters as much
-        as visibility.
+        Delhi-based, founded in 2006 by Sarvesh Bagla, who still runs it. Formally launched LLM SEO
+        services, covered by the Free Press Journal, and states 300-plus staff on its own site.
+        Strongest in BFSI, healthcare and automotive, where compliance review matters as much as
+        visibility.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. PageTraffic: best veteran Indian shop adding GEO</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. PageTraffic: best veteran Indian shop adding AI SEO</h3>
       <p className="mb-4">
-        Delhi HQ, offices in Mumbai and Noida, running since 2002, one of India&apos;s oldest SEO
-        agencies, 120+ staff. Publishes its own GEO pricing research ($1,500–$10,000/month). A good
-        fit if you want AI SEO from a company that has survived every Google update since Florida.
+        Founded in 2002, Delhi HQ with offices in Mumbai, London and Chicago, which makes it one of
+        India&apos;s oldest surviving SEO agencies. AI SEO now sits in its service menu alongside the
+        classic work. Good fit if you want a shop that has lived through every Google update since
+        Florida, less good if you want a dedicated GEO practice, which it does not market separately.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. Black Marlin Technologies: best published entry price</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. Black Marlin Technologies: most open about pricing</h3>
       <p className="mb-4">
-        Noida-based, founded 2014, with a dedicated generative engine optimization services page.
-        Its published guide anchors AI SEO in India at <strong>₹15,000 to ₹1,00,000 per month</strong>{' '}
-        which is the clearest budget band in the Indian market.
+        Noida-based, and one of the very few Indian agencies that puts packages on the page instead
+        of behind a form. It runs separate pages for generative engine optimization, answer engine
+        optimization and LLM SEO, which is more structural commitment to AI search than most of this
+        list. Its published numbers moved between our June and August checks, so read the current
+        page, not any roundup including this one.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">7. RepIndia: best full-stack national agency</h3>
       <p className="mb-4">
-        Delhi HQ with Mumbai, Bengaluru, and Kolkata offices; verified Google Partner. AI SEO sits
+        Delhi HQ with Mumbai, Bengaluru, and Kolkata offices, and a Google Partner badge on its own
+        site. AI SEO sits
         inside a full-stack offer: SEO, social, ORM, content. Pick RepIndia if you want one national
         agency handling everything, not just search.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">8. ZeroAdo: best for no-lock-in flexibility</h3>
       <p className="mb-4">
-        Connaught Place, Delhi. Pay-as-you-go tiers with published cancellation and refund policies
+        Connaught Place, Delhi. Pay-as-you-go tiers with a published cancellation and refund policy
         (&quot;no complex retainers, scale or cancel anytime&quot;). A homepage testimonial credits
-        referral traffic and leads coming directly from ChatGPT and AI engines. Exact numbers
-        aren&apos;t on the static pricing page, so ask.
+        referral traffic and leads coming directly from ChatGPT and AI engines. Exact numbers are not
+        on the pricing page, so ask.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">9. HikeMyTraffic: best acronym coverage</h3>
@@ -369,85 +409,251 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-6 mb-3">10. SEO Discovery: best non-metro Indian option</h3>
       <p className="mb-4">
-        Mohali (Punjab), 150+ SEO professionals, 6,000+ clients claimed. Rebuilt its services around
-        AI-driven search optimization. Its &quot;Best SEO Agency of the Year 2024-25&quot; award is
-        self-stated (and its Republic World feature is a sponsored placement), so weigh those claims
-        accordingly. But for budget buyers outside the Indian metros, it&apos;s a real option.
+        Mohali (Punjab), with further offices listed in the UK, Australia, New Zealand and Canada.
+        Rebuilt its services around AI-driven search. Its own site claims a 400-plus in-house team
+        and 25,000-plus clients, and displays an &quot;SEO Agency of the Year 2024, 25&quot; badge
+        that names no awarding body anywhere on the page. Treat all of that as self-stated, because
+        it is. Still a real option for budget buyers outside the metros, but this is the entry where
+        you should ask for evidence hardest.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">How much does AI SEO cost in India?</h2>
-      <div className="overflow-x-auto mb-6">
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="p-3 border text-left">Tier</th>
-              <th className="p-3 border text-left">Monthly cost</th>
-              <th className="p-3 border text-left">Source</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white">
-              <td className="p-3 border font-semibold">Entry / startup</td>
-              <td className="p-3 border">₹15,000–₹50,000</td>
-              <td className="p-3 border">Black Marlin published band (from ₹15,000)</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border font-semibold">SMB growth</td>
-              <td className="p-3 border">₹50,000–₹1,00,000</td>
-              <td className="p-3 border">Black Marlin upper band; typical metro SMB retainers</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="p-3 border font-semibold">Specialist GEO / B2B</td>
-              <td className="p-3 border">₹85,000–₹8.5 lakh ($1,000–$10,000)</td>
-              <td className="p-3 border">Qoulomb published FAQ; PageTraffic GEO research</td>
-            </tr>
-            <tr className="bg-gray-50">
-              <td className="p-3 border font-semibold">Enterprise</td>
-              <td className="p-3 border">Custom</td>
-              <td className="p-3 border">Infidigit, Techmagnate, RepIndia (quote only)</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
+        <p className="font-semibold text-orange-900 mb-2">
+          Before you contact any of the ten, find out where you actually stand
+        </p>
+        <p className="text-orange-800 mb-3">
+          Every agency here will ask what your current AI visibility looks like. Walk in already
+          knowing. Our free checker asks ChatGPT, Perplexity and Google AI Overviews the questions
+          your buyers ask, and shows whether your business gets named.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="/ai-visibility-checker"
+            className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
+          >
+            Run the free AI visibility check
+          </a>
+          <a
+            href="/ai-seo"
+            className="inline-block border border-[#B23E13] text-[#B23E13] px-5 py-2 rounded font-semibold hover:bg-orange-100 transition-colors"
+          >
+            See our India AI SEO service
+          </a>
+        </div>
       </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">How much does AI SEO cost in India?</h2>
       <p className="mb-4">
-        Two simple rules. First,{' '}
+        No roundup can answer this honestly, and any roundup that gives you a confident number is
+        quoting a page it has not re-read. What we can tell you is what moves the figure, so that
+        when three quotes land you can see why they differ:
+      </p>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li>
+          <strong>How much of the site has to be rebuilt.</strong> Schema work on a clean modern site
+          is a fraction of the same job on a slow legacy build.
+        </li>
+        <li>
+          <strong>Category competition.</strong> Real estate, edtech and BFSI in the metros cost more
+          than a niche B2B manufacturer, because the answer space is crowded.
+        </li>
+        <li>
+          <strong>Whether GEO is bundled or billed on top.</strong> Ask exactly which tasks sit in
+          the add-on and not in the base retainer.
+        </li>
+        <li>
+          <strong>Who does the work.</strong> An engineer writing schema and a junior filling a
+          content calendar produce different outcomes.
+        </li>
+        <li>
+          <strong>How many languages and locations.</strong> Multi-city work multiplies page count,
+          and page count drives the retainer.
+        </li>
+        <li>
+          <strong>Reporting depth.</strong> Per-engine citation tracking costs real tool spend. An
+          agency reporting keyword positions only is cheaper because it is doing less.
+        </li>
+      </ul>
+      <p className="mb-6">
+        Our own view:{' '}
         <a href="/glossary" className="text-orange-600 underline">
           generative engine optimization
         </a>{' '}
-        cost in India should sit{' '}
-        <strong>inside</strong> your retainer, not on top of it, because GEO and AI SEO are one workflow,
-        and market research pegs the GEO premium at just 15–20% over standard SEO. Second,
-        traditional SEO in India runs ₹15,000–₹2,00,000/month, so any AI SEO quote far below ₹15,000
-        is template work wearing an AI badge.
+        belongs <strong>inside</strong> the retainer, not on top of it. Ask what is produced each
+        month, not what it costs.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
         How to choose an AI SEO agency in India: three questions that expose weak agencies
       </h2>
       <p className="mb-4">
-        Ask every agency on your shortlist these three questions before signing anything. One:{' '}
-        <strong>&quot;Show me AI citations you earned for a client, per engine.&quot;</strong> Real
-        answers name ChatGPT, Perplexity, Claude, and Gemini separately; weak answers talk about
-        &quot;AI-readiness.&quot; Two: <strong>&quot;Who exactly does my work?&quot;</strong> AI SEO
-        is engineering: schema, llms.txt, site structure. If a sales manager presents and an
-        unnamed team executes, quality is a lottery. Three:{' '}
-        <strong>&quot;What will my monthly report show?&quot;</strong> The right answer includes
-        citations per engine, AI Overview appearances and leads, not just keyword positions.
+        Ask every agency on your shortlist these three before signing anything. The answers separate
+        real practices from rebranded ones faster than any award badge.
+      </p>
+      <ol className="list-decimal pl-6 mb-6 space-y-3">
+        <li>
+          <strong>&quot;Show me AI citations you earned for a client, per engine.&quot;</strong> A
+          real answer names ChatGPT, Perplexity, Claude and Gemini separately and shows the query.
+          A weak answer talks about &quot;AI-readiness&quot; and shows you a traffic graph.
+        </li>
+        <li>
+          <strong>&quot;Who exactly does my work?&quot;</strong> AI SEO is engineering: schema, site
+          structure, internal linking, crawler access. If a sales manager presents and an unnamed
+          team executes, quality is a lottery. Ask for the name of the person writing the schema.
+        </li>
+        <li>
+          <strong>&quot;What will my monthly report show?&quot;</strong> The right answer includes
+          citations per engine, AI Overview appearances, and leads. A report that shows only keyword
+          positions is a traditional SEO report with a new cover page.
+        </li>
+      </ol>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Red flags on an Indian AI SEO agency&apos;s website</h2>
+      <p className="mb-4">
+        Every one of these is something you can check yourself in ten minutes, before you fill in a
+        single contact form:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>
+          <strong>Awards with no awarding body.</strong> If the badge does not name who gave it, it
+          is a graphic, not an award.
+        </li>
+        <li>
+          <strong>Press coverage that is a sponsored placement.</strong> Look for
+          &quot;sponsored&quot;, &quot;partnered&quot; or &quot;brand desk&quot; near the byline.
+        </li>
+        <li>
+          <strong>Client logos with no case study behind them.</strong> A logo wall is not proof. A
+          documented result with a query and a date is.
+        </li>
+        <li>
+          <strong>Guaranteed rankings or guaranteed AI mentions.</strong> Nobody controls a
+          model&apos;s output, so nobody can promise this.
+        </li>
+        <li>
+          <strong>An AI SEO page that never names an engine.</strong> If ChatGPT, Perplexity, Claude
+          and Gemini do not appear by name, it is probably conventional SEO.
+        </li>
+        <li>
+          <strong>Their own site failing the test.</strong> Ask ChatGPT about the agency. If AI
+          engines cannot describe a company that sells AI visibility, that tells you something.
+        </li>
+        <li>
+          <strong>No named humans anywhere.</strong> No founder, no team, no bylines usually means
+          the delivery team is not the team you met.
+        </li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Run your shortlist this week</h2>
+      <p className="mb-4">
+        You do not need a two-month evaluation. Five working days is enough:
+      </p>
+      <ol className="list-decimal pl-6 mb-6 space-y-2">
+        <li>
+          <strong>Monday.</strong>{' '}
+          <a href="/ai-visibility-checker" className="text-orange-600 underline">
+            Run the free AI visibility check
+          </a>{' '}
+          so you have a baseline nobody can spin.
+        </li>
+        <li>
+          <strong>Tuesday.</strong> Pick three names from the table and read their own service pages,
+          not their roundups. Apply the red-flag list.
+        </li>
+        <li>
+          <strong>Wednesday and Thursday.</strong> Get all three on a call and ask the three
+          questions. Note who names engines and who names people.
+        </li>
+        <li>
+          <strong>Friday.</strong> Ask each for scope in writing: monthly deliverables, who does
+          them, what the report contains, and the notice period.
+        </li>
+        <li>
+          <strong>Then decide on scope and proof</strong>, not on who was most enthusiastic.
+        </li>
+      </ol>
+      <p className="mb-6">
+        If FactoryJet ends up on that shortlist, start at our{' '}
+        <a href="/ai-seo" className="text-orange-600 underline">
+          India AI SEO service page
+        </a>{' '}
+        to see the scope written out, then use the{' '}
+        <a href="/contact" className="text-orange-600 underline">
+          contact page
+        </a>{' '}
+        to get on a call.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Methodology</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Methodology and sources</h2>
       <p className="mb-4">
-        We verified every agency on its own website on 06/11/2026: service pages, office addresses,
-        published pricing, and at least one checkable differentiator each. Self-stated awards and
-        sponsored placements are labeled as such (SEO Discovery). We excluded agencies we could not
-        verify firsthand (Brandstory, Sociolabs, GO MO Group, which is Swedish-managed). FactoryJet&apos;s
-        #1 position is disclosed self-placement, the same practice used by six of the current
-        top-ten results for this query, all verified. Nobody paid to appear.
+        On each agency&apos;s own website we checked six things: a real Indian address, AI SEO, GEO,
+        AEO or LLM SEO sold as a named service, whether it publishes anything about cost, one
+        checkable differentiator, whether awards and press are earned or self-stated, and whether it
+        ranks its own listicle for this query. Done on 06/11/2026, then all ten reopened on
+        08/06/2026 along with the three external sources. Nine were re-read first-hand in August.
+        HikeMyTraffic&apos;s site blocked our request that day, so its entry rests on its own
+        published pages and its coverage in The Hans India. The re-check produced real corrections:
+      </p>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>
+          A published price band we recorded in June did not match the same page in August, so all
+          specific cost figures have been removed from this article.
+        </li>
+        <li>
+          PageTraffic&apos;s office list and service menu did not match June. Its site lists New
+          Delhi, Mumbai, London and Chicago, and names AI SEO but not GEO. Entry corrected.
+        </li>
+        <li>
+          SEO Discovery&apos;s self-stated team size, client count and &quot;agency of the year&quot;
+          badge all still stood, unchanged. They stay in, labelled self-stated.
+        </li>
+        <li>
+          Two competitor claims we had carried could not be re-confirmed, so they are gone rather
+          than hedged.
+        </li>
+        <li>
+          The Ahrefs figure is an average, not a ceiling, so &quot;up to 58%&quot; is corrected to
+          &quot;58% fewer clicks on average&quot;, with the study&apos;s scope stated.
+        </li>
+      </ul>
+      <p className="mb-4">
+        We excluded agencies we could not verify firsthand (Brandstory, Sociolabs, and GO MO Group,
+        which is Swedish-managed). FactoryJet&apos;s #1 position is disclosed self-placement, the
+        same practice used by six of the top-ten results for this query. Nobody paid to appear, and
+        no link on this page is paid.
       </p>
       <p className="mb-4">
-        Sources: TechCrunch (Feb 2026) on India&apos;s 100M weekly ChatGPT users; Pew Research
-        Center (July 2025) on AI summary click-through; Ahrefs (Dec 2025) on AI Overviews CTR
-        impact; agency pages verified 06/11/2026.
+        Sources, each opened and confirmed on 08/06/2026:{' '}
+        <a
+          href="https://techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          TechCrunch, 15 February 2026
+        </a>{' '}
+        on India&apos;s 100 million weekly ChatGPT users and second-place market position;{' '}
+        <a
+          href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          Pew Research Center, 22 July 2025
+        </a>{' '}
+        on 8% versus 15% click-through with and without an AI summary; and{' '}
+        <a
+          href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-orange-600 underline"
+        >
+          Ahrefs
+        </a>{' '}
+        on the 58% average clickthrough drop for the top-ranking page, across 300,000 keywords,
+        December 2025 against December 2023. Note the scope: that study covers informational
+        searches, not commercial ones, so read it as direction of travel, not a number for your
+        category.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
@@ -455,15 +661,24 @@ export const post: BlogPost = {
           Want to know if AI tools mention your business in India today?
         </p>
         <p className="text-orange-800 mb-3">
-          Bhavesh runs every discovery call himself. Book a 30-minute call and find out where you
-          stand in AI search, in plain language, no jargon.
+          Bhavesh runs every discovery call himself. Book 30 minutes and find out where you stand in
+          AI search, in plain language. If we are the wrong fit, we will say so and point you at
+          whoever on this list is right.
         </p>
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
-        >
-          Book a 30-min call
-        </a>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
+          >
+            Book a 30-min call
+          </a>
+          <a
+            href="/contact"
+            className="inline-block border border-[#B23E13] text-[#B23E13] px-5 py-2 rounded font-semibold hover:bg-orange-100 transition-colors"
+          >
+            Or send us the details
+          </a>
+        </div>
       </div>
     </>
   ),

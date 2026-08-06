@@ -58,6 +58,10 @@ A decade-plus building commerce for DTC and B2B brands. Most of the brands we wo
 - AI-powered CRM and sales automation
 - AI content strategy and execution
 - Custom LLM integrations for business workflows
+- RFQ and bidding agents for manufacturers, fabricators and distributors (EDI 840/843, cXML punchout, Coupa, SAP Ariba, Jaggaer, SAM.gov intake)
+- Manufacturing operations agents (shift handovers, downtime rollups, work-order questions; read-only against ERP, MES and maintenance systems, never machine control)
+- Procurement and supply chain agents (supplier acknowledgement parsing, promised-date reconciliation, EDI 850/855/856/860/865 handling)
+- Shopify Plus builds (Shopify Functions, checkout extensibility, B2B company profiles and catalogs, Flow, Launchpad, expansion stores)
 
 ### Specialty Service Pages
 - Law firm website design

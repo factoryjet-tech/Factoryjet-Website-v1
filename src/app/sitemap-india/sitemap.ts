@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getFileLastMod, getMaxLastMod } from '@/lib/sitemap-helpers'
+import { getFileLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
 
@@ -90,16 +90,10 @@ const INDIA_SEO_SUBSERVICES = [
   'seo-audit',
 ] as const
 
-// ── India AI agent sub-pages ──────────────────────────────────────────────────
-const AI_SUB_PAGES = [
-  'ai-chatbot',
-  'ai-customer-support',
-  'ai-marketing-agent',
-  'ai-sales-agent',
-  'ai-scheduling-agent',
-  'ai-voice-agent',
-  'ai-workflow-automation',
-] as const
+// ── AI agent cluster moved to sitemap-us on 2026-08-06 ───────────────────────
+// The hub and its spokes were retargeted from India to the US, where measured
+// demand is 8,250/mo at median KD 6. They are now listed in
+// src/app/sitemap-us/sitemap.ts. A URL belongs to exactly one sitemap.
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
@@ -158,12 +152,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: PRIORITY.service,
     },
     {
-      url: `${SITE_URL}/services/ai-agent-development`,
-      lastModified: getFileLastMod('src/app/services/ai-agent-development/page.tsx'),
-      changeFrequency: CHANGEFREQ.service as ChangeFreq,
-      priority: PRIORITY.service,
-    },
-    {
       url: `${SITE_URL}/seo`,
       lastModified: getFileLastMod('src/app/seo/page.tsx'),
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
@@ -201,17 +189,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: PRIORITY.city,
   }))
 
-  // ── AI agent sub-pages ───────────────────────────────────────────────────────
-  const aiSubPages: MetadataRoute.Sitemap = AI_SUB_PAGES.map((slug) => ({
-    url: `${SITE_URL}/services/ai-agent-development/${slug}`,
-    lastModified: getMaxLastMod(
-      `src/app/services/ai-agent-development/${slug}/page.tsx`,
-      'src/app/services/ai-agent-development/page.tsx',
-    ),
-    changeFrequency: CHANGEFREQ.subpage as ChangeFreq,
-    priority: PRIORITY.subpage,
-  }))
-
   // ── India digital-marketing city pages ───────────────────────────────────────
   const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad', 'noida', 'ahmedabad', 'chennai', 'kolkata', 'surat', 'indore', 'chandigarh', 'lucknow', 'jaipur'].map((city) => ({
     url: `${SITE_URL}/digital-marketing/${city}`,
@@ -227,7 +204,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoCities,
     ...seoSubServices,
     ...ecommerceCities,
-    ...aiSubPages,
     ...dmCities,
   ]
 }
