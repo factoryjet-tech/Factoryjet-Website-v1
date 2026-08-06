@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Automation Agency for US Small Businesses | FactoryJet',
+  title: 'AI Automation Agency in the USA for Small Businesses | FactoryJet',
   description:
-    'US-focused AI automation agency, connect tools, eliminate manual workflows, save 20+ hours/week. n8n, Make, Zapier & HubSpot. Free automation audit.',
+    'AI automation agency in the USA for small businesses. We connect the tools you already run and take the manual steps out of lead follow-up, invoicing, support triage and reporting. Built in n8n, Make and Zapier. Free automation audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Automation Agency for US Small Businesses | FactoryJet',
+    title: 'AI Automation Agency in the USA for Small Businesses | FactoryJet',
     description:
       'Connect your tools. Eliminate manual work. FactoryJet builds AI-powered workflow automation for US SMBs: fixed-price, milestone-paid, engineered for measurable outcomes.',
     url: 'https://factoryjet.com/services/ai-automation',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Automation Agency for US Small Businesses | FactoryJet',
+    title: 'AI Automation Agency in the USA for Small Businesses | FactoryJet',
     description:
-      'Save 20+ hours/week. FactoryJet automates your business workflows with AI, n8n, Make, Zapier, HubSpot. Free audit. Fixed-price, milestone-paid.',
+      'FactoryJet automates the manual steps in your business with AI, built in n8n, Make, Zapier and HubSpot. Free automation audit. Fixed-price and milestone-paid.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-06';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -123,46 +123,6 @@ const serviceSchema = {
   
 };
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How FactoryJet builds your AI automation solution in 7 days',
-  description: 'Our 7-day process for delivering production-ready AI agents and automation for businesses.',
-  totalTime: 'P7D',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Day 1 | Discovery & Use-Case Mapping',
-      text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Day 2 | Architecture & Data Planning',
-      text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Days 3–4 | Build & Integrate',
-      text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Days 5–6 | Testing & Optimization',
-      text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 5,
-      name: 'Day 7 | Launch & Training',
-      text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -182,8 +142,8 @@ const AUTOMATION_TYPES = [
   {
     name: 'Lead Nurturing & CRM',
     description:
-      'New inquiry arrives → AI enriches the contact → creates a HubSpot or Salesforce record → triggers a personalized follow-up sequence → books a call when the lead engages. Every step runs in under 60 seconds, every time, with no manual input.',
-    example: 'Clients report 20–35% more qualified pipeline within 45 days of go-live.',
+      'New inquiry arrives → AI enriches the contact → creates a HubSpot or Salesforce record → triggers a personalized follow-up sequence → books a call when the lead engages. The whole chain runs in seconds rather than whenever someone next opens the inbox, and the sequence rules stay yours to set.',
+    example: 'Touches the web form, the enrichment provider, HubSpot or Salesforce, and the calendar. Nothing is sent to a lead without the sequence rules you approved.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
   },
@@ -191,7 +151,7 @@ const AUTOMATION_TYPES = [
     name: 'Invoice & Billing Automation',
     description:
       'Invoice email arrives → AI extracts vendor, amount, and line items → cross-checks against the purchase order → logs approved items to QuickBooks or Xero → routes exceptions for human review → sends payment reminders at defined intervals.',
-    example: 'AP teams recover 8–12 hours per week from manual invoice processing.',
+    example: 'Reads PDF and photographed invoices, matches against the purchase order, posts to QuickBooks or Xero, and queues anything outside tolerance for a person.',
     linkLabel: 'Get a free audit',
     linkHref: '/contact',
   },
@@ -199,7 +159,7 @@ const AUTOMATION_TYPES = [
     name: 'Customer Support Triage',
     description:
       'Support ticket arrives → AI reads the message, classifies intent (billing / technical / returns / general), extracts the core request, drafts a response suggestion, and routes to the right team member with full context, before anyone opens their inbox.',
-    example: '60–75% of tier-1 tickets handled without human intervention.',
+    example: 'Works inside Zendesk, Freshdesk, Intercom or Gorgias. You set which intents it may answer alone and which it drafts for review.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
   },
@@ -207,7 +167,7 @@ const AUTOMATION_TYPES = [
     name: 'Inventory & Reorder Automation',
     description:
       'Stock level drops below threshold → AI checks supplier lead time and current open POs → drafts a purchase order → sends to the approver via Slack or email → auto-submits on approval → updates inventory records on confirmation.',
-    example: 'E-commerce brands eliminate stockouts that were costing 8–15% of monthly revenue.',
+    example: 'Watches stock levels in Shopify or the ERP, checks supplier lead time and open POs, and drafts the reorder for an approver rather than placing it.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
@@ -215,15 +175,15 @@ const AUTOMATION_TYPES = [
     name: 'Reporting & Analytics Automation',
     description:
       'Every Monday at 7am: AI pulls data from your CRM, ad platform, and e-commerce backend → cleans and aggregates it → writes a plain-English performance summary → flags anomalies → delivers to your inbox and Slack. No BI tool. No manual export.',
-    example: 'Business owners recover 6–10 hours per week from manual reporting.',
+    example: 'Pulls from the CRM, the ad platform and the commerce backend, writes a plain-English summary, and flags what moved. No BI tool to learn.',
     linkLabel: 'Get a free audit',
     linkHref: '/contact',
   },
   {
     name: 'HR & Employee Onboarding',
     description:
-      'New hire confirmed in your HRIS → IT accounts created automatically → welcome email sequence triggered → training tasks assigned in Notion or Asana → manager check-in calls scheduled → day-30 pulse survey sent. Zero manual coordination.',
-    example: 'HR teams reduce onboarding admin from 6 hours per hire to under 30 minutes.',
+      'New hire confirmed in your HRIS → IT accounts created automatically → welcome email sequence triggered → training tasks assigned in Notion or Asana → manager check-in calls scheduled → day-30 pulse survey sent. The coordinating is what goes away, not the judgement.',
+    example: 'Triggers off the HRIS record: account provisioning, the welcome sequence, task assignment in Notion or Asana, and the day-30 check-in.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
   },
@@ -262,24 +222,60 @@ const AUTOMATION_JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stats. All three were replaced on 2026-08-06 after fetch-verification failed
+   on every one of the previous set:
+     - "40% of US small business work hours ... per McKinsey": the cited McKinsey
+       page contains no "40 percent" figure and never uses the words "small
+       business". Read directly, 2026-08-06. Misattributed.
+     - "$33B+ US automation-as-a-service market": Grand View Research sits behind
+       a Cloudflare challenge and cannot be verified. Also global, not US.
+     - "3x faster lead response, per HBR": that HBR article is paywalled and its
+       public abstract does not contain the claim.
+   The three below are quoted from the McKinsey page, read in full on 2026-08-06.
+   Do not add a statistic here without opening the source and matching the wording.
+───────────────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────────
+   HowTo schema, generated from AUTOMATION_JOURNEY_STAGES, the same array the page
+   renders. Rebuilt 2026-08-06: the previous version was hand-written, claimed a
+   7-day delivery and named five stages that appear nowhere on the page, while the
+   visible process says 3 days to 4 weeks and the FAQ says complex builds run 4 to
+   8 weeks. That is the FAQ-schema drift bug in a different tag. Deriving it from
+   the array is what stops it recurring. No totalTime is declared, because the
+   honest answer depends on the build.
+───────────────────────────────────────────────────────────────────────────── */
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds an AI automation',
+  description:
+    'The five stages FactoryJet works through to deliver a production AI automation, from the initial audit to hand-off.',
+  step: AUTOMATION_JOURNEY_STAGES.map((stage, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: stage.title,
+    text: stage.description,
+  })),
+};
+
 const US_AUTOMATION_STATS = [
   {
-    value: '$33B+',
-    label: 'projected US automation-as-a-service market by 2030, up from $10B in 2025',
-    sourceUrl: 'https://www.grandviewresearch.com/industry-analysis/automation-as-a-service-market',
-    sourceLabel: 'Grand View Research',
-  },
-  {
-    value: '40%',
-    label: 'of US small business work hours spent on tasks that could be automated, per McKinsey',
+    value: '60%',
+    label: 'of occupations have at least one third of their activities open to automation, which is why we automate steps rather than whole jobs',
     sourceUrl: 'https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages',
-    sourceLabel: 'McKinsey Global Institute',
+    sourceLabel: 'McKinsey',
   },
   {
-    value: '3×',
-    label: 'faster lead response with automated follow-up vs. manual: the single biggest driver of close rates',
-    sourceUrl: 'https://hbr.org/2011/03/the-short-life-of-online-sales-leads',
-    sourceLabel: 'Harvard Business Review',
+    value: 'Under 5%',
+    label: 'of occupations consist ENTIRELY of activities that can be fully automated, which is why a human stays in the loop by design rather than as a concession',
+    sourceUrl: 'https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages',
+    sourceLabel: 'McKinsey',
+  },
+  {
+    value: '15%',
+    label: 'of current activities automated by 2030 is McKinsey\'s own midpoint scenario, in a range running from almost zero to 30 percent depending on adoption speed, cost, labour markets and regulation',
+    sourceUrl: 'https://www.mckinsey.com/featured-insights/future-of-work/jobs-lost-jobs-gained-what-the-future-of-work-will-mean-for-jobs-skills-and-wages',
+    sourceLabel: 'McKinsey',
   },
 ];
 
@@ -423,7 +419,7 @@ const INDUSTRIES = [
     name: 'E-Commerce & Retail',
     description:
       'Automate order confirmation flows, inventory reorder triggers, abandoned cart recovery sequences, product review requests, and customer support triage, so your team manages exceptions, not volume.',
-    example: 'One Shopify brand cut 18 manual hours per week from operations with 4 automations.',
+    example: 'Reads orders and stock straight out of Shopify or WooCommerce, and routes anything unusual to a person instead of guessing.',
     linkLabel: 'See e-commerce automation',
     linkHref: '/contact',
   },
@@ -431,31 +427,31 @@ const INDUSTRIES = [
     name: 'Professional Services',
     description:
       'Automate client onboarding (contract → welcome sequence → project setup → kickoff scheduling), proposal generation from intake form data, retainer invoice creation, and weekly status report delivery.',
-    example: 'Agencies reclaim 10–15 hours per week per account manager from admin tasks.',
+    example: 'Reads the signed contract, opens the project in Asana or Notion, and books the kickoff. The account manager approves, they do not assemble.',
   },
   {
     name: 'Healthcare & Wellness',
     description:
       'HIPAA-aware automation for patient intake, appointment reminders, follow-up sequences after visits, and insurance document processing, built with least-privilege data access and full audit trails.',
-    example: 'Practices reduce front-desk admin time by 5–8 hours per provider per week.',
+    example: 'Least-privilege access to the practice system, an audit trail on every read, and no PHI in a model prompt without your written sign-off.',
   },
   {
     name: 'Real Estate',
     description:
       'Automate lead qualification from Zillow and Realtor.com, listing description generation, CMA report delivery, showing confirmation sequences, and post-close client review requests.',
-    example: 'Teams report 30% more follow-ups completed per agent per week.',
+    example: 'Pulls the enquiry out of Zillow or Realtor.com, drafts the CMA, and queues the showing confirmation for the agent to send.',
   },
   {
     name: 'SaaS & Technology',
     description:
       'Automate trial-to-paid nurture sequences, churn signal alerts, usage-based in-app nudges, customer success check-in scheduling, and product feedback collection and routing.',
-    example: 'SaaS companies see 15–22% improvement in trial conversion rates.',
+    example: 'Watches product usage for the signals you define, then nudges in-app or routes to customer success. You set every threshold.',
   },
   {
     name: 'Finance & Accounting',
     description:
       'Automate invoice processing and matching, expense report extraction, payroll data preparation, monthly reconciliation summaries, and regulatory filing reminders, with a full audit trail on every action.',
-    example: 'Finance teams eliminate 12–20 hours per month of manual data entry.',
+    example: 'Extracts and matches, then stops. Anything outside tolerance goes to a person, and every action is written to an audit trail.',
   },
 ];
 
@@ -476,7 +472,7 @@ const FAQ_ITEMS = [
     category: 'what-is-automation',
     question: 'What is an AI automation agency?',
     answer:
-      'An AI automation agency connects your existing business tools: CRM, email, invoicing, support desk, inventory, and builds automated workflows that run without manual input. Unlike a traditional developer, an AI automation agency uses purpose-built tools like n8n, Make.com, and Zapier, layered with large language model AI for steps that require reading, classifying, or generating content. The result is a system that handles your repetitive processes 24/7, without a human in the loop for the routine decisions.',
+      'An AI automation agency connects your existing business tools: CRM, email, invoicing, support desk, inventory, and builds automated workflows that run without manual input. Unlike a traditional developer, an AI automation agency uses purpose-built tools like n8n, Make.com, and Zapier, layered with large language model AI for steps that require reading, classifying, or generating content. The result is a system that handles the repetitive part continuously, inside limits you set, and escalates anything outside them to a person rather than deciding alone.',
   },
   {
     category: 'what-is-automation',
@@ -528,7 +524,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is the ROI on AI workflow automation?',
     answer:
-      'The most direct return is labor hours recovered. A typical SMB running 3–5 automated workflows saves 15–25 staff hours per week. At a fully-loaded labor cost of $35/hour, that\'s $27,000–$45,000 per year, from a Growth package. Secondary ROI: automated lead follow-up within 60 seconds vs. hours increases close rates by 20–35% (response speed is the single biggest driver of inbound lead conversion). Most clients see full payback within 8–14 weeks of launch.',
+      'Labor hours recovered, and you should calculate it with your own numbers rather than ours. Count how many times a week the task runs, multiply by the minutes it takes and the fully-loaded hourly cost of whoever does it, then compare that to the build. We will do that arithmetic with you on the audit call using your figures. We deliberately do not publish a payback window, because it depends entirely on how manual the workflow is today and how clean your data is, and any number we printed here would be marketing rather than measurement.',
   },
   {
     category: 'pricing',
@@ -554,7 +550,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What happens if I switch tools after the automation is built?',
     answer:
-      'We architect automations with modular integration layers: the workflow logic is separated from the connector code. Swapping HubSpot for Salesforce, or QuickBooks for Xero, typically means updating the connector module, not rebuilding the automation from scratch. Most tool swaps take 1–3 days of engineering time. We document every integration point at delivery specifically so future changes are fast and predictable.',
+      'We architect automations with modular integration layers: the workflow logic is separated from the connector code. Swapping HubSpot for Salesforce, or QuickBooks for Xero, typically means updating the connector module, not rebuilding the automation from scratch. How long a swap takes depends on how different the two APIs are, and we will scope it before quoting rather than after. We document every integration point at delivery specifically so future changes are fast and predictable.',
   },
 
   /* ── Trust & Results ── */
@@ -574,14 +570,14 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can you show me examples of automations you\'ve built?',
     answer:
-      'Yes, on a strategy call we share case studies relevant to your industry and workflow type. Published examples: an e-commerce brand whose support ticket automation deflected 68% of tier-1 tickets in the first 30 days; a professional services firm whose invoice automation recovered 11 hours per week across the AP team; a real estate team whose lead follow-up automation increased contacted-within-5-minutes rate from 12% to 94%. If we haven\'t worked in your specific industry, we\'ll say so upfront.',
+      'Yes. On a strategy call we walk through builds relevant to your industry and workflow type, with the actual tools, triggers and failure cases on screen rather than a slide of numbers. We do not publish before-and-after percentages here, because a figure from someone else\'s ticket queue tells you nothing about yours and we would rather you judge the work. If we have not built in your specific industry, we will say so upfront.',
   },
 
   {
     category: 'what-is-automation',
     question: 'Can you automate my Shopify, WooCommerce, or e-commerce store operations?',
     answer:
-      'Yes, e-commerce operations automation is one of our most impactful categories. Common Shopify and WooCommerce automations we build: inventory reorder alerts triggered when stock drops below threshold (notifies supplier and creates PO automatically); order fulfillment routing based on SKU and warehouse location; abandoned cart recovery sequences that adjust messaging based on cart value, customer lifetime value, and time elapsed; post-purchase review request automation with smart timing; return/refund processing automation that handles standard cases without human review; and supplier invoice reconciliation against Shopify order data. The average e-commerce client recovers 8–15 hours of weekly operations time within 90 days of deploying these automations.',
+      'Yes, e-commerce operations is one of the categories where the manual work is most obvious. Common Shopify and WooCommerce automations we build: inventory reorder alerts triggered when stock drops below threshold (notifies supplier and creates PO automatically); order fulfillment routing based on SKU and warehouse location; abandoned cart recovery sequences that adjust messaging based on cart value, customer lifetime value, and time elapsed; post-purchase review request automation with smart timing; return/refund processing automation that handles standard cases without human review; and supplier invoice reconciliation against Shopify order data. Each one reads from Shopify or WooCommerce directly, and each has an approval step you control rather than firing blind.',
   },
   {
     category: 'technical',
@@ -646,8 +642,8 @@ export default function AIAutomationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "AI Automation Agency for US Small Businesses | FactoryJet",
-          "url": "https://factoryjet.com/services/ai-automation/",
+          "name": "AI Automation Agency in the USA for Small Businesses | FactoryJet",
+          "url": "https://factoryjet.com/services/ai-automation",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
@@ -678,7 +674,7 @@ export default function AIAutomationPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_ai_automation_hero" />}
           eyebrow="AI AUTOMATION AGENCY · USA"
           headline="The AI Automation Agency Built for US Small Businesses"
-          lead="Your team is spending 20+ hours a week on work that should run itself, copying data between tools, chasing invoices, following up on leads, writing the same reports. FactoryJet connects your stack, automates the manual steps, and builds in AI decision-making where routing alone isn't enough. Fixed-price and milestone-paid."
+          lead="Copying data between tools, chasing invoices, following up on leads, writing the same report every Monday. Nobody planned for their team to spend the week on it, it just accumulated. FactoryJet connects your stack, automates the manual steps, and builds in AI decision-making where routing alone isn't enough. Fixed-price and milestone-paid."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses automated',
@@ -691,12 +687,12 @@ export default function AIAutomationPage() {
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                AUTOMATION IN ACTION
+                ILLUSTRATIVE, NOT A CLIENT RESULT
               </p>
               <p className="mt-4 font-fj-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink">
-                Before vs. After Automation
+                What the manual version looks like, and what replaces it
               </p>
-              <div className="mt-6 space-y-4">
+              <ul className="mt-6 list-none space-y-4 p-0">
                 {[
                   {
                     before: 'Sales rep manually enters lead into CRM, 8 min per lead',
@@ -704,21 +700,21 @@ export default function AIAutomationPage() {
                   },
                   {
                     before: 'AP team processes 60 invoices by hand, 12 hrs/week',
-                    after: 'Invoice arrives → AI extracts data → matches PO → logs to QuickBooks, zero human touch',
+                    after: 'Invoice arrives → AI extracts data → matches PO → logs to QuickBooks, exceptions queued for a person',
                   },
                   {
                     before: 'Support team sorts 200 tickets manually each morning',
                     after: 'AI reads, classifies, drafts reply, routes to right agent, before inbox opens',
                   },
                 ].map((row, i) => (
-                  <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
+                  <li key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Before</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
                     <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">After</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           }
         />
@@ -739,17 +735,17 @@ export default function AIAutomationPage() {
           lead="An AI automation agency doesn't build you a chatbot and call it done. It maps your manual workflows, connects your tools via API, adds an AI decision layer where routing alone isn't smart enough, and hands you a system that runs your operations while your team focuses on the work that actually needs a human."
           body={
             <>
-              <div className="flex flex-wrap gap-2" aria-hidden>
+              <ul className="flex list-none flex-wrap gap-2 p-0">
                 {['n8n', 'Make.com', 'Zapier', 'HubSpot', 'Claude AI', 'GPT-4o', 'Salesforce', 'Shopify'].map((tool) => (
-                  <span
+                  <li
                     key={tool}
                     className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <p>
                 A Zapier freelancer connects two tools and calls it automation. A US automation agency charges enterprise rates and takes six months. FactoryJet sits in the middle, and builds above both. We map your full workflow, handle the edge cases that break simple automations, and add an AI layer (Claude, GPT-4o) for the steps that require reading, classifying, or generating content rather than just routing a signal.
               </p>
@@ -791,7 +787,7 @@ export default function AIAutomationPage() {
                   Our Automation Stack
                 </p>
               </div>
-              <div className="divide-y divide-fj-neutral-100 px-7">
+              <ul className="list-none divide-y divide-fj-neutral-100 px-7">
                 {[
                   { category: 'Orchestration', tools: 'n8n · Make.com · Zapier' },
                   { category: 'AI / LLMs', tools: 'Claude (Anthropic) · GPT-4o (OpenAI)' },
@@ -802,15 +798,15 @@ export default function AIAutomationPage() {
                   { category: 'Communication', tools: 'Slack · Gmail · Outlook · Twilio' },
                   { category: 'Storage', tools: 'Notion · Airtable · Google Drive · Box' },
                 ].map((item) => (
-                  <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
+                  <li key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
                       <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.8125rem] text-fj-neutral-500">{item.tools}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
                 <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
@@ -824,8 +820,8 @@ export default function AIAutomationPage() {
         {/* ── 5. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE COST OF MANUAL WORK"
-          headline="20 hours a week in manual work is $36,400 a year in lost productivity, per employee."
-          lead="At a fully-loaded labor cost of $35/hour, 20 manual hours per week per employee equals $36,400 per year spent on work that contributes zero strategic value. Multiply that across a team of 5 and it's $182,000 annually, in copying data between tools, writing the same emails, and running the same reports. Most SMBs automate this in 3–5 weeks. The math is not complicated."
+          headline="The manual hours are the cost, and most teams have never actually added them up."
+          lead="Take one task. Count how often it runs in a week, how many minutes it takes, and what the person doing it costs per hour. That number is what the manual version is costing you, and it is usually the first time anyone has written it down. We do this exercise on the audit call with your figures, not a made-up industry average, because your answer and your competitor's will not be close."
           pillars={[
             {
               title: 'Your team is doing work software should do',
@@ -833,7 +829,7 @@ export default function AIAutomationPage() {
             },
             {
               title: 'Speed is a competitive advantage | and you\'re losing it',
-              body: 'Research shows 78% of customers buy from the first business that responds to their inquiry. If a competitor has automated lead follow-up that fires within 60 seconds and your team checks the inbox twice a day, they are winning deals you never even knew you were in. The gap between automated and manual is not a technology story, it\'s a revenue story.',
+              body: 'Speed of response is the part of inbound sales most teams lose without noticing. If a competitor answers an enquiry in under a minute and your team checks the inbox twice a day, they are in conversations you never saw. We are not going to quote you a percentage on this, because the honest version is simpler: time your own current response, then decide whether it is fast enough.',
             },
             {
               title: 'US automation agencies are priced for enterprise budgets',
@@ -862,10 +858,10 @@ export default function AIAutomationPage() {
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="THE US AUTOMATION MARKET"
-          headline="AI Automation Is the Fastest-Growing Line Item in SMB Technology Spend"
+          headline="Automation stopped being an enterprise-only decision"
           leadParagraphs={[
-            "The automation-as-a-service market is projected to grow from $10.15 billion in 2025 to $33.12 billion by 2030, driven almost entirely by small and medium businesses adopting AI workflow tools for the first time. This isn't enterprise technology trickling down. It's SMB-native adoption of tools that didn't exist five years ago.",
-            "McKinsey estimates that 40% of US small business work hours are spent on tasks that could be automated with current technology. For a 10-person team at fully-loaded cost, that's over $700,000 per year in recoverable productivity. The businesses capturing that advantage right now aren't bigger. They're faster to act.",
+            "Automation stopped being an enterprise-only line item once the tooling got cheap enough to run one workflow at a time. That is the shift worth noticing: it is no longer a platform decision made once a decade, it is a per-process decision a small team can make this quarter.",
+            "McKinsey's read is that in about 60 percent of occupations at least a third of the constituent activities could be automated, while fewer than 5 percent of occupations could be automated end to end. Both halves matter here. There is a lot of manual work to remove, and almost none of it is a whole job, which is exactly why we automate steps and leave a person on the decisions.",
             "FactoryJet has served small and medium businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand the operational reality of a business your size, and we know exactly where automation delivers the fastest payback: lead response speed, invoice processing, and support ticket volume.",
           ]}
           stats={US_AUTOMATION_STATS}
@@ -882,8 +878,67 @@ export default function AIAutomationPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices reflect typical market ranges as of 2026. DIY costs exclude the ongoing staff time required to build and maintain workflows. FactoryJet fixed-price contracts available for all tiers."
+          footer="Compared on scope and on what you are left holding when the engagement ends, not on price. DIY looks cheapest until you count the staff time spent building and then maintaining the workflows."
         />
+
+        {/* ── 9b. WHAT WE ACTUALLY CONNECT ──────────────────────────────────
+            Added 2026-08-06. GSC (90 days to 2026-08-04) shows this page ranking
+            position 4-6 for "ai automation agency usa", "ai automation agency in
+            usa", "ai automation agencies in usa" and "ai automation services in
+            usa", but the page never enumerated what an engagement touches. The
+            head term "ai automation agency" (4,400/mo) is deliberately NOT
+            targeted: its SERP is Reddit at #1 and its AI Overview cites YouTube
+            six times out of ten, because the searchers are people wanting to
+            START an automation agency, not hire one. Measured 2026-08-06,
+            pipeline/research/dfs_aaa_serp.py.
+        ─────────────────────────────────────────────────────────────────────── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              Scope, in plain terms
+            </p>
+            <h2 className="font-fj-display text-[2rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink mb-4">
+              What an AI automation engagement in the US actually covers
+            </h2>
+            <p className="font-fj-body text-fj-neutral-600 max-w-[68ch] mb-10">
+              Most agency pages describe outcomes. This one describes scope, because scope is what you are
+              buying and it is the thing that decides whether the automation survives contact with your real
+              data. Every item below is either in a build or it is not, and we mark which on the audit call.
+            </p>
+            <div className="grid gap-10 md:grid-cols-2">
+              <div>
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-4">
+                  In every build
+                </h3>
+                <ul className="space-y-2.5 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">
+                  <li>A written workflow map covering inputs, decisions, outputs and the error states, signed off before anything is built</li>
+                  <li>API connections to the systems that already hold the data, built against the vendor REST or SOAP interface</li>
+                  <li>An AI decision layer only on the steps that need reading, classifying or generating, never on steps a rule handles better</li>
+                  <li>An explicit list of what the automation may do on its own and what it must hand to a person</li>
+                  <li>Failure alerting into Slack or email, because the dangerous failure mode is the silent one</li>
+                  <li>An audit trail on every action the automation takes</li>
+                  <li>Testing against your real edge cases, not clean sample data</li>
+                  <li>Documentation your team can read, plus a recorded walkthrough</li>
+                  <li>Full ownership of the workflows and the code when the engagement ends</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-4">
+                  Where we say no
+                </h3>
+                <ul className="space-y-2.5 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">
+                  <li>Screen-scraping a system of record. It breaks quietly and leaves nothing to audit</li>
+                  <li>Automating a process nobody has written down yet. Map it first, or you automate the confusion</li>
+                  <li>Letting an automation send external email or move money without an approval step</li>
+                  <li>Putting regulated data into a model prompt without your written sign-off</li>
+                  <li>Promising a payback window before we have seen how manual and how messy the workflow is</li>
+                  <li>Building the second and third workflow before the first one has run clean for a fortnight</li>
+                  <li>Replacing a person when the honest answer is that the process needs fixing, not automating</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
@@ -917,16 +972,20 @@ export default function AIAutomationPage() {
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">AI Automation Services by City</h2>
-            <div className="flex flex-wrap gap-3">
+            {/* Trailing slashes removed 2026-08-06: both hrefs 308-redirected, so every
+                internal click and crawl was spending a hop it did not need to. */}
+            <ul className="flex list-none flex-wrap gap-3 p-0">
               {[
-                { city: 'Miami, FL', href: '/miami/ai-automation/' },
-                { city: 'Charlotte, NC', href: '/charlotte/ai-automation/' },
+                { city: 'Miami, FL', href: '/miami/ai-automation' },
+                { city: 'Charlotte, NC', href: '/charlotte/ai-automation' },
               ].map(({ city, href }) => (
-                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
-                  {city}
-                </Link>
+                <li key={href}>
+                  <Link href={href} className="inline-block px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
+                    {city}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

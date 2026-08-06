@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     'custom ai agent development',
     'custom ai agent development company',
     'ai agent development',
-    'ai automation agency',
     'ai agent development company usa',
     'ai agents for customer support',
     'ai agent development company india',
