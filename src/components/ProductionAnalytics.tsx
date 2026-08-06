@@ -27,13 +27,31 @@ import { useEffect } from 'react';
  * window.dataLayer + window.gtag are still defined by the inline stub in <head>
  * (layout.tsx) so any dataLayer push (e.g. /thank-you's lead_converted event)
  * queues safely before gtm.js finishes loading.
+ *
+ * ── LOADING STRATEGY: IMMEDIATE, NOT DEFERRED (decided 2026-08-07) ───────────
+ * This component used to defer gtm.js until the first scroll/tap/keypress, with
+ * a requestIdleCallback timeout as a fallback (8000ms, later lowered to 2500ms).
+ * That deferral is now REMOVED. Bhavesh's call: measurement matters more than the
+ * Lighthouse points, and the deferral was costing real data.
+ *
+ * What it cost: any visitor who landed and left before the fallback fired, without
+ * scrolling, tapping or moving a mouse, was never measured at all. Not an
+ * undercounted pageview, a completely absent session. Mobile has no mousemove
+ * event, so short mobile visits were hit hardest. Against roughly 15-25 real human
+ * visitors a day, that is a material and permanently unrecoverable share.
+ *
+ * The tradeoff, stated honestly: gtm.js now executes sooner and can land inside
+ * the LCP window on a throttled mobile connection, so mobile Performance may drop.
+ * If you need to recover it, buy the points somewhere that does not cost data
+ * (image weight, font loading, the hero's JS payload). Do NOT reintroduce the
+ * deferral without first comparing GA4 sessions against GSC clicks, which is the
+ * check that exposes the gap.
+ *
+ * This still runs inside useEffect, so it is after hydration and the script is
+ * async. "Immediate" means "as early as a client component can", not render-blocking.
  */
 
 const PROD_HOSTS = ['factoryjet.com', 'www.factoryjet.com'];
-
-// The lead conversion fires here. On this page we must NOT defer tag loading,
-// or a fast bounce (< 5s, no interaction) would drop the conversion.
-const CONVERSION_PATHS = ['/thank-you'];
 
 export default function ProductionAnalytics() {
   useEffect(() => {
@@ -50,65 +68,23 @@ export default function ProductionAnalytics() {
     // commands here — GTM (loaded below) owns every tag. See file header.
     w.dataLayer = w.dataLayer || [];
 
-    let loaded = false;
-    let timer: ReturnType<typeof setTimeout> | undefined;
-    let idleHandle: number | undefined;
-    const events = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'] as const;
-    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback;
-    const cic = (window as unknown as { cancelIdleCallback?: (h: number) => void }).cancelIdleCallback;
+    // Guard against a double-load if this component ever mounts twice (React
+    // StrictMode in dev, or a future layout change). Loading gtm.js twice
+    // corrupts gtag's shared runtime.
+    if (document.querySelector('script[data-fj-gtm]')) return;
 
-    const cleanup = () => {
-      events.forEach((e) => window.removeEventListener(e, load));
-      if (timer) clearTimeout(timer);
-      if (idleHandle !== undefined && cic) cic(idleHandle);
-    };
+    (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-    function load() {
-      if (loaded) return;
-      loaded = true;
-      cleanup();
-      (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      const gtm = document.createElement('script');
-      gtm.async = true;
-      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
-      document.head.appendChild(gtm);
-      // GTM-PKWD8SHF is the ONLY tag we load. It carries the Google Ads tags for
-      // both AW-11127037244 and AW-18185532850, the GA4 property G-N40S2Q8E1J,
-      // Conversion Linker and Microsoft Clarity. We never inject gtag/js for the
-      // Ads IDs here — doing so double-loads the same runtime ("is_legacy_loaded"
-      // errors) and pulls the foreign linked GA4 destination. (GTM-only 2026-07-02.)
-    }
-
-    // On the conversion destination page, load the tags IMMEDIATELY so the lead
-    // conversion is never lost. Everywhere else, defer to first interaction (or a
-    // 5s fallback) to protect Lighthouse Performance + Best Practices.
-    const path = window.location.pathname.replace(/\/+$/, '') || '/';
-    if (CONVERSION_PATHS.includes(path)) {
-      load();
-      return cleanup;
-    }
-
-    events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
-    // No interaction (e.g. a Lighthouse run): wait for the browser to go idle,
-    // AFTER first paint / LCP, so the GTM container never executes inside the LCP
-    // window on throttled mobile. requestIdleCallback's timeout is a hard cap so
-    // bounced real users are still measured; Safari (no rIC) uses a timer.
-    //
-    // CAP LOWERED 2026-08-04 (8000 -> 2500 / 6000 -> 3000). The old 8s cap meant any
-    // visitor who landed and left inside 8 seconds without scrolling, tapping or
-    // moving a mouse was never measured at all. On mobile there is no mousemove, so
-    // that silently erased most short mobile sessions. rIC still fires at natural
-    // first idle (normally well under 2s here, i.e. after LCP), so this only changes
-    // behaviour on pages whose main thread stays busy past 2.5s; measuring those is
-    // worth more than the marginal LCP risk. Do not raise this again without
-    // checking GA4 session counts against GSC clicks first.
-    if (ric) {
-      idleHandle = ric(load, { timeout: 2500 });
-    } else {
-      timer = setTimeout(load, 3000);
-    }
-
-    return cleanup;
+    // GTM-PKWD8SHF is the ONLY tag we load. It carries the Google Ads tags for
+    // both AW-11127037244 and AW-18185532850, the GA4 property G-N40S2Q8E1J,
+    // Conversion Linker and Microsoft Clarity. We never inject gtag/js for the
+    // Ads IDs here — doing so double-loads the same runtime ("is_legacy_loaded"
+    // errors) and pulls the foreign linked GA4 destination. (GTM-only 2026-07-02.)
+    const gtm = document.createElement('script');
+    gtm.async = true;
+    gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
+    gtm.setAttribute('data-fj-gtm', '1');
+    document.head.appendChild(gtm);
   }, []);
 
   return null;

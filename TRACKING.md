@@ -66,10 +66,29 @@ regions still record GA4, just no Ads conversion.
   `www.factoryjet.com` (keeps `*.pages.dev` previews out of GA4/Ads).
 - Issues **no** `gtag('config', …)` — that double-loaded the Ads runtime
   (`is_legacy_loaded` errors) and pulled the foreign `G-ZZ03` property.
-- On `/thank-you` it loads GTM **immediately** (so `lead_converted` is never
-  dropped); elsewhere it defers to first interaction / idle for performance.
+- Loads GTM **immediately on every page** (from `useEffect`, async script, so it is
+  after hydration and never render-blocking).
 - The inline `<head>` stub only defines `window.dataLayer`/`window.gtag` so early
   dataLayer pushes queue safely.
+
+### Why loading is immediate, and why not to "optimise" it back (2026-08-07)
+
+This used to defer `gtm.js` until first scroll/tap/keypress, with a
+`requestIdleCallback` fallback (8000ms, later lowered to 2500ms). **Removed on
+Bhavesh's instruction: measurement matters more than the Lighthouse points.**
+
+What the deferral cost: a visitor who landed and left before the fallback fired,
+without scrolling, tapping or moving a mouse, was **never measured at all** — not an
+undercounted pageview, an entirely absent session. Mobile fires no `mousemove`, so
+short mobile visits were hit hardest. Against roughly 15-25 real human visitors a
+day, that is a material and permanently unrecoverable share.
+
+The tradeoff is real and worth stating: `gtm.js` can now execute inside the LCP
+window on a throttled mobile connection, so mobile Performance may drop. Buy those
+points back somewhere that does not cost data (image weight, font loading, hero JS
+payload). **Before ever reintroducing a deferral, compare GA4 sessions against GSC
+clicks** — that is the comparison that exposes the gap, and the reason nobody
+noticed it for months is that nobody ran it.
 
 ## What NOT to do
 
