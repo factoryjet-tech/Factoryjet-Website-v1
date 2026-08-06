@@ -1,0 +1,2605 @@
+{
+  "cost_usd": 0.6538,
+  "geos": {
+    "us": {
+      "agent_hire": {
+        "kw": 121,
+        "vol": 8250,
+        "comm_kw": 121,
+        "comm_vol": 8250,
+        "value": 172319.0,
+        "top": [
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency",
+            "volume": 4400,
+            "cpc": 17.8,
+            "kd": 19
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development company",
+            "geo": "us",
+            "keyword": "ai agent development company",
+            "volume": 590,
+            "cpc": 58.21,
+            "kd": 9
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development services",
+            "geo": "us",
+            "keyword": "ai agent development services",
+            "volume": 480,
+            "cpc": 34.7,
+            "kd": 2
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development company",
+            "geo": "us",
+            "keyword": "custom ai agent development company",
+            "volume": 50,
+            "cpc": 282.5,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai agency automation",
+            "volume": 210,
+            "cpc": 39.23,
+            "kd": 23
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency services",
+            "volume": 210,
+            "cpc": 18.05,
+            "kd": 6
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "what is an ai automation agency",
+            "volume": 70,
+            "cpc": 25.63,
+            "kd": 24
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency hub",
+            "volume": 70,
+            "cpc": 23.27,
+            "kd": 10
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency course",
+            "volume": 30,
+            "cpc": 40.34,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency courses",
+            "volume": 30,
+            "cpc": 40.34,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency near me",
+            "volume": 90,
+            "cpc": 13.32,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "how to start an ai automation agency",
+            "volume": 40,
+            "cpc": 25.19,
+            "kd": 2
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "what is ai automation agency",
+            "volume": 50,
+            "cpc": 14.15,
+            "kd": 15
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "automation ai agency",
+            "volume": 30,
+            "cpc": 19.47,
+            "kd": 46
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "starting an ai automation agency",
+            "volume": 20,
+            "cpc": 28.96,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "start an ai automation agency",
+            "volume": 20,
+            "cpc": 28.96,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency business model",
+            "volume": 40,
+            "cpc": 14.03,
+            "kd": 5
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "white label ai automation agency",
+            "volume": 20,
+            "cpc": 23.26,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai marketing automation agency",
+            "volume": 20,
+            "cpc": 23.21,
+            "kd": 62
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency for small businesses",
+            "volume": 20,
+            "cpc": 22.72,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency websites",
+            "volume": 10,
+            "cpc": 36.25,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "best ai automation agency",
+            "volume": 20,
+            "cpc": 18.09,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency full course",
+            "volume": 10,
+            "cpc": 33.44,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency examples",
+            "volume": 10,
+            "cpc": 30.69,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency pricing",
+            "volume": 30,
+            "cpc": 9.83,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "start ai automation agency",
+            "volume": 10,
+            "cpc": 29.41,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "how to get clients for ai automation agency",
+            "volume": 10,
+            "cpc": 24.14,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency template",
+            "volume": 10,
+            "cpc": 22.14,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency website",
+            "volume": 20,
+            "cpc": 10.17,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "us",
+            "keyword": "ai automation agency list",
+            "volume": 10,
+            "cpc": 20.28,
+            "kd": null
+          }
+        ],
+        "median_kd": 6
+      },
+      "aeo_geo": {
+        "kw": 502,
+        "vol": 36630,
+        "comm_kw": 70,
+        "comm_vol": 7210,
+        "value": 104112.0,
+        "top": [
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization services",
+            "volume": 590,
+            "cpc": 39.88,
+            "kd": 19
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization service",
+            "volume": 590,
+            "cpc": 39.88,
+            "kd": 2
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "answer engine optimization services",
+            "volume": 480,
+            "cpc": 36.37,
+            "kd": 6
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization agency",
+            "volume": 320,
+            "cpc": 45.3,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "answer engine optimization agency",
+            "volume": 210,
+            "cpc": 50.9,
+            "kd": 6
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "llm seo",
+            "geo": "us",
+            "keyword": "llm seo services",
+            "volume": 110,
+            "cpc": 34.02,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization companies",
+            "volume": 110,
+            "cpc": 26.2,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization company",
+            "volume": 110,
+            "cpc": 26.2,
+            "kd": 12
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "answer engine optimization companies",
+            "volume": 10,
+            "cpc": 233.61,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "llm seo",
+            "geo": "us",
+            "keyword": "llm seo company",
+            "volume": 40,
+            "cpc": 25.11,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "llm seo",
+            "geo": "us",
+            "keyword": "llm seo company coalition",
+            "volume": 110,
+            "cpc": 8.09,
+            "kd": 3
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "top generative engine optimization companies",
+            "volume": 10,
+            "cpc": 35.11,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization best practices",
+            "volume": 40,
+            "cpc": 8.09,
+            "kd": 11
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "generative engine optimization geo services",
+            "volume": 720,
+            "cpc": 0,
+            "kd": 28
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "ai tools with best generative engine optimization features",
+            "volume": 260,
+            "cpc": 0,
+            "kd": 20
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "best rated answer engine optimization tools",
+            "volume": 210,
+            "cpc": 0,
+            "kd": 4
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "best answer engine optimization tools",
+            "volume": 140,
+            "cpc": 0,
+            "kd": 11
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "answer engine optimization aeo services",
+            "volume": 140,
+            "cpc": 0,
+            "kd": 32
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "ai visibility solutions with best generative engine optimization",
+            "volume": 140,
+            "cpc": 0,
+            "kd": 11
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "top solutions for ai visibility and generative engine optimization",
+            "volume": 140,
+            "cpc": 0,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "best answer engine optimization services",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 5
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "leading generative engine optimization services in ai industry",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 3
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "us",
+            "keyword": "top generative engine optimization companies in ai",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 8
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "llm seo",
+            "geo": "us",
+            "keyword": "llm seo agency",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 0
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "ai search visibility",
+            "geo": "us",
+            "keyword": "ai search optimization startups with top visibility metrics",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 9
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "ai search visibility",
+            "geo": "us",
+            "keyword": "best ai visibility analytics for search optimization",
+            "volume": 110,
+            "cpc": 0,
+            "kd": 3
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "top answer engine optimization options for ai visibility products",
+            "volume": 90,
+            "cpc": 0,
+            "kd": 15
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "top answer engine optimization services for ai industry",
+            "volume": 90,
+            "cpc": 0,
+            "kd": 1
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "best answer engine optimization solutions for ai tech",
+            "volume": 90,
+            "cpc": 0,
+            "kd": 4
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "us",
+            "keyword": "best answer engine optimization for enhancing ai visibility",
+            "volume": 90,
+            "cpc": 0,
+            "kd": 5
+          }
+        ],
+        "median_kd": 16
+      },
+      "agent_build": {
+        "kw": 231,
+        "vol": 14160,
+        "comm_kw": 13,
+        "comm_vol": 210,
+        "value": 2852.0,
+        "top": [
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "how much does it cost to build an ai agent",
+            "volume": 50,
+            "cpc": 17.32,
+            "kd": 1
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "best tool to build ai agent",
+            "volume": 50,
+            "cpc": 15.59,
+            "kd": 41
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "build customer service ai agent",
+            "volume": 10,
+            "cpc": 55.34,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "how much does it cost to build ai agent",
+            "volume": 10,
+            "cpc": 27.74,
+            "kd": 1
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "best way to build an ai agent",
+            "volume": 10,
+            "cpc": 20.88,
+            "kd": 24
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "best ai agent to build website",
+            "volume": 10,
+            "cpc": 16.72,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "cost to build ai agent",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "build ai agent services to revolutionize client operations",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "best ai agent to build apps",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "best ai agent to build a website",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "build your code first app with azure ai agent service",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "build your first agent with azure ai agent service",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_build",
+            "seed": "build ai agent",
+            "geo": "us",
+            "keyword": "build your first agent with azure ai agent service workshop",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 20
+      },
+      "ai_seo_hire": {
+        "kw": 21,
+        "vol": 2950,
+        "comm_kw": 21,
+        "comm_vol": 2950,
+        "value": 184228.0,
+        "top": [
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency",
+            "volume": 1000,
+            "cpc": 82.43,
+            "kd": 0
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai seo services",
+            "volume": 1000,
+            "cpc": 78.77,
+            "kd": 2
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "seo ai agency",
+            "volume": 320,
+            "cpc": 32.02,
+            "kd": 40
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "best ai seo agency",
+            "volume": 170,
+            "cpc": 33.15,
+            "kd": 0
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai-powered seo services",
+            "volume": 70,
+            "cpc": 36.03,
+            "kd": 8
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai powered seo services",
+            "volume": 70,
+            "cpc": 36.03,
+            "kd": 12
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "seo services ai",
+            "volume": 20,
+            "cpc": 105.1,
+            "kd": 23
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai driven seo services",
+            "volume": 140,
+            "cpc": 0,
+            "kd": 16
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "seo agency ai",
+            "volume": 20,
+            "cpc": 0,
+            "kd": 40
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency london",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai based seo services",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency model disruption",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency in india",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "meet seona your personal ai seo agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency singapore",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "seo ai tools agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "us",
+            "keyword": "ai seo agency uk",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "generative ai seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai seo services in india",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "best ai seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "us",
+            "keyword": "ai seo services india",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 12
+      },
+      "commerce_gap": {
+        "kw": 78,
+        "vol": 2910,
+        "comm_kw": 28,
+        "comm_vol": 1150,
+        "value": 8064.0,
+        "top": [
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency",
+            "volume": 480,
+            "cpc": 14.1,
+            "kd": 0
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "wholesale ecommerce platform",
+            "geo": "us",
+            "keyword": "best ecommerce platform for wholesale",
+            "volume": 30,
+            "cpc": 21.6,
+            "kd": 24
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "wholesale ecommerce platform",
+            "geo": "us",
+            "keyword": "best wholesale ecommerce platform",
+            "volume": 30,
+            "cpc": 21.6,
+            "kd": 5
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus development agency",
+            "volume": 170,
+            "cpc": 0,
+            "kd": 0
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus ecommerce agency",
+            "volume": 50,
+            "cpc": 0,
+            "kd": 0
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus design agency",
+            "volume": 50,
+            "cpc": 0,
+            "kd": 9
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency usa",
+            "volume": 40,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency partner",
+            "volume": 40,
+            "cpc": 0,
+            "kd": 15
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency partners",
+            "volume": 40,
+            "cpc": 0,
+            "kd": 19
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus partner agency",
+            "volume": 30,
+            "cpc": 0,
+            "kd": 20
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "best shopify plus agency",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "kloc technologies shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency london",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "avex shopify plus ecommerce agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "noir & blanco shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency australia",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "crawlapps shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency coalition",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency melbourne",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "ecom experts shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus web development agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus migration agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus web design agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shoptrade shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "stalwart digital shopify plus experts agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "shopify plus agency uk",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "ambiw shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "commerce_gap",
+            "seed": "shopify plus agency",
+            "geo": "us",
+            "keyword": "top shopify plus agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": 7
+          }
+        ],
+        "median_kd": 15
+      },
+      "agent_vertical": {
+        "kw": 7,
+        "vol": 730,
+        "comm_kw": 0,
+        "comm_vol": 0,
+        "value": 0.0,
+        "top": [],
+        "median_kd": 9
+      }
+    },
+    "uk": {
+      "aeo_geo": {
+        "kw": 123,
+        "vol": 3490,
+        "comm_kw": 32,
+        "comm_vol": 450,
+        "value": 2398.0,
+        "top": [
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization services",
+            "volume": 110,
+            "cpc": 18.29,
+            "kd": 14
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization agency",
+            "volume": 40,
+            "cpc": 6.4,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization geo services",
+            "volume": 10,
+            "cpc": 13.06,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "answer engine optimization aeo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization methods for ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "what's the best answer engine optimization tool",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization services for ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best rated answer engine optimization for ai applications",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "answer engine optimization agency",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "top answer engine optimization options for ai visibility products",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best techniques for answer engine optimization in ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "top rated answer engine optimization for ai products",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization for enhancing ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization solutions for ai tech",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "top answer engine optimization services for ai industry",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best answer engine optimization for ai driven platforms",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "best rated answer engine optimization tools",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "uk",
+            "keyword": "answer engine optimization services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "top generative engine optimization strategies for ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "top generative engine optimization companies in ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization company",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "best generative engine optimization for ai focused businesses",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "which generative engine optimization is best for ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "top rated generative engine optimization for ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization best practices",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "best tools for generative engine optimization",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "best rated generative engine optimization for ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "generative engine optimization companies",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "uk",
+            "keyword": "what's the best generative engine optimization strategy for ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 44
+      },
+      "agent_hire": {
+        "kw": 97,
+        "vol": 2800,
+        "comm_kw": 97,
+        "comm_vol": 2800,
+        "value": 40019.0,
+        "top": [
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency",
+            "volume": 720,
+            "cpc": 20.64,
+            "kd": 10
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai-automation agency",
+            "volume": 720,
+            "cpc": 20.64,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency uk",
+            "volume": 210,
+            "cpc": 15.58,
+            "kd": 7
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai agency automation",
+            "volume": 50,
+            "cpc": 37.29,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development company",
+            "geo": "uk",
+            "keyword": "ai agent development company",
+            "volume": 50,
+            "cpc": 18.33,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency london",
+            "volume": 70,
+            "cpc": 11.34,
+            "kd": 10
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "automation ai agency",
+            "volume": 10,
+            "cpc": 68.72,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency near me",
+            "volume": 30,
+            "cpc": 22.01,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency hub",
+            "volume": 10,
+            "cpc": 33,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "how to start ai automation agency",
+            "volume": 10,
+            "cpc": 28.6,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency examples",
+            "volume": 10,
+            "cpc": 22.34,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "start an ai automation agency",
+            "volume": 10,
+            "cpc": 12.77,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "starting an ai automation agency",
+            "volume": 10,
+            "cpc": 12.77,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency for small businesses",
+            "volume": 10,
+            "cpc": 12.72,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai and automation agency",
+            "volume": 10,
+            "cpc": 12.55,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency how to start",
+            "volume": 10,
+            "cpc": 12.43,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency pricing",
+            "volume": 10,
+            "cpc": 8.29,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency model",
+            "volume": 10,
+            "cpc": 7.03,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency website",
+            "volume": 10,
+            "cpc": 6.72,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency in india",
+            "volume": 10,
+            "cpc": 6.32,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency course",
+            "volume": 10,
+            "cpc": 6.25,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "how to start an ai automation agency",
+            "volume": 10,
+            "cpc": 5.34,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "best niches for ai automation agency",
+            "volume": 10,
+            "cpc": 5.32,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency website template",
+            "volume": 10,
+            "cpc": 5.19,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency course free",
+            "volume": 10,
+            "cpc": 4.81,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency business model",
+            "volume": 10,
+            "cpc": 4.31,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "white label ai automation agency",
+            "volume": 10,
+            "cpc": 3.53,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "automation agency ai",
+            "volume": 30,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "what is an ai automation agency",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "uk",
+            "keyword": "ai automation agency reddit",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 7
+      },
+      "ai_seo_hire": {
+        "kw": 16,
+        "vol": 1240,
+        "comm_kw": 16,
+        "comm_vol": 1240,
+        "value": 23659.0,
+        "top": [
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "ai seo agency",
+            "volume": 480,
+            "cpc": 20.05,
+            "kd": 9
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "ai seo services",
+            "volume": 390,
+            "cpc": 22.97,
+            "kd": 0
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "seo ai agency",
+            "volume": 90,
+            "cpc": 20.81,
+            "kd": 13
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "ai powered seo services",
+            "volume": 30,
+            "cpc": 58.63,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "ai seo agency london",
+            "volume": 70,
+            "cpc": 8.75,
+            "kd": 0
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "ai seo agency uk",
+            "volume": 30,
+            "cpc": 17.04,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "ai based seo services",
+            "volume": 20,
+            "cpc": 16.07,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "best ai seo agency",
+            "volume": 30,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "seo agency ai",
+            "volume": 20,
+            "cpc": 0,
+            "kd": 9
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "seo services ai",
+            "volume": 20,
+            "cpc": 0,
+            "kd": 0
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "ai seo agency singapore",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "uk",
+            "keyword": "ai seo agency model disruption",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "generative ai seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "ai driven seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "ai seo services india",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "uk",
+            "keyword": "best ai seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 9
+      }
+    },
+    "india": {
+      "aeo_geo": {
+        "kw": 129,
+        "vol": 9280,
+        "comm_kw": 36,
+        "comm_vol": 1180,
+        "value": 2738.0,
+        "top": [
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "answer engine optimization services",
+            "volume": 170,
+            "cpc": 6.2,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization services",
+            "volume": 390,
+            "cpc": 2.3,
+            "kd": 21
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization agency",
+            "volume": 90,
+            "cpc": 5.23,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization geo services",
+            "volume": 40,
+            "cpc": 3.05,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization companies",
+            "volume": 50,
+            "cpc": 1.88,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization company",
+            "volume": 50,
+            "cpc": 1.88,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "generative engine optimization best practices",
+            "volume": 10,
+            "cpc": 0.58,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "answer engine optimization aeo services",
+            "volume": 70,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "answer engine optimization agency",
+            "volume": 40,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization solutions for ai tech",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "top answer engine optimization services for ai industry",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization methods for ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization for ai focused tech",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best practices for answer engine optimization",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "what is the best software for answer engine optimization",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "top answer engine optimization options for ai visibility products",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization for ai driven platforms",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization services for ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best answer engine optimization for enhancing ai visibility",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "what's the best answer engine optimization tool",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "best rated answer engine optimization tools",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "answer engine optimization",
+            "geo": "india",
+            "keyword": "top rated answer engine optimization for ai products",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "best generative engine optimization for ai focused businesses",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "best tools for generative engine optimization",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "top generative engine optimization companies in ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "top rated generative engine optimization for ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "leading generative engine optimization services in ai industry",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "top generative engine optimization tools for ai search results",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "aeo_geo",
+            "seed": "generative engine optimization",
+            "geo": "india",
+            "keyword": "top solutions for ai visibility and generative engine optimization",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 52
+      },
+      "agent_hire": {
+        "kw": 98,
+        "vol": 6660,
+        "comm_kw": 98,
+        "comm_vol": 6660,
+        "value": 16816.0,
+        "top": [
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development company",
+            "geo": "india",
+            "keyword": "ai agent development company",
+            "volume": 1900,
+            "cpc": 4.61,
+            "kd": 0
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency",
+            "volume": 2400,
+            "cpc": 1.8,
+            "kd": 16
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency india",
+            "volume": 90,
+            "cpc": 4.85,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai agency automation",
+            "volume": 170,
+            "cpc": 2.32,
+            "kd": 16
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency in usa",
+            "volume": 40,
+            "cpc": 8.47,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency in india",
+            "volume": 210,
+            "cpc": 1.23,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency services",
+            "volume": 140,
+            "cpc": 1.8,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency usa",
+            "volume": 20,
+            "cpc": 12.54,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "what is ai automation agency",
+            "volume": 140,
+            "cpc": 1.61,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai agent development company",
+            "geo": "india",
+            "keyword": "ai agent development company in india",
+            "volume": 110,
+            "cpc": 1.85,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "automation ai agency",
+            "volume": 50,
+            "cpc": 2.58,
+            "kd": 16
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency uk",
+            "volume": 20,
+            "cpc": 6.34,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "build ai automation agency",
+            "volume": 10,
+            "cpc": 9.66,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency course",
+            "volume": 70,
+            "cpc": 1.27,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency near me",
+            "volume": 90,
+            "cpc": 0.94,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "top ai automation agency",
+            "volume": 30,
+            "cpc": 2.76,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency in bangalore",
+            "volume": 70,
+            "cpc": 0.92,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency for real estate",
+            "volume": 20,
+            "cpc": 3.01,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "start ai automation agency",
+            "volume": 10,
+            "cpc": 4.94,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "how to start ai automation agency",
+            "volume": 40,
+            "cpc": 1.21,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "how to start an ai automation agency step by step",
+            "volume": 10,
+            "cpc": 4.8,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency business model",
+            "volume": 40,
+            "cpc": 0.97,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "how to build ai automation agency",
+            "volume": 20,
+            "cpc": 1.86,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "best ai automation agency",
+            "volume": 30,
+            "cpc": 1.23,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency hub",
+            "volume": 30,
+            "cpc": 1.07,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency business",
+            "volume": 20,
+            "cpc": 1.59,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai marketing automation agency",
+            "volume": 10,
+            "cpc": 3.03,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency dubai",
+            "volume": 20,
+            "cpc": 1.43,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency course free",
+            "volume": 70,
+            "cpc": 0.35,
+            "kd": null
+          },
+          {
+            "bucket": "agent_hire",
+            "seed": "ai automation agency",
+            "geo": "india",
+            "keyword": "ai automation agency website",
+            "volume": 30,
+            "cpc": 0.79,
+            "kd": null
+          }
+        ],
+        "median_kd": 16
+      },
+      "ai_seo_hire": {
+        "kw": 17,
+        "vol": 3280,
+        "comm_kw": 17,
+        "comm_vol": 3280,
+        "value": 10034.0,
+        "top": [
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai seo services",
+            "volume": 1600,
+            "cpc": 3.58,
+            "kd": 19
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "ai seo agency",
+            "volume": 720,
+            "cpc": 3.39,
+            "kd": 23
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai seo services india",
+            "volume": 170,
+            "cpc": 2.83,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "seo ai agency",
+            "volume": 210,
+            "cpc": 2.12,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "best ai seo agency",
+            "volume": 90,
+            "cpc": 4.4,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai driven seo services",
+            "volume": 70,
+            "cpc": 5.1,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "ai seo agency in india",
+            "volume": 140,
+            "cpc": 1.1,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "ai seo agency singapore",
+            "volume": 10,
+            "cpc": 3.15,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai seo services in india",
+            "volume": 90,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai powered seo services",
+            "volume": 90,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "best ai seo services",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "generative ai seo services",
+            "volume": 20,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "seo agency ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "ai seo agency model disruption",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo agency",
+            "geo": "india",
+            "keyword": "ai seo agency effective marketer",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "seo services ai",
+            "volume": 10,
+            "cpc": 0,
+            "kd": 19
+          },
+          {
+            "bucket": "ai_seo_hire",
+            "seed": "ai seo services",
+            "geo": "india",
+            "keyword": "ai based seo services",
+            "volume": 10,
+            "cpc": 0,
+            "kd": null
+          }
+        ],
+        "median_kd": 19
+      }
+    }
+  }
+}

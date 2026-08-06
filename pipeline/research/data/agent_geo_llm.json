@@ -1,0 +1,822 @@
+{
+  "cost_usd": 2.4037,
+  "results": [
+    {
+      "bucket": "agent",
+      "prompt": "Which companies build custom AI agents for mid-sized businesses? Give a ranked list with their websites.",
+      "llm": "chat_gpt",
+      "cost": 0.109215,
+      "mentioned": false,
+      "domains": [
+        "agentlab.dev",
+        "quantilus.ai",
+        "andersenlab.com",
+        "leewayhertz.com",
+        "best-ai-agent-developers.com",
+        "raftlabs.com",
+        "simform.com",
+        "dataart.com",
+        "intellectsoft.net",
+        "annaragency.com",
+        "cognizant.com",
+        "itpro.com"
+      ],
+      "error": null,
+      "text_len": 5592
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which companies build custom AI agents for mid-sized businesses? Give a ranked list with their websites.",
+      "llm": "claude",
+      "cost": 0.055885,
+      "mentioned": false,
+      "domains": [
+        "solulab.com",
+        "azumo.com",
+        "octopusbuilds.com",
+        "riseuplabs.com",
+        "itransition.com",
+        "growexx.com",
+        "neurons-lab.com",
+        "rtslabs.com",
+        "devcom.com",
+        "biz4group.com",
+        "npgroup.net",
+        "genai-labs.com"
+      ],
+      "error": null,
+      "text_len": 2162
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which companies build custom AI agents for mid-sized businesses? Give a ranked list with their websites.",
+      "llm": "gemini",
+      "cost": 0.055053,
+      "mentioned": false,
+      "domains": [
+        "markovate.com",
+        "solulab.com",
+        "appinventiv.com",
+        "effectivesoft.com",
+        "seedium.io",
+        "emerline.com",
+        "growexx.com",
+        "wearenp.com"
+      ],
+      "error": null,
+      "text_len": 7370
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which companies build custom AI agents for mid-sized businesses? Give a ranked list with their websites.",
+      "llm": "perplexity",
+      "cost": 0.029508,
+      "mentioned": false,
+      "domains": [
+        "destilabs.com",
+        "octopusbuilds.com",
+        "lab.com",
+        "phosailabs.com",
+        "markovate.com",
+        "solulab.com",
+        "intuz.com",
+        "masterofcode.com",
+        "intellectyx.com",
+        "devcom.com",
+        "ventionteams.com",
+        "leewayhertz.com",
+        "cloudnsite.com",
+        "ideas2it.com",
+        "azumo.co",
+        "softermii.com",
+        "datatobiz.com",
+        "75way.com",
+        "deviniti.com"
+      ],
+      "error": null,
+      "text_len": 6081
+    },
+    {
+      "bucket": "agent",
+      "prompt": "I run a manufacturing company. Which agencies build AI agents that automate RFQ handling and quoting? List specific companies with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.10243,
+      "mentioned": false,
+      "domains": [
+        "revenueinstitute.com",
+        "arzana.com",
+        "broadn.io",
+        "delynt.com",
+        "hexrfq.com",
+        "joinhepha.com",
+        "kwantflow.com",
+        "lodosai.com",
+        "quotomix.com",
+        "caddi.com",
+        "paperlessparts.com",
+        "apriori.com",
+        "authentise.com"
+      ],
+      "error": null,
+      "text_len": 5608
+    },
+    {
+      "bucket": "agent",
+      "prompt": "I run a manufacturing company. Which agencies build AI agents that automate RFQ handling and quoting? List specific companies with websites.",
+      "llm": "claude",
+      "cost": 0.04996,
+      "mentioned": false,
+      "domains": [
+        "spiralscout.com",
+        "paperlessparts.com",
+        "leanware.co",
+        "tacton.com",
+        "startproto.com",
+        "markovate.com",
+        "nextgeninvent.com"
+      ],
+      "error": null,
+      "text_len": 1867
+    },
+    {
+      "bucket": "agent",
+      "prompt": "I run a manufacturing company. Which agencies build AI agents that automate RFQ handling and quoting? List specific companies with websites.",
+      "llm": "gemini",
+      "cost": 0.047926,
+      "mentioned": false,
+      "domains": [
+        "unlocking.io",
+        "automate4u.io",
+        "atomicdesign.net",
+        "spiralscout.com",
+        "startproto.ai",
+        "kavida.ai"
+      ],
+      "error": null,
+      "text_len": 4552
+    },
+    {
+      "bucket": "agent",
+      "prompt": "I run a manufacturing company. Which agencies build AI agents that automate RFQ handling and quoting? List specific companies with websites.",
+      "llm": "perplexity",
+      "cost": 0.031596,
+      "mentioned": false,
+      "domains": [
+        "lyzr.ai",
+        "neenopal.com",
+        "zbrain.ai",
+        "sema4.ai",
+        "kavida.ai",
+        "veracity.ai",
+        "veracityconsulting.com",
+        "simpleai.co",
+        "simpleai.com",
+        "amazon.com",
+        "strands.ai",
+        "tryleverage.ai",
+        "automationanywhere.com",
+        "jadasquad.com",
+        "arphie.ai"
+      ],
+      "error": null,
+      "text_len": 6858
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which agencies build AI customer support agents that integrate with an existing helpdesk and ERP? Ranked list with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.11987,
+      "mentioned": false,
+      "domains": [
+        "accenture.com",
+        "deloittedigital.com",
+        "ibm.com",
+        "slalom.com",
+        "epam.com",
+        "credera.com",
+        "fayedigital.com",
+        "adelantecx.com",
+        "brokenrubik.com",
+        "netmint.io",
+        "irisagent.com",
+        "sierra.ai",
+        "decagon.ai",
+        "quiq.com",
+        "lananetsuite.com",
+        "erpagent.ai"
+      ],
+      "error": null,
+      "text_len": 6095
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which agencies build AI customer support agents that integrate with an existing helpdesk and ERP? Ranked list with websites.",
+      "llm": "claude",
+      "cost": 0.051574,
+      "mentioned": false,
+      "domains": [
+        "kore.ai",
+        "intercom.com",
+        "decagon.ai",
+        "sam-solutions.com",
+        "enjo.ai",
+        "botpress.com",
+        "crescendo.ai",
+        "yellow.ai"
+      ],
+      "error": null,
+      "text_len": 1925
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which agencies build AI customer support agents that integrate with an existing helpdesk and ERP? Ranked list with websites.",
+      "llm": "gemini",
+      "cost": 0.049558,
+      "mentioned": false,
+      "domains": [
+        "dextralabs.com",
+        "ayautomate.com",
+        "intellectyx.com",
+        "vatdi.com",
+        "effectivesoft.com"
+      ],
+      "error": null,
+      "text_len": 4866
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Which agencies build AI customer support agents that integrate with an existing helpdesk and ERP? Ranked list with websites.",
+      "llm": "perplexity",
+      "cost": 0.031467,
+      "mentioned": false,
+      "domains": [
+        "kore.ai",
+        "fin.ai",
+        "intercom.com",
+        "zendesk.com",
+        "auralis.ai",
+        "myaskai.com",
+        "moveworks.com",
+        "valantic.com",
+        "enjo.ai",
+        "forethought.ai",
+        "virtualworkforce.ai",
+        "agentiveaiq.com",
+        "dgbits.ai"
+      ],
+      "error": null,
+      "text_len": 6111
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Who are the best AI automation agencies in the USA for small and mid-sized businesses? Give a ranked list with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.117215,
+      "mentioned": false,
+      "domains": [
+        "yourbusinessconsultant.ai",
+        "sansatech.com",
+        "phosailabs.com",
+        "automaly.com",
+        "tendforce.com",
+        "lumay.ai",
+        "iqhq.com",
+        "slalom.com",
+        "appian.com"
+      ],
+      "error": null,
+      "text_len": 6188
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Who are the best AI automation agencies in the USA for small and mid-sized businesses? Give a ranked list with websites.",
+      "llm": "claude",
+      "cost": 0.054697,
+      "mentioned": false,
+      "domains": [
+        "superdupr.com",
+        "ayautomate.com",
+        "octopusbuilds.com",
+        "automely.com",
+        "markovate.com",
+        "latenode.com",
+        "hatchworks.ai",
+        "ditinteractive.com"
+      ],
+      "error": null,
+      "text_len": 2672
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Who are the best AI automation agencies in the USA for small and mid-sized businesses? Give a ranked list with websites.",
+      "llm": "gemini",
+      "cost": 0.044675,
+      "mentioned": false,
+      "domains": [
+        "zapier.com",
+        "make.com",
+        "effectivesoft.com"
+      ],
+      "error": null,
+      "text_len": 4366
+    },
+    {
+      "bucket": "agent",
+      "prompt": "Who are the best AI automation agencies in the USA for small and mid-sized businesses? Give a ranked list with websites.",
+      "llm": "perplexity",
+      "cost": 0.016608,
+      "mentioned": true,
+      "domains": [
+        "factoryjet.com",
+        "automationagency.com",
+        "lumay.ai",
+        "markovate.com",
+        "hatchworks.com",
+        "effectivesoft.com",
+        "rtslabs.com",
+        "leewayhertz.com",
+        "axeautomation.co"
+      ],
+      "error": null,
+      "text_len": 2684
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which agencies offer generative engine optimization (GEO) services? Give a ranked list with their websites.",
+      "llm": "chat_gpt",
+      "cost": 0.11239,
+      "mentioned": false,
+      "domains": [
+        "interodigital.com",
+        "geoagency.net",
+        "thegeoagency.ai",
+        "optivaal.com",
+        "geovate.com",
+        "mekaa.co",
+        "percepture.com",
+        "werankle.com",
+        "rankbrainsolutions.com",
+        "smartgeoagency.com",
+        "amsive.com",
+        "q4cdn.com"
+      ],
+      "error": null,
+      "text_len": 5296
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which agencies offer generative engine optimization (GEO) services? Give a ranked list with their websites.",
+      "llm": "claude",
+      "cost": 0.052495,
+      "mentioned": false,
+      "domains": [
+        "thedigitalelevator.com",
+        "directiveconsulting.com",
+        "lseo.com",
+        "gofishdigital.com",
+        "seoprofy.com",
+        "percepture.com",
+        "minuttia.com",
+        "interodigital.com",
+        "singlegrain.com",
+        "webfx.com",
+        "firstpagesage.com"
+      ],
+      "error": null,
+      "text_len": 2277
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which agencies offer generative engine optimization (GEO) services? Give a ranked list with their websites.",
+      "llm": "gemini",
+      "cost": 0.045419,
+      "mentioned": false,
+      "domains": [
+        "yesoptimist.com",
+        "beomniscient.com",
+        "directiveconsulting.com",
+        "siegemedia.com",
+        "ipullrank.com",
+        "webfx.com",
+        "digitalelevator.com",
+        "gofishdigital.com",
+        "powerdigitalmarketing.com"
+      ],
+      "error": null,
+      "text_len": 4240
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which agencies offer generative engine optimization (GEO) services? Give a ranked list with their websites.",
+      "llm": "perplexity",
+      "cost": 0.015939,
+      "mentioned": false,
+      "domains": [
+        "firstpagesage.com",
+        "seoprofy.com",
+        "gofishdigital.com",
+        "ipullrank.com",
+        "beomniscient.com",
+        "siegemedia.com",
+        "tripledart.com",
+        "directiveconsulting.com",
+        "powerdigitalmarketing.com",
+        "percepture.com"
+      ],
+      "error": null,
+      "text_len": 2088
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which companies do answer engine optimization (AEO) so my brand gets cited by ChatGPT and Perplexity? Ranked list with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.119085,
+      "mentioned": false,
+      "domains": [
+        "profound.com",
+        "growthmanager.ai",
+        "techradar.com",
+        "evidentlyaeo.com",
+        "rank.ai",
+        "contently.com",
+        "interodigital.com",
+        "get-geo.ai",
+        "7aeo.com",
+        "mentions.ai"
+      ],
+      "error": null,
+      "text_len": 5474
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which companies do answer engine optimization (AEO) so my brand gets cited by ChatGPT and Perplexity? Ranked list with websites.",
+      "llm": "claude",
+      "cost": 0.053278,
+      "mentioned": false,
+      "domains": [
+        "firstpagesage.com",
+        "1digitalagency.com",
+        "marceldigital.com",
+        "uncommonlogic.com",
+        "forthea.com",
+        "alevdigital.com"
+      ],
+      "error": null,
+      "text_len": 2508
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which companies do answer engine optimization (AEO) so my brand gets cited by ChatGPT and Perplexity? Ranked list with websites.",
+      "llm": "gemini",
+      "cost": 0.046769,
+      "mentioned": false,
+      "domains": [
+        "ipullrank.com",
+        "nogood.io",
+        "singlegrain.com",
+        "seerinteractive.com",
+        "siegemedia.com"
+      ],
+      "error": null,
+      "text_len": 4875
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Which companies do answer engine optimization (AEO) so my brand gets cited by ChatGPT and Perplexity? Ranked list with websites.",
+      "llm": "perplexity",
+      "cost": 0.018573,
+      "mentioned": false,
+      "domains": [
+        "firstpagesage.com",
+        "nogood.io",
+        "ipullrank.com",
+        "marceldigital.com",
+        "omniscientdigital.com",
+        "amsive.com",
+        "avenuez.com",
+        "rankz.co",
+        "conductor.com",
+        "zupo.co"
+      ],
+      "error": null,
+      "text_len": 2672
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Who are the best AI SEO agencies right now? Give a ranked list with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.12006,
+      "mentioned": false,
+      "domains": [
+        "ipullrank.com",
+        "webfx.com",
+        "omniscientdigital.com",
+        "siegemedia.com",
+        "firstpagesage.com",
+        "nogood.io",
+        "singlegrain.com",
+        "directiveconsulting.com",
+        "searchbloom.com",
+        "aeo-collective.com",
+        "revvgrowth.com",
+        "conductor.com",
+        "loudface.co",
+        "austinheaton.com"
+      ],
+      "error": null,
+      "text_len": 6242
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Who are the best AI SEO agencies right now? Give a ranked list with websites.",
+      "llm": "claude",
+      "cost": 0.057079,
+      "mentioned": false,
+      "domains": [
+        "searchbloom.com",
+        "thriveagency.com",
+        "yesoptimist.com",
+        "revvgrowth.com"
+      ],
+      "error": null,
+      "text_len": 1670
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Who are the best AI SEO agencies right now? Give a ranked list with websites.",
+      "llm": "gemini",
+      "cost": 0.048574,
+      "mentioned": false,
+      "domains": [
+        "webfx.com",
+        "seoworks.co",
+        "searchbloom.com",
+        "spicymargarita.com",
+        "onely.com",
+        "ipullrank.com",
+        "siegemedia.com",
+        "intesols.com",
+        "growpad.io"
+      ],
+      "error": null,
+      "text_len": 4988
+    },
+    {
+      "bucket": "geo",
+      "prompt": "Who are the best AI SEO agencies right now? Give a ranked list with websites.",
+      "llm": "perplexity",
+      "cost": 0.015897,
+      "mentioned": false,
+      "domains": [
+        "onely.com",
+        "ipullrank.com",
+        "siegemedia.com",
+        "firstpagesage.com",
+        "webfx.com",
+        "directiveconsulting.com",
+        "singlegrain.com",
+        "avenuez.com",
+        "thriveagency.com"
+      ],
+      "error": null,
+      "text_len": 2229
+    },
+    {
+      "bucket": "geo",
+      "prompt": "My ecommerce brand is invisible in ChatGPT and AI Overviews. Which agencies fix that? List specific companies with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.11563,
+      "mentioned": false,
+      "domains": [
+        "singlegrain.com",
+        "silkcommerce.com",
+        "netalico.com",
+        "embarque.io",
+        "coreppc.com",
+        "thegeoagency.ai",
+        "geoagency.net",
+        "archonconsultancy.com",
+        "geo-agency.org",
+        "aeomiamiagency.com"
+      ],
+      "error": null,
+      "text_len": 6003
+    },
+    {
+      "bucket": "geo",
+      "prompt": "My ecommerce brand is invisible in ChatGPT and AI Overviews. Which agencies fix that? List specific companies with websites.",
+      "llm": "claude",
+      "cost": 0.05743,
+      "mentioned": false,
+      "domains": [
+        "onely.com",
+        "quoleady.com",
+        "directom.com",
+        "mikekhorev.com",
+        "omniscientdigital.com",
+        "wearetenet.com",
+        "thriveagency.com",
+        "42dm.net",
+        "yesoptimist.com"
+      ],
+      "error": null,
+      "text_len": 2670
+    },
+    {
+      "bucket": "geo",
+      "prompt": "My ecommerce brand is invisible in ChatGPT and AI Overviews. Which agencies fix that? List specific companies with websites.",
+      "llm": "gemini",
+      "cost": 0.04551875,
+      "mentioned": false,
+      "domains": [],
+      "error": null,
+      "text_len": 4748
+    },
+    {
+      "bucket": "geo",
+      "prompt": "My ecommerce brand is invisible in ChatGPT and AI Overviews. Which agencies fix that? List specific companies with websites.",
+      "llm": "perplexity",
+      "cost": 0.015561,
+      "mentioned": false,
+      "domains": [
+        "swankyagency.com",
+        "yotpo.com",
+        "azoma.ai",
+        "veliu.com",
+        "useomnia.com",
+        "vpv.co",
+        "rankshift.ai",
+        "trysight.ai",
+        "searchengineland.com"
+      ],
+      "error": null,
+      "text_len": 2406
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which companies build B2B ecommerce portals with ERP integration? Give a ranked list with their websites.",
+      "llm": "chat_gpt",
+      "cost": 0.120155,
+      "mentioned": true,
+      "domains": [
+        "sana-commerce.com",
+        "oroinc.com",
+        "elogic.co",
+        "websolutionsnyc.com",
+        "wagento.com",
+        "dynamicseshop.com",
+        "k-ecommerce.com",
+        "dynamicscon.com",
+        "aphixsoftware.com",
+        "erpresearch.com",
+        "dckap.com",
+        "aximcommerce.com",
+        "b2bware.com",
+        "factoryjet.com",
+        "cutting-edgesolutions.com",
+        "stoamsaas.com",
+        "sealglobalholdings.com"
+      ],
+      "error": null,
+      "text_len": 6448
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which companies build B2B ecommerce portals with ERP integration? Give a ranked list with their websites.",
+      "llm": "claude",
+      "cost": 0.051544,
+      "mentioned": false,
+      "domains": [
+        "bigcommerce.com",
+        "oroinc.com",
+        "cloudfy.com",
+        "wizcommerce.com",
+        "k-ecommerce.com",
+        "shift4shop.com",
+        "commercetools.com"
+      ],
+      "error": null,
+      "text_len": 1768
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which companies build B2B ecommerce portals with ERP integration? Give a ranked list with their websites.",
+      "llm": "gemini",
+      "cost": 0.05199,
+      "mentioned": false,
+      "domains": [
+        "oroinc.com",
+        "k-ecommerce.com",
+        "sap.com",
+        "adobe.com",
+        "sparklayer.com",
+        "bigcommerce.com",
+        "netsuite.com",
+        "corevist.com",
+        "truecommerce.com"
+      ],
+      "error": null,
+      "text_len": 6320
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which companies build B2B ecommerce portals with ERP integration? Give a ranked list with their websites.",
+      "llm": "perplexity",
+      "cost": 0.030891,
+      "mentioned": false,
+      "domains": [
+        "elogic.co",
+        "atwix.com",
+        "vaimo.com",
+        "corevist.com",
+        "guidance.com",
+        "clarity-ventures.com",
+        "oroinc.com",
+        "orocommerce.com",
+        "americaneagle.com",
+        "scandiweb.com",
+        "truecommerce.com",
+        "cloudfy.com",
+        "i95dev.com",
+        "sanacommerce.com",
+        "wizcommerce.com",
+        "nomadecommerce.com"
+      ],
+      "error": null,
+      "text_len": 6145
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which agencies are the best Shopify Plus partners for a wholesale brand? Ranked list with websites.",
+      "llm": "chat_gpt",
+      "cost": 0.113525,
+      "mentioned": false,
+      "domains": [
+        "elogic.co",
+        "blueswitch.com",
+        "iwdagency.com",
+        "atwix.com",
+        "uncap.com",
+        "folio3.com",
+        "sherocommerce.com",
+        "teifi.io",
+        "netalico.com",
+        "eastsideco.com",
+        "best-shopify-b2b-agencies.com",
+        "best-shopify-plus-agencies.com"
+      ],
+      "error": null,
+      "text_len": 4943
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which agencies are the best Shopify Plus partners for a wholesale brand? Ranked list with websites.",
+      "llm": "claude",
+      "cost": 0.050233,
+      "mentioned": false,
+      "domains": [
+        "uncap.com",
+        "arcticgrey.com",
+        "getcultivated.com",
+        "netalico.com",
+        "praella.com",
+        "wemakewebsites.com",
+        "barrelny.com",
+        "blendcommerce.com",
+        "craftberry.com",
+        "mgroupweb.com"
+      ],
+      "error": null,
+      "text_len": 1721
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which agencies are the best Shopify Plus partners for a wholesale brand? Ranked list with websites.",
+      "llm": "gemini",
+      "cost": 0.046871,
+      "mentioned": false,
+      "domains": [
+        "blueswitch.com",
+        "atwix.com",
+        "uncap.com",
+        "sherocommerce.com",
+        "avexdesigns.com",
+        "mlveda.com"
+      ],
+      "error": null,
+      "text_len": 4825
+    },
+    {
+      "bucket": "commerce",
+      "prompt": "Which agencies are the best Shopify Plus partners for a wholesale brand? Ranked list with websites.",
+      "llm": "perplexity",
+      "cost": 0.03153,
+      "mentioned": false,
+      "domains": [
+        "uncap.com"
+      ],
+      "error": null,
+      "text_len": 6841
+    }
+  ]
+}
