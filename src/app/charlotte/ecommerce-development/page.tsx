@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Charlotte NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days, fixed-price. Banking capital e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
+    description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days, fixed-price. Banking capital e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.",
     url: 'https://factoryjet.com/charlotte/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Charlotte' }],
     locale: 'en_US',
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Charlotte, NC?',
               answer:
-                "FactoryJet is Charlotte's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only agency in the Queen City combining Shopify e-commerce with AI agent development. Local Charlotte agencies (Lyons Den Creative, TradeMark Media) focus on branding and marketing. Elevation Web and Brand Fuel do Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with real Charlotte market knowledge.",
+                "FactoryJet is Charlotte's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only agency in the Queen City combining Shopify e-commerce with AI agent development. Local Charlotte agencies (Lyons Den Creative, TradeMark Media) focus on branding and marketing. Elevation Web and Brand Fuel do Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with real Charlotte market knowledge.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_charlotte_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · CHARLOTTE"
           headline="Charlotte's Top-Rated Shopify Developer for North Carolina Businesses"
-          lead="The only Charlotte e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
+          lead="The only Charlotte e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
         />
@@ -509,7 +509,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

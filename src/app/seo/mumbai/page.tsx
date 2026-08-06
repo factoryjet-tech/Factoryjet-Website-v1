@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet',
     description:
-      'Expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star rating. No long contracts. Start with a free check.',
+      'Expert SEO services in Mumbai, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
     url: 'https://factoryjet.com/seo/mumbai',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Mumbai India' }],
     locale: 'en_IN',
@@ -523,7 +523,7 @@ export default function SeoMumbaiPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY MUMBAI BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Google Review Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Six SEO services ──────────────────────────────────────────── */}
@@ -803,7 +803,7 @@ export default function SeoMumbaiPage() {
               className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
             >
-              We are building Mumbai-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average, is built on the same SEO fundamentals we bring to every Mumbai engagement.
+              We are building Mumbai-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average on Google, is built on the same SEO fundamentals we bring to every Mumbai engagement.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a

@@ -209,7 +209,7 @@ export default function Page() {
           headline="Shopify Developer Sioux Falls for South Dakota Businesses"
           lead="South Dakota has zero state income tax: the best business climate in the Midwest. Smart Sioux Falls businesses are pairing that advantage with a high-converting Shopify store that launches in 7 days, fixed-price."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'Fixed-Price']}
+          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
         />
 
         {/* LOGO BAR */}

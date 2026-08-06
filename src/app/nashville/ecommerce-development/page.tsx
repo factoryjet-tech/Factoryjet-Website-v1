@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     url: 'https://factoryjet.com/nashville/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Nashville' }],
     locale: 'en_US',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Nashville, TN?',
               answer:
-                "FactoryJet is Nashville's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only shop in Music City combining Shopify e-commerce with AI development. Local Nashville agencies (Infomedia, Thompson-Miller) focus on healthcare and financial services web design, not Shopify. National agencies targeting Nashville charge enterprise-level rates. FactoryJet launches Shopify stores in 7 days, fixed-price, with real Nashville market knowledge.",
+                "FactoryJet is Nashville's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only shop in Music City combining Shopify e-commerce with AI development. Local Nashville agencies (Infomedia, Thompson-Miller) focus on healthcare and financial services web design, not Shopify. National agencies targeting Nashville charge enterprise-level rates. FactoryJet launches Shopify stores in 7 days, fixed-price, with real Nashville market knowledge.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_nashville_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · NASHVILLE"
           headline="Nashville's Top-Rated Shopify Developer for Music City Businesses"
-          lead="The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating."
+          lead="The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
         />
@@ -505,7 +505,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

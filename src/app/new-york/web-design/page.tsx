@@ -182,7 +182,7 @@ const FAQ_ITEMS = [
             {
               category: 'local',
               question: 'How do I know FactoryJet is legitimate?',
-              answer: 'We maintain a 4.9/5 average client rating, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly, because transparency is the only way to build trust with clients who have never met us in person.',
+              answer: 'We maintain a 4.9/5 average rating on Google, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly, because transparency is the only way to build trust with clients who have never met us in person.',
             },
             {
               category: 'local',
@@ -513,7 +513,7 @@ export default function NewYorkWebDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         <FAQ

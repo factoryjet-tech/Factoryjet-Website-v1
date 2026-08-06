@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Bangalore | Best SEO Services Bengaluru | FactoryJet',
     description:
-      'Expert SEO services in Bangalore, local SEO, technical SEO, B2B content SEO for tech companies, and ecommerce SEO. 500+ businesses, 4.9-star rating. No long contracts. Start with a free check.',
+      'Expert SEO services in Bangalore, local SEO, technical SEO, B2B content SEO for tech companies, and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
     url: 'https://factoryjet.com/seo/bangalore',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Bangalore' }],
     locale: 'en_IN',
@@ -499,7 +499,7 @@ export default function SeoBangalore() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY BANGALORE BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Google Review Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Six SEO services ─────────────────────────────────────────── */}
@@ -727,7 +727,7 @@ export default function SeoBangalore() {
               Real SEO results for Bangalore businesses, case studies on the way
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are building Bangalore-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average, is built on the same SEO fundamentals we bring to every Bangalore engagement.
+              We are building Bangalore-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and the lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average on Google, is built on the same SEO fundamentals we bring to every Bangalore engagement.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our full portfolio →</a>

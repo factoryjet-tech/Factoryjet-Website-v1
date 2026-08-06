@@ -307,7 +307,7 @@ export default function SeoAuditServicePage() {
                 </Link>
               </div>
               <div className="hstat rise d5">
-                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">client rating</span></div>
+                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">Google review rating</span></div>
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">sites audited &amp; built</span></div>
                 <span className="sep" />
@@ -518,7 +518,7 @@ export default function SeoAuditServicePage() {
                 <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet technical SEO and audit team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
-              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average rating</div>
+              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>
             </div>
             <div>
               <h2 data-reveal>A real SEO audit consultant, <span className="it">not a PDF generator</span></h2>
@@ -529,7 +529,7 @@ export default function SeoAuditServicePage() {
               <ul className="feat-list" data-reveal>
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M5 20c0-3.5 3-5 7-5s7 1.5 7 5" /></svg></span><div>Founder-led audits<small>Not handed to a junior or a bot</small></div></li>
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h7l-1 8 10-12h-7z" /></svg></span><div>Technical SEO experts<small>We build 100/100 Lighthouse sites</small></div></li>
-                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg></span><div>500+ sites audited &amp; built<small>4.9 / 5 average client rating</small></div></li>
+                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg></span><div>500+ sites audited &amp; built<small>4.9 / 5 average Google review rating</small></div></li>
               </ul>
               <div className="byline">Reviewed &amp; updated {REVIEWED_DATE} &middot; Bhavesh Barot, Founder</div>
             </div>

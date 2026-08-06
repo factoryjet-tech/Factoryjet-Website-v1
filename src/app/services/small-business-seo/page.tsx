@@ -315,7 +315,7 @@ export default function SmallBusinessSeoServicePage() {
                 </Link>
               </div>
               <div className="hstat rise d5">
-                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">client rating</span></div>
+                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">Google review rating</span></div>
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">businesses served</span></div>
                 <span className="sep" />
@@ -537,7 +537,7 @@ export default function SmallBusinessSeoServicePage() {
                 <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet small business SEO team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
-              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average rating</div>
+              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>
             </div>
             <div>
               <h2>A small business SEO consultant, <span className="it">not a call center</span></h2>
@@ -548,7 +548,7 @@ export default function SmallBusinessSeoServicePage() {
               <ul className="feat-list">
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M5 20c0-3.5 3-5 7-5s7 1.5 7 5" /></svg></span><div>Founder-led strategy<small>Not handed to a junior team</small></div></li>
                 <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18M7 14l4-4 3 3 5-6" /></svg></span><div>Affordable and results-first<small>Budget spent on what brings customers</small></div></li>
-                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg></span><div>500+ businesses served<small>4.9 / 5 average client rating</small></div></li>
+                <li><span className="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg></span><div>500+ businesses served<small>4.9 / 5 average Google review rating</small></div></li>
               </ul>
               <div className="byline">Reviewed &amp; updated {REVIEWED_DATE} &middot; Bhavesh Barot, Founder</div>
             </div>
@@ -596,7 +596,7 @@ export default function SmallBusinessSeoServicePage() {
                 <ul className="cta-trust">
                   <li><Check fill="#F05A28" /> A real audit, not a sales pitch</li>
                   <li><Check fill="#F05A28" /> Scoped to your budget</li>
-                  <li><Check fill="#F05A28" /> 4.9 / 5 average client rating</li>
+                  <li><Check fill="#F05A28" /> 4.9 / 5 average Google review rating</li>
                 </ul>
               </div>
               <div className="formcard">

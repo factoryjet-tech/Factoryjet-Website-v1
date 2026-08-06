@@ -87,3 +87,55 @@ Container is editable via the Tag Manager API with service account
 `tagmanager.edit.containers`; publishing needs `tagmanager.publish`). Always
 build in a new **workspace**, verify, then publish — GTM keeps version history
 for rollback.
+
+**Creating a version needs `tagmanager.edit.containerversions`.** Requesting only
+`tagmanager.publish` returns a 403 reading "insufficient authentication scopes",
+which looks like a permissions problem and is not one. The service account holds
+account admin and container `publish`.
+
+**A workspace edit changes nothing until you publish a version.** This is not a
+footnote, it is how the July 2026 outage lasted an extra two days: a workspace
+named `fix-ga4-pageview-2026-08-04` contained exactly the right fix and was never
+published, so the container kept serving the break.
+
+---
+
+## Tracking health check (run this, it is the thing that stops the regressions)
+
+One-time setup (this machine's `python3` is 3.7.4 and end-of-life, and the Google
+client libraries publish no 3.7 wheels, so pip tries to compile grpcio from source
+and fails):
+
+```bash
+bash scripts/setup-tracking-venv.sh
+```
+
+Then, from any interpreter — the script re-execs itself into the venv:
+
+```bash
+python3 scripts/check-tracking-health.py
+```
+
+Exits non-zero when tracking is genuinely broken. Run it **after every tracking
+change** and on a schedule. It reads the LIVE container and the GA4 property, never
+a workspace, because every recurrence of this problem has come from trusting
+configuration that was not actually live.
+
+What it catches, each mapped to a real incident:
+
+| Check | The incident it would have caught |
+|---|---|
+| No GA4 configuration tag in the live container | **2026-07-06.** 11 tags, none of them a config tag. Every GA4 tag was an *event* tag with `measurementIdOverride`, so clicks and form events kept recording while `page_view` sat at zero for a month. GA4's UI never says "you have no config tag". |
+| Config tag paused, trigger-less, or wrong measurement ID | same class, quieter |
+| A GA4 event tag paused in the live container | a conversion that silently stops |
+| Unpublished changes sitting in any workspace | **2026-08-04.** The fix existed and was never published |
+| Zero `page_view` in GA4 over 7 days | the outcome check: everything above can look correct and still not work |
+| A lead event firing but not flagged as a GA4 key event | **2026-07.** `Lead_Form_FactoryJet` was renamed to `generate_lead` and nobody re-flagged it, so 22 real leads were invisible and Google Ads was bidding on a dead signal |
+| A flagged key event that has stopped firing | the other half of a rename, where reports split across both names |
+
+Two things it deliberately does NOT do. It is not in `npm run prebuild`, because CI
+has no credentials and a check that cannot run in CI must never be able to block a
+deploy. And it does not verify from the browser: GA4 sends its hits with
+`navigator.sendBeacon`, which does not reliably appear in resource timing, so
+counting `/g/collect` requests can prove tracking is broken but can never prove it
+is working. Only the GA4 API can do that.

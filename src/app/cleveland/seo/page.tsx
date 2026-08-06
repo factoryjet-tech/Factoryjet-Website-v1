@@ -277,7 +277,7 @@ export default function ClevelandSeoPage() {
             <div className="fact"><div className="v">No lock-in</div><div className="k">month-to-month, cancel anytime</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">100/100</div><div className="k">Lighthouse target on every build</div></div>
-            <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
+            <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">on Google, across 500+ projects</div></div>
           </div>
         </div>
 

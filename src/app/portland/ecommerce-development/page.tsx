@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: "Top-Rated Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",
-    description: "Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, fixed-price. Oregon has NO sales tax, maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
+    description: "Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, fixed-price. Oregon has NO sales tax, maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.",
     url: 'https://factoryjet.com/portland/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Portland' }],
     locale: 'en_US',
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Portland, OR?',
               answer:
-                "FactoryJet is Portland's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only shop in the Rose City combining Shopify e-commerce with AI agent development. Local agencies (Instrument, North Studio, Zeal Creative) focus on brand identity and enterprise clients at premium prices. PHNX Digital does Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with Oregon-specific market knowledge.",
+                "FactoryJet is Portland's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only shop in the Rose City combining Shopify e-commerce with AI agent development. Local agencies (Instrument, North Studio, Zeal Creative) focus on brand identity and enterprise clients at premium prices. PHNX Digital does Shopify but at longer timelines and higher prices. FactoryJet launches in 7 days, fixed-price, with Oregon-specific market knowledge.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_portland_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · PORTLAND"
           headline="Portland's Top-Rated Shopify Developer for Oregon's Independent Brands"
-          lead="The only Portland e-commerce agency that launches in 7 days at a fixed price. Oregon has zero sales tax: the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for outdoor brands, independent makers, food businesses, and 'Keep Portland Weird' entrepreneurs. 500+ projects, 4.9★ rating."
+          lead="The only Portland e-commerce agency that launches in 7 days at a fixed price. Oregon has zero sales tax: the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for outdoor brands, independent makers, food businesses, and 'Keep Portland Weird' entrepreneurs. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Portland, OR" badgeLabel="Live in 7 days" />}
         />
@@ -506,7 +506,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

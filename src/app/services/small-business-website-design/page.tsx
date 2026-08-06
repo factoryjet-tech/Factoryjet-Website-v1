@@ -818,7 +818,7 @@ export default function SmallBusinessWebDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 500+ projects. Real results from real businesses."
+          headline="4.9/5 on Google across 500+ projects. Real results from real businesses."
         />
 
         {/* -- 13. FAQ -------------------------------------------------------- */}

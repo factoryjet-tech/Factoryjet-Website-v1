@@ -190,7 +190,7 @@ export default function EcommerceSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Ecommerce SEO Agency, 500+ Stores, 4.9 Average Rating" />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Ecommerce SEO Agency, 500+ Stores, 4.9 Google Review Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
@@ -280,7 +280,7 @@ export default function EcommerceSeoPage() {
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Ecommerce SEO results are on the way</h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real store results: category and product pages we moved up, more visitors to the pages that sell, and more sales. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating from our clients.</p>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real store results: category and product pages we moved up, more visitors to the pages that sell, and more sales. It all sits on the same work behind 500+ websites we have built, at a 4.9 average Google review rating.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>

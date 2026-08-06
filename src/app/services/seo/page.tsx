@@ -26,7 +26,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
      - NO fabricated metrics (no +312%, no 64.2% domain share, no 23k->720k).
        Service mini-cards carry real deliverables; the AI room shows a qualitative
        AI-Overview citation card, not invented dashboard percentages.
-     - Verified claims only: 4.9 / 5 average client rating, 500+ businesses served,
+     - Verified claims only: 4.9 / 5 average Google review rating, 500+ businesses served,
        7-day SEO-ready builds, 100/100 Lighthouse.
      - Founder byline + visible "Reviewed & updated" date for E-E-A-T.
 
@@ -1019,7 +1019,7 @@ export default function SeoServicePage() {
                 className="absolute -right-2 bottom-12 z-[6] rounded-xl bg-white px-3.5 py-2.5 font-fj-body text-[0.78rem] font-bold text-fj-ink"
                 style={{ boxShadow: '0 16px 36px rgba(80,70,200,0.26)' }}
               >
-                <span style={{ color: '#FFB23C' }} aria-hidden="true">&#9733;</span> 4.9/5 &middot; average rating
+                <span style={{ color: '#FFB23C' }} aria-hidden="true">&#9733;</span> 4.9/5 &middot; average Google review rating
               </div>
               {/* Caption pill (no year numbers) */}
               <span
@@ -1303,7 +1303,7 @@ export default function SeoServicePage() {
                   {[
                     'A real audit, not a sales pitch',
                     'Covers Google rankings + AI answers',
-                    '4.9 / 5 average client rating',
+                    '4.9 / 5 average Google review rating',
                   ].map((line) => (
                     <li key={line} className="flex items-center gap-3 font-fj-body text-[0.9375rem] font-medium" style={{ color: 'rgba(244,241,234,0.9)' }}>
                       <CheckCircle fill={ORANGE} size={18} /> {line}

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Delhi | Best SEO Services Delhi NCR | FactoryJet',
     description:
-      'Expert SEO services in Delhi NCR, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star rating. No long contracts. Start with a free check.',
+      'Expert SEO services in Delhi NCR, local SEO, technical SEO, ecommerce SEO, and link building. 500+ businesses, 4.9-star Google rating. No long contracts. Start with a free check.',
     url: 'https://factoryjet.com/seo/delhi',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Delhi NCR' }],
     locale: 'en_IN',
@@ -495,7 +495,7 @@ export default function SeoDelhi() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHY DELHI BUSINESSES TRUST US"
-          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Average Rating, 12+ Years Building"
+          headline="India's Trusted SEO Company, 500+ Sites Ranked, 4.9 Google Review Rating, 12+ Years Building"
         />
 
         {/* ─── 4. Delhi market context ─────────────────────────────────────── */}
@@ -749,7 +749,7 @@ export default function SeoDelhi() {
               Real SEO results for Delhi businesses, case studies on the way
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are building Delhi-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average, is built on the same SEO fundamentals we bring to every Delhi and NCR engagement.
+              We are building Delhi-specific case studies: first-page rankings achieved, organic traffic growth month-on-month, and lead volume change from Google. Our broader track record, 500+ businesses, 4.9-star average on Google, is built on the same SEO fundamentals we bring to every Delhi and NCR engagement.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Denver CO | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, fixed-price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, fixed-price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     url: 'https://factoryjet.com/denver/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Denver' }],
     locale: 'en_US',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Top-Rated Shopify Developer Denver CO | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, fixed-price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, fixed-price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Denver, CO?',
               answer:
-                "FactoryJet is Denver's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only shop in the Mile High market combining Shopify e-commerce with AI agent development. Unlike local Denver agencies (Fruition, Doodle Dog Creative) that focus on WordPress and digital marketing, FactoryJet builds exclusively on Shopify and Next.js 15. We know Colorado's outdoor economy, Denver's complex tax structure, and the Front Range consumer profile, and we deliver in 7 days at a fixed, scoped price.",
+                "FactoryJet is Denver's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only shop in the Mile High market combining Shopify e-commerce with AI agent development. Unlike local Denver agencies (Fruition, Doodle Dog Creative) that focus on WordPress and digital marketing, FactoryJet builds exclusively on Shopify and Next.js 15. We know Colorado's outdoor economy, Denver's complex tax structure, and the Front Range consumer profile, and we deliver in 7 days at a fixed, scoped price.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_denver_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · DENVER"
           headline="Denver's Top-Rated Shopify Developer for Colorado Businesses"
-          lead="The only Denver e-commerce agency that launches in 7 days at a fixed, scoped price. Shopify, WooCommerce & AI-powered stores for Colorado's outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ rating."
+          lead="The only Denver e-commerce agency that launches in 7 days at a fixed, scoped price. Shopify, WooCommerce & AI-powered stores for Colorado's outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Denver, CO" badgeLabel="Live in 7 days" />}
         />
@@ -507,7 +507,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

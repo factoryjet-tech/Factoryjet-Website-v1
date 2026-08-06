@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     url: 'https://factoryjet.com/tampa/ecommerce-development',
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -84,7 +84,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Tampa, FL?',
               answer:
-                "FactoryJet is Tampa's top-rated Shopify development agency, 500+ projects delivered, 4.9★ rating, and the only shop in the Gulf Coast region combining Shopify e-commerce with AI agent development. Unlike local Tampa agencies (Wicked Creative, Digital Momentum) that specialize in branding and marketing, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote enterprise-level prices and multi-month timelines, we launch in 7 days, fixed-price.",
+                "FactoryJet is Tampa's top-rated Shopify development agency, 500+ projects delivered, 4.9★ Google rating, and the only shop in the Gulf Coast region combining Shopify e-commerce with AI agent development. Unlike local Tampa agencies (Wicked Creative, Digital Momentum) that specialize in branding and marketing, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote enterprise-level prices and multi-month timelines, we launch in 7 days, fixed-price.",
             },
             {
               category: 'pricing',
@@ -205,7 +205,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_tampa_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
           headline="Tampa's Top-Rated Shopify Developer for Gulf Coast Businesses"
-          lead="Tampa is one of the fastest-growing economies in Florida, $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it, live in 7 days, fixed-price. 500+ projects, 4.9★."
+          lead="Tampa is one of the fastest-growing economies in Florida, $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it, live in 7 days, fixed-price. 500+ projects, 4.9★ on Google."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
         />
@@ -539,7 +539,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ (cream) ───────────────────────────────────────── */}

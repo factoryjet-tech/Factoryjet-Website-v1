@@ -214,7 +214,7 @@ export default function Page() {
           headline="Shopify Developer Fargo for Silicon Prairie Businesses"
           lead="Fargo's fastest-growing brands are ditching slow local agencies and launching high-converting Shopify stores in 7 days, at fixed-price vs local benchmarks."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'Fixed-Price']}
+          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
         />
 
         {/* LOGO BAR */}
@@ -504,7 +504,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* FAQ */}

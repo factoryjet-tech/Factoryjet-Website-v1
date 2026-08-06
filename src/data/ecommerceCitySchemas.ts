@@ -204,103 +204,103 @@ const CITIES: Record<string, CitySchemaInput> = {
     city: 'Austin', state: 'TX', stateFullName: 'Texas', slug: 'austin',
     metaTitle: 'Ecommerce Development Austin TX | 7-Day Delivery, Fixed-Price | FactoryJet',
     metaDesc: 'Austin\'s most affordable ecommerce development agency. Shopify, WooCommerce & custom online stores built in 7 days, at a fixed, transparent price. 500+ stores delivered. Free audit.',
-    heroSub: 'FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses, delivered in 7 days, at a fixed, transparent price. 500+ stores launched, 4.9★ rating.',
+    heroSub: 'FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses, delivered in 7 days, at a fixed, transparent price. 500+ stores launched, 4.9★ Google rating.',
   },
 
   // ── Miami, FL ───────────────────────────────────────────────────────────────
   miami: {
     city: 'Miami', state: 'FL', stateFullName: 'Florida', slug: 'miami',
     metaTitle: 'Shopify Developer Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, at a fixed price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Miami e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for South Florida\'s luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, at a fixed price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Miami e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for South Florida\'s luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Denver, CO ──────────────────────────────────────────────────────────────
   denver: {
     city: 'Denver', state: 'CO', stateFullName: 'Colorado', slug: 'denver',
     metaTitle: 'Shopify Developer Denver CO | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, at a fixed price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Denver e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Colorado\'s outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days, at a fixed price. Mile High e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Denver e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Colorado\'s outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Nashville, TN ────────────────────────────────────────────────────────────
   nashville: {
     city: 'Nashville', state: 'TN', stateFullName: 'Tennessee', slug: 'nashville',
     metaTitle: 'Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, at a fixed price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Music City\'s artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, at a fixed price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Music City\'s artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Portland, OR ─────────────────────────────────────────────────────────────
   portland: {
     city: 'Portland', state: 'OR', stateFullName: 'Oregon', slug: 'portland',
     metaTitle: 'Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, at a fixed price. Oregon has NO sales tax, maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Portland e-commerce agency that launches in 7 days at a fixed, transparent price. Oregon has zero sales tax: the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for Portland\'s outdoor brands, independent makers, food businesses, and \'Keep Portland Weird\' entrepreneurs. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Portland, Oregon: stores live in 7 days, at a fixed price. Oregon has NO sales tax, maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Portland e-commerce agency that launches in 7 days at a fixed, transparent price. Oregon has zero sales tax: the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for Portland\'s outdoor brands, independent makers, food businesses, and \'Keep Portland Weird\' entrepreneurs. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Charlotte, NC ────────────────────────────────────────────────────────────
   charlotte: {
     city: 'Charlotte', state: 'NC', stateFullName: 'North Carolina', slug: 'charlotte',
     metaTitle: 'Shopify Developer Charlotte NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days, at a fixed price. Banking capital e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Charlotte e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Queen City\'s DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days, at a fixed price. Banking capital e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Charlotte e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Queen City\'s DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Raleigh, NC ──────────────────────────────────────────────────────────────
   raleigh: {
     city: 'Raleigh', state: 'NC', stateFullName: 'North Carolina', slug: 'raleigh',
     metaTitle: 'Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, at a fixed price. Research Triangle e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for the Research Triangle\'s tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, at a fixed price. Research Triangle e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for the Research Triangle\'s tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Tampa, FL ────────────────────────────────────────────────────────────────
   tampa: {
     city: 'Tampa', state: 'FL', stateFullName: 'Florida', slug: 'tampa',
     metaTitle: 'Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, at a fixed price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'The only Tampa e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Tampa Bay\'s DTC brands, healthcare companies, defense/aerospace businesses, and Florida\'s thriving Gulf Coast consumer market. 500+ projects, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, at a fixed price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'The only Tampa e-commerce agency that launches in 7 days at a fixed, transparent price. Shopify, WooCommerce & AI-powered stores for Tampa Bay\'s DTC brands, healthcare companies, defense/aerospace businesses, and Florida\'s thriving Gulf Coast consumer market. 500+ projects, 4.9★ Google rating.',
   },
 
   // ── Chattanooga, TN ──────────────────────────────────────────────────────────
   chattanooga: {
     city: 'Chattanooga', state: 'TN', stateFullName: 'Tennessee', slug: 'chattanooga',
     metaTitle: 'Shopify Developer Chattanooga TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Chattanooga, Tennessee: stores live in 7 days, at a fixed price. Gig City 10 Gbps fiber + no state income tax. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'Chattanooga\'s Gig City fiber network and zero state income tax make it one of the best US cities to launch an e-commerce business. FactoryJet builds custom Shopify stores for Gig City brands, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Chattanooga, Tennessee: stores live in 7 days, at a fixed price. Gig City 10 Gbps fiber + no state income tax. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'Chattanooga\'s Gig City fiber network and zero state income tax make it one of the best US cities to launch an e-commerce business. FactoryJet builds custom Shopify stores for Gig City brands, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ Google rating.',
   },
 
   // ── Fargo, ND ────────────────────────────────────────────────────────────────
   fargo: {
     city: 'Fargo', state: 'ND', stateFullName: 'North Dakota', slug: 'fargo',
     metaTitle: 'Shopify Developer Fargo ND | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'Fargo\'s Silicon Prairie is home to Microsoft TechSpark, the Emerging Prairie ecosystem, and some of the fastest-growing businesses in the upper Midwest. FactoryJet builds custom Shopify stores for Fargo-Moorhead businesses, launched in 7 days, at a fraction of what Onsharp or AdShark charge. 500+ stores, 4.9★ rating.',
+    metaDesc: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'Fargo\'s Silicon Prairie is home to Microsoft TechSpark, the Emerging Prairie ecosystem, and some of the fastest-growing businesses in the upper Midwest. FactoryJet builds custom Shopify stores for Fargo-Moorhead businesses, launched in 7 days, at a fraction of what Onsharp or AdShark charge. 500+ stores, 4.9★ Google rating.',
   },
 
   // ── Boise, ID ────────────────────────────────────────────────────────────────
   boise: {
     city: 'Boise', state: 'ID', stateFullName: 'Idaho', slug: 'boise',
     metaTitle: 'Shopify Developer Boise ID | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Best Shopify developer in Boise, Idaho: e-commerce websites live in 7 days, at a fixed price. Treasure Valley specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'Boise is one of the fastest-growing cities in America, and the businesses winning online here aren\'t waiting months for a local agency. FactoryJet builds custom Shopify stores for Treasure Valley businesses, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ rating.',
+    metaDesc: 'Best Shopify developer in Boise, Idaho: e-commerce websites live in 7 days, at a fixed price. Treasure Valley specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'Boise is one of the fastest-growing cities in America, and the businesses winning online here aren\'t waiting months for a local agency. FactoryJet builds custom Shopify stores for Treasure Valley businesses, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ Google rating.',
   },
 
   // ── Lincoln, NE ──────────────────────────────────────────────────────────────
   lincoln: {
     city: 'Lincoln', state: 'NE', stateFullName: 'Nebraska', slug: 'lincoln',
     metaTitle: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'Lincoln is the Silicon Prairie\'s university town, ag-tech hub, and fastest-growing mid-market city. FactoryJet builds custom Shopify stores for Nebraska businesses, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days, at a fixed price. Silicon Prairie e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'Lincoln is the Silicon Prairie\'s university town, ag-tech hub, and fastest-growing mid-market city. FactoryJet builds custom Shopify stores for Nebraska businesses, launched in 7 days, at a fixed, transparent price. 500+ stores, 4.9★ Google rating.',
   },
 
   // ── Sioux Falls, SD ──────────────────────────────────────────────────────────
   'sioux-falls': {
     city: 'Sioux Falls', state: 'SD', stateFullName: 'South Dakota', slug: 'sioux-falls',
     metaTitle: 'Shopify Developer Sioux Falls SD | 7-Day Delivery, Fixed-Price | FactoryJet',
-    metaDesc: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days, at a fixed price. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    heroSub: 'South Dakota has zero state income tax: the best business climate in the Midwest. FactoryJet builds custom Shopify stores for Sioux Falls businesses, launched in 7 days, at a fraction of what Lawrence & Schiller or Click Rain charge. 500+ stores, 4.9★ rating.',
+    metaDesc: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days, at a fixed price. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    heroSub: 'South Dakota has zero state income tax: the best business climate in the Midwest. FactoryJet builds custom Shopify stores for Sioux Falls businesses, launched in 7 days, at a fraction of what Lawrence & Schiller or Click Rain charge. 500+ stores, 4.9★ Google rating.',
   },
 
 };

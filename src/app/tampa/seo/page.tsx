@@ -213,7 +213,7 @@ export default function TampaSeoPage() {
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
               <div className="hstat rise d5">
-                <div><div className="n"><span className="star">★</span> 4.9</div><div className="l">across 500+ projects</div></div>
+                <div><div className="n"><span className="star">★</span> 4.9</div><div className="l">on Google, across 500+ projects</div></div>
                 <div className="sep" />
                 <div><div className="n">Month-to-month</div><div className="l">no lock-in, ever</div></div>
                 <div className="sep" />

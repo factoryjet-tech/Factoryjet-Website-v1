@@ -278,7 +278,7 @@ export default function NashvilleSeoPage() {
             <div className="fact"><div className="v">Month-to-month</div><div className="k">local SEO, no lock-in</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">7-day</div><div className="k">kickoff, not weeks</div></div>
-            <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
+            <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">on Google, across 500+ projects</div></div>
           </div>
         </div>
 

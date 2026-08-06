@@ -279,7 +279,7 @@ export default function ArlingtonSeoPage() {
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
               <div className="hstat rise">
-                <div><div className="n"><span className="star">★</span> 4.9</div><div className="l">across 500+ projects</div></div>
+                <div><div className="n"><span className="star">★</span> 4.9</div><div className="l">on Google, across 500+ projects</div></div>
                 <div className="sep" />
                 <div><div className="n">Month-to-month</div><div className="l">no lock-in, ever</div></div>
                 <div className="sep" />
@@ -302,7 +302,7 @@ export default function ArlingtonSeoPage() {
                     <div className="sc-rank">01</div>
                     <div>
                       <div className="sc-nm">Your Business <span className="sc-tag">MAP PACK #1</span></div>
-                      <div className="sc-mt"><span className="sc-star">★★★★★</span> 4.9 (128) · Arlington, TX</div>
+                      <div className="sc-mt"><span className="sc-star">★★★★★</span> 4.9 on Google · Arlington, TX</div>
                     </div>
                     <div className="sc-bar"><div className="sc-fill" style={{ width: '92%' }} /></div>
                   </div>

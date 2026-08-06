@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Chattanooga, Tennessee?',
               answer:
-                "FactoryJet is Chattanooga's top-rated Shopify development agency, 500+ projects delivered, 4.9★ rating, and the only shop in Gig City that combines Shopify e-commerce with AI agent development at SMB pricing. Unlike local agencies like Riverworks Marketing, JLB Works, and Slamdot that build primarily on WordPress, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies like Growisto and WebCitz that rank for Chattanooga queries but operate with 7–16 week timelines and zero local market knowledge, we launch in 7 days, fixed-price.",
+                "FactoryJet is Chattanooga's top-rated Shopify development agency, 500+ projects delivered, 4.9★ Google rating, and the only shop in Gig City that combines Shopify e-commerce with AI agent development at SMB pricing. Unlike local agencies like Riverworks Marketing, JLB Works, and Slamdot that build primarily on WordPress, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies like Growisto and WebCitz that rank for Chattanooga queries but operate with 7–16 week timelines and zero local market knowledge, we launch in 7 days, fixed-price.",
             },
             {
               category: 'pricing',
@@ -231,7 +231,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_chattanooga_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · CHATTANOOGA"
           headline="Shopify Developer Chattanooga for Tennessee Businesses"
-          lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match, live in 7 days, at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★."
+          lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match, live in 7 days, at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★ on Google."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Chattanooga, TN" badgeLabel="Live in 7 days" />}
         />
@@ -554,7 +554,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────── */}

@@ -36,6 +36,9 @@ tsconfig_noext.json
 
 # Brand audit pipeline (Patch #5)
 pipeline/scripts/.venv/
+# Tracking health-check venv (206 MB, built by scripts/setup-tracking-venv.sh).
+# Never commit: it is machine-specific and rebuildable in one command.
+.venv-tracking/
 pipeline/scripts/__pycache__/
 pipeline/scripts/*.pyc
 pipeline/brand-references/*/screenshots/

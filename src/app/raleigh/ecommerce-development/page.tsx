@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     url: 'https://factoryjet.com/raleigh/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Raleigh' }],
     locale: 'en_US',
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Raleigh, NC?',
               answer:
-                "FactoryJet is Raleigh's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only agency in the Research Triangle combining Shopify e-commerce with AI agent development. Local Raleigh agencies (Forge Digital, Kaptiv8, Kelp Creative) focus on marketing and general web design. National agencies targeting Raleigh charge enterprise-level rates. FactoryJet launches in 7 days, fixed-price, with real Research Triangle market knowledge.",
+                "FactoryJet is Raleigh's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only agency in the Research Triangle combining Shopify e-commerce with AI agent development. Local Raleigh agencies (Forge Digital, Kaptiv8, Kelp Creative) focus on marketing and general web design. National agencies targeting Raleigh charge enterprise-level rates. FactoryJet launches in 7 days, fixed-price, with real Research Triangle market knowledge.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_raleigh_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · RALEIGH"
           headline="Raleigh's Top-Rated Shopify Developer for the Research Triangle"
-          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
+          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Raleigh, NC" badgeLabel="Live in 7 days" />}
         />
@@ -506,7 +506,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

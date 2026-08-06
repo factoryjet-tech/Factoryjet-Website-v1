@@ -379,7 +379,7 @@ export default function LocalSeoServicePage() {
                 </Link>
               </div>
               <div className="hstat rise d5">
-                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">client rating</span></div>
+                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">Google review rating</span></div>
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">businesses served</span></div>
                 <span className="sep" />
@@ -612,7 +612,7 @@ export default function LocalSeoServicePage() {
                 />
               </div>
               <div className="ec e1">A senior team</div>
-              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average rating</div>
+              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>
             </div>
             <div>
               <h2>Real specialists, <span className="it">not a listings mill</span></h2>
@@ -680,7 +680,7 @@ export default function LocalSeoServicePage() {
                 <ul className="cta-trust">
                   <li><Check fill="#F05A28" /> A real audit, not a sales pitch</li>
                   <li><Check fill="#F05A28" /> Covers your profile, reviews, and citations</li>
-                  <li><Check fill="#F05A28" /> 4.9 / 5 average client rating</li>
+                  <li><Check fill="#F05A28" /> 4.9 / 5 average Google review rating</li>
                 </ul>
               </div>
               <div className="formcard">

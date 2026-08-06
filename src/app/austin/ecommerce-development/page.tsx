@@ -249,7 +249,7 @@ export default function AustinEcommerceDevelopmentPage() {
             'Fixed-price builds',
             '7-day delivery guarantee',
             '500+ stores launched',
-            '4.9★ · 127 reviews',
+            '4.9★ on Google',
           ]}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Austin, TX" badgeLabel="Live in 7 days" />}
         />
@@ -600,7 +600,7 @@ export default function AustinEcommerceDevelopmentPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 127 reviews from Austin and beyond."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────── */}

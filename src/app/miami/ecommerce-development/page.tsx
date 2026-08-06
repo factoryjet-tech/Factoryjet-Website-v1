@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Top-Rated Shopify Developer Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, fixed-price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, fixed-price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     url: 'https://factoryjet.com/miami/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Miami' }],
     locale: 'en_US',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Top-Rated Shopify Developer Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, fixed-price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    description: 'Top-rated Shopify developer in Miami, Florida: stores live in 7 days, fixed-price. Latin America e-commerce gateway: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
               category: 'local',
               question: 'Who is the best Shopify developer in Miami, FL?',
               answer:
-                "FactoryJet is Miami's top-rated Shopify development agency, 500+ projects, 4.9★ rating, and the only shop in South Florida combining Shopify e-commerce with AI agent development and Spanish-language capabilities. Unlike local agencies (Absolute Web, Push Group, Grazzy Digital) that charge enterprise-level rates with 8–16 week timelines, FactoryJet launches Shopify stores in 7 days at a fixed, scoped price.",
+                "FactoryJet is Miami's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only shop in South Florida combining Shopify e-commerce with AI agent development and Spanish-language capabilities. Unlike local agencies (Absolute Web, Push Group, Grazzy Digital) that charge enterprise-level rates with 8–16 week timelines, FactoryJet launches Shopify stores in 7 days at a fixed, scoped price.",
             },
             {
               category: 'pricing',
@@ -187,7 +187,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_miami_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · MIAMI"
           headline="Miami's Top-Rated Shopify Developer for Florida's Global Market"
-          lead="The only Miami e-commerce agency that launches in 7 days at a fixed, scoped price. Shopify, WooCommerce & AI-powered stores for South Florida's luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ rating."
+          lead="The only Miami e-commerce agency that launches in 7 days at a fixed, scoped price. Shopify, WooCommerce & AI-powered stores for South Florida's luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ Google rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Miami, FL" badgeLabel="Live in 7 days" />}
         />
@@ -508,7 +508,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

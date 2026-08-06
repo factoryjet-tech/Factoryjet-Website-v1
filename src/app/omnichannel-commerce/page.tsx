@@ -429,7 +429,7 @@ export default function OmnichannelCommercePage() {
               </blockquote>
               <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
                 <span aria-hidden="true" style={{ color: 'var(--pp-orange)', letterSpacing: '1px' }}>★★★★★</span>
-                <span><strong style={{ color: 'var(--pp-ink)' }}>4.9/5</strong> · average client rating</span>
+                <span><strong style={{ color: 'var(--pp-ink)' }}>4.9/5</strong> · average Google review rating</span>
               </div>
             </div>
           </div>

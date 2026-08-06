@@ -470,7 +470,7 @@ export default function SeoHubPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="BY THE NUMBERS"
-          headline="India's Trusted SEO Company, 500+ Sites, 4.9 Average Rating"
+          headline="India's Trusted SEO Company, 500+ Sites, 4.9 Google Review Rating"
         />
 
         {/* ── 4. WHAT SEO INCLUDES ─────────────────────────────────────────── */}
@@ -584,7 +584,7 @@ export default function SeoHubPage() {
               SEO results are on the way
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work. For now, it all sits on the same work behind 500+ websites we have built: solid basics, real content, and a 4.9 average rating from our clients.
+              We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work. For now, it all sits on the same work behind 500+ websites we have built: solid basics, real content, and a 4.9 average Google review rating.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a

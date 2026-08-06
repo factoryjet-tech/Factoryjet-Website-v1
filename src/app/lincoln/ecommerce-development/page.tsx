@@ -209,7 +209,7 @@ export default function Page() {
           headline="Shopify Agency Lincoln NE for Nebraska Businesses"
           lead="Lincoln is the Silicon Prairie's university town, ag-tech hub, and fastest-growing mid-market city, and the businesses winning online here aren't waiting 3 months for a local agency. They launch in 7 days at fixed-price tiers."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'Fixed-Price']}
+          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
         />
 
         {/* LOGO BAR */}
@@ -499,7 +499,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* FAQ */}

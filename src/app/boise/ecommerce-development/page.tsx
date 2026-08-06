@@ -214,7 +214,7 @@ export default function Page() {
           headline="Shopify Developer Boise for Treasure Valley Businesses"
           lead="Boise is one of the fastest-growing cities in America, and the businesses winning online aren't waiting months for a local agency. They're launching professional Shopify stores in 7 days at fixed-price vs local benchmarks."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'Fixed-Price']}
+          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
         />
 
         {/* LOGO BAR */}
@@ -506,7 +506,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 across 500+ projects."
+          headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* FAQ */}
