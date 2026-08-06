@@ -150,7 +150,7 @@ export default function USPortfolioPage() {
         navLinks={[
           { label: 'Services', href: '/services/web-design' },
           { label: 'Shopify', href: '/services/shopify-development' },
-          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'AI Agents', href: '/services/ai-agent-development' },
           { label: 'Pricing', href: '/pricing' },
           { label: 'Portfolio', href: '/portfolio' },
           { label: 'FAQ', href: '/faq' },

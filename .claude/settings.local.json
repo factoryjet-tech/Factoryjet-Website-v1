@@ -160,7 +160,9 @@
       "Bash(python3 -m pip install -r requirements.txt)",
       "Bash(python3 -m json.tool)",
       "Bash(python3 trendspike_bot.py)",
-      "WebFetch(domain:factoryjet.com)"
+      "WebFetch(domain:factoryjet.com)",
+      "Skill(_gstack-command)",
+      "Skill(_gstack-command:*)"
     ]
   }
 }

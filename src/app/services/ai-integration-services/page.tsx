@@ -640,7 +640,7 @@ export default function AIIntegrationServicesPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Integration', href: '/services/ai-integration-services' },
-          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'AI Agents', href: '/services/ai-agent-development' },
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}

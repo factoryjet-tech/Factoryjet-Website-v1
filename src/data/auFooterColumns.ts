@@ -26,7 +26,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Ecommerce Web Design',     href: '/services/ecommerce-development' },
       { label: 'Shopify Developers',       href: '/services/shopify-development' },
       { label: 'SEO Services',             href: '/services/seo' },
-      { label: 'AI SEO & AI Agents',       href: '/services/ai-agents' },
+      { label: 'AI SEO & AI Agents',       href: '/services/ai-agent-development' },
     ],
   },
   {

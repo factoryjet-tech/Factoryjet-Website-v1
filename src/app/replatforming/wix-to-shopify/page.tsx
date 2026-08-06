@@ -79,7 +79,7 @@ const WEBPAGE_SCHEMA = {
   name: 'Wix to Shopify Migration Services',
   description: 'Wix Stores to Shopify migration handling export limits, CDN images, Velo code, and URL remapping.',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };

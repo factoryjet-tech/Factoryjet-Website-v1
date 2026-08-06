@@ -73,7 +73,7 @@ const ARTICLE_SCHEMA = {
   headline: 'We measured 58 pages that AI actually cites. Domain authority did not predict it.',
   description: 'Original analysis of 232 Google AI Overview citations across 12 commercial e-commerce queries, with structural measurement of the 58 most-cited pages.',
   datePublished: PAGE_MODIFIED, dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   mainEntityOfPage: 'https://factoryjet.com/ai-citation-study',
   about: [{ '@type': 'Thing', name: 'Generative engine optimization' }, { '@type': 'Thing', name: 'Google AI Overviews' }],

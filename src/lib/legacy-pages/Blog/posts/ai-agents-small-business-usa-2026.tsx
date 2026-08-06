@@ -165,7 +165,7 @@ export const post: BlogPost = {
         <strong>Agency-built custom AI agents:</strong> $2,500–$8,000 to build, $100–$300/month to maintain. Pros: trained on your business, integrated with your website and CRM, handles complex multi-step workflows, maintained and improved over time. Cons: higher upfront cost. ROI threshold for service businesses: typically 60–90 days.
       </p>
       <p className="mb-4">
-        FactoryJet builds custom AI agents for US small businesses from $2,999, deployed and integrated into your website in 7 days. Treat $2,999 as the entry point rather than a quote: we price the build once we know what the agent has to do. ➡ <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
+        FactoryJet builds custom AI agents for US small businesses from $2,999, deployed and integrated into your website in 7 days. Treat $2,999 as the entry point rather than a quote: we price the build once we know what the agent has to do. ➡ <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What to Avoid When Buying AI Agent Tools</h2>
@@ -185,7 +185,7 @@ export const post: BlogPost = {
         </ul>
       </div>
 
-      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/services/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a>, built and integrated into your website in 7 days from $2,999. Explore our <a href="/services/ai-automation/" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a> or see city-specific deployments in <a href="/austin/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin</a>, <a href="/denver/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Denver</a>, and <a href="/raleigh/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh</a>.</p>
+      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/services/ai-agent-development/" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a>, built and integrated into your website in 7 days from $2,999. Explore our <a href="/services/ai-automation/" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a> or see city-specific deployments in <a href="/austin/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin</a>, <a href="/denver/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Denver</a>, and <a href="/raleigh/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh</a>.</p>
     </>
   ),
 };

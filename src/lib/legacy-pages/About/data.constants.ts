@@ -131,7 +131,7 @@ export const REASONS: ReasonItem[] = [
 ];
 
 export const TEAM: TeamMember[] = [
-  { name: "Bhavesh Barot", role: "Founder & CEO", experience: "18+ years", specialization: "Business strategy, ERP implementation", image: "/bhavesh_image.jpg", LinkedInUrl: "https://www.linkedin.com/in/barotbhavesh/?originalSubdomain=in" },
+  { name: "Bhavesh Barot", role: "Founder & CEO", experience: "18+ years", specialization: "Business strategy, ERP implementation", image: "/bhavesh_image.jpg", LinkedInUrl: "https://www.linkedin.com/in/bhavesh-ai-gtm-expert/?originalSubdomain=in" },
   { name: "Manoj V", role: "Co-Founder & CTO", experience: "5+ years", specialization: "Technical architecture, AI implementation", image: "/manoj.jpg", LinkedInUrl: "https://www.linkedin.com/in/manoj-v-38a047220/" },
   { name: "Rishikesh Yadav", role: "Founding Member & Dev", experience: "2+ years", specialization: "Full Stack Development, AI implementation", image: "/rishikesh.jpg", LinkedInUrl: "https://www.linkedin.com/in/rishikesh-yadav-a059482b0/" },
   { name: "Nikhil Guleria", role: "Head of Digital Marketing", experience: "5+ years", specialization: "SEO, GEO, AEO, AIO, Paid Ads", image: "/nikhil_photo.jpeg", LinkedInUrl: "https://www.linkedin.com/in/nikhil-guleria-642825209/" },

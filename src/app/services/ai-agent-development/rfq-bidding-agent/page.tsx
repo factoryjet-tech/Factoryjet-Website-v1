@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agents.webp',
+        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
         width: 1200,
         height: 630,
         alt: 'FactoryJet AI agent development for RFQ and bidding workflows',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'RFQ Automation Agent for Quoting Teams | FactoryJet',
     description: 'AI agents that read inbound RFQs, match line items to your catalogue, and draft quotes for approval.',
-    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
+    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
   },
   alternates: { canonical: PAGE_URL },
   robots: {
@@ -609,7 +609,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    url: 'https://www.linkedin.com/in/bhaveshbarot/',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder, FactoryJet',
   },
   publisher: { '@id': 'https://factoryjet.com/#organization' },

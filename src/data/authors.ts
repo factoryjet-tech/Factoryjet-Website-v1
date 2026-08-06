@@ -27,7 +27,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   // every blog post byline, so it was the widest-reaching instance of the claim.
   yearsExperience: '10+',
   image: '/bhavesh_image.jpg',
-  linkedin: 'https://www.linkedin.com/in/barotbhavesh/',
+  linkedin: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
   credentials: [
     '500+ websites delivered to US, UK, and UAE clients',
     'Lighthouse 95+ performance standard on all FactoryJet projects',

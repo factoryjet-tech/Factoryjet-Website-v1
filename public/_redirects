@@ -50,13 +50,22 @@
 # ── CANNIBALIZATION CONSOLIDATION (2026-07-25) ──────────────────────────────
 # Overlapping US service pages retired into their canonical twin (301, keep
 # permanently). Preserves link equity + avoids 404s on already-indexed URLs.
-#   ai-agency                      → ai-agents  (ai-agents is the canonical AI hub)
+#   ai-agency                      → ai-agent-development  (repointed 2026-08-06)
+#
+# 2026-08-06 consolidation. /services/ai-agents was titled "AI Agent Development
+# Company & AI Agency USA", i.e. the exact head term /services/ai-agent-development
+# targets (590/mo, KD 9, $58.21 CPC). It earned 0 clicks and 0 impressions in the
+# 90 days to 2026-08-04, so there was nothing to protect and a duplicate to remove.
+# ai-agency is repointed straight at the final destination rather than through
+# ai-agents: chaining them would make a 2-hop redirect, which wastes crawl budget
+# and which retrieval bots are more likely than browsers to simply abandon.
 # NOTE 2026-08-06: the generative-engine-optimization → ai-seo 301 was REMOVED.
 # It was retired in 2026-07 as thin/orphaned. Demand measured on 2026-08-06 shows
 # GEO/AEO is a distinct ~1,900/mo US commercial market at KD 0-6 with $34-51 CPCs,
 # and the page has been rebuilt in full. /services/ai-seo keeps "ai seo agency"
 # and "ai seo services"; the GEO page owns GEO, AEO and LLM SEO only.
-/services/ai-agency /services/ai-agents 301
+/services/ai-agency /services/ai-agent-development 301
+/services/ai-agents /services/ai-agent-development 301
 # whatsapp-chatbot US namespace was a noindex double-hop stub → point straight at the US twin
 /services/whatsapp-chatbot /services/ai-chatbot-development 301
 

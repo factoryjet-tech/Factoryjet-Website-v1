@@ -128,7 +128,7 @@ const WEBPAGE_SCHEMA = {
   name: 'Generative Engine Optimization Services',
   description: 'Generative engine optimization, answer engine optimization and LLM SEO services for US brands.',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   about: { '@id': 'https://factoryjet.com/#organization' },

@@ -49,7 +49,7 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
             <ul className="space-y-4 text-slate-400">
               <li><Link href="/services/web-design" onClick={() => trackNavigation('Web Design', '/services/web-design', 'footer')} className="hover:text-[#FF6B35] transition-colors">Web Design</Link></li>
               <li><Link href="/services/ecommerce-development" onClick={() => trackNavigation('E-Commerce', '/services/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">E-Commerce</Link></li>
-              <li><Link href="/services/ai-agents/" onClick={() => trackNavigation('AI Agent Development', '/services/ai-agents/', 'footer')} className="hover:text-[#FF6B35] transition-colors">AI Agent Development</Link></li>
+              <li><Link href="/services/ai-agent-development/" onClick={() => trackNavigation('AI Agent Development', '/services/ai-agent-development/', 'footer')} className="hover:text-[#FF6B35] transition-colors">AI Agent Development</Link></li>
             </ul>
           </div>
 

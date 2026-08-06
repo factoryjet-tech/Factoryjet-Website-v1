@@ -173,7 +173,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         The clean way to hold it: an AI agent is one worker, and agentic AI is the way of working, a distinction we break down in <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a>. A customer-support agent that resolves a ticket is an AI agent. A system where a planner agent coordinates a research agent and a checkout agent to complete a purchase is agentic AI at work. If you want the deeper dive on where all of this is heading in commerce, we cover it in our{' '}
         <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce guide</a>, and we build these systems as part of our{' '}
-        <a href="/services/ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">AI agent development</a> work.
+        <a href="/services/ai-agent-development" className="text-[#B23E13] underline hover:text-[#F05A28]">AI agent development</a> work.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Real examples of agentic AI</h2>

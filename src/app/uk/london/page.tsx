@@ -53,7 +53,7 @@ const ROUTES: {
     rt: 'AI',
     h: 'AI Agents & Automation',
     p: 'Custom AI agents that handle the repetitive work: intake, support, scheduling, and workflow automation, built into your stack.',
-    href: '/services/ai-agents',
+    href: '/services/ai-agent-development',
     kv: [['Custom agents', 'Yes'], ['Integrations', 'Your stack'], ['Founder-led', 'Yes']],
   },
 ];
@@ -210,7 +210,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhaveshbarot/',
+        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
         jobTitle: 'Founder, FactoryJet',
       },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
@@ -373,7 +373,7 @@ export default function LondonHubPage() {
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="2" /><path d="M3 9h18" stroke="currentColor" strokeWidth="2" /></svg></span>
                   <div><h3>WordPress Development</h3><p><mark>WordPress web design london</mark>: editable sites your team can update without a developer.</p><span className="go">Explore WordPress →</span></div>
                 </a>
-                <a className="scard" href="/services/ai-agents">
+                <a className="scard" href="/services/ai-agent-development">
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="16" height="12" rx="3" stroke="currentColor" strokeWidth="2" /><path d="M9 12v2M15 12v2M12 3v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
                   <div><h3>AI Agents &amp; Automation</h3><p>Custom AI agents for intake, support, and scheduling, plus <mark>ai seo</mark> to get quoted by ChatGPT and Gemini.</p><span className="go">Explore AI →</span></div>
                 </a>

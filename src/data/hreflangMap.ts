@@ -504,8 +504,8 @@ export const portfolioAlternatesUS = {
 
 export const usServiceAlternates = {
   'ai-agents': {
-    'en-US': 'https://factoryjet.com/services/ai-agents',
-    'x-default': 'https://factoryjet.com/services/ai-agents',
+    'en-US': 'https://factoryjet.com/services/ai-agent-development',
+    'x-default': 'https://factoryjet.com/services/ai-agent-development',
   },
   'ai-automation': {
     'en-US': 'https://factoryjet.com/services/ai-automation',

@@ -51,7 +51,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/website-redesign',                    source: 'src/app/services/website-redesign/page.tsx' },
   { path: '/services/wordpress-development',               source: 'src/app/services/wordpress-development/page.tsx' },
   { path: '/services/web-application-development',         source: 'src/app/services/web-application-development/page.tsx' },
-  { path: '/services/ai-agents',                           source: 'src/app/services/ai-agents/page.tsx' },
+  // /services/ai-agents retired 2026-08-06: 301 to /services/ai-agent-development.
+  // A sitemap must never list a redirect source.
   { path: '/services/ai-automation',                       source: 'src/app/services/ai-automation/page.tsx' },
   { path: '/services/seo',                                 source: 'src/app/services/seo/page.tsx' },
   { path: '/services/local-seo',                           source: 'src/app/services/local-seo/page.tsx' },

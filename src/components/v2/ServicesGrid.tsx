@@ -156,10 +156,10 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'Built with',
     stack: ['Google Gemini', 'Anthropic Claude', 'OpenAI ChatGPT', 'KIMI', 'n8n'],
-    primaryCta: { label: 'See AI agent services', href: '/services/ai-agents' },
+    primaryCta: { label: 'See AI agent services', href: '/services/ai-agent-development' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Bot size={ICON_SIZE} />,
-    imageSrc: '/images/services/ai-agents.webp',
+    imageSrc: '/images/services/ai-agent-development.webp',
   },
   {
     id: 6,

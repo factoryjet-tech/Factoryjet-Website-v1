@@ -533,7 +533,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         This is the same architecture we use when we build{' '}
-        <a href="/services/ai-agents" className="text-[#B23E13] underline">
+        <a href="/services/ai-agent-development" className="text-[#B23E13] underline">
           AI agents for business operations
         </a>
         : narrow scope, real system access, a clear escalation boundary, and logging you can audit.

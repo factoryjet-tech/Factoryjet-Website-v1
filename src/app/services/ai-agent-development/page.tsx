@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agents.webp',
+        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
         width: 1200,
         height: 630,
         alt: 'FactoryJet AI agent development services',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: 'AI Agent Development Services, Custom AI Agents | FactoryJet',
     description:
       'Custom AI agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify and Slack, with human approval on anything that matters.',
-    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
+    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development',
@@ -301,7 +301,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    url: 'https://www.linkedin.com/in/bhaveshbarot/',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder, FactoryJet',
   },
   publisher: { '@id': 'https://factoryjet.com/#organization' },

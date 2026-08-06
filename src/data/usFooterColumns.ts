@@ -58,7 +58,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'SEO Services',           href: '/services/seo' },
       { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
       { label: 'AI SEO',                 href: '/services/ai-seo' },
-      { label: 'AI Agents',              href: '/services/ai-agents' },
+      { label: 'AI Agents',              href: '/services/ai-agent-development' },
       { label: 'AI Visibility Checker',  href: '/ai-visibility-checker' },
       { label: 'All services',           href: '/services' },
     ],

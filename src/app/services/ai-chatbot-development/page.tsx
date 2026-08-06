@@ -654,7 +654,7 @@ export default function AIChatbotDevelopmentPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Chatbots', href: '/services/ai-chatbot-development' },
-          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'AI Agents', href: '/services/ai-agent-development' },
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}

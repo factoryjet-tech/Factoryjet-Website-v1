@@ -116,7 +116,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhaveshbarot/',
+        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
         jobTitle: 'Founder, FactoryJet',
       },
       publisher: { '@id': 'https://factoryjet.com/#organization' },

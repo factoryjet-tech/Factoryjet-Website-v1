@@ -640,7 +640,7 @@ export default function AIWorkflowAutomationPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Automation', href: '/services/ai-workflow-automation' },
-          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'AI Agents', href: '/services/ai-agent-development' },
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}

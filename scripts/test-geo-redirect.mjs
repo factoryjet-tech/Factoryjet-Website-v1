@@ -92,7 +92,10 @@ expect('US human /services/ecommerce-development (US hub, no trailing) → NOT r
   decideNaRedirect({ path: '/services/ecommerce-development', country: 'US', userAgent: CHROME }), null)
 expect('US human /services/seo (US twin) → NOT redirected',
   decideNaRedirect({ path: '/services/seo', country: 'US', userAgent: CHROME }), null)
-expect('US human /services/ai-agents (US twin) → NOT redirected',
+// /services/ai-agents was retired 2026-08-06 (301 to /services/ai-agent-development).
+// Kept as a regression guard: the geo layer must stay out of the way so the CDN
+// redirect is what fires, rather than the two layers fighting over the same path.
+expect('US human /services/ai-agents (retired, 301 handled at the CDN) → NOT redirected by geo',
   decideNaRedirect({ path: '/services/ai-agents', country: 'US', userAgent: CHROME }), null)
 expect('US human /austin/ecommerce-development (US city) → NOT redirected',
   decideNaRedirect({ path: '/austin/ecommerce-development', country: 'US', userAgent: CHROME }), null)
@@ -129,7 +132,7 @@ expect('IN human /services/seo → /seo',
 // Changed 2026-08-06: /services/ai-agent-development is now the US page, so it is
 // no longer a valid India destination. There is no India twin for the agent
 // cluster, and routing India traffic from one US page to another is not a mirror.
-expect('IN human /services/ai-agents → NOT redirected (no India twin for the agent cluster)',
+expect('IN human /services/ai-agents (retired) → NOT redirected by geo',
   decideInRedirect({ path: '/services/ai-agents', country: 'IN', userAgent: CHROME }), null)
 expect('IN human /services/ai-agent-development → NOT redirected (US page, no mirror)',
   decideInRedirect({ path: '/services/ai-agent-development', country: 'IN', userAgent: CHROME }), null)

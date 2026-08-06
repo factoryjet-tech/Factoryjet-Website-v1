@@ -54,7 +54,7 @@ const US_WEB_SERVICES = [
 ] as const;
 
 const US_AI_SERVICES = [
-  { icon: Bot,           label: 'AI Agents',      href: '/services/ai-agents',               desc: 'Autonomous task automation' },
+  { icon: Bot,           label: 'AI Agents',      href: '/services/ai-agent-development',               desc: 'Autonomous task automation' },
   { icon: Zap,           label: 'AI Automation',  href: '/services/ai-automation',           desc: 'Eliminate repetitive work' },
   { icon: MessageSquare, label: 'AI Chatbot',     href: '/services/ai-chatbot-development',  desc: 'Smart customer support' },
   { icon: Layers,        label: 'AI Workflow',    href: '/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
@@ -71,7 +71,7 @@ const US_SOLUTIONS = [
   { icon: ShoppingBag,   label: 'Amazon Agency',            href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
   { icon: Mic,           label: 'TikTok Shop Agency',       href: '/services/tiktok-shop-agency',    desc: 'Ads, affiliates & LIVE selling' },
   { icon: Package,       label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency', desc: 'Approval, WFS & Connect ads' },
-  { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
+  { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
 ] as const;
@@ -160,7 +160,7 @@ const US_WHO_WE_SERVE_NEEDS = [
   { label: 'I sell on multiple channels', href: '/omnichannel-commerce',          sub: 'Omnichannel commerce' },
   { label: 'I need a B2B store',          href: '/b2b-ecommerce',                 sub: 'B2B e-commerce' },
   { label: 'I want to migrate platforms', href: '/replatforming',                 sub: 'Replatforming' },
-  { label: 'I want AI in my commerce',    href: '/services/ai-agents',            sub: 'Commerce AI agents' },
+  { label: 'I want AI in my commerce',    href: '/services/ai-agent-development',            sub: 'Commerce AI agents' },
 ] as const;
 
 // Resources links (US) — the "Resources" mega in the US nav
@@ -185,7 +185,7 @@ const GB_SOLUTIONS = [
   { icon: Layers,        label: 'Omnichannel Commerce',      href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
   { icon: Store,         label: 'B2B E-Commerce',            href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',    href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
-  { icon: Bot,           label: 'Commerce AI Agents',        href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
+  { icon: Bot,           label: 'Commerce AI Agents',        href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility', href: '/uk/ecommerce-seo',               desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',     href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
 ] as const;
@@ -221,7 +221,7 @@ const GB_WHO_WE_SERVE_NEEDS = [
   { label: 'I sell on multiple channels', href: '/omnichannel-commerce', sub: 'Omnichannel commerce' },
   { label: 'I need a B2B store',          href: '/b2b-ecommerce',        sub: 'B2B e-commerce' },
   { label: 'I want to migrate platforms', href: '/ecommerce-consulting', sub: 'Replatforming' },
-  { label: 'I want AI in my commerce',    href: '/services/ai-agents',   sub: 'Commerce AI agents' },
+  { label: 'I want AI in my commerce',    href: '/services/ai-agent-development',   sub: 'Commerce AI agents' },
 ] as const;
 
 const GB_KNOWLEDGE_HUB = [

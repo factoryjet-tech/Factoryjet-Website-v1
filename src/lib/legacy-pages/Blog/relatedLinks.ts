@@ -218,7 +218,7 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
   },
   {
-    href: '/services/ai-agents',
+    href: '/services/ai-agent-development',
     label: 'AI Agents for Business',
     blurb: 'Where AI agents pay for themselves, and where they do not.',
     keywords: ['ai for business', 'ai adoption', 'artificial intelligence'],
@@ -339,7 +339,7 @@ const SERVICE_RULES: ServiceRule[] = [
 const CATEGORY_FALLBACK: Record<string, string[]> = {
   'Web Design & Strategy': ['/services/web-design', '/services/small-business-website-design', '/services/website-redesign'],
   'E-Commerce Development': ['/services/ecommerce-development', '/services/shopify-development', '/services/ecommerce-marketing-agency'],
-  'Emerging Tech': ['/services/ai-agents', '/services/ai-seo', '/ai-visibility-checker', '/glossary'],
+  'Emerging Tech': ['/services/ai-agent-development', '/services/ai-seo', '/ai-visibility-checker', '/glossary'],
   'Maintenance & Security': ['/services/web-design', '/services/wordpress-development', '/services/seo-audit'],
 };
 

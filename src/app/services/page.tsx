@@ -202,7 +202,7 @@ const SERVICES = [
     title: 'AI Agent Development',
     description:
       'Custom AI agents that qualify leads, answer customer questions, and automate repetitive workflows, 24/7, no extra headcount.',
-    href: '/services/ai-agents',
+    href: '/services/ai-agent-development',
     cta: 'See AI Agent Services',
     featured: false,
   },
@@ -351,7 +351,7 @@ const jsonLd = {
         { '@type': 'ListItem', position: 4, name: 'Web Application Development', url: 'https://factoryjet.com/services/web-application-development' },
         { '@type': 'ListItem', position: 5, name: 'Website Redesign', url: 'https://factoryjet.com/services/website-redesign' },
         { '@type': 'ListItem', position: 6, name: 'WordPress Development', url: 'https://factoryjet.com/services/wordpress-development' },
-        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agents' },
+        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
         { '@type': 'ListItem', position: 8, name: 'AI Automation', url: 'https://factoryjet.com/services/ai-automation' },
         { '@type': 'ListItem', position: 9, name: 'Law Firm Website Design', url: 'https://factoryjet.com/services/law-firm-website-design' },
         { '@type': 'ListItem', position: 10, name: 'Real Estate Website Design', url: 'https://factoryjet.com/services/real-estate-website-design' },

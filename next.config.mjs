@@ -89,7 +89,10 @@ const nextConfig = {
       // Cannibalization consolidation (2026-07-25) — prod layer is /public/_redirects
       // generative-engine-optimization redirect REMOVED 2026-08-06: the page was
       // rebuilt in full. GEO/AEO measured as a distinct ~1,900/mo US market at KD 0-6.
-      { source: '/services/ai-agency',                       destination: '/services/ai-agents', permanent: true },
+      // Repointed 2026-08-06 straight at the final destination, so ai-agency does
+      // not become a 2-hop chain through the now-retired ai-agents URL.
+      { source: '/services/ai-agency',                       destination: '/services/ai-agent-development', permanent: true },
+      { source: '/services/ai-agents',                       destination: '/services/ai-agent-development', permanent: true },
       { source: '/services/whatsapp-chatbot',                destination: '/services/ai-chatbot-development', permanent: true },
       // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },

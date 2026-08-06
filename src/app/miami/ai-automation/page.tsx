@@ -155,7 +155,7 @@ const breadcrumbSchema = {
   '@id': 'https://factoryjet.com/miami/ai-automation#breadcrumb',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'US AI Services', item: 'https://factoryjet.com/services/ai-agents' },
+    { '@type': 'ListItem', position: 2, name: 'US AI Services', item: 'https://factoryjet.com/services/ai-agent-development' },
     { '@type': 'ListItem', position: 3, name: 'Miami', item: 'https://factoryjet.com/miami' },
     { '@type': 'ListItem', position: 4, name: 'AI Automation', item: 'https://factoryjet.com/miami/ai-automation' },
   ],

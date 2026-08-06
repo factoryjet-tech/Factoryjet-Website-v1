@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agents.webp',
+        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
         width: 1200,
         height: 630,
         alt: 'FactoryJet AI Agent Development Services',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'AI Chatbot Development India | FactoryJet',
     description:
       'WhatsApp chatbots, website AI chat, and support bots for Indian businesses. Fixed price. Hindi + English ready.',
-    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
+    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',

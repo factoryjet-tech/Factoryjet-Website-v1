@@ -224,7 +224,7 @@ const jsonLd = {
       name: 'Nashville SEO Company | Local SEO Services TN | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-13',
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {

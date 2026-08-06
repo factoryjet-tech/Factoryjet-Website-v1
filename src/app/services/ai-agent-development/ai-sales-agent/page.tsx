@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     description:
       'AI sales agents that qualify WhatsApp leads, book demos, and update Zoho CRM, 24/7, in Hindi and English. Fixed price.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent',
-    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agent-development.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Sales Agent India | FactoryJet',
     description: 'WhatsApp lead qualification, automated follow-ups, and demo booking for Indian businesses. Fixed price.',
-    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
+    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

@@ -143,7 +143,7 @@ export const post: BlogPost = {
         <strong>4. Multi-step quote agent.</strong> A commercial cleaning business in Portland runs an agent that handles RFQ intake: it collects square footage, service frequency, and special requirements, pulls pricing from a custom rate card, generates a quote PDF, emails it to the prospect, and creates a deal in their CRM with the right owner.
       </p>
       <p className="mb-4">
-        Pattern: each agent <em>completes work</em>. The customer's intent gets resolved end-to-end, not just answered. For the agent category in depth, see our <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents service</a> and our deeper guide on <a href="/blog/ai-agents-small-business-usa-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents for US small businesses</a>.
+        Pattern: each agent <em>completes work</em>. The customer's intent gets resolved end-to-end, not just answered. For the agent category in depth, see our <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents service</a> and our deeper guide on <a href="/blog/ai-agents-small-business-usa-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents for US small businesses</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Side-by-Side: Capability Comparison</h2>
@@ -254,7 +254,7 @@ export const post: BlogPost = {
         A typical hybrid flow: a chatbot lives on the website handling the top-of-funnel volume, pricing questions, hours, services, policy lookups. When a visitor crosses a qualification threshold (asks about a demo, requests a quote, mentions a specific use case), the chatbot hands the conversation to an AI agent. The agent then takes over the multi-step work: pulling the company data, scoring the lead, booking a meeting, drafting the follow-up email, logging everything in the CRM.
       </p>
       <p className="mb-4">
-        You get the cost efficiency of a chatbot for the 80% of conversations that are simple, and the deeper capability of an agent for the 20% that are actually worth the spend. This is also why building these systems separately and stitching them together rarely works as well as designing the hand-off from day one, which is why most SMB hybrid builds end up custom rather than purely SaaS. Our <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agent builds</a> and chatbot integrations are typically architected together for exactly this reason.
+        You get the cost efficiency of a chatbot for the 80% of conversations that are simple, and the deeper capability of an agent for the 20% that are actually worth the spend. This is also why building these systems separately and stitching them together rarely works as well as designing the hand-off from day one, which is why most SMB hybrid builds end up custom rather than purely SaaS. Our <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agent builds</a> and chatbot integrations are typically architected together for exactly this reason.
       </p>
       <p className="mb-4">
         For a concrete ecommerce application of these patterns, see <a href="/blog/austin-ecommerce-checkout-optimization-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">how small US ecommerce teams are deploying these AI patterns, Austin checkout optimization case in point</a>.
@@ -336,7 +336,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="mb-6">
-        Ready to scope this out? <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent service</a>, browse our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">chatbot development packages</a>, or talk to the founder directly, <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">book a 30-minute call</a> and we'll tell you which one (or both) you actually need.
+        Ready to scope this out? <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent service</a>, browse our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">chatbot development packages</a>, or talk to the founder directly, <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">book a 30-minute call</a> and we'll tell you which one (or both) you actually need.
       </p>
     </>
   ),

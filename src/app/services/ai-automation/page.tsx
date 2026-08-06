@@ -664,7 +664,7 @@ export default function AIAutomationPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Automation', href: '/services/ai-automation' },
-          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'AI Agents', href: '/services/ai-agent-development' },
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
@@ -937,7 +937,7 @@ export default function AIAutomationPage() {
           headline="Book an Automation Audit and Walk Away With a Roadmap"
           sub="In 30 minutes, we'll identify your 3 highest-value automation opportunities, estimate the hours you'll recover each week, and tell you exactly what it costs to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before, for a business exactly like yours."
           primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See AI Agent Services', href: '/services/ai-agents' }}
+          secondaryCta={{ label: 'See AI Agent Services', href: '/services/ai-agent-development' }}
           objectionHandler="Fixed price. Free audit first. No commitment until you've seen the plan."
         />
 

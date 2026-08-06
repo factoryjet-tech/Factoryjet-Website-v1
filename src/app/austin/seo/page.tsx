@@ -389,7 +389,7 @@ const jsonLd = {
       inLanguage: 'en-US',
       isPartOf: { '@id': 'https://factoryjet.com/#organization' },
       about: { '@id': `${CANONICAL}#service` },
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
       speakable: {
         '@type': 'SpeakableSpecification',

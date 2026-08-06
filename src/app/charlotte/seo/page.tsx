@@ -534,7 +534,7 @@ const jsonLd = {
       datePublished: '2026-06-06',
       dateModified: '2026-07-26',
       inLanguage: 'en-US',
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
       about: { '@id': `${CANONICAL}#service` },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },

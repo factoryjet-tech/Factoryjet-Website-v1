@@ -209,7 +209,7 @@ export const post: BlogPost = {
                 itemListElement: [
                   { '@type': 'Service', name: 'Workflow discovery and automation roadmap', url: 'https://factoryjet.com/services/ai-automation' },
                   { '@type': 'Service', name: 'AI agent development', url: 'https://factoryjet.com/services/ai-agent-development' },
-                  { '@type': 'Service', name: 'AI agents for business operations', url: 'https://factoryjet.com/services/ai-agents' },
+                  { '@type': 'Service', name: 'AI agents for business operations', url: 'https://factoryjet.com/services/ai-agent-development' },
                   { '@type': 'Service', name: 'AI chatbot development', url: 'https://factoryjet.com/services/ai-chatbot-development' },
                 ],
               },
@@ -398,7 +398,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-8 mb-4">Related FactoryJet services</h2>
       <ul className="list-disc pl-6 mb-6 space-y-1">
         <li><a href="/services/ai-automation" className="text-[#B23E13] underline">AI automation</a>: workflow discovery, build and integration for US small and medium businesses.</li>
-        <li><a href="/services/ai-agents" className="text-[#B23E13] underline">AI agents</a>: software that carries out multi-step work across your existing systems.</li>
+        <li><a href="/services/ai-agent-development" className="text-[#B23E13] underline">AI agents</a>: software that carries out multi-step work across your existing systems.</li>
         <li><a href="/services/ai-agent-development" className="text-[#B23E13] underline">AI agent development</a>: custom agent builds, testing and handover.</li>
         <li><a href="/services/ai-chatbot-development" className="text-[#B23E13] underline">AI chatbot development</a>: customer-facing assistants grounded in your own content.</li>
       </ul>
