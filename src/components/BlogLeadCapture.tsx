@@ -10,7 +10,9 @@
  * Reuses the exact proven pipeline of HeroInlineForm / LeadFormInline:
  *   submitLead() → /api/notify-lead (Firestore write + Resend email) →
  *   trackFormSuccess → redirect to /thank-you, which fires the single lead
- *   conversion (Google Ads AW-18185532850 + GA4 Lead_Form_FactoryJet).
+ *   conversion (Google Ads AW-18185532850 + GA4 generate_lead). The GA4 event was
+ *   renamed from Lead_Form_FactoryJet to generate_lead in the 2026-07-02 GTM
+ *   rewrite; this comment still said the old name until 2026-08-06.
  *
  * source = `blog_<slug>` so leads are attributable to the specific post.
  * Only name + email required. Honeypot for spam; no blocking CAPTCHA.
