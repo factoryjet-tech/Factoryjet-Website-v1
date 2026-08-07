@@ -116,6 +116,26 @@ def main():
         else:
             note(f"config tag OK: '{t['name']}' -> {MEASUREMENT_ID}, triggers {t.get('firingTriggerId')}")
 
+    # CHECK 1b — the Google tag MUST fire on Initialization, not Page View.
+    #
+    # Learned the hard way on 2026-08-07. Version 10 was published via the API with
+    # the config tag on trigger 11 ("All Pages", a Page View trigger). Tag Assistant
+    # reported it as fired and Succeeded, the container looked correct in every API
+    # check, and not a single page_view reached GA4. Rebuilding the identical tag in
+    # the GTM UI produced the SAME single tagId parameter but a different trigger:
+    # 2147479573, the built-in Initialization - All Pages. Initialization runs before
+    # Page View, which is where measurement configuration belongs.
+    #
+    # The trap is that nothing surfaces this. The tag reports success either way.
+    INIT_TRIGGERS = {"2147479573", "2147479572"}  # Initialization - All Pages / Consent Init
+    for t in config_tags:
+        trigs = set(t.get("firingTriggerId") or [])
+        if trigs and not (trigs & INIT_TRIGGERS):
+            fail(f"GA4 config tag '{t['name']}' fires on trigger(s) {sorted(trigs)}, not on "
+                 f"Initialization. A Google tag on a Page View trigger reports 'Succeeded' "
+                 f"in Tag Assistant and still delivers no page_view. Repoint it at "
+                 f"'Initialization - All Pages'.")
+
     # CHECK 2 — a paused GA4 event tag is a silently missing conversion.
     for t in [t for t in tags if t["type"] == "gaawe"]:
         if t.get("paused"):
