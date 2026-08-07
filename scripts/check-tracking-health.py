@@ -196,6 +196,30 @@ def main():
              "the container has been live for more than 48h. Pageviews are genuinely "
              "not arriving.")
 
+    # CHECK 4b — the sharpest signature available, and the one that named this bug.
+    #
+    # Two families of event reach GA4 by DIFFERENT paths:
+    #   - page_view / scroll / user_engagement come from the gtag RUNTIME, which only
+    #     exists if the Google tag (googtag) actually executes.
+    #   - generate_lead / *_click come from standalone GTM event tags carrying
+    #     measurementIdOverride, which send with no config tag present at all.
+    # So "conversions are fine, therefore tracking is fine" is a trap: the standalone
+    # tags kept working for a solid month while the Google tag was simply gone.
+    # Measured 2026-08-07: page_view last fired 2026-07-05, scroll and user_engagement
+    # last fired 2026-07-07, while generate_lead never stopped.
+    RUNTIME = ("page_view", "scroll", "user_engagement")
+    STANDALONE = ("generate_lead", "book_call_click", "whatsapp_click", "email_click")
+    runtime_n = sum(counts.get(e, (0, 0))[0] for e in RUNTIME)
+    standalone_n = sum(counts.get(e, (0, 0))[0] for e in STANDALONE)
+    if standalone_n and not runtime_n and hours_live >= 48:
+        fail(f"Google tag runtime is DEAD. Standalone GTM event tags delivered "
+             f"{standalone_n} event(s) in the last 7 days, but page_view, scroll and "
+             f"user_engagement delivered zero between them. Those only come from the "
+             f"gtag runtime, so the Google tag is not executing for real users even "
+             f"though conversions look healthy.")
+    elif runtime_n:
+        note(f"gtag runtime alive: {runtime_n} page_view/scroll/user_engagement in 7 days")
+
     # CHECK 5 — a lead event that fires but is not flagged is invisible to Ads bidding.
     admin = AnalyticsAdminServiceClient(credentials=service_account.Credentials.from_service_account_file(
         KEY, scopes=["https://www.googleapis.com/auth/analytics.readonly"]))
