@@ -32,7 +32,15 @@ export const pushToDataLayer = (data: Record<string, unknown>) => {
   }
 };
 
-// Track page views
+// Track page views.
+//
+// ⚠️ DO NOT CALL THIS. Kept only so the export does not break an unknown consumer.
+// Removed from ScrollToTop on 2026-08-07: no trigger in the live GTM container
+// listens for a custom event named page_view, and pushing that reserved name into
+// the dataLayer that gtag.js shares is the prime suspect for page_view never
+// reaching GA4 since 2026-07-05. GA4 enhanced measurement already covers page
+// views, SPA route changes included. If you need a route-change signal in GTM,
+// use a distinct name such as spa_route_change and add a matching trigger.
 export const trackPageView = (pagePath: string, pageTitle?: string) => {
   pushToDataLayer({
     event: 'page_view',

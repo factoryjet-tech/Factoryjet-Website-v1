@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { trackPageView } from '../utils/gtm';
 
 const ScrollToTop: React.FC = () => {
   const pathname = usePathname();
@@ -33,10 +32,25 @@ const ScrollToTop: React.FC = () => {
       document.body.scrollTop = 0;
     }
 
-    // Track page view in GTM
-    if (pathname) {
-      trackPageView(pathname);
-    }
+    // NO page_view push here. Removed 2026-08-07.
+    //
+    // This used to call trackPageView(pathname), pushing {event:'page_view', …} into
+    // window.dataLayer on every route change. Two reasons it had to go:
+    //
+    // 1. NOTHING CONSUMED IT. Audited every trigger in the live GTM container
+    //    (GTM-PKWD8SHF): mailto, tel, WhatsApp, Calendly, All Pages, form_success and
+    //    three lead_converted variants. Not one listens for a custom event named
+    //    page_view, so this push has been dead weight the whole time.
+    //
+    // 2. window.dataLayer is SHARED with gtag.js, which the Google tag loads. Pushing
+    //    a raw object whose event name collides with GA4's own reserved page_view
+    //    into that shared queue is the one non-standard thing in an otherwise textbook
+    //    setup, and page_view has not reached GA4 since 2026-07-05 while standalone
+    //    event tags (generate_lead, book_call_click) never stopped.
+    //
+    // GA4 enhanced measurement is enabled on the stream and covers page views,
+    // including SPA route changes via browser history events, so removing this loses
+    // no coverage. See TRACKING.md.
   }, [pathname]);
 
   return null;
