@@ -121,6 +121,35 @@ def main():
         if t.get("paused"):
             fail(f"GA4 event tag '{t['name']}' is PAUSED in the live container.")
 
+    # CHECK 3b — THE ONE THAT EXPLAINS THE REPEAT OUTAGES. Found 2026-08-07.
+    #
+    # A GTM workspace is an independent COPY of the container, not a view onto it.
+    # Publishing from a workspace replaces the live container with that copy. So a
+    # workspace created before a tag was added does not merely lack that tag: publish
+    # from it and the tag is DELETED from the live site, silently, as a side effect of
+    # whatever unrelated change was being shipped.
+    #
+    # That is what we found: live version 10 had 12 tags including the GA4 Google tag,
+    # while 'Default Workspace' still held the pre-fix 9. Anyone touching that
+    # workspace and hitting Submit would have reverted the fix without ever seeing it.
+    # It also explains why Preview looked broken while the live container was correct.
+    #
+    # Fix when this fires: sync the workspace (GTM shows a "sync" prompt), or delete it
+    # if it is abandoned. Never publish from a workspace that is behind.
+    live_tag_names = {t["name"] for t in tags}
+    for ws in tm.accounts().containers().workspaces().list(parent=GTM_CONTAINER).execute().get("workspace", []):
+        try:
+            ws_tags = tm.accounts().containers().workspaces().tags().list(
+                parent=ws["path"]).execute().get("tag", [])
+        except Exception:
+            continue
+        missing = live_tag_names - {t["name"] for t in ws_tags}
+        if missing:
+            fail(f"workspace '{ws['name']}' is BEHIND the live container: it is missing "
+                 f"{len(missing)} live tag(s) ({', '.join(sorted(missing))}). Publishing "
+                 f"from it would DELETE them from the live site. Sync or delete that "
+                 f"workspace now.")
+
     # CHECK 3 — unpublished workspace changes. This is the 2026-08-04 failure mode:
     # the fix existed and was never published, so the container kept serving the break.
     for ws in tm.accounts().containers().workspaces().list(parent=GTM_CONTAINER).execute().get("workspace", []):
