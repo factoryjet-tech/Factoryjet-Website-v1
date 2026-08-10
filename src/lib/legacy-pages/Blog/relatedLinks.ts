@@ -48,7 +48,10 @@ const SERVICE_RULES: ServiceRule[] = [
     href: '/services/ai-seo',
     label: 'AI SEO',
     blurb: 'Get named and quoted by ChatGPT, Perplexity, Gemini and Google AI Overviews.',
-    keywords: ['ai seo', 'geo', 'aeo', 'generative engine', 'answer engine', 'ai search', 'ai overview', 'chatgpt', 'perplexity', 'ai visibility', 'ai citation'],
+    // 'aio' is deliberately NOT mirrored onto the /ai-visibility-checker rule below:
+    // it would tie the checker with the money page and the href tie-break would push
+    // the checker above it, which is the exact inversion that rule's weight guards against.
+    keywords: ['ai seo', 'geo', 'aeo', 'aio', 'generative engine', 'answer engine', 'ai search', 'ai overview', 'chatgpt', 'perplexity', 'ai visibility', 'ai citation'],
     weight: 3,
   },
   // --- SEO family ---
@@ -113,7 +116,10 @@ const SERVICE_RULES: ServiceRule[] = [
     href: '/services/small-business-website-design',
     label: 'Small Business Web Design',
     blurb: 'Websites for small teams that need to look credible and convert.',
-    keywords: ['small business website', 'small business web design', 'website cost', 'lead generation website'],
+    // The plural earns a second hit so this rule clears /best-ecommerce-platforms outright
+    // on lead-gen posts that also say "platform comparison". Both scored 13 before, and the
+    // alphabetical href tie-break handed the lead to the ecommerce page.
+    keywords: ['small business website', 'small business web design', 'website cost', 'lead generation website', 'lead generation websites'],
     weight: 3,
   },
   {
