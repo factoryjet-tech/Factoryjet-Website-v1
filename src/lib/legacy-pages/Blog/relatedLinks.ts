@@ -266,7 +266,14 @@ const SERVICE_RULES: ServiceRule[] = [
     href: '/ai-visibility-checker',
     label: 'AI Visibility Checker',
     blurb: 'See whether ChatGPT, Perplexity and Google AI Overviews mention you today.',
-    keywords: ['ai visibility check', 'visibility checker', 'chatgpt recommend', 'get cited', 'cited by ai'],
+    // Mirrors the /services/ai-seo keyword set on purpose: a reader on any AI-search
+    // post is the exact person who wants a free visibility scan. Weight stays at 2 so
+    // the checker lands *below* the money page it accompanies rather than displacing it.
+    keywords: [
+      'ai visibility check', 'visibility checker', 'chatgpt recommend', 'get cited', 'cited by ai',
+      'ai seo', 'geo', 'aeo', 'generative engine', 'answer engine', 'ai search', 'ai overview',
+      'chatgpt', 'perplexity', 'ai visibility', 'ai citation',
+    ],
     weight: 2,
   },
   {
@@ -339,7 +346,10 @@ const SERVICE_RULES: ServiceRule[] = [
 const CATEGORY_FALLBACK: Record<string, string[]> = {
   'Web Design & Strategy': ['/services/web-design', '/services/small-business-website-design', '/services/website-redesign'],
   'E-Commerce Development': ['/services/ecommerce-development', '/services/shopify-development', '/services/ecommerce-marketing-agency'],
-  'Emerging Tech': ['/services/ai-agent-development', '/services/ai-seo', '/ai-visibility-checker', '/glossary'],
+  // The checker outranks ai-agent-development here because a post that genuinely needs
+  // the agent page matches it on keywords and never reaches this fallback. Before the
+  // reorder, ai-agent-development took the spare slot on every AI-search post by default.
+  'Emerging Tech': ['/services/ai-seo', '/ai-visibility-checker', '/services/ai-agent-development', '/glossary'],
   'Maintenance & Security': ['/services/web-design', '/services/wordpress-development', '/services/seo-audit'],
 };
 
