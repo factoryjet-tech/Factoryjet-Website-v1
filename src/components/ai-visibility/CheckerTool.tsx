@@ -24,6 +24,27 @@ const MAX_POLL_MS = 150_000; // ~2.5 min, then fall back to "we'll email it"
 
 type Step = 'form' | 'scanning' | 'done' | 'emailed' | 'error';
 
+/**
+ * Which Google Ads account should be credited for this lead.
+ *
+ * GTM routes region=uk to the London account (AW-11127037244) and region=us to
+ * the US one (AW-18185532850); any other value is GA4-only, which is the correct
+ * outcome for a market where we run no ads.
+ *
+ * This form has no country field, so the dialling code on the phone number is the
+ * only region signal it actually collects. It used to be hardcoded to 'us', which
+ * credited the US Ads account for every UK lead the checker produced and taught
+ * Ads to bid against the wrong geography. Unknown or local-format numbers still
+ * fall back to 'us', so existing US behaviour is unchanged.
+ */
+function regionFromPhone(mobile: string): string {
+  const n = mobile.replace(/[^\d+]/g, '').replace(/^00/, '+');
+  if (n.startsWith('+44')) return 'uk';
+  if (n.startsWith('+971')) return 'ae';
+  if (n.startsWith('+91')) return 'in';
+  return 'us';
+}
+
 export default function CheckerTool() {
   const [step, setStep] = useState<Step>('form');
   const [form, setForm] = useState({ website: '', name: '', email: '', mobile: '', company: '' });
@@ -102,12 +123,12 @@ export default function CheckerTool() {
         setSubmitting(false);
         return;
       }
-      // Count the lead exactly once (GTM CE - lead_converted → GA4 + US Ads).
+      // Count the lead exactly once (GTM CE - lead_converted → GA4 + region-routed Ads).
       if (!firedConv.current) {
         firedConv.current = true;
         pushToDataLayer({
           event: 'lead_converted',
-          region: 'us',
+          region: regionFromPhone(form.mobile),
           lead_source: 'ai_visibility_checker',
           lead_id: d.slug || d.docId || 'ai_check',
         });

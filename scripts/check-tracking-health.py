@@ -200,6 +200,37 @@ def main():
     counts = {r.dimension_values[0].value: (int(r.metric_values[0].value), float(r.metric_values[1].value))
               for r in rep.rows}
 
+    # Last-fired DATE per event, over a window long enough to see a stale event.
+    # A 7-day SUM cannot tell "firing today" from "fired once a week ago and has
+    # been dead since", and that is exactly how CHECK 4b below went quiet on
+    # 2026-08-10: two leftover events from the 2026-08-07 manual test kept the
+    # 7-day sum non-zero while page_view had been at zero for 36 days.
+    last_rep = data.run_report(RunReportRequest(
+        property=GA4_PROPERTY,
+        date_ranges=[DateRange(start_date="28daysAgo", end_date="today")],
+        dimensions=[Dimension(name="eventName"), Dimension(name="date")],
+        metrics=[Metric(name="eventCount")], limit=2000))
+    last_fired: dict[str, datetime.date] = {}
+    for r in last_rep.rows:
+        if int(r.metric_values[0].value) <= 0:
+            continue
+        ev, raw = r.dimension_values[0].value, r.dimension_values[1].value
+        try:
+            d = datetime.datetime.strptime(raw, "%Y%m%d").date()
+        except ValueError:
+            continue
+        if ev not in last_fired or d > last_fired[ev]:
+            last_fired[ev] = d
+
+    TODAY = datetime.date.today()
+
+    def _last(events) -> "datetime.date | None":
+        seen = [last_fired[e] for e in events if e in last_fired]
+        return max(seen) if seen else None
+
+    def _ago(d) -> str:
+        return "never in 28 days" if d is None else f"{d:%Y-%m-%d} ({(TODAY - d).days}d ago)"
+
     # CHECK 4 — the outcome check. Everything above can look right and still not work.
     #
     # Three windows, because one is not enough. The 7-day window ENDS YESTERDAY (GA4
@@ -256,18 +287,30 @@ def main():
     # tags kept working for a solid month while the Google tag was simply gone.
     # Measured 2026-08-07: page_view last fired 2026-07-05, scroll and user_engagement
     # last fired 2026-07-07, while generate_lead never stopped.
+    # Compare LAST-FIRED DATES, never 7-day sums. A single manual test leaves
+    # runtime events sitting in a sum window for a week and masks a live break.
     RUNTIME = ("page_view", "scroll", "user_engagement")
     STANDALONE = ("generate_lead", "book_call_click", "whatsapp_click", "email_click")
-    runtime_n = sum(counts.get(e, (0, 0))[0] for e in RUNTIME)
-    standalone_n = sum(counts.get(e, (0, 0))[0] for e in STANDALONE)
-    if standalone_n and not runtime_n and hours_live >= 48:
-        fail(f"Google tag runtime is DEAD. Standalone GTM event tags delivered "
-             f"{standalone_n} event(s) in the last 7 days, but page_view, scroll and "
-             f"user_engagement delivered zero between them. Those only come from the "
-             f"gtag runtime, so the Google tag is not executing for real users even "
-             f"though conversions look healthy.")
-    elif runtime_n:
-        note(f"gtag runtime alive: {runtime_n} page_view/scroll/user_engagement in 7 days")
+    STALE_DAYS = 2  # standalone traffic today + runtime silent this long = broken
+
+    runtime_last, standalone_last = _last(RUNTIME), _last(STANDALONE)
+    runtime_age = None if runtime_last is None else (TODAY - runtime_last).days
+
+    if standalone_last is not None and (TODAY - standalone_last).days <= STALE_DAYS \
+            and (runtime_age is None or runtime_age > STALE_DAYS) and hours_live >= 48:
+        fail(f"Google tag runtime is DEAD. Standalone GTM event tags last delivered "
+             f"{_ago(standalone_last)}, but page_view/scroll/user_engagement last "
+             f"delivered {_ago(runtime_last)}. Those only come from the gtag runtime, "
+             f"so the Google tag is not executing for real users even though "
+             f"conversions look healthy. Check the Google tag's LINKED DESTINATIONS "
+             f"in Google Ads -> Tools -> Google tag; that is invisible to this script "
+             f"and to the GTM API, and it is where the 2026-07 break actually lived.")
+    elif runtime_age is not None and runtime_age <= STALE_DAYS:
+        note(f"gtag runtime alive: page_view/scroll/user_engagement last fired "
+             f"{_ago(runtime_last)}")
+    else:
+        warn(f"gtag runtime last fired {_ago(runtime_last)} and standalone tags "
+             f"{_ago(standalone_last)}. Not enough recent traffic to judge.")
 
     # CHECK 5 — a lead event that fires but is not flagged is invisible to Ads bidding.
     admin = AnalyticsAdminServiceClient(credentials=service_account.Credentials.from_service_account_file(
