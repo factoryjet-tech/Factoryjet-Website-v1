@@ -369,6 +369,67 @@ const UK_CATEGORY_FALLBACK: Record<string, string[]> = {
 
 const BY_HREF = new Map(SERVICE_RULES.map((r) => [r.href, r]));
 
+/**
+ * Topical family per money page, used ONLY to order the category fallback chain.
+ *
+ * Why: a fallback array is shared by every post in a category, so it cannot tell a
+ * UK post about AI agents from a UK post about SEO. Both drew from
+ * UK_CATEGORY_FALLBACK['Emerging Tech'], so "The 10 Best SEO Agencies in the UK"
+ * spent its spare slot on /uk/ai-agents. Reordering the array only moved the problem:
+ * it fixed the 1 SEO post and regressed 3-10 agent posts, which is why the array
+ * ordering was left alone and this exists instead.
+ *
+ * The signal is what the post ALREADY matched on keywords. Scoring the fallback
+ * candidates directly does not work: a post reaches the fallback precisely because
+ * those candidates scored zero on it.
+ *
+ * Pages deliberately left out (/agentic-commerce, /commerceflo, /glossary) sit across
+ * families or are neutral. An unmapped page never reorders anything, so leaving a page
+ * out is always the safe choice.
+ */
+type ServiceFamily = 'search' | 'ai' | 'web' | 'ecommerce';
+const SERVICE_FAMILY: Record<string, ServiceFamily> = {
+  // search: organic visibility, classic SEO through to GEO/AEO
+  '/services/ai-seo': 'search',
+  '/services/seo-consulting': 'search',
+  '/services/seo-audit': 'search',
+  '/services/local-seo': 'search',
+  '/services/ecommerce-seo': 'search',
+  '/services/shopify-seo': 'search',
+  '/services/small-business-seo': 'search',
+  '/services/seo': 'search',
+  '/services/roofing-seo': 'search',
+  '/ai-visibility-checker': 'search',
+  '/uk/ai-seo': 'search',
+  '/uk/seo-audit': 'search',
+  '/uk/local-seo': 'search',
+  '/uk/seo': 'search',
+  // ai: agents, automation, chatbots (build-an-AI-system intent, not visibility intent)
+  '/services/ai-chatbot-development': 'ai',
+  '/services/ai-automation': 'ai',
+  '/services/ai-agent-development': 'ai',
+  '/uk/ai-agents': 'ai',
+  // web: design and build
+  '/services/website-redesign': 'web',
+  '/services/small-business-website-design': 'web',
+  '/services/wordpress-development': 'web',
+  '/services/web-design': 'web',
+  '/uk/web-design': 'web',
+  // ecommerce: storefronts, platforms, marketplaces
+  '/services/shopify-development': 'ecommerce',
+  '/services/woocommerce-development': 'ecommerce',
+  '/services/magento-development': 'ecommerce',
+  '/services/ecommerce-marketing-agency': 'ecommerce',
+  '/services/ecommerce-development': 'ecommerce',
+  '/services/amazon-agency': 'ecommerce',
+  '/services/walmart-marketplace-agency': 'ecommerce',
+  '/services/tiktok-shop-agency': 'ecommerce',
+  '/headless-commerce': 'ecommerce',
+  '/best-ecommerce-platforms': 'ecommerce',
+  '/services/ecommerce-growth-agency': 'ecommerce',
+  '/uk/ecommerce-development': 'ecommerce',
+};
+
 function haystack(post: BlogPost): string {
   return `${post.slug.replace(/-/g, ' ')} ${post.title}`.toLowerCase();
 }
@@ -435,9 +496,26 @@ export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] 
   // Fill from the category fallback so every post gets links, never an empty block.
   // UK posts exhaust the UK hubs first, then fall through to the US list.
   if (out.length < limit) {
+    // Topic-aware ordering. `scored` is already sorted, so scored[0] is the post's
+    // strongest keyword match and the best available read on what it is actually about.
+    // Promote entries sharing that family; everything else keeps its declared order
+    // behind them. Both partitions preserve relative order, so this stays a stable,
+    // total, deterministic ordering, and a post whose top match has no family (or whose
+    // segment contains none of it) is left exactly as it was.
+    const topFamily = scored.length > 0 ? SERVICE_FAMILY[scored[0].rule.href] : undefined;
+    const byFamily = (segment: string[]): string[] =>
+      topFamily
+        ? [...segment.filter((h) => SERVICE_FAMILY[h] === topFamily),
+           ...segment.filter((h) => SERVICE_FAMILY[h] !== topFamily)]
+        : segment;
+
+    // Ordering is applied WITHIN each market segment, never across the join. Sorting the
+    // concatenated chain instead let a same-family US page outrank a cross-family UK hub,
+    // which stripped a /uk/* link off 17 UK posts and undid the whole point of the market
+    // gating. UK hubs still exhaust before any US page; family only reorders within a tier.
     const chain = postMarket === 'uk'
-      ? [...(UK_CATEGORY_FALLBACK[post.category] ?? []), ...(CATEGORY_FALLBACK[post.category] ?? [])]
-      : (CATEGORY_FALLBACK[post.category] ?? []);
+      ? [...byFamily(UK_CATEGORY_FALLBACK[post.category] ?? []), ...byFamily(CATEGORY_FALLBACK[post.category] ?? [])]
+      : byFamily(CATEGORY_FALLBACK[post.category] ?? []);
 
     for (const href of chain) {
       if (seen.has(href)) continue;
