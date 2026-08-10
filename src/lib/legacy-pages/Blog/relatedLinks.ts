@@ -368,6 +368,27 @@ function haystack(post: BlogPost): string {
 }
 
 /**
+ * Short acronyms ('rpa', 'geo', 'seo', 'ux' ...) must match as whole words. A plain
+ * substring test let 'rpa' fire inside "Razorpay", which put /services/ai-automation
+ * at the top of a payment-gateway post's link block.
+ *
+ * Only short keywords get the boundary treatment. Longer ones stay substring-matched
+ * on purpose, because that is what carries suffixes and plurals: 'chatbot' has to keep
+ * matching "chatbots" and 'ai agent' has to keep matching "ai agents".
+ */
+const WORD_MATCH_MAX_LEN = 4;
+const KEYWORD_MATCHERS = new Map<string, RegExp>(
+  SERVICE_RULES.flatMap((r) => r.keywords)
+    .filter((kw) => kw.length <= WORD_MATCH_MAX_LEN)
+    .map((kw) => [kw, new RegExp(`\\b${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`)])
+);
+
+function keywordHit(hay: string, kw: string): boolean {
+  const re = KEYWORD_MATCHERS.get(kw);
+  return re ? re.test(hay) : hay.includes(kw);
+}
+
+/**
  * Pick the money pages most relevant to a post. Deterministic.
  * Specific rules (weight 3-4) beat generic parents (weight 1-2), so a Shopify SEO
  * post links to /services/shopify-seo rather than the generic /services/seo.
@@ -383,7 +404,7 @@ export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] 
 
     let hits = 0;
     for (const kw of rule.keywords) {
-      if (hay.includes(kw)) hits += 1;
+      if (keywordHit(hay, kw)) hits += 1;
     }
     if (hits === 0) continue;
 

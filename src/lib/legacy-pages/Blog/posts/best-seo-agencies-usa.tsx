@@ -7,7 +7,7 @@ export const post: BlogPost = {
   title: 'The 10 Best SEO Agencies in the USA (2026)',
   excerpt:
     'Most agency roundups will not tell you what anything costs. We pulled the live US search results, checked all thirteen agencies against their own websites, and found five that publish real prices. Yes, we are on the list, disclosed, with our weak spots included.',
-  category: 'Web Design & Strategy',
+  category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jul 28, 2026',
   readTime: '14 min read',

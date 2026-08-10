@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: "ai-seo-agency-uk-geo-aeo-organic-growth",
   title: "AI SEO Agency UK: How 500+ SMBs Achieved 3x Organic Growth in 2026 with GEO & AEO",
   excerpt: "UK SMBs using AI SEO (GEO and AEO) saw 3x organic traffic growth in 2026 by optimising for ChatGPT, Perplexity, and Google AI Overviews. Traditional SEO alone no longer captures the 60% of searches now answered by AI engines.",
-  category: "Web Design & Strategy",
+  category: "Emerging Tech",
   author: 'Bhavesh Barot',
   date: "May 06, 2026",
   readTime: '14 min read',
