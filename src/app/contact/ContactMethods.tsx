@@ -9,14 +9,16 @@
  */
 
 import { CalendarClock, Mail } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { whatsappHref } from '@/utils/whatsappHref';
 
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
-const WHATSAPP_HREF =
-  'https://wa.me/919699977699?text=' +
-  encodeURIComponent("Hi FactoryJet, I'd like to talk about a project.");
 const EMAIL = 'connect@factoryjet.com';
 
 export default function ContactMethods() {
+  const pathname = usePathname();
+  const WHATSAPP_HREF = whatsappHref("Hi FactoryJet, I'd like to talk about a project.", pathname);
+
   return (
     <section className="border-y border-slate-100 bg-[#FAFBFC] py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

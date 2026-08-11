@@ -106,7 +106,8 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
 
   // (2) Best-effort secondary: client Firestore write. Fire-and-forget — never
   //     awaited, so a hung/slow SDK cannot block the user. Same docId keeps it
-  //     idempotent with the server write (last write wins, no duplicates).
+  //     idempotent with the server write (merged, so neither path can clobber
+  //     fields written by the other, and no duplicates are created).
   try {
     if (db) {
       void setDoc(doc(db, collection, docId), {
@@ -118,10 +119,21 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
         message: input.message || '',
         region: input.region || '',
         source: input.source,
+        // `page` MUST be mirrored here — see the merge note below.
+        page,
         turnstileToken: input.turnstileToken || '',
         createdAt: serverTimestamp(),
         status: 'new',
-      }).catch(() => { /* server path is authoritative; ignore */ });
+      },
+      // merge:true is load-bearing, not a nicety. setDoc() WITHOUT it replaces the
+      // whole document. This write is fire-and-forget, so it frequently lands AFTER
+      // the server write and used to clobber the richer server record — dropping the
+      // `page` and `capturedBy` fields the server had just written. That is why 113
+      // of 156 stored leads have no source page and attribution was impossible.
+      // With merge, whichever path lands second tops the record up instead of
+      // flattening it, and a field written by either path always survives.
+      { merge: true }
+      ).catch(() => { /* server path is authoritative; ignore */ });
     }
   } catch {
     /* ignore — never block on the client SDK */

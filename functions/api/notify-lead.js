@@ -58,6 +58,7 @@ async function writeLeadToFirestore(env, lead) {
       source:     s(lead.source),
       page:       s(lead.page),
       turnstileToken: s(lead.turnstileToken),
+      turnstileVerdict: s(lead.turnstileVerdict),
       status:     s('new'),
       capturedBy: s('server'),
       createdAt:  { timestampValue: new Date().toISOString() },
@@ -94,7 +95,7 @@ function serviceLabel(id) {
 }
 
 /** Build a clean HTML email body */
-function buildHtml({ name, email, phone, company, service, message, region, page }) {
+function buildHtml({ name, email, phone, company, service, message, region, page, turnstileVerdict }) {
   const now = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Kolkata',
     dateStyle: 'medium',
@@ -136,6 +137,9 @@ function buildHtml({ name, email, phone, company, service, message, region, page
                 ${row('Region',  (region || '').toUpperCase() || '—')}
                 ${message ? row('Message', `<span style="color:#374151;">${message}</span>`) : ''}
                 ${page ? row('Source page', `<a href="https://factoryjet.com${page}" style="color:#6B7280;font-size:12px;">factoryjet.com${page}</a>`) : ''}
+                ${turnstileVerdict === 'failed'
+                  ? row('Spam check', '<span style="color:#B23E13;font-weight:600;">Failed bot check — treat with suspicion</span>')
+                  : ''}
               </table>
             </td>
           </tr>
@@ -175,6 +179,42 @@ function row(label, value) {
     </tr>`;
 }
 
+/**
+ * Verify the Turnstile token with Cloudflare.
+ *
+ * Until now the token was stored and never checked, which made the widget purely
+ * decorative — link-building outreach walked straight through it.
+ *
+ * This FLAGS, it never blocks. That is deliberate:
+ *   - the widget is interaction-only, so a real visitor can legitimately submit
+ *     with no token at all if it has not finished rendering;
+ *   - Turnstile tokens expire (~5 min), so someone who opens the form, gets
+ *     distracted and submits later fails verification while being entirely real;
+ *   - losing one real lead costs far more than receiving ten spam ones, and this
+ *     file exists because a 2026-06-22 regression silently lost ~100% of leads.
+ *
+ * Returns: 'verified' | 'failed' | 'absent' | 'unchecked'
+ */
+async function verifyTurnstile(env, token, ip) {
+  const secret = env && env.TURNSTILE_SECRET_KEY;
+  if (!secret) return 'unchecked';        // not configured — degrade quietly
+  if (!token) return 'absent';            // legit users can land here; not spam
+  try {
+    const form = new FormData();
+    form.append('secret', secret);
+    form.append('response', token);
+    if (ip) form.append('remoteip', ip);
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST', body: form,
+    });
+    const out = await res.json();
+    return out.success ? 'verified' : 'failed';
+  } catch (err) {
+    console.error('Turnstile verify error:', err);
+    return 'unchecked';                   // never let our own outage look like spam
+  }
+}
+
 /** Cloudflare Pages Function entry point */
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -207,11 +247,16 @@ export async function onRequestPost(context) {
     });
   }
 
+  // Spam signal only — see verifyTurnstile. Never gates capture.
+  const turnstileVerdict = await verifyTurnstile(
+    env, body.turnstileToken, request.headers.get('CF-Connecting-IP')
+  );
+
   // ── (1) AUTHORITATIVE: persist the lead to Firestore server-side ───────────
   // This is the reliable capture path; it runs regardless of email status.
   const fsResult = await writeLeadToFirestore(env, {
     docId, collection, name, email, phone, company, service, message, region, source, page,
-    turnstileToken: body.turnstileToken,
+    turnstileToken: body.turnstileToken, turnstileVerdict,
   });
 
   // ── (2) Notify by email via Resend (best-effort) ───────────────────────────
@@ -221,7 +266,10 @@ export async function onRequestPost(context) {
     console.error('RESEND_API_KEY not set — lead saved, email skipped');
   } else {
     const serviceStr = serviceLabel(service);
-    const subject = `🔥 New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    // Only an outright verification FAILURE is worth flagging in the subject.
+    // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
+    // the warning keeps its meaning instead of appearing on half the leads.
+    const subject = `${turnstileVerdict === 'failed' ? '⚠️ LIKELY SPAM — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
     try {
       const resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -230,7 +278,7 @@ export async function onRequestPost(context) {
           from: NOTIFY_FROM,
           to: [NOTIFY_TO],
           subject,
-          html: buildHtml({ name, email, phone, company, service, message, region, page }),
+          html: buildHtml({ name, email, phone, company, service, message, region, page, turnstileVerdict }),
           reply_to: email,
         }),
       });

@@ -18,8 +18,8 @@
  */
 
 import type { CSSProperties } from 'react';
-
-const WHATSAPP_NUMBER = '919699977699';
+import { usePathname } from 'next/navigation';
+import { whatsappHref } from '@/utils/whatsappHref';
 
 export interface WhatsAppCTAProps {
   /** City name in display form, e.g. "Charlotte" or "New York". */
@@ -35,8 +35,9 @@ export default function WhatsAppCTA({
   variant = 'light',
   service = 'web design',
 }: WhatsAppCTAProps) {
+  const pathname = usePathname();
   const message = `Hi FactoryJet, I'm interested in ${service} in ${city}.`;
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const href = whatsappHref(message, pathname);
   // Accessible name must contain the visible label ("Message on WhatsApp") to
   // pass the label-content-name-mismatch audit.
   const ariaLabel = `Message on WhatsApp about ${service} in ${city}`;

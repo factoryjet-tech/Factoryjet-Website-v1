@@ -11,14 +11,15 @@
  */
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useContactModal } from '@/context/ContactModalContext';
-
-const WHATSAPP_NUMBER = '919699977699';
-const WA_MESSAGE = encodeURIComponent("Hi FactoryJet, I'd like a free quote for my project.");
+import { whatsappHref } from '@/utils/whatsappHref';
 
 export default function MobileStickyCTA() {
   const { openModal } = useContactModal();
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
+  const waHref = whatsappHref("Hi FactoryJet, I'd like a free quote for my project.", pathname);
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 480);
@@ -47,7 +48,7 @@ export default function MobileStickyCTA() {
         </div>
 
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WA_MESSAGE}`}
+          href={waHref}
           target="_blank"
           rel="noopener noreferrer"
           /* Plain wa.me anchor — GTM auto-fires the WhatsApp Ads conversion + GA4 whatsapp_click. */
