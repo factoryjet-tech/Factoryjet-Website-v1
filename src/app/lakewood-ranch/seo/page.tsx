@@ -335,7 +335,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/images/factoryjet-logo.png',
+      logo: 'https://factoryjet.com/logo.png',
       contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'connect@factoryjet.com' },
       sameAs: [
         'https://www.linkedin.com/company/factoryjet',

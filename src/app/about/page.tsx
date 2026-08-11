@@ -54,7 +54,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
-      logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/logo.png', width: 400, height: 120 },
+      logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/logo.png', width: 1200, height: 240 },
       description:
         'FactoryJet is an e-commerce development agency for DTC and B2B brands. We consult, design, develop, and implement omnichannel commerce across the store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo. Clients own and operate what we build.',
       foundingDate: '2014',

@@ -202,7 +202,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
           <img
             src={showSolidStyle ? "/FinalLogo.svg" : "/FinalLogoWhite.svg"}
             alt="FactoryJet"
-            width={160}
+            width={240}
             height={40}
             className="h-8 md:h-10 w-auto object-contain"
           />

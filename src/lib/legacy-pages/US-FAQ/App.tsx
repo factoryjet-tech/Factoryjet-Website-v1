@@ -422,7 +422,7 @@ const FooterLocal = React.memo(() => (
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <div className="col-span-1 md:col-span-1">
         <Link href="/" className="flex items-center gap-2 mb-4 text-white">
-          <img src="/FinalLogo.svg" alt="FactoryJet" className="h-8 w-auto" />
+          <img src="/FinalLogoWhite.svg" alt="FactoryJet" className="h-8 w-auto" />
         </Link>
         <p className="text-sm text-slate-400 mb-4">
           Enterprise-grade digital solutions with startup-friendly pricing.

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
+import Wordmark from './Wordmark';
 
 /**
  * SiteFooter — v2.0 bottom-of-page chrome.
@@ -233,9 +234,7 @@ export default function SiteFooter({
             and one nine-word line over dead space. */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(260px,1.1fr)_3fr] lg:gap-16">
           <div>
-            <p className="font-fj-display fj-display text-[24px] font-semibold tracking-[-0.02em]">
-              {logoText}
-            </p>
+            <Wordmark label={logoText} className="h-[25px] w-auto" />
             <p className={`mt-3.5 max-w-[30ch] font-fj-body text-[15px] leading-[1.6] ${taglineClass}`}>
               {tagline}
             </p>

@@ -39,7 +39,7 @@ const schema = {
       "@id": "https://factoryjet.com/#organization",
       "name": "FactoryJet Technologies",
       "url": "https://factoryjet.com",
-      "logo": "https://factoryjet.com/images/logo.png",
+      "logo": "https://factoryjet.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",

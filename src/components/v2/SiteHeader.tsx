@@ -37,6 +37,7 @@ import {
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
+import Wordmark from './Wordmark';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
@@ -560,9 +561,10 @@ export default function SiteHeader({
             {/* Logo */}
             <Link
               href={logoHref}
-              className="font-fj-display fj-display flex-shrink-0 text-[22px] font-medium text-fj-ink md:text-[24px]"
+              className="flex-shrink-0 text-fj-ink"
+              aria-label={logoText}
             >
-              {logoText}
+              <Wordmark label={null} className="h-[19px] w-auto md:h-[21px]" />
             </Link>
 
             {/* Desktop nav */}
@@ -1419,9 +1421,10 @@ export default function SiteHeader({
           <Link
             href={logoHref}
             onClick={() => setMobileOpen(false)}
-            className="font-fj-display text-[20px] font-medium text-fj-ink"
+            className="text-fj-ink"
+            aria-label={logoText}
           >
-            {logoText}
+            <Wordmark label={null} className="h-[18px] w-auto" />
           </Link>
           <button
             type="button"

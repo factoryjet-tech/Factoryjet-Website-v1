@@ -103,8 +103,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    // PNG fallback for the handful of clients that still ignore SVG favicons,
+    // and a real PNG for Apple, which has never supported an SVG touch icon.
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
 }
