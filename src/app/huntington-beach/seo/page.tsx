@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -1269,6 +1270,7 @@ export default function HuntingtonBeachSEO() {
             </div>
           </section>
 
+          <SeoCityLinksUS currentCity="huntington-beach" />
         </main>
         <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
       </div>

@@ -1,15 +1,26 @@
 import Link from 'next/link'
 
+// Only list cities whose /{slug}/web-design page actually exists. Linking to a route
+// before it ships gets the 404 cached as a verdict, and only a manual GSC recrawl clears it.
 const ALL_CITIES = [
+  { slug: 'atlanta',    label: 'Atlanta, GA' },
   { slug: 'austin',     label: 'Austin, TX' },
   { slug: 'charlotte',  label: 'Charlotte, NC' },
+  { slug: 'chicago',    label: 'Chicago, IL' },
   { slug: 'cleveland',  label: 'Cleveland, OH' },
+  { slug: 'dallas',     label: 'Dallas, TX' },
   { slug: 'denver',     label: 'Denver, CO' },
+  { slug: 'detroit',    label: 'Detroit, MI' },
+  { slug: 'houston',    label: 'Houston, TX' },
   { slug: 'miami',      label: 'Miami, FL' },
   { slug: 'nashville',  label: 'Nashville, TN' },
   { slug: 'new-york',   label: 'New York, NY' },
+  { slug: 'phoenix',    label: 'Phoenix, AZ' },
   { slug: 'portland',   label: 'Portland, OR' },
   { slug: 'raleigh',    label: 'Raleigh, NC' },
+  { slug: 'san-diego',  label: 'San Diego, CA' },
+  { slug: 'seattle',    label: 'Seattle, WA' },
+  { slug: 'st-louis',   label: 'St. Louis, MO' },
   { slug: 'tampa',      label: 'Tampa, FL' },
 ] as const
 

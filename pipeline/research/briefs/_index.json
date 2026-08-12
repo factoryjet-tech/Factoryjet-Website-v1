@@ -1,0 +1,242 @@
+[
+ {
+  "slug": "dallas-web-design",
+  "route": "/dallas/web-design",
+  "kw": "web design company dallas",
+  "vol": 2900,
+  "kd": 24,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "dallas-seo",
+  "route": "/dallas/seo",
+  "kw": "seo agency dallas",
+  "vol": 1000,
+  "kd": 22,
+  "paa": 5,
+  "aio": false,
+  "rivals": 5
+ },
+ {
+  "slug": "chicago-seo",
+  "route": "/chicago/seo",
+  "kw": "seo agency chicago",
+  "vol": 880,
+  "kd": 1,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "chicago-web-design",
+  "route": "/chicago/web-design",
+  "kw": "web design company chicago",
+  "vol": 1900,
+  "kd": 90,
+  "paa": 0,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "phoenix-web-design",
+  "route": "/phoenix/web-design",
+  "kw": "web design company phoenix",
+  "vol": 1900,
+  "kd": 31,
+  "paa": 7,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "phoenix-seo",
+  "route": "/phoenix/seo",
+  "kw": "seo agency phoenix",
+  "vol": 1300,
+  "kd": 24,
+  "paa": 7,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "san-diego-web-design",
+  "route": "/san-diego/web-design",
+  "kw": "web design company san diego",
+  "vol": 1600,
+  "kd": 30,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "san-diego-seo",
+  "route": "/san-diego/seo",
+  "kw": "seo agency san diego",
+  "vol": 2400,
+  "kd": 39,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "boston-seo",
+  "route": "/boston/seo",
+  "kw": "seo agency boston",
+  "vol": 880,
+  "kd": 5,
+  "paa": 7,
+  "aio": false,
+  "rivals": 4
+ },
+ {
+  "slug": "detroit-web-design",
+  "route": "/detroit/web-design",
+  "kw": "web design company detroit",
+  "vol": 590,
+  "kd": 0,
+  "paa": 0,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "las-vegas-seo",
+  "route": "/las-vegas/seo",
+  "kw": "seo agency las vegas",
+  "vol": 590,
+  "kd": 13,
+  "paa": 5,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "los-angeles-seo",
+  "route": "/los-angeles/seo",
+  "kw": "seo agency los angeles",
+  "vol": 2400,
+  "kd": 35,
+  "paa": 5,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "b2b-website-design",
+  "route": "/services/b2b-website-design",
+  "kw": "b2b website design",
+  "vol": 480,
+  "kd": 1,
+  "paa": 8,
+  "aio": true,
+  "rivals": 3
+ },
+ {
+  "slug": "manufacturing-web-design",
+  "route": "/services/manufacturing-website-design",
+  "kw": "manufacturing website design",
+  "vol": 720,
+  "kd": 2,
+  "paa": 0,
+  "aio": false,
+  "rivals": 3
+ },
+ {
+  "slug": "saas-website-design",
+  "route": "/services/saas-website-design",
+  "kw": "saas website design",
+  "vol": 390,
+  "kd": 15,
+  "paa": 0,
+  "aio": true,
+  "rivals": 2
+ },
+ {
+  "slug": "restaurant-web-design",
+  "route": "/services/restaurant-website-design",
+  "kw": "restaurant website design",
+  "vol": 720,
+  "kd": 14,
+  "paa": 7,
+  "aio": false,
+  "rivals": 0
+ },
+ {
+  "slug": "nonprofit-web-design",
+  "route": "/services/nonprofit-website-design",
+  "kw": "nonprofit website design",
+  "vol": 1000,
+  "kd": 40,
+  "paa": 7,
+  "aio": true,
+  "rivals": 4
+ },
+ {
+  "slug": "ai-agents-real-estate",
+  "route": "/services/ai-agents-for-real-estate",
+  "kw": "ai agents for real estate",
+  "vol": 390,
+  "kd": 8,
+  "paa": 8,
+  "aio": true,
+  "rivals": 3
+ },
+ {
+  "slug": "ai-agents-healthcare",
+  "route": "/services/ai-agents-for-healthcare",
+  "kw": "ai agents for healthcare",
+  "vol": 170,
+  "kd": 28,
+  "paa": 7,
+  "aio": true,
+  "rivals": 2
+ },
+ {
+  "slug": "ecommerce-app-dev",
+  "route": "/services/ecommerce-app-development",
+  "kw": "ecommerce app development company",
+  "vol": 720,
+  "kd": 12,
+  "paa": 7,
+  "aio": true,
+  "rivals": 5
+ },
+ {
+  "slug": "atlanta-web-design",
+  "route": "/atlanta/web-design",
+  "kw": "web design company atlanta",
+  "vol": 1000,
+  "kd": 75,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "seattle-web-design",
+  "route": "/seattle/web-design",
+  "kw": "web design company seattle",
+  "vol": 1000,
+  "kd": 79,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "houston-web-design",
+  "route": "/houston/web-design",
+  "kw": "web design company houston",
+  "vol": 720,
+  "kd": 50,
+  "paa": 7,
+  "aio": false,
+  "rivals": 6
+ },
+ {
+  "slug": "st-louis-web-design",
+  "route": "/st-louis/web-design",
+  "kw": "web design company st louis",
+  "vol": 1300,
+  "kd": 72,
+  "paa": 6,
+  "aio": false,
+  "rivals": 6
+ }
+]

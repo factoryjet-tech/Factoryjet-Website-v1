@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -459,6 +460,7 @@ export default function ClevelandSeoPage() {
             <p className="fine">SEO services in Cleveland, Ohio, month-to-month, free audit, no setup fee. Also in Cleveland: <Link href="/cleveland/web-design">web design</Link>. See <Link href="/services/seo">US SEO services</Link> and our <Link href="/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link>.</p>
           </div>
         </section>
+        <SeoCityLinksUS currentCity="cleveland" />
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

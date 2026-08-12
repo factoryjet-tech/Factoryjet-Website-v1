@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -389,6 +390,7 @@ export default function TampaSeoPage() {
             <p className="fine">Local SEO · fixed-price · month-to-month · free audit · no setup fee · <Link href="/services/seo">US SEO services</Link></p>
           </div>
         </section>
+        <SeoCityLinksUS currentCity="tampa" />
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

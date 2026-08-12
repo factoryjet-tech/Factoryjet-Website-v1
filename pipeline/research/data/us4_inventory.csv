@@ -1,0 +1,335 @@
+kind,slug,url,title,src
+blog,agentic-ai-vs-ai-agents,/blog/agentic-ai-vs-ai-agents,Agentic AI vs AI Agents: What Is the Difference?,src/lib/legacy-pages/Blog/posts/agentic-ai-vs-ai-agents.tsx
+blog,agentic-ai-vs-generative-ai,/blog/agentic-ai-vs-generative-ai,Agentic AI vs Generative AI: What Is the Difference in 2026?,src/lib/legacy-pages/Blog/posts/agentic-ai-vs-generative-ai.tsx
+blog,agentic-commerce-vs-traditional-ecommerce,/blog/agentic-commerce-vs-traditional-ecommerce,Agentic Commerce vs Traditional Ecommerce: What Actually Changes,src/lib/legacy-pages/Blog/posts/agentic-commerce-vs-traditional-ecommerce.tsx
+blog,ai-adoption-us-small-businesses-2026,/blog/ai-adoption-us-small-businesses-2026,AI Adoption by US Small Businesses 2026: Real Numbers,src/lib/legacy-pages/Blog/posts/ai-adoption-us-small-businesses-2026.tsx
+blog,ai-agents-business-operations-uk-smbs-2026,/blog/ai-agents-business-operations-uk-smbs-2026,AI Agents for Business Operations in 2026: How UK SMBs Are Cutting Ops Costs by 35%,src/lib/legacy-pages/Blog/posts/ai-agents-business-operations-uk-smbs-2026.tsx
+blog,ai-agents-small-business-usa-2026,/blog/ai-agents-small-business-usa-2026,AI Agents for US Small Businesses: What They Are and How to Get Started,src/lib/legacy-pages/Blog/posts/ai-agents-small-business-usa-2026.tsx
+blog,ai-agents-uk-smbs-guide,/blog/ai-agents-uk-smbs-guide,AI Agents for UK SMBs: Complete 2026 Implementation Guide,src/lib/legacy-pages/Blog/posts/ai-agents-uk-smbs-guide.tsx
+blog,ai-automation-services-small-business-uk-2026,/blog/ai-automation-services-small-business-uk-2026,AI Automation Services for Small Businesses in 2026: UK Agency Selection Guide,src/lib/legacy-pages/Blog/posts/ai-automation-services-small-business-uk-2026.tsx
+blog,ai-chatbots-vs-ai-agents-business,/blog/ai-chatbots-vs-ai-agents-business,AI Chatbots vs AI Agents: Which Does Your Business Actually Need in 2026?,src/lib/legacy-pages/Blog/posts/ai-chatbots-vs-ai-agents-business.tsx
+blog,ai-seo-agency-uk-geo-aeo-organic-growth,/blog/ai-seo-agency-uk-geo-aeo-organic-growth,AI SEO Agency UK: How 500+ SMBs Achieved 3x Organic Growth in 2026 with GEO & AEO,src/lib/legacy-pages/Blog/posts/ai-seo-agency-uk-geo-aeo-organic-growth.tsx
+blog,austin-ecommerce-checkout-optimization-2026,/blog/austin-ecommerce-checkout-optimization-2026,Austin Ecommerce: Checkout Optimization and Conversion Tactics for Texas DTC Brands and Boutiques in 2026,src/lib/legacy-pages/Blog/posts/austin-ecommerce-checkout-optimization-2026.tsx
+blog,best-ai-agent-development-companies-small-business,/blog/best-ai-agent-development-companies-small-business,The 10 Best AI Agent Development Companies for Small Business (2026),src/lib/legacy-pages/Blog/posts/best-ai-agent-development-companies-small-business.tsx
+blog,best-ai-automation-tools-small-business-uk-2026,/blog/best-ai-automation-tools-small-business-uk-2026,15 Best AI Automation Tools for Small Business in 2026 (UK SMB Comparison),src/lib/legacy-pages/Blog/posts/best-ai-automation-tools-small-business-uk-2026.tsx
+blog,best-ai-for-ecommerce-2026,/blog/best-ai-for-ecommerce-2026,The Best AI for Ecommerce in 2026: What Actually Works in a Real Store,src/lib/legacy-pages/Blog/posts/best-ai-for-ecommerce-2026.tsx
+blog,best-ai-seo-agencies-india,/blog/best-ai-seo-agencies-india,10 Best AI SEO Agencies in India (2026),src/lib/legacy-pages/Blog/posts/best-ai-seo-agencies-india.tsx
+blog,best-ai-seo-agencies-uk,/blog/best-ai-seo-agencies-uk,The 10 Best AI SEO Agencies in the UK (2026),src/lib/legacy-pages/Blog/posts/best-ai-seo-agencies-uk.tsx
+blog,best-ai-seo-agencies-usa,/blog/best-ai-seo-agencies-usa,The 10 Best AI SEO Agencies in the USA (2026),src/lib/legacy-pages/Blog/posts/best-ai-seo-agencies-usa.tsx
+blog,best-ecommerce-agency-small-business-australia-2026,/blog/best-ecommerce-agency-small-business-australia-2026,Best E-Commerce Agency for Small Business Australia 2026: AI-Native Solutions Under £5K,src/lib/legacy-pages/Blog/posts/best-ecommerce-agency-small-business-australia-2026.tsx
+blog,best-ecommerce-platform-tampa-boutiques-dtc-2026,/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026,Best Ecommerce Platform for Tampa Boutiques and DTC Brands in 2026,src/lib/legacy-pages/Blog/posts/best-ecommerce-platform-tampa-boutiques-dtc-2026.tsx
+blog,best-geo-agencies,/blog/best-geo-agencies,The 10 Best GEO (Generative Engine Optimization) Agencies for Ecommerce & SMBs (2026),src/lib/legacy-pages/Blog/posts/best-geo-agencies.tsx
+blog,best-geo-ai-visibility-tools-2026,/blog/best-geo-ai-visibility-tools-2026,"Best GEO & AI Visibility Tools in 2026 (Tested by Job, Not Hype)",src/lib/legacy-pages/Blog/posts/best-geo-ai-visibility-tools-2026.tsx
+blog,best-lead-generation-websites-small-business-2026,/blog/best-lead-generation-websites-small-business-2026,Best Lead Generation Websites for Small Businesses in 2026: Platform Comparison & ROI Analysis,src/lib/legacy-pages/Blog/posts/best-lead-generation-websites-small-business-2026.tsx
+blog,best-sales-automation-small-business-uk-2026,/blog/best-sales-automation-small-business-uk-2026,Best Sales Automation for Small Business UK: 2026 Buyer,src/lib/legacy-pages/Blog/posts/best-sales-automation-small-business-uk-2026.tsx
+blog,best-seo-agencies-uk,/blog/best-seo-agencies-uk,The 10 Best SEO Agencies in the UK (2026),src/lib/legacy-pages/Blog/posts/best-seo-agencies-uk.tsx
+blog,best-seo-agencies-usa,/blog/best-seo-agencies-usa,The 10 Best SEO Agencies in the USA (2026),src/lib/legacy-pages/Blog/posts/best-seo-agencies-usa.tsx
+blog,best-seo-agency-uk-small-business-2026,/blog/best-seo-agency-uk-small-business-2026,Best SEO Agency UK for Small Business 2026: Enterprise Capabilities at SMB Budget,src/lib/legacy-pages/Blog/posts/best-seo-agency-uk-small-business-2026.tsx
+blog,best-web-design-agencies-uk-smbs-2026,/blog/best-web-design-agencies-uk-smbs-2026,15 Best Web Design Agencies in the UK for SMBs in 2026 (Ranked by Real Client Results),src/lib/legacy-pages/Blog/posts/best-web-design-agencies-uk-smbs-2026.tsx
+blog,best-web-design-agency-us-small-business-2026,/blog/best-web-design-agency-us-small-business-2026,Best Web Design Agency for US Small Businesses in 2026: What to Look For,src/lib/legacy-pages/Blog/posts/best-web-design-agency-us-small-business-2026.tsx
+blog,best-web-design-companies-small-business-australia,/blog/best-web-design-companies-small-business-australia,15 Best Web Design Companies for Small Business in Australia 2026 (Ranked by SMB Value),src/lib/legacy-pages/Blog/posts/best-web-design-companies-small-business-australia.tsx
+blog,best-wordpress-development-companies-australia-2026,/blog/best-wordpress-development-companies-australia-2026,Best WordPress Development Companies for Small Business in Australia 2026: Enterprise Features at SMB Pricing,src/lib/legacy-pages/Blog/posts/best-wordpress-development-companies-australia-2026.tsx
+blog,bigcommerce-vs-shopify-2026-fee-change,/blog/bigcommerce-vs-shopify-2026-fee-change,BigCommerce vs. Shopify After the June 2026 Fee Change: The Math Just Flipped,src/lib/legacy-pages/Blog/posts/bigcommerce-vs-shopify-2026-fee-change.tsx
+blog,boise-shopify-development-guide-idaho-small-business-2026,/blog/boise-shopify-development-guide-idaho-small-business-2026,Boise Shopify Development Guide: What Idaho Small Businesses Need to Know in 2026,src/lib/legacy-pages/Blog/posts/boise-shopify-development-guide-idaho-small-business-2026.tsx
+blog,build-ai-agents-small-business-diy-vs-agency-2026,/blog/build-ai-agents-small-business-diy-vs-agency-2026,How to Build AI Agents for Small Businesses in 2026: DIY vs. Agency Approach,src/lib/legacy-pages/Blog/posts/build-ai-agents-small-business-diy-vs-agency-2026.tsx
+blog,create-ai-agents-business-uk-smb-guide-2026,/blog/create-ai-agents-business-uk-smb-guide-2026,How to Create AI Agents for Your Business in 2026: A UK SMB Implementation Guide,src/lib/legacy-pages/Blog/posts/create-ai-agents-business-uk-smb-guide-2026.tsx
+blog,custom-online-store-development-uk-smbs-2026,/blog/custom-online-store-development-uk-smbs-2026,Custom Online Store Development for UK SMBs: Enterprise Features Without Enterprise Costs (2026 Guide),src/lib/legacy-pages/Blog/posts/custom-online-store-development-uk-smbs-2026.tsx
+blog,custom-shopify-theme-development-us-brands-2026,/blog/custom-shopify-theme-development-us-brands-2026,Custom Shopify Theme Development for US Brands: A Complete 2026 Guide,src/lib/legacy-pages/Blog/posts/custom-shopify-theme-development-us-brands-2026.tsx
+blog,custom-web-development-vs-wordpress-us-small-business-2026,/blog/custom-web-development-vs-wordpress-us-small-business-2026,Custom Web Development vs WordPress for US Small Businesses: When to Choose What in 2026,src/lib/legacy-pages/Blog/posts/custom-web-development-vs-wordpress-us-small-business-2026.tsx
+blog,digital-marketing-for-small-business-india,/blog/digital-marketing-for-small-business-india,Digital Marketing for Small Businesses in India: A Simple Guide,src/lib/legacy-pages/Blog/posts/digital-marketing-for-small-business-india.tsx
+blog,ecommerce-development-denver-co-small-business,/blog/ecommerce-development-denver-co-small-business,Ecommerce Development in Denver CO: Small Business Guide 2026,src/lib/legacy-pages/Blog/posts/ecommerce-development-denver-co-small-business.tsx
+blog,ecommerce-development-uk-shopify-woocommerce-2026,/blog/ecommerce-development-uk-shopify-woocommerce-2026,E-Commerce Development in the UK: Shopify & WooCommerce Solutions for Growing SMBs (2026),src/lib/legacy-pages/Blog/posts/ecommerce-development-uk-shopify-woocommerce-2026.tsx
+blog,evaluate-web-design-agency-us-smbs-2026,/blog/evaluate-web-design-agency-us-smbs-2026,How US SMBs Should Evaluate a Web Design Agency in 2026,src/lib/legacy-pages/Blog/posts/evaluate-web-design-agency-us-smbs-2026.tsx
+blog,generative-engine-optimization-guide,/blog/generative-engine-optimization-guide,Generative Engine Optimization (GEO): The 2026 Guide,src/lib/legacy-pages/Blog/posts/generative-engine-optimization-guide.tsx
+blog,geo-cost-small-business-2026,/blog/geo-cost-small-business-2026,"How Much Does GEO Cost in 2026? Real AI SEO Pricing, Decoded",src/lib/legacy-pages/Blog/posts/geo-cost-small-business-2026.tsx
+blog,how-long-does-seo-take-2026-month-by-month-timeline,/blog/how-long-does-seo-take-2026-month-by-month-timeline,How Long Does SEO Take in 2026? A Month-by-Month Timeline,src/lib/legacy-pages/Blog/posts/how-long-does-seo-take-2026-month-by-month-timeline.tsx
+blog,how-much-does-a-website-cost-small-business-usa-2026,/blog/how-much-does-a-website-cost-small-business-usa-2026,How Much Does a Website Cost for a Small Business in the USA? (2026),src/lib/legacy-pages/Blog/posts/how-much-does-a-website-cost-small-business-usa-2026.tsx
+blog,how-to-build-online-store-uk-smb-guide-2026,/blog/how-to-build-online-store-uk-smb-guide-2026,How to Build an Online Store in 2026: A UK SMB Founder,src/lib/legacy-pages/Blog/posts/how-to-build-online-store-uk-smb-guide-2026.tsx
+blog,how-to-choose-digital-marketing-agency-india-2026,/blog/how-to-choose-digital-marketing-agency-india-2026,How to Choose the Best Digital Marketing Agency in India (2026 Guide),src/lib/legacy-pages/Blog/posts/how-to-choose-digital-marketing-agency-india-2026.tsx
+blog,how-to-choose-web-design-agency-uk-2026,/blog/how-to-choose-web-design-agency-uk-2026,How to Choose a Web Design Agency in 2026: 12 Questions UK SMBs Must Ask (From 500+ Projects),src/lib/legacy-pages/Blog/posts/how-to-choose-web-design-agency-uk-2026.tsx
+blog,how-to-get-chatgpt-to-recommend-your-business-2026,/blog/how-to-get-chatgpt-to-recommend-your-business-2026,How to Get ChatGPT to Recommend Your Small Business (2026 Playbook),src/lib/legacy-pages/Blog/posts/how-to-get-chatgpt-to-recommend-your-business-2026.tsx
+blog,how-to-sell-on-amazon-2026,/blog/how-to-sell-on-amazon-2026,How to Sell on Amazon in 2026: A Step-by-Step Guide for US Sellers,src/lib/legacy-pages/Blog/posts/how-to-sell-on-amazon-2026.tsx
+blog,how-to-sell-on-tiktok-shop-2026,/blog/how-to-sell-on-tiktok-shop-2026,How to Sell on TikTok Shop in 2026: A Step-by-Step Guide for US Sellers,src/lib/legacy-pages/Blog/posts/how-to-sell-on-tiktok-shop-2026.tsx
+blog,how-to-sell-on-walmart-marketplace-2026,/blog/how-to-sell-on-walmart-marketplace-2026,How to Sell on Walmart Marketplace in 2026: A Step-by-Step Guide for US Sellers,src/lib/legacy-pages/Blog/posts/how-to-sell-on-walmart-marketplace-2026.tsx
+blog,how-to-show-up-in-google-ai-overviews-small-business,/blog/how-to-show-up-in-google-ai-overviews-small-business,How to Show Up in Google AI Overviews: A Small Business Checklist,src/lib/legacy-pages/Blog/posts/how-to-show-up-in-google-ai-overviews-small-business.tsx
+blog,how-uk-smbs-evaluate-woocommerce-agency-2026,/blog/how-uk-smbs-evaluate-woocommerce-agency-2026,How UK SMBs Should Evaluate a WooCommerce Agency in 2026,src/lib/legacy-pages/Blog/posts/how-uk-smbs-evaluate-woocommerce-agency-2026.tsx
+blog,is-geo-replacing-seo-2026,/blog/is-geo-replacing-seo-2026,Is GEO Replacing SEO in 2026?,src/lib/legacy-pages/Blog/posts/is-geo-replacing-seo-2026.tsx
+blog,is-seo-dead-2026-ai-search-data,/blog/is-seo-dead-2026-ai-search-data,Is SEO Dead in 2026? What the AI Search Data Actually Says,src/lib/legacy-pages/Blog/posts/is-seo-dead-2026-ai-search-data.tsx
+blog,local-seo-uk-small-businesses-map-pack,/blog/local-seo-uk-small-businesses-map-pack,Local SEO for UK Small Businesses: What Actually Moves the Map Pack,src/lib/legacy-pages/Blog/posts/local-seo-uk-small-businesses-map-pack.tsx
+blog,nyc-b2b-corporate-web-design-guide-2026,/blog/nyc-b2b-corporate-web-design-guide-2026,NYC B2B & Corporate Web Design: What Manhattan and Brooklyn Companies Should Demand From Their Agency in 2026,src/lib/legacy-pages/Blog/posts/nyc-b2b-corporate-web-design-guide-2026.tsx
+blog,raleigh-shopify-training-support-triangle-nc-2026,/blog/raleigh-shopify-training-support-triangle-nc-2026,Raleigh Shopify Training and Support: A Practical 2026 Playbook for Triangle Small Businesses,src/lib/legacy-pages/Blog/posts/raleigh-shopify-training-support-triangle-nc-2026.tsx
+blog,sales-automation-ai-uk-smbs-workflows,/blog/sales-automation-ai-uk-smbs-workflows,Sales Automation AI for UK SMBs: 7 Proven Workflows That Closed £2.4M in 2026,src/lib/legacy-pages/Blog/posts/sales-automation-ai-uk-smbs-workflows.tsx
+blog,sales-automation-tools-uk-smbs-roi-2026,/blog/sales-automation-tools-uk-smbs-roi-2026,17 Sales Automation Tools UK SMBs Actually Use in 2026 (Ranked by ROI),src/lib/legacy-pages/Blog/posts/sales-automation-tools-uk-smbs-roi-2026.tsx
+blog,sell-ai-automation-services-uk-agency-playbook-2026,/blog/sell-ai-automation-services-uk-agency-playbook-2026,How to Sell AI Automation Services in 2026: The UK Agency Playbook (12+ Years Refined),src/lib/legacy-pages/Blog/posts/sell-ai-automation-services-uk-agency-playbook-2026.tsx
+blog,seo-audit-cost-2026,/blog/seo-audit-cost-2026,How Much Does an SEO Audit Cost in 2026? (Real Pricing Breakdown),src/lib/legacy-pages/Blog/posts/seo-audit-cost-2026.tsx
+blog,seo-cost-small-business-2026,/blog/seo-cost-small-business-2026,"How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)",src/lib/legacy-pages/Blog/posts/seo-cost-small-business-2026.tsx
+blog,seo-recruitment-agencies-uk-2026,/blog/seo-recruitment-agencies-uk-2026,SEO for Recruitment Agencies in 2026: AI-Powered Strategies to Fill Your Pipeline (UK Guide),src/lib/legacy-pages/Blog/posts/seo-recruitment-agencies-uk-2026.tsx
+blog,shopify-development-cost-2026,/blog/shopify-development-cost-2026,Shopify Development Cost in 2026: Real Numbers From 500+ Store Builds,src/lib/legacy-pages/Blog/posts/shopify-development-cost-2026.tsx
+blog,shopify-store-development-uk-smbs-2026-guide,/blog/shopify-store-development-uk-smbs-2026-guide,Shopify Store Development for UK SMBs: From Setup to Scale in 2026 (Complete Agency Guide),src/lib/legacy-pages/Blog/posts/shopify-store-development-uk-smbs-2026-guide.tsx
+blog,shopify-store-setup-us-small-business-7-days,/blog/shopify-store-setup-us-small-business-7-days,How to Launch a Shopify Store in 7 Days for US Small Businesses,src/lib/legacy-pages/Blog/posts/shopify-store-setup-us-small-business-7-days.tsx
+blog,shopify-vs-custom-website-us-small-business-2026,/blog/shopify-vs-custom-website-us-small-business-2026,Shopify vs. Custom Website for US Small Business: Which Is Right for You in 2026?,src/lib/legacy-pages/Blog/posts/shopify-vs-custom-website-us-small-business-2026.tsx
+blog,shopify-vs-woocommerce-us-small-business-2026,/blog/shopify-vs-woocommerce-us-small-business-2026,Shopify vs WooCommerce for US Small Businesses in 2026: The Honest Comparison,src/lib/legacy-pages/Blog/posts/shopify-vs-woocommerce-us-small-business-2026.tsx
+blog,shopify-website-cost,/blog/shopify-website-cost,How Much Does a Shopify Website Cost in 2026? (Real Numbers),src/lib/legacy-pages/Blog/posts/shopify-website-cost.tsx
+blog,top-ecommerce-development-agencies-uk-2026,/blog/top-ecommerce-development-agencies-uk-2026,Top E-Commerce Development Agencies in the UK for 2026: How to Choose the Right Partner for Your SMB,src/lib/legacy-pages/Blog/posts/top-ecommerce-development-agencies-uk-2026.tsx
+blog,top-web-design-agencies-london-smbs-2026,/blog/top-web-design-agencies-london-smbs-2026,Top 12 Web Design Agencies in London for Growing SMBs (2026 Comparison),src/lib/legacy-pages/Blog/posts/top-web-design-agencies-london-smbs-2026.tsx
+blog,uk-web-design-agency-pricing-2026-smb-guide,/blog/uk-web-design-agency-pricing-2026-smb-guide,How Much Do Web Design Agencies Charge in 2026? UK Pricing Guide for SMBs,src/lib/legacy-pages/Blog/posts/uk-web-design-agency-pricing-2026-smb-guide.tsx
+blog,web-design-austin-tx-small-business-guide-2026,/blog/web-design-austin-tx-small-business-guide-2026,Web Design in Austin TX: Small Business Guide for 2026,src/lib/legacy-pages/Blog/posts/web-design-austin-tx-small-business-guide-2026.tsx
+blog,web-design-charlotte-nc-small-business-2026,/blog/web-design-charlotte-nc-small-business-2026,Web Design Charlotte NC: What Small Businesses Need to Know in 2026,src/lib/legacy-pages/Blog/posts/web-design-charlotte-nc-small-business-2026.tsx
+blog,web-design-denver-co-small-business-2026,/blog/web-design-denver-co-small-business-2026,Web Design for Denver CO Small Businesses: 2026 Pricing & Agency Guide,src/lib/legacy-pages/Blog/posts/web-design-denver-co-small-business-2026.tsx
+blog,web-design-miami-fl-small-business-2026,/blog/web-design-miami-fl-small-business-2026,Web Design for Miami FL Small Businesses: 2026 Complete Guide,src/lib/legacy-pages/Blog/posts/web-design-miami-fl-small-business-2026.tsx
+blog,web-design-nashville-tn-small-business-2026,/blog/web-design-nashville-tn-small-business-2026,Web Design in Nashville TN: Complete Small Business Guide 2026,src/lib/legacy-pages/Blog/posts/web-design-nashville-tn-small-business-2026.tsx
+blog,webflow-vs-wordpress-us-small-business-2026,/blog/webflow-vs-wordpress-us-small-business-2026,Webflow vs WordPress for US Small Businesses: The Honest 2026 Comparison,src/lib/legacy-pages/Blog/posts/webflow-vs-wordpress-us-small-business-2026.tsx
+blog,website-cost-small-business-usa-2026,/blog/website-cost-small-business-usa-2026,How Much Does a Website Cost for a Small Business in the USA? (2026 Complete Guide),src/lib/legacy-pages/Blog/posts/website-cost-small-business-usa-2026.tsx
+blog,website-development-cost-india-2026,/blog/website-development-cost-india-2026,Website Development Cost in India 2026: The Honest Breakdown (With Real Numbers),src/lib/legacy-pages/Blog/posts/website-development-cost-india-2026.tsx
+blog,website-redesign-cost-uk-2026-complete-pricing-guide,/blog/website-redesign-cost-uk-2026-complete-pricing-guide,Website Redesign Cost UK 2026: Complete Pricing Guide for SMBs (5-200 Employees),src/lib/legacy-pages/Blog/posts/website-redesign-cost-uk-2026-complete-pricing-guide.tsx
+blog,website-redesign-cost-us-small-business-2026,/blog/website-redesign-cost-us-small-business-2026,Website Redesign Cost for US Small Businesses in 2026,src/lib/legacy-pages/Blog/posts/website-redesign-cost-us-small-business-2026.tsx
+blog,website-redesign-small-business-uk-2026-ai-powered,/blog/website-redesign-small-business-uk-2026-ai-powered,Website Redesign for Small Business UK 2026: AI-Powered Transformation in 4 Weeks,src/lib/legacy-pages/Blog/posts/website-redesign-small-business-uk-2026-ai-powered.tsx
+blog,what-does-an-ai-automation-agency-do-uk,/blog/what-does-an-ai-automation-agency-do-uk,What Does an AI Automation Agency Actually Do?,src/lib/legacy-pages/Blog/posts/what-does-an-ai-automation-agency-do-uk.tsx
+blog,what-does-an-ai-automation-agency-do,/blog/what-does-an-ai-automation-agency-do,What Does an AI Automation Agency Actually Do?,src/lib/legacy-pages/Blog/posts/what-does-an-ai-automation-agency-do.tsx
+blog,what-does-web-design-agency-do-2026,/blog/what-does-web-design-agency-do-2026,What Does a Web Design Agency Actually Do in 2026? (Beyond Just Building Websites),src/lib/legacy-pages/Blog/posts/what-does-web-design-agency-do-2026.tsx
+blog,what-is-agentic-ai,/blog/what-is-agentic-ai,What Is Agentic AI? A Plain-English Guide with Examples (2026),src/lib/legacy-pages/Blog/posts/what-is-agentic-ai.tsx
+blog,what-is-agentic-commerce,/blog/what-is-agentic-commerce,What Is Agentic Commerce? A Plain-English Guide (2026),src/lib/legacy-pages/Blog/posts/what-is-agentic-commerce.tsx
+blog,will-ai-replace-web-designers,/blog/will-ai-replace-web-designers,Will AI Replace Web Designers? An Honest 2026 Answer,src/lib/legacy-pages/Blog/posts/will-ai-replace-web-designers.tsx
+blog,woocommerce-seo-tips-uk-stores,/blog/woocommerce-seo-tips-uk-stores,WooCommerce SEO Tips for UK Stores: 12 Tactics That Drive Organic Sales,src/lib/legacy-pages/Blog/posts/woocommerce-seo-tips-uk-stores.tsx
+blog-inline,hidden-cost-of-cheap-websites-india,/blog/hidden-cost-of-cheap-websites-india,"The Hidden Cost of Cheap Websites in India: Why a ₹10,000 Site Is Costing You Lakhs in 2026",src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,react-vs-wordpress,/blog/react-vs-wordpress,React vs WordPress: Which Architecture Suits Your Business?,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,website-redesign-checklist-2026,/blog/website-redesign-checklist-2026,The 2026 Redesign Checklist: When to Replace Your Old Website,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,b2b-web-design-trust-signals,/blog/b2b-web-design-trust-signals,Trust Signals: How to Design B2B Websites That Convert,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,mobile-only-design-strategy,/blog/mobile-only-design-strategy,Mobile-Only Design vs Responsive Design: The Complete 2026 Strategy Guide,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,shopify-vs-woocommerce-india-comparison,/blog/shopify-vs-woocommerce-india-comparison,Shopify vs WooCommerce vs Custom: An India Focused E Commerce Guide,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,reduce-cart-abandonment-ui-ux,/blog/reduce-cart-abandonment-ui-ux,Reducing Cart Abandonment: The UI UX Fixes That Save Revenue,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,scaling-ecommerce-infrastructure,/blog/scaling-ecommerce-infrastructure,"Scaling Ecommerce Infrastructure: From 10 Orders to 1,000 Orders a Day",src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,quick-commerce-app-design-trends,/blog/quick-commerce-app-design-trends,Quick Commerce UI Designing for the 10 Minute Generation,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,best-payment-gateway-india-2026,/blog/best-payment-gateway-india-2026,The Payment Gateway Matrix: Razorpay vs Stripe vs PhonePe,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,wordpress-security-audit-guide,/blog/wordpress-security-audit-guide,The Anatomy of a Hack How WordPress Sites Get Breached,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,importance-of-website-maintenance-seo,/blog/importance-of-website-maintenance-seo,Why Set It and Forget It Slowly Kills SEO Rankings,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,core-web-vitals-optimization-service,/blog/core-web-vitals-optimization-service,Core Web Vitals 2026 The Metrics That Actually Matter,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,cost-of-website-downtime-calculator,/blog/cost-of-website-downtime-calculator,The ROI of AMC: Calculating the Cost of Downtime,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,wordpress-speed-optimization-plugin-audit,/blog/wordpress-speed-optimization-plugin-audit,Plugin Bloat Why WordPress Sites Become Slow Over Time,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,aio-artificial-intelligence-optimization-guide,/blog/aio-artificial-intelligence-optimization-guide,AIO AI Optimization: The Future of Search Beyond Keywords,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,headless-commerce-pros-cons,/blog/headless-commerce-pros-cons,Headless Commerce Is It Worth the Complexity for Your Business,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,local-seo-multi-location-business,/blog/local-seo-multi-location-business,Local SEO for Global Brands: The Glocal Strategy,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,color-psychology-web-design-india,/blog/color-psychology-web-design-india,The Psychology of Color in Indian E Commerce,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,mvp-development-strategy-startups,/blog/mvp-development-strategy-startups,Startups Should Stop Building Custom and Start with Low Code,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,what-is-webflow,/blog/what-is-webflow,What is Webflow? A Complete Guide with Features and Comparison,src/lib/legacy-pages/Blog/posts.tsx
+blog-inline,top-web-design-companies-mumbai,/blog/top-web-design-companies-mumbai,Best Web Design & E-Commerce Development Companies in Mumbai (2026 Expert Review),src/lib/legacy-pages/Blog/posts.tsx
+blog-mdx,world-cup-2026-ecommerce-flash-sale-store-us,/blog/world-cup-2026-ecommerce-flash-sale-store-us,World Cup 2026: Build a Flash-Sale Store in 7 Days,content/blog/world-cup-2026-ecommerce-flash-sale-store-us.mdx
+blog-mdx,world-cup-2026-seo-small-business,/blog/world-cup-2026-seo-small-business,FIFA World Cup 2026: 7 SEO Moves for Small Businesses Before the Opening Match,content/blog/world-cup-2026-seo-small-business.mdx
+root,about,/about,About FactoryJet | E-Commerce Development Agency for DTC & B2B,src/app/about/page.tsx
+root,agentic-commerce,/agentic-commerce,Agentic Commerce Explained: The 2026 Guide for Brands | FactoryJet,src/app/agentic-commerce/page.tsx
+root,ai-citation-study,/ai-citation-study,We Measured 58 Pages That AI Actually Cites. Authority Did Not Predict It. | FactoryJet,src/app/ai-citation-study/page.tsx
+root,ai-seo,/ai-seo,"AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet",src/app/ai-seo/page.tsx
+root,ai-visibility-checker,/ai-visibility-checker,Free AI Visibility Checker: Does ChatGPT Recommend You? | FactoryJet,src/app/ai-visibility-checker/page.tsx
+city,arlington/seo,/arlington/seo,Arlington TX SEO Company | Local SEO Services | FactoryJet,src/app/arlington/seo/page.tsx
+geo-other,au,/au,Web Design Agency Australia | Websites Live in 7 Days | FactoryJet,src/app/au/page.tsx
+city,austin/ai-agents,/austin/ai-agents,AI Agents & Chatbots for Austin TX Businesses | FactoryJet,src/app/austin/ai-agents/page.tsx
+city,austin/ecommerce-development,/austin/ecommerce-development,"Ecommerce Development Austin TX | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/austin/ecommerce-development/page.tsx
+city,austin/seo,/austin/seo,Austin SEO Company | Local SEO Services TX | FactoryJet,src/app/austin/seo/page.tsx
+city,austin/web-design,/austin/web-design,"Web Design Austin TX | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/austin/web-design/page.tsx
+root,b2b-ecommerce,/b2b-ecommerce,B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms | FactoryJet,src/app/b2b-ecommerce/page.tsx
+root,best-ecommerce-platforms,/best-ecommerce-platforms,Best Ecommerce Platform for Your Business | Platform Comparison | FactoryJet,src/app/best-ecommerce-platforms/page.tsx
+root,bigcommerce-development,/bigcommerce-development,BigCommerce Development Agency | BigCommerce Developers | FactoryJet,src/app/bigcommerce-development/page.tsx
+root,blog,/blog,Web Development & E-Commerce Blog | FactoryJet,src/app/blog/page.tsx
+city,boise/ecommerce-development,/boise/ecommerce-development,"Shopify Developer Boise, ID: 7-Day Builds, Fixed-Price",src/app/boise/ecommerce-development/page.tsx
+city,boise/seo,/boise/seo,Boise SEO Company | Local SEO Services in Boise | FactoryJet,src/app/boise/seo/page.tsx
+root,case-studies,/case-studies,Case Studies | FactoryJet,src/app/case-studies/page.tsx
+city,charlotte/ai-automation,/charlotte/ai-automation,AI Workflow Automation for Charlotte NC Businesses | FactoryJet,src/app/charlotte/ai-automation/page.tsx
+city,charlotte/ecommerce-development,/charlotte/ecommerce-development,"Top-Rated Shopify Developer Charlotte NC | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/charlotte/ecommerce-development/page.tsx
+city,charlotte/seo,/charlotte/seo,Charlotte SEO Company | Local SEO Services NC | FactoryJet,src/app/charlotte/seo/page.tsx
+city,charlotte/web-design,/charlotte/web-design,Web Design Charlotte NC | 7-Day Delivery | FactoryJet,src/app/charlotte/web-design/page.tsx
+city,chattanooga/ecommerce-development,/chattanooga/ecommerce-development,Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet,src/app/chattanooga/ecommerce-development/page.tsx
+city,chattanooga/seo,/chattanooga/seo,Chattanooga SEO Company | Local SEO Services | FactoryJet,src/app/chattanooga/seo/page.tsx
+city,cleveland/seo,/cleveland/seo,Cleveland SEO Company | Local SEO Services | FactoryJet,src/app/cleveland/seo/page.tsx
+city,cleveland/web-design,/cleveland/web-design,Web Design Cleveland | FactoryJet,src/app/cleveland/web-design/page.tsx
+city,colorado-springs/seo,/colorado-springs/seo,Colorado Springs SEO Company | Local SEO | FactoryJet,src/app/colorado-springs/seo/page.tsx
+root,commerceflo,/commerceflo,Commerceflo: The Commerce AI Operator | FactoryJet,src/app/commerceflo/page.tsx
+root,contact,/contact,Contact FactoryJet | Get a Free Web Design Quote,src/app/contact/page.tsx
+city,corpus-christi/seo,/corpus-christi/seo,Corpus Christi SEO Company | Local SEO Services | FactoryJet,src/app/corpus-christi/seo/page.tsx
+city,denver/ai-agents,/denver/ai-agents,AI Agents & Chatbots for Denver CO Businesses | FactoryJet,src/app/denver/ai-agents/page.tsx
+city,denver/ecommerce-development,/denver/ecommerce-development,"Top-Rated Shopify Developer Denver CO | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/denver/ecommerce-development/page.tsx
+city,denver/seo,/denver/seo,Denver SEO Company | Local SEO Services CO | FactoryJet,src/app/denver/seo/page.tsx
+city,denver/web-design,/denver/web-design,"Web Design Denver CO | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/denver/web-design/page.tsx
+city,digital-marketing/ahmedabad,/digital-marketing/ahmedabad,Digital Marketing Agency in Ahmedabad | SEO + AI Search | FactoryJet,src/app/digital-marketing/ahmedabad/page.tsx
+city,digital-marketing/bangalore,/digital-marketing/bangalore,Digital Marketing Agency in Bangalore | FactoryJet,src/app/digital-marketing/bangalore/page.tsx
+city,digital-marketing/chandigarh,/digital-marketing/chandigarh,Digital Marketing Agency in Chandigarh | FactoryJet,src/app/digital-marketing/chandigarh/page.tsx
+city,digital-marketing/chennai,/digital-marketing/chennai,Digital Marketing Agency in Chennai | SEO + AI Search | FactoryJet,src/app/digital-marketing/chennai/page.tsx
+city,digital-marketing/delhi,/digital-marketing/delhi,Digital Marketing Agency in Delhi | FactoryJet,src/app/digital-marketing/delhi/page.tsx
+city,digital-marketing/hyderabad,/digital-marketing/hyderabad,Digital Marketing Agency in Hyderabad | FactoryJet,src/app/digital-marketing/hyderabad/page.tsx
+city,digital-marketing/indore,/digital-marketing/indore,Digital Marketing Agency in Indore | SEO + Ads | FactoryJet,src/app/digital-marketing/indore/page.tsx
+city,digital-marketing/jaipur,/digital-marketing/jaipur,Digital Marketing Agency in Jaipur | SEO + Ads | FactoryJet,src/app/digital-marketing/jaipur/page.tsx
+city,digital-marketing/kolkata,/digital-marketing/kolkata,Digital Marketing Agency in Kolkata | SEO + AI Search | FactoryJet,src/app/digital-marketing/kolkata/page.tsx
+city,digital-marketing/lucknow,/digital-marketing/lucknow,Digital Marketing Agency in Lucknow | SEO + Ads | FactoryJet,src/app/digital-marketing/lucknow/page.tsx
+city,digital-marketing/mumbai,/digital-marketing/mumbai,Digital Marketing Agency in Mumbai | SEO + AI Search | FactoryJet,src/app/digital-marketing/mumbai/page.tsx
+city,digital-marketing/noida,/digital-marketing/noida,Digital Marketing Agency in Noida | SEO + AI Search | FactoryJet,src/app/digital-marketing/noida/page.tsx
+root,digital-marketing,/digital-marketing,Best Digital Marketing Agency in India (2026) | FactoryJet,src/app/digital-marketing/page.tsx
+city,digital-marketing/pune,/digital-marketing/pune,Digital Marketing Agency in Pune | FactoryJet,src/app/digital-marketing/pune/page.tsx
+city,digital-marketing/surat,/digital-marketing/surat,Digital Marketing Agency in Surat | SEO + Ads | FactoryJet,src/app/digital-marketing/surat/page.tsx
+root,ecommerce-consulting,/ecommerce-consulting,E-Commerce Consulting Services for DTC & B2B | FactoryJet,src/app/ecommerce-consulting/page.tsx
+root,ecommerce-for-manufacturers,/ecommerce-for-manufacturers,E-Commerce for Manufacturers & Distributors | Dealer Portals | FactoryJet,src/app/ecommerce-for-manufacturers/page.tsx
+root,faq,/faq,E-Commerce Development FAQ | Omnichannel & B2B Commerce | FactoryJet,src/app/faq/page.tsx
+city,fargo/ecommerce-development,/fargo/ecommerce-development,"Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price",src/app/fargo/ecommerce-development/page.tsx
+city,fargo/seo,/fargo/seo,Fargo SEO Company | Local SEO Services in Fargo | FactoryJet,src/app/fargo/seo/page.tsx
+root,glossary,/glossary,"Commerce & AI Glossary: GEO, Headless, AI Agents & More | FactoryJet",src/app/glossary/page.tsx
+root,headless-commerce,/headless-commerce,Headless & Composable Commerce Development Agency | FactoryJet,src/app/headless-commerce/page.tsx
+city,huntington-beach/seo,/huntington-beach/seo,Huntington Beach SEO Company | Local SEO | FactoryJet,src/app/huntington-beach/seo/page.tsx
+city,lakewood-ranch/seo,/lakewood-ranch/seo,Lakewood Ranch SEO Company | Local SEO Services | FactoryJet,src/app/lakewood-ranch/seo/page.tsx
+city,lincoln/ecommerce-development,/lincoln/ecommerce-development,"Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/lincoln/ecommerce-development/page.tsx
+city,lincoln/seo,/lincoln/seo,Lincoln SEO Company | Local SEO Services NE | FactoryJet,src/app/lincoln/seo/page.tsx
+city,miami/ai-automation,/miami/ai-automation,AI Workflow Automation for Miami FL Businesses | FactoryJet,src/app/miami/ai-automation/page.tsx
+city,miami/ecommerce-development,/miami/ecommerce-development,"Top-Rated Shopify Developer Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/miami/ecommerce-development/page.tsx
+city,miami/web-design,/miami/web-design,"Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/miami/web-design/page.tsx
+root,n8n-automation,/n8n-automation,n8n Automation India | Workflow Automation Company | FactoryJet,src/app/n8n-automation/page.tsx
+city,nashville/ecommerce-development,/nashville/ecommerce-development,"Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/nashville/ecommerce-development/page.tsx
+city,nashville/seo,/nashville/seo,Nashville SEO Company | Local SEO Services TN | FactoryJet,src/app/nashville/seo/page.tsx
+city,nashville/web-design,/nashville/web-design,"Web Design Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/nashville/web-design/page.tsx
+city,new-york/web-design,/new-york/web-design,"NYC Web Design Agency: Custom Sites in 7 Days, Fixed-Price",src/app/new-york/web-design/page.tsx
+root,omnichannel-commerce,/omnichannel-commerce,Omnichannel Commerce Agency | Omnichannel Ecommerce Solutions | FactoryJet,src/app/omnichannel-commerce/page.tsx
+root,home,/,E-Commerce Development Agency for DTC & B2B Brands | FactoryJet,src/app/page.tsx
+root,portfolio,/portfolio,Portfolio - Websites We,src/app/portfolio/page.tsx
+city,portland/ecommerce-development,/portland/ecommerce-development,"Top-Rated Shopify Developer Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/portland/ecommerce-development/page.tsx
+city,portland/web-design,/portland/web-design,"Web Design Portland OR | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/portland/web-design/page.tsx
+root,pricing,/pricing,E-Commerce Development Pricing | How We Scope & Quote | FactoryJet,src/app/pricing/page.tsx
+root,privacy,/privacy,Privacy Policy | FactoryJet,src/app/privacy/page.tsx
+city,providence/seo,/providence/seo,Providence RI SEO Company | Local SEO Services | FactoryJet,src/app/providence/seo/page.tsx
+city,raleigh/ai-agents,/raleigh/ai-agents,AI Agents & Chatbots for Raleigh NC Businesses | FactoryJet,src/app/raleigh/ai-agents/page.tsx
+city,raleigh/ecommerce-development,/raleigh/ecommerce-development,"Top-Rated Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/raleigh/ecommerce-development/page.tsx
+city,raleigh/web-design,/raleigh/web-design,"Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/raleigh/web-design/page.tsx
+root,refund-policy,/refund-policy,Refund Policy | FactoryJet,src/app/refund-policy/page.tsx
+city,replatforming/magento-to-shopify,/replatforming/magento-to-shopify,Magento to Shopify Migration Services | Adobe Commerce Replatforming | FactoryJet,src/app/replatforming/magento-to-shopify/page.tsx
+root,replatforming,/replatforming,E-Commerce Replatforming & Migration Services | FactoryJet,src/app/replatforming/page.tsx
+city,replatforming/salesforce-commerce-cloud-to-shopify-plus,/replatforming/salesforce-commerce-cloud-to-shopify-plus,Salesforce Commerce Cloud to Shopify Plus Migration | SFCC Replatforming | FactoryJet,src/app/replatforming/salesforce-commerce-cloud-to-shopify-plus/page.tsx
+city,replatforming/squarespace-to-shopify,/replatforming/squarespace-to-shopify,Squarespace to Shopify Migration Services | FactoryJet,src/app/replatforming/squarespace-to-shopify/page.tsx
+city,replatforming/wix-to-shopify,/replatforming/wix-to-shopify,Wix to Shopify Migration Services | FactoryJet,src/app/replatforming/wix-to-shopify/page.tsx
+city,replatforming/woocommerce-to-shopify,/replatforming/woocommerce-to-shopify,WooCommerce to Shopify Migration Services | WordPress Replatforming | FactoryJet,src/app/replatforming/woocommerce-to-shopify/page.tsx
+city,replatforming/wordpress-to-shopify,/replatforming/wordpress-to-shopify,WordPress to Shopify Migration Services | Blog & Content Migration | FactoryJet,src/app/replatforming/wordpress-to-shopify/page.tsx
+city,seo/ahmedabad,/seo/ahmedabad,SEO Company in Ahmedabad | Best SEO Services | FactoryJet,src/app/seo/ahmedabad/page.tsx
+city,seo/bangalore,/seo/bangalore,SEO Company in Bangalore | Best SEO Services Bengaluru | FactoryJet,src/app/seo/bangalore/page.tsx
+city,seo/chennai,/seo/chennai,SEO Company in Chennai | Best SEO Services Chennai | FactoryJet,src/app/seo/chennai/page.tsx
+city,seo/delhi,/seo/delhi,SEO Company in Delhi | Best SEO Services Delhi NCR | FactoryJet,src/app/seo/delhi/page.tsx
+city,seo/ecommerce-seo,/seo/ecommerce-seo,Ecommerce SEO Services in India | Get Your Store Found | FactoryJet,src/app/seo/ecommerce-seo/page.tsx
+city,seo/hyderabad,/seo/hyderabad,SEO Company in Hyderabad | Best SEO Services Hyderabad | FactoryJet,src/app/seo/hyderabad/page.tsx
+city,seo/jaipur,/seo/jaipur,SEO Company in Jaipur | Best SEO Services | FactoryJet,src/app/seo/jaipur/page.tsx
+city,seo/kolkata,/seo/kolkata,SEO Company in Kolkata | Best SEO Agency | FactoryJet,src/app/seo/kolkata/page.tsx
+city,seo/link-building,/seo/link-building,"Link Building Services in India | Real Links, No Spam | FactoryJet",src/app/seo/link-building/page.tsx
+city,seo/local-seo,/seo/local-seo,Local SEO Services in India | Google Business Profile & Map Pack | FactoryJet,src/app/seo/local-seo/page.tsx
+city,seo/mumbai,/seo/mumbai,"SEO Company in Mumbai, India | Best SEO Services Mumbai | FactoryJet",src/app/seo/mumbai/page.tsx
+city,seo/noida,/seo/noida,SEO Company in Noida | Best SEO Services | FactoryJet,src/app/seo/noida/page.tsx
+root,seo,/seo,SEO Company in India | AI-Native SEO Agency | FactoryJet,src/app/seo/page.tsx
+city,seo/pune,/seo/pune,SEO Company in Pune | Best SEO Services Pune | FactoryJet,src/app/seo/pune/page.tsx
+city,seo/seo-audit,/seo/seo-audit,SEO Audit Services in India | Free Website Check | FactoryJet,src/app/seo/seo-audit/page.tsx
+city,seo/technical-seo,/seo/technical-seo,"Technical SEO Services in India | Fast, Search-Ready Sites | FactoryJet",src/app/seo/technical-seo/page.tsx
+city,seo/vadodara,/seo/vadodara,SEO Company in Vadodara | Best SEO Services | FactoryJet,src/app/seo/vadodara/page.tsx
+service,services/ai-agent-development/ai-chatbot,/services/ai-agent-development/ai-chatbot,AI Chatbot Development India | WhatsApp Chatbot | FactoryJet,src/app/services/ai-agent-development/ai-chatbot/page.tsx
+service,services/ai-agent-development/ai-customer-support,/services/ai-agent-development/ai-customer-support,AI Customer Support Agent India | WhatsApp AI | FactoryJet,src/app/services/ai-agent-development/ai-customer-support/page.tsx
+service,services/ai-agent-development/ai-marketing-agent,/services/ai-agent-development/ai-marketing-agent,AI Marketing Agent India | WhatsApp Automation | FactoryJet,src/app/services/ai-agent-development/ai-marketing-agent/page.tsx
+service,services/ai-agent-development/ai-sales-agent,/services/ai-agent-development/ai-sales-agent,AI Sales Agent India | WhatsApp Lead Gen | FactoryJet,src/app/services/ai-agent-development/ai-sales-agent/page.tsx
+service,services/ai-agent-development/ai-scheduling-agent,/services/ai-agent-development/ai-scheduling-agent,AI Scheduling Agent India | WhatsApp Booking | FactoryJet,src/app/services/ai-agent-development/ai-scheduling-agent/page.tsx
+service,services/ai-agent-development/ai-voice-agent,/services/ai-agent-development/ai-voice-agent,AI Voice Agent India | Hindi AI Calling Bot | FactoryJet,src/app/services/ai-agent-development/ai-voice-agent/page.tsx
+service,services/ai-agent-development/ai-workflow-automation,/services/ai-agent-development/ai-workflow-automation,AI Workflow Automation India | FactoryJet,src/app/services/ai-agent-development/ai-workflow-automation/page.tsx
+service,services/ai-agent-development/manufacturing-operations-agent,/services/ai-agent-development/manufacturing-operations-agent,AI Agents for Manufacturing Operations | FactoryJet,src/app/services/ai-agent-development/manufacturing-operations-agent/page.tsx
+service,services/ai-agent-development,/services/ai-agent-development,"AI Agent Development Services, Custom AI Agents | FactoryJet",src/app/services/ai-agent-development/page.tsx
+service,services/ai-agent-development/procurement-supply-chain-agent,/services/ai-agent-development/procurement-supply-chain-agent,Procurement & Supply Chain AI Agent Development | FactoryJet,src/app/services/ai-agent-development/procurement-supply-chain-agent/page.tsx
+service,services/ai-agent-development/rfq-bidding-agent,/services/ai-agent-development/rfq-bidding-agent,RFQ Automation Agent for Quoting Teams | FactoryJet,src/app/services/ai-agent-development/rfq-bidding-agent/page.tsx
+service,services/ai-automation,/services/ai-automation,AI Automation Agency in the USA for Small Businesses | FactoryJet,src/app/services/ai-automation/page.tsx
+service,services/ai-chatbot-development,/services/ai-chatbot-development,Best AI Chatbot Development Company in USA | FactoryJet,src/app/services/ai-chatbot-development/page.tsx
+service,services/ai-integration-services,/services/ai-integration-services,AI Integration Services USA | Connect AI to Your Tools | FactoryJet,src/app/services/ai-integration-services/page.tsx
+service,services/ai-seo,/services/ai-seo,AI SEO Agency in the USA: AI SEO Services and AI Search Visibility,src/app/services/ai-seo/page.tsx
+service,services/ai-workflow-automation,/services/ai-workflow-automation,AI Workflow Automation USA | Process AI | FactoryJet,src/app/services/ai-workflow-automation/page.tsx
+service,services/amazon-agency,/services/amazon-agency,"Amazon Agency for US Brands: Ads, SEO & PPC | FactoryJet",src/app/services/amazon-agency/page.tsx
+service,services/dental-seo,/services/dental-seo,Dental SEO Agency | Map Pack SEO for Dentists & Dental Practices | FactoryJet,src/app/services/dental-seo/page.tsx
+service,services/ecommerce-development/ahmedabad,/services/ecommerce-development/ahmedabad,Ecommerce Development in Ahmedabad | FactoryJet,src/app/services/ecommerce-development/ahmedabad/page.tsx
+service,services/ecommerce-development/bangalore,/services/ecommerce-development/bangalore,Ecommerce Development in Bangalore | FactoryJet,src/app/services/ecommerce-development/bangalore/page.tsx
+service,services/ecommerce-development/chandigarh,/services/ecommerce-development/chandigarh,Ecommerce Development in Chandigarh | FactoryJet,src/app/services/ecommerce-development/chandigarh/page.tsx
+service,services/ecommerce-development/chennai,/services/ecommerce-development/chennai,Ecommerce Development in Chennai | FactoryJet,src/app/services/ecommerce-development/chennai/page.tsx
+service,services/ecommerce-development/delhi,/services/ecommerce-development/delhi,Ecommerce Development in Delhi | FactoryJet,src/app/services/ecommerce-development/delhi/page.tsx
+service,services/ecommerce-development/hyderabad,/services/ecommerce-development/hyderabad,Ecommerce Development in Hyderabad | FactoryJet,src/app/services/ecommerce-development/hyderabad/page.tsx
+service,services/ecommerce-development/jaipur,/services/ecommerce-development/jaipur,Ecommerce Development in Jaipur | FactoryJet,src/app/services/ecommerce-development/jaipur/page.tsx
+service,services/ecommerce-development/kochi,/services/ecommerce-development/kochi,Ecommerce Development in Kochi | FactoryJet,src/app/services/ecommerce-development/kochi/page.tsx
+service,services/ecommerce-development/kolkata,/services/ecommerce-development/kolkata,Ecommerce Development in Kolkata | FactoryJet,src/app/services/ecommerce-development/kolkata/page.tsx
+service,services/ecommerce-development/lucknow,/services/ecommerce-development/lucknow,Ecommerce Development in Lucknow | FactoryJet,src/app/services/ecommerce-development/lucknow/page.tsx
+service,services/ecommerce-development/mumbai,/services/ecommerce-development/mumbai,Ecommerce Development in Mumbai | FactoryJet,src/app/services/ecommerce-development/mumbai/page.tsx
+service,services/ecommerce-development,/services/ecommerce-development,Ecommerce Development Company | Custom Online Stores | FactoryJet,src/app/services/ecommerce-development/page.tsx
+service,services/ecommerce-development/pune,/services/ecommerce-development/pune,Ecommerce Development in Pune | FactoryJet,src/app/services/ecommerce-development/pune/page.tsx
+service,services/ecommerce-development/surat,/services/ecommerce-development/surat,Ecommerce Development in Surat | FactoryJet,src/app/services/ecommerce-development/surat/page.tsx
+service,services/ecommerce-growth-agency,/services/ecommerce-growth-agency,Ecommerce Growth Agency for US Brands | FactoryJet,src/app/services/ecommerce-growth-agency/page.tsx
+service,services/ecommerce-marketing-agency,/services/ecommerce-marketing-agency,Ecommerce Marketing Agency for US Brands | FactoryJet,src/app/services/ecommerce-marketing-agency/page.tsx
+service,services/ecommerce-seo,/services/ecommerce-seo,Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet,src/app/services/ecommerce-seo/page.tsx
+service,services/generative-engine-optimization,/services/generative-engine-optimization,Generative Engine Optimization Services | GEO Agency,src/app/services/generative-engine-optimization/page.tsx
+service,services/healthcare-seo,/services/healthcare-seo,Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet,src/app/services/healthcare-seo/page.tsx
+service,services/law-firm-seo,/services/law-firm-seo,Best Law Firm SEO Company | SEO for Attorneys | FactoryJet,src/app/services/law-firm-seo/page.tsx
+service,services/law-firm-website-design,/services/law-firm-website-design,Law Firm Website Design for US Attorneys | FactoryJet,src/app/services/law-firm-website-design/page.tsx
+service,services/local-seo,/services/local-seo,Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet,src/app/services/local-seo/page.tsx
+service,services/magento-development,/services/magento-development,Magento Development Company USA | Hire Magento Developers | FactoryJet,src/app/services/magento-development/page.tsx
+service,services,/services,Web Design Services for US Small Businesses | FactoryJet,src/app/services/page.tsx
+service,services/real-estate-website-design,/services/real-estate-website-design,Real Estate Website Design: IDX Sites in 7 Days | FactoryJet,src/app/services/real-estate-website-design/page.tsx
+service,services/roofing-seo,/services/roofing-seo,Roofing SEO Services: SEO for Roofers & Roofing Companies | FactoryJet,src/app/services/roofing-seo/page.tsx
+service,services/seo-audit,/services/seo-audit,SEO Audit Services in the US: Free Site Audit & Technical SEO | FactoryJet,src/app/services/seo-audit/page.tsx
+service,services/seo-consulting,/services/seo-consulting,"SEO Consulting Services in the US: Audits, Strategy & Roadmaps | FactoryJet",src/app/services/seo-consulting/page.tsx
+service,services/seo,/services/seo,SEO Agency for Small Business USA | Local SEO | FactoryJet,src/app/services/seo/page.tsx
+service,services/shopify-development,/services/shopify-development,Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet,src/app/services/shopify-development/page.tsx
+service,services/shopify-plus-agency,/services/shopify-plus-agency,Shopify Plus Agency | Enterprise Shopify Development | FactoryJet,src/app/services/shopify-plus-agency/page.tsx
+service,services/shopify-seo,/services/shopify-seo,Shopify SEO Agency USA: Rank Your Store & Win AI Citations | FactoryJet,src/app/services/shopify-seo/page.tsx
+service,services/small-business-seo,/services/small-business-seo,Small Business SEO Services in the US: More Customers from Google | FactoryJet,src/app/services/small-business-seo/page.tsx
+service,services/small-business-website-design,/services/small-business-website-design,Small Business Website Design | 7-Day Delivery | FactoryJet,src/app/services/small-business-website-design/page.tsx
+service,services/tiktok-shop-agency,/services/tiktok-shop-agency,TikTok Shop Agency for US Brands: Ads & Affiliates | FactoryJet,src/app/services/tiktok-shop-agency/page.tsx
+service,services/walmart-marketplace-agency,/services/walmart-marketplace-agency,"Walmart Marketplace Agency for US Brands: Approval, Ads & WFS | FactoryJet",src/app/services/walmart-marketplace-agency/page.tsx
+service,services/web-application-development,/services/web-application-development,Web Application Development for US Businesses | FactoryJet,src/app/services/web-application-development/page.tsx
+service,services/web-design,/services/web-design,"Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet",src/app/services/web-design/page.tsx
+service,services/website-redesign,/services/website-redesign,Website Redesign Services USA: 7-Day Refresh | FactoryJet,src/app/services/website-redesign/page.tsx
+service,services/woocommerce-development,/services/woocommerce-development,WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet,src/app/services/woocommerce-development/page.tsx
+service,services/wordpress-development,/services/wordpress-development,WordPress Development for US Businesses | FactoryJet,src/app/services/wordpress-development/page.tsx
+root,shopify-development,/shopify-development,Shopify Website Development Company India | FactoryJet,src/app/shopify-development/page.tsx
+city,sioux-falls/ecommerce-development,/sioux-falls/ecommerce-development,"Shopify Developer Sioux Falls, SD: 7-Day Builds, Fixed-Price",src/app/sioux-falls/ecommerce-development/page.tsx
+city,sioux-falls/seo,/sioux-falls/seo,Sioux Falls SEO Company | Local SEO Services | FactoryJet,src/app/sioux-falls/seo/page.tsx
+city,tampa/ecommerce-development,/tampa/ecommerce-development,"Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/tampa/ecommerce-development/page.tsx
+city,tampa/seo,/tampa/seo,Tampa SEO Company | Local SEO Services in Tampa | FactoryJet,src/app/tampa/seo/page.tsx
+city,tampa/web-design,/tampa/web-design,"Web Design Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet",src/app/tampa/web-design/page.tsx
+root,terms,/terms,Terms and Conditions | FactoryJet,src/app/terms/page.tsx
+root,thank-you,/thank-you,Thank You | Your Request Reached FactoryJet,src/app/thank-you/page.tsx
+geo-other,uae/ecommerce-development,/uae/ecommerce-development,"Best Ecommerce Development Company in Dubai, UAE | FactoryJet",src/app/uae/ecommerce-development/page.tsx
+geo-other,uae,/uae,Web Design Agency Dubai | UAE Website Development | FactoryJet,src/app/uae/page.tsx
+geo-uk,uk/ai-agents,/uk/ai-agents,AI Agent Development & Automation Agency UK | FactoryJet,src/app/uk/ai-agents/page.tsx
+geo-uk,uk/ai-seo,/uk/ai-seo,AI SEO Agency UK | Get Cited by ChatGPT & AI Overviews | FactoryJet,src/app/uk/ai-seo/page.tsx
+geo-uk,uk/birmingham,/uk/birmingham,AI Web Design Agency Birmingham | FactoryJet,src/app/uk/birmingham/page.tsx
+geo-uk,uk/ecommerce-development,/uk/ecommerce-development,Shopify & Ecommerce Development Agency UK | FactoryJet,src/app/uk/ecommerce-development/page.tsx
+geo-uk,uk/ecommerce-seo,/uk/ecommerce-seo,"Ecommerce SEO Agency UK | Organic Revenue, Not Just Rankings | FactoryJet",src/app/uk/ecommerce-seo/page.tsx
+geo-uk,uk/leeds,/uk/leeds,/uk/leeds,src/app/uk/leeds/page.tsx
+geo-uk,uk/liverpool,/uk/liverpool,Web Design Agency Liverpool | AI-Native | FactoryJet,src/app/uk/liverpool/page.tsx
+geo-uk,uk/local-seo,/uk/local-seo,Local SEO Agency UK | Map Pack & AI Answers | FactoryJet,src/app/uk/local-seo/page.tsx
+geo-uk,uk/london,/uk/london,Web Design & Digital Agency in London | FactoryJet,src/app/uk/london/page.tsx
+geo-uk,uk/london/seo,/uk/london/seo,"SEO Agency London | AI SEO, GEO & AEO | FactoryJet",src/app/uk/london/seo/page.tsx
+geo-uk,uk/london/web-design,/uk/london/web-design,Web Design London | Website Design Agency | FactoryJet,src/app/uk/london/web-design/page.tsx
+geo-uk,uk/manchester,/uk/manchester,/uk/manchester,src/app/uk/manchester/page.tsx
+geo-uk,uk,/uk,/uk,src/app/uk/page.tsx
+geo-uk,uk/seo-audit,/uk/seo-audit,SEO Audit Services UK | Free & Human-Reviewed | FactoryJet,src/app/uk/seo-audit/page.tsx
+geo-uk,uk/seo,/uk/seo,SEO Agency UK | Rank in Google & AI Answers | FactoryJet,src/app/uk/seo/page.tsx
+geo-uk,uk/sheffield,/uk/sheffield,Speed That Competes,src/app/uk/sheffield/page.tsx
+geo-uk,uk/shopify-development,/uk/shopify-development,"Shopify Development Partner UK | Certified, Not Just Capable | FactoryJet",src/app/uk/shopify-development/page.tsx
+geo-uk,uk/shopify-seo,/uk/shopify-seo,Shopify SEO Agency UK | Shopify-Specific Technical SEO | FactoryJet,src/app/uk/shopify-seo/page.tsx
+geo-uk,uk/web-design,/uk/web-design,Web Design UK | Conversion-Focused Website Design | FactoryJet,src/app/uk/web-design/page.tsx
+city,web-design/ahmedabad,/web-design/ahmedabad,Web Design Company in Ahmedabad | FactoryJet,src/app/web-design/ahmedabad/page.tsx
+city,web-design/bangalore,/web-design/bangalore,Web Design Company in Bangalore | FactoryJet,src/app/web-design/bangalore/page.tsx
+city,web-design/bhubaneswar,/web-design/bhubaneswar,Web Design Company in Bhubaneswar | FactoryJet,src/app/web-design/bhubaneswar/page.tsx
+city,web-design/chennai,/web-design/chennai,Expert Web Design Company in Chennai | FactoryJet,src/app/web-design/chennai/page.tsx
+city,web-design/coimbatore,/web-design/coimbatore,Web Design Company in Coimbatore | FactoryJet,src/app/web-design/coimbatore/page.tsx
+city,web-design/delhi,/web-design/delhi,Web Design Company in Delhi | FactoryJet,src/app/web-design/delhi/page.tsx
+city,web-design/gurgaon,/web-design/gurgaon,Web Design Company in Gurgaon | FactoryJet,src/app/web-design/gurgaon/page.tsx
+city,web-design/hyderabad,/web-design/hyderabad,Web Design Company in Hyderabad | FactoryJet,src/app/web-design/hyderabad/page.tsx
+city,web-design/indore,/web-design/indore,Web Design Company in Indore | Website Development Indore | FactoryJet,src/app/web-design/indore/page.tsx
+city,web-design/jaipur,/web-design/jaipur,Web Design Company in Jaipur | FactoryJet,src/app/web-design/jaipur/page.tsx
+city,web-design/kochi,/web-design/kochi,Web Design Company in Kochi | FactoryJet,src/app/web-design/kochi/page.tsx
+city,web-design/kolkata,/web-design/kolkata,Web Design Company in Kolkata | FactoryJet,src/app/web-design/kolkata/page.tsx
+city,web-design/madurai,/web-design/madurai,Professional Web Design Company in Madurai | FactoryJet,src/app/web-design/madurai/page.tsx
+city,web-design/mumbai,/web-design/mumbai,Web Design Company in Mumbai | FactoryJet,src/app/web-design/mumbai/page.tsx
+city,web-design/nagpur,/web-design/nagpur,Web Design Company in Nagpur | FactoryJet,src/app/web-design/nagpur/page.tsx
+city,web-design/noida,/web-design/noida,Web Design Company in Noida | FactoryJet,src/app/web-design/noida/page.tsx
+root,web-design,/web-design,Best Web Design Company in India (2026) | FactoryJet,src/app/web-design/page.tsx
+city,web-design/pune,/web-design/pune,Web Design Company in Pune | FactoryJet,src/app/web-design/pune/page.tsx
+city,web-design/rajkot,/web-design/rajkot,Web Design Company in Rajkot | FactoryJet,src/app/web-design/rajkot/page.tsx
+city,web-design/surat,/web-design/surat,Web Design in Surat | Diamond & Textile | FactoryJet,src/app/web-design/surat/page.tsx
+city,web-design/thiruvananthapuram,/web-design/thiruvananthapuram,Web Design Company in Thiruvananthapuram | FactoryJet,src/app/web-design/thiruvananthapuram/page.tsx
+city,web-design/vadodara,/web-design/vadodara,Web Design Company in Vadodara | FactoryJet,src/app/web-design/vadodara/page.tsx
+city,web-design/visakhapatnam,/web-design/visakhapatnam,Web Design Company in Visakhapatnam | FactoryJet,src/app/web-design/visakhapatnam/page.tsx
+root,website-cost,/website-cost,How Much Does an E-Commerce Website Cost in 2026? | FactoryJet,src/app/website-cost/page.tsx
+root,whatsapp-chatbot,/whatsapp-chatbot,WhatsApp Chatbot Development India | WhatsApp Business API Integration | FactoryJet,src/app/whatsapp-chatbot/page.tsx
+root,wordpress-development,/wordpress-development,WordPress Development India | FactoryJet,src/app/wordpress-development/page.tsx

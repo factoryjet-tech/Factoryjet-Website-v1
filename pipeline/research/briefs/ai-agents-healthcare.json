@@ -1,0 +1,175 @@
+{
+ "slug": "ai-agents-healthcare",
+ "route": "/services/ai-agents-for-healthcare",
+ "kind": "service",
+ "note": "AI Overview live on this category",
+ "target_keyword": "ai agents for healthcare",
+ "search_volume": 170,
+ "keyword_difficulty": 28,
+ "winning_page_type": "other",
+ "ai_overview_present": true,
+ "ai_overview_cites": [
+  "nature.com",
+  "mckinsey.com",
+  "pmc.ncbi.nlm.nih.gov",
+  "ibm.com",
+  "kore.ai",
+  "cognigy.com",
+  "artera.io",
+  "ohmd.com",
+  "deployflow.co",
+  "info.productiveedge.com"
+ ],
+ "paa_questions": [
+  "Which AI agent is best for healthcare?",
+  "How are AI agents used in healthcare?",
+  "Is there a medical AI like Chatgpt?",
+  "Which AI platform is best for healthcare?",
+  "What are the top 3 AI agents?",
+  "What is the best AI platform for healthcare?",
+  "How to build AI agents for healthcare?",
+  "Which AI agent is best for medical?",
+  "Which is the best AI for healthcare?",
+  "How much does ChatGPT cost for healthcare?",
+  "What are some examples of how AI is being used in healthcare?",
+  "What are the different types of AI used in healthcare?",
+  "What are the 10 benefits of artificial intelligence in healthcare?",
+  "How is AI used in healthcare now?",
+  "Which medical specialties are least likely to be replaced by AI?",
+  "What is the main use of AI in healthcare?",
+  "How is AI used in medical practice?",
+  "Will AI replace primary care doctors?",
+  "Is ChatGPT for healthcare HIPAA compliant?",
+  "Where is AI used most in healthcare?",
+  "Did Bill Gates say AI will replace doctors?",
+  "What are the risks of using AI in healthcare?",
+  "What did Stephen Hawking say about AI before he died?",
+  "What did Nikola Tesla say about AI?",
+  "Could AI ever become alive?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "hippocraticai.com",
+   "title": "Hippocratic AI | Safest Generative AI Healthcare Agent",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "nature.com",
+   "title": "AI agent in healthcare: applications, evaluations, and future ...",
+   "page_type": "other"
+  },
+  {
+   "rank": 3,
+   "domain": "ibm.com",
+   "title": "AI Agents in Healthcare",
+   "page_type": "other"
+  },
+  {
+   "rank": 4,
+   "domain": "notablehealth.com",
+   "title": "Notable | The AI Platform Purpose-Built for Healthcare",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "oracle.com",
+   "title": "What Are AI Agents for Healthcare? Benefits & Use Cases",
+   "page_type": "other"
+  },
+  {
+   "rank": 6,
+   "domain": "mckinsey.com",
+   "title": "What are AI agents, and what can they do for healthcare?",
+   "page_type": "other"
+  },
+  {
+   "rank": 7,
+   "domain": "sciencedirect.com",
+   "title": "A foundational architecture for AI agents in healthcare",
+   "page_type": "blog"
+  },
+  {
+   "rank": 8,
+   "domain": "beam.ai",
+   "title": "AI Agents for Healthcare Automation",
+   "page_type": "other"
+  },
+  {
+   "rank": 9,
+   "domain": "aimultiple.com",
+   "title": "Top 10 AI Agents in Healthcare with Examples",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 10,
+   "domain": "cognigy.com",
+   "title": "AI Agents for Healthcare",
+   "page_type": "other"
+  },
+  {
+   "rank": 11,
+   "domain": "cognigy.com",
+   "title": "AI Agents for Healthcare",
+   "page_type": "other"
+  },
+  {
+   "rank": 12,
+   "domain": "deployflow.co",
+   "title": "Best AI Agent Solutions for Healthcare Providers: CTO Guide",
+   "page_type": "blog"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "hippocraticai.com",
+  "notablehealth.com"
+ ],
+ "related_searches": [
+  "Best ai agents for healthcare",
+  "AI agents in healthcare examples",
+  "AI agents in healthcare research paper",
+  "Hippocratic AI",
+  "Medical AI agent GitHub",
+  "AI agent for medical diagnosis",
+  "Awesome AI agents for healthcare",
+  "AI healthcare companies stock",
+  "Best ai agents for healthcare",
+  "AI agents in healthcare examples",
+  "AI agents in healthcare research paper",
+  "Hippocratic AI",
+  "Medical AI agent GitHub",
+  "AI agent for medical diagnosis",
+  "Awesome AI agents for healthcare",
+  "AI healthcare companies stock"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "Which AI agent is best for healthcare?": "page query",
+  "How are AI agents used in healthcare?": "page query",
+  "Is there a medical AI like Chatgpt?": "page query",
+  "Which AI platform is best for healthcare?": "page query",
+  "What are the top 3 AI agents?": "page query",
+  "What is the best AI platform for healthcare?": "page query",
+  "How to build AI agents for healthcare?": "page query",
+  "Which AI agent is best for medical?": "ai agents for healthcare",
+  "Which is the best AI for healthcare?": "ai agents for healthcare",
+  "How much does ChatGPT cost for healthcare?": "ai agents for healthcare",
+  "What are some examples of how AI is being used in healthcare?": "how is ai used in healthcare",
+  "What are the different types of AI used in healthcare?": "how is ai used in healthcare",
+  "What are the 10 benefits of artificial intelligence in healthcare?": "how is ai used in healthcare",
+  "How is AI used in healthcare now?": "how is ai used in healthcare",
+  "Which medical specialties are least likely to be replaced by AI?": "how is ai used in healthcare",
+  "What is the main use of AI in healthcare?": "how is ai used in healthcare",
+  "How is AI used in medical practice?": "ai in medical practice",
+  "Will AI replace primary care doctors?": "ai in medical practice",
+  "Is ChatGPT for healthcare HIPAA compliant?": "ai in medical practice",
+  "Where is AI used most in healthcare?": "ai in medical practice",
+  "Did Bill Gates say AI will replace doctors?": "ai in medical practice",
+  "What are the risks of using AI in healthcare?": "is ai safe in healthcare",
+  "What did Stephen Hawking say about AI before he died?": "is ai safe in healthcare",
+  "What did Nikola Tesla say about AI?": "is ai safe in healthcare",
+  "Could AI ever become alive?": "is ai safe in healthcare"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

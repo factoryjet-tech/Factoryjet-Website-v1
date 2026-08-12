@@ -1,0 +1,157 @@
+{
+ "slug": "restaurant-web-design",
+ "route": "/services/restaurant-website-design",
+ "kind": "service",
+ "note": "",
+ "target_keyword": "restaurant website design",
+ "search_volume": 720,
+ "keyword_difficulty": 14,
+ "winning_page_type": "other",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "What is the best website design for a restaurant?",
+  "What is the 30/30/30 rule for restaurants?",
+  "How much does it cost to design a restaurant website?",
+  "How to design a website for a restaurant?",
+  "How much would it cost to build a website for a restaurant?",
+  "What is the 60/40 restaurant rule?",
+  "Can I leave a 10% tip at a restaurant?",
+  "What is a fair price for a website?",
+  "What are the 7 C's of a website?",
+  "What are the five golden rules of a website?",
+  "What are the 5 elements to a good website design?",
+  "What are the 7 C's of website design?",
+  "What are the key elements of a good website?",
+  "Do I need a website for my restaurant?",
+  "How much does a website cost for a restaurant?",
+  "Why would a business not have a website?",
+  "Why does every business need a website in 2026?",
+  "How to make your restaurant successful?",
+  "Is there a monthly fee to have a website?",
+  "How do I create a website for my restaurant?",
+  "How much does it cost to create a restaurant website?",
+  "Is $1500 a good price for a website?",
+  "How much is a restaurant website with ordering online?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "dribbble.com",
+   "title": "Inspiring restaurant website designs for inspiration",
+   "page_type": "other"
+  },
+  {
+   "rank": 2,
+   "domain": "pinterest.com",
+   "title": "Restaurant Website Design",
+   "page_type": "other"
+  },
+  {
+   "rank": 3,
+   "domain": "canva.com",
+   "title": "Free Restaurant Website Builder",
+   "page_type": "other"
+  },
+  {
+   "rank": 4,
+   "domain": "pinterest.com",
+   "title": "58 Restaurant - Web Design ideas",
+   "page_type": "other"
+  },
+  {
+   "rank": 5,
+   "domain": "framer.com",
+   "title": "20 best restaurant website examples + design tips",
+   "page_type": "blog"
+  },
+  {
+   "rank": 6,
+   "domain": "reddit.com",
+   "title": "Everything You Need To Know About Web Design for ...",
+   "page_type": "directory"
+  },
+  {
+   "rank": 7,
+   "domain": "figma.com",
+   "title": "Customizable Restaurant Website Design Templates",
+   "page_type": "other"
+  },
+  {
+   "rank": 8,
+   "domain": "getbento.com",
+   "title": "https://www.getbento.com/blog/best-restaurant-webs...",
+   "page_type": "blog"
+  },
+  {
+   "rank": 9,
+   "domain": "intechnic.com",
+   "title": "Best Restaurant Website Design Inspirations 51K",
+   "page_type": "blog"
+  },
+  {
+   "rank": 10,
+   "domain": "awwwards.com",
+   "title": "Hotel & Restaurant Design websites",
+   "page_type": "other"
+  },
+  {
+   "rank": 11,
+   "domain": "onepagelove.com",
+   "title": "Restaurant Website Design Inspiration",
+   "page_type": "other"
+  },
+  {
+   "rank": 12,
+   "domain": "youtube.com",
+   "title": "Making a Restaurant Website in 2026? Do this.",
+   "page_type": "directory"
+  }
+ ],
+ "named_rivals_for_comparison_table": [],
+ "related_searches": [
+  "Restaurant website design templates",
+  "Restaurant website design free",
+  "Restaurant website design ideas",
+  "Restaurant website design in HTML",
+  "Best restaurant website design",
+  "Luxury restaurant website design",
+  "Restaurant website design pinterest",
+  "Restaurant website design Figma",
+  "Restaurant website design templates",
+  "Restaurant website design free",
+  "Restaurant website design ideas",
+  "Restaurant website design in HTML",
+  "Best restaurant website design",
+  "Luxury restaurant website design",
+  "Restaurant website design pinterest",
+  "Restaurant website design Figma"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "What is the best website design for a restaurant?": "page query",
+  "What is the 30/30/30 rule for restaurants?": "page query",
+  "How much does it cost to design a restaurant website?": "page query",
+  "How to design a website for a restaurant?": "page query",
+  "How much would it cost to build a website for a restaurant?": "page query",
+  "What is the 60/40 restaurant rule?": "page query",
+  "Can I leave a 10% tip at a restaurant?": "page query",
+  "What is a fair price for a website?": "restaurant website design",
+  "What are the 7 C's of a website?": "what should a restaurant website include",
+  "What are the five golden rules of a website?": "what should a restaurant website include",
+  "What are the 5 elements to a good website design?": "what should a restaurant website include",
+  "What are the 7 C's of website design?": "what should a restaurant website include",
+  "What are the key elements of a good website?": "what should a restaurant website include",
+  "Do I need a website for my restaurant?": "do restaurants need a website",
+  "How much does a website cost for a restaurant?": "do restaurants need a website",
+  "Why would a business not have a website?": "do restaurants need a website",
+  "Why does every business need a website in 2026?": "do restaurants need a website",
+  "How to make your restaurant successful?": "do restaurants need a website",
+  "Is there a monthly fee to have a website?": "do restaurants need a website",
+  "How do I create a website for my restaurant?": "do restaurants need a website",
+  "How much does it cost to create a restaurant website?": "restaurant website cost",
+  "Is $1500 a good price for a website?": "restaurant website cost",
+  "How much is a restaurant website with ordering online?": "restaurant website cost"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

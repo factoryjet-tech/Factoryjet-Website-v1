@@ -1,0 +1,178 @@
+{
+ "slug": "las-vegas-seo",
+ "route": "/las-vegas/seo",
+ "kind": "city",
+ "note": "",
+ "target_keyword": "seo agency las vegas",
+ "search_volume": 590,
+ "keyword_difficulty": 13,
+ "winning_page_type": "service-page",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "How much does an agency charge for SEO?",
+  "Who has the best SEO services in Las Vegas?",
+  "Is an SEO agency worth it?",
+  "What is the 80/20 rule in SEO?",
+  "Is SEO replaced by AI?",
+  "What does an SEO agency do?",
+  "How much does it cost to hire an SEO agency?",
+  "Who is the best SEO agency?",
+  "Can ChatGPT do SEO?",
+  "How much does an SEO agency typically cost?",
+  "Is SEO hard to learn?",
+  "Is SEO dead now with AI?",
+  "Is SEO work stressful?",
+  "Is SEO worth it for small businesses?",
+  "How much should a small business spend on SEO?",
+  "Can I do SEO myself?",
+  "What are the four main types of SEO?",
+  "Is SEO difficult to learn?",
+  "What is replacing SEO?",
+  "What are the top 5 SEO strategies?",
+  "Will SEO be replaced by AI?",
+  "How much should SEO cost for a small business?",
+  "Can I do SEO on my own?",
+  "Is paying someone to do SEO worth it?",
+  "What is the 3-7-27 rule in marketing?",
+  "How to do local SEO for beginners?",
+  "Can I do local SEO myself?",
+  "What is local SEO vs SEO?",
+  "Is doing a local SEO worth it?",
+  "How much does local SEO cost in the USA?",
+  "How long does it take for SEO to kick in?",
+  "Can I learn SEO by myself?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "thriveagency.com",
+   "title": "Las Vegas SEO Company",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "clutch.co",
+   "title": "Top SEO Companies in Las Vegas - Aug 2026 Rankings",
+   "page_type": "directory"
+  },
+  {
+   "rank": 3,
+   "domain": "webmarketsonline.com",
+   "title": "Digital Marketing SEO Agency Las Vegas, Nevada",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "logicalposition.com",
+   "title": "Local SEO Packages in Las Vegas",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "onfolio.com",
+   "title": "The Best SEO Agencies in Las Vegas, Nevada",
+   "page_type": "other"
+  },
+  {
+   "rank": 6,
+   "domain": "seo.co",
+   "title": "Las Vegas SEO Agency",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 7,
+   "domain": "agencies.semrush.com",
+   "title": "Best SEO Companies in Las Vegas 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 8,
+   "domain": "wfpulse.com",
+   "title": "Las Vegas SEO Services | Local Search Visibility",
+   "page_type": "other"
+  },
+  {
+   "rank": 9,
+   "domain": "helium-seo.com",
+   "title": "Las Vegas SEO Agency | SEO Company in Las Vegas, NV",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 10,
+   "domain": "designrush.com",
+   "title": "Top Las Vegas SEO Companies | 2026",
+   "page_type": "directory"
+  },
+  {
+   "rank": 11,
+   "domain": "biglasvegasseocompany.com",
+   "title": "Big Las Vegas SEO Company - We Help Businesses Grow",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 12,
+   "domain": "digitaldynastymarketing.com",
+   "title": "Las Vegas SEO Company - Digital Dynasty",
+   "page_type": "service-page"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "thriveagency.com",
+  "webmarketsonline.com",
+  "logicalposition.com",
+  "seo.co",
+  "helium-seo.com",
+  "biglasvegasseocompany.com"
+ ],
+ "related_searches": [
+  "Best seo agency las vegas",
+  "Seo agency las vegas address",
+  "Seo agency las vegas reviews",
+  "Fort Lauderdale SEO",
+  "Reno SEO",
+  "Tampa SEO",
+  "Best seo agency las vegas",
+  "Seo agency las vegas address",
+  "Seo agency las vegas reviews",
+  "Fort Lauderdale SEO",
+  "Reno SEO",
+  "Tampa SEO"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "How much does an agency charge for SEO?": "page query",
+  "Who has the best SEO services in Las Vegas?": "page query",
+  "Is an SEO agency worth it?": "page query",
+  "What is the 80/20 rule in SEO?": "page query",
+  "Is SEO replaced by AI?": "page query",
+  "What does an SEO agency do?": "seo agency",
+  "How much does it cost to hire an SEO agency?": "seo agency",
+  "Who is the best SEO agency?": "seo agency",
+  "Can ChatGPT do SEO?": "seo agency",
+  "How much does an SEO agency typically cost?": "what does an seo agency do",
+  "Is SEO hard to learn?": "what does an seo agency do",
+  "Is SEO dead now with AI?": "what does an seo agency do",
+  "Is SEO work stressful?": "what does an seo agency do",
+  "Is SEO worth it for small businesses?": "how much does seo cost for a small business",
+  "How much should a small business spend on SEO?": "how much does seo cost for a small business",
+  "Can I do SEO myself?": "how much does seo cost for a small business",
+  "What are the four main types of SEO?": "how much does seo cost for a small business",
+  "Is SEO difficult to learn?": "how long does seo take to work",
+  "What is replacing SEO?": "how long does seo take to work",
+  "What are the top 5 SEO strategies?": "how long does seo take to work",
+  "Will SEO be replaced by AI?": "how long does seo take to work",
+  "How much should SEO cost for a small business?": "is seo worth it for small business",
+  "Can I do SEO on my own?": "is seo worth it for small business",
+  "Is paying someone to do SEO worth it?": "is seo worth it for small business",
+  "What is the 3-7-27 rule in marketing?": "how to choose an seo agency",
+  "How to do local SEO for beginners?": "what is local seo",
+  "Can I do local SEO myself?": "what is local seo",
+  "What is local SEO vs SEO?": "what is local seo",
+  "Is doing a local SEO worth it?": "what is local seo",
+  "How much does local SEO cost in the USA?": "what is local seo",
+  "How long does it take for SEO to kick in?": "how do i know if seo is working",
+  "Can I learn SEO by myself?": "how do i know if seo is working"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

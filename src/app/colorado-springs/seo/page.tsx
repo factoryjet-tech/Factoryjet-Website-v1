@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import './colorado-springs-seo.css';
@@ -696,6 +697,7 @@ export default function ColoradoSpringsSEOPage() {
 
         </div>{/* /cosseo */}
 
+        <SeoCityLinksUS currentCity="colorado-springs" />
       </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
 

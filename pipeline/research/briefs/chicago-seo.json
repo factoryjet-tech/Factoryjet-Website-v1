@@ -1,0 +1,170 @@
+{
+ "slug": "chicago-seo",
+ "route": "/chicago/seo",
+ "kind": "city",
+ "note": "lowest KD in the whole US set",
+ "target_keyword": "seo agency chicago",
+ "search_volume": 880,
+ "keyword_difficulty": 1,
+ "winning_page_type": "service-page",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "How much does an SEO agency typically cost?",
+  "Is an SEO agency worth it?",
+  "What is the 80/20 rule in SEO?",
+  "What does an SEO agency do?",
+  "Can ChatGPT do SEO?",
+  "Is SEO dead now with AI?",
+  "How much does it cost to hire an SEO agency?",
+  "Who is the best SEO agency?",
+  "Is SEO replaced by AI?",
+  "Is SEO hard to learn?",
+  "Is SEO work stressful?",
+  "Is SEO worth it for small businesses?",
+  "How much should a small business spend on SEO?",
+  "Can I do SEO myself?",
+  "What are the four main types of SEO?",
+  "Is SEO difficult to learn?",
+  "What is replacing SEO?",
+  "What are the top 5 SEO strategies?",
+  "Will SEO be replaced by AI?",
+  "How much should SEO cost for a small business?",
+  "Can I do SEO on my own?",
+  "Is paying someone to do SEO worth it?",
+  "What is the 3-7-27 rule in marketing?",
+  "How to do local SEO for beginners?",
+  "Can I do local SEO myself?",
+  "What is local SEO vs SEO?",
+  "Is doing a local SEO worth it?",
+  "How much does local SEO cost in the USA?",
+  "How long does it take for SEO to kick in?",
+  "Can I learn SEO by myself?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "digitalthirdcoast.com",
+   "title": "The Top 8 SEO Agencies in Chicago That Are Actually Local",
+   "page_type": "blog"
+  },
+  {
+   "rank": 2,
+   "domain": "slimmarty.com",
+   "title": "Search Engine Optimization (SEO) in Chicago \u2013 Slim Marty",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 3,
+   "domain": "straightnorth.com",
+   "title": "Chicago SEO Company | Expert SEO Services That Drive ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "thriveagency.com",
+   "title": "Chicago SEO Company | Top-Rated Chicago SEO Services",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "clutch.co",
+   "title": "Top SEO Companies in Chicago - Aug 2026 Rankings",
+   "page_type": "directory"
+  },
+  {
+   "rank": 6,
+   "domain": "builtinchicago.org",
+   "title": "9 Chicago SEO and SEM Agencies to Know",
+   "page_type": "other"
+  },
+  {
+   "rank": 7,
+   "domain": "logicalposition.com",
+   "title": "Local SEO in Chicago",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 8,
+   "domain": "adcetera.com",
+   "title": "Chicago SEO Agency",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 9,
+   "domain": "agencies.semrush.com",
+   "title": "Best SEO Companies in Chicago 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 10,
+   "domain": "chicagoseo.company",
+   "title": "Chicago SEO | Our Chicago SEO Company Increases Revenue",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 11,
+   "domain": "itprofiles.com",
+   "title": "Top 10 SEO Companies in Chicago - Jul 2026 Rankings",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 12,
+   "domain": "loopexdigital.com",
+   "title": "Top SEO Companies in Chicago, IL for 2026",
+   "page_type": "blog"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "slimmarty.com",
+  "straightnorth.com",
+  "thriveagency.com",
+  "logicalposition.com",
+  "adcetera.com",
+  "chicagoseo.company"
+ ],
+ "related_searches": [
+  "Best seo agency chicago",
+  "Seo agency chicago reviews",
+  "Slim marty chicago",
+  "Online marketing Chicago",
+  "Best seo agency chicago",
+  "Seo agency chicago reviews",
+  "Slim marty chicago",
+  "Online marketing Chicago"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "How much does an SEO agency typically cost?": "page query",
+  "Is an SEO agency worth it?": "page query",
+  "What is the 80/20 rule in SEO?": "page query",
+  "What does an SEO agency do?": "page query",
+  "Can ChatGPT do SEO?": "page query",
+  "Is SEO dead now with AI?": "page query",
+  "How much does it cost to hire an SEO agency?": "seo agency",
+  "Who is the best SEO agency?": "seo agency",
+  "Is SEO replaced by AI?": "seo agency",
+  "Is SEO hard to learn?": "what does an seo agency do",
+  "Is SEO work stressful?": "what does an seo agency do",
+  "Is SEO worth it for small businesses?": "how much does seo cost for a small business",
+  "How much should a small business spend on SEO?": "how much does seo cost for a small business",
+  "Can I do SEO myself?": "how much does seo cost for a small business",
+  "What are the four main types of SEO?": "how much does seo cost for a small business",
+  "Is SEO difficult to learn?": "how long does seo take to work",
+  "What is replacing SEO?": "how long does seo take to work",
+  "What are the top 5 SEO strategies?": "how long does seo take to work",
+  "Will SEO be replaced by AI?": "how long does seo take to work",
+  "How much should SEO cost for a small business?": "is seo worth it for small business",
+  "Can I do SEO on my own?": "is seo worth it for small business",
+  "Is paying someone to do SEO worth it?": "is seo worth it for small business",
+  "What is the 3-7-27 rule in marketing?": "how to choose an seo agency",
+  "How to do local SEO for beginners?": "what is local seo",
+  "Can I do local SEO myself?": "what is local seo",
+  "What is local SEO vs SEO?": "what is local seo",
+  "Is doing a local SEO worth it?": "what is local seo",
+  "How much does local SEO cost in the USA?": "what is local seo",
+  "How long does it take for SEO to kick in?": "how do i know if seo is working",
+  "Can I learn SEO by myself?": "how do i know if seo is working"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

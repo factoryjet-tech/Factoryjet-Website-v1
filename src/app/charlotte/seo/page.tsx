@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
@@ -920,6 +921,7 @@ export default function CharlotteSeoPage() {
             <p className="fine">Local SEO billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/charlotte/web-design">web design</Link>, <Link href="/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/charlotte/ai-automation">AI automation</Link>. <Link href="/services/seo">US SEO services</Link>. More US cities: <Link href="/cleveland/seo">Cleveland SEO</Link> · <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
+        <SeoCityLinksUS currentCity="charlotte" />
       </main>
 
       <ExitIntentLeadForm

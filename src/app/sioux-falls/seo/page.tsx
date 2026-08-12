@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
@@ -917,6 +918,7 @@ export default function SiouxFallsSeoPage() {
             </div>
           </div>
         </section>
+        <SeoCityLinksUS currentCity="sioux-falls" />
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

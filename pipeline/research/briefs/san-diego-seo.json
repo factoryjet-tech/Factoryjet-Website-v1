@@ -1,0 +1,182 @@
+{
+ "slug": "san-diego-seo",
+ "route": "/san-diego/seo",
+ "kind": "city",
+ "note": "",
+ "target_keyword": "seo agency san diego",
+ "search_volume": 2400,
+ "keyword_difficulty": 39,
+ "winning_page_type": "service-page",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "How much does an SEO agency cost?",
+  "What is the 80/20 rule in SEO?",
+  "What does an SEO agency do?",
+  "Can ChatGPT do SEO?",
+  "Is SEO dead now with AI?",
+  "How much does it cost to hire someone to do SEO?",
+  "How much does it cost to hire an SEO agency?",
+  "Who is the best SEO agency?",
+  "Is an SEO agency worth it?",
+  "Is SEO replaced by AI?",
+  "How much does an SEO agency typically cost?",
+  "Is SEO hard to learn?",
+  "Is SEO work stressful?",
+  "Is SEO worth it for small businesses?",
+  "How much should a small business spend on SEO?",
+  "Can I do SEO myself?",
+  "What are the four main types of SEO?",
+  "Is SEO difficult to learn?",
+  "What is replacing SEO?",
+  "What are the top 5 SEO strategies?",
+  "Will SEO be replaced by AI?",
+  "How much should SEO cost for a small business?",
+  "Can I do SEO on my own?",
+  "Is paying someone to do SEO worth it?",
+  "What is the 3-7-27 rule in marketing?",
+  "How to do local SEO for beginners?",
+  "Can I do local SEO myself?",
+  "What is local SEO vs SEO?",
+  "Is doing a local SEO worth it?",
+  "How much does local SEO cost in the USA?",
+  "How long does it take for SEO to kick in?",
+  "Can I learn SEO by myself?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "thriveagency.com",
+   "title": "San Diego SEO Company",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "clutch.co",
+   "title": "Top SEO Companies in San Diego - Aug 2026 Rankings",
+   "page_type": "directory"
+  },
+  {
+   "rank": 3,
+   "domain": "gobluemedia.com",
+   "title": "San Diego SEO Agency: #1 SEO Growth Firm | Blue Media",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "krasovetzconsulting.com",
+   "title": "San Diego SEO Company, Best SEO Companies, Digital ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "agencies.semrush.com",
+   "title": "Best SEO Companies in San Diego 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 6,
+   "domain": "sabaseo.com",
+   "title": "Saba SEO: San Diego SEO Company You Can Trust | Google ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 7,
+   "domain": "ignitevisibility.com",
+   "title": "Award-Winning San Diego SEO Company",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 8,
+   "domain": "techalphonic.com",
+   "title": "SEO Company In San Diego - Tech Alphonic Pvt. Ltd",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 9,
+   "domain": "builtin.com",
+   "title": "17 San Diego SEO Companies To Know",
+   "page_type": "other"
+  },
+  {
+   "rank": 10,
+   "domain": "onfolio.com",
+   "title": "The Best SEO Agencies in San Diego, California",
+   "page_type": "other"
+  },
+  {
+   "rank": 11,
+   "domain": "jenruhman.com",
+   "title": "SEO Expert San Diego | Local SEO Company in San Diego",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 12,
+   "domain": "1digitalagency.com",
+   "title": "San Diego SEO Agency | SEO & Digital Marketing",
+   "page_type": "other"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "thriveagency.com",
+  "gobluemedia.com",
+  "krasovetzconsulting.com",
+  "sabaseo.com",
+  "ignitevisibility.com",
+  "techalphonic.com"
+ ],
+ "related_searches": [
+  "Best seo agency san diego",
+  "Digital marketing agency San Diego",
+  "Seo agency san diego reviews",
+  "Web design agency San Diego",
+  "Blue Media marketing",
+  "Creative agency San Diego",
+  "Organix seo agency",
+  "Saba SEO",
+  "Best seo agency san diego",
+  "Digital marketing agency San Diego",
+  "Seo agency san diego reviews",
+  "Web design agency San Diego",
+  "Blue Media marketing",
+  "Creative agency San Diego",
+  "Organix seo agency",
+  "Saba SEO"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "How much does an SEO agency cost?": "page query",
+  "What is the 80/20 rule in SEO?": "page query",
+  "What does an SEO agency do?": "page query",
+  "Can ChatGPT do SEO?": "page query",
+  "Is SEO dead now with AI?": "page query",
+  "How much does it cost to hire someone to do SEO?": "page query",
+  "How much does it cost to hire an SEO agency?": "seo agency",
+  "Who is the best SEO agency?": "seo agency",
+  "Is an SEO agency worth it?": "seo agency",
+  "Is SEO replaced by AI?": "seo agency",
+  "How much does an SEO agency typically cost?": "what does an seo agency do",
+  "Is SEO hard to learn?": "what does an seo agency do",
+  "Is SEO work stressful?": "what does an seo agency do",
+  "Is SEO worth it for small businesses?": "how much does seo cost for a small business",
+  "How much should a small business spend on SEO?": "how much does seo cost for a small business",
+  "Can I do SEO myself?": "how much does seo cost for a small business",
+  "What are the four main types of SEO?": "how much does seo cost for a small business",
+  "Is SEO difficult to learn?": "how long does seo take to work",
+  "What is replacing SEO?": "how long does seo take to work",
+  "What are the top 5 SEO strategies?": "how long does seo take to work",
+  "Will SEO be replaced by AI?": "how long does seo take to work",
+  "How much should SEO cost for a small business?": "is seo worth it for small business",
+  "Can I do SEO on my own?": "is seo worth it for small business",
+  "Is paying someone to do SEO worth it?": "is seo worth it for small business",
+  "What is the 3-7-27 rule in marketing?": "how to choose an seo agency",
+  "How to do local SEO for beginners?": "what is local seo",
+  "Can I do local SEO myself?": "what is local seo",
+  "What is local SEO vs SEO?": "what is local seo",
+  "Is doing a local SEO worth it?": "what is local seo",
+  "How much does local SEO cost in the USA?": "what is local seo",
+  "How long does it take for SEO to kick in?": "how do i know if seo is working",
+  "Can I learn SEO by myself?": "how do i know if seo is working"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

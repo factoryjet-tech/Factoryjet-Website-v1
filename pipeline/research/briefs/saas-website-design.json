@@ -1,0 +1,165 @@
+{
+ "slug": "saas-website-design",
+ "route": "/services/saas-website-design",
+ "kind": "service",
+ "note": "",
+ "target_keyword": "saas website design",
+ "search_volume": 390,
+ "keyword_difficulty": 15,
+ "winning_page_type": "blog",
+ "ai_overview_present": true,
+ "ai_overview_cites": [
+  "webflow.com",
+  "dribbble.com",
+  "saaspo.com",
+  "youtube.com",
+  "thatwebflowagency.com",
+  "saasframe.io",
+  "overpass.studio",
+  "freemius.com"
+ ],
+ "paa_questions": [
+  "Is Netflix a SaaS or PaaS?",
+  "Is Chatgpt a SaaS?",
+  "Is SaaS being replaced by AI?",
+  "What SaaS is in high demand?",
+  "What is replacing SaaS?",
+  "Is Airbnb a SaaS?",
+  "Is AI really replacing SaaS?",
+  "Is Netflix a SaaS or PaaS application?",
+  "What is a SaaS landing page?",
+  "Is ChatGPT a SaaS product?",
+  "Which software is best for landing pages?",
+  "What are the trends in landing page design for 2026?",
+  "What makes a good SaaS landing page?",
+  "Do I need a website if I have a landing page?",
+  "What's the best landing page builder?",
+  "Can I use Canva for a landing page?",
+  "How to build a SaaS website?",
+  "Do I need an LLC for a SaaS?",
+  "Is it difficult to build a SaaS?",
+  "Is it illegal to say you are an LLC if you are not?",
+  "How to start a SaaS business with no money?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "saaspo.com",
+   "title": "The best SaaS Web Design Inspiration | Saaspo",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "dribbble.com",
+   "title": "Saas Website",
+   "page_type": "other"
+  },
+  {
+   "rank": 3,
+   "domain": "reddit.com",
+   "title": "What are your fave SaaS websites?",
+   "page_type": "directory"
+  },
+  {
+   "rank": 4,
+   "domain": "wisepops.com",
+   "title": "Best SaaS websites 2026: 15 examples for design & ...",
+   "page_type": "blog"
+  },
+  {
+   "rank": 5,
+   "domain": "saaslandingpage.com",
+   "title": "SaaS Landing Page: The Best Landing Page Examples For ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 6,
+   "domain": "webflow.com",
+   "title": "35 SaaS website design examples to learn from in 2026",
+   "page_type": "blog"
+  },
+  {
+   "rank": 7,
+   "domain": "framer.com",
+   "title": "SaaS",
+   "page_type": "other"
+  },
+  {
+   "rank": 8,
+   "domain": "figma.com",
+   "title": "Free SaaS Website Templates You Can Edit & Download",
+   "page_type": "other"
+  },
+  {
+   "rank": 9,
+   "domain": "pinterest.com",
+   "title": "Saas Website Design Inspiration",
+   "page_type": "other"
+  },
+  {
+   "rank": 10,
+   "domain": "parallelhq.com",
+   "title": "10 Best SaaS Website Design Agencies (2026)",
+   "page_type": "blog"
+  },
+  {
+   "rank": 11,
+   "domain": "flexy.global",
+   "title": "The Ultimate Guide to SaaS Design: Best Practices and Tips",
+   "page_type": "blog"
+  },
+  {
+   "rank": 12,
+   "domain": "marketermilk.com",
+   "title": "32 best SaaS websites to gain inspiration from in 2026",
+   "page_type": "blog"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "saaspo.com",
+  "saaslandingpage.com"
+ ],
+ "related_searches": [
+  "Saas website design templates",
+  "SaaS website examples",
+  "Saas website design templates free",
+  "Saas website design free",
+  "Saas website design examples",
+  "Saas website design ideas",
+  "SaaS website design agency",
+  "SaaS website template free",
+  "Saas website design templates",
+  "SaaS website examples",
+  "Saas website design templates free",
+  "Saas website design free",
+  "Saas website design examples",
+  "Saas website design ideas",
+  "SaaS website design agency",
+  "SaaS website template free"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "Is Netflix a SaaS or PaaS?": "what makes a good saas website",
+  "Is Chatgpt a SaaS?": "what makes a good saas website",
+  "Is SaaS being replaced by AI?": "what makes a good saas website",
+  "What SaaS is in high demand?": "what makes a good saas website",
+  "What is replacing SaaS?": "what makes a good saas website",
+  "Is Airbnb a SaaS?": "what makes a good saas website",
+  "Is AI really replacing SaaS?": "what makes a good saas website",
+  "Is Netflix a SaaS or PaaS application?": "what makes a good saas website",
+  "What is a SaaS landing page?": "saas landing page design",
+  "Is ChatGPT a SaaS product?": "saas landing page design",
+  "Which software is best for landing pages?": "saas landing page design",
+  "What are the trends in landing page design for 2026?": "saas landing page design",
+  "What makes a good SaaS landing page?": "saas landing page design",
+  "Do I need a website if I have a landing page?": "saas landing page design",
+  "What's the best landing page builder?": "saas landing page design",
+  "Can I use Canva for a landing page?": "saas landing page design",
+  "How to build a SaaS website?": "how to design a saas website",
+  "Do I need an LLC for a SaaS?": "how to design a saas website",
+  "Is it difficult to build a SaaS?": "how to design a saas website",
+  "Is it illegal to say you are an LLC if you are not?": "how to design a saas website",
+  "How to start a SaaS business with no money?": "how to design a saas website"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

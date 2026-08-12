@@ -105,6 +105,37 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/cleveland/web-design',                          source: 'src/app/cleveland/web-design/page.tsx' },
   { path: '/new-york/web-design',                           source: 'src/app/new-york/web-design/page.tsx' },
   { path: '/tampa/web-design',                              source: 'src/app/tampa/web-design/page.tsx' },
+  // 2026-08-12 US build, wave 2: 8 industry and vertical service pages.
+  // B2B first because it is the strongest theme in the US research and the only theme
+  // FactoryJet has ever been AI-cited for (/b2b-ecommerce, 6 of 9 test runs).
+  { path: '/services/b2b-website-design',                   source: 'src/app/services/b2b-website-design/page.tsx' },
+  { path: '/services/manufacturing-website-design',         source: 'src/app/services/manufacturing-website-design/page.tsx' },
+  { path: '/services/saas-website-design',                  source: 'src/app/services/saas-website-design/page.tsx' },
+  { path: '/services/restaurant-website-design',            source: 'src/app/services/restaurant-website-design/page.tsx' },
+  { path: '/services/nonprofit-website-design',             source: 'src/app/services/nonprofit-website-design/page.tsx' },
+  { path: '/services/ai-agents-for-real-estate',            source: 'src/app/services/ai-agents-for-real-estate/page.tsx' },
+  { path: '/services/ai-agents-for-healthcare',             source: 'src/app/services/ai-agents-for-healthcare/page.tsx' },
+  { path: '/services/ecommerce-app-development',            source: 'src/app/services/ecommerce-app-development/page.tsx' },
+  // 2026-08-12 US build: 12 new major-metro city pages. Targets verified live on DataForSEO,
+  // see pipeline/research/data/us4_city_demand.csv and pipeline/research/briefs/.
+  { path: '/dallas/web-design',                             source: 'src/app/dallas/web-design/page.tsx' },
+  { path: '/chicago/web-design',                            source: 'src/app/chicago/web-design/page.tsx' },
+  { path: '/phoenix/web-design',                            source: 'src/app/phoenix/web-design/page.tsx' },
+  { path: '/san-diego/web-design',                          source: 'src/app/san-diego/web-design/page.tsx' },
+  { path: '/detroit/web-design',                            source: 'src/app/detroit/web-design/page.tsx' },
+  { path: '/dallas/seo',                                    source: 'src/app/dallas/seo/page.tsx' },
+  { path: '/chicago/seo',                                   source: 'src/app/chicago/seo/page.tsx' },
+  { path: '/phoenix/seo',                                   source: 'src/app/phoenix/seo/page.tsx' },
+  { path: '/san-diego/seo',                                 source: 'src/app/san-diego/seo/page.tsx' },
+  { path: '/boston/seo',                                    source: 'src/app/boston/seo/page.tsx' },
+  { path: '/las-vegas/seo',                                 source: 'src/app/las-vegas/seo/page.tsx' },
+  { path: '/los-angeles/seo',                               source: 'src/app/los-angeles/seo/page.tsx' },
+  // Four deliberate head-on high-KD city targets (Atlanta 75, Seattle 79, St Louis 72, Houston 50).
+  // Not expected to rank quickly; published to compound as domain authority grows.
+  { path: '/atlanta/web-design',                            source: 'src/app/atlanta/web-design/page.tsx' },
+  { path: '/seattle/web-design',                            source: 'src/app/seattle/web-design/page.tsx' },
+  { path: '/houston/web-design',                            source: 'src/app/houston/web-design/page.tsx' },
+  { path: '/st-louis/web-design',                           source: 'src/app/st-louis/web-design/page.tsx' },
   { path: '/boise/seo', source: 'src/app/boise/seo/page.tsx' },
   { path: '/chattanooga/seo', source: 'src/app/chattanooga/seo/page.tsx' },
   { path: '/fargo/seo', source: 'src/app/fargo/seo/page.tsx' },

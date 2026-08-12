@@ -1,0 +1,182 @@
+{
+ "slug": "los-angeles-seo",
+ "route": "/los-angeles/seo",
+ "kind": "city",
+ "note": "",
+ "target_keyword": "seo agency los angeles",
+ "search_volume": 2400,
+ "keyword_difficulty": 35,
+ "winning_page_type": "service-page",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "How much does SEO cost in Los Angeles?",
+  "How much does an SEO agency typically cost?",
+  "Which SEO company is the best in Los Angeles?",
+  "Can ChatGPT do SEO?",
+  "Is paying someone to do SEO worth it?",
+  "What does an SEO agency do?",
+  "How much does it cost to hire an SEO agency?",
+  "Who is the best SEO agency?",
+  "Is an SEO agency worth it?",
+  "Is SEO replaced by AI?",
+  "Is SEO hard to learn?",
+  "Is SEO dead now with AI?",
+  "Is SEO work stressful?",
+  "Is SEO worth it for small businesses?",
+  "What is the 80/20 rule in SEO?",
+  "How much should a small business spend on SEO?",
+  "Can I do SEO myself?",
+  "What are the four main types of SEO?",
+  "Is SEO difficult to learn?",
+  "What is replacing SEO?",
+  "What are the top 5 SEO strategies?",
+  "Will SEO be replaced by AI?",
+  "How much should SEO cost for a small business?",
+  "Can I do SEO on my own?",
+  "What is the 3-7-27 rule in marketing?",
+  "How to do local SEO for beginners?",
+  "Can I do local SEO myself?",
+  "What is local SEO vs SEO?",
+  "Is doing a local SEO worth it?",
+  "How much does local SEO cost in the USA?",
+  "How long does it take for SEO to kick in?",
+  "Can I learn SEO by myself?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "thriveagency.com",
+   "title": "Los Angeles SEO Company | Best SEO Services in L.A.",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "agencies.semrush.com",
+   "title": "Best SEO Companies in Los Angeles 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 3,
+   "domain": "losangelesseoinc.com",
+   "title": "Los Angeles SEO Company | SEO Agency | Los Angeles SEO",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "seotuners.com",
+   "title": "Affordable SEO Company Los Angeles | Award Winning SEO ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "clutch.co",
+   "title": "Top SEO Companies in Los Angeles - Aug 2026 Rankings",
+   "page_type": "directory"
+  },
+  {
+   "rank": 6,
+   "domain": "builtinla.com",
+   "title": "Top Los Angeles, CA SEO Companies 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 7,
+   "domain": "seoinla.com",
+   "title": "SEO in LA: Los Angeles SEO Company | LA Internet ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 8,
+   "domain": "growwwise.com",
+   "title": "Los Angeles SEO Company Experts",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 9,
+   "domain": "facebook.com",
+   "title": "The Los Angeles SEO Company",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 10,
+   "domain": "webdesignrankings.com",
+   "title": "The Best Los Angeles SEO Companies",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 11,
+   "domain": "go-seo.com",
+   "title": "Los Angeles SEO Agency | 19 Years Proven Results | GO ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 12,
+   "domain": "yelp.com",
+   "title": "TOP 10 BEST Seo Company in Los Angeles, CA",
+   "page_type": "directory"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "thriveagency.com",
+  "losangelesseoinc.com",
+  "seotuners.com",
+  "seoinla.com",
+  "growwwise.com",
+  "facebook.com"
+ ],
+ "related_searches": [
+  "Best seo agency los angeles",
+  "Seo agency los angeles address",
+  "Seo agency los angeles reviews",
+  "SEO agency USA",
+  "SEO company",
+  "Digital marketing agency Los Angeles",
+  "Affordable SEO",
+  "Los angeles seo linkedin",
+  "Best seo agency los angeles",
+  "Seo agency los angeles address",
+  "Seo agency los angeles reviews",
+  "SEO agency USA",
+  "SEO company",
+  "Digital marketing agency Los Angeles",
+  "Affordable SEO",
+  "Los angeles seo linkedin"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "How much does SEO cost in Los Angeles?": "page query",
+  "How much does an SEO agency typically cost?": "page query",
+  "Which SEO company is the best in Los Angeles?": "page query",
+  "Can ChatGPT do SEO?": "page query",
+  "Is paying someone to do SEO worth it?": "page query",
+  "What does an SEO agency do?": "seo agency",
+  "How much does it cost to hire an SEO agency?": "seo agency",
+  "Who is the best SEO agency?": "seo agency",
+  "Is an SEO agency worth it?": "seo agency",
+  "Is SEO replaced by AI?": "seo agency",
+  "Is SEO hard to learn?": "what does an seo agency do",
+  "Is SEO dead now with AI?": "what does an seo agency do",
+  "Is SEO work stressful?": "what does an seo agency do",
+  "Is SEO worth it for small businesses?": "how much does seo cost for a small business",
+  "What is the 80/20 rule in SEO?": "how much does seo cost for a small business",
+  "How much should a small business spend on SEO?": "how much does seo cost for a small business",
+  "Can I do SEO myself?": "how much does seo cost for a small business",
+  "What are the four main types of SEO?": "how much does seo cost for a small business",
+  "Is SEO difficult to learn?": "how long does seo take to work",
+  "What is replacing SEO?": "how long does seo take to work",
+  "What are the top 5 SEO strategies?": "how long does seo take to work",
+  "Will SEO be replaced by AI?": "how long does seo take to work",
+  "How much should SEO cost for a small business?": "is seo worth it for small business",
+  "Can I do SEO on my own?": "is seo worth it for small business",
+  "What is the 3-7-27 rule in marketing?": "how to choose an seo agency",
+  "How to do local SEO for beginners?": "what is local seo",
+  "Can I do local SEO myself?": "what is local seo",
+  "What is local SEO vs SEO?": "what is local seo",
+  "Is doing a local SEO worth it?": "what is local seo",
+  "How much does local SEO cost in the USA?": "what is local seo",
+  "How long does it take for SEO to kick in?": "how do i know if seo is working",
+  "Can I learn SEO by myself?": "how do i know if seo is working"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

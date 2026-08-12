@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -462,6 +463,7 @@ export default function NashvilleSeoPage() {
             <p className="fine">SEO services in Nashville, TN, billed month-to-month, with a free audit and no setup fee. Also in Nashville: <Link href="/nashville/web-design">web design</Link> and <Link href="/nashville/ecommerce-development">e-commerce development</Link>. See <Link href="/services/seo">US SEO services</Link>. More US cities: <Link href="/cleveland/seo">Cleveland SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link> · <Link href="/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
+        <SeoCityLinksUS currentCity="nashville" />
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

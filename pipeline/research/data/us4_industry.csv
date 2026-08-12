@@ -1,0 +1,83 @@
+keyword,industry,service,search_volume,cpc,kd
+ecommerce platform for b2b,b2b,ecommerce-dev,1900,31.06,18
+nonprofit website design,nonprofit,web-design-dev,1000,34.42,67
+web design for nonprofit,nonprofit,web-design-dev,1000,34.42,40
+real estate website design,real estate,web-design-dev,880,19.57,24
+web design for real estate,real estate,web-design-dev,880,19.57,46
+manufacturing website design,manufacturing,web-design-dev,720,52.95,2
+web design for manufacturing,manufacturing,web-design-dev,720,52.95,9
+restaurant website design,restaurant,web-design-dev,720,21.87,0
+web design for restaurant,restaurant,web-design-dev,720,21.87,14
+b2b website design,b2b,web-design-dev,480,37.27,1
+legal website design,legal,web-design-dev,480,72.64,32
+web design for b2b,b2b,web-design-dev,480,37.27,12
+ai agents for real estate,real estate,ai-agent-dev,390,14.17,8
+fashion website design,fashion,web-design-dev,390,6.3,99
+healthcare website design,healthcare,web-design-dev,390,45.2,21
+saas website design,saas,web-design-dev,390,21.76,15
+seo for b2b companies,b2b,ai-seo,390,501.35,0
+seo for insurance companies,insurance,ai-seo,390,0,0
+web design for fashion,fashion,web-design-dev,390,6.3,0
+web design for healthcare,healthcare,web-design-dev,390,45.2,27
+web design for saas,saas,web-design-dev,390,21.76,11
+b2b ecommerce website,b2b,ecommerce-dev,260,7.04,50
+ai agents for healthcare,healthcare,ai-agent-dev,170,34.83,28
+automotive website design,automotive,web-design-dev,170,0,0
+industrial website design,industrial,web-design-dev,170,18.8,0
+insurance website design,insurance,web-design-dev,170,14.84,0
+jewelry website design,jewelry,web-design-dev,170,12.52,0
+seo for saas companies,saas,ai-seo,170,10.11,2
+web design for insurance,insurance,web-design-dev,170,14.84,21
+web design for jewelry,jewelry,web-design-dev,170,12.52,13
+cannabis website design,cannabis,web-design-dev,170,0,7
+education website design,education,web-design-dev,170,10.14,0
+web design for education,education,web-design-dev,170,10.14,5
+ecommerce platform for wholesale,wholesale,ecommerce-dev,140,16.05,15
+seo for manufacturing companies,manufacturing,ai-seo,140,0,9
+apparel website design,apparel,web-design-dev,110,14.41,99
+ai agents for insurance,insurance,ai-agent-dev,90,48.38,3
+furniture website design,furniture,web-design-dev,90,4.83,5
+fitness website design,fitness,web-design-dev,90,22.53,0
+web design for fitness,fitness,web-design-dev,90,22.53,8
+ai agents for financial services,financial services,ai-agent-dev,70,54.56,22
+ai agents for manufacturing,manufacturing,ai-agent-dev,70,27.13,0
+apparel ecommerce website,apparel,ecommerce-dev,70,4.11,7
+seo for industrial companies,industrial,ai-seo,70,0,13
+ai agents for education,education,ai-agent-dev,70,23.29,0
+ai agents for saas,saas,ai-agent-dev,50,46.64,0
+fashion ecommerce website,fashion,ecommerce-dev,50,3.94,4
+financial services website design,financial services,web-design-dev,50,36.54,0
+furniture ecommerce website,furniture,ecommerce-dev,50,3.79,28
+jewelry ecommerce website,jewelry,ecommerce-dev,50,36.08,10
+ai agents for logistics,logistics,ai-agent-dev,40,16.24,5
+beauty ecommerce website,beauty,ecommerce-dev,30,0,7
+beauty website design,beauty,web-design-dev,30,11.11,0
+medical device website design,medical device,web-design-dev,30,0,0
+seo for healthcare companies,healthcare,ai-seo,30,0,10
+seo for logistics companies,logistics,ai-seo,30,0,0
+seo for real estate companies,real estate,ai-seo,30,0,13
+web design for financial services,financial services,web-design-dev,30,38.3,3
+wholesale website design,wholesale,web-design-dev,30,0,11
+ai automation for healthcare,healthcare,ai-agent-dev,20,0,7
+ai automation for real estate,real estate,ai-agent-dev,20,7.69,
+automotive ecommerce website,automotive,ecommerce-dev,20,15.42,34
+cosmetics website design,cosmetics,web-design-dev,20,0.07,0
+logistics website design,logistics,web-design-dev,20,17.32,0
+pet website design,pet,web-design-dev,20,0,6
+wholesale ecommerce website,wholesale,ecommerce-dev,20,0,38
+seo for cannabis companies,cannabis,ai-seo,20,0,7
+distribution website design,distribution,web-design-dev,10,0,7
+ecommerce platform for fashion,fashion,ecommerce-dev,10,0,0
+electronics ecommerce website,electronics,ecommerce-dev,10,0,46
+electronics website design,electronics,web-design-dev,10,0,
+food and beverage website design,food and beverage,web-design-dev,10,0,
+healthcare ecommerce website,healthcare,ecommerce-dev,10,0,
+industrial ecommerce website,industrial,ecommerce-dev,10,0,0
+pet ecommerce website,pet,ecommerce-dev,10,0,37
+real estate ecommerce website,real estate,ecommerce-dev,10,0,
+saas ecommerce website,saas,ecommerce-dev,10,0,
+seo for food and beverage companies,food and beverage,ai-seo,10,0,
+supplements website design,supplements,web-design-dev,10,0,
+education ecommerce website,education,ecommerce-dev,10,0,
+fitness ecommerce website,fitness,ecommerce-dev,10,0,43
+restaurant ecommerce website,restaurant,ecommerce-dev,10,11.81,54

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -746,6 +747,7 @@ export default function CorpusChristiSEO() {
             </div>
           </section>
 
+          <SeoCityLinksUS currentCity="corpus-christi" />
         </main>
         <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
       </div>

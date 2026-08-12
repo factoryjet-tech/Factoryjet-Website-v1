@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -456,6 +457,7 @@ export default function DenverSeoPage() {
           </div>
         </section>
         {/* PRODMARK */}
+        <SeoCityLinksUS currentCity="denver" />
       </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

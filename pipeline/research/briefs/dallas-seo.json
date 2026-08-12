@@ -1,0 +1,181 @@
+{
+ "slug": "dallas-seo",
+ "route": "/dallas/seo",
+ "kind": "city",
+ "note": "",
+ "target_keyword": "seo agency dallas",
+ "search_volume": 1000,
+ "keyword_difficulty": 22,
+ "winning_page_type": "service-page",
+ "ai_overview_present": false,
+ "ai_overview_cites": [],
+ "paa_questions": [
+  "What are the best SEO agencies in Dallas?",
+  "How much does an agency charge for SEO?",
+  "Is an SEO agency worth it?",
+  "What is the 80/20 rule in SEO?",
+  "Is SEO replaced by AI?",
+  "What does an SEO agency do?",
+  "How much does it cost to hire an SEO agency?",
+  "Who is the best SEO agency?",
+  "Can ChatGPT do SEO?",
+  "How much does an SEO agency typically cost?",
+  "Is SEO hard to learn?",
+  "Is SEO dead now with AI?",
+  "Is SEO work stressful?",
+  "Is SEO worth it for small businesses?",
+  "How much should a small business spend on SEO?",
+  "Can I do SEO myself?",
+  "What are the four main types of SEO?",
+  "Is SEO difficult to learn?",
+  "What is replacing SEO?",
+  "What are the top 5 SEO strategies?",
+  "Will SEO be replaced by AI?",
+  "How much should SEO cost for a small business?",
+  "Can I do SEO on my own?",
+  "Is paying someone to do SEO worth it?",
+  "What is the 3-7-27 rule in marketing?",
+  "How to do local SEO for beginners?",
+  "Can I do local SEO myself?",
+  "What is local SEO vs SEO?",
+  "Is doing a local SEO worth it?",
+  "How much does local SEO cost in the USA?",
+  "How long does it take for SEO to kick in?",
+  "Can I learn SEO by myself?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "agencies.semrush.com",
+   "title": "Best SEO Companies in Dallas 2026",
+   "page_type": "listicle"
+  },
+  {
+   "rank": 2,
+   "domain": "thriveagency.com",
+   "title": "Dallas SEO Company | Best SEO Services In Dallas",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 3,
+   "domain": "seodogs.com",
+   "title": "Dallas SEO Dogs: Digital Marketing Agency | SEO, PPC ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "reddit.com",
+   "title": "Best Dallas SEO company that is actually legitimate?",
+   "page_type": "directory"
+  },
+  {
+   "rank": 5,
+   "domain": "outerboxdesign.com",
+   "title": "Dallas Texas SEO Services",
+   "page_type": "other"
+  },
+  {
+   "rank": 6,
+   "domain": "coalitiontechnologies.com",
+   "title": "Dallas SEO Company | Top-Rated",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 7,
+   "domain": "1seo.com",
+   "title": "The Best Dallas SEO Company",
+   "page_type": "other"
+  },
+  {
+   "rank": 8,
+   "domain": "thriveagency.com",
+   "title": "11 Best Dallas SEO Companies in 2026",
+   "page_type": "other"
+  },
+  {
+   "rank": 9,
+   "domain": "clutch.co",
+   "title": "Top SEO Companies in Dallas - Aug 2026 Rankings",
+   "page_type": "directory"
+  },
+  {
+   "rank": 10,
+   "domain": "base2brand.com",
+   "title": "Dallas SEO Company: Boost Your Business with Digital ...",
+   "page_type": "blog"
+  },
+  {
+   "rank": 11,
+   "domain": "sofiaseo.com",
+   "title": "Dallas SEO | Trusted & Awarded SEO Company | Sofia Dallas ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 12,
+   "domain": "facebook.com",
+   "title": "The Dallas SEO Company Inc.",
+   "page_type": "service-page"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "thriveagency.com",
+  "seodogs.com",
+  "coalitiontechnologies.com",
+  "sofiaseo.com",
+  "facebook.com"
+ ],
+ "related_searches": [
+  "Best seo agency dallas",
+  "Seo agency dallas reviews",
+  "Digital marketing agency in Dallas",
+  "Dallas SEO Dogs",
+  "SEO company in Dallas Coalition",
+  "Search pros ppc seo agency in dallas tx",
+  "SEO company USA",
+  "Top seo agency usa",
+  "Best seo agency dallas",
+  "Seo agency dallas reviews",
+  "Digital marketing agency in Dallas",
+  "Dallas SEO Dogs",
+  "SEO company in Dallas Coalition",
+  "Search pros ppc seo agency in dallas tx",
+  "SEO company USA",
+  "Top seo agency usa"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "What are the best SEO agencies in Dallas?": "page query",
+  "How much does an agency charge for SEO?": "page query",
+  "Is an SEO agency worth it?": "page query",
+  "What is the 80/20 rule in SEO?": "page query",
+  "Is SEO replaced by AI?": "page query",
+  "What does an SEO agency do?": "seo agency",
+  "How much does it cost to hire an SEO agency?": "seo agency",
+  "Who is the best SEO agency?": "seo agency",
+  "Can ChatGPT do SEO?": "seo agency",
+  "How much does an SEO agency typically cost?": "what does an seo agency do",
+  "Is SEO hard to learn?": "what does an seo agency do",
+  "Is SEO dead now with AI?": "what does an seo agency do",
+  "Is SEO work stressful?": "what does an seo agency do",
+  "Is SEO worth it for small businesses?": "how much does seo cost for a small business",
+  "How much should a small business spend on SEO?": "how much does seo cost for a small business",
+  "Can I do SEO myself?": "how much does seo cost for a small business",
+  "What are the four main types of SEO?": "how much does seo cost for a small business",
+  "Is SEO difficult to learn?": "how long does seo take to work",
+  "What is replacing SEO?": "how long does seo take to work",
+  "What are the top 5 SEO strategies?": "how long does seo take to work",
+  "Will SEO be replaced by AI?": "how long does seo take to work",
+  "How much should SEO cost for a small business?": "is seo worth it for small business",
+  "Can I do SEO on my own?": "is seo worth it for small business",
+  "Is paying someone to do SEO worth it?": "is seo worth it for small business",
+  "What is the 3-7-27 rule in marketing?": "how to choose an seo agency",
+  "How to do local SEO for beginners?": "what is local seo",
+  "Can I do local SEO myself?": "what is local seo",
+  "What is local SEO vs SEO?": "what is local seo",
+  "Is doing a local SEO worth it?": "what is local seo",
+  "How much does local SEO cost in the USA?": "what is local seo",
+  "How long does it take for SEO to kick in?": "how do i know if seo is working",
+  "Can I learn SEO by myself?": "how do i know if seo is working"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

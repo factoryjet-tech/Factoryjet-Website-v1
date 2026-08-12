@@ -53,6 +53,9 @@ export default function FinalCTA({
   if (isDark) {
     return (
       <section
+        // FAQ.tsx's sidebar links to #final-cta. Without this id that anchor was dead on all
+        // 146 pages importing both components, so the FAQ's closing CTA went nowhere. Fixed 2026-08-12.
+        id="final-cta"
         className="relative overflow-hidden py-14 md:py-20"
         style={{
           backgroundImage: [
@@ -194,6 +197,9 @@ export default function FinalCTA({
   /* ─── Light variant ─────────────────────────────────────────────────────── */
   return (
     <section
+      // Same #final-cta anchor target as the dark variant above. Only one variant renders
+      // per instance, so this cannot produce a duplicate id on a page with one FinalCTA.
+      id="final-cta"
       className="relative py-14 md:py-20"
       style={{
         backgroundImage: [

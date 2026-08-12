@@ -1,0 +1,256 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   /phoenix/seo :: "Valley Grid" Phoenix local-SEO page styles. Built 2026-08-12.
+
+   Layout concept, distinct from every other city page in this family: Phoenix is
+   a flat street grid stretched across a valley ringed by ridgelines, and Google
+   ranks local results partly on distance. So the page motif is a grid of named
+   districts with a ridge silhouette underneath, not Austin's frosted 3D stack.
+
+   Scoped under .pxseo. Fonts come from the global next/font vars, so this file
+   makes zero webfont requests. No images in any decorative element (text LCP),
+   fixed-height visuals (zero CLS), all motion behind prefers-reduced-motion,
+   zero page-level JS. overflow-x:clip so sticky headers still work.
+   A11y: decorative scenes are aria-hidden in the TSX, body copy stays at or
+   above 4.5:1, and no colour is the only carrier of meaning.
+   Brand rules: cream ground, hero never dark, exactly one dark section,
+   #F05A28 for large text and fills only, #B23E13 for anything small.
+───────────────────────────────────────────────────────────────────────────── */
+.pxseo{
+  --orange:#F05A28;--orange-d:#B23E13;--orange-soft:#FBEAE1;--peach:#FAEDE5;
+  --cream:#FAFAF7;--paper:#FFFFFF;--ink:#1A1712;--n700:#3D3A33;--n600:#56524A;
+  --charcoal:#0F0F12;--char2:#17161B;--ct:#F4F1EA;--ct-mut:#B4B0A6;
+  --sand:#F3EEE4;--sage:#0E5C46;--sage-soft:#DCEFE6;--dusk:#3B3560;
+  --line:rgba(26,23,18,.10);--line-d:rgba(26,23,18,.20);
+  --e-out:cubic-bezier(.23,1,.32,1);
+  --sh-card:0 20px 40px -24px rgba(26,23,18,.24);
+  --disp:var(--font-plus-jakarta),system-ui,sans-serif;
+  --body:var(--font-inter),system-ui,sans-serif;
+  --mono:var(--font-geist-mono),ui-monospace,monospace;
+  background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+.pxseo *{box-sizing:border-box}
+.pxseo h1,.pxseo h2,.pxseo h3,.pxseo p,.pxseo blockquote,.pxseo ol,.pxseo li{margin:0}
+.pxseo .wrap{max-width:1180px;margin:0 auto;padding:0 32px;position:relative;z-index:2}
+.pxseo h1,.pxseo h2,.pxseo h3{font-family:var(--disp);font-weight:700;line-height:1.1;letter-spacing:-.025em;text-wrap:balance;color:var(--ink)}
+.pxseo h2{font-size:clamp(28px,3.6vw,44px);margin-bottom:14px}
+.pxseo h3{font-size:19px;line-height:1.25}
+.pxseo .lead{font-size:18px;color:var(--n600);text-wrap:pretty;max-width:70ch}
+.pxseo .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;color:var(--orange-d);margin-bottom:14px}
+.pxseo .body p{color:var(--n600);font-size:16.5px}
+.pxseo a{color:inherit}
+.pxseo .body a,.pxseo .lead a,.pxseo .prose a{color:var(--orange-d);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.pxseo .body a:hover,.pxseo .prose a:hover{text-decoration-thickness:2px}
+.pxseo .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border-radius:13px;padding:15px 25px;transition:transform .2s var(--e-out),border-color .2s var(--e-out)}
+.pxseo .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line-d)}
+.pxseo .btn-ghost:hover{transform:translateY(-2px);border-color:var(--ink)}
+.pxseo .btn:active{transform:translateY(0) scale(.98)}
+.pxseo a:focus-visible,.pxseo .btn:focus-visible,.pxseo summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:10px}
+.pxseo .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:30px}
+.pxseo section{position:relative}
+
+/* ── HERO: valley grid, light always ─────────────────────────────────────── */
+.pxseo .hero{position:relative;overflow:clip;
+  background:
+    radial-gradient(46% 54% at 88% 12%,rgba(240,90,40,.15),transparent 64%),
+    radial-gradient(34% 44% at 8% 84%,rgba(14,92,70,.08),transparent 62%),
+    var(--cream)}
+.pxseo .hero:before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(rgba(26,23,18,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(26,23,18,.045) 1px,transparent 1px);
+  background-size:38px 38px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 78%);mask-image:linear-gradient(180deg,#000,transparent 78%)}
+.pxseo .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:68px 0 80px}
+.pxseo .loc{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 11px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-d)}
+.pxseo .loc b{width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.pxseo .hero h1{font-size:clamp(38px,5.1vw,68px);letter-spacing:-.03em;line-height:1.05;margin:18px 0 20px}
+.pxseo .hero .lead{font-size:19px;max-width:56ch}
+.pxseo .hero .lead b{color:var(--ink);font-weight:700}
+.pxseo .hero form,.pxseo .hero .cta-row{margin-top:26px}
+
+/* district board scene */
+.pxseo .board{position:relative;height:430px;border-radius:22px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--sh-card);overflow:hidden;padding:20px 20px 0}
+.pxseo .board:before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(26,23,18,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(26,23,18,.05) 1px,transparent 1px);
+  background-size:26px 26px}
+.pxseo .bhead{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);display:flex;justify-content:space-between;margin-bottom:14px}
+.pxseo .bgrid{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.pxseo .bcell{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-weight:600;color:var(--n700);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pxseo .bcell span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--n600);font-weight:500}
+.pxseo .bcell.on{background:var(--orange);border-color:var(--orange);color:#fff;font-weight:700;box-shadow:0 12px 26px -14px rgba(240,90,40,.9)}
+.pxseo .bcell.on span{color:#FFEDE4}
+.pxseo .ridge{position:absolute;left:0;right:0;bottom:0;height:120px;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(250,250,247,.9) 42%,var(--cream) 72%)}
+.pxseo .ridge i{position:absolute;bottom:0;display:block;background:var(--sand);border-top:1.5px solid rgba(26,23,18,.14)}
+.pxseo .ridge i:nth-child(1){left:-6%;width:46%;height:52px;clip-path:polygon(0 100%,26% 22%,44% 58%,68% 6%,100% 100%)}
+.pxseo .ridge i:nth-child(2){left:34%;width:44%;height:64px;clip-path:polygon(0 100%,30% 14%,58% 52%,80% 26%,100% 100%);background:#EBE4D6}
+.pxseo .ridge i:nth-child(3){right:-4%;width:38%;height:44px;clip-path:polygon(0 100%,22% 30%,52% 4%,78% 44%,100% 100%)}
+
+/* ── FACTS BAR ───────────────────────────────────────────────────────────────
+   Kept LIGHT on purpose. Sibling city pages run a dark strip here, but the
+   2026-08-12 build brief allows exactly ONE dark section per page and that
+   budget is spent on the mid-page AI answers block. */
+.pxseo .factsbar{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pxseo .factsbar .row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:22px 32px}
+.pxseo .factsbar .fact{min-width:0;border-left:2px solid var(--orange);padding-left:14px}
+.pxseo .factsbar .v{font-family:var(--disp);font-weight:700;font-size:17px;color:var(--ink)}
+.pxseo .factsbar .k{font-size:13px;color:var(--n600);margin-top:2px}
+
+/* ── BLUF: answer first ──────────────────────────────────────────────────── */
+.pxseo .blufsec{padding:66px 0 10px}
+.pxseo .bluf{position:relative;max-width:900px;background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:20px;padding:30px 34px;box-shadow:var(--sh-card)}
+.pxseo .bluf .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--orange-d);margin-bottom:10px}
+.pxseo .bluf p{font-size:19.5px;line-height:1.55;color:var(--ink);font-weight:500;text-wrap:pretty}
+.pxseo .bluf-support{max-width:900px;margin-top:26px}
+.pxseo .bluf-support p{color:var(--n600);font-size:16.5px}
+.pxseo .bluf-support p+p{margin-top:16px}
+
+/* ── SPRAWL: why Phoenix is its own market ───────────────────────────────── */
+.pxseo .sprawl{padding:66px 0}
+.pxseo .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.pxseo .scell{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px}
+.pxseo .scell .n{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:-.03em;color:var(--orange-d);line-height:1}
+.pxseo .scell p{font-size:14.5px;color:var(--n600);margin-top:9px}
+.pxseo .scell .src{display:block;margin-top:11px;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--n600);opacity:.85}
+.pxseo .closer{margin-top:26px;max-width:78ch;font-size:16.5px;color:var(--n600)}
+
+/* ── DEMAND STRIP ────────────────────────────────────────────────────────── */
+.pxseo .demand{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+.pxseo .dh{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--n700);margin-bottom:14px}
+.pxseo .chips{display:flex;flex-wrap:wrap;gap:9px}
+.pxseo .chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:13.5px;color:var(--n700)}
+.pxseo .chips b{color:var(--ink);font-weight:600}
+
+/* ── DISTRICT CARDS ──────────────────────────────────────────────────────── */
+.pxseo .verts{padding:70px 0}
+.pxseo .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.pxseo .qcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--sh-card);display:flex;flex-direction:column}
+.pxseo .qbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--peach);border-bottom:1px solid var(--line);padding:11px 16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--orange-d)}
+.pxseo .qbar i{width:6px;height:6px;border-radius:50%;background:var(--orange);flex:none}
+.pxseo .qbar .kd{margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:10.5px;color:var(--n700)}
+.pxseo .qbody{padding:18px 20px 22px}
+.pxseo .qbody p{font-size:14.5px;color:var(--n600);margin-top:8px}
+
+/* ── SEASON LANE ─────────────────────────────────────────────────────────── */
+.pxseo .season{padding:70px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pxseo .lane{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:32px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pxseo .sitem{padding:22px 22px 24px;border-right:1px solid var(--line);background:linear-gradient(180deg,var(--cream),#fff)}
+.pxseo .sitem:last-child{border-right:0}
+.pxseo .sitem .mo{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--orange-d);display:block;margin-bottom:8px}
+.pxseo .sitem p{font-size:14.5px;color:var(--n600);margin-top:8px}
+
+/* ── NUMBERED LISTICLE ───────────────────────────────────────────────────── */
+.pxseo .steps{padding:70px 0}
+.pxseo .steplist{counter-reset:s;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;list-style:none;padding:0}
+.pxseo .steplist li{counter-increment:s;position:relative;padding:18px 20px 18px 62px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.pxseo .steplist li:before{content:counter(s,decimal-leading-zero);position:absolute;left:20px;top:17px;font-family:var(--disp);font-weight:700;font-size:20px;color:var(--orange-d);letter-spacing:-.02em}
+.pxseo .steplist h3{font-size:16.5px}
+.pxseo .steplist p{font-size:14.5px;color:var(--n600);margin-top:6px}
+
+/* ── IMAGE ROWS ──────────────────────────────────────────────────────────── */
+.pxseo .imgsec{padding:70px 0}
+.pxseo .imgrow{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.pxseo .imgrow.flip .imgwrap{order:-1}
+.pxseo .imgwrap{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh-card);background:var(--sand)}
+.pxseo .imgwrap img{width:100%;height:auto;display:block}
+
+/* ── ONE DARK SECTION ────────────────────────────────────────────────────── */
+.pxseo .darksec{background:
+  radial-gradient(42% 50% at 82% 18%,rgba(240,90,40,.20),transparent 66%),
+  linear-gradient(150deg,var(--charcoal),var(--char2) 60%,#141019);
+  color:var(--ct);padding:74px 0}
+.pxseo .darksec h2{color:#fff}
+.pxseo .darksec .eyebrow{color:#F6A07E}
+.pxseo .darksec .lead{color:var(--ct-mut);font-size:17.5px}
+.pxseo .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.pxseo .dpill{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:20px 22px}
+.pxseo .dpill h3{color:#fff;font-size:17px}
+.pxseo .dpill p{color:var(--ct-mut);font-size:14.5px;margin-top:8px}
+.pxseo .darksec .dlink{color:#F6A07E;text-decoration:underline;text-underline-offset:3px}
+
+/* ── RIVAL TABLE ─────────────────────────────────────────────────────────── */
+.pxseo .rivals{padding:70px 0}
+.pxseo .tablewrap{margin-top:30px;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:var(--sh-card)}
+.pxseo table{width:100%;border-collapse:collapse;min-width:760px}
+.pxseo thead th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--n700);background:var(--sand);padding:13px 18px;border-bottom:1px solid var(--line);white-space:nowrap}
+.pxseo tbody td{padding:15px 18px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--n600);vertical-align:top}
+.pxseo tbody tr:last-child td{border-bottom:0}
+.pxseo tbody th{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:700;color:var(--ink);font-family:var(--body);white-space:nowrap;vertical-align:top}
+.pxseo tbody tr:last-child th{border-bottom:0}
+.pxseo tbody tr.us th,.pxseo tbody tr.us td{background:var(--orange-soft)}
+.pxseo .pos{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--orange-d);background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.pxseo .honest{margin-top:28px;max-width:900px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:18px;padding:26px 30px;box-shadow:var(--sh-card)}
+.pxseo .honest p{font-size:15.5px;color:var(--n600)}
+.pxseo .honest p+p{margin-top:13px}
+
+/* ── PROOF ───────────────────────────────────────────────────────────────── */
+.pxseo .proof{padding:20px 0 70px}
+.pxseo .proofcard{max-width:900px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px 34px;box-shadow:var(--sh-card)}
+.pxseo .proofcard blockquote p{font-family:var(--disp);font-weight:700;font-size:clamp(19px,2.2vw,25px);line-height:1.32;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty}
+.pxseo .byline{display:flex;align-items:center;gap:13px;margin-top:22px}
+.pxseo .avatar{width:44px;height:44px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:15px;flex:none}
+.pxseo .byline .nm{font-weight:700;font-size:15px}
+.pxseo .byline .ti{font-size:13.5px;color:var(--n600)}
+.pxseo .clients{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pxseo .clients span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--n700);background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+.pxseo .real{margin-top:14px;font-size:13.5px;color:var(--n600)}
+
+/* ── FAQ ─────────────────────────────────────────────────────────────────── */
+.pxseo .faq{padding:70px 0;background:var(--paper);border-top:1px solid var(--line)}
+.pxseo .faqgrid{display:grid;grid-template-columns:230px 1fr;gap:44px;margin-top:34px}
+.pxseo .faqnav{position:sticky;top:96px;align-self:start;display:flex;flex-direction:column;gap:2px}
+.pxseo .faqnav a{font-size:14px;color:var(--n600);text-decoration:none;padding:8px 12px;border-left:2px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.pxseo .faqnav a:hover{color:var(--ink);border-left-color:var(--orange);background:var(--cream)}
+.pxseo .faqnav .ct{font-family:var(--mono);font-size:11px;color:var(--n600)}
+.pxseo .faqnavhelp{margin-top:16px;padding-left:12px;font-size:13px;color:var(--n600)}
+.pxseo .faqnavhelp a{color:var(--orange-d);text-decoration:underline;padding:0;border:0;display:inline}
+.pxseo .faqcat{margin-bottom:34px;scroll-margin-top:110px}
+.pxseo .faqcat .ch{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--orange-d);margin-bottom:10px}
+.pxseo details{border-bottom:1px solid var(--line)}
+.pxseo summary{cursor:pointer;list-style:none;padding:15px 34px 15px 0;font-weight:600;font-size:16px;color:var(--ink);position:relative}
+.pxseo summary::-webkit-details-marker{display:none}
+.pxseo summary:after{content:"";position:absolute;right:6px;top:23px;width:9px;height:9px;border-right:2px solid var(--n600);border-bottom:2px solid var(--n600);transform:rotate(45deg);transition:transform .2s var(--e-out)}
+.pxseo details[open] summary:after{transform:rotate(-135deg)}
+.pxseo details[open] summary{color:var(--orange-d)}
+.pxseo details p{padding:0 34px 18px 0;font-size:15px;color:var(--n600)}
+
+/* ── FINAL ───────────────────────────────────────────────────────────────── */
+.pxseo .final{background:var(--sand);border-top:1px solid var(--line);padding:70px 0 74px;text-align:center}
+.pxseo .final .lead{margin:0 auto;max-width:64ch}
+.pxseo .final .cta-row{justify-content:center}
+.pxseo .fine{margin-top:30px;font-size:13.5px;color:var(--n600);max-width:78ch;margin-left:auto;margin-right:auto}
+.pxseo .fine a{color:var(--orange-d);text-decoration:underline;text-underline-offset:2px}
+
+/* ── SOFT REVEAL (reduced-motion safe; content visible by default) ───────── */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes pxrise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .pxseo .qcard,.pxseo .scell,.pxseo .steplist li,.pxseo .sitem{animation:pxrise .5s var(--e-out) both;animation-timeline:view();animation-range:entry 0% entry 42%}
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width:1060px){
+  .pxseo .qgrid,.pxseo .dgrid{grid-template-columns:repeat(2,1fr)}
+  .pxseo .sgrid{grid-template-columns:repeat(2,1fr)}
+  .pxseo .lane{grid-template-columns:repeat(2,1fr)}
+  .pxseo .sitem:nth-child(2){border-right:0}
+  .pxseo .sitem:nth-child(1),.pxseo .sitem:nth-child(2){border-bottom:1px solid var(--line)}
+  .pxseo .faqgrid{grid-template-columns:1fr;gap:22px}
+  .pxseo .faqnav{position:static;flex-direction:row;flex-wrap:wrap;gap:8px}
+  .pxseo .faqnav a{border-left:0;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+}
+@media (max-width:900px){
+  .pxseo .hero-grid,.pxseo .imgrow{grid-template-columns:1fr;gap:34px}
+  .pxseo .imgrow.flip .imgwrap{order:0}
+  .pxseo .board{height:390px}
+  .pxseo .factsbar .row{grid-template-columns:repeat(2,1fr);gap:16px}
+  .pxseo .steplist{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .pxseo .wrap{padding:0 20px}
+  .pxseo .hero-grid{padding:44px 0 56px}
+  .pxseo .qgrid,.pxseo .dgrid,.pxseo .sgrid,.pxseo .lane{grid-template-columns:1fr}
+  .pxseo .sitem{border-right:0;border-bottom:1px solid var(--line)}
+  .pxseo .sitem:last-child{border-bottom:0}
+  .pxseo .bluf{padding:24px 22px}
+  .pxseo .bgrid{grid-template-columns:1fr}
+  .pxseo .board{height:auto;padding-bottom:96px}
+}

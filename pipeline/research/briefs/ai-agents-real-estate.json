@@ -1,0 +1,166 @@
+{
+ "slug": "ai-agents-real-estate",
+ "route": "/services/ai-agents-for-real-estate",
+ "kind": "service",
+ "note": "AI Overview live on this category",
+ "target_keyword": "ai agents for real estate",
+ "search_volume": 390,
+ "keyword_difficulty": 8,
+ "winning_page_type": "blog",
+ "ai_overview_present": true,
+ "ai_overview_cites": [
+  "reddit.com",
+  "mindstudio.ai",
+  "voiceflow.com",
+  "chatbot.com",
+  "monday.com",
+  "realestatecontent.ai"
+ ],
+ "paa_questions": [
+  "Which AI agent is best for real estate?",
+  "How much does a realtor make on a $300,000 house?",
+  "How are real estate agents using AI?",
+  "What is the 3-3-3 rule in real estate?",
+  "How much do real estate agents make off a $300,000 house?",
+  "Can I use AI instead of a real estate agent?",
+  "Is being a real estate agent still worth it in 2026?",
+  "How many houses a year does a realtor have to sell to make $200,000 a year?",
+  "Which AI is best for realtors?",
+  "What is the 7% rule in real estate?",
+  "What is the 30% rule in AI?",
+  "How is Zillow using AI?",
+  "What is Warren Buffett's #1 rule?",
+  "What did Stephen Hawking say about AI before he died?",
+  "What is AI not allowed to do?",
+  "Do realtors still get 6% commission?",
+  "How can I use AI as a realtor?",
+  "What's the best AI for realtors?",
+  "Is there a ChatGPT for real estate agents?",
+  "What's the best AI for real estate agents?",
+  "Is AI a threat to real estate agents?",
+  "Are realtors being replaced with AI?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "reddit.com",
+   "title": "Does anyone use ai agents for their realty business?",
+   "page_type": "directory"
+  },
+  {
+   "rank": 2,
+   "domain": "mindstudio.ai",
+   "title": "10 AI Agents for Real Estate Professionals",
+   "page_type": "blog"
+  },
+  {
+   "rank": 3,
+   "domain": "voiceflow.com",
+   "title": "AI for Real Estate & Property Sales",
+   "page_type": "other"
+  },
+  {
+   "rank": 4,
+   "domain": "nar.realtor",
+   "title": "Artificial Intelligence (AI) in Real Estate",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 5,
+   "domain": "housecanary.com",
+   "title": "18 Best AI Tools for Real Estate Agents (2026)",
+   "page_type": "blog"
+  },
+  {
+   "rank": 6,
+   "domain": "instinctools.com",
+   "title": "AI Tools for Real Estate Agents",
+   "page_type": "blog"
+  },
+  {
+   "rank": 7,
+   "domain": "withjoy.ai",
+   "title": "WithJoy.AI | AI Real Estate Agent",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 8,
+   "domain": "monday.com",
+   "title": "AI for Real Estate: 15 Best Platforms Compared",
+   "page_type": "blog"
+  },
+  {
+   "rank": 9,
+   "domain": "youtube.com",
+   "title": "I Blew Up a Realtor's Business With These AI Agents (STEAL ...",
+   "page_type": "directory"
+  },
+  {
+   "rank": 10,
+   "domain": "realestatecontent.ai",
+   "title": "RealEstateContent.ai - The All-in-One Social Media AI for ...",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 11,
+   "domain": "chatbot.com",
+   "title": "AI Real Estate Agent: What It Does and How to Start",
+   "page_type": "blog"
+  },
+  {
+   "rank": 12,
+   "domain": "moxiworks.com",
+   "title": "The Best AI Tools for Real Estate Agents in 2026",
+   "page_type": "blog"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "nar.realtor",
+  "withjoy.ai",
+  "realestatecontent.ai"
+ ],
+ "related_searches": [
+  "Best ai agents for real estate",
+  "Free ai agents for real estate",
+  "Ai agents for real estate reddit",
+  "Free AI tools for real estate agents",
+  "AI for real estate listings",
+  "AI for real estate investors",
+  "AI for real estate marketing",
+  "AI for real estate leads",
+  "Best ai agents for real estate",
+  "Free ai agents for real estate",
+  "Ai agents for real estate reddit",
+  "Free AI tools for real estate agents",
+  "AI for real estate listings",
+  "AI for real estate investors",
+  "AI for real estate marketing",
+  "AI for real estate leads"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "Which AI agent is best for real estate?": "page query",
+  "How much does a realtor make on a $300,000 house?": "page query",
+  "How are real estate agents using AI?": "page query",
+  "What is the 3-3-3 rule in real estate?": "page query",
+  "How much do real estate agents make off a $300,000 house?": "page query",
+  "Can I use AI instead of a real estate agent?": "page query",
+  "Is being a real estate agent still worth it in 2026?": "page query",
+  "How many houses a year does a realtor have to sell to make $200,000 a year?": "page query",
+  "Which AI is best for realtors?": "ai agents for real estate",
+  "What is the 7% rule in real estate?": "how is ai used in real estate",
+  "What is the 30% rule in AI?": "how is ai used in real estate",
+  "How is Zillow using AI?": "how is ai used in real estate",
+  "What is Warren Buffett's #1 rule?": "how is ai used in real estate",
+  "What did Stephen Hawking say about AI before he died?": "how is ai used in real estate",
+  "What is AI not allowed to do?": "how is ai used in real estate",
+  "Do realtors still get 6% commission?": "how is ai used in real estate",
+  "How can I use AI as a realtor?": "ai for realtors",
+  "What's the best AI for realtors?": "ai for realtors",
+  "Is there a ChatGPT for real estate agents?": "ai for realtors",
+  "What's the best AI for real estate agents?": "ai for realtors",
+  "Is AI a threat to real estate agents?": "will ai replace real estate agents",
+  "Are realtors being replaced with AI?": "will ai replace real estate agents"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}

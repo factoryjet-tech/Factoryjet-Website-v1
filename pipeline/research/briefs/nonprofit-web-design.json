@@ -1,0 +1,161 @@
+{
+ "slug": "nonprofit-web-design",
+ "route": "/services/nonprofit-website-design",
+ "kind": "service",
+ "note": "HEAD-ON high KD",
+ "target_keyword": "nonprofit website design",
+ "search_volume": 1000,
+ "keyword_difficulty": 40,
+ "winning_page_type": "service-page",
+ "ai_overview_present": true,
+ "ai_overview_cites": [
+  "highmountaincreative.com",
+  "youtube.com",
+  "dnlomnimedia.com",
+  "imagexmedia.com"
+ ],
+ "paa_questions": [
+  "What is the 33% rule for nonprofits?",
+  "How do I create a website for my non-profit?",
+  "What is the best website builder for a nonprofit?",
+  "What is the 80/20 rule for nonprofits?",
+  "What is a 501c3 not allowed to do?",
+  "Can I pay myself if I run a nonprofit?",
+  "Is Wix free for nonprofits?",
+  "What should be included on a non-profit website?",
+  "What is the rule of 3 in nonprofit organizations?",
+  "What do non-profit websites usually have?",
+  "What are common nonprofit mistakes?",
+  "What is the best website for non-profit organizations?",
+  "What are the best nonprofit websites in 2026?",
+  "What is the downside to Wix?",
+  "What is the best free website for nonprofit organizations?",
+  "Is $1500 a good price for a website?",
+  "Can a nonprofit get a free website?",
+  "Can you call yourself a nonprofit without a 501c3?",
+  "What is a fair price for a website?",
+  "What are the five golden rules of a website?"
+ ],
+ "organic_top12": [
+  {
+   "rank": 1,
+   "domain": "elevationweb.org",
+   "title": "Nonprofit Website Design - ELEVATION",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 2,
+   "domain": "weareloop.com",
+   "title": "Nonprofit Website Design",
+   "page_type": "other"
+  },
+  {
+   "rank": 3,
+   "domain": "doublethedonation.com",
+   "title": "The 20+ Top Nonprofit Website Design Companies",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 4,
+   "domain": "reddit.com",
+   "title": "Building a Website for a Non-Profit, any suggestions?",
+   "page_type": "directory"
+  },
+  {
+   "rank": 5,
+   "domain": "highmountaincreative.com",
+   "title": "8 Nonprofit Websites that Spark Curiosity & Make Me Feel ...",
+   "page_type": "other"
+  },
+  {
+   "rank": 6,
+   "domain": "dribbble.com",
+   "title": "Nonprofit Website",
+   "page_type": "other"
+  },
+  {
+   "rank": 7,
+   "domain": "newmediacampaigns.com",
+   "title": "Nonprofit Web Design",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 8,
+   "domain": "numiko.com",
+   "title": "The best non-profit websites 2026",
+   "page_type": "blog"
+  },
+  {
+   "rank": 9,
+   "domain": "dnlomnimedia.com",
+   "title": "15+ Top Nonprofit Websites: Get Inspired & Design Your Own",
+   "page_type": "blog"
+  },
+  {
+   "rank": 10,
+   "domain": "wiredimpact.com",
+   "title": "Wired Impact: Nonprofit Website Design",
+   "page_type": "service-page"
+  },
+  {
+   "rank": 11,
+   "domain": "awwwards.com",
+   "title": "NonProfit Websites",
+   "page_type": "other"
+  },
+  {
+   "rank": 12,
+   "domain": "mailchimp.com",
+   "title": "Best Nonprofit Websites: Nonprofit Web Design & Examples",
+   "page_type": "blog"
+  }
+ ],
+ "named_rivals_for_comparison_table": [
+  "elevationweb.org",
+  "doublethedonation.com",
+  "newmediacampaigns.com",
+  "wiredimpact.com"
+ ],
+ "related_searches": [
+  "Nonprofit website design templates",
+  "Nonprofit website design ideas",
+  "Nonprofit website design examples",
+  "Best nonprofit website design",
+  "Best nonprofit websites",
+  "Organization website examples",
+  "Best NGO websites in the world",
+  "Nonprofit website development",
+  "Nonprofit website design templates",
+  "Nonprofit website design ideas",
+  "Nonprofit website design examples",
+  "Best nonprofit website design",
+  "Best nonprofit websites",
+  "Organization website examples",
+  "Best NGO websites in the world",
+  "Nonprofit website development"
+ ],
+ "generated": "2026-08-12",
+ "paa_sources": {
+  "What is the 33% rule for nonprofits?": "page query",
+  "How do I create a website for my non-profit?": "page query",
+  "What is the best website builder for a nonprofit?": "page query",
+  "What is the 80/20 rule for nonprofits?": "page query",
+  "What is a 501c3 not allowed to do?": "page query",
+  "Can I pay myself if I run a nonprofit?": "page query",
+  "Is Wix free for nonprofits?": "page query",
+  "What should be included on a non-profit website?": "what should a nonprofit website include",
+  "What is the rule of 3 in nonprofit organizations?": "what should a nonprofit website include",
+  "What do non-profit websites usually have?": "what should a nonprofit website include",
+  "What are common nonprofit mistakes?": "what should a nonprofit website include",
+  "What is the best website for non-profit organizations?": "best website platform for nonprofits",
+  "What are the best nonprofit websites in 2026?": "best website platform for nonprofits",
+  "What is the downside to Wix?": "best website platform for nonprofits",
+  "What is the best free website for nonprofit organizations?": "best website platform for nonprofits",
+  "Is $1500 a good price for a website?": "nonprofit website cost",
+  "Can a nonprofit get a free website?": "nonprofit website cost",
+  "Can you call yourself a nonprofit without a 501c3?": "nonprofit website cost",
+  "What is a fair price for a website?": "nonprofit website cost",
+  "What are the five golden rules of a website?": "nonprofit website cost"
+ },
+ "paa_note": "Questions sourced from live Google People-Also-Ask on the page query plus generic seeds. Geo-modified queries return few PAA, generic ones return many. Localise the ANSWER honestly, do not fake a local question."
+}
