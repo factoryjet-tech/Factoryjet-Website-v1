@@ -135,7 +135,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '01',
     title: 'Nobody buys on the page',
     body:
-      'There is no add-to-cart moment for a machine tool, a compliance platform or a two-year service contract. Nielsen Norman Group makes the point plainly: a B2B site is not the thing that closes the order, so its first job is to survive the screening phase and land on the shortlist. Design the site to be shortlisted, not to convert on the spot, and the whole page order changes.',
+      'There is no add-to-cart moment for a machine tool, a compliance platform or a two-year service contract. Nielsen Norman Group puts it plainly: a B2B site is not the thing that closes the order, so its first job is to survive screening and land on the shortlist. Design for that and the page order changes.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -143,7 +143,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '02',
     title: 'You are designing for a committee',
     body:
-      'A consumer decides alone. A business decision runs through a champion who wants it, a manager who signs, an engineer who has to make it work, and a finance person who compares you to doing nothing. Nielsen Norman Group calls the split choosers and users, and they need different pages. One clever homepage cannot serve four people with four different fears.',
+      'A consumer decides alone. A business decision runs through a champion who wants it, a manager who signs, an engineer who has to make it work, and a finance person comparing you to doing nothing. Nielsen Norman Group calls that split choosers and users. One homepage cannot serve four people with four different fears.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -151,7 +151,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '03',
     title: 'Procurement and security read your site too',
     body:
-      'Late in a deal, people you have never met open your website looking for a security page, a data processing addendum, a sub-processor list and proof of accessibility conformance. If you sell to US federal agencies, Section508.gov tells vendors to publish an Accessibility Conformance Report and make it easy to find on your own site. Most B2B sites have none of this, and the deal stalls in legal.',
+      'Late in a deal, people you have never met open your site looking for a security page, a data processing addendum, a sub-processor list and proof of accessibility conformance. Section508.gov tells vendors selling to US federal agencies to publish an Accessibility Conformance Report and make it easy to find. Most B2B sites have none of it.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -159,7 +159,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '04',
     title: 'Most of your visitors are not buying today',
     body:
-      'The person reading you now may sign in eighteen months, or never, or may just be the intern doing the first sweep. A site built only around a demo form treats every one of them as a failure. A site built to teach, to be remembered and to be findable again later treats them as the pipeline they actually are.',
+      'The person reading you now may sign in eighteen months, or never, or may be the intern doing the first sweep. A site built only around a demo form treats every one of them as a failure. A site built to teach and to be findable later treats them as the pipeline they are.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -167,7 +167,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '05',
     title: 'Case studies do the selling, not the headline',
     body:
-      'Ask any B2B buyer what they read before a call and you get the same answer: the work you did for someone who looked like them. Yet case studies are usually the thinnest, worst-structured pages on a B2B site, buried two levels deep and written as praise instead of evidence. On the sites we build they are a first-class template with their own navigation.',
+      'Ask any B2B buyer what they read before a call and you get the same answer: the work you did for someone who looked like them. Yet case studies are usually the thinnest pages on a B2B site, buried two levels deep and written as praise instead of evidence.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -175,7 +175,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '06',
     title: 'Your own sales team is a user',
     body:
-      'Reps send links. Every day, to people who are about to decide. If the only sendable thing on your site is the homepage, your reps are writing their own decks instead, and your positioning quietly forks into a dozen versions. A B2B site should ship pages built to be forwarded and read by someone your rep will never speak to.',
+      'Reps send links every day, to people who are about to decide. If the only sendable thing on your site is the homepage, they write their own decks instead and your positioning quietly forks into a dozen versions. Ship pages built to be forwarded and read by someone your rep will never speak to.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -192,67 +192,67 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '01',
     title: 'Positioning before pixels',
     body:
-      'We start by writing the sentence a buyer would use to describe you to a colleague who was not in the room. If that sentence is generic, no layout saves it. This is the part most web design projects skip, and it is the reason so many B2B sites look fine and say nothing.',
+      'We write the sentence a buyer would use to describe you to a colleague who was not in the room. If it is generic, no layout saves it. Skipping this is why so many B2B sites look fine and say nothing.',
   },
   {
     n: '02',
     title: 'A page per problem, not a page per feature',
     body:
-      'Buyers search their problem, not your product taxonomy. So the site tree follows the problems you solve and the situations you solve them in, with the feature detail sitting underneath for the engineer who needs it. This one decision usually doubles the number of queries a B2B site can legitimately rank for.',
+      'Buyers search their problem, not your product taxonomy. The site tree follows the problems you solve, with feature detail underneath for the engineer who needs it. That one decision usually doubles the queries a B2B site can legitimately rank for.',
   },
   {
     n: '03',
     title: 'Case studies structured as evidence',
     body:
-      'Same skeleton every time: the situation, the constraint that made it hard, what we actually changed, and what happened after. Named where the client allows it, anonymised by sector where they do not. We never write a number into a case study that the client has not confirmed, and we will tell you when your proof is too thin to publish yet.',
+      'Same skeleton every time: the situation, the constraint that made it hard, what we changed, and what happened after. Named where the client allows it, anonymised by sector where they do not. We never write a number a client has not confirmed.',
   },
   {
     n: '04',
     title: 'A kit your champion can forward',
     body:
-      'Somebody inside the account has to argue for you in a meeting you are not invited to. Nielsen Norman Group calls this an advocacy kit. In practice it is a one-page summary, a page that answers the objection their boss will raise, and a link that does not require a form. Build it and your champion stops improvising.',
+      'Somebody inside the account has to argue for you in a meeting you are not invited to. Nielsen Norman Group calls this an advocacy kit: a one-page summary, a page answering the objection their boss will raise, and a link with no form in front of it.',
   },
   {
     n: '05',
     title: 'The procurement pages almost nobody builds',
     body:
-      'A security overview in plain words. Where data lives and who touches it. A sub-processor list. An accessibility statement and conformance report. Insurance and legal entity details. These pages get almost no traffic and they unblock deals that would otherwise sit in review for a month.',
+      'A security overview in plain words. Where data lives and who touches it. A sub-processor list. An accessibility statement and conformance report. Insurance and legal entity details. These pages get almost no traffic and unblock deals that would otherwise sit in review.',
   },
   {
     n: '06',
     title: 'Gating decided asset by asset',
     body:
-      'Nielsen Norman Group is direct about this: search engines usually cannot see content behind a gate, and case studies, FAQs and product specifications do not belong behind one. Gate the deep template or the benchmark study, where someone late in the cycle will trade an email for it. Leave the rest open so it can be found and quoted.',
+      'Search engines usually cannot see content behind a gate, and Nielsen Norman Group says case studies, FAQs and product specifications do not belong behind one. Gate the deep template or the benchmark study, leave the rest open to be found and quoted.',
   },
   {
     n: '07',
     title: 'One short form on the page that matters',
     body:
-      'Two fields on the money page beats eleven fields everywhere. Long qualification forms feel efficient to marketing and read as an obstacle course to a director who has four other tabs open. Qualify in the follow-up, or with one well-chosen question, not with a wall of dropdowns.',
+      'Two fields on the money page beats eleven fields everywhere. Long qualification forms feel efficient to marketing and read as an obstacle course to a director with four other tabs open. Qualify in the follow-up.',
   },
   {
     n: '08',
     title: 'Show the shape of your pricing',
     body:
-      'Nielsen Norman Group found the same thing across B2B tests: buyers need realistic scenarios even when pricing is genuinely complex. You do not have to publish a rate card. You do have to say what drives the number, what a small engagement looks like next to a large one, and how you charge. Silence reads as expensive and evasive.',
+      'Nielsen Norman Group found buyers need realistic scenarios even when pricing is genuinely complex. You do not have to publish a rate card. You do have to say what drives the number and how you charge. Silence reads as expensive and evasive.',
   },
   {
     n: '09',
     title: 'Integration and compatibility, spelled out',
     body:
-      'The technical evaluator on the committee has one question: will this fit what we already run. Nielsen Norman Group lists integration, compatibility and regulatory detail as a core B2B content requirement. Naming the systems you connect to, and the ones you do not, is the fastest way to stop wasting everyone’s time.',
+      'The technical evaluator has one question: will this fit what we already run. Nielsen Norman Group lists integration, compatibility and regulatory detail as a core B2B content requirement. Name the systems you connect to, and the ones you do not.',
   },
   {
     n: '10',
     title: 'A speed budget on the templates reps send',
     body:
-      'Google treats an Interaction to Next Paint of 200 milliseconds or less as good responsiveness. That target is easy on a static page and easy to lose on the case study template with an embedded video and three tracking scripts, which happens to be the page your reps send most. We hold the budget where it is actually being spent.',
+      'Google treats an Interaction to Next Paint of 200 milliseconds or less as good responsiveness. That is easy on a static page and easy to lose on the case study template with an embedded video and three tracking scripts, which is the page your reps send most.',
   },
   {
     n: '11',
     title: 'Written to be quoted, not just ranked',
     body:
-      'Google shows an AI Overview on this query today. Being summarised well means answering the question in the first screen, in plain sentences, with the specifics an engine can lift without hedging. We write the informational pages to be quoted and the commercial pages to be clicked, and we measure them separately.',
+      'Google shows an AI Overview on this query today. Being summarised well means answering the question in the first screen, in plain sentences, with specifics an engine can lift without hedging. We write informational pages to be quoted and commercial pages to be clicked.',
   },
 ];
 
@@ -278,13 +278,6 @@ const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
     bop: 'B2B branding plus content and search together',
   },
   {
-    label: 'Stated focus',
-    fj: 'Commerce, AI search and B2B marketing sites',
-    windmill: 'Marketing for technical industries, by their own line',
-    nmc: 'General web design and development studio',
-    bop: 'Technology, fintech, biotech, industrial, energy',
-  },
-  {
     label: 'Published pricing guidance',
     fj: 'Scoped on a call, fixed proposal before work starts',
     windmill: 'Publishes a pricing page on its own site',
@@ -308,9 +301,9 @@ const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
   {
     label: 'Authority profile',
     fj: 'Around fifty referring domains. Small and honest about it',
-    windmill: 'Long-running domain, top of this result',
-    nmc: 'Long-running domain, second on this result',
-    bop: 'Long-running domain with a large blog library',
+    windmill: 'Long-running domain',
+    nmc: 'Long-running domain',
+    bop: 'Long-running domain, large blog library',
   },
   {
     label: 'Pick them when',
@@ -332,42 +325,45 @@ const RIVALS: ReadonlyArray<Rival> = [
     domain: 'windmillstrategy.com',
     note: 'Top of this result, and a genuine specialist',
     detail:
-      'Ranks first for b2b website design with a page of design examples. Their own site describes them as an industrial manufacturing marketing agency doing modern marketing for technical industries, working in industrial and automation, engineering and technology, and life sciences. If you make something physical and complicated, that fluency is worth a lot and we will say so.',
+      'Their own site describes them as an industrial manufacturing marketing agency for technical industries, across industrial automation, engineering and life sciences. If you make something physical and complicated, that fluency is worth a lot.',
   },
   {
     domain: 'newmediacampaigns.com',
     note: 'Second, on a straight service page',
     detail:
-      'Holds second place with a page titled simply B2B Web Design. Their site sits behind bot protection so we could not read their positioning to describe it fairly, and we are not going to guess. What we can say is that they hold a top position on the exact term this page targets, which is a real signal.',
+      'Their page is titled simply B2B Web Design. The site sits behind bot protection so we could not read their positioning fairly, and we will not guess. They hold a top position on the exact term this page targets.',
   },
   {
     domain: 'bopdesign.com',
     note: 'Branding, content and search in one shop',
     detail:
-      'Ranks fifth with a B2B website design agency page. Their site lists website design, WordPress build, SEO, generative engine optimisation, content marketing and branding as one bundle, across technology, fintech, biotech, software, industrial, engineering, consulting and energy. If you want brand and content under the same roof as the build, they are a real answer.',
+      'Their site bundles website design, WordPress build, SEO, generative engine optimisation, content marketing and branding, across technology, fintech, biotech, industrial and energy. If you want brand and content under the same roof as the build, they are a real answer.',
   },
   {
     domain: 'webflow.com',
     note: 'Not an agency, a platform',
     detail:
-      'Ranks eighth with a gallery of B2B site examples. Worth knowing because a lot of the inspiration you are about to look at is published by the tool it was built in. Great for seeing what is possible, less useful for deciding what your buying committee needs to read.',
+      'Ranks eighth with a gallery of B2B site examples. Worth knowing because much of the inspiration you are about to look at is published by the tool it was built in.',
   },
   {
     domain: 'superside.com',
     note: 'A roundup, not a competitor page',
     detail:
-      'Ranks seventh with a listicle of B2B web design agencies. Our own research this month found that being named in these roundups did not predict whether AI engines cited a company, so treat them as a starting list rather than a verdict.',
+      'Ranks seventh with a listicle of B2B web design agencies. Our own research this month found that being named in these roundups did not predict whether AI engines cited a company, so treat them as a starting list.',
   },
   {
     domain: 'hingemarketing.com',
     note: 'The strategy angle',
     detail:
-      'Ranks sixth with an article on expertise-driven B2B website strategy rather than a service page. Useful reading if you are still deciding what the site is for, which is honestly the right thing to settle before you brief anyone, including us.',
+      'Ranks sixth with an article on expertise-driven B2B website strategy rather than a service page. Useful if you are still deciding what the site is for, which is the right thing to settle first.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 28 items across 5 categories, all grounded in live US PAA
+   FAQ data: 22 items across 5 categories, all grounded in live US PAA.
+   Trimmed from 35 on 2026-08-12: the "What is B2B website design?" item duplicated
+   the answer-first block verbatim, and the generic web-design and Canva items were
+   off-intent. If you change the count, update the FAQ lead copy below too.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -382,63 +378,27 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   /* ── B2B website basics ─────────────────────────────────────────────── */
   {
     category: 'basics',
-    question: 'What is B2B website design?',
-    answer:
-      'B2B website design is the design of a marketing site for a company that sells to other companies. Nobody completes the purchase on it. Its job is to get a whole buying committee to shortlist you, survive procurement and legal review, and give your sales team pages worth sending. That is a different brief from a consumer site, and it changes almost every layout decision.',
-  },
-  {
-    category: 'basics',
     question: 'What is the best website for a B2B company?',
     answer:
-      'The one that answers the four people in the room. The champion needs a story they can repeat, the technical evaluator needs integration and compatibility detail, the finance signer needs to understand how you charge, and procurement needs security and accessibility pages. A site that only impresses the first of those four is the most common B2B failure we see.',
+      'The one that answers all four people in the room. The champion needs a story they can repeat, the technical evaluator needs integration detail, the finance signer needs to know how you charge, and procurement needs security and accessibility pages. Impressing only the champion is the most common B2B failure.',
   },
   {
     category: 'basics',
     question: 'How do you create a B2B website?',
     answer:
-      'Write the positioning first. Then map the buying committee and give each role a page. Structure the tree around problems rather than features, build case studies as evidence, add the security and accessibility pages procurement will ask for, decide gating asset by asset, and keep one short form on the page that matters. Design and build come after those decisions, not before.',
+      'Write the positioning first, then map the buying committee and give each role a page. Structure the tree around problems rather than features, build case studies as evidence, add the security and accessibility pages procurement asks for, decide gating asset by asset, and keep one short form on the page that matters.',
   },
   {
     category: 'basics',
     question: 'What makes a good B2B website?',
     answer:
-      'Clarity about what you do in the first screen, proof that you have done it for someone like the reader, enough technical detail for the evaluator, honesty about how you charge, and pages a rep can send without a covering explanation. Everything else is decoration. If a stranger cannot describe your business after thirty seconds, the design has failed.',
-  },
-  {
-    category: 'basics',
-    question: 'What are the 5 elements to a good website design?',
-    answer:
-      'There is no official list, so treat any confident version with suspicion. The five that actually matter for B2B: a clear value proposition, navigation that matches how buyers think rather than how you are organised, proof in the form of real case studies, page speed on real devices, and one obvious next step. Aesthetics support those five, they do not replace them.',
-  },
-  {
-    category: 'basics',
-    question: "What are the 7 C's of a website?",
-    answer:
-      'The seven Cs come from an e-commerce design framework: context, content, community, customisation, communication, connection and commerce. It is a useful audit checklist because it forces you past visuals into whether the site actually connects to anything. For most B2B sites, content, context and connection carry almost all the weight, and community rarely applies at all.',
-  },
-  {
-    category: 'basics',
-    question: 'What are the five golden rules of a website?',
-    answer:
-      'Different sources list different rules, which tells you something. The version worth keeping: say what you do immediately, make the next step obvious, prove your claims, load fast on the device people actually use, and stay usable for everyone including people using a keyboard or a screen reader. Anything that survives contact with a real buyer belongs on the list.',
-  },
-  {
-    category: 'basics',
-    question: 'Can a beginner create a website?',
-    answer:
-      'Yes, and for a first company site a beginner using a builder is often the right call. Where it breaks is not the building, it is the deciding: what the site is for, what order the pages go in, what proof to show, what to gate. Those are the parts that fail quietly, and they are the parts an agency is actually being paid for.',
-  },
-  {
-    category: 'basics',
-    question: 'Is web design still in demand?',
-    answer:
-      'The commodity end is under pressure. Templates and AI tools do a passable brochure site now, and that work is getting cheaper every year. The complicated end is not under pressure at all. Positioning, buying committee architecture, integrations, accessibility conformance and search visibility are still human work, and the gap between the two ends is widening.',
+      'Clarity about what you do in the first screen, proof you have done it for someone like the reader, enough technical detail for the evaluator, honesty about how you charge, and pages a rep can send without a covering note. If a stranger cannot describe your business after thirty seconds, the design failed.',
   },
   {
     category: 'basics',
     question: 'What are the top 10 B2B websites in the USA?',
     answer:
-      'No authoritative ranking exists, and any list claiming one is somebody marketing themselves. The question usually means one of two things: the largest B2B trading platforms, or the best-designed B2B sites. For design, the roundups from Webflow, Superside and Axon Garside are reasonable starting points. Read them as inspiration, not as a scoreboard.',
+      'No authoritative ranking exists, so any list claiming one is somebody marketing themselves. The question usually means either the largest B2B trading platforms or the best-designed B2B sites. For design, the roundups from Webflow, Superside and Axon Garside are reasonable starting points, not a scoreboard.',
   },
 
   /* ── B2B vs B2C ─────────────────────────────────────────────────────── */
@@ -446,61 +406,43 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'vs',
     question: 'What is the difference between a B2B website and a B2C website?',
     answer:
-      'A B2C site is built to close a purchase from one person in one session. A B2B site is built to inform several people over several months and then hand the sale to a human. So B2B leans on evidence, technical depth and sendable pages, while B2C leans on desire, urgency and checkout. Copying B2C tactics onto a B2B site is the classic mistake.',
+      'A B2C site is built to close a purchase from one person in one session. A B2B site informs several people over several months, then hands the sale to a human. B2B leans on evidence, technical depth and sendable pages. B2C leans on desire, urgency and checkout.',
   },
   {
     category: 'vs',
     question: 'Is B2B better than B2C?',
     answer:
-      'Neither is better, they are different jobs with different maths. B2B has fewer customers, larger contracts, longer cycles and much more relationship risk. B2C has volume, faster feedback and thinner margins per sale. What matters for your website is that the two need almost opposite designs, so pick the one you actually run and stop borrowing patterns from the other.',
+      'Neither is better, they are different jobs with different maths. B2B has fewer customers, larger contracts, longer cycles and much more relationship risk. B2C has volume, faster feedback and thinner margins per sale. For your website what matters is that the two need almost opposite designs.',
   },
   {
     category: 'vs',
     question: 'What is a B2B and B2C example?',
     answer:
-      'A company selling factory automation controllers to manufacturers is B2B. A company selling running shoes on its own site is B2C. Most large companies are both at once, which is why the labels cause so much confusion. The useful question is not what the company is, it is who reads this particular page and what they are allowed to decide.',
+      'A company selling factory automation controllers to manufacturers is B2B. A company selling running shoes on its own site is B2C. Most large companies are both at once, which is why the labels confuse people. The useful question is who reads this page and what they can decide.',
   },
   {
     category: 'vs',
     question: 'Is Amazon a B2B or B2C company?',
     answer:
-      'Both, through separate businesses. Amazon.com is consumer retail. Amazon Business is a purchasing platform aimed at companies, schools and public bodies. Amazon Web Services sells cloud infrastructure almost entirely to organisations. The same brand runs a consumer storefront and a large B2B operation side by side, which is exactly why one site design cannot serve both.',
+      'Both, through separate businesses. Amazon.com is consumer retail. Amazon Business is a purchasing platform aimed at companies, schools and public bodies. Amazon Web Services sells cloud infrastructure almost entirely to organisations. One brand runs a consumer storefront and a large B2B operation side by side, on deliberately different designs.',
   },
   {
     category: 'vs',
     question: 'Is Google a B2B or B2C company?',
     answer:
-      'Consumer-facing, B2B-funded. Search, Gmail, Maps and Android are used by billions of people who pay nothing. The customers who actually pay are advertisers and cloud buyers, and those are businesses. It is the clearest example of why you should ask who pays rather than who uses when you are deciding what your own website has to argue.',
+      'Consumer-facing, B2B-funded. Search, Gmail, Maps and Android are used by billions of people who pay nothing. The customers who actually pay are advertisers and cloud buyers, and those are businesses. It is the clearest reason to ask who pays rather than who uses.',
   },
   {
     category: 'vs',
     question: 'Is Walmart a B2B or B2C company?',
     answer:
-      'Mainly B2C retail, with real B2B lines attached. Sam’s Club serves small businesses buying in bulk, Walmart Marketplace sells to third-party sellers, and Walmart Connect sells advertising to brands. So a shopper and a supplier meet completely different Walmart, and the company builds separate digital experiences for each rather than one universal site.',
-  },
-  {
-    category: 'vs',
-    question: 'Is Apple a B2B or B2C company?',
-    answer:
-      'Predominantly B2C, with a serious enterprise and education channel underneath it. Apple sells hardware and services direct to consumers, and also to companies and schools through business and education programmes, volume purchasing and resellers. The consumer brand is what you see. The business channel is a quieter, differently designed set of pages entirely.',
+      'Mainly B2C retail, with real B2B lines attached. Sam’s Club serves small businesses buying in bulk, Walmart Marketplace sells to third-party sellers, and Walmart Connect sells advertising to brands. A shopper and a supplier meet completely different Walmarts, built as separate digital experiences rather than one universal site.',
   },
   {
     category: 'vs',
     question: 'Is Coca-Cola a B2B or B2C company?',
     answer:
-      'Its marketing is B2C and its actual sales are largely B2B. Coca-Cola advertises to drinkers but sells through bottlers, retailers, restaurants and vending operators. Those business customers are the ones placing orders. It is a good reminder that a company can speak to consumers everywhere and still need a serious trade-facing side to its digital estate.',
-  },
-  {
-    category: 'vs',
-    question: 'Is Nestle a B2B or B2C company?',
-    answer:
-      'Both, and openly so. Nestlé sells consumer brands through retailers, and it also runs a dedicated foodservice arm selling to restaurants, hotels, offices and caterers. That B2B side needs product specifications, ordering, and account-level information that would clutter a consumer brand site, which is why large groups split the two rather than merging them.',
-  },
-  {
-    category: 'vs',
-    question: 'Is Canva a B2B brand?',
-    answer:
-      'Both, in the pattern people call product-led growth. Individuals use the free and paid personal plans, which is consumer behaviour. Teams and enterprise plans are sold to organisations with admin controls, brand governance and central billing, which is B2B. The individual user gets in first and the company purchase follows, so the website has to serve both audiences at once.',
+      'Its marketing is B2C and its actual sales are largely B2B. Coca-Cola advertises to drinkers but sells through bottlers, retailers, restaurants and vending operators. Those business customers place the orders. A company can speak to consumers everywhere and still need a serious trade-facing side to its digital estate.',
   },
 
   /* ── Rules and frameworks ───────────────────────────────────────────── */
@@ -508,31 +450,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'rules',
     question: 'What is the rule of 7 in B2B?',
     answer:
-      'The rule of seven is the old marketing claim that a buyer needs roughly seven exposures to your brand before they act. It comes from mid-century advertising folklore, not from a controlled study, so do not treat the number as a law. The idea underneath it is sound: one visit rarely decides a B2B purchase, so build a site people can come back to.',
+      'The rule of seven is the old marketing claim that a buyer needs roughly seven exposures to your brand before they act. It comes from mid-century advertising folklore, not a controlled study, so do not treat it as a law. The idea underneath is sound: one visit rarely decides a B2B purchase.',
   },
   {
     category: 'rules',
     question: "What are the 7 P's of B2B marketing?",
     answer:
-      'Product, price, place, promotion, people, process and physical evidence. The last three were added to the original four to cover services, where the experience of buying is part of what you are buying. For a B2B website the three additions are the interesting ones, because your site is a large part of your process and most of your physical evidence.',
+      'Product, price, place, promotion, people, process and physical evidence. The last three were added to the original four to cover services, where the experience of buying is part of what you buy. Those three matter most for a website, which is much of your process and most of your physical evidence.',
   },
   {
     category: 'rules',
     question: "What are the four C's of B2B marketing?",
     answer:
-      'Customer, cost, convenience and communication. It is a deliberate re-framing of the four Ps from the buyer’s side rather than the seller’s. Applied to a website it is a decent test: does the site talk about the customer’s situation, explain total cost honestly, make the next step convenient, and communicate rather than broadcast.',
+      'Customer, cost, convenience and communication. It is a deliberate re-framing of the four Ps from the buyer’s side. Applied to a website it is a decent test: does the site talk about the customer’s situation, explain total cost honestly, make the next step convenient, and communicate rather than broadcast.',
   },
   {
     category: 'rules',
     question: 'What are the four pillars of B2B marketing?',
     answer:
-      'There is no canonical list, so pick a version and be consistent. The one we find useful in practice: positioning, demand creation, demand capture, and measurement. Websites usually live in the third pillar and get judged only on captured leads, which is why so many B2B sites are optimised for the small group already searching and useless to everybody else.',
-  },
-  {
-    category: 'rules',
-    question: 'What is the 70-20-10 rule in sales and marketing?',
-    answer:
-      'It is an allocation heuristic, used several different ways. In marketing it usually means putting most of the effort into what reliably works, some into promising newer channels, and a small slice into experiments that will mostly fail. Treat it as a way to protect a budget for learning, not as a measured law with one correct definition.',
+      'There is no canonical list, so pick a version and be consistent. The one we find useful: positioning, demand creation, demand capture, and measurement. Websites usually live in the third pillar and get judged only on captured leads, which is why so many B2B sites are useless to everybody not already searching.',
   },
 
   /* ── Platforms, AI and tools ────────────────────────────────────────── */
@@ -540,37 +476,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'tools',
     question: 'Which B2B platform is best?',
     answer:
-      'It depends on whether you mean a marketing site or a trade ordering system. For a B2B marketing site the platform matters far less than the structure, and a well-built site on almost any modern stack will outperform a badly structured one on an expensive stack. For ordering, catalogues and account pricing, see our B2B ecommerce page, which covers that comparison properly.',
+      'It depends on whether you mean a marketing site or a trade ordering system. For a marketing site the structure matters far more than the platform, and a well-built site on any modern stack will outperform a badly structured one. For ordering and account pricing, see our B2B ecommerce page.',
   },
   {
     category: 'tools',
     question: "What is the world's largest B2B platform?",
     answer:
-      'Alibaba.com is generally described as the largest B2B trading marketplace by number of buyers and suppliers. It is worth separating that from your own site, though. A marketplace rents you access to demand and takes a cut. Your own website is the asset you keep. Most serious B2B companies end up doing both for different reasons.',
+      'Alibaba.com is generally described as the largest B2B trading marketplace by number of buyers and suppliers. Worth separating that from your own site, though. A marketplace rents you access to demand and takes a cut. Your website is the asset you keep. Most serious B2B companies do both.',
   },
   {
     category: 'tools',
     question: 'Can ChatGPT design a website?',
     answer:
-      'It can produce layouts, copy and working code very quickly, and for a simple site that is genuinely useful. What it cannot do is the part that decides whether a B2B site works: knowing your buying committee, knowing which proof you are allowed to publish, and making the judgement calls about what to leave out. It writes the page. It does not decide the page.',
-  },
-  {
-    category: 'tools',
-    question: 'Which AI is best for designing a website?',
-    answer:
-      'None of them is best across the board, and any answer naming a single winner is out of date within months. The honest split today: general assistants are strongest at copy and code, dedicated generation tools are strongest at first-draft layouts, and design systems still come from people. Use them to remove the tedious middle, not to replace the deciding.',
-  },
-  {
-    category: 'tools',
-    question: "Why don't some professional designers use Canva?",
-    answer:
-      'Plenty do, for quick internal work, and that is a perfectly good use of it. The reasons professionals reach for other tools on client work are practical: template-led output tends to converge on the same look, typographic and colour control is limited compared to professional software, print colour handling is restricted, and stock elements come with licence conditions you have to read.',
-  },
-  {
-    category: 'tools',
-    question: 'Can I legally sell things I make in Canva?',
-    answer:
-      'It depends on the licence, and you should read Canva’s own content terms rather than take anyone’s summary. The shape people usually get wrong: you can generally use licensed elements inside your own finished design, but you cannot resell the stock elements themselves largely unchanged, and building a logo on stock elements is risky because you cannot claim exclusive rights to something thousands of others also licensed.',
+      'It can produce layouts, copy and working code very quickly, and for a simple site that is genuinely useful. What it cannot do is the part that decides whether a B2B site works: knowing your buying committee, knowing what proof you may publish, and judging what to leave out.',
   },
 
   /* ── Scope and working together ─────────────────────────────────────── */
@@ -578,25 +496,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a B2B website cost?',
     answer:
-      'We will not put a figure on a page, because a number written without seeing your situation is aimed at an average rather than at you. What actually moves scope: how many templates you need, whether positioning and messaging are in or out, how many integrations touch the site, whether we write the content or you do, whether accessibility conformance is required, and how many languages you need.',
+      'We will not put a figure on a page, because a number written without seeing your situation is aimed at an average rather than at you. What moves scope: how many templates you need, whether positioning is in or out, how many integrations touch the site, who writes the content, and whether accessibility conformance is required.',
   },
   {
     category: 'working',
     question: 'How long does a B2B website build take?',
     answer:
-      'Most of the calendar goes on decisions and content, not on build. A focused site with clear positioning and content ready can move quickly. A site that needs new positioning, new case studies written from interviews, and sign-off from several stakeholders takes considerably longer, and the stakeholder count is usually the honest predictor. We phase it so something useful ships early.',
+      'Most of the calendar goes on decisions and content, not on build. A focused site with clear positioning and content ready moves quickly. A site needing new positioning, case studies written from interviews, and sign-off from several stakeholders takes far longer, and the stakeholder count is the honest predictor.',
   },
   {
     category: 'working',
     question: 'Should we redesign our B2B site or start again?',
     answer:
-      'Redesign when the structure is sound and the problem is presentation. Start again when the site is organised around your internal departments rather than your buyers, when the platform blocks basic things, or when nobody can explain what the site is for. We will tell you which one you are looking at before you commit, because guessing wrong wastes a year.',
+      'Redesign when the structure is sound and the problem is presentation. Start again when the site is organised around your internal departments rather than your buyers, when the platform blocks basic things, or when nobody can explain what the site is for. We will tell you which before you commit.',
   },
   {
     category: 'working',
     question: 'Do you also build the trade portal and ordering side?',
     answer:
-      'Yes, but on a different page and usually as a separate phase. Catalogues, account pricing, net terms, quoting, punchout and ERP integration are a systems project, not a design project, and mixing them into a marketing site brief is how both end up mediocre. Our B2B ecommerce page covers that work, and the two link to each other rather than compete.',
+      'Yes, but on a different page and usually as a separate phase. Catalogues, account pricing, net terms, quoting, punchout and ERP integration are a systems project, not a design project, and mixing them into a marketing site brief makes both mediocre. Our B2B ecommerce page covers that work.',
   },
 ];
 
@@ -886,8 +804,7 @@ export default function B2BWebsiteDesignPage() {
                 </ul>
                 <p className="mt-4 font-fj-body text-[0.75rem] text-fj-neutral-600">
                   US volumes and difficulty from DataForSEO, August 2026. Difficulty runs 0 to 100. Two
-                  separate jobs, so we keep them on two separate pages instead of one page that half answers
-                  both.
+                  separate jobs, so we keep them on two separate pages.
                 </p>
               </div>
             </div>
@@ -922,9 +839,8 @@ export default function B2BWebsiteDesignPage() {
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 That last sentence is the entire difference. A consumer site is measured on whether one person
                 completes one action in one session. A B2B site is measured on whether four or five people,
-                over several months, arrive at enough agreement to book a call. So the things that win are
-                different: evidence beats persuasion, technical depth beats polish, and a page that answers the
-                one objection the finance signer will raise is worth more than a redesigned hero.
+                over several months, arrive at enough agreement to book a call. So evidence beats persuasion
+                and technical depth beats polish.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 This page is about the marketing site. If what you actually need is a place where trade
@@ -947,7 +863,7 @@ export default function B2BWebsiteDesignPage() {
                 { b: 'Committee-first', s: 'A page for the champion, the engineer, the signer and procurement' },
                 { b: 'Founder-led', s: 'The person who scopes the work is the person who does it' },
                 { b: 'Build and search together', s: 'Design, development and organic visibility in one team' },
-                { b: 'No invented proof', s: 'No borrowed testimonials, no case study numbers a client has not confirmed' },
+                { b: 'No invented proof', s: 'No borrowed testimonials, no numbers a client has not confirmed' },
               ].map((s) => (
                 <div key={s.b} className="rounded-2xl border p-6" style={{ borderColor: 'rgba(15,15,18,0.09)', background: CREAM }}>
                   <p className="fj-display text-[1.05rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
@@ -975,8 +891,8 @@ export default function B2BWebsiteDesignPage() {
             </h2>
             <p className="mt-4 max-w-[660px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
               People type both into the same search box and agencies happily sell both from the same page.
-              They are different disciplines with different risks. Here is the split, stated plainly, so you
-              can rule one out in about thirty seconds.
+              They are different disciplines with different risks. Here is the split, so you can rule one out
+              in about thirty seconds.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -1111,8 +1027,8 @@ export default function B2BWebsiteDesignPage() {
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-700" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
                 Nielsen Norman Group describes B2B decisions as long processes involving multiple people
                 across a company hierarchy and several job roles, and splits the audience into choosers and
-                users. Give each of them somewhere to land, or your champion ends up answering their
-                questions for you from memory.
+                users. Give each of them somewhere to land, or your champion answers their questions for you
+                from memory.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
@@ -1126,7 +1042,7 @@ export default function B2BWebsiteDesignPage() {
                   },
                   {
                     t: 'The signer',
-                    s: 'Wants to understand how you charge and what happens if this goes wrong. Compares you to doing nothing at all',
+                    s: 'Wants to know how you charge and what happens if this goes wrong. Compares you to doing nothing',
                   },
                   {
                     t: 'Procurement, security and legal',
@@ -1146,8 +1062,7 @@ export default function B2BWebsiteDesignPage() {
               </ul>
               <p className="mt-5 font-fj-body text-[0.9062rem] leading-[1.6] text-fj-neutral-700">
                 Most B2B sites we audit have excellent material for the first reader and nothing at all for
-                the fourth. That is not a design problem, it is a scoping problem, and it is why deals sit in
-                review.
+                the fourth. That is a scoping problem, not a design problem.
               </p>
             </div>
           </div>
@@ -1198,8 +1113,8 @@ export default function B2BWebsiteDesignPage() {
               <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                 SEO team
               </Link>
-              . They sit in the same building as the people writing the templates, which is why the speed
-              budget in item ten survives contact with the launch.
+              , who sit with the people writing the templates. That is why the speed budget in item ten
+              survives launch.
             </p>
           </div>
         </section>
@@ -1212,8 +1127,8 @@ export default function B2BWebsiteDesignPage() {
                 Want to know which of the four readers your site is losing?
               </h2>
               <p className="mt-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-700">
-                Send us the URL. We will read it the way a buying committee reads it, tell you which role has
-                nowhere to land, and show you the pages procurement will ask for and cannot find.
+                Send us the URL. We will read it the way a buying committee reads it and tell you which role
+                has nowhere to land.
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -1237,16 +1152,16 @@ export default function B2BWebsiteDesignPage() {
             </h2>
             <p className="mt-4 max-w-[740px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
               We pulled the live US result for b2b website design in August 2026. These three hold the top
-              service page positions and we do not. Everything below comes from their own sites or their
-              position on that result. You should know this before you talk to us, not after.
+              service page positions and we do not. Everything below comes from their own sites or that
+              result. You should know it before you talk to us, not after.
             </p>
 
             <div className="mt-10 overflow-x-auto rounded-2xl border" style={{ borderColor: 'rgba(15,15,18,0.10)' }}>
               <table className="w-full min-w-[900px] border-collapse text-left">
                 <caption className="sr-only">
                   Comparison of FactoryJet, Windmill Strategy, New Media Campaigns and Bop Design across
-                  search position, strengths, stated focus, published pricing guidance, ordering capability,
-                  account staffing, authority profile and best fit.
+                  search position, strengths, published pricing guidance, ordering capability, account
+                  staffing, authority profile and best fit.
                 </caption>
                 <thead>
                   <tr style={{ background: PEACH }}>
@@ -1298,9 +1213,8 @@ export default function B2BWebsiteDesignPage() {
               </table>
             </div>
             <p className="mt-4 font-fj-body text-[0.8125rem] text-fj-neutral-600">
-              Scroll the table sideways on smaller screens. Positions are a snapshot and they move. We could
-              not read the New Media Campaigns positioning because their site returns a bot challenge, so we
-              have left that column deliberately thin rather than guessing.
+              Scroll the table sideways on smaller screens. Positions are a snapshot and they move. The New
+              Media Campaigns column is deliberately thin rather than guessed.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -1340,11 +1254,11 @@ export default function B2BWebsiteDesignPage() {
                 <ul className="mt-5 space-y-3.5">
                   {[
                     'Your sale involves several people and takes months, not minutes',
-                    'Your current site was organised around your departments rather than your buyers',
+                    'Your site is organised around your departments rather than your buyers',
                     'Deals keep stalling in security or legal review and nobody has built those pages',
-                    'You have real client work you are allowed to publish and it is buried or unwritten',
+                    'You have real client work you may publish and it is buried or unwritten',
                     'Your reps send the homepage because nothing else is sendable',
-                    'You also sell online and want the marketing site and the portal designed to work together',
+                    'You sell online too and want the marketing site and the portal to work together',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1370,7 +1284,7 @@ export default function B2BWebsiteDesignPage() {
                   ))}
                 </ul>
                 <p className="mt-6 font-fj-body text-[0.9062rem] leading-[1.6] text-fj-neutral-700">
-                  If the site is basically sound and you only need it rebuilt on a better footing, start with{' '}
+                  If the site is sound and only needs rebuilding on a better footing, start with{' '}
                   <Link href="/services/website-redesign" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     website redesign
                   </Link>
@@ -1400,8 +1314,8 @@ export default function B2BWebsiteDesignPage() {
             </h2>
             <p className="mt-4 max-w-[720px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
               You should not take a web agency&rsquo;s word for how B2B buyers behave. Four primary sources
-              back the specific claims above. We opened every one of them before publishing. Open them
-              yourself before you hire anyone, including us.
+              back the specific claims above, and we opened every one before publishing. Open them yourself
+              before you hire anyone, including us.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -1410,28 +1324,28 @@ export default function B2BWebsiteDesignPage() {
                   src: 'Nielsen Norman Group',
                   title: 'B2B and B2C sites need different things',
                   body:
-                    'NN/g research across B2B verticals identifies five UX differences: content has to support long purchase decisions involving multiple people across a hierarchy, integration and compatibility detail has to be clear, content must serve both choosers and users, complex pricing still needs realistic scenarios, and the site has to speak to different business sizes without alienating any of them.',
+                    'NN/g research across B2B verticals identifies five UX differences: content must support long purchase decisions involving multiple people across a hierarchy, integration and compatibility detail must be clear, content must serve both choosers and users, complex pricing still needs realistic scenarios, and the site must speak to different business sizes at once.',
                   href: 'https://www.nngroup.com/articles/b2b-vs-b2c/',
                 },
                 {
                   src: 'Nielsen Norman Group',
                   title: 'The site is not what closes the order',
                   body:
-                    'NN/g states that B2B sites are typically not seen as closing the order, and that they still contribute to sales if they recognise the multi-step nature of business buying. The three goals it names are surviving the initial screening to reach the shortlist, giving an internal advocate a kit they can use, and building a reputation for service.',
+                    'NN/g states that B2B sites are typically not seen as closing the order, and still contribute to sales if they recognise the multi-step nature of business buying. The three goals it names: survive screening to reach the shortlist, give an internal advocate a kit, and build a reputation for service.',
                   href: 'https://www.nngroup.com/articles/b2b-convincing-decision-makers/',
                 },
                 {
                   src: 'Nielsen Norman Group',
                   title: 'Gating decided per asset, not as a policy',
                   body:
-                    'NN/g points out that search engines usually cannot see content behind a gate, and that case studies, FAQs and product specifications do not usually belong behind one. It also finds that people early in the buying cycle have lower commitment and a higher tendency to abandon forms, which is exactly when most B2B sites put a form in the way.',
+                    'NN/g points out that search engines usually cannot see content behind a gate, and that case studies, FAQs and product specifications do not usually belong behind one. It also finds people early in the buying cycle have lower commitment and abandon forms more, which is when most B2B sites add one.',
                   href: 'https://www.nngroup.com/articles/content-behind-forms/',
                 },
                 {
                   src: 'Section508.gov',
                   title: 'Accessibility conformance is a procurement document',
                   body:
-                    'The US government guidance explains that an Accessibility Conformance Report shows how a product meets the Revised 508 Standards, that it helps federal buyers assess products during market research and proposals, and it recommends vendors produce one for anything marketed to federal agencies and make it easy to find on their own website.',
+                    'The US government guidance explains that an Accessibility Conformance Report shows how a product meets the Revised 508 Standards, and that it helps federal buyers assess products during market research and proposals. It recommends vendors produce one for anything marketed to federal agencies.',
                   href: 'https://www.section508.gov/sell/acr/',
                 },
               ].map((c) => (
@@ -1466,8 +1380,8 @@ export default function B2BWebsiteDesignPage() {
               >
                 200 milliseconds or less as good responsiveness
               </a>
-              . Search volumes and difficulty come from DataForSEO, United States, August 2026. Competitor
-              positions are from the same live result on the same date.
+              . Search volumes and difficulty come from DataForSEO, United States, August 2026, as do the
+              competitor positions.
             </p>
           </div>
         </section>
@@ -1500,15 +1414,15 @@ export default function B2BWebsiteDesignPage() {
                 <span style={{ color: ORANGE_DARK }}>a room you are not in</span>
               </h2>
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-700" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
-                Everything on this page comes from the same observation: the decisive conversation about your
-                company happens without you, using whatever your website gave your champion to work with.
-                Build for that meeting and the rest of the site tends to sort itself out.
+                Everything on this page comes from one observation: the decisive conversation about your
+                company happens without you, using whatever your website gave your champion. Build for that
+                meeting and the rest tends to sort itself out.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
                   { t: 'Founder-led scoping', s: 'Bhavesh Barot scopes the work and stays on the account' },
-                  { t: 'Design, build and search in one team', s: 'The structure decisions and the ranking decisions are made by the same people' },
-                  { t: 'B2B on both sides', s: 'We run the marketing site work and the trade portal work, and we keep them separate on purpose' },
+                  { t: 'Design, build and search in one team', s: 'Structure and ranking decisions are made by the same people' },
+                  { t: 'B2B on both sides', s: 'We run the marketing site work and the trade portal work, kept separate on purpose' },
                   { t: 'No invented numbers, ever', s: 'No fabricated case studies, no borrowed testimonials, no guaranteed results' },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
@@ -1555,17 +1469,17 @@ export default function B2BWebsiteDesignPage() {
                 {
                   label: 'Web design',
                   href: '/services/web-design',
-                  desc: 'Our general US web design service, for companies whose sale does not run through a buying committee.',
+                  desc: 'General US web design, for companies whose sale does not run through a buying committee.',
                 },
                 {
                   label: 'Website redesign',
                   href: '/services/website-redesign',
-                  desc: 'When the structure is sound and the problem is presentation, staging and search continuity.',
+                  desc: 'When the structure is sound and the problem is presentation and search continuity.',
                 },
                 {
                   label: 'SEO services',
                   href: '/services/seo',
-                  desc: 'The organic programme that gets the B2B pages found in the first place, run end to end.',
+                  desc: 'The organic programme that gets the B2B pages found in the first place.',
                 },
                 {
                   label: 'AI SEO',
@@ -1575,7 +1489,7 @@ export default function B2BWebsiteDesignPage() {
                 {
                   label: 'Web application development',
                   href: '/services/web-application-development',
-                  desc: 'When the thing behind the marketing site is a product, a portal or a customer tool rather than pages.',
+                  desc: 'When the thing behind the marketing site is a product or a customer portal rather than pages.',
                 },
               ].map((svc) => (
                 <Link
@@ -1603,7 +1517,7 @@ export default function B2BWebsiteDesignPage() {
         <FAQ
           eyebrow="B2B website design FAQ"
           headline="The questions people actually search"
-          lead="Thirty-four answers covering what B2B website design is, how a B2B site differs from a consumer one, the frameworks people keep asking about, where AI tools genuinely help, and what drives the scope of a build. If yours is not here, send a short brief and we usually reply within one business day."
+          lead="Twenty-two answers covering how a B2B site differs from a consumer one, the frameworks people keep asking about, where AI tools genuinely help, and what drives the scope of a build. If yours is not here, send a short brief and we usually reply within one business day."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1613,7 +1527,7 @@ export default function B2BWebsiteDesignPage() {
           variant="dark"
           eyebrow="BEFORE THE NEXT QUARTER"
           headline="Find out which reader your B2B site is losing"
-          sub="Book a call with the founder. We will read your site the way a buying committee reads it, name the role that has nowhere to land, list the procurement pages that are missing, and tell you plainly whether this is a redesign, a rebuild, or a positioning problem you should fix before anyone touches a layout."
+          sub="Book a call with the founder. We will read your site the way a buying committee reads it, name the role that has nowhere to land, list the procurement pages that are missing, and tell you whether this is a redesign, a rebuild, or a positioning problem."
           primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See B2B ecommerce', href: '/b2b-ecommerce' }}
           objectionHandler="Founder-led. No guaranteed results, no invented case studies, and you own the site, the content and the roadmap."

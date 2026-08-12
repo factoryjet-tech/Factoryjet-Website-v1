@@ -141,7 +141,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '01',
     title: 'Answers a new lead in seconds, at any hour',
     body:
-      'A portal enquiry at 11pm gets a real reply at 11pm, by text or email, in your brokerage voice. The agent reads the enquiry, matches it to the property, answers the question that was asked, and asks one qualifying question back. Nothing about this needs a person awake, and the whole advantage disappears if it waits for morning.',
+      'A portal enquiry at 11pm gets a real reply at 11pm, by text or email, in your brokerage voice. The agent reads the enquiry, matches it to the property, answers the question asked, and asks one qualifying question back.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -149,7 +149,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '02',
     title: 'Qualifies without interrogating',
     body:
-      'Timeline, area, whether they have a home to sell, whether they have spoken to a lender, and whether they already have an agent. Five things, asked across a conversation rather than fired as a form. The answers go into named CRM fields, not into a note nobody reads, so routing rules can actually use them.',
+      'Timeline, area, whether they have a home to sell, whether they have spoken to a lender, and whether they already have an agent. Five things, asked across a conversation rather than fired as a form, then written to named CRM fields so routing rules can use them.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -157,7 +157,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '03',
     title: 'Books the showing against a real calendar',
     body:
-      'The agent checks live availability in Google Calendar or Outlook, offers slots that exist, writes the appointment, sends the confirmation and the reminder, and handles the reschedule. Where the brokerage runs ShowingTime or BrokerBay, it requests through that instead of around it, so the listing side stays in the loop.',
+      'The agent checks live availability in Google Calendar or Outlook, offers slots that exist, and writes the appointment. Where the brokerage runs ShowingTime or BrokerBay, it requests through that instead of around it, so the listing side stays in the loop.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -165,7 +165,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '04',
     title: 'Keeps the long nurture alive',
     body:
-      'Most buyers and sellers are months out. That is the part humans drop, because it is a hundred small touches with no immediate payoff. An agent can run a twelve month cadence, notice when someone re-opens a saved search or clicks a listing, change the message accordingly, and pull a person in the moment the signal turns real.',
+      'Most buyers and sellers are months out, and that is the part humans drop, because it is a hundred small touches with no immediate payoff. An agent runs a twelve month cadence and pulls a person in the moment the signal turns real.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -173,7 +173,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '05',
     title: 'Enriches and cleans the CRM',
     body:
-      'Duplicate contacts merged, stage moved when the evidence says so, source recorded properly, and a short written summary of every conversation attached to the record. Unglamorous, and it is the difference between a database you can market to and forty thousand rows nobody trusts.',
+      'Duplicate contacts merged, stage moved when the evidence says so, source recorded properly, and a short written summary of every conversation attached to the record. The difference between a database you can market to and forty thousand rows nobody trusts.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -181,7 +181,7 @@ const WORKLOADS: ReadonlyArray<Workload> = [
     tag: '06',
     title: 'Handles listing and MLS data properly',
     body:
-      'Pulling status, price changes, days on market and photos from your MLS feed so the agent answers from current data instead of guessing. That means the RESO Web API where your MLS has moved to it, or a licensed IDX feed, under your MLS display rules. Never scraped from a portal, which breaks and is usually a licence violation.',
+      'Status, price changes, days on market and photos pulled from your MLS feed, so the agent answers from current data instead of guessing. That means the RESO Web API where your MLS has moved to it, or a licensed IDX feed, under your MLS display rules.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -198,31 +198,31 @@ const STEPS: ReadonlyArray<Step> = [
     n: '01',
     title: 'Pick one queue, not the whole business',
     body:
-      'Inbound buyer enquiries from your website and portals is the usual first queue, because it is high volume, it is measurable, and slow response is where teams bleed most. Sellers, past clients and sphere follow-up come second. Handing an agent everything on day one is the most reliable way to make it fail in public.',
+      'Inbound buyer enquiries from your website and portals: high volume, measurable, and where slow response costs most. Handing an agent everything on day one is the reliable way to fail in public.',
   },
   {
     n: '02',
     title: 'Write down what a good response actually says',
     body:
-      'Pull thirty of your best recent conversations and thirty bad ones. That is the standard the agent gets measured against, and it is also where you discover your team already disagrees about what qualifying means. This step is boring and it is the one that decides whether anyone trusts the output.',
+      'Pull thirty of your best recent conversations and thirty bad ones. That is the standard the agent gets measured against, and where you discover your team already disagrees about what qualifying means.',
   },
   {
     n: '03',
     title: 'Connect the CRM as the system of record',
     body:
-      'Follow Up Boss, Lofty, Sierra Interactive, kvCORE and BoldTrail, Real Geeks, HubSpot or Salesforce. The agent reads the contact, writes back to named fields, and logs every message. If it cannot write to the CRM, you have bought a chat widget, not an agent.',
+      'Follow Up Boss, Lofty, Sierra Interactive, kvCORE and BoldTrail, Real Geeks, HubSpot or Salesforce. The agent reads the contact, writes back to named fields, and logs every message. Without CRM writeback you have a chat widget.',
   },
   {
     n: '04',
     title: 'Connect the listing data through the right door',
     body:
-      'Your MLS feed via the RESO Web API, a distributor such as MLS Grid, Trestle or Bridge Interactive, or your IDX provider. Your MLS display rules govern what can be shown, to whom, and how fresh it has to be. We read those rules before we write the integration, not after somebody complains.',
+      'Your MLS feed via the RESO Web API, a distributor such as MLS Grid, Trestle or Bridge Interactive, or your IDX provider. Which door is open depends on your MLS, so it gets settled in scoping.',
   },
   {
     n: '05',
     title: 'Give it a calendar and a booking path',
     body:
-      'Google Calendar or Microsoft Outlook for the agent side, plus ShowingTime or BrokerBay where the brokerage uses one. Rules matter more than the connection: how far ahead it may book, buffer between showings, which agents cover which areas, and what happens when nobody is free.',
+      'Google Calendar or Microsoft Outlook for the agent side, plus ShowingTime or BrokerBay where the brokerage uses one. Then the booking rules, which decide whether the calendar stays usable once volume arrives.',
   },
   {
     n: '06',
@@ -240,7 +240,7 @@ const STEPS: ReadonlyArray<Step> = [
     n: '08',
     title: 'Run it in shadow mode first',
     body:
-      'For the first stretch the agent drafts and a person approves with one click. You watch the disagreement rate on real leads before it sends anything on its own. This costs a few weeks and it is the single biggest reason these projects survive contact with an actual client.',
+      'For the first stretch the agent drafts and a person approves with one click. You watch the disagreement rate on real leads before it sends anything alone. It costs a few weeks and it is why these projects survive.',
   },
   {
     n: '09',
@@ -252,7 +252,7 @@ const STEPS: ReadonlyArray<Step> = [
     n: '10',
     title: 'Measure speed to first reply, then contact rate',
     body:
-      'Median seconds to first response, share of leads reached, share qualified, appointments set, and how many were still worked at day thirty and day ninety. Not message volume. An agent that sends more messages and reaches fewer people has made your database worse.',
+      'Median seconds to first response, share of leads reached, share qualified, appointments set, and how many were still worked at day thirty and day ninety. Not message volume. Sending more and reaching fewer makes things worse.',
   },
 ];
 
@@ -312,13 +312,6 @@ const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
     answering: 'Leads go cold between message and callback',
     autoresponder: 'People spot it instantly and stop replying',
   },
-  {
-    label: 'Best when',
-    ai: 'Volume outruns the people you can staff on it',
-    isa: 'You have the headcount and the market knowledge',
-    answering: 'You mainly need calls captured, not worked',
-    autoresponder: 'You are one person and need any safety net',
-  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -334,37 +327,37 @@ const RIVALS: ReadonlyArray<Rival> = [
     domain: 'nar.realtor',
     note: 'The trade body, not a vendor',
     detail:
-      'The National Association of REALTORS® publishes guidance on AI in real estate rather than selling a product. It is the closest thing this category has to a neutral reference, it describes REALTORS® as the human in the loop for AI-assisted tasks, and it flags data bias and privacy as live risks. Read it before you read any vendor page, including this one.',
+      'The National Association of REALTORS® publishes guidance on AI in real estate rather than selling a product, which makes it the closest thing this category has to a neutral reference.',
   },
   {
     domain: 'withjoy.ai',
     note: 'A packaged AI real estate assistant',
     detail:
-      'Sells itself as an AI real estate agent: a ready-made product you switch on rather than a build. If your workflow matches what the product does, buying beats building, and we will say so on the call. The trade is that you take their conversation design and their integration list.',
+      'Sells itself as an AI real estate agent: a ready-made product you switch on rather than a build. If your workflow matches what it does, buying beats building.',
   },
   {
     domain: 'realestatecontent.ai',
     note: 'Marketing content, not lead handling',
     detail:
-      'Focused on social media and marketing content for agents. Different job from the one on this page. Plenty of teams need both, and content tools do not touch your CRM records or book anything.',
+      'Focused on social media and marketing content for agents, which is a different job from the one on this page. Content tools do not touch your CRM records or book anything.',
   },
   {
     domain: 'mindstudio.ai',
     note: 'A build-your-own agent platform',
     detail:
-      'A general platform for assembling AI agents and workflows, with a widely read roundup of real estate agent use cases. Genuinely useful if you have someone in-house willing to own the build and maintain it. Where teams struggle is the second half: authentication, MLS rules, evaluation and the audit trail.',
+      'A general platform for assembling AI agents and workflows, with a widely read roundup of real estate use cases. Where teams struggle is the second half: authentication, MLS rules, evaluation and the audit trail.',
   },
   {
     domain: 'voiceflow.com',
     note: 'Conversation design tooling',
     detail:
-      'A platform for designing and shipping conversational agents, with real estate presented as one of its use cases. Strong at the conversation layer. The integration and compliance layer around it is still your problem to solve.',
+      'A platform for designing and shipping conversational agents, with real estate as one use case. The integration and compliance layer around it is still yours to solve.',
   },
   {
     domain: 'chatbot.com',
     note: 'Website chat, well executed',
     detail:
-      'A mature chatbot product with a clear explainer on AI real estate agents. If what you actually need is a good website chat that captures and routes, this is a reasonable answer and cheaper than a custom build.',
+      'A mature chatbot product with a clear explainer on AI real estate agents. If what you need is website chat that captures and routes, this is cheaper than a custom build.',
   },
 ];
 
@@ -380,14 +373,14 @@ const CITATIONS: ReadonlyArray<Citation> = [
     src: 'Harvard Business Review, March 2011',
     title: 'Why the first hour decides the lead',
     body:
-      'Oldroyd, McElheran and Elkington studied 1.25 million sales leads across 42 US companies. Firms that tried to contact a lead within an hour were nearly seven times as likely to have a meaningful conversation with a decision maker as those that tried an hour later, and more than sixty times as likely as those who waited a day. A separate audit of 2,241 US companies found the average response time, among those that responded at all, was 42 hours.',
+      'Oldroyd, McElheran and Elkington are the source for the seven times and sixty times figures quoted above, drawn from 1.25 million leads across 42 US companies. The same article reports a separate audit of 2,241 US companies where average response time, among those that replied at all, was 42 hours.',
     href: 'https://hbr.org/2011/03/the-short-life-of-online-sales-leads',
   },
   {
     src: 'United States Code, 42 U.S.C. § 3604(c)',
     title: 'What the law says about the words you publish',
     body:
-      'The Fair Housing Act makes it unlawful to make, print or publish any notice, statement or advertisement about the sale or rental of a dwelling that indicates any preference, limitation or discrimination based on race, colour, religion, sex, handicap, familial status or national origin. An automated message is a statement. That is the whole reason the limits on this page are written into the tools.',
+      'The Fair Housing Act makes it unlawful to make, print or publish any notice, statement or advertisement about the sale or rental of a dwelling that indicates any preference, limitation or discrimination based on race, colour, religion, sex, handicap, familial status or national origin. An automated message is a statement.',
     href: 'https://www.law.cornell.edu/uscode/text/42/3604',
   },
   {
@@ -401,17 +394,24 @@ const CITATIONS: ReadonlyArray<Citation> = [
     src: 'Real Estate Standards Organization',
     title: 'How listing data is meant to move',
     body:
-      'RESO describes the Web API as the modern way to transport real estate data, built on open standards including OData, and says companies are moving away from older deprecated transports such as RETS. This is the door an agent should read listing data through, rather than scraping a portal.',
+      'RESO describes the Web API as the modern way to transport real estate data, built on open standards including OData, and says companies are moving away from older deprecated transports such as RETS. This is the door an agent should read listing data through.',
     href: 'https://www.reso.org/reso-web-api/',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 36 items across 7 categories, grounded in the live US
+   FAQ data: 22 items across 6 categories, grounded in the live US
    People-Also-Ask set pulled 2026-08-12. Two PAA questions arrived with dollar
    figures in the question text; they are asked here without the figure, because
    this site carries no currency values. The FAQPage JSON-LD below is generated
    from THIS array. Never hand-write a second copy.
+
+   Trimmed 2026-08-12 from 37 items. Removed: three questions that restated the
+   answer-first block almost verbatim, four that repeated a workload tile or a
+   fit-check bullet, and eight off-intent ones (general AI trivia, commission
+   arithmetic, unrelated rules of thumb). The "rules" category went with them and
+   its one surviving question moved into "jobs". Every remaining category still
+   has items, so no nav tab renders empty. Never drop below 20 items.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -420,7 +420,6 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'systems', label: 'CRMs, MLS & tools' },
   { key: 'limits', label: 'Fair housing & limits' },
   { key: 'career', label: 'Agents, jobs & commission' },
-  { key: 'rules', label: 'Rules people ask about' },
   { key: 'working', label: 'Working with us' },
 ];
 
@@ -428,39 +427,21 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   /* ── The basics ─────────────────────────────────────────────────────── */
   {
     category: 'basics',
-    question: 'What is an AI agent for real estate?',
-    answer:
-      'An AI agent for real estate is software that works your inbound leads the way a good assistant would. It replies to a new enquiry in seconds, asks qualifying questions, books a showing on a real calendar, updates the CRM record and keeps following up for months. A licensed human still handles advice, negotiation and anything material.',
-  },
-  {
-    category: 'basics',
-    question: 'What is the difference between an AI agent and a real estate chatbot?',
-    answer:
-      'A chatbot writes an answer. An agent takes an action. The chatbot on your website can explain that a home has four bedrooms. An agent checks the calendar, books Tuesday at six, writes the appointment into Follow Up Boss, sends the confirmation, and tells a person which lead needs a call.',
-  },
-  {
-    category: 'basics',
     question: 'Which AI agent is best for real estate?',
     answer:
-      'There is no single best one, because the category covers four different jobs: lead response, content writing, valuation and transaction admin. Pick by the job you are losing money on. If your leads sit unanswered for hours, buy or build lead response and ignore everything else until that is fixed.',
+      'No single one wins, because the category covers four different jobs: lead response, content writing, valuation and transaction admin. Pick by the job that is costing you money. If enquiries sit unanswered for hours, fix lead response first and ignore everything else until it works.',
   },
   {
     category: 'basics',
     question: 'Which AI is best for realtors?',
     answer:
-      'For most individual agents the honest answer is a general assistant such as ChatGPT, Claude or Gemini for writing and thinking, plus whatever automation is already inside your CRM. A custom agent only pays off when volume is large enough that a person genuinely cannot keep up, which usually means a team or a brokerage rather than a solo agent.',
+      'For most individual agents, a general assistant such as ChatGPT, Claude or Gemini for writing, plus the automation already inside your CRM. A custom agent only pays off when volume genuinely outruns a person, which usually means a team or a brokerage rather than a solo agent.',
   },
   {
     category: 'basics',
     question: 'Is there a ChatGPT for real estate agents?',
     answer:
-      'Several products wrap a general model in a real estate interface, and ChatGPT itself is widely used by agents for drafting. The gap is not the writing. It is that a chat window cannot see your CRM, your calendar or your MLS feed, so it cannot act. That connection is what makes something an agent.',
-  },
-  {
-    category: 'basics',
-    question: 'How is this different from your general AI agent development service?',
-    answer:
-      'Same engineering practice, different domain. Our parent page covers building agents for support, sales and back-office queues in any industry. This page is the real estate application: portal leads, showing scheduling, MLS data rules and fair housing limits. If you want the general version, start at AI agent development.',
+      'Several products wrap a general model in a real estate interface, and agents use ChatGPT itself for drafting. The gap is not the writing. A chat window cannot see your CRM, your calendar or your MLS feed, so it cannot act. That connection is what makes something an agent.',
   },
 
   /* ── What it actually does ──────────────────────────────────────────── */
@@ -468,49 +449,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'How are real estate agents using AI?',
     answer:
-      'Four clusters, in rough order of adoption. Writing: listing copy, emails, social posts. Answering: website chat and instant replies to portal leads. Admin: summarising calls, drafting follow-ups, cleaning the database. Analysis: comparable properties and market questions. The first three are settled practice. The fourth still needs a person checking the output.',
-  },
-  {
-    category: 'jobs',
-    question: 'How can I use AI as a realtor?',
-    answer:
-      'Start with the thing you are worst at, which for most agents is follow-up. Automate the first reply so nobody waits, and automate the ninety day nurture so nobody is forgotten. Keep the showing, the pricing conversation and the negotiation entirely human. That split gets you most of the value with almost none of the risk.',
-  },
-  {
-    category: 'jobs',
-    question: 'Can an AI agent answer leads at night and on weekends?',
-    answer:
-      'Yes, and that is usually where it earns its keep. Portal enquiries arrive heavily in evenings and at weekends, which is exactly when a team is least covered. The agent replies immediately, holds a short conversation, books if the person is ready, and leaves a briefed lead for the morning.',
+      'Four clusters, in rough order of adoption. Writing: listing copy, emails, social posts. Answering: website chat and instant replies to portal leads. Admin: summarising calls, drafting follow-ups, cleaning the database. Analysis: comparable properties and market questions. The first three are settled practice. The fourth still needs checking.',
   },
   {
     category: 'jobs',
     question: 'Can the agent book showings on my calendar?',
     answer:
-      'Yes. It reads live availability from Google Calendar or Outlook, offers only slots that exist, writes the appointment, and sends confirmations and reminders. Where your brokerage runs ShowingTime or BrokerBay, it requests through that system so the listing side is not bypassed.',
-  },
-  {
-    category: 'jobs',
-    question: 'Can it call leads, not just text them?',
-    answer:
-      'It can, over a voice platform such as Twilio, and we would usually ask you to wait. Text and email are lower risk, easier to review and better received on a first touch. Voice is worth adding once the text agent is proven and you have the consent and recording rules sorted with your broker.',
+      'Yes, and the booking rules matter more than the connection. Before launch you set how far ahead it may book, the buffer between showings, which agents cover which areas, and what happens when nobody is free. It handles the confirmation, the reminder and the reschedule too.',
   },
   {
     category: 'jobs',
     question: 'Will the agent write listing descriptions?',
     answer:
-      'It can draft them from the property record, and a person must read every one before it is published. Listing copy is advertising, and advertising is exactly where fair housing language rules bite hardest. Draft by machine, approve by human, every time, with no exceptions for a busy week.',
+      'It can draft them from the property record, and a person must read every one before publication. Listing copy is advertising, and advertising is where fair housing language rules bite hardest. Draft by machine, approve by human, every time, with no exception for a busy week.',
   },
   {
     category: 'jobs',
     question: 'Does this replace our inside sales agents?',
     answer:
-      'Usually it changes what they do rather than removing them. The agent takes first response, basic qualification and the long nurture, which is the grinding part. Your people take the conversations that need judgement, market knowledge and a relationship. Teams that fire the ISA desk on launch day tend to regret it within a quarter.',
+      'Usually it changes what they do rather than removing them. The agent takes first response, basic qualification and the long nurture, which is the grinding part. Your people take the conversations needing judgement, market knowledge and a relationship. Teams that clear the ISA desk on launch day tend to regret it.',
   },
   {
     category: 'jobs',
-    question: 'How is Zillow using AI?',
+    question: 'What is the 3-3-3 rule in real estate?',
     answer:
-      'Zillow has used machine learning for years in its valuation estimate, and has added natural language search, AI-assisted listing tools and virtual touring features. Portals are building AI into the search experience itself. That is a reason to be fast and useful when a lead reaches you, not a reason to panic.',
+      'An informal coaching habit rather than an official rule, used a few different ways. The common version is a follow-up cadence: contact a new lead three times in three days, then three times in three weeks, then three times in three months. Agents intend to run that. Software actually does.',
   },
 
   /* ── CRMs, MLS & tools ──────────────────────────────────────────────── */
@@ -524,13 +487,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'systems',
     question: 'Can the agent read our MLS data?',
     answer:
-      'Yes, through the proper door: your MLS feed over the RESO Web API, a distributor such as MLS Grid, Trestle or Bridge Interactive, or your IDX provider. Your MLS display rules decide what may be shown and how fresh it must be. We do not scrape portals, which breaks quietly and usually violates a licence.',
-  },
-  {
-    category: 'systems',
-    question: 'What if our brokerage runs on spreadsheets and a shared inbox?',
-    answer:
-      'Then fix that first, and we will tell you so. An agent needs a system of record to write to. Without one you get fast replies that nobody can see, which is worse than slow replies everyone can. A simple CRM properly set up beats an agent bolted onto chaos.',
+      'Yes, through the proper door. Your MLS display rules decide what may be shown, to whom, and how fresh it has to be, and we read those rules before writing the integration. We do not scrape portals, which breaks quietly and usually violates a licence.',
   },
   {
     category: 'systems',
@@ -544,37 +501,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'limits',
     question: 'What is AI not allowed to do in real estate?',
     answer:
-      'It may not steer. Under the Fair Housing Act it is unlawful to publish any statement about the sale or rental of a dwelling indicating a preference or limitation based on race, colour, religion, sex, handicap, familial status or national origin. An automated message is a statement, so the agent must never describe an area by who lives there, or answer questions about demographics, crime or school quality.',
+      'It may not steer. The Fair Housing Act makes it unlawful to publish any statement about the sale or rental of a dwelling indicating a preference or limitation based on a protected characteristic, and an automated message is a statement. So the agent never describes an area by who lives there, and never answers demographic, crime or school questions.',
   },
   {
     category: 'limits',
     question: 'How do you stop the agent from breaking fair housing rules?',
     answer:
-      'Three layers, none of them a prompt. A classifier catches protected-characteristic questions before generation. The tools themselves cannot return demographic data. And every outbound message is logged so your broker can audit what was actually said. Flagged requests get one neutral reply and an immediate handoff to a licensed person.',
+      'Three layers, none of them a prompt. A classifier catches protected-characteristic questions before generation. The tools themselves cannot return demographic data. Every outbound message is logged so your broker can audit what was said. Flagged requests get one neutral reply and an immediate handoff to a licensed person.',
   },
   {
     category: 'limits',
     question: 'Can the agent give advice on price, contracts or financing?',
     answer:
-      'No, and it should refuse clearly rather than hedge. Pricing advice, contract terms, repair negotiation, disclosure questions, tax and mortgage advice all leave the agent immediately with a summary attached to the record. Those are licensed conversations, and in several cases they are legal or financial advice that no automated system should be giving.',
+      'No, and it refuses clearly rather than hedging. Pricing advice, contract terms, repair negotiation, disclosure questions, tax and mortgage advice all leave the agent immediately with a summary attached to the record. Those are licensed conversations, and several of them are legal or financial advice no automated system should give.',
   },
   {
     category: 'limits',
     question: 'What happens when the agent gets something wrong?',
     answer:
-      'You are accountable, exactly as you would be for an assistant or a script, which is why the design points are boundaries, approvals and logs. No AI system is right every time. What good design gives you is mistakes that are visible, small, and correctable rather than silent. Every run is replayable from the log.',
-  },
-  {
-    category: 'limits',
-    question: 'What is the 30% rule in AI?',
-    answer:
-      'There is no formal thirty percent rule in AI. The phrase circulates loosely, usually meaning that a model gets you part of the way and a person finishes the job. The useful version for real estate is simpler: never hand an agent a task where you cannot check the output.',
-  },
-  {
-    category: 'limits',
-    question: 'What did Stephen Hawking say about AI before he died?',
-    answer:
-      'In a 2014 BBC interview he warned that full artificial intelligence could, in his words, "spell the end of the human race", while also noting that the basic forms in use were already useful. He was talking about general machine intelligence, not about a scheduling assistant that books showings inside your calendar.',
+      'You are accountable, exactly as you would be for an assistant or a script, which is why the design points are boundaries, approvals and logs. No AI system is right every time. Good design makes mistakes visible, small and correctable rather than silent. Every run is replayable from the log.',
   },
 
   /* ── Agents, jobs & commission ──────────────────────────────────────── */
@@ -582,7 +527,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'career',
     question: 'Is AI a threat to real estate agents?',
     answer:
-      'It is a threat to the parts of the job that are typing and chasing, and not much of a threat to the rest. Nobody hires an agent because they are good at sending follow-up texts. The risk is not being replaced by AI, it is competing against a team that answers in seconds while you answer in hours.',
+      'It threatens the parts of the job that are typing and chasing, and little else. Nobody hires an agent because they are good at sending follow-up texts. The real risk is not being replaced by AI, it is competing against a team that answers in seconds while you answer in hours.',
   },
   {
     category: 'career',
@@ -594,51 +539,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'career',
     question: 'Can I use AI instead of a real estate agent?',
     answer:
-      'For research, yes. AI is genuinely good at explaining process, comparing areas on published data and drafting questions. For the transaction itself you still need someone licensed and accountable. AI does not carry fiduciary duty, cannot hold earnest money, will not attend the inspection and cannot be sued for bad advice.',
-  },
-  {
-    category: 'career',
-    question: 'Is being a real estate agent still worth it in 2026?',
-    answer:
-      'It depends entirely on lead flow and cost discipline, as it always has. The change is that the gap between organised agents and disorganised ones has widened, because tooling now multiplies whoever is already systematic. If you have a database and a follow-up habit, this is a good moment. If you have neither, tooling will not save you.',
+      'For research, yes. AI is good at explaining process, comparing areas on published data and drafting questions. For the transaction itself you need someone licensed and accountable. AI carries no fiduciary duty, cannot hold earnest money, will not attend the inspection and cannot be sued for bad advice.',
   },
   {
     category: 'career',
     question: 'Do realtors still get 6% commission?',
     answer:
-      'Commission rates are not set by law or by any association, and never have been. They are negotiable between the parties, and following the industry practice changes that took effect in 2024, buyers sign a written agreement with their agent before touring and offers of compensation are no longer published in the MLS. Your brokerage sets its own rates, and an AI agent should never quote one.',
-  },
-  {
-    category: 'career',
-    question: 'How much does a realtor make on a home sale?',
-    answer:
-      'It depends on the negotiated rate, the split with the brokerage, any referral fee, and the costs the agent carries themselves. That is why a single figure is misleading. The number that actually moves an agent income is not the rate, it is the share of enquiries that turn into conversations, which is the part this page is about.',
-  },
-  {
-    category: 'career',
-    question: 'How many homes a year does an agent need to sell to reach a six figure year?',
-    answer:
-      'The arithmetic depends on your average sale price, your split and your expenses, so anyone quoting a universal number is guessing. The more useful question is the one behind it: of the enquiries you already received this year, how many did you actually reach within an hour? For most teams that answer, not the transaction count, is the constraint.',
-  },
-
-  /* ── Rules people ask about ─────────────────────────────────────────── */
-  {
-    category: 'rules',
-    question: 'What is the 3-3-3 rule in real estate?',
-    answer:
-      'It is an informal coaching habit rather than an official rule, and it is used a few different ways. The common version is a follow-up cadence: contact a new lead three times in three days, then three times in three weeks, then three times in three months. That cadence is exactly the kind of thing people intend to run and an agent actually runs.',
-  },
-  {
-    category: 'rules',
-    question: 'What is the 7% rule in real estate?',
-    answer:
-      'There is no single official seven percent rule, and the phrase is used loosely for several unrelated ideas, including a rough allowance for total selling costs and various investing heuristics. Treat any version you see as a rule of thumb from whoever wrote it, not an industry standard, and never let an automated system state one as fact.',
-  },
-  {
-    category: 'rules',
-    question: 'What is Warren Buffett’s number one rule?',
-    answer:
-      'The line usually quoted is never lose money, with rule two being never forget rule one. It is about protecting capital rather than chasing upside. Applied here it argues for the boring version of AI: one queue, hard limits, a human on anything material, and a log you can read afterwards.',
+      'Commission rates are not set by law or by any association and never have been. They are negotiable between the parties, and since the 2024 practice changes buyers sign a written agreement with their agent before touring, while offers of compensation are no longer published in the MLS. An AI agent should never quote a rate.',
   },
 
   /* ── Working with us ────────────────────────────────────────────────── */
@@ -646,13 +553,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How long does it take to build?',
     answer:
-      'A single queue with a CRM and a calendar connected is usually a matter of weeks, then a few more weeks in shadow mode before it acts alone. Adding MLS data and voice lengthens it. The variable that moves the timeline most is access: API credentials, sample conversations, and one person who can decide what a good reply looks like.',
+      'A single queue with a CRM and a calendar connected is usually a matter of weeks, then a few more weeks in shadow mode before it acts alone. Adding MLS data and voice lengthens it. What moves the timeline most is access: API credentials, sample conversations, and one decision maker.',
   },
   {
     category: 'working',
     question: 'How much does an AI agent for a real estate team cost?',
     answer:
-      'We will not put a figure on a page, because a number written without seeing your setup is aimed at an average rather than at you. Scope is driven by how many queues, how many systems, whether those systems have clean APIs, whether MLS data is involved, and how much conversation design your brand needs. Book a call and you get a fixed proposal instead of a range.',
+      'We will not put a figure on a page, because a number written without seeing your setup is aimed at an average rather than at you. Scope depends on how many queues and systems, whether those systems have clean APIs, whether MLS data is involved, and how much conversation design you need.',
   },
   {
     category: 'working',
@@ -864,9 +771,9 @@ export default function AiAgentsForRealEstatePage() {
                 style={{ fontSize: '1.125rem', lineHeight: 1.6 }}
               >
                 We build AI agents for brokerages and real estate teams. They answer inbound enquiries
-                immediately, qualify honestly, book the showing on a real calendar, and keep the follow-up
-                alive for months. Fair housing limits live in the tools, and a licensed person still handles
-                anything that matters.{' '}
+                immediately, qualify honestly, book the showing, and keep the follow-up alive for months.
+                Fair housing limits live in the tools, and a licensed person still handles anything that
+                matters.{' '}
                 <b className="font-bold text-fj-ink">Built into your CRM, not a new one.</b>
               </p>
               <HeroInlineForm
@@ -938,8 +845,7 @@ export default function AiAgentsForRealEstatePage() {
                   ))}
                 </ol>
                 <p className="mt-4 font-fj-body text-[0.75rem] text-fj-neutral-600">
-                  A worked example of the sequence, not a result from a named brokerage. We publish no client
-                  names and no invented case study numbers.
+                  A worked example of the sequence, not a result from a named brokerage.
                 </p>
               </div>
             </div>
@@ -974,10 +880,9 @@ export default function AiAgentsForRealEstatePage() {
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 The difference from a chatbot is that an agent takes an action. A chatbot can tell someone a
-                home has four bedrooms. An agent checks your calendar, books Tuesday at six, writes the
-                appointment into Follow Up Boss, sends the confirmation, and flags to a person that this lead
-                is worth a call. It reads and writes real records, which is also why the limits on it have to
-                be real.
+                home has four bedrooms. An agent books Tuesday at six, writes the appointment into Follow Up
+                Boss and flags the lead for a call. It writes to real records, which is why its limits have
+                to be real.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 This page is the real estate build.{' '}
@@ -988,7 +893,7 @@ export default function AiAgentsForRealEstatePage() {
                 >
                   AI agent development
                 </Link>{' '}
-                is the parent service and covers building agents in any industry, including the generic{' '}
+                is the parent service and covers agents in any industry, including the generic{' '}
                 <Link
                   href="/services/ai-agent-development/ai-sales-agent"
                   className="font-semibold underline underline-offset-2"
@@ -1013,8 +918,7 @@ export default function AiAgentsForRealEstatePage() {
                   voice
                 </Link>{' '}
                 patterns. What is here and not there: portal lead behaviour, showing logistics, MLS and IDX
-                data rules, and fair housing constraints that do not apply to a software company automating a
-                help desk.
+                data rules, and fair housing constraints.
               </p>
             </div>
           </div>
@@ -1085,33 +989,28 @@ export default function AiAgentsForRealEstatePage() {
               </h2>
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-700" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
                 A Harvard Business Review study of 1.25 million sales leads across 42 US companies found that
-                firms contacting a lead within an hour were nearly seven times as likely to have a meaningful
-                conversation with a decision maker as those that tried an hour later, and more than sixty times
-                as likely as those who waited a day. A separate audit of 2,241 companies put the average
-                response time, among those that replied at all, at 42 hours.
+                firms contacting a lead within an hour were nearly seven times as likely to reach a decision
+                maker as those that tried an hour later, and more than sixty times as likely as those who
+                waited a day.
               </p>
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-700" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
                 Real estate makes that harder than most industries. Enquiries arrive in evenings and at
-                weekends. The same lead usually goes to more than one agent. And the person enquiring is
-                sitting on a portal with another thirty listings open. Being second is close to being nowhere.
+                weekends, the same lead usually goes to more than one agent, and the person enquiring has
+                another thirty listings open. Being second is close to being nowhere.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
                   {
                     t: 'Nobody loses to a better follow-up email',
-                    s: 'They lose to whoever replied first, and the reply usually only had to be competent',
-                  },
-                  {
-                    t: 'Evenings and weekends are the gap',
-                    s: 'That is when portal enquiries peak and when a team is least covered',
+                    s: 'They lose to whoever replied first, and the reply only had to be competent',
                   },
                   {
                     t: 'The nurture is where humans quit',
-                    s: 'Most buyers are months out, and month four is where a person stops and software does not',
+                    s: 'Most buyers are months out, and month four is where a person stops',
                   },
                   {
                     t: 'Speed only helps if it is not rubbish',
-                    s: 'An instant template that ignores the question is worse than a slow real answer',
+                    s: 'An instant template that ignores the question is worse than a slow answer',
                   },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
@@ -1142,8 +1041,8 @@ export default function AiAgentsForRealEstatePage() {
               What an AI agent actually does for a brokerage
             </h2>
             <p className="mt-4 max-w-[700px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              Most teams need one or two of these, not all six. Picking the one that is costing you money and
-              ignoring the rest is a better first project than a platform that does everything badly.
+              Most teams need one or two of these, not all six. Picking the one costing you money is a better
+              first project than a platform that does everything badly.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -1240,8 +1139,8 @@ export default function AiAgentsForRealEstatePage() {
               Ten steps to put an AI agent into a real estate team
             </h2>
             <p className="mt-4 max-w-[700px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              In the order they happen. If a proposal starts at step three and skips steps two, six and eight,
-              you are buying a demo rather than a system.
+              In the order they happen. A proposal that starts at step three and skips two, six and eight is a
+              demo, not a system.
             </p>
 
             <ol className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -1273,8 +1172,8 @@ export default function AiAgentsForRealEstatePage() {
               </h2>
               <p className="mt-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-700">
                 Bring one real queue and the CRM you run. We will walk the workflow end to end, name the
-                integrations it needs, and tell you plainly if buying a product beats building one. That
-                conversation is free and it is with the founder, not a salesperson.
+                integrations it needs, and tell you plainly if buying a product beats building one. Free, and
+                with the founder.
               </p>
             </div>
             <div className="flex-shrink-0">
@@ -1296,17 +1195,16 @@ export default function AiAgentsForRealEstatePage() {
               AI agent vs an ISA desk vs an answering service vs a CRM auto-responder
             </h2>
             <p className="mt-4 max-w-[720px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              An honest side by side, including where each one fails. We sell the first column and we will
-              still tell you to keep the second if you have good people on it. Most teams that get this right
-              run two of the four together.
+              An honest side by side, including where each one fails. We sell the first column and will still
+              tell you to keep the second.
             </p>
 
             <div className="mt-10 overflow-x-auto rounded-2xl border" style={{ borderColor: 'rgba(15,15,18,0.10)' }}>
               <table className="w-full min-w-[900px] border-collapse text-left">
                 <caption className="sr-only">
-                  Comparison of an AI agent, an inside sales agent desk, a human answering service and a CRM
-                  auto-responder across response speed, conversation depth, long-term follow-up, CRM writeback,
-                  cost behaviour, fair housing exposure and failure modes.
+                  Comparison of an AI agent, an inside sales agent desk, an answering service and a CRM
+                  auto-responder across speed, depth, follow-up, CRM writeback, cost, fair housing exposure
+                  and failure modes.
                 </caption>
                 <thead>
                   <tr style={{ background: PEACH }}>
@@ -1358,9 +1256,8 @@ export default function AiAgentsForRealEstatePage() {
               </table>
             </div>
             <p className="mt-4 font-fj-body text-[0.8125rem] text-fj-neutral-600">
-              Scroll the table sideways on smaller screens. The honest summary: an agent wins on speed,
-              coverage and stamina, a good ISA still wins on judgement, and neither one saves a team that
-              cannot write to a CRM.
+              Scroll the table sideways on smaller screens. An agent wins on speed, coverage and stamina, a
+              good ISA still wins on judgement, and neither saves a team that cannot write to a CRM.
             </p>
           </div>
         </section>
@@ -1378,9 +1275,8 @@ export default function AiAgentsForRealEstatePage() {
               The other answers to this question, and what each one is good at
             </h2>
             <p className="mt-4 max-w-[780px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We pulled the live US results for this query on 12 August 2026. Here is who shows up and what
-              they actually do. Several of them are the right answer for some teams. You should know that
-              before you talk to us, not after.
+              We pulled the live US results for this query on 12 August 2026. Several of these are the right
+              answer for some teams, and you should know that before you talk to us.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -1400,11 +1296,9 @@ export default function AiAgentsForRealEstatePage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">What we do differently</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'We build against your existing CRM and MLS feed rather than asking you to move onto our platform',
-                    'Fair housing limits are enforced in the tool layer and the classifier, not written as a polite instruction in a prompt',
-                    'One senior person runs the account. The founder scopes it, does the analysis and shows up on the calls',
-                    'You get the repository, the connectors and the evaluation sets, so a different team could take it over tomorrow',
-                    'We will tell you when buying a packaged product beats building one, even though building is what we sell',
+                    'We build against your existing CRM and MLS feed rather than moving you onto our platform',
+                    'Fair housing limits are enforced in the tool layer and the classifier, not in a prompt',
+                    'You get the repository, the connectors and the evaluation sets, so another team could take over',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1417,10 +1311,9 @@ export default function AiAgentsForRealEstatePage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">Where we honestly stand</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'FactoryJet had 53 referring domains when we last measured, in August 2026. Established competitors in this space have far more. We are the challenger and we will not pretend otherwise',
-                    'We are not a real-estate-only shop. Our agent work spans support, sales and back-office queues across several industries, and this is the vertical application of it',
-                    'We publish no client names, no invented case study numbers and no testimonials we cannot stand behind, including on this page',
-                    'If you want a product you can switch on this week rather than a build, a packaged tool will get you there faster and we will say so',
+                    'FactoryJet had 53 referring domains in August 2026. Established competitors have far more, and we will not pretend otherwise',
+                    'We are not a real-estate-only shop. Our agent work spans several industries, and this is the vertical application of it',
+                    'We publish no client names, no invented case study numbers and no testimonials we cannot stand behind',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-neutral-700">
                       <CrossCircle size={18} /> {line}
@@ -1445,8 +1338,7 @@ export default function AiAgentsForRealEstatePage() {
               When an AI agent is the wrong thing to buy
             </h2>
             <p className="mt-4 max-w-[680px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              A mismatched build wastes your season and our reputation. Read both columns before you book a
-              call.
+              A mismatched build wastes your season and our reputation.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -1455,11 +1347,10 @@ export default function AiAgentsForRealEstatePage() {
                 <ul className="mt-5 space-y-3.5">
                   {[
                     'You get more inbound enquiries than your people can answer within the hour',
-                    'You already run a real CRM and your data in it is roughly trustworthy',
-                    'Your database has thousands of contacts nobody has spoken to in a year',
+                    'You already run a real CRM and the data in it is roughly trustworthy',
                     'Evenings and weekends are where your enquiries land and where you are least covered',
-                    'You want the agent to write into your systems, not to live in a separate dashboard',
-                    'Your broker will engage with the fair housing and audit questions rather than wave them through',
+                    'You want the agent writing into your systems, not living in a separate dashboard',
+                    'Your broker will engage with the fair housing and audit questions',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1472,10 +1363,9 @@ export default function AiAgentsForRealEstatePage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">A poor fit</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'You are a solo agent with a handful of leads a month. A packaged tool or your CRM automation is cheaper and enough',
+                    'You are a solo agent with a handful of leads a month. A packaged tool is cheaper and enough',
                     'Your leads live in a shared inbox and a spreadsheet. Fix the system of record first',
-                    'You want it to negotiate, price, advise or close. It must not, and we will not build that',
-                    'You want to remove every human from the conversation. That is the version that ends in a complaint',
+                    'You want to remove every human from the conversation. That version ends in a complaint',
                     'Nobody on your side will read the logs or own the escalations after launch',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-neutral-700">
@@ -1484,8 +1374,7 @@ export default function AiAgentsForRealEstatePage() {
                   ))}
                 </ul>
                 <p className="mt-6 font-fj-body text-[0.9062rem] leading-[1.6] text-fj-neutral-700">
-                  If the real problem is that your website does not convert the traffic it already gets, start
-                  with{' '}
+                  If the real problem is that your website does not convert the traffic it gets, start with{' '}
                   <Link
                     href="/services/real-estate-website-design"
                     className="font-semibold underline underline-offset-2"
@@ -1513,8 +1402,8 @@ export default function AiAgentsForRealEstatePage() {
               Where the claims on this page come from
             </h2>
             <p className="mt-4 max-w-[740px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              You should not take a vendor&rsquo;s word for how lead response or fair housing works. Four
-              primary sources back the specific claims above. Open them before you hire anyone, including us.
+              Do not take a vendor&rsquo;s word for how lead response or fair housing works. Four primary
+              sources back the claims above.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -1539,9 +1428,8 @@ export default function AiAgentsForRealEstatePage() {
             </div>
 
             <p className="mt-8 max-w-[840px] font-fj-body text-[0.9375rem] leading-[1.65] text-fj-neutral-700">
-              Search volume and keyword difficulty quoted for this topic come from DataForSEO, United States,
-              pulled August 2026. The vendor list is what appeared on the live results for this query on the
-              same date. Results move, so treat it as a snapshot. Nothing on this page is legal advice.
+              The vendor list is what appeared on the live US results on 12 August 2026. Nothing on this page
+              is legal advice.
             </p>
           </div>
         </section>
@@ -1575,14 +1463,12 @@ export default function AiAgentsForRealEstatePage() {
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-700" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
                 Almost none of the difficulty in this work is the conversation. It is authentication against a
                 CRM, MLS display rules, calendar edge cases, and deciding what the system is forbidden to say.
-                That is engineering and judgement, and it is what we actually do.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  { t: 'Founder-led scoping', s: 'The person who scopes the build is the person who does the analysis' },
-                  { t: 'Agents and websites in one team', s: 'If the site is the bottleneck we can fix that too, rather than filing a ticket' },
+                  { t: 'Founder-led scoping', s: 'Whoever scopes the build does the analysis' },
+                  { t: 'Agents and websites in one team', s: 'If the site is the bottleneck we fix that too' },
                   { t: 'Boundaries before capability', s: 'What it must never do gets written before what it will do' },
-                  { t: 'No invented numbers, ever', s: 'No fabricated case studies, no borrowed testimonials, no promised results' },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
                     <CheckCircle size={20} fill={LAV} />
@@ -1623,32 +1509,32 @@ export default function AiAgentsForRealEstatePage() {
                 {
                   label: 'AI agent development',
                   href: '/services/ai-agent-development',
-                  desc: 'The parent service. Custom agents for support, sales and back-office queues in any industry.',
+                  desc: 'The parent service. Custom agents for support, sales and back-office queues.',
                 },
                 {
                   label: 'AI sales agent',
                   href: '/services/ai-agent-development/ai-sales-agent',
-                  desc: 'The generic inbound lead pattern: enrich, qualify, route, and write the reasoning into the CRM.',
+                  desc: 'The generic inbound lead pattern: enrich, qualify, route, write back to the CRM.',
                 },
                 {
                   label: 'AI scheduling agent',
                   href: '/services/ai-agent-development/ai-scheduling-agent',
-                  desc: 'Booking, rescheduling and confirmation against real calendar and capacity rules, in any industry.',
+                  desc: 'Booking, rescheduling and confirmation against real calendar and capacity rules.',
                 },
                 {
                   label: 'AI voice agent',
                   href: '/services/ai-agent-development/ai-voice-agent',
-                  desc: 'Inbound calls handled over Twilio, with collection and routing to the right person.',
+                  desc: 'Inbound calls handled over Twilio, routed to the right person.',
                 },
                 {
                   label: 'Real estate website design',
                   href: '/services/real-estate-website-design',
-                  desc: 'The site the agent answers for. Fast on mobile, honest search, forms people actually finish.',
+                  desc: 'The site the agent answers for. Fast on mobile, forms people actually finish.',
                 },
                 {
                   label: 'AI SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting named and cited inside ChatGPT, Perplexity and Google AI Overviews, not just ranked.',
+                  desc: 'Getting named and cited inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
               ].map((svc) => (
                 <Link
@@ -1676,7 +1562,7 @@ export default function AiAgentsForRealEstatePage() {
         <FAQ
           eyebrow="AI in real estate FAQ"
           headline="The questions agents and brokers actually search"
-          lead="Thirty-six answers covering what an AI agent does for a real estate team, which CRMs and MLS feeds it connects to, what fair housing law will not let any automated system say, and the career questions that come with all of this. If yours is not here, send a short brief and we usually reply within one business day."
+          lead="Twenty-two answers on what an AI agent does for a real estate team, which CRMs and MLS feeds it connects to, and what fair housing law will not let any automated system say."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -1686,7 +1572,7 @@ export default function AiAgentsForRealEstatePage() {
           variant="dark"
           eyebrow="ONE QUEUE, PROPERLY"
           headline="Find out which part of your lead flow is actually leaking"
-          sub="Book a call with the founder. Bring one real queue and the CRM you run. We will walk the workflow end to end, name the integrations it needs, tell you what an agent must never be allowed to say, and tell you plainly if buying a packaged product beats building one for you."
+          sub="Book a call with the founder. Bring one real queue and the CRM you run. We will walk the workflow end to end, name the integrations it needs, and tell you what an agent must never be allowed to say."
           primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See AI agent development', href: '/services/ai-agent-development' }}
           objectionHandler="Founder-led. Fair housing limits built in, no promised results, no invented case studies, and you own the code and the connectors."

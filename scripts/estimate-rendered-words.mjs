@@ -37,7 +37,12 @@ function sourceWords(file) {
   for (const m of s.matchAll(/'([^'\\\n]{25,})'|"([^"\\\n]{25,})"|`([^`\\]{25,})`/g)) {
     out.push(m[1] || m[2] || m[3]);
   }
-  for (const m of s.matchAll(/>\s*([A-Z][^<>{}\n]{20,})\s*</g)) out.push(m[1]);
+  // JSX text nodes. The original pattern here excluded \n, which meant any <p> whose prose
+  // wrapped across lines was invisible: one agent deleted eleven paragraphs and this number
+  // did not move at all. Allow newlines inside the text node and normalise whitespace after.
+  for (const m of s.matchAll(/>\s*([A-Za-z][^<>{}]{20,}?)\s*</g)) {
+    out.push(m[1].replace(/\s+/g, ' '));
+  }
   return out.join(' ').split(/\s+/).filter((w) => /[a-z]/i.test(w)).length;
 }
 
