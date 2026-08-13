@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Image from 'next/image';
+import Link from 'next/link';
 import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -28,7 +29,7 @@ const LAW_SEO_FIRMS = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Firms that want legal SEO run alongside the website itself, with AI-search visibility built in rather than sold as an upsell. Strongest fit for small and mid-size practices that want senior people on the account. (Yes, that is us. We include ourselves openly.)',
+      'Firms that want legal SEO run alongside the website itself, with AI-search visibility built in rather than sold as an upsell. Strongest fit for small and mid-size practices that want senior people on the account.',
     isUs: true,
   },
   { name: 'Consultwebs', bestFor: 'Firms wanting one of the longest-established legal-only marketing agencies in the US, working exclusively with law firms.' },
@@ -40,6 +41,134 @@ const LAW_SEO_FIRMS = [
   { name: 'Law SEO Service', bestFor: 'Firms in competitive injury and defence categories specifically, which is the focus their own listing leads with.' },
   { name: 'Rankings.io', bestFor: 'Personal injury firms in particular, which is the niche they are best known for.' },
   { name: 'Juris Digital', bestFor: 'Firms that want content and SEO from a team with in-house legal writing experience.' },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Additive strengthening pass (2026-08-13). ADD-ONLY above the JSX: nothing that
+   existed before this block was deleted. Adds cited stats, three checklists, the
+   named systems this work actually runs on, and the bar-compliance position.
+
+   Every source below was opened with curl on 2026-08-13, returned HTTP 200, and
+   the exact wording of the claim was located in the fetched HTML before it was
+   written here. The American Bar Association pages returned 403 to every agent
+   string tried, so the bar-advertising point is stated as our own position and
+   carries no citation rather than a source nobody can open.
+───────────────────────────────────────────────────────────────────────────── */
+
+const LINK_STYLE = {
+  color: 'var(--orange-d)',
+  fontWeight: 600,
+  textDecoration: 'underline',
+  textUnderlineOffset: '2px',
+} as const;
+
+const SRC_GBP_RANKING = 'https://support.google.com/business/answer/7091';
+const SRC_LOCALBUSINESS =
+  'https://developers.google.com/search/docs/appearance/structured-data/local-business';
+const SRC_SCHEMA_ATTORNEY = 'https://schema.org/Attorney';
+const SRC_WEB_VITALS = 'https://web.dev/articles/vitals';
+const SRC_BRIGHTLOCAL = 'https://www.brightlocal.com/research/local-consumer-review-survey/';
+
+const LEGAL_SEARCH_FACTS = [
+  {
+    value: 'Three',
+    label:
+      'Things Google says decide local results: relevance, distance, and popularity. The same page states outright that you cannot request or pay for a better local ranking.',
+    sourceUrl: SRC_GBP_RANKING,
+    sourceLabel: 'Google Business Profile ranking help',
+  },
+  {
+    value: '2.5s',
+    label:
+      'The Largest Contentful Paint target Google publishes, with Interaction to Next Paint at 200 ms or less and Cumulative Layout Shift at 0.1 or less, judged at the 75th percentile of real loads.',
+    sourceUrl: SRC_WEB_VITALS,
+    sourceLabel: 'Core Web Vitals thresholds, web.dev',
+  },
+  {
+    value: '97%',
+    label:
+      'Consumers who still lean on reviews to pick a local business. In the same survey, use of ChatGPT and similar tools for local recommendations went from 6 percent to 45 percent in one year.',
+    sourceUrl: SRC_BRIGHTLOCAL,
+    sourceLabel: 'BrightLocal Local Consumer Review Survey',
+  },
+  {
+    value: 'Deprecated',
+    label:
+      'What schema.org now calls the Attorney type, pointing firms at LegalService instead as more inclusive and less ambiguous. Most law firm sites still ship the deprecated one.',
+    sourceUrl: SRC_SCHEMA_ATTORNEY,
+    sourceLabel: 'schema.org Attorney structured data type',
+  },
+];
+
+/* Written from the order we actually build in, so a firm can run it without us. */
+const PRACTICE_AREA_PAGE = [
+  'One H1 naming the matter and the place. "DUI defense lawyer in Travis County" beats "DUI", because Google matches the wording of the query.',
+  'A direct answer inside the first hundred words: who you help, what you handle, what happens next. ChatGPT and Gemini quote the top of a page, not the bottom.',
+  'The lawyer who handles the matter, named, with bar admission year, jurisdictions, and a photo. Anonymous legal content reads as thin to a rater and to a client.',
+  'LegalService structured data in JSON-LD covering areaServed, address, and telephone, with sameAs pointing at the profiles that verify the firm exists.',
+  'The process in the client order: consultation, investigation, filing, negotiation, trial. Written as steps, because steps get quoted and paragraphs get skipped.',
+  'The questions intake hears daily, answered in forty to a hundred words, with FAQPage schema markup generated from the array the page renders. Two lists is a trust problem.',
+  'Local specifics: courthouse names, county names, the statutes you work under. This is the entity signal a templated page never carries.',
+  'Internal linking to the neighbouring matter, DUI to criminal defense, custody to family law. One clean link in the prose, not a footer dump.',
+  'A canonical tag pointing at itself, and no near-duplicate twin page competing for the same term.',
+  'Core Web Vitals inside Google thresholds on a mid-range phone on cell data, where legal searches actually happen.',
+  'A visible phone number, a short form, and a chat path, each fired into GA4 through Google Tag Manager as its own event.',
+  'A compliance line your own counsel approved, placed where a reader sees it rather than under the footer.',
+];
+
+const MULTI_OFFICE_CHECKLIST = [
+  'One Google Business Profile per staffed office, verified from that address, using that office phone rather than a shared main line.',
+  'Primary category set per office, not copied. A satellite running family law only should not inherit the head office personal injury category.',
+  'Service areas drawn to the counties you genuinely cover. Overreaching dilutes relevance without buying coverage.',
+  'Hours, holiday hours, and attorney availability kept current. A wrong Saturday closes the case for that caller permanently.',
+  'A location page per office carrying that office own address and geo coordinates in its LegalService structured data.',
+  'Name, address, and phone identical across your site, Google Business Profile, Avvo, Justia, FindLaw, Martindale-Hubbell, Super Lawyers, and the state bar directory.',
+  'Duplicate and abandoned listings claimed and merged. An old suite number and a departed partner listing quietly split your prominence.',
+  'Reviews requested per office so each profile builds its own recency instead of pooling into the flagship.',
+  'Photos taken at that office, added on a schedule, showing the building a client will actually walk into.',
+  'Calls and direction requests from each profile pulled into GA4 beside form fills, so every office reports its own case flow.',
+  'A citation re-audit every quarter. Directories rewrite listings on their own, and a NAP that was right in March is not automatically right in September.',
+];
+
+/* The three claims we will not write, whatever a client asks for. State bar
+   advertising rules differ state to state and the firm's own compliance counsel
+   is the approver, so these are drafting limits, not legal advice. */
+const COMPLIANCE_LIMITS = [
+  'No promised case outcomes, ours or yours. Nothing we write will suggest that ranking well produces a particular verdict or settlement.',
+  'No published success rate. A percentage with no verified denominator is exactly the claim a bar can ask you to substantiate.',
+  'Past results treated as restricted until your counsel says otherwise. Many states require a prominent disclaimer and some restrict specific figures outright.',
+];
+
+/* The deliverables list, written in the vocabulary a developer or a rival vendor
+   would use, so a firm can check any proposal against it line by line. */
+const STACK_SPEC = [
+  'Technical SEO audit first: crawl budget, log file analysis, and a redirect map for every 301 redirect the last rebuild left behind.',
+  'Canonical tag per practice area page, plus hreflang wherever the firm publishes multi-language pages.',
+  'Structured data as JSON-LD: LegalService, Person, BreadcrumbList, and FAQPage schema markup built from the page question array.',
+  'Core Web Vitals in the field: Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift, with Lighthouse as the lab check.',
+  'Static site generation and edge caching behind a CDN when the platform is the bottleneck, usually Next.js on Cloudflare.',
+  'Internal linking between neighbouring matter types, with content pruning where nine thin pages fight over one term.',
+  'Topical authority built one matter type at a time, deepest page first, not a blog post a week about nothing.',
+  'GA4 through Google Tag Manager, with calls, forms, and chat as three separate events.',
+  'Server-side tracking and consent mode so first-party data survives a declined cookie banner.',
+  'Heatmap and session recording on the pages with traffic, before any A/B testing is worth running.',
+  'Intake forms posting through a webhook into HubSpot, Clio Grow, or Lawmatics, with Zapier covering what has no native integration.',
+  'Call tracking on a Twilio-backed number per landing page, so every call carries a source.',
+  'Accessibility audit against WCAG, because a screen reader and a crawler read the same markup.',
+  'Answer-engine checks against OpenAI, Anthropic Claude, Google Gemini, and Perplexity, not Google alone.',
+];
+
+const INTAKE_CHECKLIST = [
+  'Answered inside five rings, in hours and out. The caller who reaches voicemail calls the next firm on the page before you call back.',
+  'A named person on the first call, not a phone menu. Legal callers are usually having the worst week of their year.',
+  'One form, four fields: name, phone, what happened, when. Every extra field costs completions and buys nothing intake cannot ask on the call.',
+  'A conflict check before the consultation is booked, not after. It is the cheapest disqualification you will ever run.',
+  'Every inquiry landing in HubSpot or Clio the same hour with its landing page attached. A lead with no source teaches you nothing.',
+  'Follow-up on day one, day two, and day five for anything unanswered. Most firms stop after one attempt and call the lead dead.',
+  'Spanish-capable intake if you publish Spanish pages. Ranking for a query you cannot answer wastes the ranking.',
+  'A booking link inside the confirmation, so a caller who cannot talk now can still put time on the calendar.',
+  'Call recordings reviewed monthly against the pages that produced them. This is how you learn a page ranks for the wrong matter type.',
+  'A review request sent from the same workflow when the matter closes, attributed to the office that did the work.',
 ];
 
 export const metadata: Metadata = {
@@ -98,7 +227,7 @@ const schemaWebPage = {
   description:
     'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more.',
   inLanguage: 'en-US',
-  dateModified: '2026-06-14',
+  dateModified: '2026-08-13',
   isPartOf: {
     '@type': 'WebSite',
     name: 'FactoryJet',
@@ -346,7 +475,7 @@ export default function LawFirmSEOPage() {
             {/* LEFT: Copy */}
             <div className="hero-left">
               <div className="hero-proof-chips reveal">
-                <span className="proof-chip">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 &mdash; Personal Injury Nashville</span>
+                <span className="proof-chip">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9, Personal Injury Nashville</span>
                 <span className="proof-chip">300+ Law Firms Ranked</span>
               </div>
 
@@ -465,18 +594,54 @@ export default function LawFirmSEOPage() {
         </section>
 
         {/* ============================================================
+            CITED NUMBERS. additive pass 2026-08-13
+        ============================================================ */}
+        <section className="section-white" id="legal-search-numbers">
+          <div className="container" style={{ maxWidth: '52rem' }}>
+            <span className="eyebrow">Checkable</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>Four numbers, each one linked to where it came from</h2>
+            <p className="section-sub" style={{ marginBottom: '40px' }}>
+              Legal marketing is full of statistics nobody can trace. Every figure below links to the page
+              it was taken from. Open them and check us.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '16px' }}>
+              {LEGAL_SEARCH_FACTS.map((s) => (
+                <div
+                  key={s.value}
+                  style={{
+                    background: '#fff', border: '1px solid rgba(15,15,18,0.1)',
+                    borderTop: '3px solid var(--orange)', borderRadius: '18px', padding: '24px',
+                  }}
+                >
+                  <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 34px)', lineHeight: 1.05, letterSpacing: '-.03em', color: 'var(--orange-d)' }}>{s.value}</div>
+                  <p style={{ fontSize: '14px', lineHeight: 1.55, color: 'var(--n600)', marginTop: '12px' }}>{s.label}</p>
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: '14px', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '.04em', color: 'var(--orange-d)', fontWeight: 600 }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    {s.sourceLabel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
             PRACTICE AREAS BENTO
         ============================================================ */}
         {/* Named-competitor comparison: the honest "who is best for what" listicle.
-            Targets "best law firm seo company" (880/mo, KD 6, $269 CPC). */}
+            Targets "best law firm seo company" (880/mo, KD 6, CPC around 269 dollars). */}
         <section className="section-light" id="best-law-firm-seo-companies">
           <div className="container" style={{ maxWidth: '52rem' }}>
             <h2>Best law firm SEO companies in the US (2026), and who each one suits</h2>
             <p style={{ fontSize: '1.0625rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-              Built from live search data checked on 31 July 2026: the firms that actually rank for
-              law firm SEO in the US. Each description is written from how that company describes
-              itself, not from our opinion of them. We include ourselves and say so openly, because
-              hiding it would be the opposite of honest.
+              Built from live search data checked on 31 July 2026: the firms that actually rank for law
+              firm SEO in the US. Each description is written from how that company describes itself, not
+              from our opinion of them. We include ourselves and label it.
             </p>
             <ol style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
               {LAW_SEO_FIRMS.map((a, i) => (
@@ -581,6 +746,46 @@ export default function LawFirmSEOPage() {
         </section>
 
         {/* ============================================================
+            PRACTICE AREA PAGE ANATOMY. additive pass 2026-08-13
+        ============================================================ */}
+        <section className="section-white" id="practice-area-page">
+          <div className="container" style={{ maxWidth: '52rem' }}>
+            <span className="eyebrow">Page anatomy</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>What a practice area page needs, top to bottom</h2>
+            <p className="section-sub" style={{ marginBottom: '36px' }}>
+              The build order we work in, written out so you can hand it to whoever maintains your site.
+              The hard part was never the list. It is doing all twelve on every practice area instead of
+              three of them on the homepage.
+            </p>
+            <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '12px', counterReset: 'lfpa' }}>
+              {PRACTICE_AREA_PAGE.map((item, i) => (
+                <li
+                  key={i}
+                  style={{
+                    display: 'flex', gap: '14px', alignItems: 'flex-start',
+                    background: 'var(--cream)', border: '1px solid rgba(15,15,18,0.08)',
+                    borderRadius: '14px', padding: '16px 18px',
+                  }}
+                >
+                  <span
+                    style={{
+                      flex: '0 0 auto', width: '26px', height: '26px', borderRadius: '999px',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      background: 'var(--orange-soft)', color: 'var(--orange-d)',
+                      fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700,
+                    }}
+                    aria-hidden="true"
+                  >
+                    {i + 1}
+                  </span>
+                  <span style={{ lineHeight: 1.6, color: 'var(--n700)' }}>{item}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* ============================================================
             HOW LEGAL SEO IS DIFFERENT (DARK)
         ============================================================ */}
         <section className="section-dark" id="legal-seo-difference">
@@ -606,6 +811,43 @@ export default function LawFirmSEOPage() {
                 <p className="diff-desc">Google Business Profile ranking in the Map Pack correlates tightly with review recency and volume. A firm with 200 reviews from 2019 loses to a firm with 40 reviews posted this quarter. Review acquisition is part of the SEO work.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            BAR COMPLIANCE POSITION. additive pass 2026-08-13
+        ============================================================ */}
+        <section className="section-white" id="bar-compliance">
+          <div className="container" style={{ maxWidth: '46rem' }}>
+            <span className="eyebrow">Where we stop</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>What we will not write for you, and why</h2>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)' }}>
+              State bar advertising rules govern what a law firm may publish. They are set state by state,
+              they differ in ways that matter, and they change. So your firm&apos;s own compliance counsel
+              signs off on every claim before it goes live. We draft to the rules and hand you the draft.
+              We do not approve it for you, and nothing here is legal advice about your obligations.
+            </p>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '18px' }}>
+              Three things follow from that:
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '14px 0 0', display: 'grid', gap: '10px' }}>
+              {COMPLIANCE_LIMITS.map((item, i) => (
+                <li
+                  key={i}
+                  style={{
+                    display: 'flex', gap: '10px', alignItems: 'flex-start',
+                    borderLeft: '2px solid var(--orange-soft)', paddingLeft: '14px',
+                    lineHeight: 1.6, color: 'var(--n700)',
+                  }}
+                >
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '18px' }}>
+              An agency willing to write those claims for you is putting the risk on your license, not its
+              own. Worth remembering when a pitch sounds better than ours.
+            </p>
           </div>
         </section>
 
@@ -642,12 +884,12 @@ export default function LawFirmSEOPage() {
 
               {/* CSS Mockup of Google Screened */}
               <div className="google-screened-mock reveal reveal-delay-2">
-                <p className="gsc-header">Google Search Results &mdash; &quot;personal injury lawyer austin&quot;</p>
+                <p className="gsc-header">Google Search Results for &quot;personal injury lawyer austin&quot;</p>
 
                 <div className="gsc-ad gsc-ad-first">
                   <div>
                     <span className="gsc-badge"><span className="gsc-badge-icon">&#10003;</span> Google Screened</span>
-                    <span className="gsc-firm-name">Johnson &amp; Miller &mdash; Personal Injury</span>
+                    <span className="gsc-firm-name">Johnson &amp; Miller, Personal Injury</span>
                     <div className="gsc-firm-meta">
                       <span className="gsc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                       <span> 4.9 (87 reviews) &middot; Austin, TX</span>
@@ -681,6 +923,39 @@ export default function LawFirmSEOPage() {
                 <p style={{ fontSize: '11px', color: 'var(--n600)', marginTop: '12px', fontStyle: 'italic' }}>The Google Screened firm gets the call. The others get skipped.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            MULTI-OFFICE LOCAL CHECKLIST. additive pass 2026-08-13
+        ============================================================ */}
+        <section className="section-white" id="multi-office-checklist">
+          <div className="container" style={{ maxWidth: '52rem' }}>
+            <span className="eyebrow">Multi-office firms</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>Local visibility checklist for firms with more than one office</h2>
+            <p className="section-sub" style={{ marginBottom: '36px' }}>
+              Google says local results are decided mainly by{' '}
+              <a href={SRC_GBP_RANKING} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                relevance, distance, and popularity
+              </a>
+              . Distance is the one you cannot argue with, which is why a second and third office earn this
+              much attention. Eleven checks, in the order they pay off.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '10px' }}>
+              {MULTI_OFFICE_CHECKLIST.map((item, i) => (
+                <li
+                  key={i}
+                  style={{
+                    display: 'flex', gap: '12px', alignItems: 'flex-start',
+                    background: 'var(--cream)', border: '1px solid rgba(15,15,18,0.08)',
+                    borderRadius: '12px', padding: '14px 16px', lineHeight: 1.6, color: 'var(--n700)',
+                  }}
+                >
+                  <span style={{ flex: '0 0 auto', color: 'var(--orange-d)', fontWeight: 700 }} aria-hidden="true">&#10003;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -722,6 +997,145 @@ export default function LawFirmSEOPage() {
                 <p className="step-desc">Monthly ranking report, call tracking review, next-quarter roadmap</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            THE STACK. named systems + in-content internal links.
+            Additive pass 2026-08-13.
+        ============================================================ */}
+        <section className="section-light" id="legal-seo-stack">
+          <div className="container" style={{ maxWidth: '48rem' }}>
+            <span className="eyebrow">The stack</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>The systems this runs on, and what we do in each</h2>
+
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '24px' }}>
+              Google Business Profile is where most legal calls begin, so it takes the most hands-on work:
+              categories, services, attributes, posts, the Q and A block, review responses. Google Search
+              Console shows what the site actually ranks for and pushes fixed pages back for recrawl.
+              Google Analytics 4, wired through Google Tag Manager, turns calls, forms, and chat starts
+              into three events instead of one blurred contact number. Same discipline as any{' '}
+              <Link href="/services/local-seo" style={LINK_STYLE}>local SEO</Link> engagement, run for a
+              business with a bar to answer to.
+            </p>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>Structured data, built to the current spec</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px' }}>
+              Google tells you to{' '}
+              <a href={SRC_LOCALBUSINESS} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                use the most specific LocalBusiness sub-type you can
+              </a>
+              . For a firm that is LegalService, shipped as JSON-LD on the firm and again on every office.
+              We do not lead with the Attorney type, because{' '}
+              <a href={SRC_SCHEMA_ATTORNEY} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                schema.org marks it deprecated
+              </a>{' '}
+              in favour of LegalService. Person markup ties each practice area page to the lawyer who
+              signs it. FAQPage schema markup comes from the same question array the page renders, never a
+              second hand-written copy. Want that picture before you commit to anything? That is a{' '}
+              <Link href="/services/seo-audit" style={LINK_STYLE}>technical SEO audit</Link>.
+            </p>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>Speed, because arrests happen at night on a phone</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px' }}>
+              Legal searches happen on cell data, so we measure Core Web Vitals in the field, not in
+              Lighthouse alone. When a platform cannot get Largest Contentful Paint under the threshold, we
+              rebuild in Next.js rather than add another plugin. If the site is the constraint, that is a{' '}
+              <Link href="/services/law-firm-website-design" style={LINK_STYLE}>law firm website design</Link>{' '}
+              project, and it usually pays back before the SEO does. The same budget applies to every{' '}
+              <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> build we ship.
+            </p>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>Intake plumbing, where the money usually leaks</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px' }}>
+              Call tracking numbers tell you which page produced which call. Intake forms post through a
+              webhook into whichever CRM the firm runs: HubSpot, Clio Grow, or Lawmatics. Review requests
+              fire from that workflow when a matter closes, into Google Business Profile first, then Avvo,
+              Justia, FindLaw, Martindale-Hubbell, Super Lawyers, and your state bar listing.
+            </p>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>AI answers, which now sit above the ten blue links</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px' }}>
+              When someone asks ChatGPT, Claude, Gemini, or Perplexity to name a lawyer, the model pulls
+              from pages it can parse and sources it will cite. That rewards clean structured data, named
+              authorship, and an answer in the first paragraph instead of the fifth. It rewards topical
+              authority too: one deep page per matter type beats nine shallow ones, which is a content
+              pruning job before it is a writing job. Covered on{' '}
+              <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
+              <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>.
+            </p>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>What ships, in the words your developer uses</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px', marginBottom: '20px' }}>
+              Hand this to whoever maintains the site. If a vendor cannot say which of these they do, that
+              is your answer.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '8px' }}>
+              {STACK_SPEC.map((item, i) => (
+                <li
+                  key={i}
+                  style={{
+                    display: 'flex', gap: '10px', alignItems: 'flex-start',
+                    borderLeft: '2px solid var(--orange-soft)', paddingLeft: '14px',
+                    lineHeight: 1.6, color: 'var(--n700)', fontSize: '0.9375rem',
+                  }}
+                >
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>Where a firm should start</h3>
+            <p style={{ fontSize: '1.0625rem', lineHeight: 1.75, color: 'var(--n700)', marginTop: '10px' }}>
+              It depends on size. A two-attorney practice is better served by the sequencing in{' '}
+              <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link> than a
+              full legal program bought at once. For the parent discipline, start at{' '}
+              <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>. Firms fighting for one
+              metro usually want the city page:{' '}
+              <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
+              <Link href="/chicago/seo" style={LINK_STYLE}>Chicago</Link>,{' '}
+              <Link href="/dallas/seo" style={LINK_STYLE}>Dallas</Link>,{' '}
+              <Link href="/boston/seo" style={LINK_STYLE}>Boston</Link>, or{' '}
+              <Link href="/los-angeles/seo" style={LINK_STYLE}>Los Angeles</Link>.
+            </p>
+          </div>
+        </section>
+
+        {/* ============================================================
+            INTAKE CHECKLIST. additive pass 2026-08-13
+        ============================================================ */}
+        <section className="section-white" id="intake-checklist">
+          <div className="container" style={{ maxWidth: '52rem' }}>
+            <span className="eyebrow">After the click</span>
+            <h2 className="section-title" style={{ marginTop: '14px' }}>The intake checklist SEO cannot fix for you</h2>
+            <p className="section-sub" style={{ marginBottom: '36px' }}>
+              We have watched firms double organic calls and sign the same number of cases. Rankings put a
+              person on the phone. These ten decide whether that person becomes a client, and they all sit
+              inside your office rather than ours.
+            </p>
+            <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '10px' }}>
+              {INTAKE_CHECKLIST.map((item, i) => (
+                <li
+                  key={i}
+                  style={{
+                    display: 'flex', gap: '12px', alignItems: 'flex-start',
+                    background: 'var(--cream)', border: '1px solid rgba(15,15,18,0.08)',
+                    borderRadius: '12px', padding: '14px 16px', lineHeight: 1.6, color: 'var(--n700)',
+                  }}
+                >
+                  <span
+                    style={{
+                      flex: '0 0 auto', fontFamily: 'var(--font-mono)', fontSize: '12px',
+                      fontWeight: 700, color: 'var(--orange-d)', paddingTop: '3px',
+                    }}
+                    aria-hidden="true"
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 

@@ -8,6 +8,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
@@ -277,6 +278,273 @@ const SCORE_FJ = ['The founder, Bhavesh', 'Scoped to your budget', 'Built for SM
 const SCORE_AG = [['A rotating junior', 'p'], ['High retainer', 'x'], ['Enterprise-first', 'p'], ['Rankings & traffic', 'p'], ['Add-on cost', 'p'], ['6 to 12 month lock-in', 'x']] as const;
 const SCORE_DIY = [['Solo, stretched thin', 'p'], ['Low', 'c'], ['Hit or miss', 'p'], ['Little or none', 'x'], ['Not covered', 'x'], ['Flexible', 'c']] as const;
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Additive strengthening pass (2026-08-13). ADD-ONLY: nothing above this block
+   was removed, and all 21 FAQs are untouched. Adds cited numbers, an 18-point
+   owner checklist, a five-way comparison table, and the named systems small
+   business SEO actually runs on.
+
+   Every source below was opened with curl on 2026-08-13, returned HTTP 200, and
+   the exact claim was located in the fetched HTML before it was written here.
+   If a source stops resolving, cut the claim rather than leaving it uncited.
+───────────────────────────────────────────────────────────────────────────── */
+
+const LINK_STYLE = {
+  color: 'var(--ls-orange-d)',
+  fontWeight: 600,
+  textDecoration: 'underline',
+  textUnderlineOffset: '2px',
+} as const;
+
+const GOOGLE_HIRING_SEO = 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo';
+const GOOGLE_STARTER_GUIDE = 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide';
+const GOOGLE_PROFILE_RANKING = 'https://support.google.com/business/answer/7091';
+const BRIGHTLOCAL_SURVEY = 'https://www.brightlocal.com/research/local-consumer-review-survey/';
+const WEB_DEV_VITALS = 'https://web.dev/articles/vitals';
+
+const SBSEO_STATS = [
+  {
+    value: '#1',
+    label:
+      'Google’s own guidance on hiring an SEO says it flatly: no one can guarantee a #1 ranking on Google, and you should be wary of anyone who promises one. So we sell the work and report the leads, never a position.',
+    sourceUrl: GOOGLE_HIRING_SEO,
+    sourceLabel: 'Do you need an SEO? Google Search Central',
+  },
+  {
+    value: 'Hours to months',
+    label:
+      'Google’s starter guide says some changes show up in Search within a few hours while others take several months, and suggests waiting a few weeks before judging the effect. That is the real timeline, from the people who run the index.',
+    sourceUrl: GOOGLE_STARTER_GUIDE,
+    sourceLabel: 'SEO Starter Guide, Google Search Central',
+  },
+  {
+    value: '47%',
+    label:
+      'Share of consumers who will not use a business with fewer than 20 reviews. Getting found is half the job. What people see once they find you decides whether the phone rings.',
+    sourceUrl: BRIGHTLOCAL_SURVEY,
+    sourceLabel: 'BrightLocal Local Consumer Review Survey',
+  },
+  {
+    value: '2.5s',
+    label:
+      'The Largest Contentful Paint threshold Google publishes for a good page experience, measured at the 75th percentile of real visits, alongside Interaction to Next Paint of 200 ms or less and Cumulative Layout Shift of 0.1 or less. Your pages get held to that same bar.',
+    sourceUrl: WEB_DEV_VITALS,
+    sourceLabel: 'Core Web Vitals thresholds, web.dev',
+  },
+];
+
+/* The order we actually work in. An owner can run this alone and be better off,
+   which is the point of publishing it. */
+const OWNER_CHECKLIST = [
+  {
+    title: 'Claim and finish your Google Business Profile',
+    body: 'Google’s own help page says businesses with complete and accurate information are more likely to show up in local results. Categories, services, hours, photos, and a real description. Free, and most owners stop at the name and the phone number.',
+  },
+  {
+    title: 'Verify the site in Google Search Console',
+    body: 'This is the only place Google tells you which of your pages it indexed and which it skipped. Before anyone sells you content, check whether the pages you already have are even in the index.',
+  },
+  {
+    title: 'Wire GA4 through Google Tag Manager to calls and forms',
+    body: 'Google Analytics 4 counts sessions by default, and sessions do not pay anyone. Fire click-to-call, form submits, and WhatsApp taps as named GA4 events through Google Tag Manager so the report is about leads.',
+  },
+  {
+    title: 'Add Bing Webmaster Tools while you are at it',
+    body: 'Smaller than Google and free. It also feeds answer engines that never crawl Google directly, so it is worth the twenty minutes even though the traffic looks small.',
+  },
+  {
+    title: 'Rewrite titles on pages that already get impressions',
+    body: 'Search Console shows pages ranking on page two with a title nobody clicks. Rewriting those is the fastest win on the whole list, because the ranking is already earned.',
+  },
+  {
+    title: 'One page per service, not one page listing every service',
+    body: 'A single page trying to rank for six things ranks for none of them. Split it, then point each page at the words a buyer would actually type.',
+  },
+  {
+    title: 'Check the site on a phone against Core Web Vitals',
+    body: 'Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift, measured on field data from real visits, not one Lighthouse run on a fast laptop. A slow page loses the customer after the click, which no amount of ranking fixes.',
+  },
+  {
+    title: 'Ship structured data as JSON-LD',
+    body: 'schema.org markup for your organization, your services, and your FAQ, written in JSON-LD. Search engines and AI answer engines both read structured data before they read your layout, so schema markup is cheap surface area.',
+  },
+  {
+    title: 'Check sitemap.xml and robots.txt',
+    body: 'Two files that quietly decide what gets crawled. A stale sitemap.xml full of deleted URLs and a robots.txt blocking a folder you forgot about are both common, and both invisible until someone looks.',
+  },
+  {
+    title: 'Fix internal linking from your strongest pages down',
+    body: 'Your homepage and your one popular blog post carry most of your topical authority. Internal linking passes it to the service pages that need it. It costs nothing and almost nobody does it deliberately.',
+  },
+  {
+    title: 'Ask every happy customer for a review, every time',
+    body: 'Nearly half of consumers skip a business with fewer than twenty reviews. Build the ask into the job: a text after the invoice, a line in the receipt email. Then answer every review, good and bad.',
+  },
+  {
+    title: 'Write the answers to the questions you get on the phone',
+    body: 'The questions customers ask before they buy are the questions they type into Google first. Answer them plainly on the page. That same plain answer is what an AI engine quotes back.',
+  },
+  {
+    title: 'Cut or merge the thin and duplicate pages',
+    body: 'Content pruning is unglamorous and it works. Ten near-identical pages compete with each other and waste crawl budget that should be spent on the five pages that convert.',
+  },
+  {
+    title: 'Set canonical tags and single-hop 301 redirects',
+    body: 'Old URLs, tracking parameters, and www variants split your signals across duplicates. Write a redirect map, ship each 301 redirect as one hop, and put a self-referencing canonical tag on everything that stays.',
+  },
+  {
+    title: 'Keep your name, address, and phone identical everywhere',
+    body: 'Directories copy each other, so one wrong suite number spreads. If most of your customers come from the map pack, this is where the depth lives and it is worth going further than this list does.',
+  },
+  {
+    title: 'Track what the phone call was worth',
+    body: 'A tracking number through a service like Twilio, or simply asking every caller how they found you and writing it down. Either beats guessing. SEO you cannot attribute is SEO you will cancel in month four.',
+  },
+  {
+    title: 'Publish one useful thing a month, not ten thin ones',
+    body: 'Depth on a narrow topic builds topical authority faster than volume across a wide one. One page that genuinely answers a buying question outranks five that skim it.',
+  },
+  {
+    title: 'Watch what happens after the click',
+    body: 'A heatmap and one session recording usually explain a page that gets traffic and no calls faster than another round of A/B testing. That is CRO, and it is often worth more than the next ranking.',
+  },
+];
+
+const SMB_SYSTEMS = [
+  {
+    name: 'Google Business Profile',
+    body: 'Categories, services, hours, photos, posts, and Q and A. Google’s help documentation states that complete, accurate information makes a business more likely to appear in local results, and it is still the cheapest visibility a small business owns.',
+  },
+  {
+    name: 'Google Search Console',
+    body: 'Which queries you already surface for, which pages are indexed, and which Google decided to drop. Every technical SEO audit we run starts here, and on larger sites we add log file analysis when pages are not being crawled at all.',
+  },
+  {
+    name: 'Google Analytics 4 and Google Tag Manager',
+    body: 'GA4 is where calls, form submits, and WhatsApp taps land as named events, fired through Google Tag Manager. Where the site allows it we move to server-side tracking with consent mode, so your first-party data survives browser changes.',
+  },
+  {
+    name: 'Looker Studio',
+    body: 'The monthly report is a Looker Studio view built on your own GA4 and Search Console data. You keep access. We do not invent a proprietary score, because a number only we can calculate is a number you cannot check.',
+  },
+  {
+    name: 'Bing Webmaster Tools',
+    body: 'Free, quick to verify, and it feeds answer engines that do not crawl Google. Small traffic, small effort, and it costs you an afternoon once.',
+  },
+  {
+    name: 'Your website platform',
+    body: 'Most small business sites run on WordPress, Shopify, WooCommerce, Squarespace, or Wix. We work in whichever one you have. Where we rebuild, it is Next.js with static site generation and edge caching on Cloudflare, so the CDN does the work instead of a caching plugin.',
+  },
+  {
+    name: 'Review platforms',
+    body: 'Google reviews first, then the ones your industry actually reads. If you sell products, review apps such as Yotpo or Judge.me collect a separate stream from your Google reviews, so do not let anyone report them as one number.',
+  },
+  {
+    name: 'The tools already on your invoice',
+    body: 'Review requests and lead follow-up usually run through what you already pay for, whether that is Mailchimp, HubSpot, or a Twilio number. If you have none of it, n8n, Zapier, or Make.com will wire the request flow for close to nothing.',
+  },
+];
+
+const REPORT_LINES = [
+  'Calls and form submits, counted as GA4 events rather than estimated',
+  'Which queries brought them, pulled from Google Search Console',
+  'Pages that gained or lost impressions this month, and what we changed',
+  'Review count, average rating, and how many we responded to',
+  'Core Web Vitals field data on the pages that matter, not a one-off Lighthouse score',
+  'What we are doing next month, and why that and not something else',
+];
+
+const APPROACH_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: 'Doing it yourself' },
+  { label: 'A low-cost SEO tool' },
+  { label: 'A local freelancer' },
+  { label: 'A full agency retainer' },
+] as const;
+
+const APPROACH_ROWS = [
+  {
+    feature: 'Who does the work',
+    values: [
+      'The founder scopes it and stays on the account',
+      'You, in the hours left after running the business',
+      'Software. It reports, it does not fix anything',
+      'One person, usually good at the part they are good at',
+      'An account manager, with a strategist on the kickoff call',
+    ],
+  },
+  {
+    feature: 'Best fit',
+    values: [
+      'An owner who wants it handled and wants to see the leads',
+      'One location, a simple site, and real hours to spare',
+      'Someone who already knows what to fix and needs the data',
+      'A narrow, well-defined job with a clear finish line',
+      'A bigger budget and a marketing lead to manage the account',
+    ],
+  },
+  {
+    feature: 'Website and technical fixes',
+    values: [
+      'Included. Core Web Vitals, canonical tags, 301 redirects, and internal linking',
+      'Possible with a weekend and patience, harder on a page builder',
+      'Flags issues, fixes none of them',
+      'Depends entirely on the freelancer’s background',
+      'Usually flagged in the audit and handed back to your developer',
+    ],
+  },
+  {
+    feature: 'Structured data and schema',
+    values: [
+      'schema.org markup shipped as JSON-LD and validated before launch',
+      'A plugin gets you part of the way',
+      'Detects missing structured data, writes none',
+      'Sometimes, if you ask for it by name',
+      'Covered, though schema markup is often the first thing dropped',
+    ],
+  },
+  {
+    feature: 'Content',
+    values: [
+      'Pages built around what your buyers type, published on a schedule',
+      'Nobody knows your customers better. Few owners find the time',
+      'Suggests topics. Writing is still yours',
+      'Often the strongest thing a good freelancer offers',
+      'Included, sometimes produced at volume rather than depth',
+    ],
+  },
+  {
+    feature: 'Reviews',
+    values: [
+      'A request flow wired through your existing tools, plus a reply on every review',
+      'Works if you remember to ask. Most owners forget',
+      'Monitoring and alerts. The asking stays manual',
+      'Varies. Ask before you sign',
+      'Usually included, occasionally an add-on',
+    ],
+  },
+  {
+    feature: 'What gets reported',
+    values: [
+      'Calls and form submits as GA4 events, in a Looker Studio view you keep',
+      'Whatever you check yourself in Search Console and GA4',
+      'Rankings, backlinks, and site errors',
+      'Depends on the person. Often a monthly email',
+      'Rankings and traffic, sometimes calls',
+    ],
+  },
+  {
+    feature: 'Commitment',
+    values: [
+      'Month to month',
+      'Your own hours, which is the real cost',
+      'An annual subscription in most cases',
+      'Project by project, or a small monthly',
+      'Six to twelve month lock-in is still common',
+    ],
+  },
+];
+
 export default function SmallBusinessSeoServicePage() {
   return (
     <>
@@ -352,9 +620,10 @@ export default function SmallBusinessSeoServicePage() {
             <span className="tag">Short answer</span>
             <p>
               FactoryJet is a US small business SEO company that gets you found on Google and turns those searches into
-              customers. Our small business SEO services cover your website, your local listings, and content, kept
-              affordable by doing the work that moves rankings first. Founder-led, month-to-month, reported in calls and
-              leads.
+              customers. We fix the website first, so pages meet the published Core Web Vitals thresholds and carry
+              structured data as JSON-LD, then finish your Google Business Profile, then publish content around what
+              your buyers actually search. Calls and form submits come back as GA4 events through Google Tag Manager,
+              so the work is reported in leads rather than rankings. Founder-led and month-to-month.
             </p>
           </div>
         </div>
@@ -370,6 +639,41 @@ export default function SmallBusinessSeoServicePage() {
             </div>
           </div>
         </div>
+
+        {/* 3b. CITED NUMBERS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">The numbers</div>
+            <h2 style={{ marginTop: 14 }}>Four things worth knowing before you hire anyone for SEO</h2>
+            <p className="dek">
+              Small business SEO is sold with a lot of confident noise. These four figures come from Google and from
+              published research, and each one links to the source, so you can check it instead of taking our word for
+              it.
+            </p>
+            <div
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginTop: 40 }}
+            >
+              {SBSEO_STATS.map((s) => (
+                <div
+                  key={s.value}
+                  style={{ background: '#fff', border: '1px solid var(--ls-line)', borderTop: '3px solid var(--ls-orange)', borderRadius: 18, padding: 24 }}
+                >
+                  <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 38px)', lineHeight: 1.05, letterSpacing: '-.03em', color: 'var(--ls-orange)' }}>{s.value}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 12 }}>{s.label}</p>
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: 14, display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.04em', color: 'var(--ls-orange-d)', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    {s.sourceLabel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* 4. PILLAR TRIAD */}
         <section>
@@ -419,7 +723,7 @@ export default function SmallBusinessSeoServicePage() {
                 <div className="ic ic-o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.5-4.5" strokeLinecap="round" /></svg></div>
                 <div className="kk">Foundation</div>
                 <h3>Website &amp; on-page SEO</h3>
-                <p>We make your site fast, crawlable, and built around the searches your customers actually type, so Google can rank you and visitors convert. This is the foundation every small business SEO plan is built on.</p>
+                <p>We make your site fast, crawlable, and built around the searches your customers actually type, so Google can rank you and visitors convert. That means Core Web Vitals measured on a phone, structured data shipped as JSON-LD, a clean canonical tag on every page, and internal linking that passes authority where it is needed. This is the foundation every small business SEO plan is built on.</p>
                 <div className="impact">Impact on leads <span className="bar"><i style={{ width: '94%' }} /></span> High</div>
               </div>
               <div className="tile">
@@ -438,7 +742,7 @@ export default function SmallBusinessSeoServicePage() {
                 <div className="ic ic-o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18" /><path d="M7 14l4-4 3 3 5-6" strokeLinecap="round" strokeLinejoin="round" /></svg></div>
                 <div className="kk">Plain-English proof</div>
                 <h3>Reporting in leads, not rankings</h3>
-                <p>A monthly report tied to calls, form fills, and sales, so you always know what your SEO marketing is actually earning. No vanity rankings nobody acts on.</p>
+                <p>A monthly report tied to calls, form fills, and sales, built from your own GA4 and Google Search Console data in a Looker Studio view you keep. You always know what your SEO marketing is actually earning. No vanity rankings nobody acts on.</p>
               </div>
             </div>
           </div>
@@ -446,10 +750,102 @@ export default function SmallBusinessSeoServicePage() {
 
     
 
+        {/* 5b. THE OWNER CHECKLIST - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">How it actually works</div>
+            <h2 style={{ marginTop: 14 }}>The 18 checks we run first, in the order we run them</h2>
+            <p className="dek">
+              This is our own working order, published in full. Run it yourself and you will be better off than most
+              small businesses in your market. Hire us and you get the same list done properly, faster, and measured.
+              Either way it is the list you can hold any SEO company to.
+            </p>
+            <ol style={{ listStyle: 'none', margin: '40px 0 0', padding: 0, display: 'grid', gap: 12, maxWidth: 860 }}>
+              {OWNER_CHECKLIST.map((c, i) => (
+                <li
+                  key={c.title}
+                  style={{ display: 'flex', gap: 16, alignItems: 'flex-start', background: '#fff', border: '1px solid var(--ls-line)', borderRadius: 14, padding: '18px 20px' }}
+                >
+                  <span style={{ flexShrink: 0, fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 18, width: 34, height: 34, lineHeight: '34px', textAlign: 'center', borderRadius: 10, background: 'var(--ls-orange-soft)', color: 'var(--ls-orange-d)' }}>{i + 1}</span>
+                  <div>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{c.title}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{c.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div style={{ maxWidth: 760, marginTop: 40 }}>
+              <p className="dek" style={{ maxWidth: 760 }}>
+                Item one deserves a footnote, because it is the only free thing on the list that Google itself
+                comments on. Google’s{' '}
+                <a href={GOOGLE_PROFILE_RANKING} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                  Business Profile ranking documentation
+                </a>{' '}
+                says local results are based mainly on relevance, distance, and prominence, and that businesses with
+                complete and accurate information are more likely to show up. Finishing your profile is an afternoon
+                of work with no invoice attached.
+              </p>
+              <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
+                Most of this overlaps with our wider{' '}
+                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, because small business SEO is
+                ordinary SEO with a smaller budget and less patience for busywork. The{' '}
+                <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this exact list and
+                hands you the findings whether or not you hire us. If most of your customers arrive through the map
+                pack and &ldquo;near me&rdquo; searches, the deeper work sits on{' '}
+                <Link href="/services/local-seo" style={LINK_STYLE}>local SEO</Link> instead, and if you sell products
+                online, the category and product side lives on{' '}
+                <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>, where a clean product
+                feed into Google Merchant Center and an abandoned cart flow usually matter more than another blog
+                post.
+              </p>
+              <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
+                Because buyers now ask ChatGPT and Google’s AI answers the same questions they used to type into a
+                search box, the structured data, reviews, and plain answers built here are the same signals that feed{' '}
+                <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>.
+                And when the real bottleneck is the site rather than the SEO, we say so: that is a{' '}
+                <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> job, and for owners starting
+                from nothing,{' '}
+                <Link href="/services/small-business-website-design" style={LINK_STYLE}>small business website design</Link>{' '}
+                comes before any of this. Billing you for another month of tuning a site that cannot be tuned is not a
+                service.
+              </p>
+              <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
+                Where the competitor set and the review bar differ enough to change the plan, we publish a
+                metro-specific SEO page:{' '}
+                <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
+                <Link href="/dallas/seo" style={LINK_STYLE}>Dallas</Link>,{' '}
+                <Link href="/chicago/seo" style={LINK_STYLE}>Chicago</Link>,{' '}
+                <Link href="/los-angeles/seo" style={LINK_STYLE}>Los Angeles</Link>,{' '}
+                <Link href="/boston/seo" style={LINK_STYLE}>Boston</Link>,{' '}
+                <Link href="/phoenix/seo" style={LINK_STYLE}>Phoenix</Link>,{' '}
+                <Link href="/san-diego/seo" style={LINK_STYLE}>San Diego</Link>, and{' '}
+                <Link href="/las-vegas/seo" style={LINK_STYLE}>Las Vegas</Link>. Start there if you are in one of
+                them.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <MidPageCTA
           headline={'Want to know what is actually stopping you?'}
           sub={'Send your site and the terms you want. We will show you the real gap and what closes it, with no retainer pitch.'}
           label={'Get a free SEO review'}
+        />
+
+        {/* 5c. FIVE APPROACHES - additive pass 2026-08-13 */}
+        <ComparisonTable
+          eyebrow="How the options compare"
+          headline="Five honest ways to get this done, including not hiring us"
+          lead={
+            'We are one of five workable options here, not the only one. With a simple site, one location, and real hours to spare, doing it yourself genuinely works, and the checklist above is the whole method. A tool solves the measuring and none of the fixing. A good freelancer is excellent at the thing they are good at and quiet about the rest. A full agency retainer buys you a team you have to manage. Find the row that matters most to you and decide on that row.'
+          }
+          columns={APPROACH_COLUMNS}
+          rows={APPROACH_ROWS}
+          footer={
+            'Columns describe the typical shape of each option as of 2026, not a scorecard. Freelancers and agencies vary enormously, so ask every one of them the same questions this table answers, us included.'
+          }
         />
 
         {/* 6. SCORECARD */}
@@ -481,6 +877,85 @@ export default function SmallBusinessSeoServicePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 6b. NAMED SYSTEMS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">Where the work happens</div>
+            <h2 style={{ marginTop: 14 }}>The systems your visibility <span className="it">actually runs on</span></h2>
+            <p className="dek">
+              Small business SEO is not one dashboard. Your visibility sits across a handful of accounts that do not
+              talk to each other, and the gaps between them are where rankings and leads leak. Here is each one, and
+              what it is for.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 14, marginTop: 40 }}>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 14 }}>
+                {SMB_SYSTEMS.slice(0, 4).map((s) => (
+                  <li key={s.name} style={{ background: '#fff', border: '1px solid var(--ls-line)', borderLeft: '3px solid var(--ls-orange)', borderRadius: 14, padding: '18px 20px' }}>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{s.name}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{s.body}</p>
+                  </li>
+                ))}
+              </ul>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 14 }}>
+                {SMB_SYSTEMS.slice(4).map((s) => (
+                  <li key={s.name} style={{ background: '#fff', border: '1px solid var(--ls-line)', borderLeft: '3px solid var(--ls-orange)', borderRadius: 14, padding: '18px 20px' }}>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{s.name}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{s.body}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h3 style={{ marginTop: 52, fontSize: 22 }}>On the site itself, it is a technical SEO audit before it is anything clever</h3>
+            <p className="dek" style={{ marginTop: 10, maxWidth: 760 }}>
+              Every page we touch gets schema.org structured data written as JSON-LD, a self-referencing canonical
+              tag, a single-hop 301 redirect for anything retired, and internal linking from the pages that already
+              carry authority. Pages are held to the published{' '}
+              <a href={WEB_DEV_VITALS} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                Core Web Vitals thresholds
+              </a>{' '}
+              on a phone, so Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift are
+              measured on field data from real visits rather than one Lighthouse run on a fast laptop. We run an
+              accessibility audit against WCAG at the same time, because a page a screen reader cannot use is a page
+              some of your customers cannot use either.
+            </p>
+            <p className="dek" style={{ marginTop: 16, maxWidth: 760 }}>
+              Where a rebuild or a replatforming is involved, the url mapping and the redirect map get written before
+              anything moves, not after somebody notices the calls stopped. On bigger sites we add log file analysis
+              and content pruning, because crawl budget spent on ten near-identical pages is crawl budget not spent on
+              the five that convert. And when a page gets traffic but no calls, a heatmap and one session recording
+              answer it faster than another round of A/B testing.
+            </p>
+            <p className="dek" style={{ marginTop: 16, maxWidth: 760 }}>
+              On timing, we quote Google rather than ourselves. Its{' '}
+              <a href={GOOGLE_STARTER_GUIDE} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                SEO Starter Guide
+              </a>{' '}
+              says some changes take a few hours to show up in Search and others take several months, and it suggests
+              waiting a few weeks before judging the effect. That matches what we tell owners on the first call, and
+              it is why the engagement is month to month rather than a year of faith.
+            </p>
+
+            <h3 style={{ marginTop: 52, fontSize: 22 }}>What lands in your inbox each month</h3>
+            <ul style={{ listStyle: 'none', margin: '20px 0 0', padding: 0, display: 'grid', gap: 10, maxWidth: 760 }}>
+              {REPORT_LINES.map((r) => (
+                <li key={r} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 15, lineHeight: 1.55, color: 'var(--ls-n600)' }}>
+                  <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
+                    <circle cx="10" cy="10" r="9" fill="#0C7150" />
+                    <path d="M6 10.5l2.5 2.5L14 7" stroke="#fff" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+                  </svg>
+                  {r}
+                </li>
+              ))}
+            </ul>
+            <p style={{ fontSize: 13, color: 'var(--ls-n400)', marginTop: 18, maxWidth: 760 }}>
+              Reports are assembled from your own Google Business Profile, Google Search Console, and GA4 data, in a
+              Looker Studio view you keep access to. There is no proprietary metric, because a number only we can
+              calculate is a number you cannot check.
+            </p>
           </div>
         </section>
 

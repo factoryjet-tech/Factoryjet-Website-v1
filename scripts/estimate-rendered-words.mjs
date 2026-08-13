@@ -34,8 +34,18 @@ function sourceWords(file) {
   s = s.replace(/(className|href|src|id|alt|rel|target|type|width|height|loading|fetchPriority)=\{?["'][^"']*["']\}?/g, '');
 
   const out = [];
+  // Backtick handling is the subtle one. A naive /`([^`\\]{25,})`/ starts matching at the
+  // CLOSING backtick of a short literal (anything under the 25-char floor, e.g. `${h}%`),
+  // pairs it with the OPENING backtick of the next literal, and swallows all the JSX in
+  // between. On src/app/services/small-business-seo/page.tsx that ate 23,938 characters and
+  // produced a false "over band" verdict. Pages with many short template literals (that file
+  // has 25 backticks) were badly wrong while pages with few (local-seo has 3) looked fine.
+  // Fix: reject any candidate span that contains a JSX tag opening, since real prose does not.
+  const JSXISH = /<[A-Za-z/]/;
   for (const m of s.matchAll(/'([^'\\\n]{25,})'|"([^"\\\n]{25,})"|`([^`\\]{25,})`/g)) {
-    out.push(m[1] || m[2] || m[3]);
+    const text = m[1] || m[2] || m[3];
+    if (JSXISH.test(text)) continue;
+    out.push(text);
   }
   // JSX text nodes. The original pattern here excluded \n, which meant any <p> whose prose
   // wrapped across lines was invisible: one agent deleted eleven paragraphs and this number

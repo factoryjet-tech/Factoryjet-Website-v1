@@ -420,7 +420,10 @@ export default function EcommerceSeoServicePage() {
                 <div className="lbl">Organic results</div>
                 <div className="res win">
                   <div className="crumb"><span className="fav" /> yourstore.com &rsaquo; collections &rsaquo; organic-tees</div>
-                  <div className="ttl">Organic Cotton T-Shirts &mdash; Soft, Ethical, Built to Last</div>
+                  {/* Was an HTML em-dash entity here. It rendered as an em dash, breaking the
+                      no-em-dash rule, while staying invisible to a source grep for the
+                      character itself. Check entities as well as literals when auditing. */}
+                  <div className="ttl">Organic Cotton T-Shirts: Soft, Ethical, Built to Last</div>
                   <div className="rich"><span className="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 (1,204) <span className="price">$38.00</span> <span className="stock">In stock</span> &middot; Free shipping</div>
                 </div>
                 <div className="res comp">

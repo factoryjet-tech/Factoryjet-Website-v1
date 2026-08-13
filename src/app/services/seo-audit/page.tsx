@@ -8,6 +8,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
@@ -36,7 +37,7 @@ import './seo-audit.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const REVIEWED_DATE = 'June 3, 2026';
+const REVIEWED_DATE = 'August 13, 2026';
 
 type FaqGroup = { id: string; label: string; items: { q: string; a: string }[] };
 
@@ -189,7 +190,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-13';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -269,6 +270,377 @@ const SCORE_ROWS = ['Who reads your site', 'Prioritized by impact', 'Core Web Vi
 const SCORE_FJ = ['The founder, Bhavesh', 'Yes, ranked', 'Diagnosed & fixed', '90-day plan', 'Yes, in-house', 'The full report'];
 const SCORE_AG = [['A junior analyst', 'p'], ['Sometimes', 'p'], ['Yes', 'c'], ['Dense PDF', 'p'], ['Costly retainer', 'p'], ['A long deck', 'p']] as const;
 const SCORE_DIY = [['A bot', 'x'], ['Flat error list', 'x'], ['Score only', 'p'], ['None', 'x'], ['No', 'x'], ['A CSV of errors', 'p']] as const;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Additive strengthening pass (2026-08-13). ADD-ONLY: nothing above this block
+   was removed and all 21 FAQs are untouched. Adds cited numbers, the full audit
+   checklist (the centrepiece of the page), a four-way comparison table that
+   includes "do not pay anyone", the systems an audit actually runs through, and
+   in-content internal links.
+
+   Every source below was opened with curl on 2026-08-13, returned HTTP 200, and
+   the exact claim was located in the fetched HTML before it was written here.
+   If a source stops resolving, cut the claim rather than leave it standing bare.
+───────────────────────────────────────────────────────────────────────────── */
+
+const LINK_STYLE = {
+  color: 'var(--orange-d)',
+  fontWeight: 600,
+  textDecoration: 'underline',
+  textUnderlineOffset: '2px',
+} as const;
+
+const WEB_DEV_VITALS = 'https://web.dev/articles/vitals';
+const GOOGLE_SITEMAP_DOC =
+  'https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap';
+const GOOGLE_ROBOTS_DOC =
+  'https://developers.google.com/search/docs/crawling-indexing/robots/intro';
+const GOOGLE_STRUCTURED_DATA_DOC =
+  'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data';
+const GOOGLE_SEARCH_CONSOLE_DOC = 'https://support.google.com/webmasters/answer/9128668';
+const SCHEMA_ORG_ORGANIZATION = 'https://schema.org/Organization';
+
+const AUDIT_STATS = [
+  {
+    value: '2.5s',
+    label:
+      'The Largest Contentful Paint threshold Google publishes for a good page experience, alongside Interaction to Next Paint at 200 milliseconds or less and Cumulative Layout Shift at 0.1 or less. All three are judged at the 75th percentile of real page loads, so one quick test on your own laptop proves nothing.',
+    sourceUrl: WEB_DEV_VITALS,
+    sourceLabel: 'Core Web Vitals thresholds, web.dev',
+  },
+  {
+    value: '50,000',
+    label:
+      'The ceiling on a single sitemap file: 50,000 URLs or 50MB uncompressed, whichever you hit first. Past that you need a sitemap index. A sitemap.xml quietly over the limit is one of the faster findings in a technical SEO audit.',
+    sourceUrl: GOOGLE_SITEMAP_DOC,
+    sourceLabel: 'Build and submit a sitemap, Google Search Central',
+  },
+  {
+    value: '10M+',
+    label:
+      'Domains carrying schema.org Organization markup, counted by Google against its own web index in July 2026. Structured data stopped being an edge case a long time ago. It is the floor your competitors already stand on.',
+    sourceUrl: SCHEMA_ORG_ORGANIZATION,
+    sourceLabel: 'Organization type usage, schema.org',
+  },
+];
+
+/* The checklist. This is the page. It is the order we actually work in, and it
+   is the list you can hold any other agency to, including the ones we lose to. */
+type CheckGroup = { label: string; items: ReadonlyArray<{ t: string; b: string }> };
+
+const AUDIT_CHECKLIST: ReadonlyArray<CheckGroup> = [
+  {
+    label: 'Crawling and indexing',
+    items: [
+      {
+        t: 'robots.txt, read line by line',
+        b: 'What it blocks, and what it blocks by accident. Google’s own documentation says robots.txt is not a mechanism for keeping a page out of the index, so a disallowed URL can still surface with no snippet under it.',
+      },
+      {
+        t: 'sitemap.xml and the sitemap index',
+        b: 'Whether it exists, whether it lists only live 200 URLs, whether it is submitted, and whether it has crept past the size limit and stopped being read at all.',
+      },
+      {
+        t: 'Index coverage in Google Search Console',
+        b: 'The pages Google found, the pages it skipped, and the reason it gives for each one. On most sites this is where the fastest wins are sitting.',
+      },
+      {
+        t: 'Canonical tags',
+        b: 'Every page needs a self-referencing canonical tag or a deliberate one pointing elsewhere. Conflicting canonicals split your signals across URLs that should have been one.',
+      },
+      {
+        t: 'Redirect chains and the redirect map',
+        b: 'Every 301 redirect should be a single hop. We trace the chains, flag the loops, and write a redirect map for anything retired. Bots give up on chains faster than browsers do.',
+      },
+      {
+        t: 'Crawl budget on large sites',
+        b: 'Where Googlebot actually spends its time. Faceted URLs, filter parameters, and near-duplicate pages eat the crawl budget you wanted spent on pages that convert.',
+      },
+      {
+        t: 'hreflang and country targeting',
+        b: 'If you run US, UK, or other regional versions we check the hreflang cluster returns properly and that x-default is set. Broken hreflang quietly serves the wrong page to the wrong country.',
+      },
+      {
+        t: 'Rendering and hydration',
+        b: 'We compare raw HTML against the rendered DOM on React, Next.js, Vue, and Nuxt builds. Content that only appears after hydration is content Google may never weigh.',
+      },
+    ],
+  },
+  {
+    label: 'Speed and page experience',
+    items: [
+      {
+        t: 'Largest Contentful Paint',
+        b: 'Which element is largest, when it paints, and what is holding it up. Usually an unoptimized hero image or a font that arrives late.',
+      },
+      {
+        t: 'Interaction to Next Paint',
+        b: 'How long the page takes to answer a real tap. Heavy client-side JavaScript is the usual cause, and it rarely shows up on a desktop test.',
+      },
+      {
+        t: 'Cumulative Layout Shift',
+        b: 'Images without reserved space, late banners, and fonts that swap. Cheap to fix, and it irritates buyers more than it costs you rankings.',
+      },
+      {
+        t: 'Lab scores measured against field data',
+        b: 'A Lighthouse run tells you what is possible. Field data tells you what your visitors got. We report both, and never quote only the flattering one.',
+      },
+      {
+        t: 'How the page is delivered',
+        b: 'Whether static site generation or server-side rendering would help, whether the CDN is doing edge caching on HTML or only on assets, and what is blocking first paint.',
+      },
+    ],
+  },
+  {
+    label: 'On-page',
+    items: [
+      {
+        t: 'Title tags',
+        b: 'Length, uniqueness, and whether the page targets a phrase anyone actually searches. Rewritten titles are often the first measurable lift after an audit.',
+      },
+      {
+        t: 'Meta descriptions',
+        b: 'Not a ranking factor, still a click-through factor. Duplicates, truncations, and the pages where Google is rewriting yours because it is unhelpful.',
+      },
+      {
+        t: 'Heading structure',
+        b: 'Exactly one h1 and a clean descent to h2 and h3. We check the tag the browser receives, not the component name, because heading wrappers get this silently wrong.',
+      },
+      {
+        t: 'Keyword cannibalization',
+        b: 'Two pages chasing one phrase beat each other instead of the competition. We find the overlaps and say plainly which page should win and which should be merged.',
+      },
+      {
+        t: 'Internal linking',
+        b: 'Orphan pages, dead ends, and the authority your strongest pages are sitting on instead of passing down. Internal linking costs nothing and most sites still waste it.',
+      },
+      {
+        t: 'Images, alt text, and URLs',
+        b: 'Missing alt attributes, decorative images that should carry empty alt, files served far heavier than needed, and URLs only worth changing when the gain beats the redirect.',
+      },
+    ],
+  },
+  {
+    label: 'Content',
+    items: [
+      {
+        t: 'Thin and near-duplicate pages',
+        b: 'Cloned service or location pages get filtered out of the index. Content pruning almost always comes before writing anything new.',
+      },
+      {
+        t: 'Topical gaps against who outranks you',
+        b: 'What the pages above you cover that yours do not. Topical authority is built by covering a subject properly, not by publishing more often.',
+      },
+      {
+        t: 'Answer-first structure',
+        b: 'Whether each page states its answer inside the first screen. AI answer engines pull disproportionately from the top third of a page, so burying the answer costs you twice.',
+      },
+      {
+        t: 'Freshness and author signals',
+        b: 'Whether dateModified in your structured data is honest, whether anything time-sensitive has quietly expired, and whether a named human stands behind the advice.',
+      },
+    ],
+  },
+  {
+    label: 'Structured data and entities',
+    items: [
+      {
+        t: 'JSON-LD, not Microdata',
+        b: 'Google recommends JSON-LD for structured data in its own documentation, so that is the format we check for and the format we write.',
+      },
+      {
+        t: 'Schema that matches the page',
+        b: 'The right schema.org types for what the page genuinely is, validated before it ships instead of after somebody notices a rich result disappeared.',
+      },
+      {
+        t: 'Schema drift',
+        b: 'FAQ schema markup saying one thing while the visible FAQ says another is the most common silent defect we find. To an answer engine it reads as cloaking.',
+      },
+      {
+        t: 'Entity consistency',
+        b: 'Your Organization markup, your sameAs profiles, and whether your business name is written the same way everywhere Google already trusts.',
+      },
+    ],
+  },
+  {
+    label: 'Links and authority',
+    items: [
+      {
+        t: 'Referring domains, not link counts',
+        b: 'How many real sites link to you, and how many of those are farms. A thousand links from forty domains is forty links.',
+      },
+      {
+        t: 'Toxic and bought links',
+        b: 'Anything a previous agency purchased, and whether it needs disavowing or simply ignoring. Most of the time the honest answer is ignoring.',
+      },
+      {
+        t: 'Broken inbound links',
+        b: 'Links pointing at URLs you retired years ago. A single-hop 301 redirect recovers authority you already earned and then forgot about.',
+      },
+    ],
+  },
+  {
+    label: 'Local visibility',
+    items: [
+      {
+        t: 'Google Business Profile and NAP',
+        b: 'Primary category, services, hours, photos, and whether name, address, and phone match across the directories that feed Google. For a local business this outranks a lot of the website.',
+      },
+      {
+        t: 'Location pages',
+        b: 'One genuinely different page per location, carrying LocalBusiness structured data and internal linking from the service pages that already hold weight.',
+      },
+    ],
+  },
+  {
+    label: 'AI visibility',
+    items: [
+      {
+        t: 'Whether the assistants name you',
+        b: 'We put the questions your buyers actually type into ChatGPT, Claude, Gemini, and Perplexity, and record whether you appear. It is measurable now, so we measure it.',
+      },
+      {
+        t: 'AI crawler access in robots.txt',
+        b: 'GPTBot, ClaudeBot, PerplexityBot, and Google-Extended each need naming. One over-broad wildcard that catches a retrieval bot removes you from AI answers with no error anywhere to notice.',
+      },
+      {
+        t: 'Extractable blocks and llms.txt',
+        b: 'Short definitions, real tables, honest lists, and a plain markdown file at your site root. The formats an answer engine can lift cleanly are the ones that get cited.',
+      },
+    ],
+  },
+  {
+    label: 'Measurement',
+    items: [
+      {
+        t: 'GA4 events that match reality',
+        b: 'Whether form submits, calls, and checkouts land in Google Analytics 4 as named events. We have opened audits where the tracking broke months before the traffic did.',
+      },
+      {
+        t: 'Google Tag Manager and server-side tracking',
+        b: 'What is firing, what is firing twice, and whether moving to server-side tracking with consent mode would protect the first-party data you still have.',
+      },
+      {
+        t: 'A year of Search Console history',
+        b: 'Twelve months of queries and pages. On a large site we push the bulk export into BigQuery and read it in Looker Studio, because the interface hides the long tail.',
+      },
+    ],
+  },
+];
+
+const CHECKLIST_TOTAL = AUDIT_CHECKLIST.reduce((n, g) => n + g.items.length, 0);
+
+const AUDIT_SYSTEMS = [
+  {
+    name: 'Google Search Console',
+    body: 'Google calls it a free service to monitor, maintain, and troubleshoot your presence in Search. First thing we ask for, and the one most owners never connected.',
+  },
+  {
+    name: 'Google Analytics 4 and Google Tag Manager',
+    body: 'Whether conversions are counted at all. Named GA4 events fired through Google Tag Manager, checked against what the site really does.',
+  },
+  {
+    name: 'Bing Webmaster Tools',
+    body: 'Free, quick to claim, and it feeds answer engines that never crawl Google directly. Most sites we audit have never opened it.',
+  },
+  {
+    name: 'Screaming Frog',
+    body: 'The full crawl. Redirect chains, canonical tags, status codes, duplicate titles, and orphan pages, at whatever scale your site is.',
+  },
+  {
+    name: 'Server log files',
+    body: 'Log file analysis shows what Googlebot actually requested, not what a crawl simulation guessed. The only honest read on crawl budget.',
+  },
+  {
+    name: 'Lighthouse and field Core Web Vitals',
+    body: 'Lighthouse in the lab, then real-user Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. A laptop on office wifi is not your customer.',
+  },
+  {
+    name: 'Structured data validation',
+    body: 'Every JSON-LD block parsed and checked against schema.org, including the ones declared in code that never reach a script tag on the page.',
+  },
+  {
+    name: 'ChatGPT, Claude, Gemini, and Perplexity',
+    body: 'Run against your real buying questions. OpenAI, Anthropic, and Google answer differently, and being invisible in one is a finding, not a footnote.',
+  },
+  {
+    name: 'Your stack and your CDN',
+    body: 'Next.js, React, Shopify, WooCommerce, Magento, or WordPress, behind Cloudflare or Vercel. Rendering, redirects, and caching behave differently on each.',
+  },
+];
+
+const APPROACH_COLUMNS = [
+  { label: 'A manual audit', isFactoryJet: true },
+  { label: 'A free automated scan' },
+  { label: 'A gig-marketplace audit' },
+  { label: 'Your own team, in-house' },
+] as const;
+
+const APPROACH_ROWS = [
+  {
+    feature: 'Who reads your site',
+    values: [
+      'The founder, start to finish, on the same call that presents the findings',
+      'Software. Nobody reads the output except you',
+      'Usually a template filled in by someone who spent under an hour on it',
+      'Whoever has the time, which on most weeks is nobody',
+    ],
+  },
+  {
+    feature: 'What comes back',
+    values: [
+      'Findings ranked by impact and effort, with a 90-day sequence and the reasoning shown',
+      'A score and a flat list of errors, unranked and uncontextualized',
+      'A long PDF, often the same automated export with a cover page on it',
+      'A list in a spreadsheet that competes with everything else in the backlog',
+    ],
+  },
+  {
+    feature: 'Crawling and indexing depth',
+    values: [
+      'Full crawl, plus index coverage, log file analysis, redirect chains, and canonical tag conflicts',
+      'Surface crawl. Finds broken links, misses why Google skipped a page',
+      'Whatever the tool it was run through happened to output',
+      'Good, if somebody already knows Search Console. Rarely their main job',
+    ],
+  },
+  {
+    feature: 'Core Web Vitals',
+    values: [
+      'Lab and field data, diagnosed to the element and the cause, on mobile',
+      'A Lighthouse number, real but not what your visitors experienced',
+      'A screenshot of that same Lighthouse number',
+      'Easy to measure, harder to interpret without having fixed it before',
+    ],
+  },
+  {
+    feature: 'Structured data and AI visibility',
+    values: [
+      'JSON-LD validated against schema.org, plus whether ChatGPT, Claude, Gemini, and Perplexity name you',
+      'Flags missing schema markup. Cannot say whether an answer engine cites you',
+      'Rarely covered at all',
+      'Only if someone on the team already follows this closely',
+    ],
+  },
+  {
+    feature: 'Who fixes it afterwards',
+    values: [
+      'We implement it, hand it to your developer, or sit alongside your team',
+      'Nobody. That part is entirely on you',
+      'Almost never included, and the seller is usually gone by then',
+      'Your team, the fastest option when the backlog allows it',
+    ],
+  },
+  {
+    feature: 'When this is genuinely the right call',
+    values: [
+      'Traffic dropped and nobody can explain why, or a redesign or replatforming is coming and you cannot afford to lose what already ranks',
+      'A small site with one obvious problem and a developer who can act on it. If the scan finds a stray noindex left on after launch, you are done. Do not pay anyone',
+      'Hard to make a case for. Run the free scan yourself and keep the difference',
+      'You have a developer with real hours free and someone who opens Search Console weekly. Then your gap is prioritization, not access',
+    ],
+  },
+];
 
 export default function SeoAuditServicePage() {
   return (
@@ -362,6 +734,38 @@ export default function SeoAuditServicePage() {
           </div>
         </div>
 
+        {/* 3b. CITED NUMBERS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow" data-reveal>What the audit is measured against</div>
+            <h2 data-reveal style={{ marginTop: 14 }}>Three numbers your site is <span className="it">already being judged on</span></h2>
+            <p className="dek" data-reveal>
+              An audit is only worth reading if the bar it measures you against is published somewhere you can check.
+              Each figure below links to the source it came from. Open them.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginTop: 40 }}>
+              {AUDIT_STATS.map((s) => (
+                <div
+                  key={s.value}
+                  style={{ background: '#fff', border: '1px solid var(--line)', borderTop: '3px solid var(--orange)', borderRadius: 18, padding: 24 }}
+                >
+                  <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1, letterSpacing: '-.03em', color: 'var(--orange)' }}>{s.value}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', marginTop: 12 }}>{s.label}</p>
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: 14, display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.04em', color: 'var(--orange-d)', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    {s.sourceLabel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* 4. THREE LAYERS, glass cards */}
         <section className="glass-sec">
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 760 }}>
@@ -439,12 +843,95 @@ export default function SeoAuditServicePage() {
           </div>
         </section>
 
-    
+        {/* 5b. THE FULL CHECKLIST - the centrepiece. Additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow" data-reveal>The full list, nothing held back</div>
+            <h2 data-reveal style={{ marginTop: 14 }}>The {CHECKLIST_TOTAL} things we check, <span className="it">in the order we check them</span></h2>
+            <p className="dek" data-reveal>
+              Most agencies keep the checklist behind a form. Here is ours. Read it, hand it to whoever you are already
+              paying, and hold them to it. If they cannot answer half of these about your site, that is your answer.
+            </p>
+
+            <div style={{ marginTop: 44, display: 'grid', gap: 40, maxWidth: 900 }}>
+              {AUDIT_CHECKLIST.map((g) => (
+                <div key={g.label} data-reveal>
+                  <h3 style={{ fontSize: 21, marginBottom: 16 }}>{g.label}</h3>
+                  <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 10 }}>
+                    {g.items.map((c) => (
+                      <li
+                        key={c.t}
+                        style={{ display: 'flex', gap: 14, alignItems: 'flex-start', background: '#fff', border: '1px solid var(--line)', borderLeft: '3px solid var(--orange)', borderRadius: 12, padding: '16px 18px' }}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
+                          <circle cx="10" cy="10" r="9" fill="#0C7150" />
+                          <path d="M6 10.5l2.5 2.5L14 7" stroke="#fff" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+                        </svg>
+                        <div>
+                          <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 16.5, color: 'var(--ink)' }}>{c.t}</div>
+                          <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', marginTop: 4 }}>{c.b}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ maxWidth: 780, marginTop: 48 }}>
+              <h3 style={{ fontSize: 21, marginBottom: 12 }}>Where the findings usually send you next</h3>
+              <p className="dek" style={{ maxWidth: 780 }}>
+                An audit is a diagnosis, and the diagnosis decides the treatment. When the crawl comes back clean and
+                the problem is simply that nobody has built topical depth, the answer is ordinary{' '}
+                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, or{' '}
+                <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link> if you are a
+                single owner with limited hours. When the map pack is the missing channel, it is{' '}
+                <Link href="/services/local-seo" style={LINK_STYLE}>local SEO</Link>. When faceted URLs are burning
+                crawl budget and collection pages are cannibalizing each other, it is{' '}
+                <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>.
+              </p>
+              <p className="dek" style={{ maxWidth: 780, marginTop: 16 }}>
+                When you rank in Google but no assistant will name you, the work is{' '}
+                <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>,
+                which run on the same structured data and internal linking this audit checks. And sometimes the honest
+                finding is that the site itself cannot be tuned into shape, in which case it is a{' '}
+                <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> problem, or a{' '}
+                <Link href="/services/website-redesign" style={LINK_STYLE}>website redesign</Link> where the URL mapping
+                and the redirect map get written before anything moves. We will say that out loud rather than bill you
+                for another month of polishing.
+              </p>
+              <p className="dek" style={{ maxWidth: 780, marginTop: 16 }}>
+                Where the competitor set is local enough to change the priorities, we publish a metro page instead of
+                pretending one national answer fits: <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
+                <Link href="/dallas/seo" style={LINK_STYLE}>Dallas</Link>,{' '}
+                <Link href="/chicago/seo" style={LINK_STYLE}>Chicago</Link>,{' '}
+                <Link href="/boston/seo" style={LINK_STYLE}>Boston</Link>,{' '}
+                <Link href="/phoenix/seo" style={LINK_STYLE}>Phoenix</Link>, and{' '}
+                <Link href="/san-diego/seo" style={LINK_STYLE}>San Diego</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <MidPageCTA
           headline={'Want the audit before any commitment?'}
           sub={'We run the full technical, content and link audit first. You keep the findings whether or not you work with us.'}
           label={'Request your free audit'}
+        />
+
+        {/* 5c. FOUR WAYS TO GET AUDITED - additive pass 2026-08-13 */}
+        <ComparisonTable
+          eyebrow="How the options compare"
+          headline="Four ways to get your site audited, including the one that costs you nothing"
+          lead={
+            'We are one of four workable options, and not the right one for every site. A free scan is genuinely enough for a small site with an obvious problem. An in-house check beats hiring anyone when you already have a developer with time. Find the row that matters most and decide on that row.'
+          }
+          columns={APPROACH_COLUMNS}
+          rows={APPROACH_ROWS}
+          footer={
+            'Columns describe the typical shape of each option as of 2026, not a scorecard. Tools and agencies vary widely, so put the same questions to any of them.'
+          }
         />
 
         {/* 6. REPORT DELIVERABLES (glass) */}
@@ -461,6 +948,42 @@ export default function SeoAuditServicePage() {
               <div className="platcard"><div className="pn">Technical findings</div><p>The crawl, speed, and indexing issues, explained in plain English with the why.</p></div>
               <div className="platcard"><div className="pn">90-day roadmap</div><p>A sequenced plan plus a 20-minute walkthrough call with the founder.</p></div>
             </div>
+          </div>
+        </section>
+
+        {/* 6b. NAMED SYSTEMS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow" data-reveal>What we open</div>
+            <h2 data-reveal style={{ marginTop: 14 }}>The tools an audit runs through, <span className="it">and what each one is for</span></h2>
+            <p className="dek" data-reveal>
+              No single dashboard sees your whole site. The gaps between these systems are exactly where rankings leak,
+              which is why an audit that only quotes one score is not an audit.
+            </p>
+            <ul style={{ listStyle: 'none', margin: '40px 0 0', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 14 }} data-reveal>
+              {AUDIT_SYSTEMS.map((s) => (
+                <li key={s.name} style={{ background: '#fff', border: '1px solid var(--line)', borderLeft: '3px solid var(--orange)', borderRadius: 14, padding: '18px 20px' }}>
+                  <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 16.5, color: 'var(--ink)' }}>{s.name}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', marginTop: 4 }}>{s.body}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="dek" data-reveal style={{ maxWidth: 800, marginTop: 32 }}>
+              Three of those claims are not ours, so here are the sources.{' '}
+              <a href={GOOGLE_SEARCH_CONSOLE_DOC} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                Google&rsquo;s description of Search Console
+              </a>{' '}
+              is where the &ldquo;monitor, maintain, and troubleshoot&rdquo; line comes from.{' '}
+              <a href={GOOGLE_STRUCTURED_DATA_DOC} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                Google&rsquo;s structured data documentation
+              </a>{' '}
+              states the preference for JSON-LD over Microdata and RDFa outright. And{' '}
+              <a href={GOOGLE_ROBOTS_DOC} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                the robots.txt introduction
+              </a>{' '}
+              says plainly that the file is not a way to keep a page out of the index. If any of them stop saying that,
+              tell us and we will cut the claim.
+            </p>
           </div>
         </section>
 

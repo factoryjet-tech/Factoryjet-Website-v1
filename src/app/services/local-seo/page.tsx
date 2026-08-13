@@ -8,6 +8,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
@@ -340,6 +341,239 @@ const SCORE_FJ = ['The founder, Bhavesh', 'Full optimization', 'Review engine + 
 const SCORE_AG = [['A rotating junior', 'p'], ['Basic setup', 'p'], ['Occasional asks', 'p'], ['Add-on service', 'p'], ['"Good enough"', 'p'], ['Limited', 'p'], ['Rankings & traffic', 'p'], ['6 to 12 month lock-in', 'x']] as const;
 const SCORE_DIY = [['No strategist', 'x'], ['Manual setup', 'x'], ['Plugin reminders', 'p'], ['You do it', 'x'], ['Templated', 'x'], ['Not covered', 'x'], ['Data only', 'p'], ['Cancel anytime', 'c']] as const;
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Additive strengthening pass (2026-08-13). ADD-ONLY: nothing above this block
+   was removed. Adds cited stats, a 14-point checklist, a four-way comparison
+   table, and the named systems local visibility actually runs on.
+
+   Every source below was opened with curl on 2026-08-13, returned HTTP 200, and
+   the exact claim was located in the fetched HTML before it was written here.
+   If a source stops resolving, cut the claim rather than leaving it uncited.
+───────────────────────────────────────────────────────────────────────────── */
+
+const LINK_STYLE = {
+  color: 'var(--ls-orange-d)',
+  fontWeight: 600,
+  textDecoration: 'underline',
+  textUnderlineOffset: '2px',
+} as const;
+
+const GOOGLE_RANKING_DOC = 'https://support.google.com/business/answer/7091';
+const GOOGLE_LOCALBUSINESS_DOC =
+  'https://developers.google.com/search/docs/appearance/structured-data/local-business';
+const BRIGHTLOCAL_SURVEY = 'https://www.brightlocal.com/research/local-consumer-review-survey/';
+const WEB_DEV_VITALS = 'https://web.dev/articles/vitals';
+
+const LOCAL_SEO_STATS = [
+  {
+    value: '97%',
+    label:
+      'Share of consumers who read reviews for local businesses. 41% now say they always read them before choosing, up from 29% a year earlier.',
+    sourceUrl: BRIGHTLOCAL_SURVEY,
+    sourceLabel: 'BrightLocal Local Consumer Review Survey',
+  },
+  {
+    value: '45%',
+    label:
+      'Share of consumers using ChatGPT and other generative AI tools to find local businesses, up from 6% a year earlier. That makes AI the third most common source of a local recommendation.',
+    sourceUrl: BRIGHTLOCAL_SURVEY,
+    sourceLabel: 'BrightLocal Local Consumer Review Survey',
+  },
+  {
+    value: '2.5s',
+    label:
+      'The Largest Contentful Paint threshold Google publishes for a good page experience, alongside Interaction to Next Paint under 200 ms and Cumulative Layout Shift under 0.1. Your location pages get held to the same bar.',
+    sourceUrl: WEB_DEV_VITALS,
+    sourceLabel: 'Core Web Vitals thresholds, web.dev',
+  },
+];
+
+/* The list a competitor cannot paste: it is the order we actually work in. */
+const MAP_PACK_CHECKLIST = [
+  {
+    title: 'Primary category on your Google Business Profile',
+    body: 'The one field that moves the most on the whole profile. A wrong primary category keeps you out of the map pack for the term you care about, however many reviews you have.',
+  },
+  {
+    title: 'Secondary categories, services, and attributes',
+    body: 'Google matches these against the wording of the search. We fill every field that genuinely applies and remove the ones dragging you into queries you cannot win.',
+  },
+  {
+    title: 'NAP consistency at the aggregator, not the directory',
+    body: 'In the US most directory listings trace back to a few data aggregators. We correct the aggregator record first, then the copies, then suppress duplicates. Fixing forty directories by hand is the slow way.',
+  },
+  {
+    title: 'Apple Business Connect and Bing Places',
+    body: 'BrightLocal recorded Apple Maps usage for local recommendations climbing from 14% to 27% in a year. Both listings are free, take about an hour, and most businesses have never claimed either.',
+  },
+  {
+    title: 'Review volume, recency, and response rate',
+    body: 'Google names review count as a prominence input in its own documentation. We wire a request flow through the tools you already pay for, or through n8n, Zapier, or Make.com if you have none, and answer every review.',
+  },
+  {
+    title: 'schema.org LocalBusiness markup in JSON-LD',
+    body: 'Each location page ships with structured data carrying address, hours, phone, and geo coordinates. We write the JSON-LD to Google’s published LocalBusiness guidance, then validate the schema markup before it goes live.',
+  },
+  {
+    title: 'Location pages that are not clones of each other',
+    body: 'One page per location or service area, each genuinely different. Near-duplicate location pages get filtered out of the index and burn the crawl budget you wanted spent on the pages that convert. Content pruning usually comes before writing anything new.',
+  },
+  {
+    title: 'Internal linking from your strongest pages down',
+    body: 'Service pages that already hold topical authority should be passing it to the local pages. Internal linking costs nothing and most local sites still leave every location page one orphaned click from nowhere.',
+  },
+  {
+    title: 'Canonical tags and single-hop 301 redirects',
+    body: 'Retired location URLs, tracking parameters, and www variants split your signals. We build a redirect map, ship each 301 redirect as a single hop, and set a self-referencing canonical tag on everything that stays.',
+  },
+  {
+    title: 'Core Web Vitals measured on a phone',
+    body: 'Map-pack traffic arrives on mobile, on a cell connection. We check Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift in field data, not just a Lighthouse run on a laptop.',
+  },
+  {
+    title: 'Google Search Console coverage and query data',
+    body: 'Search Console shows which local queries you already surface for and which location pages Google decided not to index. In a technical SEO audit that is where the fastest wins sit, and where you catch crawl budget draining into pages nobody searches for.',
+  },
+  {
+    title: 'GA4 and Google Tag Manager wired to calls, not sessions',
+    body: 'Click-to-call, direction requests, and form submits become named GA4 events through Google Tag Manager. Without that, nobody can honestly tell you whether local SEO worked.',
+  },
+  {
+    title: 'Profile posts, fresh photos, and Q and A',
+    body: 'An active Google Business Profile outranks a dormant one carrying the same reviews. Posts, current photos, and seeded questions are the cheapest ongoing signal available to you.',
+  },
+  {
+    title: 'Local links and mentions that are not directories',
+    body: 'Chamber pages, local press, sponsorships, supplier listings. A handful of genuine local links builds more prominence than another hundred citations on sites nobody visits.',
+  },
+];
+
+const LOCAL_SYSTEMS = [
+  {
+    name: 'Google Business Profile',
+    body: 'Categories, services, attributes, hours, posts, photos, and Q and A. The single largest input into where you sit in the map pack, and the one most owners set up once and never revisit.',
+  },
+  {
+    name: 'Google Search Console',
+    body: 'Which local queries you already appear for, which location pages are indexed, and which Google quietly dropped. We pull coverage and query data monthly, plus log file analysis when a big multi-location site is not getting crawled.',
+  },
+  {
+    name: 'Google Maps',
+    body: 'Where the profile is actually seen. Photos, directions, and reviews render here first, and a Maps result behaves nothing like a desktop search page.',
+  },
+  {
+    name: 'Apple Business Connect',
+    body: 'Apple Maps listings for iPhone users, including the place card Siri reads from. Free to claim, and now too widely used to skip.',
+  },
+  {
+    name: 'Bing Places',
+    body: 'Smaller than Google, still free, and it feeds answer engines that do not crawl Google directly. Worth the hour it takes.',
+  },
+  {
+    name: 'Citation aggregators',
+    body: 'The handful of US data providers that most directories syndicate from. Correcting the source record propagates outward. Correcting directories one at a time does not.',
+  },
+  {
+    name: 'GA4 and Google Tag Manager',
+    body: 'Google Analytics 4 is where calls, direction requests, and form submits land as named events, fired through Google Tag Manager. Where the site allows it we move to server-side tracking with consent mode, so your first-party data survives the browser changes.',
+  },
+  {
+    name: 'Google Merchant Center',
+    body: 'Only relevant if you carry stock. Local inventory feeds put your actual shelf into nearby searches. If your store runs on Shopify or WooCommerce, the feed is usually already sitting there unused.',
+  },
+];
+
+const REPORT_LINES = [
+  'Calls from the profile and from the site, tracked as GA4 events rather than guessed at',
+  'Direction requests and clicks through to your site from Google Maps',
+  'Form submits with their real source, so paid and organic never get credited to each other',
+  'Review count, average rating, and response rate for the month',
+  'Which location pages Google Search Console shows as indexed, and which it dropped',
+  'Core Web Vitals field data for the pages that matter, not a one-off Lighthouse score',
+];
+
+const APPROACH_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: 'Doing it yourself' },
+  { label: 'A listings tool' },
+  { label: 'A full agency retainer' },
+] as const;
+
+const APPROACH_ROWS = [
+  {
+    feature: 'Who does the work',
+    values: [
+      'The founder scopes it and stays on the account',
+      'You, in the hours left after running the business',
+      'Software. Nobody reads the output except you',
+      'Usually an account manager, with a strategist on the kickoff call',
+    ],
+  },
+  {
+    feature: 'Google Business Profile',
+    values: [
+      'Categories, services, attributes, posts, photos, and Q and A, reviewed weekly',
+      'Simple to set up, easy to leave dormant for months',
+      'Syncs name, address, phone, and hours. Categories and posts stay on you',
+      'Set up properly at onboarding, then often revisited quarterly',
+    ],
+  },
+  {
+    feature: 'Citations and NAP consistency',
+    values: [
+      'Aggregator record first, then the copies, then duplicate suppression',
+      'Doable, but hunting duplicates by hand takes weeks',
+      'This is what these tools are genuinely best at',
+      'Frequently subcontracted to the same listings tools',
+    ],
+  },
+  {
+    feature: 'Reviews',
+    values: [
+      'Request flow through your existing tools, n8n, Zapier, or a Twilio number, plus a written response on every review',
+      'Works if you remember to ask. Most owners forget',
+      'Monitoring and alerts. Asking is still manual',
+      'Usually included, sometimes priced as an add-on',
+    ],
+  },
+  {
+    feature: 'Location pages and schema',
+    values: [
+      'Unique pages with schema.org LocalBusiness structured data in JSON-LD, validated before launch',
+      'Realistic only if you already write for the web',
+      'Not covered',
+      'Covered, though the schema markup is often skipped',
+    ],
+  },
+  {
+    feature: 'Site speed',
+    values: [
+      'Core Web Vitals checked on mobile against the published Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift thresholds',
+      'A Lighthouse score you can run, and then what',
+      'Not covered',
+      'Flagged in the audit and handed to your developer',
+    ],
+  },
+  {
+    feature: 'What gets reported',
+    values: [
+      'Calls, direction requests, and form submits as GA4 events through Google Tag Manager, in a Looker Studio view you keep',
+      'Whatever you check yourself inside Google Business Profile',
+      'Listing accuracy and review counts',
+      'Rankings and traffic, sometimes calls',
+    ],
+  },
+  {
+    feature: 'Commitment',
+    values: [
+      'Month to month',
+      'Your own hours, which is the real cost',
+      'An annual subscription in most cases',
+      'Six to twelve month lock-in is still common',
+    ],
+  },
+];
+
 export default function LocalSeoServicePage() {
   return (
     <>
@@ -419,8 +653,9 @@ export default function LocalSeoServicePage() {
             <p>
               FactoryJet is a US-focused local SEO company whose local SEO experts get your business into the Google
               map pack and Google Maps for &ldquo;near me&rdquo; searches. We optimize your Google Business Profile,
-              build reviews and citations, and earn local authority so you show up when nearby customers search.
-              Founder-led, month-to-month, reported in calls and bookings.
+              fix NAP consistency at the citation aggregators, build reviews, and ship schema.org LocalBusiness
+              structured data on every location page. Calls and direction requests come back as GA4 events, so the
+              result is reported in bookings instead of rankings. Founder-led and month-to-month.
             </p>
           </div>
         </div>
@@ -437,13 +672,51 @@ export default function LocalSeoServicePage() {
           </div>
         </div>
 
+        {/* 3b. CITED LOCAL SEARCH NUMBERS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">The numbers</div>
+            <h2 style={{ marginTop: 14 }}>What local search looks like right now</h2>
+            <p className="dek">
+              Three figures worth knowing before you spend a month on local SEO. Each one links to the source it came
+              from, so you can check it rather than take our word for it.
+            </p>
+            <div
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginTop: 40 }}
+            >
+              {LOCAL_SEO_STATS.map((s) => (
+                <div
+                  key={s.value}
+                  style={{ background: '#fff', border: '1px solid var(--ls-line)', borderTop: '3px solid var(--ls-orange)', borderRadius: 18, padding: 24 }}
+                >
+                  <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1, letterSpacing: '-.03em', color: 'var(--ls-orange)' }}>{s.value}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 12 }}>{s.label}</p>
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: 14, display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.04em', color: 'var(--ls-orange-d)', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    {s.sourceLabel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* 4. PILLAR TRIAD */}
         <section>
           <div className="wrap" style={{ textAlign: 'center', maxWidth: 700 }}>
             <h2>Three signals decide who Google <span className="it">puts on the map</span></h2>
             <p className="dek" style={{ margin: '0 auto' }}>
-              Every map-pack ranking comes down to the same three things. We work all three, and lead with the two you
-              can actually control.
+              Every map-pack ranking comes down to the same three things, and Google says so itself in its{' '}
+              <a href={GOOGLE_RANKING_DOC} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                Business Profile ranking documentation
+              </a>
+              : local results are ranked mainly on relevance, distance, and prominence. We work all three, and lead
+              with the two you can actually control.
             </p>
           </div>
           <div className="wrap">
@@ -451,7 +724,7 @@ export default function LocalSeoServicePage() {
               <div className="pillar">
                 <div className="node"><PinIcon /></div>
                 <h3>Proximity</h3>
-                <p className="sub">How close you are to the searcher. Partly fixed, but the right profile setup widens your service radius.</p>
+                <p className="sub">How close you are to the searcher. Google calls this one distance. Partly fixed, but the right service-area setup on your Google Business Profile widens the radius you can win.</p>
                 <span className="wd">Profile + service-area setup</span>
               </div>
               <div className="pillar">
@@ -463,7 +736,7 @@ export default function LocalSeoServicePage() {
               <div className="pillar">
                 <div className="node"><StarIcon /></div>
                 <h3>Prominence</h3>
-                <p className="sub">How trusted and known you are. Reviews, citations, and local links are the signals Google leans on hardest.</p>
+                <p className="sub">How well known you are. Google names two inputs outright: how many sites link to you, and how many reviews you have. So reviews, citations, and local links are where the work goes.</p>
                 <span className="wd">Reviews + citations + links</span>
               </div>
             </div>
@@ -510,12 +783,85 @@ export default function LocalSeoServicePage() {
           </div>
         </section>
 
-    
+        {/* 5b. THE CHECKLIST - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">How it actually works</div>
+            <h2 style={{ marginTop: 14 }}>The 14 checks we run in the first two weeks</h2>
+            <p className="dek">
+              Ordered by impact, top to bottom. This is the order we work in, and it is the same list you can hold
+              any other local SEO company to.
+            </p>
+            <ol style={{ listStyle: 'none', margin: '40px 0 0', padding: 0, display: 'grid', gap: 12, maxWidth: 860 }}>
+              {MAP_PACK_CHECKLIST.map((c, i) => (
+                <li
+                  key={c.title}
+                  style={{ display: 'flex', gap: 16, alignItems: 'flex-start', background: '#fff', border: '1px solid var(--ls-line)', borderRadius: 14, padding: '18px 20px' }}
+                >
+                  <span style={{ flexShrink: 0, fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 18, width: 34, height: 34, lineHeight: '34px', textAlign: 'center', borderRadius: 10, background: 'var(--ls-orange-soft)', color: 'var(--ls-orange-d)' }}>{i + 1}</span>
+                  <div>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{c.title}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{c.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div style={{ maxWidth: 760, marginTop: 40 }}>
+              <p className="dek" style={{ maxWidth: 760 }}>
+                Most of that overlaps with our wider{' '}
+                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, because local SEO is ordinary SEO
+                with a geography constraint bolted on. The{' '}
+                <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this same list and hands
+                you the findings whether or not you hire us. Single-location owners usually start with{' '}
+                <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link>. If you also
+                sell online, the product and collection side sits on{' '}
+                <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>, and product reviews
+                collected in Yotpo or Judge.me are a separate stream from your Google Business Profile reviews, so do
+                not let anyone report them as one number.
+              </p>
+              <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
+                Because 45% of consumers now ask an AI tool for local recommendations, the profile, review, and
+                structured data signals we build here are the same ones that feed{' '}
+                <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>.
+                And if the bottleneck turns out to be the site itself rather than the profile, that is a{' '}
+                <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> problem. We will say so instead
+                of billing you for another month of tuning a site that cannot be tuned.
+              </p>
+              <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
+                We also publish a metro-specific SEO page where the competitor set and the review bar differ enough to
+                matter: <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
+                <Link href="/dallas/seo" style={LINK_STYLE}>Dallas</Link>,{' '}
+                <Link href="/chicago/seo" style={LINK_STYLE}>Chicago</Link>,{' '}
+                <Link href="/los-angeles/seo" style={LINK_STYLE}>Los Angeles</Link>,{' '}
+                <Link href="/boston/seo" style={LINK_STYLE}>Boston</Link>,{' '}
+                <Link href="/phoenix/seo" style={LINK_STYLE}>Phoenix</Link>,{' '}
+                <Link href="/san-diego/seo" style={LINK_STYLE}>San Diego</Link>, and{' '}
+                <Link href="/las-vegas/seo" style={LINK_STYLE}>Las Vegas</Link>. Start there if you are in one of them.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <MidPageCTA
           headline={'Not showing in the map pack?'}
           sub={'Send us your business name and city. We will check your profile, your categories and your competitors, and tell you what is holding you down.'}
           label={'Get a free map pack check'}
+        />
+
+        {/* 6a. FOUR APPROACHES - additive pass 2026-08-13 */}
+        <ComparisonTable
+          eyebrow="How the options compare"
+          headline="Four honest ways to do local SEO, including not hiring us"
+          lead={
+            'Local SEO is not something only an agency can do, and we are one of four workable options here. With one location and the hours to spare, doing it yourself genuinely works. With twenty locations and no time, it does not. A listings tool solves one part of this properly and none of the rest. Find the row that matters most to you and decide on that.'
+          }
+          columns={APPROACH_COLUMNS}
+          rows={APPROACH_ROWS}
+          footer={
+            'Columns describe the typical shape of each option as of 2026, not a scorecard. Tools and agencies vary, so ask any of them the same questions this table answers.'
+          }
         />
 
         {/* 6. SCORECARD */}
@@ -548,6 +894,76 @@ export default function LocalSeoServicePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 6b. NAMED SYSTEMS - additive pass 2026-08-13 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow">Where the work happens</div>
+            <h2 style={{ marginTop: 14 }}>The systems your local visibility <span className="it">actually runs on</span></h2>
+            <p className="dek">
+              Local SEO is not one dashboard. Your visibility sits across systems that do not talk to each other, and
+              the gaps are where rankings leak. Here is each one, and what it is for.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 14, marginTop: 40 }}>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 14 }}>
+                {LOCAL_SYSTEMS.slice(0, 4).map((s) => (
+                  <li key={s.name} style={{ background: '#fff', border: '1px solid var(--ls-line)', borderLeft: '3px solid var(--ls-orange)', borderRadius: 14, padding: '18px 20px' }}>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{s.name}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{s.body}</p>
+                  </li>
+                ))}
+              </ul>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: 14 }}>
+                {LOCAL_SYSTEMS.slice(4).map((s) => (
+                  <li key={s.name} style={{ background: '#fff', border: '1px solid var(--ls-line)', borderLeft: '3px solid var(--ls-orange)', borderRadius: 14, padding: '18px 20px' }}>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ls-ink)' }}>{s.name}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--ls-n600)', marginTop: 4 }}>{s.body}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h3 style={{ marginTop: 52, fontSize: 22 }}>On the site itself, it is a technical SEO audit with the geography turned up</h3>
+            <p className="dek" style={{ marginTop: 10, maxWidth: 760 }}>
+              Every location page ships with schema.org LocalBusiness structured data in JSON-LD, built to Google’s{' '}
+              <a href={GOOGLE_LOCALBUSINESS_DOC} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                LocalBusiness structured data guidance
+              </a>
+              , with a self-referencing canonical tag, a single-hop 301 redirect for anything retired, and internal
+              linking from the service pages that already carry authority. Pages are held to the published{' '}
+              <a href={WEB_DEV_VITALS} target="_blank" rel="noopener noreferrer" style={LINK_STYLE}>
+                Core Web Vitals thresholds
+              </a>{' '}
+              on mobile, and where we build the site ourselves that means static site generation in Next.js with edge
+              caching on Cloudflare, so the CDN does the work instead of a caching plugin. We run an accessibility
+              audit against WCAG at the same time, because a location page a screen reader cannot use is a location
+              page a share of your customers cannot use either.
+            </p>
+            <p className="dek" style={{ marginTop: 16, maxWidth: 760 }}>
+              Where a rebuild or a replatforming is involved, the URL mapping and the redirect map get written before
+              anything moves, not after somebody notices the calls stopped. And when a page gets the traffic but not
+              the calls, a heatmap and one session recording usually answer it faster than another round of A/B
+              testing.
+            </p>
+
+            <h3 style={{ marginTop: 52, fontSize: 22 }}>What lands in your inbox each month</h3>
+            <ul style={{ listStyle: 'none', margin: '20px 0 0', padding: 0, display: 'grid', gap: 10, maxWidth: 760 }}>
+              {REPORT_LINES.map((r) => (
+                <li key={r} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 15, lineHeight: 1.55, color: 'var(--ls-n600)' }}>
+                  <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
+                    <circle cx="10" cy="10" r="9" fill="#0C7150" />
+                    <path d="M6 10.5l2.5 2.5L14 7" stroke="#fff" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+                  </svg>
+                  {r}
+                </li>
+              ))}
+            </ul>
+            <p style={{ fontSize: 13, color: 'var(--ls-n400)', marginTop: 18, maxWidth: 760 }}>
+              Reports are assembled from your own Google Business Profile, Google Search Console, and GA4 data. We do
+              not have a proprietary metric, because a number only we can calculate is a number you cannot check.
+            </p>
           </div>
         </section>
 

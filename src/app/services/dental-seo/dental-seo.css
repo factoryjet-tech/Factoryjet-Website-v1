@@ -55,12 +55,12 @@
 .dseo [data-reveal-delay="5"] { transition-delay: .5s; }
 .dseo [data-reveal-delay="6"] { transition-delay: .6s; }
 
-/* ── Gradient text ── */
+/* ── Accent text ──
+   Was a gradient (linear-gradient + background-clip: text), which CLAUDE.md bans outright.
+   Replaced with the flat accessible orange. #B23E13 is the small-text variant: #F05A28 only
+   clears contrast at large sizes, and this class is used inline inside running headlines. */
 .dseo .g-text {
-  background: linear-gradient(135deg, var(--orange) 0%, #d94a1b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #B23E13;
 }
 
 /* ── Cards ── */
