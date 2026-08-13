@@ -81,10 +81,7 @@
 
 /* ===== GRADIENT TEXT ===== */
 .cosseo .g-text {
-  background: linear-gradient(135deg, #F05A28, #B23E13);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #B23E13;
 }
 
 /* ===== ANIMATION SYSTEM ===== */

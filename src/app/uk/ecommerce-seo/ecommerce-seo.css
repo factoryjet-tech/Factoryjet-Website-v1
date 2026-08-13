@@ -214,9 +214,9 @@
 
 .uk-eseo .trust-pill {display:flex;align-items:center;gap:8px;font-size:13px;color:var(--n600)}
 
-.uk-eseo .grad-text {background:linear-gradient(135deg,#059669 0%,#10B981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.uk-eseo .grad-text {color: #059669}
 
-.uk-eseo .grad-text-orange {background:linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.uk-eseo .grad-text-orange {color: #B23E13}
 
 
 .uk-eseo .col-6040 {display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}

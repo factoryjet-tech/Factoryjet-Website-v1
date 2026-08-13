@@ -283,7 +283,7 @@
 
 .uk-sseo .trust-pill {display:flex;align-items:center;gap:8px;font-size:13px;color:var(--n600)}
 
-.uk-sseo .grad-text {background:linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.uk-sseo .grad-text {color: #B23E13}
 
 
 .uk-sseo .col-6040 {display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}

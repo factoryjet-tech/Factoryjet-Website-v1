@@ -56,9 +56,9 @@
 .dseo [data-reveal-delay="6"] { transition-delay: .6s; }
 
 /* ── Accent text ──
-   Was a gradient (linear-gradient + background-clip: text), which CLAUDE.md bans outright.
-   Replaced with the flat accessible orange. #B23E13 is the small-text variant: #F05A28 only
-   clears contrast at large sizes, and this class is used inline inside running headlines. */
+   Was gradient text, which CLAUDE.md bans outright. Replaced with the flat accessible orange.
+   #B23E13 is the small-text variant: #F05A28 only clears contrast at large sizes, and this
+   class is used inline inside running headlines. */
 .dseo .g-text {
   color: #B23E13;
 }
@@ -578,11 +578,8 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--orange) 0%, #d94a1b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 8px;
+  color: #B23E13;
 }
 .dseo .reviews-big-label {
   font-family: var(--disp);

@@ -28,7 +28,7 @@
 .uk-londonhub .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#B23E13;display:block}
 .uk-londonhub .wrap{max-width:1120px;margin:0 auto;padding:0 24px;position:relative}
 .uk-londonhub mark{background:linear-gradient(180deg,transparent 55%,#FCD9C7 55%);padding:0 1px;font-weight:600;color:inherit}
-.uk-londonhub .grad{background:linear-gradient(100deg,var(--orange),#ff9a6a,var(--orange));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:uklh-shim 5s linear infinite}
+.uk-londonhub .grad{color: #B23E13}
 @keyframes uklh-shim{to{background-position:200% center}}
 .uk-londonhub .sec{padding:70px 0;position:relative}
 

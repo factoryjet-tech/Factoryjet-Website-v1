@@ -311,8 +311,7 @@
 
 /* ─── Gradient text ─── */
 .uk-seo .grad-text {
-  background:linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  color: #B23E13;
 }
 
 

@@ -90,10 +90,7 @@
 }
 
 .lfseo .text-gradient {
-  background: linear-gradient(135deg, #F05A28 0%, #B23E13 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #B23E13;
 }
 
 @media (prefers-reduced-motion: reduce) {
