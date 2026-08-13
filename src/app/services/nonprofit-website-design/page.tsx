@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/nonprofit-website-design: US nonprofit website design service page.
@@ -1222,6 +1223,14 @@ export default function NonprofitWebsiteDesignPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Donations stalling at the second step?'}
+          sub={'Send us your giving flow. We will walk it as a donor would and tell you exactly where people are dropping out.'}
+          label={'Get a free donation flow review'}
+        />
 
         {/* ─── 10. COMPARISON TABLE (named rivals from the live SERP) ──── */}
         <section className="bg-white py-14 md:py-20">

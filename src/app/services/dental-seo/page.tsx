@@ -5,6 +5,7 @@ import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import './dental-seo.css';
@@ -623,6 +624,14 @@ export default function DentalSEOPage() {
           </div>
         </div>
       </section>
+
+    
+
+      <MidPageCTA
+        headline={'Patients finding the practice down the road instead?'}
+        sub={'Send us your practice name and city. We will check your profile, reviews and categories and tell you what is losing you bookings.'}
+        label={'Get a free practice check'}
+      />
 
       {/* ═══════════════════════════════════════
           TEAM

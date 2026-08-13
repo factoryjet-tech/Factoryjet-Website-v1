@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -281,6 +282,14 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+
+   
+
+        <MidPageCTA
+          headline={'WooCommerce getting fragile?'}
+          sub={'Tell us your plugin stack and order volume. We will tell you what breaks in a move and how we handle it.'}
+          label={'Scope your WooCommerce migration'}
+        />
 
         {/* Comparison table */}
         <section className="pp-sec">

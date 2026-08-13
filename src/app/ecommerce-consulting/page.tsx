@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -341,6 +342,14 @@ export default function EcommerceConsultingPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want a second opinion before you commit?'}
+          sub={'Bring us the decision you are stuck on. We will give you a straight answer, including when the answer is do nothing.'}
+          label={'Book a consulting call'}
+        />
 
         {/* Comparison */}
         <section className="border-t border-[#E7DED6] bg-white">

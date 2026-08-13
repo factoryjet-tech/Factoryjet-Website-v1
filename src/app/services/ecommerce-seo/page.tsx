@@ -10,6 +10,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import EcomFx from './EcomFx';
 import './ecommerce-seo.css';
 
@@ -564,6 +565,14 @@ export default function EcommerceSeoServicePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Products buried on page three?'}
+          sub={'Send us your store and two competitors. We will show you which pages are losing and the fastest fixes.'}
+          label={'Get a free store SEO review'}
+        />
 
         {/* 6. PLATFORMS */}
         <section className="plat">

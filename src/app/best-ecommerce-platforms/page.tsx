@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -659,6 +660,14 @@ export default function BestEcommercePlatformsPage() {
             </p>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Still not sure which platform fits?'}
+          sub={'Tell us what you sell, your order volume, and who has to run it day to day. We will recommend one and say why.'}
+          label={'Get a platform recommendation'}
+        />
 
         {/* ── How to choose ── */}
         <section className="pp-sec">

@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ecommerce-app-development: US native mobile app page for commerce
@@ -1172,6 +1173,14 @@ export default function EcommerceAppDevelopmentPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Not sure an app is worth building?'}
+          sub={'Most stores do not need one. Tell us your repeat purchase rate and we will give you an honest yes or no.'}
+          label={'Get a straight answer'}
+        />
 
         {/* ─── 8. STORE RULES: IAP, REJECTION, DEEP LINKS, OFFLINE ──────── */}
         <section className="py-14 md:py-20" style={{ background: CREAM }}>

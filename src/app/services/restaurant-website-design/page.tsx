@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/restaurant-website-design: US restaurant web design vertical page.
@@ -1112,6 +1113,14 @@ export default function RestaurantWebsiteDesignPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Menu still living in a PDF?'}
+          sub={'Send us your site. We will tell you what search and AI answers cannot read today, and what it takes to fix.'}
+          label={'Get a free menu check'}
+        />
 
         {/* ─── 8. COMPARISON TABLE ─────────────────────────────────────── */}
         <section className="bg-white py-14 md:py-20">

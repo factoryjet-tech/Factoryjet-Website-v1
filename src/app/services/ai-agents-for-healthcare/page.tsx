@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ai-agents-for-healthcare: the HEALTHCARE VERTICAL application of
@@ -1208,6 +1209,14 @@ export default function AiAgentsForHealthcarePage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Front desk buried in scheduling calls?'}
+          sub={'Tell us your systems and your patient volume. We will map the administrative work an agent can take, and what it never touches.'}
+          label={'Talk about your front office'}
+        />
 
         {/* ─── 8. MID-PAGE CTA ─────────────────────────────────────────── */}
         <section className="py-12 md:py-14" style={{ background: PEACH }}>

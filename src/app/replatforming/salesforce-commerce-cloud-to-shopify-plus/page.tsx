@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -274,6 +275,14 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+
+   
+
+        <MidPageCTA
+          headline={'Reviewing your Commerce Cloud renewal?'}
+          sub={'Tell us your integration list and order volume. We will map what a move to Shopify Plus would really involve.'}
+          label={'Scope your SFCC migration'}
+        />
 
         {/* Comparison table */}
         <section className="pp-sec">

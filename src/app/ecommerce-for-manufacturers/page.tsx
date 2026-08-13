@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -364,6 +365,14 @@ export default function EcommerceForManufacturersPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Distributors still ordering by email?'}
+          sub={'Send us your catalogue size and your ERP. We will show you what a trade portal changes and what it does not.'}
+          label={'Talk about your trade portal'}
+        />
 
         {/* Segments */}
         <section className="pp-sec">

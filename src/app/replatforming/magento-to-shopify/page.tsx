@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -298,6 +299,14 @@ export default function MagentoToShopifyPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Magento costs climbing?'}
+          sub={'Send us your SKU count and extension list. We will map what carries over to Shopify and what has to be rebuilt.'}
+          label={'Scope your Magento migration'}
+        />
 
         {/* Process */}
 

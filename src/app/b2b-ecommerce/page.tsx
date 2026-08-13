@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -528,6 +529,14 @@ export default function B2BEcommercePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Buyers still phoning in orders?'}
+          sub={'Tell us how your trade customers order today and what your ERP is. We will map what self-serve would actually look like.'}
+          label={'Get a B2B commerce audit'}
+        />
 
         {/* ── How to choose ── */}
         <section className="pp-sec">

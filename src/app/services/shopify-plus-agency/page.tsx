@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -651,6 +652,14 @@ export default function ShopifyPlusAgencyPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Outgrowing standard Shopify?'}
+          sub={'Tell us your order volume and where the current setup strains. We will tell you honestly whether Plus is worth it yet.'}
+          label={'Talk about Shopify Plus'}
+        />
 
         {/* Multi-store */}
         <section className="pp-sec tint">

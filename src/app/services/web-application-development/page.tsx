@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 export const metadata: Metadata = {
   title: 'Web Application Development for US Businesses | FactoryJet',
@@ -669,6 +670,15 @@ export default function WebApplicationDevelopmentPage() {
             body: "The businesses capturing competitive advantage in 2025 are not bigger. They're faster. A custom web application is the infrastructure that makes automation, AI integration, and operational efficiency possible at your scale.",
           },
         ]}
+      />
+
+      {/* ── 5b. MID-PAGE CTA ──
+          Added 2026-08-12. A live audit found this page had its only call to action at ~98%,
+          leaving a convinced reader nothing to act on through the whole body. */}
+      <MidPageCTA
+        headline={'Have an idea that needs building?'}
+        sub={'Describe what the software has to do and who has to use it. We will come back with the shortest honest path to a working version.'}
+        label={'Talk about your app'}
       />
 
       {/* ── 6. WHAT WE BUILD ── */}

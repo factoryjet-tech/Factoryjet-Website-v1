@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/b2b-website-design: US B2B website design service page.
@@ -1136,6 +1137,14 @@ export default function B2BWebsiteDesignPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Site not surviving procurement review?'}
+          sub={'Send us your site and tell us who signs off. We will show you what the buying committee cannot find today.'}
+          label={'Get a free B2B site review'}
+        />
 
         {/* ─── 9. COMPARISON TABLE (named rivals from the live SERP) ───── */}
         <section className="py-14 md:py-20" style={{ background: CREAM }}>

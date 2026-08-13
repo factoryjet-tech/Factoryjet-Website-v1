@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -336,6 +337,14 @@ export default function ReplatformingPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Weighing up a migration?'}
+          sub={'Tell us the platform you are on and what is driving the move. We will tell you honestly whether it is worth the disruption.'}
+          label={'Talk about your migration'}
+        />
 
         {/* Mid-page CTA */}
         <section className="pp-sec">

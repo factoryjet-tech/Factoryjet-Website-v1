@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -279,6 +280,14 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
+
+   
+
+        <MidPageCTA
+          headline={'Outgrowing Squarespace?'}
+          sub={'Send us your store. We will tell you what transfers cleanly, what needs rebuilding, and whether you should move at all.'}
+          label={'Scope your Squarespace migration'}
+        />
 
         {/* Comparison table */}
         <section className="pp-sec">

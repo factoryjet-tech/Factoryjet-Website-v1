@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
@@ -449,6 +450,14 @@ export default function AiAgentsUKPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Have a process eating your team alive?'}
+          sub={'Describe the workflow. We will tell you whether an agent genuinely helps or whether you just need better software.'}
+          label={'Talk about your workflow'}
+        />
 
         {/* ═══ 8. COMPARISON TABLE ═══ */}
         <section className="sec-lg dot-grid">

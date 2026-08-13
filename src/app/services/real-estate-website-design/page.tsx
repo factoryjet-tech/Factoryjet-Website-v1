@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 export const metadata: Metadata = {
   title: 'Real Estate Website Design: IDX Sites in 7 Days | FactoryJet',
@@ -595,6 +596,15 @@ export default function RealEstateWebsiteDesignPage() {
             ))}
           </div>
         }
+      />
+
+      {/* ── 4b. MID-PAGE CTA ──
+          Added 2026-08-12. A live audit found this page had its only call to action at ~98%,
+          leaving a convinced reader nothing to act on through the whole body. */}
+      <MidPageCTA
+        headline={'Site not turning traffic into showings?'}
+        sub={'Send us your current site and your MLS feed. We will tell you what is losing enquiries and which IDX setup actually fits how you work.'}
+        label={'Talk about your listings site'}
       />
 
       {/* ── 5. STRATEGIC DARK SECTION ── */}

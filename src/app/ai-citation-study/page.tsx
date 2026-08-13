@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -260,6 +261,14 @@ export default function AICitationStudyPage() {
             </p>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to know if AI cites you?'}
+          sub={'We will run your brand through the same test used in this study and send you the raw answers, cited sources included.'}
+          label={'Test your own pages'}
+        />
 
         <section className="pp-sec tint">
           <div className="pp-wrap">

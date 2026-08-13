@@ -3,6 +3,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { ecommerceDevelopmentAlternatesUAE } from '@/data/hreflangMap';
 import './ecommerce-development.css';
 
@@ -512,6 +513,14 @@ export default function EcommerceDevelopmentUAEPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Planning a store for the UAE market?'}
+          sub={'Tell us what you sell and which payment and delivery partners matter. We will map what the build actually needs.'}
+          label={'Talk about your store'}
+        />
 
         {/* ═══ 7. COMPARISON TABLE ═══ */}
         <section className="sec-lg dot-grid">

@@ -4,6 +4,7 @@ import { websiteCostAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -147,6 +148,14 @@ export default function WebsiteCostPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want a real number for your project?'}
+          sub={'Tell us your page count, integrations and deadline. We will scope it properly and quote it before any work starts.'}
+          label={'Get your project scoped'}
+        />
 
         <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
           <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">

@@ -10,6 +10,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './local-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -508,6 +509,14 @@ export default function LocalSeoServicePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Not showing in the map pack?'}
+          sub={'Send us your business name and city. We will check your profile, your categories and your competitors, and tell you what is holding you down.'}
+          label={'Get a free map pack check'}
+        />
 
         {/* 6. SCORECARD */}
         <section>

@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -210,6 +211,14 @@ export default function HeadlessCommercePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Not sure headless is worth it?'}
+          sub={'Most stores do not need it. Tell us your setup and we will tell you honestly whether it would pay for itself.'}
+          label={'Get a straight answer'}
+        />
 
         {/* What we build (bento) */}
 

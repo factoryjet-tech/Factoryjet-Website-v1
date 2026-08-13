@@ -10,6 +10,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './small-business-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -442,6 +443,14 @@ export default function SmallBusinessSeoServicePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to know what is actually stopping you?'}
+          sub={'Send your site and the terms you want. We will show you the real gap and what closes it, with no retainer pitch.'}
+          label={'Get a free SEO review'}
+        />
 
         {/* 6. SCORECARD */}
         <section>

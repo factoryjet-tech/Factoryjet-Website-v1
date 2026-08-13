@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -256,6 +257,14 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
+
+   
+
+        <MidPageCTA
+          headline={'Hitting the limits of Wix?'}
+          sub={'Tell us what you cannot do today. We will tell you whether Shopify solves it or whether the problem is somewhere else.'}
+          label={'Scope your Wix migration'}
+        />
 
         {/* Comparison table */}
         <section className="pp-sec">

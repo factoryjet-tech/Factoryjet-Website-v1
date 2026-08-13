@@ -5,6 +5,7 @@ import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import './law-firm-seo.css';
@@ -791,6 +792,14 @@ export default function LawFirmSEOPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Losing cases to firms with worse reviews?'}
+          sub={'Send us your firm and your practice areas. We will show you which pages are losing and what the leaders are doing differently.'}
+          label={'Get a free firm SEO review'}
+        />
 
         {/* ============================================================
             TEAM SECTION (DARK)

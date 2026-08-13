@@ -8,6 +8,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -523,6 +524,14 @@ export default function GenerativeEngineOptimizationPage() {
             </ul>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to know what AI says about you?'}
+          sub={'We will run your brand and your main terms through ChatGPT, Perplexity and Google AI Overviews and send you the raw answers.'}
+          label={'Check your AI visibility'}
+        />
 
         {/* Audit checklist */}
         <section className="pp-sec tint">

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-seo';
@@ -400,6 +401,14 @@ export default function AiSeoUKPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to know if AI answers mention you?'}
+          sub={'We will run your brand and your main terms through ChatGPT, Perplexity and Google AI Overviews and send you what they actually say.'}
+          label={'Check your AI visibility'}
+        />
 
         {/* ═══ 7. COMPARISON TABLE ═══ */}
         <section className="sec-lg">

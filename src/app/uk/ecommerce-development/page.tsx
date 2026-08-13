@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ecommerce-development.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-development';
@@ -439,6 +440,14 @@ export default function EcommerceDevelopmentUKPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Planning a new store or a replatform?'}
+          sub={'Tell us your platform and your order volume. We will tell you what we would build, and what we would leave alone.'}
+          label={'Talk about your store'}
+        />
 
         {/* ═══ 7. COMPARISON TABLE ═══ */}
         <section className="sec-lg dot-grid">

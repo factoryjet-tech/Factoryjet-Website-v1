@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { auHubAlternates } from '@/data/hreflangMap';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import SiteFooter from '@/components/v2/SiteFooter';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuHeader from './components/Header';
 import AuModalButton from './components/AuModalButton';
 
@@ -411,6 +412,14 @@ export default function AUHomePage() {
               </div>
             </div>
           </section>
+
+      
+
+          <MidPageCTA
+            headline={'Want to see what your site could do?'}
+            sub={'Send us the URL. We will come back with the three things costing you the most enquiries, and what it would take to fix them.'}
+            label={'Get a free site review'}
+          />
 
           {/* ============ DARK: why teams switch ============ */}
           <section className="dark">

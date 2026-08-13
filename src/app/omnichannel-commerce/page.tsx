@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -330,6 +331,14 @@ export default function OmnichannelCommercePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Stock and orders living in different systems?'}
+          sub={'Tell us which channels you sell on and what your inventory source of truth is. We will map where it is breaking.'}
+          label={'Talk about your channels'}
+        />
 
         {/* Process */}
         <section className="pp-sec">

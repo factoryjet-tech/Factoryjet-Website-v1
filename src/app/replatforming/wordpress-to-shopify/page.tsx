@@ -5,6 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -250,6 +251,14 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
+
+   
+
+        <MidPageCTA
+          headline={'WooCommerce or WordPress holding you back?'}
+          sub={'Send us your setup. We will map the content, the URLs and the redirects before anyone talks about a build.'}
+          label={'Scope your WordPress migration'}
+        />
 
         {/* Comparison table */}
         <section className="pp-sec">

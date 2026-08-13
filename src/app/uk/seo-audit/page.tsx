@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './seo-audit.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo-audit';
@@ -454,6 +455,14 @@ export default function SeoAuditUKPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want the audit before you commit to anything?'}
+          sub={'We run the full technical and content audit first, then you decide whether to work with us. No obligation attached.'}
+          label={'Request your SEO audit'}
+        />
 
         {/* ═══ 8. COMPARISON TABLE ═══ */}
         <section className="sec-lg dot-grid">

@@ -17,6 +17,7 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -902,6 +903,14 @@ export default function RFQBiddingAgentPage() {
             </aside>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Quoting team buried in RFQs?'}
+          sub={'Tell us how many you handle a week and where they come from. We will map which parts an agent can safely take.'}
+          label={'Talk about your RFQ flow'}
+        />
 
         {/* ── Systems and standards ──────────────────────────────────────── */}
         <ServiceExplanation

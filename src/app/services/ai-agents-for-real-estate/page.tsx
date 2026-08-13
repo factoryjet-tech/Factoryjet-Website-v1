@@ -9,6 +9,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ai-agents-for-real-estate: the REAL ESTATE VERTICAL application of
@@ -1181,6 +1182,14 @@ export default function AiAgentsForRealEstatePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Leads going cold overnight?'}
+          sub={'Tell us your CRM and how enquiries arrive. We will map what an agent can answer and where a human must take over.'}
+          label={'Talk about your lead flow'}
+        />
 
         {/* ─── 9. COMPARISON TABLE ─────────────────────────────────────── */}
         <section className="py-14 md:py-20" style={{ background: CREAM }}>

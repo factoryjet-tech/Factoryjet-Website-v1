@@ -10,6 +10,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuditFx from './AuditFx';
 import './seo-audit.css';
 
@@ -437,6 +438,14 @@ export default function SeoAuditServicePage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want the audit before any commitment?'}
+          sub={'We run the full technical, content and link audit first. You keep the findings whether or not you work with us.'}
+          label={'Request your free audit'}
+        />
 
         {/* 6. REPORT DELIVERABLES (glass) */}
         <section className="plat">

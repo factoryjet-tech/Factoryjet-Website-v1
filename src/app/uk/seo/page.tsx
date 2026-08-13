@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo';
@@ -408,6 +409,14 @@ export default function SeoUKPage() {
             </ol>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to see where you really stand?'}
+          sub={'Send your domain and the terms that matter. We will show you the gap to page one and what closes it, with no retainer talk.'}
+          label={'Get a free UK SEO review'}
+        />
 
         {/* ═══ 7. COMPARISON TABLE ═══ */}
         <section className="sec-lg">

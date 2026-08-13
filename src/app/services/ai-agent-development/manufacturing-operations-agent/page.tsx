@@ -13,6 +13,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -1017,6 +1018,14 @@ export default function ManufacturingOperationsAgentPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Operations running on spreadsheets and chase emails?'}
+          sub={'Describe the process that eats the most time. We will tell you whether an agent helps or whether it needs fixing first.'}
+          label={'Talk about your operations'}
+        />
 
         {/* ── 4. Systems and standards ── */}
         <ServiceExplanation

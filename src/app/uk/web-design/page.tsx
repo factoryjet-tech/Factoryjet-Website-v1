@@ -3,6 +3,7 @@ import { webDesignAlternates } from '@/data/hreflangMap';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import './web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/web-design';
@@ -426,6 +427,14 @@ export default function WebDesignUKPage() {
             </div>
           </div>
         </section>
+
+    
+
+        <MidPageCTA
+          headline={'Want to see what your site could do?'}
+          sub={'Send us the URL. We will come back with the three things costing you the most enquiries, and what it would take to fix them.'}
+          label={'Get a free UK site review'}
+        />
 
         {/* ═══ 7. PROCESS ═══ */}
         <section className="sec-lg">
