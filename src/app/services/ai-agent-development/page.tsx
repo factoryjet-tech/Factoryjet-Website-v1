@@ -17,7 +17,7 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-06';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development Services, Custom AI Agents | FactoryJet',
+  title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
   description:
     'Custom AI agent development for US operations teams. Agents that work support, sales and back-office queues inside Zendesk, HubSpot, NetSuite, Shopify and Slack.',
   keywords: [
@@ -28,13 +28,14 @@ export const metadata: Metadata = {
     'ai agent development',
     'ai agent development company usa',
     'ai agents for customer support',
-    'ai agent development company india',
-    'ai agent development services india',
+    'agentic ai development company',
+    'agentic ai development services',
+    'agentic ai consultant',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agent Development Services, Custom AI Agents | FactoryJet',
+    title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
     description:
       'Custom AI agents for operations leaders: support, sales and back-office workflows wired into the help desk, CRM and ERP you already run.',
     url: 'https://factoryjet.com/services/ai-agent-development',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agent Development Services, Custom AI Agents | FactoryJet',
+    title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
     description:
       'Custom AI agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify and Slack, with human approval on anything that matters.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
@@ -81,6 +82,7 @@ const FAQ_CATEGORIES = [
   { key: 'basics', label: 'The basics' },
   { key: 'integrations', label: 'Systems & integrations' },
   { key: 'stack', label: 'Stack & architecture' },
+  { key: 'agentic', label: 'Agentic AI' },
   { key: 'safety', label: 'Control & safety' },
   { key: 'process', label: 'Process & ownership' },
   { key: 'choosing', label: 'Choosing a partner' },
@@ -274,6 +276,47 @@ const FAQ_ITEMS = [
     question: 'Can an AI agent run on our own infrastructure instead of a vendor cloud?',
     answer:
       'Yes. The orchestration layer, the vector store and the integration code can all run in your cloud account or on-premise, which keeps your data inside your boundary. The model itself is the part that forces a choice: hosted models from OpenAI or Anthropic mean requests leave your network under their data terms, while open-weight models can run entirely in your environment at the cost of more infrastructure work and usually some capability. We scope this early, because it changes the architecture rather than being a setting you flip later.',
+  },
+  /* ── Agentic AI ────────────────────────────────────────────────────────────
+     Added 2026-08-18. The page had ZERO mentions of "agentic" despite being the
+     agent development page. Measured reachability, weakest page-1 incumbent by
+     referring domains against our 63:
+
+       agentic ai development company   210/mo   weakest  77   REACHABLE
+       agentic ai development services  170/mo   weakest ~77   REACHABLE
+       agentic ai consultant             90/mo   weakest  19   REACHABLE
+       agentic ai company               880/mo   weakest 348   GATED (IBM, AWS, MIT Sloan)
+       agentic ai agency                320/mo   weakest 553   GATED
+       agentic ai development           260/mo   learning SERP (MS Learn, DeepLearning.AI)
+
+     So this targets the explicitly commercial long-tail only, roughly 470/mo.
+     Do not retarget at "agentic ai company" or "agentic ai agency": those are
+     held by IBM, AWS, Salesforce and MIT Sloan at a median of 21,000-31,000
+     referring domains.
+  ─────────────────────────────────────────────────────────────────────────── */
+  {
+    category: 'agentic',
+    question: 'What is agentic AI, and how is it different from an AI agent?',
+    answer:
+      'An AI agent is the thing. Agentic AI is the property that makes it worth building. A system is agentic when it decides its own next step toward a goal rather than following a fixed script: it chooses which tool to call, notices when a result is wrong, and retries or escalates. A chatbot with a decision tree is not agentic no matter what the vendor calls it. The practical difference for you is that agentic systems handle the cases nobody wrote a rule for, which is where most of the manual work actually lives.',
+  },
+  {
+    category: 'agentic',
+    question: 'What does an agentic AI development company actually do?',
+    answer:
+      'Four things, in this order. It maps the workflow you want handled and decides honestly whether it needs an agent at all. It builds the tool layer, meaning the reads and writes into your CRM, ERP, helpdesk and data, because an agent without tools is just a chat window. It builds the control layer: what the agent may do unsupervised, what needs a human, and what it must never touch. Then it builds the evaluation suite that proves the thing works before it touches a customer. Most of the effort is the middle two.',
+  },
+  {
+    category: 'agentic',
+    question: 'When should we hire an agentic AI consultant instead of a development team?',
+    answer:
+      'Hire a consultant when you do not yet know what to build. That is a real and common position, and paying for a build in that state is how projects get abandoned. A short consulting engagement should end with a ranked list of candidate workflows, an honest verdict on which ones are worth automating, and a build estimate. Hire a development team once you know the workflow, the systems it touches, and what success looks like. We do both, and we will tell you which one you are actually in.',
+  },
+  {
+    category: 'agentic',
+    question: 'Is agentic AI ready for production, or is it still a demo technology?',
+    answer:
+      'It is production-ready for narrow, well-instrumented jobs and not ready for open-ended ones. An agent that handles a defined workflow with a fixed set of tools, clear escalation and an evaluation suite behind it runs reliably today. An agent given broad autonomy over systems it can write to, without evals, will fail in ways nobody notices for weeks. The difference is not the model, it is the scope and the instrumentation around it. Be suspicious of anyone who does not raise that distinction before quoting.',
   },
   {
     category: 'stack',
