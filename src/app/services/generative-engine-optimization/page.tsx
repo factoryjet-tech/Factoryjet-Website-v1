@@ -29,13 +29,13 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-06';
 
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimization Services | GEO Agency',
+  title: 'AI Search Optimization Services | GEO & LLM SEO | FactoryJet',
   description:
-    'Generative engine optimization services from a GEO and AEO agency. We get brands cited in ChatGPT, Perplexity, Claude and Google AI Overviews.',
+    'AI search optimization services for US brands: generative engine optimization, LLM SEO and answer engine work that gets you cited in ChatGPT, Perplexity, Claude and Google AI Overviews.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Generative Engine Optimization Services | GEO Agency',
+    title: 'AI Search Optimization Services | GEO & LLM SEO | FactoryJet',
     description:
       'GEO, AEO and LLM SEO services: crawler access, extractable structure, entity work and answer-share measurement across ChatGPT, Claude, Perplexity and Google AI Overviews.',
     url: 'https://factoryjet.com/services/generative-engine-optimization',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Generative Engine Optimization Services | GEO Agency',
+    title: 'AI Search Optimization Services | GEO & LLM SEO | FactoryJet',
     description: 'GEO, AEO and LLM SEO services for US brands. Get named in AI answers, not just ranked on a results page.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -96,6 +96,21 @@ const FAQ_ITEMS = [
   { category: 'results', question: 'Is AI traffic worth chasing if the volume is small?', answer: 'The visit count is the wrong metric. An answer that names you reaches a buyer at the moment they are building a shortlist, and it works even when nobody clicks. Judge it on mention share across your buying questions, and on how many sales conversations open with a recommendation.' },
 
   { category: 'working', question: 'How do we start?', answer: 'A short call where we look at your robots.txt, your top pages, and the questions your buyers actually ask an assistant. You leave knowing whether you are blocked, whether your pages are extractable, and what a realistic programme looks like. You can also run our free AI visibility check first.' },
+
+  /* ── AI search optimization / LLM SEO ──────────────────────────────────────
+     Added 2026-08-17. The page had 24 mentions of "generative engine
+     optimization" and ZERO of "ai search optimization", which is the term we
+     can actually reach: measured, the weakest page-1 incumbent for
+     "ai search optimization services" holds 42 referring domains and for
+     "llm seo services" holds 15, against our 63. The GEO and AEO agency terms
+     are gated (weakest 350 and 474 respectively) despite carrying KD 0 and
+     KD 6, so they stay in the body as category vocabulary but are no longer
+     what the page targets. See pipeline/research/US-SERVICE-DEMAND-PLAN.md.
+  ─────────────────────────────────────────────────────────────────────────── */
+  { category: 'terms', question: 'What are AI search optimization services?', answer: 'AI search optimization services get your business named in the answers assistants write, rather than just ranked on a page of links. In practice that is four things: making sure the AI crawlers can reach you at all, restructuring pages so an answer can be lifted cleanly out of them, building the entity and citation signals that make an engine trust you as a source, and measuring which engines actually name you month to month. Generative engine optimization, answer engine optimization and LLM SEO are all names for parts of this same job.' },
+  { category: 'terms', question: 'What is LLM SEO, and how is it different from GEO?', answer: 'They are the same discipline under two names. LLM SEO tends to emphasise the model side, meaning crawler access, llms.txt, and how your content is chunked and retrieved. GEO tends to emphasise the answer side, meaning extractable phrasing, statistics worth quoting, and named entities. Anyone selling them as two separate retainers is selling you the same work twice. Ask for one scope and one report.' },
+  { category: 'terms', question: 'Are AI search optimization services just SEO with a new name?', answer: 'No, though plenty of agencies rebadge and hope you will not check. The honest test is the deliverable. Classic SEO optimises for a click on a blue link. AI search optimization optimises for being quoted when there is no blue link, which changes what you write, how you structure it, and what you measure. If an agency cannot show you per-engine citation counts for ChatGPT, Perplexity, Claude and Gemini separately, they are reporting classic SEO with new labels.' },
+  { category: 'results', question: 'How do you price AI search optimization services?', answer: 'Fixed price after a scoping call, month to month, no long lock-in. Scope is driven by how many pages need restructuring, how many engines and prompts you want tracked, and whether crawler access needs fixing first. We start every engagement with a free AI visibility check so you see your baseline before you commit to anything, and so we both know what the starting number was when we report against it later.' },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
