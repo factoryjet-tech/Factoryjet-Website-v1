@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
+        url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp',
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'FactoryJet AI Agent Development Services',
       },
     ],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Marketing Agent India | FactoryJet',
     description: 'WhatsApp broadcast automation, Diwali campaigns, and AI content in Hindi and English. Fixed price.',
-    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
+    images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',

@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
+        url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp',
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'FactoryJet AI agent development services',
       },
     ],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'AI Agent Development Services, Custom AI Agents | FactoryJet',
     description:
       'Custom AI agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify and Slack, with human approval on anything that matters.',
-    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
+    images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development',

@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     images: [
       {
-        url: 'https://factoryjet.com/images/services/ai-agent-development.webp',
+        url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp',
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'FactoryJet AI agent development for RFQ and bidding workflows',
       },
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'RFQ Automation Agent for Quoting Teams | FactoryJet',
     description: 'AI agents that read inbound RFQs, match line items to your catalogue, and draft quotes for approval.',
-    images: ['https://factoryjet.com/images/services/ai-agent-development.webp'],
+    images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
   alternates: { canonical: PAGE_URL },
   robots: {
