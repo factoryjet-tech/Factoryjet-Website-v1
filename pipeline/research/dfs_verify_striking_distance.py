@@ -35,54 +35,66 @@ LOGIN = os.environ["DATAFORSEO_LOGIN"]; PW = os.environ["DATAFORSEO_PASSWORD"]
 AUTH = base64.b64encode(f"{LOGIN}:{PW}".encode()).decode()
 
 # location_code -> (label, language_code)
-MARKETS = {2356: ("India", "en"), 2840: ("United States", "en"), 2826: ("United Kingdom", "en")}
+MARKETS = {2356: ("India", "en"), 2840: ("United States", "en"), 2826: ("United Kingdom", "en"),
+           2036: ("Australia", "en")}
 
 # (query, gsc_impressions, gsc_position, market_location_code, cluster)
 QUERIES = [
-    # ── India AI-SEO listicle: the block the report wants retitled ──────────
-    ("ai seo expert in india",            259, 7.9,  2356, "India AI-SEO"),
-    ("ai seo services india",             241, 6.2,  2356, "India AI-SEO"),
-    ("ai seo company india",              176, 4.05, 2356, "India AI-SEO"),
-    ("best geo agency in india",          175, 9.5,  2356, "India AI-SEO"),
-    ("ai seo agency in india",            157, 5.3,  2356, "India AI-SEO"),
-    ("ai seo company in india",           144, 5.0,  2356, "India AI-SEO"),
-    ("ai seo services in india",          100, 4.6,  2356, "India AI-SEO"),
-    ("ai seo and aeo agency in india",     81, 4.6,  2356, "India AI-SEO"),
-    ("best ai seo agency in mumbai",       54, 5.2,  2356, "India AI-SEO"),
-    ("best ai seo agency",                261, 16.6, 2356, "India AI-SEO"),
-    ("ai seo agency for ecommerce",       764, 8.0,  2356, "India AI-SEO (rankstr-suffixed)"),
-    # ── Fargo: report's #1 recommendation ──────────────────────────────────
-    ("seo company fargo",                 204, 7.6,  2840, "Fargo"),
-    ("fargo seo",                         158, 6.3,  2840, "Fargo"),
-    ("seo fargo",                         170, 9.7,  2840, "Fargo"),
-    ("fargo seo company",                 135, 9.2,  2840, "Fargo"),
-    ("seo company fargo nd",              122, 8.0,  2840, "Fargo"),
-    ("seo fargo nd",                      103, 7.7,  2840, "Fargo"),
-    ("fargo moorhead seo strategy company",39, 4.6,  2840, "Fargo"),
-    # ── UK AI-SEO: report wants a Newcastle page built ─────────────────────
-    ("ai search agency newcastle",        579, 14.7, 2826, "UK AI-SEO"),
-    ("ai search agency leicester",        573, 25.1, 2826, "UK AI-SEO"),
-    ("ai seo agency london",              214, 19.9, 2826, "UK AI-SEO"),
-    ("aeo agencies leicester",            131, 5.9,  2826, "UK AI-SEO"),
-    ("aeo agency leicester",               93, 18.0, 2826, "UK AI-SEO"),
-    ("ai seo glasgow",                     75, 17.0, 2826, "UK AI-SEO"),
-    ("ai seo services london",             71, 14.1, 2826, "UK AI-SEO"),
-    ("ai seo agencies in uk",              54, 11.9, 2826, "UK AI-SEO"),
-    ("ai search agency derby",             49, 20.0, 2826, "UK AI-SEO"),
-    ("ai seo cardiff",                     47, 4.7,  2826, "UK AI-SEO"),
-    # ── Austin: report calls this a page-2 goldmine ────────────────────────
-    ("austin seo",                       1242, 17.5, 2840, "Austin"),
-    ("austin seo expert",                 478, 16.8, 2840, "Austin"),
-    ("austin seo consultant",             416, 13.8, 2840, "Austin"),
-    ("austin seo company",                261, 11.5, 2840, "Austin"),
-    ("capital of techs pflugerville seo", 239, 8.3,  2840, "Austin"),
-    # ── Blog clusters flagged as new traction ──────────────────────────────
-    ("do i need extra budget for geo",    413, 11.7, 2840, "Blog: GEO cost"),
-    ("how long does seo take",              0, 0.0,  2840, "Blog: SEO timeline (head, control)"),
-    ("ai adoption rates dutch smbs by size",133, 9.9, 2840, "Blog: AI adoption"),
+    # Refreshed 2026-08-17 from the 07/18-08/14 GSC mining report.
+    # ── Fargo: report's #1 recommendation. All eleven terms, all zero clicks. ──
+    ("seo fargo",                          208, 6.3,  2840, "Fargo"),
+    ("seo company fargo",                  176, 7.1,  2840, "Fargo"),
+    ("fargo seo",                          175, 4.2,  2840, "Fargo"),
+    ("fargo seo company",                  167, 9.2,  2840, "Fargo"),
+    ("seo fargo nd",                       110, 5.3,  2840, "Fargo"),
+    ("seo company fargo nd",               108, 6.6,  2840, "Fargo"),
+    ("seo services fargo",                  52, 12.2, 2840, "Fargo"),
+    ("fargo moorhead seo consultant company",37, 2.8, 2840, "Fargo"),
+    ("fargo moorhead seo strategy company",  28, 4.0, 2840, "Fargo"),
+    ("fargo moorhead seo consultant agency",  25, 7.1, 2840, "Fargo"),
+    ("shopify development fargo",            27, 2.3, 2840, "Fargo"),
+    # ── Austin: report calls this a page-2 goldmine (~4,700 impr, 0 clicks) ──
+    ("austin seo",                         930, 14.4, 2840, "Austin"),
+    ("austin seo agency",                  674, 17.5, 2840, "Austin"),
+    ("austin seo services",                424, 19.8, 2840, "Austin"),
+    ("austin seo expert",                  360, 12.2, 2840, "Austin"),
+    ("austin seo consultant",              297, 11.2, 2840, "Austin"),
+    ("austin seo firm",                    283, 17.1, 2840, "Austin"),
+    ("austin seo service",                 280, 18.4, 2840, "Austin"),
+    ("austin seo companies",               228, 19.9, 2840, "Austin"),
+    ("austin seo consultants",             224, 11.2, 2840, "Austin"),
+    ("austin real estate seo company",     218, 11.4, 2840, "Austin"),
+    ("austin video seo company",           135, 9.5,  2840, "Austin"),
+    ("austin seo firms",                   109, 15.0, 2840, "Austin"),
+    # ── New page candidates the report wants built ─────────────────────────
+    ("sioux falls seo",                     97, 8.6,  2840, "NEW PAGE: Sioux Falls"),
+    ("arlington local seo",                 57, 4.9,  2840, "Arlington"),
+    ("ai search agency newcastle",         589, 14.7, 2826, "NEW PAGE: Newcastle UK"),
+    ("ai seo glasgow",                      76, 12.7, 2826, "NEW PAGE: Glasgow UK"),
+    ("ai search agency derby",              49, 14.1, 2826, "NEW PAGE: Derby UK"),
+    ("business websites australia",        150, 7.3,  2036, "NEW PAGE: Australia"),
+    # ── India AI-SEO listicle: densest page-1 block (pos 4.2-5.6) ───────────
+    ("ai seo expert in india",             431, 7.3,  2356, "India AI-SEO"),
+    ("ai seo services india",              229, 5.6,  2356, "India AI-SEO"),
+    ("best geo agency in india",           180, 9.5,  2356, "India AI-SEO"),
+    ("ai seo company in india",            157, 4.2,  2356, "India AI-SEO"),
+    ("ai seo agency in india",             150, 5.2,  2356, "India AI-SEO"),
+    ("ai seo company india",               143, 4.2,  2356, "India AI-SEO"),
+    ("ai seo and aeo agency in india",      89, 4.3,  2356, "India AI-SEO"),
+    ("ai seo agency in mumbai",             76, 6.8,  2356, "India AI-SEO"),
+    ("ai seo agency india",                 66, 4.8,  2356, "India AI-SEO"),
+    ("best llm seo agency in india",        38, 6.7,  2356, "India AI-SEO"),
+    # ── India commercial: the terms that ACTUALLY convert (proof cases) ─────
+    ("digital marketing agency in hyderabad",85, 13.0, 2356, "India commercial (CONVERTING 4.71%)"),
+    ("best seo services in hyderabad",       67, 11.1, 2356, "India commercial (CONVERTING 1.49%)"),
+    ("digital marketing agency noida",      161, 8.0,  2356, "India commercial (CONVERTING 1.86%)"),
+    # ── The lead magnet ────────────────────────────────────────────────────
+    ("ai visibility checker",                53, 12.0, 2840, "Lead magnet (CONVERTING 5.66%)"),
+    # ── Known bot rows, included to show what synthetic looks like ─────────
+    ("ai adoption rates dutch smbs by size",305, 9.9, 2840, "Blog: AI adoption"),
     # ── Controls: known-real head terms, to prove the API is answering ─────
-    ("seo agency",                          0, 0.0,  2840, "CONTROL (should be high)"),
-    ("seo services india",                  0, 0.0,  2356, "CONTROL (should be high)"),
+    ("seo agency",                           0, 0.0,  2840, "CONTROL (should be high)"),
+    ("seo services india",                   0, 0.0,  2356, "CONTROL (should be high)"),
 ]
 
 

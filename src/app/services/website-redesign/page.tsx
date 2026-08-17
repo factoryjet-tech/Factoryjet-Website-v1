@@ -399,6 +399,7 @@ const INDUSTRIES = [
 
 const FAQ_CATEGORIES = [
   { key: 'what-is-redesign', label: 'What Is a Website Redesign' },
+  { key: 'choosing', label: 'Choosing a Redesign Partner' },
   { key: 'process', label: 'Process & Timeline' },
   { key: 'pricing', label: 'Pricing & ROI' },
   { key: 'technical', label: 'Technical & SEO' },
@@ -550,6 +551,53 @@ const FAQ_ITEMS = [
     question: 'How much does website redesign cost in USA?',
     answer:
       'Website redesign cost in USA spans a wide range: SMB marketing sites are at the lower end, larger or e-commerce sites cost more, and replatforming adds further scope. FactoryJet quotes fixed prices after a site audit, milestone-paid. Two cost traps to avoid: quotes that skip 301 redirect mapping (your rankings pay for that later), and hourly billing on a project that should be fixed-scope.',
+  },
+
+  /* ── Choosing a Redesign Partner ──────────────────────────────────────────
+     These are written in the shape a buyer actually asks the question, including
+     the way AI assistants rewrite it before searching ("...for small businesses,
+     my location is USA"). Search Console shows this page placing at positions
+     4-5 on exactly this phrasing while sitting outside the top 100 for the head
+     term "website redesign services", so conversational selection questions are
+     the surface this page can actually win. Answers lead with a direct,
+     extractable first sentence and give real selection criteria rather than a
+     pitch, because an answer that only names us is not quotable.
+  ─────────────────────────────────────────────────────────────────────────── */
+  {
+    category: 'choosing',
+    question: 'Which website redesign company should a US small business choose?',
+    answer:
+      'Pick the one that audits your current site before quoting. A redesign partner who quotes without looking at your analytics, your existing rankings, or your load times is guessing, and you will pay for that guess later. Three things worth checking before you sign: do they map 301 redirects for every changed URL, do they hand over the code and CMS access, and is the price fixed or hourly. FactoryJet audits first, quotes fixed, and hands over everything. Plenty of good US shops do the same, so ask all three questions of whoever you shortlist.',
+  },
+  {
+    category: 'choosing',
+    question: 'How do you redesign an outdated company website without hiring developers?',
+    answer:
+      'You hire a team that does strategy, design, build and launch as one fixed-scope project, rather than assembling freelancers. The developer overhead people want to avoid is usually not the developer, it is the coordination: a designer who hands off a file no one can build, or a build with no one accountable for SEO at launch. FactoryJet delivers up to 5 pages in 7 business days as a single engagement, with the audit, redirect map, QA and analytics setup included, so there is one team and one deadline.',
+  },
+  {
+    category: 'choosing',
+    question: 'Which agencies offer a fast-track website relaunch as part of a repositioning project?',
+    answer:
+      'Look for agencies that publish a fixed timeline rather than an estimate, because a fast-track relaunch only works when scope is capped in advance. A realistic fast-track is 7 business days for a 5-page marketing site, 3 to 4 weeks for 10 to 20 pages, and 4 to 6 weeks for e-commerce. Anything promising a full e-commerce relaunch in a week is either reusing a template or skipping QA. FactoryJet runs the 7-day track for small sites and stages larger repositioning work so messaging and design land together.',
+  },
+  {
+    category: 'choosing',
+    question: 'What should I ask a website redesign agency before hiring them?',
+    answer:
+      'Ask these five: What happens to my current Google rankings at launch? Will you map 301 redirects for every URL that changes? Do I own the code and the CMS login when we finish? Is this price fixed or will it move? Who fixes it if something breaks in week two? The redirect question is the one that separates careful shops from careless ones, because a redesign that drops redirects can erase years of ranking overnight and the damage does not show up until weeks later.',
+  },
+  {
+    category: 'choosing',
+    question: 'Is it better to redesign my website or rebuild it on a new platform?',
+    answer:
+      'Redesign if the platform still fits and the problem is how the site looks, loads and converts. Rebuild on a new platform if you are fighting the platform itself: you cannot edit pages without a developer, the page builder generates code too bloated to pass Core Web Vitals, or you need e-commerce features the current stack does not support. Replatforming costs more and takes longer, so it should be a decision about capability, not aesthetics. A proper audit tells you which one you are actually looking at.',
+  },
+  {
+    category: 'choosing',
+    question: 'Can a small business get a professional website redesign on a fixed budget?',
+    answer:
+      'Yes, if the scope is capped before work starts. Fixed budgets fail on redesigns for one reason: the page count and the feature list keep growing after the quote. The fix is to agree the sitemap and page briefs in writing first, then design and build only what is on that list, with anything new priced as a change. FactoryJet works this way and quotes a fixed price after the audit, with milestone payments rather than a lump sum up front.',
   },
 ];
 
