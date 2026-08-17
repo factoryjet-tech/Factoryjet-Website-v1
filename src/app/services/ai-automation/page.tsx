@@ -459,6 +459,7 @@ const INDUSTRIES = [
 
 const FAQ_CATEGORIES = [
   { key: 'what-is-automation', label: 'What Is AI Automation' },
+  { key: 'choosing', label: 'Choosing an Automation Partner' },
   { key: 'process', label: 'Process & Timeline' },
   { key: 'pricing', label: 'Pricing & ROI' },
   { key: 'technical', label: 'Tools & Integrations' },
@@ -596,6 +597,53 @@ const FAQ_ITEMS = [
     question: 'Does FactoryJet offer ongoing AI automation support and monitoring after deployment?',
     answer:
       'Yes, automation monitoring is critical because integrations break when third-party APIs change their schemas or rate limits. Every automation FactoryJet builds includes: error handling and alerting (Slack or email notifications when a workflow fails), 30 days of post-deployment support to catch edge cases, and full documentation so your team understands what each workflow does. Beyond that, FactoryJet offers optional automation retainer plans: workflow monitoring, API update response within 24 hours, monthly performance reports (tasks processed, time saved, error rates), and ongoing optimization work each month. Unmonitored automations silently fail, FactoryJet retainer clients know about failures before their customers do.',
+  },
+
+  /* ── Choosing an Automation Partner ───────────────────────────────────────
+     Written in the shape buyers actually ask, including how AI assistants
+     rewrite the question before searching. Search Console shows this page at
+     position 6.3 for "ai automation agency for small businesses" with zero
+     clicks, and at 55 for the bare head term "ai automation agency", so the
+     winnable surface is the qualified, conversational selection question, not
+     the head term. Answers lead with a direct extractable sentence and give
+     real criteria, including when NOT to hire an agency, because an answer
+     that only recommends us is not quotable.
+  ─────────────────────────────────────────────────────────────────────────── */
+  {
+    category: 'choosing',
+    question: 'Which AI automation agency should a US small business choose?',
+    answer:
+      'Choose the one that starts by mapping your existing workflows rather than pitching a platform. An agency that recommends a tool before it has seen how your team actually works is selling a licence, not solving a problem. Three things to check: will they work inside the systems you already pay for, do you own the automations and the accounts when the engagement ends, and do they monitor for failures after launch. Automations break silently when an API changes, so unmonitored work quietly stops paying for itself.',
+  },
+  {
+    category: 'choosing',
+    question: 'Should we hire an AI automation agency or build workflows in-house with Zapier or n8n?',
+    answer:
+      'Build in-house when the workflow is simple, lives inside one or two apps, and someone on your team owns it. Zapier and Make are genuinely good for that, and hiring an agency for a five-step Zap is a waste of money. Bring in an agency when workflows span several systems, when failure has a real cost, or when nobody in-house has time to maintain them. The maintenance question is the one most teams get wrong: building an automation takes a day, keeping twenty of them alive is an ongoing job.',
+  },
+  {
+    category: 'choosing',
+    question: 'How do I find a reliable partner to embed AI into our existing business software?',
+    answer:
+      'Look for a partner who integrates rather than replaces. The reliable signal is whether they will work through your current stack, so ask specifically about the systems you run: HubSpot or Salesforce for CRM, QuickBooks or Xero for finance, Slack for alerting, and whatever runs your operations. FactoryJet builds on n8n, Make and Zapier and connects into those systems directly, so nothing gets ripped out. Be cautious of anyone whose first recommendation is migrating you onto their own platform.',
+  },
+  {
+    category: 'choosing',
+    question: 'What should I ask an AI automation agency before hiring them?',
+    answer:
+      'Ask these five: Which of our existing tools will this run through? Who owns the automations and the accounts when we stop working together? What happens when a third-party API changes and a workflow breaks? Is this a fixed project or a retainer? Can you show a workflow you built that failed and what you did about it. That last one is the most revealing, because every automation practice has broken something, and the ones that answer honestly are the ones that monitor properly.',
+  },
+  {
+    category: 'choosing',
+    question: 'Which AI automation agencies work with manufacturers and ecommerce brands?',
+    answer:
+      'Look for agencies that name the systems in your industry rather than talking about AI in general. For manufacturers that means ERP and inventory integrations, quote and RFQ handling, and supplier communication. For ecommerce it means order processing, returns handling, catalog updates and customer service triage across Shopify and your helpdesk. FactoryJet builds in both, connecting n8n and Make workflows into the ERP, storefront and CRM already in place. An agency that cannot name your systems in the first call will learn them on your budget.',
+  },
+  {
+    category: 'choosing',
+    question: 'How much should a small business budget for AI workflow automation?',
+    answer:
+      'Budget against the hours a workflow removes, not the number of workflows. A useful test before spending anything: pick one task someone does manually every week, multiply the hours by their loaded cost, and annualise it. If that number does not comfortably exceed the build cost, automate something else first. Start with two or three high-frequency workflows rather than a full programme. FactoryJet scopes and quotes fixed after a workflow audit, so the cost is known before the build starts.',
   },
 ];
 
