@@ -203,7 +203,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Where FactoryJet actually stands, in numbers</h2>
-      <p className="mb-4">Putting yourself first on your own list is cheap unless you show the weak spots too, so here they are. FactoryJet has 44 referring domains. Coalition Technologies, which also appears on these results pages, is somewhere near 2,800. Authority is our binding constraint and it is why we compete on low-competition long-tail terms and on how the work is delivered, rather than on brute domain strength.</p>
+      <p className="mb-4">Putting yourself first on your own list is cheap unless you show the weak spots too, so here they are. FactoryJet has 63 referring domains, measured 08/17/2026, and a fair number of those are scraper sites we never earned. Agencies elsewhere on this page run into the thousands. Authority is our binding constraint and it is why we compete on low-competition long-tail terms and on how the work is delivered, rather than on brute domain strength.</p>
       <p className="mb-4">Our strongest US positions today are tenth for local seo nashville and eighth for seo agency austin texas. That is it. We have no case-study numbers to wave at you yet, and we are not going to invent any. What we do have is a delivery model most of this list cannot match at this size: the founder runs your account, you get citation counts per AI engine rather than a rankings PDF, and terms are month to month.</p>
       <p className="mb-4">If that trade appeals, the details live on our <a href="/services/ai-seo" className="text-orange-600 underline">US AI SEO services page</a>, which covers generative engine optimization and answer engine optimization on one retainer. If it does not, hire the incumbent, and go in knowing exactly what you bought.</p>
 
@@ -241,6 +241,69 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-8 mb-4">How to choose between them</h2>
       <p className="mb-4">Three filters separate real AI SEO capability from rebadged classic SEO. First, <strong>per-engine reporting</strong>: ask to see a sample monthly report with citation counts for ChatGPT, Perplexity, Claude, and Gemini separately, because most agencies track only Google AI Overviews. Second, <strong>who does the work</strong>: AI SEO is engineering-heavy (schema, llms.txt, log-file analysis, entity markup), so if a strategist presents and a mystery team executes, quality varies. Third, <strong>contract terms</strong>: AI search changes every quarter, so month-to-month or short-notice terms keep your agency honest, and you should be wary of 12-month lock-ins on a discipline this young.</p>
       <p className="mb-4">If you want the underlying playbook before you hire anyone, our <a href="/blog/generative-engine-optimization-guide" className="text-orange-600 underline">generative engine optimization guide</a> explains the work itself, and our roundup of the <a href="/blog/best-geo-ai-visibility-tools-2026" className="text-orange-600 underline">best GEO and AI visibility tools</a> covers what good agencies use to track citations.</p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">GEO, AEO, AIO, LLM SEO: which one are you actually buying?</h2>
+      <p className="mb-4">Four acronyms are being sold as four services. They are mostly one service with different emphasis, and knowing which is which stops you paying twice for the same work.</p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Term</th>
+              <th className="p-3 border text-left">What it actually means</th>
+              <th className="p-3 border text-left">What the deliverable looks like</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border"><strong>Generative engine optimization (GEO)</strong></td>
+              <td className="p-3 border">Getting your pages quoted inside AI-generated answers</td>
+              <td className="p-3 border">Extractable answer blocks, named-entity coverage, citable statistics with real sources</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border"><strong>Answer engine optimization (AEO)</strong></td>
+              <td className="p-3 border">The same work, framed around direct question-and-answer retrieval</td>
+              <td className="p-3 border">FAQ and question coverage, schema markup, short extractable answers</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border"><strong>AI search optimization</strong></td>
+              <td className="p-3 border">The umbrella label most agencies use when they sell both</td>
+              <td className="p-3 border">Usually a retainer covering GEO plus AEO plus classic technical SEO</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border"><strong>LLM SEO / AIO</strong></td>
+              <td className="p-3 border">Newer labels for the same discipline, sometimes emphasising crawler access</td>
+              <td className="p-3 border">robots.txt access for AI crawlers, llms.txt, structured content</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4">The practical test: ask any agency selling one of these to describe the deliverable without using the acronym. If they cannot, or if the answer is the same as their classic SEO retainer, you are buying a rebadge. If they can point at extractable answers, entity coverage, schema and per-engine citation tracking, the label does not matter.</p>
+      <p className="mb-4">One thing worth knowing before you sign: <strong>AI crawler access is a prerequisite, not an optimisation.</strong> If your robots.txt blocks GPTBot, ClaudeBot, PerplexityBot or Google-Extended, no amount of content work will get you cited, because the engines cannot read the page. Any competent agency checks this in the first week. Ask whether they have.</p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Red flags on a US AI SEO agency&apos;s website</h2>
+      <p className="mb-4">These are the patterns worth walking away from, in rough order of how often they appear:</p>
+      <ul className="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Guaranteed rankings or guaranteed AI citations.</strong> Nobody controls what a model outputs. A guarantee here is either meaningless or measured against a metric so soft it always passes.</li>
+        <li><strong>Only Google AI Overviews reported.</strong> AI Overviews are the easiest surface to track and the least differentiated. If ChatGPT, Perplexity, Claude and Gemini are not reported separately, they are not being worked on separately.</li>
+        <li><strong>Case studies with percentages and no baselines.</strong> &quot;+340% AI visibility&quot; means nothing without the starting number. Three citations to thirteen is +333%.</li>
+        <li><strong>A twelve-month lock-in on a two-year-old discipline.</strong> The engines change quarterly. Long contracts transfer that risk to you.</li>
+        <li><strong>No named person on the work.</strong> AI SEO is engineering-heavy. If a strategist presents and the execution team is never named, you cannot judge who is actually doing it.</li>
+        <li><strong>Pricing revealed only after a discovery call.</strong> Common and not disqualifying on its own, but it is a negotiating tactic, not a service feature.</li>
+        <li><strong>Client logos with no matching case study or reference.</strong> A logo wall proves someone paid an invoice once.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">How to run your shortlist this week</h2>
+      <p className="mb-4">If you want to compress this into a few hours rather than a few weeks, do it in this order:</p>
+      <ol className="list-decimal pl-6 mb-4 space-y-2">
+        <li><strong>Establish your own baseline first.</strong> Ask ChatGPT, Perplexity and Gemini the question your buyers would ask (&quot;who are the best [your category] companies in [your city]&quot;) and write down who gets named. That list is your real competitive set, and it is often not who you assumed.</li>
+        <li><strong>Check your own crawler access.</strong> Open yoursite.com/robots.txt and search for GPTBot, ClaudeBot, PerplexityBot and Google-Extended. If any are blocked, that is your first fix and you may not need an agency to make it.</li>
+        <li><strong>Shortlist three, not ten.</strong> One large agency, one specialist, one owner-operated shop. The spread tells you more than three similar quotes.</li>
+        <li><strong>Ask each for a sample monthly report.</strong> Not a proposal, an actual report from a live client with the name redacted. This single request separates the agencies that measure from the ones that narrate.</li>
+        <li><strong>Ask what they would do in month one.</strong> A good answer is specific and unglamorous: crawler access, schema, fixing thin pages, building extractable answers. A bad answer is a strategy phase.</li>
+        <li><strong>Confirm the exit.</strong> Who owns the content, the schema and the tracking when you leave. Get it in writing before you start, not when you are unhappy.</li>
+      </ol>
+      <p className="mb-4">Steps one and two cost nothing and take about twenty minutes. Do them before you talk to anybody, including us, because they change what you should be asking for.</p>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Methodology</h2>
       <p className="mb-4">We verified every agency on its own website and in live US search results on 06/17/2026: service pages, office locations, proprietary tools, and at least one differentiator each that can be checked at the source. We included Onely despite its Warsaw headquarters because it serves US clients and ranks in US listicles, and we flag the location openly rather than hide it. We excluded pure listicle publishers and directories that rank for this query but do not deliver the service themselves. FactoryJet&apos;s inclusion and position are disclosed self-placement, the same practice used by most of the current page-one results for this query, which we also verified. No agency paid to appear.</p>
       <h2 className="text-2xl font-bold mt-8 mb-4">Sources</h2>

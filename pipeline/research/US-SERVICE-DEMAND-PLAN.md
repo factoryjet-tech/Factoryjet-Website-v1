@@ -129,12 +129,26 @@ Note: `/services/generative-engine-optimization` still returns 200 and was **not
 301'd despite `factoryjet-us-page-consolidation`. Given GEO/AEO now shows 2,240/mo of
 real commercial demand at KD 0-19, keeping it is correct. Do not retire it.
 
-### Tier 3 — the one real page gap
-**AI voice agents.** No page exists. `ai voice agent` 2,400/mo, `ai voice agent platform`
-880, `ai voice agent for healthcare` 110 at $96 CPC KD 0, `ai voice agent for real estate`
-90 KD 0, `ai voice agent for small business` 70 at $56 KD 1. We already have
-`/services/ai-agents-for-healthcare` and `/services/ai-agents-for-real-estate` but neither
-uses voice framing.
+### Tier 3 — ~~the one real page gap~~ WRONG, see correction
+
+> ❌ **CORRECTED 2026-08-17.** This section said "AI voice agents. No page exists." That was
+> wrong. `/services/ai-agent-development/ai-voice-agent/page.tsx` exists (811 lines, tracked,
+> in the sitemap). The check that produced the error globbed `src/app/services/*voice*`, which
+> only looks one level deep and misses nested children. **Glob recursively before claiming a
+> page does not exist.**
+>
+> The recommendation was also wrong on the merits. The voice cluster is **product-locked** at
+> every volume level, more thoroughly than `ai agent for customer service`:
+> - `ai receptionist` (12,100/mo) → RingCentral, IONOS, Zoom, GoTo, Synthflow, Retell
+> - `ai voice agent for healthcare` (110/mo, "KD 0") → assorthealth, Infinitus, Hyro, Deepgram, a PubMed paper
+> - `ai voice agent agency` (140/mo) → Synthflow, Retell, voice.ai, Vellum. **Platforms rank for
+>   the agency query itself**, which closes the sub-cluster.
+>
+> Do not chase the receptionist volume and do not build a second voice page.
+>
+> Retargeting the healthcare and real-estate pages to voice framing is also wrong: agent
+> framing has **more** volume (real estate 390/mo vs 70/mo voice; healthcare 170 vs 110) and a
+> softer SERP. Leave both on agent framing as citation assets.
 
 ### Stop doing
 - **Omnichannel Commerce** — 0 commercial demand. Not a lead page.
