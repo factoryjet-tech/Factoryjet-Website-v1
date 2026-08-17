@@ -893,7 +893,7 @@ export default function SeoAuditServicePage() {
               <p className="dek" style={{ maxWidth: 780, marginTop: 16 }}>
                 When you rank in Google but no assistant will name you, the work is{' '}
                 <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
-                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>,
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>AI search optimization services</Link>,
                 which run on the same structured data and internal linking this audit checks. And sometimes the honest
                 finding is that the site itself cannot be tuned into shape, in which case it is a{' '}
                 <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> problem, or a{' '}

@@ -1037,7 +1037,7 @@ export default function DentalSEOPage() {
               Patients also ask ChatGPT, Claude, and Gemini which dentist to see, and those tools read the same
               signals this list builds. That overlap is what{' '}
               <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
-              <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>{' '}
+              <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>AI search optimization</Link>{' '}
               cover, so we treat them as one job. Where a metro changes the plan we publish a page for it:{' '}
               <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
               <Link href="/dallas/seo" style={LINK_STYLE}>Dallas</Link>,{' '}

@@ -824,7 +824,7 @@ export default function LocalSeoServicePage() {
                 Because 45% of consumers now ask an AI tool for local recommendations, the profile, review, and
                 structured data signals we build here are the same ones that feed{' '}
                 <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
-                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>.
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>AI search optimization</Link>.
                 And if the bottleneck turns out to be the site itself rather than the profile, that is a{' '}
                 <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> problem. We will say so instead
                 of billing you for another month of tuning a site that cannot be tuned.

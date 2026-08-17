@@ -803,7 +803,7 @@ export default function SmallBusinessSeoServicePage() {
                 Because buyers now ask ChatGPT and Google’s AI answers the same questions they used to type into a
                 search box, the structured data, reviews, and plain answers built here are the same signals that feed{' '}
                 <Link href="/services/ai-seo" style={LINK_STYLE}>AI SEO</Link> and{' '}
-                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>generative engine optimization</Link>.
+                <Link href="/services/generative-engine-optimization" style={LINK_STYLE}>AI search optimization</Link>.
                 And when the real bottleneck is the site rather than the SEO, we say so: that is a{' '}
                 <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> job, and for owners starting
                 from nothing,{' '}
