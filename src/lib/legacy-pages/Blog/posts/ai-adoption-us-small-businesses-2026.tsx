@@ -223,17 +223,18 @@ export const post: BlogPost = {
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
         <p className="font-semibold text-orange-900 mb-2">
-          Want to see where your business sits on this spectrum?
+          Find out whether AI already recommends your competitors
         </p>
         <p className="text-orange-800 mb-3">
-          FactoryJet has worked with 500+ small businesses across the US, UK, UAE and India on their website and e-commerce
-          infrastructure.
+          Most small businesses have never seen what ChatGPT, Perplexity, or Google&rsquo;s AI answers say when
+          someone asks for a company like theirs. Our free checker runs the scan and shows you your visibility
+          score, which businesses get named instead of you, and what to fix first. It takes about a minute.
         </p>
         <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
+          href="/ai-visibility-checker"
           className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
         >
-          Talk to Bhavesh, free 30 minutes →
+          Run the free AI visibility check →
         </a>
       </div>
 
@@ -369,7 +370,13 @@ export const post: BlogPost = {
           Northeast Ohio
         </a>{' '}
 , AI-assisted SEO content helps you rank in the Map Pack faster by publishing neighborhood
-        and service-area pages at a pace no manual team can match.
+        and service-area pages at a pace no manual team can match. There is a newer reason it matters too.
+        Buyers increasingly ask ChatGPT or Perplexity for a recommendation before they ever open Google, and
+        you can{' '}
+        <a href="/ai-visibility-checker" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          check whether those tools name your business
+        </a>{' '}
+        in about a minute.
       </p>
       <p className="mb-4">
         At FactoryJet, we build these capabilities directly into the{' '}
