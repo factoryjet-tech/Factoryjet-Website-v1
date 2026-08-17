@@ -80,6 +80,7 @@ export const metadata: Metadata = {
 const FAQ_CATEGORIES = [
   { key: 'basics', label: 'The basics' },
   { key: 'integrations', label: 'Systems & integrations' },
+  { key: 'stack', label: 'Stack & architecture' },
   { key: 'safety', label: 'Control & safety' },
   { key: 'process', label: 'Process & ownership' },
   { key: 'choosing', label: 'Choosing a partner' },
@@ -236,6 +237,49 @@ const FAQ_ITEMS = [
     question: 'Which is the best AI agent development company in India?',
     answer:
       'It depends on the job, so treat any ranked list as a shortlist rather than an answer. Apply the same test everywhere: who scopes the work, is the price fixed before it starts, who owns the code at the end, and can they walk one of your workflows end to end naming real systems.',
+  },
+
+  /* ── Stack & architecture ─────────────────────────────────────────────────
+     These are the questions an IT head or technical evaluator asks, and they
+     were the page's biggest gap: before this block the page named zero agent
+     frameworks (no LangChain, LangGraph, CrewAI or AutoGen) and had no
+     question covering retrieval, evaluation or self-hosting.
+
+     That matters beyond completeness. The one page ChatGPT has ever cited on
+     this site is /b2b-ecommerce, and the mechanism was named-capability
+     density, not authority. /services/ai-automation is the best-performing US
+     page and names n8n 18x, Zapier 23x, Make 10x. This page had none of that
+     vocabulary, and takes 5 impressions a month.
+  ─────────────────────────────────────────────────────────────────────────── */
+  {
+    category: 'stack',
+    question: 'What frameworks do you build AI agents on?',
+    answer:
+      'We build on LangGraph or the model vendor SDKs for anything that needs reliable state and branching, and use LangChain where its integrations save real time. Multi-agent frameworks like CrewAI and AutoGen are useful for a narrow set of problems and a liability for the rest, so we only reach for them when a job genuinely needs several specialised agents rather than one agent with good tools. Tool access goes through MCP servers where a system supports it. The framework should be a decision you can see justified, not a preference you inherit.',
+  },
+  {
+    category: 'stack',
+    question: 'How do you connect an AI agent to our internal documents and data?',
+    answer:
+      'Through retrieval, not fine-tuning, in almost every case. The agent queries your content at run time rather than having it baked into a model, which means answers update the moment your documents do. In practice that is a vector store such as pgvector or Pinecone holding embeddings of your knowledge base, plus direct API reads from the systems of record so live data like order status or ticket history is fetched fresh rather than remembered. Fine-tuning is for changing how a model behaves, not for teaching it your facts.',
+  },
+  {
+    category: 'stack',
+    question: 'How do you measure whether an AI agent is actually working?',
+    answer:
+      'With an evaluation suite built before launch, run against every change afterwards. The metrics that matter are task success rate (did the agent complete the job without a human), escalation rate (how often it correctly hands off), and false-action rate (how often it did something it should not have). We build a fixed set of real cases from your own history, score each release against it, and treat a regression as a blocker. Agents without evals degrade quietly, because nothing errors when an answer is merely wrong.',
+  },
+  {
+    category: 'stack',
+    question: 'Can an AI agent run on our own infrastructure instead of a vendor cloud?',
+    answer:
+      'Yes. The orchestration layer, the vector store and the integration code can all run in your cloud account or on-premise, which keeps your data inside your boundary. The model itself is the part that forces a choice: hosted models from OpenAI or Anthropic mean requests leave your network under their data terms, while open-weight models can run entirely in your environment at the cost of more infrastructure work and usually some capability. We scope this early, because it changes the architecture rather than being a setting you flip later.',
+  },
+  {
+    category: 'stack',
+    question: 'Do we need one agent or several agents working together?',
+    answer:
+      'Start with one, and split only when it stops working. A single agent with a well-chosen set of tools handles more than most teams expect, and it is far easier to debug because there is one decision trail. Multi-agent orchestration earns its complexity when tasks genuinely need different capabilities or permissions, for example a research step that reads widely and a separate execution step allowed to write to your CRM. Splitting early is the most common way an agent build becomes hard to reason about.',
   },
 ];
 
