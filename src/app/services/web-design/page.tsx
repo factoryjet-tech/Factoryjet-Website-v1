@@ -264,47 +264,6 @@ const US_WEB_STATS = [
   },
 ];
 
-const INDUSTRIES = [
-  {
-    name: 'Home Services & Contractors',
-    description:
-      'Fast-loading local business sites with click-to-call, Google Maps integration, service area pages, and review widgets. Built to rank in local search and convert mobile visitors into calls.',
-    example: 'HVAC, plumbing, landscaping, and cleaning clients report 2× more inbound calls.',
-    linkLabel: 'See how it works',
-    linkHref: '/contact',
-  },
-  {
-    name: 'Professional Services',
-    description:
-      'Law firms, accounting practices, consultants, and financial advisors. Trust-driven design with clear credentials, practice area pages, and compliant lead capture forms.',
-    example: 'Typically includes attorney bio pages, practice area landing pages, and intake forms.',
-  },
-  {
-    name: 'Healthcare & Wellness',
-    description:
-      'HIPAA-conscious web design for medical practices, therapists, and wellness brands. Patient-friendly booking integrations, service pages, and insurance information layouts.',
-    example: 'Average 35% increase in online appointment booking after redesign.',
-  },
-  {
-    name: 'E-Commerce & Retail',
-    description:
-      'Custom Shopify or Next.js Commerce stores with branded product pages, collection filters, upsell widgets, and checkout optimization. Built for conversion, not just aesthetics.',
-    example: 'DTC brands average 2.3× improvement in mobile add-to-cart rate.',
-  },
-  {
-    name: 'Restaurants & Hospitality',
-    description:
-      'Visually rich restaurant and hospitality sites with online menus, reservation integrations (OpenTable, Resy), event pages, and photo-forward design that captures atmosphere.',
-    example: 'Google PageSpeed 95+ maintained even with high-resolution food photography.',
-  },
-  {
-    name: 'Real Estate',
-    description:
-      'Agent and brokerage sites with IDX property search integration, neighborhood landing pages, lead capture forms, and a CMS agents can update without developer help.',
-    example: 'Clients report 40% more contact form submissions after switching from template sites.',
-  },
-];
-
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Traditional Agency' },

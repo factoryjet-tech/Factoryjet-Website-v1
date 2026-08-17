@@ -352,49 +352,6 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-const INDUSTRIES = [
-  {
-    name: 'Professional Services',
-    description:
-      'Law firms, consultants, accountants, and agencies need WordPress sites that establish authority and convert visitors into consultations. We build professional service sites with team and attorney profiles, practice area pages with schema markup, client testimonials structured for credibility, and contact flows optimized for high-value inquiry.',
-    example: 'Professional service WordPress sites generate 40–80% more qualified leads than template builds.',
-    linkLabel: 'See law firm website design',
-    linkHref: '/services/law-firm-website-design',
-  },
-  {
-    name: 'Healthcare & Wellness',
-    description:
-      'Medical practices, therapists, and wellness businesses need WordPress sites that communicate trust and make appointment booking friction-free. We build healthcare WordPress sites with HIPAA-aware contact forms, provider profiles, service pages with medical schema markup, and telemedicine or booking integrations.',
-    example: 'Healthcare WordPress sites increase online appointment bookings by 35–55% within 90 days of launch.',
-  },
-  {
-    name: 'Real Estate',
-    description:
-      'Real estate agents, brokers, and property developers need WordPress sites with IDX or MLS integration, property search, and lead capture optimized for buyer and seller intent. We build real estate WordPress sites that rank for local search and convert property browsers into active prospects.',
-    example: 'IDX-integrated WordPress sites generate 2–3× more buyer inquiries from organic traffic vs. generic agency sites.',
-    linkLabel: 'See real estate web design',
-    linkHref: '/services/real-estate-website-design',
-  },
-  {
-    name: 'Education & E-Learning',
-    description:
-      'Schools, training providers, and online course creators need WordPress sites with course catalog management, learner registration, and payment processing. We build education WordPress sites on LearnDash or LifterLMS with custom course pages, instructor profiles, and membership-gated content.',
-    example: 'Custom course page design increases course enrollment rates by 25–45% over default plugin themes.',
-  },
-  {
-    name: 'Non-Profit & Community',
-    description:
-      'Non-profits need WordPress sites that communicate mission, display impact, and convert visitors into donors or volunteers. We build non-profit WordPress sites with donation platform integration, event management, program pages, and impact metrics, without the donor-management software overhead most non-profits don\'t need.',
-    example: 'Non-profit WordPress sites with clear impact metrics convert 30% more visitors to donors than mission-statement-only sites.',
-  },
-  {
-    name: 'Media & Publishing',
-    description:
-      'Blogs, news sites, podcasts, and media brands need WordPress sites that scale content gracefully, category architecture, author profiles, tag and taxonomy structure, newsletter integration, and advertising layout that doesn\'t destroy the reading experience. We build media WordPress sites designed for high-volume content management and audience retention.',
-    example: 'Media sites rebuilt on custom WordPress themes see 40–60% lower bounce rates vs. bloated theme predecessors.',
-  },
-];
-
 /* ─── FAQ ──────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES = [

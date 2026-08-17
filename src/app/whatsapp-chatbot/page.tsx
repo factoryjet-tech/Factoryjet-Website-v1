@@ -279,60 +279,6 @@ const WHATSAPP_INDUSTRIES = [
   },
 ];
 
-const WHATSAPP_PRICING_TIERS = [
-  {
-    name: 'Starter',
-    priceRange: 'Fixed-price',
-    description:
-      'A production-grade FAQ and lead-capture bot on WhatsApp Business API. The fastest way to automate your most repeated conversations and start capturing leads 24/7.',
-    features: [
-      'WhatsApp Business API setup (Interakt or AiSensy)',
-      'FAQ automation, up to 50 question-answer pairs',
-      'Lead capture flow with Google Sheets or CRM push',
-      '1 primary conversation flow (support or booking)',
-      'Auto-reply to common greetings and queries',
-      'Business hours message + human handoff trigger',
-      '7-day delivery, 30-day post-launch support',
-    ],
-    cta: { label: 'Get a Free Demo', modal: true as const, region: 'in' as const },
-  },
-  {
-    name: 'Business',
-    priceRange: 'Fixed-price',
-    description:
-      'Multi-flow WhatsApp chatbot with order tracking, Razorpay payment integration, catalog browsing, and CRM sync. Our most popular India deployment for D2C brands and growing businesses.',
-    features: [
-      'Multi-flow bot, support, ordering, lead capture',
-      'Shiprocket / Delhivery order tracking integration',
-      'Razorpay payment link generation from chat',
-      'Product catalog browsing on WhatsApp',
-      'Zoho CRM / HubSpot / Google Sheets sync',
-      'Hindi + English multilingual support',
-      'Human escalation with full conversation context',
-      '7-day delivery, 30-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Call', modal: true as const, region: 'in' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    priceRange: 'Custom quote',
-    description:
-      'AI-powered NLP chatbot with multi-language support, n8n automation workflows, and custom integrations. Built for large retail, B2B distributors, and businesses processing high conversation volumes.',
-    features: [
-      'AI-powered NLP, understands intent, not just keywords',
-      'Multi-language: Hindi, Tamil, Telugu, Marathi, Gujarati',
-      'n8n automation for complex workflow triggers',
-      'Custom API integrations (Tally, SAP, custom ERP)',
-      'Advanced analytics dashboard, deflection, CSAT, volume',
-      'Multi-agent team inbox with role-based access',
-      'Razorpay + UPI + COD payment workflow automation',
-      '90-day post-launch support and optimisation',
-    ],
-    cta: { label: 'Schedule Enterprise Call', modal: true as const, region: 'in' as const },
-  },
-] as const;
-
 const WHATSAPP_FAQ_CATEGORIES = [
   { key: 'basics',     label: 'Chatbot Basics' },
   { key: 'api',        label: 'WhatsApp API' },

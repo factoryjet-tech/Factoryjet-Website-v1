@@ -243,47 +243,6 @@ const US_SHOPIFY_STATS = [
   },
 ];
 
-const INDUSTRIES = [
-  {
-    name: 'DTC & Consumer Brands',
-    description:
-      'Direct-to-consumer Shopify stores with branded themes, subscription product support via ReCharge, email capture flows, post-purchase upsells, and review collection via Yotpo or Okendo.',
-    example: 'Fashion, beauty, health, food, and lifestyle DTC brands across the US.',
-    linkLabel: 'See DTC examples',
-    linkHref: '/portfolio',
-  },
-  {
-    name: 'B2B & Wholesale',
-    description:
-      'Shopify Plus B2B portal with company accounts, net payment terms, volume pricing tiers, quantity rules, and a separate wholesale storefront: all managed from a single Shopify admin.',
-    example: 'Separate retail and wholesale storefronts with shared inventory. Zero double-entry.',
-  },
-  {
-    name: 'Fashion & Apparel',
-    description:
-      'Variant-heavy apparel stores with size guide overlays, color swatches, cross-sell lookbooks, fit-recommender quizzes, and Klaviyo flows for back-in-stock and browse abandonment.',
-    example: 'High-SKU apparel builds with 200+ variant products and infinite scroll collection pages.',
-  },
-  {
-    name: 'Health, Beauty & Wellness',
-    description:
-      'Subscription-first stores for supplements, skincare, and wellness products. ReCharge or Skio integration, before/after galleries, ingredient transparency pages, and HIPAA-conscious review handling.',
-    example: 'Subscription-first builds typically see 40% of revenue on auto-renew within 90 days.',
-  },
-  {
-    name: 'Food, Beverage & Gifting',
-    description:
-      'Custom box builders, gift message flows, perishable shipping logic, ZIP code validation, and date-picker delivery. Integrated with ShipStation, Shippo, or your own 3PL for automated fulfillment.',
-    example: 'Seasonal gifting brands built with real-time shipping rate calculators and blackout dates.',
-  },
-  {
-    name: 'Home, Lifestyle & Furniture',
-    description:
-      'High-AOV product pages with room-scene galleries, product configurators, white-glove delivery options, and financing integrations (Affirm, Klarna). Built for purchase decisions that take weeks, not minutes.',
-    example: 'High-ticket furniture brands average 15% higher AOV with financing widget placement.',
-  },
-];
-
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'US Shopify Agency' },

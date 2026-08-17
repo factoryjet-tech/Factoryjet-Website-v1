@@ -246,47 +246,6 @@ const US_ECOMM_STATS = [
   },
 ];
 
-const INDUSTRIES = [
-  {
-    name: 'Fashion & Apparel',
-    description:
-      'Variant-heavy product pages with size guides, color swatches, and fit recommenders. Back-in-stock alerts, lookbook galleries, cross-sell bundles, and Klaviyo browse-abandonment flows.',
-    example: 'High-SKU apparel builds with 200+ product variants and infinite-scroll collection pages.',
-    linkLabel: 'See apparel examples',
-    linkHref: '/portfolio',
-  },
-  {
-    name: 'Health, Beauty & Supplements',
-    description:
-      'Subscription-first stores with ReCharge or Skio, ingredient transparency product pages, before/after galleries, quiz-based product recommenders, and compliance-conscious copy review.',
-    example: 'Subscription stores typically reach 40% of revenue on auto-renew within 90 days.',
-  },
-  {
-    name: 'Food, Beverage & Gifting',
-    description:
-      'Custom box builders, gift message flows, perishable shipping logic, ZIP code validation for delivery windows, and 3PL integration for automated fulfillment with ShipStation or Shippo.',
-    example: 'Seasonal gifting brands handle 10× traffic spikes with zero checkout errors.',
-  },
-  {
-    name: 'Home, Furniture & Lifestyle',
-    description:
-      'High-AOV product pages with room-scene photography, product configurators, white-glove delivery options, and Affirm or Klarna financing. Built for purchase decisions that take weeks, not seconds.',
-    example: 'Financing widget placement increases AOV 15% on average across furniture builds.',
-  },
-  {
-    name: 'B2B & Wholesale',
-    description:
-      'Wholesale portals with company accounts, net terms, volume pricing tiers, minimum order quantities, and a separate buyer-facing storefront: all synced to a single inventory source.',
-    example: 'B2B clients eliminate manual order entry and quote-to-invoice delays entirely.',
-  },
-  {
-    name: 'Electronics & Tech Accessories',
-    description:
-      'Spec-rich product pages with comparison tables, compatibility finders, warranty registration, and multi-channel inventory sync across Amazon, eBay, and your own storefront.',
-    example: 'Multi-channel sync eliminates oversells and manual inventory reconciliation.',
-  },
-];
-
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Traditional Agency' },

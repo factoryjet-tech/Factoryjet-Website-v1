@@ -414,47 +414,6 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-const INDUSTRIES = [
-  {
-    name: 'E-Commerce & Retail',
-    description:
-      'Automate order confirmation flows, inventory reorder triggers, abandoned cart recovery sequences, product review requests, and customer support triage, so your team manages exceptions, not volume.',
-    example: 'Reads orders and stock straight out of Shopify or WooCommerce, and routes anything unusual to a person instead of guessing.',
-    linkLabel: 'See e-commerce automation',
-    linkHref: '/contact',
-  },
-  {
-    name: 'Professional Services',
-    description:
-      'Automate client onboarding (contract → welcome sequence → project setup → kickoff scheduling), proposal generation from intake form data, retainer invoice creation, and weekly status report delivery.',
-    example: 'Reads the signed contract, opens the project in Asana or Notion, and books the kickoff. The account manager approves, they do not assemble.',
-  },
-  {
-    name: 'Healthcare & Wellness',
-    description:
-      'HIPAA-aware automation for patient intake, appointment reminders, follow-up sequences after visits, and insurance document processing, built with least-privilege data access and full audit trails.',
-    example: 'Least-privilege access to the practice system, an audit trail on every read, and no PHI in a model prompt without your written sign-off.',
-  },
-  {
-    name: 'Real Estate',
-    description:
-      'Automate lead qualification from Zillow and Realtor.com, listing description generation, CMA report delivery, showing confirmation sequences, and post-close client review requests.',
-    example: 'Pulls the enquiry out of Zillow or Realtor.com, drafts the CMA, and queues the showing confirmation for the agent to send.',
-  },
-  {
-    name: 'SaaS & Technology',
-    description:
-      'Automate trial-to-paid nurture sequences, churn signal alerts, usage-based in-app nudges, customer success check-in scheduling, and product feedback collection and routing.',
-    example: 'Watches product usage for the signals you define, then nudges in-app or routes to customer success. You set every threshold.',
-  },
-  {
-    name: 'Finance & Accounting',
-    description:
-      'Automate invoice processing and matching, expense report extraction, payroll data preparation, monthly reconciliation summaries, and regulatory filing reminders, with a full audit trail on every action.',
-    example: 'Extracts and matches, then stops. Anything outside tolerance goes to a person, and every action is written to an audit trail.',
-  },
-];
-
 /* ─── FAQ ──────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES = [

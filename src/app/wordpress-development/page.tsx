@@ -341,64 +341,6 @@ const WP_COMPARISON_ROWS = [
   },
 ];
 
-const WP_PRICING_TIERS = [
-  {
-    name: 'Starter Site',
-    priceRange: '',
-    description:
-      'A custom WordPress theme with up to 5 pages, ideal for new businesses, service providers, and consultants who need a professional web presence without the agency price tag.',
-    features: [
-      'Custom Figma design, homepage + up to 4 inner pages',
-      'WordPress theme built to match Figma exactly',
-      'Block-editor compatible, no Elementor dependency',
-      'Contact form with email + WhatsApp routing',
-      'Mobile-first, Lighthouse 85+ performance',
-      'On-page SEO: title tags, meta, schema markup',
-      'Google Analytics 4 + Search Console setup',
-      'Code delivered to your GitHub on launch',
-      '5–7 day delivery from design sign-off',
-    ],
-    cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-  },
-  {
-    name: 'Growth Site',
-    priceRange: '',
-    description:
-      'A complete WordPress business site, custom theme, up to 8 pages, speed optimization, technical SEO, blog setup, and everything needed to rank and convert in India.',
-    features: [
-      'Everything in Starter, plus:',
-      'Up to 8 pages including blog archive and post template',
-      'Advanced custom fields (ACF) for structured content',
-      'Speed optimization: Redis, WebP, Cloudflare, Core Web Vitals green',
-      'Technical SEO: XML sitemap, Open Graph, BreadcrumbList schema',
-      'Security hardening: Wordfence, login protection, 2FA admin',
-      'Google Analytics 4 with event tracking + Meta Pixel',
-      '2 rounds of design revisions before build starts',
-      '7–10 day delivery from design sign-off',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
-    popular: true,
-  },
-  {
-    name: 'WooCommerce Store',
-    priceRange: '',
-    description:
-      'A full WooCommerce store built for the Indian market: Razorpay + UPI, GST invoicing, Shiprocket logistics, custom theme, and a checkout flow designed to reduce cart abandonment on mobile.',
-    features: [
-      'Everything in Growth Site, plus:',
-      'WooCommerce setup with full product catalogue import',
-      'Razorpay: UPI, cards, net banking, EMI, Paytm, PhonePe, BNPL',
-      'GST-compliant auto-invoicing with GSTIN capture at checkout',
-      'Shiprocket integration with real-time shipping rate calculator',
-      'COD setup with optional prepaid discount incentive',
-      'WhatsApp order notifications and abandoned cart recovery',
-      'Shiprocket + Delhivery automated AWB and tracking',
-      '14–21 day delivery from design sign-off',
-    ],
-    cta: { label: 'Schedule a Discovery Call', modal: true as const, region: 'in' as const },
-  },
-] as const;
-
 const WP_FAQ_CATEGORIES = [
   { key: 'pricing',    label: 'Pricing & Timeline' },
   { key: 'platform',   label: 'WordPress vs. Alternatives' },

@@ -377,47 +377,6 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-const PRACTICE_AREAS = [
-  {
-    name: 'Personal Injury',
-    description:
-      'Personal injury law has the most competitive local search landscape in legal. A generic site won\'t rank against established firms spending heavily on ads every month. We build personal injury law firm websites with practice-area-specific landing pages for car accidents, slip and fall, medical malpractice, and wrongful death: each targeting high-intent local search queries and optimized to convert visitors who are actively seeking representation.',
-    example: 'Personal injury firms with dedicated practice-area pages rank for 4–6× more local search queries than firms with a single "Personal Injury" page.',
-  },
-  {
-    name: 'Family Law',
-    description:
-      'Family law clients are searching in emotionally charged moments, divorce, child custody, restraining orders, adoption. The website that earns their trust in those first 50 milliseconds gets the consultation. We design family law websites with empathetic copy, clear process explanations that reduce anxiety, and consultation intake forms that feel safe and straightforward, not like a legal questionnaire.',
-    example: 'Family law redesigns consistently increase consultation request rates by 50–80% over previous sites.',
-  },
-  {
-    name: 'Criminal Defense',
-    description:
-      'Criminal defense clients often search after hours, on mobile, in urgent circumstances. Speed and mobile usability are especially critical: a site that loads in 8 seconds loses the consultation to the firm whose site loads in 1.5. We build criminal defense sites that are fast on every connection, clear on practice areas and experience, and accessible via click-to-call from any mobile device.',
-    example: 'Criminal defense sites rebuilt for mobile performance see 40–65% more after-hours contact form completions.',
-  },
-  {
-    name: 'Estate Planning & Probate',
-    description:
-      'Estate planning clients are typically older, more cautious about who they hire, and do significant online research before contacting an attorney. We design estate planning law firm websites that signal longevity, expertise, and trustworthiness, detailed attorney credentials, published articles, FAQ sections that demonstrate deep knowledge, and consultation intake forms with clear expectations about what the process involves.',
-    example: 'Estate planning sites with comprehensive FAQs rank for 2–3× more long-tail search queries than FAQ-light sites.',
-  },
-  {
-    name: 'Immigration Law',
-    description:
-      'Immigration law clients often research in languages other than English and need reassurance that the firm understands their specific situation. We design immigration law firm websites with multilingual capability, clear case type categorization (family-based, employment-based, asylum, deportation defense), and consultation intake forms that explain what documents clients need to bring.',
-    example: 'Multilingual immigration firm sites see 35–55% more consultation requests from non-English-speaking prospect segments.',
-  },
-  {
-    name: 'Business & Corporate Law',
-    description:
-      'Business law clients evaluating an attorney firm are often comparing multiple options and will read attorney bios carefully. We design corporate law firm websites that communicate sophistication and specialization, industry-specific practice areas, client logos and case studies (where appropriate), attorney credentials that emphasize business and transactional experience, and clear service packages for startup, growth-stage, and established businesses.',
-    example: 'Corporate law sites with detailed attorney profiles and industry specializations close at 30% higher rates than generalist presentations.',
-    linkLabel: 'Start a conversation',
-    linkHref: '/contact',
-  },
-];
-
 /* ─── FAQ ──────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES = [

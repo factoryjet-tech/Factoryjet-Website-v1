@@ -357,45 +357,6 @@ const IN_MARKET_STATS = [
   },
 ];
 
-const IN_INDUSTRIES = [
-  {
-    name: 'SMBs & Service Businesses',
-    description:
-      'India has 63M+ SMBs, from local contractors and clinics to manufacturer-dealers and professional services firms. These businesses need websites that rank in local search, convert mobile visitors from Google Maps, and work reliably on mid-range Android devices on 4G.',
-    example: 'HVAC, plumbing, salon chains, clinics, tutoring centres, and chartered accountants.',
-  },
-  {
-    name: 'D2C & E-Commerce Brands',
-    description:
-      'India\'s D2C market is projected to reach $100B by 2025. Building a brand-owned channel reduces dependency on Flipkart and Amazon marketplaces. We build on Shopify or custom Next.js Commerce with Razorpay, PhonePe, and UPI integration baked in from day one.',
-    example: 'Fashion, F&B, personal care, home goods, and niche consumer brands targeting direct buyers.',
-  },
-  {
-    name: 'Healthcare & Wellness',
-    description:
-      'Clinics, diagnostic labs, dental chains, physiotherapy centres, and Ayurveda brands. Websites in this sector need appointment booking, doctor/service pages, and trust signals that convert health-concerned visitors before they go to a competitor.',
-    example: 'Multi-location clinic chains, diagnostic centres, and wellness brands across metro India.',
-  },
-  {
-    name: 'Real Estate & Construction',
-    description:
-      'India\'s real estate market is one of the fastest-growing in Asia. Developers, brokers, and construction firms need sites with project galleries, EMI calculators, WhatsApp inquiry flows, and local SEO targeting high-demand micro-markets and pin codes.',
-    example: 'Developers and brokers in Mumbai, Pune, Bangalore, Hyderabad, and Delhi NCR.',
-  },
-  {
-    name: 'Professional Services',
-    description:
-      'Chartered accountants, law firms, consultancies, financial advisors, and B2B service providers. Websites for professional services need to build trust fast, credentials, case studies, and clear inquiry forms that route to the right person without friction.',
-    example: 'CA firms, law practices, management consultancies, and B2B service vendors.',
-  },
-  {
-    name: 'Education & EdTech',
-    description:
-      'Coaching centres, training institutes, online learning platforms, and school websites. India\'s education market is digital-first for discovery, a well-ranked website is how students and parents find you before they pick up the phone or walk in.',
-    example: 'Coaching institutes, test-prep platforms, skill training providers, and university sites.',
-  },
-];
-
 const IN_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Indian Agency' },
@@ -472,63 +433,6 @@ const IN_COMPARISON_ROWS = [
     ],
   },
 ];
-
-const IN_PRICING_TIERS = [
-  {
-    name: 'Starter',
-    priceRange: '',
-    description:
-      'A 5-page website that loads fast on mobile, ranks for your business name and core service, and looks professional enough to convert the first-time visitor.',
-    features: [
-      'Up to 5 pages (Home, About, Services, Contact + 1 more)',
-      'Custom Figma design, not a template',
-      'Next.js or WordPress (your choice)',
-      'Mobile-first, Lighthouse 95+ guaranteed',
-      'Technical SEO: meta tags, schema, sitemap, robots.txt',
-      'Contact form + WhatsApp button integration',
-      '2 rounds of design revisions',
-      '7-day delivery from design sign-off',
-    ],
-    cta: { label: 'Book a Free Audit', modal: true as const, region: 'in' as const },
-  },
-  {
-    name: 'Growth',
-    priceRange: '',
-    description:
-      'A full business website with CMS, blog, and advanced SEO. The most popular tier for Indian SMBs scaling their digital presence and generating consistent inbound leads.',
-    features: [
-      'Up to 15 pages including service and city pages',
-      'CMS integration, update content without touching code',
-      'Blog setup with category and SEO architecture',
-      'Advanced SEO: keyword targeting, internal link map',
-      'Google Analytics 4 + Search Console setup',
-      'Lead capture forms + Razorpay or payment integration',
-      'WhatsApp Business API button',
-      'Lighthouse 98–100 across all four categories',
-      '3 revision rounds + team training session (recorded)',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
-    popular: true,
-  },
-  {
-    name: 'Custom',
-    priceRange: '',
-    description:
-      'E-commerce stores, Next.js web applications, large marketing sites, and complex builds with Indian payment gateway and third-party API integrations.',
-    features: [
-      'Pages & scope defined per project',
-      'Shopify, WooCommerce, or custom Next.js e-commerce',
-      'Razorpay, PhonePe, UPI, and PayU payment integrations',
-      'Third-party API connections (CRM, ERP, booking systems)',
-      'Custom animations and interactive UI components',
-      'Multi-city or multi-language site architecture',
-      'Headless CMS setup (Sanity, Contentful, or WordPress)',
-      'Performance SLA: Core Web Vitals green on launch',
-      '30-day post-launch support window',
-    ],
-    cta: { label: 'Schedule a Scoping Call', modal: true as const, region: 'in' as const },
-  },
-] as const;
 
 const IN_FAQ_CATEGORIES = [
   { key: 'process',    label: 'Process & Timeline' },

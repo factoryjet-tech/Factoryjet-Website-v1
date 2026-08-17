@@ -434,64 +434,6 @@ const SHOPIFY_COMPARISON_ROWS = [
   },
 ];
 
-const SHOPIFY_PRICING_TIERS = [
-  {
-    name: 'Starter',
-    priceRange: 'Fixed-price',
-    description:
-      'A custom Shopify theme designed in Figma and built in Liquid for your existing store. Best for brands that already have Shopify set up but need a storefront that actually converts.',
-    features: [
-      'Custom Figma design, homepage, PDP, collection, cart',
-      'Liquid theme built to match Figma exactly',
-      'Custom sections editable from Shopify theme editor',
-      'Mobile-first, Lighthouse 95+ performance',
-      'Razorpay + UPI integration',
-      'Technical SEO: schema markup, canonical URLs, alt tags',
-      '2 rounds of design revisions',
-      'Code delivered to your GitHub on launch',
-      '5–7 day delivery from design sign-off',
-    ],
-    cta: { label: 'Book a Store Audit', modal: true as const, region: 'in' as const },
-  },
-  {
-    name: 'Growth',
-    priceRange: 'Fixed-price',
-    description:
-      'A complete Shopify store from scratch, custom theme, full product catalogue, Razorpay + UPI payments, Shiprocket logistics, GST invoicing, WhatsApp notifications, and a live launch.',
-    features: [
-      'Everything in Starter, plus:',
-      'Full product catalogue import and collections architecture',
-      'Razorpay integration: UPI, cards, net banking, EMI, wallets',
-      'Shiprocket integration with real-time shipping rate calculator',
-      'GST-compliant auto-invoicing at order placement',
-      'WhatsApp order notifications and abandoned cart recovery',
-      'Google Analytics 4 + Meta Pixel + Search Console setup',
-      'Shipping zones, tax configuration, and return policy setup',
-      '7–14 day delivery from design sign-off',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
-    popular: true,
-  },
-  {
-    name: 'Scale',
-    priceRange: 'Custom quote',
-    description:
-      'Shopify Plus with custom checkout UI, B2B wholesale portal, or headless Hydrogen storefront, for brands where standard Shopify has hit its ceiling.',
-    features: [
-      'Everything in Growth, plus:',
-      'Checkout Extensibility (custom checkout UI components)',
-      'B2B wholesale portal with company accounts and dealer pricing',
-      'Multi-storefront management from one Shopify admin',
-      'Shopify Flow automation for order routing and inventory alerts',
-      'Headless Hydrogen/Next.js storefront (optional)',
-      'Advanced Klaviyo or WebEngage email flows (10+ sequences)',
-      'ERP / Tally / Zoho Books integration',
-      'Dedicated engineering point of contact + 90-day support',
-    ],
-    cta: { label: 'Schedule a Discovery Call', modal: true as const, region: 'in' as const },
-  },
-] as const;
-
 const SHOPIFY_FAQ_CATEGORIES = [
   { key: 'cost',      label: 'Cost & Timeline' },
   { key: 'india',     label: 'India-Specific (Razorpay, GST, Shiprocket)' },

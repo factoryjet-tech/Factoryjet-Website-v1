@@ -352,49 +352,6 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-const INDUSTRIES = [
-  {
-    name: 'Professional Services',
-    description:
-      'Law firms, accounting firms, consultants, and agencies need websites that establish credibility immediately. We redesign professional service sites with authority-first layouts, case study integration, team profiles that build trust, and clear service tier structures that make it easy to understand what you offer and who it\'s for.',
-    example: 'Professional service firm redesigns typically generate 40–80% more contact form submissions within 60 days.',
-    linkLabel: 'See law firm redesigns',
-    linkHref: '/services/law-firm-website-design',
-  },
-  {
-    name: 'Retail & E-Commerce',
-    description:
-      'Slow product pages, confusing navigation, and broken mobile checkout lose you customers every day. We redesign retail and e-commerce sites with performance-first architecture, conversion-optimized product pages, and mobile checkout flows that reduce abandonment.',
-    example: 'E-commerce redesigns recover an average of 18% of revenue previously lost to cart abandonment.',
-  },
-  {
-    name: 'Healthcare & Wellness',
-    description:
-      'Medical practices, clinics, and wellness businesses need sites that communicate trust before patients call. We redesign healthcare sites with HIPAA-aware contact forms, appointment booking integration, provider profiles, and clear insurance and service information.',
-    example: 'Healthcare redesigns increase online appointment bookings by 35–55% in the first quarter.',
-  },
-  {
-    name: 'Real Estate',
-    description:
-      'Real estate websites live and die on listing presentation and lead capture. We redesign agent and broker sites with IDX integration, lead magnet landing pages, neighborhood guides, and search experiences that keep buyers on your site instead of Zillow.',
-    example: 'Real estate site redesigns generate 2–3× more buyer inquiries from organic traffic within 90 days.',
-    linkLabel: 'See real estate web design',
-    linkHref: '/services/real-estate-website-design',
-  },
-  {
-    name: 'Restaurants & Hospitality',
-    description:
-      'Restaurant sites need fast load times on mobile (people searching while hungry), easy menu access, and frictionless reservation paths. We redesign food and hospitality sites with mobile-first layouts, online ordering integration, and Google Maps and review platform connections.',
-    example: 'Restaurant redesigns see 25–40% increase in online reservation completions within 30 days.',
-  },
-  {
-    name: 'Home Services & Contractors',
-    description:
-      'Plumbers, electricians, roofers, and HVAC companies compete on Google local search, and lose or win based on how fast their site loads and how easy it is to call or book from a phone. We redesign home service sites for local SEO, click-to-call, and online estimate request conversion.',
-    example: 'Home service redesigns increase mobile call conversions by 40–70% within 45 days.',
-  },
-];
-
 /* ─── FAQ ──────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES = [

@@ -114,17 +114,6 @@ const US_SUPPORT_SERVICES = [
   { icon: Zap,        label: 'AI Automation',       href: '/services/ai-automation',               desc: 'Eliminate repetitive work' },
 ] as const;
 
-// SEO hub + sub-services (US) — new "SEO & AI Search" column in the Services mega.
-// AI SEO is highlighted separately (the "get cited" answer box), not listed here.
-const US_SEO_HUB_HREF = '/services/seo';
-const US_SEO_SERVICES = [
-  { icon: MapPin,        label: 'Local SEO',          href: '/services/local-seo',          desc: 'Map pack & near-me' },
-  { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/services/ecommerce-seo',      desc: 'Product & collection SEO' },
-  { icon: TrendingUp,    label: 'Shopify SEO',        href: '/services/shopify-seo',        desc: 'Rank your Shopify store' },
-  { icon: Search,        label: 'SEO Audit',          href: '/services/seo-audit',          desc: 'Free technical site check' },
-  { icon: Store,         label: 'Small Business SEO', href: '/services/small-business-seo', desc: 'Affordable managed SEO' },
-] as const;
-
 const US_LOCATIONS = [
   { label: 'Austin',          state: 'TX', href: '/austin/web-design' },
   { label: 'Miami',           state: 'FL', href: '/miami/web-design' },
@@ -137,13 +126,6 @@ const US_LOCATIONS = [
   { label: 'Portland',        state: 'OR', href: '/portland/web-design' },
   { label: 'Colorado Springs',state: 'CO', href: '/colorado-springs/seo' },
   { label: 'Cleveland',       state: 'OH', href: '/cleveland/web-design' },
-] as const;
-
-// Industry SEO verticals (US) — sub-group in the SEO mega column + mobile drawer
-const US_INDUSTRY_SEO = [
-  { label: 'Healthcare SEO', href: '/services/healthcare-seo', desc: 'SEO for medical practices' },
-  { label: 'Dental SEO',     href: '/services/dental-seo',     desc: 'Rank for local dentist searches' },
-  { label: 'Law Firm SEO',   href: '/services/law-firm-seo',   desc: 'SEO for attorneys & law firms' },
 ] as const;
 
 // Who We Serve — by business type (US desktop mega panel)

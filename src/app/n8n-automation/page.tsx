@@ -380,60 +380,6 @@ const N8N_COMPARISON_ROWS = [
   },
 ];
 
-const N8N_PRICING_TIERS = [
-  {
-    name: 'Starter',
-    priceRange: '',
-    description:
-      'The fastest way to eliminate your top 3 manual processes. Built, tested, deployed, and documented in 7 days. Best for founders and small teams automating their first workflows.',
-    features: [
-      'Up to 3 automated workflows',
-      '2 tool integrations (e.g., Razorpay + Zoho CRM)',
-      'n8n deployment (cloud-hosted n8n or your VPS)',
-      'Error handling and alert setup',
-      'Workflow documentation and walkthrough',
-      '7-day delivery from audit sign-off',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Automation Audit', modal: true as const, region: 'in' as const },
-  },
-  {
-    name: 'Growth',
-    priceRange: '',
-    description:
-      'A complete automation layer for a growing Indian business, covering sales, operations, payments, and WhatsApp communications. The most popular package for 10–50 person teams.',
-    features: [
-      'Up to 10 automated workflows',
-      '5 tool integrations',
-      'WhatsApp Business API setup and workflow',
-      'Razorpay + Tally / Zoho Books integration',
-      'Self-hosted n8n setup on your server (AWS / DigitalOcean / Hetzner)',
-      '30-day monitoring and error response',
-      'Full workflow documentation and team training',
-      'Priority support during first 30 days',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
-    popular: true,
-  },
-  {
-    name: 'Custom Infrastructure',
-    priceRange: '',
-    description:
-      'A fully managed automation infrastructure for businesses replacing multiple SaaS tools or automating end-to-end operations across departments.',
-    features: [
-      'Unlimited workflows (scoped per engagement)',
-      'Unlimited integrations including custom API nodes',
-      'Dedicated n8n instance with high-availability setup',
-      'Custom n8n nodes for Tally, legacy ERP, or proprietary APIs',
-      'Full automation infrastructure: server, backups, monitoring',
-      'Ongoing support and maintenance retainer',
-      'Quarterly automation review and optimisation',
-      'Dedicated engineer point of contact',
-    ],
-    cta: { label: 'Schedule a Discovery Call', modal: true as const, region: 'in' as const },
-  },
-] as const;
-
 const N8N_FAQ_CATEGORIES = [
   { key: 'n8n',         label: 'What is n8n & Pricing' },
   { key: 'india',       label: 'India-Specific Integrations' },

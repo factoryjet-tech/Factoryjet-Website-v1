@@ -163,41 +163,6 @@ const APP_TYPES = [
   },
 ];
 
-const INDUSTRIES = [
-  {
-    name: 'Healthcare & Wellness',
-    description: 'Patient portals, appointment booking, HIPAA-conscious data handling, intake forms, and practitioner scheduling dashboards.',
-    example: 'Practices reduce front-desk admin time by 5–8 hours per provider per week.',
-  },
-  {
-    name: 'Legal & Professional Services',
-    description: 'Client portals with document sharing, matter tracking, billing integration, and secure communication between attorney and client.',
-    example: 'Firms report 30% reduction in client email volume within 60 days of launch.',
-  },
-  {
-    name: 'Real Estate',
-    description: 'Agent portals, property management dashboards, lease tracking, maintenance request workflows, and owner financial reporting.',
-    example: 'Property managers eliminate 8–12 hours per week of manual tenant communication.',
-  },
-  {
-    name: 'E-Commerce & Retail',
-    description: 'B2B wholesale portals, custom checkout flows, inventory dashboards, subscription billing, and multi-location management systems.',
-    example: 'Wholesalers processing 200+ orders/month see 70% reduction in order entry time.',
-  },
-  {
-    name: 'Field Services',
-    description: 'Technician dispatch, job scheduling, mobile-first field apps, customer communication, and invoicing workflows for service businesses.',
-    example: 'Field service companies schedule 3x more jobs with the same dispatch staff.',
-  },
-  {
-    name: 'SaaS & Technology',
-    description: 'Multi-tenant platforms, subscription billing, feature flags, usage metering, and self-serve onboarding for software startups.',
-    example: 'SaaS MVPs launched in 8–14 weeks. First paying customers within 30 days of launch.',
-    linkLabel: 'Discuss your SaaS',
-    linkHref: '/contact',
-  },
-];
-
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'US Dev Agency' },
@@ -302,33 +267,6 @@ const PRICING_TIERS = [
     cta: { label: 'Schedule a Discovery Call', modal: true, region: 'us' },
   },
 ] as const;
-
-const RELATED_SERVICES = [
-  {
-    name: 'AI Automation',
-    description: 'Connect your web app to AI workflows, automated responses, data extraction, LLM-powered features. Fixed price, scoped to your build.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/ai-automation',
-  },
-  {
-    name: 'Website Design',
-    description: 'Marketing website to complement your web application, lead capture, product marketing, SEO. Fixed price, scoped to your build.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/website-redesign',
-  },
-  {
-    name: 'WordPress Development',
-    description: 'Content-heavy sites with custom functionality, membership areas, WooCommerce. Fixed price, scoped to your build.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/wordpress-development',
-  },
-  {
-    name: 'Transparent Pricing',
-    description: 'See all FactoryJet service pricing: fixed packages, no hourly billing, no surprise invoices.',
-    linkLabel: 'See pricing',
-    linkHref: '/pricing',
-  },
-];
 
 const FAQ_CATEGORIES = [
   { key: 'what-is', label: 'What Is Web Application Development' },

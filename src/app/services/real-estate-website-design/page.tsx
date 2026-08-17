@@ -163,33 +163,6 @@ const USE_CASES = [
   },
 ];
 
-const RELATED_SERVICES = [
-  {
-    name: 'Website Redesign',
-    description: 'Already have a site? Modernize it with faster load times, new design, and better SEO, without losing your existing rankings.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/website-redesign',
-  },
-  {
-    name: 'Law Firm Website Design',
-    description: 'Looking for real estate attorney website design? We specialize in practice-area-specific legal sites.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/law-firm-website-design',
-  },
-  {
-    name: 'Transparent Pricing',
-    description: 'See all FactoryJet service pricing: fixed packages, no hourly billing, no surprise invoices.',
-    linkLabel: 'See pricing',
-    linkHref: '/pricing',
-  },
-  {
-    name: 'AI Automation',
-    description: 'Automate your lead follow-up, listing alerts, and client communication workflows. Fixed price, scoped to your build.',
-    linkLabel: 'Learn more',
-    linkHref: '/services/ai-automation',
-  },
-];
-
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Real Geeks / kvCORE' },
