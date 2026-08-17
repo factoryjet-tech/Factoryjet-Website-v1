@@ -279,6 +279,7 @@ export const post: BlogPost = {
       </div>
       <p className="mb-4">The practical test: ask any agency selling one of these to describe the deliverable without using the acronym. If they cannot, or if the answer is the same as their classic SEO retainer, you are buying a rebadge. If they can point at extractable answers, entity coverage, schema and per-engine citation tracking, the label does not matter.</p>
       <p className="mb-4">One thing worth knowing before you sign: <strong>AI crawler access is a prerequisite, not an optimisation.</strong> If your robots.txt blocks GPTBot, ClaudeBot, PerplexityBot or Google-Extended, no amount of content work will get you cited, because the engines cannot read the page. Any competent agency checks this in the first week. Ask whether they have.</p>
+      <p className="mb-4">If you want the scope written out rather than described in acronyms, our own <a href="/services/generative-engine-optimization" className="text-orange-600 underline">AI search optimization services</a> page lists what is actually in the engagement: crawler access, extractable structure, entity work, and per-engine citation measurement across ChatGPT, Perplexity, Claude and Google AI Overviews.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Red flags on a US AI SEO agency&apos;s website</h2>
       <p className="mb-4">These are the patterns worth walking away from, in rough order of how often they appear:</p>
