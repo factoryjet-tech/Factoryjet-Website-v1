@@ -71,6 +71,18 @@ const US_ROUTES: { path: string; source: string }[] = [
   // ── AI agent cluster, moved from sitemap-india 2026-08-06 ──────────────────
   // Retargeted to the US: measured demand 8,250/mo, median KD 6, vs 1,711
   // impressions and 9 clicks earned over the prior 90 days.
+  //
+  // 2026-08-17: the page half of that retarget was finished today. Until then
+  // these seven children still carried locale 'en_IN', areaServed 'IN' and
+  // "India" in their titles while sitting in the US sitemap, so Google was
+  // being told India pages were US pages. They are now genuinely US-targeted.
+  // Nav labels in SiteHeader/Footer were already geo-neutral and untouched.
+  //
+  // Correction to the 8,250/mo figure above: US-only measurement on 2026-08-17
+  // put realistically winnable commercial demand in this cluster at ~1,900/mo.
+  // The larger number included DIY/informational terms ("how to build an ai
+  // agent", 2,900/mo) that are not buyer intent. Size expectations accordingly;
+  // see pipeline/research/US-ONLY-REALITY-2026-08-17.md.
   { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
   { path: '/services/ai-agent-development/ai-chatbot',     source: 'src/app/services/ai-agent-development/ai-chatbot/page.tsx' },
   { path: '/services/ai-agent-development/ai-customer-support', source: 'src/app/services/ai-agent-development/ai-customer-support/page.tsx' },

@@ -20,34 +20,34 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
-  title: 'AI Scheduling Agent India | WhatsApp Booking | FactoryJet',
+  title: 'AI Scheduling Agent for US Businesses | FactoryJet',
   description:
-    'AI scheduling agents for Indian businesses, automate appointment booking and WhatsApp calendar management. Integrated with Zoho & Google Calendar. Fixed price.',
+    'AI scheduling agents for US businesses. Automate appointment booking, SMS and email reminders, and two-way sync with Google Calendar, Outlook and Calendly. Fixed price.',
   keywords: [
-    'AI scheduling agent India',
-    'AI appointment booking India',
-    'WhatsApp appointment booking India',
-    'automated scheduling India',
-    'AI booking bot India',
-    'Zoho Bookings AI India',
-    'clinic appointment AI India',
-    'site visit scheduling AI India',
-    'demo booking AI India',
-    'calendar automation India',
+    'AI scheduling agent',
+    'AI appointment booking USA',
+    'automated appointment scheduling US',
+    'AI booking agent for small business',
+    'appointment reminder automation US',
+    'Google Calendar AI scheduling',
+    'Outlook calendar AI booking',
+    'clinic appointment scheduling AI',
+    'demo booking automation US',
+    'AI scheduling assistant USA',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Scheduling Agent India | WhatsApp Appointment Booking AI | FactoryJet',
-    description: 'AI that books site visits, demos, and appointments on WhatsApp, in Hindi and English, integrated with Google Calendar and Zoho. Fixed price.',
+    title: 'AI Scheduling Agent for US Businesses | Appointment Booking AI | FactoryJet',
+    description: 'AI that books demos, service calls, and appointments by text and email, in English and Spanish, synced to Google Calendar and Outlook. Fixed price.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent',
     images: [{ url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp', width: 1200, height: 800, alt: 'FactoryJet AI Agent Development Services' }],
-    locale: 'en_IN',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Scheduling Agent India | FactoryJet',
-    description: 'Automate appointment booking on WhatsApp in Hindi and English. Google Calendar + Zoho integrated. Fixed price.',
+    title: 'AI Scheduling Agent for US Businesses | FactoryJet',
+    description: 'Automate appointment booking and reminders by text and email, in English and Spanish. Google Calendar and Outlook integrated. Fixed price.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent' },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-17';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -71,10 +71,10 @@ const webPageSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'AI Scheduling Agent Development India',
+  name: 'AI Scheduling Agent Development USA',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  description: 'Custom AI scheduling agents for Indian businesses, automate appointment booking on WhatsApp in Hindi and English with Google Calendar, Zoho Bookings, and Razorpay integration.',
-  areaServed: 'IN',
+  description: 'Custom AI scheduling agents for US businesses, automate appointment booking by SMS, email, and web chat in English and Spanish with Google Calendar, Outlook, and Calendly integration.',
+  areaServed: 'US',
   serviceType: 'AI Appointment Scheduling Automation',
 };
 
@@ -98,17 +98,17 @@ const SCHEDULING_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '02',
     title: 'Conversation & Calendar Design',
-    description: 'We design the booking conversation in Hindi and English, how the AI asks for preferences, presents time slots, handles conflicts, and confirms bookings. We configure availability rules, buffer times, and resource allocation logic in your calendar system.',
+    description: 'We design the booking conversation in English and Spanish, how the AI asks for preferences, presents time slots, handles conflicts, and confirms bookings. We configure availability rules, buffer times, and resource allocation logic in your calendar system.',
   },
   {
     number: '03',
     title: 'Build & Integrate',
-    description: 'We build the AI scheduling agent and connect it to your WhatsApp Business API, Google Calendar or Zoho Bookings, CRM, and Razorpay (if payment at booking is required). Full two-way calendar sync ensures no double bookings.',
+    description: 'We build the AI scheduling agent and connect it to your SMS and email channels, Google Calendar or Outlook, your booking system, your CRM, and your payment processor (if a deposit at booking is required). Full two-way calendar sync ensures no double bookings.',
   },
   {
     number: '04',
     title: 'Test & Tune',
-    description: 'We run 100+ test bookings across different scenarios, concurrent availability requests, edge-case time zones, rescheduling after confirmation, and cancellation flows. We tune Hindi speech patterns and slot-presentation logic until booking completion rates meet target.',
+    description: 'We run 100+ test bookings across different scenarios: concurrent availability requests, customers in a different time zone from the location they are booking, daylight saving transitions, rescheduling after confirmation, and cancellation flows. We tune slot-presentation logic until booking completion rates meet target.',
   },
   {
     number: '05',
@@ -120,7 +120,7 @@ const SCHEDULING_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const SCHEDULING_STATS = [
   {
     value: '35%',
-    label: 'more appointments booked per week with AI vs. manual WhatsApp scheduling: FactoryJet client data',
+    label: 'more appointments booked per week with AI vs. manual phone and email scheduling: FactoryJet client data',
     microcopy: 'FactoryJet scheduling deployment data',
     categoryLabel: 'BOOKING LIFT',
   },
@@ -140,29 +140,29 @@ const SCHEDULING_STATS = [
 
 const SCHEDULING_MARKET_STATS = [
   {
-    value: '500M+',
-    label: 'WhatsApp users in India: your customers expect to book appointments there too',
-    sourceUrl: 'https://meta.com/business/whatsapp-india-report-2024',
-    sourceLabel: 'Meta Business India 2024',
+    value: '2 clock changes',
+    label: 'US clocks move on the second Sunday in March and the first Sunday in November, and Arizona and Hawaii do not move at all. A scheduling agent that stores the wrong offset books the wrong hour twice a year',
+    sourceUrl: 'https://www.law.cornell.edu/uscode/text/15/260a',
+    sourceLabel: '15 U.S.C. 260a',
   },
   {
-    value: '3 hrs',
-    label: 'average time Indian SMBs spend daily on manual appointment coordination, addressable with AI',
-    sourceUrl: 'https://nasscom.in/knowledge-center/publications',
-    sourceLabel: 'NASSCOM SMB Productivity Report',
+    value: 'TCPA',
+    label: 'automated appointment texts and calls to US mobile numbers need prior express consent and a working opt-out. We build consent capture and STOP handling into the booking flow',
+    sourceUrl: 'https://www.law.cornell.edu/uscode/text/47/227',
+    sourceLabel: '47 U.S.C. 227',
   },
   {
-    value: '₹3,500 Cr+',
-    label: 'India online appointment scheduling market projected by 2027',
-    sourceUrl: 'https://nasscom.in/knowledge-center/publications',
-    sourceLabel: 'NASSCOM India Digital Report 2024',
+    value: '24/7',
+    label: 'coverage from Eastern to Pacific, so a request that lands at 11 PM in Los Angeles is already a confirmed appointment when your Atlanta team logs in',
+    sourceUrl: 'https://factoryjet.com/services/ai-agent-development',
+    sourceLabel: 'FactoryJet scheduling deployments',
   },
 ];
 
 const SCHEDULING_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Manual WhatsApp Booking' },
-  { label: 'Calendly / Zoho Bookings Alone' },
+  { label: 'Manual Phone & Email Booking' },
+  { label: 'Calendly / Acuity Alone' },
   { label: 'Receptionist / Coordinator' },
 ] as const;
 
@@ -170,14 +170,14 @@ const SCHEDULING_COMPARISON_ROWS = [
   {
     feature: 'Starting cost',
     values: [
-      'Fixed one-time price',
-      '₹0 (but ₹15,000–₹25,000/month in staff time)',
-      '₹800–₹3,000/month (no WhatsApp, no AI)',
-      '₹15,000–₹30,000/month salary',
+      'Fixed price after a scoping call',
+      'No software cost, paid for in front-desk hours every single day',
+      'Monthly subscription per seat, no SMS conversation, no AI',
+      'Full-time salary plus benefits and cover for time off',
     ],
   },
   {
-    feature: 'Books appointments on WhatsApp in Hindi',
+    feature: 'Books by SMS and email in English and Spanish',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="mw" kind="partial" />,
@@ -186,7 +186,7 @@ const SCHEDULING_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Available 24/7 including weekends and festivals',
+    feature: 'Available 24/7 across every US time zone, weekends and holidays included',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="mw" kind="no" />,
@@ -195,7 +195,7 @@ const SCHEDULING_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Sends automated reminders',
+    feature: 'Sends automated SMS and email reminders',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="mw" kind="no" />,
@@ -204,7 +204,7 @@ const SCHEDULING_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Zoho CRM / LeadSquared sync',
+    feature: 'HubSpot / Salesforce sync on every booking',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="mw" kind="no" />,
@@ -222,7 +222,7 @@ const SCHEDULING_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Razorpay deposit collection at booking',
+    feature: 'Card deposit collected at time of booking',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="mw" kind="no" />,
@@ -262,52 +262,52 @@ const SCHEDULING_COMPARISON_ROWS = [
 const SCHEDULING_INDUSTRIES = [
   {
     name: 'Healthcare & Clinics',
-    description: 'WhatsApp appointment booking for multi-doctor clinics, real-time availability check, specialty-based routing, confirmation WhatsApp with doctor name and directions, reminder sequence, and rescheduling flow.',
+    description: 'Appointment booking by text, web chat, and email for multi-provider practices: real-time availability check, specialty-based routing, confirmation with provider name and directions, reminder sequence, and rescheduling flow. Built to respect HIPAA on what the agent stores and sends.',
     example: 'Clinics report 35% more appointments booked and 40% fewer no-shows after AI scheduling deployment.',
   },
   {
     name: 'Real Estate',
-    description: 'Site visit booking from 99acres, MagicBricks, and Facebook leads: AI books slots based on project and location, confirms via WhatsApp, sends directions, logs to Zoho CRM with lead qualification data.',
-    example: 'Builders double site visit booking rates without adding coordinators.',
+    description: 'Showing and tour booking from Zillow, Realtor.com, and paid social leads: the AI books slots by property and neighborhood, confirms by text, sends the address and access instructions, and logs to your CRM with the qualification answers attached.',
+    example: 'Agents double showing booking rates without adding a coordinator.',
   },
   {
-    name: 'EdTech & Coaching',
-    description: 'Counsellor call and demo class booking, AI books based on course interest and counsellor availability, sends joining link via WhatsApp, and sends 1-hour and 10-minute reminders to reduce no-shows.',
-    example: 'EdTech platforms see 3× more counsellor calls booked per week with AI scheduling.',
+    name: 'Education & Training',
+    description: 'Advisor call and trial class booking: the AI books on program interest and advisor availability, sends the Zoom or Teams link by text and email, and sends 24-hour and 10-minute reminders to reduce no-shows.',
+    example: 'Education providers see 3× more advisor calls booked per week with AI scheduling.',
   },
   {
     name: 'Automotive',
-    description: 'Test drive booking from lead ads and website: AI qualifies by model interest, books slots to showroom calendar, sends WhatsApp confirmation with location, and calls to confirm 24 hours before.',
+    description: 'Test drive booking from lead ads and the dealership website: the AI qualifies by model interest, books slots to the showroom calendar, texts a confirmation with the address, and follows up 24 hours before to confirm.',
     example: 'Dealerships book 2× more test drives per month without adding front-desk staff.',
   },
   {
     name: 'Professional Services',
-    description: 'Consultation booking for CA firms, law firms, and financial advisors, AI books based on advisor availability and service type, collects pre-meeting details, sends Zoom or in-person confirmation, and reminder sequence.',
+    description: 'Consultation booking for CPA firms, law firms, and financial advisors: the AI books on advisor availability and service type, collects pre-meeting details, sends a Zoom or in-office confirmation, and runs the reminder sequence.',
     example: 'Advisors recover 2–3 hours per week of calendar coordination time with AI scheduling.',
   },
   {
-    name: 'Beauty & Wellness',
-    description: 'Salon, spa, and wellness centre booking on WhatsApp, service selection, stylist preference, slot confirmation, payment link for deposit, reminder WhatsApp, and post-visit review request.',
-    example: 'Salons increase repeat booking rate by 25% with AI reminder and rebooking sequences.',
+    name: 'Home Services & Field Work',
+    description: 'Service call scheduling for HVAC, plumbing, electrical, and pest control: the AI checks technician availability by ZIP code, books the arrival window, collects a card deposit where you require one, and texts an on-the-way update.',
+    example: 'Home service companies cut dispatch coordination time and fill same-day cancellation slots automatically.',
   },
 ];
 
 const SCHEDULING_PRICING_TIERS = [
   {
-    name: 'WhatsApp Booking AI',
+    name: 'Text & Email Booking AI',
     priceRange: '',
-    description: 'A focused AI appointment booking agent on WhatsApp, single service type, single calendar, with confirmation and reminder messages.',
+    description: 'A focused AI appointment booking agent on SMS, email, and web chat: single service type, single calendar, with confirmation and reminder messages.',
     features: [
-      'WhatsApp Business API booking flow',
+      'SMS, email, and website chat booking flow',
       'Single service type and calendar',
-      'Real-time availability check (Google Calendar or Zoho Bookings)',
-      'Hindi + English language support',
-      'Booking confirmation WhatsApp message',
-      '24-hour and 1-hour reminder WhatsApp messages',
+      'Real-time availability check (Google Calendar or Outlook)',
+      'English + Spanish language support',
+      'Booking confirmation by text with a calendar invite attached',
+      '24-hour and 1-hour reminders with TCPA opt-out handling',
       'Rescheduling and cancellation handling',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'in' as const },
+    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Multi-Resource Scheduling Platform',
@@ -316,40 +316,40 @@ const SCHEDULING_PRICING_TIERS = [
     features: [
       'Multiple staff members / resources',
       'Multiple service types with custom durations',
-      'Zoho CRM / LeadSquared sync on every booking',
-      'Razorpay deposit collection at booking',
+      'HubSpot / Salesforce sync on every booking',
+      'Card deposit collected at time of booking',
       'Round-robin or rule-based staff routing',
       'Multi-step reminder sequence (24hr, 1hr, post-visit)',
       'Rescheduling and cancellation with slot release',
       'Booking analytics dashboard',
       '30-day post-launch support + optimisation',
     ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
+    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
     popular: true,
   },
   {
     name: 'Enterprise Scheduling Suite',
     priceRange: '',
-    description: 'Multi-location, multi-language scheduling for high-volume Indian businesses with full CRM and payment integration.',
+    description: 'Multi-location, multi-time-zone scheduling for high-volume US businesses with full CRM and payment integration.',
     features: [
       'Multi-location, multi-branch scheduling',
-      'Multi-language support (up to 5 regional languages)',
-      'Full Zoho CRM / HIS / PMS integration',
-      'Razorpay full payment collection and refunds',
+      'Multi-time-zone booking with correct daylight saving handling',
+      'Full CRM, EHR, or PMS integration',
+      'Full payment collection and refunds through your processor',
       'AI waitlist management (auto-fills cancellations)',
       'Custom booking rules per service and location',
       'Advanced no-show analytics and recovery flows',
       'API access for custom CRM and ERP integration',
       '90-day post-launch support + quarterly optimisation',
     ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'in' as const },
+    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
   },
 ] as const;
 
 const SCHEDULING_FAQ_CATEGORIES = [
   { key: 'basics', label: 'Scheduling AI Basics' },
-  { key: 'whatsapp', label: 'WhatsApp & Channels' },
-  { key: 'india', label: 'India-Specific' },
+  { key: 'channels', label: 'Channels & Reminders' },
+  { key: 'us', label: 'US-Specific' },
   { key: 'process', label: 'Process & Timeline' },
   { key: 'pricing', label: 'Pricing & ROI' },
 ];
@@ -358,102 +358,117 @@ const SCHEDULING_FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'What exactly does an AI scheduling agent do?',
-    answer: "An AI scheduling agent handles the complete appointment booking flow autonomously, on WhatsApp, website, or inbound call. When a customer asks for an appointment, the AI checks real-time availability, presents available slots, confirms the booking to your calendar system, sends a WhatsApp confirmation with details and directions, triggers reminders before the appointment, and handles rescheduling or cancellation requests: all without any manual coordination.",
+    answer: "An AI scheduling agent handles the complete appointment booking flow autonomously, by text message, email, website chat, or inbound call. When a customer asks for an appointment, the AI checks real-time availability, presents open slots in the customer's own time zone, writes the booking to your calendar, sends a confirmation text and a calendar invite with the address, triggers reminders before the appointment, and handles rescheduling or cancellation requests: all without any manual coordination.",
   },
   {
     category: 'basics',
-    question: 'How is this different from just using Calendly or Zoho Bookings?',
-    answer: "Calendly and Zoho Bookings are booking pages, they work if the customer visits a URL, selects a service, picks a slot, and fills out a form. Most Indian customers do not follow that flow. They message your WhatsApp, ask for an appointment in conversation, and expect a response. An AI scheduling agent meets them where they are, on WhatsApp, in Hindi, in a natural conversation, and the calendar booking happens as an outcome of that conversation, not a separate step.",
+    question: 'How is this different from just using Calendly or Acuity?',
+    answer: "Calendly and Acuity are booking pages. They work if the customer visits a URL, selects a service, picks a slot, and fills out a form. Plenty of people never finish that. They text the number on your website, they reply to the ad, they call and leave a voicemail, or they email asking if Thursday works. An AI scheduling agent meets them in those channels, holds a normal conversation, and the calendar booking happens as the outcome of that conversation rather than as a separate step the customer has to take on their own.",
   },
   {
     category: 'basics',
-    question: 'Can the AI handle multiple types of appointments, like different services or different doctors?',
+    question: 'Can the AI handle multiple types of appointments, like different services or different providers?',
     answer: "Yes. Our Multi-Resource Scheduling Platform supports multiple service types with different durations (15-minute follow-ups vs. 60-minute consultations), multiple staff members with individual calendars, and routing rules based on service type, location preference, or round-robin assignment. The AI asks the right qualifying questions to determine which service and which resource the customer needs before presenting availability.",
   },
   {
     category: 'basics',
     question: 'What happens when all slots are full?',
-    answer: "The AI offers the next available slot, offers to add the customer to a waitlist (if you enable this), or presents alternative locations or staff members with availability. For businesses with high demand, clinics during flu season, real estate site visits during project launches: the AI also manages a waitlist that auto-fills from cancellations, reducing wasted slots and no-shows.",
+    answer: "The AI offers the next available slot, offers to add the customer to a waitlist (if you enable this), or presents alternative locations or staff members with availability. For businesses with seasonal demand spikes, clinics in flu season or HVAC companies in the first heat wave: the AI also manages a waitlist that auto-fills from cancellations, reducing wasted slots and no-shows.",
   },
   {
-    category: 'whatsapp',
-    question: 'Can customers book appointments by messaging your WhatsApp in Hindi?',
-    answer: "Yes, this is the primary use case for Indian businesses. A customer messages 'doctor ka appointment chahiye' or 'I want to book a site visit for Saturday' and the AI conducts the full booking conversation in Hindi or English, confirms the slot, and adds it to your calendar. No URL to click, no form to fill, just a natural WhatsApp conversation that ends with a confirmed appointment.",
+    category: 'channels',
+    question: 'Which channels can customers book through?',
+    answer: "Text message, email, your website chat widget, and inbound phone calls if you add the voice module. Text is usually the workhorse in the US, because the reply rate is high and the customer does not have to leave whatever they were doing. Web chat catches people already on your site. Email suits B2B and longer scheduling threads. WhatsApp is available too if a meaningful share of your customers use it, but we would not build the whole flow around it in a US-only market.",
   },
   {
-    category: 'whatsapp',
-    question: 'Can the AI send appointment reminders on WhatsApp automatically?',
-    answer: "Yes. Using WhatsApp template messages (Meta-approved), the AI sends a confirmation immediately on booking, a 24-hour reminder the day before, a 1-hour reminder on the day, and (optionally) a post-appointment feedback request. For healthcare and real estate, the 24-hour + 1-hour reminder combination reduces no-shows by 35–45% in our deployments.",
+    category: 'channels',
+    question: 'Can the AI send appointment reminders by text and email automatically?',
+    answer: "Yes. The AI sends a confirmation immediately on booking with a calendar invite attached, a 24-hour reminder the day before, a 1-hour reminder on the day, and (optionally) a post-appointment feedback request. For healthcare and home services, the 24-hour plus 1-hour reminder combination reduces no-shows by 35–45% in our deployments. Every message carries an opt-out, and an opt-out is honored immediately across every future sequence.",
   },
   {
-    category: 'whatsapp',
-    question: 'Can customers reschedule by messaging on WhatsApp?',
-    answer: "Yes, rescheduling conversations are fully automated. A customer messages 'please reschedule my appointment' and the AI identifies their existing booking, checks availability for alternative times, presents options, confirms the change to your calendar, and sends a new confirmation. The original slot is automatically freed for other customers. Cancellations follow the same flow with optional refund trigger if a Razorpay deposit was collected.",
+    category: 'channels',
+    question: 'Can customers reschedule by replying to a text?',
+    answer: "Yes, rescheduling conversations are fully automated. A customer texts back 'need to move this to next week' and the AI identifies their existing booking, checks availability for alternative times, presents options, writes the change to your calendar, and sends an updated confirmation and calendar invite. The original slot is automatically freed for other customers. Cancellations follow the same flow, with an optional refund trigger if a card deposit was collected.",
   },
   {
-    category: 'whatsapp',
-    question: 'Can the AI also send appointment reminders via voice call?',
-    answer: "Yes, for high-value appointments (real estate site visits, high-ticket service consultations), we can add an automated voice reminder call 24 hours before the appointment using our AI Voice Agent module. The AI calls in Hindi or English, confirms the appointment details, and gives the customer an option to reschedule by pressing a key or responding. This combination of WhatsApp text + voice call reminder achieves the lowest no-show rates in our deployments.",
+    category: 'channels',
+    question: 'Can the AI also confirm appointments by voice call?',
+    answer: "Yes, for high-value appointments (property showings, big-ticket service estimates), we can add an automated voice confirmation call 24 hours before using our AI Voice Agent module. The AI calls in English or Spanish, confirms the appointment details, and gives the customer the option to reschedule by pressing a key or just saying so. Text plus a voice confirmation gets the lowest no-show rates in our deployments. Outbound calls follow the same consent and calling-window rules as the text reminders.",
   },
   {
-    category: 'india',
-    question: 'Can the AI collect a booking deposit via Razorpay?',
-    answer: "Yes. For services where a deposit reduces no-shows (clinics, salons, high-demand site visits), we integrate Razorpay payment link generation into the booking flow. After the customer confirms a slot, the AI sends a Razorpay payment link on WhatsApp, confirms receipt on payment, and the booking is only finalised after payment. Cancellations trigger the refund flow based on your configured refund policy.",
+    category: 'us',
+    question: 'How does the AI handle customers in different time zones?',
+    answer: "Every appointment is stored in the location's time zone and displayed to the customer in theirs, detected from their area code or asked outright when it is ambiguous. So a customer in Phoenix booking a call with your Atlanta office sees Mountain time, your team sees Eastern, and the calendar invite carries the right offset for both. We also test the two daylight saving transitions specifically, and account for Arizona and Hawaii, which do not change their clocks at all.",
   },
   {
-    category: 'india',
-    question: 'Does the AI sync appointments to Zoho CRM or LeadSquared?',
-    answer: "Yes. Every booking creates or updates a contact record in Zoho CRM, LeadSquared, or Freshsales, with the customer name, phone, appointment type, date, time, and staff assignment. For real estate and EdTech, this also updates the lead pipeline stage (e.g., from 'contacted' to 'site visit booked'). Sales managers see the booking pipeline in CRM without anyone entering data manually.",
+    category: 'us',
+    question: 'Is texting appointment reminders to customers a TCPA problem?',
+    answer: "It is a rule the build has to respect, not a blocker. Automated texts and calls to US mobile numbers need prior express consent from the person you are contacting, and an opt-out that actually works. So the booking flow captures consent at the point the customer gives you their number, records when and how they gave it, includes opt-out language in the messages, and processes STOP and UNSUBSCRIBE replies immediately across every sequence. We also respect calling windows for voice. We build to those rules, but we are not attorneys, so run your final message templates and consent language past your own counsel.",
   },
   {
-    category: 'india',
-    question: 'Can the AI handle multi-language booking for businesses operating in multiple states?',
-    answer: "Yes. Our Enterprise Scheduling Suite supports up to 5 regional languages: Hindi, Marathi, Tamil, Telugu, Gujarati, Kannada, with automatic language detection at the start of the booking conversation. For businesses with locations in Mumbai, Chennai, and Hyderabad, the AI routes to the appropriate language model based on the customer's phone number prefix or the first message they send.",
+    category: 'us',
+    question: 'Can the AI collect a card deposit at the time of booking?',
+    answer: "Yes. For services where a deposit reduces no-shows (clinics, salons, high-demand service calls), we build payment link generation into the booking flow using your existing payment processor. After the customer picks a slot, the AI sends a payment link, confirms on receipt, and only finalizes the booking after payment clears. Cancellations trigger the refund flow based on the policy you configure.",
   },
   {
-    category: 'india',
-    question: 'How does the scheduling AI handle Indian public holidays and festival dates?',
-    answer: "The AI calendar configuration includes Indian public holidays (national and state-specific) and any custom blocked dates you define. During festival periods, you can configure reduced hours, emergency-only slots, or complete closure: the AI automatically stops offering those slots and informs customers of the next available date. Diwali, Holi, Eid, and other major festival closures can be pre-configured annually.",
+    category: 'us',
+    question: 'Does the AI sync appointments to HubSpot or Salesforce?',
+    answer: "Yes. Every booking creates or updates a contact record in HubSpot, Salesforce, Pipedrive, or whatever CRM you already run, with the customer name, phone, appointment type, date, time, and staff assignment. For real estate and B2B sales, this also moves the deal stage (for example from 'contacted' to 'showing booked'). Managers see the booking pipeline in the CRM without anyone typing it in.",
+  },
+  {
+    category: 'us',
+    question: 'What about patient data, is this HIPAA-safe for a medical practice?',
+    answer: "For healthcare clients we design the agent so protected health information stays inside systems covered by a business associate agreement, and the outbound text says only what it needs to: who, when, where, and how to reschedule. No diagnosis, no reason for visit, no results in a text message. We will work within the BAAs your practice already has with its EHR and messaging vendors. We are not a HIPAA certification body and we do not claim to be one, so your compliance officer signs off on the final message templates and data flow.",
+  },
+  {
+    category: 'us',
+    question: 'Can the AI take bookings in Spanish?',
+    answer: "Yes. English and Spanish are the two languages we build and test properly for US deployments, with automatic detection from the customer's first message. The whole flow works in either: qualifying questions, slot presentation, confirmation, reminders, and rescheduling. If a large share of your customers speak another language, tell us on the scoping call and we will tell you honestly whether we can support it to the same standard.",
+  },
+  {
+    category: 'us',
+    question: 'How does the scheduling AI handle US holidays and reduced-hours days?',
+    answer: "The calendar configuration includes federal holidays plus any custom blocked dates you define, per location. Around Thanksgiving, Christmas, and July 4th you can configure reduced hours, emergency-only slots, or a full closure: the AI stops offering those slots and tells customers the next date you are actually open. A multi-location business can run different holiday calendars per site, which matters when your Chicago office closes and your Austin office does not.",
   },
   {
     category: 'process',
     question: 'How long does it take to build and deploy an AI scheduling agent?',
-    answer: "A focused WhatsApp booking agent (single service, one calendar) goes live in 1–2 weeks. Multi-resource platforms with CRM and Razorpay integration take 3–4 weeks. Enterprise suites with multi-location and multi-language support take 5–7 weeks. The fastest path is to start with one service type, validate the booking flow with real customers, and then expand to multi-service and multi-staff.",
+    answer: "A focused text and email booking agent (single service, one calendar) goes live in 1–2 weeks. Multi-resource platforms with CRM and payment integration take 3–4 weeks. Enterprise suites with multi-location and multi-time-zone support take 5–7 weeks. The fastest path is to start with one service type, validate the booking flow with real customers, and then expand to multi-service and multi-staff.",
   },
   {
     category: 'process',
     question: 'What do you need from us to build the scheduling AI?',
-    answer: "We need: API access to your calendar system (Google Calendar or Zoho Bookings), your WhatsApp Business account access (we can set this up), your service list with durations and staff assignments, business hours and holiday schedule, and a 30-minute discovery call to map the booking conversation flow. We handle all technical setup from there.",
+    answer: "We need: API access to your calendar system (Google Calendar, Outlook or Microsoft 365, Calendly, or your existing booking software), a business texting number (we can provision and register one), your service list with durations and staff assignments, business hours, time zones, and holiday schedule per location, and a 30-minute discovery call to map the booking conversation. We handle all technical setup from there.",
   },
   {
     category: 'process',
     question: 'Can we update availability and services without technical help?',
-    answer: "Yes. After deployment, you manage service types, staff availability, business hours, and holiday schedules through the admin dashboard, no code required. Adding a new doctor, changing a service duration, or blocking dates for Diwali can all be done by a non-technical staff member. For changes to the conversation flow or new integrations, we handle those on retainer.",
+    answer: "Yes. After deployment, you manage service types, staff availability, business hours, and holiday schedules through the admin dashboard, no code required. Adding a new provider, changing a service duration, or blocking the week of Thanksgiving can all be done by a non-technical staff member. For changes to the conversation flow or new integrations, we handle those on retainer.",
   },
   {
     category: 'process',
     question: 'How do we measure the performance of the scheduling AI?',
-    answer: "You get a booking analytics dashboard showing total bookings per day/week, source channel (WhatsApp vs. website), no-show rate, rescheduling rate, drop-off point in the booking conversation (where customers abandon), and revenue collected via Razorpay. Most businesses see booking volume increase 25–40% in the first month as the 24/7 availability captures demand that previously went unbooked outside business hours.",
+    answer: "You get a booking analytics dashboard showing total bookings per day and week, source channel (text vs. web chat vs. email), no-show rate, rescheduling rate, drop-off point in the booking conversation (where customers abandon), and deposits collected. Most businesses see booking volume increase 25–40% in the first month as the 24/7 availability captures demand that previously went unbooked outside business hours.",
   },
   {
     category: 'pricing',
     question: 'How do I calculate the ROI of an AI scheduling agent?',
-    answer: "The simplest ROI calculation: count the staff hours spent per week on appointment coordination (calls, WhatsApp replies, reminder messages, reschedule management), multiply by hourly cost, and project monthly savings. For most Indian businesses with 20–50 appointments per day, the AI saves 2–4 hours of coordination time daily, ₹10,000–₹25,000/month in staff time. At our fixed build price, payback typically lands within a few months. Secondary ROI: 24/7 availability books appointments that were previously missed outside business hours.",
+    answer: "The simplest calculation: count the staff hours spent per week on appointment coordination (calls, callbacks, reminder texts, reschedule management), multiply by your fully loaded hourly cost, and project the monthly saving. For most businesses running 20–50 appointments per day, the AI takes back 2–4 hours of coordination time daily. We quote a fixed price after a scoping call, so you can hold that number against the saving before you commit. The second half of the ROI is the appointments you were never capturing at all because nobody was answering at 9 PM.",
   },
   {
     category: 'pricing',
     question: 'Are there ongoing costs after the scheduling agent is built?',
-    answer: "LLM API costs for conversation processing are minimal for scheduling (₹1,500–₹5,000/month for 100–300 bookings/day). WhatsApp message costs (Meta charges per conversation or template message via your BSP) are the main variable cost. FactoryJet charges nothing ongoing unless you choose a maintenance retainer. Google Calendar and Zoho Bookings are free or already part of your existing subscriptions.",
+    answer: "Three small ones, all paid to vendors rather than to us: LLM API usage for the conversation (modest at scheduling volumes), your SMS provider's per-message cost, and whatever your calendar and CRM subscriptions already cost. FactoryJet charges nothing ongoing unless you choose a maintenance retainer. We size the vendor costs for your actual booking volume during scoping so there are no surprises after launch.",
   },
   {
     category: 'pricing',
-    question: 'Can we start with just WhatsApp booking and add the reminder sequence and Razorpay later?',
-    answer: "Yes, modular expansion is standard. Start with the WhatsApp Booking AI, run it for 4–6 weeks to establish baseline metrics, then add the multi-reminder sequence to reduce no-shows, and Razorpay deposit collection to improve show rate further. Each module is priced at the incremental cost of the addition. Most clients expand to the full reminder + payment module within 60 days of the initial deployment.",
+    question: 'Can we start with just text booking and add the reminder sequence and deposits later?',
+    answer: "Yes, modular expansion is standard. Start with the Text & Email Booking AI, run it for 4–6 weeks to establish baseline metrics, then add the multi-step reminder sequence to reduce no-shows, and deposit collection to improve show rate further. Each module is priced at the incremental cost of the addition. Most clients expand to the full reminder plus payment module within 60 days of the initial deployment.",
   },
   {
     category: 'pricing',
     question: 'Can we pilot the scheduling AI before committing to the full build?',
-    answer: "Yes. For businesses wanting validation before committing, we offer a 2-week pilot: a WhatsApp booking flow for one service type deployed to your live WhatsApp number. The pilot is offered at a fixed price, credited against the full project. Seeing real customer booking conversations and the calendar entries they generate is typically the fastest way to build internal confidence in the ROI.",
+    answer: "Yes. For businesses wanting validation before committing, we offer a 2-week pilot: a text booking flow for one service type deployed to your live business number. The pilot is offered at a fixed price, credited against the full project. Seeing real customer booking conversations and the calendar entries they generate is typically the fastest way to build internal confidence in the ROI.",
   },
 ];
 
@@ -467,28 +482,28 @@ const faqSchema = {
   })),
 };
 
-export default function AISchedulingAgentINPage() {
+export default function AISchedulingAgentUSPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="ai-scheduling-agent-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script id="ai-scheduling-agent-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="ai-scheduling-agent-us-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="ai-scheduling-agent-us-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader
-        locale="in"
+        locale="us"
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
+        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
       />
 
       <BreadcrumbSchema
@@ -509,15 +524,15 @@ export default function AISchedulingAgentINPage() {
         ]} />
 
         <Hero
-        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_scheduling_agent_hero" />}
-          eyebrow="AI SCHEDULING AGENT · INDIA"
-          headline="AI That Books Site Visits, Demos, and Clinic Appointments on WhatsApp, 24/7 in Hindi"
-          lead="AI scheduling agents that check availability, book slots to Google Calendar, collect Razorpay deposits, and send WhatsApp reminders: all from a single customer message on WhatsApp, in Hindi or English. No coordinator needed. Fixed price."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+        formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_scheduling_agent_hero" />}
+          eyebrow="AI SCHEDULING AGENT · USA"
+          headline="AI That Books Demos, Showings, and Clinic Appointments by Text and Email, 24/7"
+          lead="AI scheduling agents that check availability, write the slot to Google Calendar or Outlook, send the calendar invite, collect a card deposit where you need one, and run the reminder sequence: all from one customer message, in English or Spanish, in the right time zone. No coordinator needed. Fixed price."
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'us' as const }}
           trustItems={[
             '500+ businesses served',
-            'WhatsApp + Google Calendar + Zoho',
-            'Hindi & English booking flows',
+            'Google Calendar + Outlook + Calendly',
+            'English & Spanish booking flows',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -529,9 +544,9 @@ export default function AISchedulingAgentINPage() {
               </p>
               <div className="mt-6 space-y-3">
                 {[
-                  'Customer: "Sunday ke liye site visit book karna hai" → AI checks availability → books slot → sends WhatsApp confirmation',
-                  'Clinic patient asks for Dr. Mehta appointment → AI checks schedule → offers 3 slots → patient picks → confirmed to calendar',
-                  'No-show reminder: 24hr WhatsApp sent to 8 patients → 6 confirmed attendance → no-show rate down 40%',
+                  'Customer texts "any chance you can come out Saturday?" → AI checks the crew calendar → books the window → texts back a confirmation and a calendar invite',
+                  'Patient asks for a Dr. Reyes appointment → AI checks the schedule → offers 3 slots in the patient\'s own time zone → patient picks → written to the calendar',
+                  'No-show prevention: 24hr reminder texted to 8 patients → 6 confirm, 1 reschedules into an open slot → no-show rate down 40%',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -542,33 +557,33 @@ export default function AISchedulingAgentINPage() {
                 ))}
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">Books appointments 24/7. Syncs to Google Calendar. Reminds via WhatsApp. Runs itself.</p>
+                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">Books appointments 24/7. Syncs to Google Calendar and Outlook. Reminds by text and email. Runs itself.</p>
               </div>
             </div>
           }
         />
 
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
 
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. One goal: your results."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
         />
 
         <ServiceExplanation
           eyebrow="AI SCHEDULING EXPLAINED"
-          headline="Why AI Scheduling Is Different From Calendly or a WhatsApp Receptionist"
-          lead="Calendly and Zoho Bookings require customers to visit a URL, fill a form, and pick a slot. Most Indian customers message your WhatsApp instead. An AI scheduling agent meets them there, in Hindi, in conversation, with your live calendar."
+          headline="Why AI Scheduling Is Different From Calendly or a Front-Desk Coordinator"
+          lead="Calendly and Acuity require the customer to open a URL, fill a form, and pick a slot. Plenty of people never finish that. They text, they call, they email. An AI scheduling agent meets them in those channels, in conversation, against your live calendar."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
-                {['WhatsApp booking', 'Hindi scheduling', 'Google Calendar', 'Zoho Bookings', 'Razorpay deposit', 'Reminders', 'Multi-doctor', 'Rescheduling'].map((cap) => (
+                {['SMS booking', 'Spanish scheduling', 'Google Calendar', 'Outlook & Microsoft 365', 'Card deposits', 'Reminders', 'Multi-provider', 'Rescheduling'].map((cap) => (
                   <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
                 ))}
               </div>
               <p>
-                The scheduling friction for most Indian businesses happens on WhatsApp, customers ask for an appointment, the coordinator checks the calendar, messages back 2–3 times to confirm, and eventually books manually. This takes 15–20 minutes per booking and breaks down entirely outside business hours. An AI scheduling agent compresses this to 60 seconds, 24/7, without any human involved.
+                The scheduling friction for most US businesses happens in the gap between the request and the confirmation. A customer texts or calls asking for an appointment, the coordinator checks the calendar, plays phone tag or messages back 2–3 times to settle on a time, and eventually books it by hand. That is 15–20 minutes per booking, and it stops entirely at 5 PM local, which is 2 PM for a third of the country. An AI scheduling agent compresses it to 60 seconds, 24/7, without a human in the loop.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -588,7 +603,7 @@ export default function AISchedulingAgentINPage() {
                 </p>
               </div>
               <p>
-                FactoryJet AI scheduling agents connect to your WhatsApp Business API, Google Calendar or Zoho Bookings, CRM, and Razorpay. The booking conversation happens naturally in the customer's preferred language. The calendar entry, CRM update, Razorpay deposit, and reminder sequence happen automatically, no coordinator, no back-and-forth, no missed appointments.
+                FactoryJet AI scheduling agents connect to your texting number and inbox, Google Calendar or Outlook, your booking system, your CRM, and your payment processor. The booking conversation happens naturally in English or Spanish. The calendar entry, the invite, the CRM update, the deposit, and the reminder sequence all happen on their own: no coordinator, no back-and-forth, no missed appointments.
               </p>
             </>
           }
@@ -599,10 +614,10 @@ export default function AISchedulingAgentINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { scenario: 'Customer asks for appointment on WhatsApp', manual: 'Coordinator checks calendar, replies, customer picks, confirms manually, 15–20 min', ai: 'AI checks availability, offers slots, books, sends confirmation, 60 seconds' },
-                  { scenario: 'Appointment request at 11 PM on Sunday', manual: 'No response until Monday morning, customer may book elsewhere', ai: 'AI books the appointment immediately, calendar updated, confirmation sent' },
-                  { scenario: 'Customer wants to reschedule', manual: 'Coordinator back-and-forth, manual calendar update, 10 min', ai: 'AI rescheduling conversation, calendar updated, new confirmation sent, 90 sec' },
-                  { scenario: 'Reminder for tomorrow\'s appointments', manual: 'Coordinator manually messages each patient/customer, 30 min daily', ai: 'AI sends 24hr WhatsApp reminder automatically to all appointments' },
+                  { scenario: 'Customer texts asking for an appointment', manual: 'Coordinator checks calendar, replies, customer picks, confirms by hand, 15–20 min', ai: 'AI checks availability, offers slots, books, sends confirmation and invite, 60 seconds' },
+                  { scenario: 'Request lands at 11 PM Pacific on a Sunday', manual: 'No response until Monday, and by then they have called a competitor', ai: 'AI books it immediately, calendar updated, confirmation sent' },
+                  { scenario: 'Customer in a different time zone from the location', manual: 'Coordinator does the math in their head, sometimes wrong, both parties show up an hour apart', ai: 'AI shows the customer their time zone, stores the location time zone, invite carries the right offset' },
+                  { scenario: 'Reminders for tomorrow\'s appointments', manual: 'Coordinator messages each customer by hand, 30 min daily', ai: 'AI texts and emails the 24hr reminder automatically, with opt-out handled' },
                 ].map((row) => (
                   <div key={row.scenario} className="px-7 py-4">
                     <p className="font-fj-mono font-semibold text-fj-ink" style={{ fontSize: '0.75rem', letterSpacing: '0.04em' }}>{row.scenario}</p>
@@ -626,29 +641,29 @@ export default function AISchedulingAgentINPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your coordinators are spending 3 hours a day on appointment management that should take zero"
-          lead="Manual scheduling on WhatsApp is one of the most expensive hidden costs in Indian businesses. It requires constant attention, has high error rates, stops outside business hours, and creates a poor customer experience. AI scheduling eliminates it entirely."
+          lead="Manual scheduling is one of the most expensive hidden costs in a US small business. It needs constant attention, has a high error rate, stops dead outside office hours, and gives the customer a worse experience than a competitor who answers instantly. AI scheduling removes it."
           pillars={[
             {
               icon: '📅',
               title: 'Manual scheduling bleeds 3 hours a day',
-              body: "The average Indian SMB with 20–50 appointments per day spends 2–4 hours of coordinator or front-desk time daily on scheduling: checking calendars, responding to WhatsApp booking requests, sending confirmations, managing reschedules, and manually following up for reminders. This is 100% addressable by AI, none of it requires human judgment once the system is built.",
+              body: "A business running 20–50 appointments per day spends 2–4 hours of coordinator or front-desk time daily on scheduling: checking calendars, returning booking calls and texts, sending confirmations, handling reschedules, and chasing reminders by hand. Almost none of it needs human judgment once the system is built, which is exactly what makes it a good candidate for automation.",
             },
             {
               icon: '🌙',
-              title: 'You are losing appointments booked outside business hours',
-              body: "35–40% of appointment requests in India arrive outside 9 AM–6 PM, evenings, weekends, and festival days when coordinators are offline. These leads either book with a competitor who responds first, or are followed up too late. An AI scheduling agent books 24/7, including at 11 PM on Diwali, and the appointment is confirmed to your calendar before your team arrives the next morning.",
+              title: 'You are losing the appointments people try to book after hours',
+              body: "A large share of appointment requests arrive outside 9 to 5, in the evening, on weekends, and from customers three time zones away who are still at their desk when your office has closed. Those requests either go to whoever answers first or get followed up too late to matter. An AI scheduling agent books at 11 PM on a Sunday, and the appointment is on your calendar before your team gets in.",
             },
             {
               icon: '🚫',
               title: 'No-shows are costing you revenue every day',
-              body: "The average Indian business sees 20–35% no-show rates on appointments booked via manual WhatsApp coordination. Most of these are recoverable with a well-timed reminder sequence. An AI scheduling agent with a 24-hour WhatsApp reminder + 1-hour WhatsApp reminder consistently reduces no-show rates to 10–15%, recovering significant revenue from slots that would otherwise be wasted.",
+              body: "No-show rates on manually coordinated appointments run high, and most of those are recoverable with a well-timed reminder. An AI scheduling agent that texts 24 hours out and again an hour before, with an easy one-tap reschedule instead of a dead end, consistently pulls no-show rates down in our deployments and recovers revenue from slots that would otherwise sit empty.",
             },
           ]}
         />
 
         <ServiceJourneyRow
           eyebrow="HOW WE BUILD"
-          headline="From booking flow design to live WhatsApp appointments in 1–4 weeks"
+          headline="From booking flow design to live appointments in 1–4 weeks"
           stages={SCHEDULING_JOURNEY_STAGES}
           closingNote="We run 100+ test bookings before your customers see the AI. You validate the conversation flow and calendar accuracy, we fix any edge cases before go-live."
         />
@@ -661,7 +676,7 @@ export default function AISchedulingAgentINPage() {
           body={
             <>
               <p>
-                Every AI scheduling agent has five layers: a conversational AI for the booking dialogue (Claude or GPT-4o), a calendar integration layer (Google Calendar, Zoho Bookings, or custom), a WhatsApp delivery layer (Interakt, Wati, or AiSensy), a reminder orchestration layer, and a CRM sync layer (Zoho CRM, LeadSquared). We design the handoffs between layers to be reliable, with error recovery at each step so a failed API call never results in a missed booking.
+                Every AI scheduling agent has five layers: a conversational AI for the booking dialogue (Claude or GPT-4o), a calendar integration layer (Google Calendar, Outlook and Microsoft 365, Calendly, or your own booking system), a message delivery layer (Twilio, MessageBird, or your existing business texting provider), a reminder orchestration layer, and a CRM sync layer (HubSpot, Salesforce, Pipedrive). We design the handoffs between layers to be reliable, with error recovery at each step so a failed API call never results in a missed booking.
               </p>
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white" aria-hidden>
                 <table className="w-full text-left">
@@ -674,11 +689,11 @@ export default function AISchedulingAgentINPage() {
                   <tbody className="divide-y divide-fj-neutral-100">
                     {[
                       { layer: 'Conversational AI', tools: 'Claude, GPT-4o, Gemini' },
-                      { layer: 'WhatsApp Delivery', tools: 'Interakt, Wati, AiSensy' },
-                      { layer: 'Calendar / Booking', tools: 'Google Calendar, Zoho Bookings, Calendly, custom' },
-                      { layer: 'CRM Sync', tools: 'Zoho CRM, LeadSquared, Freshsales, HubSpot' },
-                      { layer: 'Payment Collection', tools: 'Razorpay (deposit + refund workflows)' },
-                      { layer: 'Reminder Orchestration', tools: 'n8n, custom scheduler with WhatsApp API' },
+                      { layer: 'Message Delivery', tools: 'Twilio, MessageBird, transactional email, WhatsApp Business API where your customers use it' },
+                      { layer: 'Calendar / Booking', tools: 'Google Calendar, Outlook & Microsoft 365, Calendly, Acuity, custom' },
+                      { layer: 'CRM Sync', tools: 'HubSpot, Salesforce, Pipedrive, Zoho CRM' },
+                      { layer: 'Payment Collection', tools: 'Your processor (deposit + refund workflows)' },
+                      { layer: 'Reminder Orchestration', tools: 'n8n, custom scheduler with SMS and email APIs' },
                       { layer: 'Analytics', tools: 'Custom dashboard, Google Sheets export' },
                     ].map((row) => (
                       <tr key={row.layer}>
@@ -698,11 +713,11 @@ export default function AISchedulingAgentINPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { name: 'Clinic & Healthcare Booking', desc: 'Multi-doctor appointment booking on WhatsApp | specialty routing, Hindi/English, Razorpay fees, DPDP-compliant data handling.' },
-                  { name: 'Real Estate Site Visit Booking', desc: 'Lead-to-site-visit automation from 99acres, Facebook, and WhatsApp | slot booking, CRM update, pre-visit WhatsApp with location.' },
-                  { name: 'Demo & Counsellor Call Booking', desc: 'EdTech and B2B demo booking | qualification questions, counsellor routing, Zoom link, multi-step reminder sequence.' },
-                  { name: 'Test Drive & Showroom Booking', desc: 'Automotive appointment booking from lead ads | model preference, showroom routing, date/time confirmation, 24hr reminder.' },
-                  { name: 'Service & Consultation Booking', desc: 'Professional services booking (CA, lawyer, advisor, salon) | service selection, deposit collection, multi-reminder, post-visit review request.' },
+                  { name: 'Clinic & Healthcare Booking', desc: 'Multi-provider appointment booking by text and web chat | specialty routing, English/Spanish, copay collection, HIPAA-aware message design.' },
+                  { name: 'Real Estate Showing Booking', desc: 'Lead-to-showing automation from Zillow, Realtor.com, and paid social | slot booking, CRM update, pre-visit text with the address and access notes.' },
+                  { name: 'Demo & Advisor Call Booking', desc: 'B2B and education demo booking | qualification questions, rep routing, Zoom or Teams link, multi-step reminder sequence.' },
+                  { name: 'Test Drive & Showroom Booking', desc: 'Automotive appointment booking from lead ads | model preference, store routing, date and time confirmation, 24hr reminder.' },
+                  { name: 'Service & Consultation Booking', desc: 'Professional and home services booking (CPA, attorney, advisor, HVAC) | service selection, deposit collection, multi-reminder, post-visit review request.' },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
                     <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.name}</p>
@@ -735,11 +750,11 @@ export default function AISchedulingAgentINPage() {
         </section>
 
         <CityContextSection
-          eyebrow="INDIA SCHEDULING AI MARKET"
-          headline="500M WhatsApp users who prefer to book appointments by messaging, not by clicking a link."
+          eyebrow="US SCHEDULING AI MARKET"
+          headline="A country four time zones wide, where the person booking is rarely in the same one as the person taking the booking."
           leadParagraphs={[
-            "The Indian customer journey for booking appointments is fundamentally different from the Western model. Indian customers do not fill out booking forms, they message. Real estate buyers message before visiting, patients message before booking, students message before enrolling. Businesses that respond to these messages with a fast, frictionless booking flow win; those that ask customers to 'click the link and fill the form' lose them.",
-            "FactoryJet AI scheduling agents are built for the Indian WhatsApp-first booking behaviour, natural conversation in Hindi or English, live calendar check, instant confirmation, automated reminders. For businesses in healthcare, real estate, EdTech, automotive, and professional services, where appointment volume drives revenue directly, AI scheduling is one of the highest-ROI technology investments available.",
+            "US scheduling has a specific shape. Your customer texts instead of filling out a form. They do it at 9 PM their time, which may be midnight yours. Half of them are in a different time zone from the location they are booking, and twice a year the whole country moves its clocks except Arizona and Hawaii. Businesses that answer instantly and get the hour right win the appointment. Businesses that reply Monday morning with 'what time works for you?' lose it to whoever answered first.",
+            "FactoryJet AI scheduling agents are built for that reality: a natural conversation over text, email, or web chat in English or Spanish, a live calendar check, an instant confirmation with a calendar invite carrying the correct offset, and a reminder sequence that respects consent and opt-out. For healthcare, real estate, home services, automotive, and professional services, where appointment volume is revenue, scheduling is usually the first thing worth automating.",
           ]}
           bodySlot={
             <>
@@ -749,7 +764,7 @@ export default function AISchedulingAgentINPage() {
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
-                {['Healthcare & Clinics', 'Real Estate', 'EdTech', 'Automotive', 'Professional Services', 'Beauty & Wellness'].map((ind) => (
+                {['Healthcare & Clinics', 'Real Estate', 'Education & Training', 'Automotive', 'Professional Services', 'Home Services'].map((ind) => (
                   <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
                 ))}
               </div>
@@ -760,17 +775,17 @@ export default function AISchedulingAgentINPage() {
 
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Manual WhatsApp vs. Calendly vs. Receptionist"
-          lead="Fixed price, WhatsApp-native, Hindi-speaking scheduling AI: the honest comparison."
-          pullQuote={{ stat: 'Fixed price', caption: 'AI scheduling agent that books appointments on WhatsApp in Hindi and English, syncs to Google Calendar, sends WhatsApp confirmations and reminders, and reduces no-shows by 40%. No monthly fee to FactoryJet.' }}
+          headline="FactoryJet vs. Manual Booking vs. Calendly vs. a Receptionist"
+          lead="Fixed price, text-native, English and Spanish scheduling AI: the honest comparison."
+          pullQuote={{ stat: 'Fixed price', caption: 'An AI scheduling agent that books by text and email in English and Spanish, syncs two ways with Google Calendar and Outlook, sends confirmations, invites and reminders, and cuts no-shows. No monthly fee to FactoryJet.' }}
           columns={SCHEDULING_COMPARISON_COLUMNS}
           rows={SCHEDULING_COMPARISON_ROWS}
-          footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="We quote a fixed price after a scoping call. Comparison reflects the typical shape of each option, not a quote from any named vendor."
         />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
-          headline="AI scheduling agents for every appointment-driven Indian business"
+          headline="AI scheduling agents for every appointment-driven US business"
           lead="Every industry has different booking flows, calendar systems, and compliance requirements. We build for yours."
           sectors={SCHEDULING_INDUSTRIES}
         />
@@ -779,13 +794,13 @@ export default function AISchedulingAgentINPage() {
         <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian founders say about working with FactoryJet"
+          headline="What founders say about working with FactoryJet"
         />
 
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Automate Appointment Booking"
-          lead="The questions we answer on every Indian AI scheduling discovery call, answered honestly, with real use case examples."
+          lead="The questions we answer on every AI scheduling discovery call, answered honestly, with real use case examples."
           categories={SCHEDULING_FAQ_CATEGORIES}
           items={SCHEDULING_FAQ_ITEMS}
         />
@@ -796,15 +811,15 @@ export default function AISchedulingAgentINPage() {
             eyebrow="GET STARTED"
             headline="Book a Free AI Scheduling Strategy Call"
             sub="Tell us your appointment volume, how customers currently book, and your biggest scheduling friction. We will map out exactly how an AI scheduling agent reduces that friction and give you a fixed-price estimate before writing a single line of code."
-            primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
-            objectionHandler="Fixed price. Full code ownership. WhatsApp + Google Calendar + Zoho + Razorpay ready. 500+ businesses served."
+            primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+            secondaryCta={{ label: 'See AI Agent Services', href: '/services/ai-agent-development' }}
+            objectionHandler="Fixed price after a scoping call. Full code ownership. SMS + email + Google Calendar + Outlook ready. 500+ businesses served."
           />
         </div>
 
       </main>
 
-      <SiteFooter locale="in" />
+      <SiteFooter locale="us" />
     </>
   );
 }
