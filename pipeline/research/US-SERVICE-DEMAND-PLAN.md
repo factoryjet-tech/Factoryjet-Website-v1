@@ -110,9 +110,34 @@ the use-case framing is not.**
 ## 4. The plan (zero ad budget, ~53 referring domains)
 
 ### Tier 1 — pages that already exist, worth the most, we rank nowhere
-1. **`/services/website-redesign`** for `website redesign services` (8,100/mo, KD 29,
-   zero directories). The single biggest winnable US term on the board. Bigger than the
-   entire AI agent category.
+
+> ❌ **ITEM 1 RETRACTED 2026-08-17.** `website redesign services` is **not winnable** and
+> should not be built for. The original reasoning was "8,100/mo, KD 29, zero directories in
+> the top 10". The directory count was a bad proxy: no directories does not mean winnable,
+> it means the incumbents are strong agencies rather than aggregators. Measured properly:
+>
+> | Term | Weakest incumbent (ref domains) | Median | Us |
+> |---|---:|---:|---:|
+> | `website redesign services` | **191** | ~1,200 | **63** |
+> | `website redesign company` | 127 | 2,221 | 63 |
+> | `affordable web design company` | 122 | 361 | 63 |
+> | `cheap web design company` | 22 (subdomain of a large parent) | 1,248 | 63 |
+>
+> The weakest page on page one has ~3x our referring domains and ranks 9th. The whole
+> cluster is authority-gated at every level, **including the qualifier layer** that works
+> elsewhere on this site.
+>
+> Contrast: `theaiautomationagency.ai` outranks us for `ai automation agency` (4,400/mo)
+> on **38** referring domains. Same site, same 63 domains, opposite outcome. **Winnability
+> is set by the incumbents' authority, not by volume, KD, or directory count.**
+>
+> **Rule going forward: measure the top 10's referring domains before committing to any
+> term.** KD and directory counts are not sufficient.
+>
+> Web design stays a service we sell. It is not a channel we can win organically at current
+> authority.
+
+1. ~~`/services/website-redesign` for `website redesign services`~~ — see retraction above.
 2. **`/services/ai-automation`** for `ai automation agency` (4,400/mo, KD 19, top 10 is
    Reddit plus unknown shops). Already the best engagement signal on the site
    (306s average in GA4).
