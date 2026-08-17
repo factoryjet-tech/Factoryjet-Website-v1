@@ -345,60 +345,6 @@ const CHATBOT_INDUSTRIES = [
   },
 ];
 
-const CHATBOT_PRICING_TIERS = [
-  {
-    name: 'Website Chatbot',
-    priceRange: '',
-    description:
-      'A focused AI chatbot for your website, captures leads, answers FAQs, books appointments, and qualifies visitors 24/7.',
-    features: [
-      'AI-powered website chat widget (no scripted decision tree)',
-      'Lead capture with CRM push (HubSpot, Salesforce, or Google Sheets)',
-      'FAQ knowledge base, trained on your product/service content',
-      'Appointment booking with calendar integration',
-      'Human handoff trigger when confidence is low',
-      'Claude, GPT-4o, or Gemini as the underlying model',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Support & Sales Chatbot Agent',
-    priceRange: '',
-    description:
-      'A production-grade chatbot agent across website chat, SMS and email, integrated with your CRM, store, and support desk. Our most popular US deployment.',
-    features: [
-      'Website chat plus SMS and email (Twilio and SendGrid)',
-      'HubSpot / Salesforce / Zendesk / Shopify / ShipStation integration',
-      'Order status, returns, and product query handling',
-      'Lead qualification and demo booking flow',
-      'English + Spanish support with automatic detection',
-      'Human escalation path with context handover',
-      'Stripe payment link sending from chat',
-      '30-day post-launch support',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Multi-Channel Chatbot Platform',
-    priceRange: '',
-    description:
-      'Website, phone, SMS, email and support-portal agents with a unified inbox, analytics dashboard, and deep ERP/CRM integration for growing US businesses.',
-    features: [
-      'Website chat + phone/SMS + Zendesk or HubSpot Service Hub in one platform',
-      'Unified conversation inbox with agent workspace',
-      'Deep HubSpot / Salesforce / NetSuite / Shopify / Stripe integration',
-      'Custom analytics dashboard, conversation volume, deflection, CSAT',
-      'English and Spanish auto-detection across all channels',
-      'Role-based admin access for your support team',
-      'Optional WhatsApp Business channel for customers who prefer it',
-      '90-day post-launch support and optimization window',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const CHATBOT_FAQ_CATEGORIES = [
   { key: 'basics',     label: 'Chatbot Basics' },
   { key: 'channels',   label: 'Channels & Deployment' },

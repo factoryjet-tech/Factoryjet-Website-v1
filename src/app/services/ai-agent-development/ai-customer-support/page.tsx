@@ -297,61 +297,6 @@ const SUPPORT_INDUSTRIES = [
   },
 ];
 
-const SUPPORT_PRICING_TIERS = [
-  {
-    name: 'Single-Channel Support Agent',
-    priceRange: '',
-    description: 'A focused AI customer support agent on one channel (email or website chat), handling order status, FAQs, and returns with live Shopify and carrier data.',
-    features: [
-      'Website chat widget or shared support inbox deployment',
-      'Shopify / WooCommerce order status integration',
-      'ShipStation / UPS / FedEx tracking lookup',
-      'FAQ knowledge base from your content',
-      'English + Spanish language support',
-      'Human escalation with full context handover',
-      'Stripe payment status lookup',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Multi-Channel Support Platform',
-    priceRange: '',
-    description: 'Email, website chat and SMS support unified with the helpdesk you already run, plus analytics and escalation routing.',
-    features: [
-      'Email + website chat + SMS in one unified queue',
-      'Zendesk / Intercom / Freshdesk / HubSpot ticket creation and update',
-      'Invoice and receipt retrieval from QuickBooks or NetSuite',
-      'Return and exchange processing flow',
-      'English + Spanish',
-      'CSAT collection and reporting',
-      'AI response accuracy dashboard',
-      'Escalation routing by query type',
-      'WhatsApp available as an optional extra channel',
-      '30-day post-launch support + optimization',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise Support Automation Suite',
-    priceRange: '',
-    description: 'Full multi-channel support automation for high-volume US businesses with deep ERP integration.',
-    features: [
-      'Email + website chat + SMS + customer portal in one queue',
-      'Deep NetSuite / QuickBooks / Shopify / ERP integration',
-      'AI ticket classification, routing, and priority scoring',
-      'Multi-language support (English, Spanish, and more)',
-      'Custom CSAT and SLA tracking dashboard',
-      'Proactive support triggers (shipment delayed, payment failed)',
-      'Role-based agent workspace',
-      'CCPA-aware data handling documentation',
-      '90-day post-launch support + quarterly knowledge base updates',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const SUPPORT_FAQ_CATEGORIES = [
   { key: 'basics', label: 'Support AI Basics' },
   { key: 'channels', label: 'Channels & Helpdesk' },

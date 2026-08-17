@@ -292,56 +292,6 @@ const WORKFLOW_INDUSTRIES = [
   },
 ];
 
-const WORKFLOW_PRICING_TIERS = [
-  {
-    name: 'Workflow Starter',
-    priceRange: '',
-    description: 'A focused two-system automation that eliminates your single biggest manual repetition.',
-    features: [
-      '2-system integration (e.g., HubSpot + Slack)',
-      'Trigger-based workflow (form submit, order placed, lead created)',
-      'AI data transformation or classification',
-      'Error alerting and retry logic',
-      'Audit log for every run',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Multi-System Workflow Platform',
-    priceRange: '',
-    description: '5–10 connected tools in a unified automation platform: your operations on autopilot.',
-    features: [
-      '5–10 system integrations',
-      'Multi-step workflow chains with AI decision logic',
-      'HubSpot + QuickBooks + Stripe + Slack + Shopify ready',
-      'Invoice generation and dispatch',
-      'Duplicate detection and data validation',
-      'Custom admin dashboard to monitor workflow runs',
-      'Error recovery and alert routing',
-      '30-day post-launch support',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Full Business Automation Suite',
-    priceRange: '',
-    description: 'End-to-end automation across sales, operations, finance, and support for scaling US businesses.',
-    features: [
-      'System integrations scoped per project brief',
-      'AI document processing (invoices, contracts, vendor forms)',
-      'Full sales pipeline automation (lead → close → invoice)',
-      'Operations automation (order → fulfillment → accounting)',
-      'Support ticket automation with AI routing',
-      'Multi-branch or multi-location support',
-      'Real-time operations dashboard',
-      '90-day post-launch support + optimization',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const WORKFLOW_FAQ_CATEGORIES = [
   { key: 'basics', label: 'Automation Basics' },
   { key: 'tools', label: 'Tools & Integrations' },

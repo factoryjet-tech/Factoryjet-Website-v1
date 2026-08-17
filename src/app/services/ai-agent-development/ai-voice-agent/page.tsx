@@ -292,62 +292,6 @@ const VOICE_INDUSTRIES = [
   },
 ];
 
-const VOICE_PRICING_TIERS = [
-  {
-    name: 'Outbound Voice AI',
-    priceRange: '',
-    description: 'A focused AI calling agent for one outbound use case, lead qualification or appointment booking.',
-    features: [
-      'One outbound calling flow (qualification or booking)',
-      'English and Spanish support',
-      'HubSpot, Salesforce, or Google Sheets update on call completion',
-      'US telephony setup (Twilio, Telnyx, or Vonage) with registered caller ID',
-      'National Do Not Call Registry and internal do-not-call scrubbing',
-      'Calling windows enforced in the lead\'s local time zone',
-      'Real-time call transcript logging',
-      'Human handoff trigger',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Full Voice AI Platform',
-    priceRange: '',
-    description: 'Inbound + outbound voice AI with deep CRM integration, analytics, and multi-flow support.',
-    features: [
-      'Inbound and outbound calling flows',
-      'English and Spanish, with dialect and voice selection',
-      'HubSpot or Salesforce full integration (create, update, log)',
-      'Google Calendar or Calendly appointment booking',
-      'Call recording, transcript, and sentiment analysis',
-      'Performance dashboard (answer rate, qualification rate, booking rate)',
-      'Multi-campaign support (qualification + booking + follow-up)',
-      'Consent and opt-out records written back to your CRM',
-      'Human handoff with live context transfer',
-      '30-day post-launch support',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise Voice AI',
-    priceRange: '',
-    description: 'Multi-campaign voice AI with full telephony infrastructure for high-volume businesses.',
-    features: [
-      'Calling flows & campaigns scoped per project brief',
-      'Languages beyond English and Spanish where you have real demand',
-      'Full telephony infrastructure setup (SIP trunk, number provisioning, STIR/SHAKEN attestation)',
-      'State-by-state call recording disclosure handling',
-      'Real-time supervisor monitoring and agent override',
-      'Advanced analytics: call drop rate, sentiment trends, conversion funnel',
-      'API access for custom CRM integrations',
-      'Dedicated infrastructure (no shared cloud)',
-      '90-day post-launch support + quarterly model updates',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const VOICE_FAQ_CATEGORIES = [
   { key: 'basics', label: 'Voice AI Basics' },
   { key: 'language', label: 'English & Spanish' },

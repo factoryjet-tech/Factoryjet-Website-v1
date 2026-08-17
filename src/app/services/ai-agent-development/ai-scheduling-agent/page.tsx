@@ -292,60 +292,6 @@ const SCHEDULING_INDUSTRIES = [
   },
 ];
 
-const SCHEDULING_PRICING_TIERS = [
-  {
-    name: 'Text & Email Booking AI',
-    priceRange: '',
-    description: 'A focused AI appointment booking agent on SMS, email, and web chat: single service type, single calendar, with confirmation and reminder messages.',
-    features: [
-      'SMS, email, and website chat booking flow',
-      'Single service type and calendar',
-      'Real-time availability check (Google Calendar or Outlook)',
-      'English + Spanish language support',
-      'Booking confirmation by text with a calendar invite attached',
-      '24-hour and 1-hour reminders with TCPA opt-out handling',
-      'Rescheduling and cancellation handling',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Multi-Resource Scheduling Platform',
-    priceRange: '',
-    description: 'Multi-staff, multi-service scheduling with CRM sync, reminders, and no-show reduction flows.',
-    features: [
-      'Multiple staff members / resources',
-      'Multiple service types with custom durations',
-      'HubSpot / Salesforce sync on every booking',
-      'Card deposit collected at time of booking',
-      'Round-robin or rule-based staff routing',
-      'Multi-step reminder sequence (24hr, 1hr, post-visit)',
-      'Rescheduling and cancellation with slot release',
-      'Booking analytics dashboard',
-      '30-day post-launch support + optimisation',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise Scheduling Suite',
-    priceRange: '',
-    description: 'Multi-location, multi-time-zone scheduling for high-volume US businesses with full CRM and payment integration.',
-    features: [
-      'Multi-location, multi-branch scheduling',
-      'Multi-time-zone booking with correct daylight saving handling',
-      'Full CRM, EHR, or PMS integration',
-      'Full payment collection and refunds through your processor',
-      'AI waitlist management (auto-fills cancellations)',
-      'Custom booking rules per service and location',
-      'Advanced no-show analytics and recovery flows',
-      'API access for custom CRM and ERP integration',
-      '90-day post-launch support + quarterly optimisation',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const SCHEDULING_FAQ_CATEGORIES = [
   { key: 'basics', label: 'Scheduling AI Basics' },
   { key: 'channels', label: 'Channels & Reminders' },

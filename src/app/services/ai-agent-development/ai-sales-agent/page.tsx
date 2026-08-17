@@ -153,55 +153,6 @@ const SALES_INDUSTRIES = [
   { name: 'Healthcare & Diagnostics', description: 'Patient intake AI that answers questions, checks provider availability, books appointments, collects insurance details, and sends confirmation with location and prep instructions automatically. Built to respect HIPAA rules on protected health information.', example: 'Front desks spend far less of the day on scheduling calls.' },
 ];
 
-const SALES_PRICING_TIERS = [
-  {
-    name: 'Lead Qualification AI',
-    priceRange: '',
-    description: 'A focused AI sales agent that answers inbound leads within seconds, qualifies them, pushes qualified prospects to your CRM, and follows up automatically.',
-    features: [
-      'Inbound lead qualification flow across email, web form, and SMS (custom to your product/service)',
-      'HubSpot, Salesforce or Pipedrive integration, qualified leads pushed automatically',
-      'Lead scoring based on your criteria (budget, timeline, fit)',
-      'English and Spanish conversations',
-      'Re-engagement sequences for leads that go quiet',
-      'Conversation log and lead summary in CRM',
-      '14-day post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Full Sales AI Platform',
-    priceRange: '',
-    description: 'Multi-source lead capture, intelligent qualification, automated meeting booking, and follow-up sequences: all integrated with your CRM and calendar.',
-    features: [
-      'Multi-source lead capture: Facebook and Google lead ads + website forms + inbound email',
-      'HubSpot / Salesforce / Pipedrive deep integration',
-      'Automated meeting booking with Google Calendar, Outlook or Calendly',
-      'Follow-up sequences for cold leads (24hr, 3-day, 7-day)',
-      'Lead scoring dashboard with conversion analytics',
-      'Stripe payment link sending for high-ticket closings',
-      '30-day post-launch support and conversion optimization',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise Sales AI',
-    priceRange: '',
-    description: 'A full AI-powered sales pipeline, from multi-channel lead capture to deal closing support, with custom CRM workflows and analytics.',
-    features: [
-      'All channels: email, phone, SMS, website, Facebook, Instagram, and WhatsApp where your buyers use it',
-      'Multi-tier qualification with dynamic scoring models',
-      'Custom CRM workflows (HubSpot, Salesforce, Microsoft Dynamics)',
-      'Territory and team routing logic',
-      'AI-generated call briefs for sales reps before every meeting',
-      'Real-time sales pipeline analytics dashboard',
-      '90-day post-launch optimization window',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const SALES_FAQ_CATEGORIES = [
   { key: 'basics',  label: 'AI Sales Basics' },
   { key: 'leads',   label: 'Lead Handling' },

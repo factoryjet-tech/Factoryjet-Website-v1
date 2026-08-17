@@ -341,65 +341,6 @@ const MARKETING_INDUSTRIES = [
   },
 ];
 
-const MARKETING_PRICING_TIERS = [
-  {
-    name: 'Content AI Starter',
-    priceRange: '',
-    description:
-      'AI-powered content generation for social and email, always-on marketing without the agency retainer.',
-    features: [
-      'AI social media content calendar (30 posts/month)',
-      'Email campaign copy generation',
-      'Brand voice setup',
-      'Seasonal campaign briefs (US retail calendar pre-loaded)',
-      'Instagram + Facebook post scheduling',
-      'Monthly performance report',
-      '3 months post-launch support',
-    ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
-  },
-  {
-    name: 'Full Marketing AI Platform',
-    priceRange: '',
-    description:
-      'Email + SMS + social + ad optimization: your full marketing stack on autopilot.',
-    features: [
-      'Everything in Content AI Starter',
-      'Lifecycle email automation (welcome, cart, winback)',
-      'SMS campaigns with consent and opt-out handling',
-      'CRM audience segmentation (RFM, region, lifecycle stage)',
-      'Seasonal campaign automation (Black Friday, holiday, back to school)',
-      'Google Ads + Meta Ads optimization signals',
-      'English and Spanish content generation',
-      'Human approval workflow',
-      'Campaign A/B testing engine',
-      'Revenue attribution dashboard',
-      '6 months post-launch support',
-    ],
-    cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
-    popular: true,
-  },
-  {
-    name: 'Enterprise Marketing AI',
-    priceRange: '',
-    description:
-      'Multi-brand, bilingual, autonomous campaign execution for high-volume US businesses.',
-    features: [
-      'Everything in Full Marketing AI Platform',
-      'Multi-brand or multi-region management',
-      'Bilingual AI (English and Spanish)',
-      'Autonomous campaign execution (no manual approval)',
-      'Real-time ad budget reallocation',
-      'Unified email, SMS and chat flow',
-      'Predictive campaign timing (ML-based)',
-      'Custom BI dashboard with ROAS tracking',
-      'Dedicated account manager',
-      '12 months support + quarterly model updates',
-    ],
-    cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
-  },
-] as const;
-
 const MARKETING_FAQ_CATEGORIES = [
   { key: 'basics', label: 'The Basics' },
   { key: 'campaigns', label: 'Campaigns & Channels' },

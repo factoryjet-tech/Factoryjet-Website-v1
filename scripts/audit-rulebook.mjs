@@ -73,28 +73,63 @@ const CHECKS = {
 };
 
 /**
- * Find `const FOO_SCHEMA = {...}` blocks that are declared but never referenced
- * again — i.e. never JSON.stringify'd into a <script type="application/ld+json">.
- *
- * This is a silent failure: tsc is happy, the constant looks right in review, and
- * the schema simply never ships. Caught 3 pages on 2026-08-03 (headless-commerce,
- * omnichannel-commerce, commerceflo) whose dateModified and Person author existed
- * only in source. Confirmed independently against rendered HTML.
+ * Walk a balanced {...} or [...] block starting at `start`, stepping over string
+ * literals, template literals and comments so a brace inside copy cannot end it
+ * early. Returns the index of the closing delimiter, or -1 if unbalanced.
  */
-function unrenderedSchemas(file) {
+function blockEnd(src, start) {
+  const open = src[start];
+  const close = open === '{' ? '}' : ']';
+  let depth = 0;
+  for (let i = start; i < src.length; i++) {
+    const c = src[i];
+    if (c === '/' && src[i + 1] === '/') { i = src.indexOf('\n', i); if (i < 0) return -1; continue; }
+    if (c === '/' && src[i + 1] === '*') { const j = src.indexOf('*/', i + 2); if (j < 0) return -1; i = j + 1; continue; }
+    if (c === '"' || c === "'" || c === '`') {
+      const quote = c;
+      for (i++; i < src.length; i++) {
+        if (src[i] === '\\') { i++; continue; }
+        if (src[i] === quote) break;
+      }
+      continue;
+    }
+    if (c === open) depth++;
+    else if (c === close && --depth === 0) return i;
+  }
+  return -1;
+}
+
+/**
+ * Find module-scope `const FOO = {...}` / `const FOO = [...]` blocks that are
+ * declared but never referenced again anywhere in the file.
+ *
+ * This is a silent failure: tsc is happy (an unused const is legal), every build
+ * guard passes, the constant looks right in review, and it simply never ships.
+ *
+ * Two flavours, reported separately because they differ in severity:
+ *   - `schema`: a schema.org object that never reaches a <script type="ld+json">.
+ *     Actively harmful — the page claims structured data it does not emit. Caught
+ *     3 pages on 2026-08-03 (headless-commerce, omnichannel-commerce, commerceflo)
+ *     whose dateModified and Person author existed only in source. FATAL.
+ *   - `data`: any other never-rendered content array/object. Dead weight rather
+ *     than a correctness bug. Caught the 7 *PRICING_TIERS consts under
+ *     /services/ai-agent-development on 2026-08-17. Reported, non-fatal.
+ *
+ * `export const` is deliberately not matched: it may be consumed by another file.
+ */
+function deadConsts(file) {
   const src = readFileSync(file, 'utf8');
   const out = [];
-  for (const m of src.matchAll(/^const ([A-Z_0-9]+)\s*=\s*\{/gm)) {
+  for (const m of src.matchAll(/^const ([A-Z][A-Z_0-9]*)\s*=\s*([[{])/gm)) {
     const name = m[1];
-    let i = src.indexOf('{', m.index), depth = 0, end = i;
-    for (; end < src.length; end++) {
-      if (src[end] === '{') depth++;
-      else if (src[end] === '}' && --depth === 0) break;
-    }
-    const block = src.slice(i, end + 1);
-    if (!/['"]?@context['"]?\s*:/.test(block)) continue; // only schema.org objects
+    const open = m.index + m[0].length - 1;
+    const end = blockEnd(src, open);
+    if (end < 0) continue;
+    const block = src.slice(open, end + 1);
     const rest = src.slice(0, m.index) + src.slice(end + 1);
-    if (!new RegExp(`\\b${name}\\b`).test(rest)) out.push(name);
+    if (new RegExp(`\\b${name}\\b`).test(rest)) continue;
+    const kind = /['"]?@context['"]?\s*:/.test(block) ? 'schema' : 'data';
+    out.push({ name, kind, lines: block.split('\n').length });
   }
   return out;
 }
@@ -107,9 +142,26 @@ for (const file of pages) {
   const t = textWithImports(file);
   const r = { route, file: relative(ROOT, file), dynamic: isDynamic };
   for (const [k, fn] of Object.entries(CHECKS)) r[k] = fn(t);
-  r.unrenderedSchemas = unrenderedSchemas(file);
+  r.deadConsts = deadConsts(file);
   rows.push(r);
 }
+
+/**
+ * Dead consts are not a page-only problem, so sweep the shared component tree too.
+ * Kept separate from `rows` so the coverage percentages above stay page-scoped.
+ */
+function collectComponents(dir, out = []) {
+  if (!existsSync(dir)) return out;
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) collectComponents(full, out);
+    else if (/\.tsx?$/.test(entry)) out.push(full);
+  }
+  return out;
+}
+const componentRows = collectComponents(join(ROOT, 'src/components'))
+  .map((file) => ({ route: relative(ROOT, file), deadConsts: deadConsts(file) }))
+  .filter((r) => r.deadConsts.length);
 
 if (process.argv.includes('--json')) {
   console.log(JSON.stringify(rows, null, 2));
@@ -134,8 +186,23 @@ console.log(`  (${missing.length} routes)`);
 console.log('\n--- Dynamic templates (cover many URLs each) ---');
 dyn.forEach((r) => console.log(`  ${r.route.padEnd(28)} dateModified=${r.dateModified} person=${r.personSchema}`));
 
-const orphaned = rows.filter((r) => r.unrenderedSchemas.length);
+const all = [...rows, ...componentRows];
+const named = (r, kind) => r.deadConsts.filter((c) => c.kind === kind);
+
+const orphaned = all.filter((r) => named(r, 'schema').length);
 console.log('\n--- Schema declared but NEVER rendered (silent: tsc cannot catch this) ---');
 if (!orphaned.length) console.log('  none');
-orphaned.forEach((r) => console.log(`  ${r.route.padEnd(34)} ${r.unrenderedSchemas.join(', ')}`));
+orphaned.forEach((r) =>
+  console.log(`  ${r.route.padEnd(34)} ${named(r, 'schema').map((c) => c.name).join(', ')}`),
+);
+
+const deadData = all.filter((r) => named(r, 'data').length);
+const deadLines = deadData.reduce((s, r) => s + named(r, 'data').reduce((n, c) => n + c.lines, 0), 0);
+console.log('\n--- Content const declared but NEVER rendered (dead weight, non-fatal) ---');
+if (!deadData.length) console.log('  none');
+deadData.forEach((r) =>
+  console.log(`  ${r.route.padEnd(34)} ${named(r, 'data').map((c) => `${c.name} (${c.lines}L)`).join(', ')}`),
+);
+if (deadData.length) console.log(`  (${deadLines} lines across ${deadData.length} files)`);
+
 if (orphaned.length) process.exitCode = 1;
