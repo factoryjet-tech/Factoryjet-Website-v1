@@ -107,11 +107,29 @@ const US_SUPPORT_SERVICES = [
   { icon: RefreshCw,  label: 'Website Redesign',    href: '/services/website-redesign',            desc: 'Modernize your existing site' },
   { icon: FileCode,   label: 'WordPress',           href: '/services/wordpress-development',        desc: 'Custom WP sites & plugins' },
   { icon: Code,       label: 'Web App Development',  href: '/services/web-application-development',  desc: 'Complex web apps' },
-  { icon: TrendingUp, label: 'SEO Services',        href: '/services/seo',                         desc: 'Rank on Google' },
-  { icon: MapPin,     label: 'Local SEO',           href: '/services/local-seo',                   desc: 'Map pack & near-me' },
   { icon: Sparkles,   label: 'AI SEO',              href: '/services/ai-seo',                      desc: 'Get cited in AI answers' },
   { icon: Search,     label: 'AI Visibility Checker', href: '/ai-visibility-checker',              desc: 'Does AI recommend you? Free' },
   { icon: Zap,        label: 'AI Automation',       href: '/services/ai-automation',               desc: 'Eliminate repetitive work' },
+] as const;
+
+// SEO hub + sub-services (US) — the "SEO & AI Search" column in the Services mega.
+// SEO Services and Local SEO live here rather than in US_SUPPORT_SERVICES so the
+// same link does not render twice in one panel. AI SEO stays in supporting
+// services: it is the "get cited" answer box, a different intent from ranking.
+const US_SEO_HUB_HREF = '/services/seo';
+const US_SEO_SERVICES = [
+  { icon: MapPin,        label: 'Local SEO',          href: '/services/local-seo',          desc: 'Map pack & near-me' },
+  { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/services/ecommerce-seo',      desc: 'Product & collection SEO' },
+  { icon: TrendingUp,    label: 'Shopify SEO',        href: '/services/shopify-seo',        desc: 'Rank your Shopify store' },
+  { icon: Search,        label: 'SEO Audit',          href: '/services/seo-audit',          desc: 'Free technical site check' },
+  { icon: Store,         label: 'Small Business SEO', href: '/services/small-business-seo', desc: 'Affordable managed SEO' },
+] as const;
+
+// Industry SEO verticals (US) — sub-group in the SEO mega column + mobile drawer
+const US_INDUSTRY_SEO = [
+  { label: 'Healthcare SEO', href: '/services/healthcare-seo', desc: 'SEO for medical practices' },
+  { label: 'Dental SEO',     href: '/services/dental-seo',     desc: 'Rank for local dentist searches' },
+  { label: 'Law Firm SEO',   href: '/services/law-firm-seo',   desc: 'SEO for attorneys & law firms' },
 ] as const;
 
 const US_LOCATIONS = [
@@ -943,14 +961,69 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'services' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className="w-[620px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                          <div className="p-4">
-                            <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Supporting services</p>
-                            <div className="grid grid-cols-2 gap-x-2">
-                              {SUPPORT.map((s) => (
-                                <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                              ))}
+                        <div className={`${locale === 'us' ? 'w-[880px]' : 'w-[620px]'} max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5`}>
+                          <div className={locale === 'us' ? 'grid grid-cols-[1fr_300px]' : ''}>
+                            <div className="p-4">
+                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Supporting services</p>
+                              <div className="grid grid-cols-2 gap-x-2">
+                                {SUPPORT.map((s) => (
+                                  <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
                             </div>
+
+                            {/* SEO & AI Search column, US only; the UK SEO spokes live under /uk. */}
+                            {locale === 'us' && (
+                              <div className="border-l border-fj-neutral-100 p-4" style={{ backgroundColor: '#FFFDFB' }}>
+                                <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                                  SEO &amp; AI Search
+                                </p>
+
+                                {/* SEO hub card */}
+                                <Link
+                                  href={US_SEO_HUB_HREF}
+                                  className="group mb-2.5 flex items-center gap-3 rounded-xl border border-[#F3C9B6] p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
+                                  style={{ background: 'linear-gradient(135deg,#FCEEE8,#FFF6F1)' }}
+                                >
+                                  <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#B23E13] text-white">
+                                    <TrendingUp size={17} strokeWidth={1.8} />
+                                  </span>
+                                  <span className="flex flex-1 flex-col">
+                                    <span className="font-fj-body text-[13.5px] font-semibold text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                      SEO Services
+                                    </span>
+                                    <span className="font-fj-body text-[11px] leading-snug text-fj-neutral-500">
+                                      Rank on Google and get cited by AI
+                                    </span>
+                                  </span>
+                                </Link>
+
+                                {/* Sub-services */}
+                                <div className="space-y-0.5">
+                                  {US_SEO_SERVICES.map((s) => (
+                                    <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                  ))}
+                                </div>
+
+                                {/* Industry verticals */}
+                                <p className="mb-1.5 mt-3 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                                  By industry
+                                </p>
+                                <ul className="space-y-0.5">
+                                  {US_INDUSTRY_SEO.map((s) => (
+                                    <li key={s.href}>
+                                      <Link
+                                        href={s.href}
+                                        className="block rounded-md px-2 py-1.5 font-fj-body text-[12.5px] font-medium leading-tight text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#B23E13]"
+                                      >
+                                        {s.label}
+                                        <span className="block font-normal text-[11px] text-fj-neutral-400">{s.desc}</span>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -1548,6 +1621,25 @@ export default function SiteHeader({
                             {s.label}
                           </Link>
                         ))}
+                        {locale === 'us' && (
+                          <>
+                            <div className="mb-1 mt-3 flex items-center justify-between px-1">
+                              <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">SEO &amp; AI Search</p>
+                              <Link href={US_SEO_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#B23E13]">SEO hub →</Link>
+                            </div>
+                            {US_SEO_SERVICES.map((s) => (
+                              <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                                <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                                {s.label}
+                              </Link>
+                            ))}
+                            {US_INDUSTRY_SEO.map((s) => (
+                              <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg py-2 pl-9 pr-1 font-fj-body text-[13.5px] text-fj-neutral-500 transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                                {s.label}
+                              </Link>
+                            ))}
+                          </>
+                        )}
                       </>
                     )}
                     {!isCommerce && (
