@@ -418,6 +418,7 @@ const PRICING_TIERS = [
 
 const FAQ_CATEGORIES = [
   { key: 'what-is-automation', label: 'What Is AI Automation' },
+  { key: 'scope', label: 'Services & Scope' },
   { key: 'choosing', label: 'Choosing an Automation Partner' },
   { key: 'process', label: 'Process & Timeline' },
   { key: 'pricing', label: 'Pricing & ROI' },
@@ -603,6 +604,51 @@ const FAQ_ITEMS = [
     question: 'How much should a small business budget for AI workflow automation?',
     answer:
       'Budget against the hours a workflow removes, not the number of workflows. A useful test before spending anything: pick one task someone does manually every week, multiply the hours by their loaded cost, and annualise it. If that number does not comfortably exceed the build cost, automate something else first. Start with two or three high-frequency workflows rather than a full programme. FactoryJet scopes and quotes fixed after a workflow audit, so the cost is known before the build starts.',
+  },
+
+  /* -- Services & Scope -------------------------------------------------------
+     Added 2026-08-18. Measured reachability, weakest page-1 incumbent by
+     referring domains against our 63:
+
+       ai automation agency services   210/mo  weakest  77  median  164  REACHABLE
+       ai automation for small business 210/mo weakest 106  median 3987  reachable at the bottom
+       ai integration services          590/mo weakest 209  median 2259  BORDERLINE (IBM top 10)
+       automation services for businesses      weakest 282  median 5572  GATED (Rippling, Blue Prism)
+
+     "ai automation agency services" is the softest SERP measured across this
+     whole research pass: theaiautomationagency.ai(77), jadasquad.com(77),
+     goodish.agency(104), eliya.io(147). The page mentioned that phrase once and
+     "ai automation for small business" not at all, while already ranking 7.3 in
+     the US for the plural variant.
+
+     Title deliberately unchanged: it is what earns that 7.3, and trading it for
+     a "services" keyword is a bad bet. Do NOT retarget at "automation services
+     for businesses" (enterprise RPA) or the bare "ai automation agency" head,
+     which sits at US position 60 and whose SERP is Reddit and LinkedIn.
+  --------------------------------------------------------------------------- */
+  {
+    category: 'scope',
+    question: 'What is included in AI automation agency services?',
+    answer:
+      'A real engagement has four parts. A workflow audit that maps what your team actually does by hand and picks the two or three worth automating first. The build itself, which is mostly integration work against the systems you already pay for. A control layer covering what runs unattended, what needs a human to approve, and what happens when a step fails. Then monitoring, because integrations break quietly when a third-party API changes and an unwatched automation stops paying for itself without anyone noticing.',
+  },
+  {
+    category: 'scope',
+    question: 'What does AI automation for a small business actually look like in practice?',
+    answer:
+      'Smaller and duller than the demos suggest, which is why it works. A typical first build is one workflow: an inbound enquiry that gets read, classified, written into the CRM, and answered or routed within a minute. Or an invoice that gets matched, coded and queued for approval instead of being retyped. Nobody is replaced. One recurring job stops consuming a person for a few hours a week. Two or three of those compound into real capacity, and that is the honest shape of AI automation for a small business.',
+  },
+  {
+    category: 'scope',
+    question: 'We already use Zapier. Do we still need AI automation services?',
+    answer:
+      'Possibly not, and you should be told that before you spend anything. Zapier and Make handle linear, rule-based work well, and if your workflows fit that shape you already have what you need. The case for bringing someone in is when steps require judgement rather than rules, when a workflow spans several systems and breaks often, or when nobody in-house has time to keep twenty automations alive. That last one is the real reason most teams call, and it is a maintenance problem more than a technology one.',
+  },
+  {
+    category: 'scope',
+    question: 'How are AI automation agency services different from just hiring a developer?',
+    answer:
+      'A developer builds what you specify. An agency should decide with you what is worth building, which is the harder half. Most wasted automation spend goes on workflows that should have been simplified or deleted rather than automated, and a good scoping pass catches that before anyone writes code. The other difference is what happens after launch: a contractor finishes and leaves, while automations need someone watching for the API change that silently breaks step four. Ask either option who is responsible in month three.',
   },
 ];
 
