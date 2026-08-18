@@ -175,6 +175,36 @@ real commercial demand at KD 0-19, keeping it is correct. Do not retire it.
 > framing has **more** volume (real estate 390/mo vs 70/mo voice; healthcare 170 vs 110) and a
 > softer SERP. Leave both on agent framing as citation assets.
 
+### Chatbot cluster: GATED, do not invest (measured 2026-08-18)
+
+Every commercial chatbot term is out of reach. Weakest page-1 incumbent by
+referring domains, against our 63:
+
+| Term | Vol | CPC | Weakest | Median |
+|---|---:|---:|---:|---:|
+| `ai chatbot development company` | 390 | $17.10 | **1,334** | 3,935 |
+| `ai chatbot agency` | 390 | $32.83 | 293 | 5,719 |
+| `chatbot development company` | 260 | - | 293 | 1,958 |
+| `chatbot integration services` | 20 | $269.26 | 276 | 3,455 |
+| `ai chatbot development services` | 880 | $58.17 | 227 | 1,888 |
+
+Top 10s are Salesforce, Google Cloud, chatbot.com, chatbase, appinventiv,
+leewayhertz, NICE. For contrast, `ai automation agency services` has a median of
+164 and `agentic ai development company` a weakest of 77. Those are winnable.
+This is not.
+
+**Also note the impressions are mostly fake.** `/services/ai-chatbot-development`
+takes ~130 US impressions, but 86 of them come from two queries with **zero**
+measurable search volume (`custom ai chatbot development services` 60 impressions,
+`ai based chatbot development company` 26). Do not read that page's impression
+count as demand.
+
+**Two pages currently split this gated cluster:**
+`/services/ai-chatbot-development` (1,006 lines) and
+`/services/ai-agent-development/ai-chatbot` (1,001 lines, retargeted from India
+2026-08-17, zero US impressions). Consolidating them would help concentration but
+will not produce rankings on gated terms, so it is housekeeping, not a growth move.
+
 ### Stop doing
 - **Omnichannel Commerce** — 0 commercial demand. Not a lead page.
 - **Agentic Commerce** — 120 commercial demand against 14,060 informational. Blog and
