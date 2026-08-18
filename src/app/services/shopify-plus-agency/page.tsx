@@ -57,6 +57,7 @@ const FAQ_CATEGORIES = [
   { key: 'b2b', label: 'B2B & wholesale' },
   { key: 'technical', label: 'Build & tech' },
   { key: 'working', label: 'Working together' },
+  { key: 'engagement', label: 'Scope & engagement' },
 ];
 
 const FAQ_ITEMS = [
@@ -203,6 +204,49 @@ const FAQ_ITEMS = [
     question: 'What happens after launch?',
     answer:
       'Plus stores are never finished, so we usually continue on a monthly retainer covering platform changes, checkout and Functions work, new markets or expansion stores, integration maintenance, and conversion work. If you would rather run it in-house, we hand over documentation and stay available for the checkout and Functions work specifically.',
+  },
+
+  /* -- Scope & engagement -----------------------------------------------------
+     Added 2026-08-18. Measured reachability, weakest page-1 incumbent by
+     referring domains against our 63:
+
+       shopify plus development agency  170/mo  weakest  62  median  563  REACHABLE
+       shopify development agency       480/mo  weakest 141  median  784  BORDERLINE
+       shopify plus agency              480/mo  weakest 550  median  760  GATED
+       ecommerce development company    880/mo  weakest 639  median 2105  GATED
+       ecommerce app development company 720/mo weakest 895  median 2566  GATED
+
+     The page title targets "shopify plus agency", which is gated. The variant one
+     word away, "shopify plus development agency", has heseven.com ranking on 62
+     referring domains. Title left alone (changing it risks nothing that works,
+     but there is no evidence it helps either); the reachable phrasing is carried
+     in the body instead.
+
+     Second signal driving the retainer question below: US GSC has us at position
+     2.3 for "agencies that do custom shopify without forcing a monthly retainer",
+     the same terms-qualified pattern that puts us at 1.8 on "austin no contract
+     seo". The page mentioned "retainer" exactly once and never addressed the
+     objection. Do NOT retarget at the ecommerce development head terms: that
+     cluster is owned by scnsoft (8,878), itransition (5,582), appinventiv
+     (11,785) and WebFX (44,532).
+  --------------------------------------------------------------------------- */
+  {
+    category: 'engagement',
+    question: 'Do you work without a monthly retainer?',
+    answer:
+      'Yes. A Shopify Plus build can be a fixed-scope project that ends when it ships, and plenty of brands should take that option. Retainers make sense when the store keeps changing: new markets, checkout and Functions work, integrations that need watching. They do not make sense as a condition of being allowed to hire us. If an agency will only quote a build alongside a twelve-month commitment, the commitment is the product. Ask what the project costs on its own and see whether they will answer.',
+  },
+  {
+    category: 'engagement',
+    question: 'What does a Shopify Plus development agency do that a regular Shopify agency cannot?',
+    answer:
+      'Three things Plus unlocks and standard Shopify does not. Checkout customisation through Shopify Functions and checkout extensibility, which is where most Plus-specific engineering time goes. B2B on Plus, meaning company accounts, price lists and net terms without a third-party app. And expansion stores plus Shopify Flow for multi-market and automation work. A Shopify Plus development agency is really a team that has shipped those three, so ask for a specific example of each rather than a general Shopify portfolio.',
+  },
+  {
+    category: 'engagement',
+    question: 'Should we hire a Shopify Plus development agency or move to a headless build?',
+    answer:
+      'Stay on standard Plus unless you have a concrete reason to leave it. Headless buys you front-end freedom and costs you the parts of Shopify that work out of the box, checkout being the important one. The honest triggers for going headless are a content-heavy front end Liquid cannot serve, genuine multi-brand or multi-region complexity, or an existing front-end team who will own it. Wanting a faster site is not a trigger on its own, because most Plus stores are slow for reasons a rebuild will not fix.',
   },
 ];
 
