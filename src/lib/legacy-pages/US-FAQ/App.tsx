@@ -428,7 +428,7 @@ const FooterLocal = React.memo(() => (
           Enterprise-grade digital solutions with startup-friendly pricing.
         </p>
         <div className="flex gap-4">
-          <a href="https://twitter.com/factoryjet" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-jet-blue cursor-pointer transition-colors text-slate-300 hover:text-white">X</a>
+          <a href="https://x.com/FactoryJet_Tech" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-jet-blue cursor-pointer transition-colors text-slate-300 hover:text-white">X</a>
           <a href="https://linkedin.com/company/factoryjet" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-jet-blue cursor-pointer transition-colors text-slate-300 hover:text-white">in</a>
         </div>
       </div>

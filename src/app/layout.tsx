@@ -174,9 +174,9 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://www.linkedin.com/company/factoryjet",
-                "https://www.instagram.com/factoryjet",
-                "https://www.facebook.com/factoryjet",
-                "https://twitter.com/factoryjet",
+                "https://www.instagram.com/factoryjetb2b",
+                "https://www.facebook.com/factoryjetb2b",
+                "https://x.com/FactoryJet_Tech",
                 "https://clutch.co/profile/factoryjet-private",
                 "https://www.goodfirms.co/company/factoryjet-private-limited",
                 "https://www.designrush.com/agency/profile/factoryjet",
