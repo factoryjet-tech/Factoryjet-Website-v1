@@ -24,6 +24,10 @@ import '@/components/v2/PlatformPage.css';
  */
 
 const PAGE_MODIFIED = '2026-08-03';
+// Regenerated and figure-checked by scripts/export-citation-study-dataset.mjs,
+// which fails if any number published here stops matching the source data.
+const DATASET_URL = 'https://factoryjet.com/data/ai-citation-study-2026-08.csv';
+const CITATION = 'FactoryJet (2026). Structural analysis of 58 pages cited by Google AI Overviews. https://factoryjet.com/ai-citation-study';
 
 export const metadata: Metadata = {
   title: 'We Measured 58 Pages That AI Actually Cites. Authority Did Not Predict It. | FactoryJet',
@@ -86,6 +90,13 @@ const DATASET_SCHEMA = {
   creator: { '@id': 'https://factoryjet.com/#organization' },
   dateModified: PAGE_MODIFIED, license: 'https://creativecommons.org/licenses/by/4.0/',
   isAccessibleForFree: true,
+  url: 'https://factoryjet.com/ai-citation-study',
+  distribution: [{
+    '@type': 'DataDownload',
+    encodingFormat: 'text/csv',
+    contentUrl: DATASET_URL,
+    name: 'Per-page structural measurements, 58 cited pages',
+  }],
   variableMeasured: ['rendered word count', 'H1/H2/H3 counts', 'list item count', 'table count', 'JSON-LD schema types', 'visible FAQ presence', 'dateModified presence'],
 };
 const ORG_SCHEMA = {
@@ -356,11 +367,54 @@ export default function AICitationStudyPage() {
           categories={FAQ_CATEGORIES}
         />
 
+        <section className="pp-sec" id="cite">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// cite this study'}</p>
+            <h2 style={{ marginTop: '10px' }}>Download the data and cite it</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '72ch' }}>
+              The full per-page measurements are published as a CSV under{' '}
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                CC BY 4.0
+              </a>. One row per cited page, with the word count, heading counts, list items,
+              tables, schema types and FAQ flags behind every median quoted above. Use it,
+              re-cut it, or check our arithmetic.
+            </p>
+
+            <p style={{ marginTop: '22px' }}>
+              <a
+                href={DATASET_URL}
+                download
+                style={{
+                  display: 'inline-block', padding: '13px 22px',
+                  border: '1.5px solid var(--pp-ink)', borderRadius: '2px',
+                  color: 'var(--pp-ink)', textDecoration: 'none', fontWeight: 600,
+                }}
+              >
+                Download the dataset (CSV, 58 rows)
+              </a>
+            </p>
+
+            <div style={{ marginTop: '30px', maxWidth: '72ch' }}>
+              <p className="pp-mlabel" style={{ marginBottom: '10px' }}>{'// attribution'}</p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-geist-mono), ui-monospace, monospace',
+                  fontSize: '0.86rem', lineHeight: 1.7, padding: '16px 18px',
+                  border: '1px solid rgba(0,0,0,0.14)', borderRadius: '2px',
+                  margin: 0, wordBreak: 'break-word',
+                }}
+              >
+                {CITATION}
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="pp-sec tint" id="final-cta">
           <div className="pp-wrap">
             <h2 style={{ marginTop: 0 }}>Use the data, challenge the data</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '66ch' }}>
-              The scripts and raw JSON behind every figure are committed in our repository. If you
+              Every figure above is derived from the CSV published on this page. If you
               reproduce this and get a different answer, we would genuinely like to know. If you want
               help applying it to your own commerce site, we build{' '}
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B commerce</Link>,{' '}

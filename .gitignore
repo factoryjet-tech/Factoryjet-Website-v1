@@ -41,6 +41,8 @@ pipeline/scripts/.venv/
 .venv-tracking/
 pipeline/scripts/__pycache__/
 pipeline/scripts/*.pyc
+pipeline/research/__pycache__/
+pipeline/research/*.pyc
 pipeline/brand-references/*/screenshots/
 pipeline/brand-references/_run.log
 .claude/
