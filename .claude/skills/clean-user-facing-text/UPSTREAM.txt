@@ -1,0 +1,3 @@
+UPSTREAM COMMIT: d5563d2e129166cae737cc6ac604e75f5631c368
+SOURCE: https://github.com/guillaumemeyer/watermarks-remover
+VENDORED: 2026-08-20

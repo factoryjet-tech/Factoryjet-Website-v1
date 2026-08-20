@@ -1,0 +1,9584 @@
+{
+ "market": "UK",
+ "existing_blog_slugs": [
+  "agentic-ai-vs-ai-agents",
+  "agentic-ai-vs-generative-ai",
+  "agentic-commerce-vs-traditional-ecommerce",
+  "ai-adoption-us-small-businesses-2026",
+  "ai-agents-business-operations-uk-smbs-2026",
+  "ai-agents-small-business-usa-2026",
+  "ai-agents-uk-smbs-guide",
+  "ai-automation-services-small-business-uk-2026",
+  "ai-chatbots-vs-ai-agents-business",
+  "ai-seo-agency-uk-geo-aeo-organic-growth",
+  "aio-artificial-intelligence-optimization-guide",
+  "austin-ecommerce-checkout-optimization-2026",
+  "b2b-web-design-trust-signals",
+  "best-ai-agent-development-companies-small-business",
+  "best-ai-automation-tools-small-business-uk-2026",
+  "best-ai-for-ecommerce-2026",
+  "best-ai-seo-agencies-india",
+  "best-ai-seo-agencies-uk",
+  "best-ai-seo-agencies-usa",
+  "best-ecommerce-agency-small-business-australia-2026",
+  "best-ecommerce-platform-tampa-boutiques-dtc-2026",
+  "best-geo-agencies",
+  "best-geo-ai-visibility-tools-2026",
+  "best-lead-generation-websites-small-business-2026",
+  "best-payment-gateway-india-2026",
+  "best-sales-automation-small-business-uk-2026",
+  "best-seo-agencies-uk",
+  "best-seo-agencies-usa",
+  "best-seo-agency-uk-small-business-2026",
+  "best-web-design-agencies-uk-smbs-2026",
+  "best-web-design-agency-us-small-business-2026",
+  "best-web-design-companies-small-business-australia",
+  "best-wordpress-development-companies-australia-2026",
+  "bigcommerce-vs-shopify-2026-fee-change",
+  "boise-shopify-development-guide-idaho-small-business-2026",
+  "build-ai-agents-small-business-diy-vs-agency-2026",
+  "color-psychology-web-design-india",
+  "core-web-vitals-optimization-service",
+  "cost-of-website-downtime-calculator",
+  "create-ai-agents-business-uk-smb-guide-2026",
+  "custom-online-store-development-uk-smbs-2026",
+  "custom-shopify-theme-development-us-brands-2026",
+  "custom-web-development-vs-wordpress-us-small-business-2026",
+  "digital-marketing-for-small-business-india",
+  "ecommerce-development-denver-co-small-business",
+  "ecommerce-development-uk-shopify-woocommerce-2026",
+  "evaluate-web-design-agency-us-smbs-2026",
+  "generative-engine-optimization-guide",
+  "geo-cost-small-business-2026",
+  "headless-commerce-pros-cons",
+  "hidden-cost-of-cheap-websites-india",
+  "how-long-does-seo-take-2026-month-by-month-timeline",
+  "how-much-does-a-website-cost-small-business-usa-2026",
+  "how-to-build-online-store-uk-smb-guide-2026",
+  "how-to-choose-digital-marketing-agency-india-2026",
+  "how-to-choose-web-design-agency-uk-2026",
+  "how-to-get-chatgpt-to-recommend-your-business-2026",
+  "how-to-sell-on-amazon-2026",
+  "how-to-sell-on-tiktok-shop-2026",
+  "how-to-sell-on-walmart-marketplace-2026",
+  "how-to-show-up-in-google-ai-overviews-small-business",
+  "how-uk-smbs-evaluate-woocommerce-agency-2026",
+  "importance-of-website-maintenance-seo",
+  "is-geo-replacing-seo-2026",
+  "is-seo-dead-2026-ai-search-data",
+  "local-seo-multi-location-business",
+  "local-seo-uk-small-businesses-map-pack",
+  "mobile-only-design-strategy",
+  "mvp-development-strategy-startups",
+  "nyc-b2b-corporate-web-design-guide-2026",
+  "quick-commerce-app-design-trends",
+  "raleigh-shopify-training-support-triangle-nc-2026",
+  "react-vs-wordpress",
+  "reduce-cart-abandonment-ui-ux",
+  "sales-automation-ai-uk-smbs-workflows",
+  "sales-automation-tools-uk-smbs-roi-2026",
+  "scaling-ecommerce-infrastructure",
+  "sell-ai-automation-services-uk-agency-playbook-2026",
+  "seo-audit-cost-2026",
+  "seo-cost-small-business-2026",
+  "seo-recruitment-agencies-uk-2026",
+  "shopify-development-cost-2026",
+  "shopify-store-development-uk-smbs-2026-guide",
+  "shopify-store-setup-us-small-business-7-days",
+  "shopify-vs-custom-website-us-small-business-2026",
+  "shopify-vs-woocommerce-india-comparison",
+  "shopify-vs-woocommerce-us-small-business-2026",
+  "shopify-website-cost",
+  "top-ecommerce-development-agencies-uk-2026",
+  "top-web-design-agencies-london-smbs-2026",
+  "top-web-design-companies-mumbai",
+  "uk-web-design-agency-pricing-2026-smb-guide",
+  "web-design-austin-tx-small-business-guide-2026",
+  "web-design-charlotte-nc-small-business-2026",
+  "web-design-denver-co-small-business-2026",
+  "web-design-miami-fl-small-business-2026",
+  "web-design-nashville-tn-small-business-2026",
+  "webflow-vs-wordpress-us-small-business-2026",
+  "website-cost-small-business-usa-2026",
+  "website-development-cost-india-2026",
+  "website-redesign-checklist-2026",
+  "website-redesign-cost-uk-2026-complete-pricing-guide",
+  "website-redesign-cost-us-small-business-2026",
+  "website-redesign-small-business-uk-2026-ai-powered",
+  "what-does-an-ai-automation-agency-do",
+  "what-does-an-ai-automation-agency-do-uk",
+  "what-does-web-design-agency-do-2026",
+  "what-is-agentic-ai",
+  "what-is-agentic-commerce",
+  "what-is-webflow",
+  "will-ai-replace-web-designers",
+  "woocommerce-seo-tips-uk-stores",
+  "wordpress-security-audit-guide",
+  "wordpress-speed-optimization-plugin-audit"
+ ],
+ "service_lines": {
+  "Web Design & Development": {
+   "top_120_candidates": [
+    {
+     "keyword": "best web design websites",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design site",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web page design",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design best sites",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design best",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design pages",
+     "volume": 1600,
+     "cpc": 5,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design website",
+     "volume": 1300,
+     "cpc": 5.59,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design",
+     "volume": 1300,
+     "cpc": 5.59,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design top",
+     "volume": 1300,
+     "cpc": 5.59,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design sites",
+     "volume": 1300,
+     "cpc": 5.59,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design price",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design cost",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web page design cost",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 2,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "prices web design",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "pricing web design",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design fees",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 12,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web page design price",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 31,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "costs of web design",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 1,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website cost design",
+     "volume": 880,
+     "cpc": 9.07,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website designing cost",
+     "volume": 880,
+     "cpc": 9.37,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design template",
+     "volume": 720,
+     "cpc": 5.71,
+     "kd": 59,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ideas web design",
+     "volume": 720,
+     "cpc": 4.16,
+     "kd": 50,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "template web page design",
+     "volume": 720,
+     "cpc": 5.71,
+     "kd": 30,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "web design website template",
+     "volume": 720,
+     "cpc": 5.71,
+     "kd": 59,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "web design website ideas",
+     "volume": 720,
+     "cpc": 4.16,
+     "kd": 43,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "web page design ideas",
+     "volume": 720,
+     "cpc": 4.16,
+     "kd": 50,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how much can a website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "kd": 7,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "host website cost",
+     "volume": 720,
+     "cpc": 5.24,
+     "kd": 23,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "hosting website cost",
+     "volume": 720,
+     "cpc": 7.09,
+     "kd": 18,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much do website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "kd": 9,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much will a website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "kd": 7,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website cost",
+     "volume": 720,
+     "cpc": 9.13,
+     "kd": 18,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much should a website cost",
+     "volume": 720,
+     "cpc": 7.2,
+     "kd": 7,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does this website cost",
+     "volume": 720,
+     "cpc": 7.2,
+     "kd": 7,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design uk prices",
+     "volume": 590,
+     "cpc": 9.92,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to web design",
+     "volume": 590,
+     "cpc": 10.06,
+     "kd": 41,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "web design price uk",
+     "volume": 590,
+     "cpc": 11.7,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design cost uk",
+     "volume": 590,
+     "cpc": 9.92,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cheap web design",
+     "volume": 590,
+     "cpc": 12.74,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to design web design",
+     "volume": 590,
+     "cpc": 10.06,
+     "kd": 41,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "website development costs uk",
+     "volume": 590,
+     "cpc": 9.92,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website development cost uk",
+     "volume": 590,
+     "cpc": 9.92,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website design cost uk",
+     "volume": 590,
+     "cpc": 9.92,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website cost uk",
+     "volume": 590,
+     "cpc": 11.7,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best wordpress hosting website",
+     "volume": 590,
+     "cpc": 27.86,
+     "kd": 33,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "cheap wordpress website hosting",
+     "volume": 590,
+     "cpc": 26.3,
+     "kd": 40,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best host for wordpress website",
+     "volume": 590,
+     "cpc": 34.65,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design affordable",
+     "volume": 480,
+     "cpc": 121.73,
+     "kd": 16,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cheap affordable web design",
+     "volume": 480,
+     "cpc": 121.73,
+     "kd": 13,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "web design for cheap",
+     "volume": 480,
+     "cpc": 121.73,
+     "kd": 42,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "wix website cost",
+     "volume": 480,
+     "cpc": 6.2,
+     "kd": 15,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does squarespace website cost",
+     "volume": 390,
+     "cpc": 5.04,
+     "kd": 17,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to develop wordpress website",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 50,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to start a website wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 60,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how make wordpress website",
+     "volume": 390,
+     "cpc": 4.87,
+     "kd": 64,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create website wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 71,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best website themes wordpress",
+     "volume": 390,
+     "cpc": 4.29,
+     "kd": 64,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build website wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 24,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create website from wordpress",
+     "volume": 390,
+     "cpc": 4.87,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to design website on wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best website hosting for wordpress uk",
+     "volume": 390,
+     "cpc": 26.56,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to make website by wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 53,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to build a website from wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 71,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make a website from wordpress",
+     "volume": 390,
+     "cpc": 4.87,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create website by wordpress",
+     "volume": 390,
+     "cpc": 4.57,
+     "kd": 68,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best web design companies london",
+     "volume": 320,
+     "cpc": null,
+     "kd": 88,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is web page design",
+     "volume": 320,
+     "cpc": 3.9,
+     "kd": 37,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is web design",
+     "volume": 320,
+     "cpc": 2.44,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top web design company",
+     "volume": 320,
+     "cpc": 20.05,
+     "kd": 22,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "low cost web design",
+     "volume": 320,
+     "cpc": 8.34,
+     "kd": 25,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best agency web design",
+     "volume": 320,
+     "cpc": 7.14,
+     "kd": 32,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web page design examples",
+     "volume": 320,
+     "cpc": 3.11,
+     "kd": 42,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best web design firm",
+     "volume": 320,
+     "cpc": 20.05,
+     "kd": 56,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "uk top web design companies",
+     "volume": 320,
+     "cpc": 14.25,
+     "kd": 33,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design companies",
+     "volume": 320,
+     "cpc": 38.62,
+     "kd": 22,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design agency uk",
+     "volume": 320,
+     "cpc": 14.25,
+     "kd": 48,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design pages examples",
+     "volume": 320,
+     "cpc": 3.75,
+     "kd": 42,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best web design agencies london",
+     "volume": 320,
+     "cpc": 8.53,
+     "kd": 48,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design examples",
+     "volume": 320,
+     "cpc": 3.75,
+     "kd": 31,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best company for web design",
+     "volume": 320,
+     "cpc": 38.62,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design company websites",
+     "volume": 320,
+     "cpc": 20.05,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "web design website examples",
+     "volume": 320,
+     "cpc": 3.75,
+     "kd": 32,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "web design portfolio template",
+     "volume": 320,
+     "cpc": 4.08,
+     "kd": 29,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "web design best companies",
+     "volume": 320,
+     "cpc": 38.62,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design agency london",
+     "volume": 320,
+     "cpc": null,
+     "kd": 52,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design agencies uk",
+     "volume": 320,
+     "cpc": 14.37,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design agency uk",
+     "volume": 320,
+     "cpc": 14.25,
+     "kd": 56,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design firms",
+     "volume": 320,
+     "cpc": 38.62,
+     "kd": 39,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top uk web design agencies",
+     "volume": 320,
+     "cpc": 14.25,
+     "kd": 43,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design firms",
+     "volume": 320,
+     "cpc": 38.62,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top web design companies london",
+     "volume": 320,
+     "cpc": null,
+     "kd": 48,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design agency london",
+     "volume": 320,
+     "cpc": null,
+     "kd": 27,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design company in london",
+     "volume": 320,
+     "cpc": null,
+     "kd": 67,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best web design company in uk",
+     "volume": 320,
+     "cpc": 14.25,
+     "kd": 56,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "website design low cost",
+     "volume": 320,
+     "cpc": 8.34,
+     "kd": 29,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "making a website cost",
+     "volume": 320,
+     "cpc": 9.17,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website builder cost",
+     "volume": 320,
+     "cpc": 9.17,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website designing at low cost",
+     "volume": 320,
+     "cpc": 41.42,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website builder low cost",
+     "volume": 320,
+     "cpc": 26.84,
+     "kd": 39,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "make a website cost",
+     "volume": 320,
+     "cpc": 7.29,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does a website builder cost",
+     "volume": 320,
+     "cpc": 5.82,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website design at low cost",
+     "volume": 320,
+     "cpc": 41.42,
+     "kd": 24,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does hosting a website cost",
+     "volume": 320,
+     "cpc": 3.59,
+     "kd": 4,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "wordpress website template",
+     "volume": 320,
+     "cpc": 3.99,
+     "kd": 97,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best website development companies",
+     "volume": 260,
+     "cpc": 14.29,
+     "kd": 54,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "website development cost",
+     "volume": 260,
+     "cpc": 14.58,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website development costs",
+     "volume": 260,
+     "cpc": 9.13,
+     "kd": 3,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "top website development agencies",
+     "volume": 260,
+     "cpc": 14.29,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best website development company",
+     "volume": 260,
+     "cpc": 21.48,
+     "kd": 54,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top website development companies",
+     "volume": 260,
+     "cpc": 14.29,
+     "kd": 16,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top website development company",
+     "volume": 260,
+     "cpc": 14.29,
+     "kd": 16,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top website development agency",
+     "volume": 260,
+     "cpc": 21.48,
+     "kd": 27,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "developing a website cost",
+     "volume": 260,
+     "cpc": 9.13,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much should a website cost uk",
+     "volume": 260,
+     "cpc": 7,
+     "kd": 4,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website design how much does it cost",
+     "volume": 260,
+     "cpc": 6.95,
+     "kd": 11,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does creating a website cost",
+     "volume": 260,
+     "cpc": 7.38,
+     "kd": 31,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does a website cost uk",
+     "volume": 260,
+     "cpc": 7,
+     "kd": 3,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does making a website cost",
+     "volume": 260,
+     "cpc": 6.95,
+     "kd": 31,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "website examples using wordpress",
+     "volume": 260,
+     "cpc": 5.01,
+     "kd": 33,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "wordpress website examples",
+     "volume": 260,
+     "cpc": 5.01,
+     "kd": 24,
+     "tags": [
+      "GUIDE"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "how much can a website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "ai_overview": true,
+     "paa": [
+      "What is the average cost for a website?",
+      "How much does a website cost in the UK?",
+      "How much does a website cost?",
+      "How much does it cost to buy a website?",
+      "Can I buy a website permanently?",
+      "Is it worth owning a domain?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.godaddy.com",
+      "www.wix.com",
+      "www.getyouonline.co.uk",
+      "www.forbes.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how much do website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "ai_overview": true,
+     "paa": [
+      "How much does a website cost in the UK?",
+      "What is the average cost for a website?",
+      "How much does a website cost?",
+      "How much should you pay someone to do a website?",
+      "What are the five golden rules of a website?",
+      "How much should I pay someone to maintain my website?"
+     ],
+     "top5": [
+      "www.godaddy.com",
+      "www.reddit.com",
+      "startups.co.uk",
+      "www.duport.co.uk",
+      "www.wix.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how much will a website cost",
+     "volume": 720,
+     "cpc": 5.96,
+     "ai_overview": true,
+     "paa": [
+      "What is the average cost for a website?",
+      "How much does a website cost?",
+      "How much should a website cost to develop?",
+      "How much should you pay someone to do a website?",
+      "What are the five golden rules of a website?",
+      "Why do you have to pay for a website?"
+     ],
+     "top5": [
+      "www.godaddy.com",
+      "www.reddit.com",
+      "authenticstyle.co.uk",
+      "www.wix.com",
+      "startups.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "web design price",
+     "volume": 880,
+     "cpc": 9.07,
+     "ai_overview": true,
+     "paa": [
+      "What is the average cost of web design?",
+      "How much do web designers usually charge?",
+      "How much should I pay someone to design a website?",
+      "Is web design still in demand in 2026?",
+      "Will AI replace web designers?",
+      "Is 40 too old to become a web developer?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.cheapwebdesign.co.uk",
+      "designbox.co.uk",
+      "www.godaddy.com",
+      "www.checkatrade.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "web design cost",
+     "volume": 880,
+     "cpc": 9.07,
+     "ai_overview": true,
+     "paa": [
+      "How much does web design cost in the UK?",
+      "How much do web designers usually charge?",
+      "How much should I pay someone to design a website?",
+      "How much should a 10 page website cost?",
+      "What are the five golden rules of a website?",
+      "Can I host my own website for free?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.godaddy.com",
+      "www.cheapwebdesign.co.uk",
+      "www.checkatrade.com",
+      "www.duport.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "web page design cost",
+     "volume": 880,
+     "cpc": 9.07,
+     "ai_overview": true,
+     "paa": [
+      "How much should a full website design cost?",
+      "How much does web design cost in the UK?",
+      "How much should a 10 page website cost?",
+      "How much does it cost to own a web page?",
+      "What is the cheapest way to own a website?",
+      "What are the five golden rules of a website?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.godaddy.com",
+      "www.cheapwebdesign.co.uk",
+      "authenticstyle.co.uk",
+      "www.checkatrade.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best web design websites",
+     "volume": 1600,
+     "cpc": 5,
+     "ai_overview": true,
+     "paa": [
+      "Which website is best for web design?",
+      "What are the top 5 website designs?",
+      "Is web design still in demand in 2026?",
+      "Can ChatGPT design a website?",
+      "Which AI is best for designing a website?",
+      "How much does it cost to have AI build a website?"
+     ],
+     "top5": [
+      "www.awwwards.com",
+      "www.pixelish.co.uk",
+      "www.reddit.com",
+      "www.siteinspire.com",
+      "dribbble.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best web design site",
+     "volume": 1600,
+     "cpc": 5,
+     "ai_overview": true,
+     "paa": [
+      "What is the best website design site?",
+      "What are the top 5 website designs?",
+      "Is web design still in demand in 2026?",
+      "Can ChatGPT design a website?",
+      "Which AI is best for designing a website?",
+      "Is ChatGPT good for web design?"
+     ],
+     "top5": [
+      "www.awwwards.com",
+      "www.pixelish.co.uk",
+      "www.siteinspire.com",
+      "www.reddit.com",
+      "dribbble.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best web page design",
+     "volume": 1600,
+     "cpc": 5,
+     "ai_overview": false,
+     "paa": [
+      "What is the best website design page?",
+      "Can ChatGPT design a website?",
+      "What are the top 10 website designs?",
+      "What is the 3 second rule in web design?",
+      "What are the five golden rules of web design?",
+      "What is the 10 seconds rule?",
+      "Why does the 5 second rule not work?",
+      "Why is there a 5 second rule?"
+     ],
+     "top5": [
+      "www.awwwards.com",
+      "www.reddit.com",
+      "www.eleken.co",
+      "www.siteinspire.com",
+      "www.pixelish.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "web design template",
+     "volume": 720,
+     "cpc": 5.71,
+     "ai_overview": false,
+     "paa": [
+      "What is the best website design template?",
+      "How do I create a web design?",
+      "What are templates in web design?",
+      "What are the best free website templates?",
+      "Is there a 100% free website builder?",
+      "Where can I get free design templates?"
+     ],
+     "top5": [
+      "webflow.com",
+      "www.figma.com",
+      "elements.envato.com",
+      "dribbble.com",
+      "www.names.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ideas web design",
+     "volume": 720,
+     "cpc": 4.16,
+     "ai_overview": true,
+     "paa": [
+      "What are the 7 C's of website design?",
+      "What is the 3 second rule in web design?",
+      "What are the best website ideas?",
+      "What are the five golden rules of web design?",
+      "What are the 7 principles of web design?",
+      "What are the three types of web design?"
+     ],
+     "top5": [
+      "dribbble.com",
+      "www.siteinspire.com",
+      "www.pinterest.com",
+      "www.awwwards.com",
+      "nicepage.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "template web page design",
+     "volume": 720,
+     "cpc": 5.71,
+     "ai_overview": false,
+     "paa": [],
+     "top5": [
+      "webflow.com",
+      "dribbble.com",
+      "www.figma.com",
+      "www.wix.com",
+      "elements.envato.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "Ecommerce Development": {
+   "top_120_candidates": [
+    {
+     "keyword": "cheap online store",
+     "volume": 880,
+     "cpc": 3.14,
+     "kd": 44,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best wine online store",
+     "volume": 720,
+     "cpc": 2.69,
+     "kd": 69,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "online store cheap",
+     "volume": 720,
+     "cpc": 3.3,
+     "kd": 44,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "shopify template store",
+     "volume": 590,
+     "cpc": 7.5,
+     "kd": 39,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best fashion online store",
+     "volume": 480,
+     "cpc": 1.61,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to start online store",
+     "volume": 390,
+     "cpc": 8.03,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "uk best online store",
+     "volume": 390,
+     "cpc": 5.55,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to open an online store",
+     "volume": 390,
+     "cpc": 8.03,
+     "kd": 48,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to start an online store website",
+     "volume": 390,
+     "cpc": 8.03,
+     "kd": 42,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i start online store",
+     "volume": 390,
+     "cpc": 8.03,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "woocommerce pricing",
+     "volume": 390,
+     "cpc": 9.37,
+     "kd": 38,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "woocommerce price",
+     "volume": 390,
+     "cpc": 14.32,
+     "kd": 29,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "woocommerce vs shopify",
+     "volume": 390,
+     "cpc": 4.73,
+     "kd": 3,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to establish online store",
+     "volume": 320,
+     "cpc": 7.47,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how start online store",
+     "volume": 320,
+     "cpc": 7.47,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to begin an online store",
+     "volume": 320,
+     "cpc": 7.47,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make an online store",
+     "volume": 320,
+     "cpc": 20.66,
+     "kd": 41,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to open online store",
+     "volume": 320,
+     "cpc": 7.47,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how do i create an online store",
+     "volume": 320,
+     "cpc": 16,
+     "kd": 31,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to build online store",
+     "volume": 320,
+     "cpc": 16,
+     "kd": 60,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ecommerce best platform",
+     "volume": 320,
+     "cpc": 11.8,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "website ecommerce template",
+     "volume": 260,
+     "cpc": 9.69,
+     "kd": 30,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ecommerce website best",
+     "volume": 260,
+     "cpc": 6.7,
+     "kd": 25,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ecommerce website design template",
+     "volume": 260,
+     "cpc": 7.31,
+     "kd": 26,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to build shopify store",
+     "volume": 260,
+     "cpc": 9.35,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make shopify store",
+     "volume": 260,
+     "cpc": 10.32,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create shopify store",
+     "volume": 260,
+     "cpc": 10.32,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to set up shopify store",
+     "volume": 260,
+     "cpc": 7.91,
+     "kd": 37,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "shopify store examples",
+     "volume": 260,
+     "cpc": 5.61,
+     "kd": 22,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to setup a store on shopify",
+     "volume": 260,
+     "cpc": 7.91,
+     "kd": 47,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to delete shopify store",
+     "volume": 260,
+     "cpc": 9.21,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best platform ecommerce",
+     "volume": 260,
+     "cpc": 13.52,
+     "kd": 28,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "shopify vs woocommerce",
+     "volume": 260,
+     "cpc": 3.7,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is woocommerce",
+     "volume": 260,
+     "cpc": 6.57,
+     "kd": 53,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "shopify versus woocommerce",
+     "volume": 260,
+     "cpc": 2.63,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ecommerce website costs",
+     "volume": 210,
+     "cpc": 8.7,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cost ecommerce website",
+     "volume": 210,
+     "cpc": 8.7,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website price",
+     "volume": 210,
+     "cpc": 9.14,
+     "kd": 2,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website prices",
+     "volume": 210,
+     "cpc": 8.7,
+     "kd": 2,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website pricing",
+     "volume": 210,
+     "cpc": 8.7,
+     "kd": 2,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "what ecommerce platform",
+     "volume": 210,
+     "cpc": 4.99,
+     "kd": 24,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ecommerce platform definition",
+     "volume": 210,
+     "cpc": 3.19,
+     "kd": 14,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website host",
+     "volume": 170,
+     "cpc": 18.76,
+     "kd": 16,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best website hosting ecommerce",
+     "volume": 170,
+     "cpc": 18.76,
+     "kd": 25,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to close shopify store",
+     "volume": 170,
+     "cpc": 6.78,
+     "kd": 4,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website creator",
+     "volume": 140,
+     "cpc": 22.81,
+     "kd": 31,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "affordable ecommerce website",
+     "volume": 140,
+     "cpc": 16.5,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website seo strategy",
+     "volume": 140,
+     "cpc": null,
+     "kd": 23,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ecommerce website builder best",
+     "volume": 140,
+     "cpc": 22.81,
+     "kd": 31,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ecommerce website low cost",
+     "volume": 140,
+     "cpc": 16.5,
+     "kd": 57,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "top ecommerce website designs",
+     "volume": 140,
+     "cpc": 6.82,
+     "kd": 13,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce design website",
+     "volume": 140,
+     "cpc": 6.82,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best website builders for ecommerce",
+     "volume": 140,
+     "cpc": 22.81,
+     "kd": 31,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top ecommerce website builder",
+     "volume": 140,
+     "cpc": 22.81,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website maker",
+     "volume": 140,
+     "cpc": 22.81,
+     "kd": 42,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website layouts",
+     "volume": 140,
+     "cpc": 6.82,
+     "kd": 34,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website providers",
+     "volume": 140,
+     "cpc": 27.48,
+     "kd": 4,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "cheap ecommerce website",
+     "volume": 140,
+     "cpc": 21.81,
+     "kd": 37,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "top ecommerce website design",
+     "volume": 140,
+     "cpc": 6.82,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce website provider",
+     "volume": 140,
+     "cpc": 27.48,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best uk ecommerce platform",
+     "volume": 140,
+     "cpc": 9.84,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is ecommerce website",
+     "volume": 110,
+     "cpc": 1.74,
+     "kd": 3,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ecommerce website examples",
+     "volume": 110,
+     "cpc": 4.58,
+     "kd": 18,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is a n ecommerce website",
+     "volume": 110,
+     "cpc": 5.95,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best website designs for ecommerce",
+     "volume": 110,
+     "cpc": 3.7,
+     "kd": 12,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "shopify store best",
+     "volume": 110,
+     "cpc": 8.92,
+     "kd": 5,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "is woocommerce free",
+     "volume": 110,
+     "cpc": 10.56,
+     "kd": 42,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create ecommerce website",
+     "volume": 90,
+     "cpc": 10.32,
+     "kd": 28,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how build ecommerce website",
+     "volume": 90,
+     "cpc": 10.32,
+     "kd": 32,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top ecommerce website",
+     "volume": 90,
+     "cpc": 4.86,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to make ecommerce website",
+     "volume": 90,
+     "cpc": 15.03,
+     "kd": 43,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to develop ecommerce website",
+     "volume": 90,
+     "cpc": 10.32,
+     "kd": 34,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to build a n ecommerce website",
+     "volume": 90,
+     "cpc": 10.32,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top shopify store",
+     "volume": 90,
+     "cpc": 3.32,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to start shopify store",
+     "volume": 90,
+     "cpc": 7.14,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best seo ecommerce platform",
+     "volume": 90,
+     "cpc": 7.07,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best woocommerce themes",
+     "volume": 90,
+     "cpc": 3.88,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "woocommerce template",
+     "volume": 90,
+     "cpc": 3.18,
+     "kd": 63,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best woocommerce theme",
+     "volume": 90,
+     "cpc": 3.88,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "template website ecommerce free",
+     "volume": 70,
+     "cpc": 18.25,
+     "kd": 18,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "affordable ecommerce website design",
+     "volume": 70,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website costs uk",
+     "volume": 70,
+     "cpc": 17.72,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cheap ecommerce website uk",
+     "volume": 70,
+     "cpc": 13.67,
+     "kd": 24,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website cost uk",
+     "volume": 70,
+     "cpc": 17.72,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much is a shopify store",
+     "volume": 70,
+     "cpc": 4.7,
+     "kd": 5,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to change shopify store name",
+     "volume": 70,
+     "cpc": null,
+     "kd": 5,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to deactivate shopify store",
+     "volume": 70,
+     "cpc": 15.78,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "review woocommerce",
+     "volume": 70,
+     "cpc": 6.24,
+     "kd": 20,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "woocommerce reviews",
+     "volume": 70,
+     "cpc": 9.31,
+     "kd": 28,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best theme woocommerce",
+     "volume": 70,
+     "cpc": 4.11,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "woocommerce shipping table rates",
+     "volume": 70,
+     "cpc": 2.06,
+     "kd": 12,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "woocommerce themes best",
+     "volume": 70,
+     "cpc": 4.11,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "free ecommerce website template wordpress",
+     "volume": 50,
+     "cpc": 2.1,
+     "kd": 56,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to develop a ecommerce website",
+     "volume": 50,
+     "cpc": 18.42,
+     "kd": 33,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ecommerce website development cost",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does a n ecommerce website cost",
+     "volume": 50,
+     "cpc": 5.38,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does ecommerce website cost",
+     "volume": 50,
+     "cpc": 5.38,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to build a ecommerce website",
+     "volume": 50,
+     "cpc": 18.42,
+     "kd": 32,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "cheap ecommerce website design",
+     "volume": 50,
+     "cpc": null,
+     "kd": 20,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to create a ecommerce website",
+     "volume": 50,
+     "cpc": 18.42,
+     "kd": 28,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "cost of creating an ecommerce website",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce website development price",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cost to develop ecommerce website",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "low cost ecommerce website design",
+     "volume": 50,
+     "cpc": null,
+     "kd": 8,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cost of developing an ecommerce website",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to make a ecommerce website",
+     "volume": 50,
+     "cpc": 18.42,
+     "kd": 41,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best website builder for ecommerce uk",
+     "volume": 50,
+     "cpc": 22.66,
+     "kd": 45,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how much should an ecommerce website cost",
+     "volume": 50,
+     "cpc": 5.38,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does an ecommerce website cost uk",
+     "volume": 50,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "shopify store cost",
+     "volume": 50,
+     "cpc": 6.69,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to open shopify store",
+     "volume": 50,
+     "cpc": 6.89,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "shopify store costs",
+     "volume": 50,
+     "cpc": 6.69,
+     "kd": 8,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to pause shopify store",
+     "volume": 50,
+     "cpc": null,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ecommerce platform for b2b",
+     "volume": 50,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce platform for small businesses",
+     "volume": 50,
+     "cpc": 107.01,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce platform small business",
+     "volume": 50,
+     "cpc": 107.01,
+     "kd": 3,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ecommerce platform for small business uk",
+     "volume": 50,
+     "cpc": 12.5,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "wordpress woocommerce template",
+     "volume": 50,
+     "cpc": 3.42,
+     "kd": 100,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "woocommerce fee",
+     "volume": 50,
+     "cpc": 2.64,
+     "kd": 22,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "woocommerce costs",
+     "volume": 50,
+     "cpc": 3.08,
+     "kd": 16,
+     "tags": [
+      "COST"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "how to start online store",
+     "volume": 390,
+     "cpc": 8.03,
+     "ai_overview": true,
+     "paa": [
+      "How much does it cost to start an online store?",
+      "Do I need a license to sell online in the UK?",
+      "What sells the fastest online?",
+      "How much do I need to open an online store?",
+      "Can I start an online store for free?",
+      "Will AI replace e-commerce?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.sumup.com",
+      "www.forbes.com",
+      "www.shopify.com",
+      "www.baslondigital.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how to open an online store",
+     "volume": 390,
+     "cpc": 8.03,
+     "ai_overview": true,
+     "paa": [
+      "How much does it cost to open an online store?",
+      "Can I start an online store for free?",
+      "How hard is it to open an online store?",
+      "Do I need a license to sell online in the UK?",
+      "Can I sell stuff without being a business?",
+      "Can I run a small business without registering in the UK?"
+     ],
+     "top5": [
+      "www.wix.com",
+      "www.sumup.com",
+      "www.money.co.uk",
+      "www.forbes.com",
+      "squareup.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how to start an online store website",
+     "volume": 390,
+     "cpc": 8.03,
+     "ai_overview": true,
+     "paa": [
+      "How much does it cost to start an online store?",
+      "What sells the fastest online?",
+      "Can I start an online store for free?",
+      "How much do I need to open an online store?",
+      "What is the easiest online business to start?",
+      "Will AI replace e-commerce?"
+     ],
+     "top5": [
+      "www.wix.com",
+      "squareup.com",
+      "www.sumup.com",
+      "www.forbes.com",
+      "freewebstore.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "cheap online store",
+     "volume": 880,
+     "cpc": 3.14,
+     "ai_overview": false,
+     "paa": [
+      "What is the cheapest online store to shop at?",
+      "Which is the cheapest online store?",
+      "Which online shopping site is the cheapest?",
+      "What is the cheapest online store in the UK?",
+      "Where can I buy cheap but good quality clothes online?",
+      "What is the most popular online shopping site in the UK?"
+     ],
+     "top5": [
+      "www.5poundstuff.com",
+      "www.boohoo.com",
+      "bargainfox.com",
+      "www.pricerunner.com",
+      "www.onlinepoundstore.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "online store cheap",
+     "volume": 720,
+     "cpc": 3.3,
+     "ai_overview": false,
+     "paa": [
+      "What is the cheapest online store?",
+      "What is the cheapest online store in the UK?",
+      "What is like shein but cheaper?",
+      "Where can I buy very cheap clothes online?",
+      "What is the best cheap online clothing store?",
+      "What is the 3-3-3 rule for clothes?"
+     ],
+     "top5": [
+      "www.5poundstuff.com",
+      "www.boohoo.com",
+      "bargainfox.com",
+      "youknowwhos.co.uk",
+      "www.buzzfeed.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "woocommerce pricing",
+     "volume": 390,
+     "cpc": 9.37,
+     "ai_overview": false,
+     "paa": [
+      "How much does WooCommerce cost per year?",
+      "Is WooCommerce 100% free?",
+      "What are the disadvantages of WooCommerce?",
+      "How much is a WooCommerce subscription?",
+      "Which one is better, Shopify or WooCommerce?",
+      "Is WooCommerce free forever?"
+     ],
+     "top5": [
+      "woocommerce.com",
+      "woocommerce.com",
+      "www.reddit.com",
+      "elementor.com",
+      "www.cloudways.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best wine online store",
+     "volume": 720,
+     "cpc": 2.69,
+     "ai_overview": true,
+     "paa": [
+      "What is the best website to order wine online?",
+      "What is the best online wine retailer?",
+      "Which online alcohol shop is the best in the UK?",
+      "Who is the best wine merchant in the UK?",
+      "Can I order wine online and have it delivered to the UK?",
+      "Where's the best place to buy wine?"
+     ],
+     "top5": [
+      "www.majestic.co.uk",
+      "www.thewinesociety.com",
+      "hedonism.co.uk",
+      "thefinewinecompany.co.uk",
+      "www.laithwaites.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best fashion online store",
+     "volume": 480,
+     "cpc": 1.61,
+     "ai_overview": false,
+     "paa": [
+      "What is the best online fashion site?",
+      "What is the most trusted online clothing store?",
+      "What is the best online fashion store in the UK?",
+      "What is the 3-3-3 rule for clothes?",
+      "What two colors should not be worn together?",
+      "What is out of style for 2026?"
+     ],
+     "top5": [
+      "www.asos.com",
+      "princesspolly.co.uk",
+      "www.boohoo.com",
+      "www.5poundstuff.com",
+      "www.nastygal.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "uk best online store",
+     "volume": 390,
+     "cpc": 5.55,
+     "ai_overview": true,
+     "paa": [
+      "What are the top 10 online shopping sites in the UK?",
+      "What are the top 5 online retailers?",
+      "Who is the biggest online retailer in the UK?",
+      "What are the top 10 retailers in the UK?",
+      "What's the most popular store in the UK?",
+      "Who are the Big 4 retailers in the UK?"
+     ],
+     "top5": [
+      "www.next.co.uk",
+      "ecommercenews.eu",
+      "bargainfox.com",
+      "reports.retail-week.com",
+      "startups.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "shopify template store",
+     "volume": 590,
+     "cpc": 7.5,
+     "ai_overview": false,
+     "paa": [],
+     "top5": [
+      "themes.shopify.com",
+      "themeforest.net",
+      "dribbble.com",
+      "elements.envato.com",
+      "shopify.dev"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "website ecommerce template",
+     "volume": 260,
+     "cpc": 9.69,
+     "ai_overview": true,
+     "paa": [
+      "What are the best templates for eCommerce websites?",
+      "What are the 7 types of e-commerce?",
+      "How can I create an eCommerce website for free?",
+      "How much does it cost to build an eCommerce website?",
+      "Will AI replace e-commerce?",
+      "What are 5 disadvantages of e-commerce?"
+     ],
+     "top5": [
+      "www.figma.com",
+      "themeforest.net",
+      "www.wix.com",
+      "dribbble.com",
+      "www.framer.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ecommerce website design template",
+     "volume": 260,
+     "cpc": 7.31,
+     "ai_overview": false,
+     "paa": [],
+     "top5": [
+      "www.figma.com",
+      "themeforest.net",
+      "www.framer.com",
+      "dribbble.com",
+      "www.wix.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "SEO": {
+   "top_120_candidates": [
+    {
+     "keyword": "what is search engine optimisation seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "kd": 91,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "kd": 63,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what about seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "kd": 91,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is seo optimisation",
+     "volume": 5400,
+     "cpc": 3.43,
+     "kd": 91,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is search engine optimization seo",
+     "volume": 5400,
+     "cpc": 3.56,
+     "kd": 66,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "tips seo",
+     "volume": 1900,
+     "cpc": 4.22,
+     "kd": 39,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo top companies",
+     "volume": 1600,
+     "cpc": 39.06,
+     "kd": 34,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo companies uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 25,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo services uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best uk seo agencies",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo company uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 28,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo best companies",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 18,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo service in uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 29,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo providers",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agency united kingdom",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo best company",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 18,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agencies",
+     "volume": 1600,
+     "cpc": 39.06,
+     "kd": 3,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agency uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best uk seo company",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 46,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo optimization companies",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 22,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo provider",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 30,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agency",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo services uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo companies uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 26,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo agency uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "kd": 42,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo optimization company",
+     "volume": 1600,
+     "cpc": 24.38,
+     "kd": 30,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo tools best",
+     "volume": 1300,
+     "cpc": 23.66,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo best tool",
+     "volume": 1300,
+     "cpc": 23.66,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo optimization tool",
+     "volume": 1300,
+     "cpc": 22.45,
+     "kd": 45,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agencies in uk",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 20,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best uk seo companies",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 26,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo companies in the uk",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 25,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top seo agencies uk",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 11,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo optimization tools",
+     "volume": 1300,
+     "cpc": 22.45,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo company uk",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best uk seo agency",
+     "volume": 1300,
+     "cpc": 28.98,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo marketing tools",
+     "volume": 1300,
+     "cpc": 23.66,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo optimization tips",
+     "volume": 1000,
+     "cpc": 3.75,
+     "kd": 70,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo tips",
+     "volume": 1000,
+     "cpc": 3.75,
+     "kd": 53,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what does seo stand for",
+     "volume": 1000,
+     "cpc": 0.19,
+     "kd": 63,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "seo optimisation tips",
+     "volume": 1000,
+     "cpc": 3.75,
+     "kd": 32,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is marketing seo",
+     "volume": 880,
+     "cpc": 4.29,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "strategy seo",
+     "volume": 880,
+     "cpc": 10.63,
+     "kd": 64,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo optimization strategy",
+     "volume": 880,
+     "cpc": 13.45,
+     "kd": 65,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best seo services in london",
+     "volume": 720,
+     "cpc": 31.3,
+     "kd": 20,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo companies london",
+     "volume": 720,
+     "cpc": 31.3,
+     "kd": 19,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agency london",
+     "volume": 720,
+     "cpc": 31.3,
+     "kd": 32,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo agencies in london",
+     "volume": 720,
+     "cpc": 31.3,
+     "kd": 47,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo marketing cost",
+     "volume": 590,
+     "cpc": 9.13,
+     "kd": 42,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cost seo",
+     "volume": 590,
+     "cpc": 9.13,
+     "kd": 23,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo optimization cost",
+     "volume": 590,
+     "cpc": 9.13,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo uk cost",
+     "volume": 260,
+     "cpc": 7.52,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "low cost seo services",
+     "volume": 260,
+     "cpc": 14.86,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "low cost seo service",
+     "volume": 260,
+     "cpc": 30.57,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo low cost",
+     "volume": 260,
+     "cpc": 15.91,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo services cost",
+     "volume": 210,
+     "cpc": 6.43,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo service cost",
+     "volume": 210,
+     "cpc": 6.43,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "what local seo",
+     "volume": 170,
+     "cpc": 11.85,
+     "kd": 71,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much does seo cost",
+     "volume": 170,
+     "cpc": 7.09,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does seo marketing cost",
+     "volume": 170,
+     "cpc": 7.09,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best local seo agencies",
+     "volume": 140,
+     "cpc": 16.39,
+     "kd": 3,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best local seo company",
+     "volume": 140,
+     "cpc": 16.39,
+     "kd": 9,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best local seo companies",
+     "volume": 140,
+     "cpc": 16.39,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best local seo agency",
+     "volume": 140,
+     "cpc": null,
+     "kd": 3,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how much does a seo cost",
+     "volume": 140,
+     "cpc": 7.02,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo package cost",
+     "volume": 140,
+     "cpc": 8.64,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "low cost seo packages",
+     "volume": 140,
+     "cpc": 4.86,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo packages cost",
+     "volume": 140,
+     "cpc": 17.74,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much should seo cost",
+     "volume": 140,
+     "cpc": 7.02,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does seo optimization cost",
+     "volume": 140,
+     "cpc": 7.02,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "local seo checklist",
+     "volume": 110,
+     "cpc": null,
+     "kd": 29,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is seo audit",
+     "volume": 110,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "low-cost seo packages",
+     "volume": 110,
+     "cpc": 14.89,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best local seo tools",
+     "volume": 90,
+     "cpc": 11.43,
+     "kd": 22,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best local seo tool",
+     "volume": 90,
+     "cpc": 5.49,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo audit tools",
+     "volume": 90,
+     "cpc": 17.1,
+     "kd": 76,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seo audit tool",
+     "volume": 90,
+     "cpc": 12.84,
+     "kd": 76,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo audit report template",
+     "volume": 90,
+     "cpc": null,
+     "kd": 3,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "average cost of seo",
+     "volume": 90,
+     "cpc": 19.16,
+     "kd": 4,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "typical seo cost",
+     "volume": 90,
+     "cpc": 19.16,
+     "kd": 1,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "local seo guide",
+     "volume": 70,
+     "cpc": null,
+     "kd": 70,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is local seo optimization",
+     "volume": 70,
+     "cpc": null,
+     "kd": 46,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top local seo agencies",
+     "volume": 70,
+     "cpc": null,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top local seo agency",
+     "volume": 70,
+     "cpc": null,
+     "kd": 18,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is a local seo",
+     "volume": 70,
+     "cpc": null,
+     "kd": 37,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top local seo companies",
+     "volume": 70,
+     "cpc": null,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is local seo marketing",
+     "volume": 70,
+     "cpc": null,
+     "kd": 24,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top local seo company",
+     "volume": 70,
+     "cpc": null,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "audit seo checklist",
+     "volume": 70,
+     "cpc": 8.89,
+     "kd": 31,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo audit cost",
+     "volume": 70,
+     "cpc": null,
+     "kd": 8,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo audit costs",
+     "volume": 70,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo audit examples",
+     "volume": 70,
+     "cpc": 3.48,
+     "kd": 2,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo average cost",
+     "volume": 70,
+     "cpc": null,
+     "kd": 8,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo reseller cost",
+     "volume": 70,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best seo tool for keyword ranking reports",
+     "volume": 70,
+     "cpc": null,
+     "kd": 47,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is local seo services",
+     "volume": 50,
+     "cpc": null,
+     "kd": 37,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "local seo strategy",
+     "volume": 50,
+     "cpc": null,
+     "kd": 68,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best free seo audit tools",
+     "volume": 50,
+     "cpc": 16.41,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to do seo audit",
+     "volume": 50,
+     "cpc": null,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much does an seo audit cost",
+     "volume": 50,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best seo audit",
+     "volume": 50,
+     "cpc": null,
+     "kd": 53,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free seo audit tool",
+     "volume": 50,
+     "cpc": null,
+     "kd": 61,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to conduct an seo audit",
+     "volume": 50,
+     "cpc": null,
+     "kd": 30,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to perform an seo audit",
+     "volume": 50,
+     "cpc": null,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "monthly seo cost",
+     "volume": 50,
+     "cpc": 5.07,
+     "kd": 42,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo website cost",
+     "volume": 50,
+     "cpc": 11.21,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "yoast seo cost",
+     "volume": 50,
+     "cpc": 2.41,
+     "kd": 35,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "low cost seo",
+     "volume": 50,
+     "cpc": null,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much does seo cost uk",
+     "volume": 50,
+     "cpc": 3.82,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "seo cost per month",
+     "volume": 50,
+     "cpc": 10.29,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "local seo optimization tips",
+     "volume": 40,
+     "cpc": null,
+     "kd": 33,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "local seo statistics",
+     "volume": 40,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best local seo company for google",
+     "volume": 40,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "local seo tips",
+     "volume": 40,
+     "cpc": null,
+     "kd": 21,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "local seo pricing",
+     "volume": 40,
+     "cpc": 8.62,
+     "kd": 3,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to do local seo marketing",
+     "volume": 40,
+     "cpc": null,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "local seo stats",
+     "volume": 40,
+     "cpc": null,
+     "kd": 26,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "local seo price",
+     "volume": 40,
+     "cpc": 8.62,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best local seo software",
+     "volume": 40,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to do local seo",
+     "volume": 40,
+     "cpc": null,
+     "kd": 46,
+     "tags": [
+      "QUESTION"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "what is search engine optimisation seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "ai_overview": true,
+     "paa": [
+      "What is SEO with an example?",
+      "How do I learn SEO as a beginner?",
+      "Can I do SEO myself?",
+      "Can ChatGPT do SEO?",
+      "Is SEO dead now with AI?",
+      "How much should SEO cost for a small business?"
+     ],
+     "top5": [
+      "developers.google.com",
+      "www.ukri.org",
+      "en.wikipedia.org",
+      "digitalmarketinginstitute.com",
+      "searchengineland.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what is seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "ai_overview": true,
+     "paa": [
+      "What is SEO and how does it work?",
+      "How to do SEO for beginners?",
+      "Can you do SEO yourself?",
+      "Is SEO a good career?",
+      "Will SEO be replaced by AI?",
+      "How much is SEO salary?"
+     ],
+     "top5": [
+      "developers.google.com",
+      "searchengineland.com",
+      "digitalmarketinginstitute.com",
+      "moz.com",
+      "www.mtu.edu"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what about seo",
+     "volume": 5400,
+     "cpc": 3.43,
+     "ai_overview": true,
+     "paa": [
+      "What is SEO and how to work?",
+      "Is SEO still worth it in 2026?",
+      "How do I learn SEO as a beginner?",
+      "Will SEO be replaced by AI?",
+      "What is a SEO salary?",
+      "Which 5 jobs will survive AI?"
+     ],
+     "top5": [
+      "developers.google.com",
+      "searchengineland.com",
+      "en.wikipedia.org",
+      "www.reddit.com",
+      "digitalmarketinginstitute.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "seo marketing cost",
+     "volume": 590,
+     "cpc": 9.13,
+     "ai_overview": true,
+     "paa": [
+      "How much does SEO marketing cost?",
+      "How much does SEO cost in the UK?",
+      "What is the 80/20 rule in SEO?",
+      "Is paying someone to do SEO worth it?",
+      "Can ChatGPT do SEO?",
+      "Is SEO dead now with AI?"
+     ],
+     "top5": [
+      "www.polarisagency.com",
+      "tjcreative.co.uk",
+      "www.seocalc.com",
+      "whitehat-seo.co.uk",
+      "www.rubikdigital.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "cost seo",
+     "volume": 590,
+     "cpc": 9.13,
+     "ai_overview": true,
+     "paa": [
+      "How much does SEO cost?",
+      "Is it worth paying for SEO?",
+      "Can I do SEO on my own?",
+      "How much should I expect to pay for SEO?",
+      "What is the average cost of SEO?",
+      "Is paying someone for SEO worth it?"
+     ],
+     "top5": [
+      "www.redcore.digital",
+      "www.seocalc.com",
+      "www.rubikdigital.co.uk",
+      "www.polarisagency.com",
+      "whitehat-seo.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "seo optimization cost",
+     "volume": 590,
+     "cpc": 9.13,
+     "ai_overview": true,
+     "paa": [
+      "How much does SEO optimization cost?",
+      "Is it worth paying for SEO optimization?",
+      "How much does SEO cost in the UK?",
+      "What is the 80/20 rule in SEO?",
+      "What is the 5-3-2 rule on Instagram?",
+      "What are the top 5 SEO strategies?"
+     ],
+     "top5": [
+      "targetedseo.co.uk",
+      "www.seocalc.com",
+      "www.rubikdigital.co.uk",
+      "whitehat-seo.co.uk",
+      "www.redcore.digital"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "seo top companies",
+     "volume": 1600,
+     "cpc": 39.06,
+     "ai_overview": true,
+     "paa": [
+      "Who are the biggest SEO companies?",
+      "Which company is best for SEO?",
+      "What are the top SEO companies in the UK?",
+      "Who are the top 10 SEO experts in the world?",
+      "Who is the best SEO expert in London?",
+      "What is a SEO salary?"
+     ],
+     "top5": [
+      "clutch.co",
+      "www.seoworks.co.uk",
+      "uk.trustpilot.com",
+      "thriveagency.com",
+      "www.jdrgroup.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "top seo companies uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "ai_overview": true,
+     "paa": [
+      "Who are the biggest SEO companies?",
+      "Which company is best for SEO?",
+      "What is the 80/20 rule for SEO?",
+      "How much does SEO cost in the UK?",
+      "Is SEO worth it for small businesses?",
+      "Which SEO service is the best in the UK?"
+     ],
+     "top5": [
+      "www.gsstechsolutions.co.uk",
+      "thatware.co",
+      "www.seoworks.co.uk",
+      "clutch.co",
+      "www.geniecrawl.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best seo services uk",
+     "volume": 1600,
+     "cpc": 29.94,
+     "ai_overview": true,
+     "paa": [
+      "What is the typical cost of SEO services in the UK?",
+      "What is the 80/20 rule in SEO?",
+      "Is it worth paying for SEO services?",
+      "What is the average cost of local SEO services in the UK?",
+      "Is doing a local SEO worth it?",
+      "Which SEO service is the best in the UK?"
+     ],
+     "top5": [
+      "www.seoworks.co.uk",
+      "uk.trustpilot.com",
+      "www.jdrgroup.co.uk",
+      "agencies.semrush.com",
+      "localiq.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "tips seo",
+     "volume": 1900,
+     "cpc": 4.22,
+     "ai_overview": true,
+     "paa": [
+      "What are some SEO tips?",
+      "What is the 80/20 rule in SEO?",
+      "What are the top 5 SEO strategies?",
+      "Can ChatGPT do SEO?",
+      "Is SEO dead now with AI?",
+      "Can I do SEO myself?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "developers.google.com",
+      "www.mtu.edu",
+      "www.bynder.com",
+      "www.finnpartners.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "seo optimization tips",
+     "volume": 1000,
+     "cpc": 3.75,
+     "ai_overview": true,
+     "paa": [
+      "What is the best way to optimize SEO?",
+      "What is the 80/20 rule in SEO?",
+      "Is SEO dead now with AI?",
+      "What are the top 5 SEO strategies?",
+      "Can ChatGPT do SEO?",
+      "Can I do SEO myself?"
+     ],
+     "top5": [
+      "developers.google.com",
+      "www.reddit.com",
+      "www.siteimprove.com",
+      "www.mtu.edu",
+      "www.wiley.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "seo tips",
+     "volume": 1000,
+     "cpc": 3.75,
+     "ai_overview": true,
+     "paa": [
+      "What is the best SEO strategy?",
+      "What are some SEO tips?",
+      "What is the 80/20 rule for SEO?",
+      "What are the top 5 SEO strategies?",
+      "Is SEO dead now with AI?",
+      "Can ChatGPT do SEO?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "developers.google.com",
+      "www.mtu.edu",
+      "www.finnpartners.com",
+      "www.bynder.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "AI SEO / GEO": {
+   "top_120_candidates": [
+    {
+     "keyword": "how to disable ai overview google",
+     "volume": 720,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to remove ai overview from google",
+     "volume": 480,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off google ai overview",
+     "volume": 480,
+     "cpc": null,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is 2027 next year ai overview",
+     "volume": 390,
+     "cpc": null,
+     "kd": 15,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is it 2027 next year ai overview",
+     "volume": 320,
+     "cpc": null,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to disable ai overview",
+     "volume": 320,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to disable google ai overview",
+     "volume": 210,
+     "cpc": null,
+     "kd": 19,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ai overview",
+     "volume": 210,
+     "cpc": null,
+     "kd": 48,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is 2026 next year ai overview",
+     "volume": 210,
+     "cpc": null,
+     "kd": 33,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai seo tool",
+     "volume": 140,
+     "cpc": 25.7,
+     "kd": 31,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai seo tools",
+     "volume": 140,
+     "cpc": 25.7,
+     "kd": 39,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to remove google ai overview",
+     "volume": 110,
+     "cpc": null,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "can you turn off google ai overview",
+     "volume": 110,
+     "cpc": null,
+     "kd": 6,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is ai overview accurate",
+     "volume": 110,
+     "cpc": null,
+     "kd": 40,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off ai overview on google",
+     "volume": 110,
+     "cpc": null,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is generative engine optimization",
+     "volume": 70,
+     "cpc": 9.02,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to rank in ai overview",
+     "volume": 70,
+     "cpc": null,
+     "kd": 28,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get rid of google ai overview",
+     "volume": 70,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ai seo called",
+     "volume": 50,
+     "cpc": 21.91,
+     "kd": 12,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ai seo",
+     "volume": 50,
+     "cpc": 10.72,
+     "kd": 52,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai seo strategy",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai seo software",
+     "volume": 50,
+     "cpc": 23.25,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "does google ai overview use water",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is google ai overview",
+     "volume": 50,
+     "cpc": null,
+     "kd": 53,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is an ai overview",
+     "volume": 50,
+     "cpc": null,
+     "kd": 10,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "can you turn off ai overview",
+     "volume": 50,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off ai overview on safari",
+     "volume": 40,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how many rocks should i eat per day ai overview",
+     "volume": 40,
+     "cpc": null,
+     "kd": 31,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is google ai overview accurate",
+     "volume": 40,
+     "cpc": null,
+     "kd": 6,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "why is google ai overview so bad",
+     "volume": 40,
+     "cpc": null,
+     "kd": 28,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "why is ai overview so bad",
+     "volume": 40,
+     "cpc": null,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "when did ai overview start on google",
+     "volume": 40,
+     "cpc": null,
+     "kd": 40,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is geo generative engine optimization",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai seo",
+     "volume": 30,
+     "cpc": 22.07,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai seo agency",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is ai overview on google",
+     "volume": 30,
+     "cpc": null,
+     "kd": 58,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get ai overview",
+     "volume": 30,
+     "cpc": 4.24,
+     "kd": 7,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "when did google ai overview start",
+     "volume": 30,
+     "cpc": null,
+     "kd": 40,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "when was ai overview added to google",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get ai overview on google",
+     "volume": 30,
+     "cpc": 7.07,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does google ai overview work",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai seo tools 2025",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free ai seo tools",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to do ai seo",
+     "volume": 20,
+     "cpc": 24.08,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top ai seo tools",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "where is ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is it 2028 next year ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is google ai overview generative ai",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how accurate is ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how many rocks should i eat ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what happened to google ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to appear in ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off google ai overview on mobile",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how accurate is google ai overview",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "when was google ai overview released",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how turn off ai overview google",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off ai overview google ai",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get rid of ai overview on safari",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to disable ai overview on google",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to hide ai overview google",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is google ai overview bad for the environment",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is ai overview bad for the environment",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what does ai overview mean",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn off ai overview safari",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is ai overview gemini",
+     "volume": 20,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how generative engine optimization geo rewrites the rules of search",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization guide",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization tips",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "top generative engine optimization strategies for ai visibility",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top generative engine optimization companies in ai",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization examples",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is generative engine optimization geo",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best generative engine optimization for ai focused businesses",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization vs aeo",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "which generative engine optimization is best for ai",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top rated generative engine optimization for ai",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization best practices",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization statistics",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization vs seo",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best tools for generative engine optimization",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how does generative engine optimization work",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best rated generative engine optimization for ai",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what's the best generative engine optimization strategy for ai",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION",
+      "COMPARISON",
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "answer engine optimization vs generative engine optimization",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to implement generative engine optimization",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to measure generative engine optimization",
+     "volume": 10,
+     "cpc": 18.21,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to do generative engine optimization",
+     "volume": 10,
+     "cpc": 36.1,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "generative engine optimization checklist",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to ai seo",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "seo vs ai search",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how does ai seo work",
+     "volume": 10,
+     "cpc": 8.29,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai seo writer",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seo vs ai search optimization",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai seo tools for small businesses",
+     "volume": 10,
+     "cpc": 23.71,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai seo vs geo",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "does ai seo work",
+     "volume": 10,
+     "cpc": 11.62,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai seo statistics",
+     "volume": 10,
+     "cpc": 11.86,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to use ai seo to improve your website",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai seo writing tools",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai seo tutorial",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ai seo checklist",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai seo content writer",
+     "volume": 10,
+     "cpc": 26.18,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai seo best practices",
+     "volume": 10,
+     "cpc": 6.7,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai visibility platforms with seo capabilities",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "google ai seo guide",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo ai visibility checklist",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai seo services",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "alli ai seo review",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai seo tips",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ai seo trends",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "seo leads ai search strategy shifts",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai seo tools free",
+     "volume": 10,
+     "cpc": 4.32,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai and geo seo trends",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "ranked ai seo review",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is ai seo optimization",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best chatgpt seo plugin",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "chatgpt seo guide",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "chatgpt seo strategy",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is the funniest thing in the world ai overview",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to turn on ai overview in chrome",
+     "volume": 10,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "how to disable ai overview google",
+     "volume": 720,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "Can I turn off AI Overview in Google?",
+      "How to deactivate overview AI?",
+      "Why is Google forcing AI Overview?",
+      "How do I disable AI Assistant on Google?",
+      "How do I turn off AI?",
+      "How do I disable Gemini on Google?"
+     ],
+     "top5": [
+      "support.google.com",
+      "www.reddit.com",
+      "www.cnet.com",
+      "www.androidauthority.com",
+      "chromewebstore.google.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how to remove ai overview from google",
+     "volume": 480,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "How to shut up AI Overview?",
+      "Why is Google forcing AI Overview?",
+      "How do I change my Google Search back to normal?",
+      "How can I hide Google AI Overviews from Chrome?",
+      "How do I disable AI Overview in Google?",
+      "How do I disable all AI features in Google Chrome?"
+     ],
+     "top5": [
+      "support.google.com",
+      "www.reddit.com",
+      "www.cnet.com",
+      "chromewebstore.google.com",
+      "www.androidauthority.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how to turn off google ai overview",
+     "volume": 480,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "Why is Google forcing AI Overview?",
+      "How to shut up AI Overview?",
+      "How can I hide Google AI Overviews from Chrome?",
+      "How do I get rid of AI on my phone searches?",
+      "Can you disable Google AI?",
+      "Can I disable AI on my phone?"
+     ],
+     "top5": [
+      "support.google.com",
+      "www.reddit.com",
+      "www.cnet.com",
+      "www.androidauthority.com",
+      "tenbluelinks.org"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how much water does ai overview use",
+     "volume": 10,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "How much water does AI use really?",
+      "Is AI or Google worse for the environment?",
+      "How much water does ChatGPT use per 100 words?",
+      "Is ChatGPT wasting water?",
+      "Why is ChatGPT bad for the environment?",
+      "What is the #1 water waster?"
+     ],
+     "top5": [
+      "matttutt.me",
+      "www.reddit.com",
+      "sustainableict.blog.gov.uk",
+      "www.businessenergyuk.com",
+      "nationalcentreforai.jiscinvolve.org"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how much energy is google wasting with its ai overview",
+     "volume": 10,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "How bad is Google AI overview for the environment?",
+      "Does ChatGPT use more energy than a Google search?",
+      "Is ChatGPT worse for the environment than Google?",
+      "How much energy is wasted with AI?",
+      "How damaging is AI to the environment?",
+      "What is the 30% rule in AI?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.scientificamerican.com",
+      "matttutt.me",
+      "sustainabilitymag.com",
+      "support.google.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how much energy does ai overview use",
+     "volume": 10,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "How much electricity does Google AI Overview use?",
+      "How much energy does AI use overall?",
+      "Is Google AI environmentally friendly?",
+      "How much energy does it take to run an AI search?",
+      "How damaging is AI to the environment?",
+      "How much energy does 1 ChatGPT search use?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "matttutt.me",
+      "www.scientificamerican.com",
+      "www.techuk.org",
+      "www.technologyreview.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best ai seo tool",
+     "volume": 140,
+     "cpc": 25.7,
+     "ai_overview": true,
+     "paa": [
+      "Which AI tool is best for SEO?",
+      "Which AI agent is best for SEO?",
+      "Is ChatGPT good for SEO?",
+      "Can AI do SEO optimization?",
+      "What is the best AI SEO agency?",
+      "What is AI SEO called now?"
+     ],
+     "top5": [
+      "freddiechatt.com",
+      "onelittleweb.com",
+      "whatagraph.com",
+      "www.rankability.com",
+      "zapier.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best ai seo tools",
+     "volume": 140,
+     "cpc": 25.7,
+     "ai_overview": true,
+     "paa": [
+      "Which AI is best for SEO?",
+      "Can AI do SEO optimization?",
+      "Is ChatGPT good for SEO?",
+      "What is the best AI SEO agency?",
+      "What is AI SEO called now?",
+      "How much does AI SEO cost?"
+     ],
+     "top5": [
+      "onelittleweb.com",
+      "whatagraph.com",
+      "freddiechatt.com",
+      "www.rankability.com",
+      "zapier.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best ai seo software",
+     "volume": 50,
+     "cpc": 23.25,
+     "ai_overview": true,
+     "paa": [
+      "Which AI tool is best for SEO?",
+      "Which AI agent is best for SEO?",
+      "Can AI do SEO optimization?",
+      "What is the best AI SEO agency?",
+      "Can ChatGPT do SEO?",
+      "What is AI SEO called now?"
+     ],
+     "top5": [
+      "onelittleweb.com",
+      "whatagraph.com",
+      "www.rankability.com",
+      "freddiechatt.com",
+      "zapier.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai seo strategy",
+     "volume": 50,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "Can you do SEO with AI?",
+      "What is the 80/20 rule in SEO?",
+      "What are the top 5 SEO strategies?",
+      "What is AI SEO called now?",
+      "Can ChatGPT do SEO?",
+      "How is AI changing SEO in 2026?"
+     ],
+     "top5": [
+      "www.salesforce.com",
+      "llmrefs.com",
+      "www.brightedge.com",
+      "www.siteimprove.com",
+      "www.wsiworld.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "generative engine optimization guide",
+     "volume": 10,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [],
+     "top5": [
+      "www.semrush.com",
+      "developers.google.com",
+      "llmrefs.com",
+      "moz.com",
+      "www.aspectusgroup.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "generative engine optimization tips",
+     "volume": 10,
+     "cpc": null,
+     "ai_overview": true,
+     "paa": [
+      "Is SEO dead now with AI?",
+      "How do I learn SEO as a beginner?",
+      "What are the top 5 SEO strategies?",
+      "How do I improve my SEO skills?",
+      "Can ChatGPT do SEO?",
+      "Can I do SEO myself?"
+     ],
+     "top5": [
+      "developers.google.com",
+      "www.reply.com",
+      "www.coursera.org",
+      "en.wikipedia.org",
+      "moz.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "AI Agents & Automation": {
+   "top_120_candidates": [
+    {
+     "keyword": "what is agentic ai",
+     "volume": 5400,
+     "cpc": 5.74,
+     "kd": 56,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is an ai agent",
+     "volume": 2900,
+     "cpc": 5.36,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai chatbot best",
+     "volume": 1900,
+     "cpc": 4.1,
+     "kd": 50,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what are ai agent",
+     "volume": 720,
+     "cpc": 6.23,
+     "kd": 48,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "agentic ai vs generative ai",
+     "volume": 720,
+     "cpc": 8.89,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "agentic ai versus generative ai",
+     "volume": 720,
+     "cpc": 8.89,
+     "kd": 4,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build an ai agent",
+     "volume": 480,
+     "cpc": 11.28,
+     "kd": 19,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot for roleplay",
+     "volume": 480,
+     "cpc": 2.3,
+     "kd": 9,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free ai chatbot",
+     "volume": 480,
+     "cpc": 2.92,
+     "kd": 29,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot app",
+     "volume": 480,
+     "cpc": 2.52,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is ai chatbot",
+     "volume": 480,
+     "cpc": 13.72,
+     "kd": 31,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot apps",
+     "volume": 480,
+     "cpc": 2.52,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai agent",
+     "volume": 390,
+     "cpc": 13.6,
+     "kd": 20,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is ai agent",
+     "volume": 390,
+     "cpc": 4.92,
+     "kd": 64,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "agentic ai examples",
+     "volume": 390,
+     "cpc": 9.05,
+     "kd": 17,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to create an ai agent",
+     "volume": 320,
+     "cpc": 9.7,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai agent examples",
+     "volume": 320,
+     "cpc": 6.76,
+     "kd": 24,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot free",
+     "volume": 320,
+     "cpc": 3.11,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "generative ai vs agentic ai",
+     "volume": 320,
+     "cpc": 8.03,
+     "kd": 18,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build ai agent",
+     "volume": 260,
+     "cpc": 9.35,
+     "kd": 40,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ai automation",
+     "volume": 260,
+     "cpc": 15.76,
+     "kd": 21,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is the best ai chatbot",
+     "volume": 260,
+     "cpc": 10.31,
+     "kd": 24,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai agent versus agentic ai",
+     "volume": 210,
+     "cpc": 12.71,
+     "kd": 20,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "whats the best ai chatbot",
+     "volume": 210,
+     "cpc": 2.91,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai agents vs agentic ai",
+     "volume": 210,
+     "cpc": 13.46,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what does agentic ai mean",
+     "volume": 210,
+     "cpc": 2.52,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create ai agent",
+     "volume": 170,
+     "cpc": 7.02,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "gen ai vs agentic ai",
+     "volume": 170,
+     "cpc": 4.73,
+     "kd": 16,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "agentic vs generative ai",
+     "volume": 170,
+     "cpc": 8.29,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best chatbot ai",
+     "volume": 140,
+     "cpc": 5.34,
+     "kd": 39,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot with no restrictions",
+     "volume": 140,
+     "cpc": 2.62,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "agentic ai vs ai agents",
+     "volume": 140,
+     "cpc": 2.6,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "examples of agentic ai",
+     "volume": 140,
+     "cpc": 11.94,
+     "kd": 29,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is an ai agent and how does it work",
+     "volume": 110,
+     "cpc": 12.22,
+     "kd": 66,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make an ai agent",
+     "volume": 110,
+     "cpc": 10.41,
+     "kd": 19,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make ai chatbot",
+     "volume": 110,
+     "cpc": 12.7,
+     "kd": 49,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is chatbot ai",
+     "volume": 110,
+     "cpc": null,
+     "kd": 61,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot roleplay",
+     "volume": 110,
+     "cpc": 1.6,
+     "kd": 19,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top ai chatbot",
+     "volume": 110,
+     "cpc": 9.09,
+     "kd": 33,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free ai chatbot with no restrictions",
+     "volume": 110,
+     "cpc": 2.01,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to create ai chatbot",
+     "volume": 110,
+     "cpc": 12.7,
+     "kd": 49,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is agentic ai vs generative ai",
+     "volume": 110,
+     "cpc": 9.16,
+     "kd": 14,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is agentic ai in simple terms",
+     "volume": 110,
+     "cpc": 11.45,
+     "kd": 62,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best agentic ai",
+     "volume": 110,
+     "cpc": 20.23,
+     "kd": 22,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is agentic ai example",
+     "volume": 110,
+     "cpc": 5.55,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai chatbot examples",
+     "volume": 90,
+     "cpc": 5.53,
+     "kd": 24,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "difference between generative ai and agentic ai",
+     "volume": 90,
+     "cpc": null,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "is chatgpt an ai agent",
+     "volume": 70,
+     "cpc": 1.48,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai agent vs agentic ai",
+     "volume": 70,
+     "cpc": 10.09,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai agent for coding",
+     "volume": 70,
+     "cpc": 9.61,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free ai chatbot app",
+     "volume": 70,
+     "cpc": 1.68,
+     "kd": 29,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best no filter ai chatbot",
+     "volume": 70,
+     "cpc": 1.74,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "the best ai chatbot",
+     "volume": 70,
+     "cpc": 6.8,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is workflow automation",
+     "volume": 70,
+     "cpc": 30.51,
+     "kd": 32,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "genai vs agentic ai",
+     "volume": 70,
+     "cpc": 10.9,
+     "kd": 38,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what agentic ai",
+     "volume": 70,
+     "cpc": 7.97,
+     "kd": 53,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is chatgpt agentic ai",
+     "volume": 70,
+     "cpc": null,
+     "kd": 16,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does agentic ai work",
+     "volume": 70,
+     "cpc": 8.26,
+     "kd": 55,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how do you build an ai agent",
+     "volume": 50,
+     "cpc": 8.01,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best free ai agent",
+     "volume": 50,
+     "cpc": 13.34,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai agent builder",
+     "volume": 50,
+     "cpc": 11.28,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build an ai agent with chatgpt",
+     "volume": 50,
+     "cpc": 5.73,
+     "kd": 19,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to build ai agent from scratch",
+     "volume": 50,
+     "cpc": 14.95,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "which ai chatbot is best",
+     "volume": 50,
+     "cpc": 4.35,
+     "kd": 40,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best free ai chatbot without restrictions",
+     "volume": 50,
+     "cpc": 1.98,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "chatbot ai review",
+     "volume": 50,
+     "cpc": 3.95,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best unfiltered ai chatbot",
+     "volume": 50,
+     "cpc": 2.85,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai character chatbot",
+     "volume": 50,
+     "cpc": 5.37,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai roleplay chatbot",
+     "volume": 50,
+     "cpc": 1.57,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build agentic ai",
+     "volume": 50,
+     "cpc": 12.14,
+     "kd": 19,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is copilot agentic ai",
+     "volume": 50,
+     "cpc": null,
+     "kd": 13,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is claude agentic ai",
+     "volume": 50,
+     "cpc": 16.02,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is claude an ai agent",
+     "volume": 40,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top ai agent",
+     "volume": 40,
+     "cpc": 22.77,
+     "kd": 13,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how do you create an ai agent",
+     "volume": 40,
+     "cpc": 15.91,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what can ai agent do",
+     "volume": 40,
+     "cpc": 2.95,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how do i build an ai agent",
+     "volume": 40,
+     "cpc": 17.73,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is safe to use an ai chatbot for",
+     "volume": 40,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what's the best ai chatbot",
+     "volume": 40,
+     "cpc": 5.13,
+     "kd": 15,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is the best ai chatbot app",
+     "volume": 40,
+     "cpc": 3.14,
+     "kd": null,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot for coding",
+     "volume": 40,
+     "cpc": 5.25,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot no filter",
+     "volume": 40,
+     "cpc": 1.4,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build ai chatbot",
+     "volume": 40,
+     "cpc": 6.27,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai girlfriend chatbot",
+     "volume": 40,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how does ai chatbot work",
+     "volume": 40,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what does agentic mean in ai",
+     "volume": 40,
+     "cpc": 1.17,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "agentic ai tutorial",
+     "volume": 40,
+     "cpc": 7.44,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "difference between genai and agentic ai",
+     "volume": 40,
+     "cpc": 9.76,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai agent for business",
+     "volume": 30,
+     "cpc": 19.27,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai agent ideas",
+     "volume": 30,
+     "cpc": 5.94,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what does an ai agent do",
+     "volume": 30,
+     "cpc": 8.55,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai agent tutorial",
+     "volume": 30,
+     "cpc": 11.81,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to build your own ai agent",
+     "volume": 30,
+     "cpc": 15.56,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how ai agent works",
+     "volume": 30,
+     "cpc": 8.38,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai agent platform",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai agent platforms",
+     "volume": 30,
+     "cpc": 16.96,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build an ai agent with claude",
+     "volume": 30,
+     "cpc": 7.09,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai agent vs llm",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to build an ai agent in copilot",
+     "volume": 30,
+     "cpc": 6.83,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai automation tools",
+     "volume": 30,
+     "cpc": 27.61,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai automation tool",
+     "volume": 30,
+     "cpc": 27.61,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai automation examples",
+     "volume": 30,
+     "cpc": 4.98,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot sites",
+     "volume": 30,
+     "cpc": 4.39,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what was the first ai chatbot",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "ai chatbot price",
+     "volume": 30,
+     "cpc": 27.38,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot website",
+     "volume": 30,
+     "cpc": 1.54,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai chatbot pricing",
+     "volume": 30,
+     "cpc": 27.38,
+     "kd": null,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "what ai chatbot has no filter",
+     "volume": 30,
+     "cpc": 2.62,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot character",
+     "volume": 30,
+     "cpc": 4.12,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai chatbot ideas",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot 2026",
+     "volume": 30,
+     "cpc": 2.18,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot site",
+     "volume": 30,
+     "cpc": 9.81,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "which ai chatbot is the best",
+     "volume": 30,
+     "cpc": null,
+     "kd": 40,
+     "tags": [
+      "QUESTION",
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai chatbot gpt alternative",
+     "volume": 30,
+     "cpc": 5.94,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best ai chatbot websites",
+     "volume": 30,
+     "cpc": 2.78,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to use agentic ai",
+     "volume": 30,
+     "cpc": 10.14,
+     "kd": 51,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best agentic ai tools",
+     "volume": 30,
+     "cpc": 4.06,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "agentic ai vs llms",
+     "volume": 30,
+     "cpc": 9.21,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "ai vs agentic ai",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "rag vs agentic ai",
+     "volume": 30,
+     "cpc": null,
+     "kd": null,
+     "tags": [
+      "COMPARISON"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "what is agentic ai",
+     "volume": 5400,
+     "cpc": 5.74,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT an agentic AI?",
+      "What is the difference between gen AI and agentic AI?",
+      "What are examples of agentic AI?",
+      "What is the difference between AI and agentic?",
+      "What are the top 3 AI agents?",
+      "What are the 7 types of AI?"
+     ],
+     "top5": [
+      "www.gov.uk",
+      "www.ibm.com",
+      "mitsloan.mit.edu",
+      "cloud.google.com",
+      "www.redhat.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what is an ai agent",
+     "volume": 2900,
+     "cpc": 5.36,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT an AI agent?",
+      "What does an AI agent do exactly?",
+      "What are AI agent examples?",
+      "What is the salary of an AI agent?",
+      "Can you really make money with AI agents?",
+      "Which AI job is highly paid?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.ibm.com",
+      "www.mckinsey.com",
+      "cloud.google.com",
+      "centrefordigitalinnovation.ac.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what are ai agent",
+     "volume": 720,
+     "cpc": 6.23,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT an AI agent?",
+      "What is AI agent and its example?",
+      "What are the top 5 AI agents?",
+      "What are the 7 types of AI agents?",
+      "What are the best examples of AI agents?",
+      "What are common AI agents?"
+     ],
+     "top5": [
+      "www.ibm.com",
+      "www.reddit.com",
+      "cloud.google.com",
+      "centrefordigitalinnovation.ac.uk",
+      "aws.amazon.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai chatbot price",
+     "volume": 30,
+     "cpc": 27.38,
+     "ai_overview": true,
+     "paa": [
+      "How much does AI cost in the UK?",
+      "Can I buy my own AI bot?",
+      "Is AI chatbot free?",
+      "How much is chatbot AI per month?",
+      "Which is better, ChatGPT or chatbot?"
+     ],
+     "top5": [
+      "www.chatbot.com",
+      "www.reddit.com",
+      "chatbotapp.ai",
+      "www.tidio.com",
+      "masterofcode.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai chatbot pricing",
+     "volume": 30,
+     "cpc": 27.38,
+     "ai_overview": true,
+     "paa": [
+      "Can I buy my own AI bot?",
+      "How much does AI cost in the UK?",
+      "Which AI chatbot is the cheapest?",
+      "Is AI chatbot free?",
+      "Which is better, ChatGPT or chatbot?",
+      "How expensive are AI chatbots?"
+     ],
+     "top5": [
+      "www.chatbot.com",
+      "chatbotapp.ai",
+      "www.cnet.com",
+      "www.reddit.com",
+      "masterofcode.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai agent pricing",
+     "volume": 20,
+     "cpc": 6.34,
+     "ai_overview": true,
+     "paa": [
+      "How do you price your AI agent?",
+      "How much does it cost to run an AI agent on 24/7?",
+      "Are AI agents expensive?",
+      "Is agent AI free to use?",
+      "Can I build my own AI agent for free?",
+      "How much do AI agents cost?"
+     ],
+     "top5": [
+      "www.chargebee.com",
+      "pickaxe.co",
+      "www.reddit.com",
+      "docs.cloud.google.com",
+      "www.bakedwith.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai chatbot best",
+     "volume": 1900,
+     "cpc": 4.1,
+     "ai_overview": true,
+     "paa": [
+      "What are the top 10 AI chatbots?",
+      "Is there any AI better than ChatGPT?",
+      "Is ChatGPT still the best AI?",
+      "Which is better, ChatGPT or chatbot?",
+      "What are the four types of chatbots?",
+      "Which is the most accurate AI chatbot?"
+     ],
+     "top5": [
+      "uk.pcmag.com",
+      "zapier.com",
+      "www.knock-ai.com",
+      "www.chatbot.com",
+      "artificialanalysis.ai"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "agentic ai vs generative ai",
+     "volume": 720,
+     "cpc": 8.89,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT agentic AI or generative AI?",
+      "What are examples of agentic AI?",
+      "Is agentic AI better than generative AI?",
+      "What are the 7 types of AI?",
+      "Which type of AI is ChatGPT?",
+      "What are the top 3 most used AI?"
+     ],
+     "top5": [
+      "www.ibm.com",
+      "www.thomsonreuters.com",
+      "www.databricks.com",
+      "www.youtube.com",
+      "www.redhat.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "agentic ai versus generative ai",
+     "volume": 720,
+     "cpc": 8.89,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT generative or agentic AI?",
+      "Is agentic AI better than generative AI?",
+      "What are the 7 types of AI?",
+      "What are the 5 different types of AI?",
+      "Which type of AI is ChatGPT?",
+      "What are the top 3 most used AI?"
+     ],
+     "top5": [
+      "www.ibm.com",
+      "www.thomsonreuters.com",
+      "www.databricks.com",
+      "www.youtube.com",
+      "www.redhat.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "agentic ai examples",
+     "volume": 390,
+     "cpc": 9.05,
+     "ai_overview": true,
+     "paa": [
+      "What is the most popular agentic AI?",
+      "What are the 5 types of agent in AI?",
+      "Is Siri an example of agentic AI?",
+      "What is agentic AI in simple ways?",
+      "Is ChatGPT an agentic AI?",
+      "How can I get started with agentic AI?"
+     ],
+     "top5": [
+      "www.evidentlyai.com",
+      "mitsloan.mit.edu",
+      "slack.com",
+      "bcn.co.uk",
+      "cloud.google.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "ai agent examples",
+     "volume": 320,
+     "cpc": 6.76,
+     "ai_overview": true,
+     "paa": [
+      "What are the top 5 AI agents?",
+      "What are real examples of AI agents?",
+      "Is ChatGPT an AI agent?",
+      "What are the 5 types of AI agents?",
+      "What are common AI agents?",
+      "What are the 7 main types of AI?"
+     ],
+     "top5": [
+      "www.reddit.com",
+      "www.domo.com",
+      "cloud.google.com",
+      "www.evidentlyai.com",
+      "www.automationanywhere.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "examples of agentic ai",
+     "volume": 140,
+     "cpc": 11.94,
+     "ai_overview": true,
+     "paa": [
+      "Is ChatGPT an agentic AI?",
+      "What types of agentic AI are there?",
+      "Is Alexa an example of agentic AI?",
+      "What are agentic AI systems?",
+      "What are the top 10 agentic AI tools?",
+      "What is a simple example of agentic AI?"
+     ],
+     "top5": [
+      "www.evidentlyai.com",
+      "mitsloan.mit.edu",
+      "slack.com",
+      "bcn.co.uk",
+      "cloud.google.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "Digital Marketing": {
+   "top_120_candidates": [
+    {
+     "keyword": "what digital marketing is",
+     "volume": 6600,
+     "cpc": 4.55,
+     "kd": 46,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what do you know about digital marketing",
+     "volume": 6600,
+     "cpc": 4.55,
+     "kd": 65,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what about digital marketing",
+     "volume": 6600,
+     "cpc": 4.55,
+     "kd": 75,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "strategy digital marketing",
+     "volume": 1300,
+     "cpc": 13.92,
+     "kd": 58,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "digital marketing marketing strategy",
+     "volume": 1300,
+     "cpc": 12.88,
+     "kd": 58,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "google ads fees",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 7,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads pricing",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 11,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads price",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 11,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads costs",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 6,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads cost",
+     "volume": 1000,
+     "cpc": 12.52,
+     "kd": 11,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads rates",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads per click cost",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 36,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads prices",
+     "volume": 1000,
+     "cpc": 11.15,
+     "kd": 17,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads price list",
+     "volume": 1000,
+     "cpc": 12.52,
+     "kd": 23,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "top digital marketing company",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top digital marketing companies",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top digital marketing agency",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 45,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top digital marketing agencies",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "digital marketing agency best",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 41,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing companies",
+     "volume": 880,
+     "cpc": 16.42,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing company",
+     "volume": 880,
+     "cpc": 16.42,
+     "kd": 57,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing firms",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing firm",
+     "volume": 880,
+     "cpc": 11.68,
+     "kd": 56,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing agencies",
+     "volume": 880,
+     "cpc": 16.42,
+     "kd": 42,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is lead generation",
+     "volume": 720,
+     "cpc": null,
+     "kd": 33,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what content marketing",
+     "volume": 720,
+     "cpc": 1.01,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to start digital marketing",
+     "volume": 480,
+     "cpc": 10.65,
+     "kd": 4,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get into digital marketing",
+     "volume": 390,
+     "cpc": 6.7,
+     "kd": 13,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "digital marketing examples",
+     "volume": 390,
+     "cpc": 4.1,
+     "kd": 9,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to get in digital marketing",
+     "volume": 390,
+     "cpc": 6.7,
+     "kd": null,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to advertise on google ads",
+     "volume": 390,
+     "cpc": 18.07,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much do google ads costs",
+     "volume": 390,
+     "cpc": 8.65,
+     "kd": 5,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much google ads cost",
+     "volume": 390,
+     "cpc": 8.65,
+     "kd": 28,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best digital marketing agency london",
+     "volume": 320,
+     "cpc": 7.55,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top london digital marketing agencies",
+     "volume": 320,
+     "cpc": 7.8,
+     "kd": 36,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "what is search engine optimization in digital marketing",
+     "volume": 320,
+     "cpc": 2.1,
+     "kd": 72,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is seo digital marketing",
+     "volume": 320,
+     "cpc": 3.16,
+     "kd": 50,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best digital marketing agencies london",
+     "volume": 320,
+     "cpc": 7.8,
+     "kd": 58,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best digital marketing companies in london",
+     "volume": 320,
+     "cpc": 7.55,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top digital marketing agency london",
+     "volume": 320,
+     "cpc": 7.8,
+     "kd": 36,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top digital marketing companies london",
+     "volume": 320,
+     "cpc": 7.55,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "marketing strategy content",
+     "volume": 320,
+     "cpc": 7.15,
+     "kd": 53,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to block google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 15,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i remove google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to deactivate google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to remove google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much to advertise on google ads",
+     "volume": 320,
+     "cpc": 11.04,
+     "kd": 18,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how much google ads",
+     "volume": 320,
+     "cpc": 9.09,
+     "kd": 3,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how do google ads work",
+     "volume": 320,
+     "cpc": 9.34,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to disable google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 11,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to stop google ads",
+     "volume": 320,
+     "cpc": 1.46,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does google ads works",
+     "volume": 320,
+     "cpc": 9.34,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is pay-per-click in digital marketing",
+     "volume": 260,
+     "cpc": 3.98,
+     "kd": 32,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "digital marketing strategy agency",
+     "volume": 260,
+     "cpc": null,
+     "kd": 58,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is pay per click advertising in digital marketing",
+     "volume": 260,
+     "cpc": 3.98,
+     "kd": 59,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is ppc digital marketing",
+     "volume": 260,
+     "cpc": 3.98,
+     "kd": 40,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how do digital marketing",
+     "volume": 260,
+     "cpc": 7.42,
+     "kd": 31,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to start digital marketing from home",
+     "volume": 260,
+     "cpc": 6.36,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "digital marketing strategy agencies",
+     "volume": 260,
+     "cpc": null,
+     "kd": 45,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "digital marketing strategy small business",
+     "volume": 260,
+     "cpc": 22.89,
+     "kd": 14,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how stop google ads",
+     "volume": 260,
+     "cpc": 1.09,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to prevent google ads",
+     "volume": 260,
+     "cpc": 1.09,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i stop google ads",
+     "volume": 260,
+     "cpc": 1.09,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does digital marketing",
+     "volume": 210,
+     "cpc": 8.39,
+     "kd": 51,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "digital marketing strategy services",
+     "volume": 210,
+     "cpc": null,
+     "kd": 2,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "lead generation strategy",
+     "volume": 210,
+     "cpc": 5.08,
+     "kd": 32,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "lead generation strategy b2b",
+     "volume": 210,
+     "cpc": null,
+     "kd": 29,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "costs of google ads",
+     "volume": 210,
+     "cpc": 10.7,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "what google ads",
+     "volume": 210,
+     "cpc": 8.57,
+     "kd": 52,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "cost of google ads",
+     "volume": 210,
+     "cpc": 10.7,
+     "kd": 13,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "ecommerce marketing strategy",
+     "volume": 170,
+     "cpc": null,
+     "kd": 12,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best content marketing company",
+     "volume": 170,
+     "cpc": 5.79,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best content marketing agencies",
+     "volume": 170,
+     "cpc": 5.79,
+     "kd": 12,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "content marketing examples",
+     "volume": 170,
+     "cpc": null,
+     "kd": 5,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best content marketing agency",
+     "volume": 170,
+     "cpc": 5.79,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best content marketing companies",
+     "volume": 170,
+     "cpc": 5.79,
+     "kd": 5,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to use google ads",
+     "volume": 170,
+     "cpc": 12.08,
+     "kd": 15,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to google ads",
+     "volume": 170,
+     "cpc": 21.42,
+     "kd": 24,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "demand generation vs lead generation",
+     "volume": 140,
+     "cpc": null,
+     "kd": 2,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "google ads examples",
+     "volume": 140,
+     "cpc": 0.7,
+     "kd": 18,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "lead generation ideas b2b",
+     "volume": 110,
+     "cpc": null,
+     "kd": 25,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what is b2b lead generation",
+     "volume": 110,
+     "cpc": null,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is lead generation marketing",
+     "volume": 110,
+     "cpc": null,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "cost per click google ads",
+     "volume": 110,
+     "cpc": 8.41,
+     "kd": 33,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads costs per click",
+     "volume": 110,
+     "cpc": 8.41,
+     "kd": 12,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads how much",
+     "volume": 110,
+     "cpc": 7.25,
+     "kd": 3,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to run google ads",
+     "volume": 110,
+     "cpc": 25.93,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what are google ads",
+     "volume": 110,
+     "cpc": 12.8,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to create google ads",
+     "volume": 110,
+     "cpc": 20.12,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to make google ads",
+     "volume": 110,
+     "cpc": 20.12,
+     "kd": 38,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "google ads pricing per click",
+     "volume": 110,
+     "cpc": 8.41,
+     "kd": 28,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "google ads price per click",
+     "volume": 110,
+     "cpc": 8.41,
+     "kd": 9,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "examples of google ads",
+     "volume": 110,
+     "cpc": 1.68,
+     "kd": 12,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "best lead generation agencies",
+     "volume": 90,
+     "cpc": 25.28,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best lead generation tools",
+     "volume": 90,
+     "cpc": 30.36,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best lead generation tool",
+     "volume": 90,
+     "cpc": 30.36,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best lead generation companies",
+     "volume": 90,
+     "cpc": 25.28,
+     "kd": 8,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best lead generation company",
+     "volume": 90,
+     "cpc": 25.28,
+     "kd": 2,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top content marketing firms",
+     "volume": 90,
+     "cpc": null,
+     "kd": 4,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top content marketing company",
+     "volume": 90,
+     "cpc": null,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top content marketing agency",
+     "volume": 90,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "content marketing strategy agency",
+     "volume": 90,
+     "cpc": null,
+     "kd": 1,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "top content marketing agencies",
+     "volume": 90,
+     "cpc": null,
+     "kd": 15,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "top content marketing companies",
+     "volume": 90,
+     "cpc": null,
+     "kd": 12,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to setup google ads",
+     "volume": 90,
+     "cpc": 11.99,
+     "kd": 14,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how google ads works",
+     "volume": 90,
+     "cpc": 16.91,
+     "kd": 13,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to set google ads",
+     "volume": 90,
+     "cpc": 8.73,
+     "kd": 14,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "do google ads work",
+     "volume": 90,
+     "cpc": 15.68,
+     "kd": 5,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to set up google ads",
+     "volume": 90,
+     "cpc": 8.73,
+     "kd": 14,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how google ads work",
+     "volume": 90,
+     "cpc": 16.91,
+     "kd": 30,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is there vat on google ads",
+     "volume": 90,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "google ads how much does it cost",
+     "volume": 90,
+     "cpc": 9.34,
+     "kd": 16,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "is google ads worth it",
+     "volume": 90,
+     "cpc": 9.17,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to cancel google ads",
+     "volume": 90,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "google ads cost uk",
+     "volume": 90,
+     "cpc": 21.97,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "lead generation examples",
+     "volume": 70,
+     "cpc": 411.68,
+     "kd": 26,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "what does lead generation mean",
+     "volume": 70,
+     "cpc": 27.07,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "lead generation ideas",
+     "volume": 70,
+     "cpc": 5.16,
+     "kd": 7,
+     "tags": [
+      "GUIDE"
+     ]
+    },
+    {
+     "keyword": "how to lead generation",
+     "volume": 70,
+     "cpc": 24.93,
+     "kd": 17,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is lead generation in digital marketing",
+     "volume": 70,
+     "cpc": 3.69,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "what digital marketing is",
+     "volume": 6600,
+     "cpc": 4.55,
+     "ai_overview": true,
+     "paa": [
+      "What exactly does digital marketing do?",
+      "Do digital marketers make a lot of money?",
+      "How do beginners start digital marketing?",
+      "What skills do I need for digital marketing?",
+      "Is digital marketing a good career in the UK?",
+      "What subjects do I need for digital marketing?"
+     ],
+     "top5": [
+      "business.adobe.com",
+      "www.investopedia.com",
+      "www.inseec.com",
+      "www.salesforce.com",
+      "www.smartinsights.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what do you know about digital marketing",
+     "volume": 6600,
+     "cpc": 4.55,
+     "ai_overview": true,
+     "paa": [
+      "What are the four types of digital marketing?",
+      "What exactly do you do in digital marketing?",
+      "How do beginners start digital marketing?",
+      "How does digital marketing make money?",
+      "Does digital marketing really pay?",
+      "How to start digital marketing from home with no experience?"
+     ],
+     "top5": [
+      "www.investopedia.com",
+      "business.adobe.com",
+      "www.oracle.com",
+      "en.wikipedia.org",
+      "www.imd.org"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "what about digital marketing",
+     "volume": 6600,
+     "cpc": 4.55,
+     "ai_overview": true,
+     "paa": [
+      "What are the four types of digital marketing?",
+      "What exactly do you do in digital marketing?",
+      "How do digital marketers earn money?",
+      "How do beginners start digital marketing?",
+      "How much money do I need to start digital marketing?",
+      "Can I learn digital marketing in 3 months?"
+     ],
+     "top5": [
+      "www.investopedia.com",
+      "business.adobe.com",
+      "en.wikipedia.org",
+      "www.oracle.com",
+      "www.coursera.org"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "google ads fees",
+     "volume": 1000,
+     "cpc": 11.15,
+     "ai_overview": true,
+     "paa": [
+      "How much do Google Ads charge?",
+      "Is $20 a day good for Google Ads?",
+      "How much do Google Ads typically cost?",
+      "How much do Google Ads cost in the UK?",
+      "Is Google Ads worth it in the UK?",
+      "Is it worth paying for Google Ads?"
+     ],
+     "top5": [
+      "support.google.com",
+      "business.google.com",
+      "www.reddit.com",
+      "www.wordstream.com",
+      "www.shopline.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "google ads pricing",
+     "volume": 1000,
+     "cpc": 11.15,
+     "ai_overview": true,
+     "paa": [
+      "How much does Google Ads pay per 1,000 views?",
+      "How much do Google Ads cost in the UK?",
+      "Is $10 a day enough for Google Ads?",
+      "How much does a 1000 impressions cost in Google Ads?",
+      "Is it worth paying for Google Ads?",
+      "Why is my cost per 1000 impressions so high?"
+     ],
+     "top5": [
+      "business.google.com",
+      "www.shopline.com",
+      "candiddigital.co.uk",
+      "support.google.com",
+      "www.wordstream.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "google ads price",
+     "volume": 1000,
+     "cpc": 11.15,
+     "ai_overview": true,
+     "paa": [
+      "Is $20 a day good for Google Ads?",
+      "How much do Google Ads cost in the UK?",
+      "Is $10 a day good for Google Ads?",
+      "Is Google Ads worth it in the UK?",
+      "What are the disadvantages of Google Ads?",
+      "Is Facebook or Google Ads better?"
+     ],
+     "top5": [
+      "business.google.com",
+      "www.reddit.com",
+      "candiddigital.co.uk",
+      "www.shopline.com",
+      "whitehat-seo.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "top digital marketing company",
+     "volume": 880,
+     "cpc": 11.68,
+     "ai_overview": true,
+     "paa": [
+      "Who is the best digital marketing company?",
+      "What are the top 10 digital marketing companies?",
+      "What are the top 10 digital marketing agencies in the UK?",
+      "Who are the big 4 in marketing?",
+      "What are the top 5 marketing companies?",
+      "Which Big 4 is hardest to get into?"
+     ],
+     "top5": [
+      "clutch.co",
+      "atomicdigitalmarketing.co.uk",
+      "builtinlondon.uk",
+      "www.iconicdigital.co.uk",
+      "www.gartner.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "top digital marketing companies",
+     "volume": 880,
+     "cpc": 11.68,
+     "ai_overview": false,
+     "paa": [
+      "What are the top 10 digital marketing companies?",
+      "Who is the best digital marketing company?",
+      "What are the top 10 digital marketing agencies in the UK?",
+      "Who are the big 4 in marketing?",
+      "What are the top 5 marketing companies?",
+      "Which Big 4 is hardest to get into?"
+     ],
+     "top5": [
+      "clutch.co",
+      "agencies.semrush.com",
+      "builtinlondon.uk",
+      "www.reddit.com",
+      "www.gartner.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "top digital marketing agency",
+     "volume": 880,
+     "cpc": 11.68,
+     "ai_overview": true,
+     "paa": [
+      "Who are the top digital marketing agencies?",
+      "Which agency is best for digital marketing?",
+      "What are the top 10 digital marketing agencies in the UK?",
+      "What are the top 10 digital marketing agencies in the world?",
+      "Who are the big 6 digital marketing agencies?",
+      "What are the top 5 digital marketing platforms?"
+     ],
+     "top5": [
+      "clutch.co",
+      "atomicdigitalmarketing.co.uk",
+      "www.gartner.com",
+      "builtinlondon.uk",
+      "www.iconicdigital.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "strategy digital marketing",
+     "volume": 1300,
+     "cpc": 13.92,
+     "ai_overview": true,
+     "paa": [
+      "What are the 5 main strategies of digital marketing?",
+      "What is the strategy of digital marketing?",
+      "What is the 70/20/10 rule in digital marketing?",
+      "What are the 7 strategies of marketing?",
+      "What are the 7 pillars of digital marketing?",
+      "What are the 5 main marketing strategies?"
+     ],
+     "top5": [
+      "www.business.gov.uk",
+      "business.adobe.com",
+      "www.smartinsights.com",
+      "digitalmarketinginstitute.com",
+      "londonsba.org.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "digital marketing marketing strategy",
+     "volume": 1300,
+     "cpc": 12.88,
+     "ai_overview": true,
+     "paa": [
+      "What are the 5 main strategies of digital marketing?",
+      "What are 7 types of digital marketing?",
+      "What is the best strategy for digital marketing?",
+      "What is the 70/20/10 rule in digital marketing?",
+      "What are the 7 pillars of digital marketing?",
+      "What is the Golden Rule of marketing?"
+     ],
+     "top5": [
+      "www.business.gov.uk",
+      "digitalmarketinginstitute.com",
+      "www.smartinsights.com",
+      "business.adobe.com",
+      "www.snhu.edu"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "digital marketing examples",
+     "volume": 390,
+     "cpc": 4.1,
+     "ai_overview": true,
+     "paa": [
+      "What are some examples of digital marketing?",
+      "What is digital marketing and its examples?",
+      "What are 7 types of digital marketing?",
+      "What are the top 5 digital marketing platforms?",
+      "How do beginners start digital marketing?",
+      "What are the top 5 digital products to sell?"
+     ],
+     "top5": [
+      "business.adobe.com",
+      "www.investopedia.com",
+      "shorthand.com",
+      "heyflow.com",
+      "www.youtube.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  },
+  "Marketplace (Amazon/Walmart/TikTok)": {
+   "top_120_candidates": [
+    {
+     "keyword": "how sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "kd": 39,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "kd": 75,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can we sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "kd": 15,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon seller",
+     "volume": 4400,
+     "cpc": 9.09,
+     "kd": 68,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top seller on amazon",
+     "volume": 1900,
+     "cpc": 1.34,
+     "kd": 30,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to contact amazon seller",
+     "volume": 1900,
+     "cpc": null,
+     "kd": 1,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best amazon seller",
+     "volume": 1900,
+     "cpc": 1.62,
+     "kd": 40,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best seller product amazon",
+     "volume": 1900,
+     "cpc": 1.62,
+     "kd": 35,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to contact amazon about a seller",
+     "volume": 1900,
+     "cpc": null,
+     "kd": 2,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i contact seller on amazon",
+     "volume": 1900,
+     "cpc": null,
+     "kd": 3,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is tiktok shop safe",
+     "volume": 1600,
+     "cpc": 0.07,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon uk",
+     "volume": 1300,
+     "cpc": 7.53,
+     "kd": 34,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i sell on amazon uk",
+     "volume": 1300,
+     "cpc": 7.53,
+     "kd": 34,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on tiktok shop",
+     "volume": 1300,
+     "cpc": 3.74,
+     "kd": 15,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how sell on amazon uk",
+     "volume": 1000,
+     "cpc": 5.89,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is tiktok shop",
+     "volume": 880,
+     "cpc": 10.62,
+     "kd": 31,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is tiktok shop legit",
+     "volume": 880,
+     "cpc": 16.08,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get tiktok shop",
+     "volume": 880,
+     "cpc": 5.66,
+     "kd": 26,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell something on amazon",
+     "volume": 720,
+     "cpc": 6.85,
+     "kd": 54,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how sell things on amazon",
+     "volume": 720,
+     "cpc": 6.85,
+     "kd": 52,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i sell things on amazon",
+     "volume": 720,
+     "cpc": 6.85,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "amazon uk best seller",
+     "volume": 720,
+     "cpc": 0.62,
+     "kd": 14,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how long does tiktok shop take to deliver",
+     "volume": 720,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell items on amazon",
+     "volume": 590,
+     "cpc": 6.22,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell stuff on amazon",
+     "volume": 590,
+     "cpc": 6.22,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best sell product on amazon",
+     "volume": 590,
+     "cpc": 2.2,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how can i sell items on amazon",
+     "volume": 590,
+     "cpc": 6.22,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best products sell on amazon",
+     "volume": 590,
+     "cpc": 2.2,
+     "kd": 40,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how can i sell something on amazon",
+     "volume": 590,
+     "cpc": 6.22,
+     "kd": 65,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "amazon best seller products",
+     "volume": 590,
+     "cpc": 2.18,
+     "kd": 19,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "amazon best seller items",
+     "volume": 590,
+     "cpc": 1.8,
+     "kd": 24,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to message amazon seller",
+     "volume": 480,
+     "cpc": 2.23,
+     "kd": 2,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to access tiktok shop",
+     "volume": 480,
+     "cpc": 9.19,
+     "kd": 29,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get on tiktok shop",
+     "volume": 480,
+     "cpc": 5.03,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does tiktok shop work",
+     "volume": 480,
+     "cpc": 3.68,
+     "kd": 6,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how does tiktok shop works",
+     "volume": 480,
+     "cpc": 2.81,
+     "kd": 11,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "sell on amazon pricing",
+     "volume": 390,
+     "cpc": 2.46,
+     "kd": 26,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how sell products on amazon",
+     "volume": 390,
+     "cpc": 12.01,
+     "kd": 76,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "sell on amazon price",
+     "volume": 390,
+     "cpc": 2.46,
+     "kd": 8,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to sell amazon products on amazon",
+     "volume": 390,
+     "cpc": 10.34,
+     "kd": 10,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell goods on amazon",
+     "volume": 390,
+     "cpc": 12.01,
+     "kd": 10,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "sell on amazon fees",
+     "volume": 390,
+     "cpc": 2.46,
+     "kd": 18,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how can i sell a product on amazon",
+     "volume": 390,
+     "cpc": 10.34,
+     "kd": 65,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how sell product on amazon",
+     "volume": 390,
+     "cpc": 12.01,
+     "kd": 10,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i sell products on amazon",
+     "volume": 390,
+     "cpc": 10.34,
+     "kd": 65,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top sell on amazon",
+     "volume": 390,
+     "cpc": 1.69,
+     "kd": 29,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "seller fees amazon",
+     "volume": 390,
+     "cpc": 2.67,
+     "kd": 30,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon seller pricing",
+     "volume": 390,
+     "cpc": 2.67,
+     "kd": 12,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon seller price",
+     "volume": 390,
+     "cpc": 2.67,
+     "kd": 54,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon seller fee",
+     "volume": 390,
+     "cpc": 4.97,
+     "kd": 5,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon seller rates",
+     "volume": 390,
+     "cpc": 2.67,
+     "kd": 47,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon seller cost",
+     "volume": 390,
+     "cpc": 2.67,
+     "kd": 6,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "where is tiktok shop",
+     "volume": 390,
+     "cpc": 4.12,
+     "kd": 34,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "sell on amazon fee",
+     "volume": 320,
+     "cpc": 2.81,
+     "kd": 18,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "how to set up tiktok shop",
+     "volume": 320,
+     "cpc": 6.93,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to setup tiktok shop",
+     "volume": 320,
+     "cpc": 5.87,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get free shipping on tiktok shop",
+     "volume": 320,
+     "cpc": 4.46,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to find tiktok shop",
+     "volume": 320,
+     "cpc": 4.64,
+     "kd": 5,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "sell on amazon fees uk",
+     "volume": 260,
+     "cpc": 2.09,
+     "kd": 13,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "cost to sell on amazon uk",
+     "volume": 260,
+     "cpc": 2.09,
+     "kd": 23,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "amazon uk seller fees",
+     "volume": 260,
+     "cpc": 2.09,
+     "kd": 13,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "tiktok shop reviews",
+     "volume": 260,
+     "cpc": 47.85,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to open tiktok shop",
+     "volume": 260,
+     "cpc": 4.69,
+     "kd": 21,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "why is tiktok shop so cheap",
+     "volume": 260,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "tiktok shop review",
+     "volume": 260,
+     "cpc": 47.85,
+     "kd": 0,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "can i sell on amazon",
+     "volume": 210,
+     "cpc": 7.6,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "best products to sell on amazon",
+     "volume": 210,
+     "cpc": 3.46,
+     "kd": 7,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "best things to sell on amazon",
+     "volume": 210,
+     "cpc": 3.78,
+     "kd": 27,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon for dummies",
+     "volume": 210,
+     "cpc": 9.43,
+     "kd": 25,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much does it cost to sell on amazon",
+     "volume": 210,
+     "cpc": 2.58,
+     "kd": 35,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "best product to sell on amazon",
+     "volume": 210,
+     "cpc": 3.78,
+     "kd": 2,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to delete amazon seller account",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to close my amazon seller account",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to cancel my amazon seller account",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to search amazon by seller",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to find amazon seller",
+     "volume": 210,
+     "cpc": null,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to cancel amazon seller account",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to search for a seller on amazon",
+     "volume": 210,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to close amazon seller account",
+     "volume": 210,
+     "cpc": 1.07,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to deactivate amazon seller account",
+     "volume": 210,
+     "cpc": 1.07,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to open a tiktok shop",
+     "volume": 210,
+     "cpc": 4.61,
+     "kd": 21,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get to tiktok shop",
+     "volume": 210,
+     "cpc": 7.35,
+     "kd": 21,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "tiktok shop fees",
+     "volume": 210,
+     "cpc": 5.76,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "tiktok shop fee",
+     "volume": 210,
+     "cpc": 5.76,
+     "kd": 0,
+     "tags": [
+      "COST"
+     ]
+    },
+    {
+     "keyword": "can you sell on amazon",
+     "volume": 170,
+     "cpc": 7.39,
+     "kd": 52,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon for beginners",
+     "volume": 170,
+     "cpc": 7.66,
+     "kd": 65,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top items to sell on amazon",
+     "volume": 170,
+     "cpc": 2.73,
+     "kd": 26,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon ebook",
+     "volume": 170,
+     "cpc": 6.57,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what is sell on amazon",
+     "volume": 170,
+     "cpc": 2.61,
+     "kd": 76,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "top products that sell on amazon",
+     "volume": 170,
+     "cpc": 2.73,
+     "kd": 17,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how do i sell ebooks on amazon",
+     "volume": 170,
+     "cpc": 6.57,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "amazon top seller products",
+     "volume": 170,
+     "cpc": 2.73,
+     "kd": 23,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to open amazon seller account",
+     "volume": 170,
+     "cpc": 8.22,
+     "kd": 51,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to use tiktok shop",
+     "volume": 170,
+     "cpc": 5.2,
+     "kd": 22,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to buy from tiktok shop",
+     "volume": 170,
+     "cpc": 5.66,
+     "kd": 8,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how long does tiktok shop take to deliver uk",
+     "volume": 170,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to get tiktok shop as a buyer",
+     "volume": 170,
+     "cpc": 5.27,
+     "kd": 36,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to start tiktok shop",
+     "volume": 170,
+     "cpc": 4.29,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "where has tiktok shop gone",
+     "volume": 170,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to contact tiktok shop",
+     "volume": 170,
+     "cpc": null,
+     "kd": 9,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "what i sell on amazon",
+     "volume": 140,
+     "cpc": 1.66,
+     "kd": 33,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is it easy to sell on amazon uk",
+     "volume": 140,
+     "cpc": 12.58,
+     "kd": 23,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon uk for beginners",
+     "volume": 140,
+     "cpc": 8.34,
+     "kd": 24,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how can i sell on amazon for free",
+     "volume": 140,
+     "cpc": 8.82,
+     "kd": 28,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "can anybody sell on amazon",
+     "volume": 140,
+     "cpc": 10.02,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "can anyone sell on amazon",
+     "volume": 140,
+     "cpc": 10.02,
+     "kd": 27,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell ebooks on amazon",
+     "volume": 140,
+     "cpc": 6.81,
+     "kd": 20,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on amazon free",
+     "volume": 140,
+     "cpc": 8.82,
+     "kd": 58,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell ebook on amazon",
+     "volume": 140,
+     "cpc": 6.81,
+     "kd": 13,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is it free to sell on amazon",
+     "volume": 140,
+     "cpc": 11.5,
+     "kd": 39,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "amazon kindle best seller",
+     "volume": 140,
+     "cpc": 0.7,
+     "kd": 21,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to start selling on tiktok shop",
+     "volume": 140,
+     "cpc": 4.19,
+     "kd": 18,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how long does tiktok shop take to ship",
+     "volume": 140,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "is it safe to buy from tiktok shop",
+     "volume": 140,
+     "cpc": null,
+     "kd": 0,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to sell on tiktok shop for beginners",
+     "volume": 140,
+     "cpc": 4.14,
+     "kd": 37,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how to return on tiktok shop",
+     "volume": 140,
+     "cpc": null,
+     "kd": 5,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "how much to sell on amazon",
+     "volume": 110,
+     "cpc": 1.89,
+     "kd": 24,
+     "tags": [
+      "QUESTION",
+      "COST"
+     ]
+    },
+    {
+     "keyword": "can i sell stuff on amazon",
+     "volume": 110,
+     "cpc": 9.45,
+     "kd": 71,
+     "tags": [
+      "QUESTION"
+     ]
+    },
+    {
+     "keyword": "amazon top seller list",
+     "volume": 110,
+     "cpc": 0.39,
+     "kd": 48,
+     "tags": [
+      "COMPARISON"
+     ]
+    },
+    {
+     "keyword": "how to make an amazon seller account",
+     "volume": 110,
+     "cpc": 6.18,
+     "kd": 39,
+     "tags": [
+      "QUESTION"
+     ]
+    }
+   ],
+   "serp_enriched": [
+    {
+     "keyword": "how sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "ai_overview": true,
+     "paa": [
+      "Is it free to sell stuff on Amazon?",
+      "How do I sell on Amazon for beginners?",
+      "Can I sell on Amazon without being a business?",
+      "How much does it cost to sell on Amazon for beginners?",
+      "What are the disadvantages of selling on Amazon?",
+      "What are the 5 most sold items on Amazon?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "www.amazon.com",
+      "sell.amazon.co.uk",
+      "www.amazon.co.uk",
+      "www.shopify.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how can i sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "ai_overview": true,
+     "paa": [
+      "Is it free to sell stuff on Amazon?",
+      "Is it worth it to sell stuff on Amazon?",
+      "Can I sell on Amazon from home?",
+      "How much does it cost to sell on Amazon for beginners?",
+      "What are the disadvantages of selling on Amazon?",
+      "What are the 5 most sold items on Amazon?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "www.amazon.com",
+      "sell.amazon.co.uk",
+      "sellercentral.amazon.co.uk",
+      "www.postoffice.co.uk"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "how can we sell on amazon",
+     "volume": 4400,
+     "cpc": 9.09,
+     "ai_overview": true,
+     "paa": [
+      "How much does it cost to sell on Amazon?",
+      "How do I sell on Amazon to make money?",
+      "Can a normal person sell on Amazon?",
+      "Can I sell on Amazon without being a business?",
+      "Do I need to pay taxes if I sell on Amazon?",
+      "How much does it cost to register as a seller on Amazon?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "sell.amazon.co.uk",
+      "www.amazon.com",
+      "www.amazon.co.uk",
+      "www.shopify.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "sell on amazon pricing",
+     "volume": 390,
+     "cpc": 2.46,
+     "ai_overview": true,
+     "paa": [
+      "How much does it cost to sell stuff on Amazon?",
+      "Is selling on Amazon worth it in the UK?",
+      "Can I make $1000 a month selling on Amazon?",
+      "Is it worth it to sell stuff on Amazon?",
+      "What is the downside of selling on Amazon?",
+      "What is the most profitable item to sell on Amazon?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "sellercentral.amazon.co.uk",
+      "sell.amazon.in",
+      "sell.amazon.co.uk",
+      "www.reddit.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "sell on amazon price",
+     "volume": 390,
+     "cpc": 2.46,
+     "ai_overview": true,
+     "paa": [
+      "How much does it charge to sell on Amazon?",
+      "Is selling on Amazon worth it in the UK?",
+      "How to calculate Amazon selling price?",
+      "How much does it cost to sell on Amazon UK?",
+      "Is it still worth it to sell on Amazon?",
+      "What are the 5 most sold items on Amazon?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "sellercentral.amazon.co.uk",
+      "sell.amazon.co.uk",
+      "sell.amazon.com",
+      "osome.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "sell on amazon fees",
+     "volume": 390,
+     "cpc": 2.46,
+     "ai_overview": true,
+     "paa": [
+      "Is selling on Amazon worth it in the UK?",
+      "Is it still worth it to sell on Amazon?",
+      "What are the disadvantages of selling on Amazon?",
+      "How much does it cost to sell on Amazon UK?",
+      "What are the 5 most sold items on Amazon?",
+      "How much do beginner Amazon sellers make?"
+     ],
+     "top5": [
+      "sell.amazon.co.uk",
+      "sellercentral.amazon.co.uk",
+      "sellercentral.amazon.com",
+      "www.reddit.com",
+      "osome.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "top seller on amazon",
+     "volume": 1900,
+     "cpc": 1.34,
+     "ai_overview": true,
+     "paa": [
+      "What is the #1 seller on Amazon?",
+      "What are the top sellers on Amazon right now?",
+      "Who are the top 10 Amazon sellers in the world?",
+      "What is the #1 most sold item on Amazon?",
+      "What are the 10 most bought items on Amazon?",
+      "What sells fastest on Amazon?"
+     ],
+     "top5": [
+      "www.amazon.co.uk",
+      "www.amazon.com",
+      "www.marketplacepulse.com",
+      "www.helium10.com",
+      "amzscout.net"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best amazon seller",
+     "volume": 1900,
+     "cpc": 1.62,
+     "ai_overview": true,
+     "paa": [
+      "What is the #1 best seller on Amazon?",
+      "Which seller is best on Amazon?",
+      "Can I make $1000 a month selling on Amazon?",
+      "What is selling the best on Amazon right now?",
+      "What sells fastest on Amazon?",
+      "What are the 10 most bought items on Amazon?"
+     ],
+     "top5": [
+      "www.amazon.co.uk",
+      "www.marketplacepulse.com",
+      "www.reddit.com",
+      "www.helium10.com",
+      "www.sellerassistant.app"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "best seller product amazon",
+     "volume": 1900,
+     "cpc": 1.62,
+     "ai_overview": false,
+     "paa": [
+      "What is the #1 selling product on Amazon?",
+      "What is the best-selling product on Amazon?",
+      "What is Amazon's #1 best seller?",
+      "What are the top 10 sellers on Amazon?",
+      "What sells fastest on Amazon?",
+      "What are the 10 most bought items on Amazon?"
+     ],
+     "top5": [
+      "www.amazon.co.uk",
+      "www.amazon.com",
+      "amzscout.net",
+      "packprofulfilment.co.uk",
+      "www.youtube.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "tiktok shop stats",
+     "volume": 40,
+     "cpc": 4.81,
+     "ai_overview": true,
+     "paa": [
+      "Does TikTok pay per 1,000,000 views?",
+      "What are the sales stats for TikTok Shops in the UK?",
+      "Can you see statistics on TikTok?",
+      "How to find TikTok Shop score?",
+      "How do I check my TikTok Shop earnings?",
+      "How do TikTok Shop points work?"
+     ],
+     "top5": [
+      "www.statista.com",
+      "newsroom.tiktok.com",
+      "www.aftership.com",
+      "redstagfulfillment.com",
+      "sproutsocial.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "tiktok shop statistics",
+     "volume": 40,
+     "cpc": 4.81,
+     "ai_overview": true,
+     "paa": [
+      "What is the 3 second rule in TikTok?",
+      "What is the most sold thing on TikTok Shop?",
+      "What percentage does the TikTok Shop take?",
+      "Can you see statistics on TikTok?",
+      "Is 20,000 views on TikTok a lot?",
+      "Does TikTok pay $1 for 1000 views?"
+     ],
+     "top5": [
+      "www.statista.com",
+      "rootdigital.co.uk",
+      "newsroom.tiktok.com",
+      "www.aftership.com",
+      "www.forbes.com"
+     ],
+     "we_rank": false
+    },
+    {
+     "keyword": "tiktok shop trends",
+     "volume": 30,
+     "cpc": 6.54,
+     "ai_overview": true,
+     "paa": [
+      "What's trending on TikTok Shop right now?",
+      "What are the top 10 TikTok trends right now?",
+      "What is the most popular thing on TikTok Shop?",
+      "What sells really well on TikTok Shop?",
+      "What are the most purchased items on TikTok?",
+      "What to sell on TikTok Shop for beginners?"
+     ],
+     "top5": [
+      "www.tiktok.com",
+      "ads.tiktok.com",
+      "ads.tiktok.com",
+      "www.cosmopolitan.com",
+      "ads.tiktok.com"
+     ],
+     "we_rank": false
+    }
+   ]
+  }
+ }
+}

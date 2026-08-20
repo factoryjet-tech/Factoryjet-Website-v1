@@ -45,7 +45,17 @@ pipeline/research/__pycache__/
 pipeline/research/*.pyc
 pipeline/brand-references/*/screenshots/
 pipeline/brand-references/_run.log
-.claude/
+.claude/*
+# Everything under .claude/ stays local EXCEPT the content-hygiene skill, which
+# pairs with scripts/check-watermarks.mjs and has to travel with the repo.
+# The pattern must be `.claude/*` and not `.claude/`: git cannot re-include a
+# path whose parent directory is itself excluded, so a bare `.claude/` would
+# make every negation below a silent no-op. Same reason for re-excluding
+# `.claude/skills/*` before naming the one skill we do track.
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/clean-user-facing-text/
+.claude/skills/clean-user-facing-text/**/__pycache__/
 yadav-preview/
 
 # Netlify deploy artifacts

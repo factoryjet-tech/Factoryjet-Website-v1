@@ -8,12 +8,13 @@
     "dev": "next dev",
     "validate": "node scripts/validate-build.mjs",
     "test:geo": "node scripts/test-geo-redirect.mjs",
-    "prebuild": "node scripts/check-tracked-imports.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs",
+    "prebuild": "node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs",
     "build": "next build",
     "start": "next start",
     "preview": "next start",
-    "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
-    "typecheck": "tsc --noEmit"
+    "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
+    "typecheck": "tsc --noEmit",
+    "check:watermarks": "node scripts/check-watermarks.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
