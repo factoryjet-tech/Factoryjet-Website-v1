@@ -114,7 +114,98 @@ and "98% client satisfaction". Only "500+ businesses" is verified. Remove or sub
 budget offshore shop, which contradicts the premium commerce positioning everywhere else and
 is visible to any prospect who checks. Clutch also shows 0 reviews and no connected socials.
 
-### 2d. Priority order
+### 2d. Clutch — FIXED 2026-08-18 (verified live)
+
+| Field | Was | Now |
+|---|---|---|
+| Tagline | "AI-Native Web Design & E-Commerce Development" | "Ecommerce Development for DTC & B2B Brands" |
+| Description | "$100+ Million in measurable business value", "98% client satisfaction" | canonical Section 1 copy, unverified claims removed |
+| Hourly rate | $25 - $49 / hr | $50 - $99 / hr |
+| Year founded | 2020 | 2014 |
+
+Service Lines reset 2026-08-18: **E-Commerce 60% / Web Design 25% / AI 15%** (was AI 40 /
+E-Com 30 / Web 30). Saved and confirmed persisted in the vendor dashboard on reload. The
+public profile was still rendering the old 40/30/30 at time of writing — Clutch-side cache
+or a pending recalculation, since the Company Information edits went live immediately.
+**Re-check the public profile in 24h.**
+
+Still open on Clutch:
+- **Focus-area sub-allocations are marked Incomplete**: under E-Commerce Development
+  (Frameworks And CMS, E-Commerce Systems) and under Web Design (CMS Focus, Frameworks And
+  CMS). Incomplete focus areas limit which directories the profile surfaces in. Filling them
+  needs a real answer on the platform/framework mix.
+- **Social links are paywalled** behind Clutch Verified at $499/yr. Not bought. Given every
+  Clutch link is a tracking redirect, this is not worth paying for.
+- Min project size left at $1,000+ (only the hourly rate was authorised).
+- Sales email still `bhavesh.b@factoryjet.com`, not the canonical `connect@`.
+- 0 reviews. This is the single biggest credibility gap on the profile.
+
+
+### 2f. Full content audit of the other four — 2026-08-18
+
+| Surface | Founded | Location | Rate | Positioning |
+|---|---|---|---|---|
+| Site / schema | 2014 | India | n/a | ecommerce dev, DTC/B2B, US |
+| Clutch (fixed) | 2014 | Bengaluru, India | $50-99 | ecommerce ✔ |
+| GoodFirms | **2020** | **Burlington, Ontario, CANADA** | $50-99 | "AI-Native Web Design" |
+| DesignRush | **2020** | Bengaluru, India | $49 | "AI-native web design" + WordPress + SEO |
+| SoftwareSuggest | — | Bengaluru | — | "AI-native web design" for SMBs |
+| Crunchbase | **Oct 1, 2021** | Bangalore, India | — | "AI-native Services as a Software company" |
+
+**Founding date RESOLVED 2026-08-18 — confirmed 2014 by Bhavesh, now aligned everywhere:**
+
+| Surface | Was | Now | Verified live |
+|---|---|---|---|
+| Site / schema | 2014 | 2014 | already correct |
+| Clutch | 2020 | 2014 | yes |
+| GoodFirms | 2020 | 2014 | yes |
+| DesignRush | 2020 | 2014 | yes |
+| Crunchbase | Oct 1, 2021 | 2014 | yes |
+| SoftwareSuggest | — | — | no founding-year field exists |
+
+On Crunchbase the month/day (Oct 1) were cleared rather than carried over to 2014 — only the
+year is confirmed, so asserting a specific day would have invented a fact.
+
+**GoodFirms lists a Canadian address** — 1606-2087 Fairview Street, Burlington, Ontario —
+a country that appears on no other surface and nowhere in the codebase. Either a real
+office nobody documented, or wrong. Verify before touching.
+
+**GoodFirms "Service Focus" is entirely mobile app development**: iPhone 25%, Android 25%,
+Enterprise Apps 20%, Web Apps 20%, Food Delivery App 10%. FactoryJet does not build mobile
+apps. This actively files the company in mobile-app directories and is the single most
+wrong thing found in this audit.
+
+**GoodFirms contradicts itself on one page**: "10 plus years building B2B and DTC commerce"
+sits directly above "2020".
+
+**Crunchbase description** — "AI-native Services as a Software company helping SMBs solve
+everyday business problem with AI" — wrong positioning and a grammar error. Categories lead
+with Agentic AI / AI / Digital Marketing, not commerce.
+
+Useful thing found: GoodFirms lists 10 named portfolio clients (Impulse Branding Solutions,
+Formative Concepts, Mawa UAE, Belle Maison, Bombay Petals, Grofresh Agrofood, Rukman
+Transport, VidaML, CuraShield, WetStone Labs) — candidates for the Clutch review push.
+
+### 2g. Taglines aligned 2026-08-18 — canonical copy live
+
+Canonical tagline: **"Ecommerce Development for DTC & B2B Brands"**
+
+| Surface | Was | Now | Verified live |
+|---|---|---|---|
+| Clutch | "AI-Native Web Design & E-Commerce Development" | canonical | yes |
+| GoodFirms | "AI-Native Web Design & E-Commerce Development" | canonical | yes |
+| DesignRush | "AI-Native Web Design & E-Commerce Development" | canonical | yes |
+| Crunchbase | "AI-native Services as a Software company..." | canonical short description | yes |
+| SoftwareSuggest | "AI-native web design, e-commerce and SEO..." | **BLOCKED** | — |
+
+**SoftwareSuggest is blocked**: its editor lives on a separate vendor portal
+(`/vendorsportal/index.php?r=site/login`) with its own login, which is not authenticated in
+the browser. Bhavesh must log in there before this one can be fixed.
+
+Also still on Crunchbase: the **long** "Full Description" field still carries the old
+"AI-native software company ... SMBs" copy. Only the short description was in scope here.
+
+### 2e. Priority order
 1. Fix the 3 broken `sameAs` entries in `src/app/layout.tsx` (5 min, pure downside removal)
 2. Remove pricing + unverified claims from Clutch, fix founding year to 2014
 3. Align the three stale descriptions to Section 1 copy

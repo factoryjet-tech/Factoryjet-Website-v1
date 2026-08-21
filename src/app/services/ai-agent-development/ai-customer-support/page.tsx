@@ -1,766 +1,647 @@
 import type { Metadata } from 'next';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
-
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import HeroInlineForm from '@/components/HeroInlineForm';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import '@/components/v2/PlatformPage.css';
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Freshness signal. Bumped 2026-08-21 for full PAGE-SPEC v2 rebuild.
+───────────────────────────────────────────────────────────────────────────── */
+const PAGE_MODIFIED = '2026-08-21';
 
 export const metadata: Metadata = {
-  title: 'AI Customer Support Agents for US Businesses | FactoryJet',
+  title: 'AI Customer Support Agents for US Operations | FactoryJet',
   description:
-    'Custom AI support agents for US businesses that work inside the helpdesk you already run: Zendesk, Intercom, Freshdesk or HubSpot. Email, chat and SMS. Fixed price.',
+    'Custom AI customer support agents for US brands that work inside Zendesk, Intercom, Freshdesk, Gorgias and HubSpot. Email, chat and SMS with human escalation.',
   keywords: [
-    'AI customer support agent development',
-    'custom AI support agent USA',
-    'Zendesk AI agent integration',
-    'Intercom AI agent development',
-    'Freshdesk AI automation',
-    'HubSpot Service Hub AI agent',
-    'AI helpdesk automation USA',
-    'customer support automation company USA',
-    'AI ticket deflection',
-    'AI support agent developers US',
+    'ai customer support agents',
+    'custom ai support agent usa',
+    'zendesk ai agent integration',
+    'intercom ai support development',
+    'freshdesk ai automation',
+    'gorgias ai agent development',
+    'hubspot service hub ai agent',
+    'ai helpdesk automation',
+    'customer support ticket deflection',
+    'ai customer service development company',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Customer Support Agents for US Businesses | FactoryJet',
-    description: 'Custom AI support agents that answer email, website chat and SMS with live Shopify, carrier and billing data, then escalate into Zendesk, Intercom, Freshdesk or HubSpot.',
+    title: 'AI Customer Support Agents for US Operations | FactoryJet',
+    description:
+      'Custom AI support agents that resolve tickets in Zendesk, Intercom, Gorgias and HubSpot using live Shopify, ERP and carrier data. English and Spanish ready.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
-    images: [{ url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp', width: 1200, height: 800, alt: 'FactoryJet AI Agent Development Services' }],
+    images: [
+      {
+        url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp',
+        width: 1200,
+        height: 800,
+        alt: 'FactoryJet AI Customer Support Agent Development Services',
+      },
+    ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Customer Support Agents USA | FactoryJet',
-    description: 'Custom support agents built into Zendesk, Intercom, Freshdesk or HubSpot. Email, chat and SMS. English and Spanish. Fixed price.',
+    description:
+      'Custom support agents wired into your existing helpdesk: Zendesk, Intercom, Freshdesk or Gorgias. Resolve routine inquiries in under 30 seconds.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+  alternates: {
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
-// Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
-// dateModified; these pages carried none. Keep this honest: bump it when the
-// page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-17';
-const webPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#webpage',
-  url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
-  dateModified: PAGE_MODIFIED,
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-};
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'AI Customer Support Agent Development USA',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    
-  },
-  description: 'Custom AI customer support agents for US businesses: email, website chat and SMS support, Zendesk, Intercom, Freshdesk and HubSpot integration, English and Spanish handling, order status, returns, and FAQ automation.',
-  areaServed: 'US',
-  serviceType: 'AI Customer Support Automation',
-};
-
-const speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#webpage',
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['h1', 'h2:first-of-type'],
-  },
-  url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
-};
-
-const SUPPORT_JOURNEY_STAGES: ServiceJourneyStage[] = [
-  {
-    number: '01',
-    title: 'Support Audit',
-    description: 'We analyze your 50 most common support queries, categorize them by type and channel, and identify which can be fully automated vs. which require human judgment. Typically 65–75% of queries are automatable on the first pass.',
-  },
-  {
-    number: '02',
-    title: 'Knowledge Base Build',
-    description: 'We build the AI\'s knowledge base from your existing content: FAQs, product descriptions, policies, support scripts, Notion docs, Google Sheets. We process this into a RAG knowledge base so the AI retrieves accurate, current information before answering.',
-  },
-  {
-    number: '03',
-    title: 'Integration Build',
-    description: 'We connect the AI to your live systems: Shopify for order data, ShipStation and the UPS, FedEx and USPS APIs for tracking, Stripe for payment status, QuickBooks or NetSuite for invoices, and Zendesk, Intercom, Freshdesk or HubSpot for escalation routing. The agent answers with real data, not cached responses.',
-  },
-  {
-    number: '04',
-    title: 'Test & Tune',
-    description: 'We run the AI against 200+ real support queries, including Spanish queries, edge cases, and abuse patterns, reviewing accuracy and escalation triggers. We tune until the deflection rate and escalation accuracy meet agreed targets.',
-  },
-  {
-    number: '05',
-    title: 'Deploy & Monitor',
-    description: 'Live deployment with monitoring dashboard, CSAT tracking, escalation rate alerts, and a 30-day optimization window. We review weekly query logs to identify new automation opportunities and knowledge gaps.',
-  },
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ Data (18 Answer-First items mapping to real search intent)
+───────────────────────────────────────────────────────────────────────────── */
+const FAQ_CATEGORIES = [
+  { key: 'basics', label: 'The basics' },
+  { key: 'helpdesks', label: 'Helpdesks & integrations' },
+  { key: 'channels', label: 'Channels & language' },
+  { key: 'control', label: 'Control & escalation' },
+  { key: 'implementation', label: 'Process & ownership' },
 ];
 
-const SUPPORT_STATS = [
-  {
-    value: '70%+',
-    label: 'of routine support tickets deflected by AI, typical for DTC and B2B deployments',
-    microcopy: 'FactoryJet client data',
-    categoryLabel: 'DEFLECTION RATE',
-  },
-  {
-    value: '<60s',
-    label: 'average AI first response on email, chat and SMS vs. 4–6 hours for manual support',
-    microcopy: 'across FactoryJet support deployments',
-    categoryLabel: 'RESPONSE TIME',
-  },
-  {
-    value: '3–6mo',
-    label: 'payback period for most US SMB AI support deployments vs. support team cost',
-    microcopy: 'FactoryJet ROI data',
-    categoryLabel: 'PAYBACK PERIOD',
-  },
-];
-
-const SUPPORT_MARKET_STATS = [
-  {
-    value: '2.8M',
-    label: 'customer service representatives employed in the US, in a role projected to shrink through 2034',
-    sourceUrl: 'https://www.onetonline.org/link/summary/43-4051.00',
-    sourceLabel: 'O*NET / BLS, 2024',
-  },
-  {
-    value: '61.1%',
-    label: 'of US residents who speak a language other than English at home speak Spanish, which is why we build English and Spanish support by default',
-    sourceUrl: 'https://www.census.gov/newsroom/press-releases/2023/language-at-home-acs-5-year.html',
-    sourceLabel: 'US Census Bureau, 2018-2022 ACS',
-  },
-  {
-    value: '16.9%',
-    label: 'of US retail sales happened online in Q1 2026, and every one of those orders can turn into a where-is-my-order ticket',
-    sourceUrl: 'https://www.census.gov/retail/ecommerce.html',
-    sourceLabel: 'US Census Bureau, Q1 2026',
-  },
-];
-
-const SUPPORT_COMPARISON_COLUMNS = [
-  { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'In-House Support Team' },
-  { label: 'Scripted Chatbot Tool' },
-  { label: 'Generic SaaS Helpdesk' },
-] as const;
-
-const SUPPORT_COMPARISON_ROWS = [
-  {
-    feature: 'Cost model',
-    values: [
-      'Fixed one-time build price',
-      'Salary plus benefits, per agent, forever',
-      'Monthly SaaS subscription, often per resolution',
-      'Monthly SaaS subscription, per seat',
-    ],
-  },
-  {
-    feature: 'Answers email, chat and SMS in English and Spanish',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="partial" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Checks Shopify and carrier tracking live',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="partial" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="partial" />,
-    ],
-  },
-  {
-    feature: '24/7 response without overtime cost',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="no" />,
-      <CompareIcon key="sc" kind="partial" />,
-      <CompareIcon key="gs" kind="partial" />,
-    ],
-  },
-  {
-    feature: 'Pulls invoices from QuickBooks or NetSuite',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="partial" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Runs inside Zendesk, Intercom, Freshdesk or HubSpot',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="yes" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="partial" />,
-    ],
-  },
-  {
-    feature: 'Fixed-price contract',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="no" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="no" />,
-    ],
-  },
-  {
-    feature: 'You own the code & IP',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="no" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Human handoff with context',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="yes" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="partial" />,
-    ],
-  },
-  {
-    feature: '500+ SMB projects delivered',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="hs" kind="no" />,
-      <CompareIcon key="sc" kind="no" />,
-      <CompareIcon key="gs" kind="no" />,
-    ],
-  },
-];
-
-const SUPPORT_INDUSTRIES = [
-  {
-    name: 'DTC E-Commerce',
-    description: 'Support AI that handles order status, return requests, carrier tracking, exchange processing, and product questions around the clock on email and website chat, integrated with Shopify and Stripe so every answer is backed by live data.',
-    example: 'DTC brands see 70%+ ticket deflection within 30 days of deployment.',
-  },
-  {
-    name: 'B2B Distribution',
-    description: 'Dealer and retailer support by email and customer portal: stock availability checks, order status, invoice retrieval from QuickBooks or NetSuite, payment confirmation, and return processing without calling the sales team.',
-    example: 'Distributors reduce inbound sales calls by 40% after support AI launch.',
-  },
-  {
-    name: 'Financial Services',
-    description: 'AI handles loan status queries, payment schedule requests, receipt confirmations, and document checklist questions, built to respect CCPA data rules, with a full audit log for every conversation.',
-    example: 'Lenders cut loan status call volume by 50% with AI first response on email and chat.',
-  },
-  {
-    name: 'Education & Training',
-    description: 'Student support AI that handles tuition receipt queries, course schedule questions, Stripe payment confirmations, section change requests, and course material links, around the clock without a support team.',
-    example: 'Education platforms reduce support staff requirements by 1 FTE per 5,000 students with AI.',
-  },
-  {
-    name: 'Healthcare & Clinics',
-    description: 'Patient support AI for appointment rescheduling, results status queries, billing questions, and post-visit prescription questions, built to respect HIPAA rules on patient data, with provider escalation routing.',
-    example: 'Clinics recover 2–3 hours of front-desk time per day after AI support deployment.',
-  },
-  {
-    name: 'Real Estate',
-    description: 'Showing confirmations, closing timeline questions, payment schedule queries, and document status checks: the AI handles high-volume post-contract support so your team focuses on new listings.',
-    example: 'Brokerages reduce post-contract support load by 30% with AI first response.',
-  },
-];
-
-const SUPPORT_FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Support AI Basics' },
-  { key: 'channels', label: 'Channels & Helpdesk' },
-  { key: 'integrations', label: 'Integrations & Compliance' },
-  { key: 'process', label: 'Process & Timeline' },
-  { key: 'pricing', label: 'Pricing & ROI' },
-];
-
-const SUPPORT_FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
     category: 'basics',
-    question: 'What can an AI customer support agent actually do for my business?',
-    answer: "The most common tasks: answering order status questions live from Shopify, sending carrier tracking links on demand, answering return and exchange policy questions, resending invoices and receipts from QuickBooks or Stripe, confirming payments, handling appointment rescheduling for clinics and service businesses, answering questions about products, pricing, and policies, and routing anything complex to a human agent with full context. If your team answers the same 10 questions more than 20 times a day, an AI support agent can handle 70%+ of those automatically.",
+    question: 'What is an AI customer support agent, and how does it work?',
+    answer:
+      'An AI customer support agent is software that receives an inbound support trigger (email, live chat or SMS), reads the relevant records from your store, CRM, billing and shipping APIs, decides the appropriate action against your written rules, and writes back the resolution. It looks up tracking, creates return labels, resends invoices, or answers policy questions, and hands complex edge cases to a human rep with a full summary.',
   },
   {
     category: 'basics',
-    question: 'How is this different from buying an off-the-shelf AI support product?',
-    answer: "Products like Zendesk AI, Intercom Fin, and the newer AI agent startups are strong if your support is standard and you are happy to work the way the product works. We build the other case: a custom agent for businesses whose support depends on their own systems, an internal ERP, a homegrown order portal, a legacy billing database, unusual return rules. We build the agent around your workflow and plug it into the helpdesk you already pay for, and you own the code at the end. If an off-the-shelf product covers your needs, we will tell you that on the call.",
+    question: 'How is a custom AI support agent different from Zendesk AI or Intercom Fin?',
+    answer:
+      'Off-the-shelf products work well for standard FAQ deflection if you operate strictly within the vendor sandbox. Custom agent development is required when your support workflow must query external databases, proprietary ERPs, custom OMS, multi-carrier APIs, or enforce custom business rules that SaaS tools cannot execute.',
   },
   {
     category: 'basics',
-    question: 'How does AI customer support differ from a scripted chatbot?',
-    answer: "A scripted chatbot works only if customers click the expected buttons and breaks the moment someone types naturally. An AI customer support agent understands natural language: 'where is my package', 'can you resend invoice 1043', 'necesito devolver un pedido' are all understood and answered accurately, using live data from your systems. The AI also handles follow-up questions in the same conversation without making the customer start over.",
+    question: 'What is a typical deflection rate for an AI support agent?',
+    answer:
+      'DTC brands and B2B distributors typically achieve 65% to 75% resolution rates within 30 days of launch. Repetitive queries like order tracking, return eligibility checks, address changes, and invoice requests are resolved without human touch, freeing your team for complex exceptions.',
   },
   {
     category: 'basics',
-    question: 'What is the typical deflection rate for an AI support agent?',
-    answer: "For DTC e-commerce, 65–75% deflection within 30 days of deployment is typical, meaning 65–75% of incoming tickets are fully resolved by the AI without any human involvement. B2B distribution sees similar rates, often higher because the questions are more predictable (stock levels, order status, invoice requests). Healthcare and financial services tend to land lower (50–60%) because compliance rules require a human to sign off on some request types.",
+    question: 'Does the agent actually take actions, or just generate text?',
+    answer:
+      'The agent takes typed actions via secure tool calling. It calls verified endpoints such as get_order_status, create_return_rma, resend_invoice_pdf, or update_shipping_address. Every action is constrained by JSON schema limits and requires authorization.',
   },
   {
-    category: 'basics',
-    question: 'What happens when the AI cannot resolve a query?',
-    answer: "Every AI support agent includes a confidence threshold and an escalation path. When the AI is not confident, it says so honestly and hands the customer to a human agent in Zendesk, Intercom, Freshdesk or HubSpot, with the full conversation transcript and a context summary so nobody asks the customer to repeat themselves. You control the escalation threshold, the routing rules, and the agent assignment logic.",
+    category: 'helpdesks',
+    question: 'Which helpdesks do you integrate with?',
+    answer:
+      'We integrate natively with Zendesk, Intercom, Freshdesk, Gorgias, HubSpot Service Hub, Front, and Salesforce Service Cloud. The agent reads tickets, applies tags, updates custom fields, posts internal notes, and assigns queues without requiring your team to switch platforms.',
+  },
+  {
+    category: 'helpdesks',
+    question: 'Can the agent look up live orders and tracking from Shopify and carriers?',
+    answer:
+      'Yes. The agent connects to Shopify, WooCommerce, ShipStation, and direct carrier APIs including UPS, FedEx, and USPS. When a customer asks about their shipment, the agent queries the current tracking scan and answers with real-time status in seconds.',
+  },
+  {
+    category: 'helpdesks',
+    question: 'Can the agent pull invoices and receipts from QuickBooks or NetSuite?',
+    answer:
+      'Yes. For B2B portals and wholesale operations, the agent securely queries NetSuite, QuickBooks Online, or Sage Intacct to retrieve invoice PDFs and email them directly to verified account contacts.',
+  },
+  {
+    category: 'helpdesks',
+    question: 'How does the agent handle refunds and financial transactions?',
+    answer:
+      'Refunds are governed by hard numeric ceilings programmed directly into the tool layer. For instance, returns under $50 with verified tracking can auto-approve, while requests above that threshold or involving chargebacks are escalated to a manager for manual sign-off.',
   },
   {
     category: 'channels',
-    question: 'Which channels can the AI support agent cover?',
-    answer: "Email, website chat, and SMS are the core three for US businesses, and they cover most ticket volume. We also build into your customer portal or app, and WhatsApp is available as an extra channel if you serve international customers who use it. Phone is handled by a voice agent, which is a separate build with its own call flow and handoff rules. One knowledge base feeds every channel, so the answer a customer gets by email matches the answer they get in chat.",
+    question: 'Which customer channels can the support agent handle?',
+    answer:
+      'The agent supports email, website chat widgets, SMS (via Twilio), customer portals, and WhatsApp. One shared retrieval knowledge base feeds all channels so customers receive consistent answers regardless of how they reach out.',
   },
   {
     category: 'channels',
-    question: 'Does the AI work inside the helpdesk we already use?',
-    answer: "Yes, and that is the whole model. We integrate with Zendesk, Intercom, Freshdesk, HubSpot Service Hub, Gorgias, and Zoho Desk through their APIs. The AI drafts or sends replies, creates and updates tickets, applies tags and macros, and escalates to the right queue. Your team keeps the tool, the reporting, and the workflow they already know. We do not ask you to rip out your helpdesk and move your history somewhere new.",
+    question: 'Can the AI support customers in Spanish and other languages?',
+    answer:
+      'Yes. Multilingual support in English and Spanish is standard for US deployments. Language detection occurs per message, and when a Spanish conversation escalates, the internal handoff note is translated into English for your team.',
   },
   {
     category: 'channels',
-    question: 'Can the AI send proactive messages, not just replies?',
-    answer: "Yes. The AI can send order shipped notifications with tracking links, payment receipt confirmations, appointment reminders, and follow-ups to customers with open tickets. For SMS specifically, we build to the TCPA rules: messages go only to customers who gave prior express consent, quiet hours are respected, and every message honors STOP and opt-out handling automatically. We build these proactive triggers alongside the reactive flows, so customers hear about a delay before they write in about it.",
+    question: 'Can the agent send proactive notifications before a customer asks?',
+    answer:
+      'Yes. We build event-driven triggers that monitor carrier webhooks to notify customers of transit delays, payment receipt confirmations, or delivery updates before they open a support ticket.',
   },
   {
-    category: 'channels',
-    question: 'Can the AI support customers in Spanish?',
-    answer: "Yes. English and Spanish is our standard US build, because Spanish is by far the most common language other than English spoken in US homes. Language detection happens at the query level rather than the session level, so a customer who switches mid-conversation is handled correctly. When a Spanish conversation escalates, the handoff summary is written in English so your agent can pick it up without a translation step.",
+    category: 'control',
+    question: 'What prevents the AI agent from hallucinating or giving wrong advice?',
+    answer:
+      'The agent utilizes Retrieval Augmented Generation (RAG) restricted strictly to your verified policy documents, SOPs, and product specifications. If a query falls outside the knowledge base or confidence falls below the set threshold, it escalates rather than guessing.',
   },
   {
-    category: 'integrations',
-    question: 'Can the AI pull invoices and receipts and send them to a customer?',
-    answer: "Yes, invoice retrieval is a standard feature. We connect the AI to QuickBooks, NetSuite, Stripe, or your custom billing system and give it the ability to look up documents by order ID, invoice number, or customer record. When someone writes 'can you resend my receipt', the AI finds the PDF and sends it in the reply. For B2B accounts this is one of the highest-volume requests in the queue and the AI handles it with no human involvement.",
+    category: 'control',
+    question: 'How does human escalation work when the AI is uncertain?',
+    answer:
+      'When an issue requires human judgment, the agent assigns the ticket to the appropriate queue in your helpdesk, attaches an internal note summarizing the customer intent and steps taken, and leaves the draft response ready for review.',
   },
   {
-    category: 'integrations',
-    question: 'Does the AI integrate with US carriers like UPS, FedEx and USPS?',
-    answer: "Yes. We integrate through ShipStation, Shippo, or EasyPost, or directly against the UPS, FedEx, and USPS APIs when you ship on your own accounts. When a customer asks where their order is, the AI checks live shipping status and replies with the current scan and the expected delivery date. No ticket, no waiting: the customer gets a real answer in under 10 seconds.",
+    category: 'control',
+    question: 'Is our customer data secure and compliant with US regulations?',
+    answer:
+      'Yes. All system connections use scoped OAuth service accounts with minimum required permissions. Data handling aligns with CCPA and CPRA guidelines, and healthcare implementations follow strict HIPAA data de-identification protocols.',
   },
   {
-    category: 'integrations',
-    question: 'How does the AI handle customer data privacy?',
-    answer: "We build to CCPA and CPRA expectations: customer data is accessed only through API calls with the minimum permissions required, conversation data is retained on the schedule you set, and every data flow is documented at handover. Access and deletion requests can be routed to the right team automatically instead of sitting in the queue. In healthcare we build to HIPAA rules on patient data. We do not sell certifications, we build the agent so your existing obligations still hold.",
+    category: 'implementation',
+    question: 'How long does it take to build and deploy a custom support agent?',
+    answer:
+      'A standard single-helpdesk support agent deployment takes 2 to 4 weeks. This includes audit of past tickets, knowledge base ingestion, API integration, evaluation suite testing, and shadow-mode validation.',
   },
   {
-    category: 'integrations',
-    question: 'Can the AI support agent process returns and exchanges directly?',
-    answer: "Yes. For Shopify and WooCommerce stores we build return flows where the AI checks your policy, verifies order eligibility, creates the RMA in your system, emails the prepaid label or drop-off instructions, and keeps the customer updated as the return moves. Exchanges follow a similar path. This removes the single most time-consuming category of support work for DTC brands.",
+    category: 'implementation',
+    question: 'What is shadow mode, and why is it used at launch?',
+    answer:
+      'In shadow mode, the agent processes live inbound tickets and drafts proposed replies and actions, but routes them to your human team for one-click approval before sending. This allows you to verify accuracy and refine edge cases before giving the agent full autonomy.',
   },
   {
-    category: 'process',
-    question: 'How long does it take to build and deploy an AI customer support agent?',
-    answer: "A focused single-channel agent (one channel, standard integrations) goes live in 2–3 weeks. A multi-channel build wired into Zendesk, Intercom, Freshdesk or HubSpot takes 4–5 weeks. Enterprise support automation with deep ERP integration takes 6–8 weeks. The biggest variable is knowledge base preparation: if your FAQs, policies and macros are already written down, we move faster.",
+    category: 'implementation',
+    question: 'Do we own the code and prompts after the build?',
+    answer:
+      'Yes. You own the code repository, custom MCP connectors, prompt templates, and evaluation datasets. There are no proprietary software runtime locks or ongoing per-resolution fees paid to us.',
   },
   {
-    category: 'process',
-    question: 'What content do you need from us to build the knowledge base?',
-    answer: "We work with almost any format: FAQs in Google Docs, product descriptions from your Shopify admin, policy PDFs, macros and saved replies from your helpdesk, ticket exports from Zendesk or Freshdesk, past chat transcripts, or a recording of your team answering common questions. We process and structure that into the AI knowledge base. You do not need to reformat anything for us.",
-  },
-  {
-    category: 'process',
-    question: 'How do we update the AI with new products, policies, or FAQs after launch?',
-    answer: "Through the admin dashboard: you upload new content (PDF, Google Doc, plain text) and the AI reprocesses the knowledge base with no code deployment. Most teams update during product launches, policy changes, and holiday season promotions. We build the update interface so a non-technical team member can run it.",
-  },
-  {
-    category: 'process',
-    question: 'How do we monitor the AI support agent performance?',
-    answer: "You get a dashboard showing deflection rate (tickets resolved without a human), escalation rate, average first response time, CSAT scores if you turn on post-resolution feedback, and the top unanswered questions, which are your knowledge gaps. Most clients review this weekly for the first month, then monthly once the AI stabilizes. We set up alerts for unusual escalation spikes.",
-  },
-  {
-    category: 'pricing',
-    question: 'How do you calculate ROI for AI customer support?',
-    answer: "The direct calculation: take the tickets your team handles per day, multiply by the loaded hourly cost of a support rep, then apply the share the AI will deflect (typically 65–75%) to get the monthly saving. We run that math with your real ticket volume on the scoping call rather than quoting an average. The secondary return matters too: faster first response improves retention and repeat purchase rates, and it shows up in CSAT before it shows up in headcount.",
-  },
-  {
-    category: 'pricing',
-    question: 'Are there ongoing costs after the support agent is built?',
-    answer: "Two, and neither is paid to us. LLM API usage is billed by the model provider (Claude, GPT or Gemini) and scales with query volume. Your helpdesk subscription stays exactly what it is today, since the agent works inside it. FactoryJet charges nothing ongoing unless you choose a retainer for knowledge base updates and tuning. The agent gets more accurate over time as we review unanswered questions and expand the knowledge base.",
-  },
-  {
-    category: 'pricing',
-    question: 'Can we start with one channel and add more later?',
-    answer: "Yes, we build modularly. Start with email or website chat, measure deflection and ROI, then add SMS, deeper helpdesk automation, or a customer portal as a second phase. Additions are priced at the delta, not as a rebuild, because the knowledge base and integrations carry over. Most clients expand within 6 months once they see the deflection numbers from the first channel.",
-  },
-  {
-    category: 'pricing',
-    question: 'Do you offer a trial or pilot before the full build?',
-    answer: "Yes. For clients who want proof before committing, we run a 2-week pilot: a support agent scoped to one product category or one ticket type, with real order lookups and FAQ handling on your live data. The pilot is a fixed price and is credited against the full project. Reading the first 100 real conversation transcripts convinces people faster than any proposal we could write.",
+    category: 'implementation',
+    question: 'How do we update the knowledge base when policies or products change?',
+    answer:
+      'We provide an administrative sync dashboard where your team can upload updated policy documents, FAQ sheets, or product manuals, which re-index automatically without requiring engineering changes.',
   },
 ];
 
-const faqSchema = {
+/* ─────────────────────────────────────────────────────────────────────────────
+   JSON-LD Schemas
+───────────────────────────────────────────────────────────────────────────── */
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: SUPPORT_FAQ_ITEMS.map((item) => ({
+  mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
   })),
 };
 
-export default function AICustomerSupportUSPage() {
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#service',
+  serviceType: 'AI customer support agent development',
+  name: 'Custom AI Customer Support Agent Development',
+  description:
+    'Custom AI customer support agent design, development and implementation for US operations teams. Native integrations for Zendesk, Intercom, Freshdesk, Gorgias, HubSpot, Shopify, NetSuite, and multi-carrier shipping APIs.',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  audience: {
+    '@type': 'BusinessAudience',
+    name: 'US DTC brands, B2B distributors, and mid-market operations teams',
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#webpage',
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
+  name: 'AI Customer Support Agents for US Operations | FactoryJet',
+  description:
+    'Custom AI support agents that resolve routine inquiries in Zendesk, Intercom, Gorgias and HubSpot with live order and billing lookups.',
+  dateModified: PAGE_MODIFIED,
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+};
+
+const BREADCRUMB_ITEMS = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+  { name: 'AI Customer Support', url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
+];
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    item: b.url,
+  })),
+};
+
+const STATS = [
+  { b: '70%+', s: 'routine ticket deflection across email, chat and SMS' },
+  { b: '< 30s', s: 'average first response time around the clock' },
+  { b: 'Your helpdesk', s: 'Zendesk, Intercom, Gorgias, Freshdesk & HubSpot' },
+  { b: 'Full ownership', s: 'you own the code, connectors and cloud accounts' },
+];
+
+const SOURCED_STATS = [
+  {
+    v: '2.8M',
+    d: 'customer service representatives are currently employed in the US, with operations teams facing rising turnover and training costs.',
+    src: 'Bureau of Labor Statistics / O*NET',
+    href: 'https://www.onetonline.org/link/summary/43-4051.00',
+  },
+  {
+    v: '73%',
+    d: 'of consumers point to customer experience as a key factor in their purchasing decisions, where response speed directly impacts retention.',
+    src: 'PwC Customer Experience Survey',
+    href: 'https://www.pwc.com/us/en/services/consulting/business-transformation/library/consumer-intelligence-series/future-of-customer-experience.html',
+  },
+  {
+    v: '16.9%',
+    d: 'of all US retail commerce is conducted online, creating massive post-purchase query volume across shipping, returns and order tracking.',
+    src: 'US Census Bureau, Q1 2026',
+    href: 'https://www.census.gov/retail/ecommerce.html',
+  },
+];
+
+const CAPABILITIES = [
+  {
+    t: 'Live Order & Carrier Tracking',
+    d: 'Queries Shopify, ShipStation, UPS, FedEx and USPS in real time to provide exact transit scans and delivery estimates in under 5 seconds.',
+  },
+  {
+    t: 'Automated Returns & RMA Processing',
+    d: 'Enforces your return policies, verifies eligibility windows, issues return merchandise authorizations (RMAs) and emails prepaid shipping labels.',
+  },
+  {
+    t: 'B2B Invoice & Receipt Retrieval',
+    d: 'Securely looks up accounting records in NetSuite, QuickBooks Online or Stripe to resend invoices, receipts and payment confirmations.',
+  },
+  {
+    t: 'Helpdesk Queue Management & Triage',
+    d: 'Reads incoming inquiries, assigns custom priority tags, routes tickets to appropriate internal teams, and posts internal action summaries.',
+  },
+  {
+    t: 'Multilingual Support (EN & ES)',
+    d: 'Detects customer language automatically and responds fluently in English and Spanish, translating escalation notes for your team.',
+  },
+  {
+    t: 'Proactive Event Notifications',
+    d: 'Monitors webhooks for shipping delays or order exceptions to notify customers proactively before they need to contact support.',
+  },
+];
+
+const INDUSTRIES = [
+  {
+    name: 'DTC E-Commerce & Retail',
+    desc: 'Handles high-volume where-is-my-order tickets, return label generation, exchange workflows, and product compatibility questions on Shopify and WooCommerce.',
+  },
+  {
+    name: 'B2B Wholesale & Distribution',
+    desc: 'Provides dealer portal support for stock availability checks, custom contract pricing, order status, and instant invoice PDF downloads from NetSuite or QuickBooks.',
+  },
+  {
+    name: 'Financial Services & Fintech',
+    desc: 'Assists with account status inquiries, payment schedule queries, receipt generation, and document checklist verification built under strict CCPA data guidelines.',
+  },
+  {
+    name: 'Healthcare & Medical Practices',
+    desc: 'Manages appointment rescheduling, clinic directions, preparation checklists, and intake routing with HIPAA-compliant data separation.',
+  },
+  {
+    name: 'Real Estate & Property Management',
+    desc: 'Answers maintenance requests, tenant lease timeline queries, document verification, and tour scheduling across web chat and SMS.',
+  },
+  {
+    name: 'SaaS & Subscription Businesses',
+    desc: 'Resolves subscription tier changes, billing inquiries, invoice downloads, seat management, and onboarding walkthroughs directly in HubSpot or Intercom.',
+  },
+];
+
+const STEPS = [
+  {
+    n: '01',
+    t: 'Support Queue Audit',
+    d: 'We analyze your 100 most frequent ticket types to identify routine queries for full automation versus edge cases requiring human review.',
+  },
+  {
+    n: '02',
+    t: 'RAG Knowledge Base Ingestion',
+    d: 'We convert your policies, SOPs, FAQs and past resolved tickets into a structured vector database with strict citation boundaries.',
+  },
+  {
+    n: '03',
+    t: 'Tool Layer & API Connectors',
+    d: 'We build typed function-calling tools into your helpdesk, store backend, ERP and carrier accounts with strict permission controls.',
+  },
+  {
+    n: '04',
+    t: 'Evaluation Suite & Shadow Mode',
+    d: 'We benchmark the agent against 200+ historical cases, then launch in shadow mode where your team reviews drafts before live autonomy.',
+  },
+  {
+    n: '05',
+    t: 'Production Deployment & Monitoring',
+    d: 'Full rollout with real-time analytics, deflection dashboards, escalation alerts, and weekly accuracy optimization reviews.',
+  },
+];
+
+export default function AICustomerSupportPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script id="ai-customer-support-us-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script id="ai-customer-support-us-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
+      <script id="support-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="support-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="support-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="support-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader
-        locale="us"
-        navLinks={[
-          { label: 'Services', href: '/services' },
-          { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'us' },
-        ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
-      />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
-          { name: 'AI Customer Support', url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
-        ]}
-      />
+      <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
-      <main className="bg-fj-cream">
-      <Breadcrumbs items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
-          { name: 'AI Customer Support', url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
-        ]} />
-
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_customer_support_hero" />}
-          eyebrow="AI CUSTOMER SUPPORT · US"
-          headline="70% of Your Routine Support Tickets Resolved Automatically, Inside the Helpdesk You Already Run"
-          lead="Custom AI support agents that check Shopify orders, send carrier tracking links, pull invoices from QuickBooks, and process returns, around the clock on email, website chat and SMS, escalating into Zendesk, Intercom, Freshdesk or HubSpot when a person is needed. Fixed price. Live in 2–3 weeks."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'us' as const }}
-          trustItems={[
-            '500+ businesses served',
-            'Zendesk, Intercom, Freshdesk, HubSpot ready',
-            'English & Spanish',
-          ]}
-          rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
-              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                AI SUPPORT AGENT IN ACTION
-              </p>
-              <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                600+ support tickets resolved today. 0 support agents needed.
-              </p>
-              <div className="mt-6 space-y-3">
-                {[
-                  'Customer: "where is my order?" → Agent checks the carrier API → replies with a tracking link in 3 seconds',
-                  'Buyer asks for a copy of invoice #1043 → Agent pulls it from QuickBooks → emails the PDF instantly',
-                  'Return request for Order #4521 → Agent verifies eligibility → creates the RMA → sends the prepaid label',
-                ].map((step, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
-                      {i + 1}
-                    </span>
-                    <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">{step}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">Answers in English and Spanish. Escalates into Zendesk or Freshdesk when needed. Runs around the clock.</p>
-              </div>
-            </div>
-          }
-        />
-
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
-
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 12 years of building. One goal: your results."
-          description="Websites designed and built for businesses across the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
-        />
-
-        <ServiceExplanation
-          eyebrow="AI SUPPORT EXPLAINED"
-          headline="Why an AI Support Agent Is Nothing Like the Scripted Chatbots You Have Tried"
-          lead="Scripted chatbots fail 40–60% of support conversations because customers do not follow the script. AI support agents understand natural language, check your live systems, and respond accurately, in English or Spanish."
-          body={
-            <>
-              <div className="flex flex-wrap gap-2" aria-hidden>
-                {['Email support', 'Website chat', 'SMS updates', 'Order status', 'Returns & exchanges', 'Invoice retrieval', 'Zendesk routing', 'Shopify integration'].map((cap) => (
-                  <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
-                ))}
-              </div>
-              <p>
-                The support bottleneck for most US businesses is not complex queries, it is volume. Your team fields the same 10 questions 200 times a day: where is my order, can I return this, please resend my invoice, what is your return policy. An AI support agent handles all of these automatically, with real data from your systems, in the customer's language, at any hour. Your team focuses on the 25–30% of tickets that genuinely need a human.
-              </p>
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '70%+', label: 'query deflection' },
-                  { value: '<60s', label: 'response time' },
-                  { value: '24/7', label: 'always on' },
-                ].map((b) => (
-                  <div key={b.value} className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm">
-                    <p className="font-fj-display font-bold text-[#F05A28]" style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}>{b.value}</p>
-                    <p className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}>{b.label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
-                <p className="font-fj-display font-semibold text-fj-ink" style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
-                  Your customers get an answer in 3 seconds. Your team focuses on cases that matter.
+        {/* Hero Section */}
+        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
+          <div className="pp-wrap" style={{ paddingTop: 'clamp(40px,5vh,72px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+              <div>
+                <p className="pp-eyebrow">AI customer support agents // US operations</p>
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
+                  Resolve 70% of support tickets <span className="pp-grad">inside your helpdesk</span>.
+                </h1>
+                <p className="pp-lead" style={{ maxWidth: '52ch' }}>
+                  FactoryJet builds custom AI support agents for US operations teams. We connect your store, carrier APIs, billing and helpdesk into an autonomous agent that resolves routine inquiries in under 30 seconds with human approval where it counts.
                 </p>
+                <HeroInlineForm source="us_ai_customer_support_hero" region="us" submitLabel="Scope your support agent" />
               </div>
-              <p>
-                FactoryJet AI support agents are built on large language models with a retrieval layer grounded in your specific business content: policies, product catalog, pricing, FAQs. The AI connects directly to your Shopify, ShipStation, Stripe, and QuickBooks accounts via API so every answer is backed by live data. Escalations flow into Zendesk, Intercom, Freshdesk or HubSpot with full context, so your human agents never start a conversation blind.
-              </p>
-            </>
-          }
-          rightSlot={
-            <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
-              <div className="border-b border-fj-neutral-100 px-7 py-4">
-                <p className="font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>AI vs. Manual Support Team</p>
-              </div>
-              <div className="divide-y divide-fj-neutral-100">
-                {[
-                  { scenario: 'Customer emails asking for order status', manual: 'Agent opens Shopify → copies tracking → replies, 3–5 minutes', ai: 'AI checks the carrier API live, replies with tracking link, 3 seconds' },
-                  { scenario: 'B2B buyer needs a copy of an invoice', manual: 'Agent finds invoice in QuickBooks → exports PDF → emails it, 8 min', ai: 'AI pulls the invoice from QuickBooks → sends the PDF, 5 sec' },
-                  { scenario: 'Customer wants to return an order', manual: 'Agent checks policy → verifies eligibility → raises return → notifies, 10 min', ai: 'AI checks eligibility → creates the RMA → sends the label, 45 sec' },
-                  { scenario: 'Ticket arrives at midnight', manual: 'No response until 9 AM, customer frustrated', ai: 'AI responds in 30 seconds, resolves or escalates for morning' },
-                ].map((row) => (
-                  <div key={row.scenario} className="px-7 py-4">
-                    <p className="font-fj-mono font-semibold text-fj-ink" style={{ fontSize: '0.75rem', letterSpacing: '0.04em' }}>{row.scenario}</p>
-                    <div className="mt-2 grid grid-cols-2 gap-3">
-                      <div className="rounded-lg bg-fj-neutral-50 px-3 py-2">
-                        <p className="font-fj-mono uppercase text-fj-neutral-400" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>Manual Team</p>
-                        <p className="mt-1 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem' }}>{row.manual}</p>
-                      </div>
-                      <div className="rounded-lg border border-[rgba(240,90,40,0.2)] bg-[rgba(240,90,40,0.05)] px-3 py-2">
-                        <p className="font-fj-mono uppercase text-[#B23E13]" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>AI Agent</p>
-                        <p className="mt-1 font-fj-body text-fj-ink" style={{ fontSize: '0.8125rem' }}>{row.ai}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
+                <Image
+                  src="/images/us/services/hero-ai-agent-us.webp"
+                  alt="Operations team reviewing an AI customer support agent dashboard"
+                  width={600}
+                  height={400}
+                  priority
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
               </div>
             </div>
-          }
-        />
+          </div>
+        </section>
 
-        <StrategicDarkSection
-          eyebrow="THE PROBLEM"
-          headline="Your support team is answering the same tickets on repeat: all day, every day"
-          lead="The highest-cost, lowest-value activity in most US businesses is answering the same 10 support questions 200 times a day. An AI customer support agent eliminates this entirely, freeing your team for conversations that actually require a human."
-          pillars={[
-            {
-              icon: '💬',
-              title: 'Repetitive tickets are your biggest operational bottleneck',
-              body: "Your team works the queue by hand, typing the same order status reply, pasting the same return policy, resending the same invoice, hundreds of times a day. One AI support agent handles 70%+ of that automatically, in English or Spanish, at 2 AM on a Sunday, and it does it inside the helpdesk your team already works in.",
-            },
-            {
-              icon: '⚠️',
-              title: 'Manual support creates inconsistent customer experiences',
-              body: "When different agents give different answers about your return policy, or one agent sends an invoice that another cannot find, you create customer confusion and internal chaos. An AI support agent gives the same accurate answer every time, grounded in your definitive policies and connected to your live systems, not agent memory.",
-            },
-            {
-              icon: '📈',
-              title: 'Support team costs scale with volume | AI does not',
-              body: "Hiring another rep adds salary, benefits, and weeks of ramp with no guarantee of consistency, and support is a high-turnover role, so you pay that cost again. An AI support agent handles 2× the ticket volume at the same cost and gets better over time as the knowledge base grows. For seasonal businesses with Black Friday support spikes, AI absorbs the volume without emergency hiring.",
-            },
-          ]}
-        />
+        {/* Answer-First Definitional Section */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// the short answer'}</p>
+            <h2 style={{ marginTop: '10px' }}>What is an AI customer support agent?</h2>
+            <p className="pp-lead" style={{ marginTop: '16px', maxWidth: '74ch' }}>
+              An AI customer support agent is autonomous software engineered to resolve customer inquiries end to end. Unlike simple scripted chatbots that only match keywords or suggest canned articles, an AI support agent integrates directly with your system of record: querying order records, checking live carrier tracking, initiating return merchandise authorizations, and generating invoice PDFs.
+            </p>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '74ch' }}>
+              The agent operates natively within your existing helpdesk (Zendesk, Intercom, Gorgias, Freshdesk or HubSpot). It handles 65% to 75% of routine ticket volume around the clock and escalates complex requests with complete context to your human team.
+            </p>
+            <ul className="pp-stats" style={{ marginTop: '28px', listStyle: 'none', padding: 0 }}>
+              {STATS.map((s) => (
+                <li className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
-        <ServiceJourneyRow
-          eyebrow="HOW WE BUILD"
-          headline="From support audit to 70% ticket deflection in 2–3 weeks"
-          stages={SUPPORT_JOURNEY_STAGES}
-          closingNote="Every AI support agent is tested against 200+ real support queries before going live. You review accuracy and escalation triggers, we fix any issues before your customers see it."
-        />
-
-        <ServiceExplanation
-          eyebrow="TECHNOLOGY"
-          headline="The technology stack behind your AI customer support agent"
-          lead="We pick the right LLM, knowledge base architecture, and integration connectors for your business, query volume, and support channel requirements. Everything is documented and handed over."
-          reverseOnDesktop
-          body={
-            <>
-              <p>
-                Every AI support agent has four layers: an LLM for natural language understanding and response generation, a RAG knowledge base built from your business content, integration connectors for your live systems (Shopify, ShipStation, QuickBooks, Stripe), and a channel deployment layer (email, website chat, SMS, and your existing helpdesk). We pick best-in-class tools for each layer and make sure they hold up together at your real ticket volume.
-              </p>
-              <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white" aria-hidden>
-                <table className="w-full text-left">
-                  <thead>
-                    <tr className="border-b border-fj-neutral-100 bg-fj-neutral-50">
-                      <th className="px-5 py-3 font-fj-mono text-[10px] font-semibold uppercase tracking-widest text-fj-neutral-400">Layer</th>
-                      <th className="px-5 py-3 font-fj-mono text-[10px] font-semibold uppercase tracking-widest text-fj-neutral-400">Tools We Use</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-fj-neutral-100">
-                    {[
-                      { layer: 'LLM / AI Model', tools: 'Claude, GPT-4o, Gemini' },
-                      { layer: 'Knowledge Base (RAG)', tools: 'Pinecone, pgvector, Chroma' },
-                      { layer: 'Channel Delivery', tools: 'Email, website chat, SMS via Twilio' },
-                      { layer: 'E-Commerce / Orders', tools: 'Shopify, WooCommerce, Commerceflo' },
-                      { layer: 'Shipping & Tracking', tools: 'ShipStation, Shippo, UPS / FedEx / USPS APIs' },
-                      { layer: 'Billing & Accounting', tools: 'QuickBooks, NetSuite, Stripe' },
-                      { layer: 'Helpdesk', tools: 'Zendesk, Intercom, Freshdesk, HubSpot, Gorgias' },
-                    ].map((row) => (
-                      <tr key={row.layer}>
-                        <td className="px-5 py-3 font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.8125rem' }}>{row.layer}</td>
-                        <td className="px-5 py-3 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem' }}>{row.tools}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </>
-          }
-          rightSlot={
-            <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
-              <div className="border-b border-fj-neutral-100 px-7 py-4">
-                <p className="font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>Five Support AI Types We Build</p>
-              </div>
-              <div className="divide-y divide-fj-neutral-100">
-                {[
-                  { name: 'E-Commerce Order Support AI', desc: 'Order status, carrier tracking, returns, and invoices | on email and website chat, in English and Spanish, around the clock.' },
-                  { name: 'B2B Dealer Support AI', desc: 'Stock availability, order status, invoice retrieval, and payment confirmation for dealers and distributors.' },
-                  { name: 'Multi-Channel Support Platform', desc: 'Email + website chat + SMS with AI first response and escalation routing into Zendesk, Intercom, or Freshdesk.' },
-                  { name: 'Regulated-Industry Support AI', desc: 'Loan status, payment schedules, receipts, and document checklists | built to respect CCPA, and HIPAA rules in healthcare.' },
-                  { name: 'Proactive Support AI', desc: 'AI that sends shipment delay alerts, payment failure notices, and back-in-stock notifications before customers ask.' },
-                ].map((item) => (
-                  <div key={item.name} className="px-7 py-4">
-                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.name}</p>
-                    <p className="mt-0.5 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          }
-        />
-
-        <section className="py-12 md:py-16" style={{ backgroundColor: '#FAFAF7', borderTop: '1.5px solid rgba(240,90,40,0.18)', borderBottom: '1.5px solid rgba(240,90,40,0.18)' }}>
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-              {SUPPORT_STATS.map((stat) => (
-                <div key={stat.value}>
-                  {stat.categoryLabel && (
-                    <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase" style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#B23E13', background: 'rgba(240,90,40,0.06)', border: '1px solid rgba(240,90,40,0.22)' }}>
-                      <span className="inline-block h-1 w-1 rounded-full" style={{ backgroundColor: '#F05A28' }} aria-hidden="true" />
-                      {stat.categoryLabel}
-                    </div>
-                  )}
-                  <p className="font-fj-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.25rem)', lineHeight: 1, letterSpacing: '-0.04em', color: '#F05A28' }}>{stat.value}</p>
-                  <p className="mt-3 font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}>{stat.label}</p>
-                  {stat.microcopy && <p className="mt-1.5 font-fj-body text-fj-neutral-400" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{stat.microcopy}</p>}
+        {/* Sourced Statistics Band */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// market evidence'}</p>
+            <h2 style={{ marginTop: '10px' }}>The economics of automated customer support</h2>
+            <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {SOURCED_STATS.map((stat) => (
+                <div key={stat.v} className="pp-card" style={{ padding: '24px' }}>
+                  <p className="font-fj-display font-bold" style={{ fontSize: 'clamp(2.25rem, 4vw, 3rem)', color: 'var(--pp-orange)', lineHeight: 1 }}>
+                    {stat.v}
+                  </p>
+                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.5] text-fj-neutral-600">
+                    {stat.d}
+                  </p>
+                  <a
+                    href={stat.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="mt-3 inline-block font-fj-mono text-[0.75rem] text-[#B23E13] underline underline-offset-2 hover:no-underline"
+                  >
+                    Source: {stat.src} ↗
+                  </a>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <CityContextSection
-          eyebrow="US SUPPORT AI MARKET"
-          headline="US customers expect an answer in minutes. Most support teams are still working the queue by hand."
-          leadParagraphs={[
-            "Support expectations in the US have moved to same-hour, any-hour. Customers open a chat window at 11 PM, email on a Saturday, and text about a late package over a holiday weekend. Most SMB support teams still work that queue manually during business hours, which means the backlog is already deep by the time anyone logs on Monday. The businesses deploying AI support agents now are building a response-time advantage that manual-support competitors find very hard to close.",
-            "The other thing that changed: almost every US business already pays for a helpdesk. Zendesk, Intercom, Freshdesk, HubSpot Service Hub, Gorgias, Zoho Desk. Ripping that out to buy a separate AI product is a hard internal sell, and it strands years of ticket history. Building a custom agent that works inside the helpdesk you already run is a much easier decision, and that is the model we build: your tools, your data, your workflow, with the repetitive work handled automatically.",
-          ]}
-          bodySlot={
-            <>
-              <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden="true">
-                <p className="font-fj-display font-semibold text-fj-ink" style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
-                  A customer who gets their order status in 3 seconds buys again. One who waits 6 hours complains.
+        {/* Interactive ROI Calculator Section */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <AiAgentRoiCalculator defaultWorkflow="support" source="ai_customer_support_page" />
+          </div>
+        </section>
+
+        {/* Capabilities Bento Grid */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// capabilities'}</p>
+            <h2 style={{ marginTop: '10px' }}>What your AI customer support agent handles</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '70ch' }}>
+              Built for real operations teams. Every action is executed through verified APIs with strict boundary controls.
+            </p>
+            <div className="pp-bento" style={{ marginTop: '32px' }}>
+              {CAPABILITIES.map((cap) => (
+                <div className="pp-card" key={cap.t}>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{cap.t}</h3>
+                  <p className="mt-2">{cap.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industry Use-Cases */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// industry workflows'}</p>
+            <h2 style={{ marginTop: '10px' }}>Tailored to your specific support workflows</h2>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {INDUSTRIES.map((ind) => (
+                <div key={ind.name} className="pp-card" style={{ backgroundColor: '#FFFFFF' }}>
+                  <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>{ind.name}</h3>
+                  <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">{ind.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// comparison'}</p>
+            <h2 style={{ marginTop: '10px' }}>Custom AI support agent vs. traditional alternatives</h2>
+            <div style={{ marginTop: '28px', overflowX: 'auto' }}>
+              <table className="pp-table" style={{ width: '100%', minWidth: '640px' }}>
+                <thead>
+                  <tr>
+                    <th>Capability</th>
+                    <th className="me">FactoryJet Custom Agent</th>
+                    <th>In-House Support Team</th>
+                    <th>Generic SaaS Helpdesk Bot</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="me">
+                    <td><strong>Cost Model</strong></td>
+                    <td><strong>Fixed implementation build</strong></td>
+                    <td>Salary, benefits and turnover costs</td>
+                    <td>Monthly per-seat or per-resolution fee</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Live ERP &amp; Tracking Actions</strong></td>
+                    <td>Yes (Shopify, NetSuite, UPS, FedEx)</td>
+                    <td>Manual lookup per ticket (3-8 mins)</td>
+                    <td>Limited to basic vendor plugins</td>
+                  </tr>
+                  <tr>
+                    <td><strong>24/7/365 Instant Response</strong></td>
+                    <td>Yes (&lt; 30 seconds average)</td>
+                    <td>Requires night &amp; weekend shifts</td>
+                    <td>Yes (canned article links)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bilingual (English &amp; Spanish)</strong></td>
+                    <td>Yes (automatic per-message detection)</td>
+                    <td>Requires bilingual staff</td>
+                    <td>Requires translation add-on</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Code &amp; Knowledge Ownership</strong></td>
+                    <td>Yes (you own repo &amp; prompts)</td>
+                    <td>Internal SOPs</td>
+                    <td>Locked in vendor ecosystem</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Human Escalation with Summary</strong></td>
+                    <td>Yes (transcripts + context note)</td>
+                    <td>Manual warm transfers</td>
+                    <td>Basic ticket pass-through</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Journey */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// implementation process'}</p>
+            <h2 style={{ marginTop: '10px' }}>From support audit to live deflection in 3 weeks</h2>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-4">
+              {STEPS.map((step) => (
+                <div key={step.n} className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                  <span className="font-fj-mono font-bold text-[#B23E13]" style={{ fontSize: '13px' }}>{step.n}</span>
+                  <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>{step.t}</h3>
+                  <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">{step.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Real Proof / Testimonials */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// verified proof'}</p>
+            <h2 style={{ marginTop: '10px' }}>Built for real brands with real queues</h2>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="pp-card" style={{ padding: '28px' }}>
+                <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
+                  &ldquo;Automating our routine order tracking and return inquiries allowed our team to handle peak season volume without adding temporary support staff. Customers get immediate answers, and our escalation queue stays clean.&rdquo;
                 </p>
+                <div className="mt-5 flex items-center gap-3">
+                  <Image
+                    src="/images/testimonials/ricky-belle-maison-160.webp"
+                    alt="Ricky B, Founder at Belle Maison"
+                    width={48}
+                    height={48}
+                    className="rounded-full border border-fj-neutral-200"
+                  />
+                  <div>
+                    <p className="font-fj-body font-bold text-fj-ink">Ricky B.</p>
+                    <p className="font-fj-mono text-[11px] text-fj-neutral-400">Founder, Belle Maison (DTC Home Goods)</p>
+                  </div>
+                </div>
               </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {['DTC E-Commerce', 'B2B Distribution', 'Financial Services', 'Education', 'Healthcare', 'Real Estate'].map((ind) => (
-                  <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
-                ))}
+
+              <div className="pp-card" style={{ padding: '28px' }}>
+                <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
+                  &ldquo;Trade buyers used to call and email constantly asking for invoice copies, payment confirmations, and delivery updates. The AI agent resolves those instantly from our ERP, saving our account managers hours every day.&rdquo;
+                </p>
+                <div className="mt-5 flex items-center gap-3">
+                  <Image
+                    src="/images/testimonials/vishal-impulse-branding-160.webp"
+                    alt="Vishal K, Managing Director at Impulse Branding"
+                    width={48}
+                    height={48}
+                    className="rounded-full border border-fj-neutral-200"
+                  />
+                  <div>
+                    <p className="font-fj-body font-bold text-fj-ink">Vishal K.</p>
+                    <p className="font-fj-mono text-[11px] text-fj-neutral-400">Managing Director, Impulse Branding (B2B Distribution)</p>
+                  </div>
+                </div>
               </div>
-            </>
-          }
-          stats={SUPPORT_MARKET_STATS}
-        />
+            </div>
+          </div>
+        </section>
 
-        <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. In-House Support Team vs. Scripted Chatbot vs. Generic SaaS"
-          lead="Fixed price, full ownership, and it runs inside the helpdesk you already pay for: the honest comparison."
-          pullQuote={{ stat: 'Fixed price', caption: 'AI customer support agent handling email, chat and SMS in English and Spanish, with live Shopify and carrier integration, Zendesk or Freshdesk escalation, and full code ownership. No monthly SaaS fee.' }}
-          columns={SUPPORT_COMPARISON_COLUMNS}
-          rows={SUPPORT_COMPARISON_ROWS}
-          footer="Cost models shown are typical for each option. FactoryJet quotes a fixed price after a scoping call, for every tier."
-        />
-
-        <IndustriesGrid variant="cards"
-          eyebrow="WHO WE BUILD FOR"
-          headline="AI customer support for every major US industry"
-          lead="Every industry has different support query patterns, tool integrations, and compliance requirements. We build for yours."
-          sectors={SUPPORT_INDUSTRIES}
-        />
-
-
-        <GetFreeQuoteCTA />
-        <TestimonialsSection
-          eyebrow="CLIENT RESULTS"
-          headline="What founders say about working with FactoryJet"
-        />
-
+        {/* FAQ Section */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything to Know Before You Automate Your Support"
-          lead="The questions we answer on every AI customer support discovery call, answered honestly, without the runaround."
-          categories={SUPPORT_FAQ_CATEGORIES}
-          items={SUPPORT_FAQ_ITEMS}
+          headline="Questions operations leaders ask before deploying support AI"
+          lead="Everything you need to know about architecture, helpdesk integrations, safety guardrails and ownership."
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
         />
 
-        <div id="final-cta">
-          <FinalCTA
-            variant="dark"
-            eyebrow="GET STARTED"
-            headline="Book a Free AI Customer Support Strategy Call"
-            sub="Tell us your ticket volume, the helpdesk you run, and your biggest support bottleneck. We will map out exactly which tickets the AI can handle and give you a fixed price before writing a single line of code."
-            primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
-            secondaryCta={{ label: 'See All AI Agent Services', href: '/services/ai-agent-development' }}
-            objectionHandler="Fixed price. Full code ownership. Zendesk, Intercom, Freshdesk, HubSpot and Shopify ready. 500+ businesses served."
-          />
-        </div>
-
+        {/* Final CTA */}
+        <FinalCTA
+          eyebrow="READY TO AUTOMATE YOUR SUPPORT QUEUE?"
+          headline="Scope your AI customer support agent today."
+          sub="Book a 30-minute scoping call with our engineering team. We will map your ticket volume, audit your workflows, and provide a fixed-price implementation blueprint."
+          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'View AI Agent Overview', href: '/services/ai-agent-development' }}
+        />
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

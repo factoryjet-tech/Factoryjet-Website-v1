@@ -52,15 +52,26 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     ],
   },
   {
-    heading: 'Services',
+    heading: 'AI Agents & Automation',
+    links: [
+      { label: 'Custom AI Agent Development', href: '/services/ai-agent-development' },
+      { label: 'AI Customer Support Agents',  href: '/services/ai-agent-development/ai-customer-support' },
+      { label: 'AI Sales & SDR Agents',       href: '/services/ai-agent-development/ai-sales-agent' },
+      { label: 'AI Workflow Automation',      href: '/services/ai-agent-development/ai-workflow-automation' },
+      { label: 'Voice AI Agents',             href: '/services/ai-agent-development/ai-voice-agent' },
+      { label: 'n8n Automation',              href: '/n8n-automation' },
+      { label: 'AI SEO & Visibility',         href: '/services/ai-seo' },
+      { label: 'AI Visibility Checker',       href: '/ai-visibility-checker' },
+    ],
+  },
+  {
+    heading: 'Services & SEO',
     links: [
       { label: 'Web Design',             href: '/services/web-design' },
       { label: 'SEO Services',           href: '/services/seo' },
       { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
-      { label: 'AI SEO',                 href: '/services/ai-seo' },
-      { label: 'AI Agents',              href: '/services/ai-agent-development' },
-      { label: 'AI Visibility Checker',  href: '/ai-visibility-checker' },
-      { label: 'All services',           href: '/services' },
+      { label: 'Local SEO',              href: '/services/local-seo' },
+      { label: 'All Services',           href: '/services' },
     ],
   },
   {

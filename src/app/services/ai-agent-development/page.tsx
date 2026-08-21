@@ -8,6 +8,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -832,6 +833,13 @@ export default function AIAgentDevelopmentPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* Interactive ROI Calculator */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <AiAgentRoiCalculator defaultWorkflow="support" source="ai_agent_development_master_hub" />
           </div>
         </section>
 

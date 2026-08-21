@@ -62,6 +62,16 @@ const US_AI_SERVICES = [
   { icon: Link2,         label: 'AI Integration', href: '/services/ai-integration-services', desc: 'Connect AI to your stack' },
 ] as const;
 
+const US_AI_AGENTS_NAV = [
+  { icon: Bot,           label: 'Custom AI Agents',       href: '/services/ai-agent-development',               desc: 'Autonomous operations & task agents' },
+  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-agent-development/ai-customer-support', desc: 'Deflect 70%+ of support tickets' },
+  { icon: TrendingUp,    label: 'AI Sales & SDR Agents',  href: '/services/ai-agent-development/ai-sales-agent',         desc: 'Inbound lead qualification & CRM booking' },
+  { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-agent-development/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
+  { icon: Mic,           label: 'Voice AI Agents',        href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Inbound & outbound voice calling' },
+  { icon: Workflow,      label: 'n8n Automation',         href: '/n8n-automation',                               desc: 'Self-hosted workflow automation' },
+  { icon: Sparkles,      label: 'Agentic Commerce',       href: '/agentic-commerce',                             desc: 'How AI agents buy, sell & reprice' },
+] as const;
+
 // Solutions (US) — the commerce pillar + flagship pages, the primary menu
 const US_SOLUTIONS = [
   { icon: Sparkles,      label: 'Agentic Commerce',         href: '/agentic-commerce',               desc: 'How AI agents buy & sell' },
@@ -498,9 +508,10 @@ export default function SiteHeader({
   const WHO_NEEDS   = locale === 'gb' ? GB_WHO_WE_SERVE_NEEDS : US_WHO_WE_SERVE_NEEDS;
   const KNOW_HUB    = locale === 'gb' ? GB_KNOWLEDGE_HUB      : US_KNOWLEDGE_HUB;
 
-  const [openDropdown, setOpenDropdown] = useState<'solutions' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<'solutions' | 'aiagents' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAiAgentsOpen, setMobileAiAgentsOpen] = useState(false);
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -526,7 +537,7 @@ export default function SiteHeader({
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  const openDrop = (id: 'solutions' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company') => {
+  const openDrop = (id: 'solutions' | 'aiagents' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company') => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpenDropdown(id);
   };
@@ -891,6 +902,64 @@ export default function SiteHeader({
                               <Link href={cfg.featuredCtaHref} className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white">
                                 {cfg.featuredCtaLabel}
                                 <ArrowRight size={13} strokeWidth={2} />
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* AI Agents */}
+                  <div className="relative" onMouseEnter={() => openDrop('aiagents')} onMouseLeave={scheduleClosed}>
+                    <button type="button" aria-expanded={openDropdown === 'aiagents'} aria-haspopup="menu" className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] font-medium text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]">
+                      AI Agents
+                      <ChevronDown size={14} strokeWidth={2} className={`transition-transform duration-200 ${openDropdown === 'aiagents' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`} />
+                    </button>
+                    {openDropdown === 'aiagents' && (
+                      <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
+                        <div className="w-[820px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="grid grid-cols-[1.1fr_260px]">
+                            <div className="p-4">
+                              <div className="flex items-center justify-between mb-2 px-1">
+                                <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">AI Agent Development Services</p>
+                                <Link href="/services/ai-agent-development" className="font-fj-body text-[11px] font-semibold text-[#B23E13] hover:underline">
+                                  Overview &amp; Architecture →
+                                </Link>
+                              </div>
+                              <div className="grid grid-cols-2 gap-x-2 gap-y-0.5">
+                                {US_AI_AGENTS_NAV.map((s) => (
+                                  <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
+                            </div>
+                            <div className="flex flex-col justify-between rounded-r-2xl p-5" style={{ background: '#0F0F12' }}>
+                              <div>
+                                <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40">US Operations</p>
+                                <p className="font-fj-display text-[16.5px] font-semibold leading-snug text-[#FAFAF7]">
+                                  Custom AI agents that work your real queues
+                                </p>
+                                <p className="mt-2 font-fj-body text-[11.5px] leading-relaxed text-white/60">
+                                  Wired into Zendesk, HubSpot, NetSuite, Shopify &amp; Slack. Human approval on anything costly.
+                                </p>
+                                <ul className="mt-3 space-y-1.5">
+                                  {['Zendesk & Intercom resolution', 'HubSpot & Salesforce qualification', 'NetSuite & ERP 3-way matching', 'Full code & prompt ownership'].map((item) => (
+                                    <li key={item} className="flex items-center gap-2">
+                                      <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#1E1E22] ring-1 ring-[#F05A28]/40">
+                                        <svg width="7" height="5" viewBox="0 0 8 6" fill="none" aria-hidden="true">
+                                          <path d="M1 3L3 5L7 1" stroke="#F05A28" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                      </span>
+                                      <span className="font-fj-body text-[11px] text-white/80">{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <Link
+                                href="/services/ai-agent-development"
+                                className="mt-4 flex items-center gap-1.5 font-fj-body text-[12px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                              >
+                                Explore AI Agent Architecture <ArrowRight size={12} strokeWidth={2} />
                               </Link>
                             </div>
                           </div>
@@ -1589,6 +1658,16 @@ export default function SiteHeader({
                     ))}
                     {isCommerce && (
                       <>
+                        <div className="mb-1 mt-3 flex items-center justify-between px-1">
+                          <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Agent Development</p>
+                          <Link href="/services/ai-agent-development" onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#B23E13]">View all →</Link>
+                        </div>
+                        {US_AI_AGENTS_NAV.map((s) => (
+                          <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                            <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                            {s.label}
+                          </Link>
+                        ))}
                         <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Platforms</p>
                         {PLATFORMS.map((s) => (
                           <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
