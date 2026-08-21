@@ -7,12 +7,13 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Freshness signal. Bumped 2026-08-21 for full PAGE-SPEC v2 rebuild.
+   Freshness signal. Bumped 2026-08-21 for full PAGE-SPEC v2 3,500+ word standard.
 ───────────────────────────────────────────────────────────────────────────── */
 const PAGE_MODIFIED = '2026-08-21';
 
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
     'business process automation company',
     'ai document extraction agent',
     'back office workflow automation',
+    'enterprise n8n engineering company',
   ],
   openGraph: {
     type: 'website',
@@ -73,17 +75,18 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ Data (18 Answer-First items mapping to real search intent)
+   FAQ Data (24 Answer-First items mapping to real search intent)
 ───────────────────────────────────────────────────────────────────────────── */
-const WORKFLOW_FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Automation Basics' },
-  { key: 'tools', label: 'Tools & Integrations' },
-  { key: 'compliance', label: 'Compliance & Security' },
-  { key: 'process', label: 'Process & Implementation' },
+const FAQ_CATEGORIES = [
+  { key: 'basics', label: 'Automation basics' },
+  { key: 'tools', label: 'Tools & ERP integrations' },
+  { key: 'compliance', label: 'Compliance & security' },
+  { key: 'process', label: 'Process & implementation' },
   { key: 'pricing', label: 'Pricing & ROI' },
+  { key: 'architecture', label: 'Technical architecture' },
 ];
 
-const WORKFLOW_FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'What is AI workflow automation and how does it differ from traditional Zapier zaps?',
@@ -98,7 +101,7 @@ const WORKFLOW_FAQ_ITEMS = [
   },
   {
     category: 'basics',
-    question: 'Can the workflow extract data from irregular PDF invoices and POs?',
+    question: 'Can the workflow extract data from irregular PDF invoices and purchase orders?',
     answer:
       'Yes. Using multi-modal vision and language models with strict JSON schema outputs, our workflows extract vendor name, invoice date, line items, unit quantities, tax, and totals from any layout with over 99% accuracy, flagging discrepancies for human review.',
   },
@@ -151,6 +154,12 @@ const WORKFLOW_FAQ_ITEMS = [
       'Yes. The language model automatically detects Spanish, French, or English document text, standardizing extracted currencies, dates, and terms into unified English records in your accounting system.',
   },
   {
+    category: 'compliance',
+    question: 'How do you handle rate limits across third-party APIs?',
+    answer:
+      'Our pipelines deploy token-bucket rate limiters, queue buffering via Redis, and automatic backoff pauses to prevent hitting Shopify, HubSpot, or carrier API concurrency caps.',
+  },
+  {
     category: 'process',
     question: 'How long does a custom workflow automation implementation take?',
     answer:
@@ -167,6 +176,12 @@ const WORKFLOW_FAQ_ITEMS = [
     question: 'Do we own the workflow code and architecture?',
     answer:
       'Yes. You own all n8n JSON workflows, custom Python connector scripts, Docker compose files, and prompt templates with zero vendor lock-in.',
+  },
+  {
+    category: 'process',
+    question: 'How do we test and verify the workflows before go-live?',
+    answer:
+      'We establish dedicated staging environments and run batches of 100+ historical records through the pipeline, verifying every field in sandbox accounts before enabling production write access.',
   },
   {
     category: 'pricing',
@@ -188,26 +203,98 @@ const WORKFLOW_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'How do we test and verify the workflows before go-live?',
+    question: 'What happens if a SaaS tool updates its API in the future?',
     answer:
-      'We establish dedicated staging environments and run batches of 100+ historical records through the pipeline, verifying every field in sandbox accounts before enabling production write access.',
+      'We build connectors using versioned stable API endpoints. If a vendor announces deprecations, our maintenance retainer covers updating node endpoints and verifying data schemas before cutoff deadlines.',
+  },
+  {
+    category: 'architecture',
+    question: 'How does n8n handle high concurrency and queue backpressure?',
+    answer:
+      'In production, we configure n8n in queue mode using Redis as the message broker and external PostgreSQL for execution history, allowing horizontal worker scaling to process thousands of simultaneous webhook events.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can we run custom Python scripts and NPM packages inside n8n?',
+    answer:
+      'Yes. Unlike Zapier restricted sandboxes, self-hosted n8n allows full Python and Node.js code execution with arbitrary NPM libraries (such as Lodash, Mathjs, or custom cryptographic modules).',
+  },
+  {
+    category: 'architecture',
+    question: 'How are database idempotency keys enforced on webhook endpoints?',
+    answer:
+      'Every webhook payload hash is checked against a Redis idempotency cache with a 24-hour TTL before execution, preventing duplicate transactions from network retries or carrier webhook duplicates.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you monitor pipeline uptime and error rates?',
+    answer:
+      'We configure automated healthcheck monitors (Prometheus / Grafana or CloudWatch) and instant Slack/PagerDuty webhooks that alert your engineering team if failure rates exceed 0.5%.',
+  },
+  {
+    category: 'architecture',
+    question: 'How does the workflow handle multi-page PDF invoice table extraction?',
+    answer:
+      'Multi-modal vision nodes convert PDF pages into high-resolution images, extract tabular line items with column bounding coordinates, and mathematically verify that line-item subtotals equal the invoice grand total.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can n8n trigger webhooks into proprietary legacy on-premise databases?',
+    answer:
+      'Yes. Using secure reverse SSH tunnels, VPN gateways, or AWS Direct Connect, n8n can query and write to legacy SQL Server, Oracle, or AS400 databases without public internet exposure.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you migrate historical data before launching new automated workflows?',
+    answer:
+      'We write batch extraction and reconciliation scripts that validate, clean, and sync historical records between legacy and target systems in sandboxed staging environments prior to production cutover.',
+  },
+  {
+    category: 'architecture',
+    question: 'What happens during a catastrophic cloud server failure?',
+    answer:
+      'Our infrastructure blueprints include automated nightly database snapshots (AWS RDS / GCP Cloud SQL) and infrastructure-as-code Docker compose scripts, allowing complete disaster recovery within 15 minutes.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can n8n trigger automated SMS and voice alerts for urgent operational exceptions?',
+    answer:
+      'Yes. High-priority errors (such as payment gateway outages or inventory depletion) can trigger automated Twilio SMS and voice calls to on-call engineering managers.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you handle pagination when querying massive datasets via API?',
+    answer:
+      'Our custom n8n nodes implement cursor-based and offset-limit pagination loops with built-in memory stream chunking, safely processing millions of rows without memory exhaustion.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can workflows dynamically adjust pricing across e-commerce marketplaces?',
+    answer:
+      'Yes. We build algorithmic repricing engines that monitor competitor prices, calculate minimum gross margins, and push dynamic price updates to Shopify and Amazon every hour.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you ensure zero data corruption during system schema migrations?',
+    answer:
+      'We deploy blue-green dual-write pipelines that write data to both old and new schemas simultaneously, verifying field parity across 10,000+ records before deprecating legacy endpoints.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
-const WORKFLOW_FAQ_SCHEMA = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: WORKFLOW_FAQ_ITEMS.map((item) => ({
+  mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
   })),
 };
 
-const WORKFLOW_SERVICE_SCHEMA = {
+const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation#service',
@@ -228,7 +315,7 @@ const WORKFLOW_SERVICE_SCHEMA = {
   },
 };
 
-const WORKFLOW_WEBPAGE_SCHEMA = {
+const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation#webpage',
@@ -241,17 +328,17 @@ const WORKFLOW_WEBPAGE_SCHEMA = {
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
 
-const WORKFLOW_BREADCRUMB_ITEMS = [
+const BREADCRUMB_ITEMS = [
   { name: 'Home', url: 'https://factoryjet.com' },
   { name: 'Services', url: 'https://factoryjet.com/services' },
   { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
   { name: 'AI Workflow Automation', url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation' },
 ];
 
-const WORKFLOW_BREADCRUMB_SCHEMA = {
+const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: WORKFLOW_BREADCRUMB_ITEMS.map((b, i) => ({
+  itemListElement: BREADCRUMB_ITEMS.map((b, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: b.name,
@@ -312,6 +399,14 @@ const CAPABILITIES = [
     t: 'Event-Driven Slack & SMS Dispatch',
     d: 'Notifies account executives and warehouse managers of inventory thresholds, VIP orders, or payment failures with actionable interactive buttons.',
   },
+  {
+    t: 'Rate Limit & Queue Buffering',
+    d: 'Deploys Redis queue workers to manage API concurrency limits, ensuring zero 429 throttling errors across high-volume batch sync jobs.',
+  },
+  {
+    t: 'Audit Logging & Full Observability',
+    d: 'Logs every execution run, payload hash, and transformation step into an audit database for complete financial compliance and error tracing.',
+  },
 ];
 
 const INDUSTRIES = [
@@ -338,6 +433,62 @@ const INDUSTRIES = [
   {
     name: 'Professional Services & Legal',
     desc: 'Executes new client onboarding pipelines: generating contracts, creating shared Google Drive folders, and triggering kickoff milestones.',
+  },
+];
+
+const FAILURE_MODES = [
+  {
+    title: '1. Upstream API Schema Changes & Silent Breaks',
+    description: 'When a connected SaaS tool renames or deprecates a webhook payload field without notice.',
+    mitigation: 'Runtime JSON Schema validation (Pydantic / Zod) intercepts malformed payloads immediately, isolating the record to a dead-letter queue and dispatching an alert to your engineering Slack channel.',
+  },
+  {
+    title: '2. Redis Queue Concurrency & Memory Overflow',
+    description: 'When a massive flash sale or batch upload sends 10,000 simultaneous webhook triggers.',
+    mitigation: 'Redis-backed token-bucket rate limiters regulate concurrency, pacing worker nodes to respect third-party API rate limits while persisting backlogged payloads safely on disk.',
+  },
+  {
+    title: '3. Database Lockups & Write Collisions',
+    description: 'When two concurrent workflow executions attempt to update the same ERP customer record simultaneously.',
+    mitigation: 'Optimistic locking and atomic database transactions ensure that state conflicts trigger automated exponential backoff retries rather than corrupting financial records.',
+  },
+  {
+    title: '4. API Rate Limit Throttling (HTTP 429 Errors)',
+    description: 'When high-frequency API calls trigger rate-limit blocks on Shopify, HubSpot, or carrier servers.',
+    mitigation: 'Automated retry interceptors parse the Retry-After header, pausing worker queues dynamically and resuming execution without dropping records.',
+  },
+  {
+    title: '5. Infinite Loop & Runaway Execution Costs',
+    description: 'When a bi-directional CRM sync triggers an echo loop (System A updates System B, which triggers System A).',
+    mitigation: 'Execution cycle breakers check origin user IDs and payload hashes, programmatically halting recursive triggers before API quota is wasted.',
+  },
+];
+
+const SELECTION_CRITERIA = [
+  {
+    num: '01',
+    title: 'Insist on Self-Hosted Private VPC Deployment',
+    desc: 'Never process sensitive ERP financial balances or customer PII through multi-tenant third-party SaaS clouds. Ensure your partner deploys n8n or Python microservices inside your AWS or GCP account.',
+  },
+  {
+    num: '02',
+    title: 'Verify Dead-Letter Queue & Error Architecture',
+    desc: 'Ask how they handle unexpected API timeouts. If their solution lacks automated retries, payload isolation, and interactive Slack alert cards, the system will fail under production load.',
+  },
+  {
+    num: '03',
+    title: 'Demand Native Multi-Modal AI Document Extraction',
+    desc: 'Ensure the engineering team utilizes vision-language models capable of extracting irregular multi-page PDF invoices and packing slips into validated JSON without requiring rigid OCR templates.',
+  },
+  {
+    num: '04',
+    title: 'Check Full Version Control & Git Repository Ownership',
+    desc: 'You must own all workflow JSON definitions, custom Python nodes, Docker compose files, and migration scripts in a private Git repository with zero vendor lock-in.',
+  },
+  {
+    num: '05',
+    title: 'Verify Fixed-Price Build Contracts',
+    desc: 'Avoid open-ended hourly billing or agencies that charge recurring per-task markups on your automated transactions.',
   },
 ];
 
@@ -372,15 +523,15 @@ const STEPS = [
 export default function AIWorkflowAutomationPage() {
   return (
     <>
-      <script id="workflow-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WORKFLOW_FAQ_SCHEMA) }} />
-      <script id="workflow-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WORKFLOW_SERVICE_SCHEMA) }} />
-      <script id="workflow-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WORKFLOW_WEBPAGE_SCHEMA) }} />
-      <script id="workflow-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WORKFLOW_BREADCRUMB_SCHEMA) }} />
+      <script id="workflow-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="workflow-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="workflow-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="workflow-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        <Breadcrumbs items={WORKFLOW_BREADCRUMB_ITEMS} />
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* Hero Section */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -421,6 +572,9 @@ export default function AIWorkflowAutomationPage() {
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '74ch' }}>
               By deploying on self-hosted infrastructure inside your private cloud, you eliminate recurring per-task fees from third-party tools, maintain strict data residency compliance, and establish resilient dead-letter queues that prevent silent failures.
             </p>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '74ch' }}>
+              From automated 3-way invoice matching in NetSuite to real-time inventory rebalancing across Shopify and regional 3PL warehouses, AI workflow automation transforms fragmented manual processes into resilient, auditable data engines.
+            </p>
             <ul className="pp-stats" style={{ marginTop: '28px', listStyle: 'none', padding: 0 }}>
               {STATS.map((s) => (
                 <li className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></li>
@@ -457,15 +611,56 @@ export default function AIWorkflowAutomationPage() {
           </div>
         </section>
 
-        {/* Interactive ROI Calculator Section */}
+        {/* Proprietary Framework: The 4-Stage Automation Maturity Model */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// proprietary framework'}</p>
+            <h2 style={{ marginTop: '10px' }}>The 4-Stage Automation Maturity Model</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '72ch' }}>
+              Mid-market enterprises evolve through four distinct stages of operational automation. Here is how architectures mature:
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                <span className="font-fj-mono font-bold text-gray-500" style={{ fontSize: '12px' }}>STAGE 1 // FRAGILE RELAYS</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>Zapier &amp; Make SaaS</h3>
+                <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">
+                  Basic point-to-point SaaS triggers. High per-task fees, zero schema validation, and frequent silent execution breaks.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                <span className="font-fj-mono font-bold text-blue-600" style={{ fontSize: '12px' }}>STAGE 2 // CUSTOM SCRIPTS</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>Isolated Webhook Bots</h3>
+                <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">
+                  Hand-coded Node/Python scripts. Solves logic limits but lacks execution visualizers, centralized logging, and retry queues.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                <span className="font-fj-mono font-bold text-orange-600" style={{ fontSize: '12px' }}>STAGE 3 // PRODUCTION VPC</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>Self-Hosted n8n</h3>
+                <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">
+                  Dedicated Docker clusters in your VPC. Zero per-task tax, dead-letter queues, Redis queue buffering, and Git versioning.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                <span className="font-fj-mono font-bold text-green-600" style={{ fontSize: '12px' }}>STAGE 4 // AGENTIC GRAPHS</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>Self-Healing Agents</h3>
+                <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">
+                  Multi-modal vision extraction, evaluative feedback loops, dynamic margin repricing, and automated exception routing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Interactive ROI Calculator Section */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <AiAgentRoiCalculator defaultWorkflow="erp" source="ai_workflow_automation_page" />
           </div>
         </section>
 
         {/* Capabilities Bento Grid */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// capabilities'}</p>
             <h2 style={{ marginTop: '10px' }}>What our AI workflow pipelines handle</h2>
@@ -483,8 +678,76 @@ export default function AIWorkflowAutomationPage() {
           </div>
         </section>
 
-        {/* Industry Use-Cases */}
+        {/* Technical Architecture Deep-Dive */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// technical architecture'}</p>
+            <h2 style={{ marginTop: '10px' }}>The self-hosted n8n infrastructure advantage</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '70ch' }}>
+              We deploy production-grade, highly available automation infrastructure directly inside your private Amazon Web Services or Google Cloud Platform environment.
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>1. Private Cloud VPC &amp; Zero Task Fees</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Runs on dedicated Docker containers with persistent PostgreSQL databases. Process 50,000 to 1,000,000+ monthly workflow operations for a flat $25–$50/month in cloud hosting costs with zero third-party per-task pricing tiers.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>2. Multi-Modal Vision &amp; PDF Extraction</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Integrates LangChain vision nodes that convert complex multi-page vendor PDF invoices, packing slips, and bills of lading into validated structured JSON records with line item mathematical reconciliation.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>3. Dead-Letter Queues &amp; Circuit Breakers</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Captures failed API payloads into an isolated PostgreSQL dead-letter queue, preventing silent data loss. Sends interactive Slack alerts with one-click replay buttons to re-run modified records instantly.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>4. Git Version Control &amp; CI/CD</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Every workflow is committed as a portable JSON definition to your private Git repository, allowing direct branch testing across dev, staging, and production environments with zero vendor lock-in.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Negative Space: When NOT to build self-hosted n8n automations */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// negative space & honest guidance'}</p>
+            <h2 style={{ marginTop: '10px' }}>When you should NOT build custom n8n workflow automations</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '72ch' }}>
+              Self-hosted workflow engineering requires ongoing infrastructure ownership. Do not deploy self-hosted n8n if:
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.05rem' }}>Low Execution Volume (&lt; 200 Tasks/Mo)</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  If your business only runs a handful of simple automations each month, a free or $20/month Zapier plan is more practical than managing a private cloud server.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.05rem' }}>Native Tool Sync is Sufficient</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  If you only need to sync standard HubSpot contacts to Shopify customers using native, supported marketplace integrations without custom data mapping, custom automation is unnecessary.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.05rem' }}>Zero Cloud Infrastructure Access</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  If your IT policy strictly forbids provisioning private Docker instances or PostgreSQL databases on AWS, GCP, or DigitalOcean, hosted SaaS tools must be used instead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Industry Use-Cases */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// industry workflows'}</p>
             <h2 style={{ marginTop: '10px' }}>Engineered for your industry operational stack</h2>
@@ -495,6 +758,67 @@ export default function AIWorkflowAutomationPage() {
                   <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">{ind.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Failure Modes & Safety Engineering */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// resilience & error boundaries'}</p>
+            <h2 style={{ marginTop: '10px' }}>How our automation pipelines handle operational failure</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '70ch' }}>
+              Enterprise data operations cannot tolerate silent breaks. Here is how our architecture prevents sync failures:
+            </p>
+            <div className="mt-8 space-y-4">
+              {FAILURE_MODES.map((fm) => (
+                <div key={fm.title} className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                  <h3 className="font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.05rem' }}>{fm.title}</h3>
+                  <p className="mt-1 font-fj-body text-[0.875rem] text-red-700"><strong>Failure State:</strong> {fm.description}</p>
+                  <p className="mt-1 font-fj-body text-[0.875rem] text-green-800"><strong>Engineered Mitigation:</strong> {fm.mitigation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The 4 Core Enterprise Automation Topologies */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// enterprise automation topologies'}</p>
+            <h2 style={{ marginTop: '10px' }}>4 production data pipelines we engineer on self-hosted n8n</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '72ch' }}>
+              From unstructured invoice ingestion to automated inventory rebalancing, here is how our pipelines operate:
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <span className="font-fj-mono font-bold text-orange-600" style={{ fontSize: '12px' }}>TOPOLOGY 01 // PDF INVOICE EXTRACTION</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>Multi-Modal Vendor Invoice Parsing</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Watches AP billing inboxes, extracts tabular line items from PDF invoices with vision models, executes 3-way matching against NetSuite POs, and writes verified draft bills for one-click accounting sign-off.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <span className="font-fj-mono font-bold text-orange-600" style={{ fontSize: '12px' }}>TOPOLOGY 02 // OMNICHANNEL INVENTORY</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>Multi-Warehouse Stock Rebalancing</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Monitors sell-through velocity across Shopify Plus, Amazon FBA, and regional 3PL nodes, dynamically adjusting buffer stocks and creating internal inventory transfer manifests before stockouts occur.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <span className="font-fj-mono font-bold text-orange-600" style={{ fontSize: '12px' }}>TOPOLOGY 03 // CRM &amp; BILLING SYNC</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>Stripe-to-QuickBooks Revenue Settlement</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Captures Stripe successful charge webhooks, calculates processing fees, generates customer invoices in QuickBooks Online, and updates HubSpot deal pipeline stages with complete transaction receipts.
+                </p>
+              </div>
+              <div className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                <span className="font-fj-mono font-bold text-orange-600" style={{ fontSize: '12px' }}>TOPOLOGY 04 // CLIENT ONBOARDING</span>
+                <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1.1rem' }}>Automated B2B Client Provisioning</h3>
+                <p className="mt-2 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  Triggers upon signed DocuSign contracts: generates shared Google Drive client folders, creates customer accounts in project management software, posts team kickoff briefs in Slack, and issues initial deposit invoices.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -557,8 +881,25 @@ export default function AIWorkflowAutomationPage() {
           </div>
         </section>
 
-        {/* Implementation Journey */}
+        {/* Selection Checklist: How to Choose a Partner */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// buyer checklist'}</p>
+            <h2 style={{ marginTop: '10px' }}>How to evaluate an enterprise workflow automation partner</h2>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-4">
+              {SELECTION_CRITERIA.map((sc) => (
+                <div key={sc.num} className="pp-card" style={{ backgroundColor: '#FFFFFF', padding: '20px' }}>
+                  <span className="font-fj-mono font-bold text-[#B23E13]" style={{ fontSize: '13px' }}>{sc.num}</span>
+                  <h3 className="mt-2 font-fj-body font-bold text-fj-ink" style={{ fontSize: '1rem' }}>{sc.title}</h3>
+                  <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600 leading-relaxed">{sc.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Journey */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// implementation process'}</p>
             <h2 style={{ marginTop: '10px' }}>From process audit to live pipeline in 3 weeks</h2>
@@ -575,12 +916,12 @@ export default function AIWorkflowAutomationPage() {
         </section>
 
         {/* Real Proof / Testimonials */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// verified proof'}</p>
             <h2 style={{ marginTop: '10px' }}>Built for high-volume operational workflows</h2>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="pp-card" style={{ padding: '28px' }}>
+              <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
                 <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
                   &ldquo;We were manually copying hundreds of dealer purchase orders from PDF emails into our ERP every week. FactoryJet built an n8n pipeline that reads every attachment, validates part numbers, and writes clean orders to NetSuite in seconds.&rdquo;
                 </p>
@@ -599,7 +940,7 @@ export default function AIWorkflowAutomationPage() {
                 </div>
               </div>
 
-              <div className="pp-card" style={{ padding: '28px' }}>
+              <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
                 <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
                   &ldquo;Our order fulfillment and accounting sync used to break whenever customers changed billing addresses mid-shipment. The self-healing workflow handles exception routing automatically, saving us hours of manual reconciliations.&rdquo;
                 </p>
@@ -626,8 +967,8 @@ export default function AIWorkflowAutomationPage() {
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Questions operations leaders ask before deploying automated pipelines"
           lead="Everything you need to know about n8n architecture, ERP connectors, error recovery and data ownership."
-          categories={WORKFLOW_FAQ_CATEGORIES}
-          items={WORKFLOW_FAQ_ITEMS}
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
         />
 
         {/* Final CTA */}
