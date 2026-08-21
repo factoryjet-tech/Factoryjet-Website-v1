@@ -94,7 +94,7 @@ const SERVICE_RULES: ServiceRule[] = [
     href: '/services/small-business-seo',
     label: 'Small Business SEO',
     blurb: 'Search growth scoped to a small team and a real budget.',
-    keywords: ['small business seo', 'seo for small business', 'seo cost', 'how long does seo'],
+    keywords: ['small business seo', 'seo for small business', 'seo cost', 'how long does seo', 'seo tips'],
     weight: 3,
   },
   {

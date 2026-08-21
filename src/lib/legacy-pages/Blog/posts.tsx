@@ -93,8 +93,11 @@ import { post as bestSeoAgenciesUsaPost } from './posts/best-seo-agencies-usa';
 import { post as isGeoReplacingSeo2026Post } from './posts/is-geo-replacing-seo-2026';
 import { post as whatDoesAnAiAutomationAgencyDoUkPost } from './posts/what-does-an-ai-automation-agency-do-uk';
 import { post as localSeoUkSmallBusinessesMapPackPost } from './posts/local-seo-uk-small-businesses-map-pack';
+import { post as seoTipsSmallBusiness2026Post } from './posts/seo-tips-small-business-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- US SEO TIPS PILLAR (2026-08-21) ---
+  seoTipsSmallBusiness2026Post,
   // --- US AI / AGENTIC COMMERCE (2026) ---
   whatIsAgenticCommercePost,
   agenticCommerceVsTraditionalEcommercePost,
