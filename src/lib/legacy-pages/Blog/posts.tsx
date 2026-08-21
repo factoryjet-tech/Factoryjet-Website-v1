@@ -94,8 +94,17 @@ import { post as isGeoReplacingSeo2026Post } from './posts/is-geo-replacing-seo-
 import { post as whatDoesAnAiAutomationAgencyDoUkPost } from './posts/what-does-an-ai-automation-agency-do-uk';
 import { post as localSeoUkSmallBusinessesMapPackPost } from './posts/local-seo-uk-small-businesses-map-pack';
 import { post as seoTipsSmallBusiness2026Post } from './posts/seo-tips-small-business-2026';
+import { post as aiCustomerSupportAgentArchitectureGuidePost } from './posts/ai-customer-support-agent-architecture-guide';
+import { post as howToBuildCustomAiSdrB2bSales2026Post } from './posts/how-to-build-custom-ai-sdr-b2b-sales-2026';
+import { post as n8nVsZapierVsMakeAiWorkflowAutomation2026Post } from './posts/n8n-vs-zapier-vs-make-ai-workflow-automation-2026';
+import { post as agenticCommerceAutonomousAiAgentsEcommerce2026Post } from './posts/agentic-commerce-autonomous-ai-agents-ecommerce-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- US AI AGENT PILLAR GUIDES (2026-08-21) ---
+  aiCustomerSupportAgentArchitectureGuidePost,
+  howToBuildCustomAiSdrB2bSales2026Post,
+  n8nVsZapierVsMakeAiWorkflowAutomation2026Post,
+  agenticCommerceAutonomousAiAgentsEcommerce2026Post,
   // --- US SEO TIPS PILLAR (2026-08-21) ---
   seoTipsSmallBusiness2026Post,
   // --- US AI / AGENTIC COMMERCE (2026) ---
