@@ -15,7 +15,8 @@
     "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
     "typecheck": "tsc --noEmit",
     "check:watermarks": "node scripts/check-watermarks.mjs",
-    "indexnow": "node scripts/submit-indexnow.mjs"
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "bing:submit": "node scripts/submit-bing-api.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
