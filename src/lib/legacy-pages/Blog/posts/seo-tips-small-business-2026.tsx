@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: 'What SEO metrics should a small business owner watch?',
-    a: 'Indexed money URLs, queries that already convert, and the one form or call event you actually want. Rank tracking on vanity head terms is a spectator sport. If Search Console cannot see a conversion, you are optimizing a brochure.',
+    a: 'Indexed money URLs, queries that already convert, and the one form or call event you actually want. Rank tracking on vanity head terms is a spectator sport. If Search Console cannot see a conversion from organic, you are optimizing a brochure, not a business.',
   },
   {
     q: 'Do backlinks still matter in 2026?',
@@ -77,6 +77,18 @@ const faqs = [
   {
     q: 'What is the biggest SEO mistake small businesses make?',
     a: 'Publishing. They publish 30 posts that never mention the service, never link to it, and never answer a question a paying customer typed. The archive looks busy. Search Console shows the homepage ranking for the brand name and nothing else.',
+  },
+  {
+    q: 'What are the best SEO strategies?',
+    a: 'Google\'s AI Overview for "seo tips" compresses them to four: the right search terms, helpful content, page structure, and technical basics. For a small US business the strategy is narrower: pick one money URL, make it indexable, answer the buyer on that URL, and link to it. Tools are optional. The URL is not.',
+  },
+  {
+    q: 'How do I improve my SEO skills?',
+    a: 'Skill is hours on one site, not another course. Read Search Console weekly, rewrite one title, and compare what ranked against what you published. The PAA under "seo tips" asks this because people collect tips and never ship a URL. Ten hours on your own money page beats a 40-hour certification.',
+  },
+  {
+    q: 'Can a beginner do SEO?',
+    a: 'A beginner can do the 80/20: Search Console, titles, FAQs, Google Business Profile if you serve a place, and internal links. A beginner should not buy links, split one query into three posts, or trust ChatGPT to pick the winning URL. That is how beginners get a busy blog and an empty pipeline.',
   },
   {
     q: 'How does FactoryJet approach SEO for US small businesses?',
@@ -93,14 +105,14 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Aug 21, 2026',
-  readTime: '12 min read',
+  readTime: '14 min read',
   imageUrl: '/blog-images/seo-tips-small-business-2026.webp',
   imageAlt:
     'Small business owner at a bright desk reviewing search results on a laptop, orange notebook beside the keyboard',
   meta: {
     title: 'SEO Tips for Small Business in 2026 (The 80/20)',
     description:
-      'Practical SEO tips for US small businesses in 2026: the 80/20 that moves a money page, time cost per step, and whether ChatGPT can do the work. Written for owners, not tool vendors.',
+      'SEO tips for US small businesses in 2026: the 80/20 that moves a money page, time cost per step, and whether ChatGPT can do the work.',
   },
   keyTakeaways: [
     'The 80/20 for a firm under $5M is indexation, one commercial page, internal links, and a conversion Search Console can see.',
@@ -158,11 +170,100 @@ export const post: BlogPost = {
         costs are for one competent person, not a sprint ritual.
       </p>
 
+
+      <h2 id="definition">What SEO tips actually are</h2>
+      <p>
+        SEO tips are the smallest set of changes that get a specific URL found, understood, and
+        trusted for a query a customer already types. They are not a dashboard, a plugin, or a
+        40-post calendar. If a tip does not change a page Google can fetch, it is entertainment.
+      </p>
+      <p>
+        Related searches under the same query, pulled the same day:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li>SEO tips for beginners</li>
+        <li>SEO tips reddit</li>
+        <li>Free SEO tips</li>
+        <li>Best SEO tips</li>
+        <li>SEO tips for small businesses</li>
+        <li>What is SEO, and what SEO stands for (those belong on a definition page, not this one)</li>
+      </ul>
+      <p>
+        Beginner, Reddit, free, best, and small business are the same job as this page: an owner,
+        one site, no team. "What is SEO" is a definition query. It gets its own URL later.
+      </p>
+
+      <h2 id="aio-today">Who Google quotes for "seo tips" today</h2>
+      <p>
+        Pulled live from Google US on 21 Aug 2026. The AI Overview sits above organic. It cites
+        seven sources. FactoryJet is in none of them. Neither is any other services agency.
+      </p>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li>Reddit, r/SEO, a 2021 thread Google still treats as a primary source.</li>
+        <li>Semrush, "13 SEO Tips to Boost Your Search Visibility."</li>
+        <li>Google's own SEO starter guide on developers.google.com.</li>
+        <li>Hello Co Creative, a short "easy tips" post.</li>
+        <li>YouTube, an ecommerce SEO checklist.</li>
+        <li>Siteimprove, content-optimization best practices.</li>
+        <li>BDC, "SEO tips for small businesses."</li>
+      </ul>
+      <p>
+        Organic underneath the overview is a slightly different set: Reddit again, Google's starter
+        guide, Semrush, Siteimprove, Michigan Tech, Hello Co Creative, YouTube, and Bynder. Still
+        no services agency. The pattern is the same as the 417-SERP sample from 20 Aug: Google,
+        publishers, and forums, not firms that sell the work.
+      </p>
+      <p>
+        If you want to be the eighth citation, you have to be as extractable as those pages: short
+        claims, lists, and a first paragraph a model can lift. You also have to get crawled. A post
+        that went live this morning will not appear in that box today. PAA still asks "Is SEO dead
+        now with AI?" We already answered that with data.{' '}
+        <a href="/blog/is-seo-dead-2026-ai-search-data" className="text-blue-600 underline hover:text-blue-800">
+          Is SEO dead in 2026
+        </a>{' '}
+        is the argument. This page is what to do if the answer is no.
+      </p>
+      <p>
+        If you want that work scoped for a US small business,{' '}
+        <a href="/services/small-business-seo" className="text-blue-600 underline hover:text-blue-800">start here</a>, not with another tips roundup.
+      </p>
+
+      <h2 id="best-strategies">What are the best SEO strategies?</h2>
+      <p>
+        That is the first People Also Ask result under "seo tips" today, and Google answers it
+        inside the PAA with an AI Overview. The overview's own four-part list:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li>Target the terms people actually type, including long-tail phrases.</li>
+        <li>Write for humans first, put the main term in the first 100 words, update old pages.</li>
+        <li>One H1, subheadings, image alt text.</li>
+        <li>Speed, clean URLs, links you did not buy.</li>
+      </ul>
+      <p>
+        None of that is wrong. None of it tells a $2M firm which URL to fix on Monday. Our overlay
+        is the 80/20 below: same four areas, one page, time-boxed.
+      </p>
+
+      <h2 id="skills">How to improve SEO skills without another course</h2>
+      <p>
+        Second PAA: "How do I improve my SEO skills?" Third, "Can a beginner do SEO?" Yes, if
+        skill means shipping, not collecting certificates.
+      </p>
+      <ul className="list-disc pl-6 space-y-2 mb-6">
+        <li>Week 1: Search Console on the money URL (45 minutes).</li>
+        <li>Week 1: rewrite title, H1, first 60 words (2 hours).</li>
+        <li>Week 2: 8 to 12 FAQs on that URL (90 minutes).</li>
+        <li>Week 2: internal links from every related article (1 hour).</li>
+        <li>Ongoing: compare what ranked in the AI Overview against what you published.</li>
+      </ul>
+
       <h2 id="eighty-twenty">The 80/20, in order</h2>
       <p>
         Do these in sequence. Skipping to "write more blogs" is how you get 114 posts and zero
         rankings, which is where factoryjet.com itself sat across 417 sampled SERPs in August 2026.
-        We are not exempt from this list.
+        We are not exempt from this list. Time costs below are for one competent person, not a
+        sprint ritual, and they map onto the four areas Google already named in the AI Overview:
+        terms, content, structure, and technical basics. The difference is we name the URL.
       </p>
 
       <h3 id="tip-1">1. Put Search Console on the page that makes money (45 minutes)</h3>
@@ -282,6 +383,9 @@ export const post: BlogPost = {
         <li>City pages for cities you do not serve.</li>
         <li>AI drafts shipped without a human who has been on a sales call.</li>
         <li>Reporting "impressions up 12 percent" with no lead attached.</li>
+        <li>Chasing "what is SEO" on this URL when related search already splits that query off.</li>
+        <li>Shipping ChatGPT drafts that never mention the money page.</li>
+        <li>Treating Semrush's 13 tips as a strategy for a 12-person company you do not have.</li>
       </ul>
 
       <h2 id="diy-or-hire">DIY, developer, or agency</h2>
@@ -307,7 +411,8 @@ export const post: BlogPost = {
       <p>
         Open Search Console. Pick one URL. Rewrite the first 60 words so a stranger, and a model,
         can quote them. Then publish the next article only if it links back. That is the whole tip
-        list, compressed.
+        list, compressed. If you want help after that first pass, the next click is{' '}
+        <a href="/services/small-business-seo">small business SEO</a>, not another roundup of the same 13 tips Semrush already ranked for.
       </p>
     </article>
   ),
