@@ -405,7 +405,7 @@ const CAPABILITIES = [
   },
   {
     t: 'Audit Logging & Full Observability',
-    d: 'Logs every execution run, payload hash, and transformation step into an audit database for complete financial compliance and error tracing.',
+    d: 'Logs every execution run, payload hash, and convertation step into an audit database for complete financial compliance and error tracing.',
   },
 ];
 
@@ -501,7 +501,7 @@ const STEPS = [
   {
     n: '02',
     t: 'Data Architecture & Schema Design',
-    d: 'We design the complete pipeline blueprint: defining webhook triggers, LLM transformation prompts, and system field mappings.',
+    d: 'We design the complete pipeline blueprint: defining webhook triggers, LLM convertation prompts, and system field mappings.',
   },
   {
     n: '03',
@@ -573,7 +573,7 @@ export default function AIWorkflowAutomationPage() {
               By deploying on self-hosted infrastructure inside your private cloud, you eliminate recurring per-task fees from third-party tools, maintain strict data residency compliance, and establish resilient dead-letter queues that prevent silent failures.
             </p>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '74ch' }}>
-              From automated 3-way invoice matching in NetSuite to real-time inventory rebalancing across Shopify and regional 3PL warehouses, AI workflow automation transforms fragmented manual processes into resilient, auditable data engines.
+              From automated 3-way invoice matching in NetSuite to real-time inventory rebalancing across Shopify and regional 3PL warehouses, AI workflow automation converts fragmented manual processes into resilient, auditable data engines.
             </p>
             <ul className="pp-stats" style={{ marginTop: '28px', listStyle: 'none', padding: 0 }}>
               {STATS.map((s) => (

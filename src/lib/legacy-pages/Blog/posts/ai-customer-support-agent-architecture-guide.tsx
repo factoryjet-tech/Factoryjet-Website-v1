@@ -60,7 +60,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How does the agent handle multilingual customer support inquiries?',
-      a: 'The agent detects incoming language automatically across 50+ languages, processing Spanish, French, German, and English queries with equal fluency. It retrieves company policies in English, translates context seamlessly, and responds in the customer preferred language.',
+      a: 'The agent detects incoming language automatically across 50+ languages, processing Spanish, French, German, and English queries with equal fluency. It retrieves company policies in English, translates context frictionlessly, and responds in the customer preferred language.',
     },
     {
       q: 'Can the support agent read attachments and photos of damaged items?',
@@ -197,7 +197,7 @@ export const post: BlogPost = {
       <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
         <li><strong>Intent Classification:</strong> Identifies primary intent (WISMO, Return, Exchange, Product Question, Billing).</li>
         <li><strong>Entity Extraction &amp; Slot Filling:</strong> Extracts order number, customer email, item SKU, and reason for return into structured session state.</li>
-        <li><strong>State Persistence:</strong> Conversation state is stored in a fast Redis cache with a 24-hour expiration window, allowing customers to resume conversations seamlessly.</li>
+        <li><strong>State Persistence:</strong> Conversation state is stored in a fast Redis cache with a 24-hour expiration window, allowing customers to resume conversations frictionlessly.</li>
         <li><strong>Context Summarization:</strong> Multi-turn conversations exceeding 10 turns are summarized into a dense context block to preserve LLM token efficiency.</li>
       </ul>
 

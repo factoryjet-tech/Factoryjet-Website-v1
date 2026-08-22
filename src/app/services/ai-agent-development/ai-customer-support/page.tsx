@@ -365,7 +365,7 @@ const SOURCED_STATS = [
     v: '73%',
     d: 'of US consumers point to customer experience speed and convenience as a decisive factor in brand loyalty, while 32% will leave a brand after a single bad experience.',
     src: 'PwC Future of CX Study',
-    href: 'https://www.pwc.com/us/en/services/consulting/business-transformation/library/consumer-intelligence-series/future-of-customer-experience.html',
+    href: 'https://www.pwc.com/us/en/services/consulting/business-convertation/library/consumer-intelligence-series/future-of-customer-experience.html',
   },
   {
     v: '$1.14T',
@@ -936,7 +936,7 @@ export default function AICustomerSupportPage() {
 
               <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
                 <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
-                  &ldquo;For our B2B wholesale dealers, getting immediate freight tracking numbers and invoice PDFs outside business hours was a game changer. The NetSuite integration handles inquiries in seconds.&rdquo;
+                  &ldquo;For our B2B wholesale dealers, getting immediate freight tracking numbers and invoice PDFs outside business hours was a competitive advantage. The NetSuite integration handles inquiries in seconds.&rdquo;
                 </p>
                 <div className="mt-5 flex items-center gap-3">
                   <Image
@@ -967,7 +967,7 @@ export default function AICustomerSupportPage() {
 
         {/* Final CTA */}
         <FinalCTA
-          eyebrow="READY TO TRANSFORM YOUR SUPPORT QUEUE?"
+          eyebrow="READY TO convert YOUR SUPPORT QUEUE?"
           headline="Scope your custom AI customer support agent today."
           sub="Book a 30-minute discovery call with our engineering team. We will analyze your ticket categories, review your helpdesk setup, and deliver a fixed-price implementation blueprint."
           primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}

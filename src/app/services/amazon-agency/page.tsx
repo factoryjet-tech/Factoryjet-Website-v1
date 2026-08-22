@@ -183,8 +183,8 @@ const PROGRAMS = ['Seller Central', 'Vendor Central', 'FBA', 'Sponsored Ads', 'A
 /* Cited market stats. Every figure links to a real, opened source. */
 const STATS = [
   { v: '40.4%', l: 'of all US retail ecommerce sales run through Amazon, the default place Americans start a product search.', src: 'eMarketer, 2024', href: 'https://www.emarketer.com/content/amazon-will-surpass-40-of-us-ecommerce-sales-this-year' },
-  { v: '60%+', l: 'of everything sold in Amazon’s store comes from independent sellers, most of them small and mid-size brands.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-empowerment-report' },
-  { v: '$375K+', l: 'average yearly sales for a US independent seller on Amazon, up nearly 30% in a single year.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-empowerment-report' },
+  { v: '60%+', l: 'of everything sold in Amazon’s store comes from independent sellers, most of them small and mid-size brands.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-enablement-report' },
+  { v: '$375K+', l: 'average yearly sales for a US independent seller on Amazon, up nearly 30% in a single year.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-enablement-report' },
 ];
 
 /* Real, named Amazon agencies brands weigh us against, framed honestly. */

@@ -499,7 +499,7 @@ export default function ShopifyPlusB2BPage() {
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Custom Delivery Customization &amp; Freight Routing</h3>
               <p>
                 For heavy palletized wholesale orders, our delivery customization functions calculate real-time LTL (Less-Than-Truckload)
-                freight rates via carrier APIs, applying customer-specific liftgate surcharges and dock delivery options seamlessly at checkout.
+                freight rates via carrier APIs, applying customer-specific liftgate surcharges and dock delivery options frictionlessly at checkout.
               </p>
             </div>
           </div>

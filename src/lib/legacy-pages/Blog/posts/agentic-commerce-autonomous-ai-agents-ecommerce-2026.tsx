@@ -4,7 +4,7 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '254',
   slug: 'agentic-commerce-autonomous-ai-agents-ecommerce-2026',
-  title: 'Agentic Commerce: How Autonomous AI Agents Are Transforming E-Commerce Operations in 2026',
+  title: 'Agentic Commerce: How Autonomous AI Agents Are converting E-Commerce Operations in 2026',
   excerpt:
     'A comprehensive 3,500+ word strategic blueprint on the shift from conversational chatbots to agentic commerce: autonomous multi-channel inventory rebalancing, dynamic margin-aware repricing, supplier purchasing, and safety envelopes.',
   category: 'E-Commerce Development',
@@ -80,7 +80,7 @@ export const post: BlogPost = {
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-200">
         <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
-          <li>1. The Paradigm Shift: From Conversational Chatbots to Agentic Commerce</li>
+          <li>1. The fundamental shift: From Conversational Chatbots to Agentic Commerce</li>
           <li>2. The 4 Operational Pillars of an Agentic Commerce Architecture</li>
           <li>3. Omnichannel Inventory Orchestration &amp; Multi-Marketplace Sync</li>
           <li>4. Margin-Aware Dynamic Repricing &amp; Ad Spend CAC Integration</li>

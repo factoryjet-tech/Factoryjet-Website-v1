@@ -141,7 +141,7 @@ const FAQ_ITEMS = [
     category: 'multichannel',
     question: 'How does multichannel catalog syndication handle variant attributes?',
     answer:
-      'Each marketplace requires unique category taxonomy and attribute schemas. Our transformation pipelines map your master product database to each channel’s required data structure without duplicating manual SKU entry.',
+      'Each marketplace requires unique category taxonomy and attribute schemas. Our convertation pipelines map your master product database to each channel’s required data structure without duplicating manual SKU entry.',
   },
   {
     category: 'multichannel',
@@ -454,9 +454,9 @@ export default function MarketplaceFeeCalculatorPage() {
                 Target EDI, and Faire API. By pooling physical inventory and setting dynamic buffer rules, we ensure you never oversell during
                 promotional spikes while keeping Buy Boxes active with real-time stock levels.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 3: Automated Feed Transformation &amp; SEO Syndication</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 3: Automated Feed convertation &amp; SEO Syndication</h3>
               <p>
-                Each marketplace requires distinct taxonomy, bullet structures, and image resolutions. Our automated transformation pipelines
+                Each marketplace requires distinct taxonomy, bullet structures, and image resolutions. Our automated convertation pipelines
                 syndicate product data from your master database into optimized channel feeds without manual spreadsheet re-entry, embedding
                 high-volume search terms and structured attributes to capture organic search ranking.
               </p>

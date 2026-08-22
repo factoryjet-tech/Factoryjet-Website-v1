@@ -95,7 +95,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How are product catalog attributes syndicated across diverse marketplaces?',
     answer:
-      'Because Amazon, Walmart, Target Plus, and Faire all require different product taxonomies and attribute fields, we build automated data transformation middleware that normalizes your master product catalog into channel-specific schemas without manual double-entry.',
+      'Because Amazon, Walmart, Target Plus, and Faire all require different product taxonomies and attribute fields, we build automated data convertation middleware that normalizes your master product catalog into channel-specific schemas without manual double-entry.',
   },
 
   // Operations & ERP

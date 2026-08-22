@@ -226,7 +226,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">6. Direct Calendar Booking &amp; Round-Robin Routing</h2>
       <p className="mb-4">
-        Eliminating calendar friction is the single highest leverage point in inbound conversion. When a prospect confirms qualification criteria:
+        Eliminating calendar friction is the single highest utilize point in inbound conversion. When a prospect confirms qualification criteria:
       </p>
 
       <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">

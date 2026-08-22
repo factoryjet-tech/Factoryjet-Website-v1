@@ -1120,7 +1120,7 @@ export default function AIVoiceAgentPage() {
 
               <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
                 <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
-                  &ldquo;The bilingual English and Spanish capability was critical for our customer base. The voice agent switches languages seamlessly and sounds completely natural, cutting our answering service costs by 80%.&rdquo;
+                  &ldquo;The bilingual English and Spanish capability was critical for our customer base. The voice agent switches languages frictionlessly and sounds completely natural, cutting our answering service costs by 80%.&rdquo;
                 </p>
                 <div className="mt-5 flex items-center gap-3">
                   <Image

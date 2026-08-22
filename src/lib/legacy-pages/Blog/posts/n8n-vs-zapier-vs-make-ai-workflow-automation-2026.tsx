@@ -61,7 +61,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How difficult is it to migrate existing workflows from Zapier or Make to n8n?',
-      a: 'A standard workflow migration takes 1 to 3 days per pipeline. The process involves mapping the webhook triggers, recreating data transformation logic in n8n nodes, configuring authentication credentials, and running parallel testing in a sandbox environment before switching production traffic.',
+      a: 'A standard workflow migration takes 1 to 3 days per pipeline. The process involves mapping the webhook triggers, recreating data convertation logic in n8n nodes, configuring authentication credentials, and running parallel testing in a sandbox environment before switching production traffic.',
     },
     {
       q: 'What are the main drawbacks or limitations of self-hosting n8n?',
@@ -314,10 +314,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">7. Code Extensibility: Native Python &amp; JavaScript</h2>
       <p className="mb-4">
-        Zapier restricts custom code steps to a 1-second execution timeout within an isolated sandbox stripped of external libraries. Make relies on visual expression formulas that become unmaintainable spaghetti when handling nested JSON transformations.
+        Zapier restricts custom code steps to a 1-second execution timeout within an isolated sandbox stripped of external libraries. Make relies on visual expression formulas that become unmaintainable spaghetti when handling nested JSON convertations.
       </p>
       <p className="mb-4">
-        n8n allows full Python and JavaScript execution inside code nodes. You can import any NPM library (such as <code>lodash</code>, <code>moment</code>, <code>crypto</code>, or <code>mathjs</code>), execute multi-step array transformations, perform cryptographic signature verifications, and run data sanitization scripts without artificial constraints.
+        n8n allows full Python and JavaScript execution inside code nodes. You can import any NPM library (such as <code>lodash</code>, <code>moment</code>, <code>crypto</code>, or <code>mathjs</code>), execute multi-step array convertations, perform cryptographic signature verifications, and run data sanitization scripts without artificial constraints.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">8. Real-World Case Studies: Mid-Market Wholesale &amp; E-Commerce</h2>
