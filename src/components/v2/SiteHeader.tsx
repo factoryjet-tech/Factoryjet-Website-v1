@@ -35,6 +35,7 @@ import {
   Sparkles,
   Package,
   Target,
+  Calculator,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -86,6 +87,7 @@ const US_SOLUTIONS = [
   { icon: Package,       label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency', desc: 'Approval, WFS & Connect ads' },
   { icon: Target,        label: 'Target Plus Marketplace',  href: '/target-plus-marketplace',        desc: 'Curated DVS & EDI integration' },
   { icon: Store,         label: 'Faire Wholesale Agency',   href: '/faire-wholesale-marketplace',    desc: 'B2B boutique catalog & reorders' },
+  { icon: Calculator,    label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator',  desc: 'Amazon, Walmart, Target & Faire' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
@@ -95,9 +97,11 @@ const US_SOLUTIONS = [
 const US_PLATFORMS = [
   { icon: Sparkles,     label: 'Best Ecommerce Platforms', href: '/best-ecommerce-platforms',         desc: 'Side-by-side platform guide' },
   { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/services/shopify-development',     desc: 'DTC + B2B on one store' },
+  { icon: ShoppingBag,  label: 'Shopify Plus B2B',         href: '/services/shopify-plus-b2b',         desc: 'Wholesale pricing & Net terms' },
   { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/services/magento-development',     desc: 'Deep B2B, large catalogs' },
   { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
   { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
+  { icon: Layers,       label: 'BigCommerce B2B Edition',  href: '/services/bigcommerce-b2b',          desc: 'Enterprise RFQ & PunchOut' },
   { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
   { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
 ] as const;

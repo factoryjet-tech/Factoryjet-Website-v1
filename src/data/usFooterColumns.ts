@@ -41,6 +41,9 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Amazon Agency',          href: '/services/amazon-agency' },
       { label: 'Target Plus Marketplace',href: '/target-plus-marketplace' },
       { label: 'Faire Wholesale Agency', href: '/faire-wholesale-marketplace' },
+      { label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator' },
+      { label: 'Omnichannel vs Multichannel', href: '/omnichannel-vs-multichannel-commerce' },
+      { label: 'Agentic Commerce for Brands', href: '/agentic-commerce-for-brands' },
     ],
   },
   {
@@ -48,9 +51,11 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     links: [
       { label: 'Best Ecommerce Platforms',href: '/best-ecommerce-platforms' },
       { label: 'Shopify Development',     href: '/services/shopify-development' },
+      { label: 'Shopify Plus B2B',        href: '/services/shopify-plus-b2b' },
       { label: 'Magento Development',     href: '/services/magento-development' },
       { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
-      { label: 'BigCommerce',             href: '/bigcommerce-development' },
+      { label: 'BigCommerce Development', href: '/bigcommerce-development' },
+      { label: 'BigCommerce B2B Edition', href: '/services/bigcommerce-b2b' },
       { label: 'Commerceflo',             href: '/commerceflo' },
       { label: 'WordPress Development',   href: '/services/wordpress-development' },
     ],

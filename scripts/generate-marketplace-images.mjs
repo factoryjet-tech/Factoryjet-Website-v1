@@ -83,6 +83,30 @@ const PROMPTS = [
       'A modern, brightly-lit creator live-streaming studio with professional diffused softbox lighting. ' +
       'A creator holding a beauty product in front of a sleek smartphone mount, with a side monitor displaying live TikTok Shop affiliate sales graphs. A warm orange accent mug sits on the desk. ' + STYLE,
   },
+  {
+    name: 'omnichannel-vs-multichannel-unified-data.webp',
+    prompt:
+      'A senior e-commerce operations director at a clean architectural oak desk in a sunlit loft reviewing unified omnichannel inventory data across Shopify, Amazon, and ERP systems on dual high-resolution displays. ' +
+      'A warm orange ceramic coffee cup sits beside a leather notebook. ' + STYLE,
+  },
+  {
+    name: 'agentic-commerce-autonomous-ai-shopper.webp',
+    prompt:
+      'A modern tech workstation showing an AI agent autonomous checkout simulation dashboard with JSON-LD schema feeds and real-time transaction graphs on a curved monitor. ' +
+      'Clean ambient studio lighting with a subtle warm orange desk accent lamp. ' + STYLE,
+  },
+  {
+    name: 'shopify-plus-b2b-wholesale-portal.webp',
+    prompt:
+      'A B2B wholesale operations manager at a clean oak desk in a sunlit industrial loft reviewing wholesale tier pricing and Net 30 payment terms on a 27-inch studio display. ' +
+      'A warm orange ceramic mug rests on the desk. ' + STYLE,
+  },
+  {
+    name: 'bigcommerce-b2b-edition-quoting.webp',
+    prompt:
+      'A B2B enterprise sales director in a modern showroom using a sleek iPad Pro to review automated custom quotation requests and corporate buyer permissions. ' +
+      'A warm orange leather notebook rests on the counter. ' + STYLE,
+  },
 ];
 
 async function generateImage(item) {
