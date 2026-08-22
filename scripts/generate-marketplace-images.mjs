@@ -107,6 +107,66 @@ const PROMPTS = [
       'A B2B enterprise sales director in a modern showroom using a sleek iPad Pro to review automated custom quotation requests and corporate buyer permissions. ' +
       'A warm orange leather notebook rests on the counter. ' + STYLE,
   },
+  {
+    name: 'san-francisco-silicon-valley-ecommerce-architecture.webp',
+    prompt:
+      'A senior Silicon Valley commerce architect standing in a sunlit modern tech office in San Francisco reviewing headless Next.js code and edge deployment metrics on a large wall display. ' +
+      'A warm orange accent notebook rests on the clean oak conference table. ' + STYLE,
+  },
+  {
+    name: 'dallas-fort-worth-wholesale-logistics-commerce.webp',
+    prompt:
+      'An enterprise logistics director in a bright high-ceiling corporate office in Dallas reviewing multi-warehouse 3PL inventory routing and NetSuite ERP data on dual monitors. ' +
+      'A warm orange ceramic mug sits beside a stainless steel laptop. ' + STYLE,
+  },
+  {
+    name: 'atlanta-enterprise-supply-chain-commerce.webp',
+    prompt:
+      'A retail operations executive in a sunlit Atlanta modern office analyzing omnichannel point-of-sale and supply chain fulfillment metrics on a high-resolution display. ' +
+      'A single warm orange folder rests on the clean desk. ' + STYLE,
+  },
+  {
+    name: 'miami-luxury-crossborder-creator-commerce.webp',
+    prompt:
+      'A luxury brand founder in a bright sunlit waterfront Miami design studio reviewing international multi-currency checkouts and TikTok Shop live creator analytics on an iPad Pro. ' +
+      'A warm orange accent vase sits on the white marble table. ' + STYLE,
+  },
+  {
+    name: 'shopify-plus-vs-bigcommerce-enterprise-matrix.webp',
+    prompt:
+      'A senior e-commerce technical consultant in a bright glass-walled boardroom reviewing a side-by-side architectural comparison matrix of Shopify Plus and BigCommerce on a studio display. ' +
+      'A warm orange notebook sits on the table. ' + STYLE,
+  },
+  {
+    name: 'shopify-plus-vs-magento-adobe-commerce-tco.webp',
+    prompt:
+      'An enterprise VP of Digital reviewing total cost of ownership graphs comparing SaaS Shopify Plus and legacy Adobe Commerce Magento on a clean modern desk. ' +
+      'A warm orange pen rests on a white tablet. ' + STYLE,
+  },
+  {
+    name: 'headless-nextjs-vs-monolithic-liquid-architecture.webp',
+    prompt:
+      'A software engineer at a clean standing desk in a bright sunlit loft comparing React Server Component rendering latency and sub-second Core Web Vitals graphs on a curved monitor. ' +
+      'A warm orange ceramic coffee cup sits on the desk. ' + STYLE,
+  },
+  {
+    name: 'bigcommerce-to-shopify-plus-migration-pipeline.webp',
+    prompt:
+      'A senior data engineer reviewing automated 301 redirect tables, B2B wholesale price lists, and customer database migration pipelines on a high-resolution studio screen. ' +
+      'A single warm orange notebook rests beside the keyboard. ' + STYLE,
+  },
+  {
+    name: 'netsuite-suitecommerce-to-shopify-plus-sync.webp',
+    prompt:
+      'An enterprise systems architect reviewing bi-directional NetSuite ERP webhook pipelines and Shopify Plus order synchronization diagrams on a wall-mounted display. ' +
+      'A warm orange folder sits on the conference table. ' + STYLE,
+  },
+  {
+    name: 'ecommerce-speed-core-web-vitals-performance-engine.webp',
+    prompt:
+      'A performance optimization engineer in a bright laboratory environment analyzing sub-second Largest Contentful Paint (LCP) and 99+ Google Lighthouse performance scores on dual displays. ' +
+      'A warm orange accent desk accessory sits near the monitor. ' + STYLE,
+  },
 ];
 
 async function generateImage(item) {

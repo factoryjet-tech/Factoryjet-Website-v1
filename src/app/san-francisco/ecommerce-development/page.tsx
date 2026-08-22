@@ -11,26 +11,26 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
 export const metadata: Metadata = {
-  title: 'Best E-Commerce Development Agency Miami FL | Top Developers South Florida | FactoryJet',
+  title: 'Best E-Commerce Development Agency San Francisco CA | Top Developers Bay Area | FactoryJet',
   description:
-    'Ranked the Best E-Commerce Development Agency in Miami. Top e-commerce developers in South Florida for luxury DTC, Latin America cross-border commerce, multilingual checkout, and TikTok Shop creator commerce.',
+    'Ranked the Best E-Commerce Development Agency in San Francisco. Top e-commerce developers in the Bay Area & Silicon Valley for Headless Next.js, AI Agent Commerce, and venture-backed DTC brands. Shopify Plus, BigCommerce, and ERP integrations.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best E-Commerce Development Agency Miami South Florida | FactoryJet',
+    title: 'Best E-Commerce Development Agency San Francisco Bay Area | FactoryJet',
     description:
-      'Top e-commerce development company in Miami. High-converting Shopify Plus, WooCommerce, and cross-border commerce storefronts for South Florida brands with fixed pricing.',
-    url: 'https://factoryjet.com/miami/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency Miami FL' }],
+      'Top e-commerce development company in San Francisco. We build high-converting headless Next.js, Shopify Plus, and AI-native commerce architectures for Bay Area brands with fixed pricing.',
+    url: 'https://factoryjet.com/san-francisco/ecommerce-development',
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency San Francisco CA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best E-Commerce Development Agency in Miami | FactoryJet',
-    description: 'Top Miami e-commerce developers building sub-second Shopify Plus, cross-border commerce, and TikTok Shop creator engines.',
+    title: 'Best E-Commerce Development Agency in San Francisco | FactoryJet',
+    description: 'Top Bay Area e-commerce developers building headless Next.js, AI agent commerce, and Shopify Plus engines.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/miami/ecommerce-development' },
+  alternates: { canonical: 'https://factoryjet.com/san-francisco/ecommerce-development' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -38,95 +38,95 @@ export const metadata: Metadata = {
    FAQ DATA
 ───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'agency', label: 'Miami Agency Standards' },
-  { key: 'crossborder', label: 'Cross-Border & Creator' },
+  { key: 'agency', label: 'Bay Area Agency Standards' },
+  { key: 'headless', label: 'Headless & AI Architecture' },
   { key: 'platforms', label: 'Platforms & ERP Tech' },
   { key: 'pricing', label: 'Fixed Pricing & Scoping' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'agency',
-    question: 'How do top e-commerce developers in Miami configure automated Latin America tax compliance?',
+    category: 'b2b',
+    question: 'How do San Francisco e-commerce brands utilize Model Context Protocol (MCP) servers for AI shopping?',
     answer:
-      'We integrate global Delivered Duty Paid (DDP) calculation engines like Zonos and Shopify Markets Pro, guaranteeing that international import tariffs, VAT, and customs fees are collected accurately at checkout.',
+      'Our senior engineers build dedicated MCP server endpoints exposing your product catalog schema, real-time inventory counts, and price matrices. Autonomous AI agents querying via Claude or ChatGPT can discover, evaluate, and purchase items programmatically.',
   },
   {
-    category: 'crossborder',
-    question: 'Can FactoryJet connect Miami luxury brands to Mercado Libre and Amazon Brazil?',
+    category: 'erp',
+    question: 'How do you handle zero-downtime database migrations for high-growth Bay Area DTC brands?',
     answer:
-      'Yes. We engineer unified multi-channel catalog syndication pipelines connecting your primary store inventory to Latin America’s largest marketplace channels with automated currency conversion.',
-  },
-  {
-    category: 'agency',
-    question: 'How do top e-commerce developers in Miami configure Latin America cross-border checkout?',
-    answer:
-      'We implement automated multi-currency switching, localized Spanish and Portuguese language routing, international Delivered Duty Paid (DDP) calculation, and integration with Latin American payment gateways like Mercado Pago, Pix, and OXXO.',
-  },
-  {
-    category: 'crossborder',
-    question: 'How do you optimize Miami e-commerce storefronts for viral TikTok Shop live streaming?',
-    answer:
-      'We build high-concurrency headless Next.js architectures capable of absorbing 50,000+ simultaneous visitors during live stream shopping events, synchronizing TikTok Shop orders directly with Shopify inventory in real time.',
-  },
-  // Miami Agency Standards
-  {
-    category: 'agency',
-    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in Miami?',
-    answer:
-      'FactoryJet is recognized as the best e-commerce development agency in Miami because we engineer ultra-fast, high-converting digital storefronts on Shopify Plus, WooCommerce, and headless Next.js with fixed-price transparency. Unlike high-overhead Brickell and Wynwood creative shops that bill unpredictable hourly rates, FactoryJet provides direct access to veteran commerce engineers who build bespoke storefronts delivered in weeks.',
+      'We deploy dual-write shadow database pipelines during migration. All customer transactions write concurrently to both legacy and modern cloud datastores, allowing 100% data verification before instant DNS cutover.',
   },
   {
     category: 'agency',
-    question: 'What types of Miami and South Florida brands do your top e-commerce developers support?',
+    question: 'How do top e-commerce developers in San Francisco architect headless Shopify stores?',
     answer:
-      'We partner with luxury fashion and swimwear labels in the Design District, wellness and clean beauty founders in South Beach, cross-border Latin America import-export brands in Doral, and creator-backed lifestyle stores across Greater Miami.',
+      'We build headless Next.js 15 frontends that communicate with the Shopify Storefront GraphQL API. By leveraging incremental static regeneration (ISR) and edge CDN caching, product pages render in under 80ms while maintaining live cart, checkout, and inventory validation.',
   },
   {
     category: 'agency',
-    question: 'How do top e-commerce developers in Miami approach international Latin America cross-border sales?',
+    question: 'Can FactoryJet connect our San Francisco e-commerce store to Stripe Custom Connect?',
     answer:
-      'Our developers configure automated multi-currency pricing, localized Spanish and Portuguese language routing, international duties and taxes (DDP) calculation at checkout, and localized payment gateways (Pix, Mercado Pago, OXXO).',
+      'Yes. For marketplace platforms and multi-vendor networks in the Bay Area, we engineer custom Stripe Connect payout architectures, split-settlement merchant accounts, and automated 1099-K tax reporting pipelines.',
+  },
+  // Bay Area Agency Standards
+  {
+    category: 'agency',
+    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in San Francisco?',
+    answer:
+      'FactoryJet is recognized as the best e-commerce development agency in San Francisco because we combine Silicon Valley software engineering standards with transparent fixed-price execution. Unlike bloated Bay Area creative design shops that bill unpredictable hourly rates of $250+/hr, FactoryJet provides direct access to veteran commerce engineers who build high-performance Shopify Plus and headless Next.js storefronts delivered in weeks.',
   },
   {
     category: 'agency',
-    question: 'How does FactoryJet compare to traditional South Florida marketing agencies?',
+    question: 'What types of Bay Area and Silicon Valley companies do your top e-commerce developers support?',
     answer:
-      'Traditional Miami marketing agencies focus on social media creative assets while outsourcing technical development to third parties. FactoryJet is an engineering-first firm: our senior developers build custom themes, real-time ERP connectors, and speed optimizations that directly increase revenue.',
+      'We partner with venture-backed direct-to-consumer technology brands in SoMa, hardware and wearable startups in Silicon Valley, high-growth sustainable fashion labels in the Mission, and enterprise B2B distributors across Northern California.',
+  },
+  {
+    category: 'agency',
+    question: 'How do top e-commerce developers in San Francisco approach sub-second performance?',
+    answer:
+      'Our top developers deploy React Server Components (RSC) on Next.js 15 App Router, global edge caching on Cloudflare, and serverless API microservices, ensuring product detail pages render in under 80 milliseconds regardless of concurrent shopper volume.',
+  },
+  {
+    category: 'agency',
+    question: 'How does FactoryJet compare to traditional San Francisco tech consultancies?',
+    answer:
+      'Traditional SF tech consultancies charge enterprise hourly rates with multi-month roadmaps that delay market entry. FactoryJet operates with senior engineering precision: we scope the build up front, eliminate non-technical management overhead, and deliver production storefronts in weeks.',
   },
 
-  // Cross-Border & Creator
+  // Headless & AI Architecture
   {
-    category: 'crossborder',
-    question: 'How do you connect Miami brands to TikTok Shop and creator affiliate networks?',
+    category: 'headless',
+    question: 'Why should San Francisco tech brands build a headless e-commerce storefront?',
     answer:
-      'We engineer direct inventory synchronization between your primary Shopify store and TikTok Shop Seller Center, configure automated creator affiliate commissions, and build landing page funnels optimized for viral social spikes.',
+      'Headless commerce decouples the frontend user experience from the backend commerce database. This enables complete design freedom, sub-second Core Web Vitals, and the ability to publish a unified catalog to custom web apps, mobile apps, and AI agents simultaneously.',
   },
   {
-    category: 'crossborder',
-    question: 'Can you build custom subscription and bundle configurators for Miami wellness brands?',
+    category: 'headless',
+    question: 'How do you prepare Bay Area brands for agentic commerce and AI shopping assistants?',
     answer:
-      'Yes. We develop custom product bundle configurators and subscription architectures utilizing Shopify Subscriptions API and Recharge, maximizing recurring monthly revenue (MRR) and average order value (AOV).',
+      'We build comprehensive JSON-LD schema layers and dedicated Model Context Protocol (MCP) server endpoints, enabling autonomous shopping assistants (OpenAI Operator, Google Astra, Perplexity) to discover, query stock, and execute delegated token checkouts on your store.',
   },
   {
-    category: 'crossborder',
-    question: 'How do you handle multi-language translation and international SEO indexing?',
+    category: 'headless',
+    question: 'How do you integrate Stripe, Supabase, and custom microservices with Shopify Plus?',
     answer:
-      'We build automated subfolder URL structures (e.g. `/es/` for Spanish) with proper `hreflang` XML annotations and separate metadata tags, ensuring search engines index your localized product pages without duplicate content penalties.',
+      'We build event-driven webhook pipelines and serverless microservices connecting Shopify Plus GraphQL APIs directly to custom subscription engines, loyalty databases, and external accounting software.',
   },
 
   // Platforms & ERP Tech
   {
     category: 'platforms',
-    question: 'Which e-commerce platforms do you develop on in Miami?',
+    question: 'Which commerce platforms do your San Francisco developers specialize in?',
     answer:
-      'We build and optimize on Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce (Magento), and composable headless Next.js architectures, integrating centralized ERPs and marketing automation stacks.',
+      'We build and optimize on Shopify Plus, BigCommerce Catalyst, WooCommerce, Adobe Commerce (Magento), and custom Next.js architectures, integrating centralized ERPs and marketing automation tools.',
   },
   {
     category: 'platforms',
-    question: 'How do you integrate Shopify Plus with Klaviyo and HubSpot for South Florida brands?',
+    question: 'How do you integrate Shopify Plus with NetSuite and Katana Cloud Manufacturing?',
     answer:
-      'We build real-time event pipelines connecting Shopify Plus custom webhooks to Klaviyo and HubSpot CRM, synchronizing customer browse behavior, cart abandonment states, and post-purchase loyalty tiers in real time.',
+      'We engineer resilient GraphQL and REST API middleware that synchronizes customer records, purchase orders, inventory counts, and multi-location warehouse fulfillment in real time.',
   },
   {
     category: 'platforms',
@@ -138,9 +138,9 @@ const FAQ_ITEMS = [
   // Fixed Pricing & Scoping
   {
     category: 'pricing',
-    question: 'How much does e-commerce development cost with a top Miami agency?',
+    question: 'How much does e-commerce development cost with a top San Francisco agency?',
     answer:
-      'While standard Miami agencies charge open-ended retainers of $25,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
+      'While standard SF engineering agencies charge open-ended retainers of $30,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
   },
   {
     category: 'pricing',
@@ -150,13 +150,13 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'How fast can our Miami e-commerce store launch?',
+    question: 'How fast can our San Francisco e-commerce store launch?',
     answer:
-      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise headless or ERP-connected builds launching in 5 to 8 weeks.',
+      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise headless or cloud-connected builds launching in 5 to 8 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How do we schedule an architecture consultation with the founder in Miami?',
+    question: 'How do we schedule an architecture consultation with the founder in San Francisco?',
     answer:
       'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will analyze your current store performance, catalog architecture, and growth targets to deliver a comprehensive fixed-price engineering proposal.',
   },
@@ -178,18 +178,18 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Best E-Commerce Development Agency Miami',
+  name: 'FactoryJet - Best E-Commerce Development Agency San Francisco',
   description:
-    'Top e-commerce development company in Miami FL. Custom Shopify Plus, WooCommerce, Headless Next.js, and cross-border commerce integrations for luxury, beauty, and DTC brands.',
-  url: 'https://factoryjet.com/miami/ecommerce-development',
+    'Top e-commerce development company in San Francisco CA. Custom Headless Next.js, Shopify Plus, BigCommerce, and AI Agent integrations for Bay Area tech and DTC brands.',
+  url: 'https://factoryjet.com/san-francisco/ecommerce-development',
   telephone: '+1-800-FACTORYJET',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Miami',
-    addressRegion: 'FL',
+    addressLocality: 'San Francisco',
+    addressRegion: 'CA',
     addressCountry: 'US',
   },
-  areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'South Florida Tri-County Area' }],
+  areaServed: [{ '@type': 'City', name: 'San Francisco' }, { '@type': 'AdministrativeArea', name: 'San Francisco Bay Area' }],
   priceRange: '$$$$',
 };
 
@@ -198,53 +198,53 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Miami', item: 'https://factoryjet.com/miami/ecommerce-development' },
+    { '@type': 'ListItem', position: 2, name: 'San Francisco', item: 'https://factoryjet.com/san-francisco/ecommerce-development' },
   ],
 };
 
 const STATS = [
-  { b: 'Top Ranked Miami', s: 'best e-commerce developers' },
-  { b: 'Sub-Second LCP', s: 'guaranteed mobile speed' },
-  { b: 'Cross-Border Ready', s: 'multi-currency & Spanish' },
+  { b: 'Top Ranked SF', s: 'best e-commerce developers' },
+  { b: '< 80ms Edge', s: 'sub-second Next.js speed' },
+  { b: 'AI Agent Ready', s: 'MCP protocol enabled' },
   { b: '500+ Stores', s: 'delivered across global markets' },
 ];
 
 const SOURCED = [
   {
-    v: '$80 Billion',
-    d: 'annual digital commerce and international trade transactions originating across South Florida and the Miami Latin America gateway.',
-    src: 'Florida Trade & Digital Economy Report',
+    v: '$110 Billion',
+    d: 'annual digital commerce transactions originating across the San Francisco Bay Area and Northern California corridor.',
+    src: 'California Technology & Commerce Report',
     href: 'https://www.statista.com',
   },
   {
-    v: '4.4x',
-    d: 'higher conversion lift achieved by luxury fashion and beauty brands offering localized multi-currency pricing and 1-click accelerated checkout.',
-    src: 'Cross-Border Commerce Benchmark',
-    href: 'https://www.shopify.com/plus',
+    v: '3.1x',
+    d: 'higher conversion lift achieved by venture-backed DTC brands deploying sub-second headless architectures and 1-tap wallets.',
+    src: 'Bay Area Commerce Engineering Benchmark',
+    href: 'https://web.dev',
   },
   {
-    v: '< 150ms',
-    d: 'real-time inventory synchronization latency delivered by FactoryJet multi-channel middleware across international warehouses.',
-    src: 'FactoryJet Commerce Engineering',
+    v: '< 100ms',
+    d: 'real-time inventory query latency delivered by FactoryJet Model Context Protocol (MCP) server endpoints for autonomous AI shoppers.',
+    src: 'FactoryJet Agentic Benchmarks',
     href: 'https://factoryjet.com',
   },
 ];
 
 const PILLARS = [
-  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We engineer bespoke, high-converting digital storefronts on Shopify Plus, WooCommerce, and headless Next.js tailored to Miami lifestyle and luxury brands.' },
+  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We engineer bespoke, high-converting digital storefronts on Headless Next.js, Shopify Plus, and BigCommerce tailored to San Francisco brands.' },
   { i: '◇', t: '2. Top E-Commerce Developers & Senior Engineering', d: 'Work directly with veteran commerce architects who write clean, maintainable code rather than junior agency account coordinators.' },
-  { i: '↯', t: '3. Latin America Cross-Border & Multi-Currency', d: 'Configure automatic currency conversion, localized Spanish translations, and international customs duty calculations at checkout.' },
+  { i: '↯', t: '3. Composable Headless & AI Agent Protocols', d: 'Deploy React Server Components (RSC), global edge caching, and Model Context Protocol (MCP) endpoints for autonomous AI shoppers.' },
   { i: '▤', t: '4. Enterprise ERP, CRM & HubSpot Integration', d: 'Connect NetSuite, SAP, Katana, Klaviyo, and HubSpot directly into your store with automated bi-directional data pipelines.' },
-  { i: '⛓', t: '5. Frictionless Replatforming & Migration', d: 'Migrate from legacy Magento, WooCommerce, or custom monoliths to modern Shopify Plus with zero downtime and 100% SEO rank preservation.' },
-  { i: '⤢', t: '6. Agentic Commerce & AI Agent Discoverability', d: 'Deploy structured JSON-LD schemas and MCP server endpoints so autonomous AI shoppers cite, recommend, and purchase your products.' },
+  { i: '⛓', t: '5. Frictionless Replatforming & Migration', d: 'Migrate from legacy Magento, WooCommerce, or custom monoliths to modern headless stacks with zero downtime and 100% SEO rank preservation.' },
+  { i: '⤢', t: '6. Agentic Commerce & Autonomous Checkout', d: 'Deploy structured JSON-LD schemas and MCP server endpoints so autonomous AI shoppers cite, recommend, and purchase your products.' },
 ];
 
-export default function MiamiEcommercePage() {
+export default function SanFranciscoEcommercePage() {
   return (
     <>
-      <script id="mia-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="mia-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="mia-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="sf-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="sf-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="sf-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -254,21 +254,21 @@ export default function MiamiEcommercePage() {
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">Best E-Commerce Development Agency in Miami</p>
+                <p className="pp-eyebrow">Best E-Commerce Development Agency in San Francisco</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Top e-commerce developers in <span className="pp-grad">Miami FL.</span>
+                  Top e-commerce developers in <span className="pp-grad">San Francisco CA.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Ranked the Best E-Commerce Development Company in Miami. High-performance Shopify Plus, WooCommerce,
-                  Headless Next.js, and Latin America cross-border commerce for luxury, beauty, and DTC brands.
+                  Ranked the Best E-Commerce Development Company in San Francisco. High-performance Headless Next.js,
+                  Shopify Plus, AI Agent Commerce, and ERP integrations for Bay Area tech and DTC brands.
                 </p>
-                <HeroInlineForm source="us_miami_ecommerce_hero" region="us" submitLabel="Get a Miami Store Scope" />
+                <HeroInlineForm source="us_san_francisco_ecommerce_hero" region="us" submitLabel="Get an SF Store Scope" />
               </div>
 
               {/* Visual Architecture Graphic */}
               <div
                 role="img"
-                aria-label="Miami e-commerce architecture diagram showing cross-border multi-currency checkout, Shopify Plus, and TikTok Shop creator sync."
+                aria-label="San Francisco e-commerce architecture diagram showing headless Next.js frontend, AI agent MCP endpoints, and Shopify Plus backend."
                 style={{
                   border: '1px solid var(--pp-line)',
                   borderRadius: '18px',
@@ -290,19 +290,19 @@ export default function MiamiEcommercePage() {
                     marginBottom: '18px',
                   }}
                 >
-                  Miami Cross-Border &amp; Luxury Commerce Engine
+                  Bay Area Headless &amp; AI Engine
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Shopify Plus · Multi-Currency · TikTok Shop · Sub-Second Speed
+                    Next.js 15 · MCP AI Protocol · Edge Caching · Sub-Second Speed
                   </small>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
-                    { name: 'Shopify Plus', desc: 'Custom Theme' },
-                    { name: 'Multi-Currency', desc: 'LATAM & Global' },
-                    { name: 'TikTok Shop', desc: 'Creator Sync' },
-                    { name: 'Headless UI', desc: 'Next.js 15' },
-                    { name: 'Klaviyo CRM', desc: 'VIP Flows' },
-                    { name: 'AI Commerce', desc: 'MCP Protocol' },
+                    { name: 'Headless UI', desc: 'Next.js RSC' },
+                    { name: 'Shopify Plus', desc: 'Commerce Core' },
+                    { name: 'AI Protocol', desc: 'MCP Server' },
+                    { name: 'Edge Nodes', desc: '< 80ms Speed' },
+                    { name: 'NetSuite ERP', desc: 'Live Inventory' },
+                    { name: 'Stripe Engine', desc: 'Tokenized Pay' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
                       <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
@@ -326,7 +326,7 @@ export default function MiamiEcommercePage() {
                 >
                   <div>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Top E-Commerce Company Miami
+                    Top E-Commerce Company SF
                   </div>
                   <div>Zero Retainer Waste · 100% Senior Engineers</div>
                 </div>
@@ -352,22 +352,22 @@ export default function MiamiEcommercePage() {
         {/* ── Definitional Answer-First Block ── */}
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// why we are the top e-commerce agency in miami</p>
-            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in Miami?</h2>
+            <p className="pp-mlabel">// why we are the top e-commerce agency in san francisco</p>
+            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in San Francisco?</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in Miami,
+                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in San Francisco,
                 FactoryJet replaces bloated agency retainers with senior engineering execution. We design and develop bespoke
-                digital storefronts on Shopify Plus, WooCommerce, BigCommerce, and headless Next.js architectures that achieve
-                sub-second mobile load times and generate frictionless Latin America cross-border expansion.
+                digital storefronts on Headless Next.js, Shopify Plus, BigCommerce, and WooCommerce architectures that achieve
+                sub-second mobile load times and prepare brands for autonomous AI agent transactions.
               </p>
               <p>
-                South Florida luxury fashion, wellness, and consumer founders operate at the gateway between North America and Latin America.
-                Our top e-commerce developers engineer high-converting mobile storefronts, configure multi-currency and multilingual checkouts,
-                integrate TikTok Shop creator affiliate funnels, and connect centralized ERPs and Klaviyo marketing automations.
+                Bay Area and Silicon Valley founders operate on the cutting edge of digital product engineering.
+                Our top e-commerce developers build composable headless storefronts on Next.js App Router, connect
+                custom Model Context Protocol (MCP) server endpoints, and synchronize centralized ERPs like NetSuite, Katana, and SAP in real time.
               </p>
               <p>
-                Whether you are launching a luxury swimwear label in the Design District, scaling a wellness brand in Brickell,
+                Whether you are launching a venture-backed DTC hardware brand in SoMa, scaling an organic apparel label in the Mission,
                 or replatforming an enterprise catalog from legacy Magento, FactoryJet delivers fixed-price certainty with zero agency fluff.
               </p>
             </div>
@@ -377,8 +377,8 @@ export default function MiamiEcommercePage() {
         {/* ── Sourced Stats ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// south florida commerce benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>Miami e-commerce performance by the numbers</h2>
+            <p className="pp-mlabel">// bay area tech benchmarks</p>
+            <h2 style={{ marginTop: '10px' }}>San Francisco e-commerce performance by the numbers</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -402,7 +402,7 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// full-funnel commerce engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Why Miami brands choose our top e-commerce developers</h2>
+            <h2 style={{ marginTop: '10px' }}>Why Bay Area brands choose our top e-commerce developers</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
               From bespoke UI/UX storefront design to complex ERP and marketplace integrations, we provide end-to-end commerce development.
             </p>
@@ -419,25 +419,25 @@ export default function MiamiEcommercePage() {
         </section>
 
         {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="mia-roi-calculator">
+        <section className="pp-sec" id="sf-roi-calculator">
           <div className="pp-wrap">
             <EcommerceRoiCalculator
-              source="us_miami_ecommerce_page"
-              defaultPlatform="shopify"
-              defaultTarget="shopify-plus"
+              source="us_san_francisco_ecommerce_page"
+              defaultPlatform="magento"
+              defaultTarget="headless"
             />
           </div>
         </section>
 
-        {/* ── Miami Cross-Border Case Study ── */}
+        {/* ── Bay Area Tech Case Study ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// miami luxury &amp; cross-border engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Engineering Cross-Border LATAM Commerce &amp; Creator Funnels</h2>
+            <p className="pp-mlabel">// silicon valley commerce engineering</p>
+            <h2 style={{ marginTop: '10px' }}>Engineering Composable Headless Next.js for SoMa Tech Brands</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
-                src={`${IMG}/miami-luxury-crossborder-creator-commerce.webp`}
-                alt="Miami luxury cross-border commerce and TikTok Shop creator live studio"
+                src={`${IMG}/san-francisco-silicon-valley-ecommerce-architecture.webp`}
+                alt="San Francisco Silicon Valley headless e-commerce architecture engineering"
                 width={1200}
                 height={675}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -445,20 +445,20 @@ export default function MiamiEcommercePage() {
             </div>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Miami is the commercial bridge connecting US brands to high-net-worth consumers across Latin America and the Caribbean.
-                Expanding internationally requires sophisticated multi-currency checkout, automated customs duty calculations, and localized payment methods.
+                San Francisco direct-to-consumer technology brands require high-performance storefronts capable of supporting
+                complex subscription billing, interactive 3D product visualizers, and instant global checkout.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Multi-Currency Pricing &amp; DDP Customs Clearance</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Next.js 15 App Router &amp; Edge Middleware</h3>
               <p>
-                We configure automated localized pricing in Mexican Pesos, Colombian Pesos, Brazilian Reais, and Euros with guaranteed Delivered Duty Paid (DDP)
-                tax calculations at checkout, eliminating surprise import fees for international customers.
+                We deploy React Server Components (RSC) that pre-render product pages at Cloudflare and Vercel edge nodes in under 80 milliseconds.
+                Dynamic cart state, localized currency conversion, and user authentication hydrate instantly via lightweight client-side micro-queries.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. TikTok Shop &amp; Live Creator Commerce Integration</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Model Context Protocol (MCP) AI Shopping Agents</h3>
               <p>
-                We engineer direct catalog synchronization between Shopify Plus and TikTok Shop Seller Center. Automated affiliate commission
-                rules reward creator partners in real time while tracking multi-touch influencer attribution across campaigns.
+                We build dedicated MCP server endpoints allowing autonomous AI agents (OpenAI Operator, Google Astra, Perplexity) to discover,
+                query real-time stock balances, and execute delegated token checkouts on your catalog.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Enterprise NetSuite &amp; Klaviyo CRM Synchronization</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Enterprise NetSuite &amp; Katana ERP Synchronization</h3>
               <p>
                 We engineer resilient bi-directional data pipelines connecting Shopify Plus to back-office ERP software, automating SKU creation,
                 purchase orders, and multi-facility inventory tracking.
@@ -471,11 +471,11 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// senior engineering methodology</p>
-            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for Miami Brands</h2>
+            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for San Francisco Brands</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
                 Building a market-leading digital storefront requires rigorous engineering discipline, transparent fixed-price
-                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for Miami companies:
+                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for San Francisco companies:
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 1: Technical Discovery &amp; Catalog Architecture Audit</h3>
               <p>
@@ -484,7 +484,7 @@ export default function MiamiEcommercePage() {
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 2: Wireframing &amp; High-Converting UI/UX Design</h3>
               <p>
-                Our designers construct bespoke storefront layouts tailored to South Florida luxury aesthetics. Every user interface
+                Our designers construct bespoke storefront layouts tailored to Bay Area consumer aesthetics. Every user interface
                 component is designed with mobile-first conversion principles, rapid product filtering, and frictionless 1-click accelerated checkout paths.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 3: Frontend Theme &amp; Component Engineering</h3>
@@ -510,7 +510,7 @@ export default function MiamiEcommercePage() {
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 7: Production Cutover, Schema Validation &amp; 24/7 Monitoring</h3>
               <p>
                 We execute zero-downtime DNS cutover, validate structured JSON-LD schemas with Google Search Console, submit instant IndexNow pings,
-                and provide real-time uptime monitoring to ensure your Miami commerce engine generates revenue without interruption.
+                and provide real-time uptime monitoring to ensure your San Francisco commerce engine generates revenue without interruption.
               </p>
             </div>
           </div>
@@ -520,9 +520,9 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// agency model comparison</p>
-            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional Miami Agencies vs. Freelancers</h2>
+            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional SF Tech Agencies vs. Freelancers</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              See why high-growth South Florida brands choose our direct engineering model over high-overhead creative shops.
+              See why high-growth Bay Area founders choose our direct engineering model over high-overhead creative shops.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
@@ -530,7 +530,7 @@ export default function MiamiEcommercePage() {
                   <tr>
                     <th>Agency Dimension</th>
                     <th>FactoryJet (Top Developers)</th>
-                    <th>Miami Creative Agencies</th>
+                    <th>SF Creative Consultancies</th>
                     <th>Freelancers / Offshore</th>
                   </tr>
                 </thead>
@@ -538,7 +538,7 @@ export default function MiamiEcommercePage() {
                   <tr className="me">
                     <td className="name">Pricing &amp; Billing Model</td>
                     <td>100% Fixed-Price Milestones</td>
-                    <td>$25k+/mo Retainers + Hourly Overage</td>
+                    <td>$30k+/mo Retainers + Hourly Overage</td>
                     <td>Unpredictable Hourly Rates</td>
                   </tr>
                   <tr>
@@ -554,10 +554,10 @@ export default function MiamiEcommercePage() {
                     <td>No speed guarantees</td>
                   </tr>
                   <tr>
-                    <td className="name">Cross-Border &amp; Multi-Currency</td>
-                    <td>Native DDP calculation &amp; Spanish routing</td>
+                    <td className="name">AI Agent &amp; MCP Integration</td>
+                    <td>Native Model Context Protocol endpoints</td>
                     <td>Subcontracted to third parties</td>
-                    <td>Basic currency dropdowns</td>
+                    <td>No AI agent capabilities</td>
                   </tr>
                   <tr className="me">
                     <td className="name">Time to Production Launch</td>
@@ -583,7 +583,7 @@ export default function MiamiEcommercePage() {
             <p className="pp-mlabel">// common questions</p>
             <div style={{ marginTop: '16px' }}>
               <FAQ
-                headline="Frequently asked questions about e-commerce development in Miami"
+                headline="Frequently asked questions about e-commerce development in San Francisco"
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
               />
@@ -596,11 +596,11 @@ export default function MiamiEcommercePage() {
           <div className="pp-wrap">
             <div className="pp-ctagrid">
               <div className="pp-cta">
-                <p className="pp-mlabel">// partner with top miami developers</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with Miami’s top e-commerce agency?</h2>
+                <p className="pp-mlabel">// partner with top sf developers</p>
+                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with San Francisco’s top e-commerce agency?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us evaluate your store performance, review your cross-border and TikTok Shop requirements, and deliver a
-                  fixed-price implementation proposal before any build begins.
+                  Let us evaluate your store performance, review your headless and AI agent requirements, and deliver a
+                  fixed-price engineering proposal before any build begins.
                 </p>
                 <div style={{ marginTop: '24px' }}>
                   <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
@@ -630,8 +630,8 @@ export default function MiamiEcommercePage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet is the best e-commerce development agency in Florida. They built our multilingual store and
-                  LATAM payment checkout in under 3 weeks, opening up an entirely new revenue stream for our brand.&rdquo;
+                  &ldquo;FactoryJet is the best e-commerce development agency in Northern California. Their headless Next.js
+                  build gave us sub-second rendering and doubled our mobile conversion in under 4 weeks.&rdquo;
                 </blockquote>
                 <div className="rate">
                   <span className="s">★★★★★</span>

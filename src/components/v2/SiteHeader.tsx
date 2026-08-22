@@ -88,6 +88,7 @@ const US_SOLUTIONS = [
   { icon: Target,        label: 'Target Plus Marketplace',  href: '/target-plus-marketplace',        desc: 'Curated DVS & EDI integration' },
   { icon: Store,         label: 'Faire Wholesale Agency',   href: '/faire-wholesale-marketplace',    desc: 'B2B boutique catalog & reorders' },
   { icon: Calculator,    label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator',  desc: 'Amazon, Walmart, Target & Faire' },
+  { icon: Zap,           label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator',  desc: 'Core Web Vitals & Latency ROI' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
@@ -106,13 +107,12 @@ const US_PLATFORMS = [
   { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
 ] as const;
 
-// Replatforming (US) — migration hub + its six spokes, added to the Platforms mega
-// 2026-08-03. Every href below was curl-verified 200 on the live site before being
-// linked. Do NOT add a route here before its page ships: Google caches the 404
-// verdict against a linked-but-missing URL and only a manual GSC recrawl clears it.
+// Replatforming (US) — migration hub + its spokes
 const US_REPLATFORMING_HUB = '/replatforming';
 const US_REPLATFORMING = [
   { label: 'Magento to Shopify',       href: '/replatforming/magento-to-shopify' },
+  { label: 'BigCommerce to Shopify',   href: '/replatforming/bigcommerce-to-shopify-plus' },
+  { label: 'SuiteCommerce to Shopify', href: '/replatforming/netsuite-suitecommerce-to-shopify-plus' },
   { label: 'WooCommerce to Shopify',   href: '/replatforming/woocommerce-to-shopify' },
   { label: 'WordPress to Shopify',     href: '/replatforming/wordpress-to-shopify' },
   { label: 'Squarespace to Shopify',   href: '/replatforming/squarespace-to-shopify' },

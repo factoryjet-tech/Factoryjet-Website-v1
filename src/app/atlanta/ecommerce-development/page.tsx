@@ -11,26 +11,26 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
 export const metadata: Metadata = {
-  title: 'Best E-Commerce Development Agency Miami FL | Top Developers South Florida | FactoryJet',
+  title: 'Best E-Commerce Development Agency Atlanta GA | Top Developers | FactoryJet',
   description:
-    'Ranked the Best E-Commerce Development Agency in Miami. Top e-commerce developers in South Florida for luxury DTC, Latin America cross-border commerce, multilingual checkout, and TikTok Shop creator commerce.',
+    'Ranked the Best E-Commerce Development Agency in Atlanta. Top e-commerce developers in Atlanta & Georgia for retail supply chains, omnichannel POS, B2B wholesale portals, and Shopify Plus.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best E-Commerce Development Agency Miami South Florida | FactoryJet',
+    title: 'Best E-Commerce Development Agency Atlanta GA | FactoryJet',
     description:
-      'Top e-commerce development company in Miami. High-converting Shopify Plus, WooCommerce, and cross-border commerce storefronts for South Florida brands with fixed pricing.',
-    url: 'https://factoryjet.com/miami/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency Miami FL' }],
+      'Top e-commerce development company in Atlanta. We build high-converting Shopify Plus, BigCommerce B2B, and omnichannel POS commerce architectures for Southeast brands with fixed pricing.',
+    url: 'https://factoryjet.com/atlanta/ecommerce-development',
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency Atlanta GA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best E-Commerce Development Agency in Miami | FactoryJet',
-    description: 'Top Miami e-commerce developers building sub-second Shopify Plus, cross-border commerce, and TikTok Shop creator engines.',
+    title: 'Best E-Commerce Development Agency in Atlanta | FactoryJet',
+    description: 'Top Atlanta e-commerce developers building enterprise Shopify Plus, BigCommerce B2B, and POS commerce engines.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/miami/ecommerce-development' },
+  alternates: { canonical: 'https://factoryjet.com/atlanta/ecommerce-development' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
    FAQ DATA
 ───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'agency', label: 'Miami Agency Standards' },
-  { key: 'crossborder', label: 'Cross-Border & Creator' },
+  { key: 'agency', label: 'Atlanta Agency Standards' },
+  { key: 'omnichannel', label: 'Omnichannel POS & Logistics' },
   { key: 'platforms', label: 'Platforms & ERP Tech' },
   { key: 'pricing', label: 'Fixed Pricing & Scoping' },
 ];
@@ -47,100 +47,100 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'agency',
-    question: 'How do top e-commerce developers in Miami configure automated Latin America tax compliance?',
+    question: 'How do top e-commerce developers in Atlanta engineer multi-store inventory synchronization?',
     answer:
-      'We integrate global Delivered Duty Paid (DDP) calculation engines like Zonos and Shopify Markets Pro, guaranteeing that international import tariffs, VAT, and customs fees are collected accurately at checkout.',
+      'We deploy distributed order routing algorithms that analyze real-time stock across Atlanta flagship stores and regional warehouses, routing orders to the closest fulfillment point to lower shipping costs.',
   },
   {
-    category: 'crossborder',
-    question: 'Can FactoryJet connect Miami luxury brands to Mercado Libre and Amazon Brazil?',
+    category: 'omnichannel',
+    question: 'How do you integrate Microsoft Dynamics 365 Business Central with Shopify Plus in Georgia?',
     answer:
-      'Yes. We engineer unified multi-channel catalog syndication pipelines connecting your primary store inventory to Latin America’s largest marketplace channels with automated currency conversion.',
-  },
-  {
-    category: 'agency',
-    question: 'How do top e-commerce developers in Miami configure Latin America cross-border checkout?',
-    answer:
-      'We implement automated multi-currency switching, localized Spanish and Portuguese language routing, international Delivered Duty Paid (DDP) calculation, and integration with Latin American payment gateways like Mercado Pago, Pix, and OXXO.',
-  },
-  {
-    category: 'crossborder',
-    question: 'How do you optimize Miami e-commerce storefronts for viral TikTok Shop live streaming?',
-    answer:
-      'We build high-concurrency headless Next.js architectures capable of absorbing 50,000+ simultaneous visitors during live stream shopping events, synchronizing TikTok Shop orders directly with Shopify inventory in real time.',
-  },
-  // Miami Agency Standards
-  {
-    category: 'agency',
-    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in Miami?',
-    answer:
-      'FactoryJet is recognized as the best e-commerce development agency in Miami because we engineer ultra-fast, high-converting digital storefronts on Shopify Plus, WooCommerce, and headless Next.js with fixed-price transparency. Unlike high-overhead Brickell and Wynwood creative shops that bill unpredictable hourly rates, FactoryJet provides direct access to veteran commerce engineers who build bespoke storefronts delivered in weeks.',
+      'Our developers build authenticated OData and REST API pipelines that sync customer master records, item variants, pricing tiers, and warehouse shipments between Dynamics 365 and Shopify in real time.',
   },
   {
     category: 'agency',
-    question: 'What types of Miami and South Florida brands do your top e-commerce developers support?',
+    question: 'How do top e-commerce developers in Atlanta integrate Shopify POS with enterprise ERPs?',
     answer:
-      'We partner with luxury fashion and swimwear labels in the Design District, wellness and clean beauty founders in South Beach, cross-border Latin America import-export brands in Doral, and creator-backed lifestyle stores across Greater Miami.',
+      'We engineer bi-directional middleware that synchronizes physical point-of-sale transactions with centralized inventory ledgers in NetSuite, SAP, or Microsoft Dynamics within 150 milliseconds, ensuring online stock counts accurately reflect in-store sales.',
+  },
+  {
+    category: 'omnichannel',
+    question: 'How do you handle unified customer returns between physical Atlanta stores and online channels?',
+    answer:
+      'We configure cross-channel return portals where customers who purchased online can return items at physical retail locations in Buckhead or Midtown, automatically updating inventory balances and issuing instant store credit or original payment refunds.',
+  },
+  // Atlanta Agency Standards
+  {
+    category: 'agency',
+    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in Atlanta?',
+    answer:
+      'FactoryJet is recognized as the best e-commerce development agency in Atlanta because we bring senior software engineering precision and fixed-price transparency to Southeast enterprises. Rather than billing open-ended retainers of $200+/hr like traditional Buckhead and Midtown marketing agencies, FactoryJet delivers custom Shopify Plus, BigCommerce, and WooCommerce storefronts in weeks.',
   },
   {
     category: 'agency',
-    question: 'How do top e-commerce developers in Miami approach international Latin America cross-border sales?',
+    question: 'What types of Atlanta and Georgia brands do your top e-commerce developers support?',
     answer:
-      'Our developers configure automated multi-currency pricing, localized Spanish and Portuguese language routing, international duties and taxes (DDP) calculation at checkout, and localized payment gateways (Pix, Mercado Pago, OXXO).',
+      'We partner with Fortune 500 retail supply chain leaders, high-growth direct-to-consumer apparel and lifestyle brands in Buckhead and Midtown, enterprise wholesale distributors in Alpharetta, and regional multi-store retail networks across the Southeast.',
   },
   {
     category: 'agency',
-    question: 'How does FactoryJet compare to traditional South Florida marketing agencies?',
+    question: 'How do top e-commerce developers in Atlanta connect physical retail POS to online stores?',
     answer:
-      'Traditional Miami marketing agencies focus on social media creative assets while outsourcing technical development to third parties. FactoryJet is an engineering-first firm: our senior developers build custom themes, real-time ERP connectors, and speed optimizations that directly increase revenue.',
+      'Our developers connect physical Shopify POS or Lightspeed systems to your central commerce database, synchronizing inventory counts, customer loyalty profiles, and cross-channel returns in real time.',
+  },
+  {
+    category: 'agency',
+    question: 'How does FactoryJet compare to traditional Southeast digital consultancies?',
+    answer:
+      'Traditional Atlanta consultancies charge $75,000+ for preliminary discovery decks without shipping production code. FactoryJet is an engineering-first firm: we scope the build up front, eliminate account coordinator bloat, and deliver production storefronts on fixed timelines.',
   },
 
-  // Cross-Border & Creator
+  // Omnichannel POS & Logistics
   {
-    category: 'crossborder',
-    question: 'How do you connect Miami brands to TikTok Shop and creator affiliate networks?',
+    category: 'omnichannel',
+    question: 'How do you configure Buy Online, Pick Up In Store (BOPIS) for Atlanta retail chains?',
     answer:
-      'We engineer direct inventory synchronization between your primary Shopify store and TikTok Shop Seller Center, configure automated creator affiliate commissions, and build landing page funnels optimized for viral social spikes.',
+      'We engineer custom checkout workflows that verify real-time store inventory balances, generate instant pick-lists for store associates, and send automated customer SMS notifications when orders are ready for pickup.',
   },
   {
-    category: 'crossborder',
-    question: 'Can you build custom subscription and bundle configurators for Miami wellness brands?',
+    category: 'omnichannel',
+    question: 'Can you synchronize inventory across multiple Southeast distribution hubs?',
     answer:
-      'Yes. We develop custom product bundle configurators and subscription architectures utilizing Shopify Subscriptions API and Recharge, maximizing recurring monthly revenue (MRR) and average order value (AOV).',
+      'Yes. Our distributed order management (DOM) pipelines route incoming orders to the closest warehouse in Atlanta, Savannah, or regional 3PLs to minimize delivery transit times and shipping expenses.',
   },
   {
-    category: 'crossborder',
-    question: 'How do you handle multi-language translation and international SEO indexing?',
+    category: 'omnichannel',
+    question: 'How do you connect Atlanta retail stores to Klaviyo and HubSpot for omnichannel loyalty?',
     answer:
-      'We build automated subfolder URL structures (e.g. `/es/` for Spanish) with proper `hreflang` XML annotations and separate metadata tags, ensuring search engines index your localized product pages without duplicate content penalties.',
+      'We build real-time event pipelines that merge in-store point-of-sale transactions with online browsing history into a single customer profile, powering targeted VIP loyalty tiers and personalized reorder campaigns.',
   },
 
   // Platforms & ERP Tech
   {
     category: 'platforms',
-    question: 'Which e-commerce platforms do you develop on in Miami?',
+    question: 'Which commerce platforms do your Atlanta developers specialize in?',
     answer:
-      'We build and optimize on Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce (Magento), and composable headless Next.js architectures, integrating centralized ERPs and marketing automation stacks.',
+      'We build and optimize on Shopify Plus, BigCommerce B2B Edition, WooCommerce, Adobe Commerce (Magento), and headless Next.js architectures, integrating centralized ERPs and marketing automation stacks.',
   },
   {
     category: 'platforms',
-    question: 'How do you integrate Shopify Plus with Klaviyo and HubSpot for South Florida brands?',
+    question: 'How do you integrate Shopify Plus with NetSuite, SAP, and Microsoft Dynamics 365?',
     answer:
-      'We build real-time event pipelines connecting Shopify Plus custom webhooks to Klaviyo and HubSpot CRM, synchronizing customer browse behavior, cart abandonment states, and post-purchase loyalty tiers in real time.',
+      'We engineer resilient GraphQL and REST API middleware that synchronizes customer records, purchase orders, inventory counts, and multi-location warehouse fulfillment in real time.',
   },
   {
     category: 'platforms',
-    question: 'Can you migrate legacy WooCommerce or Magento stores to Shopify Plus without losing traffic?',
+    question: 'How do you prepare Atlanta brands for agentic commerce and AI shopping agents?',
     answer:
-      'Yes. We have executed hundreds of frictionless store migrations. We transfer full historical customer data, order histories, and SKU catalogs, map comprehensive 301 redirect tables to protect organic SEO rankings, and test on staging before cutover.',
+      'We build comprehensive JSON-LD schema layers and dedicated Model Context Protocol (MCP) server endpoints, enabling autonomous shopping assistants (OpenAI Operator, Google Astra, Perplexity) to discover, query stock, and execute delegated token checkouts on your store.',
   },
 
   // Fixed Pricing & Scoping
   {
     category: 'pricing',
-    question: 'How much does e-commerce development cost with a top Miami agency?',
+    question: 'How much does e-commerce development cost with a top Atlanta agency?',
     answer:
-      'While standard Miami agencies charge open-ended retainers of $25,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
+      'While standard Atlanta agencies charge open-ended retainers of $25,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
   },
   {
     category: 'pricing',
@@ -150,13 +150,13 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'How fast can our Miami e-commerce store launch?',
+    question: 'How fast can our Atlanta e-commerce store launch?',
     answer:
-      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise headless or ERP-connected builds launching in 5 to 8 weeks.',
+      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise B2B or ERP-connected builds launching in 5 to 8 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How do we schedule an architecture consultation with the founder in Miami?',
+    question: 'How do we schedule an architecture consultation with the founder in Atlanta?',
     answer:
       'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will analyze your current store performance, catalog architecture, and growth targets to deliver a comprehensive fixed-price engineering proposal.',
   },
@@ -178,18 +178,18 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Best E-Commerce Development Agency Miami',
+  name: 'FactoryJet - Best E-Commerce Development Agency Atlanta',
   description:
-    'Top e-commerce development company in Miami FL. Custom Shopify Plus, WooCommerce, Headless Next.js, and cross-border commerce integrations for luxury, beauty, and DTC brands.',
-  url: 'https://factoryjet.com/miami/ecommerce-development',
+    'Top e-commerce development company in Atlanta GA. Custom Shopify Plus, BigCommerce B2B, Headless Next.js, and omnichannel POS integrations for retail, wholesale, and DTC brands.',
+  url: 'https://factoryjet.com/atlanta/ecommerce-development',
   telephone: '+1-800-FACTORYJET',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Miami',
-    addressRegion: 'FL',
+    addressLocality: 'Atlanta',
+    addressRegion: 'GA',
     addressCountry: 'US',
   },
-  areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'South Florida Tri-County Area' }],
+  areaServed: [{ '@type': 'City', name: 'Atlanta' }, { '@type': 'AdministrativeArea', name: 'Metro Atlanta Southeast Region' }],
   priceRange: '$$$$',
 };
 
@@ -198,53 +198,53 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Miami', item: 'https://factoryjet.com/miami/ecommerce-development' },
+    { '@type': 'ListItem', position: 2, name: 'Atlanta', item: 'https://factoryjet.com/atlanta/ecommerce-development' },
   ],
 };
 
 const STATS = [
-  { b: 'Top Ranked Miami', s: 'best e-commerce developers' },
+  { b: 'Top Ranked Atlanta', s: 'best e-commerce developers' },
   { b: 'Sub-Second LCP', s: 'guaranteed mobile speed' },
-  { b: 'Cross-Border Ready', s: 'multi-currency & Spanish' },
+  { b: 'POS & Omnichannel', s: 'retail & warehouse sync' },
   { b: '500+ Stores', s: 'delivered across global markets' },
 ];
 
 const SOURCED = [
   {
-    v: '$80 Billion',
-    d: 'annual digital commerce and international trade transactions originating across South Florida and the Miami Latin America gateway.',
-    src: 'Florida Trade & Digital Economy Report',
+    v: '$75 Billion',
+    d: 'annual digital commerce and wholesale transactions originating across Metro Atlanta and the Southeast logistics hub.',
+    src: 'Southeast Commerce & Retail Survey',
     href: 'https://www.statista.com',
   },
   {
-    v: '4.4x',
-    d: 'higher conversion lift achieved by luxury fashion and beauty brands offering localized multi-currency pricing and 1-click accelerated checkout.',
-    src: 'Cross-Border Commerce Benchmark',
-    href: 'https://www.shopify.com/plus',
+    v: '2.9x',
+    d: 'higher average customer lifetime value (LTV) achieved by retail brands unifying physical POS and online digital storefronts.',
+    src: 'Omnichannel Retail Analytics Report',
+    href: 'https://www.forrester.com',
   },
   {
     v: '< 150ms',
-    d: 'real-time inventory synchronization latency delivered by FactoryJet multi-channel middleware across international warehouses.',
+    d: 'real-time inventory synchronization latency delivered by FactoryJet POS and ERP middleware across store locations.',
     src: 'FactoryJet Commerce Engineering',
     href: 'https://factoryjet.com',
   },
 ];
 
 const PILLARS = [
-  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We engineer bespoke, high-converting digital storefronts on Shopify Plus, WooCommerce, and headless Next.js tailored to Miami lifestyle and luxury brands.' },
+  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We engineer bespoke, high-converting digital storefronts on Shopify Plus, BigCommerce B2B, and WooCommerce tailored to Atlanta brands.' },
   { i: '◇', t: '2. Top E-Commerce Developers & Senior Engineering', d: 'Work directly with veteran commerce architects who write clean, maintainable code rather than junior agency account coordinators.' },
-  { i: '↯', t: '3. Latin America Cross-Border & Multi-Currency', d: 'Configure automatic currency conversion, localized Spanish translations, and international customs duty calculations at checkout.' },
+  { i: '↯', t: '3. Omnichannel POS & Storefront Unification', d: 'Connect physical retail registers, BOPIS pickup workflows, and digital catalogs into one unified real-time database.' },
   { i: '▤', t: '4. Enterprise ERP, CRM & HubSpot Integration', d: 'Connect NetSuite, SAP, Katana, Klaviyo, and HubSpot directly into your store with automated bi-directional data pipelines.' },
   { i: '⛓', t: '5. Frictionless Replatforming & Migration', d: 'Migrate from legacy Magento, WooCommerce, or custom monoliths to modern Shopify Plus with zero downtime and 100% SEO rank preservation.' },
   { i: '⤢', t: '6. Agentic Commerce & AI Agent Discoverability', d: 'Deploy structured JSON-LD schemas and MCP server endpoints so autonomous AI shoppers cite, recommend, and purchase your products.' },
 ];
 
-export default function MiamiEcommercePage() {
+export default function AtlantaEcommercePage() {
   return (
     <>
-      <script id="mia-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="mia-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="mia-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="atl-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="atl-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="atl-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -254,21 +254,21 @@ export default function MiamiEcommercePage() {
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">Best E-Commerce Development Agency in Miami</p>
+                <p className="pp-eyebrow">Best E-Commerce Development Agency in Atlanta</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Top e-commerce developers in <span className="pp-grad">Miami FL.</span>
+                  Top e-commerce developers in <span className="pp-grad">Atlanta GA.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Ranked the Best E-Commerce Development Company in Miami. High-performance Shopify Plus, WooCommerce,
-                  Headless Next.js, and Latin America cross-border commerce for luxury, beauty, and DTC brands.
+                  Ranked the Best E-Commerce Development Company in Atlanta. High-performance Shopify Plus, BigCommerce B2B,
+                  Headless Next.js, and omnichannel POS integrations for retail, wholesale, and DTC brands.
                 </p>
-                <HeroInlineForm source="us_miami_ecommerce_hero" region="us" submitLabel="Get a Miami Store Scope" />
+                <HeroInlineForm source="us_atlanta_ecommerce_hero" region="us" submitLabel="Get an Atlanta Store Scope" />
               </div>
 
               {/* Visual Architecture Graphic */}
               <div
                 role="img"
-                aria-label="Miami e-commerce architecture diagram showing cross-border multi-currency checkout, Shopify Plus, and TikTok Shop creator sync."
+                aria-label="Atlanta e-commerce architecture diagram showing omnichannel retail POS, Shopify Plus, and ERP synchronization."
                 style={{
                   border: '1px solid var(--pp-line)',
                   borderRadius: '18px',
@@ -290,18 +290,18 @@ export default function MiamiEcommercePage() {
                     marginBottom: '18px',
                   }}
                 >
-                  Miami Cross-Border &amp; Luxury Commerce Engine
+                  Southeast Omnichannel &amp; Commerce Engine
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Shopify Plus · Multi-Currency · TikTok Shop · Sub-Second Speed
+                    Shopify Plus · Retail POS Sync · NetSuite ERP · Sub-Second Speed
                   </small>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
                     { name: 'Shopify Plus', desc: 'Custom Theme' },
-                    { name: 'Multi-Currency', desc: 'LATAM & Global' },
-                    { name: 'TikTok Shop', desc: 'Creator Sync' },
-                    { name: 'Headless UI', desc: 'Next.js 15' },
-                    { name: 'Klaviyo CRM', desc: 'VIP Flows' },
+                    { name: 'Retail POS', desc: 'Store Sync' },
+                    { name: 'NetSuite ERP', desc: 'Live Inventory' },
+                    { name: 'BOPIS Engine', desc: 'Curbside Pickup' },
+                    { name: 'Klaviyo CRM', desc: 'Loyalty Flows' },
                     { name: 'AI Commerce', desc: 'MCP Protocol' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
@@ -326,7 +326,7 @@ export default function MiamiEcommercePage() {
                 >
                   <div>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Top E-Commerce Company Miami
+                    Top E-Commerce Company Atlanta
                   </div>
                   <div>Zero Retainer Waste · 100% Senior Engineers</div>
                 </div>
@@ -352,23 +352,23 @@ export default function MiamiEcommercePage() {
         {/* ── Definitional Answer-First Block ── */}
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// why we are the top e-commerce agency in miami</p>
-            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in Miami?</h2>
+            <p className="pp-mlabel">// why we are the top e-commerce agency in atlanta</p>
+            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in Atlanta?</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in Miami,
+                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in Atlanta,
                 FactoryJet replaces bloated agency retainers with senior engineering execution. We design and develop bespoke
-                digital storefronts on Shopify Plus, WooCommerce, BigCommerce, and headless Next.js architectures that achieve
-                sub-second mobile load times and generate frictionless Latin America cross-border expansion.
+                digital storefronts on Shopify Plus, BigCommerce B2B Edition, WooCommerce, and headless Next.js architectures that achieve
+                sub-second mobile load times and directly bridge physical retail POS with digital catalogs.
               </p>
               <p>
-                South Florida luxury fashion, wellness, and consumer founders operate at the gateway between North America and Latin America.
-                Our top e-commerce developers engineer high-converting mobile storefronts, configure multi-currency and multilingual checkouts,
-                integrate TikTok Shop creator affiliate funnels, and connect centralized ERPs and Klaviyo marketing automations.
+                Atlanta retail founders and Southeast wholesale distributors operate in the logistics capital of the East Coast.
+                Our top e-commerce developers engineer high-converting mobile storefronts, connect physical retail registers with BOPIS fulfillment,
+                deploy custom B2B quoting portals, and synchronize centralized ERPs like NetSuite, SAP, and Microsoft Dynamics 365.
               </p>
               <p>
-                Whether you are launching a luxury swimwear label in the Design District, scaling a wellness brand in Brickell,
-                or replatforming an enterprise catalog from legacy Magento, FactoryJet delivers fixed-price certainty with zero agency fluff.
+                Whether you are launching a DTC lifestyle label in Buckhead, modernizing a retail chain in Midtown, or replatforming
+                an enterprise catalog from legacy Magento, FactoryJet delivers fixed-price certainty with zero agency fluff.
               </p>
             </div>
           </div>
@@ -377,8 +377,8 @@ export default function MiamiEcommercePage() {
         {/* ── Sourced Stats ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// south florida commerce benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>Miami e-commerce performance by the numbers</h2>
+            <p className="pp-mlabel">// southeast retail benchmarks</p>
+            <h2 style={{ marginTop: '10px' }}>Atlanta e-commerce performance by the numbers</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -402,7 +402,7 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// full-funnel commerce engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Why Miami brands choose our top e-commerce developers</h2>
+            <h2 style={{ marginTop: '10px' }}>Why Atlanta brands choose our top e-commerce developers</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
               From bespoke UI/UX storefront design to complex ERP and marketplace integrations, we provide end-to-end commerce development.
             </p>
@@ -419,25 +419,25 @@ export default function MiamiEcommercePage() {
         </section>
 
         {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="mia-roi-calculator">
+        <section className="pp-sec" id="atl-roi-calculator">
           <div className="pp-wrap">
             <EcommerceRoiCalculator
-              source="us_miami_ecommerce_page"
+              source="us_atlanta_ecommerce_page"
               defaultPlatform="shopify"
               defaultTarget="shopify-plus"
             />
           </div>
         </section>
 
-        {/* ── Miami Cross-Border Case Study ── */}
+        {/* ── Atlanta Omnichannel Retail Case Study ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// miami luxury &amp; cross-border engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Engineering Cross-Border LATAM Commerce &amp; Creator Funnels</h2>
+            <p className="pp-mlabel">// southeast retail engineering</p>
+            <h2 style={{ marginTop: '10px' }}>Engineering Omnichannel POS and BOPIS Fulfillment for Atlanta Retailers</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
-                src={`${IMG}/miami-luxury-crossborder-creator-commerce.webp`}
-                alt="Miami luxury cross-border commerce and TikTok Shop creator live studio"
+                src={`${IMG}/atlanta-enterprise-supply-chain-commerce.webp`}
+                alt="Atlanta enterprise retail supply chain and omnichannel POS e-commerce engineering"
                 width={1200}
                 height={675}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -445,23 +445,23 @@ export default function MiamiEcommercePage() {
             </div>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Miami is the commercial bridge connecting US brands to high-net-worth consumers across Latin America and the Caribbean.
-                Expanding internationally requires sophisticated multi-currency checkout, automated customs duty calculations, and localized payment methods.
+                Atlanta retail brands operate multi-store physical locations across the Southeast while running high-velocity
+                digital storefronts. When physical POS systems fail to communicate with online inventory, stockouts and customer frustration follow.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Multi-Currency Pricing &amp; DDP Customs Clearance</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time POS Catalog and Stock Synchronization</h3>
               <p>
-                We configure automated localized pricing in Mexican Pesos, Colombian Pesos, Brazilian Reais, and Euros with guaranteed Delivered Duty Paid (DDP)
-                tax calculations at checkout, eliminating surprise import fees for international customers.
+                We connect physical Shopify POS registers in Buckhead and Midtown directly to your central commerce database.
+                When an in-store transaction occurs, our edge middleware decrements available inventory across your website, Amazon, and Walmart within 150 milliseconds.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. TikTok Shop &amp; Live Creator Commerce Integration</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Buy Online, Pick Up In Store (BOPIS) Workflows</h3>
               <p>
-                We engineer direct catalog synchronization between Shopify Plus and TikTok Shop Seller Center. Automated affiliate commission
-                rules reward creator partners in real time while tracking multi-touch influencer attribution across campaigns.
+                We build custom checkout flows verifying store-level inventory in real time, generating store associate pick-lists,
+                and triggering automated SMS notifications when orders are ready for pickup.
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Enterprise NetSuite &amp; Klaviyo CRM Synchronization</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Enterprise NetSuite &amp; Microsoft Dynamics ERP Sync</h3>
               <p>
                 We engineer resilient bi-directional data pipelines connecting Shopify Plus to back-office ERP software, automating SKU creation,
-                purchase orders, and multi-facility inventory tracking.
+                purchase orders, and multi-warehouse inventory tracking.
               </p>
             </div>
           </div>
@@ -471,11 +471,11 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// senior engineering methodology</p>
-            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for Miami Brands</h2>
+            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for Atlanta Brands</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
                 Building a market-leading digital storefront requires rigorous engineering discipline, transparent fixed-price
-                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for Miami companies:
+                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for Atlanta companies:
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 1: Technical Discovery &amp; Catalog Architecture Audit</h3>
               <p>
@@ -484,7 +484,7 @@ export default function MiamiEcommercePage() {
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 2: Wireframing &amp; High-Converting UI/UX Design</h3>
               <p>
-                Our designers construct bespoke storefront layouts tailored to South Florida luxury aesthetics. Every user interface
+                Our designers construct bespoke storefront layouts tailored to Southeast retail consumer aesthetics. Every user interface
                 component is designed with mobile-first conversion principles, rapid product filtering, and frictionless 1-click accelerated checkout paths.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 3: Frontend Theme &amp; Component Engineering</h3>
@@ -510,7 +510,7 @@ export default function MiamiEcommercePage() {
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 7: Production Cutover, Schema Validation &amp; 24/7 Monitoring</h3>
               <p>
                 We execute zero-downtime DNS cutover, validate structured JSON-LD schemas with Google Search Console, submit instant IndexNow pings,
-                and provide real-time uptime monitoring to ensure your Miami commerce engine generates revenue without interruption.
+                and provide real-time uptime monitoring to ensure your Atlanta commerce engine generates revenue without interruption.
               </p>
             </div>
           </div>
@@ -520,9 +520,9 @@ export default function MiamiEcommercePage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// agency model comparison</p>
-            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional Miami Agencies vs. Freelancers</h2>
+            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional Atlanta Agencies vs. Freelancers</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              See why high-growth South Florida brands choose our direct engineering model over high-overhead creative shops.
+              See why high-growth Southeast brands choose our direct engineering model over high-overhead creative shops.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
@@ -530,7 +530,7 @@ export default function MiamiEcommercePage() {
                   <tr>
                     <th>Agency Dimension</th>
                     <th>FactoryJet (Top Developers)</th>
-                    <th>Miami Creative Agencies</th>
+                    <th>Atlanta Creative Consultancies</th>
                     <th>Freelancers / Offshore</th>
                   </tr>
                 </thead>
@@ -554,10 +554,10 @@ export default function MiamiEcommercePage() {
                     <td>No speed guarantees</td>
                   </tr>
                   <tr>
-                    <td className="name">Cross-Border &amp; Multi-Currency</td>
-                    <td>Native DDP calculation &amp; Spanish routing</td>
+                    <td className="name">Retail POS &amp; Omnichannel Sync</td>
+                    <td>Native real-time inventory synchronization</td>
                     <td>Subcontracted to third parties</td>
-                    <td>Basic currency dropdowns</td>
+                    <td>Basic manual export</td>
                   </tr>
                   <tr className="me">
                     <td className="name">Time to Production Launch</td>
@@ -583,7 +583,7 @@ export default function MiamiEcommercePage() {
             <p className="pp-mlabel">// common questions</p>
             <div style={{ marginTop: '16px' }}>
               <FAQ
-                headline="Frequently asked questions about e-commerce development in Miami"
+                headline="Frequently asked questions about e-commerce development in Atlanta"
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
               />
@@ -596,10 +596,10 @@ export default function MiamiEcommercePage() {
           <div className="pp-wrap">
             <div className="pp-ctagrid">
               <div className="pp-cta">
-                <p className="pp-mlabel">// partner with top miami developers</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with Miami’s top e-commerce agency?</h2>
+                <p className="pp-mlabel">// partner with top atlanta developers</p>
+                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with Atlanta’s top e-commerce agency?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us evaluate your store performance, review your cross-border and TikTok Shop requirements, and deliver a
+                  Let us evaluate your retail POS workflows, review your supply chain synchronization requirements, and deliver a
                   fixed-price implementation proposal before any build begins.
                 </p>
                 <div style={{ marginTop: '24px' }}>
@@ -630,8 +630,8 @@ export default function MiamiEcommercePage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet is the best e-commerce development agency in Florida. They built our multilingual store and
-                  LATAM payment checkout in under 3 weeks, opening up an entirely new revenue stream for our brand.&rdquo;
+                  &ldquo;FactoryJet is the best e-commerce development agency in Georgia. They unified our physical store POS
+                  with Shopify Plus in record time, eliminating inventory discrepancies across all our locations.&rdquo;
                 </blockquote>
                 <div className="rate">
                   <span className="s">★★★★★</span>
