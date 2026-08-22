@@ -33,6 +33,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'E-Commerce Development', href: '/services/ecommerce-development' },
       { label: 'B2B E-Commerce',         href: '/b2b-ecommerce' },
       { label: 'Omnichannel Commerce',   href: '/omnichannel-commerce' },
+      { label: 'Marketplace Management', href: '/marketplace-management' },
       { label: 'Replatforming',          href: '/replatforming' },
       { label: 'Headless Commerce',      href: '/headless-commerce' },
       { label: 'Agentic Commerce',       href: '/agentic-commerce' },

@@ -76,6 +76,7 @@ const US_AI_AGENTS_NAV = [
 const US_SOLUTIONS = [
   { icon: Sparkles,      label: 'Agentic Commerce',         href: '/agentic-commerce',               desc: 'How AI agents buy & sell' },
   { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
+  { icon: Package,       label: 'Marketplace Management',   href: '/marketplace-management',         desc: 'Amazon, Walmart, Target & Faire' },
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
   { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
