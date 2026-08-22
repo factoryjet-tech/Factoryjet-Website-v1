@@ -39,6 +39,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Agentic Commerce',       href: '/agentic-commerce' },
       { label: 'For Manufacturers',      href: '/ecommerce-for-manufacturers' },
       { label: 'Amazon Agency',          href: '/services/amazon-agency' },
+      { label: 'Target Plus Marketplace',href: '/target-plus-marketplace' },
       { label: 'Faire Wholesale Agency', href: '/faire-wholesale-marketplace' },
     ],
   },

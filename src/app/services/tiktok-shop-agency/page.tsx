@@ -9,6 +9,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ComparisonTable from '@/components/v2/ComparisonTable';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -350,6 +351,17 @@ export default function TikTokShopAgencyPage() {
                 <div key={c.b} className="tts-crystal tts-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* INTERACTIVE ROI CALCULATOR */}
+        <section className="tts-sec pt0" id="tiktok-roi-calculator">
+          <div className="tts-wrap">
+            <EcommerceRoiCalculator
+              source="us_services_tiktok_agency_page"
+              defaultPlatform="shopify"
+              defaultTarget="omnichannel"
+            />
           </div>
         </section>
 

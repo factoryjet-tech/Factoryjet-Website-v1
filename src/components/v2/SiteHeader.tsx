@@ -34,6 +34,7 @@ import {
   Store,
   Sparkles,
   Package,
+  Target,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -83,6 +84,7 @@ const US_SOLUTIONS = [
   { icon: ShoppingBag,   label: 'Amazon Agency',            href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
   { icon: Mic,           label: 'TikTok Shop Agency',       href: '/services/tiktok-shop-agency',    desc: 'Ads, affiliates & LIVE selling' },
   { icon: Package,       label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency', desc: 'Approval, WFS & Connect ads' },
+  { icon: Target,        label: 'Target Plus Marketplace',  href: '/target-plus-marketplace',        desc: 'Curated DVS & EDI integration' },
   { icon: Store,         label: 'Faire Wholesale Agency',   href: '/faire-wholesale-marketplace',    desc: 'B2B boutique catalog & reorders' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },

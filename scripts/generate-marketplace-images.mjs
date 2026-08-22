@@ -71,6 +71,18 @@ const PROMPTS = [
       'A brand operations director at a clean white desk in a sunlit loft studio reviewing B2B wholesale pricing tiers and inventory synchronization feeds on a sleek desktop monitor. ' +
       'A ceramic mug with a subtle warm orange interior rim sits on the desk. ' + STYLE,
   },
+  {
+    name: 'target-plus-curated-retail-showcase.webp',
+    prompt:
+      'A senior retail merchandise director in a sunlit modern product design showroom reviewing curated home goods and apparel on display. ' +
+      'Holding an iPad Pro displaying Target Plus DVS inventory metrics. A single warm orange leather notebook rests on the display counter. ' + STYLE,
+  },
+  {
+    name: 'tiktok-shop-live-studio-commerce.webp',
+    prompt:
+      'A modern, brightly-lit creator live-streaming studio with professional diffused softbox lighting. ' +
+      'A creator holding a beauty product in front of a sleek smartphone mount, with a side monitor displaying live TikTok Shop affiliate sales graphs. A warm orange accent mug sits on the desk. ' + STYLE,
+  },
 ];
 
 async function generateImage(item) {

@@ -6,6 +6,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -56,6 +57,8 @@ const FAQ_ITEMS = [
   { category: 'working', question: 'Can you migrate our store to a headless build without losing SEO?', answer: 'Yes. We preserve URLs with 301 redirects, keep structured data and metadata intact, and test on staging before cutover so rankings and uptime are protected.' },
   { category: 'working', question: 'How much does headless commerce development cost?', answer: 'It depends on scope and how much of the stack goes composable, so we scope it on a short call and send a fixed proposal before any work starts.' },
   { category: 'working', question: 'Do you work with US brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds.' },
+  { category: 'build', question: 'How do React Server Components (RSC) improve headless performance?', answer: 'React Server Components allow catalog data fetching, product descriptions, and structural layouts to render entirely on the edge server without sending any JavaScript runtime to the client browser. This slashes client bundle size by 70%+, ensuring instant Largest Contentful Paint (LCP) and perfect Core Web Vitals.' },
+  { category: 'build', question: 'How do you handle edge cache invalidation when prices or inventory change?', answer: 'We configure automated webhook listeners between Shopify or BigCommerce and our edge hosting layer (Vercel or Cloudflare Pages). When an inventory change or price adjustment occurs, our webhook purges the specific edge cache tag within 150 milliseconds, ensuring shoppers always see accurate stock without sacrificing cache hit ratios.' },
 ];
 const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
 const SERVICE_SCHEMA = {
@@ -252,6 +255,46 @@ export default function HeadlessCommercePage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* Technical Architecture Deep-Dive */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// architectural engineering</p>
+            <h2 style={{ marginTop: '10px' }}>The headless engineering stack: sub-second LCP by design</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                The primary reason brands choose a headless front end is uncompromising speed. Standard monolithic themes
+                frequently bundle dozens of third-party apps, redundant tracking scripts, and heavy DOM trees that degrade
+                mobile Largest Contentful Paint (LCP) past 3.5 seconds.
+              </p>
+              <p>
+                Our headless engineering stack utilizes React Server Components (RSC) on Next.js 15 App Router or Shopify
+                Hydrogen on Oxygen. By rendering catalog queries, product specifications, and navigational structures on
+                the edge server, zero unnecessary JavaScript ships to the client browser.
+              </p>
+              <p>
+                Key technical pillars of our headless architecture include:
+              </p>
+              <ul style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
+                <li><strong>Incremental Static Regeneration (ISR):</strong> Product detail pages (PDPs) and collection pages generate statically at build time and revalidate in the background when catalog changes occur via webhooks.</li>
+                <li><strong>Edge Cache Invalidation:</strong> Global CDN edge nodes cache pre-rendered HTML responses, serving 95%+ of shopper requests in under 80ms worldwide.</li>
+                <li><strong>Unified GraphQL Storefront Layer:</strong> A centralized GraphQL data layer aggregates product data from Shopify, editorial content from Sanity or Contentful, and customer reviews from Yotpo into a single efficient query.</li>
+                <li><strong>Hosted Checkout Isolation:</strong> Customer checkout transitions securely to Shopify Plus or BigCommerce hosted checkout, guaranteeing PCI-DSS Level 1 compliance and access to accelerated payment methods like Shop Pay, Apple Pay, and Google Pay.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ROI Calculator */}
+        <section className="pp-sec" id="headless-roi-calculator">
+          <div className="pp-wrap">
+            <EcommerceRoiCalculator
+              source="us_headless_commerce_page"
+              defaultPlatform="magento"
+              defaultTarget="headless"
+            />
           </div>
         </section>
 

@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -351,6 +352,17 @@ export default function EcommerceConsultingPage() {
           label={'Book a consulting call'}
         />
 
+        {/* Interactive ROI Calculator */}
+        <section className="border-t border-[#E7DED6] bg-white py-12" id="consulting-roi-calculator">
+          <div className="mx-auto max-w-[1180px] px-5">
+            <EcommerceRoiCalculator
+              source="us_ecommerce_consulting_page"
+              defaultPlatform="magento"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
+
         {/* Comparison */}
         <section className="border-t border-[#E7DED6] bg-white">
           <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
@@ -463,7 +475,7 @@ export default function EcommerceConsultingPage() {
               Tell us where you are stuck. We will review what you run and send a scoped plan with priorities.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#B23E13] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#B23E13] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-all hover:-translate-y-0.5">Talk to the Founder</a>
               <ModalCTAButton label="Get a commerce audit" region="us" btnVariant="secondary-light" />
             </div>
             <p className="mt-8 text-[14px] text-[#6E635A]">
