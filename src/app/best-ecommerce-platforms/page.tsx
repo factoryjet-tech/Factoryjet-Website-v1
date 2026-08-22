@@ -6,6 +6,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -556,17 +557,10 @@ export default function BestEcommercePlatformsPage() {
           </div>
         </section>
 
-        {/* ── Mid-page CTA ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap" style={{ textAlign: 'center' }}>
-            <p className="pp-mlabel">// before you decide</p>
-            <h2 style={{ marginTop: '10px' }}>Still weighing Shopify vs BigCommerce vs the rest?</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
-              Tell us your catalog size and budget. We will give you a straight platform recommendation, not a sales pitch.
-            </p>
-            <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Get a free platform audit" region="us" btnVariant="primary-light" />
-            </div>
+        {/* ── Interactive ROI & Payback Calculator ── */}
+        <section className="pp-sec" id="roi-calculator">
+          <div className="pp-wrap">
+            <EcommerceRoiCalculator source="us_best_ecommerce_platforms_page" defaultPlatform="magento" defaultTarget="shopify-plus" />
           </div>
         </section>
 

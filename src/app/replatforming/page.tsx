@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -374,6 +375,17 @@ export default function ReplatformingPage() {
                 </figure>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── Interactive Replatforming ROI Calculator ── */}
+        <section className="pp-sec" id="replatforming-roi-calculator">
+          <div className="pp-wrap">
+            <EcommerceRoiCalculator
+              source="us_replatforming_service_page"
+              defaultPlatform="magento"
+              defaultTarget="shopify-plus"
+            />
           </div>
         </section>
 

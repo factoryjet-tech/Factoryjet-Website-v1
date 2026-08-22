@@ -16,7 +16,9 @@
     "typecheck": "tsc --noEmit",
     "check:watermarks": "node scripts/check-watermarks.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
-    "bing:submit": "node scripts/submit-bing-api.mjs"
+    "bing:submit": "node scripts/submit-bing-api.mjs",
+    "social:status": "node scripts/social-publish.mjs --status",
+    "social:post": "node scripts/social-publish.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

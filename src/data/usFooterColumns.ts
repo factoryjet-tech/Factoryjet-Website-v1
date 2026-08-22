@@ -43,6 +43,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Platforms',
     links: [
+      { label: 'Best Ecommerce Platforms',href: '/best-ecommerce-platforms' },
       { label: 'Shopify Development',     href: '/services/shopify-development' },
       { label: 'Magento Development',     href: '/services/magento-development' },
       { label: 'WooCommerce Development', href: '/services/woocommerce-development' },

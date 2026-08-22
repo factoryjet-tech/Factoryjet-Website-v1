@@ -89,6 +89,7 @@ const US_SOLUTIONS = [
 
 // Platforms (US) — what we build on; items without a dedicated page point to the closest one
 const US_PLATFORMS = [
+  { icon: Sparkles,     label: 'Best Ecommerce Platforms', href: '/best-ecommerce-platforms',         desc: 'Side-by-side platform guide' },
   { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/services/shopify-development',     desc: 'DTC + B2B on one store' },
   { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/services/magento-development',     desc: 'Deep B2B, large catalogs' },
   { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },

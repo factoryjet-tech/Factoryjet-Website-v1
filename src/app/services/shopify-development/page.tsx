@@ -22,6 +22,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -1090,6 +1091,17 @@ export default function ShopifyPage() {
           }
           stats={US_SHOPIFY_STATS}
         />
+
+        {/* ── 9b. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <EcommerceRoiCalculator
+              source="us_shopify_development_service_page"
+              defaultPlatform="shopify"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable

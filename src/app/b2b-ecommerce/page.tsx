@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -517,26 +518,16 @@ export default function B2BEcommercePage() {
         </section>
 
         {/* ── Mid-page CTA ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap" style={{ textAlign: 'center' }}>
-            <p className="pp-mlabel">// before you scope it</p>
-            <h2 style={{ marginTop: '10px' }}>Selling to trade buyers on a B2C storefront?</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
-              Tell us how your buyers order today. We will map what a real B2B storefront would replace.
-            </p>
-            <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-            </div>
+        {/* ── Interactive ROI & Wholesale Migration Calculator ── */}
+        <section className="pp-sec" id="b2b-roi-calculator">
+          <div className="pp-wrap">
+            <EcommerceRoiCalculator
+              source="us_b2b_ecommerce_page"
+              defaultPlatform="magento"
+              defaultTarget="bigcommerce-b2b"
+            />
           </div>
         </section>
-
-    
-
-        <MidPageCTA
-          headline={'Buyers still phoning in orders?'}
-          sub={'Tell us how your trade customers order today and what your ERP is. We will map what self-serve would actually look like.'}
-          label={'Get a B2B commerce audit'}
-        />
 
         {/* ── How to choose ── */}
         <section className="pp-sec">
