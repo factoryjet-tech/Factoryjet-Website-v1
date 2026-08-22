@@ -9,6 +9,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ComparisonTable from '@/components/v2/ComparisonTable';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -354,6 +355,17 @@ export default function WalmartMarketplaceAgencyPage() {
                 <div key={c.b} className="wmp-crystal wmp-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* INTERACTIVE ROI CALCULATOR */}
+        <section className="wmp-sec pt0" id="walmart-roi-calculator">
+          <div className="wmp-wrap">
+            <EcommerceRoiCalculator
+              source="us_services_walmart_agency_page"
+              defaultPlatform="shopify"
+              defaultTarget="omnichannel"
+            />
           </div>
         </section>
 

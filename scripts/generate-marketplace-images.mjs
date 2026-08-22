@@ -59,10 +59,26 @@ const PROMPTS = [
       'A senior brand director seated at a sunlit conference table reviewing premium product packaging design and high-end digital storefront layouts on an iPad Pro. ' +
       'A single warm orange folder sits beside the tablet. ' + STYLE,
   },
+  {
+    name: 'faire-wholesale-boutique-sync.webp',
+    prompt:
+      'A stylish boutique store owner and a wholesale brand manager in a bright sunlit contemporary design showroom reviewing premium lifestyle goods on display. ' +
+      'One holds an iPad showing wholesale ordering terms. A single warm orange portfolio folder rests on the clean oak table. ' + STYLE,
+  },
+  {
+    name: 'faire-brand-portal-catalog.webp',
+    prompt:
+      'A brand operations director at a clean white desk in a sunlit loft studio reviewing B2B wholesale pricing tiers and inventory synchronization feeds on a sleek desktop monitor. ' +
+      'A ceramic mug with a subtle warm orange interior rim sits on the desk. ' + STYLE,
+  },
 ];
 
 async function generateImage(item) {
   const targetPath = join(OUT_DIR, item.name);
+  if (existsSync(targetPath)) {
+    console.log(`⏩ Skipping existing: ${item.name}`);
+    return;
+  }
   console.log(`\n🎨 Generating: ${item.name}...`);
 
   const payload = [

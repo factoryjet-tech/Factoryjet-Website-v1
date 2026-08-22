@@ -9,6 +9,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ComparisonTable from '@/components/v2/ComparisonTable';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -354,6 +355,17 @@ export default function AmazonAgencyPage() {
                 <div key={c.b} className="amz-crystal amz-li"><span className="num" /><div><b>{c.b}</b><p>{c.p}</p></div></div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* INTERACTIVE ROI CALCULATOR */}
+        <section className="amz-sec pt0" id="amazon-roi-calculator">
+          <div className="amz-wrap">
+            <EcommerceRoiCalculator
+              source="us_services_amazon_agency_page"
+              defaultPlatform="shopify"
+              defaultTarget="omnichannel"
+            />
           </div>
         </section>
 
