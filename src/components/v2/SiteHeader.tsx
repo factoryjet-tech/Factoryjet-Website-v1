@@ -74,24 +74,35 @@ const US_AI_AGENTS_NAV = [
   { icon: Sparkles,      label: 'Agentic Commerce',       href: '/agentic-commerce',                             desc: 'How AI agents buy, sell & reprice' },
 ] as const;
 
-// Solutions (US) — the commerce pillar + flagship pages, the primary menu
-const US_SOLUTIONS = [
+// Solutions (US) — categorized for enterprise-grade 3-column + showcase layout
+const US_SOLUTIONS_CORE = [
   { icon: Sparkles,      label: 'Agentic Commerce',         href: '/agentic-commerce',               desc: 'How AI agents buy & sell' },
   { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
-  { icon: Package,       label: 'Marketplace Management',   href: '/marketplace-management',         desc: 'Amazon, Walmart, Target & Faire' },
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
-  { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
+  { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+] as const;
+
+const US_SOLUTIONS_MARKETPLACES = [
   { icon: ShoppingBag,   label: 'Amazon Agency',            href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
   { icon: Mic,           label: 'TikTok Shop Agency',       href: '/services/tiktok-shop-agency',    desc: 'Ads, affiliates & LIVE selling' },
   { icon: Package,       label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency', desc: 'Approval, WFS & Connect ads' },
   { icon: Target,        label: 'Target Plus Marketplace',  href: '/target-plus-marketplace',        desc: 'Curated DVS & EDI integration' },
   { icon: Store,         label: 'Faire Wholesale Agency',   href: '/faire-wholesale-marketplace',    desc: 'B2B boutique catalog & reorders' },
-  { icon: Calculator,    label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator',  desc: 'Amazon, Walmart, Target & Faire' },
-  { icon: Zap,           label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator',  desc: 'Core Web Vitals & Latency ROI' },
+] as const;
+
+const US_SOLUTIONS_GROWTH = [
+  { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
-  { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+  { icon: Calculator,    label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator',  desc: 'Amazon, Walmart, Target & Faire' },
+  { icon: Zap,           label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator',  desc: 'Core Web Vitals & Latency ROI' },
+] as const;
+
+const US_SOLUTIONS = [
+  ...US_SOLUTIONS_CORE,
+  ...US_SOLUTIONS_MARKETPLACES,
+  ...US_SOLUTIONS_GROWTH,
 ] as const;
 
 // Platforms (US) — what we build on; items without a dedicated page point to the closest one
@@ -201,13 +212,29 @@ const US_KNOWLEDGE_HUB = [
 // (/uk/shopify-development, /uk/shopify-seo, /uk/ecommerce-seo, /uk/{city}); the
 // rest use the global commerce/service pages until UK versions ship.
 
-const GB_SOLUTIONS = [
+const GB_SOLUTIONS_CORE = [
   { icon: Layers,        label: 'Omnichannel Commerce',      href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
   { icon: Store,         label: 'B2B E-Commerce',            href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',    href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: Search,        label: 'E-Commerce Consulting',     href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+] as const;
+
+const GB_SOLUTIONS_MARKETPLACES = [
+  { icon: ShoppingBag,   label: 'Amazon Agency',             href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
+  { icon: Mic,           label: 'TikTok Shop Agency',        href: '/services/tiktok-shop-agency',    desc: 'Ads, affiliates & LIVE selling' },
+  { icon: Package,       label: 'Walmart Marketplace Agency',href: '/services/walmart-marketplace-agency', desc: 'Approval, WFS & Connect ads' },
+] as const;
+
+const GB_SOLUTIONS_GROWTH = [
   { icon: Bot,           label: 'Commerce AI Agents',        href: '/services/ai-agent-development',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility', href: '/uk/ecommerce-seo',               desc: 'Google, AI answers & marketplaces' },
-  { icon: Search,        label: 'E-Commerce Consulting',     href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+  { icon: ShoppingBag,   label: 'Shopify & Shopify Plus',    href: '/uk/shopify-development',         desc: 'DTC + B2B on one store' },
+] as const;
+
+const GB_SOLUTIONS = [
+  ...GB_SOLUTIONS_CORE,
+  ...GB_SOLUTIONS_MARKETPLACES,
+  ...GB_SOLUTIONS_GROWTH,
 ] as const;
 
 const GB_PLATFORMS = [
@@ -511,6 +538,9 @@ export default function SiteHeader({
   // the simpler Services + Locations layout.
   const isCommerce = locale === 'us' || locale === 'gb';
   const SOLUTIONS   = locale === 'gb' ? GB_SOLUTIONS          : US_SOLUTIONS;
+  const SOLUTIONS_CORE = locale === 'gb' ? GB_SOLUTIONS_CORE : US_SOLUTIONS_CORE;
+  const SOLUTIONS_MARKETPLACES = locale === 'gb' ? GB_SOLUTIONS_MARKETPLACES : US_SOLUTIONS_MARKETPLACES;
+  const SOLUTIONS_GROWTH = locale === 'gb' ? GB_SOLUTIONS_GROWTH : US_SOLUTIONS_GROWTH;
   const PLATFORMS   = locale === 'gb' ? GB_PLATFORMS          : US_PLATFORMS;
   const SUPPORT     = locale === 'gb' ? GB_SUPPORT_SERVICES   : US_SUPPORT_SERVICES;
   const WHO_TYPES   = locale === 'gb' ? GB_WHO_WE_SERVE_TYPES : US_WHO_WE_SERVE_TYPES;
@@ -878,39 +908,56 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'solutions' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className="w-[760px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                          <div className="grid grid-cols-[1fr_1fr_220px]">
+                        <div className="w-[1040px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="grid grid-cols-[1fr_1fr_1fr_250px]">
+                            {/* Column 1: Core & B2B Commerce */}
                             <div className="p-4">
-                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Commerce solutions</p>
-                              {SOLUTIONS.slice(0, 3).map((s) => (
-                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                              ))}
+                              <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Core &amp; B2B Commerce</p>
+                              <div className="space-y-0.5">
+                                {SOLUTIONS_CORE.map((s) => (
+                                  <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
                             </div>
+                            {/* Column 2: Marketplaces & Retail */}
                             <div className="border-l border-fj-neutral-100 p-4">
-                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">&nbsp;</p>
-                              {SOLUTIONS.slice(3).map((s) => (
-                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                              ))}
+                              <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Marketplaces &amp; Retail</p>
+                              <div className="space-y-0.5">
+                                {SOLUTIONS_MARKETPLACES.map((s) => (
+                                  <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
                             </div>
-                            <div className="flex flex-col justify-between rounded-r-2xl p-5" style={{ background: 'linear-gradient(145deg, #F05A28 0%, #c44820 100%)' }}>
+                            {/* Column 3: Growth & AI Tools */}
+                            <div className="border-l border-fj-neutral-100 p-4">
+                              <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Growth &amp; AI Tools</p>
+                              <div className="space-y-0.5">
+                                {SOLUTIONS_GROWTH.map((s) => (
+                                  <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                                ))}
+                              </div>
+                            </div>
+                            {/* Column 4: Enterprise Showcase Panel */}
+                            <div className="flex flex-col justify-between rounded-r-2xl p-5" style={{ background: 'linear-gradient(145deg, #141414 0%, #1c1c22 100%)' }}>
                               <div>
-                                <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/60">Why FactoryJet</p>
-                                <p className="font-fj-display text-[19px] font-semibold leading-tight text-white">{cfg.featuredHeadline}</p>
-                                <p className="mt-2 font-fj-body text-[12px] leading-relaxed text-white/75">{cfg.featuredBody}</p>
-                                <ul className="mt-4 space-y-2">
-                                  {cfg.featuredStats.map((item) => (
+                                <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-0.5 font-fj-mono text-[9.5px] font-bold uppercase tracking-[0.15em] text-[#FF5622]">
+                                  Enterprise Commerce
+                                </div>
+                                <p className="mt-2.5 font-fj-display text-[17px] font-semibold leading-tight text-white">One system, every channel</p>
+                                <p className="mt-2 font-fj-body text-[11.5px] leading-relaxed text-white/70">One catalog, inventory, and order engine across your DTC store, marketplaces, and B2B portals.</p>
+                                <ul className="mt-3.5 space-y-1.5">
+                                  {['DTC + B2B unified stack', 'Zero-downtime cutover guarantee', 'Full code & data ownership'].map((item) => (
                                     <li key={item} className="flex items-center gap-2">
-                                      <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-white/20">
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true"><path d="M1 3L3 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                      <span className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#FF5622]/20 text-[#FF5622]">
+                                        <svg width="7" height="5" viewBox="0 0 8 6" fill="none" aria-hidden="true"><path d="M1 3L3 5L7 1" stroke="#FF5622" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                       </span>
-                                      <span className="font-fj-body text-[11.5px] text-white/85">{item}</span>
+                                      <span className="font-fj-body text-[11px] text-white/85">{item}</span>
                                     </li>
                                   ))}
                                 </ul>
                               </div>
-                              <Link href={cfg.featuredCtaHref} className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white">
-                                {cfg.featuredCtaLabel}
-                                <ArrowRight size={13} strokeWidth={2} />
+                              <Link href="/replatforming" className="mt-4 flex items-center gap-1.5 font-fj-body text-[12px] font-semibold text-[#FF5622] transition-opacity hover:opacity-85">
+                                Explore Replatforming Hub <ArrowRight size={12} strokeWidth={2} />
                               </Link>
                             </div>
                           </div>
@@ -927,7 +974,7 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'aiagents' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className="w-[820px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="w-[840px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                           <div className="grid grid-cols-[1.1fr_260px]">
                             <div className="p-4">
                               <div className="flex items-center justify-between mb-2 px-1">
@@ -985,7 +1032,7 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'platforms' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className="w-[760px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="w-[840px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                           <div className="grid grid-cols-[1fr_260px]">
                             <div className="p-4">
                               <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Platforms we build on</p>
@@ -1039,8 +1086,8 @@ export default function SiteHeader({
                     </button>
                     {openDropdown === 'services' && (
                       <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
-                        <div className={`${locale === 'us' ? 'w-[880px]' : 'w-[620px]'} max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5`}>
-                          <div className={locale === 'us' ? 'grid grid-cols-[1fr_300px]' : ''}>
+                        <div className={`${locale === 'us' ? 'w-[920px]' : 'w-[620px]'} max-w-[calc(100vw-2rem)] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5`}>
+                          <div className={locale === 'us' ? 'grid grid-cols-[1fr_320px]' : ''}>
                             <div className="p-4">
                               <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Supporting services</p>
                               <div className="grid grid-cols-2 gap-x-2">
@@ -1053,24 +1100,24 @@ export default function SiteHeader({
                             {/* SEO & AI Search column, US only; the UK SEO spokes live under /uk. */}
                             {locale === 'us' && (
                               <div className="border-l border-fj-neutral-100 p-4" style={{ backgroundColor: '#FFFDFB' }}>
-                                <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                                <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                                   SEO &amp; AI Search
                                 </p>
 
                                 {/* SEO hub card */}
                                 <Link
                                   href={US_SEO_HUB_HREF}
-                                  className="group mb-2.5 flex items-center gap-3 rounded-xl border border-[#F3C9B6] p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
+                                  className="group mb-2 flex items-center gap-3 rounded-xl border border-[#F3C9B6] p-2.5 transition-all hover:border-[#F05A28] hover:shadow-sm"
                                   style={{ background: 'linear-gradient(135deg,#FCEEE8,#FFF6F1)' }}
                                 >
-                                  <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#B23E13] text-white">
-                                    <TrendingUp size={17} strokeWidth={1.8} />
+                                  <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#B23E13] text-white">
+                                    <TrendingUp size={15} strokeWidth={1.8} />
                                   </span>
                                   <span className="flex flex-1 flex-col">
-                                    <span className="font-fj-body text-[13.5px] font-semibold text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                    <span className="font-fj-body text-[13px] font-semibold text-fj-ink transition-colors group-hover:text-[#F05A28]">
                                       SEO Services
                                     </span>
-                                    <span className="font-fj-body text-[11px] leading-snug text-fj-neutral-500">
+                                    <span className="font-fj-body text-[10.5px] leading-snug text-fj-neutral-500">
                                       Rank on Google and get cited by AI
                                     </span>
                                   </span>
@@ -1084,22 +1131,20 @@ export default function SiteHeader({
                                 </div>
 
                                 {/* Industry verticals */}
-                                <p className="mb-1.5 mt-3 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                                <p className="mb-1 mt-2.5 font-fj-mono text-[9px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-400">
                                   By industry
                                 </p>
-                                <ul className="space-y-0.5">
+                                <div className="grid grid-cols-3 gap-1">
                                   {US_INDUSTRY_SEO.map((s) => (
-                                    <li key={s.href}>
-                                      <Link
-                                        href={s.href}
-                                        className="block rounded-md px-2 py-1.5 font-fj-body text-[12.5px] font-medium leading-tight text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#B23E13]"
-                                      >
-                                        {s.label}
-                                        <span className="block font-normal text-[11px] text-fj-neutral-400">{s.desc}</span>
-                                      </Link>
-                                    </li>
+                                    <Link
+                                      key={s.href}
+                                      href={s.href}
+                                      className="rounded-md bg-fj-neutral-100/70 px-2 py-1 text-center font-fj-body text-[11px] font-medium leading-tight text-fj-ink transition-colors hover:bg-[#F05A28]/10 hover:text-[#B23E13]"
+                                    >
+                                      {s.label.replace(' SEO', '')}
+                                    </Link>
                                   ))}
-                                </ul>
+                                </div>
                               </div>
                             )}
                           </div>
@@ -1138,18 +1183,18 @@ export default function SiteHeader({
                       onMouseLeave={scheduleClosed}
                       role="menu"
                     >
-                      <div className="w-[820px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                        <div className="grid grid-cols-[1fr_1fr_220px]">
+                      <div className="w-[860px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[1fr_1fr_240px]">
 
                           {/* By Business Type */}
-                          <div className="p-5">
-                            <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By business type</p>
+                          <div className="p-4">
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By business type</p>
                             <div className="space-y-0.5">
                               {WHO_TYPES.map((item) => (
                                 <Link
                                   key={item.href}
                                   href={item.href}
-                                  className="group flex flex-col rounded-lg px-2.5 py-2 transition-colors hover:bg-[#F05A28]/5"
+                                  className="group flex flex-col rounded-lg px-2.5 py-1.5 transition-colors hover:bg-[#F05A28]/5"
                                 >
                                   <span className="font-fj-body text-[13px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
                                     {item.label}
@@ -1163,14 +1208,14 @@ export default function SiteHeader({
                           </div>
 
                           {/* By What You Need */}
-                          <div className="border-l border-fj-neutral-100 p-5">
-                            <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By what you need</p>
-                            <div className="space-y-1">
+                          <div className="border-l border-fj-neutral-100 p-4">
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By what you need</p>
+                            <div className="space-y-0.5">
                               {WHO_NEEDS.map((item) => (
                                 <Link
                                   key={item.href}
                                   href={item.href}
-                                  className="group flex flex-col rounded-lg border border-transparent px-2.5 py-2.5 transition-all hover:border-fj-neutral-200 hover:bg-[#F05A28]/5"
+                                  className="group flex flex-col rounded-lg border border-transparent px-2.5 py-2 transition-all hover:border-fj-neutral-200 hover:bg-[#F05A28]/5"
                                 >
                                   <span className="font-fj-body text-[13px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
                                     {item.label}
@@ -1378,7 +1423,7 @@ export default function SiteHeader({
                       onMouseLeave={scheduleClosed}
                       role="menu"
                     >
-                      <div className="w-[280px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                      <div className="w-[280px] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                         <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                           Resources
                         </p>
@@ -1418,7 +1463,7 @@ export default function SiteHeader({
                       onMouseLeave={scheduleClosed}
                       role="menu"
                     >
-                      <div className="w-[260px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                      <div className="w-[260px] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                         <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                           Resources
                         </p>
@@ -1461,14 +1506,14 @@ export default function SiteHeader({
                       onMouseLeave={scheduleClosed}
                       role="menu"
                     >
-                      <div className="w-[220px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                      <div className="w-[230px] max-h-[calc(100vh-90px)] overflow-y-auto rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                         <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                           Company
                         </p>
                         <div className="space-y-0.5">
-                          <ServiceCard icon={Globe} label="About FactoryJet" href="/about" desc="Our story and team" />
-                          <ServiceCard icon={FileText} label="Case Studies" href="/case-studies" desc="Real client results" />
-                          <ServiceCard icon={MessageSquare} label="Contact" href="/contact" desc="Talk to us today" />
+                          <ServiceCard icon={Globe} label="About FactoryJet" href="/about" desc="Our team & mission" />
+                          <ServiceCard icon={Zap} label="Pricing & Retainers" href="/pricing" desc="Transparent fixed tiers" />
+                          <ServiceCard icon={MessageSquare} label="Contact Us" href="/contact" desc="Talk to leadership" />
                         </div>
                       </div>
                     </div>

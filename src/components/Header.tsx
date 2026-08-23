@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
       label: 'Resources', href: '#', hasDropdown: true, isRoute: false,
       submenu: [
         { label: 'Blogs', href: '/blog', icon: FileText, desc: 'Latest insights & trends', isRoute: true },
-        { label: 'Case Studies', href: '/case', icon: BookOpen, desc: 'Real client success stories', isRoute: true },
+        { label: 'Case Studies', href: '/case-studies', icon: BookOpen, desc: 'Real client success stories', isRoute: true },
       ]
     },
   ] : basePath ? [
@@ -124,7 +124,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
       label: 'Resources', href: '#', hasDropdown: true, isRoute: false,
       submenu: [
         { label: 'Blogs', href: '/blog', icon: FileText, desc: 'Latest insights & trends', isRoute: true },
-        { label: 'Case Studies', href: '/case', icon: BookOpen, desc: 'Real client success stories', isRoute: true },
+        { label: 'Case Studies', href: '/case-studies', icon: BookOpen, desc: 'Real client success stories', isRoute: true },
       ]
     },
     { label: 'Contact Us', href: '/contact', hasDropdown: false, isRoute: true }
