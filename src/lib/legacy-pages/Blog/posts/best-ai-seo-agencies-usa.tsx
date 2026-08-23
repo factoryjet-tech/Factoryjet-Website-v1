@@ -204,8 +204,35 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Where FactoryJet actually stands, in numbers</h2>
       <p className="mb-4">Putting yourself first on your own list is cheap unless you show the weak spots too, so here they are. FactoryJet has 63 referring domains, measured 08/17/2026, and a fair number of those are scraper sites we never earned. Agencies elsewhere on this page run into the thousands. Authority is our binding constraint and it is why we compete on low-competition long-tail terms and on how the work is delivered, rather than on brute domain strength.</p>
-      <p className="mb-4">Our strongest US positions today are tenth for local seo nashville and eighth for seo agency austin texas. That is it. We have no case-study numbers to wave at you yet, and we are not going to invent any. What we do have is a delivery model most of this list cannot match at this size: the founder runs your account, you get citation counts per AI engine rather than a rankings PDF, and terms are month to month.</p>
       <p className="mb-4">If that trade appeals, the details live on our <a href="/services/ai-seo" className="text-orange-600 underline">US AI SEO services page</a>, which covers generative engine optimization and answer engine optimization on one retainer. If it does not, hire the incumbent, and go in knowing exactly what you bought.</p>
+
+      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          // Executive Search Diagnostic &amp; AI Citation Audit
+        </p>
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
+          Get a Live Citation Breakdown Across ChatGPT, Perplexity &amp; Google AI
+        </h3>
+        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
+          Find out whether generative engines cite your business or recommend your competitors. Schedule a direct 30-minute scoping call with founder Bhavesh Barot. We present your live entity footprint and concrete steps to get quoted.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+          >
+            Schedule 30-Min AI SEO Call →
+          </a>
+          <a
+            href="/services/ai-seo"
+            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            Explore AI SEO &amp; GEO Retainers
+          </a>
+        </div>
+      </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How much do AI SEO agencies cost in the US?</h2>
       <p className="mb-4">We are not going to invent numbers, because almost none of these agencies publish them, and a made-up range helps no one. Instead, here is how US AI SEO pricing actually works, and the three models you will encounter:</p>

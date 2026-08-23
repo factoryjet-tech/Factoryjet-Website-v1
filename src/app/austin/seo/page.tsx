@@ -34,14 +34,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'Austin SEO Company | Local SEO Services TX | FactoryJet',
+  title: 'Austin SEO Company & Agency | No-Contract Local & Technical SEO TX | FactoryJet',
   description:
-    'FactoryJet is an Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and an Austin SEO consultant who talks to you directly. Free audit, no long-term contract.',
+    'Ranked Top Austin SEO Company & Agency. No-contract local SEO, Google Map Pack rankings, AI answer citations & senior engineering technical SEO for Austin TX businesses. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Austin SEO Company | Local SEO Services TX | FactoryJet',
+    title: 'Austin SEO Company & Agency | No-Contract Local SEO TX | FactoryJet',
     description:
-      'Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and a consultant who talks to you directly. Free audit, no long-term contract.',
+      'Austin SEO company and agency built for the most crowded market in Texas. No-contract local SEO, technical SEO, and an engineer who talks to you directly. Free audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -319,7 +319,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/austin/seo#webpage',
       url: 'https://factoryjet.com/austin/seo',
       // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
+      dateModified: '2026-08-23',
       isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

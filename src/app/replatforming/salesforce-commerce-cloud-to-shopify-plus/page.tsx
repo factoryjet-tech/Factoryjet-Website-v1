@@ -6,6 +6,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -335,6 +336,16 @@ export default function SFCCToShopifyPlusPage() {
             </div>
           </div>
         </section>
+
+        <EnterpriseArchitectureBlueprint
+          badge="// SFCC ENTERPRISE MIGRATION BLUEPRINT"
+          title="Zero-Downtime Migration from Salesforce Commerce Cloud to Shopify Plus"
+          subtitle="How we replace SiteGenesis/SFRA cartridges, rebuild OCAPI pipelines, and route ERP/OMS data through sub-150ms idempotent event queues."
+          legacySource="SFCC / Demandware"
+          targetStack="Shopify Plus Enterprise Architecture"
+          ctaLabel="Schedule SFCC Architecture Review"
+          region="us"
+        />
 
         <section className="pp-sec tint">
           <div className="pp-wrap">

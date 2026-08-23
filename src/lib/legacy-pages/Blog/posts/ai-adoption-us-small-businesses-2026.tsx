@@ -221,21 +221,32 @@ export const post: BlogPost = {
         single-tool experimentation to multi-tool integration happened between late 2024 and mid-2025.
       </p>
 
-      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8">
-        <p className="font-semibold text-orange-900 mb-2">
-          Find out whether AI already recommends your competitors
+      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          // Executive Diagnostic &amp; Architecture Scoping
         </p>
-        <p className="text-orange-800 mb-3">
-          Most small businesses have never seen what ChatGPT, Perplexity, or Google&rsquo;s AI answers say when
-          someone asks for a company like theirs. Our free checker runs the scan and shows you your visibility
-          score, which businesses get named instead of you, and what to fix first. It takes about a minute.
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
+          Deploy Production AI Agents Across Your Commerce &amp; Ops Stack
+        </h3>
+        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
+          Moving from one-off chatbot experiments to autonomous AI workflows? We build custom AI customer support agents, automated RFQ quoting engines, and ERP sync pipelines with guaranteed SLAs. Schedule a direct 30-minute scoping call with founder Bhavesh Barot.
         </p>
-        <a
-          href="/ai-visibility-checker"
-          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
-        >
-          Run the free AI visibility check →
-        </a>
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+          >
+            Schedule 30-Min Architecture Call →
+          </a>
+          <a
+            href="/services/ai-agent-development"
+            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            Explore AI Agent Framework
+          </a>
+        </div>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">

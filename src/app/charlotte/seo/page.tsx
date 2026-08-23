@@ -38,14 +38,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/charlotte/seo';
 
 export const metadata: Metadata = {
-  title: 'Charlotte SEO Company | Local SEO Services NC | FactoryJet',
+  title: 'Charlotte SEO Company & Agency | Affordable & Local SEO Services NC | FactoryJet',
   description:
-    'FactoryJet is a Charlotte SEO company that gets local businesses into the Google Map Pack and "near me" results. Local SEO, GBP optimization, and technical SEO. Free audit, no long-term contracts.',
+    'Ranked Top Charlotte SEO Company & Agency. Affordable local SEO, Google Business Profile Map Pack optimization & technical SEO for Charlotte NC businesses. Free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Charlotte SEO Company | Local SEO Services NC | FactoryJet',
+    title: 'Charlotte SEO Company & Agency | Affordable Local SEO NC | FactoryJet',
     description:
-      'Charlotte SEO company. Map Pack optimization, local SEO services, and technical SEO for Charlotte, NC businesses. Free audit, no lock-in.',
+      'Charlotte SEO company. Map Pack optimization, affordable local SEO services, and technical SEO for Charlotte, NC businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',

@@ -38,12 +38,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
-  title: 'Sioux Falls SEO Company | Local SEO Services | FactoryJet',
+  title: 'Sioux Falls SEO Company & Agency | Local Search & AI Visibility SD | FactoryJet',
   description:
-    'FactoryJet is a Sioux Falls SEO company that wins the Map Pack, organic rankings, and AI answers for Sioux Empire businesses. Local SEO services in Sioux Falls, Brandon, Harrisburg, and Tea. Free SEO audit, month-to-month, built by senior engineers.',
+    'Ranked Top Sioux Falls SEO Company & Agency. Dominate the Google 3-Pack, organic SERPs & AI Overviews for Sioux Empire businesses in Sioux Falls, Brandon & Harrisburg SD. Free audit, month-to-month, built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Sioux Falls SEO Company | Local SEO Services | FactoryJet',
+    title: 'Sioux Falls SEO Company & Agency | Local Search SD | FactoryJet',
     description:
       'Sioux Falls SEO company for the whole Sioux Empire: Map Pack, organic, and AI answers in one compounding plan. Free SEO audit, month-to-month, senior engineers, founder-led.',
     url: CANONICAL,
@@ -369,7 +369,7 @@ const LINK_STYLE = { color: '#B23E13', fontWeight: 600, textDecoration: 'underli
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  dateModified: '2026-08-04',
+  dateModified: '2026-08-23',
   name: 'Sioux Falls SEO Company | Local SEO Services in Sioux Falls, SD',
   url: CANONICAL,
   description:

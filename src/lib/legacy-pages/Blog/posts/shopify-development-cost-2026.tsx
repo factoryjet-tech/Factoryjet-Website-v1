@@ -294,6 +294,34 @@ export const post: BlogPost = {
         custom checkout, performance-optimized architecture): $20,000 to $100,000+.
       </p>
 
+      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          // Executive Commerce Scoping &amp; Feasibility
+        </p>
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
+          Planning a Custom Shopify Build or Enterprise Replatform?
+        </h3>
+        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
+          Avoid scope creep, unmaintained app dependencies, and bloated agency retainers. Schedule a direct 30-minute discovery call with founder Bhavesh Barot. We map custom integrations, ERP sync requirements, and exact development milestones upfront.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+          >
+            Schedule 30-Min Shopify Scoping →
+          </a>
+          <a
+            href="/services/shopify-development"
+            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            Explore Shopify Development Services
+          </a>
+        </div>
+      </div>
+
       <h3 className="text-xl font-bold mt-6 mb-3">4. Apps and Ongoing Costs (Monthly)</h3>
       <p className="mb-4">
         This is the category that surprises most store owners after launch. Some common apps and

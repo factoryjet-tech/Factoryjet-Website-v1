@@ -14,12 +14,12 @@ const CANONICAL = 'https://factoryjet.com/lakewood-ranch/seo';
 
 // ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Lakewood Ranch SEO Company | Local SEO Services | FactoryJet',
+  title: 'Lakewood Ranch SEO Company | No-Contract Local SEO & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is an SEO company for Lakewood Ranch, FL businesses across Manatee and Sarasota County. Google map pack rankings, Business Profile management, AI search visibility, and technical SEO. Month-to-month, senior engineers, free audit.',
+    'Ranked Top Lakewood Ranch FL SEO Company. No-contract local SEO, Google Map Pack rankings, AI search optimization & technical audits for Manatee & Sarasota businesses. Free 30-min strategy call.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Lakewood Ranch FL SEO Company | FactoryJet',
+    title: 'Lakewood Ranch SEO Company | No-Contract Local SEO FL | FactoryJet',
     description:
       'Local SEO for Lakewood Ranch, FL. Most of the community carries a Bradenton or Sarasota address while everyone searches for "Lakewood Ranch". We fix that gap, then build the rankings around it.',
     url: CANONICAL,
@@ -327,7 +327,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/lakewood-ranch/seo#webpage',
       url: 'https://factoryjet.com/lakewood-ranch/seo',
       // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
+      dateModified: '2026-08-23',
       isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

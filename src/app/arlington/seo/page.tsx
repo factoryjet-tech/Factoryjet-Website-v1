@@ -24,12 +24,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/arlington/seo';
 
 export const metadata: Metadata = {
-  title: 'Arlington TX SEO Company | Local SEO Services | FactoryJet',
+  title: 'Arlington TX SEO Company & Agency | Local SEO Services DFW | FactoryJet',
   description:
-    'FactoryJet is an Arlington TX SEO company that gets DFW businesses into Google\'s local 3-pack and "near me" results. Free audit, month-to-month, built by senior engineers. Serving Arlington, Mansfield, Grand Prairie, and the full DFW metro.',
+    'Ranked Top Arlington TX SEO Company & Agency. Dominate the Google 3-Pack, local organic search & AI Overviews for Arlington, Mansfield & DFW businesses. Free audit, month-to-month.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Arlington TX SEO Company | Local SEO Services | FactoryJet',
+    title: 'Arlington TX SEO Company & Agency | Local SEO Services | FactoryJet',
     description:
       'Arlington TX SEO company that wins the DFW search map. Free audit, month-to-month, senior engineers. Serving the full DFW Metroplex.',
     url: CANONICAL,
@@ -216,7 +216,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/arlington/seo#webpage',
       url: 'https://factoryjet.com/arlington/seo',
       // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
+      dateModified: '2026-08-23',
       isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

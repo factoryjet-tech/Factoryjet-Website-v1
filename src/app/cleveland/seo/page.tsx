@@ -29,12 +29,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/cleveland/seo';
 
 export const metadata: Metadata = {
-  title: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
+  title: 'Cleveland SEO Company & Agency | Local SEO & AI Search Visibility OH | FactoryJet',
   description:
-    'Trusted SEO company in Cleveland, Ohio. Senior SEO experts delivering local search engine optimization, technical SEO & GBP optimization. 500+ businesses served. Free audit, no lock-in contracts.',
+    'Ranked Top Cleveland SEO Company & Agency. Local SEO, technical search architecture, AI answers & Google Business Profile optimization for Ohio businesses. Free audit, no contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
+    title: 'Cleveland SEO Company & Agency | Local SEO OH | FactoryJet',
     description:
       'Top-rated SEO company in Cleveland, Ohio. Local SEO, technical SEO & Google Business Profile optimization for Ohio businesses. 500+ clients served. Free audit, no contracts.',
     url: CANONICAL,
@@ -223,7 +223,7 @@ const jsonLd = {
       url: CANONICAL,
       name: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
       datePublished: '2026-06-06',
-      dateModified: '2026-06-15',
+      dateModified: '2026-08-23',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

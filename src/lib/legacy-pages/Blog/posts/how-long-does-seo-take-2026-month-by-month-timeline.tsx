@@ -256,6 +256,34 @@ export const post: BlogPost = {
         issue blocking progress.
       </p>
 
+      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          // Executive Search Diagnostic &amp; Timeline Review
+        </p>
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
+          Where Does Your Domain Sit on the 3–12 Month Timeline?
+        </h3>
+        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
+          Wondering whether technical crawl debt, entity indexing gaps, or thin content are holding your domain back? Schedule a direct 30-minute discovery call with founder Bhavesh Barot. We walk through your live GSC data, strike-distance keywords, and competitor gap architecture.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+          >
+            Schedule 30-Min Technical SEO Scoping →
+          </a>
+          <a
+            href="/services/seo"
+            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            Explore Technical SEO Services
+          </a>
+        </div>
+      </div>
+
       <h3>Month 3. Content Creation Begins</h3>
       <p>
         Month three is when new content production starts in earnest. The keyword research from

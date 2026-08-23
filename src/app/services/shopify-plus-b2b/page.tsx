@@ -5,7 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -436,16 +436,7 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="b2b-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_shopify_plus_b2b_page"
-              defaultPlatform="magento"
-              defaultTarget="shopify-plus"
-            />
-          </div>
-        </section>
+
 
         {/* ── Use Case & Imagery Section ── */}
         <section className="pp-sec tint">
@@ -595,6 +586,16 @@ export default function ShopifyPlusB2BPage() {
             </div>
           </div>
         </section>
+
+        <EnterpriseArchitectureBlueprint
+          badge="// UNIFIED B2B COMMERCE ARCHITECTURE"
+          title="Enterprise B2B Wholesale & DTC on a Single Modern Commerce Engine"
+          subtitle="How enterprise brands consolidate multiple wholesale stores into one unified Shopify Plus architecture with custom price lists, Net terms, and real-time ERP synchronization."
+          legacySource="Fragmented B2B Stores & Legacy EDI"
+          targetStack="Shopify Plus Native B2B + Real-Time ERP Sync"
+          ctaLabel="Schedule B2B Wholesale Architecture Review"
+          region="us"
+        />
 
         {/* ── FAQ ── */}
         <section className="pp-sec pp-faqsec tint">

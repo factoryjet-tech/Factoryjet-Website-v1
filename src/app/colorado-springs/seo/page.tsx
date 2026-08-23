@@ -23,14 +23,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/colorado-springs/seo';
 
 export const metadata: Metadata = {
-  title: 'Colorado Springs SEO Company | Local SEO | FactoryJet',
+  title: 'Colorado Springs SEO Company | Local SEO & HVAC Search Specialists | FactoryJet',
   description:
-    'Colorado Springs SEO company for aerospace, military, home services, and local businesses. Map Pack dominance, neighborhood targeting, and 10 years of precision SEO. Free audit.',
+    'Ranked Top Colorado Springs SEO Company. Dominate Google Map Pack rankings & local organic search for Colorado Springs HVAC, contractors, aerospace & local businesses. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Colorado Springs SEO Company | Local SEO | FactoryJet',
+    title: 'Colorado Springs SEO Company | Local SEO Specialists | FactoryJet',
     description:
-      'Colorado Springs SEO company for aerospace, military, home services, and local businesses. Map Pack dominance, neighborhood targeting, and 10 years of precision SEO. Free audit.',
+      'Colorado Springs SEO company for HVAC, contractors, aerospace, and local businesses. Map Pack dominance, neighborhood targeting, and senior engineering SEO. Free audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -188,7 +188,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/colorado-springs/seo#webpage',
       url: 'https://factoryjet.com/colorado-springs/seo',
       // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
+      dateModified: '2026-08-23',
       isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

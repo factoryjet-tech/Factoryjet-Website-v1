@@ -4,7 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -458,16 +458,7 @@ export default function SuiteCommerceToShopifyPage() {
           </div>
         </section>
 
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="suitecommerce-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_suitecommerce_to_shopify_page"
-              defaultPlatform="magento"
-              defaultTarget="shopify-plus"
-            />
-          </div>
-        </section>
+
 
         {/* ── Data Pipeline Technical Deep-Dive ── */}
         <section className="pp-sec tint">
@@ -523,7 +514,16 @@ export default function SuiteCommerceToShopifyPage() {
           </div>
         </section>
 
-        
+        <EnterpriseArchitectureBlueprint
+          badge="// NETSUITE ERP DATA PIPELINE BLUEPRINT"
+          title="High-Throughput NetSuite ERP & Shopify Plus Architecture"
+          subtitle="How enterprise brands capture rapid mobile commerce conversion while maintaining NetSuite SuiteTalk REST sync as their financial and operational source of truth."
+          legacySource="NetSuite SuiteCommerce (SCA)"
+          targetStack="Shopify Plus + NetSuite SuiteTalk REST Pipeline"
+          ctaLabel="Schedule NetSuite Architecture Review"
+          region="us"
+        />
+
         {/* ── NetSuite ERP Resilience & Error Handling ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">

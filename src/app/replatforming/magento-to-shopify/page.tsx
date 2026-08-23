@@ -6,6 +6,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -361,6 +362,16 @@ export default function MagentoToShopifyPage() {
             </div>
           </div>
         </section>
+
+        <EnterpriseArchitectureBlueprint
+          badge="// ADOBE COMMERCE MIGRATION BLUEPRINT"
+          title="Enterprise Architecture: Replatforming Magento & Adobe Commerce to Shopify Plus"
+          subtitle="Eliminating server infrastructure debt, PHP patching cycles, and sluggish extension chains with high-throughput Shopify Plus architecture and bi-directional ERP syncing."
+          legacySource="Adobe Commerce / Magento 2"
+          targetStack="Shopify Plus Modern Architecture"
+          ctaLabel="Schedule Adobe Commerce Replatforming Review"
+          region="us"
+        />
 
         <section className="pp-sec">
           <div className="pp-wrap">
