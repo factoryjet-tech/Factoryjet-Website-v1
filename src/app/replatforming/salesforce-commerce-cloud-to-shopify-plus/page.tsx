@@ -309,13 +309,13 @@ export default function SFCCToShopifyPlusPage() {
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (No Obstructing Overlays) */}
-              <div className="rv-curved-frame-1" style={{ position: 'relative', width: '100%', minHeight: '440px', background: '#F6F6F9', border: '1px solid #E6E6EC', boxShadow: '0 24px 56px rgba(0,0,0,0.06)' }}>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/shared/factoryjet-senior-engineer.webp"
                   alt="FactoryJet senior commerce architect analyzing enterprise migration pipelines"
                   width={640}
-                  height={520}
+                  height={640}
                   priority
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
@@ -354,13 +354,13 @@ export default function SFCCToShopifyPlusPage() {
           <div className="pp-wrap">
             <div className="rv-about-grid">
               
-              {/* Left Column: Clean Organic Curved Photo Frame (No Obstructing Overlays) */}
-              <div className="rv-curved-frame-2" style={{ position: 'relative', width: '100%', minHeight: '480px', background: '#F6F6F9', border: '1px solid #E6E6EC', boxShadow: '0 24px 56px rgba(0,0,0,0.06)' }}>
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
                   alt="FactoryJet engineering leadership conducting enterprise architecture audit"
                   width={640}
-                  height={560}
+                  height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
