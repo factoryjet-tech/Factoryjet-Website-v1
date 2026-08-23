@@ -294,7 +294,7 @@ export default function SiteFooter({
               ))}
             </ul>
             <span className={`font-fj-body text-[13px] ${taglineClass}`}>
-              &ldquo;Highly Recommended&rdquo;, SoftwareSuggest Winter 2025.
+              Verified enterprise technology &amp; commerce engineering partner.
             </span>
           </div>
         )}

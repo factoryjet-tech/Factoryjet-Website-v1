@@ -1,9 +1,8 @@
-import { RECOGNITION_PROFILES, RECOGNITION_AWARD } from '@/data/recognitionProfiles';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 
 /**
  * RecognitionStrip — "Recognized on" third-party trust strip for the dark UK
- * footers (#0A0F1C / #111827). Verified directory profiles + the SoftwareSuggest
- * award; NO review-count/rating claims (profiles have no collected reviews yet).
+ * footers (#0A0F1C / #111827). Verified directory profiles; NO review-count/rating claims.
  *
  * Inline-styled to match the UK footers' dark palette. Pure presentational
  * component (no hooks) — safe to render inside the "use client" UK footers.
@@ -51,13 +50,6 @@ export default function RecognitionStrip() {
           </li>
         ))}
       </ul>
-      <p style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-sans)', fontSize: 13, marginTop: 14 }}>
-        Awarded{' '}
-        <span style={{ fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>
-          &ldquo;{RECOGNITION_AWARD.label}&rdquo;
-        </span>{' '}
-        by {RECOGNITION_AWARD.source}, {RECOGNITION_AWARD.period}.
-      </p>
     </div>
   );
 }

@@ -16,10 +16,3 @@ export const RECOGNITION_PROFILES: ReadonlyArray<RecognitionProfile> = [
   { label: 'SoftwareSuggest', href: 'https://www.softwaresuggest.com/factoryjet' },
   { label: 'Crunchbase',      href: 'https://www.crunchbase.com/organization/factoryjet' },
 ];
-
-export const RECOGNITION_AWARD = {
-  source: 'SoftwareSuggest',
-  label: 'Highly Recommended',
-  period: 'Winter 2025',
-  href: 'https://www.softwaresuggest.com/factoryjet',
-} as const;
