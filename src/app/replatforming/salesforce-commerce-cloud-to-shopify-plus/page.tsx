@@ -351,21 +351,88 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX 2x2 BENTO STAT COUNTER GRID ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
-            <div className="rv-stat-grid">
-              {STAT_CARDS.map((s) => (
-                <div className="rv-stat-card" key={s.num}>
-                  <div>
-                    <div className="rv-stat-icon">
-                      <span style={{ fontSize: '18px' }}>{s.icon}</span>
-                    </div>
-                    <div className="rv-stat-num">{s.num}</div>
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Organic Curved Image Visual Frame */}
+              <div className="rv-curved-frame-2" style={{ background: 'linear-gradient(135deg, #FFF0EB 0%, #FFF8F5 50%, #FAF7F2 100%)', border: '1px solid #F0DFD8', padding: '36px 32px', minHeight: '440px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 24px 48px rgba(240, 90, 40, 0.06)' }}>
+                <div>
+                  <div className="rv-badge" style={{ background: '#FFFFFF', marginBottom: '16px' }}>
+                    <span className="rv-badge-icon">⚡</span>
+                    <span>Direct Founder Engagement</span>
                   </div>
-                  <p className="rv-stat-desc">{s.desc}</p>
+                  <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', lineHeight: 1.2, margin: '0 0 14px' }}>
+                    Engineered by Architects, Not Sales Reps
+                  </h3>
+                  <p style={{ color: '#494852', fontSize: '15px', lineHeight: 1.6, margin: 0 }}>
+                    Every replatforming project is led directly by founder Bhavesh Barot. We audit your legacy custom cartridges, map complex data models, and engineer high-throughput ERP pipelines before any contract is signed.
+                  </p>
                 </div>
-              ))}
+
+                <div style={{ background: '#FFFFFF', borderRadius: '14px', border: '1px solid #EAEAEA', padding: '18px 20px', marginTop: '24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#141414' }}>Architecture Parity Score</span>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#10B981', fontFamily: 'var(--pp-mono)' }}>100% VERIFIED</span>
+                  </div>
+                  <div style={{ width: '100%', height: '6px', background: '#F0F0F5', borderRadius: '100px', overflow: 'hidden' }}>
+                    <div style={{ width: '100%', height: '100%', background: 'linear-gradient(90deg, #FF5622, #10B981)', borderRadius: '100px' }} />
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Founder Phone Action */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Who We Are · Enterprise Delivery</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Enterprise Scale with Zero Cutover Disruption
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We are a dedicated team of enterprise commerce architects, systems integrators, and performance engineers dedicated to transforming legacy tech debt into modern revenue growth.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.num}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(26px, 3.5vw, 36px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <p style={{ fontSize: '13px', color: '#6E6E80', margin: '8px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: More About Us / Discovery Call + Call Any Time */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '24px', marginTop: '28px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                  
+                  <a href="tel:+18329988422" className="rv-founder-call-btn">
+                    <div className="rv-call-circle">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: '11px', color: '#8E8E9F', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.05em' }}>Call / Text Any Time</div>
+                      <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>+1 (832) 998-8422</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -422,7 +489,7 @@ export default function SFCCToShopifyPlusPage() {
         <div id="architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// ENTERPRISE MIGRATION BLUEPRINT"
-            title="How Modern Enterprise Commerce Works (In Plain English)"
+            title="How Modern Enterprise Commerce Works"
             subtitle="Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how leading brands move from Salesforce Commerce Cloud to Shopify Plus with zero downtime."
             legacySource="SFCC / Demandware"
             targetStack="Shopify Plus Enterprise Architecture"

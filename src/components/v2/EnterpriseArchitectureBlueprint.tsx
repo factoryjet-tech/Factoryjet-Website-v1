@@ -104,11 +104,11 @@ const SIMULATION_EVENTS: SimulationEvent[] = [
   },
 ];
 
-const AUTO_SCROLL_DURATION = 6000; // 6 seconds per tab
+const AUTO_SCROLL_DURATION = 5000; // 5 seconds per tab
 
 export default function EnterpriseArchitectureBlueprint({
   badge = '// ENTERPRISE ARCHITECTURE BLUEPRINT',
-  title = 'How Modern Enterprise Commerce Works (In Plain English)',
+  title = 'How Modern Enterprise Commerce Works',
   subtitle = 'Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how leading brands move from Salesforce Commerce Cloud to Shopify Plus with zero downtime.',
   legacySource = 'Salesforce Commerce Cloud (SFCC)',
   targetStack = 'Shopify Plus Enterprise Architecture',
@@ -116,52 +116,66 @@ export default function EnterpriseArchitectureBlueprint({
   region = 'us',
 }: EnterpriseArchitectureBlueprintProps) {
   const [activeTab, setActiveTab] = useState<TabType>('layers');
-  const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
   const [activeLayer, setActiveLayer] = useState<number>(1);
-  const [activeEvent, setActiveEvent] = useState<SimulationEvent>(SIMULATION_EVENTS[0]);
+  const [activeEventIndex, setActiveEventIndex] = useState<number>(0);
   const [simStep, setSimStep] = useState(3);
+  const userInteractedRef = useRef(false);
 
-  // Auto-scroll progress timer
+  const activeEvent = SIMULATION_EVENTS[activeEventIndex];
+
+  // Auto-scroll progress timer across tabs
   useEffect(() => {
-    if (isPaused) return;
-
-    const interval = 50; // update every 50ms
-    const stepIncrement = (interval / AUTO_SCROLL_DURATION) * 100;
+    const intervalTime = 50;
+    const stepIncrement = (intervalTime / AUTO_SCROLL_DURATION) * 100;
 
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           // Advance to next tab
-          const currentIndex = TABS.findIndex((t) => t.id === activeTab);
-          const nextIndex = (currentIndex + 1) % TABS.length;
-          setActiveTab(TABS[nextIndex].id);
+          setActiveTab((currTab) => {
+            const currentIndex = TABS.findIndex((t) => t.id === currTab);
+            const nextIndex = (currentIndex + 1) % TABS.length;
+            return TABS[nextIndex].id;
+          });
           return 0;
         }
         return prev + stepIncrement;
       });
-    }, interval);
+    }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [activeTab, isPaused]);
+  }, []);
 
-  // Reset progress when user manually switches tabs
+  // When dataflow tab is active, auto-advance simulation events
+  useEffect(() => {
+    if (activeTab !== 'dataflow') return;
+
+    const eventTimer = setInterval(() => {
+      setActiveEventIndex((prev) => (prev + 1) % SIMULATION_EVENTS.length);
+      setSimStep(1);
+      setTimeout(() => setSimStep(2), 250);
+      setTimeout(() => setSimStep(3), 500);
+    }, 2500);
+
+    return () => clearInterval(eventTimer);
+  }, [activeTab]);
+
+  // When user clicks a tab
   const handleTabClick = (tabId: TabType) => {
     setActiveTab(tabId);
     setProgress(0);
   };
 
-  const runSimulation = (ev: SimulationEvent) => {
-    setActiveEvent(ev);
+  const handleManualEventSelect = (index: number) => {
+    setActiveEventIndex(index);
     setSimStep(1);
-    setTimeout(() => setSimStep(2), 300);
-    setTimeout(() => setSimStep(3), 600);
+    setTimeout(() => setSimStep(2), 250);
+    setTimeout(() => setSimStep(3), 500);
   };
 
   return (
     <section 
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       className="relative overflow-hidden bg-gradient-to-b from-[#FFF9F6] via-[#FAF7F2] to-[#FFFFFF] text-[#1E293B] py-20 md:py-28 font-fj-body border-y border-[#E8DFD8]"
     >
       {/* ── STRIPE-STYLE LUMINOUS MESH GRADIENTS ── */}
@@ -211,9 +225,9 @@ export default function EnterpriseArchitectureBlueprint({
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`group relative p-4 rounded-2xl transition-all duration-300 border text-left overflow-hidden ${
+                  className={`group relative p-4 rounded-2xl transition-all duration-300 border text-left overflow-hidden cursor-pointer ${
                     isActive
-                      ? 'bg-white border-[#F05A28] shadow-[0_10px_25px_rgba(240,90,40,0.12)] ring-1 ring-[#F05A28]/30'
+                      ? 'bg-white border-[#F05A28] shadow-[0_10px_25px_rgba(240,90,40,0.12)] ring-1 ring-[#F05A28]/30 scale-[1.02]'
                       : 'bg-white/70 hover:bg-white border-[#E8E1DA] hover:border-[#D0C6BD]'
                   }`}
                 >
@@ -246,9 +260,12 @@ export default function EnterpriseArchitectureBlueprint({
           </div>
 
           <div className="mt-3 flex items-center justify-center gap-2 text-[11px] text-[#64748B] font-fj-mono">
-            <span>💡 Tabs auto-play every 6s</span>
+            <span className="inline-flex items-center gap-1.5 font-semibold text-[#B23E13]">
+              <span className="h-2 w-2 rounded-full bg-[#FF5622] animate-ping" />
+              Auto-cycling through architecture lenses every 5s
+            </span>
             <span>·</span>
-            <span>Hover anywhere to pause &amp; inspect</span>
+            <span>Click any tab to jump directly</span>
           </div>
         </div>
 
@@ -471,13 +488,13 @@ export default function EnterpriseArchitectureBlueprint({
 
             {/* Clickable Action Buttons */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {SIMULATION_EVENTS.map((ev) => (
+              {SIMULATION_EVENTS.map((ev, idx) => (
                 <button
                   key={ev.id}
-                  onClick={() => runSimulation(ev)}
-                  className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all border ${
-                    activeEvent.id === ev.id
-                      ? 'bg-[#F05A28] border-[#C94A1A] text-white shadow-md shadow-[#F05A28]/25'
+                  onClick={() => handleManualEventSelect(idx)}
+                  className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer ${
+                    activeEventIndex === idx
+                      ? 'bg-[#F05A28] border-[#C94A1A] text-white shadow-md shadow-[#F05A28]/25 scale-[1.03]'
                       : 'bg-[#FAF8F5] border-[#E8DFD8] text-[#334155] hover:border-[#F05A28]/40 hover:bg-white'
                   }`}
                 >

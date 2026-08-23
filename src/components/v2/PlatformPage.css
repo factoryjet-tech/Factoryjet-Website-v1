@@ -359,7 +359,83 @@
   outline: 2px solid var(--pp-orange-dark); outline-offset: 3px; border-radius: 4px;
 }
 
-/* ─── RITOVEX DESIGN SYSTEM SPECIFICATIONS ─────────────────────────────────── */
+/* Organic curved container shapes from Ritovex template */
+.platpage .rv-curved-frame-1 {
+  border-radius: 40px 120px 40px 120px;
+  overflow: hidden;
+  position: relative;
+}
+.platpage .rv-curved-frame-2 {
+  border-radius: 120px 40px 120px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.platpage .rv-about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .platpage .rv-about-grid { grid-template-columns: 1fr; }
+}
+
+.platpage .rv-founder-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none !important;
+  color: #141414 !important;
+  transition: all 0.2s ease;
+}
+.platpage .rv-founder-call-btn:hover {
+  color: #FF5622 !important;
+}
+.platpage .rv-call-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #F6F6F9;
+  border: 1px solid #E6E6EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.platpage .rv-founder-call-btn:hover .rv-call-circle {
+  background-color: #FF5622;
+  border-color: #FF5622;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.platpage .rv-stat-icon-outline {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #E6E6EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: #141414;
+}
+
+.platpage .rv-stat-card-bento {
+  background-color: #F6F6F9;
+  border: 1px solid #EBEBEF;
+  border-radius: 16px;
+  padding: 26px 24px;
+  transition: all 0.3s ease;
+}
+.platpage .rv-stat-card-bento:hover {
+  background-color: #FFFFFF;
+  border-color: #FF5622;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
 .platpage .rv-badge {
   display: inline-flex;
   align-items: center;
