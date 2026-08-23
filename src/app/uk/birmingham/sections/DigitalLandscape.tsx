@@ -1,101 +1,49 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { Landmark, Building2, Users, TrendingUp } from "lucide-react";
 
 type Stat = {
   value: string;
   label: string;
-  ringPct: number;
-  ringColor: string;
-  span2?: boolean;
+  sublabel: string;
+  icon: React.ElementType<{ size?: number; strokeWidth?: number; className?: string }>;
+  trend: string;
 };
 
 const STATS: Stat[] = [
   {
     value: "£31.9bn",
-    label: "Birmingham city region GDP",
-    ringPct: 88,
-    ringColor: "#F05A28",
-    span2: true,
+    label: "City Region GDP",
+    sublabel: "West Midlands economic powerhouse",
+    icon: Landmark,
+    trend: "Tier 1 Metro",
   },
   {
-    value: "60,000",
-    label: "Registered businesses",
-    ringPct: 72,
-    ringColor: "#FF6B35",
+    value: "60,000+",
+    label: "Registered Businesses",
+    sublabel: "Largest commercial base outside London",
+    icon: Building2,
+    trend: "High Growth",
   },
   {
     value: "2.6M+",
-    label: "West Midlands metro population",
-    ringPct: 95,
-    ringColor: "#10B981",
+    label: "Metro Population",
+    sublabel: "Median age 34.4 — native digital adopters",
+    icon: Users,
+    trend: "Youngest UK City",
   },
   {
     value: "£2.9bn+",
-    label: "Active regeneration investment (Paradise + Smithfield)",
-    ringPct: 65,
-    ringColor: "#F05A28",
+    label: "Active Regeneration",
+    sublabel: "Paradise, Smithfield & HS2 Curzon",
+    icon: TrendingUp,
+    trend: "Infrastructure",
   },
 ];
 
-const R = 24;
-const CIRC = 2 * Math.PI * R;
-
 export default function DigitalLandscape() {
   const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      const rings = sectionRef.current?.querySelectorAll<SVGCircleElement>(
-        "circle[data-ring-fill]"
-      );
-
-      if (prefersReduced) {
-        rings?.forEach((ring) => {
-          const pct = Number(ring.dataset.ringFill ?? "100");
-          ring.style.strokeDashoffset = String(CIRC - (CIRC * pct) / 100);
-        });
-        return;
-      }
-
-      rings?.forEach((ring) => {
-        const pct = Number(ring.dataset.ringFill ?? "100");
-        const target = CIRC - (CIRC * pct) / 100;
-        const ringColor =
-          ring.getAttribute("data-ring-color") ?? "#F05A28";
-        gsap.fromTo(
-          ring,
-          { strokeDashoffset: CIRC },
-          {
-            strokeDashoffset: target,
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: ring.closest("[data-stat-card]") as Element,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-        ring.style.stroke = ringColor;
-      });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
 
   return (
     <section
@@ -213,110 +161,60 @@ export default function DigitalLandscape() {
           {/* Bento stats grid */}
           <div className="order-1 lg:order-2">
             <div
-              className="grid gap-5 grid-cols-1 sm:grid-cols-2"
+              className="grid gap-4 grid-cols-1 sm:grid-cols-2"
               role="list"
               aria-label="Birmingham digital statistics"
             >
-              {STATS.map((s) => (
-                <div
-                  key={s.label}
-                  role="listitem"
-                  data-stat-card
-                  className={[
-                    "group relative flex flex-col justify-between overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1",
-                    s.span2 ? "sm:col-span-2" : "",
-                  ].join(" ")}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    border: "1px solid #E2E8F0",
-                    borderRadius: 12,
-                    borderLeft: s.span2
-                      ? `3px solid ${s.ringColor}`
-                      : "1px solid #E2E8F0",
-                    minHeight: 180,
-                    boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow =
-                      "0 4px 12px rgba(0,0,0,0.08)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow =
-                      "0 1px 3px rgba(0,0,0,0.04)";
-                  }}
-                >
-                  <svg
-                    aria-hidden="true"
-                    width="80"
-                    height="80"
-                    viewBox="0 0 64 64"
-                    style={{
-                      position: "absolute",
-                      top: 8,
-                      right: 8,
-                      width: 80,
-                      height: 80,
-                      zIndex: 0,
-                      pointerEvents: "none",
-                    }}
-                  >
-                    <circle
-                      cx="32"
-                      cy="32"
-                      r={R}
-                      fill="none"
-                      stroke="#E2E8F0"
-                      strokeWidth="3"
-                    />
-                    <circle
-                      data-ring-fill={s.ringPct}
-                      data-ring-color={s.ringColor}
-                      cx="32"
-                      cy="32"
-                      r={R}
-                      fill="none"
-                      stroke={s.ringColor}
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      style={{
-                        strokeDasharray: CIRC,
-                        strokeDashoffset: CIRC,
-                        transform: "rotate(-90deg)",
-                        transformOrigin: "32px 32px",
-                      }}
-                    />
-                  </svg>
-
+              {STATS.map((s) => {
+                const Icon = s.icon;
+                return (
                   <div
-                    className="font-clash"
+                    key={s.label}
+                    role="listitem"
+                    className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5622]/40 hover:shadow-xl hover:shadow-[#F05A28]/5"
                     style={{
-                      color: s.ringColor,
-                      fontWeight: 700,
-                      fontSize: s.span2 ? 64 : 56,
-                      lineHeight: 1,
-                      letterSpacing: "-0.02em",
-                      position: "relative",
-                      zIndex: 10,
+                      boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                      minHeight: 180,
                     }}
                   >
-                    {s.value}
+                    {/* Header: Clean Icon Badge + Trend Pill */}
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FEEFEA] border border-[#F3C9B6] text-[#F05A28] transition-transform duration-300 group-hover:scale-105">
+                        <Icon size={18} strokeWidth={2} />
+                      </div>
+                      <span className="inline-flex items-center rounded-full bg-[#F6F6F9] border border-[#E6E6EC] px-2.5 py-0.5 font-fj-mono text-[11px] font-semibold text-[#141414]">
+                        {s.trend}
+                      </span>
+                    </div>
+
+                    {/* Big Number Headline */}
+                    <div>
+                      <div
+                        className="font-clash"
+                        style={{
+                          fontSize: "clamp(30px, 2.5vw, 38px)",
+                          fontWeight: 700,
+                          color: "#F05A28",
+                          lineHeight: 1.1,
+                          letterSpacing: "-0.02em",
+                        }}
+                      >
+                        {s.value}
+                      </div>
+                      <div
+                        className="mt-2 font-fj-body text-[13.5px] font-semibold leading-snug text-[#0A0F1C]"
+                      >
+                        {s.label}
+                      </div>
+                      <p
+                        className="mt-0.5 font-fj-body text-[11.5px] leading-relaxed text-[#6b7280]"
+                      >
+                        {s.sublabel}
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    className="mt-4"
-                    style={{
-                      color: "#6b7280",
-                      fontFamily: "var(--font-sans)",
-                      fontWeight: 400,
-                      fontSize: 14,
-                      letterSpacing: "0.02em",
-                      position: "relative",
-                      zIndex: 10,
-                    }}
-                  >
-                    {s.label}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

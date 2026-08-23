@@ -2,83 +2,50 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { Sparkles, Bot, ShoppingBag, TrendingUp } from "lucide-react";
 
 // ── Bento stat definition ────────────────────────────────────────────────────
 type Stat = {
-  value: string; // headline figure
-  label: string; // caption below
-  // Visual percentage for the decorative progress ring. For "£80.8B" style
-  // stats it's a fixed fill; for "54%" stats it matches the real value.
-  ringPct: number;
-  // Bento sizing — first card spans 2 columns on lg+
-  span2?: boolean;
+  value: string;
+  label: string;
+  sublabel: string;
+  icon: React.ElementType<{ size?: number; strokeWidth?: number; className?: string }>;
+  trend: string;
 };
 
 const STATS: Stat[] = [
-  { value: "£80.8B", label: "UK AI Sector Value",           ringPct: 80, span2: true },
-  { value: "54%",    label: "UK Firms Using AI",            ringPct: 54 },
-  { value: "£265B+", label: "UK E-Commerce Market",         ringPct: 90 },
-  { value: "42%",    label: "UK Searches with AI Overviews", ringPct: 42 },
+  {
+    value: "£80.8B",
+    label: "UK AI Sector Value",
+    sublabel: "Europe's largest AI economy",
+    icon: Sparkles,
+    trend: "+28% YoY",
+  },
+  {
+    value: "54%",
+    label: "UK Firms Using AI",
+    sublabel: "Up from 9% in 2023",
+    icon: Bot,
+    trend: "6x Growth",
+  },
+  {
+    value: "£265B+",
+    label: "UK E-Commerce Market",
+    sublabel: "28% of total UK retail sales",
+    icon: ShoppingBag,
+    trend: "24% Organic",
+  },
+  {
+    value: "42%",
+    label: "UK Searches with AI Overviews",
+    sublabel: "Converts at 4.4x traditional CTR",
+    icon: TrendingUp,
+    trend: "527% Surge",
+  },
 ];
-
-// SVG progress ring constants
-const R = 24;
-const CIRC = 2 * Math.PI * R; // ~150.8
 
 export default function DigitalLandscape() {
   const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      const rings = sectionRef.current?.querySelectorAll<SVGCircleElement>(
-        "circle[data-ring-fill]"
-      );
-
-      if (prefersReduced) {
-        // Reduced-motion: snap rings to their filled state immediately.
-        rings?.forEach((ring) => {
-          const pct = Number(ring.dataset.ringFill ?? "100");
-          ring.style.strokeDashoffset = String(CIRC - (CIRC * pct) / 100);
-        });
-        return;
-      }
-
-      // Progress rings draw on scroll entry
-      rings?.forEach((ring) => {
-        const pct = Number(ring.dataset.ringFill ?? "100");
-        const target = CIRC - (CIRC * pct) / 100;
-        gsap.fromTo(
-          ring,
-          { strokeDashoffset: CIRC },
-          {
-            strokeDashoffset: target,
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: ring.closest("[data-stat-card]") as Element,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
 
   return (
     <section
@@ -241,100 +208,62 @@ export default function DigitalLandscape() {
           </div>
         </div>
 
-        {/* ── Bento stats grid ─────────────────────────────────────────── */}
+        {/* ── 4-Col Bento Stats Grid (Clean, Balanced & Zero Overlap) ── */}
         <div
-          className="mt-20 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           role="list"
           aria-label="UK digital statistics"
         >
-          {STATS.map((s) => (
-            <div
-              key={s.label}
-              role="listitem"
-              data-stat-card
-              className={[
-                "group relative flex flex-col justify-between overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1",
-                s.span2 ? "lg:col-span-2" : "",
-              ].join(" ")}
-              style={{
-                backgroundColor: "#FFFFFF",
-                border: "1px solid #E2E8F0",
-                borderRadius: 12,
-                borderLeft: s.span2 ? "3px solid #F05A28" : "1px solid #E2E8F0",
-                minHeight: 180,
-                boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow =
-                  "0 4px 12px rgba(0,0,0,0.08)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow =
-                  "0 1px 3px rgba(0,0,0,0.04)";
-              }}
-            >
-              {/* Decorative progress ring, top right */}
-              <svg
-                aria-hidden="true"
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                className="absolute right-5 top-5"
-              >
-                {/* Track */}
-                <circle
-                  cx="32"
-                  cy="32"
-                  r={R}
-                  fill="none"
-                  stroke="#E2E8F0"
-                  strokeWidth="3"
-                />
-                {/* Fill, starts hidden (full offset), GSAP draws it in */}
-                <circle
-                  data-ring-fill={s.ringPct}
-                  cx="32"
-                  cy="32"
-                  r={R}
-                  fill="none"
-                  stroke="#F05A28"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  style={{
-                    strokeDasharray: CIRC,
-                    strokeDashoffset: CIRC,
-                    transform: "rotate(-90deg)",
-                    transformOrigin: "32px 32px",
-                  }}
-                />
-              </svg>
-
+          {STATS.map((s) => {
+            const Icon = s.icon;
+            return (
               <div
-                className="font-clash"
+                key={s.label}
+                role="listitem"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5622]/40 hover:shadow-xl hover:shadow-[#F05A28]/5"
                 style={{
-                  color: "#F05A28",
-                  fontWeight: 700,
-                  fontSize: s.span2 ? 64 : 56,
-                  lineHeight: 1,
-                  letterSpacing: "-0.02em",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                  minHeight: 200,
                 }}
               >
-                {s.value}
+                {/* Header: Clean Icon Badge + Trend Pill */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FEEFEA] border border-[#F3C9B6] text-[#F05A28] transition-transform duration-300 group-hover:scale-105">
+                    <Icon size={18} strokeWidth={2} />
+                  </div>
+                  <span className="inline-flex items-center rounded-full bg-[#F6F6F9] border border-[#E6E6EC] px-2.5 py-0.5 font-fj-mono text-[11px] font-semibold text-[#141414]">
+                    {s.trend}
+                  </span>
+                </div>
+
+                {/* Big Number Headline */}
+                <div>
+                  <div
+                    className="font-clash"
+                    style={{
+                      fontSize: "clamp(32px, 2.8vw, 42px)",
+                      fontWeight: 700,
+                      color: "#F05A28",
+                      lineHeight: 1.1,
+                      letterSpacing: "-0.02em",
+                    }}
+                  >
+                    {s.value}
+                  </div>
+                  <div
+                    className="mt-2.5 font-fj-body text-[14px] font-semibold leading-snug text-[#0A0F1C]"
+                  >
+                    {s.label}
+                  </div>
+                  <p
+                    className="mt-1 font-fj-body text-[12px] leading-relaxed text-[#6b7280]"
+                  >
+                    {s.sublabel}
+                  </p>
+                </div>
               </div>
-              <p
-                className="mt-4"
-                style={{
-                  color: "#6b7280",
-                  fontFamily: "var(--font-sans)",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  letterSpacing: "0.02em",
-                }}
-              >
-                {s.label}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* ── Pull quote ────────────────────────────────────────────────── */}
