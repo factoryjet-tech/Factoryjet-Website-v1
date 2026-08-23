@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -304,23 +305,33 @@ export default function SFCCToShopifyPlusPage() {
                 </div>
               </div>
 
-              {/* Right Column Visual Showcase */}
-              <div className="pp-stage" role="img" aria-label="A modern Shopify Plus migration replacing SFCC cartridges, promotions, and ERP integrations.">
-                <div className="pp-store" aria-hidden="true" style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', boxShadow: '0 20px 48px rgba(0,0,0,0.06)' }}>
-                  <div className="bar" style={{ borderBottom: '1px solid #EAEAEA' }}><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>SFCC Cartridges</span><span className="v" style={{ color: '#FF5622' }}>Audited &amp; Replaced</span></div>
-                    <div className="row win"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>Promotions Engine</span><span className="v" style={{ color: '#047857' }}>→ Shopify Functions</span></div>
-                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>Price Books</span><span className="v" style={{ color: '#3B82F6' }}>→ Markets &amp; B2B</span></div>
-                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>NetSuite / SAP ERP</span><span className="v" style={{ color: '#141414' }}>Sub-150ms Event Sync</span></div>
+              {/* Right Column: Ritovex Organic Curved Photo Frame with Live Floating Metric Chips */}
+              <div className="rv-curved-frame-1" style={{ position: 'relative', width: '100%', minHeight: '440px', background: '#F6F6F9', border: '1px solid #E6E6EC', boxShadow: '0 24px 56px rgba(0,0,0,0.08)' }}>
+                <Image
+                  src="/images/us/shared/factoryjet-senior-engineer.webp"
+                  alt="FactoryJet senior commerce architect analyzing enterprise migration pipelines"
+                  width={640}
+                  height={520}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+                
+                {/* Floating Top Badge */}
+                <div style={{ position: 'absolute', top: '16px', left: '16px', background: 'rgba(255, 255, 255, 0.94)', backdropFilter: 'blur(8px)', border: '1px solid #EAEAEA', borderRadius: '100px', padding: '6px 16px', display: 'inline-flex', alignItems: 'center', gap: '8px', boxShadow: '0 8px 20px rgba(0,0,0,0.06)' }}>
+                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#141414', fontFamily: 'var(--pp-mono)' }}>100% SEO Safety Verified</span>
+                </div>
+
+                {/* Floating Bottom Card */}
+                <div style={{ position: 'absolute', bottom: '16px', right: '16px', left: '16px', background: 'rgba(20, 20, 20, 0.88)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '14px', padding: '14px 18px', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', boxShadow: '0 16px 36px rgba(0,0,0,0.2)' }}>
+                  <div>
+                    <div style={{ fontSize: '11px', color: '#FF7A52', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Enterprise Sync Bus</div>
+                    <div style={{ fontSize: '13.5px', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>NetSuite / SAP ERP → Shopify Plus</div>
+                  </div>
+                  <div style={{ background: 'rgba(255,255,255,0.1)', padding: '6px 12px', borderRadius: '8px', fontSize: '12px', fontWeight: 800, color: '#10B981', fontFamily: 'var(--pp-mono)', whiteSpace: 'nowrap' }}>
+                    ⚡ Sub-150ms
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%', background: '#FFFFFF', border: '1px solid #E6E6EC', color: '#141414' }} aria-hidden="true">
-                  <span className="d" style={{ background: '#FF5622' }} />SiteGenesis &amp; SFRA
-                </span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s', background: '#FFFFFF', border: '1px solid #E6E6EC', color: '#141414' }} aria-hidden="true">
-                  <span className="d" style={{ background: '#10B981' }} />Shopify Plus Enterprise
-                </span>
               </div>
 
             </div>
@@ -356,25 +367,27 @@ export default function SFCCToShopifyPlusPage() {
           <div className="pp-wrap">
             <div className="rv-about-grid">
               
-              {/* Left Column: Organic Curved Image Visual Frame */}
-              <div className="rv-curved-frame-2" style={{ background: 'linear-gradient(135deg, #FFF0EB 0%, #FFF8F5 50%, #FAF7F2 100%)', border: '1px solid #F0DFD8', padding: '36px 32px', minHeight: '440px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 24px 48px rgba(240, 90, 40, 0.06)' }}>
-                <div>
-                  <div className="rv-badge" style={{ background: '#FFFFFF', marginBottom: '16px' }}>
-                    <span className="rv-badge-icon">⚡</span>
-                    <span>Direct Founder Engagement</span>
-                  </div>
-                  <h3 style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', lineHeight: 1.2, margin: '0 0 14px' }}>
-                    Engineered by Architects, Not Sales Reps
-                  </h3>
-                  <p style={{ color: '#494852', fontSize: '15px', lineHeight: 1.6, margin: 0 }}>
-                    Every replatforming project is led directly by founder Bhavesh Barot. We audit your legacy custom cartridges, map complex data models, and engineer high-throughput ERP pipelines before any contract is signed.
-                  </p>
+              {/* Left Column: Organic Curved Image Visual Frame with Human Strategy Photo */}
+              <div className="rv-curved-frame-2" style={{ position: 'relative', width: '100%', minHeight: '480px', background: '#F6F6F9', border: '1px solid #E6E6EC', boxShadow: '0 24px 56px rgba(0,0,0,0.08)' }}>
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet engineering leadership conducting enterprise architecture audit"
+                  width={640}
+                  height={560}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+
+                {/* Overlay Top Tag */}
+                <div style={{ position: 'absolute', top: '16px', left: '16px', background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(8px)', border: '1px solid #EAEAEA', borderRadius: '100px', padding: '6px 16px', display: 'inline-flex', alignItems: 'center', gap: '8px', boxShadow: '0 8px 20px rgba(0,0,0,0.06)' }}>
+                  <span style={{ color: '#FF5622', fontWeight: 800 }}>⚡</span>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#141414' }}>Direct Founder Engagement</span>
                 </div>
 
-                <div style={{ background: '#FFFFFF', borderRadius: '14px', border: '1px solid #EAEAEA', padding: '18px 20px', marginTop: '24px' }}>
+                {/* Overlay Bottom Architecture Parity Card */}
+                <div style={{ position: 'absolute', bottom: '16px', right: '16px', left: '16px', background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(12px)', borderRadius: '14px', border: '1px solid #EAEAEA', padding: '16px 20px', boxShadow: '0 12px 32px rgba(0,0,0,0.1)' }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#141414' }}>Architecture Parity Score</span>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#10B981', fontFamily: 'var(--pp-mono)' }}>100% VERIFIED</span>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#141414' }}>SFCC to Shopify Parity Audit</span>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#10B981', fontFamily: 'var(--pp-mono)' }}>100% PASS</span>
                   </div>
                   <div style={{ width: '100%', height: '6px', background: '#F0F0F5', borderRadius: '100px', overflow: 'hidden' }}>
                     <div style={{ width: '100%', height: '100%', background: 'linear-gradient(90deg, #FF5622, #10B981)', borderRadius: '100px' }} />
@@ -617,7 +630,98 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
-        {/* ── 08. RITOVEX FAQ ACCORDION ── */}
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Enterprise Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Enterprise Leaders Say About Our Engineering
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from directors and commerce leaders who moved off legacy monoliths to modern Shopify Plus architecture:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;FactoryJet executed our zero-downtime cutover without losing a single customer record or ranking position. Our mobile conversion shot up immediately with Shop Pay.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <Image
+                    src="/images/testimonials/ricky-belle-maison-160.webp"
+                    alt="Ricky B."
+                    width={48}
+                    height={48}
+                    style={{ borderRadius: '50%', objectFit: 'cover' }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Ricky B.</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Managing Director · Belle Maison</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Connecting our NetSuite ERP directly to Shopify Plus B2B Catalogs used to give us nightmares. FactoryJet’s sub-150ms event bus handles 100k+ SKU updates flawlessly.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <Image
+                    src="/images/testimonials/vishal-impulse-branding-160.webp"
+                    alt="Vishal K."
+                    width={48}
+                    height={48}
+                    style={{ borderRadius: '50%', objectFit: 'cover' }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Vishal K.</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>VP of Operations · Impulse Branding</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;No junior salespeople or endless discovery decks. We worked directly with Bhavesh and his engineering architects to get the job done on time and on budget.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <Image
+                    src="/images/testimonials/kiran-formative-concepts-160.webp"
+                    alt="Kiran P."
+                    width={48}
+                    height={48}
+                    style={{ borderRadius: '50%', objectFit: 'cover' }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Kiran P.</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Technical Director · Formative Concepts</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. RITOVEX FAQ ACCORDION ── */}
         <FAQ
           eyebrow="SFCC TO SHOPIFY PLUS FAQ"
           headline="Real Questions Enterprise &amp; SMB Teams Ask"
@@ -625,10 +729,10 @@ export default function SFCCToShopifyPlusPage() {
           categories={FAQ_CATEGORIES}
         />
 
-        {/* ── 09. RITOVEX FINAL HIGH-IMPACT CTA BANNER ── */}
+        {/* ── 10. RITOVEX FINAL HIGH-IMPACT CTA BANNER (WITH FOUNDER HEADSHOT) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 8vh, 96px) 0' }}>
           <div className="pp-wrap" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            <div className="rv-badge" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF', marginBottom: '20px' }}>
+            <div className="rv-badge" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF', marginBottom: '24px' }}>
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="#FF5622">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
@@ -639,9 +743,27 @@ export default function SFCCToShopifyPlusPage() {
               Ready to Scope Your SFCC to Shopify Plus Replatform?
             </h2>
 
-            <p style={{ fontSize: 'clamp(16px, 1.8vw, 18.5px)', color: '#A0A0B2', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '58ch' }}>
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 18.5px)', color: '#A0A0B2', lineHeight: 1.6, margin: '0 auto 32px', maxWidth: '58ch' }}>
               Direct 30-minute peer-to-peer scoping call with founder Bhavesh Barot. We review your custom cartridges, ERP synchronization requirements, and deliver a transparent fixed-price proposal before any commitment.
             </p>
+
+            {/* Founder Profile Badge */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '14px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '100px', padding: '6px 20px 6px 6px', margin: '0 auto 28px' }}>
+              <div style={{ position: 'relative', width: '44px', height: '44px' }}>
+                <Image
+                  src="/bhavesh_image.jpg"
+                  alt="Bhavesh Barot, Founder of FactoryJet"
+                  width={44}
+                  height={44}
+                  style={{ borderRadius: '50%', objectFit: 'cover' }}
+                />
+                <span style={{ position: 'absolute', bottom: '0', right: '0', width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10B981', border: '2px solid #141414' }} />
+              </div>
+              <div style={{ textAlign: 'left' }}>
+                <div style={{ fontSize: '13.5px', fontWeight: 700, color: '#FFFFFF' }}>Bhavesh Barot</div>
+                <div style={{ fontSize: '11px', color: '#FF7A52', fontFamily: 'var(--pp-mono)' }}>Founder &amp; Principal Commerce Architect</div>
+              </div>
+            </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
               <ModalCTAButton label="Schedule a Free Discovery Call" region="us" btnVariant="primary-light" />
