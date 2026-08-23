@@ -162,59 +162,99 @@ const BREADCRUMB_SCHEMA = {
   ],
 };
 
-const STATS = [
-  { b: '40%–70%', s: 'Lower Total Cost of Ownership' },
-  { b: '0 Seconds', s: 'Cutover Downtime' },
-  { b: '100%', s: 'SEO 301 Ranking Preservation' },
-  { b: '10x Faster', s: 'Marketing Campaign Launch Speed' },
+const PARTNERS = [
+  'Shopify Plus Enterprise',
+  'NetSuite SuiteTalk ERP',
+  'SAP S/4HANA OData',
+  'Manhattan WMS 3PL',
+  'Akeneo PIM 100k+ SKU',
+  'Salesforce Service Cloud',
+  'Avalara AvaTax',
+  'Cloudflare Real-Time Queue',
+];
+
+const STAT_CARDS = [
+  {
+    num: '40%–70%',
+    desc: 'Lower total cost of ownership by eliminating GMV percentage cuts and $200/hr developer retainers.',
+    icon: '💰',
+  },
+  {
+    num: '0 Sec',
+    desc: 'Zero-downtime blue/green DNS cutover protocol with instant rollback safety nets.',
+    icon: '⚡',
+  },
+  {
+    num: '100%',
+    desc: 'Preserved 301 URL redirect mapping per locale, keeping your Google rankings and search equity.',
+    icon: '🛡️',
+  },
+  {
+    num: '10x',
+    desc: 'Faster marketing release velocity. Drag-and-drop landing pages and launch promos in 15 minutes.',
+    icon: '🚀',
+  },
 ];
 
 const PAIN_POINTS = [
   {
-    title: 'The "GMV Tax" & High License Fees',
-    simple: 'SFCC takes a cut of every dollar you make, plus $150k–$500k/yr in platform fees.',
-    solution: 'Shopify Plus has predictable flat pricing with zero revenue penalties as your brand scales.',
+    num: '01',
+    title: 'The GMV Percentage Tax & $150k+ License Fees',
+    problem: 'SFCC charges a percentage of your gross sales on top of massive annual software license fees.',
+    solution: 'Shopify Plus gives you predictable flat pricing with zero revenue penalty as your business scales.',
   },
   {
-    title: 'Slow 3-Week Release Cycles',
-    simple: 'Even simple text or banner changes require backend developer cartridges and test builds.',
-    solution: 'Shopify Plus gives your marketing team visual drag-and-drop sections to launch updates same-day.',
+    num: '02',
+    title: '3-Week Cartridge Deployment Bottlenecks',
+    problem: 'Simple text changes or new promotional banners require backend developers and staging builds.',
+    solution: 'Shopify Plus gives your marketing team visual sections to edit, preview, and publish same-day.',
   },
   {
-    title: 'Expensive Specialist Developers',
-    simple: 'SFCC developers charge $150–$250/hour and are difficult to hire and retain.',
-    solution: 'Shopify is the global standard with tens of thousands of certified engineers and modern APIs.',
+    num: '03',
+    title: 'Expensive Specialist Developers ($150–$250/hr)',
+    problem: 'SFCC developers are rare, expensive to hire, and difficult to retain.',
+    solution: 'Shopify is the global commerce standard with thousands of certified engineers and modern APIs.',
   },
   {
-    title: 'Fragile Upgrades & Tech Debt',
-    simple: 'Legacy cartridges often break whenever Salesforce rolls out core system updates.',
-    solution: 'Shopify handles all core updates, security patches, and server scaling automatically in the cloud.',
-  },
-  {
-    title: 'Complex Multi-System Silos',
-    simple: 'Connecting POS, wholesale, and DTC requires separate custom cartridge builds.',
-    solution: 'Shopify Plus unites retail POS, B2B wholesale, and international markets in a single dashboard.',
-  },
-  {
-    title: 'Slow Checkout & Mobile Friction',
-    simple: 'Legacy checkouts have multi-step forms that cause shoppers to abandon carts.',
-    solution: 'Shop Pay provides 1-click accelerated checkout with 40%+ higher mobile conversion rates.',
+    num: '04',
+    title: 'Fragile Upgrades & 5+ Years of Tech Debt',
+    problem: 'Legacy SiteGenesis cartridges frequently break when Salesforce pushes core updates.',
+    solution: 'Shopify handles all server scaling, security patches, and platform updates automatically.',
   },
 ];
 
-const STEPS = [
-  { n: '01', t: 'Cartridge & Customization Audit', d: 'We audit every single cartridge, scheduled background job, and active promotion so no business rule is forgotten.' },
-  { n: '02', t: 'Data & Architecture Mapping', d: 'We map your price books to Shopify Markets, promotions to Shopify Functions, and catalog attributes to metaobjects.' },
-  { n: '03', t: 'Storefront Build & ERP Connectors', d: 'We build your high-converting theme and connect your NetSuite, SAP, or Manhattan WMS via real-time webhooks.' },
-  { n: '04', t: '1-to-1 SEO Crawl & Redirect Map', d: 'We crawl every single indexed URL on your legacy store to guarantee 100% link equity and zero 404 broken links.' },
-  { n: '05', t: 'Zero-Downtime Blue/Green Cutover', d: 'We switch DNS during off-peak hours with verified real-time order processing and instant rollback safety nets.' },
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Cartridge & Customization Audit',
+    d: 'We audit every single custom cartridge, scheduled background job, and active promotion so no business rule is forgotten.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data & Architecture Mapping',
+    d: 'We map your price books to Shopify Markets, promotions to Shopify Functions, and catalog attributes to metaobjects.',
+    icon: '🗺️',
+  },
+  {
+    n: '03',
+    t: 'Storefront Build & ERP Connectors',
+    d: 'We build your high-converting theme and connect your NetSuite, SAP, or Manhattan WMS via real-time webhooks.',
+    icon: '⚙️',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & Redirect Map',
+    d: 'We crawl every single indexed URL on your legacy store to guarantee 100% link equity and zero 404 broken links.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Zero-Downtime Blue/Green Cutover',
+    d: 'We switch DNS during off-peak hours with verified real-time order processing and instant rollback safety nets.',
+    icon: '🚀',
+  },
 ];
-
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 
 export default function SFCCToShopifyPlusPage() {
   return (
@@ -229,72 +269,148 @@ export default function SFCCToShopifyPlusPage() {
 
       <main className="platpage">
 
-        {/* ── HERO SECTION ── */}
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.08fr 0.92fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Enterprise Replatforming Guide</p>
-                <h1 style={{ margin: '14px 0 16px', maxWidth: '20ch' }}>
-                  Migrate from Salesforce Commerce Cloud to Shopify Plus with Zero Downtime
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>SFCC to Shopify Plus Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Zero-Downtime Migration from Salesforce Commerce Cloud to Shopify Plus
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '50ch' }}>
-                  Escape the high cost and slow release cycles of SFCC (Demandware). We audit your custom cartridges, rebuild promotions with Shopify Functions, sync your ERP in real time, and protect 100% of your Google search rankings.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Escape high license fees, GMV sales cuts, and slow cartridge builds. We audit your custom code, rebuild promotions with Shopify Functions, sync your ERP in real time, and protect 100% of your Google rankings.
                 </p>
-                <HeroInlineForm source="us_sfcc_shopify_hero" region="us" submitLabel="Get a Free Replatforming Audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Replatforming Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
+
+              {/* Right Column Visual Showcase */}
               <div className="pp-stage" role="img" aria-label="A modern Shopify Plus migration replacing SFCC cartridges, promotions, and ERP integrations.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
+                <div className="pp-store" aria-hidden="true" style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', boxShadow: '0 20px 48px rgba(0,0,0,0.06)' }}>
+                  <div className="bar" style={{ borderBottom: '1px solid #EAEAEA' }}><i /><i /><i /></div>
                   <div className="body">
-                    <div className="row"><span className="k">SFCC Cartridges</span><span className="v">Audited &amp; Replaced</span></div>
-                    <div className="row win"><span className="k">Promotions Engine</span><span className="v">→ Shopify Functions</span></div>
-                    <div className="row"><span className="k">Price Books</span><span className="v">→ Markets &amp; B2B</span></div>
-                    <div className="row"><span className="k">NetSuite / SAP ERP</span><span className="v">Sub-150ms Sync</span></div>
+                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>SFCC Cartridges</span><span className="v" style={{ color: '#FF5622' }}>Audited &amp; Replaced</span></div>
+                    <div className="row win"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>Promotions Engine</span><span className="v" style={{ color: '#047857' }}>→ Shopify Functions</span></div>
+                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>Price Books</span><span className="v" style={{ color: '#3B82F6' }}>→ Markets &amp; B2B</span></div>
+                    <div className="row"><span className="k" style={{ color: '#141414', fontWeight: 600 }}>NetSuite / SAP ERP</span><span className="v" style={{ color: '#141414' }}>Sub-150ms Event Sync</span></div>
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />SiteGenesis &amp; SFRA</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Shopify Plus Enterprise</span>
+                <span className="pp-node" style={{ top: '4%', left: '-4%', background: '#FFFFFF', border: '1px solid #E6E6EC', color: '#141414' }} aria-hidden="true">
+                  <span className="d" style={{ background: '#FF5622' }} />SiteGenesis &amp; SFRA
+                </span>
+                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s', background: '#FFFFFF', border: '1px solid #E6E6EC', color: '#141414' }} aria-hidden="true">
+                  <span className="d" style={{ background: '#10B981' }} />Shopify Plus Enterprise
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; ERP Connectors</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── STATS ROW ── */}
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
+        {/* ── 03. RITOVEX 2x2 BENTO STAT COUNTER GRID ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (
-                <div className="pp-stat" key={s.b}>
-                  <b>{s.b}</b>
-                  <span>{s.s}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── WHY BRANDS LEAVE SFCC (PAIN POINTS & SOLUTIONS) ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the real comparison'}</p>
-            <h2 style={{ marginTop: '10px' }}>Why Leading Brands Are Leaving Salesforce Commerce Cloud</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Salesforce Commerce Cloud (formerly Demandware) was built for an older era of e-commerce. Here is what actually happens when you trade legacy cartridges for a modern, agile commerce stack:
-            </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {PAIN_POINTS.map((p) => (
-                <div className="pp-card" key={p.title} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div className="rv-stat-grid">
+              {STAT_CARDS.map((s) => (
+                <div className="rv-stat-card" key={s.num}>
                   <div>
-                    <h3 style={{ color: 'var(--pp-orange-dark)', fontSize: '18px', marginBottom: '8px' }}>{p.title}</h3>
-                    <p style={{ fontSize: '14px', color: 'var(--pp-muted)', marginBottom: '12px' }}>
-                      <strong>The Problem:</strong> {p.simple}
-                    </p>
+                    <div className="rv-stat-icon">
+                      <span style={{ fontSize: '18px' }}>{s.icon}</span>
+                    </div>
+                    <div className="rv-stat-num">{s.num}</div>
                   </div>
-                  <div style={{ background: 'var(--pp-tint)', padding: '12px 14px', borderRadius: '10px', border: '1px solid var(--pp-line)' }}>
-                    <p style={{ fontSize: '13.5px', color: 'var(--pp-ink)', margin: 0, lineHeight: 1.5 }}>
-                      <strong style={{ color: 'var(--pp-orange-dark)' }}>The Shopify Plus Fix:</strong> {p.solution}
-                    </p>
+                  <p className="rv-stat-desc">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. WHY LEAVE SFCC (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Leading Brands Are Leaving Salesforce Commerce Cloud
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                SFCC was designed for an older generation of e-commerce. Here is what happens when you trade legacy cartridges for modern Shopify Plus agility:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The SFCC Bottleneck:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Plus Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -302,103 +418,82 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
-        {/* ── SHORT ANSWER FOR AI CITATIONS ── */}
-        <section className="pp-sec tint">
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (RITOVEX AUTO-SCROLL TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// ENTERPRISE MIGRATION BLUEPRINT"
+            title="How Modern Enterprise Commerce Works (In Plain English)"
+            subtitle="Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how leading brands move from Salesforce Commerce Cloud to Shopify Plus with zero downtime."
+            legacySource="SFCC / Demandware"
+            targetStack="Shopify Plus Enterprise Architecture"
+            ctaLabel="Schedule an Architecture Scoping Call"
+            region="us"
+          />
+        </div>
+
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// in plain english'}</p>
-            <h2 style={{ marginTop: '10px' }}>What Does an SFCC to Shopify Plus Migration Involve?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-                <p>
-                  A Salesforce Commerce Cloud migration moves your product catalog, customer records, order history, custom promotions, and ERP integrations onto Shopify Plus. 
-                </p>
-                <p>
-                  Because SFCC uses a custom code system called &ldquo;cartridges&rdquo;, code cannot be copied directly. Instead, we audit your active features, rebuild your custom promotions using serverless <strong>Shopify Functions</strong>, map your price books into <strong>Shopify Markets and B2B catalogs</strong>, and connect your warehouse and ERP systems with sub-150ms real-time event queues.
-                </p>
-                <p className="pp-splitband-note">
-                  The result: Your marketing team launches campaigns in minutes, and your business saves hundreds of thousands of dollars each year in license fees and developer retainers.
-                </p>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img
-                    src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-enterprise-war-room.webp"
-                    alt="An enterprise commerce team reviewing a zero-downtime SFCC to Shopify Plus replatforming plan"
-                    width={1280}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </figure>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Salesforce Commerce Cloud vs. Shopify Plus
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                SFCC offers deep legacy configurability at high maintenance cost. Shopify Plus gives speed, lower TCO, and total team agility.
+              </p>
             </div>
-          </div>
-        </section>
 
-        {/* ── THE ENTERPRISE ARCHITECTURE BLUEPRINT (LUMINOUS STRIPE-STYLE GRADIENT WITH AUTO-SCROLL TABS) ── */}
-        <EnterpriseArchitectureBlueprint
-          badge="// ENTERPRISE MIGRATION BLUEPRINT"
-          title="How Modern Enterprise Commerce Works (In Plain English)"
-          subtitle="Say goodbye to slow cartridge builds, high license fees, and fragile integrations. Here is how leading brands move from Salesforce Commerce Cloud to Shopify Plus with zero downtime."
-          legacySource="SFCC / Demandware"
-          targetStack="Shopify Plus Enterprise Architecture"
-          ctaLabel="Schedule an Architecture Scoping Call"
-          region="us"
-        />
-
-        {/* ── COMPARISON TABLE ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side-by-side comparison'}</p>
-            <h2 style={{ marginTop: '10px' }}>Salesforce Commerce Cloud vs. Shopify Plus</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              SFCC gives deep legacy configurability at the cost of high maintenance and slow releases. Shopify Plus gives lightning-fast release velocity, lower total cost of ownership, and a platform your marketing team can actually operate.
-            </p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead>
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
                   <tr>
-                    <th>Feature / Dimension</th>
-                    <th>Salesforce Commerce Cloud (SFCC)</th>
-                    <th>Shopify Plus Enterprise</th>
-                    <th>What It Means for Your Brand</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Salesforce Commerce Cloud (SFCC)</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Plus Enterprise</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="name">Cost Model</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Cost Model</td>
                     <td>$150k–$500k+/yr license + GMV revenue cut</td>
-                    <td>Predictable enterprise plan, zero GMV penalty</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Predictable enterprise plan, zero GMV penalty</td>
                     <td>Save 40%–70% in total annual operating costs</td>
                   </tr>
                   <tr>
-                    <td className="name">Custom Code Model</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Custom Code Model</td>
                     <td>Proprietary cartridges (SiteGenesis / SFRA)</td>
-                    <td>Theme sections, custom Apps &amp; Functions</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Theme sections, custom Apps &amp; Functions</td>
                     <td>Easier to maintain, upgrade, and scale</td>
                   </tr>
                   <tr>
-                    <td className="name">Release Velocity</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Release Velocity</td>
                     <td>2–4 weeks per deployment via developers</td>
-                    <td>Same-day visual drag-and-drop updates</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Same-day visual drag-and-drop updates</td>
                     <td>Marketing launches campaigns 10x faster</td>
                   </tr>
                   <tr>
-                    <td className="name">Checkout Experience</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Experience</td>
                     <td>Legacy multi-step custom checkout</td>
-                    <td>Shop Pay 1-click accelerated checkout</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
                     <td>40%+ higher conversion rates on mobile</td>
                   </tr>
                   <tr>
-                    <td className="name">Promotions Engine</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Promotions Engine</td>
                     <td>Complex legacy campaign qualifiers</td>
-                    <td>Shopify Functions (sub-5ms checkout rules)</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shopify Functions (sub-5ms checkout rules)</td>
                     <td>Complex discounts run without slowing the site</td>
                   </tr>
                   <tr>
-                    <td className="name">B2B Wholesale</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>B2B Wholesale</td>
                     <td>Requires custom portal build</td>
-                    <td>Native Shopify Plus B2B built-in</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native Shopify Plus B2B built-in</td>
                     <td>Wholesale and DTC managed in one admin</td>
                   </tr>
                 </tbody>
@@ -407,123 +502,55 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
-        {/* ── MID PAGE CTA ── */}
-        <MidPageCTA
-          headline={'Approaching Your Commerce Cloud License Renewal?'}
-          sub={'Send us your active cartridge list and order volume. We will deliver a complete scope, timeline, and exact TCO cost-savings analysis.'}
-          label={'Scope Your SFCC Migration'}
-        />
-
-        {/* ── 5 STAGE PROCESS ── */}
-        <section className="pp-sec tint">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// step-by-step roadmap'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our 5-Stage Zero-Downtime Migration Protocol</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>
-                  We never guess or take shortcuts with enterprise commerce. Every phase has clear sign-off gates: data parity is verified before templates are finalized, and your redirect map is crawled and tested before DNS switch.
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Zero-Downtime Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We never guess or take shortcuts with enterprise commerce. Every phase has clear sign-off gates: data parity is verified before templates are built, and your redirect map is tested before DNS switch.
                 </p>
-                <p className="pp-splitband-note">
-                  Every single indexed URL is mapped 1-to-1 so you preserve 100% of your Google rankings and search equity.
-                </p>
+                <ModalCTAButton label="Start Your Migration Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img
-                    src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-multi-market.webp"
-                    alt="A solutions architect reviewing global store locales and redirect maps on a monitor"
-                    width={1280}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3>
-                  <p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
-        {/* ── RELATED WORK ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
-              <div>
-                <p className="pp-mlabel">{'// explore more'}</p>
-                <h2 style={{ marginTop: '10px' }}>Related Migration Services</h2>
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-                Looking to replatform from another platform? Explore our guides for{' '}
-                <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
-                  Magento to Shopify
-                </Link>
-                ,{' '}
-                <Link href="/replatforming/netsuite-suitecommerce-to-shopify-plus" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
-                  NetSuite SuiteCommerce to Shopify Plus
-                </Link>
-                , and{' '}
-                <Link href="/replatforming/bigcommerce-to-shopify-plus" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
-                  BigCommerce to Shopify Plus
-                </Link>
-                . If you need wholesale selling, check our{' '}
-                <Link href="/services/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
-                  Shopify Plus B2B setup
-                </Link>
-                .
-              </p>
+
             </div>
           </div>
         </section>
 
-        {/* ── PEOPLE & GOVERNANCE ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// engineering governance'}</p>
-            <h2 style={{ marginTop: '10px' }}>Enterprise Migrations Succeed on Discovery, Not Guesses</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Most replatforming projects stumble when hidden customizations surface halfway through build. We front-load the discovery so your timeline and budget stay locked.
-            </p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img
-                    src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-people-exec-meeting.webp"
-                    alt="Executives and solutions architects in a strategy meeting reviewing migration milestones"
-                    width={1280}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <figcaption>Phased milestones with clear sign-off gates agreed before code is written.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img
-                    src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-people-architect-review.webp"
-                    alt="A senior solutions architect mapping ERP integrations and cart data on a system diagram"
-                    width={1280}
-                    height={800}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <figcaption>Cartridge-by-cartridge inventory before estimating timeline or cost.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ COMPONENT ── */}
+        {/* ── 08. RITOVEX FAQ ACCORDION ── */}
         <FAQ
           eyebrow="SFCC TO SHOPIFY PLUS FAQ"
           headline="Real Questions Enterprise &amp; SMB Teams Ask"
@@ -531,38 +558,31 @@ export default function SFCCToShopifyPlusPage() {
           categories={FAQ_CATEGORIES}
         />
 
-        {/* ── FINAL CALL TO ACTION ── */}
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope Your SFCC Replatforming Project</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us if you are on SiteGenesis or SFRA, roughly how many cartridges and regions you manage, and when your contract renews. We will deliver a cartridge inventory and fixed-scope proposal.
-                </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a Free Replatforming Audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Complete cartridge inventory before any estimate is signed',
-                    'Active promotions listed, then rebuilt with fast Shopify Functions',
-                    'Price book model agreed and tested in staging up front',
-                    '100% 1-to-1 URL redirect mapping per locale (Zero 404s)',
-                    'Phased rollout so the integration pattern is proven before DNS cutover',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>
-                        {checkIcon}
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* ── 09. RITOVEX FINAL HIGH-IMPACT CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+            <div className="rv-badge" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="#FF5622">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Get Started Today</span>
             </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.15, margin: '0 0 18px' }}>
+              Ready to Scope Your SFCC to Shopify Plus Replatform?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 18.5px)', color: '#A0A0B2', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '58ch' }}>
+              Direct 30-minute peer-to-peer scoping call with founder Bhavesh Barot. We review your custom cartridges, ERP synchronization requirements, and deliver a transparent fixed-price proposal before any commitment.
+            </p>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+              <ModalCTAButton label="Schedule a Free Discovery Call" region="us" btnVariant="primary-light" />
+            </div>
+
+            <p style={{ marginTop: '20px', fontSize: '13px', color: '#7E7E92', fontFamily: 'var(--pp-mono)' }}>
+              ✓ 100% Engineer-Led · Zero Sales Pressure · Clear Milestones
+            </p>
           </div>
         </section>
 
