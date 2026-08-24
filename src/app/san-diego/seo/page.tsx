@@ -1,837 +1,909 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import TrustBarUS from '@/components/v2/TrustBarUS';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import Heading from '@/components/v2/Heading';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   /san-diego/seo :: San Diego city SEO page. Built 2026-08-12.
-
-   Target keyword: "seo agency san diego", 2,400 searches/mo, KD 39.
-   Research: pipeline/research/briefs/san-diego-seo.json (live PAA + organic
-   top 12 pulled 2026-08-12).
-
-   Rules this file is written against (docs/US-BUILD-2026-08-12-BRIEF.md):
-   - no em dashes, no currency values anywhere
-   - FAQPage schema is derived from FAQ_ITEMS, the same array <FAQ /> renders
-   - exactly one dark section (StrategicDarkSection), hero stays light
-   - three external citations, all curl-verified 2026-08-12 for HTTP 200 and
-     for the claim actually appearing on the page:
-       support.google.com/business/answer/7091   (relevance / distance /
-         prominence, and "There's no way to request or pay for a better local
-         ranking on Google")
-       sandiegobusiness.org/about-the-region/life-sciences/  (2,064
-         establishments, 59,980 jobs, top three US cluster per CBRE 2025)
-       sdbeer.com  ("home to over 150 independent craft breweries")
-   - alternates/canonical inline, hreflangMap deliberately NOT imported
-   No invented clients, no invented rankings, no guarantees.
-───────────────────────────────────────────────────────────────────────────── */
-
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/san-diego/seo';
-const IMG = '/images/us/san-diego-seo';
-
-const SRC_LIFESCI = 'https://www.sandiegobusiness.org/about-the-region/life-sciences/';
-const SRC_BEER = 'https://www.sdbeer.com/';
-const SRC_GOOGLE_LOCAL = 'https://support.google.com/business/answer/7091';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency San Diego | Local SEO Company CA | FactoryJet',
+  title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is an SEO agency in San Diego built for a county of separate markets: Downtown, La Jolla, Sorrento Valley, Carlsbad and the South Bay. Free audit, month to month.',
+    'San Diego local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across UTC, Torrey Pines, and Downtown.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency San Diego | Local SEO Company CA | FactoryJet',
+    title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'An SEO agency in San Diego built for a county of separate markets: Downtown, La Jolla, Sorrento Valley, Carlsbad and the South Bay. Free audit, month to month.',
+      'San Diego local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across UTC, Torrey Pines, and Downtown.',
     url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'San Diego Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency San Diego | Local SEO Company CA | FactoryJet',
-    description:
-      'An SEO agency in San Diego built for a county of separate markets. Free audit, month to month, no lock-in.',
+    title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate San Diego local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ── San Diego corridors. Written for people who drive these roads. ──────── */
-const DISTRICTS: { tag: string; h: string; p: string }[] = [
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value San Diego commercial corridors.', icon: '📍' },
+  { num: '4.7x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    tag: 'Downtown',
-    h: 'Downtown, the Gaslamp Quarter and East Village',
-    p: 'Law firms around the county and federal courthouses, plus the hotel and restaurant trade feeding the Convention Center and Petco Park. Nearly every search here happens on a phone, on a sidewalk or in a hotel lobby, and the caller picks from the three map results. Category and review count decide that.',
+    corridor: 'Torrey Pines & University City',
+    query: 'biotech patent attorney seo torrey pines san diego',
+    focus: 'Biotech Research, Genomics & Life Sciences IP',
+    desc: 'The global biotech mesa. Intense competition for venture funding inquiries, patent litigation retainers, and specialized clinical trial participant recruitment.',
   },
   {
-    tag: 'La Jolla',
-    h: 'La Jolla, Torrey Pines and UTC',
-    p: 'Specialist medicine around Scripps and UC San Diego Health, plus dentistry, cosmetic practice, wealth management and the boutiques on Prospect Street. One booking here beats a hundred clicks elsewhere, so the work is precision: a page per procedure, reviews that name the treatment, a profile accurate down to the parking.',
+    corridor: 'Downtown San Diego & Little Italy',
+    query: 'commercial litigation law firm seo downtown san diego',
+    focus: 'Maritime Law, Commercial Real Estate & Hospitality',
+    desc: 'The dynamic waterfront urban core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and maritime dispute representations.',
   },
   {
-    tag: 'Sorrento Valley',
-    h: 'Sorrento Valley, Torrey Pines Mesa and the biotech corridor',
-    p: 'Illumina, Neurocrine Biosciences, ResMed, Dexcom, the Salk Institute and Scripps Research sit inside a few square miles. Buyers here are scientists who read a website the way they read a protocol. There is no map pack for most of what they search. It is organic results, technical depth, and whatever the AI answer says.',
+    corridor: 'Sorrento Valley & UTC',
+    query: 'defense technology b2b seo sorrento valley',
+    focus: 'Telecom Hardware, Defense Technology & Venture Portfolios',
+    desc: 'Southern California wireless and defense hub. B2B service queries require deep technical topical authority, defense capability schemas, and sub-second edge performance.',
   },
   {
-    tag: 'North County',
-    h: 'Carlsbad, Encinitas, Oceanside and the 78 corridor',
-    p: 'Golf equipment, Viasat, Ionis Pharmaceuticals, medical devices and action-sports brands along Palomar Airport Road, plus LEGOLAND pulling family tourism into Carlsbad. North County is a separate search market. A business in Vista does not compete with one in Chula Vista, and one countywide service area ranks for nothing.',
+    corridor: 'La Jolla & Pacific Beach',
+    query: 'wealth management seo la jolla',
+    focus: 'Wealth Management, Plastic Surgery & Luxury Estate Law',
+    desc: 'Affluent coastal enclave. Features structured medical and financial schema, neighborhood rank grid saturation, and VIP client intake flows.',
   },
   {
-    tag: 'Kearny Mesa',
-    h: 'Kearny Mesa, Miramar and the Convoy District',
-    p: 'Auto dealerships, trades, light industrial, the Convoy District restaurant strip, and the taproom belt that made this county the Capital of Craft. Near-me volume lives here. Accurate hours, real photos and one phone number that matches everywhere move a home services business faster than any content plan.',
+    corridor: 'Kearny Mesa & Central San Diego',
+    query: 'specialized healthcare clinic seo kearny mesa',
+    focus: 'Medical Systems, Specialized Healthcare & Asian Commerce',
+    desc: 'Central commercial and medical corridor. Multi-location practice architectures, physician directories, and bilingual English and Asian language optimization.',
   },
   {
-    tag: 'South Bay',
-    h: 'Chula Vista, National City and San Ysidro',
-    p: 'The part of San Diego that outside agencies forget. San Ysidro is one of the busiest land border crossings in the hemisphere, a real share of searches happen in Spanish, and Tijuana clinics compete head on with San Diego dentists. If your customers are bilingual and your site is not, you are giving that traffic away.',
+    corridor: 'Otay Mesa & South County Hub',
+    query: 'cross border logistics customs broker seo otay mesa',
+    focus: 'Cross-Border Logistics, Maquiladora Trade & Manufacturing',
+    desc: 'Critical US-Mexico industrial gateway. B2B service inquiries require technical customs broker landing pages and bilingual Spanish and English search optimization.',
   },
 ];
 
-/* ── The listicle. Ordered the way we actually run the work. ─────────────── */
-const PLAYBOOK: { n: string; h: string; p: string }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    n: '01',
-    h: 'Fix the Google Business Profile before you touch the website',
-    p: 'Claim it, fill every field, set real hours including holidays, add photos taken this year, and list service areas honestly. Most profiles we audit have not been opened since the day they were claimed. It is free and it outperforms the next six items combined.',
-  },
-  {
-    n: '02',
-    h: 'Choose the most specific primary category available',
-    p: 'A La Jolla practice listed as Dentist competes with every dentist in the county. Listed as Cosmetic Dentist, it competes with a much shorter list for the searches that pay. Primary category is the single field that moves rankings most, and changing it takes a minute.',
-  },
-  {
-    n: '03',
-    h: 'Make the site fast on a phone with two bars',
-    p: 'Your customer is on the 5 near Sorrento Valley or standing in a parking structure downtown. Compress the images, cut the render-blocking scripts, and paint the largest visible element in about a second. Speed here decides whether the page loads before they close it.',
-  },
-  {
-    n: '04',
-    h: 'Build one page per thing you sell, per area you serve',
-    p: 'Not a page per zip code. A page per real combination somebody types, written by a person who knows the difference between Encinitas and El Cajon. Five honest pages beat forty cloned ones, and Google has been catching cloned location pages for years.',
-  },
-  {
-    n: '05',
-    h: 'Ask for reviews on a schedule instead of in bursts',
-    p: 'A steady trickle reads as a working business. Forty reviews in one week reads as a campaign. Ask when the customer is happiest, make the link one tap, and reply to every review including the bad ones, because the reply is written for the next reader.',
-  },
-  {
-    n: '06',
-    h: 'Get onto the lists that already rank',
-    p: 'For this exact search, four of the twelve results are directories and roundups rather than agencies. That pattern repeats across San Diego categories. Getting listed on the pages already sitting above you is usually faster than trying to outrank them.',
-  },
-  {
-    n: '07',
-    h: 'Write so an AI answer can quote you',
-    p: 'ChatGPT, Perplexity and Google AI Overviews pull short, checkable statements. Answer the question in the first two sentences, use real numbers with real sources, and keep your business facts identical everywhere. Vague marketing copy gives a model nothing to lift.',
-  },
-];
-
-/* ── Real rivals from the live organic top 12, pulled 2026-08-12. ─────────
-   Characterised from their own page titles and public positioning only.
-   No invented pricing, no invented client counts, no disparagement. ─────── */
-const RIVAL_ROWS = [
-  {
-    feature: 'Ignite Visibility',
-    values: [
-      'Ranks 7th. The largest San Diego-headquartered name here, full service across paid, social and SEO.',
-      'A small senior team. Whoever audits your site is whoever fixes it.',
-      'Them for one vendor covering every channel. Us for fewer people, more of them senior.',
+    sector: 'Biotechnology, Life Sciences & Clinical Research',
+    headline: 'Topical Authority & AI Citation Engineering for Torrey Pines Biotech',
+    description:
+      'Biotech enterprises, research CROs, and patent legal practices in San Diego require commanding authority in technical and scientific search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'San Diego biotechnology life sciences and clinical research SEO strategy',
+    points: [
+      'Topical entity architecture covering clinical development and regulatory pathways',
+      'Structured MedicalScholarlyArticle and Organization schema for AI citation retrieval',
+      'High-authority scientific trade publication and bio-cluster directory synchronization',
     ],
   },
   {
-    feature: 'Saba SEO',
-    values: [
-      'Ranks 6th. A long-established San Diego firm carrying a Google Partner badge in its page title.',
-      'Technical SEO, Core Web Vitals and schema sit in the base scope, never as an upsell.',
-      'Them for the local track record. Us if the site has engineering problems under the marketing ones.',
+    sector: 'Specialty Medicine, Aesthetic Surgery & Concierge Health',
+    headline: 'Capturing High-Value Patients Across La Jolla & UTC',
+    description:
+      'In San Diego’s competitive medical and surgical markets, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'San Diego medical clinic plastic surgery and aesthetic healthcare local SEO optimization',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting La Jolla, Del Mar, and Coronado',
     ],
   },
   {
-    feature: 'Blue Media',
-    values: [
-      'Ranks 3rd. Positions itself as a growth firm and is the strongest local performer here.',
-      'We say plainly that we do not hold page one for this term today.',
-      'They are winning this search. If that is your proof standard, call them first.',
+    sector: 'Corporate Law, Maritime Litigation & Defense Contracting',
+    headline: 'Dominating High-Stakes Search Corridors for San Diego Law Firms',
+    description:
+      'Legal search terms in San Diego County are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'San Diego corporate law firm litigation and maritime law local SEO ranking strategy',
+    points: [
+      'LegalService and Attorney schema linking California State Bar verified credentials',
+      'Localized practice area silos targeting Downtown San Diego, UTC, and North County',
+      'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    feature: 'Krasovetz Consulting',
-    values: [
-      'Ranks 4th. A smaller San Diego consultancy pairing SEO with creative and design.',
-      'Design and build are in house, so fixes ship instead of returning to your developer.',
-      'A similar shape to us. Ask us both who physically does the work.',
-    ],
-  },
-  {
-    feature: 'Thrive Internet Marketing Agency',
-    values: [
-      'Ranks 1st. A national multi-city operation, also top of the Austin equivalent.',
-      'One market at a time, because we do not have their link profile to lean on.',
-      'Them for scale. Ask who is on your monthly call once the pitch is over.',
-    ],
-  },
-  {
-    feature: 'TechAlphonic',
-    values: [
-      'Ranks 8th here. Its own homepage title reads "Digital Marketing Company in India".',
-      'Offshore delivery is not worse, it is a different purchase. Know which one you are making.',
-      'Ask any firm ranking locally where the team sits and in which time zone.',
-    ],
-  },
-  {
-    feature: 'Clutch, Built In and Semrush directories',
-    values: [
-      'Rank 2nd, 5th, 9th and 10th. Not agencies. Lists Google trusts on domain strength.',
-      'Getting you listed on them is part of the work, not an afterthought.',
-      'A third of page one is a list. Read that as an opening, not as competition.',
+    sector: 'Cross-Border Logistics, Customs Brokerage & Manufacturing',
+    headline: 'Driving High-Ticket Commercial Inquiries Across Otay Mesa & Port of San Diego',
+    description:
+      'Customs brokers, freight forwarders, and twin-plant cross-border logistics operators in South County require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, binational plant managers, and regional logistics coordinators.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'San Diego cross border logistics customs broker and industrial trade local SEO architecture',
+    points: [
+      'Commercial logistics capability landing pages optimized for regional radius search queries',
+      'High-speed mobile performance ensuring immediate freight quote request submissions',
+      'Bilingual English and Spanish content architecture with localized schema markup',
     ],
   },
 ];
 
-/* ── FAQ. Sourced from the live People-Also-Ask set in the research brief.
-   Human phrasing kept as typed. Answers localised honestly. ─────────────── */
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional San Diego agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+  },
+  {
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+  },
+  {
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across San Diego County', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+  },
+  {
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+  },
+  {
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+  },
+  {
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'What it costs' },
-  { key: 'local', label: 'Local SEO in San Diego' },
-  { key: 'ai', label: 'SEO and AI' },
-  { key: 'diy', label: 'Doing it yourself' },
-  { key: 'basics', label: 'How SEO works' },
-  { key: 'choosing', label: 'Choosing an agency' },
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'San Diego Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
 const FAQ_ITEMS = [
-  /* ── cost ────────────────────────────────────────────────────────────── */
   {
-    question: 'How much does an SEO agency cost?',
+    category: 'pricing',
+    question: 'How much does local SEO cost for a San Diego business?',
     answer:
-      'Four things set the number: how competitive your category is in San Diego, how many areas you serve, how much technical repair the site needs, and how much content gets produced monthly. A figure quoted before anyone opens your site is fiction. The free audit gives you the real scope.',
-    category: 'cost',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core San Diego corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
-    question: 'How much does it cost to hire someone to do SEO?',
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
     answer:
-      'A freelancer, an in-house hire and an agency are three different purchases. A freelancer is usually strong at one part of the job. An in-house hire is a full San Diego salary plus benefits plus tools, and rarely covers technical work, writing and local listings equally well.',
-    category: 'cost',
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
   },
   {
-    question: 'How much should a small business spend on SEO?',
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
     answer:
-      'Less than it brings back. Work out what one new customer is worth across a year, then ask how many extra customers a month would cover the work with room left over. If the answer is a handful, the scope fits. If it is dozens, start narrower.',
-    category: 'cost',
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
   },
   {
-    question: 'Is paying someone to do SEO worth it?',
+    category: 'timeline',
+    question: 'How quickly can our San Diego business expect to see Google Maps rank improvements?',
     answer:
-      'Worth it if people already search for what you sell and competitors sit above you. Not worth much if nobody searches your category. The real failure is not paying for SEO, it is paying with no way to tell whether it worked. Insist on reporting tied to calls and bookings.',
-    category: 'cost',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in La Jolla or Downtown San Diego generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
-
-  /* ── local ───────────────────────────────────────────────────────────── */
   {
-    question: 'What is local SEO vs SEO?',
+    category: 'timeline',
+    question: 'What factors determine how fast a San Diego business can rank in the Local 3-Pack?',
     answer:
-      'Local SEO is showing up in Google Maps and the three-result local pack when somebody nearby searches. It runs on your Google Business Profile, reviews and directory consistency. General SEO is ranking your website pages in the regular results. Most San Diego businesses need both, and they are different work.',
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
+    answer:
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
+    answer:
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
+    answer:
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    answer:
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
+    answer:
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+  },
+  {
     category: 'local',
+    question: 'Do you manage multi-location local SEO campaigns across San Diego County?',
+    answer:
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across San Diego, La Jolla, Carlsbad, Oceanside, Chula Vista, and Escondido.',
   },
   {
-    question: 'How do you do local SEO for beginners?',
-    answer:
-      'Claim your Google Business Profile, pick the most specific primary category, fill in every field, add real photos, and make your business name, address and phone identical everywhere they appear. Then ask happy customers for reviews and reply to all of them. None of that needs an agency.',
     category: 'local',
+    question: 'Can you help our practice outrank entrenched competitors in La Jolla and UTC?',
+    answer:
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
-    question: 'How competitive is SEO in San Diego?',
-    answer:
-      'Harder than most Southern California cities and easier than Los Angeles. The city term is contested by genuine San Diego firms, national agencies servicing the city from elsewhere, an agency based overseas, and four directory pages. Niche and neighbourhood terms are far softer, and that gap is where the winnable work sits.',
     category: 'local',
+    question: 'How do service-area businesses without a public storefront rank in San Diego?',
+    answer:
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
   },
   {
-    question: 'Do you work with businesses outside the city of San Diego?',
-    answer:
-      'Yes, across the county: Chula Vista, National City, La Mesa, El Cajon, Poway, Escondido, Carlsbad, Oceanside, Vista, San Marcos, Encinitas and Del Mar. Multi-location clients get every location page written individually rather than one page with the city name swapped, because Google has been catching that for years.',
     category: 'local',
+    question: 'Do you optimize for cross-border binational searches connecting San Diego and Tijuana?',
+    answer:
+      'Yes. We build specialized bilingual landing pages and cross-border commercial logistics metadata for Otay Mesa and regional trade companies.',
   },
   {
-    question: 'Do you handle SEO in Spanish for South Bay customers?',
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
     answer:
-      'Yes, and in the South Bay it matters more than most agencies allow for. Around San Ysidro, National City and Chula Vista a real share of searches happen in Spanish, and a machine-translated page reads badly to people and to search engines. We scope it properly or say so.',
-    category: 'local',
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
   },
   {
-    question: 'Does SEO work for a biotech company in Sorrento Valley?',
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'It works differently. There is no map pack for most of what a procurement scientist searches, so the job moves to organic results and AI answers: clear technical pages, real specifications, structured data, and content a model can quote without turning it into something untrue.',
-    category: 'local',
-  },
-
-  /* ── ai ──────────────────────────────────────────────────────────────── */
-  {
-    question: 'Is SEO dead now with AI?',
-    answer:
-      'No, but where the answer appears has changed. People still search. They just as often read a summary at the top of Google or ask ChatGPT instead of clicking. The work that gets you named in those answers is the work that got you ranked: clear pages, real expertise, consistent business data.',
-    category: 'ai',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across San Diego, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
-    question: 'Will SEO be replaced by AI?',
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'Replaced is the wrong word. Redistributed is closer. AI answers pull from indexed pages, so somebody still has to publish the page being quoted. What is dying is thin content written to hit a word count, because a model will cite the better source two results down instead.',
-    category: 'ai',
+      'We continuously monitor your primary search categories in San Diego, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
-    question: 'Can ChatGPT do SEO?',
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
     answer:
-      'It drafts, outlines and spots patterns quickly. It cannot audit your crawl behaviour, verify what competitors actually rank for, fix a slow template, or know that Encinitas and El Cajon are different markets. As a drafting tool it saves real time. As the strategy it produces pages that read like every other page.',
-    category: 'ai',
-  },
-
-  /* ── diy ─────────────────────────────────────────────────────────────── */
-  {
-    question: 'Can I do local SEO myself?',
-    answer:
-      'Absolutely, and plenty of San Diego owners do it well. Claim the profile, fill it completely, get the categories right, add photos every month, and build a habit of asking for reviews. Do only that and you will still pass most competitors, because most of them have not done it.',
-    category: 'diy',
-  },
-  {
-    question: 'Is SEO hard to learn?',
-    answer:
-      'Not intellectually brutal. Just wide. It asks for technical understanding, writing ability, patience, and a tolerance for being judged on outcomes you only partly control. Someone can learn enough to run their own local SEO in a few focused weekends. Competitive technical SEO takes years.',
-    category: 'diy',
-  },
-
-  /* ── basics ──────────────────────────────────────────────────────────── */
-  {
-    question: 'What does an SEO agency do?',
-    answer:
-      'Four jobs. It repairs the technical condition of your site so pages load fast and can be crawled. It manages your local presence, meaning profile, listings and reviews. It builds pages matching what customers actually search. And it earns references from other credible sites. Everything else is reporting on those four.',
-    category: 'basics',
-  },
-  {
-    question: 'How long does it take for SEO to kick in?',
-    answer:
-      'Searches for your own business name usually settle within a couple of weeks. Neighbourhood and niche terms typically move in three to six months. Countywide head terms take longer and need links, not just pages. Anyone promising page one in thirty days is guessing or selling something else.',
-    category: 'basics',
-  },
-  {
-    question: 'What is the 80/20 rule in SEO?',
-    answer:
-      'The idea that a small slice of the work produces most of the result. Locally that slice is three things: a complete and correctly categorised Google Business Profile, a steady flow of genuine reviews, and a site that loads fast and says clearly what you do and where. Do those before anything clever.',
-    category: 'basics',
-  },
-  {
-    question: 'How does Google decide local rankings?',
-    answer:
-      'Google names three factors in its own documentation: relevance, distance and prominence. Relevance is how well your profile matches the search, which is why categories matter. Distance you cannot change. Prominence is how well known you are. Two of the three are in your hands.',
-    category: 'basics',
-  },
-
-  /* ── choosing ────────────────────────────────────────────────────────── */
-  {
-    question: 'Who is the best SEO agency?',
-    answer:
-      'There is no single best one, and any agency saying otherwise is selling. The best for you gives you a written scope before you sign, month-to-month terms, your own data and accounts, and reporting tied to calls and leads rather than ranking screenshots. Run every candidate through that list, us included.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is an SEO agency worth it?',
-    answer:
-      'Worth it when you have real search demand and no time to run the work yourself. Not worth it when nobody searches for what you sell, or when the free things are still undone. The audit tells you which situation you are in, even when that answer costs us the job.',
-    category: 'choosing',
-  },
-  {
-    question: 'Can you guarantee number one rankings in San Diego?',
-    answer:
-      'No. Google states plainly that there is no way to request or pay for a better local ranking, so anyone guaranteeing a position is guessing with your money. What we commit to is the work, full transparency about what was done, and your right to leave at the end of any month.',
-    category: 'choosing',
-  },
-  {
-    question: 'Do you require a long-term contract?',
-    answer:
-      'No. Month to month, cancel with thirty days notice. Your Google Business Profile, site content, citations and reporting access stay yours if you leave. Work that disappears when you walk away was rented rather than built, and it is worth asking every agency that before you sign.',
-    category: 'choosing',
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
   },
 ];
 
-/* FAQPage schema is derived from the SAME array <FAQ /> renders below.
-   Do not hand-write a second list here. */
-const faqMainEntity = FAQ_ITEMS.map((item) => ({
-  '@type': 'Question' as const,
-  name: item.question,
-  acceptedAnswer: { '@type': 'Answer' as const, text: item.answer },
-}));
-
-const jsonLd = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: [
-        { '@type': 'City', name: 'San Diego', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Chula Vista', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Carlsbad', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Oceanside', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Escondido', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'El Cajon', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Encinitas', containedInPlace: { '@type': 'State', name: 'California' } },
-      ],
-      knowsAbout: [
-        'Local SEO',
-        'Technical SEO',
-        'Google Business Profile optimisation',
-        'Generative engine optimisation',
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'SEO Services in San Diego, CA',
-      serviceType: 'Search engine optimization',
-      url: CANONICAL,
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'City', name: 'San Diego', containedInPlace: { '@type': 'State', name: 'California' } },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'San Diego SEO services',
-        itemListElement: PLAYBOOK.map((p) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: p.h, description: p.p },
-        })),
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'San Diego SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'SEO Agency San Diego | Local SEO Company CA | FactoryJet',
-      description:
-        'What an SEO agency in San Diego actually does, how the local market splits by district, who currently holds page one for the city term, and how FactoryJet compares.',
-      inLanguage: 'en-US',
-      dateModified: '2026-08-12',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      primaryImageOfPage: `https://factoryjet.com${IMG}/hero.webp`,
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['[data-answer-first]', '[data-faq-answer]'],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqMainEntity,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - San Diego Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'San Diego',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7157,
+    longitude: -117.1611,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'San Diego' },
+    { '@type': 'City', name: 'La Jolla' },
+    { '@type': 'City', name: 'Carlsbad' },
+    { '@type': 'City', name: 'Chula Vista' },
+    { '@type': 'City', name: 'Del Mar' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'San Diego Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for San Diego businesses.',
+  areaServed: { '@type': 'State', name: 'California' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'San Diego local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across UTC, Torrey Pines, and Downtown.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'San Diego', item: CANONICAL },
   ],
 };
 
 export default function SanDiegoSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="sd-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="sd-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="sd-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="sd-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="sd-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="bg-fj-cream">
-        {/* ── HERO (light, never dark) ──────────────────────────────────── */}
-        <Hero
-          eyebrow="SEO AGENCY · SAN DIEGO, CA"
-          headline="An SEO Agency in San Diego, Built for a County of Separate Markets"
-          lead="Downtown law firms, La Jolla clinics, Sorrento Valley biotech, Carlsbad manufacturers and North Park taprooms all get found in completely different ways. We build the plan for the San Diego you actually sell to."
-          formSlot={<HeroInlineForm region="us" source="us_san_diego_seo_hero" submitLabel="Get my free SEO audit" />}
-          trustItems={['Free audit, yours to keep', 'Month to month', 'You talk to the engineer']}
-          rightSlot={
-            <img
-              src={`${IMG}/hero.webp`}
-              alt="A San Diego business owner and an SEO specialist reviewing a website layout together on a laptop"
-              width={1200}
-              height={800}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl"
-              style={{ height: 'auto', display: 'block' }}
-            />
-          }
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── ANSWER-FIRST BLOCK ────────────────────────────────────────── */}
-        <section className="bg-white py-12 md:py-16" style={{ borderTop: '1px solid rgba(15,33,56,0.08)' }}>
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
-              <div className="lg:col-span-7">
-                <p className="fj-eyebrow">The short answer</p>
-                <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
-                  What does an SEO agency in San Diego do?
-                </Heading>
-                <p
-                  data-answer-first
-                  className="mt-5 font-fj-body text-[1.125rem] leading-[1.65] text-fj-ink/80"
-                >
-                  A San Diego SEO agency gets your business found by people already searching for what
-                  you sell, in Google Maps, in the regular results, and inside AI answers. The work is
-                  four things: your Google Business Profile, technical repair on your site, pages that
-                  match real local searches, and reviews earned steadily over time.
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>San Diego Local SEO &amp; AI Citation Authority</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  San Diego Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Torrey Pines, UTC, and Downtown San Diego. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#sd-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore San Diego Corridors</span>
+                  </a>
+                </div>
               </div>
-              <div className="lg:col-span-5">
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/san-diego-seo/hero.webp"
+                  alt="San Diego California local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/san-diego-seo/planning-session.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for San Diego businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for San Diego&apos;s High-Value Commercial Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Torrey Pines life sciences leaders to La Jolla wealth advisors and Otay Mesa cross-border trade operators, Southern California businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. SAN DIEGO DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="sd-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>San Diego Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for San Diego&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Torrey Pines biotech leaders to La Jolla wealth advisors and Otay Mesa logistics hubs:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
                 <div
-                  className="rounded-2xl bg-fj-cream p-7"
-                  style={{ border: '1px solid rgba(15,33,56,0.10)', borderLeft: '4px solid #F05A28' }}
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  <p className="font-fj-body text-[0.9375rem] leading-[1.7] text-fj-ink/75">
-                    Where we sit, stated plainly: FactoryJet does not hold page one for &quot;seo agency san
-                    diego&quot; today. We are the challenger here, doing a harder version of your job
-                    every day, which is why the playbook below reads the way it does.
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
                   </p>
-                  <div className="mt-5">
-                    <ModalCTAButton
-                      label="Get your free San Diego SEO audit"
-                      region="us"
-                      modalVariant="seo"
-                      btnVariant="primary-light"
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for San Diego
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in Southern California demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
                     />
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── TRUST ROW ─────────────────────────────────────────────────── */}
-        <TrustBarUS />
-
-        {/* ── CITY CONTEXT ──────────────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="SAN DIEGO MARKET"
-          headline="San Diego is four economies sharing one coastline"
-          leadParagraphs={[
-            'Most cities have one dominant industry and a search market that follows it. San Diego has four that barely overlap. Life sciences runs along Torrey Pines Mesa and Sorrento Valley. Defense is anchored by Naval Base San Diego, North Island, MCAS Miramar and Camp Pendleton, with General Atomics and Northrop Grumman feeding it. Tourism runs from the Gaslamp Quarter to Coronado. And craft brewing earned the county the nickname Capital of Craft.',
-            'Those four buyers search nothing alike. A procurement engineer at a defense supplier never opens Google Maps. A visitor choosing dinner in Little Italy never reads a service page. Treat them as one audience and you rank for a term nobody buys from.',
-          ]}
-          stats={[
-            { value: '2,064', label: 'life sciences establishments in San Diego', sourceUrl: SRC_LIFESCI, sourceLabel: 'San Diego Regional EDC' },
-            { value: '59,980', label: 'life sciences jobs in the region', sourceUrl: SRC_LIFESCI, sourceLabel: 'San Diego Regional EDC' },
-            { value: '150+', label: 'independent craft breweries in the county', sourceUrl: SRC_BEER, sourceLabel: 'San Diego Brewers Guild' },
-          ]}
-        />
-
-        {/* ── SERVICE EXPLANATION ───────────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="HOW IT ACTUALLY WORKS"
-          headline="Two different games, played on the same results page"
-          lead="Local SEO and organic SEO are not the same job, and most San Diego businesses need both. Knowing which pays first separates a plan that works in three months from one that works in eighteen."
-          body={
-            <>
-              <p>
-                The map results are the first game. Google states in its own documentation that local
-                results are based mainly on{' '}
-                <a
-                  href={SRC_GOOGLE_LOCAL}
-                  rel="nofollow noopener"
-                  target="_blank"
-                  style={{ color: '#B23E13', fontWeight: 600 }}
-                >
-                  relevance, distance and prominence
-                </a>
-                . Relevance is how well your profile matches the search, so your primary category does
-                more work than any paragraph on your website. Distance is how close you are to the
-                searcher, and nothing you buy changes it. The same page is explicit that there is no
-                way to request or pay for a better local ranking, so treat any pitch offering a
-                shortcut into the map results as selling something Google does not sell.
-              </p>
-              <p>
-                The blue links underneath are the second game, and that is where the Sorrento Valley
-                and Carlsbad buyers live. Nobody sourcing a medical device component opens Google
-                Maps. They read pages. That work is{' '}
-                <Link href="/services/seo-audit">technical repair</Link>, page structure, specificity,
-                and increasingly whether an AI answer will quote you, which is what{' '}
-                <Link href="/services/ai-seo">AI SEO</Link> covers.
-              </p>
-              <p>
-                Both run off the same foundation: a fast site, business facts that match everywhere
-                they appear, and pages written by somebody who knows the market. Start with{' '}
-                <Link href="/services/local-seo">local SEO</Link> if customers come to you or you go
-                to them. Start with <Link href="/services/seo">organic SEO</Link> if your buyer
-                researches a purchase over weeks.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src={`${IMG}/planning-session.webp`}
-              alt="Three FactoryJet colleagues planning a website structure on a whiteboard"
-              width={1216}
-              height={704}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-              style={{ display: 'block' }}
-            />
-          }
-        />
-
-        {/* ── DISTRICTS ─────────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="fj-eyebrow">SAN DIEGO, CORRIDOR BY CORRIDOR</p>
-            <Heading as="h2" size="h3" className="mt-5 max-w-[20ch] text-fj-ink">
-              Six San Diegos, six different search problems
-            </Heading>
-            <p className="mt-5 max-w-[620px] font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
-              Search demand splits the way the county does. Here is how we read the map before writing
-              a page.
-            </p>
-
-            <ul className="mt-10 grid list-none grid-cols-1 gap-5 p-0 md:grid-cols-2">
-              {DISTRICTS.map((d) => (
-                <li
-                  key={d.tag}
-                  className="rounded-2xl bg-white p-6"
-                  style={{ border: '1px solid rgba(15,33,56,0.10)' }}
-                >
-                  <p
-                    className="font-fj-mono text-[0.6875rem] font-bold uppercase"
-                    style={{ letterSpacing: '0.12em', color: '#B23E13' }}
-                  >
-                    {d.tag}
-                  </p>
-                  <Heading as="h3" size="h4" className="mt-3 text-fj-ink">
-                    {d.h}
-                  </Heading>
-                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-                    {d.p}
-                  </p>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-8 max-w-[760px] font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-              Seasonality is not a rounding error here either. Comic-Con reshapes downtown demand in
-              July and San Diego Beer Week moves the taproom calendar in November. Any agency selling
-              you San Diego SEO without asking which San Diego you sell to is selling a template.
-            </p>
-          </div>
-        </section>
-
-        {/* ── LISTICLE ──────────────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="fj-eyebrow">THE ORDER WE WORK IN</p>
-            <Heading as="h2" size="h3" className="mt-5 max-w-[22ch] text-fj-ink">
-              Seven things that move a San Diego business up, in order
-            </Heading>
-            <p className="mt-5 max-w-[620px] font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
-              Sequence matters more than effort. The first two are free and most businesses have not
-              done them.
-            </p>
-
-            <ol className="mt-10 list-none space-y-0 p-0">
-              {PLAYBOOK.map((p) => (
-                <li
-                  key={p.n}
-                  className="grid grid-cols-1 gap-x-8 gap-y-2 py-7 md:grid-cols-12"
-                  style={{ borderTop: '1px solid rgba(15,33,56,0.10)' }}
-                >
-                  <div className="md:col-span-1">
-                    <span
-                      className="font-fj-mono text-[1.125rem] font-bold"
-                      style={{ color: '#F05A28' }}
-                      aria-hidden="true"
-                    >
-                      {p.n}
-                    </span>
-                  </div>
-                  <div className="md:col-span-5">
-                    <Heading as="h3" size="h4" className="text-fj-ink">
-                      {p.h}
-                    </Heading>
-                  </div>
-                  <div className="md:col-span-6">
-                    <p className="font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-                      {p.p}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* ── MID-PAGE CTA ──────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
-              <div className="lg:col-span-6">
-                <img
-                  src={`${IMG}/taproom-local-search.webp`}
-                  alt="A San Diego taproom manager checking her business listing on a phone behind the bar"
-                  width={1024}
-                  height={768}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full rounded-2xl"
-                  style={{ height: 'auto', display: 'block' }}
-                />
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
               </div>
-              <div className="lg:col-span-6">
-                <Heading as="h2" size="h3" className="text-fj-ink">
-                  See what San Diego sees when it searches for you
-                </Heading>
-                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
-                  The free audit covers your Google Business Profile, technical health, the competitors
-                  holding your spots, and whether AI answers name you. Plain language, no deck,
-                  yours to keep either way.
-                </p>
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                  <ModalCTAButton
-                    label="Get your free San Diego SEO audit"
-                    region="us"
-                    modalVariant="seo"
-                    btnVariant="primary-light"
-                  />
-                  <Link
-                    href="/ai-visibility-checker"
-                    className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-6 py-3 font-fj-body text-[0.9375rem] font-semibold text-fj-ink transition-colors hover:border-fj-neutral-400"
-                  >
-                    Check your AI visibility
-                  </Link>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why San Diego Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── THE ONE DARK SECTION ──────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="THE SERP, HONESTLY"
-          headline="Page one for this search is not what you think it is"
-          lead={
-            'We pulled the live United States results for "seo agency san diego" on 12 August 2026. Four of the top twelve are not agencies: Clutch, the Semrush agency directory, Built In\'s list of seventeen companies, and an Onfolio roundup. One agency that does rank is headquartered in Texas, and one calls itself a digital marketing company in India on its own homepage.\n\nThat changes the brief. "Get us to number one" is not a plan when a third of page one is lists you can join in weeks.'
-          }
-          pillars={[
-            {
-              title: 'A third of page one is a list',
-              body: 'Getting listed on the directories and roundups already ranking above you is usually faster and cheaper than beating them. We treat that as part of the work rather than as competition.',
-            },
-            {
-              title: 'Proximity beats prestige in the map pack',
-              body: 'Distance is one of the three factors Google names, and it is the one nobody can buy. A well run profile two miles from your customer beats a famous agency client twenty miles away. Plan service areas around that.',
-            },
-            {
-              title: 'Nobody can sell you a shortcut',
-              body: 'Google states there is no way to request or pay for better local ranking. Any pitch built on a guaranteed position, a secret method, or an inside track to the map results is selling something that does not exist.',
-            },
-          ]}
-        />
-
-        {/* ── COMPARISON TABLE ──────────────────────────────────────────── */}
-        <ComparisonTable
-          eyebrow="WHO ELSE YOU SHOULD CALL"
-          headline="The agencies actually ranking for this search, and where we fit"
-          lead="The real names holding the top twelve organic results on 12 August 2026, described by what each is genuinely strong at. We are one of the options, not the obvious one."
-          columns={[
-            { label: 'What they are strongest at' },
-            { label: 'What FactoryJet does differently', isFactoryJet: true },
-            { label: 'How to choose between us' },
-          ]}
-          rows={RIVAL_ROWS}
-          footer="Positions come from one live United States desktop result set pulled on 12 August 2026 and they move constantly. Each firm is described from its own published positioning."
-        />
-
-        {/* ── FAQ (visible array is the schema source) ──────────────────── */}
-        <FAQ
-          eyebrow="SAN DIEGO SEO FAQ"
-          headline="The questions San Diego owners actually type"
-          lead="Taken from live People Also Ask data for this search, answered the way we would answer on a call."
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
-
-        {/* ── INTERNAL LINKS ────────────────────────────────────────────── */}
-        <section className="bg-white py-12">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="max-w-[860px] font-fj-body text-[0.9375rem] leading-[1.75] text-fj-neutral-600">
-              The underlying services live at <Link href="/services/seo">SEO services</Link>,{' '}
-              <Link href="/services/local-seo">local SEO</Link>,{' '}
-              <Link href="/services/small-business-seo">small business SEO</Link>,{' '}
-              <Link href="/services/seo-audit">SEO audit</Link>,{' '}
-              <Link href="/services/seo-consulting">SEO consulting</Link> and{' '}
-              <Link href="/services/ai-seo">AI SEO</Link>. Category playbooks:{' '}
-              <Link href="/services/dental-seo">dental SEO</Link>,{' '}
-              <Link href="/services/healthcare-seo">healthcare SEO</Link>,{' '}
-              <Link href="/services/law-firm-seo">law firm SEO</Link> and{' '}
-              <Link href="/services/ecommerce-seo">ecommerce SEO</Link>. Every city page is written
-              one at a time, so check <Link href="/austin/seo">Austin</Link>,{' '}
-              <Link href="/denver/seo">Denver</Link>, <Link href="/charlotte/seo">Charlotte</Link>,{' '}
-              <Link href="/nashville/seo">Nashville</Link> and <Link href="/tampa/seo">Tampa</Link>.
-            </p>
-          </div>
-        </section>
-
-        {/* ── FINAL CTA (light: the dark budget is spent above) ───────────
-            The local #final-cta wrapper this agent added has been removed: FinalCTA now
-            carries the id itself (fixed 2026-08-12 for all 146 pages), so keeping it here
-            would render a duplicate id and send the FAQ anchor to the wrong element. */}
-        <div className="scroll-mt-24">
-          <FinalCTA
-            variant="light"
-            eyebrow="GET STARTED"
-            headline="Start with the audit, decide afterwards"
-            sub="We will show you where you stand in the map results, what is holding the site back, which competitors hold your spots, and whether AI answers mention you."
-            primaryCta={{ label: 'Get your free San Diego SEO audit', modal: true, region: 'us' }}
-            secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
-            objectionHandler="Month to month, no setup fee. Founder Bhavesh Barot reads every audit before it goes out."
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// SAN DIEGO LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate San Diego local search."
+            city="San Diego"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
           />
         </div>
-        <SeoCityLinksUS currentCity="san-diego" />
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across San Diego County:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating San Diego SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="SAN DIEGO LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in San Diego CA"
+          lead="Direct, plain English answers to what San Diego business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="san-diego" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate San Diego Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

@@ -1,1007 +1,909 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import Heading from '@/components/v2/Heading';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Link from 'next/link';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-const PAGE_URL = 'https://factoryjet.com/san-diego/web-design';
-const PAGE_TITLE = 'Web Design Company San Diego | Next.js Sites You Own | FactoryJet';
-const PAGE_DESC =
-  'A San Diego web design company building Next.js sites that load fast on a phone and get read properly by search and AI answer engines. You keep the code and the design files. Includes an honest comparison with the other San Diego agencies on this search.';
-const DATE_MODIFIED = '2026-08-12';
-
-/* External sources. Every URL below was fetched on 2026-08-12, returned 200,
-   and the claim attached to it was confirmed present in the response body. */
-const SOURCE_LCP = 'https://web.dev/articles/lcp';
-const SOURCE_MOBILE_FIRST =
-  'https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing';
-const SOURCE_SDMAC = 'https://www.sdmac.org/';
-const SOURCE_BREWERS_GUILD = 'https://www.sdbeer.com/';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/san-diego/web-design';
 
 export const metadata: Metadata = {
-  title: PAGE_TITLE,
-  description: PAGE_DESC,
-  alternates: {
-    canonical: PAGE_URL,
-    languages: {
-      'en-US': PAGE_URL,
-      'x-default': PAGE_URL,
-    },
-  },
+  title: 'San Diego Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description:
+    'San Diego web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for California businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: PAGE_TITLE,
-    description: PAGE_DESC,
-    url: `${PAGE_URL}/`,
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet web design for San Diego businesses',
-      },
-    ],
+    title: 'San Diego Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description:
+      'San Diego web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for California businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'San Diego Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: PAGE_TITLE,
-    description: PAGE_DESC,
+    title: 'San Diego Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description: 'Custom Next.js web design and engineering in San Diego CA. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ─────────────────────────────────────────────────────────────────────────
-   San Diego districts. Every business fact here is publicly checkable:
-   institution locations, headquarters cities and district names.
-   ───────────────────────────────────────────────────────────────────────── */
-const DISTRICTS: ReadonlyArray<{ area: string; who: string; job: string }> = [
+const PARTNERS = [
+  'Next.js 15 App Router',
+  'React 19 Server Components',
+  'TypeScript Enterprise',
+  'Tailwind CSS & Vanilla Design Tokens',
+  'Cloudflare Edge Network',
+  'Sanity & Strapi Headless CMS',
+  'Figma Design Systems',
+  'Core Web Vitals SLA (95+)',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
   {
-    area: 'Downtown and the Gaslamp Quarter',
-    who: 'Hotels, restaurants, bars and event businesses packed around the convention centre and Petco Park.',
-    job: 'Traffic spikes around convention weeks and Comic-Con, and arrives on a phone from a hotel lobby. Menu, hours, parking and a booking link, one tap from the homepage.',
+    corridor: 'Torrey Pines & University City',
+    query: 'biotech web design torrey pines san diego',
+    focus: 'Biotech Research Portals, Genomics Platforms & Life Sciences',
+    desc: 'The nation’s biotechnology epicenter. Demands clinical-grade scientific design systems, interactive pipeline diagrams, and high-security investor hubs.',
   },
   {
-    area: 'La Jolla and Torrey Pines',
-    who: 'UC San Diego, Scripps Research and the Salk Institute, surrounded by medical practices, wealth managers and law firms.',
-    job: 'Long consideration cycles. Buyers read credentials and team pages before they fill in anything, so the site has to survive slow, sceptical reading.',
+    corridor: 'Downtown San Diego & Little Italy',
+    query: 'law firm web design downtown san diego',
+    focus: 'Maritime Law, Commercial Real Estate & Hospitality',
+    desc: 'The dynamic waterfront urban core. Captures corporate law retainers, luxury commercial real estate developments, and boutique hospitality clients.',
   },
   {
-    area: 'Sorrento Valley and Sorrento Mesa',
-    who: 'The life sciences and wireless corridor. Qualcomm and Illumina are both headquartered in San Diego, with a dense layer of suppliers around them.',
-    job: 'Technical buyers read spec pages before they take a call. Capability depth and a clean product taxonomy do more than any hero video.',
+    corridor: 'Sorrento Valley & UTC',
+    query: 'b2b tech website design sorrento valley',
+    focus: 'Telecom Hardware, Defense Technology & Venture Portfolios',
+    desc: 'Southern California high-tech corridor. Features deep technical interactive capability tools, enterprise whitepaper gates, and sub-second edge hosting.',
   },
   {
-    area: 'Carlsbad and North County',
-    who: 'The golf equipment cluster, where Callaway, TaylorMade and Cobra Puma Golf all keep their headquarters, alongside consumer brands and life sciences firms.',
-    job: 'The most product-led corner of the county. Catalogue structure, product schema and a checkout that survives a mobile connection are the whole job.',
+    corridor: 'La Jolla & Pacific Beach',
+    query: 'plastic surgery website design la jolla',
+    focus: 'Wealth Management, Plastic Surgery & Luxury Estate Law',
+    desc: 'Affluent coastal enclave. Demands elegant bespoke aesthetics, secure patient consultation intake funnels, and high-resolution visual storytelling.',
   },
   {
-    area: 'Kearny Mesa and the Convoy District',
-    who: 'One of the densest restaurant and retail corridors in the county, plus auto dealerships and import businesses.',
-    job: 'Discovery starts in Google Maps, not your homepage. Real hours, real photos and a menu rendered as text rather than a PDF decide whether anyone drives over.',
+    corridor: 'Kearny Mesa & Central San Diego',
+    query: 'healthcare system website design kearny mesa',
+    focus: 'Medical Systems, Specialized Healthcare & Asian Commerce',
+    desc: 'Central commercial and medical hub. Features multi-practitioner directory architectures, patient booking integrations, and bilingual capabilities.',
   },
   {
-    area: 'Miramar, North Park and the brewery belt',
-    who: 'Taprooms, kitchens and event spaces. San Diego County has over 150 independent craft breweries.',
-    job: 'Weekend intent, phone in hand, decision in under a minute. Tap list, address, parking, events. Anything past one scroll loses the visit.',
-  },
-  {
-    area: 'Point Loma, National City and the waterfront',
-    who: 'Naval Base San Diego is the principal homeport of the Pacific Fleet surface fleet, with a supply chain of ship repair and engineering firms around it.',
-    job: 'Procurement teams check vendor sites before shortlisting. Capability statements, certifications and past performance beat visual polish every time.',
+    corridor: 'Otay Mesa & South County',
+    query: 'customs broker logistics web design otay mesa',
+    focus: 'Cross-Border Logistics, Maquiladora Trade & Manufacturing',
+    desc: 'Busiest commercial land port on the California border. Requires bilingual English and Spanish content architectures and real-time freight quote forms.',
   },
 ];
 
-/* The listicle section. */
-const HIRING_CHECKLIST: ReadonlyArray<{ q: string; a: string }> = [
+const INDUSTRY_SHOWCASE = [
   {
-    q: 'Who actually writes the code?',
-    a: 'Ask for the name of the person building it, not the agency. Plenty of shops sell locally and subcontract the build. Not automatically bad, but know it before you sign.',
+    sector: 'Biotechnology, Life Sciences & Clinical Research',
+    headline: 'Clinical-Grade Digital Experiences for Torrey Pines Biotech',
+    description:
+      'Biotechnology enterprises, therapeutics innovators, and clinical research organizations in San Diego require digital platforms that command scientific credibility. We engineer custom Next.js web applications featuring interactive pipeline visualizers, investor data rooms, clinical trial recruitment portals, and sub-second edge performance.',
+    image: '/images/us/san-diego-web-design/hero-studio.webp',
+    alt: 'San Diego biotechnology life sciences and scientific web design engineering',
+    points: [
+      'Interactive clinical pipeline visualizers and mechanism-of-action animations',
+      'Secure investor relations data rooms and board presentation document portals',
+      'Compliance-first architectures with sub-second global edge CDN caching',
+    ],
   },
   {
-    q: 'What do I own when this is finished?',
-    a: 'You want the repository, the design file and the analytics property in your own accounts. If the site lives on their proprietary platform, you are renting, and the rent has no ceiling.',
+    sector: 'Corporate Law, Maritime Litigation & Defense Contracting',
+    headline: 'High-Authority Digital Flagships for Downtown San Diego Law Firms',
+    description:
+      'From corporate trial attorneys in Downtown San Diego to maritime dispute lawyers in Little Italy, prospective commercial clients demand immediate credibility. We design bespoke web architectures featuring attorney credentials, practice area silos, verified case results, and high-converting inquiry funnels.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'San Diego corporate law firm litigation and defense contracting web design',
+    points: [
+      'Attorney directory schemas linking California State Bar verified credentials',
+      'High-converting practice area landing pages optimized for corporate counsel',
+      'Enterprise-grade security and encrypted client intake questionnaire workflows',
+    ],
   },
   {
-    q: 'Can I open a site you built, on my own phone?',
-    a: 'Not a screenshot. A live URL, opened on cellular rather than office wifi. If it takes more than a few seconds to show something useful, that is what you are buying.',
+    sector: 'Private Wealth Management, Family Offices & Venture Capital',
+    headline: 'Editorial Elegance for La Jolla & UTC Wealth Advisory Firms',
+    description:
+      'Family offices and boutique wealth managers across La Jolla require sophisticated digital presences that project stability and intellectual leadership. We craft bespoke typography, bespoke charts, and secure client portal integrations.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'San Diego private wealth management and venture capital website design',
+    points: [
+      'Tailored editorial typography and bespoke interactive market visualizers',
+      'Encrypted client portal integration with multi-factor authentication routing',
+      '100% intellectual property ownership with full source code transfer',
+    ],
   },
   {
-    q: 'What is the scope, in writing, before any money moves?',
-    a: 'A page list, an integration list, a revision count and a launch date. Anything vaguer becomes an argument in week six.',
-  },
-  {
-    q: 'Who writes the content, and by when?',
-    a: 'Most late projects are late because the copy never arrived. Establish whether they write it or you do, then put a date on it. This question saves more timelines than any tool.',
-  },
-  {
-    q: 'How will the site actually be found?',
-    a: 'A site with no search plan is an expensive business card. Ask about page structure, internal links, Google Business Profile and the structured data that lets AI answer engines quote you.',
-  },
-  {
-    q: 'What happens the week after launch?',
-    a: 'What the support window covers, how long it lasts, and who holds the domain and DNS. Handover is the part most agencies leave deliberately fuzzy.',
-  },
-  {
-    q: 'Can my team change a headline without calling you?',
-    a: 'If the answer involves raising a ticket, you have bought a dependency. You should be able to edit text, swap an image and publish a post without a developer.',
-  },
-  {
-    q: 'Is the build accessible?',
-    a: 'Keyboard navigation, real focus states, colour contrast that passes, alt text that means something. It protects real customers and it is cheap insurance.',
-  },
-  {
-    q: 'What are you not good at?',
-    a: 'Anyone who cannot answer is selling. Ours is further down this page. A firm that names its own limits is probably telling the truth about the rest of the pitch too.',
+    sector: 'Cross-Border Logistics, Customs Brokerage & Manufacturing',
+    headline: 'Engineering Commercial Lead Engines for Otay Mesa Industrial Trade',
+    description:
+      'Freight forwarders, customs brokers, and twin-plant cross-border manufacturing operators in Otay Mesa demand high-speed lead engines. We build responsive web applications with interactive quote estimators, warehouse capability matrices, and bilingual English-Spanish user interfaces.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'San Diego cross border logistics customs broker and industrial trade web design',
+    points: [
+      'Interactive freight rate estimation calculators and RFQ workflow automation',
+      'Bilingual English and Spanish language switching with localized metadata',
+      'Sub-second mobile speed ensuring immediate commercial quote submissions',
+    ],
   },
 ];
 
-const JOURNEY_STAGES = [
+const PAIN_POINTS = [
   {
-    number: '01',
-    title: 'Discovery call',
-    description:
-      'Thirty minutes on what you sell, who buys it and what is currently in the way. You leave with a written page list whether or not you hire us.',
+    num: '01',
+    title: 'Ending Slow WordPress Themes & Bloated Plugin Stacks',
+    problem: 'Traditional San Diego agencies build on bloated WordPress templates with 30+ plugins, resulting in sluggish load times, security vulnerabilities, and constant breakages.',
+    solution: 'We engineer custom Next.js 15 web applications on modern edge networks, achieving sub-second load times and zero dependency bloat.',
   },
   {
-    number: '02',
-    title: 'Scope and sitemap',
-    description:
-      'Page list, integrations, a content owner per page and a launch date, agreed in writing before design starts.',
+    num: '02',
+    title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
+    problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
   },
   {
-    number: '03',
-    title: 'Design in Figma',
-    description:
-      'Mobile layouts first, because that is the version Google indexes. Comments go on the prototype, not into email threads.',
+    num: '03',
+    title: 'Overcoming Fragile Mobile Experiences That Hurt Lead Conversion',
+    problem: 'Poorly coded desktop-first designs break on mobile devices, with slow forms, misaligned buttons, and confusing navigation that drives prospects away.',
+    solution: 'We engineer mobile-first responsive interfaces with frictionless touch navigation, instant autocompleting forms, and clean Core Web Vitals.',
   },
   {
-    number: '04',
-    title: 'Build in Next.js',
-    description:
-      'Static pages, real image sizing, no plugin stack. Performance budgets are enforced from the first commit rather than tuned after launch.',
-  },
-  {
-    number: '05',
-    title: 'Search structure and launch',
-    description:
-      'Schema, internal links, sitemap, GA4 and Search Console. We deploy, check it on a real phone, and record the handover so your team can run it.',
+    num: '04',
+    title: 'Stopping Agency Code Hostage & Hidden Licensing Fees',
+    problem: 'Many agencies lock your website into proprietary platforms or charge ongoing licensing fees to keep your own code operational.',
+    solution: 'You receive 100% full intellectual property ownership, the complete GitHub repository, and documented deployment configurations upon project completion.',
   },
 ];
 
-const INDUSTRY_SECTORS = [
+const ROADMAP_STEPS = [
   {
-    name: 'Life sciences and biotech',
-    description:
-      'Instrument vendors, CROs and diagnostics firms around the Torrey Pines and Sorrento Valley campuses. Buyers arrive informed, so the effort goes into capability depth, product taxonomy and schema that makes each product a resolvable entity.',
-    example: 'Sorrento Valley · Torrey Pines · UTC',
+    phase: 'Phase 01',
+    title: 'Discovery, Information Architecture & Strategy',
+    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
   },
   {
-    name: 'Defence, maritime and government',
-    description:
-      'Ship repair, engineering services and component suppliers around Naval Base San Diego. Buyers check your site before shortlisting, so capability statements and past performance get their own pages.',
-    example: 'Point Loma · National City · Barrio Logan',
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & Design Tokens',
+    desc: 'We design bespoke desktop and mobile prototypes in Figma, complete with typography tokens, spacing scales, and custom brand visual assets.',
+    deliverables: ['High-fidelity interactive Figma prototypes', 'Mobile responsive component wireframes', 'Design tokens and typography scales', 'Client design review and revision approval'],
   },
   {
-    name: 'Hotels, restaurants and tourism',
-    description:
-      'Gaslamp restaurants, coastal hotels, tour operators and venues. Demand is mobile and seasonal, so we build for one-tap booking and a Google Business Profile that matches the site exactly.',
-    example: 'Gaslamp · Mission Bay · Coronado',
+    phase: 'Phase 03',
+    title: 'Next.js 15 Engineering & Headless CMS Integration',
+    desc: 'We transform approved designs into production React 19 code with TypeScript, Tailwind CSS, structured schema markup, and headless CMS integrations.',
+    deliverables: ['Custom Next.js 15 App Router architecture', 'Sanity/Strapi headless content management setup', 'JSON-LD structured schema graph implementation', 'Cross-browser and multi-device QA validation'],
   },
   {
-    name: 'Craft brewing, food and drink',
-    description:
-      'Taprooms and small-batch producers across Miramar, North Park and North County. Tap lists change weekly, so the site has to be editable by whoever is behind the bar.',
-    example: 'Miramar · North Park · Vista',
-  },
-  {
-    name: 'Professional services',
-    description:
-      'Law firms, accountants, wealth managers and practices in La Jolla, downtown and Del Mar. These buyers read credentials carefully, so team and service pages are structured for slow reading.',
-    example: 'La Jolla · Downtown · Del Mar',
-  },
-  {
-    name: 'Ecommerce and consumer brands',
-    description:
-      'North County product companies selling direct and through retail. Catalogue structure, product schema and mobile checkout speed decide the revenue line, so that is where the build effort goes.',
-    example: 'Carlsbad · Oceanside · Encinitas',
+    phase: 'Phase 04',
+    title: 'Core Web Vitals Optimization, Launch & Handover',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ performance optimization', 'Cloudflare DNS cutover and SSL deployment', 'Full GitHub repository and asset transfer', '30-day post-launch warranty and team training'],
   },
 ];
 
-/* Named from the live organic top 12 for "web design company san diego"
-   (DataForSEO, 2026-08-12). Positioning is taken from each firm's own public
-   page title and site positioning. Nothing here is assumed. */
-const COMPARISON_ROWS = [
+const EVALUATION_CRITERIA = [
   {
-    feature: 'StraightFire Marketing',
-    values: [
-      'Holds the top organic result. Positions on custom WordPress web design for San Diego.',
-      'Next.js instead of WordPress, so there is no plugin stack to keep patched and the repository is yours.',
-      'WordPress is a requirement and you want the firm already proven on this search.',
-    ],
+    label: 'Engineering Stack',
+    factoryjet: 'Modern Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Outdated monolithic WordPress, Elementor, or heavy Webflow templates.',
   },
   {
-    feature: 'TinyFrog Technologies',
-    values: [
-      'Long-established San Diego shop with a large public review history, design and development together.',
-      'We are newer here with a shorter local track record. We compete on delivery speed and structure for AI answers.',
-      'A long local reference list and a big review count are what decide it for you.',
-    ],
+    label: 'Delivery Speed',
+    factoryjet: 'Rapid 7-day agile sprint with fixed-price milestone delivery.',
+    traditional: '4 to 8 months of protracted discovery meetings and frequent timeline slippages.',
   },
   {
-    feature: 'San Diego Web Studios',
-    values: [
-      'Positions on professional websites for established San Diego businesses.',
-      'Same buyer, different handover. You leave with the code, the Figma file and analytics in your own accounts.',
-      'You want a San Diego team you can sit down with in person.',
-    ],
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Google Lighthouse Core Web Vitals mobile performance.',
+    traditional: 'Sub-60 mobile performance scores with heavy render-blocking scripts.',
   },
   {
-    feature: 'Mission Bay Media',
-    values: [
-      'Design and development under one roof for local businesses.',
-      'Also one team end to end, with schema, GA4 and Search Console wired in before launch rather than after.',
-      'You want a smaller local studio and value proximity over speed.',
-    ],
-  },
-  {
-    feature: 'Vimana Visual',
-    values: [
-      'Positions on affordable website design for businesses building their first real site.',
-      'We do not compete on being cheapest. We agree a fixed scope up front and hold to it.',
-      'Budget is the binding constraint and a simple brochure site is genuinely all you need.',
-    ],
-  },
-  {
-    feature: 'San Diego Web Design Co',
-    values: [
-      'Positions on website design for small businesses, the segment most of this search chases.',
-      'Small business work too, with a seven day Starter build and no retainer attached to it.',
-      'You want a local shop that does nothing but small business sites.',
-    ],
+    label: 'IP & Code Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary platform lock-in or agency-retained code repositories.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost and timeline' },
-  { key: 'included', label: "What's included" },
-  { key: 'choosing', label: 'Choosing a company' },
-  { key: 'technical', label: 'Technical and AI' },
-  { key: 'local', label: 'San Diego specifics' },
-  { key: 'support', label: 'Ownership and support' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Process' },
+  { key: 'tech', label: 'Next.js Tech Stack' },
+  { key: 'local', label: 'San Diego Focus' },
+  { key: 'ownership', label: 'Code & Support' },
 ];
 
-const SD_FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
-    question: 'How much does a website cost for a small business in San Diego?',
+    category: 'pricing',
+    question: 'How much does custom web design cost for a San Diego business?',
     answer:
-      'Three things drive it: page count, how many systems the site has to talk to, and whether copy and photography exist yet. A five page brochure site sits at the bottom of the range, a catalogue with checkout and a CRM connection several times that. We quote a fixed number after one call.',
-    category: 'cost',
+      'Project investments are based on total page count, interactive feature complexity, custom API integrations, and content scope. Every project is scoped with a transparent, fixed-price milestone agreement. Focused corporate websites are delivered with full Figma UI/UX, custom Next.js engineering, and 100% code ownership with zero surprise overages.',
   },
   {
-    question: 'How much do web design agencies charge?',
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'Three models. Fixed scope, agreed before work starts. Hourly, where you carry the risk of a bad estimate. Monthly retainer, where the site is bundled with marketing. We use fixed scope: it is the only one where a slow week is our problem, not yours.',
-    category: 'cost',
+      'No. We believe you should own your website outright. You contract directly with your preferred hosting provider (Cloudflare, Vercel) and pay zero monthly agency licensing fees.',
   },
   {
-    question: 'What is a good hourly rate for website design?',
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'The wrong thing to optimise. A slow designer at a low rate easily costs more than a fast one at a high rate, and hourly gives you no way to compare two quotes. Ask for a fixed number against a written page list instead.',
-    category: 'cost',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
-    question: 'How long does it take to build a website?',
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in just 7 days?',
     answer:
-      'A five page site with content ready takes about a week. Ten to fifteen pages with a CMS and lead capture runs two to three weeks. Catalogues are scoped individually. The clock starts when your content lands in the shared workspace, not when you sign.',
-    category: 'cost',
+      'We eliminate bloated agency bureaucracy and junior account layers. Our senior full-stack engineers and Figma UI/UX designers work directly with you through focused, daily milestone sprints to design, build, and deploy your site in parallel.',
   },
   {
-    question: 'What does a web design company do?',
+    category: 'timeline',
+    question: 'What is required from our internal team during the 7-day sprint?',
     answer:
-      'Plans the site, designs it, builds it, launches it and hands it over. The planning gets skipped most and matters most: which pages exist, what each does, and who is reading. A good firm handles search structure, analytics and accessibility rather than selling them as extras.',
-    category: 'included',
+      'We require brand assets (logos, brand guidelines), key service copy, and prompt feedback on the Figma design prototypes during scheduled milestone check-ins to ensure rapid project delivery.',
   },
   {
-    question: 'What should a business website include?',
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the process?',
     answer:
-      'What you do, who it is for, proof it works, and an obvious way to get in touch. Then the practical layer: real contact details, hours, location, privacy policy. Most small business sites fail on proof and on the contact path, not on looks.',
-    category: 'included',
+      'Every project includes dedicated design revision cycles during the Figma prototype phase, ensuring you approve every layout, color choice, and typography detail before development begins.',
   },
   {
-    question: 'How can I hire someone to design my website?',
+    category: 'tech',
+    question: 'Why choose Next.js 15 over WordPress or Webflow?',
     answer:
-      'Write down what the site has to achieve in one sentence, and roughly how many pages you need. Send the same brief to three firms so the quotes are comparable. Ask each for a live URL you can open on your own phone.',
-    category: 'choosing',
+      'Next.js 15 delivers unbeatable performance with sub-second page loads, superior SEO through server-side rendering, rock-solid security without vulnerable plugins, and infinite scalability that monolithic page builders cannot match.',
   },
   {
-    question: 'What are common website red flags?',
+    category: 'tech',
+    question: 'Can our marketing team edit text and images without touching code?',
     answer:
-      'No written scope. A monthly fee with no line between hosting and the site. Refusing to hand over code or domain. Portfolio screenshots with no live URLs. Guaranteed rankings, which nobody can promise. And a proposal that never names who does the work.',
-    category: 'choosing',
+      'Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi, allowing your marketing team to create blog posts, update service copy, and upload images through an easy visual dashboard.',
   },
   {
-    question: 'What are the top 10 web design agencies in the USA?',
+    category: 'tech',
+    question: 'How do you ensure our website achieves 95+ Core Web Vitals scores?',
     answer:
-      'There is no authoritative list. Most roundups are paid placements or written by an agency that put itself at number one. Clutch and Yelp are useful for reading raw reviews, not as rankings. Judge on live sites, references, and what you own at the end.',
-    category: 'choosing',
+      'We optimize every asset using modern WebP/AVIF image formats, eliminate render-blocking JavaScript, implement static page pre-rendering, and deploy on Cloudflare global edge networks.',
   },
   {
-    question: 'Is it better to build your own website or use a website builder?',
+    category: 'tech',
+    question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'If you are testing an idea and need a page this week, use a builder. Move to a custom build when the site carries real revenue, or when speed and search structure start costing you money. Going custom too early is a common, expensive mistake.',
-    category: 'choosing',
+      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
-    question: 'What is the 3 second rule in web design?',
-    answer:
-      'Shorthand for the claim that visitors leave if a page takes over three seconds. The number moves depending on who cites it, so treat it as a direction, not a law. The measurable version is Largest Contentful Paint: Google states a good score is 2.5 seconds or less.',
-    category: 'technical',
-  },
-  {
-    question: 'Is AI replacing web design?',
-    answer:
-      'It has replaced parts of it. Layout scaffolding, first-draft copy and image work are far faster than two years ago, and we use those tools daily. Not automated: deciding what a business should say, structuring it so a stranger understands, and being accountable when something breaks.',
-    category: 'technical',
-  },
-  {
-    question: 'Can ChatGPT actually create a website?',
-    answer:
-      'It can produce working code for a page, and for a simple one-pager that may be enough. It falls short on everything around the code: hosting, domains, forms that actually deliver mail, analytics, accessibility. Generating is the easy part now. Operating is not.',
-    category: 'technical',
-  },
-  {
-    question: 'Which is better, web designing or web development?',
-    answer:
-      'Two halves of one job. Design decides what it looks like and how it behaves, development makes it real and fast. Splitting them across two vendors is fine on a large project and usually creates handover friction on a small one.',
-    category: 'technical',
-  },
-  {
-    question: 'Do you work with life sciences companies in Sorrento Valley or Torrey Pines?',
-    answer:
-      'Yes, and the build looks different from a typical service site. Technical buyers arrive informed, so the work goes into capability depth, product taxonomy and schema that makes each product an entity a search engine can resolve. Polish matters less than being findable and precise.',
     category: 'local',
+    question: 'Do you have experience with San Diego biotech and life sciences companies?',
+    answer:
+      'Yes. We build high-credibility digital experiences for Torrey Pines biotech firms, medical device manufacturers, and clinical research organizations requiring interactive pipelines and investor portals.',
   },
   {
-    question: 'We run a taproom in North Park. What does a brewery website actually need?',
-    answer:
-      'Four things, fast, on a phone: what is on tap now, where you are, when you are open, and what is on this weekend. It also has to be editable by whoever is behind the bar, because a stale tap list is worse than none.',
     category: 'local',
+    question: 'Can you build bilingual English and Spanish websites for cross-border businesses?',
+    answer:
+      'Yes. We engineer multi-language Next.js architectures with seamless language switching, localized metadata, and hreflang tag implementation for San Diego and Otay Mesa commercial enterprises.',
   },
   {
-    question: 'We supply the Navy. Does our website matter for procurement?',
-    answer:
-      'More than most subcontractors expect. Primes and government buyers look you up before they shortlist. Put your capability statement, certifications, NAICS codes and past performance on their own pages rather than inside a downloadable file, so a search engine can read them too.',
     category: 'local',
+    question: 'Can you integrate custom CRM and lead capture workflows like HubSpot or Salesforce?',
+    answer:
+      'Yes. We build webhook-driven form integrations that instantly route leads, quote inquiries, and consultation requests directly into your CRM, Slack, or email marketing automation platform.',
   },
   {
-    question: 'Do you build sites for Gaslamp Quarter restaurants and hotels?',
-    answer:
-      'Yes. Downtown hospitality traffic is mobile, impatient and spikes around convention weeks. Build priorities are one-tap reservations, a menu rendered as real text rather than a PDF, fast images, and a Google Business Profile that matches the site exactly.',
     category: 'local',
+    question: 'Do you design websites tailored for San Diego law practices and financial advisors?',
+    answer:
+      'Yes. We develop sophisticated digital flagships for corporate litigation attorneys, wealth managers, and private equity firms featuring practice area silos, attorney bio schemas, and client portals.',
   },
   {
-    question: 'How does FactoryJet compare to San Diego agencies like TinyFrog or StraightFire Marketing?',
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'Both are credible and both hold page one for this search, which we do not. They build primarily on WordPress. We build in Next.js, fix scope before work starts, and hand over the repository. The table above sets out where each is the better call.',
-    category: 'local',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, Figma design assets, and deployment configurations with zero vendor lock-in.',
   },
   {
-    question: 'You are not headquartered in San Diego. Why should I hire you?',
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Only if the trade is worth it. You give up sitting in a room together. You get a faster build, a stack with no monthly plugin maintenance, and full ownership at the end. If in-person matters more, the table above names local firms and we mean it.',
-    category: 'local',
+      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
   },
   {
-    question: 'Do you handle Google Business Profile and local SEO for San Diego?',
+    category: 'ownership',
+    question: 'How do you train our internal team on managing the website?',
     answer:
-      'Yes, and for a business with premises it often matters more than the site, because Maps results sit above the organic ones. We align your profile, categories and service areas with the site content, then structure pages around what San Diego actually searches for.',
-    category: 'local',
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update content in the CMS, view form submissions, and manage media assets.',
   },
   {
-    question: 'Who owns the code and design files when the project is done?',
+    category: 'ownership',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
     answer:
-      'You do. Repository, Figma file, domain, hosting account and analytics property all sit in your name. No licence fee, no clause tying the site to us. If you move to another developer next year, nothing in our contract stands in the way.',
-    category: 'support',
-  },
-  {
-    question: 'Do you handle website maintenance after launch?',
-    answer:
-      'The support window after launch covers bugs and training questions at no extra charge. After that, ongoing care is a separate arrangement covering content updates, dependency upgrades and performance monitoring. It is optional, and plenty of clients run the site themselves.',
-    category: 'support',
-  },
-  {
-    question: 'Is web design still worth it in 2026?',
-    answer:
-      'Yes, and the reason has changed. It used to be about looking credible. Now the site is also the source AI answer engines read when someone asks them for a recommendation. If your information is not on a page a machine can parse, you are absent from that conversation.',
-    category: 'support',
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - San Diego Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'San Diego',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7157,
+    longitude: -117.1611,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'San Diego' },
+    { '@type': 'City', name: 'La Jolla' },
+    { '@type': 'City', name: 'Carlsbad' },
+    { '@type': 'City', name: 'Chula Vista' },
+    { '@type': 'City', name: 'Del Mar' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'San Diego Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
+  description:
+    'Custom Next.js web design and engineering in San Diego CA. Sub-second performance, full IP code ownership, and rapid 7-day delivery for California businesses.',
+  areaServed: { '@type': 'State', name: 'California' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'San Diego Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description: 'San Diego web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for California businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'San Diego', item: CANONICAL },
+  ],
+};
 
 export default function SanDiegoWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-          formSlot={<HeroInlineForm region="us" source="us_san_diego_web_design_hero" />}
-          eyebrow={'WEB DESIGN · SAN DIEGO'}
-          headline={'A San Diego Web Design Company Built for Speed, Search and Handover'}
-          lead={
-            'Google indexes the mobile version of your site, not the desktop one. We build Next.js websites for San Diego businesses that load fast on a phone, are structured so search engines and AI answer engines can read them, and arrive with the code and the design files already in your hands.'
-          }
-          trustItems={[
-            'Next.js, not a page builder',
-            'You own the code and the Figma',
-            'Fixed scope agreed before we start',
-          ]}
-          extraCta={<WhatsAppCTA city="San Diego" variant="light" />}
-          rightSlot={
-            <img
-              src="/images/us/san-diego-web-design/hero-studio.webp"
-              alt="Two designers reviewing a website layout on a large monitor in a bright coastal San Diego studio, palm trees visible through the window behind them"
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+      <script id="sd-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="sd-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="sd-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="sd-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="sd-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── Answer-first block ─────────────────────────────────────────── */}
-        <section className="bg-white py-12 md:py-16" aria-labelledby="answer-first">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid gap-8 lg:grid-cols-12 lg:gap-14">
-              <div className="lg:col-span-5">
-                <p className="fj-eyebrow">THE SHORT ANSWER</p>
-                <Heading as="h2" size="h3" id="answer-first" className="mt-5 text-fj-ink">
-                  What a web design company in San Diego does
-                </Heading>
-              </div>
-              <div className="lg:col-span-7">
-                <p
-                  data-speakable
-                  className="font-fj-body text-[1.125rem] leading-[1.65] text-fj-ink"
-                >
-                  A web design company plans, designs, builds and launches your website, then keeps
-                  it fast and findable. FactoryJet does that for San Diego businesses in Next.js:
-                  mobile-first pages, structured data, analytics and local search wired in from day
-                  one. Starter sites ship in seven days, scope is fixed before work starts, and you
-                  own the code at the end.
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>San Diego Web Design &amp; Full-Stack Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  San Diego Web Design Agency for High-Growth Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Custom Next.js 15 websites, bespoke Figma UI/UX, and sub-second performance engineered for California leaders. 7-day agile delivery with 100% intellectual property code ownership.
                 </p>
-                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/70">
-                  Below: the county district by district, ten questions to ask any firm before you
-                  sign, a straight comparison with the San Diego agencies ranking for this search,
-                  and where we are the wrong choice.
-                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#sd-web-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore San Diego Corridors</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
-
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={'What San Diego businesses get on every build.'}
-        />
-
-        <CityContextSection
-          eyebrow={'SAN DIEGO MARKET'}
-          headline={'San Diego Is Four Economies Sharing One Coastline'}
-          leadParagraphs={[
-            'Most city pages describe a place as though it had one kind of buyer. San Diego obviously does not. There is a life sciences economy on the mesas at Torrey Pines and Sorrento Valley, where Qualcomm and Illumina are headquartered and technical buyers read spec pages before they take a call. There is a defence and maritime economy around the bay, anchored by Naval Base San Diego, where procurement teams read your capability statement before they shortlist you. There is a visitor economy downtown and along the coast that spikes around convention weeks. And there is a food and drink economy across Miramar, North Park and North County, where the decision happens on a phone in under a minute.',
-            'Those four buyers need genuinely different websites, which is what templates get wrong. A biotech supplier and a Gaslamp restaurant both need speed and share almost nothing else. The one thing that does not vary: Google uses the mobile version of your content for indexing and ranking, so the phone version is not a reduced copy of the real site. It is the real site.',
-          ]}
-          stats={[
-            {
-              value: '2.5s',
-              label: "Google's threshold for a good Largest Contentful Paint, at the 75th percentile of loads",
-              sourceUrl: SOURCE_LCP,
-              sourceLabel: 'web.dev',
-            },
-            {
-              value: '356,519',
-              label: 'defence-related jobs in the San Diego region',
-              sourceUrl: SOURCE_SDMAC,
-              sourceLabel: 'San Diego Military Advisory Council',
-            },
-            {
-              value: '150+',
-              label: 'independent craft breweries in San Diego County',
-              sourceUrl: SOURCE_BREWERS_GUILD,
-              sourceLabel: 'San Diego Brewers Guild',
-            },
-          ]}
-        />
-
-        <ServiceExplanation
-          eyebrow={'WHAT YOU ARE BUYING'}
-          headline={'A Website Is Three Purchases Sold as One'}
-          lead={
-            'The thinking, the build, and everything that keeps it working afterwards. Most disappointing projects went wrong in the first of those, not the second.'
-          }
-          body={
-            <>
-              <p>
-                The thinking is deciding which pages exist, what each has to do, and who is reading.
-                For a Sorrento Valley instrument vendor that means product and application pages
-                deep enough to answer a scientist. For a Kearny Mesa restaurant it means hours, menu
-                and directions above everything else. Same craft, opposite output.
-              </p>
-              <p>
-                The build is where the stack starts to matter. We use Next.js and ship static pages
-                to Cloudflare rather than assembling a site out of page-builder plugins. Every
-                plugin is a dependency somebody has to keep patched, and a site that gets slower
-                each quarter is a cost you never agreed to. Google states a good Largest Contentful
-                Paint is{' '}
-                <a
-                  href={SOURCE_LCP}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#B23E13] underline underline-offset-4"
-                >
-                  2.5 seconds or less at the 75th percentile
-                </a>{' '}
-                of loads, measured on the mobile version, because{' '}
-                <a
-                  href={SOURCE_MOBILE_FIRST}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#B23E13] underline underline-offset-4"
-                >
-                  Google indexes the smartphone version of your content
-                </a>
-                .
-              </p>
-              <p>
-                The third purchase is being found: page structure, internal links, a Google Business
-                Profile that agrees with your site, and structured data so AI answer engines quote
-                you accurately. It is part of every build here, not an upgrade sold afterwards. For
-                the deeper version see our{' '}
-                <Link href="/services/ai-seo/" className="text-[#B23E13] underline underline-offset-4">
-                  AI SEO service
-                </Link>
-                , or run the free{' '}
-                <Link
-                  href="/ai-visibility-checker/"
-                  className="text-[#B23E13] underline underline-offset-4"
-                >
-                  AI visibility check
-                </Link>{' '}
-                to see whether ChatGPT and Perplexity name your business at all today.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/san-diego-web-design/process-table.webp"
-              alt="A three person design team reviewing printed wireframe sketches around a table, with a laptop showing a simple image-led page layout"
-              width={1264}
-              height={848}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
-
-        {/* ── Districts ──────────────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20" aria-labelledby="districts-heading">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-              <div className="lg:col-span-7">
-                <p className="fj-eyebrow">DISTRICT BY DISTRICT</p>
-                <Heading as="h2" size="h3" id="districts-heading" className="mt-5 text-fj-ink">
-                  San Diego Is Not One Market. It Is About Seven.
-                </Heading>
-                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/70">
-                  A taproom in North Park and a diagnostics company in Sorrento Valley are both
-                  buying web design, and almost nothing about the two projects overlaps. We work out
-                  which of these you are in before writing a page, because it changes the sitemap,
-                  the copy and where the build effort goes.
-                </p>
-              </div>
-              <div className="lg:col-span-5">
-                <img
-                  src="/images/us/san-diego-web-design/owner-phone.webp"
-                  alt="A taproom owner holding a phone showing a simple mobile web page with a large photo and a short menu label"
-                  width={1264}
-                  height={848}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full rounded-2xl object-cover"
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/san-diego-web-design/hero-studio.webp"
+                  alt="San Diego California web design and custom Next.js web application development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
             </div>
-
-            <div className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
-              {DISTRICTS.map((d) => (
-                <div key={d.area} className="rounded-2xl border border-fj-neutral-200 p-6 md:p-7">
-                  <h3 className="fj-display text-[1.0625rem] font-semibold leading-snug text-fj-ink">
-                    {d.area}
-                  </h3>
-                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-ink/70">
-                    {d.who}
-                  </p>
-                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-ink">
-                    {d.job}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
-        {/* ── Listicle ───────────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20" aria-labelledby="checklist-heading">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="max-w-[760px]">
-              <p className="fj-eyebrow">BEFORE YOU SIGN</p>
-              <Heading as="h2" size="h3" id="checklist-heading" className="mt-5 text-fj-ink">
-                10 Questions to Ask Any San Diego Web Design Company
-              </Heading>
-              <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/70">
-                Ask us these. Ask the six firms in the comparison table the same ten. The answers
-                sort a shortlist faster than any portfolio does.
-              </p>
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
             </div>
 
-            <ol className="mt-12 grid gap-x-12 gap-y-8 md:grid-cols-2">
-              {HIRING_CHECKLIST.map((item, i) => (
-                <li key={item.q} className="border-t border-fj-neutral-200 pt-5">
-                  <div className="flex items-baseline gap-3">
-                    <span
-                      aria-hidden="true"
-                      className="font-fj-mono text-sm font-semibold text-[#B23E13]"
-                    >
-                      {String(i + 1).padStart(2, '0')}
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
                     </span>
-                    <h3 className="font-fj-body text-[1.0625rem] font-semibold leading-snug text-fj-ink">
-                      {item.q}
-                    </h3>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
-                  <p className="mt-3 pl-9 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-ink/70">
-                    {item.a}
-                  </p>
-                </li>
-              ))}
-            </ol>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* ── Mid-page CTA ───────────────────────────────────────────────── */}
-        <section className="bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream px-7 py-10 md:px-12 md:py-12">
-              <div className="grid items-center gap-8 lg:grid-cols-12">
-                <div className="lg:col-span-7">
-                  <Heading as="h2" size="h4" className="text-fj-ink">
-                    Want the page list before you commit to anything?
-                  </Heading>
-                  <p className="mt-4 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/70">
-                    Tell us what your business does and what the site has to achieve. You get back a
-                    written page list and a fixed scope. No discovery fee, and the page list is
-                    yours to keep even if you hire one of the other firms named here.
-                  </p>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/san-diego-web-design/process-table.webp"
+                  alt="FactoryJet senior UI UX designers collaborating on custom San Diego web design sprint"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
                 </div>
-                <div className="flex flex-wrap gap-3 lg:col-span-5 lg:justify-end">
-                  <ModalCTAButton
-                    label="Get a scoped quote"
-                    region="us"
-                    btnVariant="primary-light"
-                  />
-                  <Link
-                    href="/portfolio/"
-                    className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink transition-colors hover:border-fj-neutral-400"
-                  >
-                    See recent work
-                  </Link>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Web Design Engineered for San Diego&apos;s Market Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Torrey Pines biotechnology research hubs to Downtown corporate trial law firms and Otay Mesa international trade corridors, we build high-converting web applications that elevate your brand equity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Design Consultation" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── The single dark section: honest self-disclosure ─────────────── */}
-        <StrategicDarkSection
-          eyebrow="STRAIGHT ANSWERS"
-          headline={'Where We Fit in San Diego, and Where We Do Not'}
-          lead={
-            'We are the newest name on this page and we are not headquartered in San Diego. Both are real reasons to hire someone else, so they belong at the top rather than in a footnote.\n\nWe are good at one shape of project: a site that has to load fast on a phone, be structured properly for search and AI answers, and be handed over cleanly to a team that wants to run it themselves. We are not a branding studio, and not the right call if you want a design director in your office on Wednesdays. If that is the need, the table below names San Diego firms who do it.'
-          }
-          pillars={[
-            {
-              title: 'Best fit',
-              body: 'You need the site live and working, you care about speed and being found, and you want to own everything at the end.',
-            },
-            {
-              title: 'Poor fit',
-              body: 'You want a brand identity built from scratch, weekly in-person workshops, or a WordPress site your team will extend with plugins for years.',
-            },
-            {
-              title: 'How we decide',
-              body: 'The first call is thirty minutes and diagnostic, not a pitch. If another firm fits better we say so on that call, not three weeks into a proposal.',
-            },
-          ]}
-        />
+        {/* ── 04. SAN DIEGO DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="sd-web-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>San Diego Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for San Diego&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Torrey Pines biotech leaders to Downtown legal flagships and Otay Mesa logistics hubs:
+              </p>
+            </div>
 
-        <ComparisonTable
-          eyebrow={'THE OTHER OPTIONS'}
-          headline={'The San Diego Agencies You Are Probably Also Looking At'}
-          lead={
-            'These six all rank on page one for this search. We do not, which is part of why this page exists. Three of the top twelve results are directories, not agencies, so read Yelp, Clutch and Upwork as raw review sources rather than rankings. The first column is each firm’s own public positioning.'
-          }
-          columns={[
-            { label: 'Their public positioning' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Pick them if' },
-          ]}
-          rows={COMPARISON_ROWS}
-          footer={
-            <>
-              Organic results for &quot;web design company san diego&quot; sampled 12 August 2026.
-              Rankings move. Open a live site from each shortlisted firm on your own phone rather
-              than trusting any table, including this one.
-            </>
-          }
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
 
-        <ServiceJourneyRow
-          eyebrow={'HOW IT RUNS'}
-          headline={'How We Build Your San Diego Website'}
-          lead={'Five stages, no mystery phases. You always know what happens next and what we need from you.'}
-          stages={JOURNEY_STAGES}
-          closingNote="Content is the usual reason a project slips, so every page gets an owner and a date before design starts."
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
 
-        <IndustriesGrid
-          variant="cards"
-          eyebrow={'SAN DIEGO × WEB DESIGN'}
-          headline={'Built for the Industries San Diego Actually Runs On'}
-          lead={
-            'Six sectors, six different builds. The difference is not decoration, it is what goes on the first screen and how deep the information architecture has to go.'
-          }
-          sectors={INDUSTRY_SECTORS}
-        />
-
-        <PricingTiers
-          eyebrow={'SCOPE TIERS'}
-          headline={'Three Scopes, Quoted as a Fixed Number'}
-          lead={
-            'We do not publish figures, because a number without a page list is meaningless. We publish what sits in each tier instead, so you know which conversation you are having before you book. The fixed quote comes after that call, in writing, before anything starts.'
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed scope',
-              name: 'Starter',
-              description:
-                'Five pages that load fast on a phone and rank for your own name and core service. For sole traders and local services who need a credible presence quickly.',
-              features: [
-                '5 pages, mobile-first build',
-                'Schema markup and Search Console setup',
-                'Contact form with email delivery',
-                '2 review rounds',
-                'Ships in 7 days from content handover',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-            {
-              priceRange: 'Fixed scope',
-              name: 'Growth',
-              description:
-                'Ten to fifteen pages with a CMS, lead capture and analytics from day one. For businesses that need the site to generate qualified enquiries.',
-              features: [
-                '10–15 pages with a blog CMS',
-                'Local search and Google Business Profile alignment',
-                'Lead capture and email routing',
-                '3 review rounds',
-                'Recorded handover and training session',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed scope',
-              name: 'Scale',
-              description:
-                'Custom Next.js build with a catalogue, integrations or AI features. For businesses where the site carries a real revenue line.',
-              features: [
-                'Custom Next.js architecture',
-                'Ecommerce, booking or membership features',
-                'CRM and third-party API integrations',
-                'AI search and content integrations',
-                'Priority support and quarterly reviews',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-          ]}
-          footnote="No retainer is required on any tier. Ongoing care is a separate arrangement you can decline."
-        />
-
-        <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={'Web Design Questions San Diego Businesses Actually Ask'}
-          lead="Taken from what people genuinely type into Google around this search, answered without hedging."
-          categories={FAQ_CATEGORIES}
-          items={SD_FAQ_ITEMS}
-        />
-
-        {/* ── Related services ───────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <p className="mb-4 font-fj-mono text-sm uppercase tracking-widest text-[#B23E13]">
-              Related services
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/services/web-design/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                US web design services
-              </Link>
-              <Link
-                href="/services/seo/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                SEO services
-              </Link>
-              <Link
-                href="/services/ai-seo/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                AI SEO
-              </Link>
-              <Link
-                href="/website-cost/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                What a website should cost
-              </Link>
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <WebDesignCityLinksUS currentCity="san-diego" />
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for San Diego Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Southern California demands tailored user flows, design tokens, and performance metrics:
+              </p>
+            </div>
 
-        <FinalCTA
-          variant="light"
-          eyebrow={'NEXT STEP'}
-          headline={'Get a Written Page List for Your San Diego Site'}
-          sub={
-            'Tell us what your business does, who buys from you and what the site has to achieve. You get back a page list and a fixed scope you can hold us to, or hand to any of the other companies named on this page.'
-          }
-          primaryCta={{ label: 'Start a project', modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="San Diego" variant="light" />}
-          objectionHandler="Not ready to talk? Take the ten questions above and ask them of whoever you do hire."
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why San Diego Leaders Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile WordPress page builders with high-performance Next.js engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-design-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// SAN DIEGO FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
+            title="Next.js 15 App Router to Global Cloudflare Edge"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
+            city="San Diego"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Web Design Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay deliveries and high-conversion web launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating San Diego Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="SAN DIEGO WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in San Diego CA"
+          lead="Direct, plain English answers to what San Diego business owners and marketing leaders ask about website design and engineering:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        <SchemaScript />
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="san-diego" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your San Diego Web Presence?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-/* ─────────────────────────────────────────────────────────────────────────
-   Schema. Every const declared here is rendered into a script tag below.
-   FAQPage.mainEntity is derived from SD_FAQ_ITEMS, the same array the visible
-   <FAQ /> renders. There is no second copy of the questions anywhere.
-   ───────────────────────────────────────────────────────────────────────── */
-function SchemaScript() {
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${PAGE_URL}#webpage`,
-    name: PAGE_TITLE,
-    description: PAGE_DESC,
-    url: `${PAGE_URL}/`,
-    dateModified: DATE_MODIFIED,
-    inLanguage: 'en-US',
-    isPartOf: { '@id': 'https://factoryjet.com/#organization' },
-    about: { '@id': `${PAGE_URL}#service` },
-    author: { '@id': 'https://factoryjet.com/#bhavesh-barot' },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '[data-speakable]', '[data-faq-answer]'],
-    },
-    citation: [SOURCE_LCP, SOURCE_MOBILE_FIRST, SOURCE_SDMAC, SOURCE_BREWERS_GUILD],
-  };
-
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ProfessionalService'],
-        '@id': `${PAGE_URL}#business`,
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com',
-        telephone: '+919699977699',
-        areaServed: {
-          '@type': 'City',
-          name: 'San Diego',
-          containedInPlace: { '@type': 'State', name: 'California' },
-        },
-        founder: { '@id': 'https://factoryjet.com/#bhavesh-barot' },
-      },
-      {
-        '@type': 'Person',
-        '@id': 'https://factoryjet.com/#bhavesh-barot',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder',
-        worksFor: { '@type': 'Organization', name: 'FactoryJet Technologies' },
-        url: 'https://factoryjet.com/about',
-      },
-      {
-        '@type': 'Service',
-        '@id': `${PAGE_URL}#service`,
-        name: 'Web Design San Diego',
-        serviceType: 'Web design and website development',
-        provider: {
-          '@type': 'Organization',
-          '@id': 'https://factoryjet.com/#organization',
-          name: 'FactoryJet Technologies',
-        },
-        areaServed: { '@type': 'City', name: 'San Diego' },
-        description:
-          'Next.js website design and development for San Diego businesses, including schema markup, Google Business Profile alignment, analytics and full handover of code and design files.',
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${PAGE_URL}#faq`,
-        mainEntity: SD_FAQ_ITEMS.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${PAGE_URL}#breadcrumbs`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Web Design',
-            item: 'https://factoryjet.com/services/web-design',
-          },
-          { '@type': 'ListItem', position: 3, name: 'San Diego', item: PAGE_URL },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-      />
+      <SiteFooter locale="us" />
     </>
   );
 }

@@ -1,875 +1,909 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   /los-angeles/seo :: Los Angeles city SEO page. Built 2026-08-12.
-
-   Target keyword: "seo agency los angeles", 2,400/mo, KD 35 (DataForSEO,
-   2026-08-12). Joint-highest volume city SEO target in this build wave, and a
-   genuinely saturated market: six of the live top twelve results are not
-   agencies at all, they are directories, roundups and one Facebook page.
-
-   Page thesis, and the reason this is not a template: LA County is roughly
-   4,000 square miles. Google's own documented local ranking factors are
-   relevance, distance and prominence, and in a metro this size DISTANCE does
-   more work than anywhere else in the US. A Santa Monica business will
-   effectively never appear in a Pasadena map pack 25 miles away. So the page is
-   built around ranking one district at a time rather than "citywide".
-
-   Brief compliance (docs/US-BUILD-2026-08-12-BRIEF.md): no em dashes, no
-   currency values, exactly one dark section (FinalCTA), plain <img> for the
-   static-export target, 20 FAQs from live PAA, FAQPage schema derived from the
-   same array the visible FAQ renders. Depth held to the 2,500-3,500 band on
-   purpose: the research found AI-cited pages are SHORTER than ranking pages.
-   Structure and component usage mirror src/app/austin/web-design/page.tsx.
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/los-angeles/seo';
-const IMG = '/images/us/los-angeles-seo';
-const DATE_MODIFIED = '2026-08-12';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency Los Angeles | Local SEO Services LA | FactoryJet',
+  title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is an SEO agency in Los Angeles that ranks you district by district, from Downtown and the Fashion District to Santa Monica, Culver City, Pasadena and the Valley. Free audit, month to month, senior engineers only.',
+    'Los Angeles local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Century City, Silicon Beach, and DTLA.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency Los Angeles | Local SEO Services LA | FactoryJet',
+    title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'Los Angeles is 4,000 square miles of separate local markets. We rank you in the ones your customers actually search from. Free audit, month to month.',
+      'Los Angeles local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Century City, Silicon Beach, and DTLA.',
     url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Los Angeles Local SEO Agency' }],
     locale: 'en_US',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet SEO agency, Los Angeles' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency Los Angeles | Local SEO Services LA | FactoryJet',
-    description:
-      'Los Angeles is 4,000 square miles of separate local markets. We rank you in the ones your customers actually search from.',
+    title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Los Angeles local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ── LA districts. Written by someone who knows which freeway is which. ──── */
-const DISTRICTS: { tag: string; h: string; p: string }[] = [
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Los Angeles commercial corridors.', icon: '📍' },
+  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    tag: 'Downtown',
-    h: 'Downtown, the Fashion District and the Arts District',
-    p: 'The LA Fashion District alone covers 107 blocks, and the wholesale apparel trade inside it searches by showroom, minimum order and category, usually from a phone in Santee Alley. Add the Flower District, the Jewelry District and the Bunker Hill finance towers and Downtown is five markets sharing one zip range. Categories and photos decide these searches, not blog volume.',
+    corridor: 'Century City & Beverly Hills',
+    query: 'entertainment law seo century city los angeles',
+    focus: 'Entertainment Law, Talent Representation & Private Wealth Advisory',
+    desc: 'The power center of global entertainment legal practice. Intense local competition for high-net-worth family office advisory, talent representation, and complex IP litigation.',
   },
   {
-    tag: 'Westside',
-    h: 'Santa Monica, Venice and the Silicon Beach corridor',
-    p: 'Snap is headquartered in Santa Monica, Google runs a large Playa Vista campus, Riot Games sits in West LA, and around them is the densest cluster of DTC brands and studios in California. These buyers skip ads by reflex and read your site like a spec. Speed, clean architecture and being quotable by AI engines is the job here.',
+    corridor: 'Silicon Beach & Santa Monica',
+    query: 'tech b2b seo silicon beach santa monica',
+    focus: 'SaaS Tech, Venture Capital & Creator Platforms',
+    desc: 'West Coast digital innovation corridor. Tech and venture firms require deep technical topical authority, founder profile schemas, and AI engine citation dominance.',
   },
   {
-    tag: 'Culver City',
-    h: 'Culver City and the streaming and post-production belt',
-    p: 'Sony Pictures has been on Washington Boulevard since the MGM days, and both Amazon and Apple took large Culver City offices for streaming. Around the lots sits a supply chain of post houses, VFX shops, colourists and equipment rental. Tiny volumes, enormous deal values. Five searches a month for one specific service can beat five thousand generic ones.',
+    corridor: 'Downtown Los Angeles & Arts District',
+    query: 'fashion showroom commercial seo dtla',
+    focus: 'Fashion Showrooms, Architecture & Commercial Litigation',
+    desc: 'The historic and creative core of Southern California. Captures high-ticket corporate legal retainers, commercial architecture RFQs, and wholesale apparel inquiries.',
   },
   {
-    tag: 'Pasadena',
-    h: 'Pasadena and the San Gabriel Valley',
-    p: 'Caltech, the Jet Propulsion Laboratory, Huntington Hospital, and a thick layer of engineering, legal, dental and medical practices along Colorado Boulevard and Lake Avenue. Pasadena behaves like its own small city, which is exactly why it is winnable. Most practices here still have a Business Profile nobody has touched since the day it was claimed.',
+    corridor: 'Pasadena & San Gabriel Valley',
+    query: 'biotech clinic seo pasadena',
+    focus: 'Biotech, Aerospace Engineering & Healthcare Systems',
+    desc: 'Scientific innovation and affluent residential hub. Demands verified medical specialist schemas, research institute cross-links, and multi-location practice architectures.',
   },
   {
-    tag: 'The Valley',
-    h: 'Burbank, Sherman Oaks and the San Fernando Valley',
-    p: 'Warner Bros. and Disney anchor Burbank, NBCUniversal anchors Universal City, and the rest of the Valley is one of the strongest small-business corridors in the country: home services, auto, medical and restaurants along Ventura Boulevard. Search here is almost entirely proximity driven. Set your service area wrong and you lose customers four miles away.',
+    corridor: 'South Bay & El Segundo',
+    query: 'defense contractor logistics seo el segundo',
+    focus: 'Defense Contracting, Commercial Logistics & Corporate HQs',
+    desc: 'Aerospace and defense capital. B2B service inquiries require technical capability landing pages, ITAR-aware compliance schemas, and sub-second edge performance.',
   },
   {
-    tag: 'South Bay',
-    h: 'El Segundo, Hawthorne and the aerospace South Bay',
-    p: 'SpaceX in Hawthorne, The Aerospace Corporation in El Segundo, plus large Northrop Grumman, Boeing and RTX operations in the same few square miles. Suppliers sell to procurement teams and engineers, so searches are technical and low volume. A page naming the actual process, tolerance or certification beats a brochure page every time.',
+    corridor: 'San Fernando Valley & Sherman Oaks',
+    query: 'plastic surgery seo sherman oaks',
+    focus: 'Specialty Medical Clinics, Aesthetic Surgery & Professional Services',
+    desc: 'Dense, affluent medical corridor. Captures high-ticket elective procedure consultations, cosmetic dermatology patients, and executive wealth clients.',
   },
 ];
 
-/* ── Listicle. Ordered by what actually moves the needle first in LA. ────── */
-const PLAYBOOK: { n: string; h: string; p: string }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    n: '01',
-    h: 'Set a service area you can actually be chosen in',
-    p: 'The most common Los Angeles mistake. Owners set a thirty mile radius because it feels ambitious, then rank nowhere. Distance is one of Google\'s three documented local factors, and in a county this size a wide radius makes you a weak match everywhere.',
+    sector: 'Cosmetic Surgery, Medical Aesthetics & Dermatology',
+    headline: 'Capturing High-Value Patients Across Beverly Hills & West LA',
+    description:
+      'In Southern California’s premier aesthetic and surgical markets, patients evaluate physician credentials and peer reviews thoroughly before scheduling consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Los Angeles healthcare medical aesthetic and plastic surgery clinic local SEO optimization',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting Beverly Hills, Santa Monica, and Encino',
+    ],
   },
   {
-    n: '02',
-    h: 'Choose the most specific primary category available',
-    p: 'Your primary category is the strongest lever on the whole profile and it takes four minutes to change. "Personal injury attorney" behaves nothing like "lawyer". Pick the narrowest category that is still true, then use secondary categories for everything else.',
+    sector: 'Entertainment Law, Talent Representation & IP Litigation',
+    headline: 'Dominating High-Stakes Search Corridors for Century City & DTLA Law Firms',
+    description:
+      'Legal search terms across Los Angeles County are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Los Angeles entertainment law firm litigation and copyright local SEO ranking strategy',
+    points: [
+      'LegalService and Attorney schema linking California State Bar verified credentials',
+      'Localized practice area silos targeting Century City, DTLA, Beverly Hills, and Pasadena',
+      'High-authority local legal directory citations and editorial publication placements',
+    ],
   },
   {
-    n: '03',
-    h: 'Build reviews steadily and reply to all of them',
-    p: 'Google states plainly that more reviews and positive ratings can improve local ranking. Steady beats spiky: twenty over ten months reads as a real business, twenty in one week reads as a campaign. Reply to every one in your own voice.',
+    sector: 'Private Wealth Management, Family Offices & Tax Advisory',
+    headline: 'Topical Authority & AI Citation Engineering for LA Financial Leaders',
+    description:
+      'Century City and Westside wealth advisors require commanding search presence to capture high-net-worth entertainment executives and tech founders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Los Angeles private wealth management and entertainment financial advisory SEO strategy',
+    points: [
+      'Topical content graph covering California wealth planning and executive advisory',
+      'Structured FinancialService and Organization schema for AI citation retrieval',
+      'High-authority regional financial PR and tier-one publication placements',
+    ],
   },
   {
-    n: '04',
-    h: 'Fix the site before you write anything on it',
-    p: 'A slow or broken site will not hold a ranking no matter how good the copy is. Core Web Vitals, crawlability, headings, internal links and structured data come first. This layer is invisible in a monthly report, which is why it gets skipped.',
-  },
-  {
-    n: '05',
-    h: 'Write one real page per district, not one per zip code',
-    p: 'A Pasadena page should mention Colorado Boulevard and the parking. An El Segundo page should talk about procurement cycles. If a page still makes sense with the neighborhood name swapped out, it is a doorway page, and Google has been good at spotting those for years.',
-  },
-  {
-    n: '06',
-    h: 'Answer the question before you sell anything',
-    p: 'Put the direct answer in the first forty to sixty words, plain language, no preamble. That is what gets pulled into an AI Overview or quoted by ChatGPT, and it is what the human wanted anyway. Cited pages are usually shorter than ranking pages.',
-  },
-  {
-    n: '07',
-    h: 'Make your business data machine readable',
-    p: 'Name, address, phone and hours identical everywhere, LocalBusiness and FAQPage structured data on the site, and no drift between what your schema claims and what the page shows. AI answer engines are far less forgiving of that mismatch than Google historically was.',
+    sector: 'Commercial Architecture, High-End Construction & Interior Design',
+    headline: 'Driving High-Ticket Commercial Inquiries Across Southern California',
+    description:
+      'Architectural studios, luxury general contractors, and commercial developers in Los Angeles require steady project flow. We optimize your local digital footprint to capture corporate developers, luxury estate owners, and hospitality groups.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Los Angeles architecture and luxury commercial construction local SEO architecture',
+    points: [
+      'Commercial capability landing pages optimized for regional radius search queries',
+      'High-speed mobile performance ensuring immediate project RFP submissions',
+      'Structured LocalBusiness schema with verified commercial service area parameters',
+    ],
   },
 ];
 
-/* ── Real rivals from the live top 12 for "seo agency los angeles",
-      DataForSEO, 2026-08-12. Described fairly, from their own sites. ────── */
-const RIVAL_ROWS = [
+const PAIN_POINTS = [
   {
-    feature: 'Thrive Internet Marketing',
-    values: [
-      'Holds position one. A national operation running SEO, paid search, social, links and video production in one shop, with franchise and enterprise programs.',
-      'You have many locations, or want search, ads, social and video from one vendor with the staff to cover all of it.',
-      'One senior engineer on your account instead of a pod. We do not run your paid social, and we say so rather than sell it.',
-    ],
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional Los Angeles agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
   },
   {
-    feature: 'Los Angeles SEO Inc',
-    values: [
-      'Position three, with a local number. The deepest vertical menu here: law firm, dental, medical, accounting, contractor and retail SEO each get their own line.',
-      'You want an agency that has run your exact vertical dozens of times and can show you work inside it.',
-      'We build the site and do the SEO with one team, so technical repair is part of the work rather than a second quote.',
-    ],
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
   },
   {
-    feature: 'seoTuners',
-    values: [
-      'Position four, based up in Thousand Oaks. Publishes its packages openly and shipped a real generative engine optimization service rather than renaming SEO.',
-      'You want a published, predictable package and a clear monthly scope without a long discovery process.',
-      'We scope per business rather than per package, and the free audit always comes before any number.',
-    ],
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
   },
   {
-    feature: 'GO-SEO',
-    values: [
-      'Position eleven, practicing since 2007. Publishes genuinely good free tools including an AI bot access checker and a crawler policy generator.',
-      'You want a long-tenured practitioner who has worked through every major algorithm change and will talk to you directly.',
-      'A similar philosophy to ours, honestly. We differ in that we also rebuild sites, so a replatform is on the table.',
-    ],
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
   },
-  {
-    feature: 'Growwwise',
-    values: [
-      'Position eight. Platform-specific SEO for Shopify, WordPress and WooCommerce, plus white-label capacity for other agencies.',
-      'You are on a specific platform and want someone who knows its quirks, or you are an agency needing delivery capacity.',
-      'We are commerce-first, so product taxonomy, faceted navigation and category structure are our default lens.',
-    ],
-  },
-  {
-    feature: 'FactoryJet',
-    values: [
-      'Not on page one for this term. We are the challenger here, and pretending otherwise would be the first reason not to hire us.',
-      'You want senior people doing the work, month to month terms, and a written scope you read before you sign.',
-      'Free audit you keep either way, your accounts and data stay yours, reporting tied to calls and forms.',
-    ],
-  },
-] as const;
+];
 
-/* ── FAQ. 22 questions, all grounded in live People-Also-Ask data for this
-      query set (pipeline/research/briefs/los-angeles-seo.json). The FAQPage
-      schema below is DERIVED from this array. Never duplicate it. ───────── */
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across Los Angeles County', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+  },
+  {
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+  },
+  {
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+  },
+  {
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost and value' },
-  { key: 'choose', label: 'Choosing an agency' },
-  { key: 'local', label: 'Local SEO in LA' },
-  { key: 'ai', label: 'AI and search' },
-  { key: 'diy', label: 'Doing it yourself' },
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'LA Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'cost',
-    question: 'How much does SEO cost in Los Angeles?',
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Los Angeles business?',
     answer:
-      'LA sits at the higher end of the US range because the market is crowded and salaries here are high. Your number is set by how many districts you need, how competitive your category is, and how much technical repair the site needs first. We work month to month and scope after a free audit.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Los Angeles corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
-    category: 'cost',
-    question: 'How much does an SEO agency typically cost?',
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
     answer:
-      'Agencies price on effort, so the drivers are the same everywhere: number of locations, category competitiveness, technical debt, content volume, and whether links are included. Ask any agency to put those five in writing and the quotes become comparable.',
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
   },
   {
-    category: 'cost',
-    question: 'How much should a small business spend on SEO?',
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
     answer:
-      'Less than it brings in. Work out what one new customer is worth across a year, then ask how many extra customers a month would cover the work with room left over. If the answer is a handful, the scope fits. If it is dozens, start narrower.',
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
   },
   {
-    category: 'cost',
-    question: 'Is paying someone to do SEO worth it?',
+    category: 'timeline',
+    question: 'How quickly can our Los Angeles business expect to see Google Maps rank improvements?',
     answer:
-      'It is worth it if competitors above you are taking work you could have had, and worth little if almost nobody searches for what you sell. Most LA businesses are in the first group. The failure mode is paying with no way to tell whether it worked, so insist on reporting in calls and forms.',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Beverly Hills or Century City generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
-    category: 'cost',
-    question: 'How long does it take for SEO to kick in?',
+    category: 'timeline',
+    question: 'What factors determine how fast a Los Angeles business can rank in the Local 3-Pack?',
     answer:
-      'Business Profile changes often move within four to eight weeks. Organic rankings on competitive LA terms usually take three to six months to show real movement and six to twelve to stabilise. We win the low-difficulty district searches first so leads arrive while the bigger terms mature.',
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
   {
-    category: 'choose',
-    question: 'Which SEO company is the best in Los Angeles?',
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'There is no single best one, and any agency saying otherwise is selling. The best fit gives you a written scope before you sign, month to month terms, your data staying yours, and reporting tied to calls and leads. Run every candidate through that list, including us.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
   },
   {
-    category: 'choose',
-    question: 'What does an SEO agency do?',
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
     answer:
-      'Four things, in this order. It fixes your site so pages can be crawled, load fast and be understood. It maintains your Business Profile so you can appear in the map pack. It writes pages matching what people actually search. And it earns references from other credible sites.',
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
   },
   {
-    category: 'choose',
-    question: 'Why do directories rank above agencies for "seo agency los angeles"?',
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'Because Google trusts those domains, not because they do SEO for anyone. On the live results, six of the top twelve are lists rather than agencies: a Semrush partner directory, Clutch, Built In LA, Yelp, a rankings site and one Facebook page. Getting listed on them is part of the work.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
-    category: 'local',
-    question: 'What is local SEO versus regular SEO?',
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
-      'Local SEO is how you appear when someone nearby searches, in Google Maps and the three-result local pack. Regular SEO is the standard blue-link results, which are not filtered by proximity. Local runs on your Business Profile, reviews and distance. Regular runs on your site and who links to it.',
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
   {
-    category: 'local',
-    question: 'Why can I not rank across all of Los Angeles?',
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
     answer:
-      'Because distance is one of Google\'s three documented local ranking factors and LA County is roughly four thousand square miles. Santa Monica to Pasadena is about a twenty-five mile drive. Google will not show a Westside business to someone in the San Gabriel Valley when fifty closer options exist.',
-  },
-  {
-    category: 'local',
-    question: 'How do I do local SEO as a beginner?',
-    answer:
-      'Claim your Business Profile and fill every field. Pick the most specific primary category that is true. Set a service area you can actually serve, not the whole county. Make your name, address and phone identical everywhere. Then ask every happy customer for a review.',
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
   },
   {
     category: 'local',
-    question: 'Can I do local SEO myself?',
+    question: 'Do you manage multi-location local SEO campaigns across Southern California?',
     answer:
-      'The first chunk, absolutely. Profile, categories, service area, photos, hours and reviews are owner-level work and they matter more than most agencies admit. It gets hard at technical repair, content that has to outrank an established competitor, and earning references from sites that carry weight.',
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Los Angeles, Beverly Hills, Santa Monica, Pasadena, Glendale, and Long Beach.',
   },
   {
     category: 'local',
-    question: 'Is local SEO worth doing for a Los Angeles business?',
+    question: 'Can you help our practice outrank entrenched competitors in Century City and West LA?',
     answer:
-      'In a metro this size it is one of the few channels with a visible finish line. You are not trying to beat the internet. You are trying to beat the handful of businesses in your category within a few miles of you. A normal owner can win that fight.',
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
     category: 'local',
-    question: 'Can I pay Google to rank higher in the map pack?',
+    question: 'How do service-area businesses without a public storefront rank in Los Angeles?',
     answer:
-      'No. Google states plainly that there is no way to request or pay for a better local ranking. You can buy Google Ads and a Local Services Ad slot, both of which sit above the organic results and stop the moment you stop paying. A paid shortcut into the map pack does not exist.',
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
   },
   {
-    category: 'ai',
-    question: 'Can ChatGPT do SEO?',
+    category: 'local',
+    question: 'Can you optimize for Spanish and bilingual search queries in Los Angeles?',
     answer:
-      'It can draft, outline, cluster keywords and speed up research, and it is genuinely useful for that. It cannot audit your rendering, fix Core Web Vitals, manage your Business Profile, earn a reference from a real publication, or know which LA district is winnable this quarter.',
+      'Yes. We build bilingual landing page silos, localized metadata, and Spanish-language GBP attributes to capture high-intent inquiries across LA’s large bilingual commercial markets.',
   },
   {
-    category: 'ai',
-    question: 'Is SEO being replaced by AI?',
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
     answer:
-      'Replaced, no. Redistributed, yes. People still search, they just as often read a summary at the top of Google or ask an assistant instead of clicking. The work that gets you cited in those answers is the work that got you ranked. The trick era died, not the discipline.',
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
   },
   {
-    category: 'ai',
-    question: 'Is SEO dead now that AI answers exist?',
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'No. Two thousand four hundred people a month still type "seo agency los angeles" into Google. What changed is where the answer surfaces, so the same page now has to rank in the classic results, show in the map pack, and be quotable by ChatGPT, Perplexity and AI Overviews.',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Los Angeles, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
-    category: 'diy',
-    question: 'Can I do SEO myself?',
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'Yes, up to a point, and the early wins are real. Fix your titles, write pages that answer real questions, claim your Business Profile, ask for reviews, compress your images. The ceiling arrives when you need to diagnose why a page will not index, usually around month four.',
+      'We continuously monitor your primary search categories in Los Angeles, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
-    category: 'diy',
-    question: 'Is SEO hard to learn?',
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
     answer:
-      'Not intellectually brutal, just wide. It asks for technical understanding, writing ability, patience, and tolerance for being judged on outcomes you only partly control. The hard part is the feedback loop: you make a change and find out weeks later whether it worked.',
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
   },
-  {
-    category: 'diy',
-    question: 'What are the four main types of SEO?',
-    answer:
-      'On-page is your content, titles and headings. Off-page is mostly references from other sites. Technical is speed, crawlability, indexing and structured data. Local is your Business Profile, listings and reviews. LA businesses usually move fastest on local and technical.',
-  },
-] as const;
+];
 
-/* ── Schema. Every const below reaches a <script type="application/ld+json">
-      in SchemaScript(). FAQPage.mainEntity is derived from FAQ_ITEMS. ───── */
-const faqMainEntity = FAQ_ITEMS.map((item) => ({
-  '@type': 'Question' as const,
-  name: item.question,
-  acceptedAnswer: { '@type': 'Answer' as const, text: item.answer },
-}));
-
-const jsonLd = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: [
-        { '@type': 'City', name: 'Los Angeles', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Santa Monica', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Culver City', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Pasadena', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'Burbank', containedInPlace: { '@type': 'State', name: 'California' } },
-        { '@type': 'City', name: 'El Segundo', containedInPlace: { '@type': 'State', name: 'California' } },
-      ],
-      knowsAbout: ['Local SEO', 'Technical SEO', 'Generative engine optimization', 'Google Business Profile optimization'],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'SEO Services in Los Angeles, CA',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      url: CANONICAL,
-      areaServed: { '@type': 'City', name: 'Los Angeles', containedInPlace: { '@type': 'State', name: 'California' } },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Los Angeles SEO services',
-        itemListElement: PLAYBOOK.map((p) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: p.h, description: p.p },
-        })),
-      },
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'SEO Agency Los Angeles | Local SEO Services LA | FactoryJet',
-      description:
-        'What an SEO agency in Los Angeles actually does, why the metro has to be ranked district by district, who currently holds page one for the term, and where FactoryJet honestly sits.',
-      inLanguage: 'en-US',
-      dateModified: DATE_MODIFIED,
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      primaryImageOfPage: { '@type': 'ImageObject', url: `https://factoryjet.com${IMG}/los-angeles-seo-team.webp` },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['[data-speakable]', 'h1', '.faq-answer'],
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'SEO Agency Los Angeles', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqMainEntity,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Los Angeles Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Los Angeles',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 34.0522,
+    longitude: -118.2437,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Los Angeles' },
+    { '@type': 'City', name: 'Beverly Hills' },
+    { '@type': 'City', name: 'Santa Monica' },
+    { '@type': 'City', name: 'Pasadena' },
+    { '@type': 'City', name: 'Century City' },
   ],
 };
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
-}
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Los Angeles Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Los Angeles businesses.',
+  areaServed: { '@type': 'State', name: 'California' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Los Angeles local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Century City, Silicon Beach, and DTLA.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Los Angeles', item: CANONICAL },
+  ],
+};
 
 export default function LosAngelesSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <SchemaScript />
+      <script id="la-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="la-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="la-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="la-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="la-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="bg-fj-cream">
-        {/* ── HERO ──────────────────────────────────────────────────────── */}
-        <Hero
-          eyebrow="SEO AGENCY · LOS ANGELES"
-          headline="An SEO Agency in Los Angeles That Ranks You District by District"
-          lead="LA County is roughly four thousand square miles. Nobody ranks across all of it, and any agency promising that has not read Google's own ranking docs. We pick the districts your customers search from, and win those first."
-          trustItems={['Free audit, yours to keep', 'Month to month, no lock-in', 'Senior engineers, no account managers']}
-          formSlot={<HeroInlineForm region="us" source="us_los_angeles_seo_hero" submitLabel="Get my free SEO audit" />}
-          rightSlot={
-            <img
-              src={`${IMG}/los-angeles-seo-team.webp`}
-              alt="A small team planning a local SEO campaign in a bright Los Angeles studio, palm trees visible through the window"
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-              style={{ height: 'auto', display: 'block' }}
-            />
-          }
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── ANSWER FIRST ──────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div
-              className="max-w-[860px] rounded-2xl bg-white p-8 md:p-10"
-              style={{ border: '1px solid rgba(26,23,18,.10)', borderLeft: '4px solid #F05A28' }}
-            >
-              <p className="font-fj-mono text-[0.6875rem] uppercase tracking-[0.14em] text-[#B23E13]">
-                The short answer
-              </p>
-              <p
-                data-speakable
-                className="mt-4 font-fj-body text-[1.125rem] leading-[1.65] text-fj-ink"
-              >
-                An SEO agency in Los Angeles gets your business found by people already searching
-                for what you sell: in Google Maps, in the regular results, and inside AI answers.
-                The work is your Google Business Profile, technical repair, reviews, and pages
-                written one district at a time, because Los Angeles is far too spread out to rank
-                as a single city.
-              </p>
-              <p className="mt-5 font-fj-body text-[1rem] leading-[1.7] text-fj-ink/75">
-                That last clause is the part most LA pages skip.{' '}
-                <a
-                  href="https://support.google.com/business/answer/7091"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-[#B23E13]/40 underline-offset-2 hover:decoration-[#B23E13]"
-                >
-                  Google documents three local ranking factors
-                </a>
-                : relevance, distance and prominence. Two you can influence. Distance you cannot,
-                and in a county this size it quietly decides more results than anything else. So we
-                treat Downtown, the Westside, Culver City, Pasadena, the Valley and the South Bay
-                as six separate markets rather than one brief.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── TRUST ROW ─────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
-        <BigThreeTrustBlock
-          variant="statement"
-          eyebrow="HOW WE WORK"
-          headline="Free audit first. Month to month after that. Senior engineers on every account, and your data stays yours."
-        />
-
-        {/* ── LA MARKET CONTEXT ─────────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="LOS ANGELES MARKET"
-          headline="The Largest County Economy in America, and the Hardest One to Rank Across"
-          leadParagraphs={[
-            'Los Angeles County is the biggest county economy in the United States, with output approaching one trillion dollars in value, per the LAEDC analysis in the 2025 Southern California Economic Update. Professional, scientific and technical services alone employ about 307,500 people here. The Information sector, where film, television, music and digital media sit, employs around 189,800 and accounts for 83 percent of all such jobs in the wider Southern California region.',
-            'Underneath those numbers is a market that has genuinely been hard since 2023. The writers\' and actors\' strikes stalled production, the 2025 rebound ran slower than studios expected, and the Palisades and Eaton wildfires hit in January. If you sell into entertainment you already know your buyers are cautious. That changes what an SEO program should chase: fewer vanity terms, more searches made by someone with a live problem.',
-          ]}
-          stats={[
-            {
-              value: '307,500',
-              label: 'people employed in professional, scientific and technical services in LA County',
-              sourceUrl: 'https://scag.ca.gov/sites/default/files/2026-01/26-426-ES-0357-RegionalEconomicAnalysis2025CountyReportsLosAngeles-Final.pdf',
-              sourceLabel: 'SCAG / LAEDC, 2025 Economic Update',
-            },
-            {
-              value: '189,800',
-              label: 'workers in the Information sector, 83% of all such jobs in the SCAG region',
-              sourceUrl: 'https://scag.ca.gov/sites/default/files/2026-01/26-426-ES-0357-RegionalEconomicAnalysis2025CountyReportsLosAngeles-Final.pdf',
-              sourceLabel: 'SCAG / LAEDC, 2025 Economic Update',
-            },
-            {
-              value: '107 blocks',
-              label: 'covered by the LA Fashion District in Downtown Los Angeles',
-              sourceUrl: 'https://fashiondistrict.org/',
-              sourceLabel: 'LA Fashion District BID',
-            },
-          ]}
-        />
-
-        {/* ── WHAT THE WORK ACTUALLY IS ─────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="WHAT WE ACTUALLY DO"
-          headline="What an SEO Agency Does, Minus the Deck"
-          lead="Four jobs, in this order. Everything else an agency sells sits on top of these, and if the first two are broken the rest is decoration."
-          body={
-            <>
-              <p>
-                <strong>One: fix the site.</strong> Core Web Vitals, crawlability, indexing,
-                headings, internal links and structured data. Invisible in a monthly report, which
-                is exactly why it gets skipped, and the reason rankings stick once they arrive. It
-                is where our <Link href="/services/seo-audit">free SEO audit</Link> starts.
-              </p>
-              <p>
-                <strong>Two: own your Business Profile.</strong> Category, service area, hours,
-                photos, services, questions and answers. In LA the service area setting does more
-                damage than any other field. This is the core of{' '}
-                <Link href="/services/local-seo">local SEO</Link>, and it is owner-level work you
-                can start today.
-              </p>
-              <p>
-                <strong>Three: write pages for what LA actually types.</strong> One genuine page
-                per district, with the streets and constraints a real customer would recognise.
-                Not what an agency guessed in a keyword tool.
-              </p>
-              <p>
-                <strong>Four: be quotable by machines.</strong> Answer-first writing and honest
-                structured data so ChatGPT, Perplexity and AI Overviews cite you instead of a
-                competitor. That is our <Link href="/services/ai-seo">AI SEO</Link> work, and the
-                free <Link href="/ai-visibility-checker">AI visibility checker</Link> shows where
-                you stand. Smaller operation? Start at{' '}
-                <Link href="/services/small-business-seo">small business SEO</Link>.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src={`${IMG}/los-angeles-seo-consult.webp`}
-              alt="An SEO consultant walking a Los Angeles business owner through a printed audit at a sunlit table"
-              width={1216}
-              height={704}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-              style={{ height: 'auto', display: 'block' }}
-            />
-          }
-        />
-
-        {/* ── DISTRICTS ─────────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="font-fj-mono text-[0.6875rem] uppercase tracking-[0.14em] text-[#B23E13]">
-              Los Angeles, district by district
-            </p>
-            <h2 className="fj-display mt-5 max-w-[860px] font-fj-display text-[clamp(1.75rem,3.6vw,3rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-fj-ink">
-              LA is not one market. It is about six of them, and they barely overlap.
-            </h2>
-            <p className="mt-6 max-w-[720px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/75">
-              Santa Monica to Pasadena is roughly a twenty-five mile drive, and a business in one
-              will essentially never show in the other's map pack. Here is how we read the county
-              before writing a page.
-            </p>
-
-            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-              {DISTRICTS.map((d, i) => (
-                <div
-                  key={d.tag}
-                  className={`rounded-2xl bg-white p-7 md:p-8 ${i % 3 === 0 ? 'md:col-span-2' : ''}`}
-                  style={{ border: '1px solid rgba(26,23,18,.10)' }}
-                >
-                  <span className="inline-block rounded-full bg-[#FFF3EE] px-3 py-1 font-fj-mono text-[0.6875rem] uppercase tracking-[0.12em] text-[#B23E13]">
-                    {d.tag}
-                  </span>
-                  <h3 className="mt-4 font-fj-display text-[1.3125rem] font-semibold leading-[1.25] tracking-[-0.01em] text-fj-ink">
-                    {d.h}
-                  </h3>
-                  <p className="mt-3 font-fj-body text-[0.9875rem] leading-[1.7] text-fj-ink/75">
-                    {d.p}
-                  </p>
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Los Angeles Local SEO &amp; AI Citation Authority</span>
                 </div>
-              ))}
-            </div>
 
-            <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
-              <div className="lg:col-span-5">
-                <img
-                  src={`${IMG}/los-angeles-fashion-district.webp`}
-                  alt="Two business owners photographing apparel stock in a downtown Los Angeles wholesale showroom"
-                  width={1216}
-                  height={704}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full rounded-2xl object-cover"
-                  style={{ height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="lg:col-span-7">
-                <p className="font-fj-body text-[1.0625rem] leading-[1.75] text-fj-ink/80">
-                  LA's economy is not one story about Hollywood. It is a port and logistics
-                  economy, an aerospace economy, a wholesale apparel economy, a health system, and
-                  a technology corridor on the coast, all sharing a freeway network and almost
-                  nothing else. An agency selling you "Los Angeles SEO" without asking which Los
-                  Angeles you sell to is selling you a template.
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Los Angeles Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Century City, Beverly Hills, and Silicon Beach. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ── LISTICLE ──────────────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="font-fj-mono text-[0.6875rem] uppercase tracking-[0.14em] text-[#B23E13]">
-              The playbook
-            </p>
-            <h2 className="fj-display mt-5 max-w-[860px] font-fj-display text-[clamp(1.75rem,3.6vw,3rem)] font-semibold leading-[1.1] tracking-[-0.015em] text-fj-ink">
-              Seven things that move a Los Angeles business up the map pack
-            </h2>
-            <p className="mt-6 max-w-[720px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/75">
-              In order. The first three are owner-level work you can start this afternoon, and
-              they beat almost anything you could buy instead.
-            </p>
-
-            <ol className="mt-12 space-y-5">
-              {PLAYBOOK.map((p) => (
-                <li
-                  key={p.n}
-                  className="grid grid-cols-1 gap-4 rounded-2xl bg-fj-cream p-7 md:grid-cols-12 md:gap-8 md:p-8"
-                  style={{ border: '1px solid rgba(26,23,18,.08)' }}
-                >
-                  <div className="md:col-span-4">
-                    <span className="font-fj-mono text-[0.75rem] tracking-[0.12em] text-[#B23E13]">
-                      {p.n}
-                    </span>
-                    <h3 className="mt-2 font-fj-display text-[1.25rem] font-semibold leading-[1.3] tracking-[-0.01em] text-fj-ink">
-                      {p.h}
-                    </h3>
-                  </div>
-                  <p className="font-fj-body text-[0.9875rem] leading-[1.75] text-fj-ink/75 md:col-span-8">
-                    {p.p}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* ── MID-PAGE CTA ──────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div
-              className="grid grid-cols-1 gap-6 rounded-2xl bg-white p-8 md:p-10 lg:grid-cols-12 lg:items-center"
-              style={{ border: '1px solid rgba(26,23,18,.10)', borderTop: '3px solid #F05A28' }}
-            >
-              <div className="lg:col-span-7">
-                <h2 className="fj-display font-fj-display text-[clamp(1.5rem,2.6vw,2.125rem)] font-semibold leading-[1.15] tracking-[-0.015em] text-fj-ink">
-                  Find out which LA districts you can realistically win
-                </h2>
-                <p className="mt-4 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-ink/75">
-                  The free audit shows where you appear in the map pack today, which districts are
-                  open, what is technically holding the site back, and what we would fix first.
-                  Yours to keep either way.
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-end">
-                <ModalCTAButton
-                  label="Get your free LA SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
-                />
-                <a
-                  className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink transition-colors hover:border-fj-neutral-400"
-                  href={CALENDLY}
-                >
-                  Talk to the founder
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPARISON: the real SERP, named honestly ─────────────────── */}
-        <ComparisonTable
-          eyebrow="THE SERP, HONESTLY"
-          headline="Who You Are Actually Choosing Between in Los Angeles"
-          lead={
-            'The agencies holding page one for "seo agency los angeles" on the live US results we pulled on 12 August 2026, described from their own sites. All are credible. We put ourselves at the bottom with our real position, which is exactly why it is worth reading.'
-          }
-          pullQuote={{
-            stat: '6 of 12',
-            caption:
-              'page-one results for this term are not agencies at all: a Semrush partner listing, Clutch, Built In LA, Yelp, a rankings site and one Facebook page. Getting listed on them is part of the work.',
-          }}
-          columns={[
-            { label: 'What they are genuinely good at' },
-            { label: 'Best fit when' },
-            { label: 'Where FactoryJet differs', isFactoryJet: true },
-          ]}
-          rows={RIVAL_ROWS.map((r) => ({ feature: r.feature, values: [...r.values] }))}
-          footer={
-            <>
-              Positions from live US Google results, 12 August 2026. Our referring-domain count is
-              in the dozens; the firms above us count theirs in the thousands. That gap matters
-              less for you than for us: you need to rank in a few LA districts against a dozen
-              local rivals, not nationally. Same approach elsewhere in{' '}
-              <Link href="/austin/seo">Austin</Link>, <Link href="/denver/seo">Denver</Link>,{' '}
-              <Link href="/nashville/seo">Nashville</Link> and{' '}
-              <Link href="/huntington-beach/seo">Huntington Beach</Link>.
-            </>
-          }
-        />
-
-        {/* ── FOUNDER / E-E-A-T ─────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
-              <div className="lg:col-span-7">
-                <p className="font-fj-mono text-[0.6875rem] uppercase tracking-[0.14em] text-[#B23E13]">
-                  Who you would work with
-                </p>
-                <h2 className="fj-display mt-5 font-fj-display text-[clamp(1.75rem,3.4vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.015em] text-fj-ink">
-                  You talk to the person doing the work
-                </h2>
-                <p className="mt-6 font-fj-body text-[1.0625rem] leading-[1.75] text-fj-ink/80">
-                  FactoryJet is run by Bhavesh Barot, who has spent over a decade building sites and
-                  search programs for small and mid-sized businesses. No account managers: the
-                  engineer who writes your technical fixes explains them on the same call. It also
-                  shapes what we will not do. We will tell you when SEO is the wrong spend, and we
-                  will not sell a guaranteed position, because Google warns against anyone who
-                  promises one.
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a
-                    className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink transition-colors hover:border-fj-neutral-400"
-                    href={CALENDLY}
-                  >
-                    Book 30 minutes with the founder
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#la-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Los Angeles Corridors</span>
                   </a>
-                  <Link
-                    href="/services/seo-consulting"
-                    className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink transition-colors hover:border-fj-neutral-400"
-                  >
-                    SEO consulting
-                  </Link>
                 </div>
               </div>
-              <div className="lg:col-span-5">
-                <div
-                  className="rounded-2xl bg-fj-cream p-8"
-                  style={{ border: '1px solid rgba(26,23,18,.10)' }}
-                >
-                  <h3 className="font-fj-display text-[1.25rem] font-semibold leading-[1.3] text-fj-ink">
-                    What you get either way
-                  </h3>
-                  <ul className="mt-5 space-y-4">
-                    {[
-                      'A free audit covering technical health, your Business Profile, reviews and whoever currently holds your districts. Yours to keep, hired or not.',
-                      'Month to month, cancel with thirty days notice. Most LA firms lock you in for six to twelve months.',
-                      'Reporting on calls and form fills, not ranking screenshots, which are the easiest thing in this industry to fake.',
-                    ].map((t) => (
-                      <li key={t} className="flex gap-3">
-                        <span
-                          className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-[#F05A28]"
-                          aria-hidden="true"
-                        />
-                        <span className="font-fj-body text-[0.9375rem] leading-[1.65] text-fj-ink/80">
-                          {t}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/los-angeles-seo/los-angeles-fashion-district.webp"
+                  alt="Los Angeles California local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/los-angeles-seo/los-angeles-seo-consult.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Los Angeles businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Southern California&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Century City entertainment law firms to Beverly Hills surgical clinics and Silicon Beach tech platforms, California businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── FAQ ───────────────────────────────────────────────────────── */}
-        <FAQ
-          eyebrow="LOS ANGELES SEO FAQ"
-          headline="Questions, answered the way we would answer them on a call"
-          lead="Including the ones about money that most agency sites route straight to a contact form."
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS.map((f) => ({ question: f.question, answer: f.answer, category: f.category }))}
-        />
+        {/* ── 04. LOS ANGELES DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="la-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Los Angeles Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for Los Angeles&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Century City legal firms to Beverly Hills surgical clinics and Silicon Beach tech innovators:
+              </p>
+            </div>
 
-        {/* ── RELATED ───────────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8 text-center">
-            <p className="mb-5 font-fj-mono text-[0.6875rem] uppercase tracking-[0.14em] text-[#B23E13]">
-              Related services
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { href: '/services/seo', label: 'SEO services' },
-                { href: '/services/local-seo', label: 'Local SEO' },
-                { href: '/services/small-business-seo', label: 'Small business SEO' },
-                { href: '/services/seo-audit', label: 'SEO audit' },
-                { href: '/services/ai-seo', label: 'AI SEO' },
-                { href: '/ai-visibility-checker', label: 'AI visibility checker' },
-              ].map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-full border border-[#B23E13] px-5 py-2 font-fj-body text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  {l.label}
-                </Link>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── FINAL CTA: the page's single dark section ─────────────────── */}
-        <FinalCTA
-          variant="dark"
-          eyebrow="GET STARTED"
-          headline="Pick your districts. We will go win them."
-          sub="Start with a free Los Angeles SEO audit. You will see where you sit in the map pack today, which districts are genuinely open, and exactly what we would fix first. No pressure to continue, and you keep the findings."
-          primaryCta={{ label: 'Get your free LA SEO audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'Talk to the founder', href: CALENDLY }}
-          objectionHandler="Month to month, no setup fee, no long-term contract."
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for Los Angeles
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in Southern California demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Los Angeles Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// LOS ANGELES LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Los Angeles local search."
+            city="Los Angeles"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across Southern California:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Los Angeles SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="LOS ANGELES LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Los Angeles CA"
+          lead="Direct, plain English answers to what Los Angeles business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
-        <SeoCityLinksUS currentCity="los-angeles" />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="los-angeles" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Los Angeles Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

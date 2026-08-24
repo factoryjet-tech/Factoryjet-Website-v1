@@ -1,668 +1,910 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const IMG = '/images/us/marketplace';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/seattle/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best E-Commerce Development Agency Seattle WA | Top Developers | FactoryJet',
+  title: 'Seattle E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
   description:
-    'Ranked the Best E-Commerce Development Agency in Seattle. Top e-commerce developers in Seattle for headless Next.js, outdoor retail, and cloud commerce. Shopify Plus, BigCommerce, and AWS integrations.',
+    'Seattle e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Pacific Northwest enterprise brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best E-Commerce Development Agency Seattle WA | FactoryJet',
+    title: 'Seattle E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
     description:
-      'Top e-commerce development company in Seattle. We build ultra-fast headless Next.js, Shopify Plus, and cloud-integrated commerce platforms for PNW brands with fixed pricing.',
-    url: 'https://factoryjet.com/seattle/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency Seattle WA' }],
+      'Seattle e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Pacific Northwest enterprise brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Seattle E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best E-Commerce Development Agency in Seattle | FactoryJet',
-    description: 'Top Seattle e-commerce developers building headless Next.js, Shopify Plus, and cloud commerce engines.',
+    title: 'Seattle E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    description: 'Custom headless e-commerce engineering in Seattle WA. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/seattle/ecommerce-development' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ─────────────────────────────────────────────
-   FAQ DATA
-───────────────────────────────────────────── */
+const PARTNERS = [
+  'Shopify Plus Enterprise',
+  'BigCommerce B2B Edition',
+  'Next.js 15 App Router',
+  'NetSuite ERP Integration',
+  'SAP & Microsoft Dynamics',
+  'Stripe Payments & Klarna',
+  'Klaviyo Marketing Automation',
+  'Algolia Search & Discovery',
+];
+
+const STAT_CARDS = [
+  { num: '530ms', title: 'Average Checkout Speed', desc: 'Sub-second mobile checkout latency engineered to maximize checkout completion rates.', icon: '⚡' },
+  { num: '3.6x', title: 'Average Conversion Lift', desc: 'Measured conversion rate surge after headless architecture and mobile UX replatforming.', icon: '📈' },
+  { num: '99.99%', title: 'Peak Uptime Reliability', desc: 'Zero downtime during viral product drops, Black Friday, and high-volume flash sales.', icon: '🛡️' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, custom API connectors, and hosting configurations.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'South Lake Union & Downtown',
+    query: 'enterprise retail ecommerce south lake union seattle',
+    focus: 'Enterprise Marketplace Scale, Headless Edge & High-Concurrency Retail',
+    desc: 'The Pacific Northwest retail and technology nerve center. Demands high-concurrency flash sale architectures, headless edge rendering, and sub-second global checkouts.',
+  },
+  {
+    corridor: 'Bellevue & Eastside B2B Nexus',
+    query: 'b2b wholesale portal ecommerce bellevue',
+    focus: 'Enterprise Wholesale B2B, Multi-Entity NetSuite ERP & Custom Portals',
+    desc: 'Major corporate and enterprise headquarters hub. Features custom contract pricing, net-term credit approvals, quote requests, and real-time NetSuite/SAP sync.',
+  },
+  {
+    corridor: 'Pioneer Square & SODO',
+    query: 'outdoor gear brand ecommerce pioneer square seattle',
+    focus: 'Specialty Outdoor Equipment, Technical Apparel D2C & Creator Drops',
+    desc: 'Epicenter of outdoor technical apparel and lifestyle commerce. Requires interactive lookbooks, smart product bundle configurators, and instant mobile checkouts.',
+  },
+  {
+    corridor: 'Ballard & Fremont Craft District',
+    query: 'craft beverage food subscription ecommerce ballard',
+    focus: 'Craft Beverage Distribution, Artisan Foods & Recurring Subscriptions',
+    desc: 'Celebrated craft culinary and beverage district. Features recurring subscription billing engines, custom box builders, and localized shipping rules.',
+  },
+  {
+    corridor: 'Redmond & Kirkland Tech Corridor',
+    query: 'gaming hardware merchandise ecommerce redmond',
+    focus: 'Hardware Accessories, Gaming Merch & Digital Entitlement Commerce',
+    desc: 'Interactive software and gaming hardware nexus. Features digital entitlement gating, token-backed rewards, and global multi-currency checkout gateways.',
+  },
+  {
+    corridor: 'Kent Valley & Port Gateway',
+    query: 'aerospace industrial b2b ecommerce kent valley',
+    focus: 'Industrial Cold Chain, Aerospace Hardware & Bulk Wholesale',
+    desc: 'The Pacific Northwest logistics and supply chain engine. Demands freight rate calculators, EDI integrations, CSV bulk order uploads, and custom PO generation.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Technical Outdoor Apparel, Sporting Equipment & Pacific Northwest D2C',
+    headline: 'High-Impact Digital Flagships for Seattle Outdoor & Lifestyle Brands',
+    description:
+      'From Pioneer Square technical apparel innovators to Puget Sound marine equipment suppliers, visual storytelling and speed drive brand loyalty. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive product lookbooks, smart bundling, and frictionless one-click mobile checkout.',
+    image: '/images/us/seattle-web-design/shop.webp',
+    alt: 'Seattle technical outdoor apparel sporting equipment and modern lifestyle D2C ecommerce development',
+    points: [
+      'Sub-second headless Next.js frontend with instant mobile product filtering',
+      'Dynamic product bundling, tiered upsells, and personalized cross-sells',
+      'Integrated VIP loyalty programs, SMS marketing funnels, and post-purchase flows',
+    ],
+  },
+  {
+    sector: 'Aerospace Components, Industrial Manufacturing & Heavy Supply',
+    headline: 'Engineering Enterprise B2B Portals for Kent Valley Manufacturers',
+    description:
+      'Aerospace suppliers, CNC machining facilities, and logistics operators connecting the Port of Seattle to global supply chains require complex B2B procurement portals. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom contract pricing, and real-time NetSuite or SAP sync.',
+    image: '/images/us/seattle-web-design/process.webp',
+    alt: 'Seattle enterprise aerospace manufacturing and industrial wholesale B2B ecommerce platform',
+    points: [
+      'Customer-specific contracted pricing matrices and tiered volume discounts',
+      'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
+      'Automated bidirectional synchronization with NetSuite, SAP, and Epicor ERPs',
+    ],
+  },
+  {
+    sector: 'Craft Beverage, Specialty Coffee, Gourmet Foods & Subscriptions',
+    headline: 'High-Volume Recurring Revenue Engines for Seattle Food & Beverage Brands',
+    description:
+      'From artisan coffee roasters in Ballard to Pacific seafood suppliers, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, build-your-own subscription configurators, and automated customer self-service retention portals.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Seattle specialty coffee craft beverage and gourmet food subscription ecommerce store design',
+    points: [
+      'Custom box builder and recurring subscription membership architectures',
+      'Self-service customer portal reducing subscription cancellation churn',
+      'Temperature-controlled shipping rate calculators and localized fulfillment routing',
+    ],
+  },
+  {
+    sector: 'Gaming Merchandise, Creator Hardware & Digital Drops',
+    headline: 'High-Concurrency Flash-Drop Storefronts for Seattle Gaming & Tech Brands',
+    description:
+      'Gaming studios and hardware accessories creators across Redmond and Kirkland experience sudden traffic surges during product releases. We engineer headless Next.js storefronts on edge infrastructure capable of processing thousands of checkout orders per minute with zero lag or platform downtime.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Seattle gaming merchandise hardware accessories and digital drop ecommerce development',
+    points: [
+      'High-concurrency edge infrastructure engineered for zero-latency flash drops',
+      'Dynamic limited-edition bundling with VIP membership access gating',
+      'Global multi-currency checkout with localized fulfillment routing',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow Monolithic Platforms & Crashing Servers',
+    problem: 'Legacy Magento, WooCommerce, or custom PHP stores slow down under traffic spikes, causing lost sales, database timeouts, and high ongoing maintenance bills.',
+    solution: 'We engineer headless Shopify Plus and BigCommerce architectures on global edge networks, handling unlimited concurrent traffic with sub-second page loads.',
+  },
+  {
+    num: '02',
+    title: 'Ending Broken ERP and Warehouse Inventory Synchronization',
+    problem: 'Outdated batch sync scripts create ghost inventory, overselling, and manual data entry headaches between your web store and warehouse ERP.',
+    solution: 'We build real-time webhook-driven middleware connecting NetSuite, SAP, or Microsoft Dynamics for automated inventory, order, and tracking sync.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Friction-Filled Checkouts that Kill Mobile Conversion',
+    problem: 'Clunky multi-page checkouts with slow shipping rate lookups and mandatory registration cause mobile shoppers to abandon their carts.',
+    solution: 'We implement streamlined one-page and one-click checkout flows with Apple Pay, Shop Pay, Google Pay, and instant address autocompletion.',
+  },
+  {
+    num: '04',
+    title: 'Modernizing Antiquated B2B Manual PDF and Email Ordering',
+    problem: 'Wholesale buyers are forced to call or email orders, creating order processing delays, human errors, and high operational overhead.',
+    solution: 'We launch self-service B2B customer portals with custom contract pricing, net-term credit approvals, quote requests, and instant PO generation.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Data Architecture & System Discovery',
+    desc: 'We audit your catalog data, customer database, ERP integrations, and third-party apps to design a future-proof commerce roadmap.',
+    deliverables: ['Catalog schema and variant taxonomy mapping', 'ERP, OMS, and warehouse integration architecture', 'Mobile UX conversion wireframes in Figma', 'Migration risk mitigation protocol'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js Frontend & Core Engineering',
+    desc: 'We build your custom storefront using Next.js 15, TypeScript, and modern component libraries connected to Shopify Plus or BigCommerce APIs.',
+    deliverables: ['Custom Next.js 15 headless storefront', 'Sub-second search and filtering powered by Algolia', 'Dynamic cart, upsell, and cross-sell drawer', 'Multi-device mobile responsive optimization'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'ERP Integration & Historical Data Migration',
+    desc: 'We securely migrate historical customers, orders, and product data while establishing real-time bidirectional ERP connectors.',
+    deliverables: ['Zero-downtime historical data migration', 'Automated NetSuite/SAP/QuickBooks sync', 'Custom B2B pricing and account hierarchy rules', 'Payment gateway and tax compliance configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Load Testing, Cutover & Launch Warranty',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Model',
+    factoryjet: 'Headless Next.js 15 with Shopify Plus or BigCommerce B2B. Instant edge rendering and total front-end design freedom.',
+    traditional: 'Monolithic legacy templates tied to server-side PHP with slow page rendering and rigid theme constraints.',
+  },
+  {
+    label: 'ERP & Systems Sync',
+    factoryjet: 'Event-driven, real-time webhook middleware connecting NetSuite, SAP, Microsoft Dynamics, and custom WMS.',
+    traditional: 'Fragile daily batch CSV imports that cause inventory discrepancies, overselling, and manual data cleanup.',
+  },
+  {
+    label: 'Checkout Performance',
+    factoryjet: 'Sub-600ms checkout load times with native Shop Pay, Apple Pay, and accelerated payment tokens.',
+    traditional: 'Multi-step checkouts requiring page reloads, causing 65%+ cart abandonment on mobile devices.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository and Figma source files.',
+    traditional: 'Proprietary platform lock-in or agency-held codebase with recurring licensing and maintenance surcharges.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'agency', label: 'Seattle Agency Standards' },
-  { key: 'headless', label: 'Headless & Cloud Architecture' },
-  { key: 'platforms', label: 'Platforms & ERP' },
-  { key: 'pricing', label: 'Fixed Pricing & Scoping' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'replatforming', label: 'Migration & Replatforming' },
+  { key: 'technical', label: 'Headless Tech Stack' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'support', label: 'Support & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-  // Seattle Agency Standards
-  {
-    category: 'agency',
-    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in Seattle?',
-    answer:
-      'FactoryJet is recognized as the best e-commerce development agency in Seattle because we bring enterprise cloud engineering principles to modern commerce. Rather than assembling bloated themes that suffer from high latency, our veteran engineers build ultra-fast headless Next.js storefronts and optimized Shopify Plus architectures with guaranteed sub-second mobile performance and fixed-price transparency.',
-  },
-  {
-    category: 'agency',
-    question: 'What types of Pacific Northwest brands do your top e-commerce developers support?',
-    answer:
-      'We partner with premier Pacific Northwest outdoor apparel and gear brands, Seattle direct-to-consumer technology hardware companies, Bellevue specialty retail founders, and enterprise wholesale distributors across Washington State.',
-  },
-  {
-    category: 'agency',
-    question: 'How do top e-commerce developers in Seattle approach cloud scalability and headless speed?',
-    answer:
-      'Top e-commerce developers deploy React Server Components (RSC) on Next.js 15 App Router, global CDN edge caching, and serverless API microservices, ensuring product detail pages render in under 80 milliseconds regardless of concurrent shopper volume.',
-  },
-  {
-    category: 'agency',
-    question: 'How does FactoryJet compare to high-overhead Seattle tech consultancies?',
-    answer:
-      'Traditional Pacific Northwest tech consultancies charge enterprise hourly rates with multi-month roadmaps that delay market entry. FactoryJet operates with senior engineering precision: we scope the build up front, eliminate non-technical management overhead, and deliver production storefronts in weeks.',
-  },
-
-  // Headless & Cloud Architecture
-  {
-    category: 'headless',
-    question: 'Why should Seattle retail brands build a headless e-commerce storefront?',
-    answer:
-      'Headless commerce decouples the frontend user experience from the backend commerce database. This enables complete design freedom, sub-second Core Web Vitals, and the ability to publish a unified catalog to custom web apps, mobile apps, and IoT devices simultaneously.',
-  },
-  {
-    category: 'headless',
-    question: 'How do you handle edge cache invalidation when prices or inventory change?',
-    answer:
-      'We configure automated webhook listeners between your commerce backend (Shopify Plus or BigCommerce) and our edge hosting layer on Cloudflare or Vercel, purging specific product cache tags in under 150 milliseconds when catalog updates occur.',
-  },
-  {
-    category: 'headless',
-    question: 'Can you integrate AWS serverless microservices with our e-commerce store?',
-    answer:
-      'Yes. We build custom AWS Lambda, DynamoDB, and EventBridge pipelines connecting custom product configurators, warranty registration portals, and third-party logistics systems directly to your commerce engine.',
-  },
-
-  // Platforms & ERP
-  {
-    category: 'platforms',
-    question: 'Which commerce platforms do your Seattle developers specialize in?',
-    answer:
-      'We build and optimize on Shopify Plus, BigCommerce Catalyst, WooCommerce, Magento (Adobe Commerce), and custom Next.js architectures, integrating centralized ERPs and marketing automation tools.',
-  },
-  {
-    category: 'platforms',
-    question: 'How do you integrate Shopify Plus with NetSuite and Microsoft Dynamics 365?',
-    answer:
-      'We engineer resilient GraphQL and REST API middleware that synchronizes customer records, purchase orders, inventory counts, and multi-location warehouse fulfillment in real time.',
-  },
-  {
-    category: 'platforms',
-    question: 'How do you prepare Seattle brands for agentic commerce and AI shopping agents?',
-    answer:
-      'We build comprehensive JSON-LD schema layers and dedicated Model Context Protocol (MCP) server endpoints, enabling autonomous shopping assistants (OpenAI Operator, Google Astra, Perplexity) to discover, query stock, and execute delegated token checkouts on your store.',
-  },
-
-  // Fixed Pricing & Scoping
   {
     category: 'pricing',
-    question: 'How much does e-commerce development cost with a top Seattle agency?',
+    question: 'How much does custom e-commerce development cost for a Seattle brand?',
     answer:
-      'While standard Seattle engineering agencies charge open-ended retainers of $25,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
+      'Project investment is determined by catalog complexity, custom ERP/OMS integration requirements, B2B wholesale features, and design scope. Mid-market direct-to-consumer storefronts are scoped on transparent fixed-price milestone contracts. Large enterprise replatforming initiatives with complex ERP middleware and custom B2B portals receive detailed architectural plans with guaranteed deliverables. Every proposal includes custom Figma UX, Next.js engineering, full ERP integration, and 100% code ownership.',
   },
   {
     category: 'pricing',
-    question: 'Do you charge ongoing percentages of gross merchandise volume (GMV)?',
+    question: 'Are there hidden ongoing agency fees or monthly platform markups?',
     answer:
-      'Never. You retain 100% of your revenue. We never take revenue shares or charge hidden licensing fees.',
+      'No. You contract directly with your core platform providers (Shopify Plus, BigCommerce, Cloudflare) and retain direct billing ownership. We never charge ongoing agency royalties or mark up your infrastructure costs.',
   },
   {
     category: 'pricing',
-    question: 'How fast can our Seattle e-commerce store launch?',
+    question: 'How do you guarantee that project budgets remain fixed without overruns?',
     answer:
-      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise headless or cloud-connected builds launching in 5 to 8 weeks.',
+      'We complete an exhaustive architectural discovery and data mapping phase before development begins. All APIs, data schemas, design components, and integration requirements are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
-    category: 'pricing',
-    question: 'How do we schedule an architecture consultation with the founder in Seattle?',
+    category: 'replatforming',
+    question: 'How do you ensure zero downtime and preserved SEO rankings during migration?',
     answer:
-      'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will analyze your current store performance, catalog architecture, and growth targets to deliver a comprehensive fixed-price engineering proposal.',
+      'We execute comprehensive pre-launch data migrations in staging environments, build complete 1-to-1 301 redirect maps for every legacy URL, preserve URL slugs where possible, and execute DNS cutover during off-peak hours with zero downtime for existing shoppers.',
   },
   {
-    category: 'agency',
-    question: 'Why is FactoryJet recognized as the Best E-Commerce Development Agency in Seattle for headless commerce?',
+    category: 'replatforming',
+    question: 'Can you migrate customer accounts, order history, and reviews from Magento or WooCommerce?',
     answer:
-      'We bring cloud-native software engineering principles to modern commerce. Our senior Seattle developers build ultra-fast composable storefronts on Next.js 15 App Router, edge CDN caching, and serverless AWS microservices with contractually guaranteed sub-second mobile speeds.',
+      'Yes. We migrate your complete historical catalog, customer records, order histories, and verified product reviews seamlessly, ensuring long-term customer lifetime value data remains intact.',
   },
   {
-    category: 'headless',
-    question: 'How do top Seattle e-commerce developers ensure 99.99% uptime during peak retail traffic spikes?',
+    category: 'replatforming',
+    question: 'How long does an enterprise e-commerce replatforming project typically take?',
     answer:
-      'By deploying React Server Components (RSC) across global edge networks on Cloudflare and Vercel with serverless API fallbacks, our headless storefronts absorb high concurrent traffic spikes without performance degradation.',
+      'Focused D2C storefront replatforming projects are typically delivered in 4 to 8 weeks. Complex enterprise deployments involving extensive ERP integrations, custom B2B pricing rules, and multi-warehouse routing generally take 8 to 12 weeks from kickoff to production launch.',
   },
   {
-    category: 'cloud',
-    question: 'How do you build custom warranty registration and product configurators on AWS?',
+    category: 'technical',
+    question: 'Why choose Headless Next.js over standard monolithic Shopify themes?',
     answer:
-      'We build serverless microservices using AWS Lambda and DynamoDB, integrating interactive 3D product visualizers and serial number warranty verification tools directly into your Shopify Plus or BigCommerce frontend.',
+      'Headless architectures decouple the presentation layer from backend logic, allowing pages to load in under 600ms on mobile devices, eliminating third-party app script bloat, and unlocking complete design flexibility for custom product configurators and high-converting checkout flows.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you integrate with NetSuite, SAP, or Microsoft Dynamics ERPs?',
+    answer:
+      'We build secure, event-driven API middleware that synchronizes inventory levels, product catalog updates, customer tiers, sales orders, and tracking numbers in real time, eliminating batch sync lag and manual reconciliation.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle site speed and Core Web Vitals optimization for e-commerce?',
+    answer:
+      'We implement static page pre-rendering, modern WebP/AVIF image formats, dynamic edge caching via Cloudflare, and lightweight modular JavaScript bundles to ensure your store achieves 90+ Lighthouse mobile performance scores.',
+  },
+  {
+    category: 'technical',
+    question: 'What search and merchandising platforms do you recommend?',
+    answer:
+      'We integrate enterprise search solutions such as Algolia, Searchspring, or Shopify Search & Discovery to deliver instant typo-tolerant search results, facet filtering, and automated visual merchandising.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
+    answer:
+      'Yes. We build comprehensive B2B features including customer-specific price lists, volume break tables, tax exemption handling, custom payment terms (Net 30/60), and corporate account hierarchy management.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do quote-to-order workflows work in your B2B store builds?',
+    answer:
+      'Wholesale buyers can build custom quote requests in their cart, submit them directly to your sales team, receive negotiated pricing adjustments, and convert approved quotes into completed orders in a single click.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you support hybrid stores with both direct-to-consumer and wholesale access?',
+    answer:
+      'Yes. We can architect unified storefronts where public retail customers shop standard MSRP products while verified wholesale accounts log in to see custom wholesale pricing, bulk quantity rules, and purchase order checkout options.',
+  },
+  {
+    category: 'b2b',
+    question: 'Do you build specialty coffee and craft beverage recurring subscription clubs?',
+    answer:
+      'Yes. We build custom subscription engines that allow customers to select roasts, grind types, delivery intervals, and easily manage recurring billing.',
+  },
+  {
+    category: 'support',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon final milestone completion, you receive full ownership of the clean GitHub repository, Figma design files, API middleware code, and hosting configurations with zero agency proprietary lock-in.',
+  },
+  {
+    category: 'support',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training to ensure your operational team is completely confident managing the platform.',
+  },
+  {
+    category: 'support',
+    question: 'How do you train our internal merchandising and customer support teams?',
+    answer:
+      'We provide tailored video walkthroughs and documentation covering order management, product uploads, discount creation, customer account management, and ERP sync troubleshooting.',
+  },
+  {
+    category: 'support',
+    question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
+    answer:
+      'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
   },
 ];
 
-/* ─────────────────────────────────────────────
-   SCHEMAS
-───────────────────────────────────────────── */
 const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
   })),
 };
 
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Best E-Commerce Development Agency Seattle',
-  description:
-    'Top e-commerce development company in Seattle WA. Custom Headless Next.js, Shopify Plus, BigCommerce, and AWS cloud integrations for outdoor, technology, and DTC retail brands.',
-  url: 'https://factoryjet.com/seattle/ecommerce-development',
-  telephone: '+1-800-FACTORYJET',
+  name: 'FactoryJet - Seattle E-Commerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Seattle',
     addressRegion: 'WA',
     addressCountry: 'US',
   },
-  areaServed: [{ '@type': 'City', name: 'Seattle' }, { '@type': 'AdministrativeArea', name: 'Puget Sound Region' }],
-  priceRange: '$$$$',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 47.6062,
+    longitude: -122.3321,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Seattle' },
+    { '@type': 'City', name: 'Bellevue' },
+    { '@type': 'City', name: 'Redmond' },
+    { '@type': 'City', name: 'Kirkland' },
+    { '@type': 'City', name: 'Tacoma' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Seattle E-Commerce Development & Headless Architecture',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
+  description:
+    'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Seattle enterprise brands.',
+  areaServed: { '@type': 'State', name: 'Washington' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Seattle E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  description: 'Seattle e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Pacific Northwest enterprise brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
 };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Seattle', item: 'https://factoryjet.com/seattle/ecommerce-development' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Seattle', item: CANONICAL },
   ],
 };
-
-const STATS = [
-  { b: 'Top Ranked Seattle', s: 'best e-commerce developers' },
-  { b: '< 100ms Edge', s: 'sub-second Next.js speed' },
-  { b: 'Headless & Cloud', s: 'AWS & Shopify Plus certified' },
-  { b: '500+ Stores', s: 'delivered across global markets' },
-];
-
-const SOURCED = [
-  {
-    v: '68%',
-    d: 'of tech-forward consumers in the Pacific Northwest expect sub-second page rendering, directly impacting mobile bounce and cart completion rates.',
-    src: 'Pacific Northwest Retail Survey',
-    href: 'https://www.statista.com',
-  },
-  {
-    v: '2.8x',
-    d: 'faster page load speeds achieved by retail brands migrating from monolithic Liquid themes to Next.js React Server Components.',
-    src: 'Google Core Web Vitals Benchmark',
-    href: 'https://web.dev',
-  },
-  {
-    v: '$70 Billion',
-    d: 'annual digital commerce transactions originating across the Puget Sound region and Pacific Northwest retail corridor.',
-    src: 'Washington State Commerce Report',
-    href: 'https://www.commerce.wa.gov',
-  },
-];
-
-const PILLARS = [
-  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We engineer bespoke, high-converting digital storefronts on Headless Next.js, Shopify Plus, and BigCommerce tailored to Seattle brands.' },
-  { i: '◇', t: '2. Top E-Commerce Developers & Senior Engineering', d: 'Work directly with veteran commerce architects who write clean, maintainable code rather than junior agency account coordinators.' },
-  { i: '↯', t: '3. Composable Headless & Cloud Architecture', d: 'Deploy React Server Components (RSC), global edge caching, and serverless microservices for uncompromising speed.' },
-  { i: '▤', t: '4. Enterprise ERP, CRM & HubSpot Integration', d: 'Connect NetSuite, SAP, Dynamics 365, Klaviyo, and HubSpot directly into your store with automated bi-directional data pipelines.' },
-  { i: '⛓', t: '5. Frictionless Replatforming & Migration', d: 'Migrate from legacy Magento, WooCommerce, or custom monoliths to modern headless stacks with zero downtime and 100% SEO rank preservation.' },
-  { i: '⤢', t: '6. Agentic Commerce & AI Agent Discoverability', d: 'Deploy structured JSON-LD schemas and MCP server endpoints so autonomous AI shoppers cite, recommend, and purchase your products.' },
-];
 
 export default function SeattleEcommercePage() {
   return (
     <>
-      <script id="sea-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="sea-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="sea-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="sea-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="sea-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="sea-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="sea-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="sea-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── Hero ── */}
-        <section className="pp-dotgrid">
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Best E-Commerce Development Agency in Seattle</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Top e-commerce developers in <span className="pp-grad">Seattle WA.</span>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Seattle E-Commerce &amp; Enterprise Architecture</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Seattle E-Commerce Agency for High-Growth Brands
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Ranked the Best E-Commerce Development Company in Seattle. High-performance Headless Next.js,
-                  Shopify Plus, BigCommerce, and AWS cloud integrations for outdoor, technology, and DTC brands.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Scale direct-to-consumer and wholesale operations with headless Shopify Plus, BigCommerce B2B, and sub-second checkout speeds. Engineered with bidirectional NetSuite and SAP ERP integrations.
                 </p>
-                <HeroInlineForm source="us_seattle_ecommerce_hero" region="us" submitLabel="Get a Seattle Store Scope" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get an E-Commerce Architecture Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#sea-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Seattle Corridors</span>
+                  </a>
+                </div>
               </div>
 
-              {/* Visual Architecture Graphic */}
-              <div
-                role="img"
-                aria-label="Seattle e-commerce architecture diagram showing headless Next.js frontend, AWS cloud microservices, and Shopify Plus backend."
-                style={{
-                  border: '1px solid var(--pp-line)',
-                  borderRadius: '18px',
-                  background: '#fff',
-                  padding: '24px',
-                  boxShadow: '0 18px 50px rgba(20,17,15,.08)',
-                }}
-              >
-                <div
-                  style={{
-                    border: '1.5px solid var(--pp-orange)',
-                    borderRadius: '12px',
-                    background: 'var(--pp-tint)',
-                    padding: '14px',
-                    textAlign: 'center',
-                    fontFamily: 'var(--pp-disp)',
-                    fontWeight: 700,
-                    color: 'var(--pp-ink)',
-                    marginBottom: '18px',
-                  }}
-                >
-                  Seattle Headless &amp; Cloud Engine
-                  <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Next.js 15 · Edge Caching · AWS Microservices · Sub-Second Speed
-                  </small>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/seattle-web-design/hero.webp"
+                  alt="Seattle Washington enterprise ecommerce engineering and headless Shopify Plus development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Enterprise Commerce &amp; ERP Ecosystem</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom headless platforms in Seattle"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Scale &amp; Reliability</span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                  {[
-                    { name: 'Headless UI', desc: 'Next.js RSC' },
-                    { name: 'Shopify Plus', desc: 'Commerce Core' },
-                    { name: 'AWS Cloud', desc: 'Microservices' },
-                    { name: 'Edge Nodes', desc: '< 80ms Speed' },
-                    { name: 'NetSuite ERP', desc: 'Live Inventory' },
-                    { name: 'AI Commerce', desc: 'MCP Protocol' },
-                  ].map((ch) => (
-                    <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
-                      <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>{ch.desc}</span>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  E-Commerce Engineered for Pacific Northwest High-Volume Merchants
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From South Lake Union tech brands to Bellevue enterprise B2B distributors and Ballard specialty beverage subscriptions, we engineer resilient commerce systems that maximize margins and eliminate checkout friction.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule E-Commerce Architecture Review" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. SEATTLE DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="sea-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Puget Sound Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored E-Commerce for Seattle&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From South Lake Union tech brands to Bellevue B2B distributors and Ballard specialty coffee clubs:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
                 <div
+                  key={d.corridor}
                   style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Top E-Commerce Company Seattle
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
                   </div>
-                  <div>Zero Retainer Waste · 100% Senior Engineers</div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized E-Commerce Architectures for Seattle Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in the Pacific Northwest demands tailored purchase flows, inventory connectors, and checkout performance:
+              </p>
             </div>
-          </div>
-        </section>
 
-        {/* ── Stat Band ── */}
-        <section className="pp-sec tint" style={{ paddingTop: '38px', paddingBottom: '38px' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (
-                <div className="pp-stat" key={s.b}>
-                  <b>{s.b}</b>
-                  <span>{s.s}</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── Definitional Answer-First Block ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// why we are the top e-commerce agency in seattle</p>
-            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in Seattle?</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in Seattle,
-                FactoryJet replaces bloated agency retainers with senior engineering execution. We design and develop bespoke
-                digital storefronts on Headless Next.js, Shopify Plus, BigCommerce, and WooCommerce architectures that achieve
-                sub-second mobile load times and maximize conversion for Pacific Northwest brands.
-              </p>
-              <p>
-                Seattle retail, outdoor, and technology founders demand high-performance cloud architecture that handles global traffic
-                surges effortlessly. Our top e-commerce developers build composable headless storefronts on Next.js App Router, connect
-                custom AWS serverless microservices, and synchronize centralized ERPs like NetSuite and Dynamics 365 in real time.
-              </p>
-              <p>
-                Whether you are launching a DTC outdoor apparel brand in South Lake Union, modernizing a Bellevue retail store,
-                or replatforming an enterprise catalog from legacy Magento, FactoryJet delivers fixed-price certainty with zero agency fluff.
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Seattle Merchants Choose FactoryJet E-Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks and slow monolithic checkouts with modern engineering:
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* ── Sourced Stats ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// seattle digital benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>Seattle e-commerce performance by the numbers</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
-                  <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
-                  <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '10px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}
-                  >
-                    {s.src}
-                  </a>
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 6 Core Capabilities ── */}
-        <section className="pp-sec">
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// SEATTLE ENTERPRISE E-COMMERCE BLUEPRINT"
+            title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get an E-Commerce Architecture Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE REPLATFORMING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">// full-funnel commerce engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Why Seattle brands choose our top e-commerce developers</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
-              From bespoke UI/UX storefront design to complex ERP and marketplace integrations, we provide end-to-end commerce development.
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Replatforming Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Replatforming Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-downtime migrations and high-conversion storefront launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Seattle E-Commerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless e-commerce development against traditional template agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="SEATTLE E-COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce Development in Seattle WA"
+          lead="Direct, plain English answers to what Pacific Northwest brand founders and digital commerce leaders ask about replatforming and development:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="seattle" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; Zero Downtime</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Seattle E-Commerce Architecture?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your catalog size and operational goals. We will provide a comprehensive architectural proposal, clear migration timeline, and interactive Figma preview.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {PILLARS.map((p) => (
-                <div className="pp-card" key={p.t}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '20px', color: 'var(--pp-orange-dark)', marginBottom: '10px' }} aria-hidden="true">{p.i}</div>
-                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{p.t}</h3>
-                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{p.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="sea-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_seattle_ecommerce_page"
-              defaultPlatform="magento"
-              defaultTarget="headless"
-            />
-          </div>
-        </section>
-
-        
-        {/* ── Headless Next.js 15 & AWS Microservices Architecture ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// pacific northwest cloud engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Headless Next.js 15 and AWS Serverless Microservices for Seattle Brands</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Pacific Northwest outdoor apparel, technical hardware, and DTC consumer brands demand cloud-native commerce architecture
-                engineered for sub-second rendering, dynamic personalization, and global uptime.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Next.js 15 React Server Components (RSC) on Vercel &amp; Cloudflare</h3>
-              <p>
-                We engineer composable frontends utilizing React Server Components (RSC) and incremental static regeneration (ISR).
-                Product pages render statically at the edge in under 80 milliseconds, while real-time inventory and pricing hydrate
-                instantly without layout shifts.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. AWS Serverless Microservices &amp; EventBridge Pipelines</h3>
-              <p>
-                We build dedicated AWS Lambda and EventBridge pipelines connecting custom warranty registration tools, dynamic product
-                configurators, and 3PL fulfillment feeds directly to Shopify Plus and BigCommerce backends.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Sub-Second Mobile Optimization for Outdoor &amp; DTC Retail</h3>
-              <p>
-                Every asset, font, and script is optimized for Google Core Web Vitals (CWV), achieving Lighthouse 95+ performance scores
-                that lower customer acquisition costs (CAC) across paid Google and Meta campaigns.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* ── 7-Step Commerce Engineering Process ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// senior engineering methodology</p>
-            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for Seattle WA Brands</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Building a market-leading digital storefront requires rigorous engineering discipline, transparent fixed-price
-                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for Seattle WA companies:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 1: Technical Discovery &amp; Catalog Architecture Audit</h3>
-              <p>
-                We conduct an exhaustive technical audit of your existing SKU catalog, variant matrices, customer data schemas, and ERP workflows.
-                We identify performance bottlenecks, database query inefficiencies, and third-party app bloat that drag down conversion rates.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 2: Wireframing &amp; High-Converting UI/UX Design</h3>
-              <p>
-                Our designers construct bespoke storefront layouts tailored to South Lake Union & Bellevue consumer aesthetics. Every user interface
-                component is designed with mobile-first conversion principles, rapid product filtering, and frictionless 1-click accelerated checkout paths.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 3: Frontend Theme &amp; Component Engineering</h3>
-              <p>
-                We build clean, maintainable Shopify Liquid themes or Headless Next.js 15 React Server Components with zero unneeded third-party libraries.
-                Our code adheres to strict TypeScript standards, ensuring modularity, accessibility (WCAG 2.1 AA), and sub-second rendering.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 4: ERP, CRM &amp; Marketplace Middleware Integration</h3>
-              <p>
-                We engineer custom bi-directional API pipelines connecting your store to NetSuite, SAP, Katana, Klaviyo, HubSpot, and marketplace channels
-                (Amazon SP-API, Walmart Marketplace, TikTok Shop), synchronizing inventory balances and customer order records in real time.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 5: Full Catalog Migration &amp; 301 Redirect Mapping</h3>
-              <p>
-                If migrating from legacy Magento, WooCommerce, or custom backends, we transfer full customer accounts, historical order records,
-                and SKU catalogs. We build comprehensive 1-to-1 301 redirect maps to guarantee zero loss of organic SEO search rankings and backlinks.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 6: Rigorous QA, Load Testing &amp; Security Auditing</h3>
-              <p>
-                We run automated load tests simulating 50,000+ simultaneous shoppers, verify payment gateway webhooks across all currencies,
-                and audit Core Web Vitals to guarantee sub-1.2s Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS).
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 7: Production Cutover, Schema Validation &amp; 24/7 Monitoring</h3>
-              <p>
-                We execute zero-downtime DNS cutover, validate structured JSON-LD schemas with Google Search Console, submit instant IndexNow pings,
-                and provide real-time uptime monitoring to ensure your Seattle commerce engine generates revenue without interruption.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* ── Technical Architecture Standards for Seattle Enterprises ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// enterprise engineering standards</p>
-            <h2 style={{ marginTop: '10px' }}>Enterprise Engineering Standards for Seattle Brands</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Every digital storefront developed by FactoryJet for Seattle companies adheres to rigorous technical standards
-                designed to maximize organic search rankings, conversion velocity, and platform resilience:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Strict TypeScript and Component Modularity</h3>
-              <p>
-                We build theme components and headless storefronts with zero spaghetti code. Strict typing prevents runtime exceptions
-                and ensures your internal development team can easily maintain and extend features post-launch.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Comprehensive JSON-LD and AI Answer Engine Markup</h3>
-              <p>
-                We inject rich Schema.org structured data across every product, organization, and FAQ node, ensuring search engines
-                and generative AI models (ChatGPT, Google Gemini, Perplexity) accurately cite and recommend your brand.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Sub-Second Mobile Performance and CWV Excellence</h3>
-              <p>
-                We audit all scripts, fonts, and images to guarantee sub-1.2s Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS),
-                boosting mobile conversion and maximizing return on ad spend (ROAS).
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Comparison Table ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// agency model comparison</p>
-            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional Seattle Consultancies vs. Freelancers</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              See why high-growth Pacific Northwest brands choose our direct engineering model over high-overhead consultancies.
-            </p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead>
-                  <tr>
-                    <th>Agency Dimension</th>
-                    <th>FactoryJet (Top Developers)</th>
-                    <th>Seattle Tech Consultancies</th>
-                    <th>Freelancers / Offshore</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="me">
-                    <td className="name">Pricing &amp; Billing Model</td>
-                    <td>100% Fixed-Price Milestones</td>
-                    <td>$35k+/mo Retainers + Hourly Overage</td>
-                    <td>Unpredictable Hourly Rates</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Direct Senior Engineer Access</td>
-                    <td>Yes (Direct communication with builders)</td>
-                    <td>No (Layers of account coordinators)</td>
-                    <td>Yes (Variable skill levels)</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">Headless Next.js Speed Guarantee</td>
-                    <td>Contractually guaranteed (&lt; 1.2s LCP)</td>
-                    <td>Rarely guaranteed</td>
-                    <td>No speed guarantees</td>
-                  </tr>
-                  <tr>
-                    <td className="name">AWS Cloud Microservices</td>
-                    <td>Custom Lambda, DynamoDB &amp; APIs</td>
-                    <td>Heavy custom billing models</td>
-                    <td>Limited to basic plugins</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">Time to Production Launch</td>
-                    <td>2 to 4 Weeks</td>
-                    <td>4 to 8 Months</td>
-                    <td>Frequent project delays</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Ongoing Revenue Share</td>
-                    <td>0% (You keep 100% of revenue)</td>
-                    <td>Often demand revenue percentage</td>
-                    <td>0%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="pp-sec pp-faqsec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// common questions</p>
-            <div style={{ marginTop: '16px' }}>
-              <FAQ
-                headline="Frequently asked questions about e-commerce development in Seattle"
-                categories={FAQ_CATEGORIES}
-                items={FAQ_ITEMS}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── Final CTA ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-ctagrid">
-              <div className="pp-cta">
-                <p className="pp-mlabel">// partner with top seattle developers</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with Seattle’s top e-commerce agency?</h2>
-                <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us evaluate your store performance, review your headless architecture requirements, and deliver
-                  a fixed-price implementation proposal before any build begins.
-                </p>
-                <div style={{ marginTop: '24px' }}>
-                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Book a 30-Minute Scoping Call
-                  </a>
-                </div>
-                <div className="founder">
-                  <div className="b">B</div>
-                  <div>
-                    <b>Bhavesh Barot</b>
-                    <span>Founder, FactoryJet · 10+ yrs building commerce</span>
-                  </div>
-                </div>
-              </div>
-              <div className="pp-proof">
-                <div className="top">
-                  <Image
-                    src="/images/testimonials/ricky-belle-maison-160.webp"
-                    alt="Ricky B, Belle Maison"
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Ricky B.</b>
-                    <span>Founder, Belle Maison</span>
-                  </div>
-                </div>
-                <blockquote>
-                  &ldquo;FactoryJet is the best e-commerce development agency in Washington State. Their headless Next.js
-                  build gave us instantaneous page loads and increased our conversion rate across every category.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
-                </div>
-              </div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter locale="us" />
     </>
   );
 }
