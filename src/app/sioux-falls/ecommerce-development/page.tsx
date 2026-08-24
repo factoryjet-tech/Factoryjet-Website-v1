@@ -1,498 +1,646 @@
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
+
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/sioux-falls/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Sioux Falls, SD: 7-Day Builds, Fixed-Price',
-  description: 'Launch a Shopify store in Sioux Falls in 7 days, fixed-price. South Dakota DTC specialists, no platform lock-in. Get a quote.',
+  title: 'Ecommerce Development Sioux Falls SD | Shopify | FactoryJet',
+  description:
+    'Sioux Falls ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion. Get a fixed quote.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Sioux Falls, SD: 7-Day Builds, Fixed-Price',
-    description: 'Launch a Shopify store in Sioux Falls in 7 days, fixed-price. South Dakota DTC specialists, no platform lock-in. Get a quote.',
-    url: 'https://factoryjet.com/sioux-falls/ecommerce-development',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet - Shopify Developer Sioux Falls SD',
-      },
-    ],
+    title: 'Ecommerce Development Sioux Falls SD | Shopify | FactoryJet',
+    description:
+      'Sioux Falls ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Sioux Falls Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Sioux Falls, SD: 7-Day Builds, Fixed-Price',
-    description: 'Launch a Shopify store in Sioux Falls in 7 days, fixed-price. South Dakota DTC specialists, no platform lock-in. Get a quote.',
+    title: 'Ecommerce Development Sioux Falls SD | Shopify | FactoryJet',
+    description: 'Custom Shopify Plus and wholesale ecommerce development in Sioux Falls SD. High conversion and zero lock-in.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/sioux-falls/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['sioux-falls'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('sioux-falls', FAQ_ITEMS) }}
-    />
-  )
-}
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Shop Pay Acceleration',
+  'Klaviyo Premier',
+  'WooCommerce Enterprise',
+  'Stripe Payments',
+  'Next.js 15 Commerce',
+  'Cloudflare Global Edge',
+  'Google Analytics 4',
+];
 
+const STAT_CARDS = [
+  { num: '40%+', title: 'Checkout Conversion Lift', desc: 'Shop Pay one-tap acceleration eliminating mobile checkout drop-off.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Speed Score', desc: 'Sub-second product catalog browsing engineered for higher average order value.', icon: '🚀' },
+  { num: '500+', title: 'Commerce Builds', desc: 'Stores and wholesale ordering portals deployed across DTC, AgTech, and B2B.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own your custom Liquid theme, product data, and payment gateways.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown & Phillips Avenue',
+    query: 'boutique ecommerce sioux falls',
+    focus: 'Apparel, Specialty Goods & Artisan Brands',
+    desc: 'Flagship retail storefronts looking to expand regionally and nationally. Seamless omnichannel inventory sync between physical POS and online Shopify storefronts.',
+  },
+  {
+    corridor: 'Empire Mall & 41st Commercial',
+    query: 'retail ecommerce developer sioux falls',
+    focus: 'High-Volume Consumer Goods & Multi-Store Brands',
+    desc: 'High-traffic retail corridor requiring automated inventory management, customer loyalty rewards, and rapid mobile checkout flows.',
+  },
+  {
+    corridor: 'South Sioux Falls (57th & 85th)',
+    query: 'dtc brand developer sioux falls',
+    focus: 'Direct-to-Consumer & Subscription Commerce',
+    desc: 'Rapidly expanding brand founders launching custom DTC product lines with Klaviyo post-purchase automations and subscription billing integrations.',
+  },
+  {
+    corridor: 'Regional AgTech & Food Processing',
+    query: 'agtech b2b ecommerce south dakota',
+    focus: 'Agricultural Equipment, Feed & Specialty Foods',
+    desc: 'Specialty Upper Midwest food processors and agricultural distributors scaling direct shipping and bulk wholesale ordering across the nation.',
+  },
+  {
+    corridor: 'Industrial & Wholesale Distribution',
+    query: 'wholesale portal development sioux falls',
+    focus: 'B2B Wholesale Portals & Custom Pricing',
+    desc: 'Contract manufacturers and regional distributors modernizing phone and paper order workflows into self-service B2B digital ordering portals.',
+  },
+  {
+    corridor: 'Brandon & Harrisburg Corridor',
+    query: 'local ecommerce store builder sioux falls',
+    focus: 'Commercial Home Goods & Regional Supply',
+    desc: 'Suburban manufacturing and home furnishing brands expanding regional delivery networks across Minnehaha and Lincoln counties.',
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Clunky Legacy Stores That Drop Checkout Conversions',
+    problem: 'Outdated WooCommerce plugins or slow monolithic platforms cause sluggish page loading, cart abandonment, and mobile checkout frustration.',
+    solution: 'We engineer custom Shopify Plus themes with Shop Pay one-tap acceleration, sub-second product pages, and friction-free mobile checkouts.',
+  },
+  {
+    num: '02',
+    title: 'Connecting Complex ERP, Warehouse, and Inventory Systems Seamlessly',
+    problem: 'Manual inventory entry between your warehouse, physical retail store, and online storefront leads to overselling and shipping delays.',
+    solution: 'We build automated API integrations connecting Shopify to NetSuite, QuickBooks, ShipStation, and custom warehouse management systems.',
+  },
+  {
+    num: '03',
+    title: 'Modernizing B2B Wholesale Ordering Out of Phone Calls and Spreadsheets',
+    problem: 'Wholesale B2B clients are forced to call or email PDF purchase orders because the website lacks tiered dealer pricing and bulk order sheets.',
+    solution: 'We architect enterprise Shopify B2B portals with custom dealer pricing tiers, NET payment terms, quick-order matrices, and company accounts.',
+  },
+  {
+    num: '04',
+    title: 'Retaining Full Ownership of Your Store Code and Brand Intellectual Property',
+    problem: 'Agencies lock clients into proprietary software or hold theme source code hostage with expensive recurring retainer contracts.',
+    solution: 'You retain 100% ownership of your Shopify theme, Git repository, product data, customer lists, and payment processing accounts from day one.',
+  },
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Commerce Architecture & Catalog Strategy',
+    d: 'We analyze your product catalog, variant structures, B2B wholesale pricing tiers, and warehouse fulfillment workflows.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Figma UI/UX & Conversion Flow Prototyping',
+    d: 'We design high-converting product detail pages, collection filters, custom cart drawers, and mobile-first checkout experiences.',
+    icon: '🎨',
+  },
+  {
+    n: '03',
+    t: 'Custom Shopify Plus Theme Engineering',
+    d: 'We build clean, type-safe Liquid and React components optimized for sub-second speeds and zero app bloat.',
+    icon: '⚙️',
+  },
+  {
+    n: '04',
+    t: 'ERP, Inventory & Marketing App Integrations',
+    d: 'We connect ShipStation, Klaviyo email flows, GA4 e-commerce tracking, custom tax rules, and multi-location inventory.',
+    icon: '📦',
+  },
+  {
+    n: '05',
+    t: 'Full QA, Migration & Zero-Downtime Launch',
+    d: 'We migrate legacy customer accounts and order history, test payment gateways, and execute seamless DNS cutover.',
+    icon: '🚀',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'platform', label: 'Shopify & Platforms' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'timeline', label: 'Pricing & Timeline' },
+  { key: 'migration', label: 'Data Migration' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Do you have experience with Shopify development in Sioux Falls and South Dakota?',
-              answer: "Yes. We've built stores for businesses across the Sioux Falls metro and broader South Dakota market. We understand SD buyers, the ag-driven market, the financial services sector that Sioux Falls is known for, and South Dakota's uniquely business-friendly tax structure.",
-            },
-            {
-              category: 'pricing',
-              question: "South Dakota has no state income tax. Does that advantage extend to e-commerce businesses?",
-              answer: "Yes, for e-commerce business owners operating in South Dakota, the absence of state income tax means more of your online sales revenue stays in your pocket. This is one of the reasons Sioux Falls has attracted so many businesses over the past decade. For your customers, what matters is sales tax, which we configure automatically for SD and any other states where you have tax nexus.",
-            },
-            {
-              category: 'pricing',
-              question: "What's the sales tax rate for a Sioux Falls Shopify store?",
-              answer: "South Dakota charges a 4.5% state sales tax. Sioux Falls adds a 2% municipal tax, bringing the combined rate to 6.5% for orders shipped to Sioux Falls addresses. Other SD cities have different local rates. We configure Shopify Tax to automatically calculate and collect the correct rate based on each buyer's shipping address, including handling multi-state nexus if your volume triggers out-of-state collection obligations.",
-            },
-            {
-              category: 'local',
-              question: "How does the 7-day delivery guarantee work?",
-              answer: "Once you approve your proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your complete Shopify store within that window. If we miss the deadline for any reason on our end, you get a full refund. It's in writing, it's contractual, and we've never had to issue one.",
-            },
-            {
-              category: 'local',
-              question: "I know Lawrence & Schiller is a big agency in Sioux Falls. Why would I hire FactoryJet instead?",
-              answer: "Lawrence & Schiller is excellent for large-scale brand campaigns, traditional media, and enterprise marketing. If you need a TV buy or a full rebrand, they're a solid choice. If you need a Shopify store built fast and well at a price that makes sense for a growing SMB, that's our lane. We specialize exclusively in Shopify, launch in 7 days, fixed-price, and put the deadline in writing.",
-            },
-            {
-              category: 'local',
-              question: "Can you build a Shopify store for a South Dakota agricultural business?",
-              answer: "Absolutely, ag businesses are one of our strongest verticals. We've built stores for equipment parts dealers, farm input suppliers, ranch merchandise brands, and direct-to-consumer food producers across the Dakotas. We understand the SD ag buyer: they purchase on mobile, need detailed product specs, and often buy in volume. We build for all of that, including B2B wholesale portals with tiered pricing for commercial accounts.",
-            },
-            {
-              category: 'local',
-              question: "Sioux Falls has a big financial services sector. Can you build e-commerce for fintech or financial product companies?",
-              answer: "Yes. Financial services companies in Sioux Falls increasingly sell physical products (branded merchandise, educational materials, financial planning tools) and digital products online. We've built stores for financial education companies, professional services firms with product lines, and fintech companies with physical product components. Compliance-friendly product descriptions and terms are something we factor in from the start.",
-            },
-            {
-              category: 'pricing',
-              question: "Can you integrate with Sanford Health or Avera's supplier networks?",
-              answer: "If you're a vendor selling products to Sanford Health, Avera, or other Sioux Falls health systems through an e-commerce channel, we can build a B2B store with PO-based purchasing, net payment terms, and customer-specific pricing. We've built procurement stores for healthcare suppliers. Contact us with your specific integration requirements and we'll scope it accurately.",
-            },
-            {
-              category: 'local',
-              question: "How do you handle shipping to rural South Dakota addresses?",
-              answer: "South Dakota is geographically large with significant rural population. We configure USPS Priority Mail as the primary carrier for rural SD addresses. It's the most reliable and economical option for remote areas. We set up carrier-calculated shipping rates at checkout so buyers in rural counties see accurate shipping costs. For perishable or fragile products, we configure appropriate carrier restrictions.",
-            },
-            {
-              category: 'local',
-              question: "What's the difference between FactoryJet and a local Sioux Falls web developer?",
-              answer: "A local developer might be great, or might be a one-person shop who disappears mid-project. With FactoryJet you get a 25-person team (designers, developers, project managers, QA) working in parallel, 500+ stores as proof, a written delivery guarantee, and fixed pricing. No local freelancer offers all four.",
-            },
-            {
-              category: 'local',
-              question: "Can you build a store that handles both South Dakota retail and B2B wholesale?",
-              answer: "Yes, this is one of our specialties. Many SD businesses sell retail DTC and also sell wholesale to retailers, distributors, or commercial buyers. We build unified Shopify stores with separate retail and wholesale pricing tiers, wholesale-only product visibility, login-gated B2B pricing, minimum order quantities, and net payment terms. Retail and wholesale customers experience the same store but with different pricing rules applied automatically.",
-            },
-            {
-              category: 'pricing',
-              question: "How much does a Shopify store typically cost in Sioux Falls?",
-              answer: "Local Sioux Falls agencies charge enterprise-level rates for a Shopify build with 6–16 week timelines. Freelancers run far cheaper but with variable quality. FactoryJet delivers the same quality at a fraction of the cost, fixed-price and scoped to your build, in 7 days, backed by a money-back guarantee. The main cost drivers are page count, integrations, and design complexity, and every project is quoted up front after a free discovery call so you know the full cost before work starts.",
-            },
-            {
-              category: 'technical',
-              question: "Do you set up Google Shopping for Sioux Falls product businesses?",
-              answer: "Google Shopping is included in our Growth and Headless packages and available as a paid add-on for Standard. We create your Google Merchant Center account, configure the product feed with correct SD tax rules, optimize product titles and descriptions, and link to Google Ads. For Sioux Falls product businesses, Google Shopping is typically the first high-ROI advertising channel to activate.",
-            },
-            {
-              category: 'local',
-              question: "I already have a Shopify store that's not performing. Can you audit and fix it?",
-              answer: "Yes: our free 24-hour audit covers speed scores (Core Web Vitals), checkout abandonment, mobile UX, conversion funnel gaps, and theme code issues. We give you a specific list of what's broken and a fixed price to fix it. Common problems we find: slow themes, unoptimized product images, broken mobile checkout, poor product page structure, and missing upsells.",
-            },
-            {
-              category: 'local',
-              question: "Can you help a Sioux Falls retail store add an online sales channel?",
-              answer: "This is one of the most common projects we do: a brick-and-mortar retailer in Sioux Falls that wants to add online. We build the Shopify store, sync it with your existing POS (if you're on Shopify POS, Square, or Lightspeed), configure local pickup as a shipping option, and ensure your in-store and online inventory stays in sync automatically.",
-            },
-            {
-              category: 'support',
-              question: "Do you offer ongoing maintenance after launch?",
-              answer: "Yes. Every project includes 30 days of post-launch support at no additional cost. After that, monthly maintenance plans cover theme updates, app updates, speed monitoring, and priority support. Most of our long-term clients stay on maintenance plans because it means their store never breaks without someone watching it.",
-            },
-            {
-              category: 'local',
-              question: "I'm outside Sioux Falls: Rapid City, Aberdeen, or the Black Hills. Do you serve my area?",
-              answer: "Absolutely. We serve businesses across all of South Dakota: Sioux Falls, Rapid City, Aberdeen, Watertown, Brookings, Pierre, the Black Hills, and everywhere else. Tax configuration is the same statewide (4.5% SD state rate), with local rates varying by city. Remote collaboration is our standard: most projects are handled entirely over Zoom and Slack.",
-            },
-            {
-              category: 'local',
-              question: "Can you build a Shopify store for a Black Hills or Mount Rushmore area tourism business?",
-              answer: "Yes, tourism and hospitality businesses in the Black Hills area are a growing segment. We build stores for souvenir and gift businesses, outdoor gear retailers, experience-based companies selling merchandise and gift cards, and regional food brands that drive tourist purchases. Local pickup, regional shipping, and gift-card integration are all part of the standard toolkit.",
-            },
-            {
-              category: 'local',
-              question: "What e-commerce platform is right for my South Dakota business: Shopify, WooCommerce, or something else?",
-              answer: "For 95% of Sioux Falls and South Dakota SMBs, Shopify is the right answer. It handles South Dakota sales tax automatically, runs fast with no server management, has the best app ecosystem for marketing integrations, and requires zero technical maintenance. WooCommerce works if you're deeply committed to WordPress and have ongoing development resources. Headless Shopify makes sense for high-volume businesses needing sub-second performance.",
-            },
-            {
-              category: 'local',
-              question: "How do I get started with FactoryJet?",
-              answer: "Book a 45-minute strategy call. We ask about your business, your products, and your goals, then tell you exactly what we'd build and what it would cost. No commitment, no pressure. You'll leave with a clear picture of the right path forward whether you hire us or not. Click the button below to schedule.",
-            },
-            {
-              category: 'local',
-              question: 'Who is the best ecommerce development company in Sioux Falls?',
-              answer:
-                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Sioux Falls you compare, or any ecommerce solution company in Sioux Falls, should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Sioux Falls and the best ecommerce solution company in Sioux Falls for your catalog.',
-            },
-            {
-              category: 'pricing',
-              question: 'Should I hire ecommerce developer in Sioux Falls or work with an agency?',
-              answer:
-                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Sioux Falls directly, ask for store speed scores from past builds before committing.',
-            },
+  {
+    category: 'platform',
+    question: 'Why do you recommend Shopify Plus for Sioux Falls e-commerce brands?',
+    answer:
+      'Shopify Plus provides 99.99% uptime, built-in Shop Pay checkout with the highest conversion rate in e-commerce, native B2B wholesale portal capabilities, and zero server maintenance overhead compared to fragile self-hosted platforms.',
+  },
+  {
+    category: 'platform',
+    question: 'Can you build custom headless commerce solutions with Next.js and Shopify?',
+    answer:
+      'Yes. For high-growth brands requiring ultra-custom interactive experiences, we build headless frontends using Next.js Commerce and Shopify Storefront API deployed on Cloudflare Global Edge.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can we offer custom wholesale pricing and NET payment terms to B2B buyers?',
+    answer:
+      'Yes. With Shopify Plus B2B features, you can assign custom price lists, quantity price breaks, NET 30/60 invoice terms, and company customer permissions directly within the same store.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you connect our Sioux Falls store to our warehouse and inventory ERP?',
+    answer:
+      'Yes. We integrate Shopify with leading ERPs and warehouse management systems including NetSuite, QuickBooks Commerce, SAP, ShipStation, and custom internal inventory APIs.',
+  },
+  {
+    category: 'timeline',
+    question: 'How long does it take to build and launch a custom Shopify store?',
+    answer:
+      'Standard custom theme builds typically launch in 2 to 4 weeks, while complex enterprise migrations with ERP integrations and wholesale portals typically launch in 4 to 8 weeks on milestone-based delivery.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you price e-commerce development projects?',
+    answer:
+      'We provide transparent fixed-price quotes based on your exact store scope, catalog size, integration requirements, and design customization, with no surprise hourly overages.',
+  },
+  {
+    category: 'migration',
+    question: 'Can you migrate our products, customer data, and SEO history from WooCommerce or Magento?',
+    answer:
+      'Yes. We perform complete data migrations for products, customer accounts, past orders, and execute 1-to-1 301 URL redirect maps to ensure you preserve 100% of your existing search rankings.',
+  },
+  {
+    category: 'migration',
+    question: 'Will our existing customer passwords transfer to Shopify?',
+    answer:
+      'Due to industry-standard cryptographic password hashing, passwords cannot be extracted in plain text. We set up automated one-click account activation emails so customers can reset and access their history seamlessly.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Sioux Falls Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Sioux Falls',
+    addressRegion: 'SD',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 43.5460,
+    longitude: -96.7313,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Sioux Falls' },
+    { '@type': 'City', name: 'Brandon' },
+    { '@type': 'City', name: 'Harrisburg' },
+    { '@type': 'City', name: 'Tea' },
+    { '@type': 'City', name: 'Dell Rapids' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sioux Falls Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Shopify Plus & B2B Portals',
+  description:
+    'Senior engineering-led Shopify Plus and WooCommerce development, Shop Pay acceleration, wholesale B2B portals, and ERP integrations in Sioux Falls SD.',
+  areaServed: { '@type': 'State', name: 'South Dakota' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Ecommerce Development Sioux Falls SD | Shopify | FactoryJet',
+  description: 'Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion in Sioux Falls SD.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Sioux Falls', item: 'https://factoryjet.com/sioux-falls/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Ecommerce Development', item: CANONICAL },
+  ],
+};
+
+export default function SiouxFallsEcommerceDevelopmentPage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="sf-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="sf-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="sf-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="sf-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="sf-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* HERO */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_sioux_falls_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · SIOUX FALLS, SD"
-          headline="Shopify Developer Sioux Falls for South Dakota Businesses"
-          lead="South Dakota has zero state income tax: the best business climate in the Midwest. Smart Sioux Falls businesses are pairing that advantage with a high-converting Shopify store that launches in 7 days, fixed-price."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* LOGO BAR */}
-        <LogoBar
-          tagline="Trusted by businesses across Sioux Falls, the Black Hills & all of South Dakota"
-        />
+      <main className="platpage">
 
-        {/* BIG THREE TRUST BLOCK */}
-        <BigThreeTrustBlock
-          eyebrow="WHY FACTORYJET"
-          headline="The fastest, most predictable fixed-price Shopify developer in South Dakota"
-        />
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Sioux Falls Ecommerce Engineering</span>
+                </div>
 
-        {/* CITY CONTEXT */}
-        <CityContextSection
-          eyebrow="WHY SIOUX FALLS E-COMMERCE IS DIFFERENT"
-          headline="No state income tax + booming Midwest market = the best e-commerce foundation in the region"
-          leadParagraphs={[
-            "Sioux Falls has spent years quietly becoming one of the most business-friendly cities in the United States. South Dakota has no state income tax, no corporate income tax, and no personal income tax, which means every dollar your e-commerce business earns stays in your pocket rather than going to the state.",
-            "The city itself has grown to over 200,000 people and is one of the fastest-growing metros in the upper Midwest. Financial services giants, ag-tech companies, and health systems have all established major operations here. For e-commerce businesses, this combination of tax advantages, a growing professional consumer base, and relatively low competition from established Shopify agencies creates a rare window of opportunity.",
-            "Businesses that build a strong online store now will own search rankings and customer relationships for years. South Dakota's combined Sioux Falls sales tax rate is 6.5%: one of the simpler structures in the country, which means clean tax configuration and fewer compliance headaches.",
-          ]}
-          stats={[
-            { value: '$0', label: 'South Dakota state income tax, zero, for you and your business', sourceUrl: 'https://dor.sd.gov/taxes/' },
-            { value: '200K+', label: 'Sioux Falls metro population, fastest-growing in the upper Midwest', sourceUrl: 'https://www.census.gov/' },
-            { value: '6.5%', label: 'Combined Sioux Falls sales tax, simple, predictable, auto-configured', sourceUrl: 'https://dor.sd.gov/taxes/sales/' },
-          ]}
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Ecommerce Development Agency in Sioux Falls SD
+                </h1>
 
-        {/* SERVICE EXPLANATION */}
-        <ServiceExplanation
-          eyebrow="WHAT WE BUILD FOR SIOUX FALLS BUSINESSES"
-          headline="Shopify stores built for South Dakota buyers, from ag producers to downtown retailers"
-          lead="Sioux Falls businesses sell into a market that spans from urban professionals who moved here for the tax advantages to ranchers and ag businesses across South Dakota's vast rural landscape. That range requires a Shopify store that works equally well on a high-end desktop in a downtown office and on a mobile phone with spotty LTE coverage in a rural county. We build for both: every time."
-          body={
-            <>
-              <ul className="mt-4 space-y-2 text-sm text-fj-charcoal/80">
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>Custom Shopify theme, no cookie-cutter templates</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>SD 4.5% + Sioux Falls 2% local tax auto-configured</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>Mobile-first for rural &amp; urban SD buyers</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>B2B wholesale pricing for ag &amp; manufacturing</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>Google Shopping &amp; Meta Ads integration</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>Klaviyo email automation setup</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>Local pickup &amp; regional fulfillment logic</li>
-                <li className="flex gap-2"><span className="text-fj-orange font-bold">✓</span>30-day post-launch support included</li>
-              </ul>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/sioux-falls/ecommerce/service-explanation.webp"
-              alt="Shopify development process for Sioux Falls South Dakota businesses"
-              width={1200}
-              height={800}
-              className="rounded-2xl w-full object-cover"
-              loading="lazy"
-            />
-          }
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Scale DTC online sales and wholesale B2B dealer ordering with custom Shopify Plus engineering, Shop Pay acceleration, and seamless ERP inventory synchronization.
+                </p>
 
-        {/* STRATEGIC DARK */}
-        <StrategicDarkSection
-          eyebrow="THE FACTORYJET DIFFERENCE"
-          headline="Three reasons Sioux Falls businesses choose us over local agencies"
-          pillars={[
-            {
-              icon: 'zap',
-              title: 'Launch Speed',
-              body: 'Seven days from kickoff to live store, guaranteed in writing. Local Sioux Falls agencies book 6–12 weeks out. We start Monday and launch Friday of next week.',
-            },
-            {
-              icon: 'shield',
-              title: 'Fixed Price, Always',
-              body: "You know exactly what you're paying before you pay anything. No hourly surprises, no scope changes, no surprise add-on invoices. What we quote is what you pay.",
-            },
-            {
-              icon: 'trending-up',
-              title: 'Revenue-First Design',
-              body: "Every design decision, layout, CTAs, checkout flow, product pages, is made to maximize conversion. A store that looks good but doesn't sell is just an expensive photo gallery.",
-            },
-          ]}
-        />
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#sf-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Commerce Corridors</span>
+                  </a>
+                </div>
+              </div>
 
-        {/* SERVICE JOURNEY */}
-        <ServiceJourneyRow
-          eyebrow="HOW IT WORKS"
-          headline="From first call to live store in 7 days"
-          stages={[
-            {
-              number: '01',
-              title: 'Strategy Call',
-              description: 'We learn about your Sioux Falls business, your products, and your customers in 45 minutes. Honest advice, no sales pitch.',
-            },
-            {
-              number: '02',
-              title: 'Fixed-Price Proposal',
-              description: 'Within 24 hours: a complete proposal with fixed price, exact delivery date, and full scope. No surprises, no hourly billing.',
-            },
-            {
-              number: '03',
-              title: 'Design & Build (Days 1–5)',
-              description: 'We design your custom theme, configure products and South Dakota tax rules, connect your payment gateway, and integrate all marketing tools.',
-            },
-            {
-              number: '04',
-              title: 'Review & Revisions (Day 6)',
-              description: 'You review on a private preview link and request changes. We make all revisions same-day: most clients approve in one round.',
-            },
-            {
-              number: '05',
-              title: 'Launch Day (Day 7)',
-              description: 'We push live, submit to Google, run full mobile and desktop QA, and hand you the keys with documentation and a 30-day support window.',
-            },
-          ]}
-        />
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/commerce/ecommerce-growth-agency-team.webp"
+                  alt="Sioux Falls ecommerce development team engineering custom Shopify Plus and B2B portals"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        {/* PORTFOLIO */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="Stores we've built for businesses like yours"
-          cards={[
-            {
-              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-1.webp',
-              title: 'Agricultural Products & Equipment',
-              industry: 'Shopify Plus · B2B Wholesale',
-              description: 'A full B2B wholesale store for a South Dakota ag supplier, tiered pricing, dealer portals, and rural-optimized mobile checkout.',
-              stat1: '310% increase in online orders within 90 days',
-            },
-            {
-              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-2.webp',
-              title: 'Regional Specialty Food Brand',
-              industry: 'Shopify · DTC + Subscription',
-              description: 'A direct-to-consumer food brand shipping South Dakota products nationwide, launched in 7 days with subscription box integration.',
-              stat1: 'Launched in 7 days, $22K first-month revenue',
-            },
-            {
-              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-3.webp',
-              title: 'Downtown Retail & Gift Shop',
-              industry: 'Shopify · DTC + Local Pickup',
-              description: 'A Sioux Falls boutique adding an online channel with local pickup, synced with in-store POS and inventory in real time.',
-              stat1: '3.9% conversion rate vs. 1.2% prior site',
-            },
-          ]}
-        />
+            </div>
+          </div>
+        </section>
 
-        {/* COMPARISON TABLE */}
-        <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Sioux Falls Shopify agencies"
-          lead="Every local agency in Sioux Falls will take your project, but almost none of them specialize in Shopify, and none of them put a deadline in writing."
-          columns={[
-            { label: 'Feature' },
-            { label: 'Lawrence & Schiller' },
-            { label: 'Lemonly' },
-            { label: 'Click Rain' },
-            { label: 'FactoryJet', isFactoryJet: true },
-          ] as const}
-          rows={[
-            { feature: 'Starting Price', values: ['Enterprise rates', 'Premium rates', 'Premium rates', 'Fixed-price'] },
-            { feature: 'Timeline', values: ['8–16 weeks', '6–12 weeks', '6–10 weeks', '7 Days: Guaranteed'] },
-            { feature: 'Shopify Specialist', values: ['No', 'No', 'No', 'Yes, 500+ stores'] },
-            { feature: 'Fixed Price', values: ['No', 'No', 'No', 'Yes, always'] },
-            { feature: 'Launch Guarantee', values: ['No', 'No', 'No', 'Yes, in writing'] },
-            { feature: 'Post-Launch Support', values: ['Billable', 'Billable', 'Billable', '30 days free'] },
-          ] as const}
-        />
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce &amp; Fulfillment Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* PRICING */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="Fixed-price Shopify packages for Sioux Falls businesses"
-          lead="Pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts."
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Standard',
-              description: 'For Sioux Falls boutiques, specialty food brands, and service businesses launching their first professional Shopify store.',
-              features: [
-                'Custom Shopify theme (no templates)',
-                'Up to 50 products configured',
-                'SD + Sioux Falls sales tax auto-setup',
-                'Payment gateway integration',
-                'Mobile-first responsive design',
-                'Google Analytics 4 + Search Console',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Start with Standard', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Growth',
-              description: 'For growing South Dakota brands, includes B2B pricing, Klaviyo email automation, Google Shopping, and advanced conversion features.',
-              features: [
-                'Everything in Standard',
-                'Up to 200 products + variants',
-                'B2B wholesale pricing & portal',
-                'Klaviyo email automation setup',
-                'Google Shopping feed configuration',
-                'Meta Ads pixel + product catalog',
-                'Subscription & recurring order support',
-                'Speed optimization (sub-2s load)',
-              ],
-              cta: { label: 'Start with Growth', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Headless',
-              description: 'Enterprise Shopify for high-volume Sioux Falls businesses, financial services product companies, and ag-tech manufacturers.',
-              features: [
-                'Everything in Growth',
-                'Headless Shopify + Next.js frontend',
-                'Large catalog, products & collections scoped per project',
-                'ERP / inventory system integration',
-                'Multi-location fulfillment logic',
-                'Sub-1s load time, Lighthouse 95+',
-                'Dedicated project manager',
-                '60-day post-launch support',
-              ],
-              cta: { label: 'Start with Headless', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/commerce/b2b-ecommerce-wholesale-portal.webp"
+                  alt="FactoryJet senior commerce architects reviewing wholesale B2B portal performance"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        {/* INDUSTRIES GRID */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE IN SIOUX FALLS"
-          headline="From South Dakota agriculture to downtown retail"
-          sectors={[
-            {
-              name: 'Agriculture & Farm Products',
-              description: 'SD ag producers, cattle ranchers, crop input suppliers, and farm-direct food brands going DTC through Shopify.',
-            },
-            {
-              name: 'Financial Services Products',
-              description: 'Sioux Falls is a major financial hub, fintech, credit products, and financial education companies with e-commerce needs.',
-            },
-            {
-              name: 'Health Systems & Wellness',
-              description: "Sanford Health and Avera's supplier networks, wellness brands, and health-product companies serving SD's growing market.",
-            },
-            {
-              name: 'Downtown Retail & Gifts',
-              description: 'Phillips Avenue boutiques, Falls Park area shops, and specialty retailers adding a professional online sales channel.',
-            },
-            {
-              name: 'Specialty Food & Beverage',
-              description: 'South Dakota craft beverages, specialty meats, and artisan food producers shipping their products nationwide.',
-            },
-            {
-              name: 'Manufacturing & Industrial',
-              description: 'SD manufacturers and industrial suppliers building B2B e-commerce channels to grow beyond regional markets.',
-            },
-          ]}
-        />
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Built for Scale &amp; Speed</span>
+                </div>
 
-        {/* TESTIMONIALS */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT OUR CLIENTS SAY"
-          headline="Real results from real businesses"
-        />
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for High-Growth Commerce in South Dakota
+                </h2>
 
-        {/* FAQ */}
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From regional food processors and AgTech manufacturers to high-end apparel brands, we build custom storefronts that eliminate checkout friction and scale orders effortlessly.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Commerce Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. SIOUX FALLS COMMERCE DISTRICTS DIRECTORY ── */}
+        <section id="sf-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Sioux Empire Market Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored E-Commerce for Sioux Falls Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Downtown retail and DTC brands to AgTech and wholesale distribution:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Sioux Falls Brands Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace clunky legacy software with high-converting, scalable e-commerce engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="ecom-architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// SIOUX FALLS COMMERCE ARCHITECTURE BLUEPRINT"
+            title="Modern E-Commerce: From Catalog to One-Tap Checkout"
+            subtitle="Explore how custom Shopify Liquid architecture, Shop Pay acceleration, B2B wholesale portals, and automated ERP sync drive scalable revenue."
+            legacySource="Clunky WooCommerce & Manual Phone Orders"
+            targetStack="High-Speed Shopify Plus & B2B Portal Engine"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Step-by-Step Delivery</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step E-Commerce Delivery Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From catalog architecture and custom Figma UI design to Liquid theme engineering, ERP sync, and zero-downtime launch.
+                </p>
+                <ModalCTAButton label="Start Your Store Build" region="us" btnVariant="primary-dark" />
+              </div>
+
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Sioux Falls business owners ask before hiring us"
+          eyebrow="SIOUX FALLS ECOMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce in Sioux Falls SD"
+          lead="Direct, plain English answers to what South Dakota business owners and commerce leaders ask about online store development:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* FINAL CTA */}
-        <EcommerceCityLinksUS currentCity="sioux-falls" />
-        <FinalCTA
-          variant="dark"
-          headline="Ready to launch your Sioux Falls Shopify store in 7 days?"
-          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
-          primaryCta={{ label: 'Get a Quote', href: '/contact' }}
-          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-        />
+        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="sioux-falls" />
+          </div>
+        </section>
+
+        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price E-Commerce Engineering</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Scale Your Online Store in Sioux Falls?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand catalog and goals. We will provide a comprehensive fixed-price proposal, migration architecture, and interactive Figma preview.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
 
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+
+      <SiteFooter />
     </>
-  )
+  );
 }

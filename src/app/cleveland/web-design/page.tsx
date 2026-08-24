@@ -1,423 +1,646 @@
 import type { Metadata } from 'next';
-import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Image from 'next/image';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
+
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/cleveland/web-design';
 
 export const metadata: Metadata = {
-  title: 'Web Design Cleveland | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Cleveland businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-  alternates: {
-    canonical: 'https://factoryjet.com/cleveland/web-design',
-    languages: webDesignPriorityCityAlternatesUS.cleveland,
-  },
+  title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Cleveland web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Cleveland OH businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Cleveland | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Cleveland businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-    url: 'https://factoryjet.com/cleveland/web-design/',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet Web Design: Cleveland, OH',
-      },
-    ],
+    title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Cleveland web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Cleveland OH businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Cleveland Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Cleveland | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Cleveland businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
+    title: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Cleveland OH. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-
-const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
 ];
 
-const CLEVELAND_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Cleveland?","answer":"Pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity. Most Cleveland small businesses choose the Starter tier for a clean five-page site, or Growth for a blog CMS and lead capture. Custom builds add e-commerce, booking systems, or AI features. Compared to local Cleveland agencies, FactoryJet delivers the same quality at a fraction of the cost, and you get a published timeline and a codebase you own. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Cleveland' typically take three to six months for a new domain. The work that compresses this timeline, schema, internal linking, content depth, technical performance, is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"We're a vendor or supplier in the Cleveland Clinic ecosystem, can you build HIPAA-aware B2B websites for healthcare?","answer":"Yes. Healthcare is one of our most common client profiles in Cleveland. Cleveland Clinic is the world's #2 hospital, and the vendors, suppliers, and professional services firms in its ecosystem need sites that communicate technical depth, compliance awareness, and verifiable case study evidence to institutional procurement buyers. We build sites structured for those longer B2B due-diligence cycles, with lead-capture flows designed to route inquiries to the right person fast.","category":"platform"},{"question":"We supply Parker Hannifin, Eaton, or other Cleveland manufacturers, what does a manufacturing B2B website need?","answer":"Manufacturing B2B sites need to communicate engineering credibility, production certifications (ISO, AS9100, etc.), capabilities, and case studies to procurement managers who evaluate multiple suppliers simultaneously. We build sites structured around your capabilities and certifications, not generic marketing copy, with downloadable spec sheets, inquiry forms, and content architecture that answers procurement questions before the RFQ stage.","category":"platform"},{"question":"I run a law firm in Cleveland, what do I need from a website?","answer":"Law firm sites in Cleveland need clear practice area pages, attorney bios with credentials, case result summaries (where permitted by Ohio bar rules), and a lead-capture flow that routes inquiries to the right attorney by practice area. We also handle local SEO targeting Cleveland's legal search queries, which are highly competitive and highly valuable. Schema markup for law firms is included in every project.","category":"local"},{"question":"I own a restaurant or bar near West Side Market or East 4th Street, what does a good website need?","answer":"For Cleveland's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation or waitlist integration (OpenTable, Resy, or custom flow), event calendar support for live entertainment nights, and Google Maps / Apple Maps schema so you show up correctly in local search. We also build private dining or buyout inquiry forms, which drive significant additional revenue for venues that don't surface them properly.","category":"local"},{"question":"I'm in real estate or development in Ohio City, Tremont, or Detroit Shoreway, what do I need from a site?","answer":"Cleveland's real estate boom in Ohio City, Tremont, and Detroit Shoreway has created a highly competitive online market. Real estate and development sites need project portfolio galleries, neighborhood-specific landing pages, lead-capture forms that route inquiries immediately, and local SEO targeting Cleveland's high-demand submarkets. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load on your team.","category":"local"},{"question":"We're in financial services, KeyBank or Progressive Insurance ecosystem vendors. What does our website need?","answer":"Financial services and insurance ecosystem firms need sites that project credibility to sophisticated corporate buyers, with clear service pages, team credentials, case study structures, and compliance-aware messaging. We also build lead-capture flows optimized for longer B2B sales cycles, where the goal is a booked call rather than an immediate transaction. GA4 is wired up from day one so you know which pages are converting.","category":"local"},{"question":"We're a tech startup based in University Circle or MidTown Cleveland. What do we need from a launch website?","answer":"Tech startup sites need to communicate product differentiation quickly, build credibility with investors and early customers, and generate either inbound leads or user signups. We build with Next.js for maximum performance, include structured data for AI search crawlers, and design conversion flows around your specific acquisition goal, whether that's a demo request, a waitlist signup, or a direct trial conversion.","category":"local"},{"question":"How does FactoryJet compare to Cleveland agencies like Agency Creative or Tiller Digital?","answer":"Agency Creative and Tiller Digital are established Cleveland shops. Neither commits to fixed pricing or a delivery timeline in writing. FactoryJet gives you a clear, fixed-price quote up front after a free discovery call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, which means faster load times and no ongoing plugin maintenance costs for your team. You can compare our scope and price against any Cleveland agency before you speak to us.","category":"local"},{"question":"What about Skoda Minotti, they offer web services as part of accounting?","answer":"Skoda Minotti is a respected Cleveland accounting and advisory firm. Web services are a side offering for them. FactoryJet is a dedicated web design and development team, web is our entire focus, not something bolted onto another service line. That focus means faster delivery, deeper technical expertise, and a support structure built specifically for web projects.","category":"local"},{"question":"Do I own the website after it's built, or am I locked into a platform?","answer":"You own everything: the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time. Most clients choose to stay with us for ongoing work, but that's always their call.","category":"platform"},{"question":"What tech stack do you build on, and why does it matter for my Cleveland business?","answer":"We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress, typically under 1.5 seconds on mobile, which directly affects Google rankings and visitor bounce rates. For Cleveland businesses competing on local search in high-value sectors like healthcare and manufacturing, that performance gap over a WordPress competitor is a real and measurable advantage.","category":"local"},{"question":"Can you add e-commerce to a Cleveland business website?","answer":"Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier. Cleveland retail businesses, particularly in Ohio City, Tremont, and the broader Greater Cleveland area, frequently need both a physical store presence and an online sales channel in one site. We architect that so it doesn't feel bolted on.","category":"technical"},{"question":"Can you build a Shopify store for a Cleveland retail or DTC brand?","answer":"Yes. Shopify builds for Cleveland retail and DTC brands are part of our standard service offering. We handle theme customization, product migration, payment setup, shipping configuration, and local SEO for Shopify stores. For brands that need both a Shopify storefront and a content-heavy marketing site, we build both and connect them cleanly.","category":"platform"},{"question":"What AI features can you add to a Cleveland business website?","answer":"Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. These are typically part of Custom tier projects. For Cleveland's healthcare IT vendors and manufacturing B2B firms, AI-assisted knowledge bases and spec-search tools are particularly strong fits for complex technical products.","category":"technical"},{"question":"How does my site perform on mobile? Cleveland visitors search on their phones constantly.","answer":"Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 95+ and green Core Web Vitals on mobile. Whether your customers are searching on their phones outside West Side Market, at a sports venue before a Guardians game, or comparing suppliers on a tablet in a manufacturing facility, mobile performance is non-negotiable and tested before launch.","category":"technical"},{"question":"How does Cleveland local SEO work and what do you include?","answer":"Every FactoryJet project includes on-page SEO foundations: proper heading structure, meta tags, XML sitemap, JSON-LD schema with local business markup, image optimization, and Core Web Vitals performance. For Cleveland-specific local SEO, we target your primary service area, including neighborhood-level landing pages for Ohio City, Tremont, University Circle, Detroit Shoreway, and the broader MSA suburbs if relevant to your business.","category":"included"},{"question":"Can you be flexible on the 7-day timeline if we need more time for approvals?","answer":"The 7-day clock starts when we have everything we need from you, brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control. We flag this in the kickoff so there are no surprises.","category":"pricing"},{"question":"What does your design process actually look like from the client's side?","answer":"After a kickoff call, you'll receive a Figma prototype for review, typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. You always see what you're getting before a line of code is written. Nothing ships that you haven't approved.","category":"local"},{"question":"What is GA4 and do I actually need it?","answer":"GA4 is Google's current analytics platform, it replaced Universal Analytics in 2023 and tracks who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst.","category":"technical"},{"question":"What hosting does FactoryJet use and is it included?","answer":"We deploy to Cloudflare Pages, which provides enterprise-grade CDN performance at no monthly cost for most projects. Cloudflare's global edge network means your Cleveland site loads fast whether your visitor is in Ohio City, Columbus, Chicago, or anywhere else in the US. Hosting setup, DNS configuration, and SSL are included in every project, there is no separate hosting invoice at launch.","category":"technical"}];
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across healthcare, manufacturing, and B2B.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown & Public Square',
+    query: 'cleveland corporate law website',
+    focus: 'Legal, Corporate Services & Commercial Real Estate',
+    desc: 'Dense corporate center in central Cleveland. B2B buyers evaluate design polish, partner credentials, and sub-second page performance before picking up the phone.',
+  },
+  {
+    corridor: 'University Circle & Health-Tech',
+    query: 'medical specialist website cleveland',
+    focus: 'Healthcare, Life Sciences & Specialty Clinics',
+    desc: 'Anchored by the Cleveland Clinic and Case Western Reserve. Healthcare websites require HIPAA compliance awareness, intuitive patient booking, and clear provider profiles.',
+  },
+  {
+    corridor: 'Independence, Solon & Manufacturing',
+    query: 'manufacturing b2b website cleveland',
+    focus: 'Industrial Equipment, Fabrication & Supply Chain',
+    desc: 'Precision manufacturing hubs along Cuyahoga County. Technical capability matrices, downloadable spec sheets, and fast RFQ request forms drive corporate procurement.',
+  },
+  {
+    corridor: 'Ohio City & Tremont Corridor',
+    query: 'hospitality web design cleveland',
+    focus: 'Hospitality, Dining, Breweries & Boutiques',
+    desc: 'Fast-moving food and beverage scene along West 25th. Visual storytelling, live reservation embeds, and rapid mobile load times capture high-volume weekend dining foot traffic.',
+  },
+  {
+    corridor: 'Lakewood & West Shore',
+    query: 'local contractor web design cleveland',
+    focus: 'Home Services, Contractors & Professional Practices',
+    desc: 'High-density commercial artery along Detroit Avenue. Streamlined mobile quotes, verified customer reviews, and local service area landing pages capture residential demand.',
+  },
+  {
+    corridor: 'Beachwood & Chagrin Highlands',
+    query: 'wealth management web design beachwood',
+    focus: 'Financial Advisory, Med Spas & Private Wealth',
+    desc: 'Affluent eastern suburbs where high-ticket clients research executive credentials, private advisory services, and brand trust before initiating consultations.',
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Bloated WordPress Sites That Crash and Fail Core Web Vitals',
+    problem: 'Legacy themes crammed with 40 active plugins lead to slow page loads, mobile layout shifts, security vulnerabilities, and high bounce rates.',
+    solution: 'We build bespoke Next.js and React web applications deployed to Cloudflare Edge CDN that load under 1 second with flawless 95+ Core Web Vitals scores.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating 6-Month Agency Delivery Delays with Guaranteed 7-Day Sprints',
+    problem: 'Traditional agencies take months of endless discovery meetings, bill by the hour, and stall your market launch while burning your marketing budget.',
+    solution: 'FactoryJet operates on fixed-price, milestone-based sprints. We deliver your production-ready, fully responsive website in 7 days from kickoff.',
+  },
+  {
+    num: '03',
+    title: 'Retaining 100% Code and Asset Ownership with Zero CMS Platform Lock-Ins',
+    problem: 'Many agencies trap clients inside proprietary website builders or charge expensive monthly maintenance fees just to make basic text and image edits.',
+    solution: 'You retain full intellectual property and ownership of your Figma design system, Git repository, and headless CMS content layer from day one.',
+  },
+  {
+    num: '04',
+    title: 'Converting Mobile Traffic into Booked Consultations and Qualified Leads',
+    problem: 'Websites that look decent on desktop often break on mobile phones, hiding phone numbers and burying contact forms under clumsy popups.',
+    solution: 'We engineer mobile-first user journeys with persistent tap-to-call bars, streamlined lead capture forms, and frictionless conversion paths.',
+  },
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Strategy & Brand Architecture',
+    d: 'We establish your conversion goals, target customer personas, sitemap structure, and technical requirements on our kickoff call.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Figma Prototype & Design System',
+    d: 'We craft high-fidelity desktop and mobile prototypes with bespoke typography, colors, and UI components for your direct approval.',
+    icon: '🎨',
+  },
+  {
+    n: '03',
+    t: 'Next.js & Cloudflare Development',
+    d: 'We code your site using clean, type-safe Next.js and React components with sub-second asset delivery on Cloudflare Global Edge.',
+    icon: '⚙️',
+  },
+  {
+    n: '04',
+    t: 'Content, Schema & Tracking Integration',
+    d: 'We integrate your copy, high-resolution photography, JSON-LD schema markup, and Google Analytics 4 conversion event tracking.',
+    icon: '✍️',
+  },
+  {
+    n: '05',
+    t: 'Production Launch & Handover Session',
+    d: 'We run pre-launch QA, connect your custom domain with zero downtime, and record a video training session for your team.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing & Timeline' },
+  { key: 'technical', label: 'Tech Stack & Speed' },
+  { key: 'local', label: 'Cleveland Market' },
+  { key: 'ownership', label: 'Ownership & Support' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does a custom website cost for a Cleveland business?',
+    answer:
+      'Our websites are delivered on transparent fixed-price milestones based on your specific requirements and page count. We provide an exact written quote and scope before any work begins, with no surprise add-ons or hidden hourly fees.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can you really build and launch a custom website in 7 days?',
+    answer:
+      'Yes. Our 7-day delivery sprint is built on dedicated engineering workflows: discovery and Figma UI design in days 1 to 2, Next.js component development in days 3 to 5, and content population, SEO schema, and QA launch on days 6 and 7.',
+  },
+  {
+    category: 'technical',
+    question: 'Why do you build on Next.js instead of WordPress?',
+    answer:
+      'Next.js generates lightweight static pages that load in under 1 second on mobile devices, requires no fragile third-party plugins, has zero security vulnerabilities from outdated WordPress themes, and delivers superior Google Core Web Vitals rankings.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you ensure our website passes Google Core Web Vitals?',
+    answer:
+      'We optimize image compression with modern AVIF/WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+  },
+  {
+    category: 'local',
+    question: 'Do you build B2B websites for Cleveland manufacturers and industrial suppliers?',
+    answer:
+      'Yes. We build high-conversion B2B websites tailored for Cleveland manufacturers, precision machinists, and chemical suppliers, complete with downloadable spec sheets, technical capability matrices, and seamless RFQ inquiry forms.',
+  },
+  {
+    category: 'local',
+    question: 'Can you design websites for Cleveland healthcare and dental practices?',
+    answer:
+      'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and med spas across Greater Cleveland, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
+    answer:
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+  },
+  {
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
+    answer:
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Cleveland Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cleveland',
+    addressRegion: 'OH',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 41.4993,
+    longitude: -81.6944,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Cleveland' },
+    { '@type': 'City', name: 'Lakewood' },
+    { '@type': 'City', name: 'Beachwood' },
+    { '@type': 'City', name: 'Solon' },
+    { '@type': 'City', name: 'Independence' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cleveland Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Cleveland businesses.',
+  areaServed: { '@type': 'State', name: 'Ohio' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Cleveland Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Cleveland OH businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Cleveland', item: CANONICAL },
+    { '@type': 'ListItem', position: 3, name: 'Web Design', item: CANONICAL },
+  ],
+};
 
 export default function ClevelandWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_cleveland_web_design_hero" />}
-          eyebrow={"WEB DESIGN · CLEVELAND"}
-          headline={"Web Design in Cleveland That Turns Visitors Into Paying Clients"}
-          lead={"Cleveland is one of America's most underestimated business cities: a global healthcare hub, a 200-year-old manufacturing powerhouse, and a fast-growing professional services market. FactoryJet delivers a production-ready website in 7 days, fixed-price. You own the code, the design files, and the results."}
-          trustItems={["Fixed-price websites", "7-day delivery", "Next.js + GA4 included"]}
-          extraCta={<WhatsAppCTA city="Cleveland" variant="light" />}
-          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Cleveland, OH" badgeLabel="Live in 7 days" />}
-        />
-        <LogoBar
-          tagline="Trusted by 500+ businesses across the US, UK, and UAE"
-        />
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={"Results that Cleveland businesses trust."}
-        />
-        <CityContextSection
-          eyebrow={"CLEVELAND MARKET"}
-          headline={"Why Your Cleveland Web Presence Can't Be an Afterthought"}
-          leadParagraphs={["Cleveland's city population sits at approximately 383,000, but the Greater Cleveland MSA reaches 2M+ residents and generates $135B+ in GDP, making it one of the Midwest's most significant economic anchors. Cleveland punches far above its population weight. Cleveland Clinic is ranked the world's #2 hospital system and a global pioneer of open-heart surgery, anchoring an entire ecosystem of healthcare vendors, biomedical suppliers, and professional services firms that depend on strong digital credibility to win contracts. University Hospitals, Medical Mutual, and a growing biomedical corridor in University Circle add further depth to this healthcare economy. On the corporate side, Sherwin-Williams, Parker Hannifin, Eaton, KeyBank, Progressive Insurance, and Rockwell Automation all have their headquarters in or around Cleveland, creating an enormous B2B supplier market where a weak website costs you real contracts. Meanwhile, MidTown and University Circle are emerging as legitimate tech corridors, Ohio City and Tremont are seeing significant real estate and hospitality investment, and Cleveland's sports culture: the Browns, Guardians, and Cavaliers, supports an entire ecosystem of sports-adjacent businesses. New businesses are arriving in Cleveland every week, competing for the same buyers, the same Google rankings, and the same first impression online."]}
-          stats={[
-            {"value":"383,000","label":"Cleveland City Population","sourceUrl":"https://www.census.gov/quickfacts/fact/table/clevelandcityohio/PST045224"},
-            {"value":"$135B+","label":"Greater Cleveland MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP17460"},
-            {"value":"#2","label":"Cleveland Clinic World Hospital Ranking","sourceUrl":"https://health.usnews.com/health-care/best-hospitals/articles/best-hospitals-honor-roll-and-overview"}
-          ]}
-        />
-        <ServiceExplanation
-          eyebrow={"WEB DESIGN · Cleveland"}
-          headline={"What 'Web Design' Actually Means for a Cleveland Business"}
-          lead={"Cleveland's economy splits between two dominant categories: B2B-heavy sectors (healthcare, manufacturing, financial services) where buyers research extensively before any call, and consumer-facing businesses (hospitality, retail, restaurants near West Side Market and East 4th Street) where trust is built in seconds on mobile. Both require different web strategies, and FactoryJet builds for both."}
-          body={<><p>For healthcare vendors, Cleveland Clinic ecosystem suppliers, University Hospitals partners, and professional services firms: a website needs to demonstrate compliance awareness, technical depth, and verifiable case study evidence. Procurement teams at institutions like Cleveland Clinic evaluate vendors long before picking up the phone. We structure sites to answer those due-diligence questions clearly, with lead-capture forms that route to the right person immediately and content architecture that builds credibility at every scroll depth.</p><p>For manufacturers, Parker Hannifin and Eaton ecosystem suppliers, and B2B industrial firms, sites need to communicate engineering credibility, certifications, production capabilities, and industry-specific case studies. These are not brochure sites; they are qualification tools used by procurement managers across the supply chain. For consumer-facing businesses near Ohio City, Tremont, Detroit Shoreway, and downtown Cleveland, restaurants, retailers, hospitality brands, and service businesses, sites need to convert mobile visitors from Google Maps and social in seconds, with fast booking flows and mobile-first performance. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, GA4 analytics, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank, not just look good in a mockup.</p></>}
-          rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
-        />
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline={"Why Cleveland Businesses Choose FactoryJet Over Local Agencies"}
-          lead={"Cleveland's local agency market includes Agency Creative (full-service digital, no published pricing), Tiller Digital (a WordPress-heavy established shop), and even accounting firms like Skoda Minotti that have moved into web services. None publish a 7-day delivery commitment. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session: fixed-price for comparable scope. We build in Next.js, not WordPress, which means faster load times and no monthly plugin maintenance overhead for your team.\n\nWe don't win on price alone. Every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch. And unlike most Cleveland agencies, we confirm your fixed price up front, before any work begins."}
-          pillars={[
-            { title: 'AI-native', body: 'Every site is built with an AI-assisted workflow that compresses build time without compressing quality. We have delivered 500+ projects through this system.' },
-            { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, agreed up front.' },
-            { title: 'Guaranteed', body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
-          ]}
-        />
-        <ServiceJourneyRow
-          eyebrow={"OUR PROCESS"}
-          headline={"How We Build Your Cleveland Website in 7 Days"}
-          stages={[
-            {
-              "number": "01",
-              "title": "Discovery & Strategy",
-              "description": "We map your ideal customer profile against Cleveland's market dynamics, whether that's healthcare procurement cycles, industrial B2B sales funnels, or hospitality conversion flows near West Side Market. We audit your top three competitors and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do., Days 1–2"
-            },
-            {
-              "number": "02",
-              "title": "Design & Prototyping",
-              "description": "Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. For Cleveland's manufacturing and healthcare clients, we prioritize authority signals and structured content hierarchy. For consumer-facing businesses, we focus on thumb-friendly mobile layouts and fast conversion paths., Days 3–4"
-            },
-            {
-              "number": "03",
-              "title": "Development",
-              "description": "We build in Next.js with GSAP animations, headless CMS integration, contact and inquiry forms, and any third-party APIs your business relies on. Performance budgets are enforced from the first commit, not retrofitted after launch., Days 5–6"
-            },
-            {
-              "number": "04",
-              "title": "Content & SEO",
-              "description": "Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit your sitemap to Google Search Console and verify rendering for AI crawlers. Cleveland-specific local SEO targeting is baked in, not sold as an add-on., Days 6–7"
-            },
-            {
-              "number": "05",
-              "title": "Launch & Handover",
-              "description": "We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions, so your team is fully self-sufficient from day one., Day 7+"
-            }
-          ]}
-        />
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline={"What Cleveland businesses look like after FactoryJet."}
-          cards={[
-            {
-              "industry": "Healthcare & Medical",
-              "title": "Cleveland Healthcare & Medical Client",
-              "description": "Cleveland's healthcare ecosystem, anchored by Cleveland Clinic (#2 hospital in the world), University Hospitals, and Medical Mutual, demands websites that project compliance awareness, clinical credibility, and technical depth. We build sites for vendors, suppliers, and professional services firms in this ecosystem that convert B2B researchers into booked discovery calls.",
-              "imageSrc": "/images/us/cleveland/web-design/portfolio-1.webp",
-              "stat1": "+40% conversions",
-              "stat2": "< 1.5s load time"
-            },
-            {
-              "industry": "Manufacturing & Industrial",
-              "title": "Cleveland Manufacturing & Industrial Client",
-              "description": "Cleveland is one of America's great manufacturing cities. Parker Hannifin, Eaton, Rockwell Automation, and the broader aerospace and industrial equipment supply chain need websites that communicate engineering capability, certifications, and case study evidence to procurement teams. We build sites that qualify suppliers, not just describe them.",
-              "imageSrc": "/images/us/cleveland/web-design/portfolio-2.webp",
-              "stat1": "+40% conversions",
-              "stat2": "< 1.5s load time"
-            },
-            {
-              "industry": "Professional & Financial Services",
-              "title": "Cleveland Professional & Financial Services Client",
-              "description": "KeyBank, Progressive Insurance, and Sherwin-Williams anchor Cleveland's professional services ecosystem, supporting law firms, consulting firms, financial advisors, insurance brokers, and specialty service businesses. These clients need sites that function as the first qualification filter for sophisticated B2B buyers, with authority-building content and lead capture that routes inquiries to the right person fast.",
-              "imageSrc": "/images/us/cleveland/web-design/portfolio-3.webp",
-              "stat1": "+40% conversions",
-              "stat2": "< 1.5s load time"
-            }
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-        <ComparisonTable
-          eyebrow={"WHY FACTORYJET"}
-          headline={"FactoryJet vs. Cleveland Web Agencies"}
-          lead={"Cleveland's local agency market includes Agency Creative, Tiller Digital, and even accounting firms like Skoda Minotti that offer web services. None publish a 7-day delivery commitment or a complete public price list. The FactoryJet Growth tier delivers 10–15 pages, blog CMS, lead capture, GA4, and Next.js: fixed-price for the same scope, with a guaranteed timeline and a codebase you own outright."}
-          columns={[{"label":"Their pricing"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we cost less"}]}
-          rows={[
-            {
-              "feature": "Agency Creative",
-              "values": [
-                "Pricing undisclosed; full-service digital for Cleveland brands",
-                "Fixed-price · 7-day delivery (Growth tier)",
-                "FactoryJet delivers a fully coded Next.js site in 7 days with fixed pricing; Agency Creative's timeline and rates are not publicly stated."
-              ]
-            },
-            {
-              "feature": "Tiller Digital",
-              "values": [
-                "Pricing undisclosed; WordPress-heavy established Cleveland shop",
-                "Fixed-price · 7-day delivery (Growth tier)",
-                "Next.js vs WordPress means faster load times and no monthly plugin overhead. FactoryJet confirms your fixed price before the first call."
-              ]
-            },
-            {
-              "feature": "Skoda Minotti (web services)",
-              "values": [
-                "Accounting firm offering web services; no published web pricing",
-                "Fixed-price · 7-day delivery (Growth tier)",
-                "FactoryJet is a dedicated web design and development team, web is the entire focus, not a side service attached to an accounting practice."
-              ]
-            }
-          ]}
-        />
-        <IndustriesGrid
-          eyebrow={"CLEVELAND × WEB DESIGN"}
-          headline={"Web Design for Cleveland's Key Industries"}
-          lead={"From healthcare vendors in the Cleveland Clinic ecosystem to manufacturing suppliers for Parker Hannifin and Eaton, Cleveland's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
-          sectors={[
-            {
-              "name": "Healthcare & Biomedical",
-              "description": "Cleveland Clinic is ranked #2 in the world and pioneered open-heart surgery. University Hospitals, Medical Mutual, and a growing biomedical corridor in University Circle support an enormous vendor ecosystem. Sites in this space need to demonstrate compliance awareness, clinical credibility, and technical depth, with lead-capture flows designed for longer institutional procurement cycles.",
-              "example": "Vendors, suppliers, and professional services firms serving Cleveland Clinic, University Hospitals, or the Greater Cleveland biomedical corridor."
-            },
-            {
-              "name": "Manufacturing & Industrial",
-              "description": "Parker Hannifin, Eaton, and Rockwell Automation are headquartered in or near Cleveland, anchoring one of America's most significant industrial supply chains. Aerospace, industrial equipment, polymer, and specialty manufacturing businesses need sites that communicate engineering capability, certifications, and production capacity to procurement teams, not marketing copy written for consumers.",
-              "example": "Aerospace, industrial equipment, polymer, and specialty manufacturing firms supplying Parker Hannifin, Eaton, and the broader Cleveland industrial ecosystem."
-            },
-            {
-              "name": "Financial & Insurance Services",
-              "description": "KeyBank and Progressive Insurance are major Cleveland-headquartered financial institutions, supporting a wide ecosystem of financial advisors, insurance brokers, law firms, and specialty consultants. For these businesses, the website is the first qualification filter for sophisticated clients, requiring authority-building content and conversion flows that route inquiries immediately.",
-              "example": "Financial advisors, insurance brokers, law firms, and consulting firms serving the KeyBank and Progressive Insurance ecosystem."
-            },
-            {
-              "name": "Professional Services",
-              "description": "Sherwin-Williams headquarters its global operations in Cleveland, and a wave of corporate activity across Ohio City and downtown has fueled growth in legal, consulting, staffing, and marketing services firms. These businesses need websites that communicate expertise clearly, build trust with corporate buyers, and generate qualified inbound leads consistently.",
-              "example": "Law firms, consulting firms, staffing agencies, and marketing companies serving Cleveland's corporate and professional services market."
-            },
-            {
-              "name": "Technology & Startups",
-              "description": "MidTown and University Circle are emerging as Cleveland's legitimate tech corridors, supported by institutions like Case Western Reserve University and a growing number of venture-backed startups. Tech companies need sites that project credibility quickly, communicate product differentiation clearly, and generate inbound leads or user signups at launch.",
-              "example": "SaaS startups, tech consultancies, and venture-backed companies scaling from Cleveland's MidTown and University Circle tech corridors."
-            },
-            {
-              "name": "Real Estate & Hospitality",
-              "description": "Ohio City, Tremont, and Detroit Shoreway are experiencing significant real estate and hospitality investment, while Cleveland's broader restaurant and entertainment scene continues to grow around West Side Market, East 4th Street, and the Rock & Roll Hall of Fame district. These businesses need mobile-first sites that convert visitors from Google Maps in seconds, with fast booking flows and local SEO that targets Cleveland's neighborhood-level searches.",
-              "example": "Real estate developers, hospitality brands, restaurants, and entertainment businesses operating in Ohio City, Tremont, Detroit Shoreway, and downtown Cleveland."
-            }
-          ]}
-        />
-        <PricingTiers
-          eyebrow={"HOW WE SCOPE"}
-          headline={"What's Included for Cleveland Businesses"}
-          lead={"Cleveland agency rates for comparable web projects run enterprise-level. FactoryJet delivers the same quality at a fraction of the cost, fixed-price, 10–15 pages, CMS, SEO, and analytics in the Growth tier, with 7-day delivery, Next.js, and code you own outright. Pricing is scoped to your build; the main drivers are page count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No retainer required. No proprietary platform. No surprise invoices."}
-          tiers={[
-            {
-              "name": "Starter",
-              "priceRange": "Fixed-price",
-              "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Cleveland businesses who need a credible online presence quickly.",
-              "features": [
-                "5 pages, mobile-responsive",
-                "Basic SEO & schema markup",
-                "Contact form with email forwarding",
-                "2 revision rounds",
-                "30-day post-launch support"
-              ],
-              "cta": {"label": "Get a quote", "href": "/contact"}
-            },
-            {
-              "name": "Growth",
-              "priceRange": "Fixed-price",
-              "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Cleveland SMBs scaling online who need the site to actively generate qualified inquiries.",
-              "features": [
-                "10–15 pages with blog CMS",
-                "Advanced SEO & GA4 tracking",
-                "Lead capture & email automation",
-                "3 revision rounds",
-                "30-day support + training session"
-              ],
-              "cta": {"label": "Get a quote", "href": "/contact"},
-              "popular": true
-            },
-            {
-              "name": "Custom",
-              "priceRange": "Fixed-price",
-              "description": "Custom Next.js build with e-commerce, booking systems, AI features, API integrations, and priority support. Best for established Cleveland businesses with complex requirements and a real digital revenue line.",
-              "features": [
-                "Custom Next.js architecture",
-                "E-commerce or booking integrations",
-                "AI integrations (chat, search, content)",
-                "Third-party API connections",
-                "Priority support & quarterly reviews"
-              ],
-              "cta": {"label": "Get a quote", "href": "/contact"}
-            }
-          ] as const}
-        />
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline={"Rated 4.9/5 on Google across 500+ projects."}
-        />
+      <script id="cle-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="cle-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="cle-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="cle-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="cle-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Cleveland Web Design &amp; Development</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Cleveland Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#cle-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Cleveland Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp"
+                  alt="Cleveland Ohio modern web design engineering and custom Next.js development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/services/seo/team-cutout.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Cleveland"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for Cleveland&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From global healthcare suppliers to precision manufacturers and law firms, Cleveland businesses need sites that project engineering authority and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. CLEVELAND DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="cle-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Cleveland Industry Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Cleveland&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Downtown law firms to University Circle medical practices and manufacturing hubs:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Cleveland Companies Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="web-architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// CLEVELAND MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            legacySource="Bloated Monolithic CMS & Plugin Chains"
+            targetStack="High-Speed Next.js & Cloudflare Edge Engine"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Step-by-Step Delivery</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 7-Day Sprint Delivery Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From discovery and Figma design to full Next.js development, QA testing, and live domain launch in 7 calendar days.
+                </p>
+                <ModalCTAButton label="Start Your Project" region="us" btnVariant="primary-dark" />
+              </div>
+
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={"Common Questions from Cleveland Businesses"}
+          eyebrow="CLEVELAND WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Cleveland OH"
+          lead="Direct, plain English answers to what Cleveland business owners and marketing leaders ask about website projects:"
           categories={FAQ_CATEGORIES}
-        items={CLEVELAND_FAQ_ITEMS}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
-        <WebDesignCityLinksUS currentCity="cleveland" />
-        <FinalCTA
-          variant="dark"
-          eyebrow={"READY TO START"}
-          headline={"Ready to Build Your Cleveland Website?"}
-          sub={"Cleveland's $135B+ metro economy is growing on the strength of world-class healthcare, deep manufacturing roots, and a fast-expanding professional services market. New businesses arrive every week competing for the same buyers, the same Google rankings, and the same first impression. Every week without a high-performing website is ground you're giving up. Start today and have a sitemap ready within 72 hours."}
-          primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="Cleveland" variant="dark" />}
-        />
-        <SchemaScript />
+
+        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="cleveland" />
+          </div>
+        </section>
+
+        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Cleveland Business Website?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://factoryjet.com/cleveland/web-design#business",
-        "name": "FactoryJet Technologies",
-        "url": "https://factoryjet.com",
-        "telephone": "+919699977699",
-        "areaServed": "Cleveland"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://factoryjet.com/cleveland/web-design#service",
-        "name": "Web Design Cleveland",
-        "provider": {
-          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-          "name": "FactoryJet Technologies"
-        },
-        "areaServed": "Cleveland",
-        "description": "FactoryJet builds fast, conversion-focused websites for Cleveland businesses. 7-day delivery, fixed-price. Next.js, SEO, and GA4 included."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://factoryjet.com/cleveland/web-design#faq",
-        "mainEntity": CLEVELAND_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://factoryjet.com/cleveland/web-design#breadcrumbs",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://factoryjet.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "United States",
-            "item": "https://factoryjet.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Cleveland",
-            "item": "https://factoryjet.com/cleveland"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Web Design",
-            "item": "https://factoryjet.com/cleveland/web-design"
-          }
-        ]
-      }
-    ]
-  };
-
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How FactoryJet builds your Cleveland website in 7 days",
-    "description": "Our proven 7-day process for delivering a professional, SEO-optimized website for Cleveland businesses.",
-    "totalTime": "P7D",
-    "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Day 1: Discovery Call", "text": "We learn your business, goals, and competitive landscape in Cleveland. We define the sitemap, content strategy, and technical requirements." },
-      { "@type": "HowToStep", "position": 2, "name": "Day 2: Strategy & Structure", "text": "We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins." },
-      { "@type": "HowToStep", "position": 3, "name": "Days 3–4: Design", "text": "We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs." },
-      { "@type": "HowToStep", "position": 4, "name": "Days 5–6: Development & SEO", "text": "We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for Cleveland, structured data, and connect all integrations." },
-      { "@type": "HowToStep", "position": 5, "name": "Day 7: Launch", "text": "Your Cleveland website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support." }
-    ]
-  };
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "dateModified": "2026-08-04",
-          "name": "Web Design Cleveland | FactoryJet",
-          "url": "https://factoryjet.com/cleveland/web-design/",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
-          }
-        }) }}
-      />
+      <SiteFooter />
     </>
   );
 }
