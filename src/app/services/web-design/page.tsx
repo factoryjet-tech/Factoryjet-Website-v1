@@ -621,9 +621,8 @@ export default function WebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
+          "@id": "https://factoryjet.com/services/web-design#webpage",
           "dateModified": "2026-08-04",
-          "name": "Web Design Services USA | 7-Day Website Launch | FactoryJet",
-          "url": "https://factoryjet.com/services/web-design/",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]

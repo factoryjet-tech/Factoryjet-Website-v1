@@ -656,8 +656,7 @@ export default function ShopifyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Shopify Development USA | Custom Shopify Stores | FactoryJet",
-          "url": "https://factoryjet.com/services/shopify-development/",
+          "@id": "https://factoryjet.com/services/shopify-development#webpage",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]

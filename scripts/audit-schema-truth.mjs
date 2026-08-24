@@ -65,11 +65,25 @@ const NON_FETCHABLE = [/^https?:\/\/schema\.org/i, /^https?:\/\/www\.w3\.org/i];
 
 const bust = (u) => u + (u.includes('?') ? '&' : '?') + 'cb=' + Math.random().toString(36).slice(2);
 
+/* Our own pages are fetched AS A CRAWLER, deliberately.
+ *
+ * functions/_middleware.js geo-redirects human browsers between the India and
+ * US URL clusters, and exempts crawlers so search and AI engines always get the
+ * real page. Auditing with a browser UA therefore measures what a visitor in
+ * the runner's country sees, not what Googlebot sees — which is the wrong
+ * question for a structured-data audit, and produced five false "sitemap URL
+ * redirects" findings when first run from India.
+ *
+ * This UA is honest about what it is. It matches the middleware's generic
+ * crawler self-identifiers ("crawler", "+http"), so no impersonation of
+ * Googlebot is needed or done. */
+const CRAWLER_UA = 'FactoryJetSchemaAudit/1.0 (+https://factoryjet.com; crawler)';
+
 async function getPage(url) {
   // manual redirect: a URL listed in the sitemap should answer 200 itself.
   // Following silently would audit the target twice and hide the redirect.
   const first = await fetch(bust(url), {
-    headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache' },
+    headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache', 'User-Agent': CRAWLER_UA },
     redirect: 'manual',
   });
   if (first.status >= 300 && first.status < 400) {
