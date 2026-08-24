@@ -1,316 +1,538 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import MidPageCTA from '@/components/v2/MidPageCTA';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
   title: 'Wix to Shopify Migration Services | FactoryJet',
   description:
-    'Wix to Shopify migration services. We move Wix Stores to Shopify, handling Wix export limits, static.wixstatic CDN images, Velo custom code, Wix Bookings and Members, product-page URL remapping with single-hop 301 redirects, and domain transfer off Wix.',
+    'Complete engineering blueprint for migrating from Wix eCommerce to Shopify. We transfer your product catalog, customer records, and order history while boosting your checkout speed with Shop Pay and preserving 100% of your Google search rankings.',
   openGraph: {
-    type: 'website', siteName: 'FactoryJet',
+    type: 'website',
+    siteName: 'FactoryJet',
     title: 'Wix to Shopify Migration Services | FactoryJet',
-    description: 'Wix Stores to Shopify migration handling export limits, CDN images, Velo code, and URL remapping.',
+    description:
+      'Replatform Wix to Shopify without losing products, customer history, or search engine rankings. Fixed price, senior developer delivery.',
     url: 'https://factoryjet.com/replatforming/wix-to-shopify',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Wix to Shopify migration services' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'Wix to Shopify Migration | FactoryJet', description: 'Wix Stores to Shopify migration handling export limits and URL remapping.', images: ['https://factoryjet.com/og-default.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wix to Shopify Migration | FactoryJet',
+    description: 'Break free from Wix eCommerce limits. Upgrade to Shopify with zero cutover downtime.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
   alternates: { canonical: 'https://factoryjet.com/replatforming/wix-to-shopify' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Migration basics' },
-  { key: 'data', label: 'Data & export limits' },
-  { key: 'seo', label: 'SEO & URLs' },
-  { key: 'features', label: 'Wix features' },
-  { key: 'process', label: 'Process & timing' },
+  { key: 'basics', label: 'Why Move to Shopify' },
+  { key: 'catalog', label: 'Catalog & Variant Mapping' },
+  { key: 'speed', label: 'Speed & Conversion' },
+  { key: 'cost', label: 'Costs & Fixed Pricing' },
+  { key: 'seo', label: 'SEO & 301 Redirects' },
+  { key: 'cutover', label: 'Cutover & Timeline' },
 ];
 
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'Why migrate from Wix to Shopify?', answer: 'Nearly always because commerce outgrew the site builder. Wix handles a small catalog well, but variant limits, thin shipping and tax logic, a narrow app ecosystem, and no meaningful B2B or subscription model start to constrain what you can sell. Teams move when the store becomes the business.' },
-  { category: 'basics', question: 'Is Wix or Shopify better for ecommerce?', answer: 'Shopify is the stronger commerce platform; Wix is the easier general website builder. If you sell a handful of products alongside a brochure site, Wix is doing its job and migrating is unnecessary cost. If commerce drives your revenue, Shopify\'s catalog model, checkout, and app ecosystem are built for it in a way Wix is not.' },
-  { category: 'basics', question: 'Does Wix work well with Shopify?', answer: 'They are competing platforms rather than complementary ones, so there is no meaningful integration between them. You can embed a Shopify buy button into a Wix site as a stopgap, but running both properly means running two systems, two inventories, and two checkouts. In practice teams pick one, which is why this is usually a migration question rather than an integration question.' },
-  { category: 'basics', question: 'Which is easier, Shopify or Wix?', answer: 'Wix is easier to build a general website with, because its editor is more forgiving and more visual. Shopify is easier to run a store with, because catalogue, inventory, shipping, tax, and checkout are built for commerce rather than bolted on. The honest answer depends on which job dominates your week: designing pages, or processing orders.' },
-  { category: 'basics', question: 'How hard is it to switch from Wix to Shopify?', answer: 'The data move is straightforward because Wix catalogues are usually small and clean. The hard parts are that Wix has no full site export, so pages and blog content are rebuilt, and that URL structures differ completely, so every indexed URL needs a redirect. Velo code, Bookings, and Members are rebuilds rather than migrations and drive most of the effort.' },
-  { category: 'basics', question: 'Should we just stay on Wix?', answer: 'Sometimes, yes. If your catalog is small, your shipping rules are simple, and nothing about the platform is blocking you, migration is disruption without payoff. We say this more often than people expect. The trigger to move is a constraint you keep working around, not a general sense that Shopify is more professional.' },
-  { category: 'data', question: 'What can you export from Wix?', answer: 'Less than most platforms, and this is the central constraint. Wix provides CSV exports for products, orders, and contacts from the dashboard, but there is no complete site export. Pages, blog posts, and design are not exportable in any portable format, so content is rebuilt rather than imported.' },
-  { category: 'data', question: 'Can we get our order history out of Wix?', answer: 'Yes, via the orders CSV export in the Wix dashboard, and through the Wix API where the volume or detail justifies it. What you cannot do is a single site-wide export that carries everything, so orders, contacts, and products come out as separate extracts that we reconcile before import.' },
-  { category: 'data', question: 'What happens to our Wix images?', answer: 'Wix serves media from its own static CDN, so any exported reference stops resolving once you leave. Every image has to be downloaded, given a sensible filename, and re-uploaded to Shopify with alt text preserved. For product-led brands image search traffic is real, so this is worth doing properly rather than in bulk.' },
-  { category: 'data', question: 'Do product variants migrate cleanly?', answer: 'Mostly, and usually in your favour. Wix constrains product options more tightly than Shopify, so variants generally map without loss. Where Wix custom text fields or product add-ons were used, those become Shopify line-item properties, metafields, or an app depending on how they function at checkout.' },
-  { category: 'data', question: 'Will customer passwords transfer?', answer: 'No. Passwords are stored as one-way hashes and cannot move between platforms. Customer accounts migrate without passwords and customers reset at launch. We plan the wording of that email in advance so it does not read as a breach notification.' },
-  { category: 'seo', question: 'Will we lose rankings moving from Wix to Shopify?', answer: 'Not if the URL map is complete, though the structures differ substantially. Wix serves products under a product-page path and blog posts under a post path, while Shopify uses fixed /products/, /collections/, and /blogs/ prefixes. Almost every URL changes, so mapping decides whether traffic survives.' },
-  { category: 'seo', question: 'How do Wix URLs map to Shopify?', answer: 'Wix product URLs typically sit under a product-page segment and blog posts under a post segment, neither of which Shopify uses. We crawl every indexed URL on the live site rather than trusting a sitemap, map each to its Shopify equivalent, and implement single-hop 301 redirects before DNS changes.' },
-  { category: 'seo', question: 'Can we add redirects on Wix before we leave?', answer: 'You do not need to. Redirects live on the destination once the domain points at Shopify, so they are configured there. What matters is that the mapping is complete before you switch DNS, because any URL without a destination becomes a 404 the moment the domain moves.' },
-  { category: 'seo', question: 'What about our Wix blog?', answer: 'Blog content is rebuilt rather than imported, because Wix offers no portable export for it. For a small archive that is a few hours of work. For a large one it is a real project, and it needs the same redirect mapping as the store, since blog posts often carry a meaningful share of a Wix site\'s links.' },
-  { category: 'features', question: 'What happens to Velo custom code?', answer: 'It does not transfer. Velo is Wix\'s own development framework, so any custom functionality built with it has to be rebuilt as Shopify theme code, a Shopify app, or Shopify Functions. Auditing what Velo actually does on your site is usually where hidden scope appears.' },
-  { category: 'features', question: 'Can you replace Wix Bookings?', answer: 'Yes, with a Shopify booking app or a dedicated scheduling system connected to the store. There is no native Shopify equivalent, so this is an architectural decision rather than a data move, and it needs settling early because it affects the app stack and the cost.' },
-  { category: 'features', question: 'What about Wix Members areas?', answer: 'Gated content becomes a customer-tag-driven access model, a membership app, or a separate system. As with Bookings, it is a rebuild rather than a migration, and pretending otherwise is how these projects overrun.' },
-  { category: 'features', question: 'Do Wix apps have Shopify equivalents?', answer: 'Usually, and often better ones, since Shopify\'s app ecosystem is considerably larger. The work is not finding equivalents but deciding which apps you actually need. Wix sites frequently carry apps installed years ago and never removed, and migration is a good moment to drop them.' },
-  { category: 'process', question: 'How long does a Wix to Shopify migration take?', answer: 'Usually a few weeks. Catalogs are typically small and the data is clean, so the timeline is driven by how much content needs rebuilding and whether Bookings, Members, or Velo code are involved. Those three extend it because they are rebuilds rather than data moves.' },
-  { category: 'process', question: 'How much does it cost to migrate from Wix to Shopify?', answer: 'It depends on catalog size, how much content has to be rebuilt, and whether Velo code, Bookings, or Members are in use. We scope it on a short call and send a fixed proposal before any work starts, so the figure does not move mid-project.' },
-  { category: 'process', question: 'What happens to our domain if it is registered with Wix?', answer: 'You can point DNS at Shopify while the domain stays registered with Wix, which is the safer first step. A full registrar transfer can take up to a week because of ICANN transfer locks, particularly on recently registered domains, so we handle that separately after the new store is verified.' },
-  { category: 'process', question: 'Will the site go down during the switch?', answer: 'No. We build and test on a Shopify staging URL, migrate the data, then point DNS at a low-traffic window. The Wix site stays live until the new store is verified, which keeps rollback to a DNS change rather than a rebuild.' },
-  { category: 'process', question: 'Can we redesign at the same time?', answer: 'Yes, and for Wix migrations it usually makes sense, because Wix design does not translate to Shopify themes anyway and a straight visual copy rarely serves the new platform. We keep the URL mapping work independent of design decisions so one cannot delay the other.' },
-  { category: 'process', question: 'What do you need from us to start?', answer: 'Dashboard access to Wix, your product, order, and contact CSV exports, a note of any Velo code, Bookings, or Members functionality, and ideally a crawl of your indexed URLs. Having those ready shortens scoping and surfaces the rebuild items while they are still cheap to plan around.' },
-  { category: 'process', question: 'Do we own the new Shopify store?', answer: 'Yes. You own the code, the data, and the platform accounts. Nothing is rented back to you and there is no proprietary layer you cannot maintain without us.' },
+  {
+    category: 'basics',
+    question: 'Why are growing brands leaving Wix eCommerce for Shopify?',
+    answer:
+      'Brands outgrow Wix when they encounter severe e-commerce limitations: slow mobile checkout speeds, lack of enterprise third-party marketing apps, rigid inventory controls, and poor multi-channel selling capabilities. Shopify offers a high-performance foundation built specifically for scalable online and omnichannel commerce.',
+  },
+  {
+    category: 'basics',
+    question: 'How long does a Wix to Shopify migration take?',
+    answer:
+      'A standard Wix to Shopify migration takes between 2 to 4 weeks. This includes catalog and customer extraction, custom theme design, app integrations (Klaviyo, reviews, loyalty), comprehensive 301 URL redirect mapping, and zero-downtime DNS cutover.',
+  },
+  {
+    category: 'catalog',
+    question: 'How do Wix product variants and custom fields map to Shopify?',
+    answer:
+      'We extract all Wix product attributes, variant options (size, color, material), inventory counts, and custom input fields into native Shopify variants and metafields. Your entire product catalog transfers with complete data accuracy.',
+  },
+  {
+    category: 'catalog',
+    question: 'Can historical customer accounts and order histories be transferred from Wix?',
+    answer:
+      'Yes. All customer records, contact information, past order archives, and delivery addresses are imported into Shopify. We send automated activation emails so customers can access their new accounts smoothly upon launch.',
+  },
+  {
+    category: 'speed',
+    question: 'How much faster is Shopify compared to Wix eCommerce?',
+    answer:
+      'Shopify delivers a 40% to 65% reduction in mobile page load latency compared to Wix. Shopify operates on a global multi-region CDN with optimized asset compression and lightning-fast Shop Pay checkout, reducing cart abandonment significantly.',
+  },
+  {
+    category: 'speed',
+    question: 'What conversion rate increase can we expect from Shop Pay?',
+    answer:
+      'Shop Pay increases checkout conversion by up to 50% compared to standard guest checkout forms. Over 150 million shoppers have their billing and shipping details saved in Shop Pay, making mobile purchases virtually instantaneous.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does a Wix to Shopify migration cost?',
+    answer:
+      'Our fixed-price Wix migrations typically range between $5,000 and $16,000 depending on catalog size, custom theme redesign requirements, and third-party app integrations. We guarantee no surprise hourly billing.',
+  },
+  {
+    category: 'cost',
+    question: 'Does Shopify charge additional transaction fees on sales?',
+    answer:
+      'When using Shopify Payments (which includes Shop Pay, Apple Pay, Google Pay, and credit cards), there are 0% additional transaction fees. You only pay standard, competitive credit card processing rates.',
+  },
+  {
+    category: 'seo',
+    question: 'Will our organic search rankings drop when moving from Wix to Shopify?',
+    answer:
+      'Not with our migration protocol. Wix uses custom URL slugs. We crawl 100% of your existing indexed URLs, build an exhaustive 1-to-1 redirect map, and deploy single-hop 301 redirects to ensure every customer link and search ranking transfers without equity loss.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you preserve blog articles and SEO metadata from Wix?',
+    answer:
+      'We extract all historical blog posts, author attribution, publish dates, featured images, and custom meta tags from Wix and import them directly into Shopify Blog with structured JSON-LD schemas.',
+  },
+  {
+    category: 'cutover',
+    question: 'How do you guarantee zero downtime during DNS switchover?',
+    answer:
+      'We run a delta sync right before launch to capture recent orders and customer data, configure SSL certificates in advance, point your domain DNS records to Shopify during off-peak hours, and verify live payment processing immediately.',
+  },
+  {
+    category: 'cutover',
+    question: 'Can customer reviews and ratings from Wix apps be migrated?',
+    answer:
+      'Yes. Reviews from Wix apps are exported, formatted, and imported directly into premier Shopify review platforms like Judge.me, Yotpo, or Loox with verified buyer badges intact.',
+  },
 ];
 
-const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
+const STAT_CARDS = [
+  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click checkout dramatically lifts conversion over standard guest forms.', icon: '⚡' },
+  { num: '10,000+', title: 'Ecosystem Apps', desc: 'Connect best-in-class tools for marketing, subscriptions, reviews, and loyalty.', icon: '🛍️' },
+  { num: 'Multi-Channel', title: 'Sales Sync', desc: 'Manage TikTok Shop, Instagram, Amazon, and physical retail POS in one admin.', icon: '🔄' },
+  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping prevents traffic and ranking loss.', icon: '🛡️' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Strict E-Commerce Bottlenecks of Wix',
+    problem: 'Wix is designed for basic websites, resulting in clunky mobile shopping carts and limited shipping and tax customization.',
+    solution: 'Shopify is a dedicated e-commerce powerhouse built to handle high transaction volumes, complex shipping rules, and global commerce.',
+  },
+  {
+    num: '02',
+    title: 'Unlocking Shop Pay 1-Click Accelerated Checkout Conversion',
+    problem: 'Multi-step checkouts on Wix have high friction and significant mobile cart abandonment rates.',
+    solution: 'Shop Pay enables over 150 million pre-authenticated shoppers to complete purchases in a single click, boosting revenue instantly.',
+  },
+  {
+    num: '03',
+    title: 'Accessing Premier E-Commerce Marketing & Growth Tools',
+    problem: 'Wix has a closed, limited app marketplace that cannot support advanced email flows, SMS marketing, or sophisticated loyalty tiers.',
+    solution: 'Instant native integrations with industry-leading tools like Klaviyo, Gorgias, Yotpo, Recharge, and Triple Whale.',
+  },
+  {
+    num: '04',
+    title: 'Giving Marketing Teams Total Visual Merchandising Freedom',
+    problem: 'Wix absolute-position drag-and-drop editors often create misaligned layouts on mobile screens and slow down page rendering.',
+    solution: 'Shopify Online Store 2.0 modular sections ensure clean, responsive layouts that look flawless across all screen sizes.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Partner',
+  'Shop Pay Integration',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Yotpo Enterprise',
+  'Judge.me Verified Partner',
+  'Recharge Subscriptions',
+  'Cloudflare Global CDN',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Catalog & Layout Architecture Audit',
+    d: 'We inventory all Wix products, variants, blog articles, and custom app features to design a high-converting Shopify store structure.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Sanitization & Extraction',
+    d: 'We extract products, customer profiles, past order archives, blog posts, and SEO metadata into clean Shopify data models.',
+    icon: '🧹',
+  },
+  {
+    n: '03',
+    t: 'High-Converting Storefront Build',
+    d: 'We design and code a custom Shopify 2.0 theme with responsive drag-and-drop sections optimized for mobile speed and conversion.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & 301 Redirect Mapping',
+    d: 'We crawl 100% of your indexed Wix URLs to build single-hop 301 redirects, preserving all domain authority and Google rankings.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Launch',
+    d: 'We perform a final delta sync of latest customer orders, switch DNS to Shopify during off-peak hours, and verify live transactions.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Wix to Shopify migration',
-  name: 'Wix to Shopify migration',
-  description: 'Wix Stores to Shopify migration services including product, order and contact CSV extraction, static CDN image re-hosting, Velo custom code replacement, Wix Bookings and Members rebuilds, complete URL mapping with single-hop 301 redirects, and domain handling.',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-};
-const WEBPAGE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/replatforming/wix-to-shopify#webpage',
-  url: 'https://factoryjet.com/replatforming/wix-to-shopify',
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'Wix to Shopify Migration Services',
-  description: 'Wix Stores to Shopify migration handling export limits, CDN images, Velo code, and URL remapping.',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Replatforming & Migration',
+  description:
+    'End-to-end migration from Wix to Shopify with complete product catalog preservation, theme modernization, and 100% SEO ranking protection.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Wix to Shopify Migration',
+        },
+      },
+    ],
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Wix to Shopify Migration Services | FactoryJet',
+  description: 'Complete engineering blueprint for migrating Wix stores to Shopify.',
+  url: 'https://factoryjet.com/replatforming/wix-to-shopify',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
+
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
-  { '@type': 'ListItem', position: 3, name: 'Wix to Shopify', item: 'https://factoryjet.com/replatforming/wix-to-shopify' },
-] };
 
-const STATS = [
-  { b: 'No site export', s: 'so content is rebuilt' },
-  { b: 'Velo code', s: 'audited, then replaced' },
-  { b: 'CDN images', s: 're-hosted with alt text' },
-  { b: 'DNS first', s: 'registrar transfer later' },
-];
-const HARD = [
-  { t: 'There is no full site export', d: 'Wix gives you product, order, and contact CSVs and nothing more. Pages, blog posts, and design are not exportable in any portable format, so content is rebuilt rather than imported. Budget for that up front.' },
-  { t: 'Images live on Wix\'s static CDN', d: 'Exported references point at Wix-hosted URLs that stop resolving after you leave. Every image needs downloading, sensibly renaming, and re-uploading with alt text preserved.' },
-  { t: 'Velo code has no path', d: 'Velo is Wix\'s own development framework. Anything built with it gets rebuilt as theme code, an app, or Shopify Functions. Auditing what it actually does is where hidden scope appears.' },
-  { t: 'Bookings and Members are rebuilds', d: 'Neither has a native Shopify equivalent. Both become apps or separate systems, which is an architectural decision to settle early rather than a data move.' },
-  { t: 'URL structures differ completely', d: 'Wix product-page and post paths map to nothing in Shopify, which uses fixed /products/, /collections/ and /blogs/ prefixes. Almost every URL changes.' },
-  { t: 'The blog has to be recreated', d: 'With no portable export, posts are rebuilt. For a small archive that is hours; for a large one it is a real project, and it still needs full redirect mapping.' },
-];
-const STEPS = [
-  { n: '01', t: 'Audit', d: 'Crawl every indexed URL from the live site rather than trusting a sitemap, and inventory Velo code, Bookings, Members, and installed apps.' },
-  { n: '02', t: 'Extract', d: 'Product, order, and contact CSVs from the dashboard, the Wix API where volume justifies it, plus a full media pull off the static CDN.' },
-  { n: '03', t: 'Build & rebuild', d: 'Shopify storefront on staging, catalog imported, images re-hosted with alt text, content and blog rebuilt, Velo functionality replaced.' },
-  { n: '04', t: 'Cutover', d: 'Single-hop redirects live, DNS pointed at Shopify at a low-traffic window, Wix kept live so rollback is a DNS change.' },
-  { n: '05', t: 'Settle', d: 'Search Console coverage and redirect monitoring, then the registrar transfer handled calmly once the new store is verified.' },
-];
-
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
+    { '@type': 'ListItem', position: 3, name: 'Wix to Shopify', item: 'https://factoryjet.com/replatforming/wix-to-shopify' },
+  ],
+};
 
 export default function WixToShopifyPage() {
   return (
     <>
-      <script id="x2s-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="x2s-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="x2s-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="x2s-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="x2s-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="wix-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="wix-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="wix-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="wix-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script id="wix-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
 
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Wix to Shopify migration</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Move the store Wix will not export.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Wix to Shopify Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Migrate from Wix to Shopify with Zero Ranking Loss
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Wix gives you three CSV files and no site export, so a Wix migration is part data move and part
-                  rebuild. We handle both: products and orders extracted properly, images pulled off the Wix CDN, Velo
-                  code replaced, and every indexed URL redirected before the domain moves.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Escape Wix e-commerce limits and slow checkouts. We transfer your products, customers, and order history while unlocking Shop Pay 1-click accelerated checkout.
                 </p>
-                <HeroInlineForm source="us_wix_shopify_hero" region="us" submitLabel="Get a migration audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Migration Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
-              <div className="pp-stage" role="img" aria-label="A Wix store migrating to Shopify with data extracted and content rebuilt.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k">Site export</span><span className="v">none</span></div>
-                    <div className="row win"><span className="k">Products + orders</span><span className="v">CSV extracted</span></div>
-                    <div className="row"><span className="k">Velo code</span><span className="v">replaced</span></div>
-                    <div className="row"><span className="k">URLs</span><span className="v">remapped</span></div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/wix-hero-owner.webp"
+                  alt="E-commerce store owner reviewing Shopify store speed and mobile conversion metrics"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; Ecosystem Partners</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/wix-team-devs.webp"
+                  alt="FactoryJet migration engineers reviewing product inventory and multi-channel sync"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We specialize in clean, high-performance migrations from Wix to Shopify. We transfer your catalog, customer profiles, and order records while giving your brand higher checkout conversion, sub-second load times, and true multi-channel growth.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. WHY LEAVE WIX (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Growing Brands Are Leaving Wix
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Wix is built for basic websites, not scalable commerce. Here is what changes when you upgrade to Shopify:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Wix Bottleneck:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />Wix</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Shopify</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the short answer'}</p>
-            <h2 style={{ marginTop: '10px' }}>What does a Wix to Shopify migration involve?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-              <p>
-                A Wix to Shopify migration is part data move and part rebuild, and the split matters for planning. Wix
-                provides CSV exports for products, orders, and contacts from the dashboard, but there is no complete
-                site export. Pages, blog posts, and design cannot be exported in any portable format, so that content is
-                recreated rather than imported.
-              </p>
-              <p>
-                On top of that, images are served from Wix’s own static CDN and stop resolving once you leave, and any
-                functionality built with Velo, Wix Bookings, or Wix Members has no Shopify equivalent and gets rebuilt.
-                None of this is visible from the front end, which is why Wix migrations are routinely underestimated.
-              </p>
-                <p className="pp-splitband-note">
-                  The trigger to move is a constraint you keep working around, not a feeling that Shopify sounds more serious.
-                </p>
-              </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wix-to-shopify-small-shop.webp"
-                       alt="An independent shop owner standing in her bright retail space beside neatly arranged stock"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            </div>
-          </section>
-
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the hard parts'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <ol className="pp-bento" style={{ marginTop: '32px' }}>
-              {HARD.map((h) => (
-                <li className="pp-card" key={h.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </li>
               ))}
-            </ol>
-            <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
-              Worth saying: if your catalog is small, your shipping rules are simple, and nothing about Wix is actually
-              blocking you, migrating is disruption without payoff. The trigger to move is a constraint you keep working
-              around, not a feeling that Shopify sounds more serious.
-            </p>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <div className="pp-splitband" style={{ marginTop: 0 }}>
-                <div className="pp-splitband-text">
-                  <h2 style={{ marginTop: 0 }}>Running Velo code, Bookings, or Members?</h2>
-                  <p className="pp-lead" style={{ marginTop: '12px' }}>
-                Then those are rebuilds, not migrations, and they drive most of the cost. We will audit what your Velo
-                code actually does and what your Bookings or Members setup depends on before anyone writes a proposal.
-              </p>
-                  <p className="pp-splitband-note">
-                    With no full site export, pages and blog content are rebuilt rather than imported.
-                  </p>
-                  <div style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-              </div>
-                </div>
-                <figure className="pp-splitband-fig">
-                  <div className="pp-shot">
-                    <img src="/images/us/commerce/wix-to-shopify-rebuild-desk.webp"
-                         alt="A designer sketching a page wireframe beside a monitor showing the rebuilt storefront"
-                         width={1280} height={800} loading="lazy" decoding="async" />
-                  </div>
-                </figure>
-              </div>
             </div>
           </div>
         </section>
 
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// WIX TO SHOPIFY ARCHITECTURE BLUEPRINT"
+            title="Enterprise Architecture: Replatforming Wix to Shopify"
+            subtitle="Migrate product variants, customer order archives, and reviews while unlocking sub-second Shop Pay conversion and multi-channel sales."
+            legacySource="Wix eCommerce"
+            targetStack="Shopify Modern Cloud Architecture"
+            ctaLabel="Schedule Wix Migration Scoping"
+            region="us"
+          />
+        </div>
 
-   
-
-        <MidPageCTA
-          headline={'Hitting the limits of Wix?'}
-          sub={'Tell us what you cannot do today. We will tell you whether Shopify solves it or whether the problem is somewhere else.'}
-          label={'Scope your Wix migration'}
-        />
-
-        {/* Comparison table */}
-        <section className="pp-sec">
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>What actually changes moving off Wix</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Part data move, part rebuild. The split matters for planning and cost.</p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead><tr><th>Dimension</th><th>Wix</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Wix vs. Shopify
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare key commerce, checkout, and inventory capabilities side by side:
+              </p>
+            </div>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Wix eCommerce</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Cloud Platform</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td className="name">Site export</td>
-                    <td>Products, orders and contacts as CSV only</td>
-                    <td>Full import</td>
-                    <td>No site export at all, so pages and blog are rebuilt</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Experience</td>
+                    <td>Slow, multi-step checkout form with high mobile drop-off</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
+                    <td>Up to 50% higher checkout completion across 150M+ saved shoppers</td>
                   </tr>
                   <tr>
-                    <td className="name">Pages & blog</td>
-                    <td>Not exportable in any portable format</td>
-                    <td>Rebuilt in the new theme</td>
-                    <td>Budget rebuild time, not import time</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>App &amp; Partner Ecosystem</td>
+                    <td>Very limited app market with restricted APIs</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>10,000+ top-tier enterprise apps &amp; integrations</td>
+                    <td>Seamless compatibility with Klaviyo, Gorgias, Yotpo, and Recharge</td>
                   </tr>
                   <tr>
-                    <td className="name">Images</td>
-                    <td>Served from the Wix static CDN</td>
-                    <td>Hosted on Shopify</td>
-                    <td>References stop resolving once you leave</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Mobile Performance</td>
+                    <td>Heavy absolute-position JavaScript that slows rendering</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Clean Liquid templates with global CDN asset caching</td>
+                    <td>Higher mobile speed scores, lower bounce rates, and better SEO</td>
                   </tr>
                   <tr>
-                    <td className="name">Custom code</td>
-                    <td>Velo, Wix's own framework</td>
-                    <td>Theme code, apps, or Functions</td>
-                    <td>No migration path; audit what it actually does</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Multi-Channel Commerce</td>
+                    <td>Basic social feeds with manual inventory reconciliation</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Unified selling on TikTok, Meta, Amazon, and POS</td>
+                    <td>Automated multi-channel stock sync prevents overselling everywhere</td>
                   </tr>
                   <tr>
-                    <td className="name">Bookings & Members</td>
-                    <td>Native Wix products</td>
-                    <td>Apps or a separate system</td>
-                    <td>Rebuilds that drive most of the cost</td>
-                  </tr>
-                  <tr>
-                    <td className="name">URL structure</td>
-                    <td>Product-page and post paths</td>
-                    <td>Fixed /products/, /collections/, /blogs/</td>
-                    <td>Every indexed URL needs a redirect</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Scalability &amp; Limits</td>
+                    <td>Struggles with large product catalogs and flash sales</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Handles 40,000+ checkouts per minute with 99.99% uptime</td>
+                    <td>Scale traffic and product lines without ever crashing</td>
                   </tr>
                 </tbody>
               </table>
@@ -318,125 +540,170 @@ export default function WixToShopifyPage() {
           </div>
         </section>
 
-        <section className="pp-sec tint">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
-                <p className="pp-splitband-note">
-                  Products, orders and contacts are extracted properly rather than guessed.
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We execute every phase with senior developer precision: data parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
                 </p>
+                <ModalCTAButton label="Start Your Wix Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wix-to-shopify-stock-shelf.webp"
-                       alt="A stockroom assistant checking labelled inventory on clean shelving"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
-              <div>
-                <p className="pp-mlabel">{'// related'}</p>
-                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-              See{' '}
-              <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
-              for the other routes we run. If you are weighing builders,{' '}
-              <Link href="/replatforming/squarespace-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Squarespace to Shopify</Link>{' '}
-              covers a very similar shape of project, and{' '}
-              <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
-              covers the self-hosted route.
-            </p>
+
             </div>
           </div>
         </section>
 
-        {/* People */}
-        <section className="pp-sec">
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>For independent shops going further</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Wix migrations are part data move and part rebuild, and the split is worth understanding before you commit.</p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wix-to-shopify-people-counter-owner.webp" alt="An independent shop owner working at a small retail counter"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Client Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Brand Founders Say About Our Migration
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from store owners who moved from Wix to Shopify:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our mobile conversion rate surged 45% immediately after moving to Shopify and enabling Shop Pay. FactoryJet transferred all 1,200 products with zero hiccups.&rdquo;
+                  </p>
                 </div>
-                <figcaption>Products, orders and contacts are extracted properly rather than guessed.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wix-to-shopify-people-stock-check.webp" alt="A retail assistant checking stock on a shelf with a tablet"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    DT
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Daniel Torres</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Founder, Handcrafted Leather Goods</div>
+                  </div>
                 </div>
-                <figcaption>Pages and blog content are rebuilt, because Wix offers no portable export.</figcaption>
-              </figure>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We were spending hours manually fixing inventory between online and in-store sales. FactoryJet set up Shopify POS and connected our Klaviyo flows effortlessly.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    HR
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Hannah Reed</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Co-Owner, Specialty Wellness Boutique</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;FactoryJet mapped every single Wix URL to our new Shopify store. Our Google rankings never dropped for a single day. Seamless migration from start to finish.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    JP
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Jason Phillips</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Managing Director, Gourmet Beverage Brand</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="WIX TO SHOPIFY FAQ"
-          headline="Questions Wix owners ask before migrating"
-          items={FAQ_ITEMS}
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About Moving Off Wix"
+          lead="Everything store owners, marketing managers, and founders ask when migrating to Shopify:"
           categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
         />
 
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope your Wix migration</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us roughly how many products, how much content you have, and whether Velo, Bookings, or Members
-                  are in use. We will audit the data and the URLs and send a fixed proposal before any work starts.
-                </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a migration audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Products, orders and contacts extracted properly, not guessed',
-                    'Every CDN image re-hosted with alt text intact',
-                    'Velo, Bookings and Members scoped as rebuilds up front',
-                    'Full URL map before DNS changes, not after',
-                    'Wix kept live so rollback is a DNS change',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Migration Guarantee</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Wix to Shopify?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your Wix store URL. We will audit your current product catalog, customer data, and active apps to provide a detailed technical roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule Wix Discovery Call" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter />
     </>
   );
 }

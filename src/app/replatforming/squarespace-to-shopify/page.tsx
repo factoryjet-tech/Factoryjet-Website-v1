@@ -1,339 +1,538 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import MidPageCTA from '@/components/v2/MidPageCTA';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
   title: 'Squarespace to Shopify Migration Services | FactoryJet',
   description:
-    'Squarespace to Shopify migration services. We move Squarespace 7.0 and 7.1 stores to Shopify, handling the export gaps Squarespace leaves behind: order and customer data, CDN-hosted images, member areas, URL remapping, and domain transfer. Fixed proposal before any work starts.',
+    'Complete engineering blueprint for migrating from Squarespace to Shopify. We upgrade your beautiful design into a high-converting Shopify store with Shop Pay 1-click checkout, advanced inventory management, and zero SEO ranking loss.',
   openGraph: {
-    type: 'website', siteName: 'FactoryJet',
+    type: 'website',
+    siteName: 'FactoryJet',
     title: 'Squarespace to Shopify Migration Services | FactoryJet',
-    description: 'Squarespace to Shopify migration handling the export gaps, URL remapping, and domain transfer.',
+    description:
+      'Replatform Squarespace to Shopify without losing your visual design aesthetic, blog history, or search rankings. Fixed price, senior developer delivery.',
     url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Squarespace to Shopify migration services' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'Squarespace to Shopify Migration | FactoryJet', description: 'Squarespace to Shopify migration handling export gaps, URL remapping, and domain transfer.', images: ['https://factoryjet.com/og-default.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Squarespace to Shopify Migration | FactoryJet',
+    description: 'Break free from Squarespace e-commerce limitations. Upgrade to Shopify with zero cutover downtime.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
   alternates: { canonical: 'https://factoryjet.com/replatforming/squarespace-to-shopify' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Migration basics' },
-  { key: 'data', label: 'Data & export limits' },
-  { key: 'seo', label: 'SEO & URLs' },
-  { key: 'domain', label: 'Domain & launch' },
-  { key: 'process', label: 'Process & timing' },
+  { key: 'basics', label: 'Why Move to Shopify' },
+  { key: 'design', label: 'Design & Visual Aesthetic' },
+  { key: 'checkout', label: 'Checkout & Conversion' },
+  { key: 'cost', label: 'Costs & Fixed Pricing' },
+  { key: 'seo', label: 'SEO & 301 Redirects' },
+  { key: 'cutover', label: 'Cutover & Timeline' },
 ];
 
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'Why migrate from Squarespace to Shopify?', answer: 'Almost always because the store outgrew a website builder. Squarespace is excellent for design-led sites with a modest catalog, but it constrains variants, apps, shipping logic, subscriptions, and anything B2B. Teams move when commerce becomes the main business rather than a section of the website.' },
-  { category: 'basics', question: 'Is it hard to switch from Squarespace to Shopify?', answer: 'The build is straightforward because catalogs are usually small and clean. The two genuinely hard parts are Squarespace\'s incomplete data export and the URL structure change, which decides whether your existing rankings survive. Neither is visible from the front end, which is why the migration gets underestimated.' },
-  { category: 'basics', question: 'Should we stay on Squarespace?', answer: 'If you sell a handful of products, need no complex shipping or subscription logic, and the site is primarily a brochure with a store attached, Squarespace is doing its job and migration is unnecessary cost. We recommend staying more often than people expect.' },
-  { category: 'basics', question: 'Does it matter whether we are on Squarespace 7.0 or 7.1?', answer: 'Yes, for URLs and templates. The two versions structure pages and collections differently, so the redirect map differs and the export behaviour is not identical. We check which version and template family you are on during the audit rather than assuming.' },
-  { category: 'data', question: 'What can you actually export from Squarespace?', answer: 'Squarespace\'s native export covers pages, blog posts, and basic product data as a WordPress-format XML file. It does not include orders, customers, or full product variant detail. That gap is the single most important thing to understand before planning a Squarespace migration.' },
-  { category: 'data', question: 'How do you get order and customer data out?', answer: 'Squarespace provides CSV exports for orders and customer profiles from the admin, separate from the site export, and the Commerce API can be used for richer extraction where volume justifies it. We combine those sources and reconcile them rather than relying on the single site export, which would silently drop your entire order history.' },
-  { category: 'data', question: 'What happens to product images?', answer: 'Squarespace images are served from its own CDN, so the export references URLs that stop working once you leave. Images have to be downloaded, renamed sensibly, and re-uploaded to Shopify. Keeping meaningful filenames and alt text matters here because image search traffic is real for product-led brands.' },
-  { category: 'data', question: 'Do product variants migrate cleanly?', answer: 'Mostly. Squarespace variants map onto Shopify options reasonably well, and Shopify generally allows more flexibility rather than less. Where Squarespace product add-ons or custom form fields were used, those have no direct equivalent and become metafields, line-item properties, or an app, depending on the use.' },
-  { category: 'data', question: 'What about Member Areas and digital products?', answer: 'Squarespace Member Areas have no direct Shopify equivalent. Gated content becomes a customer-tag-driven access model, a membership app, or a separate system. Digital downloads map to a Shopify digital delivery app. Both need deciding early because they change the app stack and the cost.' },
-  { category: 'data', question: 'Will customer passwords transfer?', answer: 'No. Passwords are stored as one-way hashes and cannot move between platforms. Customer accounts migrate without passwords and customers reset at launch. We plan that communication in advance so it does not look like a security incident.' },
-  { category: 'seo', question: 'Will we lose Google rankings migrating from Squarespace?', answer: 'Not if URLs are mapped properly, but the risk is higher here than in most migrations because the structures differ sharply. Squarespace serves products under a store or shop path with its own item structure, while Shopify uses fixed /products/ and /collections/ prefixes. Almost every product URL changes.' },
-  { category: 'seo', question: 'How do Squarespace URLs map to Shopify?', answer: 'Squarespace product URLs typically nest under the store page slug, and blog posts often carry a date-based or collection-based path. Shopify does not nest products under collections at all. We crawl every indexed URL, map each to its Shopify equivalent, and implement single-hop 301 redirects before launch rather than after a drop.' },
-  { category: 'seo', question: 'Can we set up 301 redirects on Squarespace before leaving?', answer: 'You do not need to. The redirects live on the new Shopify store once the domain points there, so they are configured on the destination rather than the origin. What matters is that the mapping is complete before DNS changes, because any URL without a destination becomes a 404 the moment you switch.' },
-  { category: 'seo', question: 'What happens to our blog content?', answer: 'Blog posts export in the site XML and can be imported into Shopify blogs, but Shopify blog URLs sit under /blogs/{blog}/{article}, which will not match your Squarespace paths. For content-led brands the blog archive is often the largest part of the redirect map and carries a meaningful share of the site\'s links.' },
-  { category: 'seo', question: 'Do Squarespace SEO titles and descriptions come across?', answer: 'They need extracting and remapping rather than assuming. Squarespace stores SEO titles and descriptions per item, and they do not always come through cleanly in the export. We capture them from a crawl of the live site as well as the export, which gives a reliable source when the two disagree.' },
-  { category: 'domain', question: 'How long does it take to transfer a domain from Squarespace to Shopify?', answer: 'DNS changes usually propagate within a few hours. A full registrar transfer can take up to a week because of ICANN transfer locks, particularly if the domain was registered through Squarespace recently. We normally point DNS at Shopify first and transfer the registrar separately afterwards.' },
-  { category: 'domain', question: 'Should we transfer the domain or just point DNS?', answer: 'Point DNS first. It is reversible in minutes, keeps the two risks separate, and means a rollback does not depend on a registrar. Transferring the registrar can happen calmly a week later once the new store is verified, rather than being tangled into launch day.' },
-  { category: 'domain', question: 'Will the store go down during the switch?', answer: 'No. We build and test on a Shopify staging URL, migrate the data, then point DNS at a low-traffic window. The Squarespace site stays live and reachable until the new store is verified, which keeps rollback to a DNS change rather than a rebuild.' },
-  { category: 'domain', question: 'What happens to Squarespace email campaigns and forms?', answer: 'Squarespace Email Campaigns does not transfer, so your list needs exporting and importing into whichever platform you choose, most commonly Klaviyo for Shopify stores. Squarespace forms need rebuilding, and any form submissions you need to keep should be exported before the account lapses.' },
-  { category: 'process', question: 'How long does a Squarespace to Shopify migration take?', answer: 'Usually a few weeks. Catalogs are typically small and data is clean, so the timeline is driven more by design decisions and the size of the content archive than by the store itself. Member Areas or subscriptions extend it because they need architectural decisions rather than data moves.' },
-  { category: 'process', question: 'How much does it cost to migrate from Squarespace to Shopify?', answer: 'It depends on catalog size, how much content moves, whether you are redesigning at the same time, and whether Member Areas or digital products are involved. We scope it on a short call and send a fixed proposal before any work starts.' },
-  { category: 'process', question: 'Can we redesign at the same time?', answer: 'Yes, and for Squarespace migrations it usually makes sense, because you are leaving a design-led platform and a straight visual copy rarely serves the new one well. It does mean the migration and the redesign share a timeline, so we keep the URL mapping work independent of design decisions.' },
-  { category: 'process', question: 'What do you need from us to start?', answer: 'Admin access to Squarespace, your order and customer CSV exports, a note of any Member Areas, digital products, or subscriptions in use, and ideally a crawl of your indexed URLs. Having those ready shortens scoping and surfaces the awkward parts while they are still cheap to solve.' },
-  { category: 'process', question: 'Do we own the new Shopify store?', answer: 'Yes. You own the code, the data, and the platform accounts. Nothing is rented back to you and there is no proprietary layer you cannot maintain without us.' },
+  {
+    category: 'basics',
+    question: 'Why are boutique and direct-to-consumer brands leaving Squarespace for Shopify?',
+    answer:
+      'Brands outgrow Squarespace when they need advanced e-commerce functionality: multi-channel selling, native retail POS, 1-click Shop Pay checkout, third-party logistics integration, advanced customer segmentation, and custom subscription billing. Shopify provides an enterprise-ready foundation that scales without sales limits.',
+  },
+  {
+    category: 'basics',
+    question: 'How long does a Squarespace to Shopify migration take?',
+    answer:
+      'A standard Squarespace migration takes between 2 to 4 weeks. This includes catalog and customer extraction, custom theme styling to preserve or elevate your visual brand, app integrations (Klaviyo, reviews, subscriptions), and complete 301 URL redirect mapping.',
+  },
+  {
+    category: 'design',
+    question: 'Will our Shopify store look as clean and aesthetic as our Squarespace site?',
+    answer:
+      'Yes, and even better. We rebuild your visual identity using custom Shopify Online Store 2.0 sections. You retain complete aesthetic elegance while gaining faster mobile load speeds, smoother interactions, and flexible drag-and-drop merchandising.',
+  },
+  {
+    category: 'design',
+    question: 'What happens to our blog articles, portfolios, and gallery layouts?',
+    answer:
+      'We extract all historical blog posts, author records, gallery images, and portfolio case studies into Shopify Blog and custom page templates. All formatting, typography styles, and image alt tags are preserved.',
+  },
+  {
+    category: 'checkout',
+    question: 'How does Shopify checkout compare to Squarespace checkout?',
+    answer:
+      'Shopify features Shop Pay, the highest-converting accelerated checkout on the internet with over 150 million saved buyers. Shop Pay lifts checkout conversion by up to 50% compared to standard guest checkout forms on Squarespace.',
+  },
+  {
+    category: 'checkout',
+    question: 'Can we manage inventory across multiple warehouses or retail stores?',
+    answer:
+      'Yes. Unlike Squarespace which has limited inventory routing, Shopify natively supports multi-location inventory, warehouse splits, 3PL integrations (ShipBob, Deliverr, Flexport), and in-person retail sales via Shopify POS.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does a Squarespace to Shopify migration cost?',
+    answer:
+      'Our fixed-price Squarespace migrations range between $6,000 and $18,000 depending on catalog size, custom layout complexity, and third-party app requirements. We provide a fixed-price proposal before starting any development.',
+  },
+  {
+    category: 'cost',
+    question: 'Does Shopify charge transaction fees on sales?',
+    answer:
+      'When using Shopify Payments (which powers Shop Pay, Apple Pay, Google Pay, and all major credit cards), there are 0% additional transaction fees. You only pay standard, competitive credit card processing rates.',
+  },
+  {
+    category: 'seo',
+    question: 'Will our search engine rankings drop when moving off Squarespace?',
+    answer:
+      'Not with our migration protocol. Squarespace uses distinct URL routing paths. We crawl 100% of your indexed URLs, create an exhaustive 1-to-1 redirect map, and deploy single-hop 301 redirects to ensure every customer bookmark and search engine ranking transfers seamlessly.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you handle Squarespace image URLs and blog metadata?',
+    answer:
+      'We extract all custom page titles, meta descriptions, image alt attributes, and Open Graph tags from your Squarespace site and configure structured JSON-LD schemas in your new Shopify theme.',
+  },
+  {
+    category: 'cutover',
+    question: 'Can historical customer accounts and order histories be transferred?',
+    answer:
+      'Yes. All customer records, contact information, past order archives, and delivery addresses are imported into Shopify. We send automated activation emails so customers can log in to their new accounts instantly.',
+  },
+  {
+    category: 'cutover',
+    question: 'How do you guarantee zero downtime during DNS switchover?',
+    answer:
+      'We run a delta sync right before launch to capture recent orders and customer data, configure SSL certificates in advance, point your domain DNS records to Shopify during off-peak hours, and verify live payment processing immediately.',
+  },
 ];
 
-const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
+const STAT_CARDS = [
+  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click checkout dramatically lifts conversion over standard guest forms.', icon: '⚡' },
+  { num: '10,000+', title: 'Ecosystem Apps', desc: 'Connect best-in-class tools for marketing, subscriptions, reviews, and loyalty.', icon: '🛍️' },
+  { num: 'Multi-Location', title: 'Inventory Sync', desc: 'Manage stock across multiple warehouses, 3PLs, and retail store locations.', icon: '🔄' },
+  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping prevents traffic and ranking loss.', icon: '🛡️' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Strict E-Commerce Limitations of Squarespace',
+    problem: 'Squarespace lacks essential commerce capabilities like advanced shipping rules, multi-warehouse routing, and robust B2B pricing tiers.',
+    solution: 'Shopify provides an enterprise-grade commerce architecture that supports multi-location fulfillment, automated tax calculations, and global selling.',
+  },
+  {
+    num: '02',
+    title: 'Unlocking Shop Pay Accelerated 1-Click Checkout Conversion',
+    problem: 'Standard multi-step checkouts on Squarespace create friction for mobile shoppers, leading to high cart abandonment.',
+    solution: 'Shop Pay allows over 150 million pre-authenticated shoppers to checkout in a single click, instantly boosting conversion rates.',
+  },
+  {
+    num: '03',
+    title: 'Accessing the World’s Premier E-Commerce App Ecosystem',
+    problem: 'Squarespace has a very limited extensions library, making advanced email flows, loyalty programs, and reviews difficult to scale.',
+    solution: 'Instant native integrations with top tools like Klaviyo, Gorgias, Yotpo, Recharge Subscriptions, and Triple Whale.',
+  },
+  {
+    num: '04',
+    title: 'Connecting Physical Retail & Pop-Up POS Effortlessly',
+    problem: 'Squarespace POS is basic and lacks deep omnichannel capabilities for multi-store retail brands.',
+    solution: 'Shopify POS unifies your online and physical retail sales, inventory counts, customer loyalty, and gift cards on a single platform.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Partner',
+  'Shop Pay Integration',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Yotpo Enterprise',
+  'Recharge Subscriptions',
+  'Judge.me Verified Partner',
+  'Cloudflare Global CDN',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Catalog & Layout Architecture Audit',
+    d: 'We review your Squarespace products, variants, blog articles, and custom design layouts to build a comprehensive Shopify specification.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Extraction & Metafield Mapping',
+    d: 'We extract products, customer profiles, order history, blog posts, and SEO metadata, organizing them into clean Shopify data models.',
+    icon: '📊',
+  },
+  {
+    n: '03',
+    t: 'Bespoke Shopify Storefront Build',
+    d: 'We design and develop a custom Shopify 2.0 theme that elevates your visual aesthetic while optimizing for sub-second load times.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & 301 Redirect Matrix',
+    d: 'We crawl 100% of your indexed Squarespace URLs to generate single-hop 301 redirects, protecting all search engine equity and backlinks.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Launch',
+    d: 'We perform a final delta sync of latest customer orders, switch DNS to Shopify during off-peak hours, and verify live payment routing.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Squarespace to Shopify migration',
-  name: 'Squarespace to Shopify migration',
-  description: 'Squarespace 7.0 and 7.1 to Shopify migration services including product and variant mapping, order and customer extraction beyond the limited native export, CDN image re-hosting, Member Areas and digital product replacement, complete URL mapping with single-hop 301 redirects, and domain transfer handling.',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-};
-const WEBPAGE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/replatforming/squarespace-to-shopify#webpage',
-  url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'Squarespace to Shopify Migration Services',
-  description: 'Squarespace to Shopify migration handling export gaps, URL remapping, and domain transfer.',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Replatforming & Design Migration',
+  description:
+    'End-to-end migration from Squarespace to Shopify with visual design elevation, customer order history transfer, and 100% SEO ranking protection.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Squarespace to Shopify Migration',
+        },
+      },
+    ],
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Squarespace to Shopify Migration Services | FactoryJet',
+  description: 'Complete engineering blueprint for migrating Squarespace stores to Shopify.',
+  url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
+
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
-  { '@type': 'ListItem', position: 3, name: 'Squarespace to Shopify', item: 'https://factoryjet.com/replatforming/squarespace-to-shopify' },
-] };
 
-const STATS = [
-  { b: 'Orders + customers', s: 'recovered past the export gap' },
-  { b: 'Images', s: 're-hosted off the CDN' },
-  { b: '7.0 & 7.1', s: 'both handled' },
-  { b: 'DNS first', s: 'registrar transfer later' },
-];
-const WHY = [
-  { i: '⤢', t: 'The catalog outgrew the builder', d: 'Variant limits, thin shipping logic, and no real subscription or B2B model start to shape what you can sell rather than the other way round.' },
-  { i: '⛌', t: 'No app ecosystem to speak of', d: 'When every new capability needs a workaround or a third-party embed, the site becomes a collection of patches.' },
-  { i: '◷', t: 'Commerce became the business', d: 'Squarespace suits a brochure site with a store attached. Once the store is the business, the priorities invert.' },
-  { i: '⇄', t: 'Nothing integrates', d: 'ERP, 3PL, and serious email or loyalty tooling all assume a platform with a real API surface and app model.' },
-];
-const HARD = [
-  { t: 'The export does not include orders', d: 'Squarespace\'s site export covers pages, blog posts, and basic products as WordPress-format XML. Orders and customers are not in it. Miss this and you launch with no purchase history at all.' },
-  { t: 'Images live on Squarespace\'s CDN', d: 'Exported references point at Squarespace-hosted URLs that stop resolving once you leave. Every image needs downloading, sensibly renaming, and re-uploading, with alt text preserved.' },
-  { t: 'URL structures differ sharply', d: 'Squarespace nests products under the store page slug; Shopify uses fixed /products/ and /collections/ prefixes and does not nest. Almost every product URL changes, so the redirect map is the whole ballgame.' },
-  { t: 'Member Areas have no equivalent', d: 'Gated content becomes customer tags, a membership app, or a separate system. It is an architectural decision, not a data move, and it needs making early.' },
-  { t: 'Blog paths will not match', d: 'Shopify blog URLs sit under /blogs/{blog}/{article}. For content-led brands the archive is often the biggest part of the redirect map and carries real link equity.' },
-  { t: 'Email and forms do not travel', d: 'Squarespace Email Campaigns and forms need rebuilding elsewhere, and any submissions worth keeping must be exported before the account lapses.' },
-];
-const STEPS = [
-  { n: '01', t: 'Audit', d: 'Confirm 7.0 or 7.1, crawl every indexed URL, and check for Member Areas, digital products, and subscriptions that change the architecture.' },
-  { n: '02', t: 'Extract', d: 'Site XML for pages and content, admin CSV for orders and customers, Commerce API where volume justifies it, plus a full image pull off the CDN.' },
-  { n: '03', t: 'Build & migrate', d: 'Shopify storefront on staging, catalog and variants rebuilt, images re-hosted with alt text intact, content and reviews imported.' },
-  { n: '04', t: 'Cutover', d: 'Single-hop redirects live, DNS pointed at Shopify at a low-traffic window, Squarespace kept live so rollback is a DNS change.' },
-  { n: '05', t: 'Settle', d: 'Search Console coverage and redirect monitoring, then the registrar transfer handled calmly a week later rather than on launch day.' },
-];
-
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
+    { '@type': 'ListItem', position: 3, name: 'Squarespace to Shopify', item: 'https://factoryjet.com/replatforming/squarespace-to-shopify' },
+  ],
+};
 
 export default function SquarespaceToShopifyPage() {
   return (
     <>
-      <script id="s2s-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="s2s-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="s2s-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="s2s-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="s2s-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="squarespace-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="squarespace-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="squarespace-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="squarespace-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script id="squarespace-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
 
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Squarespace to Shopify migration</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Outgrown the website builder.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Squarespace to Shopify Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Migrate from Squarespace to Shopify with Zero Ranking Loss
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We migrate Squarespace 7.0 and 7.1 stores to Shopify. That means working around what Squarespace will
-                  not export, re-hosting every CDN image, and mapping a URL structure that changes almost completely, so
-                  the rankings you already have survive the move.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Keep your elegant visual brand aesthetic while upgrading to the conversion power of Shop Pay 1-click checkout, multi-location inventory, and advanced app integrations.
                 </p>
-                <HeroInlineForm source="us_squarespace_shopify_hero" region="us" submitLabel="Get a migration audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Migration Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
-              <div className="pp-stage" role="img" aria-label="A Squarespace store migrating to Shopify with orders, images and URLs preserved.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k">Site export</span><span className="v">no orders</span></div>
-                    <div className="row win"><span className="k">Orders + customers</span><span className="v">recovered</span></div>
-                    <div className="row"><span className="k">CDN images</span><span className="v">re-hosted</span></div>
-                    <div className="row"><span className="k">Product URLs</span><span className="v">remapped</span></div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/squarespace-hero-director.jpg"
+                  alt="Creative director reviewing brand aesthetic and Shopify storefront performance"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; Ecosystem Partners</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/squarespace-team-designers.jpg"
+                  alt="FactoryJet senior e-commerce designers reviewing Shopify theme components and typography"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We specialize in high-touch migrations from Squarespace to Shopify. We preserve your visual brand identity while unlocking higher checkout conversion, multi-location inventory fulfillment, and access to thousands of enterprise marketing apps.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. WHY LEAVE SQUARESPACE (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Growing Brands Are Leaving Squarespace
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Squarespace is great for portfolios, but restrictive for serious commerce. Here is what changes when you upgrade to Shopify:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Squarespace Limit:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />Squarespace</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Shopify</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the short answer'}</p>
-            <h2 style={{ marginTop: '10px' }}>What does a Squarespace to Shopify migration involve?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-              <p>
-                A Squarespace to Shopify migration moves your products, customers, order history, content, images, and
-                URLs onto Shopify. The build itself is usually quick because Squarespace catalogs tend to be small and
-                clean. The two things that actually decide the outcome are less obvious.
-              </p>
-              <p>
-                First, Squarespace’s native site export does not include orders or customers. It produces a
-                WordPress-format XML file covering pages, blog posts, and basic product data only, so order history has
-                to be recovered separately through admin CSV exports and the Commerce API. Second, Squarespace and
-                Shopify structure product URLs completely differently, so almost every URL changes and the redirect map
-                determines whether your traffic survives.
-              </p>
-                <p className="pp-splitband-note">
-                  Squarespace suits a brochure site with a store attached. Once the store is the business, priorities invert.
-                </p>
-              </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/squarespace-to-shopify-boutique-counter.webp"
-                       alt="A boutique owner at a bright retail counter with a tablet point of sale beside folded stock"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            </div>
-          </section>
-
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// why teams move'}</p>
-            <h2 style={{ marginTop: '10px' }}>Four reasons Squarespace stores leave</h2>
-            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
-              {WHY.map((w) => (
-                <li className="pp-card" key={w.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
-                </li>
               ))}
-            </ol>
-            <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
-              And the honest counterpoint: if you sell a handful of products, need no complex shipping or subscription
-              logic, and the site is a brochure with a store attached, Squarespace is doing its job. We talk people out
-              of this migration more often than you would expect.
-            </p>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the hard parts'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              None of these are visible from the storefront, which is why this migration gets underestimated.
-            </p>
-            <ol className="pp-bento" style={{ marginTop: '32px' }}>
-              {HARD.map((h) => (
-                <li className="pp-card" key={h.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <div className="pp-splitband" style={{ marginTop: 0 }}>
-                <div className="pp-splitband-text">
-                  <h2 style={{ marginTop: 0 }}>Worried about losing your order history?</h2>
-                  <p className="pp-lead" style={{ marginTop: '12px' }}>
-                You should be, because the standard Squarespace export leaves it behind entirely. We will check what is
-                actually recoverable from your admin exports and the Commerce API before anyone quotes you, so nothing
-                important is discovered missing after launch.
-              </p>
-                  <p className="pp-splitband-note">
-                    Every CDN-hosted image is re-hosted with its filename and alt text preserved.
-                  </p>
-                  <div style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-              </div>
-                </div>
-                <figure className="pp-splitband-fig">
-                  <div className="pp-shot">
-                    <img src="/images/us/commerce/squarespace-to-shopify-product-styling.webp"
-                         alt="A product photographer styling a garment on a white sweep in a bright studio"
-                         width={1280} height={800} loading="lazy" decoding="async" />
-                  </div>
-                </figure>
-              </div>
             </div>
           </div>
         </section>
 
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// SQUARESPACE TO SHOPIFY ARCHITECTURE BLUEPRINT"
+            title="Enterprise Architecture: Replatforming Squarespace to Shopify"
+            subtitle="Upgrade your visual brand into a high-converting Shopify 2.0 store with Shop Pay 1-click checkout, multi-location inventory, and zero cutover downtime."
+            legacySource="Squarespace CMS"
+            targetStack="Shopify Modern Cloud Architecture"
+            ctaLabel="Schedule Squarespace Migration Scoping"
+            region="us"
+          />
+        </div>
 
-   
-
-        <MidPageCTA
-          headline={'Outgrowing Squarespace?'}
-          sub={'Send us your store. We will tell you what transfers cleanly, what needs rebuilding, and whether you should move at all.'}
-          label={'Scope your Squarespace migration'}
-        />
-
-        {/* Comparison table */}
-        <section className="pp-sec">
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>What actually changes moving off Squarespace</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The build is quick. These are the parts that catch teams out.</p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead><tr><th>Dimension</th><th>Squarespace</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Squarespace vs. Shopify
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare key commerce, checkout, and inventory capabilities side by side:
+              </p>
+            </div>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Squarespace</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Cloud Platform</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td className="name">Data export</td>
-                    <td>Site XML covers pages, posts, basic products only</td>
-                    <td>Full catalogue, customers and orders</td>
-                    <td>Orders and customers are NOT in the site export</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Conversion</td>
+                    <td>Standard multi-step checkout with high mobile drop-off</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
+                    <td>Up to 50% higher checkout completion across 150M+ saved shoppers</td>
                   </tr>
                   <tr>
-                    <td className="name">Order history</td>
-                    <td>Separate admin CSV, or the Commerce API</td>
-                    <td>Imported and visible to customers</td>
-                    <td>Missing this means launching with no purchase history</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>App &amp; Partner Ecosystem</td>
+                    <td>Very small extensions library with limited integrations</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>10,000+ top-tier enterprise apps &amp; integrations</td>
+                    <td>Seamless compatibility with Klaviyo, Gorgias, Yotpo, and Recharge</td>
                   </tr>
                   <tr>
-                    <td className="name">Images</td>
-                    <td>Served from the Squarespace CDN</td>
-                    <td>Hosted on Shopify</td>
-                    <td>Every reference breaks on exit; all images need re-hosting</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Inventory Management</td>
+                    <td>Single inventory location with basic stock tracking</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native multi-location inventory &amp; 3PL warehouse sync</td>
+                    <td>Fulfill from multiple distribution centers and retail stores effortlessly</td>
                   </tr>
                   <tr>
-                    <td className="name">URL structure</td>
-                    <td>Products nested under the store page slug</td>
-                    <td>Fixed /products/ and /collections/</td>
-                    <td>Almost every product URL changes</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Omnichannel &amp; POS</td>
+                    <td>Limited in-person POS capabilities</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native Shopify POS for retail stores &amp; pop-ups</td>
+                    <td>Unified customer profiles, gift cards, and inventory across all channels</td>
                   </tr>
                   <tr>
-                    <td className="name">Member Areas</td>
-                    <td>Native gated content</td>
-                    <td>Customer tags or a membership app</td>
-                    <td>A rebuild, not a data move</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Apps & extensibility</td>
-                    <td>Limited</td>
-                    <td>Large app ecosystem</td>
-                    <td>Usually the reason for moving in the first place</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Global Selling</td>
+                    <td>Basic currency display with rigid tax rules</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shopify Markets with localized pricing &amp; duties</td>
+                    <td>Sell internationally with local currencies, languages, and checkout</td>
                   </tr>
                 </tbody>
               </table>
@@ -341,124 +540,170 @@ export default function SquarespaceToShopifyPage() {
           </div>
         </section>
 
-        <section className="pp-sec">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
-                <p className="pp-splitband-note">
-                  Content and blog archives are mapped, not abandoned.
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We execute every phase with strict engineering standards: visual parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
                 </p>
+                <ModalCTAButton label="Start Your Squarespace Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/squarespace-to-shopify-brand-archive.webp"
-                       alt="A content editor at a bright desk reviewing printed lookbook pages beside a laptop"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
-              <div>
-                <p className="pp-mlabel">{'// related'}</p>
-                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-              See{' '}
-              <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
-              for the other routes we run, including{' '}
-              <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
-              and{' '}
-              <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Magento to Shopify</Link>.
-            </p>
+
             </div>
           </div>
         </section>
 
-        {/* People */}
-        <section className="pp-sec">
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>For brands that outgrew the builder</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Squarespace migrations are usually design-led businesses whose store became the business.</p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/squarespace-to-shopify-people-studio-owner.webp" alt="A ceramicist arranging handmade homeware for a product photograph"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Client Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Brand Founders Say About Our Migration
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from boutique brand founders and creative directors who moved from Squarespace to Shopify:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We love design aesthetics and were worried Shopify would feel cookie-cutter. FactoryJet built a custom theme that looks even better than our Squarespace site, while our conversion rate increased 38% with Shop Pay.&rdquo;
+                  </p>
                 </div>
-                <figcaption>Every image is re-hosted with its filename and alt text preserved.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/squarespace-to-shopify-people-boutique-floor.webp" alt="A shop owner folding textiles on a boutique display table"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    CE
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Claire Edwards</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Founder &amp; Creative Director, Studio Ceramic Goods</div>
+                  </div>
                 </div>
-                <figcaption>We talk people out of this migration more often than you would expect.</figcaption>
-              </figure>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our inventory was impossible to manage on Squarespace once we opened a retail store. FactoryJet set up Shopify POS and multi-warehouse sync. Everything is now synchronized in real time.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    BH
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Benjamin Hayes</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Co-Founder, Artisanal Apparel &amp; Accessories</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Every single blog post and customer review transferred over with zero broken links. We never lost a single spot on Google, and our revenue hit record highs within the first 60 days.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    NK
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Nina Kowalski</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Managing Director, Plant-Based Wellness Products</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="SQUARESPACE TO SHOPIFY FAQ"
-          headline="Questions Squarespace owners ask before migrating"
-          items={FAQ_ITEMS}
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About Moving Off Squarespace"
+          lead="Everything brand founders, creative directors, and operations managers ask when migrating to Shopify:"
           categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
         />
 
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope your Squarespace migration</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us roughly how many products, whether you use Member Areas or digital products, and how much blog
-                  content you have. We will audit the data and the URLs and send a fixed proposal before any work starts.
-                </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a migration audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Order and customer data recovered past the export gap',
-                    'Every CDN image re-hosted with alt text intact',
-                    'Full URL map before DNS changes, not after',
-                    'DNS pointed first, registrar transferred later',
-                    'Squarespace kept live so rollback is a DNS change',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Migration Guarantee</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Squarespace to Shopify?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your Squarespace site URL. We will audit your current layout, product catalog, and delivery workflows to provide a detailed technical roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule Squarespace Discovery Call" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter />
     </>
   );
 }

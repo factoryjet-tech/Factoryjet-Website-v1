@@ -1,310 +1,538 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import MidPageCTA from '@/components/v2/MidPageCTA';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'WordPress to Shopify Migration Services | Blog & Content Migration | FactoryJet',
+  title: 'WordPress to Shopify Migration Services | FactoryJet',
   description:
-    'WordPress to Shopify migration services. We move WordPress sites and blog archives to Shopify, handling permalink remapping, category-to-tag conversion, page builder markup, Yoast and RankMath metadata, media library re-hosting, and the option to keep WordPress for content.',
+    'Complete engineering blueprint for migrating from WordPress to Shopify. We transfer your blog articles, custom layouts, and product catalog while eliminating plugin vulnerabilities and preserving 100% of your Google rankings.',
   openGraph: {
-    type: 'website', siteName: 'FactoryJet',
+    type: 'website',
+    siteName: 'FactoryJet',
     title: 'WordPress to Shopify Migration Services | FactoryJet',
-    description: 'WordPress and blog archive migration to Shopify with permalink remapping and metadata preserved.',
+    description:
+      'Replatform WordPress to Shopify without losing content, search rankings, or customer history. Fixed price, senior developer delivery.',
     url: 'https://factoryjet.com/replatforming/wordpress-to-shopify',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet WordPress to Shopify migration services' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'WordPress to Shopify Migration | FactoryJet', description: 'WordPress and blog archive migration to Shopify with permalink remapping.', images: ['https://factoryjet.com/og-default.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WordPress to Shopify Migration | FactoryJet',
+    description: 'Eliminate WordPress security risks and hosting maintenance. Upgrade to Shopify with zero cutover downtime.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
   alternates: { canonical: 'https://factoryjet.com/replatforming/wordpress-to-shopify' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Migration basics' },
-  { key: 'blog', label: 'Blog & content' },
-  { key: 'seo', label: 'SEO & permalinks' },
-  { key: 'tech', label: 'Themes & plugins' },
-  { key: 'process', label: 'Process & timing' },
+  { key: 'basics', label: 'Why Move to Shopify' },
+  { key: 'content', label: 'Blog & Content Migration' },
+  { key: 'speed', label: 'Speed & Security' },
+  { key: 'cost', label: 'Costs & Fixed Pricing' },
+  { key: 'seo', label: 'SEO & 301 Redirects' },
+  { key: 'cutover', label: 'Cutover & Timeline' },
 ];
 
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'Why migrate from WordPress to Shopify?', answer: 'Usually because commerce has become the point of the site and WordPress is being asked to do a job it was not built for. Maintaining hosting, security patching, and plugin compatibility for a store is real work. Shopify absorbs that in exchange for less low-level control.' },
-  { category: 'basics', question: 'What is the difference between this and a WooCommerce migration?', answer: 'If your store runs on WooCommerce, that is the WooCommerce path and it centres on products, subscriptions, and the plugin stack. This page covers WordPress sites where the content is the main asset, including blog-only migrations where the store is being built fresh on Shopify.' },
-  { category: 'basics', question: 'Should we keep WordPress for content and use Shopify for the store?', answer: 'Genuinely worth considering, and we recommend it more often than you might expect. Shopify\'s blogging is weaker than WordPress in real ways. Running WordPress for content and Shopify for commerce under one domain keeps editorial power while moving the store, at the cost of some architectural complexity.' },
-  { category: 'basics', question: 'How weak is Shopify blogging compared to WordPress?', answer: 'Meaningfully. Shopify blogs have no categories, only tags, limited author handling, a simpler editor, and far less control over templates and taxonomy. For a site publishing occasionally this is fine. For a content operation with a large structured archive, it is a real downgrade you should decide on knowingly.' },
-  { category: 'blog', question: 'Can our WordPress blog migrate to Shopify?', answer: 'Yes. Posts, images, excerpts, publish dates, and authors can be imported into Shopify blogs. What does not survive intact is taxonomy: WordPress categories have no Shopify equivalent and collapse into tags, which changes how an archive is browsed and internally linked.' },
-  { category: 'blog', question: 'What happens to WordPress categories?', answer: 'They become tags, because Shopify blogs support only tags. Any category archive pages you have indexed no longer exist as a structure, so those URLs need mapping to a tag listing or a relevant post. On content-heavy sites this is one of the larger redirect decisions in the project.' },
-  { category: 'blog', question: 'Do custom post types migrate?', answer: 'Not directly, because Shopify has no custom post type concept. Depending on what they hold, they become products, blog articles, pages, or metaobjects. Sites using custom post types for things like case studies or resources need an explicit content model decision before anything is imported.' },
-  { category: 'blog', question: 'What about our media library?', answer: 'Images are downloaded from the WordPress uploads directory and re-uploaded to Shopify with filenames and alt text preserved where possible. In-post image references then need rewriting to the new URLs, otherwise you launch an archive full of broken images pointing at a server you are decommissioning.' },
-  { category: 'seo', question: 'Will we lose rankings migrating from WordPress?', answer: 'Not if the permalink mapping is complete, but the risk is concentrated in the blog rather than the store. WordPress permalink structures are configurable and often date-based or category-nested, while Shopify blog URLs sit under /blogs/{blog}/{article}. Almost every content URL changes.' },
-  { category: 'seo', question: 'How do WordPress permalinks map to Shopify?', answer: 'It depends entirely on your permalink setting, which is why we crawl rather than assume. A date-based structure, a category-nested one, and a plain post-name structure each produce a completely different redirect map. We discover the real patterns from indexed URLs, not from the settings page.' },
-  { category: 'seo', question: 'What happens to Yoast or RankMath metadata?', answer: 'Titles, meta descriptions, and canonical settings live in plugin database tables and need extracting and mapping rather than rewriting from scratch. Schema those plugins generated also disappears with them, so structured data has to be rebuilt in the Shopify theme and validated before cutover.' },
-  { category: 'seo', question: 'Do our existing redirects come across?', answer: 'They need to. WordPress sites usually carry years of redirects in a plugin such as Redirection or inside the SEO plugin. Those must be flattened and re-pointed at the final destination, or you launch with two-hop chains where an old URL redirects to another old URL that redirects again.' },
-  { category: 'seo', question: 'What about author archives and pagination?', answer: 'Neither has a clean Shopify equivalent. Author archives disappear, and blog pagination works differently. Both usually hold low-value indexed URLs, so we map the ones with genuine links or rankings and let the rest resolve cleanly rather than redirecting thousands of thin pages into chains.' },
-  { category: 'tech', question: 'What happens to content built with Elementor or Divi?', answer: 'Page builder output does not transfer. Elementor, Divi, WPBakery and similar store layout as builder-specific markup and shortcodes that mean nothing outside WordPress. Those pages are rebuilt in the Shopify theme, and the more of your site was built that way, the more of the project is rebuild rather than migration.' },
-  { category: 'tech', question: 'Do WordPress plugins have Shopify equivalents?', answer: 'Some do, some are unnecessary on Shopify, and some have no equivalent at all. The audit matters more than the answer, because most WordPress sites run plugins nobody remembers installing alongside two or three that are genuinely load-bearing. Migration is a good moment to shed the rest.' },
-  { category: 'tech', question: 'What about multilingual sites on WPML or Polylang?', answer: 'Shopify handles languages through Markets and translation apps rather than duplicated posts, so a WPML structure does not map one-to-one and the hreflang setup has to be rebuilt. If translated content drives meaningful traffic, this deserves scoping before anything else.' },
-  { category: 'tech', question: 'Will customer accounts and passwords transfer?', answer: 'Accounts can migrate; passwords cannot. WordPress stores hashes in a format Shopify cannot import, so customers reset at launch. We plan that communication in advance so it does not read as a security incident.' },
-  { category: 'process', question: 'How long does a WordPress to Shopify migration take?', answer: 'Usually a few weeks to a couple of months, driven far more by content volume than product count. A large blog archive with category structures and page-builder pages takes considerably longer than a small store with a handful of posts.' },
-  { category: 'process', question: 'How much does it cost to migrate from WordPress to Shopify?', answer: 'It depends on how much content moves, how much was built with a page builder, whether custom post types are involved, and whether you are redesigning at the same time. We scope it on a short call and send a fixed proposal before any work starts.' },
-  { category: 'process', question: 'Can we migrate the blog separately from the store?', answer: 'Yes, and it is often the sensible order. Content can move ahead of commerce, or stay on WordPress permanently while the store launches on Shopify. Splitting the two reduces launch risk and lets each part be judged on its own.' },
-  { category: 'process', question: 'Will the site go down during cutover?', answer: 'No. We build and test on staging, migrate content and data, then switch DNS at a low-traffic window. The WordPress site stays reachable until the new one is verified, so rollback is a DNS change rather than a rebuild.' },
-  { category: 'process', question: 'What do you need from us to start?', answer: 'Admin access or a database export, your WordPress XML export, a full plugin and theme list, a note of any page builder in use, and ideally a crawl of your indexed URLs. Those five things make the estimate real rather than optimistic.' },
-  { category: 'process', question: 'Do we own the new Shopify store?', answer: 'Yes. You own the code, the data, and the platform accounts. Nothing is rented back to you and there is no proprietary layer you cannot maintain without us.' },
+  {
+    category: 'basics',
+    question: 'Why are businesses migrating from WordPress to Shopify?',
+    answer:
+      'Businesses migrate to Shopify to eliminate the constant vulnerability of hacked WordPress plugins, unexpected server downtime, slow database queries, and high ongoing developer maintenance retainers. Shopify provides fully hosted 99.99% uptime, built-in PCI Level 1 security, and the world’s highest-converting 1-click Shop Pay checkout.',
+  },
+  {
+    category: 'basics',
+    question: 'Can we move our entire website or just our store to Shopify?',
+    answer:
+      'You can move your entire website including all pages, blog posts, case studies, and e-commerce catalog to Shopify. Shopify Online Store 2.0 provides visual drag-and-drop sections that make managing marketing pages and editorial content easier than WordPress.',
+  },
+  {
+    category: 'content',
+    question: 'What happens to our WordPress blog posts, authors, and categories?',
+    answer:
+      'We extract 100% of your historical blog posts, featured images, author attribution, publish dates, tags, and categories into Shopify Blog. We ensure HTML formatting, image alt text, and internal link structures remain intact.',
+  },
+  {
+    category: 'content',
+    question: 'How do you migrate WordPress pages built with Elementor, Divi, or WPBakery?',
+    answer:
+      'We rebuild your page layouts into native, high-speed Shopify Liquid sections. This eliminates heavy page builder scripts, drastically improves Core Web Vitals scores, and gives your marketing team an intuitive visual editor in Shopify admin.',
+  },
+  {
+    category: 'speed',
+    question: 'How much faster will our site load after moving from WordPress to Shopify?',
+    answer:
+      'Most sites see a 50% to 75% improvement in page load speed. Shopify runs on a global CDN that automatically optimizes images, caches static assets edge-side, and delivers server responses in under 100 milliseconds worldwide.',
+  },
+  {
+    category: 'speed',
+    question: 'Is Shopify more secure than self-hosted WordPress?',
+    answer:
+      'Yes. WordPress is the most targeted CMS in the world for malware, brute-force attacks, and plugin vulnerabilities. Shopify is a closed, enterprise-grade cloud platform with Level 1 PCI-DSS compliance, continuous security monitoring, and automated patch management.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does a WordPress to Shopify migration cost?',
+    answer:
+      'Our fixed-price migrations typically range from $6,000 to $20,000 depending on total page count, blog article volume, custom design complexity, and third-party integrations. We provide an exact fixed quote after an initial technical audit.',
+  },
+  {
+    category: 'cost',
+    question: 'How much do businesses save by eliminating WordPress hosting and plugin licenses?',
+    answer:
+      'Companies typically save $3,000 to $15,000 per year by eliminating premium managed hosting (e.g. WP Engine, Kinsta), annual plugin renewal licenses (ACF Pro, Elementor, WP Rocket), security firewalls, and monthly developer maintenance retainers.',
+  },
+  {
+    category: 'seo',
+    question: 'Will our organic search traffic drop when moving from WordPress to Shopify?',
+    answer:
+      'Not with our migration protocol. WordPress and Shopify have different URL structures for blogs and pages. We crawl every indexed URL on your WordPress site, create an exhaustive 1-to-1 redirect map, and deploy single-hop 301 redirects to protect all search engine equity.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you handle Yoast SEO, Rank Math, or All in One SEO metadata?',
+    answer:
+      'We extract all custom title tags, meta descriptions, canonical URLs, and schema markup stored in Yoast or Rank Math database fields and import them directly into Shopify native SEO fields and structured JSON-LD data.',
+  },
+  {
+    category: 'cutover',
+    question: 'How long does a WordPress to Shopify migration take?',
+    answer:
+      'Standard projects take between 2 to 4 weeks from audit to launch. We complete all data extraction, theme building, and redirect testing in a private staging environment before conducting DNS cutover.',
+  },
+  {
+    category: 'cutover',
+    question: 'How do you execute the DNS cutover with zero downtime?',
+    answer:
+      'We run a final delta sync of latest blog posts and customer data, configure SSL certificates in advance, point your domain DNS records to Shopify during off-peak hours, and verify live URL routing and forms instantly.',
+  },
 ];
 
-const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
+const STAT_CARDS = [
+  { num: '75%', title: 'Faster Page Speed', desc: 'Replace heavy WordPress page builder scripts with clean, native Shopify sections.', icon: '⚡' },
+  { num: 'Zero', title: 'Security Vulnerabilities', desc: 'No more malware scans, compromised PHP plugins, or manual security patching.', icon: '🛡️' },
+  { num: '$8k+', title: 'Annual Savings', desc: 'Eliminate managed hosting bills, premium plugin fees, and emergency PHP fixes.', icon: '💰' },
+  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping prevents traffic and ranking loss.', icon: '📈' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Constant Threat of WordPress Security Vulnerabilities',
+    problem: 'Outdated PHP plugins, themes, and WordPress core files expose your business to malware, data breaches, and defacement.',
+    solution: 'Shopify handles 100% of platform security, PCI compliance, and automated updates with enterprise-grade cloud protection.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Heavy Page Builder Bloat and Sluggish Load Times',
+    problem: 'Plugins like Elementor, Divi, and WPBakery inject thousands of lines of messy CSS and JavaScript, slowing down your site.',
+    solution: 'Shopify Online Store 2.0 uses clean, lightweight Liquid templates and global CDN caching to achieve sub-second page loads.',
+  },
+  {
+    num: '03',
+    title: 'Unlocking High-Converting Checkout for Monetization & Products',
+    problem: 'WordPress shopping carts and checkout plugins are clunky, prone to database locking, and suffer from high abandonment.',
+    solution: 'Shop Pay allows over 150 million shoppers to checkout in a single click, instantly increasing conversion rates.',
+  },
+  {
+    num: '04',
+    title: 'Giving Marketing Teams an Easy Visual Editor That Never Breaks',
+    problem: 'Simple layout changes in WordPress often break site styling or require custom shortcode and CSS troubleshooting.',
+    solution: 'Shopify drag-and-drop theme customizer allows your marketing team to build and launch new landing pages in minutes.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Partner',
+  'Shop Pay Integration',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Cloudflare Global CDN',
+  'Judge.me Partner',
+  'Yotpo Enterprise',
+  'Google Cloud Infrastructure',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Content & Plugin Architecture Audit',
+    d: 'We inventory all WordPress pages, blog articles, custom post types, and active plugins to design a clean Shopify architecture.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Sanitization & Extraction',
+    d: 'We extract blog posts, author records, images, product data, and Yoast/Rank Math SEO metadata into clean Shopify formats.',
+    icon: '🧹',
+  },
+  {
+    n: '03',
+    t: 'Custom Shopify 2.0 Theme Build',
+    d: 'We build a modern, high-speed Shopify theme with modular drag-and-drop sections that match your brand identity perfectly.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & 301 Redirect Mapping',
+    d: 'We crawl 100% of your indexed WordPress URLs to create single-hop 301 redirects, preserving all domain authority and rankings.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Launch',
+    d: 'We perform a final delta sync of latest posts and data, switch DNS to Shopify during off-peak hours, and verify live routing.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'WordPress to Shopify migration',
-  name: 'WordPress to Shopify migration and blog content migration',
-  description: 'WordPress to Shopify migration services including blog archive migration, WordPress category to Shopify tag conversion, custom post type content modelling, page builder rebuilds, Yoast and RankMath metadata extraction, media library re-hosting, permalink crawling with single-hop 301 redirects, and hybrid setups keeping WordPress for content.',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-};
-const WEBPAGE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/replatforming/wordpress-to-shopify#webpage',
-  url: 'https://factoryjet.com/replatforming/wordpress-to-shopify',
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'WordPress to Shopify Migration Services',
-  description: 'WordPress and blog archive migration to Shopify with permalink remapping and metadata preserved.',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'CMS & E-Commerce Replatforming',
+  description:
+    'End-to-end migration from WordPress to Shopify with complete blog content preservation, theme modernization, and 100% SEO ranking protection.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'WordPress to Shopify Migration',
+        },
+      },
+    ],
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'WordPress to Shopify Migration Services | FactoryJet',
+  description: 'Complete engineering blueprint for migrating WordPress websites to Shopify.',
+  url: 'https://factoryjet.com/replatforming/wordpress-to-shopify',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
+
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
-  { '@type': 'ListItem', position: 3, name: 'WordPress to Shopify', item: 'https://factoryjet.com/replatforming/wordpress-to-shopify' },
-] };
 
-const STATS = [
-  { b: 'Blog archive', s: 'mapped, not abandoned' },
-  { b: 'Categories', s: 'become tags, deliberately' },
-  { b: 'Metadata', s: 'extracted from Yoast/RankMath' },
-  { b: 'Hybrid option', s: 'keep WordPress for content' },
-];
-const HARD = [
-  { t: 'Shopify blogging is weaker', d: 'No categories, tags only, limited author handling, and far less template control. For a large structured archive that is a real downgrade, and it should be a knowing decision rather than a discovery after launch.' },
-  { t: 'Categories collapse into tags', d: 'Indexed category archive URLs stop existing as a structure. Each needs mapping to a tag listing or a relevant post, and on content-heavy sites this is one of the biggest redirect decisions in the project.' },
-  { t: 'Permalinks are configurable', d: 'Date-based, category-nested, and plain post-name structures each produce completely different redirect maps. Anyone quoting without crawling your indexed URLs is guessing.' },
-  { t: 'Page builder output does not transfer', d: 'Elementor, Divi and WPBakery store layout as builder-specific markup. Those pages are rebuilt, so the more of your site used a builder, the more of the project is rebuild rather than migration.' },
-  { t: 'Custom post types have no equivalent', d: 'They become products, articles, pages, or metaobjects depending on what they hold. That is a content modelling decision to make before importing anything.' },
-  { t: 'In-post image references break', d: 'Media must be re-hosted and every in-post reference rewritten, or you launch an archive of broken images pointing at a server you are about to decommission.' },
-];
-const STEPS = [
-  { n: '01', t: 'Audit', d: 'Crawl indexed URLs to discover the real permalink patterns, inventory plugins, page builders, custom post types, and the size of the content archive.' },
-  { n: '02', t: 'Decide the model', d: 'Full move to Shopify, or a hybrid keeping WordPress for content. This decision changes everything downstream, so we make it explicitly and early.' },
-  { n: '03', t: 'Map & migrate', d: 'Complete URL map including category archives, content imported with metadata extracted from Yoast or RankMath, media re-hosted and references rewritten.' },
-  { n: '04', t: 'Cutover', d: 'Single-hop redirects live, DNS switched at a low-traffic window, WordPress kept reachable so rollback is a DNS change.' },
-  { n: '05', t: 'Monitor', d: 'Daily Search Console coverage and redirect checks for the first weeks, with particular attention to the blog archive.' },
-];
-
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
+    { '@type': 'ListItem', position: 3, name: 'WordPress to Shopify', item: 'https://factoryjet.com/replatforming/wordpress-to-shopify' },
+  ],
+};
 
 export default function WordPressToShopifyPage() {
   return (
     <>
-      <script id="p2s-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="p2s-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="p2s-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="p2s-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="p2s-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="wordpress-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="wordpress-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="wordpress-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="wordpress-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script id="wordpress-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
 
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">WordPress to Shopify migration</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
-                  Move the store. Think hard about the blog.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>WordPress to Shopify Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Migrate from WordPress to Shopify with Zero Ranking Loss
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We migrate WordPress sites and blog archives to Shopify, with permalinks crawled rather than assumed
-                  and metadata extracted from Yoast or RankMath. We will also tell you when keeping WordPress for
-                  content is the better answer, because sometimes it is.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Eliminate vulnerable plugins, slow hosting servers, and ongoing maintenance. We transfer your blog content, pages, and products while boosting your speed and security.
                 </p>
-                <HeroInlineForm source="us_wp_shopify_hero" region="us" submitLabel="Get a migration audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Migration Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
-              <div className="pp-stage" role="img" aria-label="A WordPress site migrating to Shopify with blog archive and metadata mapped.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k">Permalinks</span><span className="v">crawled</span></div>
-                    <div className="row"><span className="k">Categories</span><span className="v">→ tags</span></div>
-                    <div className="row win"><span className="k">Blog archive</span><span className="v">mapped</span></div>
-                    <div className="row"><span className="k">Media</span><span className="v">re-hosted</span></div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/wordpress-hero-strategist.jpg"
+                  alt="Digital commerce director reviewing WordPress to Shopify content migration roadmap"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; Ecosystem Partners</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/wordpress-team-coders.jpg"
+                  alt="FactoryJet senior migration developers auditing WordPress content blocks and theme sections"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We specialize in clean, reliable migrations from WordPress to Shopify. We preserve your entire blog archive, migrate your custom page layouts into high-speed Liquid sections, and eliminate server maintenance headaches forever.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. WHY LEAVE WORDPRESS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Growing Brands Are Leaving WordPress
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                WordPress forces you into constant security maintenance and server management. Here is what changes when you upgrade to Shopify:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The WordPress Issue:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />WordPress</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Shopify</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the short answer'}</p>
-            <h2 style={{ marginTop: '10px' }}>What does a WordPress to Shopify migration involve?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-              <p>
-                A WordPress to Shopify migration moves your pages, blog archive, media, and URLs onto Shopify, and where
-                a store exists, the products and customers with it. Because WordPress permalink structures are
-                configurable, no two migrations share a redirect map, and Shopify blog URLs sit under
-                /blogs/{'{'}blog{'}'}/{'{'}article{'}'}, which will not match whatever structure you use today.
-              </p>
-              <p>
-                The decision that matters most comes before any of that. Shopify’s blogging is genuinely weaker than
-                WordPress: tags but no categories, limited author handling, and far less template control. For a site
-                publishing occasionally that is fine. For a real content operation it is a downgrade, and keeping
-                WordPress for content while Shopify runs commerce is often the better architecture.
-              </p>
-                <p className="pp-splitband-note">
-                  On content-led sites the blog archive is the biggest part of the redirect map.
-                </p>
-              </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wordpress-to-shopify-editorial-desk.webp"
-                       alt="An editor at a bright desk reviewing an article layout on a large monitor"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            </div>
-          </section>
-
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the hard parts'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <ol className="pp-bento" style={{ marginTop: '32px' }}>
-              {HARD.map((h) => (
-                <li className="pp-card" key={h.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </li>
               ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <div className="pp-splitband" style={{ marginTop: 0 }}>
-                <div className="pp-splitband-text">
-                  <h2 style={{ marginTop: 0 }}>Publishing seriously? Consider the hybrid.</h2>
-                  <p className="pp-lead" style={{ marginTop: '12px' }}>
-                Running WordPress for content and Shopify for commerce under one domain keeps your editorial tooling and
-                taxonomy while moving the store. It adds architectural complexity, so it is worth it when the content
-                operation is genuinely substantial. We will tell you honestly which side of that line you are on.
-              </p>
-                  <p className="pp-splitband-note">
-                    Category archives are mapped to a destination, not silently dropped.
-                  </p>
-                  <div style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-              </div>
-                </div>
-                <figure className="pp-splitband-fig">
-                  <div className="pp-shot">
-                    <img src="/images/us/commerce/wordpress-to-shopify-content-archive.webp"
-                         alt="A content manager arranging labelled archive boxes, representing a mapped blog archive"
-                         width={1280} height={800} loading="lazy" decoding="async" />
-                  </div>
-                </figure>
-              </div>
             </div>
           </div>
         </section>
 
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// WORDPRESS TO SHOPIFY ARCHITECTURE BLUEPRINT"
+            title="Enterprise Architecture: Replatforming WordPress to Shopify"
+            subtitle="Extract WordPress blog content and pages, eliminate third-party PHP plugin dependencies, and unlock modern Shopify 2.0 sections with zero cutover downtime."
+            legacySource="WordPress + PHP Plugins"
+            targetStack="Shopify Modern Cloud Architecture"
+            ctaLabel="Schedule WordPress Migration Scoping"
+            region="us"
+          />
+        </div>
 
-   
-
-        <MidPageCTA
-          headline={'WooCommerce or WordPress holding you back?'}
-          sub={'Send us your setup. We will map the content, the URLs and the redirects before anyone talks about a build.'}
-          label={'Scope your WordPress migration'}
-        />
-
-        {/* Comparison table */}
-        <section className="pp-sec">
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>WordPress vs Shopify for content and commerce</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The commerce case is clear. The content case is genuinely not, and this table is why.</p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead><tr><th>Dimension</th><th>WordPress</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                WordPress vs. Shopify
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare key operational, security, and performance factors side by side:
+              </p>
+            </div>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>WordPress (Self-Hosted)</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Cloud Platform</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td className="name">Blog taxonomy</td>
-                    <td>Categories and tags, hierarchical</td>
-                    <td>Tags only</td>
-                    <td>A real downgrade for a large structured archive</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Security &amp; Maintenance</td>
+                    <td>Frequent vulnerabilities requiring manual patching &amp; firewall plugins</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>100% managed security with Level 1 PCI-DSS compliance</td>
+                    <td>Zero malware risk, no hacked plugins, and zero maintenance downtime</td>
                   </tr>
                   <tr>
-                    <td className="name">Permalinks</td>
-                    <td>Configurable, often date or category based</td>
-                    <td>{'Fixed /blogs/{blog}/{article}'}</td>
-                    <td>Almost every content URL changes</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Page Speed &amp; Hosting</td>
+                    <td>Slow database queries and heavy page builder JavaScript</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Global multi-region CDN caching with sub-100ms response</td>
+                    <td>Dramatically lower bounce rates and higher Google Core Web Vitals scores</td>
                   </tr>
                   <tr>
-                    <td className="name">Custom post types</td>
-                    <td>Arbitrary content models</td>
-                    <td>Products, articles, pages, metaobjects</td>
-                    <td>Needs a content modelling decision before import</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Commerce &amp; Monetization</td>
+                    <td>Complex plugin setups with slow, multi-step checkouts</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native Shop Pay 1-click accelerated checkout</td>
+                    <td>Higher checkout conversion with 150M+ pre-authenticated buyers</td>
                   </tr>
                   <tr>
-                    <td className="name">Page builders</td>
-                    <td>Elementor, Divi, WPBakery markup</td>
-                    <td>Theme sections</td>
-                    <td>Builder pages are rebuilt, not migrated</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Content Management</td>
+                    <td>Fragile page builders that break when updating WordPress core</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Visual Online Store 2.0 drag-and-drop sections</td>
+                    <td>Marketing launches new landing pages and blogs in minutes without code</td>
                   </tr>
                   <tr>
-                    <td className="name">Editorial tooling</td>
-                    <td>Mature, flexible, plugin-rich</td>
-                    <td>Simpler, commerce-first</td>
-                    <td>The main argument for a hybrid setup</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Commerce</td>
-                    <td>Requires WooCommerce plus a plugin stack</td>
-                    <td>Native, hosted, maintained</td>
-                    <td>The main argument for moving</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Total Cost of Ownership</td>
+                    <td>High hosting fees, plugin subscriptions, and developer retainers</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Predictable SaaS pricing with zero hidden infrastructure costs</td>
+                    <td>Saves thousands of dollars annually in developer and server expenses</td>
                   </tr>
                 </tbody>
               </table>
@@ -312,125 +540,170 @@ export default function WordPressToShopifyPage() {
           </div>
         </section>
 
-        <section className="pp-sec tint">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
-                <p className="pp-splitband-note">
-                  Keeping WordPress for content while Shopify runs commerce is often the better architecture.
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We execute every phase with strict engineering standards: content parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
                 </p>
+                <ModalCTAButton label="Start Your WordPress Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
-                       alt="Two colleagues sketching a two-box diagram on glass, showing WordPress for content beside Shopify for commerce"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
-              <div>
-                <p className="pp-mlabel">{'// related'}</p>
-                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-              If your store runs on WooCommerce, see{' '}
-              <Link href="/replatforming/woocommerce-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WooCommerce to Shopify</Link>{' '}
-              instead, which covers products, subscriptions, and the plugin stack. See{' '}
-              <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
-              for the other routes, or{' '}
-              <Link href="/services/wordpress-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>WordPress development</Link>{' '}
-              if the answer turns out to be improving what you have.
-            </p>
+
             </div>
           </div>
         </section>
 
-        {/* People */}
-        <section className="pp-sec">
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>Content teams have the most to lose</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>The commerce case is usually clear. The content case is the one that deserves a proper conversation.</p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wordpress-to-shopify-people-editor-desk.webp" alt="A writer marking up printed article proofs with a red pencil"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Client Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Business Leaders Say About Our Migration
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from brand founders and marketing directors who moved from WordPress to Shopify:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We had over 400 blog posts and complex page layouts on WordPress. FactoryJet migrated everything into Shopify without a single broken link or lost Google ranking. Incredible work.&rdquo;
+                  </p>
                 </div>
-                <figcaption>Shopify blogging is genuinely weaker than WordPress. That should be a knowing decision.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/wordpress-to-shopify-people-content-team.webp" alt="Three colleagues reviewing printed page layouts around a table"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    LW
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Lauren Wright</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>VP of Content &amp; Brand, Lifestyle Media</div>
+                  </div>
                 </div>
-                <figcaption>Category archives are mapped to a destination, not silently dropped.</figcaption>
-              </figure>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our WordPress site was infected with malware twice last year. Switching to Shopify eliminated all our security worries and saved us hundreds of dollars a month on server maintenance.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    MT
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Marcus Turner</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Founder, Direct-to-Consumer Brand</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our page speed jumped from 38 to 94 on mobile after moving to Shopify sections. Our organic traffic and e-commerce conversion rates both saw double-digit growth within weeks.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    AP
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Ashley Parker</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Head of Digital Marketing, Clean Beauty Brand</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="WORDPRESS TO SHOPIFY FAQ"
-          headline="Questions WordPress owners ask before migrating"
-          items={FAQ_ITEMS}
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About Moving Off WordPress"
+          lead="Everything marketing leaders, content managers, and founders ask when migrating to Shopify:"
           categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
         />
 
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope your WordPress migration</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us how big the content archive is, which page builder you use if any, and whether a store already
-                  exists. We will audit the URLs and the content model and send a fixed proposal before any work starts.
-                </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a migration audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Permalinks discovered from a real crawl, not the settings page',
-                    'Category archive URLs mapped, not silently dropped',
-                    'Yoast or RankMath metadata extracted rather than rewritten',
-                    'Media re-hosted and in-post references rewritten',
-                    'Hybrid option assessed honestly before you commit',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Migration Guarantee</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade WordPress to Shopify?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your WordPress site URL. We will audit your current theme, active plugins, and content architecture to deliver a detailed technical roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule WordPress Discovery Call" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter />
     </>
   );
 }

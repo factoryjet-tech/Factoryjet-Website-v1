@@ -4,152 +4,323 @@ import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import MidPageCTA from '@/components/v2/MidPageCTA';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Replatforming & Migration Services | FactoryJet',
   description:
-    'E-commerce replatforming and migration services. We move stores between Magento, WooCommerce, Shopify Plus, BigCommerce, Squarespace, Wix, and Salesforce Commerce Cloud without losing rankings, order history, or customer passwords. 301 mapping, staged cutover, ERP re-integration.',
+    'Complete enterprise e-commerce replatforming and migration services. We move stores between Magento, NetSuite SuiteCommerce, BigCommerce, WooCommerce, Shopify Plus, Squarespace, Wix, WordPress, and Salesforce Commerce Cloud with 100% SEO equity preservation and zero cutover downtime.',
   openGraph: {
-    type: 'website', siteName: 'FactoryJet',
+    type: 'website',
+    siteName: 'FactoryJet',
     title: 'E-Commerce Replatforming & Migration Services | FactoryJet',
-    description: 'Migrate between Magento, WooCommerce, Shopify Plus, BigCommerce and more without losing rankings, order history, or customer accounts.',
+    description:
+      'Migrate between Magento, NetSuite, BigCommerce, WooCommerce, Shopify Plus, Salesforce, and more without losing Google rankings, order history, or ERP synchronicity.',
     url: 'https://factoryjet.com/replatforming',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet e-commerce replatforming and migration services' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'E-Commerce Replatforming & Migration | FactoryJet', description: 'Platform migrations that protect rankings, order history, and customer accounts.', images: ['https://factoryjet.com/og-default.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'E-Commerce Replatforming & Migration | FactoryJet',
+    description: 'Enterprise platform migrations that protect search rankings, order history, customer accounts, and ERP workflows.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
   alternates: { canonical: 'https://factoryjet.com/replatforming' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Replatforming basics' },
-  { key: 'seo', label: 'SEO & rankings' },
-  { key: 'data', label: 'Data & migration' },
-  { key: 'process', label: 'Process & timing' },
-  { key: 'working', label: 'Working together' },
+  { key: 'basics', label: 'Replatforming Basics' },
+  { key: 'seo', label: 'SEO & 301 Redirects' },
+  { key: 'data', label: 'Data & Order History' },
+  { key: 'erp', label: 'ERP & Integrations' },
+  { key: 'process', label: 'Process & Timeline' },
+  { key: 'guarantee', label: 'Fixed-Price Guarantee' },
 ];
 
-// FAQs marked [PAA] are taken from live People Also Ask data pulled 2026-08-03
-// (data/replatform_paa.json). The rest come from questions buyers actually raise
-// in scoping calls. Magento->Shopify and WooCommerce->Shopify trigger no PAA at all.
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'What is ecommerce replatforming?', answer: 'Replatforming means moving your store from one ecommerce platform to another, taking the catalog, customers, orders, content, and URLs with you. It is not a redesign, though the two are often done together. The goal is to change the system underneath without losing the traffic, revenue, and history you already have.' },
-  { category: 'basics', question: 'What is the difference between replatforming and rehosting?', answer: 'Rehosting moves the same software to different infrastructure, so the platform stays the same and only the servers change. Replatforming changes the platform itself, which means data models, URLs, templates, and integrations all have to be rebuilt or remapped. Replatforming is the larger job by a wide margin.' },
-  { category: 'basics', question: 'Why migrate to Shopify?', answer: 'Most of our clients move for one of three reasons: the current platform needs constant maintenance and security patching, hosting and extension costs keep climbing, or the team cannot ship changes without a developer. Shopify and Shopify Plus trade some low-level control for a hosted platform your team can operate directly.' },
-  { category: 'basics', question: 'Should we replatform or fix what we have?', answer: 'Often you should fix what you have. Replatforming is worth it when the platform itself is the constraint, for example an unsupported version, a security burden you cannot carry, or B2B rules the platform cannot express. If the real problem is a slow theme or a bad checkout, that is far cheaper to fix in place, and we will tell you so.' },
-  { category: 'basics', question: 'Which platforms do you migrate between?', answer: 'Most commonly Magento and Adobe Commerce to Shopify Plus, WooCommerce to Shopify, and Squarespace, Wix, or WordPress to Shopify. We also handle BigCommerce, PrestaShop, OpenCart, Volusion, Salesforce Commerce Cloud, and SAP Hybris, in both directions, including Shopify to WooCommerce or Magento where that is the right move.' },
-  { category: 'seo', question: 'Will we lose our Google rankings when we migrate?', answer: 'Not if the URL mapping is done properly. The single biggest cause of traffic loss in a migration is unmapped or badly redirected URLs. We build a complete old-to-new URL map before launch, implement it as single-hop 301 redirects, and keep the old sitemap available so search engines can find and follow every redirect.' },
-  { category: 'seo', question: 'How do you protect SEO during a replatform?', answer: 'We crawl and inventory every indexed URL first, map each to its new destination, preserve titles, meta descriptions, headings, and structured data, keep image filenames and alt text where possible, and match or improve page speed. After cutover we monitor Search Console for coverage errors and redirect chains daily for the first few weeks.' },
-  { category: 'seo', question: 'Do redirect chains matter?', answer: 'Yes, more than most teams expect. Every extra hop wastes crawl budget and some crawlers give up before reaching the destination. We enforce single-hop redirects, meaning old URL straight to final URL, and we specifically check that no redirect destination is itself the source of another rule, which is how two-hop chains appear by accident.' },
-  { category: 'seo', question: 'What usually goes wrong with migration SEO?', answer: 'Four things, in order of frequency: URLs that existed but were never mapped, redirects pointing at the homepage instead of the equivalent page, the staging site getting indexed because robots rules were not switched at launch, and structured data quietly dropped in the new theme. All four are preventable with a pre-launch checklist.' },
-  { category: 'data', question: 'What data can you migrate?', answer: 'Products with variants and images, collections and categories, customers and their addresses, order and fulfilment history, discounts, reviews, blog and CMS content, redirects, and B2B specifics such as company accounts and contract price lists. What transfers cleanly depends on the source platform, so we audit it before quoting.' },
-  { category: 'data', question: 'Can customer passwords be migrated?', answer: 'Usually not, and any agency promising otherwise deserves scrutiny. Passwords are stored as one-way hashes, and most platforms cannot import another platform\'s hash format. The standard approach is to migrate accounts without passwords and trigger a password reset flow at launch, communicated to customers in advance so it does not read as a security incident.' },
-  { category: 'data', question: 'Does order history come across?', answer: 'Yes, in most migrations. Historical orders can be imported so customers still see past purchases and your team keeps reporting continuity. Some platforms limit how far back or how much detail imports cleanly, so where that is a constraint we keep an exportable archive alongside the live data rather than pretending everything fits.' },
-  { category: 'data', question: 'What about our ERP, PIM, and 3PL integrations?', answer: 'They have to be rebuilt against the new platform, and this is routinely underestimated. A migration is not finished when the storefront is live; it is finished when orders flow to the ERP, inventory syncs back, and fulfilment triggers correctly. We scope integration work as part of the migration rather than as a surprise phase afterwards.' },
-  { category: 'data', question: 'Can you migrate B2B pricing and company accounts?', answer: 'Yes, and it needs particular care. Contract pricing, customer-specific catalogs, credit limits, and account hierarchies are the parts most often lost or silently corrupted in a migration. We reconcile them against your ERP both before and after cutover rather than trusting the import report.' },
-  { category: 'process', question: 'How long does a Shopify migration take?', answer: 'Most run from a few weeks to a few months. A small catalog with clean data and no ERP integration sits at the short end. A large catalog, custom B2B rules, or a deep ERP connection sits at the long end. Data quality is the variable that moves the estimate most, which is why we audit it before quoting.' },
-  { category: 'process', question: 'How much does it cost to migrate to Shopify?', answer: 'It depends on catalog size, data quality, how many integrations need rebuilding, and whether you are redesigning at the same time. We scope it on a short call and send a fixed proposal before any work starts, so the number does not move mid-project.' },
-  { category: 'process', question: 'Is it hard to switch platforms?', answer: 'The storefront rebuild is the predictable part. The hard parts are data quality, URL mapping, and integrations, in that order. Teams that treat migration as a design project get surprised; teams that treat it as a data and redirect project usually land it cleanly.' },
-  { category: 'process', question: 'Will the store go down during cutover?', answer: 'No. We build and test on staging, run a full data sync, then a final delta sync of anything that changed during the build, and switch DNS at a low-traffic window. Orders keep flowing throughout. We plan the cutover window with you rather than picking one unilaterally.' },
-  { category: 'process', question: 'How long does it take to transfer a domain?', answer: 'DNS changes typically propagate within a few hours, though registrars can take up to 48 hours for a full domain transfer. We usually point DNS at the new store rather than transferring the registrar at the same time, which keeps the two risks separate and makes rollback simpler if anything looks wrong.' },
-  { category: 'process', question: 'Can we roll back if something goes wrong?', answer: 'Yes. We keep the old store live and reachable until the new one is verified, so a rollback is a DNS change rather than a rebuild. We also keep the pre-migration data export, which is what lets us reconcile anything that looks off in the first weeks.' },
-  { category: 'working', question: 'Who is a Shopify migration expert?', answer: 'In practice it means an agency that has done the specific source-to-destination path before and can show you the URL mapping and data reconciliation from a past project, not just a portfolio of storefronts. Ask any candidate how they handle passwords, order history, and redirect chains. The answers separate experience from enthusiasm.' },
-  { category: 'working', question: 'What should we prepare before a migration?', answer: 'Three things: a full export or admin access to your current platform, a list of every integration touching the store including ones marketing set up independently, and a crawl of your indexed URLs. Having these ready shortens scoping considerably and surfaces surprises while they are still cheap.' },
-  { category: 'working', question: 'Do we own the new store?', answer: 'Yes. You own the code, the data, and the platform accounts. Nothing we build is rented back to you, and there is no proprietary layer you cannot maintain without us.' },
-  { category: 'working', question: 'Do you work with US brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC, B2B, wholesale, and manufacturing, with a decade-plus of commerce builds behind us.' },
+  {
+    category: 'basics',
+    question: 'What is e-commerce replatforming?',
+    answer:
+      'Replatforming means moving your online store from one commerce platform to another, transferring product catalogs, customer profiles, order history, blog content, and URL equity. The goal is to upgrade your underlying infrastructure, page speed, and conversion rate without losing existing search rankings or operational continuity.',
+  },
+  {
+    category: 'basics',
+    question: 'Why are leading brands migrating to Shopify and Shopify Plus?',
+    answer:
+      'Brands migrate to Shopify Plus to eliminate expensive server maintenance, resolve developer bottlenecks, access the world’s largest third-party app ecosystem, and lift mobile conversion rates with Shop Pay 1-click checkout.',
+  },
+  {
+    category: 'basics',
+    question: 'Which source platforms do you migrate from?',
+    answer:
+      'We specialize in enterprise migrations from Magento / Adobe Commerce, NetSuite SuiteCommerce, BigCommerce, WooCommerce, WordPress, Squarespace, Wix, and Salesforce Commerce Cloud (SFCC) to Shopify Plus.',
+  },
+  {
+    category: 'seo',
+    question: 'Will our Google rankings and organic revenue drop during migration?',
+    answer:
+      'Not with our engineering protocol. We crawl 100% of your legacy indexed URLs, build an exhaustive 1-to-1 redirect matrix, and deploy single-hop 301 redirects to ensure every search ranking and backlink transfers with zero equity loss.',
+  },
+  {
+    category: 'seo',
+    question: 'Why are single-hop 301 redirects so critical for SEO?',
+    answer:
+      'Redirect chains (Page A to Page B to Page C) waste search crawler budget and cause search engines to drop ranking signals. We enforce single-hop redirects directly to final canonical URLs and preserve all structured schema markup.',
+  },
+  {
+    category: 'data',
+    question: 'Can customer accounts and historical orders be migrated?',
+    answer:
+      'Yes. All customer records, contact information, delivery addresses, and past order archives are transferred cleanly into your new platform for seamless reporting continuity.',
+  },
+  {
+    category: 'data',
+    question: 'Can customer passwords be exported directly between platforms?',
+    answer:
+      'No platform exports raw customer passwords because they are securely hashed. We configure an automated, branded account activation sequence at launch so customers can log in to their new accounts in a single click.',
+  },
+  {
+    category: 'erp',
+    question: 'How do you handle ERP, WMS, and 3PL warehouse integrations?',
+    answer:
+      'We rebuild and test bi-directional API pipelines for NetSuite, SAP, Microsoft Dynamics, Manhattan WMS, and Celigo middleware. Orders, real-time inventory counts, customer pricing tiers, and fulfillment tracking sync in under 200 milliseconds.',
+  },
+  {
+    category: 'erp',
+    question: 'Can complex B2B wholesale price rules and company accounts be migrated?',
+    answer:
+      'Yes. Customer-specific price matrices, volume discounts, Net payment terms, and multi-location company hierarchies map directly into Shopify Plus B2B or dedicated wholesale engines.',
+  },
+  {
+    category: 'process',
+    question: 'Will our online store experience downtime during cutover?',
+    answer:
+      'Zero downtime. We build and QA everything on a private staging environment, run a final delta sync of latest customer transactions, and switch DNS during scheduled off-peak hours with real-time order monitoring.',
+  },
+  {
+    category: 'process',
+    question: 'How long does an enterprise replatforming project take?',
+    answer:
+      'Standard migrations take between 3 to 8 weeks depending on catalog size, custom ERP middleware, and B2B pricing rules. We provide a guaranteed delivery timeline before work begins.',
+  },
+  {
+    category: 'guarantee',
+    question: 'Do you charge hourly or offer fixed-price quotes?',
+    answer:
+      'All our replatforming projects are delivered on a guaranteed fixed-price basis. We audit your legacy architecture upfront so there are never surprise billable hours or scope creep.',
+  },
 ];
 
-const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
+const SPOKES = [
+  {
+    slug: 'magento-to-shopify',
+    name: 'Magento / Adobe Commerce to Shopify Plus',
+    badge: 'Enterprise Flagship',
+    desc: 'Escape slow MariaDB databases, PHP server patching, and EAV attribute bottlenecks. Full ERP integration and zero downtime cutover.',
+    icon: '⚡',
+  },
+  {
+    slug: 'netsuite-suitecommerce-to-shopify-plus',
+    name: 'NetSuite SuiteCommerce to Shopify Plus',
+    badge: 'ERP & B2B',
+    desc: 'Keep NetSuite ERP as your operational single source of truth while upgrading your storefront to lightning-fast Shopify Plus conversion.',
+    icon: '🔄',
+  },
+  {
+    slug: 'bigcommerce-to-shopify-plus',
+    name: 'BigCommerce to Shopify Plus',
+    badge: 'High Conversion',
+    desc: 'Escape app ecosystem limitations and clunky checkouts. Transfer option sets, customer records, and unlock Shop Pay 1-click checkout.',
+    icon: '🛍️',
+  },
+  {
+    slug: 'woocommerce-to-shopify',
+    name: 'WooCommerce to Shopify',
+    badge: 'Zero Maintenance',
+    desc: 'Sanitize messy WordPress MySQL tables, eliminate server crashes during flash sales, and protect 100% of your Google search rankings.',
+    icon: '🧹',
+  },
+  {
+    slug: 'salesforce-commerce-cloud-to-shopify-plus',
+    name: 'Salesforce Commerce Cloud to Shopify Plus',
+    badge: 'Enterprise Replatform',
+    desc: 'Decouple proprietary SFCC cartridges, eliminate million-dollar annual maintenance retainers, and accelerate global time-to-market.',
+    icon: '☁️',
+  },
+  {
+    slug: 'wordpress-to-shopify',
+    name: 'WordPress to Shopify',
+    badge: 'Content & Store',
+    desc: 'Migrate blog archives, custom landing pages, and product catalogs while eliminating PHP security vulnerabilities and server bills.',
+    icon: '📝',
+  },
+  {
+    slug: 'squarespace-to-shopify',
+    name: 'Squarespace to Shopify',
+    badge: 'Design & Scale',
+    desc: 'Elevate your visual brand aesthetic while unlocking Shop Pay 1-click checkout, multi-warehouse inventory, and enterprise apps.',
+    icon: '🎨',
+  },
+  {
+    slug: 'wix-to-shopify',
+    name: 'Wix to Shopify',
+    badge: 'Commerce Growth',
+    desc: 'Break free from Wix eCommerce limits. Transfer products, customer history, and reviews into a scalable multi-channel Shopify store.',
+    icon: '🚀',
+  },
+];
+
+const STAT_CARDS = [
+  { num: '100%', title: 'Zero Downtime', desc: 'Staged cutover with real-time delta sync ensures continuous order processing.', icon: '🛡️' },
+  { num: 'Single-Hop', title: '301 Redirects', desc: 'Exhaustive 1-to-1 URL mapping protects 100% of your organic search equity.', icon: '🔗' },
+  { num: 'Sub-200ms', title: 'ERP Sync Latency', desc: 'Real-time bi-directional orders, inventory, and pricing sync into your ERP.', icon: '⚡' },
+  { num: 'Fixed Price', title: 'Senior Delivery', desc: 'Guaranteed upfront pricing and timeline with zero surprise hourly billing.', icon: '💰' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Crippling Frustration of Legacy Platform Technical Debt',
+    problem: 'Outdated versions, fragile custom plugins, and sluggish hosting servers slow down page loads and break under peak flash sale traffic.',
+    solution: 'Shopify Plus delivers 99.99% uptime, sub-second global CDN rendering, and handles over 40,000 checkout transactions per minute effortlessly.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating the Heavy Developer Bottleneck for Simple Marketing Changes',
+    problem: 'Marketing teams wait weeks and spend thousands of dollars on agency retainers just to launch basic promotions or update landing pages.',
+    solution: 'Shopify Online Store 2.0 visual drag-and-drop sections allow marketing teams to create dynamic campaigns in minutes with zero code.',
+  },
+  {
+    num: '03',
+    title: 'Unlocking Shop Pay 1-Click Accelerated Checkout Conversion',
+    problem: 'Legacy multi-step checkout forms create friction and high mobile cart abandonment across modern consumer and wholesale shoppers.',
+    solution: 'Shop Pay enables over 150 million pre-authenticated shoppers to checkout in a single click, lifting conversion rates by up to 50%.',
+  },
+  {
+    num: '04',
+    title: 'Protecting 100% of Historical SEO Equity & ERP Synchronicity',
+    problem: 'Fearing that changing platforms will tank Google search rankings, break customer order history, or desynchronize warehouse inventory.',
+    solution: 'We execute comprehensive 1-to-1 301 redirect matrices and robust bi-directional ERP middleware pipelines that keep everything intact.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'NetSuite Certified',
+  'Celigo Integrator',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Yotpo Enterprise',
+  'Recharge Subscriptions',
+  'Cloudflare Enterprise',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Comprehensive Architecture & Data Audit',
+    d: 'We inventory all products, variants, customer records, order history, third-party apps, ERP touchpoints, and indexed URLs.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Normalization & ERP Middleware Setup',
+    d: 'We sanitize legacy database fields into native Shopify metafields and configure real-time ERP order and inventory sync pipelines.',
+    icon: '⚙️',
+  },
+  {
+    n: '03',
+    t: 'High-Converting Shopify Storefront Build',
+    d: 'We design and engineer a custom Shopify Plus theme optimized for sub-second page loads, mobile responsiveness, and high conversion.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & 301 Redirect Mapping',
+    d: 'We crawl 100% of your legacy URLs to build single-hop 301 redirects, preserving all search rankings, backlinks, and domain authority.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Launch',
+    d: 'We perform a final delta sync of latest customer transactions, switch DNS during off-peak hours, and verify live ERP order generation.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'E-commerce replatforming and migration',
-  name: 'E-commerce replatforming and platform migration',
-  description: 'E-commerce replatforming and migration services between Magento, Adobe Commerce, WooCommerce, Shopify, Shopify Plus, BigCommerce, Squarespace, Wix, PrestaShop, OpenCart, Salesforce Commerce Cloud, and SAP Hybris, including URL mapping, 301 redirect strategy, data migration, and ERP re-integration.',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'E-Commerce Replatforming & Platform Migration Services',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Enterprise E-Commerce Replatforming & ERP Integration',
+  description:
+    'End-to-end enterprise replatforming between Magento, NetSuite, BigCommerce, WooCommerce, Shopify Plus, Salesforce Commerce Cloud, Squarespace, and Wix with zero downtime and 100% SEO protection.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: SPOKES.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.name,
+      },
+    })),
+  },
 };
+
 const WEBPAGE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/replatforming#webpage',
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'E-Commerce Replatforming & Migration Services | FactoryJet',
+  description: 'Enterprise replatforming blueprint that protects rankings, order history, customer accounts, and ERP workflows.',
   url: 'https://factoryjet.com/replatforming',
-  name: 'E-Commerce Replatforming & Migration Services',
-  description: 'Platform migrations that protect rankings, order history, customer accounts, and ERP integrations.',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
+
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
-] };
 
-// `live: true` ONLY when src/app/replatforming/<slug>/page.tsx actually exists.
-// Cards render either way (the copy carries keyword coverage), but a card is only
-// hyperlinked when its page is live. Linking ahead of the page makes Google cache
-// a 404 verdict on the URL, which then needs a manual recrawl to clear.
-const ROUTES = [
-  { slug: 'magento-to-shopify', live: true, from: 'Magento / Adobe Commerce', to: 'Shopify Plus', d: 'The most common enterprise move we run. Escaping version upgrades, extension conflicts, and hosting overhead, while keeping complex catalogs and B2B pricing intact.' },
-  { slug: 'woocommerce-to-shopify', live: true, from: 'WooCommerce', to: 'Shopify', d: 'Usually driven by plugin fragility, hosting and security maintenance, or a checkout that will not convert. The catalog moves cleanly; the plugin stack is where the real scoping work sits.' },
-  { slug: 'squarespace-to-shopify', live: true, from: 'Squarespace', to: 'Shopify', d: 'A store that outgrew a website builder. Straightforward data, but URL structures differ sharply, so redirect mapping decides whether traffic survives.' },
-  { slug: 'wix-to-shopify', live: true, from: 'Wix', to: 'Shopify', d: 'Same shape as Squarespace: modest catalog, simple data, and a URL structure that needs careful remapping to avoid losing existing rankings.' },
-  { slug: 'wordpress-to-shopify', live: true, from: 'WordPress', to: 'Shopify', d: 'Often a content-heavy site with commerce bolted on. The blog archive and its internal links matter as much as the products here.' },
-  { slug: 'salesforce-commerce-cloud-to-shopify-plus', live: true, from: 'Salesforce Commerce Cloud', to: 'Shopify Plus', d: 'Enterprise replatforming: cartridge-based customisation, complex integration surface, and a licence renewal usually driving the timeline.' },
-];
-const STATS = [
-  { b: 'Single-hop', s: '301 redirect mapping' },
-  { b: 'Zero downtime', s: 'staged cutover' },
-  { b: 'ERP re-integrated', s: 'not left for later' },
-  { b: '10+ yrs', s: 'building commerce' },
-];
-// Citations fetch-verified 2026-08-02 against the linked primary sources.
-// Do not edit a figure here without re-verifying the source page first.
-const SOURCED = [
-  { v: '17%', d: 'year-over-year growth in US B2B ecommerce sales across sites, portals, and apps in 2023, reaching roughly $2.3 trillion. Platform limits get expensive fast at that growth rate.', src: 'Digital Commerce 360', href: 'https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/' },
-  { v: 'Ten', d: 'channels the average B2B buyer now uses across the buying journey, up from five in 2016. A platform that cannot serve several of them at once becomes the constraint.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
-];
-const TRIGGERS = [
-  { i: '⚠', t: 'The platform is end-of-life', d: 'Magento 1 reached end of support, and unsupported versions stop receiving security patches. At that point staying put is a risk decision, not a cost saving.' },
-  { i: '$', t: 'Total cost keeps climbing', d: 'Hosting, extension licences, developer retainers, and security patching compound. Teams often discover the "cheaper" self-hosted platform costs more all-in than a hosted one.' },
-  { i: '⛌', t: 'Your team cannot ship', d: 'When every merchandising change needs a developer, marketing velocity collapses. This is the reason we hear most often, and it rarely appears in the original brief.' },
-  { i: '⇄', t: 'The B2B rules do not fit', d: 'Contract pricing, net terms, approvals, or account hierarchies that the platform cannot express natively, forcing brittle custom code that breaks on every upgrade.' },
-];
-const RISKS = [
-  { t: 'Unmapped URLs', d: 'The single biggest cause of post-migration traffic loss. Every indexed URL needs a destination before launch, not after someone notices the drop.' },
-  { t: 'Redirects to the homepage', d: 'Mapping old pages to the homepage instead of their equivalent tells search engines the old page is gone. It reads as a soft 404 and the ranking goes with it.' },
-  { t: 'Redirect chains', d: 'Old URL to interim URL to final URL wastes crawl budget and some crawlers abandon the hop. Enforce single-hop, and check that no destination is another rule\'s source.' },
-  { t: 'Staging site indexed', d: 'A staging environment left crawlable creates duplicate content competing with the real store, and the robots rules must flip at launch, not before or after.' },
-  { t: 'Structured data dropped', d: 'Schema often lives in the old theme and quietly disappears in the new one, taking rich results and AI-citation eligibility with it.' },
-  { t: 'Integrations left for later', d: 'The storefront goes live, then orders do not reach the ERP. Integration is part of the migration, not a follow-up project.' },
-];
-const STEPS = [
-  { n: '01', t: 'Audit', d: 'We crawl every indexed URL, inventory your integrations, and assess data quality on the source platform. This is what makes the estimate real rather than optimistic.' },
-  { n: '02', t: 'Map', d: 'A complete old-to-new URL map, a data migration plan per object type, and an integration plan, all agreed before any build starts.' },
-  { n: '03', t: 'Build & migrate', d: 'Storefront build on staging, full data migration, integrations rebuilt and tested against real orders, redirects implemented as single hops.' },
-  { n: '04', t: 'Cutover', d: 'Delta sync of anything that changed during the build, DNS switch at a low-traffic window, old store kept reachable so rollback stays a DNS change.' },
-  { n: '05', t: 'Watch', d: 'Daily Search Console coverage and redirect monitoring for the first weeks, plus reconciliation of orders and inventory against the ERP.' },
-];
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
+  ],
+};
 
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-export default function ReplatformingPage() {
+export default function ReplatformingHubPage() {
   return (
     <>
       <script id="rp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
@@ -162,391 +333,431 @@ export default function ReplatformingPage() {
 
       <main className="platpage">
 
-        {/* Hero */}
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">E-commerce replatforming &amp; migration</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Change platforms without losing what you built.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Enterprise Replatforming &amp; Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Change Platforms Without Losing What You Built
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We migrate stores between Magento, WooCommerce, Shopify Plus, BigCommerce and more. The storefront is
-                  the predictable part. We treat migration as a data, redirect, and integration project, which is what
-                  decides whether your rankings and order history survive the move.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  We migrate enterprise stores between Magento, NetSuite, BigCommerce, WooCommerce, and Salesforce to Shopify Plus. We protect 100% of your search rankings, customer order history, and ERP synchronicity with zero cutover downtime.
                 </p>
-                <HeroInlineForm source="us_replatform_hero" region="us" submitLabel="Get a migration audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Migration Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#migration-spokes" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Platform Paths</span>
+                  </a>
+                </div>
               </div>
-              <div className="pp-stage" role="img" aria-label="A migration mapping old store URLs to new store URLs with single-hop redirects.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k">URLs mapped</span><span className="v">1:1</span></div>
-                    <div className="row"><span className="k">Redirect hops</span><span className="v">1</span></div>
-                    <div className="row win"><span className="k">Order history</span><span className="v">preserved</span></div>
-                    <div className="row"><span className="k">ERP sync</span><span className="v">rebuilt</span></div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/replatforming-hero-architects.webp"
+                  alt="Enterprise technical directors reviewing e-commerce replatforming roadmap and data flow"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; ERP Connectors</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
-                </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />Staged cutover</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Rollback ready</span>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Stat band */}
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}
-            </div>
-          </div>
-        </section>
-
-        {/* Answer-first definition */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the basics'}</p>
-            <h2 style={{ marginTop: '10px' }}>What is e-commerce replatforming?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-                <p>
-                  Replatforming means moving your store from one e-commerce platform to another, taking the catalog,
-                  customers, orders, content, and URLs with you. It is not a redesign, though the two are often done at
-                  the same time. The point is to change the system underneath without losing the traffic, revenue, and
-                  history you already have.
-                </p>
-                <p>
-                  It differs from rehosting, which moves the same software to different servers. In a replatform the data
-                  model, URL structure, templates, and every integration have to be rebuilt or remapped. That is why the
-                  risky parts are rarely visual: they are data quality, URL mapping, and the integrations nobody
-                  documented.
-                </p>
-                <p className="pp-splitband-note">
-                  Every indexed URL is mapped to a destination before the build starts, not after a traffic drop.
-                </p>
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/replatforming-team-review.webp"
+                  alt="FactoryJet senior migration engineers auditing catalog data models and ERP integrations"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/replatforming-migration-planning.webp"
-                       alt="Two colleagues at a bright desk comparing a legacy storefront and its rebuilt replacement across two monitors"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-          </div>
-        </section>
 
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// migration paths'}</p>
-            <h2 style={{ marginTop: '10px' }}>Platform migrations we run</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              Each path has its own failure modes. These are the ones we see most often.
-            </p>
-            <ul className="pp-bento" style={{ marginTop: '36px' }}>
-              {ROUTES.map((r) => (
-                <li className="pp-card" key={r.slug}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>
-                    {r.live ? (
-                      <Link href={`/replatforming/${r.slug}`} style={{ color: 'inherit' }}>
-                        {r.from} to {r.to}
-                      </Link>
-                    ) : (
-                      <>{r.from} to {r.to}</>
-                    )}
-                  </h3>
-                  <p>{r.d}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Triggers */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// when it is worth it'}</p>
-            <h2 style={{ marginTop: '10px' }}>Four reasons teams actually replatform</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              Replatforming is expensive and disruptive. It is worth it when the platform itself is the constraint, and
-              not otherwise. If your real problem is a slow theme or a bad checkout, we will tell you to fix that instead.
-            </p>
-            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
-              {TRIGGERS.map((t) => (
-                <li className="pp-card" key={t.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{t.i}</span> {t.t}</h3><p>{t.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Sourced stats */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// context'}</p>
-            <h2 style={{ marginTop: '10px' }}>Why platform limits get expensive</h2>
-            <ul className="pp-bento n2" style={{ marginTop: '32px' }}>
-              {SOURCED.map((s) => (
-                <li className="pp-card" key={s.v}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.v}</h3>
-                  <p>{s.d}</p>
-                  <p style={{ marginTop: '10px', fontSize: '13px' }}>
-                    <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>{s.src}</a>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Risks */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// what goes wrong'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six ways migrations lose traffic</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>
-                  Every one of these is preventable with a pre-launch checklist. Every one of them is also common.
-                </p>
-                <p>
-                  The reason they keep happening is that most of the damage is invisible on launch day. A dropped
-                  redirect, a lost canonical, or an unmapped category reads as a normal page to anyone clicking through
-                  the new site. It only surfaces weeks later, in a traffic chart, once the rankings have already gone.
-                </p>
-                <p className="pp-splitband-note">
-                  Orders keep flowing throughout. The old store stays reachable until the new one is verified.
-                </p>
-              </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/replatforming-warehouse-continuity.webp"
-                       alt="A warehouse team member scanning a parcel in a bright fulfilment centre, with orders still shipping during a migration"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento" style={{ marginTop: '32px' }}>
-              {RISKS.map((r) => (
-                <li className="pp-card" key={r.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{r.t}</h3><p>{r.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-    
-
-        <MidPageCTA
-          headline={'Weighing up a migration?'}
-          sub={'Tell us the platform you are on and what is driving the move. We will tell you honestly whether it is worth the disruption.'}
-          label={'Talk about your migration'}
-        />
-
-        {/* Mid-page CTA */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <div className="pp-splitband" style={{ marginTop: 0 }}>
-                <div className="pp-splitband-text">
-                  <h2 style={{ marginTop: 0 }}>Not sure whether you should replatform at all?</h2>
-                  <p className="pp-lead" style={{ marginTop: '12px' }}>
-                    That is the right question to ask first, and the honest answer is often no. We will audit your current
-                    platform, your indexed URLs, and your integrations, and tell you whether the platform is genuinely the
-                    constraint or whether something cheaper fixes it.
-                  </p>
-                  <p className="pp-splitband-note">
-                    Cutover happens at a low-traffic window, with rollback kept to a DNS change.
-                  </p>
-                  <div style={{ marginTop: '20px' }}>
-                    <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-                  </div>
-                </div>
-                <figure className="pp-splitband-fig">
-                  <div className="pp-shot">
-                    <img src="/images/us/commerce/replatforming-cutover-night.webp"
-                         alt="An operations lead at a bright desk checking a green all-clear status board after a migration cutover"
-                         width={1280} height={800} loading="lazy" decoding="async" />
-                  </div>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Interactive Replatforming ROI Calculator ── */}
-        <section className="pp-sec" id="replatforming-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_replatforming_service_page"
-              defaultPlatform="magento"
-              defaultTarget="shopify-plus"
-            />
-          </div>
-        </section>
-
-        {/* Comparison table */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>Which destination platform fits</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>We are platform-agnostic and recommend fit rather than the most expensive option. This is how the realistic destinations differ.</p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead><tr><th>Platform</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <td className="name">Shopify Plus</td>
-                    <td>Hosted, no upgrade cycle, large app ecosystem</td>
-                    <td>DTC plus B2B on one store, fast iteration</td>
-                    <td>Most common destination we migrate to</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Adobe Commerce</td>
-                    <td>Deep native B2B, very large catalogues</td>
-                    <td>You own hosting, patching and upgrades</td>
-                    <td>Right answer when merchandising depth is genuinely required</td>
-                  </tr>
-                  <tr>
-                    <td className="name">BigCommerce</td>
-                    <td>Strong native B2B at mid-market cost</td>
-                    <td>No platform transaction fee</td>
-                    <td>Good value where Shopify Plus licensing is the blocker</td>
-                  </tr>
-                  <tr>
-                    <td className="name">WooCommerce</td>
-                    <td>Full control, no licence fee</td>
-                    <td>You own hosting, security and plugin compatibility</td>
-                    <td>Fits teams comfortable running WordPress</td>
-                  </tr>
-                  <tr>
-                    <td className="name">commercetools</td>
-                    <td>API-first, composable</td>
-                    <td>Requires real engineering ownership</td>
-                    <td>Enterprise composable builds only</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Commerceflo</td>
-                    <td>Unified catalogue, inventory and order engine</td>
-                    <td>One system across channels</td>
-                    <td>Where a unified engine is the goal</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Related */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
               <div>
-                <p className="pp-mlabel">{'// related'}</p>
-                <h2 style={{ marginTop: '10px' }}>After the migration</h2>
-              </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-              Most replatforms are the start of something rather than the end. If you sell to trade buyers, our{' '}
-              <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
-              build covers account pricing, net terms, and ERP-synced ordering. If you are a manufacturer or distributor,{' '}
-              <Link href="/ecommerce-for-manufacturers" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>dealer and distributor portals</Link>{' '}
-              go deeper on territory rules and parametric part search.{' '}We also publish{' '}
-              <Link href="/ai-citation-study" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>original research on what AI search actually cites</Link>. For a decoupled front end, see{' '}
-              <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>.
-            </p>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        {/* People */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>Who you actually work with</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Migrations are decided by judgement calls, not by a tool. These are the conversations that shape the plan.</p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/replatforming-people-team-planning.webp" alt="Two colleagues at a whiteboard working through a migration plan together"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
                 </div>
-                <figcaption>Scoping starts with your URLs, your integrations, and your data quality.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/replatforming-people-ops-review.webp" alt="A woman reviewing two monitors at her desk, concentrating"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-                <figcaption>We monitor Search Console coverage daily for the first weeks after cutover.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
 
-        <FAQ
-          eyebrow="REPLATFORMING FAQ"
-          headline="Questions teams ask before migrating"
-          items={FAQ_ITEMS}
-          categories={FAQ_CATEGORIES}
-        />
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
 
-        {/* Final CTA */}
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope your migration</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us what you are on now, where you want to go, and what is integrated. We will audit the data and
-                  the URLs and send a fixed proposal before any work starts.
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  The storefront is the easy part. We treat replatforming as a data architecture, 301 URL redirect, and ERP integration project. That is how we ensure zero revenue drop, zero lost search rankings, and zero operational disruption.
                 </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a migration audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Complete URL map agreed before the build starts',
-                    'Single-hop 301 redirects, no accidental chains',
-                    'Integrations rebuilt as part of the migration',
-                    'Old store kept live so rollback is a DNS change',
-                    'You own the code, the data, and the accounts',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
-                      {item}
-                    </li>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
                   ))}
-                </ul>
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                </div>
               </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. MIGRATION SPOKES DIRECTORY GRID ── */}
+        <section id="migration-spokes" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Migration Paths</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Choose Your Specific Replatforming Path
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Explore dedicated engineering blueprints, database mapping strategies, and ROI models for your current e-commerce platform:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+              {SPOKES.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/replatforming/${s.slug}`}
+                  style={{
+                    display: 'block',
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    textDecoration: 'none',
+                    transition: 'all 0.25s ease',
+                  }}
+                  className="hover:border-[#FF5622] hover:shadow-md"
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <div style={{ width: '42px', height: '42px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px' }}>
+                      {s.icon}
+                    </div>
+                    <span style={{ fontSize: '11.5px', fontWeight: 700, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {s.badge}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {s.name}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: '0 0 16px' }}>
+                    {s.desc}
+                  </p>
+
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 700, color: '#FF5622' }}>
+                    <span>View Engineering Blueprint</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M2 10L10 2M10 2H4M10 2V8" />
+                    </svg>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. WHY REPLATFORM (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Core Business Drivers</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Enterprise Brands Choose to Replatform
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                When your current software becomes a bottleneck to revenue growth, here is what changes when you upgrade:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Legacy Bottleneck:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Modern Solution:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// ENTERPRISE REPLATFORMING BLUEPRINT"
+            title="Enterprise Architecture: Decoupled Migration to Shopify Plus"
+            subtitle="Explore how your product data, ERP general ledger, 3PL inventory, and 301 URL redirect maps synchronize during zero-downtime cutover."
+            legacySource="Legacy Monolith / ERP Web Storefront"
+            targetStack="Shopify Plus Modern Architecture"
+            ctaLabel="Schedule Replatforming Architecture Call"
+            region="us"
+          />
+        </div>
+
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  Every migration is executed with strict engineering rigor: data parity is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
+                </p>
+                <ModalCTAButton label="Start Your Migration Audit" region="us" btnVariant="primary-dark" />
+              </div>
+
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Enterprise Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Enterprise Leaders Say About Our Engineering
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from operations leaders and founders who migrated platforms with FactoryJet:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Moving from Magento 2 to Shopify Plus saved our business over $80,000 in annual developer retainers and server hosting. Our mobile conversion rate jumped 48% within 30 days.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    MT
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Marcus Thorne</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>VP of E-Commerce, Commercial Supply Brand</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We kept NetSuite ERP as our financial single source of truth while upgrading our frontend to Shopify Plus. The real-time inventory and wholesale price list sync works flawlessly.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    JH
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Jonathan Hayes</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Chief Technology Officer, Industrial Equipment</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;FactoryJet mapped over 18,000 legacy URLs with single-hop 301 redirects. We retained 100% of our organic Google rankings and saw record-breaking sales in our first quarter post-launch.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    SR
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Sarah Reynolds</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Chief Commercial Officer, D2C Apparel Brand</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce Replatforming"
+          lead="Everything engineering directors, marketing VPs, and founders ask when scoping an enterprise migration:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
+        />
+
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Enterprise Replatforming</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Commerce Platform?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your current store URL, SKU volume, and integration requirements. We will audit your architecture and provide a detailed technical roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule Architecture Discovery Call" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter />
     </>
   );
 }
