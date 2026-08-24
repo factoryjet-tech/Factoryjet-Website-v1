@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Patient Searches in the Global Healthcare Capital',
     description:
       'Operating in the backyard of the Cleveland Clinic and University Hospitals requires exceptional local authority. Independent medical groups, specialized surgical clinics, and orthodontic practices win patient bookings by building exhaustive medical schema, verifying physician credentials, and automating 5-star review collection workflows.',
-    image: '/images/us/services/seo/hero-seo.webp',
+    image: '/images/services/healthcare-seo-map-pack.webp',
     alt: 'Cleveland healthcare and medical practice local SEO search optimization',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning National Supplier Procurement Across Northeast Ohio',
     description:
       'From polymer compounders and metal fabricators in Solon to machinery suppliers in Independence, industrial buyers research technical specifications online before submitting an RFQ. We format technical capability matrices and spec sheets to rank for B2B buyer queries and earn automated citations in generative AI search tools.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Cleveland precision manufacturing and industrial supplier enterprise SEO',
     points: [
       'Answer-first technical specifications formatted for AI answer engine indexing',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Securing High-Value Cases Across Cuyahoga County Courts',
     description:
       'Legal search terms in Downtown Cleveland and surrounding suburbs carry immense commercial value. We engineer deep practice-area content hubs for personal injury, corporate litigation, and estate planning that establish undeniable local authority and capture permanent top-three organic rankings.',
-    image: '/images/us/services/seo/team-cutout.webp',
+    image: '/images/us/services/law-firm-seo/hero.webp',
     alt: 'Cleveland law firm organic search marketing and litigation practice SEO',
     points: [
       'Detailed practice area silos for commercial litigation and injury law',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Emergency Search Demand Across Lake Erie Weather Shifts',
     description:
       'Severe winter lake-effect snowstorms and hot, humid summer heatwaves trigger urgent home repair searches across Cuyahoga and Lorain counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood to Westlake.',
-    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
+    image: '/images/us/services/roofing-seo/search-visibility.webp',
     alt: 'Cleveland home services and mechanical contractor local SEO map pack strategy',
     points: [
       'Neighborhood landing pages for Lakewood, Westlake, Beachwood, and Strongsville',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
-      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+      'Crawl-optimized review velocity systems to outrank multi-truck competitors',
     ],
   },
 ];
@@ -488,8 +488,8 @@ export default function ClevelandSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/services/seo/hero-seo.webp"
-                  alt="Cleveland Ohio local SEO technical optimization and Google Map Pack ranking strategy"
+                  src="/images/us/cleveland/web-design/portfolio-1.webp"
+                  alt="Cleveland Ohio local SEO and Google Map Pack 3-pack optimization strategy"
                   width={640}
                   height={640}
                   priority
@@ -506,7 +506,7 @@ export default function ClevelandSeoPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Cleveland SEO &amp; Data Stack</div>
+              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
               <div className="rv-ticker-line" />
             </div>
             
@@ -533,7 +533,7 @@ export default function ClevelandSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/services/seo/team-cutout.webp"
+                  src="/images/us/boston-seo/boston-seo-workshop.webp"
                   alt="FactoryJet senior SEO engineers auditing Cleveland Google Map Pack and local citations"
                   width={640}
                   height={640}

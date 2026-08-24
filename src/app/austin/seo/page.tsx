@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting High-Intent Patients Across Central Texas',
     description:
       'Medical practices in Austin face intense competition from hospital networks and private groups. We build verified medical entity schema, optimize provider profiles on Google Maps, and write clinical service pages that answer patient symptoms with absolute accuracy. This establishes medical authority that ranks in the 3-Pack and earns citations in AI search overviews.',
-    image: '/images/us/austin/austin-local-seo-near-me.webp',
+    image: '/images/us/services/dental-seo/hero.webp',
     alt: 'Austin healthcare and dental practice local SEO ranking strategy',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Emergency Search Demand During Peak Texas Weather',
     description:
       'Austin homeowners search under urgent pressure when air conditioners fail during triple-digit July heatwaves or winter freezes hit Travis County. We position your business directly in the Google Local Services and Map Pack 3-Pack with instant phone tracking, neighborhood-level service pages, and verified licensing credentials.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Austin home services and contractor local SEO map pack strategy',
     points: [
       'Neighborhood landing pages for Westlake, Circle C, Steiner Ranch, and Lakeway',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning High-Value Legal Retainers in Travis County',
     description:
       'Legal queries in Austin are among the most expensive advertising keywords in the country, often exceeding one hundred dollars per click in Google Ads. We build deep, practice-area content hubs and technical backlink authority that secure permanent top-three organic rankings without paying pay-per-click tolls.',
-    image: '/images/us/austin/austin-skyline-seo.webp',
+    image: '/images/us/services/law-firm-seo/team.webp',
     alt: 'Austin law firm organic search marketing and litigation practice SEO',
     points: [
       'Detailed practice area silos for personal injury, corporate law, and IP litigation',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Shortlist Dominance for National Procurement',
     description:
       'Austin technology companies and advanced manufacturers sell to sophisticated enterprise buyers who conduct exhaustive due diligence before contacting sales. We optimize technical whitepapers, product capability matrices, and software solution pages to rank for technical comparison queries and earn automatic citations in generative AI search tools.',
-    image: '/images/us/services/seo/hero-seo.webp',
+    image: '/images/us/saas-website-design/page-plan.webp',
     alt: 'Austin B2B technology and manufacturing enterprise SEO architecture',
     points: [
       'Answer-first technical specifications formatted for generative search engine indexing',
       'Sub-second page load speeds on Next.js and Cloudflare Edge infrastructure',
-      'In-depth competitor comparison tables that capture high-intent bottom-of-funnel searches',
+      'High-authority technical backlink acquisition through original engineering data assets',
     ],
   },
 ];

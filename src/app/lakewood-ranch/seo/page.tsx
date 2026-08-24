@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting Affluent Patients in America’s Premier Master-Planned Community',
     description:
       'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build comprehensive medical schema, doctor profile directories, and HIPAA-aware conversion flows that allow practices to dominate the Google 3-Pack and earn direct quotes in AI answer engines.',
-    image: '/images/us/lakewood-ranch/hero-lakewood-ranch.webp',
+    image: '/images/us/lakewood-ranch/seo/lakewood-ranch-buyer-intent-dashboard.webp',
     alt: 'Lakewood Ranch healthcare and medical clinic local search engine optimization',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Earning High-Ticket Consultations Among High-Net-Worth Retirees',
     description:
       'With thousands of high-net-worth individuals relocating to Lakewood Ranch, financial advisory practices and estate planning attorneys require authoritative search visibility. We build verified financial entity schemas, author deep wealth preservation guides, and engineer sub-second page performance.',
-    image: '/images/us/services/seo/team-cutout.webp',
+    image: '/images/us/services/law-firm-seo/team.webp',
     alt: 'Lakewood Ranch wealth management and estate planning local SEO strategy',
     points: [
       'Structured JSON-LD schema for FinancialService, LegalService, and WealthManagement',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Multi-Million-Dollar Residential Project Inquiries',
     description:
       'Homeowners in The Lake Club, Country Club East, and Waterside demand elite craftsmanship. We optimize project portfolio galleries, architectural spec sheets, and neighborhood landing pages to position your contracting brand as the premier luxury builder across Sarasota and Manatee counties.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/lakewood-ranch/seo/lakewood-ranch-new-resident-seo.webp',
     alt: 'Lakewood Ranch luxury custom home builder and contractor local SEO',
     points: [
       'High-resolution WebP project galleries optimized for image search and speed',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating Urgent Storm Preparation and Recovery Searches',
     description:
       'Gulf Coast tropical storms and humid subtropical heat create urgent homeowner repair and storm hardening demands. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood Ranch to Sarasota and Bradenton.',
-    image: '/images/us/services/seo/hero-seo.webp',
+    image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Lakewood Ranch hurricane roofing and contractor local SEO map pack strategy',
     points: [
       'Multi-county landing pages for Lakewood Ranch, Sarasota, and Bradenton',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
-      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+      'Crawl-optimized review velocity systems to outperform regional multi-truck fleets',
     ],
   },
 ];
@@ -486,8 +486,8 @@ export default function LakewoodRanchSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/lakewood-ranch/hero-lakewood-ranch.webp"
-                  alt="Lakewood Ranch Florida master-planned community and local SEO optimization strategy"
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-seo-hero.webp"
+                  alt="Lakewood Ranch Florida local SEO technical optimization and Google Map Pack ranking strategy"
                   width={640}
                   height={640}
                   priority
@@ -504,7 +504,7 @@ export default function LakewoodRanchSeoPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Lakewood Ranch SEO &amp; Data Stack</div>
+              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
               <div className="rv-ticker-line" />
             </div>
             
@@ -531,7 +531,7 @@ export default function LakewoodRanchSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/services/seo/team-cutout.webp"
+                  src="/images/us/lakewood-ranch/seo/lakewood-ranch-affluent-community.webp"
                   alt="FactoryJet senior SEO engineers auditing Lakewood Ranch Google Map Pack and local citations"
                   width={640}
                   height={640}

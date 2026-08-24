@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Ordering for Southeastern Manufacturers',
     description:
       'Charlotte is the central industrial crossroads of the Carolinas. We build enterprise Shopify B2B wholesale portals featuring custom dealer pricing tiers, quick-order CSV uploads, NET payment terms, and direct API synchronization with NetSuite and QuickBooks ERP systems.',
-    image: '/images/us/commerce/b2b-ecommerce-wholesale-portal.webp',
+    image: '/images/us/charlotte/ecommerce/portfolio-1.webp',
     alt: 'Charlotte wholesale B2B portal and industrial manufacturing ecommerce development',
     points: [
       'Personalized wholesale pricing catalogs mapped to dealer customer accounts',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Year-Make-Model Precision for Charlotte Motorsports Leaders',
     description:
       'Anchored by the NASCAR and performance racing hub in Mooresville and Concord, automotive parts retailers require complex catalog filtering. We engineer sub-second year-make-model vehicle lookup engines, fitment verification databases, and dynamic freight shipping calculations.',
-    image: '/images/us/commerce/b2b-ecommerce-trade-counter.webp',
+    image: '/images/us/charlotte/ecommerce/portfolio-2.webp',
     alt: 'Charlotte automotive and motorsports parts ecommerce engineering',
     points: [
       'Instant year-make-model vehicle fitment lookup engines with zero lag',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Frictionless Mobile Checkout for South End Fashion Creators',
     description:
       'Charlotte’s vibrant DTC fashion and lifestyle scene demands beautiful visual storefronts that convert on mobile devices. We build custom Shopify Plus themes equipped with Shop Pay acceleration, slide-out cart drawers, dynamic bundle builders, and automated Klaviyo email flows.',
-    image: '/images/us/charlotte/charlotte-site-mockup.webp',
+    image: '/images/us/charlotte/ecommerce/portfolio-3.webp',
     alt: 'Charlotte DTC apparel and fashion ecommerce storefront development',
     points: [
       'Shop Pay and Apple Pay one-tap mobile checkout acceleration',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling High-Velocity Subscriptions Across the Carolinas',
     description:
       'From craft coffee roasters and regional barbecue sauces to wellness supplements, food and beverage brands thrive on recurring subscriber revenue. We integrate robust subscription engines via Recharge, custom mix-and-match bundle builders, and automated cold-chain 3PL logistics.',
-    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
-    alt: 'Charlotte specialty food beverage and CPG ecommerce development',
+    image: '/images/us/b2b/b2b-trade-portal.webp',
+    alt: 'Charlotte specialty food craft beverage and CPG ecommerce development',
     points: [
-      'Flexible subscribe-and-save billing portals with easy customer self-management',
-      'Custom bundle builders with automated volume discount tiers',
-      'Seamless multi-carrier shipping rate automation via ShipStation',
+      'Flexible subscribe-and-save billing portals with customer self-management',
+      'Mix-and-match bundle builders with tiered volume price incentives',
+      'Direct API integrations with regional Carolinas cold-storage 3PL fulfillment centers',
     ],
   },
 ];
@@ -532,8 +532,8 @@ export default function CharlotteEcommerceDevelopmentPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/commerce/ecommerce-growth-agency-team.webp"
-                  alt="FactoryJet senior commerce architects reviewing high-conversion Shopify Plus performance"
+                  src="/images/us/b2b/b2b-erp-integration.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Charlotte"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

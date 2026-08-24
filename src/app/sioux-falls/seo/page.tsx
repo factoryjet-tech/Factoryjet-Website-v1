@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting Patients in the Upper Midwest’s Medical Hub',
     description:
       'Sioux Falls is the premier medical referral center for South Dakota, Iowa, and Minnesota. We build exhaustive medical schema, physician profile directories, and HIPAA-aware conversion flows that allow independent practices to win Google 3-Pack rankings and earn direct quotes in AI answer engines.',
-    image: '/images/us/sioux-falls/hero-sioux-falls.webp',
+    image: '/images/services/healthcare-seo.webp',
     alt: 'Sioux Falls healthcare and medical practice local SEO strategy',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Projecting Institutional Trust in America’s Banking Capital',
     description:
       'South Dakota’s favorable trust laws have made Sioux Falls a national center for wealth management and commercial banking. We engineer sub-second page performance, verified financial entity schemas, and deep practice area content that converts sophisticated corporate clients.',
-    image: '/images/us/services/seo/team-cutout.webp',
+    image: '/images/us/shared/factoryjet-audit-call.webp',
     alt: 'Sioux Falls financial advisory and trust administration local search marketing',
     points: [
       'Structured JSON-LD schema for FinancialService, AccountingService, and WealthManagement',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning National Supplier Procurement Across the Upper Midwest',
     description:
       'From agricultural machinery fabricators to bio-processing suppliers along I-90 and I-29, regional B2B buyers search technical specifications online before issuing an RFQ. We format technical capability matrices and spec sheets to rank for commercial buyer queries.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Sioux Falls AgTech and precision manufacturing industrial SEO',
     points: [
       'Answer-first technical specifications formatted for generative AI search crawlers',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Emergency Search Demand Across Extreme Plains Weather',
     description:
       'Severe summer Great Plains hail storms and harsh sub-zero winter freeze-thaw cycles create urgent home repair needs across Minnehaha and Lincoln counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages.',
-    image: '/images/us/services/seo/hero-seo.webp',
+    image: '/images/us/services/roofing-seo/search-visibility.webp',
     alt: 'Sioux Falls roofing contractor and HVAC home services local SEO map pack',
     points: [
       'Neighborhood landing pages for Downtown, Dawley Farm, Brandon, and Harrisburg',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
-      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+      'Crawl-optimized review velocity systems to outperform multi-truck competitors',
     ],
   },
 ];
@@ -487,8 +487,8 @@ export default function SiouxFallsSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/sioux-falls/hero-sioux-falls.webp"
-                  alt="Sioux Falls South Dakota skyline and local SEO technical optimization strategy"
+                  src="/images/us/sioux-falls/seo/sioux-falls-seo-1.webp"
+                  alt="Sioux Falls South Dakota local SEO technical optimization and Google Map Pack ranking strategy"
                   width={640}
                   height={640}
                   priority
@@ -505,7 +505,7 @@ export default function SiouxFallsSeoPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise Sioux Falls SEO &amp; Data Stack</div>
+              <div className="rv-ticker-label">Local SEO &amp; Citation Footprint</div>
               <div className="rv-ticker-line" />
             </div>
             
@@ -532,7 +532,7 @@ export default function SiouxFallsSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/services/seo/team-cutout.webp"
+                  src="/images/us/sioux-falls/seo/sioux-falls-seo-2.webp"
                   alt="FactoryJet senior SEO engineers auditing Sioux Falls Google Map Pack and local citations"
                   width={640}
                   height={640}

@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Storefronts for Silicon Hills Tech Creators',
     description:
       'Selling sophisticated consumer electronics and hardware requires detailed technical specifications, interactive product exploded views, and modular accessory add-on logic. We build fast, clean storefronts that educate customers and convert high-ticket orders with ease.',
-    image: '/images/us/austin/ecommerce/service-explanation.webp',
+    image: '/images/us/austin/ecommerce/portfolio-2.webp',
     alt: 'Austin consumer tech and hardware ecommerce development',
     points: [
       'Interactive 3D product visualizers and component spec sheets',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling High-Velocity Subscriptions and Bulk Purchasing',
     description:
       'From hot sauces and roasted coffees to craft spirits and wellness supplements, Central Texas CPG brands thrive on recurring revenue. We implement robust subscription engines via Recharge and Smartrr, automated bundle builders, and temperature-controlled shipping rate calculators.',
-    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
+    image: '/images/us/austin/ecommerce/portfolio-3.webp',
     alt: 'Austin specialty food beverage and CPG ecommerce development',
     points: [
       'Flexible subscribe-and-save billing with custom customer portals',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Ordering for Manufacturers & Dealers',
     description:
       'Traditional wholesale manufacturers in Austin lose valuable staff hours manually entering PDF purchase orders. We build enterprise Shopify B2B wholesale portals featuring personalized dealer pricing catalogs, bulk CSV order uploads, NET 30 invoicing terms, and ERP inventory synchronization.',
-    image: '/images/us/commerce/b2b-ecommerce-wholesale-portal.webp',
+    image: '/images/us/b2b/b2b-trade-portal.webp',
     alt: 'Austin wholesale B2B portal and manufacturing ecommerce engineering',
     points: [
       'Tiered wholesale pricing rules based on customer account tier',
       'Fast bulk reordering matrices and quick CSV order upload tools',
-      'Live bi-directional ERP synchronization with NetSuite and QuickBooks',
+      'Bi-directional NetSuite and QuickBooks ERP synchronization for inventory levels',
     ],
   },
 ];
@@ -532,8 +532,8 @@ export default function AustinEcommerceDevelopmentPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/commerce/ecommerce-growth-agency-team.webp"
-                  alt="FactoryJet senior commerce architects reviewing high-conversion Shopify Plus performance"
+                  src="/images/us/b2b/b2b-scoping-call.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Austin"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

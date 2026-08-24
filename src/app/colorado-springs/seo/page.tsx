@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Prime Defense Procurement Around Space Command & Peterson SFB',
     description:
       'Home to U.S. Space Command, Peterson Space Force Base, and Schriever Space Force Base, Colorado Springs is America’s premier defense technology hub. We build authoritative capability silos, government entity schemas, and sub-second page performance that position engineering contractors on prime DoD procurement lists.',
-    image: '/images/us/colorado-springs/hero-colorado-springs.webp',
+    image: '/images/us/saas-website-design/signup-flow.webp',
     alt: 'Colorado Springs aerospace and defense contracting local SEO strategy',
     points: [
       'Structured entity schemas for GovernmentOrganization and DefenseContractor',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating Severe Hail and Freeze-Thaw Emergency Searches',
     description:
       'Severe Rocky Mountain hail storms and drastic Pikes Peak weather shifts create urgent homeowner repair demands across El Paso County. We position your contracting business directly in the top 3 Google Map Pack with live call recording and neighborhood service pages from Briargate to Falcon.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/services/roofing-seo/roof-detail.webp',
     alt: 'Colorado Springs roofing contractor and home services local SEO map pack',
     points: [
       'Dedicated neighborhood landing pages for Briargate, Northgate, Falcon, and Fountain',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning Patient Trust in America’s Olympic City',
     description:
       'As Olympic City USA, Colorado Springs has an active population demanding top-tier sports medicine, physical therapy, and orthodontic care. We build comprehensive medical schema, doctor profile hubs, and automated patient review systems that secure top organic rankings and AI overview citations.',
-    image: '/images/us/services/seo/team-cutout.webp',
+    image: '/images/services/healthcare-seo-process.webp',
     alt: 'Colorado Springs sports medicine and healthcare practice local SEO',
     points: [
       'Comprehensive schema for MedicalClinic, Physician, and SportsMedicine',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting Millions of Annual Pikes Peak Visitors on Mobile',
     description:
       'From Garden of the Gods to Pikes Peak cog railway tours, millions of tourists visit Colorado Springs each year looking for immediate mobile recommendations. We optimize local entity signals, live event schemas, and mobile page performance to capture tourists searching on their phones.',
-    image: '/images/us/services/seo/hero-seo.webp',
+    image: '/images/us/san-diego-seo/taproom-local-search.webp',
     alt: 'Colorado Springs outdoor recreation tourism and hospitality local SEO',
     points: [
       'Sub-second mobile speed optimization capturing immediate on-the-go visitor searches',
       'Structured TouristAttraction and Event schema for rich Google search snippets',
-      'Continuous review velocity optimization across Google Maps and Apple Maps',
+      'Local citation synchronization across Apple Maps, TripAdvisor, and Google Maps',
     ],
   },
 ];
@@ -532,7 +532,7 @@ export default function ColoradoSpringsSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/services/seo/team-cutout.webp"
+                  src="/images/us/colorado-springs/seo/team.webp"
                   alt="FactoryJet senior SEO engineers auditing Colorado Springs Google Map Pack and local citations"
                   width={640}
                   height={640}

@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Ordering for Upper Midwest Agricultural Leaders',
     description:
       'Sioux Falls is the agricultural commerce capital of the Northern Plains. We build enterprise Shopify B2B wholesale portals featuring custom dealer pricing tiers, quick-order CSV uploads, NET payment terms, and direct API synchronization with NetSuite, SAP, and QuickBooks ERP systems.',
-    image: '/images/us/commerce/b2b-ecommerce-wholesale-portal.webp',
+    image: '/images/us/sioux-falls/ecommerce/portfolio-1.webp',
     alt: 'Sioux Falls agricultural equipment wholesale B2B ecommerce development',
     points: [
       'Personalized wholesale pricing catalogs mapped to dealer customer accounts',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling High-Velocity Subscriptions Across the Great Plains',
     description:
       'From grass-fed South Dakota beef and heritage pork to craft pantry goods, regional food brands thrive on recurring subscriber revenue. We integrate robust subscription engines via Recharge, custom bundle builders, and automated cold-chain 3PL logistics with real-time zone shipping rates.',
-    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
+    image: '/images/us/sioux-falls/ecommerce/portfolio-2.webp',
     alt: 'Sioux Falls specialty food and meat subscription ecommerce development',
     points: [
       'Flexible subscribe-and-save billing portals with easy customer self-management',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Frictionless Mobile Checkout for Upper Midwest Lifestyle Brands',
     description:
       'High-performance winter apparel, hunting gear, and outdoor lifestyle brands demand visual storefronts that convert on mobile devices. We build custom Shopify Plus themes equipped with Shop Pay acceleration, slide-out cart drawers, dynamic bundle builders, and automated Klaviyo email flows.',
-    image: '/images/us/sioux-falls/hero-sioux-falls.webp',
+    image: '/images/us/sioux-falls/ecommerce/portfolio-3.webp',
     alt: 'Sioux Falls DTC apparel and outdoor gear ecommerce storefront development',
     points: [
       'Shop Pay and Apple Pay one-tap mobile checkout acceleration',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Compliant Digital Commerce for Regional Healthcare Networks',
     description:
       'Serving the vast Sanford and Avera medical networks, healthcare equipment distributors require secure online purchasing. We engineer custom B2B trade counters with PO number entry, institutional purchasing approvals, and automated sales tax exemptions.',
-    image: '/images/us/commerce/b2b-ecommerce-trade-counter.webp',
+    image: '/images/us/b2b/b2b-trade-portal.webp',
     alt: 'Sioux Falls healthcare equipment and medical supplies ecommerce engineering',
     points: [
       'Institutional procurement workflows with tiered employee purchasing approvals',
       'Automated tax exemption certificate verification via Avalara integration',
-      'Sub-second technical catalog search with batch ordering capability',
+      'Custom Net 30 invoicing and real-time inventory reservation pipelines',
     ],
   },
 ];
@@ -532,8 +532,8 @@ export default function SiouxFallsEcommerceDevelopmentPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/commerce/ecommerce-growth-agency-team.webp"
-                  alt="FactoryJet senior commerce architects reviewing high-conversion Shopify Plus performance"
+                  src="/images/us/b2b/b2b-erp-integration.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Sioux Falls"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

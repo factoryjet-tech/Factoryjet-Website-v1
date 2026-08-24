@@ -99,7 +99,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Earning High-Ticket Consultations in America’s Second Banking Capital',
     description:
       'Charlotte is a global financial powerhouse. Wealth management firms, commercial lending brokers, and corporate advisory practices need search visibility that projects institutional stability. We build verified financial entity schema, author deep practice area guides, and engineer sub-second page performance that converts sophisticated corporate clients.',
-    image: '/images/us/charlotte/hero-charlotte.webp',
+    image: '/images/us/charlotte/charlotte-site-mockup.webp',
     alt: 'Charlotte financial advisory and wealth management local SEO architecture',
     points: [
       'Structured JSON-LD schema for FinancialService, AccountingService, and WealthManagement',
@@ -112,7 +112,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Emergency Search Demand Across Mecklenburg County',
     description:
       'From humid summer air conditioning failures to severe Carolinas storm damage repairs, Charlotte homeowners search under urgent deadlines. We position your contracting business directly in the top 3 Google Map Pack with live call tracking, hyper-local neighborhood pages, and automated review collection systems.',
-    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    image: '/images/us/services/roofing-seo/hero.webp',
     alt: 'Charlotte home services and contractor local SEO map pack strategy',
     points: [
       'Neighborhood landing pages for Myers Park, Dilworth, SouthPark, and Lake Norman',
@@ -125,7 +125,7 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting High-Intent Patients in Growing Residential Corridors',
     description:
       'Private medical practices, orthodontic groups, and specialized surgical clinics face aggressive competition from Atrium Health and Novant Health. We build detailed provider profiles, clinical symptom content, and medical schema that win Google 3-Pack rankings and earn direct quotes in AI answer overviews.',
-    image: '/images/us/services/seo/team-cutout.webp',
+    image: '/images/us/services/dental-seo/team.webp',
     alt: 'Charlotte healthcare and dental practice local search ranking strategy',
     points: [
       'Exhaustive nested schema for MedicalClinic, Physician, and MedicalSpecialty',
@@ -138,12 +138,12 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating National Supplier Procurement Along I-85 & I-77',
     description:
       'Charlotte is the logistics and industrial crossroads of the Southeast. Precision fabricators, equipment distributors, and freight carriers need websites that communicate engineering credibility to procurement managers. We optimize technical spec sheets, capability matrices, and RFQ forms to secure national supplier shortlists.',
-    image: '/images/us/services/seo/hero-seo.webp',
-    alt: 'Charlotte industrial manufacturing and supply chain enterprise SEO',
+    image: '/images/us/marketplace/atlanta-enterprise-supply-chain-commerce.webp',
+    alt: 'Charlotte logistics manufacturing and B2B enterprise SEO strategy',
     points: [
-      'Answer-first technical specifications formatted for generative AI search crawlers',
-      'Sub-second page load speeds on Next.js and Cloudflare Edge infrastructure',
-      'Structured B2B comparison tables that capture high-intent commercial searches',
+      'Answer-first technical specifications formatted for generative search engine extraction',
+      'Sub-second page speeds on lightweight Next.js and Cloudflare Edge architecture',
+      'High-authority regional logistics and trade publication backlink acquisition',
     ],
   },
 ];
@@ -532,8 +532,8 @@ export default function CharlotteSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/services/seo/team-cutout.webp"
-                  alt="FactoryJet senior SEO engineers auditing Charlotte Google Map Pack and local citations"
+                  src="/images/us/boston-seo/boston-seo-consult.webp"
+                  alt="FactoryJet senior search architects reviewing Charlotte local search optimization"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
