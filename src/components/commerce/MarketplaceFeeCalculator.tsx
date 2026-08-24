@@ -128,9 +128,9 @@ export default function MarketplaceFeeCalculator({
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFF8F5] px-3 py-1 font-mono text-xs font-semibold text-[#B23E13]">
             <Sparkles className="h-3.5 w-3.5" /> Multichannel Margin Model
           </span>
-          <h3 className="mt-2 font-fj-display text-2xl font-bold text-[#14110F] md:text-3xl">
+          <h2 className="mt-2 font-fj-display text-2xl font-bold text-[#14110F] md:text-3xl">
             Multichannel Marketplace Fee &amp; Net Margin Calculator
-          </h3>
+          </h2>
           <p className="mt-1 text-sm text-[#6E635A]">
             Compare real unit economics, platform commissions, and fulfillment costs across Amazon, Walmart, Target Plus, Faire, and Shopify DTC.
           </p>
@@ -257,9 +257,9 @@ export default function MarketplaceFeeCalculator({
         {/* Right Column: Comparative Results */}
         <div className="space-y-4 lg:col-span-6">
           <div className="rounded-xl border border-[#E7DED6] bg-[#FAF7F5] p-5">
-            <h4 className="font-fj-display text-base font-bold text-[#14110F]">
+            <h3 className="font-fj-display text-base font-bold text-[#14110F]">
               Side-by-Side Net Margin Breakdown
-            </h4>
+            </h3>
             <div className="mt-4 space-y-3">
               {channels.map((ch) => (
                 <div key={ch.name} className="rounded-lg border border-[#E7DED6] bg-white p-3.5 shadow-sm">
@@ -289,9 +289,9 @@ export default function MarketplaceFeeCalculator({
           {/* Lead Capture or Consultation */}
           {!isSubmitted ? (
             <form onSubmit={handleLeadSubmit} className="rounded-xl border border-[#B23E13]/20 bg-[#FFF8F5] p-5">
-              <h4 className="font-fj-display text-sm font-bold text-[#14110F]">
+              <h3 className="font-fj-display text-sm font-bold text-[#14110F]">
                 Get a Custom Multi-Channel Profit Architecture Review
-              </h4>
+              </h3>
               <p className="mt-1 text-xs text-[#6E635A]">
                 We analyze catalog SKU profitability across all channels, format EDI connectors, and build unified inventory sync.
               </p>

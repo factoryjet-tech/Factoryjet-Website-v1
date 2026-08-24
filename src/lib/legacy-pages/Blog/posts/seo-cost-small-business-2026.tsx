@@ -129,7 +129,7 @@ export const post: BlogPost = {
       </div>
 
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ol className="list-decimal pl-5 space-y-1 text-blue-700 text-sm">
           <li><a href="#seo-pricing-table">The SEO Pricing Table: Every Tier, Itemized</a></li>
           <li><a href="#what-each-tier-buys">What Each Budget Tier Actually Buys You</a></li>

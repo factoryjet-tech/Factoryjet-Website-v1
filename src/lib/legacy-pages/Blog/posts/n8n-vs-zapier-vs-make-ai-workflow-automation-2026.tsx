@@ -79,7 +79,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-200">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>1. The 2026 Automation Landscape: Why Architecture Dictates Margin</li>
           <li>2. Core Architectural Breakdown: Hosted Multi-Tenant SaaS vs. Self-Hosted Private VPC</li>
@@ -110,7 +110,7 @@ export const post: BlogPost = {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="p-4 bg-white border-2 border-orange-500 rounded-lg shadow-sm">
-          <h4 className="font-bold text-base text-gray-900 mb-1">n8n (Self-Hosted)</h4>
+          <h3 className="font-bold text-base text-gray-900 mb-1">n8n (Self-Hosted)</h3>
           <p className="text-sm text-gray-600 mb-2"><strong>Architecture:</strong> Dedicated Private Cloud Instance (Docker / Kubernetes on AWS, GCP, Azure, or DigitalOcean).</p>
           <p className="text-xs text-gray-500">Data never leaves your corporate virtual private cloud. Unlimited workflow executions with full local database clustering.</p>
         </div>
@@ -284,7 +284,7 @@ export const post: BlogPost = {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div className="p-4 bg-gray-50 border rounded-lg">
-          <h4 className="font-bold text-gray-900 mb-1">Multi-Modal Vision Parsing</h4>
+          <h3 className="font-bold text-gray-900 mb-1">Multi-Modal Vision Parsing</h3>
           <p className="text-sm text-gray-600">
             Ingests multi-page PDF documents, converts pages into image tokens, and extracts line item quantities, SKUs, tax calculations, and vendor addresses with strict JSON schema validation.
           </p>
@@ -324,7 +324,7 @@ export const post: BlogPost = {
 
       <div className="space-y-6 mb-8">
         <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h4 className="text-lg font-bold text-gray-900 mb-2">Case Study 1: B2B Wholesale Distributor (Impulse Branding)</h4>
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Case Study 1: B2B Wholesale Distributor (Impulse Branding)</h3>
           <p className="text-sm text-gray-700 leading-relaxed mb-3">
             <strong>The Problem:</strong> The operations team spent 25 hours per week manually copying dealer purchase orders from PDF email attachments into NetSuite, resulting in typing errors and delayed fulfillment.
           </p>
@@ -367,7 +367,7 @@ export const post: BlogPost = {
 
       <div className="space-y-4 mb-8">
         <div className="p-4 bg-white border border-gray-200 rounded-lg">
-          <h4 className="font-bold text-gray-900">Choose Zapier if:</h4>
+          <h3 className="font-bold text-gray-900">Choose Zapier if:</h3>
           <p className="text-sm text-gray-600 mt-1">
             You are an early-stage business or solo founder, your volume is under 2,000 tasks per month, you have no technical engineering support, and your workflows connect standard SaaS tools without requiring complex multi-modal AI logic.
           </p>

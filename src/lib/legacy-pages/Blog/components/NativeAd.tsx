@@ -9,9 +9,9 @@ export const NativeAd: React.FC = () => {
           <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-[#0052CC]" />
         </div>
         <div className="flex-1">
-          <h4 className="font-display font-bold text-gray-900 text-base md:text-lg mb-1">
+          <p className="font-display font-bold text-gray-900 text-base md:text-lg mb-1">
             Is your website losing customers?
-          </h4>
+          </p>
           <p className="text-gray-700 text-xs md:text-sm mb-2 md:mb-3">
             Stop losing customers to competitors. Check your website score now and get a free optimization report.
           </p>

@@ -132,7 +132,7 @@ export const post: BlogPost = {
 
       {/* Table of Contents */}
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ol className="list-decimal pl-5 space-y-1 text-blue-700 text-sm">
           <li><a href="#what-market-data-says">What the Market Data Actually Says About GEO Pricing</a></li>
           <li><a href="#pricing-tiers">The Four GEO Pricing Tiers. What You Get at Each Level</a></li>

@@ -116,7 +116,7 @@ export const POSTS: BlogPost[] = [
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
             <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                <h4 className="font-bold text-jetBlue mb-2">Do This</h4>
+                <h3 className="font-bold text-jetBlue mb-2">Do This</h3>
                 <p className="text-sm">Publish detailed case studies, upload ISO certificates, and showcase real factory floor videos.</p>
             </div>
             <div className="bg-red-50 p-6 rounded-xl border border-red-100">

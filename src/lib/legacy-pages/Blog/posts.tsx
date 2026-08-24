@@ -157,7 +157,7 @@ export const POSTS: BlogPost[] = [
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Content: In This Article</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Content: In This Article</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>Introduction</li>
           <li>The Real Cost Calculation</li>
@@ -290,7 +290,7 @@ export const POSTS: BlogPost[] = [
         <h2 className="text-2xl font-bold mb-4">Real Case Example: ₹12,000 vs. ₹65,000</h2>
         <p className="mb-2"><strong>Company:</strong> Mid-size auto component manufacturer in Pune</p>
         <p className="mb-4"><strong>Situation:</strong> Launched a ₹12,000 website in early 2023. No inquiries from organic search after 14 months. Google Search Console showed zero impressions for 90% of target keywords.</p>
-        <h4 className="font-bold underline mb-2">Issues identified:</h4>
+        <h3 className="font-bold underline mb-2">Issues identified:</h3>
         <ul className="list-disc pl-5 mb-4">
           <li>No H1/H2 structure on product pages</li>
           <li>No schema markup</li>
@@ -362,7 +362,7 @@ export const POSTS: BlogPost[] = [
   content: (
     <>
       <div className="bg-slate-50 p-6 rounded-xl mb-8 border border-slate-200">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="space-y-1 text-blue-600 list-inside list-disc">
           <li>Platform Overview: React vs WordPress</li>
           <li>Technical Comparison</li>
@@ -563,7 +563,7 @@ export const POSTS: BlogPost[] = [
         <p className="text-sm uppercase tracking-widest text-slate-400 mb-6">📋 Case Study · SaaS Platform Migration · 2024</p>
         <div className="space-y-6">
           <section>
-            <h4 className="font-bold text-red-400 mb-2">The Problem</h4>
+            <h3 className="font-bold text-red-400 mb-2">The Problem</h3>
             <p>A mid-sized SaaS company’s WordPress site load times had crept above four seconds. Organic traffic had stagnated while competitors outranked them. PageSpeed scores had dropped to 52.</p>
           </section>
           <section>
@@ -587,7 +587,7 @@ export const POSTS: BlogPost[] = [
         The web development industry shift is clear. The 2024 State of JavaScript survey found Next.js adoption rates climbing every year. Smashing Magazine noted that headless CMS architectures are now the preferred approach for performance-first agencies.
       </p>
       <div className="bg-slate-100 p-6 rounded-lg border-l-4 border-slate-900 mb-10">
-        <h4 className="font-bold mb-2">FactoryJet Perspective</h4>
+        <h3 className="font-bold mb-2">FactoryJet Perspective</h3>
         <p className="italic">At FactoryJet, our recommendation is based on business need. For marketing-led businesses that publish regularly, WordPress remains our top recommendation. For product companies and high-growth startups, we build in Next.js.</p>
       </div>
 
@@ -3981,7 +3981,7 @@ export const POSTS: BlogPost[] = [
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li><a href="#what-is-webflow" className="hover:underline">What is Webflow?</a></li>
           <li><a href="#key-features" className="hover:underline">Key Features of Webflow</a></li>
@@ -4080,7 +4080,7 @@ export const POSTS: BlogPost[] = [
 
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-green-50 p-5 rounded-lg border border-green-200">
-          <h4 className="font-bold text-green-800 mb-2">✓ Webflow Pros</h4>
+          <h3 className="font-bold text-green-800 mb-2">✓ Webflow Pros</h3>
           <ul className="list-disc pl-5 space-y-1 text-green-900">
             <li>Clean HTML/CSS output</li>
             <li>Hosting included</li>
@@ -4188,7 +4188,7 @@ export const POSTS: BlogPost[] = [
       </ul>
 
       <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
-        <h4 className="text-lg font-bold text-blue-900 mb-2">Need a Professional Webflow Website?</h4>
+        <h3 className="text-lg font-bold text-blue-900 mb-2">Need a Professional Webflow Website?</h3>
         <p className="text-blue-800 mb-3">Get a free consultation and see how we can build a fast, SEO-ready Webflow site for your business, no cost, no pressure.</p>
         <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Get a Free Webflow Consultation →</a>
         <p className="text-sm text-blue-700 mt-3">We help businesses build fast, SEO-friendly Webflow websites focused on real results, not just design.</p>
@@ -4246,7 +4246,7 @@ export const POSTS: BlogPost[] = [
       <h2 id="webflow-pros-cons" className="text-2xl font-bold mt-8 mb-4">Pros and Cons of Webflow</h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-green-50 p-5 rounded-lg border border-green-200">
-          <h4 className="font-bold text-green-800 mb-2">✓ Pros</h4>
+          <h3 className="font-bold text-green-800 mb-2">✓ Pros</h3>
           <ul className="list-disc pl-5 space-y-1 text-green-900">
             <li>Visual design with real CSS power</li>
             <li>Clean, exportable code</li>
@@ -4272,7 +4272,7 @@ export const POSTS: BlogPost[] = [
       <h2 id="webflow-verdict" className="text-2xl font-bold mt-8 mb-4">Final Verdict – Is Webflow Right for You?</h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
-          <h4 className="font-bold text-blue-800 mb-3">Use Webflow if you:</h4>
+          <h3 className="font-bold text-blue-800 mb-3">Use Webflow if you:</h3>
           <ul className="list-disc pl-5 space-y-1">
             <li>Want a beautiful, fast website without writing code</li>
             <li>Are you a designer who wants to build (or a developer who wants to design)</li>
@@ -4329,7 +4329,7 @@ export const POSTS: BlogPost[] = [
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Content</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Content</h2>
         <ul className="pl-5 space-y-1 text-blue-700" style={{ listStyle: 'none' }}>
           <li>1. <a href="#how-we-selected" className="hover:underline">How We Selected the Best Web Design Companies in Mumbai</a></li>
           <li>2. <a href="#10-best" className="hover:underline"> 10 Best Web Design Companies in Mumbai 2026</a>

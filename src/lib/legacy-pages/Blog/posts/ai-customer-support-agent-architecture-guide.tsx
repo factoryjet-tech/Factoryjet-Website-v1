@@ -78,7 +78,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-200">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>1. The Evolution: Why 2018-Era Chatbots Failed and How 2026 Agents Resolve Tickets</li>
           <li>2. The 5-Layer Technical Support Agent Architecture</li>
@@ -108,7 +108,7 @@ export const post: BlogPost = {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h4 className="font-bold text-base text-gray-900 mb-1">1. Event Ingestion &amp; Webhook Router</h4>
+          <h3 className="font-bold text-base text-gray-900 mb-1">1. Event Ingestion &amp; Webhook Router</h3>
           <p className="text-sm text-gray-600">
             Listens for inbound ticket events from Zendesk, Intercom, Gorgias, or email parsers. Normalizes payload formats, strips HTML formatting, validates HMAC signatures, and manages message rate limits.
           </p>
@@ -208,7 +208,7 @@ export const post: BlogPost = {
 
       <div className="space-y-4 mb-8">
         <div className="p-4 bg-white border border-gray-200 rounded-lg">
-          <h4 className="font-bold text-gray-900">Financial Execution Ceilings</h4>
+          <h3 className="font-bold text-gray-900">Financial Execution Ceilings</h3>
           <p className="text-sm text-gray-600 mt-1">
             The agent can autonomously approve refunds or store credits up to a strict cap (e.g. $100 per customer per 90 days). Refund requests exceeding $100 are drafted with context and routed to a human supervisor for one-click approval.
           </p>

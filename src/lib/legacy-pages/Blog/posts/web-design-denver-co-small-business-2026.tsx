@@ -63,7 +63,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>Denver's SMB Web Design Market in 2026</li>
           <li>Outdoor and Adventure Business Web Design</li>

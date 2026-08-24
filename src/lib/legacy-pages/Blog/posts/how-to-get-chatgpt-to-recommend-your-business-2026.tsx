@@ -125,7 +125,7 @@ export const post: BlogPost = {
       </div>
 
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ol className="list-decimal pl-5 space-y-1 text-blue-700 text-sm">
           <li><a href="#why-chatgpt-recommends">Why ChatGPT Recommends Some Businesses and Ignores Others</a></li>
           <li><a href="#seven-signals">The 7 Signals That Determine Whether AI Recommends You</a></li>

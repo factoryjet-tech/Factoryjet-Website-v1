@@ -79,7 +79,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-200">
-        <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
+        <h2 className="text-lg font-bold mb-3">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>1. The Speed-to-Lead Crisis in B2B Revenue Operations</li>
           <li>2. The Mathematical Proof: HBR vs. Lead Response Management Research</li>
@@ -133,7 +133,7 @@ export const post: BlogPost = {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h4 className="font-bold text-base text-gray-900 mb-1">1. Multi-Channel Lead Ingestion Router</h4>
+          <h3 className="font-bold text-base text-gray-900 mb-1">1. Multi-Channel Lead Ingestion Router</h3>
           <p className="text-sm text-gray-600">
             Captures lead events from website forms, LinkedIn Lead Gen ads, Google Ads, and inbound demo request webhooks with instant deduplication.
           </p>
@@ -252,7 +252,7 @@ export const post: BlogPost = {
 
       <div className="space-y-6 mb-8">
         <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h4 className="text-lg font-bold text-gray-900 mb-2">B2B E-Commerce Logistics (Impulse Branding)</h4>
+          <h3 className="text-lg font-bold text-gray-900 mb-2">B2B E-Commerce Logistics (Impulse Branding)</h3>
           <p className="text-sm text-gray-700 leading-relaxed mb-2">
             <strong>Challenge:</strong> Inbound dealer leads were waiting up to 24 hours for a sales response, leading to a 35% meeting drop-off rate as prospects sought alternative suppliers.
           </p>

@@ -261,7 +261,7 @@ export default function EcommerceSpeedCalculator({
             {isSubmitted ? (
               <div className="bg-white/10 rounded-xl p-4 text-center border border-[#10B981]/40">
                 <CheckCircle2 className="w-8 h-8 text-[#10B981] mx-auto mb-2" />
-                <h4 className="font-serif font-bold text-sm text-white">Audit Report Requested!</h4>
+                <h3 className="font-serif font-bold text-sm text-white">Audit Report Requested!</h3>
                 <p className="font-sans text-xs text-white/80 mt-1">
                   We are preparing a technical Lighthouse &amp; CWV breakdown for your store. Bhavesh will reach out shortly.
                 </p>
