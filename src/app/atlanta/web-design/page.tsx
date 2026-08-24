@@ -1,951 +1,909 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Link from 'next/link';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-const TITLE = 'Web Design Company Atlanta | 7-Day Builds, You Own the Code | FactoryJet';
-const DESCRIPTION =
-  'FactoryJet is a web design company for Atlanta businesses. Starter sites ship in 7 days, built in Next.js with schema, GA4 and local SEO. You own the code and the design files.';
-const URL = 'https://factoryjet.com/atlanta/web-design';
-const DATE_MODIFIED = '2026-08-12';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/atlanta/web-design';
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: URL,
-    languages: {
-      'en-US': URL,
-      'x-default': URL,
-    },
-  },
+  title: 'Atlanta Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Atlanta web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Georgia businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet web design for Atlanta, Georgia businesses',
-      },
-    ],
+    title: 'Atlanta Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Atlanta web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Georgia businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Atlanta Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: TITLE,
-    description: DESCRIPTION,
+    title: 'Atlanta Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Atlanta GA. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ===========================================================================
-   FAQ data. The visible <FAQ /> block and the FAQPage JSON-LD both read from
-   FAQ_ITEMS. Do not duplicate this array anywhere else in this file.
-   =========================================================================== */
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across Georgia.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across fintech, logistics, healthcare, and enterprise B2B.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Midtown Atlanta & Tech Square',
+    query: 'saas website design midtown atlanta',
+    focus: 'B2B SaaS, Cybersecurity & Enterprise Cloud',
+    desc: 'The Southeast’s premier tech capital. Tech firms require interactive product demo components, clear developer documentation portals, and high-converting enterprise sales funnels.',
+  },
+  {
+    corridor: 'Buckhead Financial District',
+    query: 'private wealth web design buckhead',
+    focus: 'Private Wealth Management, Corporate Law & Commercial Real Estate',
+    desc: 'Dense financial corridor along Peachtree Road. Demands institutional polish, partner credential directories, and sub-second page performance to convert high-net-worth clients.',
+  },
+  {
+    corridor: 'Alpharetta & North Fulton Tech Corridor',
+    query: 'fintech website design alpharetta',
+    focus: 'Fintech, Healthtech, Payments & Telecom',
+    desc: 'Known as the Technology City of the South. Demands high-performance API documentation portals, interactive compliance matrices, and seamless CRM integrations.',
+  },
+  {
+    corridor: 'Downtown Atlanta & Logistics Hub',
+    query: 'logistics platform web design atlanta',
+    focus: 'Logistics Technology, Freight Platforms & Supply Chain Systems',
+    desc: 'Transportation and freight epicenter. High-speed quote calculators, equipment capability matrices, and rapid RFQ workflows capture commercial supply contracts.',
+  },
+  {
+    corridor: 'West Midtown & Howell Mill',
+    query: 'architecture studio web design atlanta',
+    focus: 'Creative Studios, Architecture, Film Production & Luxury Hospitality',
+    desc: 'Vibrant design and entertainment district. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
+  },
+  {
+    corridor: 'Perimeter Center & Sandy Springs',
+    query: 'healthcare system web design sandy springs',
+    focus: 'Fortune 500 Regional HQs, Healthcare Systems & Medical Specialties',
+    desc: 'Major corporate and medical cluster. Features searchable physician directories, HIPAA-aware patient intake forms, and enterprise-level accessibility compliance.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'B2B SaaS, Cybersecurity & Enterprise Cloud Platforms',
+    headline: 'Engineering High-Conversion Digital Flagships for Atlanta Tech Leaders',
+    description:
+      'Tech Square and Alpharetta tech firms demand websites that speak to enterprise CTOs and procurement committees. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Atlanta enterprise software and cloud infrastructure web design engineering',
+    points: [
+      'Interactive product feature tours and downloadable technical whitepaper funnels',
+      'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Healthcare Systems, Medical Specialists & Healthtech',
+    headline: 'High-Trust Patient & Provider Digital Experiences Across Georgia',
+    description:
+      'From the Perimeter medical district to specialty surgical centers in Buckhead, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Atlanta healthcare medical practice and surgical clinic website design',
+    points: [
+      'Searchable provider directories with specialty credentials and hospital affiliations',
+      'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
+      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+    ],
+  },
+  {
+    sector: 'Corporate Law, Private Wealth & Commercial Real Estate',
+    headline: 'Projecting Institutional Stature for Buckhead Financial Practices',
+    description:
+      'High-stakes litigation and private wealth firms in Atlanta cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Atlanta corporate law firm litigation and private wealth web design',
+    points: [
+      'Deep practice area knowledge graphs and structured legal case victory portfolios',
+      'Attorney profile schema with state bar admissions and published industry insights',
+      'Secure lead capture workflows routing confidential inquiries to specific partners',
+    ],
+  },
+  {
+    sector: 'Logistics Technology, Transportation & Heavy Freight',
+    headline: 'Engineering Industrial Authority for Atlanta Supply Chain Leaders',
+    description:
+      'Atlanta is the premier transportation and supply chain capital of the Southeast. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance web applications featuring structured fleet capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Atlanta logistics technology and freight transportation web design engineering',
+    points: [
+      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
+      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
+    problem: 'Traditional Atlanta agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
+    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+  },
+  {
+    num: '02',
+    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
+    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
+    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
+    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
+    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+  },
+  {
+    num: '04',
+    title: 'Building Built-In Search & AI Citation Architecture from Day One',
+    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
+    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Architectural Scope & Figma Prototyping',
+    desc: 'We analyze your Georgia competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
+    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js 15 & React Engineering',
+    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
+    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Edge Deployment & Local SEO Integration',
+    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
+    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals QA, Handoff & Launch',
+    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Source Code Ownership',
+    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
+    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
+    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+  },
+  {
+    label: 'Sprint Timeline',
+    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
+    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+  },
+  {
+    label: 'Structured Data & AI Readiness',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
+    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost & Timeline' },
-  { key: 'included', label: 'What You Get' },
-  { key: 'choosing', label: 'Choosing an Agency' },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'ai', label: 'AI & Web Design' },
-  { key: 'local', label: 'Atlanta & Local' },
-  { key: 'support', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'timeline', label: 'Timeline & Sprint' },
+  { key: 'technical', label: 'Tech Stack & Performance' },
+  { key: 'local', label: 'Atlanta Market Focus' },
+  { key: 'ownership', label: 'Ownership & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
-    question: 'How much does a web design company in Atlanta charge?',
+    category: 'pricing',
+    question: 'How much does a custom Atlanta web design project cost?',
     answer:
-      'Page count, how many systems the site connects to, and how custom the design is. A five-page site for one location sits at the bottom, a store with a catalogue and payments at the top. FactoryJet quotes one fixed figure after a single call.',
-    category: 'cost',
+      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
   },
   {
-    question: 'How much should a small business in Atlanta pay for a website?',
+    category: 'pricing',
+    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
     answer:
-      'Pay for the outcome, not the page count. A site that brings in a handful of qualified enquiries a month repays itself quickly in almost any Atlanta service category. The risk is paying twice: once for a cheap site that never ranks, then again for the rebuild.',
-    category: 'cost',
+      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
   },
   {
-    question: 'What is a good hourly rate for website design?',
+    category: 'pricing',
+    question: 'How does your fixed-price quote protect our business from budget overruns?',
     answer:
-      'Hourly is the wrong unit for most small-business projects. It rewards slow work and leaves you carrying the risk when the estimate slips. Ask for a fixed project fee against a written scope, with a named change process. Hourly suits ongoing tweaks, not a new build.',
-    category: 'cost',
+      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
   },
   {
-    question: 'Why do web design agencies hide their pricing?',
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
     answer:
-      'Mostly because a website is not one product. The same five pages can be a two-week or a two-month job depending on content, integrations and approvals. Some firms also hold pricing back to price to your budget. Insist on a fixed number and a written scope.',
-    category: 'cost',
+      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
   },
   {
-    question: 'How long does it take to build a website?',
+    category: 'timeline',
+    question: 'What do you need from our team before starting the 7-day sprint?',
     answer:
-      'Our Starter build ships in 7 days. Growth projects, which run 10 to 15 pages with a blog CMS and lead capture, take 2 to 3 weeks. Scale builds get scoped one at a time. The clock starts when your logo, photos and copy notes land.',
-    category: 'cost',
+      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
   },
   {
-    question: 'Can I really get a website in 3 days?',
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the sprint?',
     answer:
-      'You can get pages live in 3 days, but a three-day site is a template with your logo dropped into it. It will not have proper information architecture, schema markup, or copy written for how your buyers search. Days four to seven are where that work happens.',
-    category: 'cost',
+      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
   },
   {
-    question: 'What should a business website include?',
-    answer:
-      'At minimum: a clear statement of what you do and who for, a page per service, proof you have done it before, a contact method that works on a phone, your service area, and a quote path. Everything else is optional until those are solid.',
-    category: 'included',
-  },
-  {
-    question: 'What are the top three features of a good website?',
-    answer:
-      'Speed, clarity, and one obvious next step. Speed keeps people from bouncing before the page paints. Clarity means a visitor knows within one screen whether you solve their problem. The next step is a single primary action per page, repeated, not five competing buttons.',
-    category: 'included',
-  },
-  {
-    question: 'What are common red flags when hiring a web design company?',
-    answer:
-      'No written scope. A quote that only arrives after a paid discovery phase. Refusing to name the platform they build on. Hosting you cannot move away from. No mention of analytics or search setup. Dead portfolio links. Any one deserves a direct question before you sign.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is it better to build my own website or hire a designer?',
-    answer:
-      'Build it yourself if you are testing an idea and time is what you have most of. Hire someone once the site has a job to do, generating enquiries or supporting a sales team. The tipping point is when you would rather be doing your actual work.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is it worth making a website for a small business?',
-    answer:
-      'Yes, for a reason that changed recently. A social profile or directory listing puts you on rented land. A site you own is what search engines index and AI assistants quote. If a machine cannot read your page, you are not in the answer.',
-    category: 'choosing',
-  },
-  {
-    question: 'What are the top 5 web design companies in Atlanta?',
-    answer:
-      'There is no official list, and any page claiming one is a directory or an agency roundup. On 12 August 2026 the first page of Google for this search included The Creative Momentum, Elite Web Professionals, Darwin Studios, Clockwork, Blue Light Labs, Thrive, Clutch, Thumbtack and Yelp.',
-    category: 'choosing',
-  },
-  {
-    question: 'How long until my new Atlanta website ranks on Google?',
-    answer:
-      'Searches for your own business name usually land within one to two weeks of launch. Competitive local terms like "web design company Atlanta" take three to six months on a new domain, and longer in crowded categories such as legal, dental and home services.',
     category: 'technical',
+    question: 'Why choose Next.js over traditional WordPress for an Atlanta business?',
+    answer:
+      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Atlanta search queries.',
   },
   {
-    question: 'Do you build online stores?',
-    answer:
-      'Yes, on the Scale tier: product catalogue, checkout, payment gateway and inventory. We build on Next.js with a headless commerce layer, which keeps the storefront fast and lets you change the front end without migrating the store. We can also rebuild over your existing back office.',
     category: 'technical',
+    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    answer:
+      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
   },
   {
-    question: 'Can ChatGPT actually create a website?',
+    category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
     answer:
-      'It can write the code for one, and for a simple single-page site that is often enough. What it will not do is decide your page structure, handle hosting and domains, wire up forms and analytics, or take responsibility when it breaks. Code was never the expensive part.',
-    category: 'ai',
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
   },
   {
-    question: 'Is AI replacing web design?',
+    category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
     answer:
-      'It is replacing the production work, not the decisions. Layout drafts, boilerplate code and first-pass copy are far faster than two years ago. What has not changed is knowing what an Alpharetta payments firm should say versus a Decatur dental practice. We use AI in our own build.',
-    category: 'ai',
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
   },
   {
-    question: 'Which parts of Atlanta do you work with?',
-    answer:
-      'All of them, and it matters less than people expect. We have built for businesses in Buckhead, Midtown and Tech Square, Downtown, West Midtown, the BeltLine and Old Fourth Ward, and out along the perimeter. What changes is search intent and competition, not the build.',
     category: 'local',
+    question: 'Do you build B2B websites for Midtown Tech Square and Alpharetta tech firms?',
+    answer:
+      'Yes. We build high-conversion B2B websites tailored for Tech Square, Alpharetta, and Perimeter technology firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
   },
   {
-    question: 'Do you work with businesses in Alpharetta, Marietta, Decatur or Sandy Springs?',
-    answer:
-      'Yes. Most of our Atlanta-area clients serve the wider metro rather than one zip code, so we build one strong page per service plus location pages for the suburbs you actually want work from. Thin pages for every suburb is a common mistake, and search engines ignore them.',
     category: 'local',
+    question: 'Can you design websites for Atlanta healthcare systems and surgical practices?',
+    answer:
+      'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and surgical centers across Greater Atlanta and Sandy Springs, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
   },
   {
-    question: 'Do you have an office in Atlanta?',
-    answer:
-      'No. We would rather say so here than let you find out on the kickoff call. FactoryJet is a remote team, running on scheduled video calls, a shared workspace and a recorded handover. If you need someone in the room every fortnight, hire an Atlanta studio above.',
     category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our Georgia business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
   },
   {
-    question: 'Who owns the code and design files when the project is done?',
+    category: 'local',
+    question: 'How does your web design optimize for local Atlanta search rankings?',
     answer:
-      'You do, completely. You get the Next.js codebase in your own repository and the full design file. There is no licence fee, no proprietary page builder, and no clause tying the site to us. If you want to move to another developer next year, nothing stops you.',
-    category: 'support',
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Atlanta, Alpharetta, Sandy Springs, Roswell, and Marietta.',
   },
   {
-    question: 'Do you handle maintenance after the site launches?',
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
     answer:
-      'The first 30 days after launch cover bug fixes and training questions at no extra charge. After that an optional monthly plan covers content updates, dependency upgrades and performance monitoring. Because the site is static Next.js rather than a plugin stack, it does not rot.',
-    category: 'support',
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+  },
+  {
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
+    answer:
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
+    answer:
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
+    answer:
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
   },
 ];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Atlanta Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Atlanta',
+    addressRegion: 'GA',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 33.749,
+    longitude: -84.388,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Atlanta' },
+    { '@type': 'City', name: 'Alpharetta' },
+    { '@type': 'City', name: 'Sandy Springs' },
+    { '@type': 'City', name: 'Roswell' },
+    { '@type': 'City', name: 'Marietta' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Atlanta Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Atlanta businesses.',
+  areaServed: { '@type': 'State', name: 'Georgia' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Atlanta Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Atlanta GA businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Atlanta', item: CANONICAL },
+  ],
+};
 
 export default function AtlantaWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-          formSlot={<HeroInlineForm region="us" source="us_atlanta_web_design_hero" />}
-          eyebrow={'WEB DESIGN · ATLANTA, GA'}
-          headline={'A Web Design Company Atlanta Businesses Can Scope in a Single Call'}
-          lead={
-            'Fixed scope, one number, and a Starter site live in 7 days. Schema, analytics and local search are wired in before launch, not sold afterwards. You keep the code and the design files.'
-          }
-          trustItems={['Fixed-price quote after one call', '7-day Starter delivery', 'You own the codebase']}
-          extraCta={<WhatsAppCTA city="Atlanta" variant="light" />}
-          rightSlot={
-            <img
-              src="/images/us/atlanta-web-design/hero.webp"
-              alt="Two people reviewing a new product page layout on a wall-mounted screen in a bright brick-walled office."
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover shadow-[0_24px_64px_-12px_rgba(15,15,18,0.22)]"
-            />
-          }
-        />
+      <script id="atl-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="atl-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="atl-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="atl-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="atl-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* Answer-first block: the highest-value extractable block on the page */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-10 md:py-12">
-          <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              The short answer
-            </p>
-            <h2 className="font-fj-display text-[clamp(1.375rem,2.4vw,1.875rem)] font-semibold leading-[1.25] tracking-[-0.015em] text-fj-ink">
-              What does a web design company in Atlanta actually do?
-            </h2>
-            <p
-              data-speakable
-              className="mt-4 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80"
-            >
-              An Atlanta web design company plans your site structure, designs and builds the pages,
-              connects your forms and analytics, then launches it. The good ones also ship schema
-              markup and page speed work so you show up in local search and in AI answers. FactoryJet
-              builds fixed-scope sites in Next.js, and you own the code.
-            </p>
-            <p className="mt-5 border-t border-fj-neutral-200 pt-4 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-              Written by <strong className="font-semibold text-fj-ink">Bhavesh Barot</strong>,
-              founder of FactoryJet. He has run more than 500 website and commerce builds for small
-              and mid-sized businesses across the US, UK, UAE and India. Last reviewed 12 August
-              2026.
-            </p>
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Atlanta Web Design &amp; Frontend Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Atlanta Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#atl-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Atlanta Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/atlanta-web-design/hero.webp"
+                  alt="Atlanta Georgia modern web design engineering and custom Next.js website mockup"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={'What Atlanta businesses get on every build.'}
-        />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <CityContextSection
-          eyebrow={'ATLANTA MARKET'}
-          headline={'Atlanta Is a Headquarters City, and Your Search Results Show It'}
-          leadParagraphs={[
-            'The Metro Atlanta Chamber counts more than 1,200 regional and global headquarters in the region and more than 13,000 technology companies. That is the competitive set your site sits next to. When someone in Buckhead searches for your service, the results are shaped by companies with in-house marketing teams. You will not outspend them. You beat them by answering the question faster than anything else on the page.',
-            'Two clusters shape the rest of this market. Metro Atlanta is known as Transaction Alley, so if you sell near payments your site is read by people who evaluate vendors for a living, and vague capability copy gets you filtered out. Around the film studios sits a deep layer of crew, rentals and post houses, judged on how fast a producer can see the work from a phone on set.',
-          ]}
-          stats={[
-            {
-              value: '1,200+',
-              label: 'Regional and global headquarters in metro Atlanta',
-              sourceUrl:
-                'https://www.metroatlantachamber.com/built-for-business/global-center-of-growth',
-              sourceLabel: 'Metro Atlanta Chamber, Global Center of Growth',
-            },
-            {
-              value: '70%',
-              label: 'Of US financial transactions pass through companies in the region',
-              sourceUrl: 'https://www.metroatlantachamber.com/industries/fintech',
-              sourceLabel: 'Metro Atlanta Chamber, Fintech',
-            },
-            {
-              value: '13,000+',
-              label: 'Technology companies based in metro Atlanta',
-              sourceUrl:
-                'https://www.metroatlantachamber.com/built-for-business/global-center-of-growth',
-              sourceLabel: 'Metro Atlanta Chamber, Global Center of Growth',
-            },
-          ]}
-        />
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Atlanta"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        <ServiceExplanation
-          eyebrow={'WHAT YOU ARE ACTUALLY BUYING'}
-          headline={'A Website Is a Sales Asset, Not a Design Deliverable'}
-          lead={
-            'Most Atlanta quotes cover the visual design and the build. Ours covers those plus the three things that decide whether the site earns anything: structure, speed, and being readable by the machines that now answer your customers’ questions.'
-          }
-          body={
-            <>
-              <p>
-                Structure means each service gets a real page instead of an accordion on the
-                homepage, and those pages link to each other in a way that tells search engines what
-                you do. Most Atlanta rebuilds we take on fail here first.
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for Atlanta&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Tech Square startups to Buckhead financial firms and Alpharetta enterprise hubs, Georgia businesses need sites that project engineering authority and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. ATLANTA DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="atl-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Metro Atlanta Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Atlanta&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Midtown Tech Square SaaS leaders to Buckhead wealth managers and Alpharetta fintech corridors:
               </p>
-              <p>
-                Speed is not a vanity number. It is the difference between someone on a phone in a
-                parking deck off Peachtree waiting for your page and going back to the results. We
-                serve static Next.js from Cloudflare&apos;s edge, so no database query sits between
-                the click and the content.
-              </p>
-              <p>
-                Machine readability is the newest part of the job and the one almost nobody quotes
-                for. We ship JSON-LD schema, keep each page&apos;s main answer in plain text near the
-                top, and check that GPTBot, ClaudeBot and PerplexityBot can crawl the site. That is
-                what decides whether an AI assistant names you.
-              </p>
-              <p>
-                Every project also includes discovery, a design system you keep, the copy, analytics
-                from day one, and 30 days of support after launch. The{' '}
-                <Link href="/services/web-design/" className="font-medium text-[#B23E13] underline underline-offset-4">
-                  full web design service scope
-                </Link>{' '}
-                has the detail.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/atlanta-web-design/process.webp"
-              alt="Three people sketching website wireframes on paper around a table beside a laptop showing a product page."
-              width={1200}
-              height={800}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+            </div>
 
-        {/* Listicle: AI extraction magnet */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-5xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Before you sign anything
-            </p>
-            <h2 className="max-w-[22ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-              6 Questions to Ask Any Atlanta Web Design Company Before You Sign
-            </h2>
-            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-              Run every shortlisted firm through this, including us. Any of them should answer all
-              six inside one call.
-            </p>
-
-            <ol className="mt-10 grid gap-5 md:grid-cols-2">
-              {[
-                {
-                  n: '01',
-                  t: 'What platform do you build on, and why that one?',
-                  d: 'WordPress, Webflow, Shopify and Next.js are all defensible answers. "We handle that" is not. The platform decides your maintenance load and how easily you leave.',
-                },
-                {
-                  n: '02',
-                  t: 'Can I load one of your live client sites on my own phone?',
-                  d: 'Not the case study page. The real site, on cellular, somewhere with bad signal. If text takes more than a couple of seconds, that is what yours will do.',
-                },
-                {
-                  n: '03',
-                  t: 'On the last day, what exactly do I receive?',
-                  d: 'A repository and a design file, not a login to something you rent forever. Ask what happens if you stop paying them.',
-                },
-                {
-                  n: '04',
-                  t: 'Is search work included in the build or sold separately?',
-                  d: 'Schema markup, meta structure, internal linking and Search Console setup belong in the build. If they appear as a separate monthly line, you pay twice.',
-                },
-                {
-                  n: '05',
-                  t: 'How does this site handle AI search?',
-                  d: 'AI assistants now answer a growing share of "who should I hire in Atlanta" questions. Ask whether their builds are crawlable by GPTBot, ClaudeBot and PerplexityBot.',
-                },
-                {
-                  n: '06',
-                  t: 'Do you understand my part of the metro?',
-                  d: 'A Decatur practice, a BeltLine retailer and a payments firm on GA 400 are three different search problems. Treat Atlanta as one flat market and you get one flat page.',
-                },
-              ].map((item) => (
-                <li
-                  key={item.n}
-                  className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6"
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  <span className="font-fj-mono text-sm font-semibold text-[#B23E13]">{item.n}</span>
-                  <h3 className="mt-2 font-fj-display text-[1.1875rem] font-semibold leading-[1.3] text-fj-ink">
-                    {item.t}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
                   </h3>
-                  <p className="mt-2 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/75">
-                    {item.d}
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
                   </p>
-                </li>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
-        <ServiceJourneyRow
-          eyebrow={'HOW IT RUNS'}
-          headline={'The 7-Day Starter Build, Step by Step'}
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery',
-              description:
-                'One 30-minute call. We agree who the site is for, which services get their own page, and what a good month of enquiries looks like. You leave with the sitemap and the quote.',
-            },
-            {
-              number: '02',
-              title: 'Design',
-              description:
-                'Wireframes first, then a design system in Figma with mobile layouts. Two revision rounds on Starter, three on Growth. Nothing gets built until you sign off the design.',
-            },
-            {
-              number: '03',
-              title: 'Build',
-              description:
-                'Static Next.js, forms wired to your inbox and CRM, CMS connected if your tier includes one. Performance budgets are enforced from the first commit, not patched at the end.',
-            },
-            {
-              number: '04',
-              title: 'Content and search',
-              description:
-                'Copy, compressed WebP images, meta structure, JSON-LD schema, internal links, and a Google Business Profile check. We verify the site renders for AI crawlers before launch.',
-            },
-            {
-              number: '05',
-              title: 'Launch and handover',
-              description:
-                'Deploy to Cloudflare, DNS and SSL, GA4 connected, then a recorded CMS walkthrough. 30 days of support follows for fixes and training questions.',
-            },
-          ]}
-        />
-
-        {/* Mid-page CTA */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-12 md:py-16">
-          <div className="mx-auto grid max-w-5xl gap-8 px-6 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Start here
-              </p>
-              <h2 className="max-w-[20ch] font-fj-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-semibold leading-[1.2] tracking-[-0.02em] text-fj-ink">
-                Get a fixed quote for your Atlanta project
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Atlanta Businesses
               </h2>
-              <p className="mt-3 max-w-[52ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-                One call, one number, and a sitemap you can take to another agency if you decide we
-                are not the right fit. No discovery fee.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Georgia demands tailored user experiences, technical credibility, and conversion paths:
               </p>
             </div>
-            <div className="lg:col-span-5">
-              <HeroInlineForm region="us" source="us_atlanta_web_design_mid" />
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Atlanta districts: the part a template cannot copy */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Where our Atlanta clients trade
-              </p>
-              <h2 className="max-w-[24ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-                Six Atlantas, Six Different Search Problems
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Atlanta Companies Choose FactoryJet Web Design
               </h2>
-              <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80">
-                Atlanta is not one market with one search behaviour. Midtown to Alpharetta is about
-                25 miles, and the buying behaviour changes completely. This is the part a template
-                cannot fake.
-              </p>
-              <ul className="mt-6 space-y-3 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/80">
-                <li>
-                  <strong className="text-fj-ink">Midtown and Tech Square.</strong> Startups,
-                  corporate innovation offices and the Georgia Tech orbit. Buyers here read your
-                  product and technical pages before they read your about page, so depth beats
-                  polish.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Buckhead.</strong> Finance, law, wealth management,
-                  medical and dental practices, and premium retail. The site is the credential check
-                  that happens before anyone replies. Named people and real qualifications beat
-                  photography.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Old Fourth Ward and the BeltLine.</strong>{' '}
-                  Independent retail, food, fitness and creative studios around Ponce City Market and
-                  the Eastside Trail. Mobile-first, fast, and tied tightly to Google Business Profile
-                  and maps, because these searches happen while someone is walking.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">West Midtown.</strong> Design showrooms, furniture
-                  and interiors trade, studios and production services around Howell Mill. These
-                  sites sell to trade buyers as much as walk-ins, so catalogue structure beats a hero
-                  video.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Alpharetta and the north perimeter.</strong>{' '}
-                  Payments, software and B2B services along GA 400, out through Sandy Springs,
-                  Dunwoody, Roswell and Johns Creek. Long buying cycles, committee decisions, and a
-                  quote form that captures enough to be worth a follow-up.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Decatur and the eastside.</strong> Practices,
-                  family services and independent shops around a walkable square, in a separate city
-                  with its own local pack. A page that says Atlanta and never says Decatur loses to
-                  one that does.
-                </li>
-              </ul>
-              <p className="mt-6 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/70">
-                South of the city, the corridor around Hartsfield-Jackson and College Park runs on
-                freight, aviation and hospitality, selling to procurement teams rather than
-                consumers. Same city, different job entirely.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
               </p>
             </div>
-            <div className="lg:col-span-5">
-              <img
-                src="/images/us/atlanta-web-design/studio.webp"
-                alt="A photographer shooting a leather bag on a lit table in a studio, with the product page open on a laptop beside it."
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                className="w-full rounded-2xl object-cover"
-              />
-              <p className="mt-3 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-                A retail brand&apos;s site lives or dies on how the catalogue is organised, not on
-                the homepage animation.
-              </p>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <IndustriesGrid
-          variant="cards"
-          eyebrow={'ATLANTA × WEB DESIGN'}
-          headline={'Built for the Industries Atlanta Actually Runs On'}
-          lead={
-            'The Metro Atlanta Chamber publishes its own key industry list, a useful map of where the small-business work sits: fintech and payments, film and creative production, supply chain, healthcare, and the education layer underneath.'
-          }
-          sectors={[
-            {
-              name: 'Fintech, payments and B2B software',
-              description:
-                'The Chamber puts 70 percent of US financial transactions through companies based here, with 6 of the 10 largest payment processors in Georgia. The vendors and integrators around them sell to buyers who evaluate suppliers professionally, so these sites need real capability pages and a scoped quote request.',
-              example: 'Processors and B2B software firms along the GA 400 corridor.',
-            },
-            {
-              name: 'Film, television and production services',
-              description:
-                'The Chamber describes Georgia as the number one state for film production, with more than 3 million square feet of sound stages in metro Atlanta. Underneath sits a dense small-business layer: crew, camera and lighting rental, post houses, wardrobe, catering and transport, all selling against a shoot date.',
-              example: 'Crew, rental houses and post-production shops near the studios.',
-            },
-            {
-              name: 'Logistics, freight and aviation',
-              description:
-                'Atlanta grew from an 1837 railroad junction into one of the main distribution hubs in the country, and the Chamber notes that 80 percent of US metros are within a two-hour flight or a two-day truck drive. Sites here sell to procurement: capability pages, downloadable specifications, and forms that capture enough to quote.',
-              example: 'Freight, warehousing and aviation services near Hartsfield-Jackson.',
-            },
-            {
-              name: 'Healthcare, clinics and life sciences',
-              description:
-                'Hospital systems and research institutions anchor a deep ecosystem of private practices, specialist clinics, device vendors and healthcare staffing firms. These builds need privacy-aware contact forms, clinician pages with real credentials, and location pages that name the neighbourhood rather than saying "Atlanta area".',
-              example: 'Practices across Buckhead, Decatur and the north perimeter.',
-            },
-            {
-              name: 'Universities, nonprofits and membership organisations',
-              description:
-                'The Chamber counts more than 70 college and university campuses in the region, and the Atlanta University Center Consortium alone brings together Clark Atlanta University, Morehouse College, Morehouse School of Medicine and Spelman College. Around them sit nonprofits, alumni bodies and training providers, where accessibility and a working donation flow beat visual flourish.',
-              example: 'Nonprofits, training providers and alumni organisations.',
-            },
-            {
-              name: 'Home services and trades',
-              description:
-                'HVAC, roofing, plumbing, electrical, pest and remodelling are the most competitive local search categories in the metro, and the ones where a slow site costs the most per day. These builds live or die on mobile speed, click-to-call, genuinely different service-area pages, and Google Business Profile alignment.',
-              example: 'Multi-truck operators across Fulton, DeKalb, Cobb and Gwinnett.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// ATLANTA MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            city="Atlanta"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        {/* Sources for every Atlanta figure quoted above */}
-        <section className="bg-fj-cream pb-10">
-          <div className="mx-auto max-w-6xl px-6">
-            <p className="border-t border-fj-neutral-200 pt-5 font-fj-body text-sm leading-[1.65] text-fj-ink/70">
-              Sources for the Atlanta figures on this page: Metro Atlanta Chamber,{' '}
-              <a
-                href="https://www.metroatlantachamber.com/built-for-business/global-center-of-growth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Global Center of Growth
-              </a>
-              ,{' '}
-              <a
-                href="https://www.metroatlantachamber.com/industries/fintech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Fintech
-              </a>
-              ,{' '}
-              <a
-                href="https://www.metroatlantachamber.com/industries/supply-chain"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Supply Chain and Advanced Manufacturing
-              </a>{' '}
-              and{' '}
-              <a
-                href="https://www.metroatlantachamber.com/industries/creative-industries"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Creative Industries
-              </a>
-              ; member institutions listed by the{' '}
-              <a
-                href="https://aucenter.edu/member-institutions/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Atlanta University Center Consortium
-              </a>
-              . All five pages were opened and checked on 12 August 2026.
-            </p>
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline={'Why an Atlanta Business Would Pick Us, and When They Should Not'}
-          lead={
-            'Atlanta has real agencies doing real work, and several are better than us at things we do not do. The Creative Momentum runs design, video and inbound marketing at enterprise scale. Darwin Studios has maintained WordPress sites here for more than 20 years. Elite Web Professionals will meet you at an Atlanta address. If that is what you want, hire them, and we mean that literally.\n\nWe are built for one situation: you know roughly what you need, you want it fixed-scope and fixed-price, live in days rather than quarters, and owned outright. It is not right for everyone.'
-          }
-          pillars={[
-            {
-              title: 'Fixed before you commit',
-              body: 'Scope, price and timeline agreed on the first call. No paid discovery phase, and no quote that arrives three weeks later with a range on it.',
-            },
-            {
-              title: 'Fast because of how we build',
-              body: 'A 7-day Starter is possible because the design system, component library and deploy pipeline already exist. Speed comes from reuse, not from skipping search work.',
-            },
-            {
-              title: 'When we are the wrong choice',
-              body: 'You want an agency in the room in Atlanta every week. You need brand identity built from nothing. You want one firm running paid media, social and email too. Or your team is committed to editing in WordPress. In all four cases, hire someone else.',
-            },
-          ]}
-        />
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Atlanta Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
 
-        <ComparisonTable
-          eyebrow={'HONEST COMPARISON'}
-          headline={'How We Sit Next to the Other Atlanta Web Design Companies'}
-          lead={
-            'These firms rank on page one for "web design company Atlanta" today. Every claim comes from what each company publishes about itself, checked on 12 August 2026. We are in the list, and not the right answer for every row.'
-          }
-          columns={[
-            { label: 'What they are good at' },
-            { label: 'Where FactoryJet differs', isFactoryJet: true },
-          ]}
-          rows={[
-            {
-              feature: 'FactoryJet',
-              values: [
-                'Fixed-scope, fixed-price builds in Next.js with schema, analytics and AI-crawler checks. Starter sites ship in 7 days and the repository is yours.',
-                'A remote team with no Atlanta office. If you want someone in your Buckhead conference room every other week, pick a local studio.',
-              ],
-            },
-            {
-              feature: 'The Creative Momentum',
-              values: [
-                'Atlanta agency covering web design and development, UI/UX, branding, video, inbound marketing, SEO, PPC and ADA compliance, aimed at enterprise clients.',
-                'Stronger for a large design-led programme with video attached. We are built for a tightly scoped site you can start this month.',
-              ],
-            },
-            {
-              feature: 'Elite Web Professionals',
-              values: [
-                'More than 15 years of Atlanta work on WordPress, Joomla, Shopify, Wix and Squarespace, plus SEO, local search and AI search optimisation. Publishes an Atlanta street address.',
-                'They build on whichever platform you already use. We only build in Next.js, a limit if your team is committed to WordPress.',
-              ],
-            },
-            {
-              feature: 'Darwin Studios',
-              values: [
-                'Atlanta WordPress specialists serving small and mid-sized businesses for more than 20 years: development, maintenance, WooCommerce, hosting, backups and SEO, direct with the principal.',
-                'Their model keeps hosting and upkeep with them long term, which suits owners who never want to think about it. Ours hands you a codebase you host anywhere.',
-              ],
-            },
-            {
-              feature: 'Clemson Web Design',
-              values: [
-                'Ranks first for this search today. Small-business websites, eCommerce, SEO and Google Ads, one-to-one contact with the owner, and a strong footprint across north Georgia.',
-                'Their office is in Oconee County, South Carolina, so in-person Atlanta meetings are not part of the model. Worth a call if you want one person on it.',
-              ],
-            },
-            {
-              feature: 'Thrive Internet Marketing Agency',
-              values: [
-                'Every channel from one agency: local and technical SEO, PPC, social, CRO, link building, content, email and ADA compliance, with an Atlanta location page.',
-                'Better fit if you want one agency running paid media and social too. We build the site and the search foundation, then stop.',
-              ],
-            },
-          ]}
-          footer={
-            <>
-              Positioning summarised from each company&apos;s own public website and from the first
-              page of Google results for this search on 12 August 2026. Nothing here is a ranking or
-              an endorsement, and no pricing is implied. Two other firms that rank on page one are
-              not described here because their sites blocked our automated check, and we will not
-              summarise a company we have not read. Verify current scope with each firm directly.
-            </>
-          }
-        />
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
 
-        <PricingTiers
-          eyebrow={'SCOPE, NOT GUESSWORK'}
-          headline={'Three Tiers, One Fixed Number Before You Start'}
-          lead={
-            'Every project is quoted as a single fixed figure after one discovery call. Scope, integrations and design complexity are what move that number. No retainer on any tier.'
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Starter',
-              description:
-                'A five-page site that loads fast on a phone and ranks for your name and core service. Right for single-location Atlanta businesses.',
-              features: [
-                '5 pages, mobile-first',
-                'Schema markup and meta structure',
-                'Contact form to your inbox',
-                '2 revision rounds',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Growth',
-              description:
-                'A 10 to 15 page site with a blog CMS, lead capture and analytics from day one. Right for firms that want qualified enquiries, not just a presence.',
-              features: [
-                '10 to 15 pages with blog CMS',
-                'Local SEO and GA4 tracking',
-                'Lead capture and email automation',
-                '3 revision rounds',
-                '30-day support plus training',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Scale',
-              description:
-                'Custom Next.js build with commerce, AI features or API integrations. Right for Atlanta businesses where the site is a real revenue line.',
-              features: [
-                'Custom Next.js architecture',
-                'Commerce or membership features',
-                'AI search or chat features',
-                'Third-party API connections',
-                'Priority support and reviews',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-          ] as const}
-        />
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={'Questions Atlanta Businesses Ask Us'}
+          eyebrow="ATLANTA WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Atlanta GA"
+          lead="Direct, plain English answers to what Atlanta business owners and marketing leaders ask about website projects:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* Related internal links */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <p className="mb-4 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Related services
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { href: '/services/web-design/', label: 'Web Design Services' },
-                { href: '/services/small-business-website-design/', label: 'Small Business Websites' },
-                { href: '/services/website-redesign/', label: 'Website Redesign' },
-                { href: '/services/local-seo/', label: 'Local SEO' },
-                { href: '/services/ecommerce-development/', label: 'Ecommerce Development' },
-              ].map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="atlanta" />
           </div>
         </section>
 
-        <WebDesignCityLinksUS currentCity="atlanta" />
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
 
-        <FinalCTA
-          variant="light"
-          eyebrow={'READY WHEN YOU ARE'}
-          headline={'Get Your Atlanta Website Scoped This Week'}
-          sub={
-            'One 30-minute call gets you a sitemap and a fixed number. If we are not the right fit, keep the sitemap and take it to whoever is. Starter builds ship in 7 days.'
-          }
-          primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="Atlanta" variant="light" />}
-          objectionHandler="No discovery fee. No retainer. You own the code."
-        />
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Atlanta Business Website?
+            </h2>
 
-        <SchemaScript />
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-/* ===========================================================================
-   Schema. Every const declared below is rendered into a <script
-   type="application/ld+json"> tag inside this component. FAQPage.mainEntity is
-   derived from FAQ_ITEMS, the same array the visible <FAQ /> renders. There is
-   no /atlanta city root, so the breadcrumb routes through /services/web-design.
-   =========================================================================== */
-
-function SchemaScript() {
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${URL}#webpage`,
-    name: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    dateModified: DATE_MODIFIED,
-    inLanguage: 'en-US',
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder, FactoryJet',
-    },
-    publisher: { '@id': 'https://factoryjet.com/#organization' },
-    isPartOf: {
-      '@type': 'WebSite',
-      '@id': 'https://factoryjet.com/#website',
-      url: 'https://factoryjet.com',
-      name: 'FactoryJet',
-    },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '.faq-answer', '[data-speakable]'],
-    },
-  };
-
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ProfessionalService'],
-        '@id': `${URL}#business`,
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com',
-        telephone: '+919699977699',
-        areaServed: [
-          { '@type': 'City', name: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' },
-          { '@type': 'AdministrativeArea', name: 'Metro Atlanta' },
-        ],
-        priceRange: 'Fixed-price, quoted per project',
-      },
-      {
-        '@type': 'Service',
-        '@id': `${URL}#service`,
-        name: 'Web Design Atlanta',
-        serviceType: 'Web design and website development',
-        provider: {
-          '@type': 'Organization',
-          '@id': 'https://factoryjet.com/#organization',
-          name: 'FactoryJet Technologies',
-        },
-        areaServed: { '@type': 'City', name: 'Atlanta', addressRegion: 'GA', addressCountry: 'US' },
-        description: DESCRIPTION,
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Web design build tiers',
-          itemListElement: [
-            { '@type': 'Offer', name: 'Starter', description: 'Five-page mobile-first site, 7-day delivery.' },
-            { '@type': 'Offer', name: 'Growth', description: '10 to 15 pages with blog CMS, lead capture and analytics.' },
-            { '@type': 'Offer', name: 'Scale', description: 'Custom Next.js build with commerce, AI features or API integrations.' },
-          ],
-        },
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${URL}#faq`,
-        mainEntity: FAQ_ITEMS.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${URL}#breadcrumbs`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Web Design',
-            item: 'https://factoryjet.com/services/web-design',
-          },
-          { '@type': 'ListItem', position: 3, name: 'Atlanta', item: URL },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-      />
+      <SiteFooter locale="us" />
     </>
   );
 }

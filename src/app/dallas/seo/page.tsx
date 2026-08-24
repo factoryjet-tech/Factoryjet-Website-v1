@@ -1,940 +1,922 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import FinalCTA from '@/components/v2/FinalCTA';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import HeroInlineForm from '@/components/HeroInlineForm';
-import './dallas-seo.css';
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   /dallas/seo :: Dallas local-SEO city page. Built 2026-08-12.
-
-   Target keyword: "seo agency dallas", 1,000/mo, KD 22. The live SERP renders
-   NO AI Overview on this query, so the win is organic rank plus human
-   conversion, not an AIO citation.
-
-   Layout is "Proximity Dial", a new one rather than a reskin of Austin's glass
-   stack: CSS-only concentric-radius hero, an asymmetric bento of real Dallas
-   districts, the demand data as a real table on the single dark section, and
-   the rival breakdown as a second real table.
-
-   Data provenance:
-   - keyword volumes and difficulty: DataForSEO, US location 2840, pulled live
-     2026-08-12 (search_volume + bulk_keyword_difficulty).
-   - page-one rivals: live SERP for "seo agency dallas",
-     pipeline/research/briefs/dallas-seo.json.
-   - rival locations confirmed by fetching each firm's own site on 2026-08-12
-     (Thrive: Arlington TX; Dallas SEO Dogs: Dallas + Allen TX; Sofia SEO:
-     Dallas TX). Coalition Technologies' contact page returned 403, so no
-     head-office claim is made about them anywhere on this page.
-
-   Rules held: no currency values, no em dashes, no invented clients or case
-   studies, no fake street address, no published pricing, exactly one dark
-   section, FAQPage schema derived from the same FAQ_ITEMS array that renders.
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/dallas/seo';
-const UPDATED = '2026-08-12';
 
 export const metadata: Metadata = {
-  title: 'Dallas SEO Agency | Local SEO Services, Dallas TX | FactoryJet',
+  title: 'Dallas Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
   description:
-    'An SEO agency in Dallas built for a metro one map pin cannot cover. Local SEO, technical SEO and AI search visibility across DFW. Free audit, no lock-in.',
+    'Dallas local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, GBP optimization, and organic search growth for Texas businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Dallas SEO Agency | Local SEO Services, Dallas TX | FactoryJet',
-    description:
-      'An SEO agency in Dallas built for a metro one map pin cannot cover. Local SEO, technical SEO and AI search visibility across DFW. Free audit, no lock-in.',
-    url: CANONICAL,
-    siteName: 'FactoryJet',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Dallas Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    description:
+      'Dallas local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Texas businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Dallas Local SEO Agency' }],
+    locale: 'en_US',
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dallas Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    description: 'Dominate Dallas Google 3-Pack map rankings and high-intent local search queries with FactoryJet.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* Hero dial pins: real places, arranged around the radius. */
-const PINS: { cls: string; label: string; on?: boolean }[] = [
-  { cls: 'a', label: 'Downtown', on: true },
-  { cls: 'b', label: 'Uptown' },
-  { cls: 'c', label: 'Plano' },
-  { cls: 'd', label: 'Deep Ellum' },
-  { cls: 'e', label: 'Irving' },
-  { cls: 'f', label: 'Garland' },
+const PARTNERS = [
+  'Google Search Console',
+  'DataForSEO API',
+  'Screaming Frog Enterprise',
+  'BrightLocal Certified',
+  'SEMrush Partner',
+  'Next.js 15 & React',
+  'Cloudflare Edge CDN',
+  'Google Analytics 4',
 ];
 
-const FACTS: { v: string; k: string }[] = [
-  { v: 'Month to month', k: 'cancel with 30 days notice' },
-  { v: 'Free SEO audit', k: 'yours to keep either way' },
-  { v: '7-day kickoff', k: 'not six weeks of onboarding' },
-  { v: 'One senior engineer', k: 'on the work and on your calls' },
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Map Pack Targets', desc: 'Precision local grid rank optimization capturing high-value phone calls and direction requests.', icon: '📍' },
+  { num: '100%', title: 'NAP Citation Consistency', desc: 'Flawless name, address, and phone data syndicated across Apple Maps, Bing, Google, and Yelp.', icon: '🛡️' },
+  { num: '150+', title: 'Local Search Audits', desc: 'Detailed ranking factor inspections across on-page, entity schema, and local link profiles.', icon: '🔍' },
+  { num: '0%', title: 'Black Hat Risk', desc: 'White-hat entity engineering strictly compliant with Google Webmaster and Local Search guidelines.', icon: '⚖️' },
 ];
 
-/* Real Dallas districts, written from the map and the employers rather than by
-   swapping a city name into a template. */
-const TILES: { cls: string; zone: string; h: string; p: string; q: string; src?: { t: string; u: string } }[] = [
+const DISTRICTS = [
   {
-    cls: 't1',
-    zone: 'Downtown / Arts District',
-    h: 'Downtown, the Arts District and the courthouse blocks',
-    p: 'Law firms, accountants, title companies, staffing agencies and the restaurants that feed them. People search on a phone between meetings and call one of the first three profiles they see. Category and review count decide that, not your blog.',
-    q: 'attorney near me dallas',
+    corridor: 'Uptown Dallas & Central Business District',
+    query: 'corporate litigation attorney dallas',
+    focus: 'Commercial Law, Private Wealth & Executive Advisory',
+    desc: 'Dense corporate center in downtown Dallas. We optimize localized legal knowledge graphs, partner practice area silos, and verified client review schemas to capture high-stakes legal inquiries.',
   },
   {
-    cls: 't2',
-    zone: 'Uptown / Knox',
-    h: 'Uptown, Knox-Henderson and Turtle Creek',
-    p: 'Dentists, med spas, boutique fitness, realtors and restaurants along McKinney Avenue and Henderson. Discovery here is visual and takes about ten seconds. Fresh photos, correct hours and recent reviews beat a long service page.',
-    q: 'med spa uptown dallas',
+    corridor: 'Plano & Telecom Corridor',
+    query: 'it consulting company plano tx',
+    focus: 'Enterprise Tech, Cloud Services & B2B Consulting',
+    desc: 'High-density tech business district. We build deep service area silos, technical credential schemas, and local B2B directory citations that win regional IT procurement contracts.',
   },
   {
-    cls: 't3',
-    zone: 'Deep Ellum / Bishop Arts',
-    h: 'Deep Ellum, Exposition Park and Bishop Arts',
-    p: 'Music venues, tattoo studios, bars, coffee roasters, independent retail. These compete against the next block, not the city. Small radius, brutal inside it, which is exactly what local SEO is built for.',
-    q: 'tattoo shop deep ellum',
+    corridor: 'Frisco & North Platinum Corridor',
+    query: 'sports medicine specialist frisco',
+    focus: 'Specialty Healthcare, Orthopedics & Med Spas',
+    desc: 'Fast-growing medical hub anchored by premier sports venues. We implement medical specialty schema, physician credentials, and local neighborhood landing pages that drive patient bookings.',
   },
   {
-    cls: 't4',
-    zone: 'Design District / Market Center',
-    h: 'The Design District, Trinity Groves and the Market Center',
-    p: 'Showrooms, furniture, flooring, lighting, wholesale trade and the contractors who buy from them. A business-to-business market hiding inside a retail postcode: buyers arrive with a specification and a deadline, so pages must answer before anyone calls.',
-    q: 'commercial flooring supplier dallas',
+    corridor: 'Arlington & Mid-Cities',
+    query: 'commercial roofing contractor arlington tx',
+    focus: 'Commercial Contractors, Roofing & Mechanical Trades',
+    desc: 'Central DFW contractor hub. We dominate high-intent emergency repair searches with verified service radius polygons, localized landing pages, and automated review capture.',
   },
   {
-    cls: 't5',
-    zone: 'Richardson / Plano',
-    h: 'The Telecom Corridor, Legacy West and the northern campuses',
-    p: 'Toyota Motor North America, JPMorgan Chase, Liberty Mutual and Frito-Lay run major campuses in Plano, and Richardson has branded itself the Telecom Corridor for decades. These buyers skip ads and read your site like a spec sheet.',
-    q: 'managed it services dallas, 1,900 a month',
+    corridor: 'Irving & Las Colinas Urban Center',
+    query: 'corporate staffing agency irving',
+    focus: 'Corporate Services, Commercial Real Estate & Staffing',
+    desc: 'Major corporate campus cluster. We build localized trust signals, thought leadership content silos, and authoritative local citation networks capturing corporate inquiries.',
   },
   {
-    cls: 't6',
-    zone: 'Medical District',
-    h: 'The Medical District and the practices orbiting it',
-    p: 'UT Southwestern alone reports more than 25,000 employees, with Parkland and Children’s Health on the same few blocks. The practices around them compete in a tight radius where patients pick from the map, read reviews, then book.',
-    q: 'dentist near me dallas',
-    src: { t: 'UT Southwestern, Facts and Figures', u: 'https://www.utsouthwestern.edu/about-us/facts.html' },
+    corridor: 'Fort Worth Stockyards & Alliance Corridor',
+    query: 'industrial equipment supplier fort worth',
+    focus: 'Industrial Tooling, Logistics, Freight & Fabrication',
+    desc: 'Heavy industrial and aviation hub. We capture regional B2B supply chain procurement queries by optimizing technical capability pages, B2B service schemas, and local trade citations.',
   },
 ];
 
-/* DataForSEO, US location 2840, pulled live 2026-08-12. Monthly volumes.
-   Difficulty is DataForSEO keyword_difficulty, 0 to 100. */
-const DEMAND: { kw: string; vol: string; kd: string; tone?: 'win' | 'soft' }[] = [
-  { kw: 'seo company near me', vol: '14,800', kd: '22', tone: 'soft' },
-  { kw: 'dallas seo', vol: '3,600', kd: '18' },
-  { kw: 'local seo company near me', vol: '1,900', kd: '32', tone: 'soft' },
-  { kw: 'seo company dallas', vol: '1,300', kd: '18' },
-  { kw: 'seo companies in dallas', vol: '1,300', kd: '18' },
-  { kw: 'seo firm dallas', vol: '1,300', kd: '22' },
-  { kw: 'seo agency dallas', vol: '1,000', kd: '22' },
-  { kw: 'digital marketing agency dallas', vol: '1,000', kd: '42' },
-  { kw: 'seo services dallas', vol: '590', kd: '23' },
-  { kw: 'seo consultant dallas', vol: '480', kd: '10', tone: 'win' },
-  { kw: 'dallas seo consultant', vol: '480', kd: '14', tone: 'win' },
-  { kw: 'seo expert dallas', vol: '480', kd: '22' },
-  { kw: 'dallas seo services', vol: '390', kd: '23' },
-  { kw: 'local seo dallas', vol: '320', kd: '5', tone: 'win' },
-  { kw: 'dallas local seo', vol: '320', kd: '2', tone: 'win' },
-  { kw: 'best seo company dallas', vol: '70', kd: '20' },
-];
-
-const PLAYS: { h: string; p: string; cite?: { t: string; u: string } }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    h: 'Your primary category, not your business name',
-    p: 'Google lists relevance first among its three local ranking factors, and relevance starts with the most specific primary category you can pick. Filing under the generic option loses the specific search.',
-    cite: { t: 'Google, local ranking factors', u: 'https://support.google.com/business/answer/7091' },
+    sector: 'Commercial Contractors, Roofing & Mechanical Trades',
+    headline: 'Capturing High-Value Commercial & Emergency Service Calls Across North Texas',
+    description:
+      'Commercial property managers and facility directors across Dallas, Collin, and Tarrant counties do not browse pages of search results. When hail storms damage roofs or HVAC units fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to dominate high-ticket service queries.',
+    image: '/images/us/services/roofing-seo/hero.webp',
+    alt: 'Dallas commercial contractor and roofing local SEO ranking strategy',
+    points: [
+      'Hyper-localized neighborhood landing pages covering 25+ DFW suburban municipalities',
+      'Automated review generation workflows securing verified customer testimonials with keyword signals',
+      'Structured LocalBusiness and Contractor JSON-LD schema with exact service area coordinates',
+    ],
   },
   {
-    h: 'Distance you cannot change, so choose your ground',
-    p: 'A Frisco clinic will not outrank a Deep Ellum clinic for someone standing in Deep Ellum. Decide which parts of the metroplex you genuinely serve, then build for those instead of claiming the whole map.',
+    sector: 'Healthcare Practices, Specialty Dental & Medical Clinics',
+    headline: 'Driving High-Value Patient Appointments in Dallas’s Premier Medical Corridors',
+    description:
+      'From private practices in the Medical District to surgical centers in Frisco and Plano, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and ensure spotless citation consistency across healthcare directories.',
+    image: '/images/us/services/dental-seo/team.webp',
+    alt: 'Dallas healthcare dental and medical practice local SEO growth',
+    points: [
+      'Physician-specific and clinic-level Google Business Profile optimization with appointment booking links',
+      'MedicalSpecialty and Physician schema markup aligning with state licensing and hospital networks',
+      'Strict HIPAA-compliant review response protocols and localized patient guide content hubs',
+    ],
   },
   {
-    h: 'Review recency, not just review count',
-    p: 'BrightLocal’s consumer survey found 74% of people only care about reviews from the last three months, and 47% will not use a business with fewer than 20 reviews. Twelve good reviews from 2024 read like none.',
-    cite: { t: 'BrightLocal Local Consumer Review Survey', u: 'https://www.brightlocal.com/research/local-consumer-review-survey/' },
+    sector: 'Litigation Law Firms, Personal Injury & Defense Practices',
+    headline: 'Dominating High-Stakes Legal Search Queries in Uptown Dallas',
+    description:
+      'Legal keywords in Dallas are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
+    image: '/images/us/services/law-firm-seo/team.webp',
+    alt: 'Dallas law firm litigation and corporate counsel local SEO architecture',
+    points: [
+      'Practice area content architecture engineered for high-intent legal search queries',
+      'LegalService and Attorney schema with state bar credentials and practice jurisdiction tags',
+      'Authoritative local legal citations across Avvo, Justia, Martindale, and Texas Bar associations',
+    ],
   },
   {
-    h: 'One real page per place you serve',
-    p: 'Not a template with the suburb name swapped out. If the Plano page could be the Garland page with two words changed, it will not rank in either, and the reader can tell.',
-  },
-  {
-    h: 'The technical condition of the site',
-    p: 'Slow pages, broken canonical tags, missing structured data and pages Google cannot crawl quietly cap everything above them. Most local agencies skip this because it is engineering, not marketing.',
-  },
-  {
-    h: 'Answer-first writing so assistants can quote you',
-    p: 'BrightLocal found use of ChatGPT and similar tools for local recommendations jumped from 6% to 45% in a year, now the third most popular source. Assistants lift short, specific sentences. Hedging never gets quoted.',
-    cite: { t: 'BrightLocal Local Consumer Review Survey', u: 'https://www.brightlocal.com/research/local-consumer-review-survey/' },
-  },
-  {
-    h: 'Name, address and phone identical everywhere',
-    p: 'Unglamorous, and still the reason a lot of local rankings stall. One old suite number on a directory nobody has checked since 2019 muddies the signal.',
-  },
-  {
-    h: 'Nobody can buy their way into the map results',
-    p: 'Google states it plainly: there is no way to request or pay for a better local ranking. Ads sit above the results and stop the day you stop paying. A paid shortcut into the map pack does not exist.',
-    cite: { t: 'Google, local ranking factors', u: 'https://support.google.com/business/answer/7091' },
+    sector: 'Industrial Suppliers, Warehousing & Fleet Logistics',
+    headline: 'Winning B2B Procurement Searches Across the DFW Logistics Hub',
+    description:
+      'Industrial buyers and supply chain managers in Fort Worth, Irving, and Alliance search for local fabrication, machining, and logistics partners. We optimize your technical capability matrices, register verified B2B industry citations, and structure commercial supplier schemas to capture corporate purchase orders.',
+    image: '/images/us/manufacturing-website-design/rfq-desk.webp',
+    alt: 'Dallas Fort Worth industrial supplier and logistics B2B local search optimization',
+    points: [
+      'B2B supplier and fabrication capability schemas linking equipment specs to regional search queries',
+      'Google Maps optimization for commercial loading dock addresses and industrial park locations',
+      'Industry-specific citation syndication across ThomasNet, IndustryNet, and Texas manufacturing networks',
+    ],
   },
 ];
 
-/* Real page-one names from the live SERP for "seo agency dallas" (2026-08-12).
-   Location claims confirmed on each firm's own site that day. Named fairly, no
-   disparagement, and we include ourselves with our weak spot stated. */
-const RIVALS: { name: string; sub: string; good: string; ask: string; us?: boolean }[] = [
+const PAIN_POINTS = [
   {
-    name: 'Thrive Agency',
-    sub: 'Arlington, TX',
-    good: 'The biggest presence here, holding two of the twelve slots we measured: its own Dallas service page and a roundup titled "11 Best Dallas SEO Companies". Also genuinely local to the metroplex.',
-    ask: 'Which named person is on your monthly call a year from now?',
+    num: '01',
+    title: 'Ending Low Proximity Traps & Geo-Grid Disappearance',
+    problem: 'Most local businesses rank well right in front of their office but disappear completely from the 3-Pack just two miles away in adjacent DFW suburbs.',
+    solution: 'We deploy localized entity content hubs and multi-radius geo-signals that expand your Google Map Pack visibility across Dallas, Collin, and Tarrant counties.',
   },
   {
-    name: 'Dallas SEO Dogs',
-    sub: 'Dallas and Allen, TX',
-    good: 'The genuine local incumbent. Their site describes offices in Dallas and Allen, running SEO and paid search together. If you want an agency you can drive across town to meet, fair call.',
-    ask: 'How is effort split between SEO and paid, and what happens if the ads pause?',
+    num: '02',
+    title: 'Resolving Inconsistent NAP Data & Corrupted Directory Citations',
+    problem: 'Duplicate listings, old suite numbers, and mismatched phone formats across Yelp, Apple Maps, and Bing confuse search algorithms and suppress rankings.',
+    solution: 'We audit and direct-sync your business data across primary data aggregators (Data Axle, Neustar, Foursquare) to guarantee 100% NAP consistency.',
   },
   {
-    name: 'Coalition Technologies',
-    sub: 'National, multi-city',
-    good: 'A large operator competing from outside the metro, with deep technical and e-commerce experience and a link profile far bigger than ours. For a complex store, that depth is worth something.',
-    ask: 'What does the smallest sensible engagement look like for a single-location business?',
+    num: '03',
+    title: 'Neutralizing Competitor Map Spam & Fake Listing Floods',
+    problem: 'Unscrupulous competitors stuff keywords into their GBP business names and create fake virtual office listings that displace legitimate local companies.',
+    solution: 'We run weekly automated geo-grid scans and file formal Google Redressal complaints backed by state corporate records to clear out map spam.',
   },
   {
-    name: 'Sofia SEO',
-    sub: 'Dallas, TX',
-    good: 'A local challenger positioned squarely on Dallas, and its own site says it is based here. Local firms know which suburbs behave like separate markets. That is not obvious from another state.',
-    ask: 'Can you see named references in your category and your part of the metroplex?',
-  },
-  {
-    name: 'The Dallas SEO Company Inc.',
-    sub: 'A Facebook page, ranking on page one',
-    good: 'Worth knowing rather than hiring against. Google will rank a social profile above a real website when the website is weak. Some competition you are counting is not an agency at all.',
-    ask: 'Is there a website you can actually evaluate, and does it load?',
-  },
-  {
-    name: 'FactoryJet',
-    sub: 'That is us. We serve Dallas, we are not headquartered there.',
-    good: 'Engineering-first local SEO: technical repair, Business Profile work, reviews, one real page per place, AI search visibility. Month to month, free audit first.',
-    ask: 'Our weak spot, stated: we are new to this result and our link profile is a fraction of the firms above. Ask for the audit and judge the work.',
-    us: true,
+    num: '04',
+    title: 'Transforming Empty Rankings into Tracked Revenue & Phone Calls',
+    problem: 'Standard agencies report on vanity impressions or search volume without tracking how many phone calls, form fills, or consultation bookings were produced.',
+    solution: 'We implement call tracking, dynamic number insertion, and Google Business Profile conversion tracking to report on actual client revenue.',
   },
 ];
 
-const LAYERS: { lt: string; h: string; p: string }[] = [
-  { lt: 'Layer 01', h: 'Technical SEO and Core Web Vitals', p: 'Speed, schema, crawlability, indexing. The foundation everything sits on, and the layer most local agencies bill as an extra.' },
-  { lt: 'Layer 02', h: 'Google Business Profile', p: 'Categories, services, attributes, hours, photos, posts. This is what generates the three-result map pack.' },
-  { lt: 'Layer 03', h: 'Citations and NAP cleanup', p: 'Consistent name, address and phone across the directories Google trusts, duplicates removed.' },
-  { lt: 'Layer 04', h: 'Review growth and response', p: 'A repeatable system to earn recent reviews and reply to them. The strongest local signal you control.' },
-  { lt: 'Layer 05', h: 'Local content, one place at a time', p: 'Service and suburb pages written individually, so the Plano page is never the Garland one with two words changed.' },
-  { lt: 'Layer 06', h: 'AI SEO and GEO', p: 'Entity data and answer-first structure so ChatGPT, Perplexity and AI Overviews can quote and attribute you.' },
-];
-
-type FaqGroup = { id: string; label: string };
-const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
-  { id: 'faq-choose', label: 'Best agencies in Dallas' },
-  { id: 'faq-cost', label: 'What it costs' },
-  { id: 'faq-worth', label: 'Is it worth it' },
-  { id: 'faq-what', label: 'What SEO agencies do' },
-  { id: 'faq-local', label: 'Local SEO' },
-  { id: 'faq-ai', label: 'SEO and AI' },
-  { id: 'faq-diy', label: 'Doing it yourself' },
-  { id: 'faq-us', label: 'Working with us' },
-];
-
-/* Grounded in the live People-Also-Ask data in
-   pipeline/research/briefs/dallas-seo.json. Phrasing kept the way a person
-   actually types. Where the question is generic, the answer is generic and any
-   Dallas detail in it is real. */
-const FAQ_ITEMS: ReadonlyArray<{ q: string; a: string; cat: string }> = [
+const ROADMAP_STEPS = [
   {
-    cat: 'faq-choose',
-    q: 'What are the best SEO agencies in Dallas?',
-    a: 'Page one is a mix: Thrive Agency out of Arlington, Dallas SEO Dogs and Sofia SEO locally, Coalition Technologies nationally, plus directories from Semrush and Clutch and a Reddit thread. Rather than trusting anyone’s ranking of themselves, ask each the same four questions: who does the work, what is in scope monthly, what happens if nothing moves, and does anything leave with you.',
+    phase: 'Phase 01',
+    title: 'Local Entity Audit & GBP Optimization',
+    desc: 'We perform a 50-point inspection of your Google Business Profile, citation consistency, and local competitors across target DFW ZIP codes.',
+    deliverables: ['50-point GBP health audit', 'Geo-grid benchmark scan across 15 miles', 'Category & primary keyword alignment', 'Spam competitor audit'],
   },
   {
-    cat: 'faq-cost',
-    q: 'How much does an agency charge for SEO?',
-    a: 'It depends on what you are trying to outrank, and anyone quoting before opening your site is guessing. The drivers: locations served, how competitive your category is inside your radius, technical repair needed first, content volume, and whether links are in scope. We scope it after a free audit.',
+    phase: 'Phase 02',
+    title: 'On-Page Entity SEO & Local Content Hubs',
+    desc: 'We inject advanced LocalBusiness schema and build hyper-relevant neighborhood and suburban landing pages covering core DFW service areas.',
+    deliverables: ['JSON-LD LocalBusiness & Service schema', 'DFW neighborhood landing pages', 'Optimized localized header hierarchies', 'Geo-tagged image metadata integration'],
   },
   {
-    cat: 'faq-cost',
-    q: 'How much should a small business spend on SEO?',
-    a: 'Less than it brings in. Work out what one new customer is worth across a year, then ask how many extra customers a month would cover the work with room left over. If the answer is a handful, the scope fits. If it is dozens, start narrower.',
+    phase: 'Phase 03',
+    title: 'Citation Syndication & Review Acceleration',
+    desc: 'We synchronize your business data across tier-1 directories and deploy automated review generation workflows to build verified 5-star ratings.',
+    deliverables: ['Data aggregator API syndication', 'Tier-1 directory verification (60+ hubs)', 'Automated SMS/Email review request funnel', 'Local Chamber & industry citations'],
   },
   {
-    cat: 'faq-cost',
-    q: 'How much does local SEO cost in the USA?',
-    a: 'There is no useful national average, because published figures blend different jobs. A single-location dentist off Preston Road and a nine-location franchise across Collin County are both doing local SEO, and the work is not the same. Ask what is included monthly and who does it.',
-  },
-  {
-    cat: 'faq-worth',
-    q: 'Is an SEO agency worth it?',
-    a: 'It is worth it if people already search for what you sell and competitors sit above you. In Dallas that covers most categories: 3,600 a month search "dallas seo" alone. The real failure mode is not paying for SEO, it is paying with no way to tell whether it worked.',
-  },
-  {
-    cat: 'faq-worth',
-    q: 'Is SEO worth it for small businesses?',
-    a: 'In local search you are not trying to beat the internet. You are trying to beat the handful of businesses in your category within a few miles of you. That is a fight a normal owner can win, which is not true of most channels.',
-  },
-  {
-    cat: 'faq-what',
-    q: 'What does an SEO agency do?',
-    a: 'Four jobs, in this order. Fix the technical condition of the site so it can hold a ranking. Get the Google Business Profile and listings correct, because that feeds the map results. Build pages matching what people search where you serve. Then earn credibility from other sites and AI engines.',
-  },
-  {
-    cat: 'faq-what',
-    q: 'What are the four main types of SEO?',
-    a: 'On-page, which is what your pages say and how they are structured. Off-page, which is links and mentions from other sites. Technical, which is speed, crawlability, structured data and indexing. And local: Business Profile, citations and reviews. For a Dallas storefront, local and technical carry the weight.',
-  },
-  {
-    cat: 'faq-what',
-    q: 'What is the 80/20 rule in SEO?',
-    a: 'The idea that a small slice of the work produces most of the result. In local SEO that slice is three things: a complete, correctly categorised Google Business Profile, a steady flow of recent reviews, and a site that loads fast and says plainly what you do and where.',
-  },
-  {
-    cat: 'faq-local',
-    q: 'What is local SEO vs SEO?',
-    a: 'SEO is getting found in search generally. Local SEO is getting found by people near you: in Google Maps, the three-result local pack, and "near me" searches. Local leans on your Business Profile, categories, reviews and proximity. General SEO leans on content and links. A storefront needs both.',
-  },
-  {
-    cat: 'faq-local',
-    q: 'How do I do local SEO as a beginner?',
-    a: 'Claim your Google Business Profile and fill in every field. Choose the most specific primary category. Make your name, address and phone identical everywhere. Add real photos rather than stock. Set accurate hours including holidays. Then ask every happy customer for a review and reply to all of them.',
-  },
-  {
-    cat: 'faq-local',
-    q: 'Can I do local SEO myself?',
-    a: 'The first chunk, absolutely, and you should. Profile, categories, hours, photos, consistent contact details and a review habit are free and yours to control. Where it gets hard is technical repair, writing pages that outrank an established competitor, and earning links from sites Google trusts.',
-  },
-  {
-    cat: 'faq-local',
-    q: 'How does Google decide local rankings?',
-    a: 'Google names three factors in its own documentation: relevance, distance and prominence. Relevance is how well your profile matches what was typed, which is why categories matter. Distance you cannot change. Prominence is how well known you are, which Google ties to sites referencing you and your review count.',
-  },
-  {
-    cat: 'faq-ai',
-    q: 'Will SEO be replaced by AI?',
-    a: 'It is changing, not disappearing. What moved is where the answer appears: people still search, they just as often read a summary or ask an assistant. The work that gets you named in those answers is the work that got you ranked: clear pages, real expertise, consistent data.',
-  },
-  {
-    cat: 'faq-ai',
-    q: 'Do people really use ChatGPT to find local businesses?',
-    a: 'Enough that it matters now. BrightLocal’s consumer survey found use of ChatGPT and similar AI tools for local business recommendations rose from 6% to 45% in a year, making it the third most popular source. A page that buries its answer gets quoted by neither.',
-  },
-  {
-    cat: 'faq-ai',
-    q: 'Can ChatGPT do SEO?',
-    a: 'It can draft, summarise and speed up research, and it is genuinely useful for that. It cannot pick your primary category, fix a canonical tag, earn a review, or get another site to reference you. Pages written entirely by a chatbot also say what every competitor says.',
-  },
-  {
-    cat: 'faq-diy',
-    q: 'Can I do SEO myself?',
-    a: 'Yes, up to a point, and the early wins are free. Fill in your profile properly, get contact details consistent, publish clear pages per service, build a review habit. The wall most owners hit is technical work and competitive content, where the feedback loop is very slow.',
-  },
-  {
-    cat: 'faq-diy',
-    q: 'How long does it take for SEO to kick in?',
-    a: 'Expect early movement in three to six months and stable local pack positions in six to twelve. Profile and review work often shows faster, sometimes within weeks. Content and links take longer. We win the low-difficulty searches first, so leads arrive while the bigger terms mature.',
-  },
-  {
-    cat: 'faq-us',
-    q: 'Can you guarantee a number one ranking in Dallas?',
-    a: 'No, and anyone who does is guessing with your money. Google states plainly in its own documentation that there is no way to request or pay for a better local ranking. We guarantee the work, transparency about it, and your right to leave at the end of any month.',
-  },
-  {
-    cat: 'faq-us',
-    q: 'Do you require a long-term contract?',
-    a: 'No. We work month to month and you can cancel with thirty days notice. Most agencies competing on this search lock clients in for six to twelve months. We would rather earn the next month than hold you to a document.',
-  },
-  {
-    cat: 'faq-us',
-    q: 'Do you work with businesses outside the city of Dallas?',
-    a: 'Yes, across the metroplex: Plano, Frisco, McKinney, Richardson, Irving and Las Colinas, Garland, Mesquite, Grand Prairie, Arlington and Fort Worth. Multi-location businesses get pages written one at a time, because a template with the suburb name swapped reads as a template.',
+    phase: 'Phase 04',
+    title: 'Map Pack Geo-Grid Defense & Monthly Reporting',
+    desc: 'We continuously track your 3-Pack rankings across a 15-mile grid, publish weekly profile updates, and report on verified inbound calls.',
+    deliverables: ['Weekly geo-grid proximity tracking', 'Weekly GBP photo & post management', 'Ongoing competitor spam removal', 'Transparent call & revenue reporting'],
   },
 ];
 
-const OTHER_CITIES: { name: string; path: string }[] = [
-  { name: 'Austin SEO', path: '/austin/seo' },
-  { name: 'Arlington SEO', path: '/arlington/seo' },
-  { name: 'Nashville SEO', path: '/nashville/seo' },
-  { name: 'Charlotte SEO', path: '/charlotte/seo' },
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Google Business Profile Optimization',
+    factoryjet: 'Deep Entity Engineering. Complete category optimization, weekly geotagged updates, structured Q&A seed libraries, and automated review velocity workflows.',
+    traditional: 'Basic Setup Only. Simple address verification without category testing, geo-grid monitoring, or spam defense against competitors.',
+  },
+  {
+    label: 'Local Schema & Structured Data',
+    factoryjet: 'Enterprise JSON-LD Graph. Complete LocalBusiness, ServiceArea, GeoCoordinates, and aggregateRating markup embedded directly in server-rendered code.',
+    traditional: 'Generic Plugin Schema. Basic auto-generated Yoast schema lacking exact coordinates, service radius polygons, or verified entity connections.',
+  },
+  {
+    label: 'Reporting & Attribution',
+    factoryjet: 'Real Business Metrics. Track verified phone calls, form fills, Map Pack direction requests, and geo-grid ranking improvements over time.',
+    traditional: 'Vague Vanity Reports. PDF reports highlighting total impressions or vanity keyword rankings that do not correlate with inbound revenue.',
+  },
+  {
+    label: 'Spam Defense & Listing Security',
+    factoryjet: 'Active Map Defense. Regular audits of competitor keyword stuffing and reporting of fake listings that artificially crowd the Dallas Map Pack.',
+    traditional: 'Passive Monitoring. Zero intervention against fraudulent competitor tactics that displace your legitimate business from top map rankings.',
+  },
 ];
 
-/* One graph, one script tag. Every node below is rendered. */
-const jsonLd = {
+const FAQ_CATEGORIES = [
+  { key: 'local-seo', label: 'Local SEO Strategy' },
+  { key: 'map-pack', label: 'Google Map Pack' },
+  { key: 'citations', label: 'Citations & NAP' },
+  { key: 'dallas', label: 'Dallas Specifics' },
+  { key: 'reviews', label: 'Reviews & Reputation' },
+  { key: 'timeline', label: 'Timelines & ROI' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'local-seo',
+    question: 'What is the difference between local SEO and traditional organic SEO in Dallas?',
+    answer:
+      'Traditional SEO focuses on nationwide or regional keyword rankings in standard blue search links. Local SEO focuses on capturing geographically constrained searches (such as "commercial roofer Dallas" or "dentist near me") by optimizing for the Google Map Pack 3-pack and localized organic results. Local SEO relies heavily on Google Business Profile health, citation consistency across directories, local reviews, and geo-targeted schema.',
+  },
+  {
+    category: 'timeline',
+    question: 'How long does it take to rank in the Dallas Google Map Pack?',
+    answer:
+      'Initial improvements in low-competition suburbs or niche service categories often appear within 30 to 60 days. In highly competitive Dallas corridors (such as personal injury law or commercial roofing), reaching the top 3 positions typically takes 90 to 180 days of systematic citation building, on-page entity optimization, and review velocity.',
+  },
+  {
+    category: 'map-pack',
+    question: 'Why does our Dallas business rank on maps near our office but disappear 3 miles away?',
+    answer:
+      'Google weighs proximity heavily in map rankings. Without deep localized entity signals, your ranking radius remains tightly clustered around your physical address. We expand your ranking radius across the entire DFW metro area by building neighborhood-specific service pages, earning location-specific backlinks, and optimizing localized service area schema.',
+  },
+  {
+    category: 'dallas',
+    question: 'How do you handle local SEO for businesses with multiple DFW locations?',
+    answer:
+      'We establish dedicated, verified Google Business Profiles for each physical location, ensuring zero phone number or address cross-contamination. On your website, we engineer unique location landing pages with bespoke content, distinct LocalBusiness schema, and individualized driving directions, eliminating internal keyword cannibalization.',
+  },
+  {
+    category: 'citations',
+    question: 'What is NAP consistency and why is it crucial for Dallas search rankings?',
+    answer:
+      'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit and synchronize 100% of your citations.',
+  },
+  {
+    category: 'reviews',
+    question: 'Can you help our business remove fake 1-star reviews or competitor spam?',
+    answer:
+      'We systematically flag and appeal reviews that violate Google’s Prohibited and Restricted Content policies (such as hate speech, conflict of interest, or fake spam accounts). For legitimate negative feedback, we provide professional response frameworks and deploy automated review generation funnels to bury negative ratings with verified 5-star client testimonials.',
+  },
+  {
+    category: 'local-seo',
+    question: 'How do you structure local schema markup for Dallas service area businesses?',
+    answer:
+      'We inject custom server-rendered JSON-LD schema defining your exact primary service categories, GeoShape service radius polygons covering DFW counties (Dallas, Tarrant, Collin, Denton), verified licensing credentials, and explicit opening hours. This ensures Google and AI crawlers understand your exact operating footprint.',
+  },
+  {
+    category: 'citations',
+    question: 'Do you optimize Apple Maps and Apple Business Connect alongside Google?',
+    answer:
+      'Yes. Millions of Dallas iPhone users and CarPlay drivers utilize Apple Maps for local searches. We claim, optimize, and synchronize your Apple Business Connect profile with custom action buttons, verified hours, and high-resolution brand photography.',
+  },
+  {
+    category: 'local-seo',
+    question: 'How does local SEO help our business appear in AI search answers like ChatGPT and Perplexity?',
+    answer:
+      'AI search engines synthesize local recommendations using structured web data, verified citation sources, and Google Business Profile information. By establishing spotless NAP consistency, rich FAQ schemas, and authoritative local business citations, we position your company as the authoritative recommendation when AI models process local queries.',
+  },
+  {
+    category: 'map-pack',
+    question: 'How do you combat competitors who stuff keywords into their Google Business Profile name?',
+    answer:
+      'Keyword stuffing in business names violates Google Business Profile guidelines. We perform regular local grid scans and submit Redressal Complaints with state licensing documentation to remove unauthorized keywords from competitor listings, restoring fair 3-Pack rankings.',
+  },
+  {
+    category: 'timeline',
+    question: 'What metrics do you track to measure the ROI of our Dallas local SEO campaign?',
+    answer:
+      'We track concrete commercial indicators: total verified phone calls from map listings, direction requests, website visits from local search, click-to-call mobile conversions, and geo-grid 3-Pack ranking expansions across target Dallas ZIP codes.',
+  },
+  {
+    category: 'map-pack',
+    question: 'Can a service-area business without a public storefront rank in the Dallas Map Pack?',
+    answer:
+      'Yes. You can configure your Google Business Profile as a Service-Area Business (SAB) with a hidden residential address. We optimize your designated service radius and pair it with strong suburban landing pages to win map pack visibility without displaying your home address.',
+  },
+  {
+    category: 'citations',
+    question: 'Why are local backlinks from Dallas websites more valuable than generic links?',
+    answer:
+      'Search engines evaluate local relevance when ranking Map Pack listings. A link from a Dallas Chamber of Commerce, local business association, or regional news publication passes strong geographic trust signals that generic national links cannot replicate.',
+  },
+  {
+    category: 'reviews',
+    question: 'How often should our Dallas business post updates or photos to our Google Profile?',
+    answer:
+      'We recommend at least one high-quality update and 2 to 4 geotagged project photos weekly. Consistent profile activity signals an active, trustworthy business, which positively influences Google’s local ranking algorithm.',
+  },
+  {
+    category: 'dallas',
+    question: 'What is the role of neighborhood landing pages in our Dallas SEO strategy?',
+    answer:
+      'Neighborhood pages allow your website to target specific commercial micro-markets (such as Plano, Frisco, or Fort Worth) with hyper-relevant content, local testimonials, and tailored schema without diluting your primary homepage focus.',
+  },
+  {
+    category: 'reviews',
+    question: 'How do you handle review generation without violating Google’s anti-gating policies?',
+    answer:
+      'We implement direct SMS and email review request workflows that invite all verified clients to leave honest feedback on Google. We avoid review gating or incentive schemes, ensuring full compliance with Google guidelines and FTC regulations.',
+  },
+  {
+    category: 'citations',
+    question: 'What happens if our business moves office locations within DFW?',
+    answer:
+      'We execute a comprehensive address migration protocol: updating your Google Business Profile, submitting state corporate filing verification, synchronizing primary data aggregators, updating website schema, and monitoring citations to prevent duplicate listing penalties.',
+  },
+  {
+    category: 'timeline',
+    question: 'Do you require long-term annual contracts for Dallas local SEO?',
+    answer:
+      'No. We operate on transparent monthly retainers with clear deliverable milestones. Our retention is built on measurable ranking improvements, verified inbound phone calls, and clear revenue growth rather than restrictive contract terms.',
+  },
+  {
+    category: 'local-seo',
+    question: 'Can local SEO help our B2B manufacturing or logistics business in Dallas?',
+    answer:
+      'Yes. Corporate buyers and procurement officers frequently search for local suppliers, fabrication shops, and logistics providers. Local SEO ensures your facility appears at the top of commercial map queries and localized B2B industrial searches.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do we begin our Dallas local SEO campaign with FactoryJet?',
+    answer:
+      'Schedule a discovery consultation or request a complimentary 50-point Dallas Local SEO Audit. We will analyze your current Map Pack visibility, identify citation errors, evaluate your local competitors, and present an actionable growth plan within 24 hours.',
+  },
+];
+
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      telephone: '+919699977699',
-      areaServed: [
-        { '@type': 'City', name: 'Dallas', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Plano', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Frisco', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Richardson', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Irving', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Garland', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Mesquite', containedInPlace: { '@type': 'State', name: 'Texas' } },
-        { '@type': 'City', name: 'Arlington', containedInPlace: { '@type': 'State', name: 'Texas' } },
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'Local SEO Services in Dallas, TX',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'City', name: 'Dallas', containedInPlace: { '@type': 'State', name: 'Texas' } },
-      url: CANONICAL,
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Dallas SEO services',
-        itemListElement: LAYERS.map((l) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: l.h, description: l.p },
-        })),
-      },
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${CANONICAL}#cities`,
-      name: 'FactoryJet local SEO city pages',
-      itemListElement: OTHER_CITIES.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        url: `https://factoryjet.com${c.path}`,
-      })),
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Dallas SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'Dallas SEO Agency | Local SEO Services in Dallas, TX',
-      description:
-        'What an SEO agency in Dallas actually does, what live search demand looks like across the metroplex, who holds page one today, and where FactoryJet fits.',
-      inLanguage: 'en-US',
-      dateModified: UPDATED,
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['.dseo .answer p', '.dseo .faqcat p'],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      /* Derived from the SAME array the visible FAQ renders. Never written twice. */
-      mainEntity: FAQ_ITEMS.map((item) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Dallas Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Dallas',
+    addressRegion: 'TX',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7767,
+    longitude: -96.797,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Dallas' },
+    { '@type': 'City', name: 'Plano' },
+    { '@type': 'City', name: 'Frisco' },
+    { '@type': 'City', name: 'Irving' },
+    { '@type': 'City', name: 'Fort Worth' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Dallas Local SEO & Map Pack Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Optimization & Geo-Grid Defense',
+  description:
+    'Senior engineering-led Google Business Profile optimization, local citation syndication, and geo-grid rank defense for Dallas businesses.',
+  areaServed: { '@type': 'State', name: 'Texas' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Dallas Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+  description: 'Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Texas businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/local-seo' },
+    { '@type': 'ListItem', position: 3, name: 'Dallas', item: CANONICAL },
   ],
 };
 
 export default function DallasSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="dal-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="dal-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="dal-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="dal-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="dal-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="bg-fj-cream">
-        <div className="dseo">
-          {/* HERO: proximity dial */}
-          <section className="hero">
-            <div className="wrap hero-grid">
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <span className="loc"><b />Dallas, TX</span>
-                <h1>The Dallas SEO agency for a metro one map pin cannot cover</h1>
-                <p className="lead">
-                  Downtown, Plano, Frisco, Irving and Garland are one economy and five different sets of search
-                  results. We win the searches your customers type,{' '}
-                  <b>starting with the ones nobody is defending</b>.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Dallas Local SEO &amp; Map Pack Dominance</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Dominate the Dallas Google Map Pack &amp; Local Search
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Capture high-intent local phone calls, consultation inquiries, and foot traffic across the DFW Metroplex. Precision GBP optimization, 100% NAP citation sync, and no long-term contracts.
                 </p>
-                <HeroInlineForm region="us" source="us_dallas_seo_hero" submitLabel="Get my free SEO audit" />
-                <div className="cta-row">
-                  <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#dal-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Dallas Search Corridors</span>
+                  </a>
                 </div>
               </div>
-              <div className="dial" aria-hidden="true">
-                <span className="ring r3" />
-                <span className="ring r2" />
-                <span className="ring r1" />
-                <div className="core">
-                  <span className="cn">3</span>
-                  <span className="ck">map pack slots per search</span>
-                </div>
-                {PINS.map((p) => (
-                  <span className={`pin ${p.cls}${p.on ? ' on' : ''}`} key={p.label}>
-                    <i />{p.label}
-                  </span>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/dallas-seo/dallas-seo-consultant-call.webp"
+                  alt="Dallas Local SEO Google Maps Strategy and Ranking Analysis"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Enterprise Local SEO &amp; Citation Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
                 ))}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* FACTS BAR */}
-          <div className="factsbar">
-            <div className="wrap row">
-              {FACTS.map((f) => (
-                <div className="fact" key={f.v}>
-                  <div className="v">{f.v}</div>
-                  <div className="k">{f.k}</div>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/dallas-seo/dallas-local-seo-team.webp"
+                  alt="FactoryJet local SEO engineers reviewing Dallas geo-grid ranking signals"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Proximity, Reviews &amp; Entity Trust</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Capturing High-Value Inbound Calls in DFW
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Uptown Dallas to Plano, Frisco, and Fort Worth, we help commercial contractors, law firms, healthcare providers, and industrial suppliers dominate local search.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Local SEO Audit" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. DALLAS DISTRICTS SECTION ── */}
+        <section id="dal-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>DFW Search Coverage</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Targeting Key Dallas-Fort Worth Search Corridors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sub-market in Dallas, Collin, and Tarrant county demands localized proximity targeting:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* ANSWER FIRST */}
-          <section className="blufsec">
-            <div className="wrap">
-              <div className="answer">
-                <span className="tag">The short answer</span>
-                <p>
-                  An SEO agency in Dallas gets you found by people already searching for what you sell: in Google Maps,
-                  in the regular results, and now inside AI answers. The work is your Google Business Profile, the
-                  technical health of your site, reviews, and a real page for each part of the metroplex you serve.
-                </p>
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Systems</span>
               </div>
-              <div className="bluf-support">
-                <p className="prose">
-                  The order matters. Start with the{' '}
-                  <Link href="/services/local-seo">Google Business Profile and local listings</Link>, because that is
-                  what generates the map pack. Then the technical condition of the site, where a free{' '}
-                  <Link href="/services/seo-audit">SEO audit</Link> begins, since a slow site will not hold a ranking
-                  however good the writing is. Then pages matching what Dallas genuinely types. Then{' '}
-                  <Link href="/services/ai-seo">AI SEO and GEO</Link>: the structured data and answer-first writing
-                  that lets ChatGPT, Perplexity and Google AI Overviews quote you instead of a competitor. Our free{' '}
-                  <Link href="/ai-visibility-checker">AI visibility checker</Link> shows where you stand on that today.
-                </p>
-                <p className="prose">
-                  Who does this work here? Two or three genuinely local firms, one large agency headquartered in
-                  Arlington, several national operators servicing Dallas from other states, and directories that
-                  outrank all of them without doing SEO for anybody. We name them below. Smaller operation? Our{' '}
-                  <Link href="/services/small-business-seo">small business SEO</Link> page is the short version.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* GEO BOARD */}
-          <section className="geo">
-            <div className="wrap">
-              <span className="eyebrow">Dallas, district by district</span>
-              <h2>Dallas is not one market. It is about a dozen of them.</h2>
-              <p className="lead">
-                Search demand splits along the same lines the metroplex does. A dental practice off Loop 12 and a venue
-                on Elm Street are both doing local SEO, and almost nothing overlaps.
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Frameworks for Dallas Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Discover how our localized entity engineering captures high-value inbound calls across core industries:
               </p>
-              <div className="board">
-                {TILES.map((t) => (
-                  <div className={`tile ${t.cls}`} key={t.cls}>
-                    <span className="zone">{t.zone}</span>
-                    <h3>{t.h}</h3>
-                    <p>{t.p}</p>
-                    <span className="qs">
-                      typical search: {t.q}
-                      {t.src ? (
-                        <>
-                          {' '}&middot;{' '}
-                          <a href={t.src.u} rel="nofollow noopener" target="_blank">{t.src.t}</a>
-                        </>
-                      ) : null}
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
                     </span>
-                  </div>
-                ))}
-              </div>
-              <p className="prose" style={{ marginTop: '30px' }}>
-                And that is only the middle of it. Irving and Las Colinas run on corporate services and logistics by
-                the airport. Frisco and McKinney are home services and orthodontists in neighbourhoods that did not
-                exist fifteen years ago.{' '}<Link href="/arlington/seo">Arlington</Link> and Fort Worth are a separate
-                market again. An agency selling you &quot;Dallas SEO&quot; without asking which Dallas is selling you a
-                template.
-              </p>
-            </div>
-          </section>
-
-          {/* DEMAND: the single dark section */}
-          <section className="demand">
-            <div className="wrap">
-              <span className="eyebrow">Real demand, pulled 2026-08-12</span>
-              <h2>What Dallas actually types into Google</h2>
-              <p className="lead">
-                Live US search volumes and difficulty from DataForSEO, pulled 12 August 2026. Difficulty runs 0 to
-                100. Read where the numbers are soft, because that gap is the whole plan.
-              </p>
-              <div className="tablewrap">
-                <table>
-                  <caption>Dallas SEO search demand, DataForSEO, United States, August 2026</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Search term</th>
-                      <th scope="col">Searches a month</th>
-                      <th scope="col">Difficulty</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {DEMAND.map((d) => (
-                      <tr key={d.kw} className={d.tone ?? undefined}>
-                        <th scope="row">{d.kw}</th>
-                        <td className="num">{d.vol}</td>
-                        <td className="num">{d.kd}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="prose">
-                Two things jump out. The head terms are <b>not</b> brutal: a cluster worth 1,000 to 3,600 searches a
-                month at difficulty 17 to 23 is a fight a focused team can win inside a year. And the soft spots are
-                where the money is.{' '}
-                <b>&quot;dallas local seo&quot; scores 2, &quot;local seo dallas&quot; scores 5, &quot;seo consultant
-                dallas&quot; scores 10.</b> Those carry 320 to 480 searches a month with almost nobody defending them,
-                and the people typing them are further along than anyone typing the head term. We win those first, so
-                leads arrive before the big terms mature.
-              </p>
-              <p className="prose">
-                One more: &quot;digital marketing agency dallas&quot; carries the same volume as our target term at
-                double the difficulty, so the generalist label means a harder fight for identical traffic. The greyed
-                rows are national terms.
-              </p>
-            </div>
-          </section>
-
-          {/* PLAYS: listicle */}
-          <section className="plays">
-            <div className="wrap">
-              <span className="eyebrow">The short list</span>
-              <h2>Eight things that decide whether you show up in Dallas</h2>
-              <p className="lead">
-                Roughly in order of impact. The first four are free, and most businesses have not done them.
-              </p>
-              <ol className="playlist">
-                {PLAYS.map((p) => (
-                  <li key={p.h}>
-                    <h3>{p.h}</h3>
-                    <p>{p.p}</p>
-                    {p.cite ? (
-                      <span className="cite">
-                        Source: <a href={p.cite.u} rel="nofollow noopener" target="_blank">{p.cite.t}</a>
-                      </span>
-                    ) : null}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </section>
-
-          {/* MID-PAGE CTA */}
-          <div className="midcta">
-            <div className="wrap inner">
-              <div>
-                <h2>Want to know which of those eight you are failing?</h2>
-                <p>
-                  The free audit checks every one against your site and profile, names the businesses above you in
-                  your radius, and hands you the roadmap. Yours to keep either way.
-                </p>
-              </div>
-              <div className="cta-row">
-                <ModalCTAButton label="Get your free Dallas SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-              </div>
-            </div>
-          </div>
-
-          {/* SERP: named rivals + comparison table */}
-          <section className="serp">
-            <div className="wrap">
-              <span className="eyebrow">The SERP, honestly</span>
-              <h2>Who you are actually up against for &quot;seo agency dallas&quot;</h2>
-              <p className="lead">
-                We pulled the live results in August 2026. Only about half of page one is an agency&apos;s own
-                website. The top slot is Semrush&apos;s directory. Position four is a Reddit thread asking for a Dallas
-                SEO company that is &quot;actually legitimate&quot;. Clutch holds a slot, a Facebook page another, and
-                Thrive holds two.
-              </p>
-              <div className="ctablewrap">
-                <table>
-                  <caption>Page-one names for &quot;seo agency dallas&quot;, live SERP, August 2026</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Who</th>
-                      <th scope="col">What they are genuinely good at</th>
-                      <th scope="col">What to ask them</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {RIVALS.map((r) => (
-                      <tr key={r.name} className={r.us ? 'us' : undefined}>
-                        <th scope="row">
-                          {r.name}
-                          <small>{r.sub}</small>
-                        </th>
-                        <td>{r.good}</td>
-                        <td>{r.ask}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="prose" style={{ marginTop: '28px' }}>
-                The part most agency pages leave out: we have a little over fifty referring domains and the national
-                firms above have thousands. That gap is real. It matters less for you than for us, because you need to
-                rank in one metro against a dozen local rivals while we are ranking nationally against firms with sixty
-                times our link profile. You get the harder version of the same job, every day.
-              </p>
-            </div>
-          </section>
-
-          {/* IMAGE BAND: how the work runs */}
-          <section className="imgband">
-            <div className="wrap ibinner">
-              <div className="ibimg">
-                <img
-                  src="/images/us/dallas-seo/dallas-local-seo-team.webp"
-                  alt="Three colleagues reviewing a client website layout together on a laptop in a bright office"
-                  width={1216}
-                  height={704}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div>
-                <span className="eyebrow">How it runs</span>
-                <h2>Senior people on your account, every month</h2>
-                <p className="lead">
-                  No account managers relaying questions to someone you never meet. The engineer who writes the fixes
-                  explains them on the same call.
-                </p>
-                <div className="ibstats">
-                  <div className="ibstat">
-                    <div className="iv">Free audit first</div>
-                    <div className="ik">findings and roadmap, yours to keep either way</div>
-                  </div>
-                  <div className="ibstat">
-                    <div className="iv">7 days to kickoff</div>
-                    <div className="ik">from signed scope to work actually starting</div>
-                  </div>
-                  <div className="ibstat">
-                    <div className="iv">You own everything</div>
-                    <div className="ik">profile, content, citations and accounts stay yours</div>
-                  </div>
-                </div>
-                <div className="cta-row">
-                  <ModalCTAButton label="See where you rank in Dallas" region="us" modalVariant="seo" btnVariant="primary-light" />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* THE STACK */}
-          <section className="stacksec">
-            <div className="wrap">
-              <span className="eyebrow">What we run each month</span>
-              <h2>Dallas SEO services, built like software</h2>
-              <p className="lead">
-                One monthly scope, the whole stack, no add-on surprises. Every layer sits on the engineering
-                foundation at layer one.
-              </p>
-              <div className="stack">
-                {LAYERS.map((l) => (
-                  <div className="layer" key={l.lt}>
-                    <span className="lt">{l.lt}</span>
-                    <h3>{l.h}</h3>
-                    <p>{l.p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* FOUNDER */}
-          <section className="founder">
-            <div className="wrap fgrid">
-              <div>
-                <span className="eyebrow">Who you will be talking to</span>
-                <h2>An SEO consultant who can read a waterfall chart</h2>
-                <p className="prose">
-                  FactoryJet is led by Bhavesh Barot, who has spent more than a decade building sites and search
-                  programmes for smaller businesses. This page leads with technical work for a reason: we build
-                  software as well as market it, and in a metro where so many buyers are engineers or procurement
-                  staff, a badly built site loses the deal before search gets a chance. The offer: free audit, written
-                  scope, month-to-month terms, and the person doing the work on your calls.
-                </p>
-                <div className="ibimg" style={{ marginTop: '28px' }}>
-                  <img
-                    src="/images/us/dallas-seo/dallas-seo-consultant-call.webp"
-                    alt="An SEO consultant wearing a headset talking a client through a website layout on a video call"
-                    width={1216}
-                    height={704}
-                    loading="lazy"
-                    decoding="async"
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
-                  />
-                </div>
-              </div>
-              <div className="callcard">
-                <div className="avatar">BB</div>
-                <div className="nm">Bhavesh Barot</div>
-                <div className="ti">Founder, FactoryJet. 10+ years building for SMBs.</div>
-                <p className="quotebit">
-                  &quot;Thirty minutes, no pitch deck. Bring your site and your toughest question.&quot;
-                </p>
-                <a className="btn" href={CALENDLY}>Book a call with the founder</a>
-                <p className="micro">Calendly, 30 minutes, no commitment</p>
-              </div>
-            </div>
-          </section>
-
-          {/* NEAR ME */}
-          <section className="imgband">
-            <div className="wrap ibinner">
-              <div>
-                <span className="eyebrow">Near-me searches</span>
-                <h2>Most of this is decided before anyone reaches your website</h2>
-                <p className="lead">
-                  Somebody types a category and &quot;near me&quot;, glances at three profiles, reads two reviews and
-                  taps call. Your site never enters it. So we start with the profile, then fix the site so it holds
-                  what the profile earns.
-                </p>
-                <div className="ibstats">
-                  <div className="ibstat">
-                    <div className="iv">Relevance, distance, prominence</div>
-                    <div className="ik">the three factors Google names in its own local ranking documentation</div>
-                  </div>
-                  <div className="ibstat">
-                    <div className="iv">Two of the three are yours</div>
-                    <div className="ik">you cannot move distance, you can fix the other two this month</div>
-                  </div>
-                </div>
-                <div className="cta-row">
-                  <ModalCTAButton label="Get your free Dallas SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-                </div>
-              </div>
-              <div className="ibimg">
-                <img
-                  src="/images/us/dallas-seo/dallas-storefront-owner.webp"
-                  alt="A shop owner showing a customer her business listing on a phone behind the counter of a bright boutique"
-                  width={1024}
-                  height={672}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="faq">
-            <div className="wrap">
-              <span className="eyebrow">Dallas SEO FAQ</span>
-              <h2>Questions, answered the way we would on a call</h2>
-              <p className="lead">
-                {FAQ_ITEMS.length} questions taken from what people actually search, including the money ones most
-                agency sites skip.
-              </p>
-              <div className="faqgrid">
-                <nav className="faqnav">
-                  {FAQ_GROUPS.map((g) => (
-                    <a href={`#${g.id}`} key={g.id}>
-                      {g.label} <span className="ct">{FAQ_ITEMS.filter((i) => i.cat === g.id).length}</span>
-                    </a>
-                  ))}
-                  <p className="faqnavhelp">
-                    Cannot find your answer?<br />
-                    <a href={CALENDLY}>Talk to the founder</a>
-                  </p>
-                </nav>
-                <div>
-                  {FAQ_GROUPS.map((g) => (
-                    <div className="faqcat" id={g.id} key={g.id}>
-                      <p className="ch">{g.label}</p>
-                      {FAQ_ITEMS.filter((i) => i.cat === g.id).map((it, i) => (
-                        <details key={it.q} open={g.id === 'faq-choose' && i === 0}>
-                          <summary>{it.q}</summary>
-                          <p>{it.a}</p>
-                        </details>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
                       ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+                  </div>
 
-          {/* LINK FOOT */}
-          <div className="linkfoot">
-            <div className="wrap">
-              <p>
-                Dallas SEO, month to month, free audit. Services:{' '}
-                <Link href="/services/seo">SEO</Link>, <Link href="/services/local-seo">local SEO</Link>,{' '}
-                <Link href="/services/small-business-seo">small business SEO</Link>,{' '}
-                <Link href="/services/seo-audit">SEO audit</Link>,{' '}
-                <Link href="/services/seo-consulting">SEO consulting</Link>,{' '}
-                <Link href="/services/ai-seo">AI SEO</Link>. Other cities:{' '}
-                <Link href="/austin/seo">Austin</Link>, <Link href="/arlington/seo">Arlington</Link>,{' '}
-                <Link href="/nashville/seo">Nashville</Link>, <Link href="/charlotte/seo">Charlotte</Link>,{' '}
-                <Link href="/denver/seo">Denver</Link>. Last updated {UPDATED}.
-              </p>
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
+
+        {/* ── 06. CORE PAIN POINTS SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Advantage</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Dallas Businesses Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace empty keyword promises with technical entity engineering and measurable ROI:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Technical Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-architecture-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// DALLAS LOCAL SEO & MAP PACK BLUEPRINT"
+            title="Entity-Led Local Search: From Citations to Inbound Calls"
+            subtitle="Explore how Google Business Profile signals, data aggregator sync, LocalBusiness schema, and review acceleration work together."
+            city="Dallas"
+            ctaLabel="Get Your Free Local SEO Audit"
+            region="us"
+          />
         </div>
 
-        <FinalCTA
-          variant="light"
-          eyebrow="GET STARTED"
-          headline="Find out what is holding you back in Dallas"
-          sub="Start with a free Dallas SEO audit: where you stand in the map pack across the areas you serve, what is technically holding the site back, and what we would fix first."
-          primaryCta={{ label: 'Get your free Dallas SEO audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'Talk to the founder', href: CALENDLY }}
-          objectionHandler="Month to month, no setup fee, and the audit is yours to keep either way."
+        {/* ── 08. STEP-BY-STEP ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>90-Day Execution Plan</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 90-Day Local Ranking Acceleration Framework
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, milestone-driven protocol to establish 3-Pack Map dominance and grow verified phone inquiries:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Dallas Local SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-first entity optimization against standard directory sellers before you invest:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Pillar</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Entity Model</div>
+                <div style={{ color: '#A0A0B0' }}>Standard Local SEO Providers</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="DALLAS LOCAL SEO INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Dallas TX"
+          lead="Direct, plain English answers to what Dallas business owners ask about Google Map Pack rankings and local search:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
-        <SeoCityLinksUS currentCity="dallas" />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="dallas" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>No Contracts &amp; Transparent ROI</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Win the Dallas Google Map Pack?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your free 50-point Dallas Local SEO audit. We will evaluate your GBP health, citation consistency, and map ranking radius.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

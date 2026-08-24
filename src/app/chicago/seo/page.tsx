@@ -1,922 +1,922 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import HeroInlineForm from '@/components/HeroInlineForm';
-import './chicago-seo.css';
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   /chicago/seo :: Chicago local-SEO city page. Built 2026-08-12.
-
-   Target: "seo agency chicago", 880 searches a month, keyword difficulty 1.
-   Lowest-difficulty target in the whole US set and no single page owns it, so
-   this one gets the real research rather than a city-name swap.
-
-   Layout: "The Grid" (blueprint hero rule, 77 literal community-area cells,
-   a real SERP table instead of the Austin chip-duel). Shared v2 <FAQ /> and
-   <FinalCTA /> render OUTSIDE the .cseo wrapper so the scoped CSS cannot
-   touch them.
-
-   Every external claim on this page was curl-verified on 2026-08-12:
-   - Google Business Profile Help, "Improve your local ranking on Google":
-     names relevance, distance and prominence, and states there is no way to
-     request or pay for a better local ranking.  HTTP 200.
-   - BrightLocal Local Consumer Review Survey 2026: 97% of consumers read
-     reviews for local businesses, 74% look for reviews from the last three
-     months.  HTTP 200.
-   - City of Chicago open data, Boundaries / Community Areas: the dataset
-     returns exactly 77 rows.  HTTP 200, row count confirmed via the SODA API.
-   Community-area numbers in DISTRICTS come from that same dataset.
-
-   Rules honoured: no em dashes, no currency values anywhere, no invented
-   clients or case-study numbers, exactly one dark section (FinalCTA, at the
-   bottom), FAQPage schema derived from FAQ_ITEMS rather than duplicated.
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/chicago/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency Chicago | Local SEO Services IL | FactoryJet',
+  title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
   description:
-    'FactoryJet is an SEO agency in Chicago built for a city of 77 neighborhoods. Local SEO, technical SEO and AI search visibility, from the Loop to Little Village. Free audit, month to month.',
+    'Chicago local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, GBP optimization, and organic search growth for Illinois businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'SEO Agency Chicago | Local SEO Services IL | FactoryJet',
-    description:
-      'An SEO agency in Chicago built for a city of 77 neighborhoods. Local SEO, technical SEO and AI search visibility. Free audit, month to month, no long contract.',
-    url: CANONICAL,
-    siteName: 'FactoryJet',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    description:
+      'Chicago local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Illinois businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chicago Local SEO Agency' }],
+    locale: 'en_US',
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    description: 'Dominate Chicago Google 3-Pack map rankings and high-intent local search queries with FactoryJet.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ── Chicago districts. Community-area numbers are the City of Chicago's own,
-      pulled from the Boundaries / Community Areas dataset. ─────────────────── */
-const DISTRICTS: { area: string; num: string; h: string; p: string }[] = [
+const PARTNERS = [
+  'Google Search Console',
+  'DataForSEO API',
+  'Screaming Frog Enterprise',
+  'BrightLocal Certified',
+  'SEMrush Partner',
+  'Next.js 15 & React',
+  'Cloudflare Edge CDN',
+  'Google Analytics 4',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Map Pack Targets', desc: 'Precision local grid rank optimization capturing high-value phone calls and direction requests.', icon: '📍' },
+  { num: '100%', title: 'NAP Citation Consistency', desc: 'Flawless name, address, and phone data syndicated across Apple Maps, Bing, Google, and Yelp.', icon: '🛡️' },
+  { num: '150+', title: 'Local Search Audits', desc: 'Detailed ranking factor inspections across on-page, entity schema, and local link profiles.', icon: '🔍' },
+  { num: '0%', title: 'Black Hat Risk', desc: 'White-hat entity engineering strictly compliant with Google Webmaster and Local Search guidelines.', icon: '⚖️' },
+];
+
+const DISTRICTS = [
   {
-    area: 'The Loop and LaSalle Street',
-    num: 'Community area 32',
-    h: 'Law, finance and professional services',
-    p: 'Law firms, accountants, wealth managers, staffing agencies and everything that orbits the courts at the Daley Center. Buyers here search from a phone inside an office tower and call one of the first three profiles they see. Your category and your review count decide that before anyone reads a word you wrote.',
+    corridor: 'The Loop & Central Business District',
+    query: 'corporate litigation attorney chicago',
+    focus: 'Commercial Law, Private Wealth & Executive Advisory',
+    desc: 'Dense corporate center in downtown Chicago. We optimize localized legal knowledge graphs, partner practice area silos, and verified client review schemas to capture high-stakes legal inquiries.',
   },
   {
-    area: 'Fulton Market and the West Loop',
-    num: 'Community area 28',
-    h: 'Two completely different audiences',
-    p: 'The global headquarters of McDonald’s and Mondelez sit here, Google runs its Midwest office out of Fulton Market, and Randolph Street is one of the densest restaurant strips in the country. So you are selling either to B2B buyers who read your site like a spec sheet, or to diners deciding in eleven seconds from photos.',
+    corridor: 'Fulton Market & West Loop',
+    query: 'specialty dining near me west loop',
+    focus: 'Culinary Flagships, Tech Startups & Creative Services',
+    desc: 'Rapidly expanding commercial innovation district. We capture weekend dining foot traffic and corporate event bookings through real-time GBP updates, high-resolution imagery, and structured menu schema.',
   },
   {
-    area: 'River North and theMART',
-    num: 'Community area 8',
-    h: 'Agencies, showrooms and hospitality',
-    p: 'Design showrooms, galleries, hotels, agencies and the startup floors inside theMART. The most proximity-brutal pocket in the city: dozens of businesses in your exact category sit within half a mile, so distance is a wash and prominence does all the work.',
+    corridor: 'Streeterville & Magnificent Mile',
+    query: 'cosmetic dentist streeterville',
+    focus: 'Specialty Healthcare, Dental Practices & Med Spas',
+    desc: 'High-density affluent corridor anchored by major medical centers. We implement medical specialty schema, physician credentials, and local neighborhood landing pages that drive qualified patient bookings.',
   },
   {
-    area: 'Wicker Park and Bucktown',
-    num: 'Community area 24',
-    h: 'Independent retail and personal services',
-    p: 'Boutiques, barbers, tattoo studios, coffee, records and boutique fitness along Milwaukee Avenue and Damen. Discovery here is visual and fast. Current photos, correct holiday hours and a steady drip of new reviews beat a long service page every time.',
+    corridor: 'Schaumburg & Northwest Suburbs',
+    query: 'commercial roofing contractor schaumburg',
+    focus: 'Commercial Contractors, Roofing & Mechanical Trades',
+    desc: 'Major suburban corporate and commercial center. We dominate high-intent emergency repair searches with verified service radius polygons, localized landing pages, and automated review capture.',
   },
   {
-    area: 'Lincoln Park and Lakeview',
-    num: 'Community areas 6 and 7',
-    h: 'Dentists, vets, clinics and med spas',
-    p: 'The Southport Corridor, Clark Street and Halsted are thick with practices whose Google Business Profile has not been touched since the day it was claimed. High commercial value, low effort from the incumbents. The most winnable pocket on the North Side right now.',
+    corridor: 'Naperville & DuPage County',
+    query: 'wealth management advisor naperville',
+    focus: 'Wealth Advisory, Estate Planning & Professional Practices',
+    desc: 'Affluent western suburb where high-net-worth clients research local financial expertise. We build localized trust signals, thought leadership content silos, and authoritative local citation networks.',
   },
   {
-    area: 'Pilsen and Little Village',
-    num: 'Community areas 30 and 31',
-    h: 'Bilingual search nobody optimises for',
-    p: 'Eighteenth Street and Twenty-Sixth Street are two of the busiest independent retail corridors in Chicago, and a large share of the searching happens in Spanish. Most agencies never think about it. A profile and pages that work in both languages is close to an open goal.',
+    corridor: 'Elk Grove Village & O’Hare Industrial Hub',
+    query: 'industrial equipment repair elk grove',
+    focus: 'Industrial Tooling, Logistics, Freight & Fabrication',
+    desc: 'The nation’s premier industrial park. We capture regional B2B supply chain procurement queries by optimizing technical capability pages, B2B service schemas, and localized industry directory citations.',
   },
 ];
 
-/* ── The listicle. Numbered, scannable, extraction-friendly. ────────────────── */
-const STEPS: { h: string; p: string }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    h: 'Pick the narrowest primary category that is still true',
-    p: 'Google says relevance is how well your profile matches what somebody typed. "Dentist" and "Cosmetic dentist" pull different results in Lakeview. Most Chicago businesses pick the broad one, compete with everyone and win nothing. Go narrow on the primary, add the rest as secondary.',
+    sector: 'Commercial Contractors, Roofing & Mechanical Trades',
+    headline: 'Capturing High-Value Commercial & Emergency Service Calls Across Chicagoland',
+    description:
+      'Commercial property managers and facility directors across Cook and DuPage counties do not browse pages of search results. When roof leaks occur or HVAC systems fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to dominate high-ticket service queries.',
+    image: '/images/us/services/roofing-seo/hero.webp',
+    alt: 'Chicago commercial contractor and roofing local SEO ranking strategy',
+    points: [
+      'Hyper-localized neighborhood landing pages covering 25+ Chicagoland suburban municipalities',
+      'Automated review generation workflows securing verified customer testimonials with keyword signals',
+      'Structured LocalBusiness and Contractor JSON-LD schema with exact service area coordinates',
+    ],
   },
   {
-    h: 'Get your address right before you touch anything else',
-    p: 'Distance is the one ranking factor you cannot argue with, and Chicago is dense enough that a mile matters. A Downers Grove address will not show up for somebody on Wacker Drive. Decide which neighborhoods you can genuinely serve, then build for those rather than the whole metro.',
+    sector: 'Healthcare Practices, Specialty Dental & Medical Clinics',
+    headline: 'Driving High-Value Patient Appointments in Chicago’s Premier Medical Corridors',
+    description:
+      'From private practices along Michigan Avenue to multi-location dental groups in Naperville, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and ensure spotless citation consistency across healthcare directories.',
+    image: '/images/us/services/dental-seo/team.webp',
+    alt: 'Chicago healthcare dental and medical practice local SEO growth',
+    points: [
+      'Physician-specific and clinic-level Google Business Profile optimization with appointment booking links',
+      'MedicalSpecialty and Physician schema markup aligning with state licensing and hospital networks',
+      'Strict HIPAA-compliant review response protocols and localized patient guide content hubs',
+    ],
   },
   {
-    h: 'Keep reviews recent, not just numerous',
-    p: 'BrightLocal’s 2026 consumer survey found 97% of people read reviews for local businesses and 74% look specifically for ones written in the last three months. A profile with two hundred reviews and nothing since spring reads as a business that stopped caring.',
+    sector: 'Litigation Law Firms, Personal Injury & Defense Practices',
+    headline: 'Dominating High-Stakes Legal Search Queries in Downtown Chicago',
+    description:
+      'Legal keywords in Chicago are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
+    image: '/images/us/services/law-firm-seo/team.webp',
+    alt: 'Chicago law firm litigation and corporate counsel local SEO architecture',
+    points: [
+      'Practice area content architecture engineered for high-intent legal search queries',
+      'LegalService and Attorney schema with state bar credentials and practice jurisdiction tags',
+      'Authoritative local legal citations across Avvo, Justia, Martindale, and Chicago Bar associations',
+    ],
   },
   {
-    h: 'Write neighborhood pages a local would recognise',
-    p: 'Name the street, the intersection, the CTA line, the thing on the corner. A page that says "we serve the Chicago area" ranks for nothing. A page that knows the difference between Andersonville and Edgewater gives Google something specific to match against.',
-  },
-  {
-    h: 'Make your name, address and phone identical everywhere',
-    p: 'Suite numbers, "St" versus "Street", an old suburban number still sitting on a directory from four years ago. Chicagoland businesses collect more of these than most, because so many moved into or out of the city. Pick one exact format and enforce it everywhere.',
-  },
-  {
-    h: 'Fix the site itself, not just the profile',
-    p: 'Speed, crawlability, structured data and pages that clearly say what you do and where. Most local agencies skip this layer because it looks like developer work, and it is why their rankings slide back after six months. It is also cheapest to get right at the start.',
-  },
-  {
-    h: 'Get onto the lists that already rank',
-    p: 'Half of page one for "seo agency chicago" is not an agency at all. It is Clutch, Built In Chicago, a Semrush directory and three roundups. That pattern repeats across Chicago categories. Earning a place on the lists that already rank is often faster than outranking them.',
-  },
-];
-
-/* ── Page-one rivals for "seo agency chicago", live US results, 2026-08-12.
-      Every description below is drawn from the firm's own public site.
-      Named fairly, never disparaged. ───────────────────────────────────────── */
-const RIVALS: { who: string; rank: string; where: string; good: string; us?: boolean }[] = [
-  {
-    who: 'Digital Third Coast',
-    rank: 'Position 1',
-    where: 'Chicago, North Avenue',
-    good: 'A genuinely local Chicago shop that leans on digital PR and earned links alongside SEO. Worth knowing: the page holding position 1 is their own blog post ranking the top Chicago SEO agencies. That tells you how this SERP behaves.',
-  },
-  {
-    who: 'Slim Marty',
-    rank: 'Position 2',
-    where: 'Chicago, West Higgins Avenue',
-    good: 'A small Chicago team covering web development, SEO, paid search, email and social, with fifteen years behind them. They pitch straight at small business websites. If you want one local shop for the whole stack, they are a fair call.',
-  },
-  {
-    who: 'Straight North',
-    rank: 'Position 3',
-    where: 'Downers Grove, IL',
-    good: 'Founded in 1997, headquartered in the western suburbs with offices in Chicago, Charlotte and Baltimore. They sell SEO as a lead engine and report on it that way, which is more than most agencies bother with.',
-  },
-  {
-    who: 'Thrive Agency',
-    rank: 'Position 4',
-    where: 'Arlington, Texas',
-    good: 'A large national operation with a Chicago location page, and their reach across city SERPs is impressive. It also tells you what you are buying: a multi-city machine where the strategist who won the pitch is rarely on your monthly call.',
-  },
-  {
-    who: 'Logical Position',
-    rank: 'Position 7',
-    where: 'Lake Oswego, OR, with a Palatine office',
-    good: 'Paid media first. They lead with pay-per-click management and hold Google Premier Partner status, with SEO one service among several. If you need leads this quarter rather than next year, paid is a legitimate answer.',
-  },
-  {
-    who: 'Adcetera',
-    rank: 'Position 8',
-    where: 'Houston, TX, with a Chicago office',
-    good: 'An integrated brand and creative agency serving large enterprise clients, with digital one of five practice areas. If you need brand and campaign creative rather than a local search fix, they work at a level most SEO shops do not.',
-  },
-  {
-    who: 'Chicago SEO Company',
-    rank: 'Position 10',
-    where: 'Chicago',
-    good: 'An SEO specialist that says roughly four fifths of its work is local, on month-to-month terms. Narrow focus is a real advantage here. As with anyone advertising a guarantee, read exactly what is guaranteed before you sign.',
-  },
-  {
-    who: 'Clutch and Built In Chicago',
-    rank: 'Positions 5 and 6',
-    where: 'Directories, not agencies',
-    good: 'Neither does SEO for anybody. They rank because Google trusts the domain. Worth knowing before you count your competition: getting listed on pages like these is part of the work, not a fight to win.',
-  },
-  {
-    who: 'FactoryJet',
-    rank: 'Challenger',
-    where: 'Serving Chicago and the collar counties',
-    good: 'Senior engineers doing the work rather than account managers, a written scope you read before signing, month-to-month terms, and technical SEO plus AI search visibility included instead of upsold. We are the newcomer here and will not pretend otherwise.',
-    us: true,
+    sector: 'Industrial Suppliers, Warehousing & Fleet Logistics',
+    headline: 'Winning B2B Procurement Searches Across the O’Hare Industrial Corridor',
+    description:
+      'Industrial buyers and supply chain managers in Elk Grove Village and surrounding industrial parks search for local fabrication, machining, and logistics partners. We optimize your technical capability matrices, register verified B2B industry citations, and structure commercial supplier schemas to capture corporate purchase orders.',
+    image: '/images/us/manufacturing-website-design/rfq-desk.webp',
+    alt: 'Chicago industrial supplier and logistics B2B local search optimization',
+    points: [
+      'B2B supplier and fabrication capability schemas linking equipment specs to regional search queries',
+      'Google Maps optimization for commercial loading dock addresses and industrial park locations',
+      'Industry-specific citation syndication across ThomasNet, IndustryNet, and Midwest manufacturing networks',
+    ],
   },
 ];
 
-const LAYERS: { lt: string; h: string; p: string }[] = [
-  { lt: 'Layer 01', h: 'Technical SEO and Core Web Vitals', p: 'Speed, schema, crawlability, internal linking. The foundation most local agencies skip, and why their rankings slide back.' },
-  { lt: 'Layer 02', h: 'Google Business Profile', p: 'The map pack is built from your profile: categories, services, attributes, photos, hours and posts.' },
-  { lt: 'Layer 03', h: 'Citations and NAP cleanup', p: 'Consistent listings across the directories Google trusts, with duplicate Chicagoland listings removed.' },
-  { lt: 'Layer 04', h: 'Review growth and response', p: 'A system to earn reviews steadily and reply to all of them. The strongest signal you fully control.' },
-  { lt: 'Layer 05', h: 'Neighborhood content', p: 'Service and area pages that earn rankings instead of reading like one page with the name swapped.' },
-  { lt: 'Layer 06', h: 'AI SEO and GEO', p: 'Entity data and answer-first writing so ChatGPT, Perplexity and Google AI Overviews quote you correctly.' },
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Low Proximity Traps & Geo-Grid Disappearance',
+    problem: 'Most local businesses rank well right in front of their office but disappear completely from the 3-Pack just two miles away in adjacent neighborhoods.',
+    solution: 'We deploy localized entity content hubs and multi-radius geo-signals that expand your Google Map Pack visibility across the entire Chicago metro area.',
+  },
+  {
+    num: '02',
+    title: 'Resolving Inconsistent NAP Data & Corrupted Directory Citations',
+    problem: 'Duplicate listings, old suite numbers, and mismatched phone formats across Yelp, Apple Maps, and Bing confuse search algorithms and suppress rankings.',
+    solution: 'We audit and direct-sync your business data across primary data aggregators (Data Axle, Neustar, Foursquare) to guarantee 100% NAP consistency.',
+  },
+  {
+    num: '03',
+    title: 'Neutralizing Competitor Map Spam & Fake Listing Floods',
+    problem: 'Unscrupulous competitors stuff keywords into their GBP business names and create fake virtual office listings that displace legitimate local companies.',
+    solution: 'We run weekly automated geo-grid scans and file formal Google Redressal complaints backed by state corporate records to clear out map spam.',
+  },
+  {
+    num: '04',
+    title: 'Transforming Empty Rankings into Tracked Revenue & Phone Calls',
+    problem: 'Standard agencies report on vanity impressions or search volume without tracking how many phone calls, form fills, or consultation bookings were produced.',
+    solution: 'We implement call tracking, dynamic number insertion, and Google Business Profile conversion tracking to report on actual client revenue.',
+  },
 ];
 
-const CONSULT_PTS: { h: string; p: string }[] = [
-  { h: 'You talk to the person doing the work', p: 'No account manager layer. The engineer who writes the fixes explains them to you in plain English.' },
-  { h: 'Technical SEO is the floor, not an upsell', p: 'Core Web Vitals, schema and crawl health are in every month’s scope, not quoted separately.' },
-  { h: 'Free SEO audit, yours to keep', p: 'Every engagement starts with a full audit. You keep the findings and the roadmap either way.' },
-  { h: 'AI search visibility included', p: 'Structured data and answer-first content so AI engines can cite you. Check where you stand with our free AI visibility checker.' },
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity Audit & GBP Optimization',
+    desc: 'We perform a 50-point inspection of your Google Business Profile, citation consistency, and local competitors across target Chicagoland ZIP codes.',
+    deliverables: ['50-point GBP health audit', 'Geo-grid benchmark scan across 15 miles', 'Category & primary keyword alignment', 'Spam competitor audit'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'On-Page Entity SEO & Local Content Hubs',
+    desc: 'We inject advanced LocalBusiness schema and build hyper-relevant neighborhood and suburban landing pages covering core Chicago service areas.',
+    deliverables: ['JSON-LD LocalBusiness & Service schema', 'Chicago neighborhood landing pages', 'Optimized localized header hierarchies', 'Geo-tagged image metadata integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Citation Syndication & Review Acceleration',
+    desc: 'We synchronize your business data across tier-1 directories and deploy automated review generation workflows to build verified 5-star ratings.',
+    deliverables: ['Data aggregator API syndication', 'Tier-1 directory verification (60+ hubs)', 'Automated SMS/Email review request funnel', 'Local Chamber & industry citations'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Map Pack Geo-Grid Defense & Monthly Reporting',
+    desc: 'We continuously track your 3-Pack rankings across a 15-mile grid, publish weekly profile updates, and report on verified inbound calls.',
+    deliverables: ['Weekly geo-grid proximity tracking', 'Weekly GBP photo & post management', 'Ongoing competitor spam removal', 'Transparent call & revenue reporting'],
+  },
 ];
 
-/* ── FAQ. Grounded in live People-Also-Ask data for this query, localised
-      honestly. This ONE array feeds both the visible FAQ and the schema. ───── */
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Google Business Profile Optimization',
+    factoryjet: 'Deep Entity Engineering. Complete category optimization, weekly geotagged updates, structured Q&A seed libraries, and automated review velocity workflows.',
+    traditional: 'Basic Setup Only. Simple address verification without category testing, geo-grid monitoring, or spam defense against competitors.',
+  },
+  {
+    label: 'Local Schema & Structured Data',
+    factoryjet: 'Enterprise JSON-LD Graph. Complete LocalBusiness, ServiceArea, GeoCoordinates, and aggregateRating markup embedded directly in server-rendered code.',
+    traditional: 'Generic Plugin Schema. Basic auto-generated Yoast schema lacking exact coordinates, service radius polygons, or verified entity connections.',
+  },
+  {
+    label: 'Reporting & Attribution',
+    factoryjet: 'Real Business Metrics. Track verified phone calls, form fills, Map Pack direction requests, and geo-grid ranking improvements over time.',
+    traditional: 'Vague Vanity Reports. PDF reports highlighting total impressions or vanity keyword rankings that do not correlate with inbound revenue.',
+  },
+  {
+    label: 'Spam Defense & Listing Security',
+    factoryjet: 'Active Map Defense. Regular audits of competitor keyword stuffing and reporting of fake listings that artificially crowd the Chicago Map Pack.',
+    traditional: 'Passive Monitoring. Zero intervention against fraudulent competitor tactics that displace your legitimate business from top map rankings.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'What it costs' },
-  { key: 'worth', label: 'Is it worth it' },
-  { key: 'basics', label: 'How SEO works' },
-  { key: 'ai', label: 'SEO and AI' },
-  { key: 'diy', label: 'Doing it yourself' },
-  { key: 'local', label: 'Chicago specifics' },
-  { key: 'work', label: 'Working with us' },
-] as const;
+  { key: 'local-seo', label: 'Local SEO Strategy' },
+  { key: 'map-pack', label: 'Google Map Pack' },
+  { key: 'citations', label: 'Citations & NAP' },
+  { key: 'chicago', label: 'Chicago Specifics' },
+  { key: 'reviews', label: 'Reviews & Reputation' },
+  { key: 'timeline', label: 'Timelines & ROI' },
+];
 
 const FAQ_ITEMS = [
   {
-    category: 'cost',
-    question: 'How much does an SEO agency typically cost?',
+    category: 'local-seo',
+    question: 'What is the difference between local SEO and traditional organic SEO in Chicago?',
     answer:
-      'Agencies price on effort. The drivers are how many locations you serve, how competitive your category is in your part of Chicago, how much technical repair the site needs first, and whether links are in scope. We run a free audit before quoting, so the plan is on paper.',
+      'Traditional SEO focuses on nationwide or regional keyword rankings in standard blue search links. Local SEO focuses on capturing geographically constrained searches (such as "emergency plumber Chicago" or "roofing contractor near me") by optimizing for the Google Map Pack 3-pack and localized organic results. Local SEO relies heavily on Google Business Profile health, citation consistency across directories, local reviews, and geo-targeted schema.',
   },
   {
-    category: 'cost',
-    question: 'How much does it cost to hire an SEO agency in Chicago?',
+    category: 'timeline',
+    question: 'How long does it take to rank in the Chicago Google Map Pack?',
     answer:
-      'More than a quiet market, less than New York, and a number without a scope attached is meaningless anyway. A single-location clinic in Lakeview and a nine-location home services company across the collar counties are not the same job. Get two or three written scopes and compare them line by line.',
+      'Initial improvements in low-competition suburbs or niche service categories often appear within 30 to 60 days. In highly competitive downtown Chicago corridors (such as personal injury law or commercial roofing), reaching the top 3 positions typically takes 90 to 180 days of systematic citation building, on-page entity optimization, and review velocity.',
   },
   {
-    category: 'cost',
-    question: 'How much should a small business spend on SEO?',
+    category: 'map-pack',
+    question: 'Why does our Chicago business rank on maps near our office but disappear 3 miles away?',
     answer:
-      'Less than it brings in. Work out what one new customer is worth over a year, then ask how many extra customers a month would cover the work with room left over. A handful means the scope fits. Dozens means start narrower.',
+      'Google weighs proximity heavily in map rankings. Without deep localized entity signals, your ranking radius remains tightly clustered around your physical address. We expand your ranking radius across the entire Chicago metro area by building neighborhood-specific service pages, earning location-specific backlinks, and optimizing localized service area schema.',
   },
   {
-    category: 'cost',
-    question: 'Why is local SEO a monthly thing instead of a one-time job?',
+    category: 'chicago',
+    question: 'How do you handle local SEO for businesses with multiple Chicago locations?',
     answer:
-      'Rankings are earned and then defended. Competitors keep optimising, Google keeps shipping updates, and your profile needs ongoing posts, photos, reviews and listing upkeep. A one-time setup decays quietly and you find out six months later when the calls stop.',
+      'We establish dedicated, verified Google Business Profiles for each physical location, ensuring zero phone number or address cross-contamination. On your website, we engineer unique location landing pages with bespoke content, distinct LocalBusiness schema, and individualized driving directions, eliminating internal keyword cannibalization.',
   },
   {
-    category: 'worth',
-    question: 'Is an SEO agency worth it?',
+    category: 'citations',
+    question: 'What is NAP consistency and why is it crucial for Chicago search rankings?',
     answer:
-      'It is worth it if people search before they buy from you and competitors sit above you. It is worth little if nobody searches for what you sell. The real failure mode is paying for SEO with no way to tell whether it worked.',
+      'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit and synchronize 100% of your citations.',
   },
   {
-    category: 'worth',
-    question: 'Is paying someone to do SEO worth it?',
+    category: 'reviews',
+    question: 'Can you help our business remove fake 1-star reviews or competitor spam?',
     answer:
-      'Yes for the parts that need judgement and consistency, no for the parts you can do in an afternoon. Claiming your profile, adding real photos and asking for reviews are yours. Technical repair, content that outranks an incumbent, and earning links are where paying someone pays back.',
+      'We systematically flag and appeal reviews that violate Google’s Prohibited and Restricted Content policies (such as hate speech, conflict of interest, or fake spam accounts). For legitimate negative feedback, we provide professional response frameworks and deploy automated review generation funnels to bury negative ratings with verified 5-star client testimonials.',
   },
   {
-    category: 'worth',
-    question: 'Is SEO worth it for small businesses?',
+    category: 'local-seo',
+    question: 'How do you structure local schema markup for Chicago service area businesses?',
     answer:
-      'For most Chicago small businesses, yes, because you are not trying to beat the internet. You are trying to beat the handful of businesses in your category within a few miles of you. That is a fight a normal owner can win.',
+      'We inject custom server-rendered JSON-LD schema defining your exact primary service categories, GeoShape service radius polygons covering Chicagoland counties (Cook, DuPage, Lake, Will), verified licensing credentials, and explicit opening hours. This ensures Google and AI crawlers understand your exact operating footprint.',
   },
   {
-    category: 'worth',
-    question: 'Who is the best SEO agency in Chicago?',
+    category: 'citations',
+    question: 'Do you optimize Apple Maps and Apple Business Connect alongside Google?',
     answer:
-      'It depends on what is broken. Run every candidate, us included, through one checklist: a written scope you read before signing, month-to-month terms, your data staying yours, the person doing the work on the call, and reporting tied to leads rather than rankings.',
+      'Yes. Millions of Chicago iPhone users and CarPlay drivers utilize Apple Maps for local searches. We claim, optimize, and synchronize your Apple Business Connect profile with custom action buttons, verified hours, and high-resolution brand photography.',
   },
   {
-    category: 'basics',
-    question: 'What does an SEO agency do?',
+    category: 'local-seo',
+    question: 'How does local SEO help our business appear in AI search answers like ChatGPT and Perplexity?',
     answer:
-      'Four things. Fix the technical condition of your site so search engines can crawl and trust it. Build and maintain your Google Business Profile and local listings. Write pages that match what people search. Earn mentions and links from credible sites. Everything else sits inside those four.',
+      'AI search engines synthesize local recommendations using structured web data, verified citation sources, and Google Business Profile information. By establishing spotless NAP consistency, rich FAQ schemas, and authoritative local business citations, we position your company as the authoritative recommendation when AI models process local queries.',
   },
   {
-    category: 'basics',
-    question: 'What are the four main types of SEO?',
+    category: 'map-pack',
+    question: 'How do you combat competitors who stuff keywords into their Google Business Profile name?',
     answer:
-      'On-page is your content and how pages are structured. Technical is speed, crawling, indexing and structured data. Off-page is links and mentions from elsewhere. Local is your Google Business Profile, listings and reviews. A Chicago storefront lives or dies on the fourth.',
+      'Keyword stuffing in business names violates Google Business Profile guidelines. We perform regular local grid scans and submit Redressal Complaints with state licensing documentation to remove unauthorized keywords from competitor listings, restoring fair 3-Pack rankings.',
   },
   {
-    category: 'basics',
-    question: 'What is the 80/20 rule in SEO?',
+    category: 'timeline',
+    question: 'What metrics do you track to measure the ROI of our Chicago local SEO campaign?',
     answer:
-      'The idea that a small slice of the work produces most of the result. In local SEO that slice is three things: a correctly categorised Google Business Profile, a steady flow of recent reviews, and a fast site that says clearly what you do and where.',
+      'We track concrete commercial indicators: total verified phone calls from map listings, direction requests, website visits from local search, click-to-call mobile conversions, and geo-grid 3-Pack ranking expansions across target Chicago ZIP codes.',
   },
   {
-    category: 'basics',
-    question: 'What is local SEO versus regular SEO?',
+    category: 'map-pack',
+    question: 'Can a service-area business without a public storefront rank in the Chicago Map Pack?',
     answer:
-      'Regular SEO ranks a page in the ten blue links, anywhere. Local SEO gets your business into the map pack and the near me results for people physically close to you. Google ranks local results on relevance, distance and prominence. Distance is fixed. The other two are the job.',
+      'Yes. You can configure your Google Business Profile as a Service-Area Business (SAB) with a hidden residential address. We optimize your designated service radius and pair it with strong suburban landing pages to win map pack visibility without displaying your home address.',
   },
   {
-    category: 'basics',
-    question: 'How long does it take for SEO to kick in?',
+    category: 'citations',
+    question: 'Why are local backlinks from Chicago websites more valuable than generic links?',
     answer:
-      'Expect early movement in three to six months and stable local rankings in six to twelve. Profile and review work often shows up faster, sometimes within weeks. Content and links take the long road. We sequence it so quick wins land while the slower work matures.',
+      'Search engines evaluate local relevance when ranking Map Pack listings. A link from a Chicago Chamber of Commerce, local business association, or regional news publication passes strong geographic trust signals that generic national links cannot replicate.',
   },
   {
-    category: 'ai',
-    question: 'Can ChatGPT do SEO?',
+    category: 'reviews',
+    question: 'How often should our Chicago business post updates or photos to our Google Profile?',
     answer:
-      'It can draft, outline and speed up research. It cannot see your Google Business Profile, cannot know why your site is slow, cannot earn a link, and does not know what your Chicago competitors rank for this month. As an assistant it saves hours. As the strategy it produces pages that read like everyone else’s.',
+      'We recommend at least one high-quality update and 2 to 4 geotagged project photos weekly. Consistent profile activity signals an active, trustworthy business, which positively influences Google’s local ranking algorithm.',
   },
   {
-    category: 'ai',
-    question: 'Is SEO dead now with AI?',
+    category: 'chicago',
+    question: 'What is the role of neighborhood landing pages in our Chicago SEO strategy?',
     answer:
-      'No, but where the answer appears has changed. People still search, they just as often read a summary at the top of Google or ask an assistant instead of clicking. The work that gets you cited in those answers is the same work that got you ranked.',
+      'Neighborhood pages allow your website to target specific commercial micro-markets (such as River North, Lincoln Park, or Schaumburg) with hyper-relevant content, local testimonials, and tailored schema without diluting your primary homepage focus.',
   },
   {
-    category: 'ai',
-    question: 'Will SEO be replaced by AI?',
+    category: 'reviews',
+    question: 'How do you handle review generation without violating Google’s anti-gating policies?',
     answer:
-      'The tactics keep getting replaced. The job does not. Something still decides which businesses an answer engine names, and it draws on the same signals: your site, your listings, your reviews and what other sites say about you. Most Chicago businesses have never checked whether they are named at all.',
+      'We implement direct SMS and email review request workflows that invite all verified clients to leave honest feedback on Google. We avoid review gating or incentive schemes, ensuring full compliance with Google guidelines and FTC regulations.',
   },
   {
-    category: 'diy',
-    question: 'Can I do SEO myself?',
+    category: 'citations',
+    question: 'What happens if our business moves office locations within Chicago?',
     answer:
-      'The first chunk, absolutely, and you should. Claim and fill out your Google Business Profile, make your name, address and phone identical everywhere, add real photos rather than stock, and ask every happy customer for a review. It gets hard at technical repair and beating an incumbent.',
+      'We execute a comprehensive address migration protocol: updating your Google Business Profile, submitting state corporate filing verification, synchronizing primary data aggregators, updating website schema, and monitoring citations to prevent duplicate listing penalties.',
   },
   {
-    category: 'diy',
-    question: 'Can I do local SEO myself, and where do I start?',
+    category: 'timeline',
+    question: 'Do you require long-term annual contracts for Chicago local SEO?',
     answer:
-      'Search your own category plus your neighborhood on your phone and see whether you appear. Then claim your profile, pick the narrowest true primary category, fill in services and hours, add ten real photos, and ask five customers for reviews this week. That is a genuine first month.',
+      'No. We operate on transparent monthly retainers with clear deliverable milestones. Our retention is built on measurable ranking improvements, verified inbound phone calls, and clear revenue growth rather than restrictive contract terms.',
   },
   {
-    category: 'local',
-    question: 'Do you work with businesses in the Chicago suburbs?',
+    category: 'local-seo',
+    question: 'Can local SEO help our B2B manufacturing or wholesale business in Chicago?',
     answer:
-      'Yes. We work across Chicagoland: Evanston, Oak Park, Naperville, Schaumburg, Oak Brook, Skokie, Arlington Heights, Downers Grove, Cicero, Aurora and Joliet. Multi-location businesses get location pages written one at a time, because Google has spotted cloned ones for years.',
+      'Yes. Corporate buyers and procurement officers frequently search for local suppliers, fabrication shops, and logistics providers. Local SEO ensures your facility appears at the top of commercial map queries and localized B2B industrial searches.',
   },
   {
-    category: 'local',
-    question: 'Do Chicago businesses need Spanish-language SEO?',
+    category: 'timeline',
+    question: 'How do we begin our Chicago local SEO campaign with FactoryJet?',
     answer:
-      'In parts of the city it is one of the clearest openings available. Along Eighteenth Street in Pilsen and Twenty-Sixth Street in Little Village a large share of the searching happens in Spanish, and few competitors have built for it. Where that fits your customers, we build both versions properly.',
+      'Schedule a discovery consultation or request a complimentary 50-point Chicago Local SEO Audit. We will analyze your current Map Pack visibility, identify citation errors, evaluate your local competitors, and present an actionable growth plan within 24 hours.',
   },
-  {
-    category: 'work',
-    question: 'Do you require a long-term contract?',
-    answer:
-      'No. We work month to month and you can cancel with thirty days notice. Plenty of Chicago agencies lock you into six or twelve months. We would rather earn the next month, and if we are the wrong fit you should find that out in month two, not month ten.',
-  },
-  {
-    category: 'work',
-    question: 'Can you guarantee number one rankings in Chicago?',
-    answer:
-      'No, and anyone who does is guessing with your money. Google states plainly that there is no way to request or pay for a better local ranking. What we guarantee is the work itself, transparency about what was done and why, and your right to leave at the end of any month.',
-  },
-  {
-    category: 'work',
-    question: 'What happens to my work if I leave?',
-    answer:
-      'You keep everything. Your Google Business Profile, website content, citations and reporting access stay yours, in accounts with your name on them. Work that disappears when you leave was rented, not built. Ask every agency this before you sign.',
-  },
-  {
-    category: 'work',
-    question: 'What does the free Chicago SEO audit include?',
-    answer:
-      'Technical health first: speed, Core Web Vitals, crawl errors and structured data. Then your Google Business Profile, reviews and citations. Then content gaps against what Chicago actually searches in your category, and the competitors holding your spots. Yours to keep either way.',
-  },
-] as const;
-
-/* Derived, never duplicated. This is the ONLY place FAQ schema comes from. */
-const faqSchemaItems = FAQ_ITEMS.map((item) => ({
-  '@type': 'Question' as const,
-  name: item.question,
-  acceptedAnswer: { '@type': 'Answer' as const, text: item.answer },
-}));
-
-const OTHER_CITIES: { name: string; path: string }[] = [
-  { name: 'Austin SEO', path: '/austin/seo' },
-  { name: 'Cleveland SEO', path: '/cleveland/seo' },
-  { name: 'Nashville SEO', path: '/nashville/seo' },
-  { name: 'Charlotte SEO', path: '/charlotte/seo' },
-  { name: 'Denver SEO', path: '/denver/seo' },
 ];
 
-const jsonLd = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: [
-        { '@type': 'City', name: 'Chicago', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-        { '@type': 'City', name: 'Evanston', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-        { '@type': 'City', name: 'Oak Park', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-        { '@type': 'City', name: 'Naperville', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-        { '@type': 'City', name: 'Schaumburg', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-        { '@type': 'City', name: 'Downers Grove', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-      ],
-      knowsAbout: ['Local SEO', 'Technical SEO', 'Google Business Profile optimization', 'Generative engine optimization'],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'SEO Services in Chicago, IL',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      url: CANONICAL,
-      areaServed: { '@type': 'City', name: 'Chicago', containedInPlace: { '@type': 'State', name: 'Illinois' } },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Chicago SEO services',
-        itemListElement: LAYERS.map((l) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: l.h, description: l.p },
-        })),
-      },
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${CANONICAL}#cities`,
-      name: 'FactoryJet local SEO city pages',
-      itemListElement: OTHER_CITIES.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        url: `https://factoryjet.com${c.path}`,
-      })),
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Chicago SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'SEO Agency Chicago | Local SEO Services in Chicago, IL',
-      description:
-        'What an SEO agency in Chicago actually does, how the local search competition really looks across the city’s 77 community areas, and how FactoryJet compares to the firms currently holding page one.',
-      inLanguage: 'en-US',
-      dateModified: '2026-08-12',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['.cseo .bluf p', '.cseo .bluf-support', '[data-faq-answer]'],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqSchemaItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Chicago Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Chicago',
+    addressRegion: 'IL',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 41.8781,
+    longitude: -87.6298,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Chicago' },
+    { '@type': 'City', name: 'Naperville' },
+    { '@type': 'City', name: 'Schaumburg' },
+    { '@type': 'City', name: 'Oak Brook' },
+    { '@type': 'City', name: 'Evanston' },
   ],
 };
 
-/* 77 decorative cells, one per Chicago community area. Purely visual. */
-const CELL_HIGHLIGHT = new Set([6, 7, 8, 24, 28, 30, 31, 32]);
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Chicago Local SEO & Map Pack Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Optimization & Geo-Grid Defense',
+  description:
+    'Senior engineering-led Google Business Profile optimization, local citation syndication, and geo-grid rank defense for Chicago businesses.',
+  areaServed: { '@type': 'State', name: 'Illinois' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+  description: 'Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Illinois businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/local-seo' },
+    { '@type': 'ListItem', position: 3, name: 'Chicago', item: CANONICAL },
+  ],
+};
 
 export default function ChicagoSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="chi-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="chi-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="chi-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="chi-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="chi-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="bg-fj-cream">
-        <div className="cseo">
-          {/* HERO */}
-          <section className="hero">
-            <div className="wrap hero-grid">
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <span className="loc"><b />Chicago, Illinois</span>
-                <h1>An SEO agency in Chicago that works one neighborhood at a time</h1>
-                <p className="lead">
-                  Chicago is not one market. It is <b>77 official community areas</b> plus a ring of suburbs, and the
-                  business that wins Lincoln Park usually loses Pilsen. We build for the blocks you actually sell on.
-                </p>
-                <HeroInlineForm region="us" source="us_chicago_seo_hero" submitLabel="Get my free SEO audit" />
-                <div className="cta-row">
-                  <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Chicago Local SEO &amp; Map Pack Dominance</span>
                 </div>
-              </div>
-              <div className="shot">
-                <img
-                  src="/images/us/chicago-seo/chicago-seo-team.webp"
-                  alt="Two people reviewing a client website together in a bright brick and timber Chicago loft office"
-                  width={1264}
-                  height={848}
-                  fetchPriority="high"
-                  decoding="async"
-                />
-                <div className="pin">
-                  <div className="k">What we measured</div>
-                  <div className="v">880 searches a month</div>
-                  <div className="k" style={{ marginTop: '4px', letterSpacing: '.04em' }}>seo agency chicago, difficulty 1</div>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          {/* FACTS */}
-          <div className="factsbar">
-            <div className="wrap row">
-              <div className="fact"><div className="v">No contract</div><div className="k">month to month, cancel anytime</div></div>
-              <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
-              <div className="fact"><div className="v">7-day</div><div className="k">kickoff, not weeks</div></div>
-              <div className="fact"><div className="v"><span className="star">&#9733;</span> 4.9</div><div className="k">on Google, across 500+ projects</div></div>
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Dominate the Chicago Google Map Pack &amp; Local Search
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Capture high-intent local phone calls, consultation inquiries, and foot traffic across Cook County. Precision GBP optimization, 100% NAP citation sync, and no long-term contracts.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#chi-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Chicago Search Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/chicago-seo/chicago-strategy-session.webp"
+                  alt="Chicago Local SEO Google Maps Strategy and Ranking Analysis"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* ANSWER FIRST */}
-          <section className="blufsec">
-            <div className="wrap">
-              <div className="bluf">
-                <span className="tag">The short answer</span>
-                <p>
-                  An SEO agency in Chicago gets your business found by the people already searching for what you sell:
-                  in Google Maps, in the normal results, and now inside AI answers. FactoryJet does that work. Google
-                  Business Profile, technical repair, reviews and neighborhood pages. Month to month, free audit first,
-                  and you talk to the engineer doing the work.
-                </p>
-              </div>
-              <div className="bluf-support">
-                <p>
-                  In practice the job splits four ways. First, your{' '}
-                  <Link className="body-link" href="/services/local-seo">Google Business Profile and local listings</Link>,
-                  which is what decides the three-result map pack. Second, the technical condition of your site, which is
-                  where a free <Link className="body-link" href="/services/seo-audit">SEO audit</Link> starts, because a
-                  slow site will not hold a ranking no matter how good the writing is. Third, pages that match what
-                  Chicago genuinely types into Google rather than what an agency guessed. Fourth, and newer,{' '}
-                  <Link className="body-link" href="/services/ai-seo">AI SEO and GEO</Link>: the structured data and
-                  answer-first writing that lets ChatGPT, Perplexity and Google AI Overviews quote you instead of a
-                  competitor. Our free{' '}
-                  <Link className="body-link" href="/ai-visibility-checker">AI visibility checker</Link> shows you where
-                  you stand on that last part in about two minutes.
-                </p>
-                <p>
-                  Who does this work in Chicago? A mix. Two or three genuinely local firms, several national agencies
-                  servicing Chicago from Texas or Oregon, a long tail of freelancers, and a set of directories that
-                  outrank all of them without doing SEO for anyone. We name them further down this page, including where
-                  we sit. If you run a smaller operation, our{' '}
-                  <Link className="body-link" href="/services/small-business-seo">small business SEO</Link> approach is
-                  the shorter version of all of this, and{' '}
-                  <Link className="body-link" href="/services/seo">US SEO services</Link> covers the national picture.
-                </p>
-              </div>
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Enterprise Local SEO &amp; Citation Stack</div>
+              <div className="rv-ticker-line" />
             </div>
-          </section>
 
-          {/* 77 COMMUNITY AREAS */}
-          <section className="gridsec">
-            <div className="wrap inner">
-              <div>
-                <span className="eyebrow">The reason city pages fail here</span>
-                <h2>Chicago is not one market. It is 77.</h2>
-                <p className="lead">
-                  The City of Chicago maintains an official boundary file of its community areas, and it contains
-                  exactly seventy-seven, numbered 1 through 77 from Rogers Park to Hegewisch. That is not trivia. It is
-                  the shape of your competition.
-                </p>
-                <p className="lead">
-                  Google ranks local results on three things it names openly: relevance, distance and prominence.
-                  Distance is fixed. You cannot move your dental practice closer to the person searching. In a city this
-                  dense, the businesses you are genuinely fighting sit inside a very small radius, and they change
-                  completely between Andersonville and Bridgeport. An agency that sells you &quot;Chicago SEO&quot;
-                  without asking which Chicago you sell to is selling you a template.
-                </p>
-                <div className="cta-row">
-                  <ModalCTAButton label="See where you rank in your neighborhood" region="us" modalVariant="seo" btnVariant="primary-light" />
-                </div>
-              </div>
-              <div>
-                <div className="cells" aria-hidden="true">
-                  {Array.from({ length: 77 }).map((_, i) => (
-                    <i key={i} className={CELL_HIGHLIGHT.has(i + 1) ? 'on' : undefined} />
-                  ))}
-                </div>
-                <p className="cellkey">
-                  <span><b style={{ background: '#F05A28' }} />the eight areas covered below</span>
-                  <span><b style={{ background: '#FFFFFF', border: '1px solid #DCE2EA' }} />the other 69</span>
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* DISTRICTS */}
-          <section className="verts">
-            <div className="wrap">
-              <span className="eyebrow">Chicago, corridor by corridor</span>
-              <h2>Six Chicagos, six completely different search problems</h2>
-              <p className="lead">
-                Search demand splits along the same lines the city does. A commercial litigator on LaSalle Street and
-                a taqueria on Eighteenth Street are both doing local SEO, and almost nothing about their strategy
-                overlaps. Here is how we read the map before writing a single page.
-              </p>
-              <div className="qgrid">
-                {DISTRICTS.map((d) => (
-                  <div className="qcard" key={d.area}>
-                    <div className="qbar"><i />{d.area} <span className="kd">{d.num}</span></div>
-                    <div className="qbody"><h3>{d.h}</h3><p>{d.p}</p></div>
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
                 ))}
               </div>
-              <p className="districts">
-                Then there is everything outside the city limits, which is most of the metro. We work across{' '}
-                <b>Evanston, Oak Park, Naperville, Schaumburg, Oak Brook, Skokie, Arlington Heights, Downers Grove,
-                Cicero, Aurora and Joliet</b>. The mistake we see constantly out here is a suburban business setting a
-                city-wide service area to catch downtown searches. It does not work, and it dilutes the searches you
-                could have won at home.
-              </p>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* LISTICLE */}
-          <section className="listsec">
-            <div className="wrap">
-              <span className="eyebrow">The order that actually works</span>
-              <h2>Seven things that move a Chicago business into the map pack</h2>
-              <p className="lead">
-                In this order, not the other way round. Most businesses start at step four because it feels like
-                marketing, then wonder why nothing moved.
-              </p>
-              <ol className="steps">
-                {STEPS.map((s, i) => (
-                  <li key={s.h}>
-                    <span className="num">{String(i + 1).padStart(2, '0')}</span>
-                    <div>
-                      <h3>{s.h}</h3>
-                      <p>{s.p}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </section>
-
-          {/* MID-PAGE CTA */}
-          <section className="midcta">
-            <div className="wrap inner">
-              <div>
-                <h2>Want to know which of those seven you are failing?</h2>
-                <p>
-                  That is what the free audit is for. We look at your profile, your site and the businesses ranking
-                  above you in your neighborhood, then tell you which single fix would move the needle first. You keep
-                  the findings whether you hire us or not.
-                </p>
-                <div className="cta-row">
-                  <ModalCTAButton label="Get your free Chicago SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-                  <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
-                </div>
-              </div>
-              <div className="midimg">
-                <img
-                  src="/images/us/chicago-seo/chicago-strategy-session.webp"
-                  alt="A Chicago business owner and an SEO strategist reviewing a website together across a table"
-                  width={1216}
-                  height={704}
-                  loading="lazy"
-                  decoding="async"
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/chicago-seo/chicago-seo-team.webp"
+                  alt="FactoryJet local SEO engineers reviewing Chicago geo-grid ranking signals"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-            </div>
-          </section>
 
-          {/* THE SERP, HONESTLY */}
-          <section className="serpsec">
-            <div className="wrap">
-              <span className="eyebrow">The SERP, honestly</span>
-              <h2>Who actually holds page one for &quot;seo agency chicago&quot;</h2>
-              <p className="lead">
-                We pulled the live US results in August 2026. Two things stand out. Half of page one is not an agency
-                at all, it is somebody&apos;s list. And the result at number one is a Chicago agency&apos;s own blog post
-                ranking its competitors. Here is the field, and where we sit in it.
-              </p>
-              <div className="tablewrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">Who</th>
-                      <th scope="col">Based</th>
-                      <th scope="col">What they are genuinely good at</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {RIVALS.map((r) => (
-                      <tr key={r.who} className={r.us ? 'us' : undefined}>
-                        <td className="who">{r.who}<small>{r.rank}</small></td>
-                        <td>{r.where}</td>
-                        <td>{r.good}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="honest">
-                <h3>Where FactoryJet actually stands, as of August 2026</h3>
-                <p>
-                  We are new to this SERP and we have a smaller link profile than the firms above us. Pretending
-                  otherwise would be the first sign you should not hire us. What we do have is a research habit: this
-                  page exists because we measured that &quot;seo agency chicago&quot; carries 880 searches a month at a keyword
-                  difficulty of 1, the lowest-competition major-metro SEO term we found anywhere in the country. That is
-                  a strange thing to publish, and we are publishing it anyway.
-                </p>
-                <p>
-                  Our link gap also matters less to you than it does to us. You need to rank in a few neighborhoods,
-                  against maybe a dozen genuine local rivals. We are trying to rank nationally against firms with many
-                  times our authority. Your version of the job works on a normal timeline. Ours takes years. You get the
-                  benefit of us doing the harder version every day.
-                </p>
-                <p>
-                  Ask all of us the same three questions: who physically does the work, what happens if it does not
-                  move, and does anything leave with you when you go.
-                </p>
-                <div className="cta-row">
-                  <ModalCTAButton label="Get your free Chicago SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* THE STACK */}
-          <section className="stacksec">
-            <div className="wrap">
-              <span className="eyebrow">What is in scope</span>
-              <h2>Chicago SEO services, built like software</h2>
-              <p className="lead">
-                One monthly scope, the whole stack, no add-on surprises halfway through. The layers run bottom up on
-                purpose: everything above layer one is less durable if layer one is broken.
-              </p>
-              <div className="stack">
-                {LAYERS.map((l) => (
-                  <div className="layer" key={l.lt}>
-                    <span className="lt">{l.lt}</span>
-                    <div><h3>{l.h}</h3><p>{l.p}</p></div>
-                  </div>
-                ))}
-              </div>
-              <p className="districts">
-                Related work we do in the same stack:{' '}
-                <Link className="body-link" href="/services/seo">SEO services</Link>,{' '}
-                <Link className="body-link" href="/services/local-seo">local SEO</Link>,{' '}
-                <Link className="body-link" href="/services/small-business-seo">small business SEO</Link>,{' '}
-                <Link className="body-link" href="/services/seo-audit">SEO audits</Link>,{' '}
-                <Link className="body-link" href="/services/seo-consulting">SEO consulting</Link> and{' '}
-                <Link className="body-link" href="/services/ai-seo">AI SEO</Link>.
-              </p>
-            </div>
-          </section>
-
-          {/* CONSULTANT + FOUNDER */}
-          <section className="consult">
-            <div className="wrap grid">
+              {/* Right Column: 2x2 Bento Counter Grid */}
               <div>
-                <h2>An SEO consultant who reads your code, not just your rankings</h2>
-                <p className="lead">
-                  We build software as well as market it, so the technical layer is not something we outsource or
-                  describe vaguely. Your customers notice slow sites. So does Google.
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Proximity, Reviews &amp; Entity Trust</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Capturing High-Value Inbound Calls in Chicago
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From the Loop to Schaumburg and Naperville, we help local commercial contractors, law firms, healthcare providers, and industrial suppliers dominate local search.
                 </p>
-                <div className="pts">
-                  {CONSULT_PTS.map((c) => (
-                    <div className="cpt" key={c.h}>
-                      <span className="tick" />
-                      <div><h3>{c.h}</h3><p>{c.p}</p></div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div className="callcard">
-                <div className="avatar">BB</div>
-                <div className="nm">Bhavesh Barot</div>
-                <div className="ti">Founder, FactoryJet. 12+ years building for SMBs.</div>
-                <p className="quotebit">&quot;Thirty minutes, no pitch deck. Bring your site and your toughest question.&quot;</p>
-                <a className="btn" href={CALENDLY}>Book a call with the founder</a>
-                <p className="micro">Calendly, 30 minutes, no commitment</p>
-              </div>
-            </div>
-          </section>
 
-          {/* CITY VISUAL */}
-          <section className="citysec">
-            <div className="wrap csinner">
-              <div className="csimgwrap">
-                <img
-                  src="/images/us/chicago-seo/chicago-local-shop.webp"
-                  alt="Independent shop owner checking a phone behind the counter of a bright neighborhood storefront"
-                  width={1216}
-                  height={704}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div>
-                <span className="eyebrow">Who this is for</span>
-                <h2>The businesses local search was built for</h2>
-                <p className="lead">
-                  Dentists, lawyers, clinics, contractors, salons, restaurants, studios, home services and the trades.
-                  If somebody opens Google before choosing you, local SEO is the cheapest customer acquisition you have,
-                  and most Chicago competitors still leave it half done.
-                </p>
-                <div className="csstats">
-                  <div className="csstat"><div className="csv">3 slots</div><div className="csk">in the map pack, per category, per neighborhood</div></div>
-                  <div className="csstat"><div className="csv">97%</div><div className="csk">of consumers read reviews for local businesses, BrightLocal 2026</div></div>
-                  <div className="csstat"><div className="csv">7 days</div><div className="csk">from audit to active work, not weeks</div></div>
-                </div>
-                <div className="cta-row">
-                  <ModalCTAButton label="Get your free Chicago SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Local SEO Audit" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* SOURCES */}
-          <section className="sources">
-            <div className="wrap">
-              <div className="box">
-                <p className="sh">Sources cited on this page</p>
-                <ol>
-                  <li>
-                    Google Business Profile Help,{' '}
-                    <a href="https://support.google.com/business/answer/7091" rel="nofollow noopener" target="_blank">
-                      Improve your local ranking on Google
-                    </a>
-                    . Names relevance, distance and prominence, and rules out paying for a better local ranking.
-                  </li>
-                  <li>
-                    BrightLocal,{' '}
-                    <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" rel="nofollow noopener" target="_blank">
-                      Local Consumer Review Survey 2026
-                    </a>
-                    . 97% of consumers read reviews for local businesses, 74% want ones from the last three months.
-                  </li>
-                  <li>
-                    City of Chicago open data,{' '}
-                    <a
-                      href="https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6"
-                      rel="nofollow noopener"
-                      target="_blank"
-                    >
-                      Boundaries: Community Areas
-                    </a>
-                    . The official dataset contains 77 community areas.
-                  </li>
-                </ol>
+        {/* ── 04. CHICAGO DISTRICTS SECTION ── */}
+        <section id="chi-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Chicagoland Search Coverage</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Targeting Key Chicago Search Corridors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sub-market in Cook and DuPage county demands localized proximity targeting:
+              </p>
             </div>
-          </section>
-        </div>
 
-        {/* FAQ: shared v2 component, outside .cseo so scoped CSS cannot touch it. */}
-        <FAQ
-          eyebrow="CHICAGO SEO FAQ"
-          headline="Questions, answered like a real call"
-          lead="The same answers we would give you on the phone, including the ones about money that most agency sites skip."
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
-
-        {/* The single dark section on this page. */}
-        <FinalCTA
-          variant="dark"
-          eyebrow="GET STARTED"
-          headline="Own your corner of Chicago"
-          sub="Start with a free Chicago SEO audit. We will show you where you stand in the map pack for your neighborhood, what is technically holding the site back, and what we would fix first."
-          primaryCta={{ label: 'Get your free SEO audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'Talk to the founder', href: CALENDLY }}
-          objectionHandler="Month to month, free audit, no setup fee, and your accounts stay yours."
-        />
-
-        <section className="py-10 bg-[#FAFAF7]">
-          <div className="max-w-5xl mx-auto px-6">
-            <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-              Local SEO in other cities
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {OTHER_CITIES.map((c) => (
-                <Link
-                  key={c.path}
-                  href={c.path}
-                  className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  {c.name}
-                </Link>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </section>
-        <SeoCityLinksUS currentCity="chicago" />
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Systems</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Frameworks for Chicago Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Discover how our localized entity engineering captures high-value inbound calls across core industries:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE PAIN POINTS SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Advantage</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Chicago Businesses Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace empty keyword promises with technical entity engineering and measurable ROI:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Technical Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="local-seo-architecture-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// CHICAGO LOCAL SEO & MAP PACK BLUEPRINT"
+            title="Entity-Led Local Search: From Citations to Inbound Calls"
+            subtitle="Explore how Google Business Profile signals, data aggregator sync, LocalBusiness schema, and review acceleration work together."
+            city="Chicago"
+            ctaLabel="Get Your Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>90-Day Execution Plan</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 90-Day Local Ranking Acceleration Framework
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, milestone-driven protocol to establish 3-Pack Map dominance and grow verified phone inquiries:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Chicago Local SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-first entity optimization against standard directory sellers before you invest:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Pillar</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Entity Model</div>
+                <div style={{ color: '#A0A0B0' }}>Standard Local SEO Providers</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="CHICAGO LOCAL SEO INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Chicago IL"
+          lead="Direct, plain English answers to what Chicago business owners ask about Google Map Pack rankings and local search:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="chicago" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>No Contracts &amp; Transparent ROI</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Win the Chicago Google Map Pack?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your free 50-point Chicago Local SEO audit. We will evaluate your GBP health, citation consistency, and map ranking radius.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

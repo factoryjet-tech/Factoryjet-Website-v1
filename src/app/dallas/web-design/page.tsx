@@ -1,960 +1,909 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Link from 'next/link';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-const TITLE = 'Web Design Company Dallas | 7-Day Builds, You Own the Code | FactoryJet';
-const DESCRIPTION =
-  'FactoryJet is a web design company for Dallas businesses. Starter sites ship in 7 days, built in Next.js with schema, GA4 and local SEO. You own the code and the design files.';
-const URL = 'https://factoryjet.com/dallas/web-design';
-const DATE_MODIFIED = '2026-08-12';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/dallas/web-design';
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: URL,
-    languages: {
-      'en-US': URL,
-      'x-default': URL,
-    },
-  },
+  title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Dallas web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Texas businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet web design for Dallas, Texas businesses',
-      },
-    ],
+    title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Dallas web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Texas businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Dallas Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: TITLE,
-    description: DESCRIPTION,
+    title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Dallas TX. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ────────────────────────────────────────────────────────────────────────────
-   FAQ data. The visible <FAQ /> block and the FAQPage JSON-LD both read from
-   FAQ_ITEMS. Do not duplicate this array anywhere else in this file.
-   ──────────────────────────────────────────────────────────────────────────── */
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across DFW.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across telecom, aviation, healthcare, and B2B.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Uptown Dallas & Arts District',
+    query: 'dallas corporate law web design',
+    focus: 'Corporate Legal, Private Wealth & Commercial Real Estate',
+    desc: 'Dense financial and commercial district along McKinney Avenue. Corporate buyers evaluate visual polish, partner credentials, and sub-second page performance before booking consultations.',
+  },
+  {
+    corridor: 'Plano & Legacy West Corridor',
+    query: 'saas website design plano',
+    focus: 'Enterprise Software, Cloud Infrastructure & B2B Technology',
+    desc: 'Major corporate innovation hub along the Dallas North Tollway. Tech companies require interactive component libraries, clear documentation portals, and high-converting trial funnels.',
+  },
+  {
+    corridor: 'Irving & Las Colinas Urban Center',
+    query: 'corporate headquarters web design irving',
+    focus: 'Fortune 500 Regional HQs, Insurance & Financial Services',
+    desc: 'Premier master-planned corporate center. Demands enterprise-grade accessibility, multi-language support, secure investor relation hubs, and sub-second edge hosting.',
+  },
+  {
+    corridor: 'Frisco & North Platinum Corridor',
+    query: 'healthcare clinic web design frisco',
+    focus: 'Sports Medicine, Specialty Healthcare & Luxury Retail',
+    desc: 'The nation’s fastest-growing sports and healthcare hub. Features seamless online patient scheduling, mobile provider directories, and high-impact visual storytelling.',
+  },
+  {
+    corridor: 'Design District & Oak Lawn',
+    query: 'architecture firm website design dallas',
+    focus: 'Architecture Studios, Interior Design & Luxury Showrooms',
+    desc: 'Creative hub along the Trinity River. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
+  },
+  {
+    corridor: 'Fort Worth Stockyards & Alliance Logistics',
+    query: 'industrial logistics web design fort worth',
+    focus: 'Aviation, Freight Logistics, Energy & Heavy Commercial Services',
+    desc: 'Logistics and industrial powerhouse anchored by AllianceTexas. High-speed spec sheet downloads, equipment capability matrices, and rapid quote calculators capture high-value contracts.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Enterprise Software, Cloud Infrastructure & Telecom',
+    headline: 'Engineering High-Conversion Digital Flagships for DFW Tech Leaders',
+    description:
+      'The Plano and Richardson telecom corridors demand websites that speak to CTOs and procurement committees. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Dallas enterprise software and cloud infrastructure web design engineering',
+    points: [
+      'Interactive product feature tours and downloadable technical whitepaper funnels',
+      'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Healthcare Systems, Medical Specialists & Surgical Centers',
+    headline: 'High-Trust Patient & Provider Digital Experiences Across North Texas',
+    description:
+      'From the Southwestern Medical District to private surgical clinics in Frisco, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Dallas healthcare medical practice and surgical clinic website design',
+    points: [
+      'Searchable provider directories with specialty credentials and hospital affiliations',
+      'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
+      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+    ],
+  },
+  {
+    sector: 'Corporate Law, Private Equity & Wealth Management',
+    headline: 'Projecting Institutional Stature for Uptown Dallas Practices',
+    description:
+      'High-stakes litigation and private equity firms in Dallas cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, attorney biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Dallas corporate law firm litigation and private equity web design',
+    points: [
+      'Deep practice area knowledge graphs and structured legal case victory portfolios',
+      'Attorney profile schema with state bar admissions and published industry insights',
+      'Secure lead capture workflows routing confidential inquiries to specific partners',
+    ],
+  },
+  {
+    sector: 'Aviation, Freight Logistics & Heavy Commercial Services',
+    headline: 'Engineering Industrial Authority for Fort Worth & Alliance Leaders',
+    description:
+      'DFW is the premier logistics hub of North America. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance web applications featuring structured fleet capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Dallas Fort Worth aviation and industrial logistics web design engineering',
+    points: [
+      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
+      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
+    problem: 'Traditional Dallas agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
+    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+  },
+  {
+    num: '02',
+    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
+    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
+    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
+    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
+    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+  },
+  {
+    num: '04',
+    title: 'Building Built-In Search & AI Citation Architecture from Day One',
+    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
+    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Architectural Scope & Figma Prototyping',
+    desc: 'We analyze your Dallas-Fort Worth competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
+    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js 15 & React Engineering',
+    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
+    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Edge Deployment & Local SEO Integration',
+    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
+    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals QA, Handoff & Launch',
+    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Source Code Ownership',
+    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
+    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
+    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+  },
+  {
+    label: 'Sprint Timeline',
+    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
+    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+  },
+  {
+    label: 'Structured Data & AI Readiness',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
+    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost & Timeline' },
-  { key: 'included', label: "What You Get" },
-  { key: 'choosing', label: 'Choosing an Agency' },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'ai', label: 'AI & Web Design' },
-  { key: 'local', label: 'Dallas & Local' },
-  { key: 'support', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'timeline', label: 'Timeline & Sprint' },
+  { key: 'technical', label: 'Tech Stack & Performance' },
+  { key: 'local', label: 'Dallas Market Focus' },
+  { key: 'ownership', label: 'Ownership & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
-    question: 'How much does a web design company in Dallas charge?',
+    category: 'pricing',
+    question: 'How much does a custom Dallas web design project cost?',
     answer:
-      'It depends on three things: how many pages you need, how many systems the site has to talk to, and how custom the design is. A five-page site for a single-location service business sits at the bottom of that range. A store with a product catalogue and a booking system sits at the top. FactoryJet quotes a fixed number after one discovery call, so you see the whole figure before anyone starts work.',
-    category: 'cost',
+      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
   },
   {
-    question: 'How much should a small business in Dallas pay for a website?',
+    category: 'pricing',
+    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
     answer:
-      'Pay for the outcome, not the page count. If your site brings in even a handful of qualified enquiries a month, it pays for itself quickly in almost any Dallas service category. The real risk is not overpaying, it is paying twice: once for a cheap site that never ranks, then again for the rebuild eighteen months later. Ask for a fixed quote and a written scope.',
-    category: 'cost',
+      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
   },
   {
-    question: 'How long does it take to build a website?',
+    category: 'pricing',
+    question: 'How does your fixed-price quote protect our business from budget overruns?',
     answer:
-      'Our Starter build ships in 7 days. Growth projects, which run 10 to 15 pages with a blog CMS and lead capture, usually take 2 to 3 weeks. Scale builds with custom integrations are scoped one at a time. The clock does not start until your logo, photos and copy notes are in the shared workspace, because waiting on content is what actually delays most projects.',
-    category: 'cost',
+      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
   },
   {
-    question: 'Can I really get a website in 3 days?',
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
     answer:
-      'You can get pages live in 3 days. Whether they are worth having is a different question. A three-day site is a template with your logo dropped in. It will not have proper information architecture, schema markup, or copy written for how your buyers search. We take 7 days on Starter because days 4 to 7 are where the search and conversion work happens.',
-    category: 'cost',
+      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
   },
   {
-    question: 'What does a web design company actually do?',
+    category: 'timeline',
+    question: 'What do you need from our team before starting the 7-day sprint?',
     answer:
-      'A web design company plans the site structure, designs the pages, writes or shapes the copy, builds the front end, connects forms and third-party tools, then launches it. A good one also sets up analytics, adds structured data so search engines and AI assistants can read the page, and tunes load speed. A weak one stops at the visual design and hands you a bill.',
-    category: 'included',
+      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
   },
   {
-    question: 'What should a business website include?',
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the sprint?',
     answer:
-      'At minimum: a clear statement of what you do and who for, a page per service, proof that you have done it before, a contact method that works on a phone, your service area, and pricing guidance or a quote path. Add opening hours and a map if people visit you. Everything else is optional until those six things are solid.',
-    category: 'included',
+      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
   },
   {
-    question: 'What are the top three features of a good website?',
-    answer:
-      'Speed, clarity, and a single obvious next step. Speed keeps people from bouncing before the page paints. Clarity means a visitor knows within one screen whether you solve their problem. The next step is one primary action per page, repeated, not five competing buttons. Everything else, animation, video, clever layout, is decoration on top of those three.',
-    category: 'included',
-  },
-  {
-    question: 'What are the 5 elements of a good website design?',
-    answer:
-      'Structure, so pages sit in a logical hierarchy. Typography, so long copy is readable on a phone. Contrast, so text passes accessibility checks. Rhythm, so spacing groups related things together. And restraint, so one accent colour carries the calls to action instead of six. Get those right and the site works even before you add photography.',
-    category: 'included',
-  },
-  {
-    question: "What are the 7 C's of website design?",
-    answer:
-      'The 7 Cs are a common teaching checklist: context, content, community, customisation, communication, connection, and commerce. It comes from e-commerce interface research and is useful as a review pass, not a build plan. Run your finished site past it and you will usually find the gap is content or connection, meaning thin pages and weak internal links.',
-    category: 'included',
-  },
-  {
-    question: 'What are the five golden rules of web design?',
-    answer:
-      'Put the most important thing first. Keep the visual system consistent across every page. Make it obvious what is clickable. Design for a phone before a desktop, because most local searches happen on one. And remove anything that does not help the visitor decide. Rules like these are not style opinions, they are how you stop a page from leaking attention.',
-    category: 'included',
-  },
-  {
-    question: 'What is the 3 second rule in web design?',
-    answer:
-      'It is the rough window you have before a visitor decides whether to stay. In that time they should see what you do, who you do it for, and how to start. It is a rule of thumb rather than a measured law, but it is a useful test: show your homepage to someone for three seconds, cover it, and ask what the business does.',
     category: 'technical',
+    question: 'Why choose Next.js over traditional WordPress for a Dallas business?',
+    answer:
+      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Dallas search queries.',
   },
   {
-    question: 'What are common red flags when hiring a web design company?',
-    answer:
-      'No written scope. A quote that cannot be given until after a paid discovery phase. Refusing to say what platform they build on. Hosting you cannot move away from. No mention of analytics or search setup. And portfolio links that are dead or now point to a rebuilt site. Any one of those is worth a direct question before you sign.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is it better to build my own website or hire a designer?',
-    answer:
-      'Build it yourself if you are testing an idea, your budget is near zero, and time is what you have most of. Hire someone once the site has a job to do, generating enquiries, taking orders, or supporting a sales team. The tipping point is usually the moment you would rather be doing your actual work than fighting a page builder.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is it worth making a website for a small business?',
-    answer:
-      'Yes, and for a reason that has changed recently. A social profile or a directory listing puts you on rented land. A site you own is the thing that search engines index and that AI assistants quote when someone asks for a recommendation. If your business is not on a page a machine can read, it is not in the answer.',
-    category: 'choosing',
-  },
-  {
-    question: 'What are the top web design agencies in the USA?',
-    answer:
-      'There is no official list. The rankings you will find are either directories where placement is influenced by reviews and paid profiles, or roundup articles written by agencies themselves. Use them to build a shortlist, then judge each firm on the same three things: a written scope, a named platform, and a live site of theirs you can load and time yourself.',
-    category: 'choosing',
-  },
-  {
-    question: 'Can ChatGPT actually create a website?',
-    answer:
-      'It can write the code for one, and for a simple single-page site that is often enough. What it will not do on its own is decide your page structure, handle hosting and domains, wire up forms and analytics, test on real devices, or take responsibility when something breaks in six months. The generation step was never the expensive part.',
-    category: 'ai',
-  },
-  {
-    question: 'Is AI replacing web design?',
-    answer:
-      'It is replacing the production work, not the decisions. Layout drafts, boilerplate code and first-pass copy are much faster than they were two years ago. What has not changed is knowing what a Dallas HVAC company should say on its landing page versus a downtown law firm. We use AI heavily inside our own build, which is how a 7-day Starter is possible.',
-    category: 'ai',
-  },
-  {
-    question: 'Will AI replace web designers?',
-    answer:
-      'The role is shifting rather than disappearing. Designers who only pushed pixels in a template are under real pressure. Designers who understand conversion, accessibility, information architecture and how search and AI assistants read a page are busier than before, because more sites now get built and more of them need someone to judge whether they are any good.',
-    category: 'ai',
-  },
-  {
-    question: 'Is web design still in demand in 2026?',
-    answer:
-      'Yes, though the demand has moved. Fewer people pay for a brochure site that just exists. More pay for sites that have to perform: rank locally, get quoted by AI search, convert paid traffic, or replace a slow legacy build. In Dallas specifically, most of what we see is replatforming and rescue work rather than first-ever websites.',
-    category: 'ai',
-  },
-  {
-    question: 'Which is better, web design or web development?',
-    answer:
-      'They are two halves of the same job. Design decides what the page looks like and how a visitor moves through it. Development turns that into working code, connects it to a CMS and third-party tools, and makes it fast. You need both. A design nobody can build, and a build nobody wants to use, both fail the same way.',
     category: 'technical',
+    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    answer:
+      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
   },
   {
-    question: 'Can I host my own website for free?',
-    answer:
-      'You can host a static site free on several platforms, and for a personal project that is fine. For a business, the cost is not hosting, it is what free tiers usually lack: a custom domain on some plans, uptime commitments, and support when something breaks. We deploy client sites to Cloudflare Pages, which is fast, cheap and lets you move away whenever you want.',
     category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
+    answer:
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
   },
   {
-    question: 'How long until my new Dallas website ranks on Google?',
-    answer:
-      'Searches for your own business name usually land within one to two weeks of launch. Competitive local terms like "web design company Dallas" take three to six months on a new domain, longer in crowded categories such as legal or home services. The work that shortens that window, schema, internal linking, real content depth and page speed, is built into every project rather than sold later.',
     category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
+    answer:
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
   },
   {
-    question: 'Do I need an LLC to run a website?',
-    answer:
-      'No. Plenty of sole proprietors publish and run sites under their own name. Whether you form an LLC is a liability and tax decision rather than a web one, and a Texas attorney or CPA is the right person to ask. From a build point of view, nothing changes: the site, domain and hosting can be moved into a company later.',
     category: 'local',
+    question: 'Do you build B2B websites for Dallas technology and telecom companies?',
+    answer:
+      'Yes. We build high-conversion B2B websites tailored for Plano, Richardson, and Irving tech firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
   },
   {
-    question: 'Does my LLC name have to match my website name?',
-    answer:
-      'It does not have to. Many Texas businesses trade under an assumed name that differs from the registered entity. What matters for search and for trust is that whatever name you use is consistent across your site, your Google Business Profile and your listings, because inconsistent names weaken local ranking signals. Check the naming rules with your attorney.',
     category: 'local',
+    question: 'Can you design websites for Dallas healthcare and medical practices?',
+    answer:
+      'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and surgical centers across Greater Dallas and Frisco, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
   },
   {
-    question: 'What companies are headquartered in Dallas, Texas?',
-    answer:
-      'The City of Dallas lists AT&T, Texas Instruments, Southwest Airlines, Comerica, Energy Transfer, CBRE Group, Brinker International, Copart, Jacobs Solutions, Match Group, Atmos Energy and Trinity Industries among the Fortune 1000 companies based in the city. Across the wider Dallas-Fort Worth region there are 24 Fortune 500 headquarters spread over eleven cities.',
     category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our Dallas business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
   },
   {
-    question: 'Which parts of Dallas do you work with?',
-    answer:
-      'All of them, and the answer matters less than people expect. We have built for businesses in Downtown, Uptown, Deep Ellum, the Design District around Oak Lawn and Hi Line, Bishop Arts, Knox Street, Lake Highlands and RedBird. What changes between them is the search intent and the competition, not the build. The location pages and schema get tuned per area.',
     category: 'local',
+    question: 'How does your web design optimize for local Dallas search rankings?',
+    answer:
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Dallas, Plano, Frisco, Irving, and Fort Worth.',
   },
   {
-    question: 'Do you work with businesses outside the city, in Plano, Frisco, Irving or Arlington?',
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
     answer:
-      'Yes. Most of our Dallas-area clients serve the wider metro rather than a single zip code, so we usually build one strong service page per offering plus location pages for the suburbs you actually want work from. Building thin pages for every DFW suburb is a common mistake and search engines have got much better at ignoring them.',
-    category: 'local',
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
   },
   {
-    question: 'Do you build online stores?',
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
     answer:
-      'Yes, on the Scale tier. That covers the product catalogue, checkout, a payment gateway, and inventory. We build on Next.js with a headless commerce layer, which keeps the storefront fast and lets you change the front end without migrating the whole store. If you already run a store elsewhere, we can rebuild the front end and keep your existing back office.',
-    category: 'technical',
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
   },
   {
-    question: 'Who owns the code and design files when the project is done?',
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
     answer:
-      'You do, completely. You get the Next.js codebase in your own repository and the full design file. There is no licence fee, no proprietary page builder, and no clause tying the site to us. If you want to move to another developer next year, you can, and nothing about the handover is designed to make that hard.',
-    category: 'support',
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
   },
   {
-    question: 'Do you handle maintenance after the site launches?',
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
     answer:
-      'The first 30 days after launch cover bug fixes and training questions at no extra charge. After that, an optional monthly plan covers content updates, dependency upgrades and performance monitoring. It is optional on purpose. Because the site is a static Next.js build rather than a plugin stack, it does not rot the way an unmaintained WordPress install does.',
-    category: 'support',
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
   },
 ];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Dallas Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Dallas',
+    addressRegion: 'TX',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 32.7767,
+    longitude: -96.797,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Dallas' },
+    { '@type': 'City', name: 'Plano' },
+    { '@type': 'City', name: 'Frisco' },
+    { '@type': 'City', name: 'Irving' },
+    { '@type': 'City', name: 'Fort Worth' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Dallas Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Dallas businesses.',
+  areaServed: { '@type': 'State', name: 'Texas' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Dallas TX businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Dallas', item: CANONICAL },
+  ],
+};
 
 export default function DallasWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-          formSlot={<HeroInlineForm region="us" source="us_dallas_web_design_hero" />}
-          eyebrow={'WEB DESIGN · DALLAS, TX'}
-          headline={'A Web Design Company Dallas Businesses Can Actually Get an Answer From'}
-          lead={
-            'Fixed scope, fixed price, and a Starter site live in 7 days. Built in Next.js with schema, analytics and local search set up before launch, not sold to you afterwards. You keep the code and the design files.'
-          }
-          trustItems={['Fixed-price quote after one call', '7-day Starter delivery', 'You own the codebase']}
-          extraCta={<WhatsAppCTA city="Dallas" variant="light" />}
-          rightSlot={
-            <img
-              src="/images/us/dallas-web-design/hero.webp"
-              alt="A business owner and a web designer reviewing a new website layout on a wall-mounted monitor in a bright office."
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover shadow-[0_24px_64px_-12px_rgba(15,15,18,0.22)]"
-            />
-          }
-        />
+      <script id="dal-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="dal-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="dal-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="dal-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="dal-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── Answer-first block (highest-value extractable block on the page) ── */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-10 md:py-12">
-          <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              The short answer
-            </p>
-            <h2 className="font-fj-display text-[clamp(1.375rem,2.4vw,1.875rem)] font-semibold leading-[1.25] tracking-[-0.015em] text-fj-ink">
-              What does a web design company in Dallas actually do?
-            </h2>
-            <p
-              data-speakable
-              className="mt-4 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80"
-            >
-              A web design company in Dallas plans, designs, builds and launches your website, then
-              hands it over. A good one also sets up analytics, structured data and page speed so the
-              site earns search traffic. FactoryJet ships a five-page Starter site in seven days, and
-              you own the code and the design files.
-            </p>
-            <p className="mt-5 border-t border-fj-neutral-200 pt-4 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-              Written by <strong className="font-semibold text-fj-ink">Bhavesh Barot</strong>,
-              founder of FactoryJet. He has run more than 500 website and commerce builds for small
-              and mid-sized businesses across the US, UK, UAE and India. Last reviewed 12 August
-              2026.
-            </p>
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Dallas Web Design &amp; Frontend Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Dallas Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#dal-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Dallas Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/dallas-web-design/hero.webp"
+                  alt="Dallas Texas modern web design engineering and custom Next.js website mockup"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={'What Dallas businesses get on every build.'}
-        />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <CityContextSection
-          eyebrow={'DALLAS MARKET'}
-          headline={'You Are Not Competing With the Shop Next Door'}
-          leadParagraphs={[
-            'More than 62,000 businesses are based inside the City of Dallas, and the Dallas-Fort Worth metro ranked fifth among all US metro areas for total economic output in 2023. Twenty-four Fortune 500 companies keep their headquarters in the region. Eight of them sit inside the city itself, including AT&T, Texas Instruments, Southwest Airlines, Comerica and Energy Transfer.',
-            'That changes what a small business website has to do here. When someone in Preston Hollow or Lake Highlands searches for your service, the results page is shaped by companies with in-house marketing teams a few miles up the Tollway. You will not outspend them. You beat them by answering the searcher’s question faster and more clearly than anything else on the page, which is a structure and speed problem, and structure and speed are solvable.',
-            'The other thing worth knowing about Dallas: healthcare is the biggest employer block in the city. UT Southwestern Medical Center, Parkland Health, Methodist Dallas, Baylor Scott & White and Children’s Health each employ thousands of people here. A large share of the small-business work in this market is healthcare-adjacent, which means privacy-aware forms and clear service navigation matter more than a clever animation.',
-          ]}
-          stats={[
-            {
-              value: '62,000+',
-              label: 'Businesses based in the City of Dallas',
-              sourceUrl: 'https://www.dallasecodev.org/296/Business-Environment',
-              sourceLabel: 'City of Dallas Office of Economic Development',
-            },
-            {
-              value: '5th',
-              label: 'DFW metro rank among US metros by total GDP (2023, BEA)',
-              sourceUrl: 'https://www.dallasecodev.org/341/Economic-Indicators',
-              sourceLabel: 'City of Dallas Economic Indicators',
-            },
-            {
-              value: '24',
-              label: 'Fortune 500 headquarters in the DFW region',
-              sourceUrl:
-                'https://www.dallaschamber.org/blog/fortune-rankings-reinforce-dfws-economic-momentum/',
-              sourceLabel: 'Dallas Regional Chamber, June 2026',
-            },
-          ]}
-        />
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Dallas"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        <ServiceExplanation
-          eyebrow={'WHAT YOU ARE ACTUALLY BUYING'}
-          headline={'A Website Is a Sales Asset, Not a Design Deliverable'}
-          lead={
-            'Most quotes you will get in Dallas cover the visual design and the build. Ours covers the visual design, the build, and the three things that decide whether the site earns anything: structure, speed, and being readable by the machines that now answer your customers’ questions.'
-          }
-          body={
-            <>
-              <p>
-                Structure means your services each get a real page instead of an accordion on the
-                homepage, and those pages link to each other in a way that tells search engines what
-                you actually do. Most rebuilds we take on in Dallas fail here first. The site looks
-                fine and ranks for nothing, because there is only one page of substance on it.
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for Dallas&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Plano tech enterprises to Uptown law firms and Fort Worth industrial leaders, Dallas businesses need sites that project engineering authority and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. DALLAS DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="dal-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>DFW Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Dallas&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Uptown corporate legal firms to Plano tech campuses and Fort Worth logistics hubs:
               </p>
-              <p>
-                Speed is not a vanity number. It is the difference between a person on a phone in a
-                parking lot off Central Expressway waiting for your page and going back to the
-                results. We build static Next.js pages and serve them from Cloudflare&apos;s edge
-                network, so there is no database query between the click and the content.
-              </p>
-              <p>
-                Machine readability is the newest part of the job and the one almost nobody quotes
-                for. We ship JSON-LD schema on every page, keep the answer to each page&apos;s main
-                question in plain text near the top, and check that GPTBot, ClaudeBot and
-                PerplexityBot can crawl the site. When someone asks an AI assistant for a
-                recommendation in your category, that is what decides whether you are in the answer.
-              </p>
-              <p>
-                Every project also includes discovery, a design system you keep, the copy, analytics
-                wired in from day one, and a 30-day support window after launch. You can read the{' '}
-                <Link href="/services/web-design/" className="font-medium text-[#B23E13] underline underline-offset-4">
-                  full web design service scope
-                </Link>{' '}
-                if you want the detail.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/dallas-web-design/process.webp"
-              alt="Three people sketching website wireframes on paper around a table, with a laptop showing a store layout."
-              width={1200}
-              height={800}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+            </div>
 
-        {/* ── Listicle: AI extraction magnet ─────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-5xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Before you sign anything
-            </p>
-            <h2 className="max-w-[22ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-              8 Things to Check Before You Hire a Web Design Company in Dallas
-            </h2>
-            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-              Run every shortlisted firm through this, including us. Any of them should be able to
-              answer all eight in a single call.
-            </p>
-
-            <ol className="mt-10 grid gap-5 md:grid-cols-2">
-              {[
-                {
-                  n: '01',
-                  t: 'Ask what platform they build on, and why',
-                  d: 'WordPress, Webflow, Shopify and Next.js are all defensible answers. "We handle that" is not. The platform decides your ongoing maintenance load, your hosting bill and how easily you can leave.',
-                },
-                {
-                  n: '02',
-                  t: 'Load one of their live client sites on your own phone',
-                  d: 'Not the case study page. The real site, on cellular, away from wifi. If it takes more than a couple of seconds to show text, that is what your site will do too.',
-                },
-                {
-                  n: '03',
-                  t: 'Get the scope in writing before the deposit',
-                  d: 'Page count, revision rounds, who writes the copy, who sources photography, and what counts as out of scope. Most disputes we hear about in Dallas trace back to copy nobody agreed to write.',
-                },
-                {
-                  n: '04',
-                  t: 'Confirm you own the code and the design files',
-                  d: 'Ask directly: on the last day of the project, what do I receive? The answer should include a repository and a design file, not a login to something you rent forever.',
-                },
-                {
-                  n: '05',
-                  t: 'Check whether search work is included or upsold',
-                  d: 'Schema markup, meta structure, internal linking and Search Console setup should be part of the build. If they appear as a separate monthly line item, you are paying twice for one job.',
-                },
-                {
-                  n: '06',
-                  t: 'Ask how the site handles AI search',
-                  d: 'AI assistants now answer a growing share of "who should I hire" questions. Ask whether their builds are crawlable by GPTBot, ClaudeBot and PerplexityBot, and whether they ship structured data.',
-                },
-                {
-                  n: '07',
-                  t: 'Find out who actually does the work',
-                  d: 'Some Dallas firms white-label the build to a partner or a reseller network. That is not automatically bad, several do it well, but you should know before you sign, not after a handover goes sideways.',
-                },
-                {
-                  n: '08',
-                  t: 'Agree what happens after launch',
-                  d: 'How long is the support window, what does it cover, and what does month two cost in scope terms? A firm that has thought about this will answer without hesitating.',
-                },
-              ].map((item) => (
-                <li
-                  key={item.n}
-                  className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6"
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  <span className="font-fj-mono text-sm font-semibold text-[#B23E13]">{item.n}</span>
-                  <h3 className="mt-2 font-fj-display text-[1.1875rem] font-semibold leading-[1.3] text-fj-ink">
-                    {item.t}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
                   </h3>
-                  <p className="mt-2 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/75">
-                    {item.d}
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
                   </p>
-                </li>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
-        <ServiceJourneyRow
-          eyebrow={'HOW IT RUNS'}
-          headline={'The 7-Day Starter Build, Step by Step'}
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery',
-              description:
-                'One 30-minute call. We agree who the site is for, which services get their own page, and what a good month of enquiries looks like. You get the sitemap and the fixed quote out of this call.',
-            },
-            {
-              number: '02',
-              title: 'Design',
-              description:
-                'Wireframes first, then a full design system in Figma, mobile layouts included. Two structured revision rounds on Starter, three on Growth. Nothing gets built until you sign off the design.',
-            },
-            {
-              number: '03',
-              title: 'Build',
-              description:
-                'Static Next.js, forms wired to your inbox and CRM, CMS connected if the tier includes one. Performance budgets are enforced from the first commit rather than patched at the end.',
-            },
-            {
-              number: '04',
-              title: 'Content and search',
-              description:
-                'Copy, compressed WebP images, meta structure, JSON-LD schema, internal links, and a Google Business Profile check for your Dallas location. We verify the site renders for AI crawlers before launch.',
-            },
-            {
-              number: '05',
-              title: 'Launch and handover',
-              description:
-                'Deploy to Cloudflare, DNS and SSL, GA4 connected, then a recorded walkthrough of the CMS. 30 days of support follows for fixes and training questions.',
-            },
-          ]}
-        />
-
-        {/* ── Mid-page CTA ───────────────────────────────────────────────── */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-12 md:py-16">
-          <div className="mx-auto grid max-w-5xl gap-8 px-6 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Start here
-              </p>
-              <h2 className="max-w-[20ch] font-fj-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-semibold leading-[1.2] tracking-[-0.02em] text-fj-ink">
-                Get a fixed quote for your Dallas project
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Dallas Businesses
               </h2>
-              <p className="mt-3 max-w-[52ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-                One call, one number, and a sitemap you can take to another agency if you decide we
-                are not the right fit. No discovery fee.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in North Texas demands tailored user experiences, technical credibility, and conversion paths:
               </p>
             </div>
-            <div className="lg:col-span-5">
-              <HeroInlineForm region="us" source="us_dallas_web_design_mid" />
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── Dallas districts: the un-copyable local part ────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Where our Dallas clients trade
-              </p>
-              <h2 className="max-w-[24ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-                Dallas Is a City of Districts, and Search Behaves Differently in Each One
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Dallas Companies Choose FactoryJet Web Design
               </h2>
-              <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80">
-                The City of Dallas runs more than a dozen Public Improvement Districts, each one a
-                self-funding business area with its own character: the Dallas Downtown Improvement
-                District, Uptown, Deep Ellum, Knox Street, Oak Lawn-Hi Line, Klyde Warren Park and
-                the Arts District, Midtown, South Side, University Crossing, Lake Highlands, North
-                Lake Highlands, Far East Dallas, Prestonwood and RedBird.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
               </p>
-              <p className="mt-4 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80">
-                That list is not trivia. It tells you how differently the same service sells across
-                one city. A studio in Deep Ellum and a showroom in the Design District around Oak
-                Lawn and Hi Line are selling to different buyers with different intent, and neither
-                page should be written the way a Preston Hollow professional services firm writes
-                its page.
-              </p>
-              <ul className="mt-6 space-y-3 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/80">
-                <li>
-                  <strong className="text-fj-ink">Downtown and Uptown.</strong> Professional
-                  services, law, finance and consulting. The site is the credential check that
-                  happens before anyone replies to your email.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Deep Ellum and Bishop Arts.</strong> Independent
-                  retail, food and creative studios. Mobile-first, fast, and tied tightly to Google
-                  Business Profile and maps results.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Design District, Oak Lawn-Hi Line.</strong>{' '}
-                  Showrooms and trade suppliers. These sites often serve designers and buyers rather
-                  than walk-ins, so catalogue structure beats a hero video.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Medical District and beyond.</strong> Practices and
-                  vendors around UT Southwestern and Parkland. Privacy-aware forms, clear service
-                  navigation, and location pages that actually name the clinic.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">RedBird and southern Dallas.</strong> Growing
-                  service and trade businesses where local pack visibility does more work than any
-                  amount of national content.
-                </li>
-              </ul>
             </div>
-            <div className="lg:col-span-5">
-              <img
-                src="/images/us/dallas-web-design/showroom.webp"
-                alt="A photographer shooting product images in a brick warehouse showroom beside a laptop showing the product page."
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                className="w-full rounded-2xl object-cover"
-              />
-              <p className="mt-3 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-                Product photography and page structure are the same job. A showroom brand&apos;s
-                site lives or dies on how its catalogue is organised, not on the homepage animation.
-              </p>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <IndustriesGrid
-          variant="cards"
-          eyebrow={'DALLAS × WEB DESIGN'}
-          headline={'Built for the Industries Dallas Actually Runs On'}
-          lead={
-            'The City of Dallas publishes its own list of major employers, and it is a useful map of where the small-business work sits: healthcare first, then telecom and semiconductors, aviation and logistics, education, and government contracting.'
-          }
-          sectors={[
-            {
-              name: 'Healthcare and medical practices',
-              description:
-                'UT Southwestern Medical Center, Parkland Health, Methodist Dallas, Baylor Scott & White and Children’s Health are among the largest employers in the city. That anchors a deep ecosystem of private practices, specialist clinics, medical device vendors and healthcare staffing firms. These sites need privacy-aware contact forms, unambiguous service navigation and location pages that name the clinic and the neighbourhood.',
-              example: 'Practices and vendors working around the Southwestern Medical District.',
-            },
-            {
-              name: 'Telecom, semiconductors and B2B technology',
-              description:
-                'AT&T and Texas Instruments both headquarter in Dallas, and the supplier and services layer around them is large. Buyers in this category read specification detail before they read testimonials, so the site has to lead with capability, publish real technical pages, and make it easy to request a scoped quote rather than "get in touch".',
-              example: 'Component suppliers, integrators and B2B software firms in the Dallas metro.',
-            },
-            {
-              name: 'Professional and business services',
-              description:
-                'Law, accounting, consulting, staffing and commercial real estate cluster in Downtown and Uptown. For these firms the website is the credential check that happens before the first reply. Depth beats decoration: a page per practice area, named people with real credentials, and case detail that survives a sceptical read.',
-              example: 'Firms in the Downtown and Uptown improvement districts.',
-            },
-            {
-              name: 'Home services and trades',
-              description:
-                'HVAC, roofing, plumbing, electrical and remodelling are the most competitive local search categories in the DFW market, and the ones where a slow site costs the most. These builds live or die on mobile speed, click-to-call, service-area pages that are genuinely different from each other, and Google Business Profile alignment.',
-              example: 'Multi-truck operators covering Dallas plus the northern suburbs.',
-            },
-            {
-              name: 'Retail, hospitality and independent brands',
-              description:
-                'Deep Ellum, Bishop Arts, Knox Street and Lower Greenville carry a dense independent retail and food scene. These sites need a menu or catalogue that loads instantly on a phone, working reservation or ordering integration, and enough structured data that maps and AI assistants can read hours and location correctly.',
-              example: 'Independent retailers and restaurants in the walkable districts.',
-            },
-            {
-              name: 'Logistics, aviation and industrial',
-              description:
-                'Southwest Airlines is headquartered at Love Field and the wider region is one of the country’s major freight and distribution hubs. Sites here sell to procurement teams: clear capability pages, downloadable specification documents, and a quote request form that captures enough to be worth following up.',
-              example: 'Freight, fleet, warehousing and industrial services businesses.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// DALLAS MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            city="Dallas"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline={'Why a Dallas Business Would Pick Us Over a Local Studio'}
-          lead={
-            'Dallas has real agencies doing real work. Big D Creative has been building here since 2001. The Old State does strong brand-led design. Thrive runs full multi-channel marketing at franchise and enterprise scale. If you want a partner in the room every week, hire one of them.\n\nWe are built for a different situation: you know roughly what you need, you want it fixed-scope and fixed-price, you want it live in days rather than quarters, and you want to own the result outright. That is the whole pitch.\n\nWhat you get either way is the same discipline. Static Next.js instead of a plugin stack. Schema and analytics shipped with the build rather than sold after it. A recorded handover so your own team can run the site. And no clause anywhere that makes leaving expensive.'
-          }
-          pillars={[
-            {
-              title: 'Fixed before you commit',
-              body: 'Scope, price and timeline agreed on the first call. No paid discovery phase, no quote that arrives three weeks later with a range on it.',
-            },
-            {
-              title: 'Fast because of how we build',
-              body: 'A 7-day Starter is possible because the design system, component library and deploy pipeline already exist. Speed comes from reuse, not from cutting the search work.',
-            },
-            {
-              title: 'Yours on day one',
-              body: 'The repository and the design file are handed over at launch. No proprietary builder, no hosting lock-in, no licence that expires if you stop paying us.',
-            },
-          ]}
-        />
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
 
-        <ComparisonTable
-          eyebrow={'HONEST COMPARISON'}
-          headline={'How We Sit Next to the Other Dallas Web Design Companies'}
-          lead={
-            'These are firms that rank on page one for "web design company Dallas" today. Every claim below comes from what each company publishes about itself. We have included ourselves in the list, and we are not the right answer for every row in it.'
-          }
-          columns={[
-            { label: 'What they are good at' },
-            { label: 'Where FactoryJet differs', isFactoryJet: true },
-          ]}
-          rows={[
-            {
-              feature: 'FactoryJet',
-              values: [
-                'Fixed-scope, fixed-price builds in Next.js with schema, analytics and AI-crawler checks included. 7-day Starter delivery.',
-                'We are a remote AI-native team, not a Dallas office you can walk into. If in-person weekly meetings matter to you, pick a local studio.',
-              ],
-            },
-            {
-              feature: 'Click Wise Design',
-              values: [
-                'Deep focus on home service and contractor businesses, with Local SEO and Google Local Service Ads alongside the site. States a fully US-based team and published packages.',
-                'They specialise by industry, we specialise by build method. If you are a contractor who wants LSA managed too, they are a strong fit.',
-              ],
-            },
-            {
-              feature: 'DFW Website Designers',
-              values: [
-                'Long-running affordable small-business option, 17 years in business, turnkey builds with on-page SEO, ongoing hosting and support, and a white-label reseller side.',
-                'Their model bundles hosting and support long term. Ours hands you a codebase you can host anywhere, with maintenance optional.',
-              ],
-            },
-            {
-              feature: 'Thrive Internet Marketing Agency',
-              values: [
-                'Full multi-channel marketing under one roof: SEO, PPC, social, CRO, ADA compliance, video, and dedicated franchise and enterprise programmes.',
-                'They are the better call if you want one agency running every channel. We do the site and the search foundation, not paid media management.',
-              ],
-            },
-            {
-              feature: 'The Old State',
-              values: [
-                'Brand-led Dallas studio doing strategy, persona research, identity and web design together, with a portfolio of local and regional brands.',
-                'If you need a full brand identity built from scratch, start with them. We work best when your brand already exists and the site is the gap.',
-              ],
-            },
-            {
-              feature: 'Big D Creative',
-              values: [
-                'Award-winning Dallas team operating since 2001, more than 2,000 projects delivered, WordPress-centred, scope-flexible from small sites to large builds.',
-                'WordPress versus static Next.js is the real fork. Theirs is easier to find local help for. Ours is faster and has no plugin maintenance load.',
-              ],
-            },
-            {
-              feature: 'JSL Marketing & Web Design',
-              values: [
-                'Web design bundled with in-house photography and video production, brand development, content and email marketing.',
-                'If you need original photo and video shot as part of the project, they cover that in house. We would bring in a local photographer.',
-              ],
-            },
-          ]}
-          footer={
-            <>
-              Positioning summarised from each company&apos;s own public website in August 2026.
-              Nothing here is a ranking, and no pricing is implied. Verify current scope with each
-              firm directly.
-            </>
-          }
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
 
-        <PricingTiers
-          eyebrow={'SCOPE, NOT GUESSWORK'}
-          headline={'Three Tiers, One Fixed Number Before You Start'}
-          lead={
-            'Every project is quoted as a single fixed figure after one discovery call. What moves the number is page count, how many systems the site connects to, and how custom the design work is. Starter ships in 7 days. No retainer is required on any tier.'
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Starter',
-              description:
-                'A five-page site that loads fast on a phone and ranks for your name and core service. Right for single-location Dallas service businesses that need to look credible now.',
-              features: [
-                '5 pages, mobile-first',
-                'Schema markup and meta structure',
-                'Contact form to your inbox',
-                '2 revision rounds',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Growth',
-              description:
-                'A 10 to 15 page site with a blog CMS, lead capture and analytics wired in from day one. Right for firms that want the site to generate qualified enquiries rather than just exist.',
-              features: [
-                '10 to 15 pages with blog CMS',
-                'Local SEO and GA4 tracking',
-                'Lead capture and email automation',
-                '3 revision rounds',
-                '30-day support plus a training session',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Scale',
-              description:
-                'Custom Next.js build with commerce, AI features or API integrations. Right for established Dallas businesses where the site is a real revenue line.',
-              features: [
-                'Custom Next.js architecture',
-                'Commerce or membership features',
-                'AI search, chat or recommendations',
-                'Third-party API connections',
-                'Priority support and quarterly reviews',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-          ] as const}
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
 
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Dallas Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={'Questions Dallas Businesses Ask Us'}
+          eyebrow="DALLAS WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Dallas TX"
+          lead="Direct, plain English answers to what Dallas business owners and marketing leaders ask about website projects:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── Related internal links ─────────────────────────────────────── */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <p className="mb-4 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Related services
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { href: '/services/web-design/', label: 'Web Design Services' },
-                { href: '/services/small-business-website-design/', label: 'Small Business Websites' },
-                { href: '/services/website-redesign/', label: 'Website Redesign' },
-                { href: '/services/local-seo/', label: 'Local SEO' },
-                { href: '/services/ecommerce-development/', label: 'Ecommerce Development' },
-              ].map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="dallas" />
           </div>
         </section>
 
-        <WebDesignCityLinksUS currentCity="dallas" />
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
 
-        <FinalCTA
-          variant="light"
-          eyebrow={'READY WHEN YOU ARE'}
-          headline={'Get Your Dallas Website Scoped This Week'}
-          sub={
-            'One 30-minute call gets you a sitemap and a fixed number. If we are not the right fit, keep the sitemap and take it to whoever is. Starter builds ship in 7 days from the day your content lands.'
-          }
-          primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="Dallas" variant="light" />}
-          objectionHandler="No discovery fee. No retainer. You own the code."
-        />
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Dallas Business Website?
+            </h2>
 
-        <SchemaScript />
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-/* ────────────────────────────────────────────────────────────────────────────
-   Schema. Every const declared below is rendered into a <script
-   type="application/ld+json"> tag inside this component. FAQPage.mainEntity is
-   derived from FAQ_ITEMS, the same array the visible <FAQ /> renders.
-   ──────────────────────────────────────────────────────────────────────────── */
-
-function SchemaScript() {
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${URL}#webpage`,
-    name: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    dateModified: DATE_MODIFIED,
-    inLanguage: 'en-US',
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder, FactoryJet',
-    },
-    publisher: { '@id': 'https://factoryjet.com/#organization' },
-    isPartOf: {
-      '@type': 'WebSite',
-      '@id': 'https://factoryjet.com/#website',
-      url: 'https://factoryjet.com',
-      name: 'FactoryJet',
-    },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '.faq-answer', '[data-speakable]'],
-    },
-  };
-
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ProfessionalService'],
-        '@id': `${URL}#business`,
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com',
-        telephone: '+919699977699',
-        areaServed: [
-          { '@type': 'City', name: 'Dallas', addressRegion: 'TX', addressCountry: 'US' },
-          { '@type': 'AdministrativeArea', name: 'Dallas-Fort Worth metroplex' },
-        ],
-        priceRange: 'Fixed-price, quoted per project',
-      },
-      {
-        '@type': 'Service',
-        '@id': `${URL}#service`,
-        name: 'Web Design Dallas',
-        serviceType: 'Web design and website development',
-        provider: {
-          '@type': 'Organization',
-          '@id': 'https://factoryjet.com/#organization',
-          name: 'FactoryJet Technologies',
-        },
-        areaServed: { '@type': 'City', name: 'Dallas', addressRegion: 'TX', addressCountry: 'US' },
-        description: DESCRIPTION,
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Web design build tiers',
-          itemListElement: [
-            { '@type': 'Offer', name: 'Starter', description: 'Five-page mobile-first site, 7-day delivery.' },
-            { '@type': 'Offer', name: 'Growth', description: '10 to 15 pages with blog CMS, lead capture and analytics.' },
-            { '@type': 'Offer', name: 'Scale', description: 'Custom Next.js build with commerce, AI features or API integrations.' },
-          ],
-        },
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${URL}#faq`,
-        mainEntity: FAQ_ITEMS.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${URL}#breadcrumbs`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Web Design',
-            item: 'https://factoryjet.com/services/web-design',
-          },
-          { '@type': 'ListItem', position: 3, name: 'Dallas', item: URL },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-      />
+      <SiteFooter locale="us" />
     </>
   );
 }
