@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -756,12 +756,11 @@ export default function ClevelandWebDesignPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="web-architecture-blueprint">
-          <EnterpriseArchitectureBlueprint
+          <WebDesignArchitectureBlueprint
             badge="// CLEVELAND MODERN WEB ARCHITECTURE BLUEPRINT"
             title="High-Performance Frontend: From Code to Conversion"
             subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
-            legacySource="Bloated Monolithic CMS & Plugin Chains"
-            targetStack="High-Speed Next.js & Cloudflare Edge Engine"
+            city="Cleveland"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />

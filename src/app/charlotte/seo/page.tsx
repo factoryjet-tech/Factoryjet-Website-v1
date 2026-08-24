@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -756,12 +756,11 @@ export default function CharlotteSeoPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="seo-architecture-blueprint">
-          <EnterpriseArchitectureBlueprint
+          <LocalSeoArchitectureBlueprint
             badge="// CHARLOTTE LOCAL SEO & AI CITATION BLUEPRINT"
             title="Local SEO Architecture: From Map Pack to AI Citations"
             subtitle="Explore how your Google Business Profile, local review velocity, JSON-LD schema, and high-performance frontend synchronize to capture inbound leads."
-            legacySource="Neglected Profile & Slow Monolithic CMS"
-            targetStack="High-Speed Local SEO & AI Citation Engine"
+            city="Charlotte"
             ctaLabel="Claim Free Charlotte SEO Technical Audit"
             region="us"
           />
