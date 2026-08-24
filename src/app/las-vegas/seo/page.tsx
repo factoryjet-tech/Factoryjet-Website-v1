@@ -1,985 +1,501 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import FinalCTA from '@/components/v2/FinalCTA';
-import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   /las-vegas/seo :: Las Vegas local-SEO city page. Built 2026-08-12.
-
-   Intent owned by THIS page:
-     seo agency las vegas (590 a month, difficulty 13) and its close variants
-     (best seo agency las vegas, seo agency las vegas reviews).
-
-   The local angle, and the reason this page is not a template:
-     Las Vegas search splits into two audiences that behave nothing alike.
-     Roughly 38.5m visitors a year search on a phone within a few blocks of
-     where they are standing, with no local knowledge at all. Around 2.4m
-     residents search the way any suburban American searches. On top of that
-     the Strip is not inside the City of Las Vegas, it sits in unincorporated
-     Clark County, which quietly breaks a lot of address and service-area
-     setups. Convention demand (about 6m delegates a year) arrives in bursts
-     tied to a published show calendar rather than as a flat curve.
-
-   Build rules honoured: no em dashes, no currency figures anywhere, plain
-   <img> only, FAQ from @/components/v2/FAQ, FinalCTA (never GetFreeQuoteCTA),
-   exactly one dark section (the closing FinalCTA), inline canonical and
-   alternates (no hreflangMap import), no shared files touched.
-
-   Schema: WebPage + speakable, Service, ProfessionalService (no invented
-   street address), ItemList (the nine fixes), ItemList (real SERP rivals),
-   FAQPage derived from FAQ_ITEMS, BreadcrumbList. Every const below is
-   rendered in a script tag at the top of the component.
-
-   External citations, all curl-verified 200 on 2026-08-12 with the claim
-   present in the fetched HTML:
-     clarkcountynv.gov/residents/about_clark_county/ (Strip jurisdiction, 2.4m)
-     lvcva.com/stats-and-facts/ (38.5m visitors, 6.0m convention, 150,300 rooms)
-     support.google.com/business/answer/7091 (relevance / distance / prominence)
-     developers.google.com/search/docs/appearance/ai-features (no special AI markup)
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_URL = 'https://factoryjet.com/las-vegas/seo';
-
-const ORANGE = '#F05A28';
-const ORANGE_DARK = '#B23E13';
-const CREAM = '#FAFAF7';
-const PEACH = '#FAEDE5';
-const GREEN_SOFT = '#DCEFE6';
-const LAV_SOFT = '#ECEAFB';
-const LINE = 'rgba(15,15,18,0.10)';
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Metadata
-───────────────────────────────────────────────────────────────────────────── */
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/las-vegas/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency Las Vegas | Local SEO for Visitors and Residents | FactoryJet',
+  title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'A Las Vegas SEO agency built for a city with two audiences: 38.5 million visitors searching on a phone and 2.4 million residents searching from home. Free audit, month to month, founder-led.',
-  keywords: [
-    'seo agency las vegas',
-    'las vegas seo',
-    'seo company las vegas',
-    'local seo las vegas',
-    'las vegas seo services',
-    'best seo agency las vegas',
-    'seo henderson nv',
-    'summerlin seo',
-  ],
-  alternates: {
-    canonical: PAGE_URL,
-    languages: {
-      'en-US': PAGE_URL,
-      'x-default': PAGE_URL,
-    },
-  },
+    'Las Vegas local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Summerlin, Henderson, and Downtown.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency Las Vegas | Local SEO for Visitors and Residents | FactoryJet',
+    title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'Las Vegas SEO for a city where visitors and residents search for the same business in completely different ways. Free audit, month to month, no long contract.',
-    url: PAGE_URL,
+      'Las Vegas local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Summerlin, Henderson, and Downtown.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Las Vegas Local SEO Agency' }],
     locale: 'en_US',
-    images: [
-      {
-        url: 'https://factoryjet.com/images/us/las-vegas-seo/hero.webp',
-        width: 1440,
-        height: 864,
-        alt: 'Two marketing specialists reviewing a local map with location pins in a bright Las Vegas office',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency Las Vegas | FactoryJet',
+    title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Las Vegas local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
+
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Las Vegas commercial corridors.', icon: '📍' },
+  { num: '4.9x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'The Strip & Resort Corridor',
+    query: 'hospitality entertainment management seo las vegas',
+    focus: 'Hospitality Groups, Entertainment & Nightlife Management',
+    desc: 'The global entertainment capital. Demands high-concurrency event visibility, hospitality schema graphs, and mobile geo-fenced local search optimization.',
+  },
+  {
+    corridor: 'Summerlin & Peccole Ranch',
+    query: 'estate planning attorney seo summerlin las vegas',
+    focus: 'Private Wealth Advisors, Aesthetic Medicine & Luxury Law',
+    desc: 'Affluent master-planned enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth advisory retainers.',
+  },
+  {
+    corridor: 'Henderson & Green Valley',
+    query: 'specialized healthcare clinic seo henderson nv',
+    focus: 'Specialized Healthcare, Pediatric Dental & Family Legal Practices',
+    desc: 'Fast-growing residential and medical corridor. Multi-practitioner practice architectures, physician directories, and verified review funnels.',
+  },
+  {
+    corridor: 'Downtown Las Vegas & Arts District',
+    query: 'tech creative agency seo downtown las vegas',
+    focus: 'Tech Startups, Creative Agencies & Boutique Law Firms',
+    desc: 'Vibrant urban innovation and legal district. Captures commercial litigation retainers, tech venture inquiries, and creative service contracts.',
+  },
+  {
+    corridor: 'North Las Vegas & Apex Logistics Corridor',
+    query: 'industrial warehousing logistics seo north las vegas',
+    focus: 'Industrial Warehousing, Advanced Logistics & Distribution',
+    desc: 'Major Mountain West distribution and fulfillment nexus. B2B service queries require logistics capability schemas and sub-second edge speeds.',
+  },
+  {
+    corridor: 'Southwest Valley & Spring Valley',
+    query: 'commercial hvac roofing contractor seo las vegas',
+    focus: 'Commercial Construction, HVAC & General Contractors',
+    desc: 'High-growth commercial and trade corridor. Captures high-intent commercial HVAC, roofing, and contractor project bidding inquiries.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Aesthetic Medicine, Plastic Surgery & Luxury Wellness',
+    headline: 'Capturing High-Value Patient Consultations in Summerlin & Henderson',
     description:
-      'Las Vegas SEO for a city where visitors and residents search for the same business in completely different ways.',
-    images: ['https://factoryjet.com/images/us/las-vegas-seo/hero.webp'],
-  },
-  robots: { index: true, follow: true },
-};
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Content data
-───────────────────────────────────────────────────────────────────────────── */
-
-const TRUST: { v: string; k: string }[] = [
-  { v: 'Month to month', k: 'cancel with thirty days notice' },
-  { v: 'Free audit', k: 'yours to keep, hired or not' },
-  { v: '7-day kickoff', k: 'not a six-week onboarding' },
-  { v: 'Founder-led', k: 'you talk to the person doing the work' },
-];
-
-/* Real Las Vegas districts. Written for people who drive these roads. */
-const DISTRICTS: { tag: string; title: string; body: string; tint: string; accent: string }[] = [
-  {
-    tag: 'The Strip, Paradise and Winchester',
-    title: 'Where your address is not what you think it is',
-    tint: '#FFFFFF',
-    accent: ORANGE_DARK,
-    body: 'Most of Las Vegas Boulevard sits in unincorporated Clark County, in the townships of Paradise and Winchester, not inside the City of Las Vegas. Your mail says Las Vegas, your jurisdiction does not. That gap breaks listings quietly: directories disagree on your city and your service area gets drawn around the wrong centre point.',
+      'In Las Vegas’s competitive aesthetic surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
+    image: '/images/us/las-vegas-seo/local-search.webp',
+    alt: 'Las Vegas and Summerlin cosmetic surgery aesthetic clinic local SEO ranking strategy',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting Summerlin, Henderson, and Green Valley',
+    ],
   },
   {
-    tag: 'Downtown and Fremont',
-    title: 'Two crowds, eleven seconds each',
-    tint: PEACH,
-    accent: ORANGE_DARK,
-    body: 'Fremont Street, Fremont East and the Arts District run on discovery. Somebody under the canopy opens a phone, types a category, and picks from the first three results. Photos, correct hours (including the ones that shift on show weekends), menu markup and fresh reviews decide that.',
+    sector: 'Personal Injury Law, Gaming Regulatory & Commercial Litigation',
+    headline: 'Dominating High-Stakes Search Corridors for Las Vegas Law Firms',
+    description:
+      'Legal search queries across Clark County are among the most fiercely contested in the nation. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Las Vegas corporate law firm personal injury and gaming litigation local SEO ranking strategy',
+    points: [
+      'LegalService and Attorney schema linking State Bar of Nevada verified credentials',
+      'Localized practice area silos targeting Summerlin, Downtown Las Vegas, and Henderson',
+      'High-authority local legal directory citations and editorial publication placements',
+    ],
   },
   {
-    tag: 'Summerlin and the northwest',
-    title: 'Suburban search, high commercial value',
-    tint: '#FFFFFF',
-    accent: ORANGE_DARK,
-    body: 'Summerlin, Centennial Hills and the 215 corridor behave like affluent suburbs anywhere: dentists, orthodontists, med spas, veterinary, private schools, home services, wealth advisers. People search from home, compare a few options, read reviews properly, then call. The most winnable pocket in the valley for professional practices: the head terms are contested, the neighbourhood terms are not.',
+    sector: 'Hospitality, Entertainment, Convention Services & Tourism',
+    headline: 'Hyper-Local Radius Dominance for Convention & Hospitality Leaders',
+    description:
+      'From convention logistics suppliers near the Las Vegas Convention Center to luxury dining groups on the Strip, mobile travelers and corporate event planners demand instant search answers. We optimize geo-radius signals, event schemas, and real-time review response workflows.',
+    image: '/images/us/las-vegas-seo/conventions.webp',
+    alt: 'Las Vegas convention center corporate event and hospitality entertainment local SEO optimization',
+    points: [
+      'Local radius geo-fencing targeting convention corridors and major resort districts',
+      'Event and FoodEstablishment structured schema markup for immediate mobile discovery',
+      'High-speed mobile performance ensuring frictionless phone reservations and inquiries',
+    ],
   },
   {
-    tag: 'Henderson, Green Valley and Anthem',
-    title: 'A separate city that Google treats separately',
-    tint: LAV_SOFT,
-    accent: '#3C34A8',
-    body: 'Henderson is the second largest city in Nevada, not a Las Vegas suburb, and Google knows it. Ranking in Las Vegas does not get you found in Green Valley Ranch or Anthem. If you serve both, you need pages that genuinely differ, not one page with the city name swapped.',
-  },
-  {
-    tag: 'North Las Vegas and Apex',
-    title: 'Logistics, trades and B2B buyers',
-    tint: '#FFFFFF',
-    accent: ORANGE_DARK,
-    body: 'Warehousing, distribution, manufacturing and the trades that serve them. Buyers here search during working hours, on a desktop, using capability language rather than near me. The winning page says what you make or move, what sizes and certifications, how fast, and who to call. Reviews matter less here than being findable for the exact phrase a procurement person types.',
-  },
-  {
-    tag: 'Spring Valley, Chinatown and the southwest',
-    title: 'Where multilingual search is normal',
-    tint: GREEN_SOFT,
-    accent: '#0A4A38',
-    body: 'The Spring Mountain corridor and the southwest are among the most linguistically mixed parts of the valley. A meaningful share of searches here are not in English, and the winners are the businesses whose profile category, service names and reviews reflect how their customers actually write. Most agencies never check. It takes an afternoon and it changes what you build.',
+    sector: 'Commercial HVAC, Roofing & Trade Contracting',
+    headline: 'Driving Continuous Commercial Project Bidding Across Clark County',
+    description:
+      'Commercial HVAC contractors, roofing companies, and trade specialists across the Las Vegas valley require steady commercial project pipelines. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Las Vegas commercial contractor HVAC and roofing local SEO architecture',
+    points: [
+      'Service area radius optimization covering Clark County commercial and industrial hubs',
+      'High-speed mobile performance ensuring immediate project bidding phone calls',
+      'Structured LocalBusiness and Contractor schema markup for local search dominance',
+    ],
   },
 ];
 
-/* The listicle. Numbered, scannable, extraction-friendly. */
-const FIXES: { title: string; body: string }[] = [
+const PAIN_POINTS = [
   {
-    title: 'Settle which city you are actually in',
-    body: 'Paradise, Winchester, Las Vegas, Henderson or North Las Vegas. Pick the truth, then make it identical on your site, your Google Business Profile and every directory. Inconsistent city data is the most common problem we find on valley businesses.',
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional Las Vegas agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
   },
   {
-    title: 'Choose the most specific primary category',
-    body: 'Google matches your profile to a search largely through category. Wedding chapel beats event venue. Personal injury attorney beats law firm. One field, enormous effect, and most profiles have not been revisited since the day they were claimed.',
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
   },
   {
-    title: 'Set hours that survive a show week',
-    body: 'Vegas hours move: convention weeks, holiday weekends, summer. Wrong hours produce a bad first impression and a review that mentions it. Special hours take ten minutes to set and stop a whole category of complaint.',
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
   },
   {
-    title: 'Add photos that were taken this year',
-    body: 'Discovery here is visual. Real interior, exterior, team and product photos beat stock every time, and they keep working. Refresh them on a schedule instead of once at launch.',
-  },
-  {
-    title: 'Build a review habit, not a review campaign',
-    body: 'A steady trickle of genuine reviews beats a burst followed by silence. Ask at the moment the customer is happiest, make it one tap, and reply to every review including the awkward ones.',
-  },
-  {
-    title: 'Fix the site before you write for it',
-    body: 'Speed on a hotel wifi connection, clean crawling, working structured data. A slow site will not hold a ranking however good the writing is. This is where our free SEO audit starts.',
-  },
-  {
-    title: 'Write one honest page per place you serve',
-    body: 'Las Vegas, Henderson, Summerlin, North Las Vegas. Different content, different examples, different landmarks. Google has been good at spotting cloned location pages for years, and a thin clone drags down the pages around it.',
-  },
-  {
-    title: 'Separate the visitor page from the resident page',
-    body: 'A visitor wants hours, distance, parking and a phone number in under ten seconds. A resident wants proof and options. One page cannot lead with both. Two pages can, and they rank for different things.',
-  },
-  {
-    title: 'Get ready to be quoted, not just ranked',
-    body: 'Answer-first writing, clear entity data and structured data that matches the visible text, so ChatGPT, Perplexity and Google AI Overviews can name you. Our AI visibility checker shows whether any of them currently do.',
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
   },
 ];
 
-/* Real page-one rivals for "seo agency las vegas", pulled live 2026-08-12.
-   Every detail below was read off the named site itself. Named fairly, no
-   disparagement, and our own position stated openly further down the page. */
-const RIVALS: { domain: string; role: string; goodAt: string }[] = [
+const ROADMAP_STEPS = [
   {
-    domain: 'thriveagency.com',
-    role: 'Holds position 1, national operator with a downtown Las Vegas office',
-    goodAt: 'Thrive lists a Las Vegas address on 4th Street and runs one of the widest service menus in the industry, from technical SEO to paid media and conversion work. If you want one vendor for every channel, they are a fair call. The trade is scale: the strategist who wins the pitch is rarely the person on your monthly call.',
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across the Las Vegas valley', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
   },
   {
-    domain: 'webmarketsonline.com',
-    role: 'Position 3, Boise home office with a Las Vegas Nevada office',
-    goodAt: 'WebMarkets runs SEO, paid media, creative and social under one roof, with real depth in legal and government-adjacent work. Their own site lists Boise as the home office and Las Vegas as a second location, which is worth knowing when you ask who will be in the room.',
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
   },
   {
-    domain: 'logicalposition.com',
-    role: 'Position 4, ranks with a Las Vegas local SEO packages page',
-    goodAt: 'Logical Position is headquartered in Lake Oswego, Oregon and is first a serious paid media house, a Google Ads and Microsoft Advertising partner, with SEO alongside. If most of your growth will come from ads and you want SEO in the same account, they are a sensible shortlist entry.',
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
   },
   {
-    domain: 'seo.co',
-    role: 'Position 6, national SEO and link authority specialist',
-    goodAt: 'SEO.co has run search campaigns since 2010 and now leads with technical SEO plus generative engine optimisation, including white label work for other agencies. Their published addresses are Seattle and West Palm Beach, so treat the Las Vegas page as a market page rather than a local office.',
-  },
-  {
-    domain: 'helium-seo.com',
-    role: 'Position 9, data-forward challenger serving many cities',
-    goodAt: 'Helium was founded in Cincinnati in 2016 and services a long list of metros including Las Vegas. They lean hard on testing, which suits a business with enough traffic for an experiment to produce a readable result. Below a certain volume, fundamentals tell you more than tests do.',
-  },
-  {
-    domain: 'biglasvegasseocompany.com',
-    role: 'Position 11, genuinely local, downtown address',
-    goodAt: 'One of the few names here with a real Las Vegas street address, on 4th Street downtown. If you want somebody you can drive to and meet in person, that is a legitimate reason to shortlist a local shop. We will not pretend proximity counts for nothing.',
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
   },
 ];
 
-const SERVICES: { title: string; body: string; href: string; label: string }[] = [
+const EVALUATION_CRITERIA = [
   {
-    title: 'Local SEO and the map pack',
-    body: 'Google Business Profile, categories, services, photos, posts, review growth, citations and duplicate cleanup across the valley.',
-    href: '/services/local-seo',
-    label: 'Local SEO',
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
   },
   {
-    title: 'Technical SEO and site speed',
-    body: 'Core Web Vitals, crawl and index control, structured data that matches the visible page. The floor, not an upsell.',
-    href: '/services/seo-audit',
-    label: 'Free SEO audit',
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
   },
   {
-    title: 'AI search visibility (GEO)',
-    body: 'Answer-first content and entity data so AI answer engines can name your business instead of a competitor.',
-    href: '/services/ai-seo',
-    label: 'AI SEO',
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
   },
   {
-    title: 'Smaller budgets, same discipline',
-    body: 'A narrower scope built around your profile, your reviews and three or four pages that match what people really type.',
-    href: '/services/small-business-seo',
-    label: 'Small business SEO',
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   FAQ. Grounded in live People-Also-Ask for this query set, phrased the way
-   people actually type. FAQPage schema is derived from THIS array below.
-───────────────────────────────────────────────────────────────────────────── */
-
-const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
-  { key: 'cost', label: 'What it costs' },
-  { key: 'choosing', label: 'Choosing an agency' },
-  { key: 'local', label: 'Local SEO in Las Vegas' },
-  { key: 'ai', label: 'SEO and AI' },
-  { key: 'diy', label: 'Doing it yourself' },
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'Las Vegas Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
-const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
+const FAQ_ITEMS = [
   {
-    category: 'cost',
-    question: 'How much does an SEO agency charge in Las Vegas?',
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Las Vegas business?',
     answer:
-      'It depends on what you are trying to outrank, and anyone who quotes before opening your site is guessing. The drivers are how competitive your category is, how many places you serve, how much technical repair comes first, and how much content gets made each month. We work month to month, starting with a free audit.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Las Vegas corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or high-stakes legal practices requiring Valley-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
-    category: 'cost',
-    question: 'How much should a small business spend on SEO?',
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
     answer:
-      'Less than it brings back. Work out what one new customer is worth over a year, then ask how many extra customers a month would cover the work with room to spare. If the answer is a handful, the scope fits. If it is dozens, start narrower: your profile, your reviews, three good pages.',
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
   },
   {
-    category: 'cost',
-    question: 'How much does local SEO cost in the USA, and is Las Vegas different?',
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
     answer:
-      'Published averages blend jobs with nothing in common, so they are close to useless. A single-location dentist in Summerlin and a nine-location home services company are both doing local SEO, and it is not the same work. Ask what happens each month, who does it, and how you will know it worked.',
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
   },
   {
-    category: 'cost',
-    question: 'Is an SEO agency worth it, or should I just run ads?',
+    category: 'timeline',
+    question: 'How quickly can our Las Vegas business expect to see Google Maps rank improvements?',
     answer:
-      'Ads rent attention, search earns it. Ads win when you need leads this week or you are testing a new offer. SEO wins when you want a lead source that keeps working after you stop paying. Most Las Vegas businesses eventually run both. Start with whichever one you can measure honestly.',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Summerlin or Henderson generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
-    category: 'choosing',
-    question: 'Who has the best SEO services in Las Vegas?',
+    category: 'timeline',
+    question: 'What factors determine how fast a Las Vegas business can rank in the Local 3-Pack?',
     answer:
-      'There is no single best, only best for your situation. The filter is the same for everyone: a written scope you read before signing, month-to-month terms, your accounts staying yours, and reporting tied to calls and booked jobs rather than ranking screenshots. Run every agency through it, including us.',
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
   {
-    category: 'choosing',
-    question: 'What does an SEO agency actually do all month?',
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'Four buckets. Technical work on the site: speed, crawling, structured data. Local work on your Business Profile, citations and reviews. Content that matches real searches. And authority work, meaning mentions and links from sites that matter. A month with none of those four is a month you paid for a report.',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
   },
   {
-    category: 'choosing',
-    question: 'How do I check a Las Vegas SEO company before I sign anything?',
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
     answer:
-      'Ask five things. Who physically does the work. What lands on my account each month. Are technical fixes included or billed separately. What happens to my content if I leave. And what would make you tell me SEO is the wrong spend right now. The last one separates a consultant from a salesperson.',
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
   },
   {
-    category: 'choosing',
-    question: 'Do I need an agency that is physically in Las Vegas?',
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'Not for the work itself. Several of the agencies ranking for las vegas seo are headquartered in Oregon, Ohio, Idaho or Washington. What you do need is somebody who knows the Strip is not in the City of Las Vegas, that Henderson is its own city, and that show weeks move your demand.',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
-    category: 'choosing',
-    question: 'Can you guarantee number one rankings in Las Vegas?',
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
-      'No, and anyone who does is guessing with your money. Google states plainly that there is no way to request or pay for a better local ranking. What we guarantee is the work, a clear record of what we did, and your right to leave at the end of any month.',
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
   {
-    category: 'local',
-    question: 'What is local SEO, and how is it different from regular SEO?',
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
     answer:
-      'Local SEO is how you show up when somebody nearby searches for what you sell, mostly in Google Maps and the three-result map pack. Regular SEO ranks a page anywhere. Local runs on your Business Profile, reviews and distance. Regular runs on pages, links and depth. Most valley businesses need both.',
-  },
-  {
-    category: 'local',
-    question: 'My business has a Las Vegas address but sits on the Strip. Does that matter?',
-    answer:
-      'More than people expect. Clark County has jurisdiction over the Strip, and much of Las Vegas Boulevard sits in the unincorporated townships of Paradise and Winchester rather than the city itself. Your post says Las Vegas either way, but directories disagree, and inconsistent city data is a common reason a profile underperforms.',
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
   },
   {
     category: 'local',
-    question: 'How does Google decide who gets into the Las Vegas map pack?',
+    question: 'Do you manage multi-location local SEO campaigns across Clark County?',
     answer:
-      'Google names three factors: relevance, distance and prominence. Relevance is how well your profile matches what was typed, which is why category and services matter so much. Distance is how far you are from the searcher, and you cannot change it. Prominence is how well known you are. Two of the three are yours.',
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Las Vegas, Henderson, Summerlin, and North Las Vegas.',
   },
   {
     category: 'local',
-    question: 'How do I get found by visitors rather than locals?',
+    question: 'Can you help our practice outrank entrenched competitors in Summerlin and Henderson?',
     answer:
-      'Visitors search from a phone, close to where they are standing, with no local knowledge, and decide in seconds. So: correct hours, current photos, a category matching the words a stranger would use, parking spelled out, and a phone number one tap away. Write it for somebody who arrived yesterday.',
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
     category: 'local',
-    question: 'How long does it take for SEO to kick in here?',
+    question: 'How do service-area businesses without a public storefront rank in Las Vegas?',
     answer:
-      'Expect early movement in three to six months and stable map pack positions in six to twelve. Profile and review work often shows sooner, sometimes within weeks. Content and authority are slower and compound. We win the low-competition searches first, so leads arrive while the bigger terms are still maturing.',
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Valley ZIP codes and commercial corridors.',
   },
   {
     category: 'local',
-    question: 'Is local SEO worth it in a city this size?',
+    question: 'Do you optimize for convention and corporate event searches in Las Vegas?',
     answer:
-      'You are not trying to beat the internet. You are trying to beat the dozen or so businesses in your category within a few miles of you, for three map pack slots. That is a fight a normal owner can win, which is not true of most channels you could spend the same money on.',
+      'Yes. We build specialized landing pages and event metadata targeting corporate planners, trade show exhibitors, and convention visitors in Las Vegas.',
   },
   {
-    category: 'local',
-    question: 'Do you work with hospitality, restaurants and event businesses?',
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
     answer:
-      'Yes, and they are the sharpest fit for the visitor side of this city. Restaurants, bars, chapels, tours, transport, photographers and salons all live on discovery inside a very short window. The work is unglamorous: category accuracy, fresh photos, correct hours, review velocity, and a page that answers where and when.',
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
   },
   {
-    category: 'local',
-    question: 'What about businesses that sell to conventions and trade shows?',
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'Different job entirely. Convention demand arrives in bursts around published show dates, from people who are not from here and will not be here next week. If you rent, print, staff, cater, build booths or fix technology for exhibitors, you need to be ranked well before the show, not during it.',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across the Las Vegas valley, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
-    category: 'ai',
-    question: 'Is SEO dead now that AI answers everything?',
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'No, the destination changed. People still search, they just as often read a summary or ask an assistant instead of clicking. Google states there are no additional requirements or special optimisations needed to appear in AI Overviews, and no special markup. The work that gets you cited is the work that got you ranked.',
+      'We continuously monitor your primary search categories in Las Vegas, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
-    category: 'ai',
-    question: 'Will SEO be replaced by AI, and what is replacing it?',
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
     answer:
-      'Nothing is replacing it, the surface is widening. The phrase you will hear is GEO, generative engine optimisation, which just means making your content easy for an answer engine to quote correctly. In practice: answer-first writing, structured data that matches the visible text, and being the clearest source on a topic.',
-  },
-  {
-    category: 'ai',
-    question: 'Can ChatGPT do my SEO for me?',
-    answer:
-      'It does parts of it well: drafting, outlining, clustering keywords, writing schema. It cannot verify what is true about your market, cannot log into your Business Profile and fix a wrong category, and will happily invent a statistic. As an assistant it saves hours. As a strategy it produces pages that rank for nothing.',
-  },
-  {
-    category: 'diy',
-    question: 'Can I do local SEO myself?',
-    answer:
-      'The first chunk, yes, and you should. Claim and fully complete your Google Business Profile, make your name, address and phone identical everywhere, add real photos, set special hours, and ask every happy customer for a review. It gets hard at technical repair and at outranking an established competitor.',
-  },
-  {
-    category: 'diy',
-    question: 'What is the 80/20 rule in SEO?',
-    answer:
-      'The idea that a small slice of the work produces most of the result. In local SEO that slice is usually three things: a complete and correctly categorised Business Profile, a steady flow of genuine reviews, and a fast site that says plainly what you do and where you do it.',
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
   },
 ];
 
-const OTHER_CITIES: { name: string; path: string }[] = [
-  { name: 'Denver SEO', path: '/denver/seo' },
-  { name: 'Austin SEO', path: '/austin/seo' },
-  { name: 'Charlotte SEO', path: '/charlotte/seo' },
-  { name: 'Tampa SEO', path: '/tampa/seo' },
-];
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD. Every const here is rendered in a script tag inside the component.
-───────────────────────────────────────────────────────────────────────────── */
-
-const webPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': `${PAGE_URL}#webpage`,
-  url: PAGE_URL,
-  name: 'SEO Agency Las Vegas: Local SEO for Visitors and Residents',
-  description:
-    'How SEO works in Las Vegas, where roughly 38.5 million visitors and 2.4 million residents search for the same business in completely different ways, who currently ranks for seo agency las vegas, and where FactoryJet fits.',
-  inLanguage: 'en-US',
-  dateModified: '2026-08-12',
-  lastReviewed: '2026-08-12',
-  isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  about: { '@type': 'Thing', name: 'Local search engine optimization in Las Vegas, Nevada' },
-  primaryImageOfPage: {
-    '@type': 'ImageObject',
-    url: 'https://factoryjet.com/images/us/las-vegas-seo/hero.webp',
-    width: 1440,
-    height: 864,
-  },
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['#answer-first', '#two-las-vegases'],
-  },
-  reviewedBy: { '@type': 'Person', name: 'Bhavesh Barot', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-};
-
-const professionalServiceSchema = {
-  '@context': 'https://schema.org',
-  '@type': ['ProfessionalService', 'LocalBusiness'],
-  '@id': `${PAGE_URL}#business`,
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  image: 'https://factoryjet.com/images/us/las-vegas-seo/hero.webp',
-  description:
-    'Founder-led SEO agency serving Las Vegas, Henderson, North Las Vegas, Summerlin, Paradise and Spring Valley. Local SEO, technical SEO and AI search visibility, month to month.',
-  areaServed: [
-    { '@type': 'City', name: 'Las Vegas', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-    { '@type': 'City', name: 'Henderson', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-    { '@type': 'City', name: 'North Las Vegas', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-    { '@type': 'Place', name: 'Summerlin, Nevada' },
-    { '@type': 'Place', name: 'Paradise, Nevada' },
-    { '@type': 'Place', name: 'Spring Valley, Nevada' },
-    { '@type': 'Place', name: 'Boulder City, Nevada' },
-  ],
-  knowsAbout: [
-    'Local SEO',
-    'Google Business Profile optimisation',
-    'Technical SEO',
-    'Generative engine optimisation',
-    'Hospitality and convention search demand',
-  ],
-  founder: { '@type': 'Person', name: 'Bhavesh Barot' },
-};
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': `${PAGE_URL}#service`,
-  name: 'SEO Services in Las Vegas, Nevada',
-  serviceType:
-    'SEO agency Las Vegas / Local SEO Las Vegas / Google Business Profile optimisation / Technical SEO / AI search visibility',
-  provider: {
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Las Vegas', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-    { '@type': 'City', name: 'Henderson', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-    { '@type': 'City', name: 'North Las Vegas', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-  ],
-  audience: {
-    '@type': 'BusinessAudience',
-    name: 'Las Vegas valley small and medium businesses, hospitality operators and convention suppliers',
-  },
-  description:
-    'Local and technical SEO for businesses across the Las Vegas valley, built around a market that serves both a very large visitor population and a resident metro of more than two million people.',
-  url: PAGE_URL,
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Las Vegas SEO services',
-    itemListElement: SERVICES.map((s) => ({
-      '@type': 'Offer',
-      itemOffered: { '@type': 'Service', name: s.title, description: s.body },
-    })),
-  },
-};
-
-const fixesListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  '@id': `${PAGE_URL}#fixes`,
-  name: 'Nine things we fix first for a Las Vegas business',
-  description:
-    'The nine pieces of work that move a Las Vegas valley business into local search results, in the order they normally happen.',
-  numberOfItems: FIXES.length,
-  itemListOrder: 'https://schema.org/ItemListOrderAscending',
-  itemListElement: FIXES.map((f, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: f.title,
-    description: f.body,
-  })),
-};
-
-const rivalListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  '@id': `${PAGE_URL}#rivals`,
-  name: 'Agencies ranking for seo agency las vegas',
-  description:
-    'Sites holding page one of Google for the query seo agency las vegas as measured on 12 August 2026, with what each is genuinely good at.',
-  numberOfItems: RIVALS.length,
-  itemListElement: RIVALS.map((r, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: r.domain,
-    description: r.goodAt,
-  })),
-};
-
-const faqSchema = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  '@id': `${PAGE_URL}#faq`,
   mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
   })),
 };
 
-const breadcrumbSchema = {
+const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': `${PAGE_URL}#breadcrumb`,
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Las Vegas SEO', item: PAGE_URL },
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Las Vegas Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Las Vegas',
+    addressRegion: 'NV',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 36.1699,
+    longitude: -115.1398,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Las Vegas' },
+    { '@type': 'City', name: 'Henderson' },
+    { '@type': 'City', name: 'North Las Vegas' },
+    { '@type': 'City', name: 'Boulder City' },
   ],
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Page
-───────────────────────────────────────────────────────────────────────────── */
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Las Vegas Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Las Vegas businesses.',
+  areaServed: { '@type': 'State', name: 'Nevada' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Las Vegas local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Summerlin, Henderson, and Downtown.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Las Vegas', item: CANONICAL },
+  ],
+};
 
 export default function LasVegasSeoPage() {
   return (
     <>
-      <script
-        id="lv-webpage-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        id="lv-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
-      />
-      <script
-        id="lv-service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="lv-fixes-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(fixesListSchema) }}
-      />
-      <script
-        id="lv-rivals-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(rivalListSchema) }}
-      />
-      <script
-        id="lv-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        id="lv-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script id="lv-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="lv-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="lv-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="lv-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="lv-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-      <main style={{ backgroundColor: CREAM }}>
-        {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden">
-          <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-14 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-16">
-            <div>
-              <p className="fj-eyebrow">SEO Agency &middot; Las Vegas, Nevada</p>
-              <h1
-                className="fj-display mt-5 font-bold text-fj-ink"
-                style={{ fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)', lineHeight: 1.06, letterSpacing: '-0.03em' }}
-              >
-                Las Vegas SEO for a city with{' '}
-                <span style={{ color: ORANGE }}>two completely different customers</span>
-              </h1>
-              <p
-                className="mt-6 max-w-[560px] font-fj-body font-medium text-fj-neutral-600"
-                style={{ fontSize: '1.125rem', lineHeight: 1.62 }}
-              >
-                One is standing on a sidewalk with a phone, three days into a trip, and will decide in
-                seconds. The other lives in Summerlin or Henderson and researches you properly before
-                calling. Most agencies write one page for both and lose both.{' '}
-                <b className="font-bold text-fj-ink">We build for each of them separately.</b>
-              </p>
-              <HeroInlineForm region="us" source="us_las_vegas_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="mt-8 flex flex-wrap items-center gap-6">
-                <Link
-                  href={CALENDLY}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-fj-body text-base font-semibold text-fj-ink transition-all hover:gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                  style={{ outlineColor: ORANGE }}
-                >
-                  Talk to the founder
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
-                <Link
-                  href="/services/local-seo"
-                  className="font-fj-body text-[0.9375rem] font-semibold underline underline-offset-4"
-                  style={{ color: ORANGE_DARK }}
-                >
-                  Just need the map pack fixed?
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-[560px]">
-              <div
-                className="overflow-hidden rounded-3xl border"
-                style={{ borderColor: LINE, boxShadow: '0 24px 60px rgba(20,18,12,0.12)' }}
-              >
-                <img
-                  src="/images/us/las-vegas-seo/hero.webp"
-                  alt="Two marketing specialists reviewing a street map with location pins on a laptop in a bright Las Vegas office with desert mountains through the window"
-                  width={1440}
-                  height={864}
-                  fetchPriority="high"
-                  decoding="async"
-                  className="block h-auto w-full object-cover"
-                />
-              </div>
-
-              <div
-                className="relative z-10 mx-4 -mt-10 rounded-2xl border bg-white p-5 sm:mx-6 sm:p-6"
-                style={{ borderColor: LINE, boxShadow: '0 18px 44px rgba(20,18,12,0.10)' }}
-              >
-                <span className="font-fj-mono text-[10px] uppercase tracking-[0.12em] text-fj-neutral-400">
-                  What the Las Vegas search results look like today
-                </span>
-                <ul className="mt-3 space-y-2.5">
-                  {[
-                    { k: 'seo agency las vegas', v: '590 searches a month', d: 'difficulty 13' },
-                    { k: 'page-one slots that are directories or roundups', v: '4 of 12', d: 'not agencies' },
-                    { k: 'page-one agencies headquartered outside Nevada', v: '4 of the 6 we opened', d: 'checked on their own sites' },
-                  ].map((row) => (
-                    <li
-                      key={row.k}
-                      className="flex items-baseline justify-between gap-3 border-t pt-2.5 first:border-t-0 first:pt-0"
-                      style={{ borderColor: 'rgba(15,15,18,0.08)' }}
-                    >
-                      <span className="font-fj-body text-[0.875rem] font-bold text-fj-ink">{row.k}</span>
-                      <span className="shrink-0 text-right font-fj-mono text-[0.6875rem] text-fj-neutral-600">
-                        {row.v}
-                        <small className="ml-2 block sm:inline" style={{ color: ORANGE_DARK }}>
-                          {row.d}
-                        </small>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 font-fj-body text-[0.75rem] text-fj-neutral-600">
-                  Volume and difficulty from DataForSEO, August 2026. Difficulty runs 0 to 100, so 13 is
-                  genuinely winnable. Page-one make-up read off the live results the same week.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 2. ANSWER-FIRST ─────────────────────────────────────────── */}
-        <section id="answer-first" className="pb-12 md:pb-16">
-          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <div
-              className="rounded-2xl bg-white p-7 md:p-9"
-              style={{ borderLeft: `5px solid ${ORANGE}`, boxShadow: '0 12px 34px rgba(20,18,12,0.06)' }}
-            >
-              <p className="font-fj-mono text-[11px] uppercase tracking-[0.13em]" style={{ color: ORANGE_DARK }}>
-                Short answer
-              </p>
-              <h2
-                id="two-las-vegases"
-                className="fj-display mt-3 text-[1.35rem] font-bold text-fj-ink"
-                style={{ letterSpacing: '-0.02em' }}
-              >
-                What does a Las Vegas SEO agency actually do?
-              </h2>
-              <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                <b className="text-fj-ink">
-                  A Las Vegas SEO agency gets your business found by people searching in this valley
-                </b>
-                : the Google map pack, the regular results, and now AI answers. In Las Vegas that means
-                serving two different searchers, roughly 38.5 million visitors a year and about 2.4 million
-                residents, who look for the same business in completely different ways.
-              </p>
-              <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                The work itself splits four ways. Your{' '}
-                <Link href="/services/local-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                  Google Business Profile and local listings
-                </Link>
-                , which is what actually decides the three-result map pack. The technical condition of your
-                site, which is where a free{' '}
-                <Link href="/services/seo-audit" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                  SEO audit
-                </Link>{' '}
-                starts, because a slow site will not hold a ranking however good the writing is. Pages that
-                match what people here genuinely type. And{' '}
-                <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                  AI SEO
-                </Link>
-                , the structured data and answer-first writing that lets ChatGPT, Perplexity and Google AI
-                Overviews quote you instead of a competitor. Our free{' '}
-                <Link href="/ai-visibility-checker" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                  AI visibility checker
-                </Link>{' '}
-                shows whether those engines currently name you at all.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 3. TRUST ROW ────────────────────────────────────────────── */}
-        <section className="border-y bg-white py-7" style={{ borderColor: LINE }}>
-          <div className="mx-auto grid max-w-[1180px] grid-cols-2 gap-6 px-6 md:px-8 lg:grid-cols-4">
-            {TRUST.map((t) => (
-              <div key={t.v}>
-                <p className="fj-display text-[1.0625rem] font-bold text-fj-ink">{t.v}</p>
-                <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-600">{t.k}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 4. WHY LAS VEGAS SEARCH IS DIFFERENT ────────────────────── */}
-        <section className="py-14 md:py-20">
-          <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 md:px-8 lg:grid-cols-[1.05fr_0.95fr]">
-            <div>
-              <p className="fj-eyebrow">Why this market is not like other cities</p>
-              <h2
-                className="fj-display mt-3.5 font-bold text-fj-ink"
-                style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.7rem)', lineHeight: 1.08, letterSpacing: '-0.025em' }}
-              >
-                Two audiences, one set of search results
-              </h2>
-              <p className="mt-4 max-w-[640px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}>
-                Las Vegas took in about{' '}
-                <a
-                  href="https://www.lvcva.com/stats-and-facts/"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="font-semibold underline underline-offset-2"
-                  style={{ color: ORANGE_DARK }}
-                >
-                  38.5 million visitors in 2025, including 6.0 million convention attendees
-                </a>
-                , across roughly 150,300 hotel rooms. At the same time,{' '}
-                <a
-                  href="https://www.clarkcountynv.gov/residents/about_clark_county/"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="font-semibold underline underline-offset-2"
-                  style={{ color: ORANGE_DARK }}
-                >
-                  Clark County serves more than 2.4 million residents
-                </a>
-                , a million of whom live in unincorporated areas where the county provides the services a
-                city normally would.
-              </p>
-              <p className="mt-4 max-w-[640px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                Those two groups do not search alike. A visitor types a category and a landmark, from a
-                phone, within a few blocks of where they are standing, and picks one of the first three
-                results. A resident types a category and a suburb, compares options, reads reviews, and calls
-                two days later. Different words, different intent, different winning page.
-              </p>
-              <p className="mt-4 max-w-[640px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                Then there is the calendar. Convention demand arrives in bursts around published show dates.
-                If you sell to exhibitors, your demand has a shape you can read months ahead, and ranking
-                during the show is already too late. Almost nobody plans for it.
-              </p>
-              <div className="mt-8">
-                <ModalCTAButton
-                  label="Get your free Las Vegas SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
-                />
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-[520px]">
-              <img
-                src="/images/us/las-vegas-seo/conventions.webp"
-                alt="Two exhibition staff setting up a trade show booth on the floor of a large bright Las Vegas convention hall"
-                width={1264}
-                height={848}
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full rounded-2xl border object-cover"
-                style={{ borderColor: LINE, boxShadow: '0 18px 44px rgba(20,18,12,0.09)' }}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 5. DISTRICTS ────────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <p className="fj-eyebrow">The valley, district by district</p>
-            <h2
-              className="fj-display mt-3.5 max-w-[820px] font-bold text-fj-ink"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.7rem)', lineHeight: 1.08, letterSpacing: '-0.025em' }}
-            >
-              Las Vegas is not one market. It is about six of them.
-            </h2>
-            <p className="mt-4 max-w-[700px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              Search demand splits along the same lines the valley does. A chapel on Fremont and an
-              orthodontist in Summerlin are both doing local SEO, and almost nothing overlaps. Here is how
-              we read the map before writing a page.
-            </p>
-
-            <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {DISTRICTS.map((d) => (
-                <div
-                  key={d.tag}
-                  className="rounded-2xl border p-7"
-                  style={{ background: d.tint, borderColor: LINE }}
-                >
-                  <span className="font-fj-mono text-[0.8125rem] font-bold" style={{ color: d.accent }}>
-                    {d.tag}
-                  </span>
-                  <h3 className="fj-display mb-2 mt-2 text-[1.125rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
-                    {d.title}
-                  </h3>
-                  <p className="font-fj-body text-[0.9375rem] font-medium leading-[1.62] text-fj-neutral-600">{d.body}</p>
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Las Vegas Local SEO &amp; AI Citation Authority</span>
                 </div>
-              ))}
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Las Vegas Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Summerlin, Henderson, and Downtown Las Vegas. Engineered for verified inbound calls and high-ticket consultations.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#lv-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Las Vegas Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/las-vegas-seo/hero.webp"
+                  alt="Las Vegas Nevada local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ─── 6. LISTICLE ─────────────────────────────────────────────── */}
-        <section className="py-14 md:py-20" style={{ background: PEACH }}>
-          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <p className="fj-eyebrow">First ninety days</p>
-            <h2
-              className="fj-display mt-3.5 max-w-[820px] font-bold text-fj-ink"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.7rem)', lineHeight: 1.08, letterSpacing: '-0.025em' }}
-            >
-              Nine things we fix first for a Las Vegas business
-            </h2>
-            <p className="mt-4 max-w-[700px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              In this order, because each one makes the next one work better. The first five you can do yourself.
-            </p>
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-            <ol className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
-              {FIXES.map((f, i) => (
-                <li
-                  key={f.title}
-                  className="rounded-2xl border bg-white p-6"
-                  style={{ borderColor: LINE }}
-                >
-                  <div className="flex items-baseline gap-3">
-                    <span
-                      className="font-fj-mono text-[0.8125rem] font-bold tabular-nums"
-                      style={{ color: ORANGE_DARK }}
-                    >
-                      {String(i + 1).padStart(2, '0')}
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
                     </span>
-                    <h3 className="fj-display text-[1.0625rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
-                      {f.title}
-                    </h3>
-                  </div>
-                  <p className="mt-2 font-fj-body text-[0.9375rem] leading-[1.62] text-fj-neutral-600">{f.body}</p>
-                </li>
-              ))}
-            </ol>
-
-            <p className="mt-8 max-w-[760px] font-fj-body text-[0.9375rem] leading-[1.65] text-fj-neutral-600">
-              On the map pack specifically, Google is unusually open about how it decides.{' '}
-              <a
-                href="https://support.google.com/business/answer/7091"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="font-semibold underline underline-offset-2"
-                style={{ color: ORANGE_DARK }}
-              >
-                Its own guidance names relevance, distance and prominence
-              </a>
-              , and states plainly that there is no way to request or pay for a better local ranking. You
-              cannot change distance. You can change the other two, which is what the list above is for.
-            </p>
-          </div>
-        </section>
-
-        {/* ─── 7. LOCAL SEARCH IMAGE + SERVICES ────────────────────────── */}
-        <section className="py-14 md:py-20">
-          <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 md:px-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative mx-auto w-full max-w-[500px]">
-              <img
-                src="/images/us/las-vegas-seo/local-search.webp"
-                alt="A restaurant manager in a Las Vegas dining room checking a map with a single location pin on his phone"
-                width={1200}
-                height={896}
-                loading="lazy"
-                decoding="async"
-                className="h-auto w-full rounded-2xl border object-cover"
-                style={{ borderColor: LINE, boxShadow: '0 18px 44px rgba(20,18,12,0.09)' }}
-              />
-            </div>
-
-            <div>
-              <p className="fj-eyebrow">What you get every month</p>
-              <h2
-                className="fj-display mt-3.5 font-bold text-fj-ink"
-                style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.7rem)', lineHeight: 1.08, letterSpacing: '-0.025em' }}
-              >
-                One scope, the whole stack
-              </h2>
-              <p className="mt-4 max-w-[600px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-                No tiers where the useful parts sit behind the expensive one. Everything below runs every
-                month, weighted to whatever your audit says is actually holding you back.
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {SERVICES.map((s) => (
-                  <div key={s.title} className="border-t pt-4" style={{ borderColor: LINE }}>
-                    <h3 className="fj-display text-[1.0625rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
-                      {s.title}
-                    </h3>
-                    <p className="mt-1 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">
-                      {s.body}{' '}
-                      <Link href={s.href} className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                        {s.label}
-                      </Link>
-                    </p>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
                 ))}
               </div>
@@ -987,176 +503,406 @@ export default function LasVegasSeoPage() {
           </div>
         </section>
 
-        {/* ─── 8. COMPARISON: THE REAL SERP ────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <p className="fj-eyebrow">The results page, honestly</p>
-            <h2
-              className="fj-display mt-3.5 max-w-[820px] font-bold text-fj-ink"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.7rem)', lineHeight: 1.08, letterSpacing: '-0.025em' }}
-            >
-              Who you are actually choosing between
-            </h2>
-            <p className="mt-4 max-w-[720px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We pulled the live results for seo agency las vegas in August 2026, then opened every site to
-              check what it really is. Four of the twelve page-one slots are directories or roundups rather
-              than agencies. Here is the rest, with what each is good at. We are on the list too, at the
-              bottom, which is the honest place for us today.
-            </p>
-
-            <div className="mt-10 overflow-x-auto">
-              <table className="w-full min-w-[720px] border-collapse text-left">
-                <caption className="sr-only">
-                  Agencies ranking on page one for seo agency las vegas, with position and strengths
-                </caption>
-                <thead>
-                  <tr style={{ borderBottom: `1.5px solid ${LINE}` }}>
-                    <th scope="col" className="pb-3 pr-4 font-fj-mono text-[0.6875rem] uppercase tracking-[0.12em] text-fj-neutral-400">
-                      Who
-                    </th>
-                    <th scope="col" className="pb-3 pr-4 font-fj-mono text-[0.6875rem] uppercase tracking-[0.12em] text-fj-neutral-400">
-                      Where they sit
-                    </th>
-                    <th scope="col" className="pb-3 font-fj-mono text-[0.6875rem] uppercase tracking-[0.12em] text-fj-neutral-400">
-                      What they are genuinely good at
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {RIVALS.map((r) => (
-                    <tr key={r.domain} className="align-top" style={{ borderBottom: `1px solid ${LINE}` }}>
-                      <th scope="row" className="py-4 pr-4 font-fj-body text-[0.9375rem] font-bold text-fj-ink">
-                        {r.domain}
-                      </th>
-                      <td className="py-4 pr-4 font-fj-body text-[0.875rem] text-fj-neutral-600">{r.role}</td>
-                      <td className="py-4 font-fj-body text-[0.875rem] leading-[1.6] text-fj-neutral-600">{r.goodAt}</td>
-                    </tr>
-                  ))}
-                  <tr className="align-top" style={{ background: '#FFF7F3' }}>
-                    <th scope="row" className="py-4 pr-4 font-fj-body text-[0.9375rem] font-bold text-fj-ink">
-                      FactoryJet
-                    </th>
-                    <td className="py-4 pr-4 font-fj-body text-[0.875rem]" style={{ color: ORANGE_DARK }}>
-                      Not ranking on this term yet. This page is the attempt.
-                    </td>
-                    <td className="py-4 font-fj-body text-[0.875rem] leading-[1.6] text-fj-neutral-600">
-                      Founder-led, month to month, senior people doing the work rather than briefing an
-                      account manager. Technical SEO and AI search visibility included rather than sold
-                      separately. Smaller than everyone above us, with a smaller link profile.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div
-              className="mt-10 rounded-2xl p-7 md:p-8"
-              style={{ background: CREAM, borderLeft: `4px solid ${ORANGE}` }}
-            >
-              <h3 className="fj-display text-[1.125rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
-                Why we are showing you our own weakest number
-              </h3>
-              <p className="mt-3 max-w-[860px] font-fj-body text-[0.9375rem] leading-[1.65] text-fj-neutral-600">
-                Because the gap matters much less to you than it does to us. You need to rank in one valley,
-                for a handful of categories, against maybe a dozen genuine local rivals. We are trying to
-                rank nationally against firms with many times our authority. Your version of the job works
-                on a normal timeline. Ours takes years. You get the benefit of us doing the harder version
-                every day.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-5">
-                <ModalCTAButton
-                  label="Get your free Las Vegas SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/las-vegas-seo/local-search.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Las Vegas businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
-                <Link
-                  href={CALENDLY}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-fj-body text-[0.9375rem] font-semibold underline underline-offset-4"
-                  style={{ color: ORANGE_DARK }}
-                >
-                  Or book thirty minutes with the founder
-                </Link>
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Clark County&apos;s High-Value Commercial Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Summerlin aesthetic surgeons and wealth managers to Downtown trial law firms and commercial trade contractors, Las Vegas businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ─── 9. FAQ ──────────────────────────────────────────────────── */}
-        <FAQ
-          eyebrow="Las Vegas SEO FAQ"
-          headline="The questions people actually type"
-          lead="Twenty-two answers on what to budget, how to judge an agency, how the map pack works here, and whether any of it survives AI. The same answers we would give you on the phone, including the awkward ones."
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
+        {/* ── 04. LAS VEGAS DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="lv-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Las Vegas Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for Las Vegas&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Summerlin cosmetic clinics to Downtown trial law firms and North Las Vegas industrial hubs:
+              </p>
+            </div>
 
-        {/* ─── 10. RELATED ─────────────────────────────────────────────── */}
-        <section className="border-t bg-white py-12" style={{ borderColor: LINE }}>
-          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <p className="fj-eyebrow">Keep reading</p>
-            <p className="mt-3 max-w-[880px] font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-              We write every city page one at a time, which is why they do not read like each other. See the
-              same approach in{' '}
-              {OTHER_CITIES.map((c, i) => (
-                <span key={c.path}>
-                  <Link href={c.path} className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                    {c.name}
-                  </Link>
-                  {i < OTHER_CITIES.length - 2 ? ', ' : i === OTHER_CITIES.length - 2 ? ' or ' : '. '}
-                </span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
               ))}
-              The underlying services live at{' '}
-              <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                SEO services
-              </Link>
-              ,{' '}
-              <Link href="/services/local-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                local SEO
-              </Link>
-              ,{' '}
-              <Link href="/services/small-business-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                small business SEO
-              </Link>
-              ,{' '}
-              <Link href="/services/seo-consulting" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                SEO consulting
-              </Link>{' '}
-              and{' '}
-              <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                AI SEO
-              </Link>
-              . On AI answers, Google publishes its own position:{' '}
-              <a
-                href="https://developers.google.com/search/docs/appearance/ai-features"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="font-semibold underline underline-offset-2"
-                style={{ color: ORANGE_DARK }}
-              >
-                there are no special requirements or markup to appear in AI Overviews
-              </a>
-              . Good news if your fundamentals are right, bad news if they are not.
-            </p>
+            </div>
           </div>
         </section>
 
-        {/* ─── 11. FINAL CTA (the one dark section) ────────────────────── */}
-        <FinalCTA
-          variant="dark"
-          eyebrow="START WITH THE AUDIT"
-          headline="Find out what is actually holding your Las Vegas rankings back"
-          sub="We will look at your Google Business Profile, your city and address data, your site speed on a phone, and the searches your customers are really making across the valley. Then we will tell you plainly whether search is worth building for you, or whether you should spend the next quarter somewhere else."
-          primaryCta={{ label: 'Get my free SEO audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See local SEO', href: '/services/local-seo' }}
-          objectionHandler="Month to month, founder-led, no guaranteed rankings and no invented case studies. Your profile, content and accounts stay yours."
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for Las Vegas
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in the valley demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Las Vegas Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// LAS VEGAS LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Las Vegas local search."
+            city="Las Vegas"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across Clark County:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Las Vegas SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="LAS VEGAS LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Las Vegas NV"
+          lead="Direct, plain English answers to what Las Vegas business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
-        <SeoCityLinksUS currentCity="las-vegas" />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="las-vegas" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Las Vegas Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

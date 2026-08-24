@@ -1,1009 +1,909 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Link from 'next/link';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-const TITLE = 'Web Design Company St. Louis | 7-Day Builds, You Own the Code | FactoryJet';
-const DESCRIPTION =
-  'FactoryJet is a web design company for St. Louis businesses on both sides of the state line. Starter sites ship in 7 days, built in Next.js with schema, GA4 and local SEO. You own the code and the design files.';
-const URL = 'https://factoryjet.com/st-louis/web-design';
-const DATE_MODIFIED = '2026-08-12';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/st-louis/web-design';
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: URL,
-    languages: {
-      'en-US': URL,
-      'x-default': URL,
-    },
-  },
+  title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description:
+    'St. Louis web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet web design for St. Louis, Missouri businesses',
-      },
-    ],
+    title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description:
+      'St. Louis web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'St. Louis Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: TITLE,
-    description: DESCRIPTION,
+    title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description: 'Custom Next.js web design and engineering in St. Louis MO. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ===========================================================================
-   FAQ data. The visible <FAQ /> block and the FAQPage JSON-LD both read from
-   FAQ_ITEMS. Do not duplicate this array anywhere else in this file.
-   =========================================================================== */
+const PARTNERS = [
+  'Next.js 15 App Router',
+  'React 19 Server Components',
+  'TypeScript Enterprise',
+  'Tailwind CSS & Vanilla Design Tokens',
+  'Cloudflare Edge Network',
+  'Sanity & Strapi Headless CMS',
+  'Figma Design Systems',
+  'Core Web Vitals SLA (95+)',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown & Cortex Innovation District',
+    query: 'bioscience medtech web design cortex st louis',
+    focus: 'Bioscience Core, MedTech & Health Systems',
+    desc: 'The Midwest biotechnology and plant science hub. Demands clinical-grade scientific design systems, interactive pipeline visualizers, and sub-second edge hosting.',
+  },
+  {
+    corridor: 'Clayton & Central Business District',
+    query: 'wealth management law firm web design clayton mo',
+    focus: 'Wealth Advisory, Private Equity, Law & Fortune 500 HQ',
+    desc: 'The executive financial seat of St. Louis County. Demands refined editorial typography, interactive portfolio calculators, and SOC2-compliant client portals.',
+  },
+  {
+    corridor: 'Chesterfield & West County Tech',
+    query: 'enterprise healthcare b2b web design chesterfield',
+    focus: 'Enterprise Tech, Healthcare Networks & Architectural Services',
+    desc: 'High-growth corporate corridor. Features multi-practitioner clinic directories, patient intake forms, and enterprise service capability matrices.',
+  },
+  {
+    corridor: 'St. Charles & 370 Industrial Corridor',
+    query: 'aerospace manufacturing web design st charles mo',
+    focus: 'Precision Tooling, Advanced Manufacturing & Defense Supply',
+    desc: 'Precision manufacturing and aerospace supplier heartland. Requires CAD blueprint upload portals, tolerance spec tables, and AS9100 quality cert showcases.',
+  },
+  {
+    corridor: 'Midtown & Grand Center',
+    query: 'creative foundation agency web design grand center',
+    focus: 'Cultural Foundations, Creative Agencies & Digital Media',
+    desc: 'Historic arts and creative district. Features tactile editorial layouts, interactive video hero modules, and smooth micro-animations.',
+  },
+  {
+    corridor: 'Earth City & Hazelwood Logistics Nexus',
+    query: 'multimodal logistics cold storage web design hazelwood',
+    focus: 'Cold Storage, Multimodal Logistics & Wholesale Distribution',
+    desc: 'Major Midwest freight and river distribution hub. Features freight rate estimation calculators, warehouse capability matrices, and RFQ workflows.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Plant Science, Bioscience & MedTech Innovations',
+    headline: 'Clinical-Grade Digital Flagships for St. Louis Life Sciences Leaders',
+    description:
+      'From Cortex Innovation District biotech startups to 39 North plant science enterprises, institutional credibility is paramount. We engineer custom Next.js web applications with interactive pipeline diagrams, investor data rooms, clinical trial recruitment portals, and sub-second edge performance.',
+    image: '/images/us/st-louis-web-design/plant-science-tablet.webp',
+    alt: 'St. Louis plant science biotechnology and MedTech innovation web design engineering',
+    points: [
+      'Interactive clinical pipeline visualizers and mechanism-of-action animations',
+      'Secure investor relations data rooms and board presentation document portals',
+      'Compliance-first architectures with sub-second global edge CDN caching',
+    ],
+  },
+  {
+    sector: 'Private Wealth Management, Family Offices & Corporate Law',
+    headline: 'Sophisticated Digital Presences for Clayton & St. Louis Firms',
+    description:
+      'Private wealth advisory firms, family offices, and commercial litigation practices in Clayton demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
+    image: '/images/us/st-louis-web-design/hero-st-louis-studio.webp',
+    alt: 'Clayton St. Louis wealth management private equity and corporate law website design',
+    points: [
+      'Refined editorial typography and interactive portfolio asset allocation visualizers',
+      'Encrypted client portal integration with multi-factor authentication routing',
+      '100% intellectual property ownership with full source code transfer',
+    ],
+  },
+  {
+    sector: 'Precision Manufacturing, Defense Supply & Aerospace Tooling',
+    headline: 'Engineering Commercial Lead Engines for St. Charles Manufacturers',
+    description:
+      'Aerospace suppliers, CNC machining facilities, and precision tooling manufacturers across St. Charles and Hazelwood require steady commercial contract flow. We build responsive web applications with interactive equipment matrices, AS9100 quality showcases, and rapid CAD quotation intake.',
+    image: '/images/us/st-louis-web-design/process-review-desk.webp',
+    alt: 'St. Louis aerospace manufacturing precision tooling and defense supply web design',
+    points: [
+      'Interactive equipment capability matrices and engineering tolerance tables',
+      'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
+      'Structured manufacturing schema markup linking verified AS9100 and ISO certifications',
+    ],
+  },
+  {
+    sector: 'Multimodal Freight, Cold Storage Logistics & B2B Distribution',
+    headline: 'Commercial Lead Engines for Earth City & Hazelwood Logistics Hubs',
+    description:
+      'Freight forwarders, cold storage logistics operators, and intermodal carriers across the St. Louis metropolitan area demand high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, and automated lead routing.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'St. Louis freight logistics cold storage and multimodal transportation web design',
+    points: [
+      'Interactive freight rate estimation calculators and RFQ workflow automation',
+      'Sub-second mobile performance ensuring immediate commercial quote submissions',
+      'Structured LogisticsService and Organization schema markup for regional search dominance',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow WordPress Themes & Bloated Plugin Stacks',
+    problem: 'Traditional St. Louis agencies build on bloated WordPress templates with 30+ plugins, resulting in sluggish load times, security vulnerabilities, and constant breakages.',
+    solution: 'We engineer custom Next.js 15 web applications on modern edge networks, achieving sub-second load times and zero dependency bloat.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
+    problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Fragile Mobile Experiences That Hurt Lead Conversion',
+    problem: 'Poorly coded desktop-first designs break on mobile devices, with slow forms, misaligned buttons, and confusing navigation that drives prospects away.',
+    solution: 'We engineer mobile-first responsive interfaces with frictionless touch navigation, instant autocompleting forms, and clean Core Web Vitals.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Agency Code Hostage & Hidden Licensing Fees',
+    problem: 'Many agencies lock your website into proprietary platforms or charge ongoing licensing fees to keep your own code operational.',
+    solution: 'You receive 100% full intellectual property ownership, the complete GitHub repository, and documented deployment configurations upon project completion.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Discovery, Information Architecture & Strategy',
+    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & Design Tokens',
+    desc: 'We design bespoke desktop and mobile prototypes in Figma, complete with typography tokens, spacing scales, and custom brand visual assets.',
+    deliverables: ['High-fidelity interactive Figma prototypes', 'Mobile responsive component wireframes', 'Design tokens and typography scales', 'Client design review and revision approval'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Next.js 15 Engineering & Headless CMS Integration',
+    desc: 'We transform approved designs into production React 19 code with TypeScript, Tailwind CSS, structured schema markup, and headless CMS integrations.',
+    deliverables: ['Custom Next.js 15 App Router architecture', 'Sanity/Strapi headless content management setup', 'JSON-LD structured schema graph implementation', 'Cross-browser and multi-device QA validation'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals Optimization, Launch & Handover',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ performance optimization', 'Cloudflare DNS cutover and SSL deployment', 'Full GitHub repository and asset transfer', '30-day post-launch warranty and team training'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Engineering Stack',
+    factoryjet: 'Modern Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Outdated monolithic WordPress, Elementor, or heavy Webflow templates.',
+  },
+  {
+    label: 'Delivery Speed',
+    factoryjet: 'Rapid 7-day agile sprint with fixed-price milestone delivery.',
+    traditional: '4 to 8 months of protracted discovery meetings and frequent timeline slippages.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Google Lighthouse Core Web Vitals mobile performance.',
+    traditional: 'Sub-60 mobile performance scores with heavy render-blocking scripts.',
+  },
+  {
+    label: 'IP & Code Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary platform lock-in or agency-retained code repositories.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost & Timeline' },
-  { key: 'included', label: 'What You Get' },
-  { key: 'choosing', label: 'Choosing an Agency' },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'ai', label: 'AI & Web Design' },
-  { key: 'local', label: 'St. Louis & the Metro' },
-  { key: 'support', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Process' },
+  { key: 'tech', label: 'Next.js Tech Stack' },
+  { key: 'local', label: 'St. Louis Focus' },
+  { key: 'ownership', label: 'Code & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
-    question: 'How much does a web design company in St. Louis charge?',
+    category: 'pricing',
+    question: 'How much does custom web design cost for a St. Louis business?',
     answer:
-      'Three things move the number: how many pages you need, how many systems the site talks to, and how custom the design is. A five-page site for one location sits at the bottom. A store with a catalogue, booking and payments sits at the top. We quote one fixed figure after a single call.',
-    category: 'cost',
+      'Project investments are based on total page count, interactive feature complexity, custom API integrations, and content scope. Every project is scoped with a transparent, fixed-price milestone agreement. Focused corporate websites are delivered with full Figma UI/UX, custom Next.js engineering, and 100% code ownership with zero surprise overages.',
   },
   {
-    question: 'How much should a small business in St. Louis pay for a website?',
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'Pay for the outcome, not the page count. A site that brings in a handful of qualified enquiries a month pays for itself quickly. St. Louis owners are careful with money, which is fair, but the expensive mistake is paying twice: once for a cheap site that never ranks, then again for the rebuild.',
-    category: 'cost',
+      'No. We believe you should own your website outright. You contract directly with your preferred hosting provider (Cloudflare, Vercel) and pay zero monthly agency licensing fees.',
   },
   {
-    question: 'What is a good hourly rate for website design?',
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'Hourly is the wrong unit for most small-business projects. It rewards slow work and leaves you carrying the risk when an estimate slips. Ask for a fixed fee against a written scope, with a named change process for anything outside it. Hourly suits ongoing tweaks, not a build.',
-    category: 'cost',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
-    question: 'How long does it take to build a website?',
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in just 7 days?',
     answer:
-      'Our Starter build ships in 7 days. Growth projects, 10 to 15 pages with a blog CMS and lead capture, usually take 2 to 3 weeks. Scale builds get scoped one at a time. The clock starts when your logo, photos and copy notes land, because waiting on content delays most projects.',
-    category: 'cost',
+      'We eliminate bloated agency bureaucracy and junior account layers. Our senior full-stack engineers and Figma UI/UX designers work directly with you through focused, daily milestone sprints to design, build, and deploy your site in parallel.',
   },
   {
-    question: 'Can I really get a website in 3 days?',
+    category: 'timeline',
+    question: 'What is required from our internal team during the 7-day sprint?',
     answer:
-      'You can get pages live in 3 days. Whether they are worth having is another question. A three-day site is a template with your logo in it: no real information architecture, no schema, no copy written for how your buyers search. Days four to seven are where that work happens.',
-    category: 'cost',
+      'We require brand assets (logos, brand guidelines), key service copy, and prompt feedback on the Figma design prototypes during scheduled milestone check-ins to ensure rapid project delivery.',
   },
   {
-    question: 'What does a web design company actually do?',
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the process?',
     answer:
-      'It plans the site structure, designs the pages, shapes the copy, builds the front end, connects forms and third-party tools, then launches it. A good one also sets up analytics, adds structured data so search engines and AI assistants can read the page, and tunes speed.',
-    category: 'included',
+      'Every project includes dedicated design revision cycles during the Figma prototype phase, ensuring you approve every layout, color choice, and typography detail before development begins.',
   },
   {
-    question: 'What should a business website include?',
+    category: 'tech',
+    question: 'Why choose Next.js 15 over WordPress or Webflow?',
     answer:
-      'A clear statement of what you do and who for, a page per service, proof you have done it before, a contact method that works on a phone, your service area, and a quote path. In this metro, say plainly whether you cross the river. The rest is optional until those are solid.',
-    category: 'included',
+      'Next.js 15 delivers unbeatable performance with sub-second page loads, superior SEO through server-side rendering, rock-solid security without vulnerable plugins, and infinite scalability that monolithic page builders cannot match.',
   },
   {
-    question: 'What are the 5 elements to a good website design?',
+    category: 'tech',
+    question: 'Can our marketing team edit text and images without touching code?',
     answer:
-      'Structure, so pages sit in a logical hierarchy. Typography, so long copy is readable on a phone. Contrast, so text passes accessibility checks. Rhythm, so spacing groups related things. And restraint, so one accent colour carries the calls to action. Get those right and the site works before any photos.',
-    category: 'included',
+      'Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi, allowing your marketing team to create blog posts, update service copy, and upload images through an easy visual dashboard.',
   },
   {
-    question: "What are the 7 C's of website design?",
+    category: 'tech',
+    question: 'How do you ensure our website achieves 95+ Core Web Vitals scores?',
     answer:
-      'A teaching checklist: context, content, community, customisation, communication, connection, and commerce. It comes out of e-commerce interface research and works as a review pass, not a build plan. Run a finished site past it and the gap is almost always content or connection: thin pages and weak internal links.',
-    category: 'included',
+      'We optimize every asset using modern WebP/AVIF image formats, eliminate render-blocking JavaScript, implement static page pre-rendering, and deploy on Cloudflare global edge networks.',
   },
   {
-    question: 'What are common red flags when hiring a web design company?',
+    category: 'tech',
+    question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'No written scope. A quote that only arrives after a paid discovery phase. Refusing to name the platform. Hosting you cannot move away from. No mention of analytics or search setup. Dead portfolio links. Any one of those deserves a direct question before you sign.',
-    category: 'choosing',
+      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
-    question: 'Is it better to build your own website or use a website builder?',
-    answer:
-      'Build it yourself if you are testing an idea, your budget is near zero, and time is what you have most of. Hire someone once the site has a job to do. The tipping point is the moment you would rather be doing your actual work than fighting a page builder.',
-    category: 'choosing',
-  },
-  {
-    question: 'Is it worth making a website for a small business?',
-    answer:
-      'Yes, and for a reason that changed recently. A social profile or directory listing puts you on rented land. A site you own is what search engines index and what AI assistants quote when someone asks for a recommendation. If you are not on a page a machine can read, you are not in the answer.',
-    category: 'choosing',
-  },
-  {
-    question: 'Who are the top web design companies in St. Louis?',
-    answer:
-      'There is no official list, and any page claiming one is a directory or a roundup written by an agency. On 12 August 2026 page one of Google included New Adventure Web, IQComputing, Atomicdust, 314media, Never Gravity, Hexxen, VIVIDSITES and Be Aligned, plus Clutch and DesignRush.',
-    category: 'choosing',
-  },
-  {
-    question: 'Can ChatGPT actually create a website?',
-    answer:
-      'It can write the code, and for a simple single-page site that is often enough. What it will not do is decide your page structure, handle hosting and domains, wire up forms and analytics, test on real devices, or take responsibility when something breaks. Generating code was never the expensive part.',
-    category: 'ai',
-  },
-  {
-    question: 'Is AI replacing web design?',
-    answer:
-      'It is replacing the production work, not the decisions. Layout drafts, boilerplate code and first-pass copy are far faster than two years ago. What has not changed is knowing what a Cortex biotech startup should say versus a Chesterfield HVAC company. We use AI in our own build, which is how 7 days works.',
-    category: 'ai',
-  },
-  {
-    question: 'Is web design still in demand in 2026?',
-    answer:
-      'Yes, though the demand moved. Fewer people pay for a brochure site that just exists. More pay for sites that have to perform: rank locally, get quoted by AI search, convert paid traffic, or replace a slow legacy build. Most of what we see here is replatforming and rescue work.',
-    category: 'ai',
-  },
-  {
-    question: 'What is the 3 second rule in web design?',
-    answer:
-      'It is the rough window before a visitor decides whether to stay. In that time they should see what you do, who you do it for, and how to start. A useful test: show your homepage to someone for three seconds, cover it, and ask what the business does.',
-    category: 'technical',
-  },
-  {
-    question: 'How long until my new St. Louis website ranks on Google?',
-    answer:
-      'Searches for your own business name usually land within one to two weeks of launch. Competitive local terms take three to six months on a new domain, longer in crowded categories such as legal, dental and home services. Schema, internal linking, depth and speed shorten that window.',
-    category: 'technical',
-  },
-  {
-    question: 'Do you work with businesses on the Illinois side of the metro?',
-    answer:
-      'Yes, and it is worth setting up properly. Greater St. Louis, Inc. defines the region as 15 counties across both states, so a business in Edwardsville or Belleville competes in a different local pack from one in Clayton. We set the service area, listings and location pages to match where you take work.',
     category: 'local',
+    question: 'Do you have experience with St. Louis plant science and biotechnology companies?',
+    answer:
+      'Yes. We build high-credibility digital experiences for Cortex and 39 North life sciences enterprises, agricultural technology leaders, and MedTech innovators requiring interactive pipelines and investor hubs.',
   },
   {
-    question: 'Which parts of St. Louis do you work with?',
-    answer:
-      'All of them, and it matters less than people expect. We have built for businesses trading Downtown, in the Central West End and Cortex, Clayton, Soulard, the Delmar Loop, Chesterfield, St. Charles and across the Metro East. What changes between them is search intent and competition, not the build itself.',
     category: 'local',
+    question: 'Can you design websites tailored for Clayton wealth advisory and legal practices?',
+    answer:
+      'Yes. We develop sophisticated digital flagships for private wealth managers, corporate attorneys, and private equity firms featuring practice area silos, executive bio schemas, and client portals.',
   },
   {
-    question: 'Do I need an LLC to run a website in Missouri?',
-    answer:
-      'No. Plenty of sole proprietors publish and run sites under their own name. Whether you form an LLC is a liability and tax decision rather than a web one, and a Missouri attorney or CPA is the right person to ask. The site, domain and hosting can move into a company later.',
     category: 'local',
+    question: 'Can you integrate custom CRM and lead capture workflows like HubSpot or Salesforce?',
+    answer:
+      'Yes. We build webhook-driven form integrations that instantly route leads, quote inquiries, and consultation requests directly into your CRM, Slack, or email marketing automation platform.',
   },
   {
-    question: 'Do you have an office in St. Louis?',
-    answer:
-      'No, and we would rather say so here than let you find out on the kickoff call. FactoryJet is a remote team: scheduled video calls, a shared workspace and a recorded handover. If sitting across a table in Clayton matters, one of the local studios named on this page is better.',
     category: 'local',
+    question: 'Can you build aerospace manufacturing websites for St. Charles companies?',
+    answer:
+      'Yes. We engineer precision industrial web applications with interactive tolerance tables, AS9100 quality certifications, and secure engineering RFQ upload portals.',
   },
   {
-    question: 'Who owns the code and design files when the project is done?',
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'You do, completely. You get the Next.js codebase in your own repository and the full design file. There is no licence fee, no proprietary page builder, and no clause tying the site to us. If you move to another developer next year, nothing about the handover makes that hard.',
-    category: 'support',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, Figma design assets, and deployment configurations with zero vendor lock-in.',
   },
   {
-    question: 'Do you handle maintenance after the site launches?',
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'The first 30 days cover bug fixes and training questions at no extra charge. After that an optional monthly plan covers content updates, dependency upgrades and monitoring. It is optional on purpose: a static Next.js build does not rot the way an unmaintained WordPress install does.',
-    category: 'support',
+      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team on managing the website?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update content in the CMS, view form submissions, and manage media assets.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
+    answer:
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - St. Louis Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'St. Louis',
+    addressRegion: 'MO',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 38.627,
+    longitude: -90.1994,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'St. Louis' },
+    { '@type': 'City', name: 'Clayton' },
+    { '@type': 'City', name: 'Chesterfield' },
+    { '@type': 'City', name: 'St. Charles' },
+    { '@type': 'City', name: 'Hazelwood' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'St. Louis Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
+  description:
+    'Custom Next.js web design and engineering in St. Louis MO. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Missouri businesses.',
+  areaServed: { '@type': 'State', name: 'Missouri' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description: 'St. Louis web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'St. Louis', item: CANONICAL },
+  ],
+};
 
 export default function StLouisWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-          formSlot={<HeroInlineForm region="us" source="us_st_louis_web_design_hero" />}
-          eyebrow={'WEB DESIGN · ST. LOUIS, MO'}
-          headline={'A Web Design Company St. Louis Businesses Can Scope in a Single Call'}
-          lead={
-            'Fixed scope, one number, and a Starter site live in 7 days. Schema markup, analytics and local search are wired in before launch, set up for both sides of the state line. You keep the code and the design files.'
-          }
-          trustItems={['Fixed-price quote after one call', '7-day Starter delivery', 'You own the codebase']}
-          extraCta={<WhatsAppCTA city="St. Louis" variant="light" />}
-          rightSlot={
-            <img
-              src="/images/us/st-louis-web-design/hero-st-louis-studio.webp"
-              alt="Three colleagues reviewing a product page layout on a wall-mounted screen in a bright brick-walled office."
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover shadow-[0_24px_64px_-12px_rgba(15,15,18,0.22)]"
-            />
-          }
-        />
+      <script id="stl-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="stl-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="stl-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="stl-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="stl-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* Answer-first block: the highest-value extractable block on the page */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-10 md:py-12">
-          <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              The short answer
-            </p>
-            <h2 className="font-fj-display text-[clamp(1.375rem,2.4vw,1.875rem)] font-semibold leading-[1.25] tracking-[-0.015em] text-fj-ink">
-              What does a web design company in St. Louis actually do?
-            </h2>
-            <p
-              data-speakable
-              className="mt-4 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80"
-            >
-              A St. Louis web design company plans your site structure, designs and builds the pages,
-              connects your forms and analytics, then launches it. The good ones also ship schema
-              markup and speed work so you appear in local search and in AI answers, and they set your
-              service area up for a metro that crosses into Illinois. FactoryJet builds fixed-scope
-              sites in Next.js, and you own the code.
-            </p>
-            <p className="mt-5 border-t border-fj-neutral-200 pt-4 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-              Written by <strong className="font-semibold text-fj-ink">Bhavesh Barot</strong>,
-              founder of FactoryJet. He has run more than 500 website and commerce builds for small
-              and mid-sized businesses across the US, UK, UAE and India. Last reviewed 12 August
-              2026.
-            </p>
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>St. Louis Web Design &amp; Full-Stack Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  St. Louis Web Design Agency for High-Growth Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Custom Next.js 15 websites, bespoke Figma UI/UX, and sub-second performance engineered for Missouri leaders. 7-day agile delivery with 100% intellectual property code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#stl-web-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore St. Louis Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/st-louis-web-design/hero-st-louis-studio.webp"
+                  alt="St. Louis Missouri web design and custom Next.js web application development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={'What St. Louis businesses get on every build.'}
-        />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <CityContextSection
-          eyebrow={'ST. LOUIS MARKET'}
-          headline={'St. Louis Is Two States and One Search Market. Almost Nobody Builds For That'}
-          leadParagraphs={[
-            'Greater St. Louis, Inc. defines this region as 15 counties across two states: eight in Illinois and seven jurisdictions in Missouri, including the City of St. Louis, which sits separately from St. Louis County. That one fact quietly decides a lot about your website. Google treats Edwardsville and Belleville as a different competitive set from Clayton and Kirkwood. If your site says St. Louis and never names the places you take work from, you are invisible in half the metro you serve.',
-            'The proof is in the results right now. On 12 August 2026 the page ranking first for "web design company st louis" belonged to New Adventure Web, a firm based in Waterloo, Illinois. A business on the Illinois side outranking city-centre studios for the city-centre term is what happens when a site is built around a real service area instead of a city name.',
-            'The second thing that shapes this market is the buyer. St. Louis has a deserved reputation for being price-conscious and relationship-driven, and both are rational. People ask what the thing costs to run, not just to build, and they ask who they will be talking to in month three. A site that dodges those two questions loses to one that answers them plainly.',
-          ]}
-          stats={[
-            {
-              value: '15',
-              label: 'Counties across Missouri and Illinois in the Greater St. Louis region',
-              sourceUrl: 'https://greaterstlinc.com/about/',
-              sourceLabel: 'Greater St. Louis, Inc., About',
-            },
-            {
-              value: '200',
-              label: 'Acres of the central corridor redeveloped as the Cortex Innovation District',
-              sourceUrl: 'https://www.cortexstl.org/about/',
-              sourceLabel: 'Cortex Innovation District, About',
-            },
-            {
-              value: '11',
-              label: 'Startup companies launched out of the Danforth Plant Science Center',
-              sourceUrl: 'https://www.danforthcenter.org/about/',
-              sourceLabel: 'Donald Danforth Plant Science Center, About Us',
-            },
-          ]}
-        />
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/st-louis-web-design/process-review-desk.webp"
+                  alt="FactoryJet senior UI UX designers collaborating on custom St. Louis web design sprint"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        <ServiceExplanation
-          eyebrow={'WHAT YOU ARE ACTUALLY BUYING'}
-          headline={'A Website Is a Sales Asset, Not a Design Deliverable'}
-          lead={
-            'Most quotes you will get here cover the design and the build. Ours covers those plus the three things that decide whether the site earns anything: structure, speed, and being readable by the machines that now answer your customers’ questions.'
-          }
-          body={
-            <>
-              <p>
-                Structure means each service gets a real page instead of an accordion on the
-                homepage, and those pages link to each other in a way that tells search engines what
-                you do. Most rebuilds we take on here fail at exactly that point: the site looks fine
-                and ranks for nothing, because there is one page of substance on it.
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Web Design Engineered for Gateway City Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Cortex plant science leaders to Clayton private equity firms and St. Charles aerospace suppliers, we build high-converting web applications that elevate your brand equity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Design Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. ST. LOUIS DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="stl-web-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>St. Louis Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for St. Louis&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Cortex bioscience leaders to Clayton wealth managers and St. Charles aerospace suppliers:
               </p>
-              <p>
-                Speed is not a vanity number. It is the difference between someone on a phone in a
-                parking garage off Market Street waiting for your page and going back to the results.
-                We build static Next.js pages served from Cloudflare&apos;s edge network, so no
-                database query sits between the click and the content.
-              </p>
-              <p>
-                Machine readability is the newest part of the job and the one almost nobody quotes
-                for. We ship JSON-LD schema on every page, keep the answer to each page&apos;s main
-                question in plain text near the top, and check that GPTBot, ClaudeBot and
-                PerplexityBot can crawl the site.
-              </p>
-              <p>
-                One more thing, because St. Louis buyers ask it earlier than buyers anywhere else we
-                work: what does the site cost to keep running. A static build has no plugin licences,
-                no page-builder subscription and no database to patch. Ask every firm on your list
-                for their version of that answer. The{' '}
-                <Link href="/services/web-design/" className="font-medium text-[#B23E13] underline underline-offset-4">
-                  full web design service scope
-                </Link>{' '}
-                has the detail.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/st-louis-web-design/process-review-desk.webp"
-              alt="Two people reviewing a laptop showing a website homepage layout, with printed page designs on the desk and a moodboard behind them."
-              width={1200}
-              height={800}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+            </div>
 
-        {/* Listicle: AI extraction magnet */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-5xl px-6">
-            <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Before you sign anything
-            </p>
-            <h2 className="max-w-[22ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-              8 Questions to Ask Any St. Louis Web Design Company Before You Sign
-            </h2>
-            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-              Run every shortlisted firm through this, including us. Any of them should answer all
-              eight inside one call.
-            </p>
-
-            <ol className="mt-10 grid gap-5 md:grid-cols-2">
-              {[
-                {
-                  n: '01',
-                  t: 'What platform do you build on, and why that one?',
-                  d: 'WordPress, Webflow, Shopify and Next.js are all defensible answers. "We handle that" is not. The platform decides your maintenance load, your hosting bill and how easily you can leave.',
-                },
-                {
-                  n: '02',
-                  t: 'What will this site cost me to run in year two?',
-                  d: 'Hosting, plugin renewals, page-builder subscriptions, security patching, and whoever pushes the updates. Ask for the total, not the build fee. St. Louis owners ask this best and agencies answer it worst.',
-                },
-                {
-                  n: '03',
-                  t: 'Can I load one of your live client sites on my own phone?',
-                  d: 'Not the case study page. The real site, on cellular, somewhere with bad signal like a parking garage downtown. If text takes more than a couple of seconds to appear, that is what your site will do.',
-                },
-                {
-                  n: '04',
-                  t: 'Will I get the scope in writing before the deposit?',
-                  d: 'Page count, revision rounds, who writes the copy, who sources photography, and what counts as out of scope. Most disputes we hear about trace back to copy nobody agreed to write.',
-                },
-                {
-                  n: '05',
-                  t: 'How will you set up my service area across the state line?',
-                  d: 'A firm serving Missouri and Illinois needs location pages and listings that reflect it. If the answer is "we will put St. Louis in the title tag", you will not show up in the Metro East local pack.',
-                },
-                {
-                  n: '06',
-                  t: 'On the last day, what exactly do I receive?',
-                  d: 'The answer should include a repository and a design file, not a login to something you rent forever. Ask what happens to the site if you stop paying them next year.',
-                },
-                {
-                  n: '07',
-                  t: 'Is search work included in the build or sold separately?',
-                  d: 'Schema markup, meta structure, internal linking and Search Console setup belong in the build. If they show up as a separate monthly line, you are paying twice for one job.',
-                },
-                {
-                  n: '08',
-                  t: 'How does this site handle AI search?',
-                  d: 'Assistants now answer a growing share of "who should I hire in St. Louis" questions. Ask whether their builds are crawlable by GPTBot, ClaudeBot and PerplexityBot, and whether they ship structured data.',
-                },
-              ].map((item) => (
-                <li
-                  key={item.n}
-                  className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6"
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
                 >
-                  <span className="font-fj-mono text-sm font-semibold text-[#B23E13]">{item.n}</span>
-                  <h3 className="mt-2 font-fj-display text-[1.1875rem] font-semibold leading-[1.3] text-fj-ink">
-                    {item.t}
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
                   </h3>
-                  <p className="mt-2 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/75">
-                    {item.d}
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
                   </p>
-                </li>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
-        <ServiceJourneyRow
-          eyebrow={'HOW IT RUNS'}
-          headline={'The 7-Day Starter Build, Step by Step'}
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery',
-              description:
-                'One 30-minute call. We agree who the site is for, which services get their own page, and which counties you take work from. You leave with a sitemap and a fixed quote.',
-            },
-            {
-              number: '02',
-              title: 'Design',
-              description:
-                'Wireframes first, then a full design system in Figma with mobile layouts. Two revision rounds on Starter, three on Growth. Nothing gets built until you sign off the design.',
-            },
-            {
-              number: '03',
-              title: 'Build',
-              description:
-                'Static Next.js, forms wired to your inbox and CRM, CMS connected if your tier includes one. Performance budgets are enforced from the first commit, not patched at the end.',
-            },
-            {
-              number: '04',
-              title: 'Content and search',
-              description:
-                'Copy, compressed WebP images, meta structure, JSON-LD schema, internal links, and a Google Business Profile check for every location you serve, both sides of the river.',
-            },
-            {
-              number: '05',
-              title: 'Launch and handover',
-              description:
-                'Deploy to Cloudflare, DNS and SSL, GA4 connected, then a recorded walkthrough of the CMS. 30 days of support follows for fixes and training.',
-            },
-          ]}
-        />
-
-        {/* Mid-page CTA */}
-        <section className="border-y border-[#F05A28]/20 bg-white py-12 md:py-16">
-          <div className="mx-auto grid max-w-5xl gap-8 px-6 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Start here
-              </p>
-              <h2 className="max-w-[20ch] font-fj-display text-[clamp(1.5rem,2.8vw,2.125rem)] font-semibold leading-[1.2] tracking-[-0.02em] text-fj-ink">
-                Get a fixed quote for your St. Louis project
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Missouri Brands
               </h2>
-              <p className="mt-3 max-w-[52ch] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/75">
-                One call, one number, and a sitemap you can take elsewhere if we are not the right
-                fit. No discovery fee.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in the St. Louis metro demands tailored user flows, design tokens, and performance metrics:
               </p>
             </div>
-            <div className="lg:col-span-5">
-              <HeroInlineForm region="us" source="us_st_louis_web_design_mid" />
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* St. Louis districts: the part a template cannot copy */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-7">
-              <p className="mb-3 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-                Where our St. Louis clients trade
-              </p>
-              <h2 className="max-w-[24ch] font-fj-display text-[clamp(1.75rem,3.2vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-fj-ink">
-                Seven St. Louises, Seven Different Search Problems
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why St. Louis Leaders Choose FactoryJet Web Design
               </h2>
-              <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-ink/80">
-                Downtown to Chesterfield is about 25 miles and the buying behaviour changes along the
-                way, then changes again when you cross the Mississippi. This is the part of a city
-                page a template cannot fake.
-              </p>
-              <ul className="mt-6 space-y-3 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/80">
-                <li>
-                  <strong className="text-fj-ink">Downtown and the riverfront.</strong> Civic, legal,
-                  sports and hospitality, plus everyone who serves them. Demand is event-driven around
-                  the ballpark and the convention calendar, so hours, parking notes and one-handed
-                  booking beat a long about page.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">
-                    The Central West End and the Cortex Innovation District.
-                  </strong>{' '}
-                  Cortex describes itself as the non-profit master developer that turned a 200-acre
-                  stretch of the central corridor into an innovation district, and says it recruits
-                  life science, national security and technology companies. Buyers here read your
-                  technical pages first.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Clayton.</strong> Law firms, accounting, wealth
-                  management, commercial real estate and the county seat. Your site is the credential
-                  check that happens before anyone replies to an email. Named people with real
-                  qualifications beat photography here.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Soulard, Lafayette Square and the Delmar Loop.</strong>{' '}
-                  Independent food, drink, music and retail. Mobile speed, accurate Business Profile
-                  hours, and a menu or booking link that opens instantly, because these searches
-                  happen while someone is already walking.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">Chesterfield and West County.</strong> Corporate
-                  offices, medical practices, trades and multi-location retail along the Highway 40
-                  corridor. Longer consideration, more comparison shopping, and a quote form worth a
-                  call back.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">St. Charles and the Missouri suburbs.</strong> Fast
-                  residential growth and the home services that follow it, out through O&apos;Fallon,
-                  St. Peters and Wentzville. Service-area pages genuinely earn their place here.
-                </li>
-                <li>
-                  <strong className="text-fj-ink">The Metro East, on the Illinois side.</strong>{' '}
-                  Belleville, Edwardsville, Granite City, Alton and the O&apos;Fallon on the Illinois
-                  side, which is not the O&apos;Fallon in St. Charles County. Same metro, different
-                  state, different local pack. Most St. Louis web design pages ignore it.
-                </li>
-              </ul>
-              <p className="mt-6 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink/70">
-                If you serve several of those, you do not need seven thin location pages. You need one
-                strong page per service, plus location pages only for the places you genuinely want
-                work from.
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile WordPress page builders with high-performance Next.js engineering:
               </p>
             </div>
-            <div className="lg:col-span-5">
-              <img
-                src="/images/us/st-louis-web-design/plant-science-tablet.webp"
-                alt="A researcher inspecting seedling trays in a greenhouse while a colleague reviews a plant catalogue page on a tablet."
-                width={1200}
-                height={800}
-                loading="lazy"
-                decoding="async"
-                className="w-full rounded-2xl object-cover"
-              />
-              <p className="mt-3 font-fj-body text-sm leading-[1.6] text-fj-ink/70">
-                Agtech is the cluster St. Louis is genuinely world class at, and those sites sell to
-                growers, researchers and distributors at once. Three audiences, one navigation, which
-                is a structure problem rather than a design problem.
-              </p>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <IndustriesGrid
-          variant="cards"
-          eyebrow={'ST. LOUIS × WEB DESIGN'}
-          headline={'Built for the Industries St. Louis Actually Runs On'}
-          lead={
-            'Plant science, hospital medicine, financial and legal services, freight on the river, and food and drink are the clusters that generate small-business web work here. Each needs a different site.'
-          }
-          sectors={[
-            {
-              name: 'Agtech, plant science and food production',
-              description:
-                'The Donald Danforth Plant Science Center calls itself the world’s largest independent nonprofit dedicated to plant science, and its own about page counts 11 startups launched, 31 principal investigators and 327 community members from 38 countries. Around it sits a layer of seed, equipment, biologicals and research-services firms selling to growers, scientists and distributors at once. Those sites need one navigation that serves three audiences.',
-              example: 'Seed, biologicals and research-services firms selling into the plant science cluster.',
-            },
-            {
-              name: 'Healthcare, clinics and medical practices',
-              description:
-                'Hospital systems and university medicine anchor a deep private layer: specialist practices, dental and vision groups, imaging centres, device vendors and medical staffing. These builds need privacy-aware contact forms, clear service navigation, clinician pages with real credentials, and location pages that name the suburb rather than saying "St. Louis area".',
-              example: 'Practices and suppliers across the Central West End and West County.',
-            },
-            {
-              name: 'Financial, legal and professional services',
-              description:
-                'Clayton is the business and legal centre of the region and the buying behaviour shows it. Nobody picks a firm from a hero image. They read the practice pages, check the people, then decide whether to reply. That makes this an information architecture job: one page per practice area, real biographies, plain-language process.',
-              example: 'Law firms, accountants and commercial real estate in Clayton.',
-            },
-            {
-              name: 'Logistics, freight and river trade',
-              description:
-                'St. Louis grew up where the Missouri meets the Mississippi, a river, rail and highway junction, and that is still the shape of the economy. Barge, trucking, warehousing and industrial suppliers sell to procurement teams, not consumers. They need clear capability pages, downloadable specifications, and a form that captures enough to quote from.',
-              example: 'Freight and industrial suppliers along the river and I-70.',
-            },
-            {
-              name: 'Brewing, food and hospitality',
-              description:
-                'Brewing built a lot of this city and the food and drink layer around it is still one of the strongest small-business categories here: taprooms, distilleries, restaurants, caterers and event venues. These sites live on mobile speed, correct hours, a one-tap ordering link, and structured data so menus surface in search.',
-              example: 'Taprooms and restaurants in Soulard, the Grove and Maplewood.',
-            },
-            {
-              name: 'Home services and trades',
-              description:
-                'HVAC, roofing, plumbing, electrical and remodelling are the most competitive local categories here and the ones where a slow site costs most per day. These builds live on mobile speed, click-to-call, service-area pages that genuinely differ, and Business Profile alignment across every county you cover, Illinois included.',
-              example: 'Multi-truck operators covering St. Charles and the Metro East.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-design-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// ST. LOUIS FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
+            title="Next.js 15 App Router to Global Cloudflare Edge"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
+            city="St. Louis"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        {/* Sources for every St. Louis figure quoted above */}
-        <section className="bg-fj-cream pb-10">
-          <div className="mx-auto max-w-6xl px-6">
-            <p className="border-t border-fj-neutral-200 pt-5 font-fj-body text-sm leading-[1.65] text-fj-ink/70">
-              Sources for the St. Louis figures on this page:{' '}
-              <a
-                href="https://greaterstlinc.com/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Greater St. Louis, Inc., About
-              </a>{' '}
-              for the 15-county, two-state definition of the region;{' '}
-              <a
-                href="https://www.cortexstl.org/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Cortex Innovation District, About
-              </a>{' '}
-              for the 200-acre district; the{' '}
-              <a
-                href="https://www.danforthcenter.org/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Donald Danforth Plant Science Center, About Us
-              </a>{' '}
-              for the startup and researcher figures; and the{' '}
-              <a
-                href="https://www.danforthcenter.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-[#B23E13] underline underline-offset-4"
-              >
-                Danforth Center homepage
-              </a>{' '}
-              for how it describes itself. All four were opened and checked on 12 August 2026.
-            </p>
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Web Design Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay deliveries and high-conversion web launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline={'Why a St. Louis Business Would Pick Us, and When They Should Not'}
-          lead={
-            'St. Louis has genuinely good agencies, and several are better than us at things we do not do. Atomicdust has run brand strategy and design here for 25 years. VIVIDSITES builds enterprise .NET and BigCommerce systems and meets clients in person. IQComputing covers WordPress hosting and support end to end. If those are what you want, hire them, and we mean that literally.\n\nWe are built for one situation: you know roughly what you need, you want it fixed-scope and fixed-price, live in days rather than quarters, and you want to own the result. That is the whole pitch, and it is not right for everyone.\n\nWhat you get either way is the same discipline. Static Next.js instead of a plugin stack. Schema and analytics shipped with the build. A recorded handover. No clause that makes leaving expensive.'
-          }
-          pillars={[
-            {
-              title: 'Fixed before you commit',
-              body: 'Scope, price and timeline agreed on the first call. No paid discovery phase, and no quote that arrives three weeks later with a range on it.',
-            },
-            {
-              title: 'Built for a two-state metro',
-              body: 'Service area, location pages, listings and schema set up for Missouri and Illinois separately, because Google treats them as two local markets and most St. Louis sites only claim one.',
-            },
-            {
-              title: 'When we are the wrong choice',
-              body: 'You want someone in the room in Clayton every week. You need a brand identity built from nothing. You want one firm running paid media and social too. Or your team is committed to editing in WordPress. In all four cases, hire someone else.',
-            },
-          ]}
-        />
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating St. Louis Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
+              </p>
+            </div>
 
-        <ComparisonTable
-          eyebrow={'HONEST COMPARISON'}
-          headline={'How We Sit Next to the Other St. Louis Web Design Companies'}
-          lead={
-            'These firms rank on page one for "web design company st louis" today. Every claim below comes from what each company publishes about itself, read on 12 August 2026. We are in the list too, and we are not the right answer for every row in it.'
-          }
-          columns={[
-            { label: 'What they are good at' },
-            { label: 'Where FactoryJet differs', isFactoryJet: true },
-          ]}
-          rows={[
-            {
-              feature: 'FactoryJet',
-              values: [
-                'Fixed-scope, fixed-price builds in Next.js with schema, analytics and AI-crawler checks included. Starter sites ship in 7 days and the repository is yours at handover.',
-                'We are a remote team with no St. Louis office. If you want someone in your Clayton conference room every other week, pick a local studio.',
-              ],
-            },
-            {
-              feature: 'New Adventure Web',
-              values: [
-                'Ranks first for this search today. Based in Waterloo, Illinois, serving the St. Louis metro and southern Illinois. Local business web design plus Google Maps marketing, review generation and Business Profile optimisation.',
-                'Stronger call if map visibility and reviews are the whole job. We build the site and the search foundation, and do not run review or social programmes.',
-              ],
-            },
-            {
-              feature: 'IQComputing',
-              values: [
-                'WordPress specialists covering custom and ecommerce design, WordPress repair and conversions, maintenance packages, hosting, business email, monitoring, managed support, SEO, PPC and graphic design.',
-                'They keep hosting and upkeep long term, which suits owners who never want to think about it. We hand you a codebase you can host anywhere, with maintenance optional.',
-              ],
-            },
-            {
-              feature: 'Atomicdust',
-              values: [
-                'A St. Louis branding and marketing agency of 25 years, working across brand strategy, website design and development, strategy workshops and digital marketing. Won 2026 Web Excellence and GDUSA awards.',
-                'Stronger call for a brand-led programme where positioning and identity come first. We are built for a tightly scoped site you can start this month.',
-              ],
-            },
-            {
-              feature: '314media',
-              values: [
-                'St. Louis web design and development with custom programming, database integration and mobile apps, plus hosting and maintenance with no contracts and WordPress fixes billed hourly, monthly or one-off.',
-                'Their portfolio is deep in WordPress and custom integrations. We only build in Next.js, which is a strength for speed and a limit if your team wants a WordPress editor.',
-              ],
-            },
-            {
-              feature: 'Never Gravity',
-              values: [
-                'St. Louis firm pairing custom web design with data-driven SEO, covering redesigns, ecommerce, web development and SEO audits, positioned as a long-term partner rather than a one-off build.',
-                'Better fit if you want the same team running SEO for years after launch. We build the search foundation in, then hand it over and step back.',
-              ],
-            },
-            {
-              feature: 'Hexxen and VIVIDSITES',
-              values: [
-                'The two enterprise options here. Hexxen spans app and API development, microservices and AI search optimisation across many platforms. VIVIDSITES cites a Nestlé distributor portal, Reebok BigCommerce work and a secure .NET university orthopaedics site, and meets clients in person.',
-                'Both are right when the site is part of a larger software or enterprise commerce programme, or when in-person matters. We do websites and commerce front ends in Next.js, and say no to the rest.',
-              ],
-            },
-            {
-              feature: 'Be Aligned Web Design',
-              values: [
-                'A small St. Louis studio leading with messaging and brand strategy, then website design and SEO, plus copywriting, email marketing and reputation management. You work directly with the principal.',
-                'Better fit if your real problem is that you cannot articulate what you do. We write clear copy, but we do not run a brand messaging process before the build.',
-              ],
-            },
-            {
-              feature: 'Clutch and DesignRush listings',
-              values: [
-                'Directories that put dozens of St. Louis agency profiles and client reviews in one place, which makes them the fastest way to build a shortlist from a standing start.',
-                'A directory cannot tell you how a firm behaves in week three of a project. Use it to build the list, then ask every firm on it the eight questions above.',
-              ],
-            },
-          ]}
-          footer={
-            <>
-              Positioning summarised from each company&apos;s own public website in August 2026, and
-              from the first page of Google results on 12 August 2026. Nothing here is a ranking or an
-              endorsement, and no pricing is implied. Verify current scope with each firm directly.
-            </>
-          }
-        />
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
 
-        <PricingTiers
-          eyebrow={'SCOPE, NOT GUESSWORK'}
-          headline={'Three Tiers, One Fixed Number Before You Start'}
-          lead={
-            'Every project is quoted as a single fixed figure after one discovery call. What moves the number is page count, how many systems the site connects to, and how custom the design is. Starter ships in 7 days. No retainer on any tier.'
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Starter',
-              description:
-                'A five-page site that loads fast on a phone and ranks for your name and core service. Right for single-location businesses that need to look credible now.',
-              features: [
-                '5 pages, mobile-first',
-                'Schema markup and meta structure',
-                'Contact form to your inbox',
-                '2 revision rounds',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Growth',
-              description:
-                'A 10 to 15 page site with a blog CMS, lead capture and analytics from day one. Right for firms serving several parts of the metro that need location pages that actually differ.',
-              features: [
-                '10 to 15 pages with blog CMS',
-                'Local SEO across Missouri and Illinois',
-                'Lead capture and email automation',
-                '3 revision rounds',
-                '30-day support plus a training session',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Scale',
-              description:
-                'Custom Next.js build with commerce, AI features or API integrations. Right for established businesses where the site is a real revenue line.',
-              features: [
-                'Custom Next.js architecture',
-                'Commerce or membership features',
-                'AI search, chat or recommendations',
-                'Third-party API connections',
-                'Priority support and quarterly reviews',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-          ] as const}
-        />
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={'Questions St. Louis Businesses Ask Us'}
+          eyebrow="ST. LOUIS WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in St. Louis MO"
+          lead="Direct, plain English answers to what St. Louis business owners and marketing leaders ask about website design and engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* Related internal links */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <p className="mb-4 font-fj-mono text-xs uppercase tracking-[0.14em] text-[#B23E13]">
-              Related services
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { href: '/services/web-design/', label: 'Web Design Services' },
-                { href: '/services/small-business-website-design/', label: 'Small Business Websites' },
-                { href: '/services/website-redesign/', label: 'Website Redesign' },
-                { href: '/services/local-seo/', label: 'Local SEO' },
-                { href: '/services/ecommerce-development/', label: 'Ecommerce Development' },
-              ].map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="st-louis" />
           </div>
         </section>
 
-        <WebDesignCityLinksUS currentCity="st-louis" />
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
 
-        <FinalCTA
-          variant="light"
-          eyebrow={'READY WHEN YOU ARE'}
-          headline={'Get Your St. Louis Website Scoped This Week'}
-          sub={
-            'One 30-minute call gets you a sitemap and a fixed number. If we are not the right fit, keep the sitemap and take it to whoever is. Starter builds ship 7 days after your content lands.'
-          }
-          primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="St. Louis" variant="light" />}
-          objectionHandler="No discovery fee. No retainer. You own the code."
-        />
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your St. Louis Web Presence?
+            </h2>
 
-        <SchemaScript />
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-/* ===========================================================================
-   Schema. Every const declared below is rendered into a <script
-   type="application/ld+json"> tag inside this component. FAQPage.mainEntity is
-   derived from FAQ_ITEMS, the same array the visible <FAQ /> renders. There is
-   no /st-louis city root, so the breadcrumb routes through /services/web-design.
-   =========================================================================== */
-
-function SchemaScript() {
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${URL}#webpage`,
-    name: TITLE,
-    description: DESCRIPTION,
-    url: `${URL}/`,
-    dateModified: DATE_MODIFIED,
-    inLanguage: 'en-US',
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder, FactoryJet',
-    },
-    publisher: { '@id': 'https://factoryjet.com/#organization' },
-    isPartOf: {
-      '@type': 'WebSite',
-      '@id': 'https://factoryjet.com/#website',
-      url: 'https://factoryjet.com',
-      name: 'FactoryJet',
-    },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '.faq-answer', '[data-speakable]'],
-    },
-  };
-
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ProfessionalService'],
-        '@id': `${URL}#business`,
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com',
-        telephone: '+919699977699',
-        areaServed: [
-          { '@type': 'City', name: 'St. Louis', addressRegion: 'MO', addressCountry: 'US' },
-          { '@type': 'AdministrativeArea', name: 'St. Louis County, Missouri' },
-          { '@type': 'AdministrativeArea', name: 'St. Charles County, Missouri' },
-          { '@type': 'AdministrativeArea', name: 'Madison County, Illinois' },
-          { '@type': 'AdministrativeArea', name: 'St. Clair County, Illinois' },
-        ],
-        priceRange: 'Fixed-price, quoted per project',
-      },
-      {
-        '@type': 'Service',
-        '@id': `${URL}#service`,
-        name: 'Web Design St. Louis',
-        serviceType: 'Web design and website development',
-        provider: {
-          '@type': 'Organization',
-          '@id': 'https://factoryjet.com/#organization',
-          name: 'FactoryJet Technologies',
-        },
-        areaServed: {
-          '@type': 'City',
-          name: 'St. Louis',
-          addressRegion: 'MO',
-          addressCountry: 'US',
-        },
-        description: DESCRIPTION,
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Web design build tiers',
-          itemListElement: [
-            { '@type': 'Offer', name: 'Starter', description: 'Five-page mobile-first site, 7-day delivery.' },
-            { '@type': 'Offer', name: 'Growth', description: '10 to 15 pages with blog CMS, lead capture and analytics.' },
-            { '@type': 'Offer', name: 'Scale', description: 'Custom Next.js build with commerce, AI features or API integrations.' },
-          ],
-        },
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${URL}#faq`,
-        mainEntity: FAQ_ITEMS.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${URL}#breadcrumbs`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Web Design',
-            item: 'https://factoryjet.com/services/web-design',
-          },
-          { '@type': 'ListItem', position: 3, name: 'St. Louis', item: URL },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-      />
+      <SiteFooter locale="us" />
     </>
   );
 }

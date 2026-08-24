@@ -1,914 +1,909 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ComparisonTable from '@/components/v2/ComparisonTable';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   /boston/seo :: Boston local-SEO city page. Built 2026-08-12.
-
-   Research: pipeline/research/briefs/boston-seo.json
-     target keyword "seo agency boston", 880/mo, KD 5, no AI Overview on the
-     query as of 2026-08-12. Half of the live organic top 12 is directories and
-     listicles (Yelp 1, Clutch 3, Built In Boston 4, Semrush Agencies 8,
-     Radiant Elephant 10, DesignRush 12), which is the single most useful fact
-     on this SERP and is said out loud on the page.
-
-   Rules honoured: no em dashes, no currency figures anywhere, one dark section
-   (StrategicDarkSection), FAQPage schema derived from BOSTON_FAQ_ITEMS rather
-   than hand-written twice, canonical inline (no hreflangMap import), plain
-   <img> with explicit width/height for the static-export target.
-
-   External citations, each curl-verified for HTTP 200 and for the claim being
-   present on the page, 2026-08-12:
-     - support.google.com/business/answer/7091   relevance, distance, prominence
-     - developers.google.com/search/docs/appearance/ai-features
-         "There are no additional requirements to appear in AI Overviews or AI
-          Mode, nor other special optimizations necessary."
-     - masslifesciences.com  "#1 life sciences ecosystem in the world",
-          "19 of the top 20 biopharma companies"
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/boston/seo';
-const IMG = '/images/us/boston-seo';
 
 export const metadata: Metadata = {
-  title: 'Boston SEO Agency | Local SEO Services in Boston, MA | FactoryJet',
+  title: 'Boston Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is an SEO agency for Boston businesses: Back Bay, Seaport, Kendall Square, the Financial District and the Longwood medical corridor. Google Business Profile, technical SEO and AI search visibility. Month to month, free audit first.',
+    'Boston local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Kendall Square, Seaport, and Back Bay.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Boston SEO Agency | Local SEO Services in Boston, MA | FactoryJet',
-    description:
-      'An SEO agency built for how Boston actually searches: dense neighborhoods, separate cities across the Charles, and a page one that is half directories. Free audit, month to month.',
-    url: CANONICAL,
-    siteName: 'FactoryJet',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Boston Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description:
+      'Boston local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Kendall Square, Seaport, and Back Bay.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Boston Local SEO Agency' }],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boston SEO Agency | Local SEO Services in Boston, MA | FactoryJet',
-    description:
-      'An SEO agency built for how Boston actually searches. Free audit, month to month, you keep your accounts.',
+    title: 'Boston Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Boston local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ── Boston districts. Written for people who know these streets. ────────── */
-const DISTRICTS: { tag: string; h: string; p: string }[] = [
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Boston commercial corridors.', icon: '📍' },
+  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    tag: 'Back Bay',
-    h: 'Back Bay, Copley and Newbury Street',
-    p: 'Dentists, med spas, boutique fitness, law and wealth firms stacked three to a brownstone. Searches here happen on a phone within a few blocks of the door, so your primary category, your photos and your review count decide the outcome long before your blog does. Newbury retail also lives and dies on hours being right, including the ones you change for a holiday weekend.',
+    corridor: 'Kendall Square & Cambridge',
+    query: 'biotech patent attorney local seo kendall square cambridge',
+    focus: 'Biotech Research, Genomics, AI Diagnostics & Life Sciences',
+    desc: 'The global biotech innovation capital. B2B and institutional service queries demand deep scientific topical authority, researcher schemas, and sub-second edge speeds.',
   },
   {
-    tag: 'Seaport',
-    h: 'Seaport, Fort Point and the waterfront',
-    p: 'The newest part of the city and the one with the least search history behind it. Restaurants, hotels, offices and lab space all opened at once, which means Google has thin local signal to work with and a well-run Business Profile moves faster here than almost anywhere else in Boston. Convention traffic from the BCEC spikes demand in bursts you can plan around.',
+    corridor: 'Boston Seaport & Innovation District',
+    query: 'venture capital b2b tech seo seaport boston',
+    focus: 'Fintech, Venture Capital & High-Growth SaaS',
+    desc: 'Dynamic waterfront commercial tech hub. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
   },
   {
-    tag: 'Kendall Square',
-    h: 'Cambridge, Kendall Square and MIT',
-    p: 'Biotech, robotics and software, sitting one bridge from Boston but in a different city for Google purposes. These buyers scroll past ads on reflex and read your site the way they read a spec sheet. Site speed, clean structure and documentation-grade content do the selling. Vague agency language gets you closed in about four seconds.',
+    corridor: 'Back Bay & Beacon Hill',
+    query: 'wealth management seo back bay boston',
+    focus: 'Wealth Advisory, Private Family Offices & Corporate Law',
+    desc: 'Historic seat of New England wealth and corporate law. Intense competition for high-net-worth estate planning, trust litigation, and wealth advisory retainers.',
   },
   {
-    tag: 'Financial District',
-    h: 'Financial District and Downtown Crossing',
-    p: 'Law, accounting, staffing, insurance and commercial services. The searches are typed at lunch, from a phone, by someone who will call one of the first three profiles they see. Firms here usually have the authority to rank and no profile worth ranking, which is the easiest gap on this list to close.',
+    corridor: 'Longwood Medical Area',
+    query: 'specialized healthcare clinic seo longwood boston',
+    focus: 'Academic Medicine, Hospital Networks & Specialized Clinics',
+    desc: 'World-renowned medical research and clinical cluster. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
   },
   {
-    tag: 'Longwood',
-    h: 'Longwood Medical Area and the Fenway',
-    p: 'One of the densest concentrations of hospitals and specialist practices in the country. Patients search a condition first, then a location, then read reviews. Content that answers the questions people ask before booking, plus accurate profiles for every practitioner and every site, does more here than link building ever will.',
+    corridor: 'Route 128 & Waltham Tech Corridor',
+    query: 'defense robotics enterprise seo waltham',
+    focus: 'Defense Tech, Robotics & Enterprise Hardware',
+    desc: 'The historic technology and hardware corridor. Requires precision engineering capability landing pages, defense capability schemas, and localized authority.',
   },
   {
-    tag: 'Allston to Quincy',
-    h: 'Allston, Brighton, Somerville, Brookline and Quincy',
-    p: 'Boston proper is small and the metro is a patchwork of separate cities. Somerville, Brookline, Newton and Quincy each generate their own Map Pack, and a business three miles away can be invisible in yours. Student neighborhoods also reset every September when leases turn over, so demand is seasonal in a way a national agency will not plan for.',
+    corridor: 'Financial District & Downtown Boston',
+    query: 'commercial litigation law firm seo downtown boston',
+    focus: 'Commercial Litigation, Maritime Law & Consulting',
+    desc: 'Traditional banking, legal, and insurance center. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and maritime dispute representations.',
   },
 ];
 
-/* ── Listicle. Numbered on purpose: it is the block AI engines lift. ─────── */
-const MAP_PACK_STEPS: { n: string; h: string; p: string }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    n: '01',
-    h: 'Pick the most specific primary category you can',
-    p: 'Not "Contractor" when "Kitchen remodeler" exists. Category is the strongest relevance signal on your profile and the one most Boston businesses set once, wrong, in a hurry.',
-  },
-  {
-    n: '02',
-    h: 'Fill in every field, including the boring ones',
-    p: 'Services, attributes, opening hours, holiday hours, description, and the service area if you travel. Empty fields are not neutral. They are a reason for Google to prefer the profile that filled them in.',
-  },
-  {
-    n: '03',
-    h: 'Get your name, address and phone identical everywhere',
-    p: 'Suite numbers, "St" versus "Street", the old phone number on an old directory listing. Boston businesses move offices often and the trail of stale listings is usually longer than the owner thinks.',
-  },
-  {
-    n: '04',
-    h: 'Earn reviews steadily, not in one push',
-    p: 'Google names reviews as part of prominence. Thirty reviews arriving in a week reads differently to thirty arriving across a year. Ask after the work is done, every time, and reply to all of them.',
-  },
-  {
-    n: '05',
-    h: 'Add real photos of the real place',
-    p: 'Your storefront in daylight, your team, your work. Stock imagery is obvious to customers and useless as a local signal. For retail and hospitality this alone changes how often the profile gets opened.',
-  },
-  {
-    n: '06',
-    h: 'Fix the site underneath the profile',
-    p: 'Speed, crawlability, structured data, and a page that says what you do and which neighborhoods you serve. A slow or broken site will not hold a ranking no matter how good the profile is.',
-  },
-  {
-    n: '07',
-    h: 'Write a page for each thing you actually sell',
-    p: 'One page per service, in plain language, with the Boston context that matters to it. Not one page listing eleven services in bullet points, which is what most local sites still ship.',
-  },
-  {
-    n: '08',
-    h: 'Give AI answers something clean to quote',
-    p: 'Clear headings, direct answers near the top, and consistent business facts across your site and your profile. The same structure that helps a person skim helps a model cite you correctly.',
-  },
-];
-
-/* ── Real rivals from the live organic top 12 for "seo agency boston". ───── */
-const RIVAL_ROWS = [
-  {
-    feature: 'GreenBanana SEO',
-    values: [
-      'Boston based, ranks second organically for this query. Wide service menu: local SEO, paid media, programmatic display, geofencing and white label work for other agencies. Publishes a deep answer engine and AI search library.',
-      'Also does AI search visibility work, but as part of one monthly SEO scope rather than a separate product line. We do not run paid media or white label.',
+    sector: 'Biotechnology, Life Sciences & Clinical Diagnostics',
+    headline: 'Topical Authority & AI Citation Engineering for Cambridge & Kendall Biotech',
+    description:
+      'Biotech enterprises, research CROs, and patent legal practices in Boston and Cambridge require commanding authority in technical and scientific search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
+    image: '/images/us/boston-seo/boston-seo-team.webp',
+    alt: 'Boston biotechnology life sciences and clinical research local SEO ranking strategy',
+    points: [
+      'Topical entity architecture covering clinical development and regulatory pathways',
+      'Structured MedicalScholarlyArticle and Organization schema for AI citation retrieval',
+      'High-authority scientific trade publication and Cambridge bio-cluster directory synchronization',
     ],
   },
   {
-    feature: 'Boston Web Marketing',
-    values: [
-      'Local firm covering a very large footprint: dozens of Massachusetts towns plus Connecticut, Rhode Island, New Hampshire, New York and Florida, with named pages for trades from roofing to locksmiths.',
-      'We publish far fewer city pages and write each one individually. If your trade is on their list, their vertical experience is real and worth a conversation.',
+    sector: 'Corporate Litigation, Patent Law & Financial Services',
+    headline: 'Dominating High-Stakes Search Corridors for Boston Law Firms',
+    description:
+      'Legal search terms in Suffolk and Middlesex counties are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/boston-seo/boston-seo-consult.webp',
+    alt: 'Boston corporate law firm litigation and patent law local SEO ranking strategy',
+    points: [
+      'LegalService and Attorney schema linking Massachusetts Bar verified credentials',
+      'Localized practice area silos targeting Back Bay, Financial District, and Waltham',
+      'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    feature: 'SEO.co',
-    values: [
-      'National agency serving Boston clients since 2010, with a documented audit process, link acquisition teams and Fortune 1000 clients alongside smaller ones.',
-      'Smaller team, senior people only, no separate link building department. Better fit if you want one engineer accountable end to end.',
+    sector: 'Academic Healthcare, Specialized Surgery & Clinical Practice',
+    headline: 'Capturing High-Value Patients Across Longwood & Back Bay',
+    description:
+      'In Boston’s premier academic medicine and specialized clinical market, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
+    image: '/images/us/boston-seo/boston-seo-workshop.webp',
+    alt: 'Boston medical clinic specialized healthcare and surgery local SEO optimization',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting Back Bay, Brookline, and Newton',
     ],
   },
   {
-    feature: 'Coalition Technologies',
-    values: [
-      'Large national agency ranking on this SERP from outside Boston, with a much bigger backlink profile than ours and a deep design and development bench.',
-      'We are the challenger on authority and we say so. What you get instead is direct access and month to month terms.',
-    ],
-  },
-  {
-    feature: 'Thrive Agency',
-    values: [
-      'National multi city operation that appears on more local SEO queries across the country than almost anyone. Genuinely impressive reach.',
-      'At that scale the strategist who wins the pitch is rarely on your monthly call. With us, the person on the call did the work.',
-    ],
-  },
-  {
-    feature: 'Yelp, Clutch, Built In Boston, DesignRush',
-    values: [
-      'Not agencies. Directories and listicles holding half of page one. They rank because Google trusts the domains, not because they do SEO for anyone.',
-      'Getting your business listed on pages like these is part of the job we do for you, rather than a fight to win.',
+    sector: 'Robotics, Defense Engineering & Enterprise Hardware',
+    headline: 'Driving Commercial Contract Opportunities Across Route 128 Tech Corridor',
+    description:
+      'Robotics developers, defense contractors, and specialized engineering firms across Waltham and Burlington require steady commercial inquiry flow. We optimize your local digital footprint to capture corporate procurement officers, defense contracting officers, and venture partners.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Boston robotics defense engineering and Route 128 technology local SEO architecture',
+    points: [
+      'Technical capability landing pages optimized for regional radius search queries',
+      'High-speed mobile performance ensuring immediate quotation request submissions',
+      'Structured Organization and Service schema for AI answer engine retrieval',
     ],
   },
 ];
 
-/* ── FAQ. Grounded in the live People Also Ask set in the research brief. ── */
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional Boston agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+  },
+  {
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+  },
+  {
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across Greater Boston', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+  },
+  {
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+  },
+  {
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+  },
+  {
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'What it costs' },
-  { key: 'worth', label: 'Is it worth it' },
-  { key: 'ai', label: 'SEO and AI' },
-  { key: 'diy', label: 'Doing it yourself' },
-  { key: 'local', label: 'Local SEO in Boston' },
-  { key: 'basics', label: 'How SEO works' },
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'Boston Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
-const BOSTON_FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
-    question: 'How much does an SEO agency charge in Boston?',
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Boston business?',
     answer:
-      'It depends on how competitive your category is here, how many locations you serve, and how much repair your site needs before anything else can work. A single Back Bay practice and a nine location home services company are both doing local SEO and they are not the same job. We scope it after a free audit, month to month, and put the whole scope in writing before you commit.',
-    category: 'cost',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Boston corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
-    question: 'How much does it cost to hire an SEO agency?',
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
     answer:
-      'Agencies price on effort, so the drivers are the same everywhere: number of locations, category competitiveness, technical debt on the site, how much content gets produced, and whether link work is included. Ask for two or three written scopes and compare them line by line. That comparison teaches you more than any published number will.',
-    category: 'cost',
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
   },
   {
-    question: 'How much should a small business spend on SEO?',
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
     answer:
-      'Less than it brings in. Work out what one new customer is worth to you over a year, then ask how many extra customers a month would cover the work with room left over. If the answer is a handful, the scope fits. If the answer is dozens, start narrower: your profile, your reviews, and two or three pages that match what people type.',
-    category: 'cost',
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
   },
   {
-    question: 'How much does local SEO cost in the USA?',
+    category: 'timeline',
+    question: 'How quickly can our Boston business expect to see Google Maps rank improvements?',
     answer:
-      'There is no useful national average, because the averages published online blend completely different jobs together. A one location restaurant and a multi location medical group are both counted in the same number. Ask instead what is included every month, who does it, and how you will know whether it worked.',
-    category: 'cost',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Back Bay or Cambridge generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
-    question: 'Why is SEO a monthly thing instead of one job?',
+    category: 'timeline',
+    question: 'What factors determine how fast a Boston business can rank in the Local 3-Pack?',
     answer:
-      'Rankings are earned and then defended. Competitors keep optimizing, Google keeps shipping updates, and your profile needs ongoing posts, reviews and listing upkeep. A one time setup decays quietly and you find out about it six months later, usually when the phone gets slower.',
-    category: 'cost',
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
   {
-    question: 'Is an SEO agency worth it?',
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
     answer:
-      'It is worth it when people already search for what you sell and someone else is sitting above you. It is not worth much when nobody searches for your category at all. The common failure is not paying for SEO, it is paying for SEO with no way to tell whether it worked. Insist on reporting tied to calls, forms and bookings.',
-    category: 'worth',
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
   },
   {
-    question: 'Is SEO worth it for small businesses?',
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
     answer:
-      'For most Boston small businesses, yes, because you are not trying to beat the internet. You are trying to beat the handful of businesses in your category within a couple of miles of you. That is a fight a normal owner can win, which is not true of most channels you could spend the same money on.',
-    category: 'worth',
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
   },
   {
-    question: 'Is paying someone to do SEO worth it?',
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
     answer:
-      'Worth it if the work you would otherwise skip actually gets done. Most owners can claim a profile and ask for reviews. Far fewer will fix crawl errors, rewrite thin pages, clean up stale listings across directories, and keep doing it every month. Pay for the part that keeps not happening.',
-    category: 'worth',
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
   },
   {
-    question: 'Is doing local SEO worth it?',
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
     answer:
-      'In a city where the Map Pack shows three businesses and Boston neighborhoods sit almost on top of each other, it is one of the few marketing levers with a visible finish line. You can see exactly who is above you, and usually why.',
-    category: 'worth',
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
   },
   {
-    question: 'Who is the best SEO agency in Boston?',
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
     answer:
-      'The honest answer is that there is no single best one, only the best fit. Run every candidate through the same checklist: who physically does the work, is the scope written down before you sign, are the terms month to month, do your accounts and content stay yours, and is reporting tied to leads rather than ranking screenshots. Include us in that. If we are not the fit, we will say so.',
-    category: 'worth',
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
   },
   {
-    question: 'Is SEO replaced by AI?',
-    answer:
-      'No, and Google says so directly. Its guidance on AI features states there are no additional requirements to appear in AI Overviews or AI Mode and no special optimizations necessary, because the same SEO fundamentals apply. What changed is where the answer appears, not what earns it.',
-    category: 'ai',
-  },
-  {
-    question: 'Is SEO dead now with AI?',
-    answer:
-      'No. People still search, they just read a summary at the top more often than they used to. The work that gets you quoted in that summary is the same work that got you ranked: clear pages, real expertise, consistent business facts, and other credible sites referencing you. What died is the trick era.',
-    category: 'ai',
-  },
-  {
-    question: 'Can ChatGPT do SEO?',
-    answer:
-      'It can help with parts of it. It drafts quickly, clusters keywords, and spots gaps in an outline. It cannot look at your Google Business Profile, fix a crawl error, verify a claim, earn a review, or take responsibility for what it published. Used as a drafting assistant it saves real time. Used as the strategy it produces pages that sound like everyone else.',
-    category: 'ai',
-  },
-  {
-    question: 'What is replacing SEO?',
-    answer:
-      'Nothing is replacing it, it is widening. The same page now needs to rank in Google, hold up in the Map Pack, and be clean enough for ChatGPT or Perplexity to quote without mangling it. That last part is often called GEO or answer engine optimization. It is an extra requirement, not a replacement.',
-    category: 'ai',
-  },
-  {
-    question: 'Will SEO be replaced by AI?',
-    answer:
-      'Search behavior will keep shifting and some informational traffic is already going to AI answers. Local intent is the most durable part of search, because someone looking for a dentist near Copley still has to pick a real business with a real address. That is the part we build for first.',
-    category: 'ai',
-  },
-  {
-    question: 'Can I do SEO myself?',
-    answer:
-      'The first chunk, absolutely, and you should. Claim and fully complete your Google Business Profile, make your name, address and phone identical everywhere, add real photos, and ask every happy customer for a review. That alone moves plenty of businesses. It gets hard at technical repair, at content that has to outrank an established competitor, and at earning links from sites that matter.',
-    category: 'diy',
-  },
-  {
-    question: 'Can I do local SEO myself?',
-    answer:
-      'Yes, and the highest value part is free. Complete the profile, pick the most specific category, post occasionally, keep hours accurate including holidays, and reply to every review. Give it an hour a week for three months and check whether you have moved. If you have not, the blocker is usually the site, not the profile.',
-    category: 'diy',
-  },
-  {
-    question: 'Is SEO hard to learn?',
-    answer:
-      'Not intellectually brutal. Just wide. It asks for technical understanding, writing ability, patience, and a tolerance for slow feedback. The genuinely hard part is that you make a change and learn whether it worked weeks later, which makes it very easy to draw the wrong conclusion confidently.',
-    category: 'diy',
-  },
-  {
-    question: 'Can I learn SEO by myself?',
-    answer:
-      'Yes. Google Search Central documentation and the Google Business Profile help pages are free, accurate and better than most paid courses. Start there, apply it to your own site, and measure. The gap between people who have read about SEO and people who have done it is mostly reps.',
-    category: 'diy',
-  },
-  {
-    question: 'Is SEO work stressful?',
-    answer:
-      'It can be, mostly because you are judged on an outcome you only partly control and the feedback arrives late. That is why we bias toward fixes that are correct on their own merits, like speed, accurate business data and structured content, rather than experiments we cannot read the result of.',
-    category: 'diy',
-  },
-  {
-    question: 'What is local SEO versus SEO?',
-    answer:
-      'Local SEO is about appearing when someone nearby searches for what you sell, mostly through Google Maps and the three result Map Pack, and it leans heavily on your Business Profile and reviews. General SEO is about ranking your website pages regardless of where the searcher is. Most Boston businesses need both, with local first.',
     category: 'local',
+    question: 'Do you manage multi-location local SEO campaigns across Greater Boston?',
+    answer:
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Boston, Cambridge, Newton, Waltham, Quincy, and Burlington.',
   },
   {
-    question: 'How do I do local SEO as a beginner?',
-    answer:
-      'In this order: claim the profile, choose the most specific category, complete every field, add real photos, get your name address and phone consistent everywhere, then ask for reviews steadily and reply to all of them. Only after that does it make sense to write new pages or think about links.',
     category: 'local',
+    question: 'Can you help our practice outrank entrenched competitors in Back Bay and Cambridge?',
+    answer:
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
-    question: 'Do you work with businesses in Cambridge, Somerville and Brookline?',
-    answer:
-      'Yes, and it matters that they are separate cities. Someone standing in Kendall Square gets a different Map Pack to someone standing in Back Bay, even though it is a short walk across the bridge. We build for the municipalities you actually serve rather than treating Greater Boston as one blob.',
     category: 'local',
+    question: 'How do service-area businesses without a public storefront rank in Boston?',
+    answer:
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
   },
   {
-    question: 'How long does it take for SEO to kick in?',
-    answer:
-      'Profile and listing work can show up in weeks. Competitive organic terms usually take three to six months to move and six to twelve to stabilise. We deliberately win the low competition, high intent searches first, so leads start arriving while the bigger terms are still maturing.',
     category: 'local',
+    question: 'Do you optimize for biotechnology and scientific research searches in Kendall Square?',
+    answer:
+      'Yes. We build specialized topical hubs and scientific schema markup for life sciences, CRO, and biotech diagnostic firms.',
   },
   {
-    question: 'What does an SEO agency do?',
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
     answer:
-      'Four jobs. It fixes the technical condition of your site, it manages your Google Business Profile and local listings, it produces pages and content aimed at what your customers actually search, and it earns credible references from other sites. Everything else is a variation on one of those four.',
-    category: 'basics',
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
   },
   {
-    question: 'What are the four main types of SEO?',
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'On page, which is your content and page structure. Technical, which is speed, crawlability and structured data. Off page, which is links and mentions elsewhere. And local, which is your Business Profile, reviews and listings. Local is the one that decides the Map Pack, and the one most sites underinvest in.',
-    category: 'basics',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Boston, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
-    question: 'What is the 80/20 rule in SEO?',
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'The idea that a small slice of the work produces most of the result. For a local Boston business that slice is usually three things: a complete and correctly categorized Business Profile, a steady flow of genuine reviews, and a fast site that says clearly what you do and where. Get those right before anything clever.',
-    category: 'basics',
+      'We continuously monitor your primary search categories in Boston, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
-    question: 'How do I know if my SEO is working?',
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
     answer:
-      'Look at calls, form fills and bookings first, then Google Business Profile views and direction requests, then rankings last. Rankings move around during updates and testing, so read the trend across weeks. If your agency leads with a ranking screenshot and cannot tell you what happened to enquiries, that is the answer.',
-    category: 'basics',
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
   },
 ];
 
-/* FAQPage schema is DERIVED from the array above. There is deliberately no
-   second FAQ literal anywhere in this file. */
-const faqSchemaItems = BOSTON_FAQ_ITEMS.map((item) => ({
-  '@type': 'Question' as const,
-  name: item.question,
-  acceptedAnswer: { '@type': 'Answer' as const, text: item.answer },
-}));
-
-const OTHER_CITIES: { name: string; path: string }[] = [
-  { name: 'Providence SEO', path: '/providence/seo' },
-  { name: 'Austin SEO', path: '/austin/seo' },
-  { name: 'Charlotte SEO', path: '/charlotte/seo' },
-  { name: 'Nashville SEO', path: '/nashville/seo' },
-];
-
-/* One graph, one script tag. Every schema object below is inside this const and
-   this const is rendered exactly once, so nothing can be declared and dropped. */
-const jsonLd = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: [
-        { '@type': 'City', name: 'Boston', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-        { '@type': 'City', name: 'Cambridge', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-        { '@type': 'City', name: 'Somerville', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-        { '@type': 'City', name: 'Brookline', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-        { '@type': 'City', name: 'Newton', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-        { '@type': 'City', name: 'Quincy', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-      ],
-      knowsAbout: [
-        'Local SEO',
-        'Google Business Profile optimization',
-        'Technical SEO',
-        'Generative engine optimization',
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'SEO Services in Boston, MA',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      url: CANONICAL,
-      areaServed: { '@type': 'City', name: 'Boston', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Boston SEO services',
-        itemListElement: [
-          { name: 'Google Business Profile optimization', description: 'Categories, services, attributes, hours, photos and posts on the profile the Map Pack is built from.' },
-          { name: 'Local citations and listing cleanup', description: 'Consistent name, address and phone across the directories Google reads, with duplicates removed.' },
-          { name: 'Review growth and response', description: 'A steady system for earning and answering reviews, which Google names as part of local prominence.' },
-          { name: 'Technical SEO and Core Web Vitals', description: 'Speed, crawlability, structured data and internal linking, so a ranking holds through updates.' },
-          { name: 'Local content and service pages', description: 'One page per service, written for the Boston neighborhoods the business actually serves.' },
-          { name: 'AI search visibility and GEO', description: 'Answer-first structure and consistent entity data so AI answer engines cite the business correctly.' },
-        ].map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name, description: s.description } })),
-      },
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${CANONICAL}#mappack`,
-      name: 'Eight things that decide whether a Boston business shows up in the Map Pack',
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: MAP_PACK_STEPS.map((s, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: s.h,
-        description: s.p,
-      })),
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${CANONICAL}#cities`,
-      name: 'FactoryJet local SEO city pages',
-      itemListElement: OTHER_CITIES.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        url: `https://factoryjet.com${c.path}`,
-      })),
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Boston', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'Boston SEO Agency | Local SEO Services in Boston, MA',
-      description:
-        'What a Boston SEO agency does, how the local search competition really looks across Back Bay, the Seaport, Kendall Square and Longwood, and how FactoryJet compares to the firms holding page one.',
-      inLanguage: 'en-US',
-      dateModified: '2026-08-12',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['[data-speakable]', 'h1', '[data-faq-answer]'],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqSchemaItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Boston Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Boston',
+    addressRegion: 'MA',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 42.3601,
+    longitude: -71.0589,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Boston' },
+    { '@type': 'City', name: 'Cambridge' },
+    { '@type': 'City', name: 'Newton' },
+    { '@type': 'City', name: 'Waltham' },
+    { '@type': 'City', name: 'Quincy' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Boston Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Boston businesses.',
+  areaServed: { '@type': 'State', name: 'Massachusetts' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Boston Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Boston local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Kendall Square, Seaport, and Back Bay.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Boston', item: CANONICAL },
   ],
 };
 
 export default function BostonSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="bos-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="bos-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="bos-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="bos-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="bos-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="bg-fj-cream">
-        <Hero
-          eyebrow="SEO AGENCY · BOSTON, MA"
-          headline="Boston SEO Built for the Block You Actually Sell On"
-          lead="Boston is small, dense and split across separate cities. Someone standing in Kendall Square sees a different Map Pack to someone in Back Bay, three miles away. We build for the neighborhoods your customers search from, not for a generic Greater Boston."
-          trustItems={['Month to month', 'Free audit first', 'Your accounts stay yours']}
-          formSlot={<HeroInlineForm region="us" source="us_boston_seo_hero" submitLabel="Get my free SEO audit" />}
-          rightSlot={
-            <img
-              src={`${IMG}/boston-seo-team.webp`}
-              alt="Two colleagues reviewing a website layout together at a desk in a brick New England office"
-              width={1264}
-              height={896}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-              style={{ display: 'block' }}
-            />
-          }
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── ANSWER FIRST ─────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
-              <div className="lg:col-span-7">
-                <p className="fj-eyebrow">The short answer</p>
-                <h2 className="fj-display font-fj-display mt-5 text-[1.375rem] font-semibold leading-[1.25] tracking-[-0.015em] text-fj-ink md:text-[1.625rem]">
-                  What does a Boston SEO agency actually do?
-                </h2>
-                <p
-                  data-speakable
-                  className="mt-4 font-fj-body text-[1.25rem] leading-[1.55] text-fj-ink md:text-[1.4375rem]"
-                >
-                  A Boston SEO agency gets your business found by the people already searching for
-                  what you sell, in Google Maps, in the regular results, and now inside AI answers.
-                  The work is your Google Business Profile, technical repair on your site, reviews,
-                  and pages written for what Boston actually types.
-                </p>
-              </div>
-              <div className="lg:col-span-5">
-                <div
-                  className="rounded-2xl bg-white p-7 md:p-8"
-                  style={{ border: '1px solid rgba(26,23,18,.10)', borderLeft: '4px solid #F05A28' }}
-                >
-                  <p className="font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-                    One thing worth knowing before you shortlist anyone. When we pulled the live
-                    results for <b>seo agency boston</b> in August 2026, half of page one was not an
-                    agency at all. Yelp held first, with Clutch, Built In Boston, the Semrush agency
-                    directory and DesignRush filling six of the twelve slots. You are competing with
-                    six firms and six lists, and getting onto the lists is part of the work.
-                  </p>
-                  <p className="mt-4 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-                    Roughly 880 people a month search that exact phrase (DataForSEO, August 2026),
-                    and Google showed no AI Overview on it when we checked. For now this one is still
-                    won on organic rank and on whether a human trusts the page they land on.
-                  </p>
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Boston Local SEO &amp; AI Citation Authority</span>
                 </div>
-              </div>
-            </div>
 
-            <p className="mt-10 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-              In practice the job splits four ways. First, your{' '}
-              <Link href="/services/local-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>Google Business Profile and local listings</Link>,
-              which is what actually decides the three result Map Pack. Second, the technical
-              condition of the site, which is where a free{' '}
-              <Link href="/services/seo-audit" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>SEO audit</Link>{' '}
-              starts, because a slow site will not hold a ranking however good the writing is. Third,
-              pages that match what Boston genuinely types rather than what an agency guesses. Fourth,{' '}
-              <Link href="/services/ai-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>AI SEO and GEO</Link>:
-              the structure and consistency that let ChatGPT, Perplexity and Google AI Overviews quote
-              you instead of a competitor. Running a smaller operation? The shorter version lives at{' '}
-              <Link href="/services/small-business-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>small business SEO</Link>.
-            </p>
-          </div>
-        </section>
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Boston Local SEO Agency for Market Leaders
+                </h1>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK and UAE" />
-
-        <CityContextSection
-          eyebrow="BOSTON MARKET"
-          headline="Boston Searches Like Six Cities, Not One"
-          leadParagraphs={[
-            'Boston proper is physically small, and the metro around it is a patchwork of separate municipalities that each generate their own local results. Cambridge, Somerville, Brookline, Newton and Quincy are not neighborhoods of Boston in Google’s eyes. They are their own cities, with their own Map Packs, and a competitor a short walk over the bridge can be completely invisible in yours.',
-            'The industry mix pulls in different directions too. The Massachusetts Life Sciences Center calls the state the leading life sciences ecosystem in the world and counts 19 of the top 20 biopharma companies here, which shapes Kendall Square and increasingly the Seaport. Longwood packs hospitals and specialist practices into a few blocks. The Financial District runs on law, accounting and staffing. Back Bay is retail, wellness and professional services in brownstones. A single Boston SEO template cannot serve all of that, and the agencies that ship one usually have not walked any of it.',
-          ]}
-          stats={[
-            {
-              value: '#1',
-              label: 'life sciences ecosystem in the world, per the state’s own life sciences agency',
-              sourceUrl: 'https://www.masslifesciences.com/',
-              sourceLabel: 'Massachusetts Life Sciences Center',
-            },
-            {
-              value: '19 of 20',
-              label: 'of the top 20 biopharma companies are counted in the Massachusetts ecosystem',
-              sourceUrl: 'https://www.masslifesciences.com/',
-              sourceLabel: 'Massachusetts Life Sciences Center',
-            },
-            {
-              value: '1,700+',
-              label: 'member organizations in the Massachusetts Biotechnology Council',
-              sourceUrl: 'https://www.massbio.org/',
-              sourceLabel: 'MassBio',
-            },
-          ]}
-        />
-
-        <ServiceExplanation
-          eyebrow="WHAT WE ACTUALLY DO"
-          headline="What an SEO Agency Does for a Boston Business, Week to Week"
-          lead="Most of the value is unglamorous. Fix the site, fix the profile, publish pages that answer real questions, and keep doing it long enough for the compounding to show up. Here is what that looks like when the client is in Boston."
-          body={
-            <>
-              <p>
-                We start with the Google Business Profile, because that is what the Map Pack is built
-                from. Google is unusually direct about how it ranks local results: it says they are
-                mainly based on{' '}
-                <a
-                  href="https://support.google.com/business/answer/7091"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-1 underline-offset-2"
-                  style={{ color: '#B23E13' }}
-                >
-                  relevance, distance and prominence
-                </a>
-                . Distance you cannot change. Relevance is your categories, services and description.
-                Prominence is reviews, mentions and links. Two of the three are yours to work on, and
-                most Boston profiles we open have never had either touched properly.
-              </p>
-              <p>
-                Then the site. Core Web Vitals, crawl errors, structured data, internal links, and a
-                page for each service instead of one page listing eleven. This is the part that
-                separates a ranking that holds from one that wobbles every time Google ships an
-                update, and it is the part most local agencies quietly skip because it needs
-                engineers rather than marketers.
-              </p>
-              <p>
-                Then content, written for a specific Boston reader. A dentist near Copley and a
-                contract research firm off Binney Street need completely different pages, in
-                completely different registers. Finally we make the whole thing quotable: clear
-                headings, direct answers near the top, consistent business facts everywhere, so an AI
-                answer engine can cite you without garbling what you do. Founder Bhavesh Barot has
-                been building sites and search programs for small businesses for over a decade, and
-                on our own work the engineer who writes the fix is the person who explains it to you.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src={`${IMG}/boston-seo-workshop.webp`}
-              alt="Three colleagues reviewing printed page layouts and notes in a bright meeting room overlooking a Boston brick street"
-              width={1216}
-              height={704}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-              style={{ display: 'block' }}
-            />
-          }
-        />
-
-        {/* ── DISTRICTS ────────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="max-w-[760px]">
-              <p className="fj-eyebrow">BOSTON, NEIGHBORHOOD BY NEIGHBORHOOD</p>
-              <h2 className="fj-display font-fj-display mt-5 text-[clamp(1.75rem,3.4vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-fj-ink">
-                Six Bostons, six different local SEO problems
-              </h2>
-              <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-neutral-600">
-                Search demand here splits along the same lines the city does. This is how we read the
-                map before writing a single page, and it is the difference between a local page and a
-                template with the city name swapped in.
-              </p>
-            </div>
-
-            <ul className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2" role="list">
-              {DISTRICTS.map((d) => (
-                <li
-                  key={d.tag}
-                  className="rounded-2xl bg-white p-7"
-                  style={{ border: '1px solid rgba(26,23,18,.10)', boxShadow: '0 18px 38px -28px rgba(26,23,18,.28)' }}
-                >
-                  <p className="font-fj-mono text-[0.6875rem] font-bold uppercase tracking-[0.12em]" style={{ color: '#B23E13' }}>
-                    {d.tag}
-                  </p>
-                  <h3 className="mt-3 font-fj-display text-[1.1875rem] font-semibold leading-[1.3] text-fj-ink">
-                    {d.h}
-                  </h3>
-                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">{d.p}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ── LISTICLE ─────────────────────────────────────────────────── */}
-        <section className="bg-white py-14 md:py-20">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
-              <div className="lg:col-span-5">
-                <div className="lg:sticky lg:top-24">
-                  <p className="fj-eyebrow">THE CHECKLIST</p>
-                  <h2 className="fj-display font-fj-display mt-5 text-[clamp(1.75rem,3.4vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-fj-ink">
-                    8 things that decide whether you show up in Boston&rsquo;s Map Pack
-                  </h2>
-                  <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.65] text-fj-neutral-600">
-                    In order. Work down the list and stop when you hit the first one you have not
-                    done, because that is almost always the thing holding you back.
-                  </p>
-                  <div className="mt-7">
-                    <ModalCTAButton
-                      label="Get your free Boston SEO audit"
-                      region="us"
-                      modalVariant="seo"
-                      btnVariant="primary-light"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:col-span-7">
-                <ol className="space-y-0" role="list">
-                  {MAP_PACK_STEPS.map((s) => (
-                    <li key={s.n} className="border-t border-fj-neutral-200 py-6 first:border-t-0 first:pt-0">
-                      <div className="flex gap-5">
-                        <span
-                          className="mt-0.5 font-fj-mono text-[0.875rem] font-bold"
-                          style={{ color: '#B23E13' }}
-                          aria-hidden="true"
-                        >
-                          {s.n}
-                        </span>
-                        <div>
-                          <h3 className="font-fj-display text-[1.0625rem] font-semibold leading-[1.35] text-fj-ink">
-                            {s.h}
-                          </h3>
-                          <p className="mt-2 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600">
-                            {s.p}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── MID PAGE CTA ─────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-12 md:py-16">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div
-              className="grid grid-cols-1 items-center gap-8 rounded-2xl bg-white p-8 md:p-10 lg:grid-cols-12"
-              style={{ border: '1px solid rgba(26,23,18,.10)', borderTop: '3px solid #F05A28' }}
-            >
-              <div className="lg:col-span-7">
-                <h2 className="font-fj-display text-[1.5rem] font-semibold leading-[1.25] text-fj-ink md:text-[1.75rem]">
-                  Want to know which of those eight is costing you calls?
-                </h2>
-                <p className="mt-3 font-fj-body text-[1rem] leading-[1.65] text-fj-neutral-600">
-                  The free audit opens your profile, your site and the competitors currently sitting
-                  above you in your neighborhood, then tells you in plain language what to fix and in
-                  what order. Yours to keep whether you hire us or not.
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Kendall Square, the Seaport, and Back Bay. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <ModalCTAButton
-                    label="Get your free audit"
-                    region="us"
-                    modalVariant="seo"
-                    btnVariant="primary-light"
-                  />
-                  <a
-                    href={CALENDLY}
-                    className="inline-flex items-center justify-center rounded-full px-6 py-3 font-fj-body text-[0.9375rem] font-semibold transition-colors hover:bg-fj-neutral-50"
-                    style={{ border: '1px solid rgba(26,23,18,.20)', color: '#1A1712' }}
-                  >
-                    Talk to the founder
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#bos-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Boston Corridors</span>
                   </a>
                 </div>
               </div>
-              <div className="lg:col-span-5">
-                <img
-                  src={`${IMG}/boston-seo-consult.webp`}
-                  alt="A shop owner and a visiting consultant talking at the counter of a bright Boston storefront"
-                  width={1216}
-                  height={704}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full rounded-2xl object-cover"
-                  style={{ display: 'block' }}
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/boston-seo/boston-seo-team.webp"
+                  alt="Boston Massachusetts local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── THE ONE DARK SECTION ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="SEO AND AI SEARCH"
-          headline="No, AI has not replaced SEO. It moved where the answer appears."
-          lead={
-            'We get this on every first call now, so here is the direct answer. Google publishes its own guidance on AI features and says plainly that there are no additional requirements to appear in AI Overviews or AI Mode, and no special optimizations necessary. What genuinely changed is that a summary now sits above the results for a lot of informational searches, so fewer people click through for a definition. Local intent held up best, because somebody looking for a dentist near Copley still has to pick a real business with a real address. That is the part we build for first, then we make the page clean enough to be quoted well.'
-          }
-          pillars={[
-            {
-              title: 'Same fundamentals',
-              body: 'Clear pages, real expertise, consistent business facts, credible references elsewhere. That earned rankings before and it earns citations now.',
-            },
-            {
-              title: 'Extra requirement',
-              body: 'Answer near the top, honest headings, no burying the point. If a model has to guess what you do, it will guess wrong in front of your customer.',
-            },
-            {
-              title: 'Local holds up',
-              body: 'A summary cannot book a table or fix a boiler. Searches that end in a phone call are the most durable traffic you can own in Boston.',
-            },
-          ]}
-        />
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-        <ComparisonTable
-          eyebrow="THE SERP, HONESTLY"
-          headline={<>Who you are actually up against for &ldquo;seo agency boston&rdquo;</>}
-          lead="We pulled the live results in August 2026. Here is who holds page one, what each is genuinely good at, and where we sit. We are the challenger on this SERP and pretending otherwise would be the first reason not to hire us."
-          columns={[
-            { label: 'Who they are' },
-            { label: 'FactoryJet', isFactoryJet: true },
-          ]}
-          rows={RIVAL_ROWS}
-          footer={
-            <>
-              Source: live organic results for &ldquo;seo agency boston&rdquo;, pulled 2026-08-12.
-              None of these firms are bad choices. Ask all of us the same three questions: who does
-              the work, what happens if it does not move, and does anything leave with you. See the
-              same approach applied elsewhere in{' '}
-              <Link href="/providence/seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>Providence</Link>,{' '}
-              <Link href="/austin/seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>Austin</Link>{' '}and{' '}
-              <Link href="/charlotte/seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>Charlotte</Link>.
-            </>
-          }
-        />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <FAQ
-          eyebrow="BOSTON SEO FAQ"
-          headline="Questions people actually type before hiring an SEO agency"
-          lead="These come from live People Also Ask data on this query, answered the way we would answer them on a call, including the money ones most agency sites skip."
-          categories={FAQ_CATEGORIES}
-          items={BOSTON_FAQ_ITEMS}
-        />
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/boston-seo/boston-seo-consult.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Boston businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
 
-        {/* id removed 2026-08-12: FinalCTA now carries #final-cta itself for all 146 pages
-            that pair it with <FAQ />, so a local id here would duplicate it. */}
-        <div>
-          <FinalCTA
-            variant="light"
-            eyebrow="GET STARTED"
-            headline="Find out where you stand in your Boston neighborhood"
-            sub="Start with a free audit. We will show you where you sit in the Map Pack for the streets your customers search from, what is technically holding the site back, and exactly what we would fix first. Month to month, no setup fee, no pressure to continue."
-            primaryCta={{ label: 'Get your free Boston SEO audit', modal: true, region: 'us' }}
-            secondaryCta={{ label: 'Talk to the founder', href: CALENDLY }}
-            objectionHandler="No long-term contract. Cancel with thirty days notice, and your profile, content and analytics accounts stay yours either way."
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Greater Boston&apos;s High-Value Commercial Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Cambridge biotechnology innovators to Back Bay wealth managers and Seaport venture firms, New England businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. BOSTON DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="bos-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Boston Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for Boston&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Cambridge biotechnology leaders to Back Bay wealth advisors and Seaport fintech firms:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for Boston
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in Greater Boston demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Boston Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// BOSTON LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Boston local search."
+            city="Boston"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
           />
         </div>
 
-        {/* ── RELATED LINKS ────────────────────────────────────────────── */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="font-fj-mono text-[0.6875rem] font-bold uppercase tracking-[0.12em]" style={{ color: '#B23E13' }}>
-              Keep reading
-            </p>
-            <p className="mt-4 max-w-[900px] font-fj-body text-[0.9375rem] leading-[1.75] text-fj-neutral-600">
-              Services:{' '}
-              <Link href="/services/seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>SEO services</Link>,{' '}
-              <Link href="/services/local-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>local SEO</Link>,{' '}
-              <Link href="/services/small-business-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>small business SEO</Link>,{' '}
-              <Link href="/services/seo-audit" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>SEO audit</Link>,{' '}
-              <Link href="/services/ai-seo" className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>AI SEO</Link>. Other
-              cities:{' '}
-              {OTHER_CITIES.map((c, i) => (
-                <span key={c.path}>
-                  <Link href={c.path} className="underline decoration-1 underline-offset-2" style={{ color: '#B23E13' }}>{c.name}</Link>
-                  {i < OTHER_CITIES.length - 1 ? ', ' : '.'}
-                </span>
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across Greater Boston:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               ))}
-            </p>
+            </div>
           </div>
         </section>
-        <SeoCityLinksUS currentCity="boston" />
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Boston SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="BOSTON LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Boston MA"
+          lead="Direct, plain English answers to what Boston business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="boston" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Boston Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

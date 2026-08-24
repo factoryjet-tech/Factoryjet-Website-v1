@@ -1,818 +1,909 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
-import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
-import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Link from 'next/link';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-const PAGE_URL = 'https://factoryjet.com/detroit/web-design';
-const PAGE_TITLE = 'Web Design Company Detroit MI | 7-Day Builds | FactoryJet';
-const PAGE_DESCRIPTION =
-  'FactoryJet is a web design company for Detroit businesses. Next.js sites built for speed, search and AI answers. Starter sites ship in 7 days and you own the code.';
-const DATE_MODIFIED = '2026-08-12';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/detroit/web-design';
 
 export const metadata: Metadata = {
-  title: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-  alternates: {
-    canonical: PAGE_URL,
-  },
+  title: 'Detroit Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description:
+    'Detroit web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Michigan businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
-    url: `${PAGE_URL}/`,
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet Web Design: Detroit, Michigan',
-      },
-    ],
+    title: 'Detroit Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description:
+      'Detroit web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Michigan businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Detroit Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
+    title: 'Detroit Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description: 'Custom Next.js web design and engineering in Detroit MI. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* The ten-question checklist. Rendered visibly below AND used to build the
-   ItemList schema, so the two can never drift apart. */
-const HIRING_CHECKLIST = [
+const PARTNERS = [
+  'Next.js 15 App Router',
+  'React 19 Server Components',
+  'TypeScript Enterprise',
+  'Tailwind CSS & Vanilla Design Tokens',
+  'Cloudflare Edge Network',
+  'Sanity & Strapi Headless CMS',
+  'Figma Design Systems',
+  'Core Web Vitals SLA (95+)',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
   {
-    title: 'Who does the work, and where do they sit?',
-    body: 'Some "Detroit" agencies are a sales office over a subcontractor network. Not automatically bad, but know it first. Ask who writes the code, who writes the copy, and who you email when it breaks at 5pm.',
+    corridor: 'Downtown Detroit & Woodward Corridor',
+    query: 'fintech mobility web design downtown detroit',
+    focus: 'Fintech Innovation, Automotive Mobility & Urban Development',
+    desc: 'The vibrant downtown commercial spine. Demands modern high-speed corporate flagships, interactive mobility visualizers, and sub-second edge hosting.',
   },
   {
-    title: 'What do you own when it ends?',
-    body: 'The source code, design files, domain, hosting account and analytics property, all in your name. If any of those stay with the agency, you are renting your own website.',
+    corridor: 'Midtown & New Center',
+    query: 'healthcare medical web design midtown detroit',
+    focus: 'Medical Systems, Cultural Institutions & Digital Creative Studios',
+    desc: 'Renowned healthcare, cultural, and design core. Features multi-practitioner directory architectures, patient booking integrations, and accessibility compliance.',
   },
   {
-    title: 'What is it built on, and who patches it?',
-    body: 'WordPress with fifteen plugins needs someone maintaining it monthly. A statically built Next.js site has almost nothing to patch. Neither is wrong, but the upkeep lands on you either way.',
+    corridor: 'Auburn Hills & Automation Alley',
+    query: 'tier 1 automotive supplier web design auburn hills',
+    focus: 'Automotive Tier-1 Suppliers, Robotics & Autonomous Tech',
+    desc: 'The global automotive engineering heartland. Requires precision engineering spec tables, IATF 16949 quality cert showcases, and high-speed commercial RFQ forms.',
   },
   {
-    title: 'How fast is it on a phone on a weak signal?',
-    body: 'Google publishes the target: Largest Contentful Paint, the moment your main content appears, under 2.5 seconds for 75% of visits. Ask what number they build to and how they test it.',
+    corridor: 'Troy & Big Beaver Road',
+    query: 'corporate headquarters web design troy mi',
+    focus: 'Corporate Headquarters, Financial Services & Architectural Engineering',
+    desc: 'Major corporate and professional services corridor. Demands refined editorial typography, interactive portfolio visualizers, and SOC2-compliant client portals.',
   },
   {
-    title: 'Is the copy included, or is it your homework?',
-    body: 'The top reason web projects run late. Design done, build waiting, nobody has written the About page. Ask who is writing the words, then get that answer into the scope.',
+    corridor: 'Dearborn & Western Wayne Industrial',
+    query: 'precision tooling manufacturing web design dearborn',
+    focus: 'Automotive Engineering, Precision Tooling & Advanced Materials',
+    desc: 'Heavy manufacturing and industrial engineering hub. Features CAD blueprint upload portals, equipment capability matrices, and ERP quote integrations.',
   },
   {
-    title: 'What happens to my rankings on launch day?',
-    body: 'A redesign that changes URLs without 301 redirects can erase rankings you spent years earning. Ask for a redirect map before launch and a Search Console check after.',
+    corridor: 'Ann Arbor & Tech Corridor',
+    query: 'ai biotech startup web design ann arbor',
+    focus: 'AI Research, Biotech Platforms & Venture-Backed Software',
+    desc: 'University research and high-tech software corridor. Demands developer documentation hubs, interactive SaaS demos, and sub-second edge performance.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Automotive Tier-1 Suppliers, Precision Tooling & Industrial Robotics',
+    headline: 'Engineering Commercial Lead Engines for Michigan Manufacturers',
+    description:
+      'From Auburn Hills automotive suppliers to Dearborn tooling facilities, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive equipment capability matrices, IATF 16949 compliance showcases, and secure CAD blueprint upload funnels.',
+    image: '/images/us/detroit-web-design/detroit-manufacturer-site.webp',
+    alt: 'Detroit automotive supplier and precision industrial manufacturing web design',
+    points: [
+      'Interactive equipment capability matrices and engineering tolerance tables',
+      'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
+      'Structured manufacturing and IATF 16949 quality certification schema markup',
+    ],
   },
   {
-    title: 'Can an AI assistant read and quote this site?',
-    body: 'Buyers now ask ChatGPT and Perplexity before Google. Those crawlers need server-rendered HTML, real headings, FAQ and Service schema, and a robots.txt that lets them in. Ask if it is included or billed later.',
+    sector: 'Corporate Litigation, Commercial Real Estate & Industrial Law',
+    headline: 'High-Authority Digital Flagships for Downtown Detroit Law Firms',
+    description:
+      'From corporate trial attorneys in Downtown Detroit to labor and automotive defense law practices in Troy, prospective commercial clients demand immediate credibility. We design bespoke web architectures featuring attorney credentials, practice area silos, verified case results, and high-converting inquiry funnels.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Detroit corporate law firm litigation and automotive advisory web design',
+    points: [
+      'Attorney directory schemas linking State Bar of Michigan verified credentials',
+      'High-converting practice area landing pages optimized for corporate general counsel',
+      'Enterprise-grade security and encrypted client intake questionnaire workflows',
+    ],
   },
   {
-    title: 'How many revision rounds, and how do they run?',
-    body: 'Unlimited revisions sound generous and usually mean an endless project. Structured rounds with one named decision maker ship faster. Ask how feedback gets collected, because scattered email threads are how deadlines vanish.',
+    sector: 'Fintech Platforms, Mobility Software & Venture-Backed Tech',
+    headline: 'High-Performance Web Applications for Detroit Tech Innovators',
+    description:
+      'From Woodward Corridor fintech platforms to Ann Arbor AI startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, and sub-second edge response times.',
+    image: '/images/us/detroit-web-design/hero-detroit-studio.webp',
+    alt: 'Detroit fintech mobility software and venture tech web design engineering',
+    points: [
+      'Interactive software feature sandboxes and animated architecture visualizers',
+      'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
+      'Frictionless lead routing directly into HubSpot, Salesforce, or Slack',
+    ],
   },
   {
-    title: 'Who fixes it when it breaks on a Friday night?',
-    body: 'Ask what support covers, how long it lasts, and what happens after. A contact form that quietly stopped sending is a revenue problem. You want a named contact and a response time.',
+    sector: 'Healthcare Systems, Medical Centers & Specialized Clinics',
+    headline: 'Patient-Centered Digital Platforms for Midtown Medical Practices',
+    description:
+      'In Detroit’s competitive healthcare market, patients evaluate clinical expertise and facility reputation thoroughly before booking. We craft accessible, HIPAA-conscious interfaces with provider directories, service area silos, and frictionless appointment scheduling workflows.',
+    image: '/images/us/detroit-web-design/detroit-process-review.webp',
+    alt: 'Detroit healthcare medical practice clinic website design and development',
+    points: [
+      'Multi-practitioner physician directories with board certification schemas',
+      'Sub-second mobile speed ensuring immediate patient appointment booking',
+      'Accessible, ADA-compliant typography, contrast scales, and focus states',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow WordPress Themes & Bloated Plugin Stacks',
+    problem: 'Traditional Detroit agencies build on bloated WordPress templates with 30+ plugins, resulting in sluggish load times, security vulnerabilities, and constant breakages.',
+    solution: 'We engineer custom Next.js 15 web applications on modern edge networks, achieving sub-second load times and zero dependency bloat.',
   },
   {
-    title: 'Can I see the scope before I pay anything?',
-    body: 'A serious shop gives you a page list, a timeline and a deliverable list after one call. A vague proposal produces a vague invoice. Get the sitemap and the launch date in writing.',
+    num: '02',
+    title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
+    problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Fragile Mobile Experiences That Hurt Lead Conversion',
+    problem: 'Poorly coded desktop-first designs break on mobile devices, with slow forms, misaligned buttons, and confusing navigation that drives prospects away.',
+    solution: 'We engineer mobile-first responsive interfaces with frictionless touch navigation, instant autocompleting forms, and clean Core Web Vitals.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Agency Code Hostage & Hidden Licensing Fees',
+    problem: 'Many agencies lock your website into proprietary platforms or charge ongoing licensing fees to keep your own code operational.',
+    solution: 'You receive 100% full intellectual property ownership, the complete GitHub repository, and documented deployment configurations upon project completion.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Discovery, Information Architecture & Strategy',
+    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & Design Tokens',
+    desc: 'We design bespoke desktop and mobile prototypes in Figma, complete with typography tokens, spacing scales, and custom brand visual assets.',
+    deliverables: ['High-fidelity interactive Figma prototypes', 'Mobile responsive component wireframes', 'Design tokens and typography scales', 'Client design review and revision approval'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Next.js 15 Engineering & Headless CMS Integration',
+    desc: 'We transform approved designs into production React 19 code with TypeScript, Tailwind CSS, structured schema markup, and headless CMS integrations.',
+    deliverables: ['Custom Next.js 15 App Router architecture', 'Sanity/Strapi headless content management setup', 'JSON-LD structured schema graph implementation', 'Cross-browser and multi-device QA validation'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals Optimization, Launch & Handover',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ performance optimization', 'Cloudflare DNS cutover and SSL deployment', 'Full GitHub repository and asset transfer', '30-day post-launch warranty and team training'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Engineering Stack',
+    factoryjet: 'Modern Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Outdated monolithic WordPress, Elementor, or heavy Webflow templates.',
+  },
+  {
+    label: 'Delivery Speed',
+    factoryjet: 'Rapid 7-day agile sprint with fixed-price milestone delivery.',
+    traditional: '4 to 8 months of protracted discovery meetings and frequent timeline slippages.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Google Lighthouse Core Web Vitals mobile performance.',
+    traditional: 'Sub-60 mobile performance scores with heavy render-blocking scripts.',
+  },
+  {
+    label: 'IP & Code Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary platform lock-in or agency-retained code repositories.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'cost', label: 'Cost & Timeline' },
-  { key: 'choosing', label: 'Choosing an Agency' },
-  { key: 'design', label: 'Design Principles' },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local', label: 'Detroit & Metro' },
-  { key: 'ownership', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Process' },
+  { key: 'tech', label: 'Next.js Tech Stack' },
+  { key: 'local', label: 'Detroit Focus' },
+  { key: 'ownership', label: 'Code & Support' },
 ];
 
-/* Single source of truth for the FAQ. The visible <FAQ /> and the FAQPage
-   JSON-LD are both built from this array. Never duplicate it. */
-const DETROIT_FAQ_ITEMS = [
+const FAQ_ITEMS = [
   {
-    question: 'What does a web design company in Detroit actually do?',
+    category: 'pricing',
+    question: 'How much does custom web design cost for a Detroit business?',
     answer:
-      'It plans, designs, builds and launches your website, then makes sure it loads fast and gets found. A full-service shop also writes the copy, sets up analytics, adds schema so AI assistants quote you accurately, handles redirects on launch day, and trains your team.',
-    category: 'choosing',
+      'Project investments are based on total page count, interactive feature complexity, custom API integrations, and content scope. Every project is scoped with a transparent, fixed-price milestone agreement. Focused corporate websites are delivered with full Figma UI/UX, custom Next.js engineering, and 100% code ownership with zero surprise overages.',
   },
   {
-    question: 'How much should a small business in Detroit pay for a website?',
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'There is no honest single number, because the work scales with what you need. The drivers are page count, how much copy is written from scratch, integrations like booking or inventory, and whether you sell online. A five-page Royal Oak clinic site and a Sterling Heights parts catalogue are different projects.',
-    category: 'cost',
+      'No. We believe you should own your website outright. You contract directly with your preferred hosting provider (Cloudflare, Vercel) and pay zero monthly agency licensing fees.',
   },
   {
-    question: 'How do web design agencies charge?',
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'Three models. Hourly, where you pay for time and the total moves. Fixed project, where the scope is agreed up front and the number only changes if the scope does. Monthly retainer, where you rent a team. We work fixed project for builds, with an optional retainer after launch.',
-    category: 'cost',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
-    question: 'How long does it take to build a website?',
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in just 7 days?',
     answer:
-      'A focused five-page site takes about a week when the content is ready. Ten to fifteen pages with a blog and lead capture usually runs two to three weeks. Custom builds are scoped individually. Projects rarely stall on design. They stall waiting for photos, logos and approvals.',
-    category: 'cost',
+      'We eliminate bloated agency bureaucracy and junior account layers. Our senior full-stack engineers and Figma UI/UX designers work directly with you through focused, daily milestone sprints to design, build, and deploy your site in parallel.',
   },
   {
-    question: 'Can you really build a website in 3 days?',
+    category: 'timeline',
+    question: 'What is required from our internal team during the 7-day sprint?',
     answer:
-      'You can stand up a template in three days. You cannot research a market, write real copy, source images and test properly in three days. Our Starter tier ships in seven because that is the honest floor for a site we will put our name on.',
-    category: 'cost',
+      'We require brand assets (logos, brand guidelines), key service copy, and prompt feedback on the Figma design prototypes during scheduled milestone check-ins to ensure rapid project delivery.',
   },
   {
-    question: 'Is it better to build my own website or hire someone?',
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the process?',
     answer:
-      'Build it yourself if the site is a placeholder and nobody is searching for you yet. Hire someone once the site has a job: generating quotes, booking appointments, or convincing a procurement team you are a real supplier. The break point is when one lost lead costs more than the build.',
-    category: 'choosing',
+      'Every project includes dedicated design revision cycles during the Figma prototype phase, ensuring you approve every layout, color choice, and typography detail before development begins.',
   },
   {
-    question: 'Can ChatGPT build my website for me?',
+    category: 'tech',
+    question: 'Why choose Next.js 15 over WordPress or Webflow?',
     answer:
-      'It writes working code and a decent first draft, and we use AI in our own workflow daily. It cannot decide what your Detroit customers care about, align your Google Business Profile, set redirects so you keep rankings, or notice when the contact form quietly stops sending. Generation is the easy part.',
-    category: 'technical',
+      'Next.js 15 delivers unbeatable performance with sub-second page loads, superior SEO through server-side rendering, rock-solid security without vulnerable plugins, and infinite scalability that monolithic page builders cannot match.',
   },
   {
-    question: 'Is AI replacing web designers?',
+    category: 'tech',
+    question: 'Can our marketing team edit text and images without touching code?',
     answer:
-      'It is replacing the mechanical parts: first drafts, resizing, boilerplate, alt text. It has not replaced judgement about what a page should say, what to cut, or how a supplier convinces an engineer to request a quote. Designers who only pushed pixels are losing work. The rest are busier.',
-    category: 'technical',
+      'Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi, allowing your marketing team to create blog posts, update service copy, and upload images through an easy visual dashboard.',
   },
   {
-    question: 'What are the five golden rules of a good website?',
+    category: 'tech',
+    question: 'How do you ensure our website achieves 95+ Core Web Vitals scores?',
     answer:
-      'Say who you are and what you do above the fold. Make the next action obvious on every page. Load fast on a mid-range phone. Work for keyboard and screen reader users. Keep it current, because a stale site reads as a closed business.',
-    category: 'design',
+      'We optimize every asset using modern WebP/AVIF image formats, eliminate render-blocking JavaScript, implement static page pre-rendering, and deploy on Cloudflare global edge networks.',
   },
   {
-    question: "What are the 7 C's of website design?",
+    category: 'tech',
+    question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'A teaching framework: Content, Clarity, Consistency, Credibility, Convenience, Call to action and Conversion. It is a checklist, not a law. The useful part is that six of the seven are about whether a visitor understands and trusts you. Only one is about the click. Most sites get that ratio backwards.',
-    category: 'design',
+      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
-    question: 'What is the 3 second rule in web design?',
-    answer:
-      'The rough idea that a visitor decides whether to stay within about three seconds. Treat it as a design prompt, not a measured law. The testable version is public: Google recommends Largest Contentful Paint under 2.5 seconds for 75% of visits. That is the number we build against.',
-    category: 'design',
-  },
-  {
-    question: 'What are the red flags when hiring a web designer?',
-    answer:
-      'No portfolio of live URLs you can open right now. Refusing to name the platform. A proposal with no page list and no date. Your domain or hosting staying in their name. Guaranteed number-one rankings, which nobody can promise. And a quote that arrives without one question about your business.',
-    category: 'choosing',
-  },
-  {
-    question: 'What should a business website include at minimum?',
-    answer:
-      'A home page stating what you do and who for. One page per service, because that is what people search. An about page with real faces and a real address. Contact details plus a form that works. Proof, whether reviews, logos or photos of finished work. And a privacy page.',
-    category: 'design',
-  },
-  {
-    question: 'Is it worth building a website for a small business?',
-    answer:
-      'Yes, and the reason has changed. It used to be about being findable. Now it is also the source AI assistants read when someone asks them to recommend a plumber, a clinic or a supplier in metro Detroit. Your own site is the only place you control what they learn about you.',
-    category: 'choosing',
-  },
-  {
-    question: 'Web design or web development: which do I need?',
-    answer:
-      'Design decides what the site says and how it looks. Development makes it work in a browser. A brochure site is mostly the first. A booking system or a parts catalogue flips that ratio. Most projects need both, which is why splitting them across two vendors usually costs more.',
-    category: 'technical',
-  },
-  {
-    question: 'Will my new site show up in ChatGPT and other AI answers?',
-    answer:
-      'It can, and it is a separate job from ranking on Google. AI engines pull from pages they can crawl and parse cleanly: server-rendered HTML rather than content that only appears after JavaScript runs, real heading structure, FAQ and Service schema, and a robots.txt allowing GPTBot, ClaudeBot and PerplexityBot.',
-    category: 'technical',
-  },
-  {
-    question: 'Do you work with businesses outside Detroit city limits?',
-    answer:
-      'Yes, most of our metro work sits outside the city line. Royal Oak, Ferndale, Birmingham, Troy, Southfield, Dearborn, Warren, Sterling Heights, Novi and Ann Arbor are all normal. It matters, because a Ferndale studio and a Troy firm compete in different local packs even twenty minutes apart.',
     category: 'local',
+    question: 'Do you have experience with Detroit automotive suppliers and manufacturers?',
+    answer:
+      'Yes. We build precision manufacturing digital experiences for Auburn Hills Tier-1 suppliers, robotics automation builders, and precision tooling companies requiring interactive tolerance tables and RFQ portals.',
   },
   {
-    question: 'Do you build sites for automotive suppliers and manufacturers?',
-    answer:
-      'Yes, and it is a different build from a consumer site. Engineering and procurement buyers want capability pages, certifications, tolerances, spec sheet downloads and an RFQ form that reaches a real person. The region holds more than 99,000 engineers, so assume a technical reader who bounces off vague marketing language.',
     category: 'local',
+    question: 'Can you build custom CAD and STEP file upload portals for industrial quoting?',
+    answer:
+      'Yes. We engineer secure file upload workflows that allow procurement engineers to upload large technical drawings directly to your estimating team.',
   },
   {
-    question: 'Do you work with Detroit restaurants, bars and retail?',
-    answer:
-      'Yes. Those sites live or die on mobile: a menu that opens instantly, hours that are correct, a reservation link that works, and a Google Business Profile matching the site exactly. We build them light so they load on a phone outside the door in Corktown or on Nine Mile.',
     category: 'local',
+    question: 'Can you integrate custom CRM and lead capture workflows like HubSpot or Salesforce?',
+    answer:
+      'Yes. We build webhook-driven form integrations that instantly route leads, quote inquiries, and consultation requests directly into your CRM, Slack, or email marketing automation platform.',
   },
   {
-    question: 'How can I tell if a Detroit web design company is actually local?',
+    category: 'local',
+    question: 'Do you design websites tailored for Detroit legal practices and corporate advisors?',
     answer:
-      'Look for a street address you can find on a map, not a suite that resolves to a mail service. Check whether the portfolio links to live Michigan businesses. Ask to meet. Local is not always better, but a company implying a presence it does not have has told you something.',
-    category: 'choosing',
+      'Yes. We develop sophisticated digital flagships for corporate trial attorneys, automotive defense law firms, and commercial advisors featuring practice area silos, attorney bio schemas, and client portals.',
   },
   {
-    question: 'Who owns the code and design files when we finish?',
-    answer:
-      'You do, completely. You get the Next.js codebase in a repository you control and the full design file. No licence fee, no proprietary platform, no clause tying the site to us. If you move to another developer next year, nothing breaks.',
     category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, Figma design assets, and deployment configurations with zero vendor lock-in.',
   },
   {
-    question: 'What happens after launch?',
-    answer:
-      'A 30-day support window covers bugs, fixes and training questions at no extra charge, and we record the handover so new staff can watch it later. After that you can self-manage, hire anyone you like, or keep us on a maintenance plan. All three are normal.',
     category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team on managing the website?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update content in the CMS, view form submissions, and manage media assets.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
+    answer:
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Detroit Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Detroit',
+    addressRegion: 'MI',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 42.3314,
+    longitude: -83.0458,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Detroit' },
+    { '@type': 'City', name: 'Troy' },
+    { '@type': 'City', name: 'Auburn Hills' },
+    { '@type': 'City', name: 'Dearborn' },
+    { '@type': 'City', name: 'Ann Arbor' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Detroit Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
+  description:
+    'Custom Next.js web design and engineering in Detroit MI. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Michigan businesses.',
+  areaServed: { '@type': 'State', name: 'Michigan' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Detroit Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description: 'Detroit web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Michigan businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Detroit', item: CANONICAL },
+  ],
+};
 
 export default function DetroitWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-      <main className="bg-fj-cream">
-        <Hero
-          formSlot={<HeroInlineForm region="us" source="us_detroit_web_design_hero" />}
-          eyebrow={'WEB DESIGN · DETROIT, MI'}
-          headline={'A Web Design Company in Detroit That Builds Fast Sites, Not Slow Projects'}
-          lead={
-            'Detroit runs on engineering, manufacturing and a startup scene that grew up around Michigan Central. Your website should be held to the same standard. FactoryJet ships a production Starter site in seven days, and you own every file.'
-          }
-          trustItems={['Fixed scope agreed up front', '7-day Starter delivery', 'Next.js, schema and GA4 included']}
-          extraCta={<WhatsAppCTA city="Detroit" variant="light" />}
-          rightSlot={
-            <img
-              src="/images/us/detroit-web-design/hero-detroit-studio.webp"
-              alt="A three-person web design team reviewing a product page layout on a large monitor in a brick-and-timber loft studio"
-              width={1264}
-              height={848}
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl object-cover shadow-[0_18px_50px_-24px_rgba(15,15,18,0.35)]"
-            />
-          }
-        />
+      <script id="det-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="det-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="det-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="det-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="det-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* Answer-first block. Highest-value extraction target on the page. */}
-        <section className="bg-fj-cream pt-4 pb-14 md:pb-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-8 rounded-2xl border border-fj-ink/10 bg-white p-7 md:grid-cols-12 md:p-10">
-              <div className="md:col-span-4">
-                <p className="font-fj-mono text-xs uppercase tracking-widest text-[#B23E13]">
-                  The short answer
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Detroit Web Design &amp; Full-Stack Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Detroit Web Design Agency for High-Growth Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Custom Next.js 15 websites, bespoke Figma UI/UX, and sub-second performance engineered for Michigan leaders. 7-day agile delivery with 100% intellectual property code ownership.
                 </p>
-                <h2 className="mt-3 font-fj-display text-2xl leading-tight text-fj-ink md:text-[1.75rem]">
-                  What does a web design company in Detroit do?
-                </h2>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#det-web-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Detroit Corridors</span>
+                  </a>
+                </div>
               </div>
-              <div className="md:col-span-8">
-                <p
-                  data-speakable
-                  className="font-fj-body text-lg leading-relaxed text-fj-ink/85 md:text-xl"
-                >
-                  A web design company in Detroit plans, designs, builds and launches your website,
-                  then makes sure it loads fast and shows up in search. A good one also writes the
-                  copy, sets up tracking, adds schema markup so AI answer engines can quote you, and
-                  hands over code you own.
-                </p>
-                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink/70">
-                  Where buyers go wrong is treating that as one commodity. In this metro a Tier 2
-                  supplier in Warren and a taproom in Ferndale search the same phrase and need
-                  almost nothing in common. Scope the site around whoever will actually read it.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
-
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline={'What Detroit businesses get from a FactoryJet build.'}
-        />
-
-        <CityContextSection
-          eyebrow={'DETROIT MARKET'}
-          headline={'Detroit Buyers Read Before They Call'}
-          leadParagraphs={[
-            'Detroit is not a generic mid-size market and a website here should not read like one. The region holds more than 99,000 engineers and ranks second in the country for concentration of engineering talent, so a large share of your visitors read specifications before they read slogans. Around 250,000 manufacturing workers sit in the same region, and the automotive cluster still turns out roughly 1.7 million vehicles a year across 17 models, 7 of them electric.',
-            "The other half of Detroit is much newer. Ford's Michigan Central campus covers 30 acres of Corktown and Southwest Detroit and now houses hundreds of companies. Wayne State University and the College for Creative Studies keep talent flowing through Midtown. Beyond that, the metro is really a chain of separate main streets: Royal Oak, Ferndale, Birmingham, Troy, Southfield, Dearborn and Ann Arbor each have their own economy. A site built for one of those audiences will not automatically work for the others.",
-          ]}
-          stats={[
-            {
-              value: '99,000+',
-              label: 'Engineers in the Detroit region in 2024, the #2 US metro for engineering talent',
-              sourceUrl: 'https://www.detroitregionalpartnership.com/mobility-automotive/',
-              sourceLabel: 'Detroit Regional Partnership',
-            },
-            {
-              value: '250,000',
-              label: 'Manufacturing workers across the Detroit region',
-              sourceUrl:
-                'https://www.detroitregionalpartnership.com/seven-industries-powering-the-detroit-region/',
-              sourceLabel: 'Detroit Regional Partnership',
-            },
-            {
-              value: '30 acres',
-              label: "Michigan Central's campus in Corktown and Southwest Detroit",
-              sourceUrl: 'https://michigancentral.com/about/',
-              sourceLabel: 'Michigan Central',
-            },
-          ]}
-        />
-
-        <ServiceExplanation
-          eyebrow={'WEB DESIGN · DETROIT'}
-          headline={'What Web Design Actually Buys a Detroit Business'}
-          lead={
-            'Most agencies sell you a look. What a business here needs is an asset: a site that loads on a phone in a plant parking lot, explains the offer in plain language, and gets picked up by Google and by the assistants your buyers now ask first.'
-          }
-          body={
-            <>
-              <p>
-                For mobility and manufacturing suppliers the site is a qualification tool. Your reader
-                is an engineer with a shortlist and a deadline, and they want capabilities, materials,
-                tolerances, certifications and an RFQ form (request for quote) that reaches a human.
-                We build supplier sites so a technical reader answers their own questions in two
-                clicks, because that reader will not send a vague enquiry to find out.
-              </p>
-              <p>
-                For clinics, law firms and trades across Royal Oak, Troy and Dearborn the job is local
-                search: one page per service instead of one page listing everything, signals matching
-                your Google Business Profile exactly, and a booking path that survives a one-handed
-                tap. The local pack, the three-result map block, is decided on those details.
-              </p>
-              <p>
-                Every build ships the same technical floor: a Next.js front end, server-rendered HTML
-                crawlers can read without running JavaScript, JSON-LD schema for Service and FAQ
-                content, GA4 on day one, and a redirect map so a relaunch does not cost you rankings
-                you already have. Google&apos;s published guidance is that Largest Contentful Paint
-                should land under 2.5 seconds for 75% of visits. That is the number we build against,
-                and it is testable.{' '}
-                <a
-                  className="font-medium text-[#B23E13] underline underline-offset-4"
-                  href="https://web.dev/articles/lcp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google&apos;s LCP guidance
-                </a>
-                .
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/detroit-web-design/detroit-process-review.webp"
-              alt="Two colleagues at a standing desk reviewing a website homepage layout on a laptop with printed wireframes on the wall behind them"
-              width={1200}
-              height={800}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
-
-        {/* Listicle: the most useful thing we can hand someone at shortlist stage. */}
-        <section className="bg-fj-cream py-16 md:py-24">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-10 md:grid-cols-12">
-              <div className="md:col-span-5">
-                <p className="font-fj-mono text-xs uppercase tracking-widest text-[#B23E13]">
-                  Before you sign
-                </p>
-                <h2 className="mt-3 font-fj-display text-3xl leading-[1.15] text-fj-ink md:text-4xl">
-                  10 Questions to Ask a Detroit Web Design Company
-                </h2>
-                <p className="mt-5 font-fj-body text-base leading-relaxed text-fj-ink/75">
-                  Ask every shop on your shortlist the same ten questions, including us. The answers
-                  separate a build team from a sales desk faster than any portfolio. Nine of the ten
-                  are about what happens after launch, which is where projects go wrong.
-                </p>
-                <img
-                  src="/images/us/detroit-web-design/detroit-manufacturer-site.webp"
-                  alt="An engineer reviewing a parts catalogue page on a tablet in a bright office overlooking a factory floor"
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  className="mt-8 hidden w-full rounded-2xl object-cover md:block"
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/detroit-web-design/hero-detroit-studio.webp"
+                  alt="Detroit Michigan web design and custom Next.js web application development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-              <ol className="md:col-span-7">
-                {HIRING_CHECKLIST.map((item, i) => (
-                  <li
-                    key={item.title}
-                    className="flex gap-5 border-t border-fj-ink/10 py-6 first:border-t-0 first:pt-0"
-                  >
-                    <span className="mt-1 font-fj-mono text-sm text-[#B23E13]">
-                      {String(i + 1).padStart(2, '0')}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
                     </span>
-                    <div>
-                      <h3 className="font-fj-display text-lg leading-snug text-fj-ink">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 font-fj-body text-[0.95rem] leading-relaxed text-fj-ink/75">
-                        {item.body}
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/detroit-web-design/detroit-process-review.webp"
+                  alt="FactoryJet senior UI UX designers collaborating on custom Detroit web design sprint"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Web Design Engineered for Michigan&apos;s Market Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Auburn Hills Tier-1 automotive suppliers to Downtown Detroit fintech platforms and Troy corporate headquarters, we build high-converting web applications that elevate your brand equity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
                       </p>
                     </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
+                  ))}
+                </div>
 
-        {/* Mid-page CTA. Most readers never reach the footer. */}
-        <section className="bg-fj-cream pb-16 md:pb-24">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="flex flex-col gap-6 rounded-2xl border border-[#F05A28]/25 bg-[#F05A28]/[0.07] p-8 md:flex-row md:items-center md:justify-between md:p-10">
-              <div className="md:max-w-2xl">
-                <h2 className="font-fj-display text-2xl leading-tight text-fj-ink md:text-3xl">
-                  Want those ten answers about your own project?
-                </h2>
-                <p className="mt-3 font-fj-body text-base leading-relaxed text-fj-ink/75">
-                  Send your current site, or just your business name. You get a page list, a timeline
-                  and a fixed scope back, with no obligation and no discovery fee.
-                </p>
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Design Consultation" region="us" btnVariant="primary-dark" />
+                </div>
               </div>
-              <Link
-                href="/contact/"
-                className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#F05A28] px-7 py-4 text-lg font-semibold text-white transition-transform hover:scale-[1.02]"
-              >
-                Get a scoped quote
-              </Link>
             </div>
           </div>
         </section>
 
-        <ServiceJourneyRow
-          eyebrow={'OUR PROCESS'}
-          headline={'How We Build a Detroit Website'}
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery',
-              description:
-                'One call to map who buys from you, which part of the metro they search from, and what your three closest competitors rank for. You leave with a page list and a delivery date.',
-            },
-            {
-              number: '02',
-              title: 'Design',
-              description:
-                'Wireframes first, then a full mobile-first design system in Figma. Structured feedback rounds with one named decision maker. Nothing moves to build until you sign off.',
-            },
-            {
-              number: '03',
-              title: 'Build',
-              description:
-                'Next.js front end, headless CMS if you need one, forms, and integrations such as booking, inventory or a CRM. Performance budgets are enforced from the first commit.',
-            },
-            {
-              number: '04',
-              title: 'Content and SEO',
-              description:
-                'Copy, compressed WebP imagery, meta titles, JSON-LD schema, internal links and a redirect map for every old URL. We verify the site renders for GPTBot, ClaudeBot and PerplexityBot before launch.',
-            },
-            {
-              number: '05',
-              title: 'Launch and handover',
-              description:
-                'Deploy to Cloudflare, wire GA4 and Search Console, submit the sitemap, then a recorded handover so your team can edit without us. A 30-day support window follows.',
-            },
-          ]}
-        />
+        {/* ── 04. DETROIT DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="det-web-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Metro Detroit Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Detroit&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Auburn Hills automotive suppliers to Downtown fintech platforms and Troy corporate headquarters:
+              </p>
+            </div>
 
-        <IndustriesGrid
-          // variant="cards" added 2026-08-12. The default "showcase" variant renders four
-          // hardcoded, unsourced performance claims (+38% conversion lift, +52% leads,
-          // +41% bookings, +29% traffic) that read as real client results. The other three
-          // new web-design pages in this wave all use "cards" for the same reason.
-          variant="cards"
-          eyebrow={'DETROIT × WEB DESIGN'}
-          headline={'Web Design for the Industries That Run This Region'}
-          lead={
-            'The Detroit region carries 19 Fortune 1000 companies, a supplier base reaching into every suburb, and a startup layer that barely existed ten years ago. Each buys a different website.'
-          }
-          sectors={[
-            {
-              name: 'Mobility and automotive suppliers',
-              description:
-                'The region produces roughly 1.7 million vehicles a year across 17 models, 7 of them electric, and the supplier network runs from Warren to Auburn Hills. These sites are read by engineers, so they need capability pages, tolerances, certifications, spec sheet downloads and an RFQ form that routes to a named person.',
-              example: 'Tier 1 and 2 suppliers, tooling shops, EV component makers.',
-            },
-            {
-              name: 'Advanced manufacturing and tool and die',
-              description:
-                'Around 250,000 manufacturing workers sit in this region, and many of the shops serving them still run a site that will not open properly on a phone. We build catalogue sites that load on a shop floor connection and make a quote request take one screen, not five.',
-              example: 'Machine shops and contract manufacturers in Sterling Heights and Livonia.',
-            },
-            {
-              name: 'Healthcare and professional services',
-              description:
-                'Patients and clients choose from a phone, usually from a map result. That makes page speed, correct hours, one page per service and a one-handed booking path matter more than a hero video. Firms selling credibility also need real people with real credentials on the page.',
-              example: 'Clinics, law and accounting firms in Royal Oak, Troy and Southfield.',
-            },
-            {
-              name: 'Restaurants, retail and startups',
-              description:
-                "Corktown, Eastern Market and the Woodward corridor run on mobile discovery, where a menu that opens instantly beats anything built for desktop. Michigan Central's 30-acre campus now houses hundreds of companies, and the teams there need a site that survives an investor, a recruit and a customer in the same week.",
-              example: 'Restaurants, breweries, independent retail and mobility startups.',
-            },
-          ]}
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
 
-        <ComparisonTable
-          eyebrow={'THE SHORTLIST'}
-          headline={'How FactoryJet Compares to Other Detroit Web Design Companies'}
-          lead={
-            'The honest version: we are one option on a list that already has good names on it, and for some projects another name here is the better call. Everyone below ranks on page one for Detroit web design searches. We say what each is genuinely strong at, and when to pick them over us.'
-          }
-          columns={[
-            { label: 'What they are strong at' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Which one to pick' },
-          ]}
-          rows={[
-            {
-              feature: 'Detroit Website Design (Troy, MI)',
-              values: [
-                'The long-standing local option. More than 20 years of custom WordPress design, ecommerce and SEO, all staff in their Troy office, no outsourcing.',
-                'Statically built Next.js with schema, GA4 and a redirect map, on a fixed scope.',
-                'Them for WordPress from a team you can drive to. Us for a fast static front end and no plugin upkeep.',
-              ],
-            },
-            {
-              feature: 'ThunderTech (Cleveland HQ, Detroit office)',
-              values: [
-                'A full-service marketing agency for midsize brands: web development alongside brand strategy, UX, video, advertising and communications.',
-                'A focused build team. The website is the deliverable, not one line in a marketing programme.',
-                'Them if you need an outsourced marketing department. Us if the website itself is the job.',
-              ],
-            },
-            {
-              feature: 'ANCHOR DBC (Royal Oak, MI)',
-              values: [
-                'A web and brand studio founded in 2017 by Johnny and Tessa Jarbo, with strong identity work and a real specialism in food, beverage and hospitality.',
-                'Search and conversion led, with structured data and performance budgets from the first commit.',
-                'Them if brand identity leads and you are opening a restaurant. Us if the site has to rank and convert first.',
-              ],
-            },
-            {
-              feature: 'Thrive Internet Marketing (national, Detroit page)',
-              values: [
-                'A large national agency running since 2005 across roughly 25 cities, covering SEO, PPC, social, CRO, Amazon marketing and web design.',
-                'A small senior team, one scope, one contact, and code you keep in your own repository.',
-                'Them for many marketing channels at scale. Us for a tight build and full ownership.',
-              ],
-            },
-            {
-              feature: 'Clutch and DesignRush directories',
-              values: [
-                'Useful shortlisting tools with verified client reviews and filters by service, a fast way to surface names you have not heard of.',
-                'Not a directory. A build team you hire directly, with a named contact from the first call.',
-                'Use them to assemble a shortlist, then put every name on it, ours included, through the ten questions above.',
-              ],
-            },
-          ]}
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
 
-        <PricingTiers
-          eyebrow={'SCOPE, NOT GUESSWORK'}
-          headline={'Three Scopes for Detroit Businesses'}
-          lead={
-            'Every project is quoted as a fixed scope after one call, so you know the page list, the deliverables and the launch date before anything starts. Projects that sit between two tiers get scoped directly.'
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed scope',
-              name: 'Starter',
-              description:
-                'A five-page site that loads fast on a phone and ranks for your name and core service. Best for trades, single-location clinics and new businesses.',
-              features: [
-                '5 pages, mobile-first',
-                'Schema markup and local SEO setup',
-                'Contact form with email routing',
-                '2 structured revision rounds',
-                'Ships in 7 days, 30-day support',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-            {
-              priceRange: 'Fixed scope',
-              name: 'Growth',
-              description:
-                'A 10–15 page site with a blog CMS, a page per service, and lead capture wired to your inbox or CRM. Best for firms and suppliers that need qualified enquiries.',
-              features: [
-                '10–15 pages with blog CMS',
-                'Service and location page architecture',
-                'GA4, Search Console and lead tracking',
-                '3 structured revision rounds',
-                '30-day support plus recorded training',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed scope',
-              name: 'Scale',
-              description:
-                'A custom Next.js build with ecommerce, catalogue or integration work. Best for suppliers with a real parts catalogue and teams replacing an aging platform.',
-              features: [
-                'Custom Next.js architecture',
-                'Ecommerce, catalogue or portal features',
-                'CRM, ERP and third-party API integration',
-                'Full redirect and migration plan',
-                'Priority support and quarterly reviews',
-              ],
-              cta: { label: 'Get a quote', href: '/contact' },
-            },
-          ] as const}
-        />
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline={'Rated 4.9/5 on Google across 500+ projects.'}
-        />
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Michigan Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Metro Detroit demands tailored user flows, design tokens, and performance metrics:
+              </p>
+            </div>
 
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Detroit Leaders Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile WordPress page builders with high-performance Next.js engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-design-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// DETROIT FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
+            title="Next.js 15 App Router to Global Cloudflare Edge"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
+            city="Detroit"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Web Design Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay deliveries and high-conversion web launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Detroit Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline={'Detroit Web Design Questions, Answered Straight'}
-          lead="The questions people actually type before hiring someone, answered the way we would on a call, including the ones where the honest answer does not sell a bigger project."
+          eyebrow="DETROIT WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Detroit MI"
+          lead="Direct, plain English answers to what Detroit business owners and marketing leaders ask about website design and engineering:"
           categories={FAQ_CATEGORIES}
-          items={DETROIT_FAQ_ITEMS}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* Cross-link: related FactoryJet services */}
-        <section className="bg-fj-cream py-10">
-          <div className="mx-auto max-w-5xl px-6 text-center">
-            <p className="mb-4 font-fj-mono text-sm uppercase tracking-widest text-[#B23E13]">
-              Also useful in Detroit
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/services/web-design/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                Web Design Services →
-              </Link>
-              <Link
-                href="/services/ai-seo/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                AI SEO →
-              </Link>
-              <Link
-                href="/services/ecommerce-development/"
-                className="rounded-full border border-[#B23E13] px-5 py-2 text-sm font-medium text-[#B23E13] transition-colors hover:bg-[#B23E13] hover:text-white"
-              >
-                Ecommerce Development →
-              </Link>
-            </div>
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="detroit" />
           </div>
         </section>
 
-        <WebDesignCityLinksUS currentCity="detroit" />
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
 
-        <FinalCTA
-          variant="dark"
-          eyebrow={'READY TO START'}
-          headline={'Ready to Hire a Web Design Company in Detroit?'}
-          sub={
-            'Tell us what you sell and who you sell it to. You get a page list, a delivery date and a fixed scope back after one call, with no discovery fee. Every file is yours at handover.'
-          }
-          primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
-          extraCta={<WhatsAppCTA city="Detroit" variant="dark" />}
-        />
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Detroit Web Presence?
+            </h2>
 
-        <SchemaScript />
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${PAGE_URL}#webpage`,
-    name: PAGE_TITLE,
-    description: PAGE_DESCRIPTION,
-    url: `${PAGE_URL}/`,
-    dateModified: DATE_MODIFIED,
-    inLanguage: 'en-US',
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '[data-speakable]', '[data-faq-answer]'],
-    },
-  };
-
-  const itemListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    '@id': `${PAGE_URL}#checklist`,
-    name: '10 questions to ask a Detroit web design company before you sign',
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    numberOfItems: HIRING_CHECKLIST.length,
-    itemListElement: HIRING_CHECKLIST.map((item, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: item.title,
-      description: item.body,
-    })),
-  };
-
-  const graphSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ProfessionalService'],
-        '@id': `${PAGE_URL}#business`,
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com',
-        telephone: '+919699977699',
-        founder: { '@type': 'Person', name: 'Bhavesh Barot' },
-        areaServed: [
-          { '@type': 'City', name: 'Detroit' },
-          { '@type': 'City', name: 'Royal Oak' },
-          { '@type': 'City', name: 'Troy' },
-          { '@type': 'City', name: 'Dearborn' },
-          { '@type': 'City', name: 'Southfield' },
-          { '@type': 'City', name: 'Ann Arbor' },
-        ],
-      },
-      {
-        '@type': 'Service',
-        '@id': `${PAGE_URL}#service`,
-        name: 'Web Design Detroit',
-        serviceType: 'Web design and development',
-        provider: {
-          '@type': 'Organization',
-          '@id': 'https://factoryjet.com/#organization',
-          name: 'FactoryJet Technologies',
-        },
-        areaServed: { '@type': 'City', name: 'Detroit', addressRegion: 'MI' },
-        description: PAGE_DESCRIPTION,
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${PAGE_URL}#faq`,
-        mainEntity: DETROIT_FAQ_ITEMS.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${PAGE_URL}#breadcrumbs`,
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 2, name: 'Detroit', item: 'https://factoryjet.com/detroit' },
-          { '@type': 'ListItem', position: 3, name: 'Web Design', item: PAGE_URL },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
-      />
+      <SiteFooter locale="us" />
     </>
   );
 }

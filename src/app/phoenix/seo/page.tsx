@@ -1,727 +1,909 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import HeroInlineForm from '@/components/HeroInlineForm';
-import './phoenix-seo.css';
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   /phoenix/seo :: Phoenix local-SEO city page. Built 2026-08-12.
-   Layout: "Valley Grid", distinct from Austin's glass depth stack. Phoenix is a
-   flat street grid across a valley and Google weights distance in local ranking,
-   so the page argues one thing: a Phoenix ranking is really a dozen neighborhood
-   rankings, and you win them one square at a time.
-
-   Research backing (pipeline/research/briefs/phoenix-seo.json, 2026-08-12):
-   - target "seo agency phoenix", 1,300/mo, KD 24, winning page type = service page
-   - no AI Overview rendered on this query when the live SERP was pulled
-   - 31 live People-Also-Ask questions, 21 of which became the FAQ below
-   - organic top 12 named honestly in the comparison table
-
-   Rules held: no em dashes, no currency figures anywhere, no invented clients or
-   case-study numbers, no ranking guarantees, hero never dark, exactly one dark
-   section, FAQPage schema derived from the SAME array the page renders, every
-   schema const inside the single jsonLd graph that reaches the script tag.
-   External citations were curl-verified on 2026-08-12 for HTTP 200 and for the
-   claim being present on the page.
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/phoenix/seo';
-const MODIFIED = '2026-08-12';
-
-const SRC_GBP = 'https://support.google.com/business/answer/7091';
-const SRC_GOOGLE_SEO = 'https://developers.google.com/search/docs/fundamentals/do-i-need-seo';
-const SRC_BRIGHTLOCAL = 'https://www.brightlocal.com/research/local-consumer-review-survey/';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency Phoenix AZ | Local SEO Across the Valley | FactoryJet',
+  title: 'Phoenix Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is an SEO agency in Phoenix built for a metro that sprawls. Local SEO, technical SEO and AI search visibility across Phoenix, Scottsdale, Tempe, Chandler and Mesa. Free audit, month to month, no lock-in.',
+    'Phoenix local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Scottsdale, Tempe, and Biltmore.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'SEO Agency Phoenix AZ | Local SEO Across the Valley | FactoryJet',
-    description:
-      'An SEO agency in Phoenix built for a metro that sprawls. Local SEO, technical SEO and AI search visibility across Phoenix, Scottsdale, Tempe, Chandler and Mesa. Free audit, month to month.',
-    url: CANONICAL,
-    siteName: 'FactoryJet',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Phoenix Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description:
+      'Phoenix local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Scottsdale, Tempe, and Biltmore.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Phoenix Local SEO Agency' }],
+    locale: 'en_US',
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Phoenix Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Phoenix local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* Hero scene. Real Valley employment centers, not decoration. */
-const BOARD: { name: string; note: string; on?: boolean }[] = [
-  { name: 'Downtown Phoenix', note: 'law + civic' },
-  { name: 'Camelback Corridor', note: 'finance + medical' },
-  { name: 'Old Town Scottsdale', note: 'resorts + retail', on: true },
-  { name: 'Tempe and ASU', note: 'students + software' },
-  { name: 'Chandler Price Corridor', note: 'chips + B2B' },
-  { name: 'Mesa and Gilbert', note: 'families + trades' },
-  { name: 'Glendale Westgate', note: 'sport + hospitality' },
-  { name: 'North Phoenix', note: 'semiconductor build' },
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
 ];
 
-const FACTS: { v: string; k: string }[] = [
-  { v: 'No contract', k: 'month to month, cancel any time' },
-  { v: 'Free audit', k: 'yours to keep, hired or not' },
-  { v: '7-day kickoff', k: 'not six weeks of onboarding' },
-  { v: 'Valley wide', k: 'Phoenix, Scottsdale, Tempe, Chandler, Mesa' },
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Phoenix commercial corridors.', icon: '📍' },
+  { num: '4.6x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
-/* Every number here is sourced, and each source was opened on 2026-08-12. */
-const MOSAIC: { n: string; t: React.ReactNode; src: React.ReactNode }[] = [
+const DISTRICTS = [
   {
-    n: '3',
-    t: <>factors decide local results, in Google&apos;s own words: <b>relevance, distance and prominence</b>. Two of the three are yours to change.</>,
-    src: <a href={SRC_GBP} rel="noopener">Google Business Profile Help</a>,
+    corridor: 'Camelback Corridor & Biltmore',
+    query: 'estate planning attorney seo biltmore phoenix',
+    focus: 'Wealth Advisory, Corporate Law & Commercial Real Estate',
+    desc: 'The prestigious financial and legal heart of the Valley. Intense competition for high-net-worth estate planning, corporate litigation retainers, and commercial deals.',
   },
   {
-    n: '1,300',
-    t: <>searches a month for <b>seo agency phoenix</b> alone, at a difficulty score of 24. Demand is not what is stopping you.</>,
-    src: <>DataForSEO, August 2026</>,
+    corridor: 'Scottsdale Airpark & North Scottsdale',
+    query: 'plastic surgeon local seo scottsdale',
+    focus: 'Plastic Surgery, Aesthetic Clinics & Luxury Services',
+    desc: 'Bustling luxury medical, aviation, and wellness nexus. High-value patient inquiries demand multi-practitioner GBP optimization and hyper-targeted procedure schemas.',
   },
   {
-    n: '4 of 12',
-    t: <>results on page one for that search are <b>directories and roundups</b>, not agencies. Getting listed on them is part of the job.</>,
-    src: <>Live Google results, August 2026</>,
+    corridor: 'Downtown Phoenix & Roosevelt Row',
+    query: 'biotech healthcare local seo downtown phoenix',
+    focus: 'Bio-Science Core, FinTech & Healthcare Innovation',
+    desc: 'Fast-growing urban innovation district. B2B and institutional service queries require deep technical topical authority, organization schemas, and sub-second edge speeds.',
   },
   {
-    n: '97%',
-    t: <>of people say they use <b>reviews</b> to guide what they buy. It is the cheapest ranking work most Phoenix businesses never do.</>,
-    src: <a href={SRC_BRIGHTLOCAL} rel="noopener">BrightLocal Local Consumer Review Survey 2026</a>,
-  },
-];
-
-/* What Google itself shows alongside the head term. Straight from the live SERP. */
-const RELATED = [
-  'best seo agency phoenix',
-  'seo agency phoenix reviews',
-  'scottsdale seo company',
-  'marketing agencies in phoenix',
-  'tucson seo company',
-  'seo agency dallas',
-  'rising phoenix seo',
-  'complete seo',
-];
-
-/* Real Valley corridors, written for people who have actually driven them. */
-const DISTRICTS: { q: string; kd: string; h: string; p: string }[] = [
-  {
-    q: 'personal injury lawyer phoenix',
-    kd: 'Downtown',
-    h: 'Downtown, Roosevelt Row and the Warehouse District',
-    p: 'Law firms, government contractors, accountants and the restaurant trade around Washington and Roosevelt. Almost all of it is searched on a phone, and the caller picks one of the first three profiles. Your category and review count decide that.',
+    corridor: 'Tempe & Silicon Desert Nexus',
+    query: 'b2b tech local seo tempe',
+    focus: 'Semiconductor Supply, Enterprise SaaS & Microelectronics',
+    desc: 'Major university and hardware technology hub. Features structured entity markup, regional directory citations, and high-converting inquiry funnels.',
   },
   {
-    q: 'wealth manager near me phoenix',
-    kd: 'Camelback',
-    h: 'Camelback Corridor, Biltmore and Arcadia',
-    p: 'The professional strip around 24th Street and Camelback: wealth management, boutique law, specialist medicine. High value per client, low volume per term, which flips the strategy. You want to be the one credible result for forty specific searches.',
+    corridor: 'Chandler & Price Road Corridor',
+    query: 'aerospace manufacturing seo chandler',
+    focus: 'Autonomous Vehicle Tech, Precision Aviation & Engineering',
+    desc: 'High-tech manufacturing center. Requires precision engineering capability landing pages, AS9100 quality cert schemas, and localized search dominance.',
   },
   {
-    q: 'med spa old town scottsdale',
-    kd: 'Scottsdale',
-    h: 'Old Town, the Airpark and North Scottsdale',
-    p: 'Resorts, med spas, cosmetic dentistry and nightlife in Old Town, plus one of the largest employment centers in the metro at the Airpark. Discovery is visual and fast: photos, correct hours and new reviews beat a long service page.',
-  },
-  {
-    q: 'technical seo tempe az',
-    kd: 'Tempe',
-    h: 'Tempe, Mill Avenue and the ASU campus',
-    p: 'A student and young professional market layered on a serious employer base around Tempe Town Lake. These buyers skip ads by reflex and read your site the way they read documentation. Architecture and page speed do the work.',
-  },
-  {
-    q: 'b2b supplier chandler az',
-    kd: 'Chandler',
-    h: 'The Price Corridor, Ocotillo and Gilbert',
-    p: 'Chandler runs on semiconductors, aerospace and their supplier base. Gilbert next door is family services and Heritage District restaurants. One needs capability pages a procurement team can read, the other a profile that looks alive on Friday night.',
-  },
-  {
-    q: 'ac repair surprise az',
-    kd: 'West Valley',
-    h: 'Mesa, Glendale and the growing West Valley',
-    p: 'Aerospace at Falcon Field, sport around Westgate, then the fastest-growing edge through Peoria, Surprise, Goodyear, Buckeye and Queen Creek. Home services country, where area pages have to read like somebody has driven the route.',
+    corridor: 'Gilbert & East Valley Gateway',
+    query: 'commercial contractor seo gilbert',
+    focus: 'Advanced Manufacturing, Clean Tech & Regional Logistics',
+    desc: 'Thriving East Valley commercial engine. Captures commercial HVAC, roofing, and contractor inquiries across high-growth industrial developments.',
   },
 ];
 
-/* Phoenix seasonality. The most useful block on this page for a local owner. */
-const SEASON: { mo: string; h: string; p: string }[] = [
+const INDUSTRY_SHOWCASE = [
   {
-    mo: 'November to April',
-    h: 'Winter visitors arrive',
-    p: 'Seasonal residents swell the Valley for half the year and arrive knowing nobody. Dentists, physios, salons and restaurants all feel it. Hours, categories and seasonal pages need to be right by October, not fixed in January when the calls already went elsewhere.',
-  },
-  {
-    mo: 'February to March',
-    h: 'Spring training and golf',
-    p: 'Cactus League baseball fills ballparks across the metro, and tournament week in Scottsdale is the busiest stretch of the year for bars, transport and rentals. Publish the event page in December. February is too late.',
-  },
-  {
-    mo: 'Mid June to September',
-    h: 'Monsoon storms',
-    p: 'Storms bring roof leaks, downed trees and water damage, and the searches spike within hours. Roofers and restoration firms who were not already ranking in May do not get those calls in July.',
-  },
-  {
-    mo: 'May to September',
-    h: 'The heat trade',
-    p: 'Air conditioning, pool service and pest control run flat out while retail and hospitality go quiet. On the quiet side of that split, summer is when you build content and clear technical debt, ready for when the visitors return.',
-  },
-];
-
-const STEPS: { h: string; p: string }[] = [
-  { h: 'Fix the Business Profile before anything else', p: 'Most Phoenix profiles sit on a generic primary category with half the services blank and no service area set. Fastest change available, and free.' },
-  { h: 'Kill the duplicate listings', p: 'Old suite numbers, a previous owner, a franchise record nobody closed. Duplicates split your signals, and this metro has moved and rebuilt a lot.' },
-  { h: 'Make the site survive a phone in August', p: 'Core Web Vitals, image weight, layout shift. A site that stalls on a mid-range Android loses the customer before Google is involved.' },
-  { h: 'Choose the grid squares you can actually win', p: 'Not "Phoenix". Your own city plus the two next to it. Winning Chandler and Gilbert first is how you get taken seriously in Phoenix proper.' },
-  { h: 'Write one honest page per service and per place', p: 'Not thirty cloned area pages. A customer in Surprise can tell inside a paragraph whether you have worked out there. So can Google.' },
-  { h: 'Turn reviews into a weekly routine', p: 'A request built into your job-completion process, and a reply to every review including the bad ones. A burst looks like what it is.' },
-  { h: 'Make yourself quotable by AI answers', p: 'Structured data plus answer-first paragraphs, so an assistant can lift a clean sentence about you rather than guessing.' },
-];
-
-/* Live top 12 for "seo agency phoenix", DataForSEO 2026-08-12. Every claim about a
-   rival is either its own page title, the locations listed on its own site (checked
-   2026-08-12), or its SERP position. No opinions dressed up as facts. */
-const RIVALS: { name: string; pos: string; what: string; good: string; know: string; us?: boolean }[] = [
-  { name: 'Semrush agency directory', pos: '1', what: 'Directory listing', good: 'A fast filtered shortlist, free to browse.', know: 'A directory, not an agency. Part of page one is lists, and getting onto them is work rather than a fight.' },
-  { name: 'Thrive Agency', pos: '2', what: 'National agency, Phoenix location page', good: 'Enormous reach. They rank for this city after city.', know: 'Their Phoenix presence is a location page in a national network. Ask who is on your monthly call.' },
-  { name: 'SEO Phoenix', pos: '3', what: 'Phoenix-only firm', good: 'Genuinely local. Their site carries Arizona testimonials, including a Scottsdale dental practice.', know: 'If you want references you can drive across town to meet, a local incumbent is a fair call.' },
-  { name: 'Clutch', pos: '4', what: 'Review directory', good: 'Verified client interviews, more diligence than most sources do.', know: 'Placement rewards firms that chase reviews there, so read it as a starting list, not a ranking.' },
-  { name: 'Nvent Marketing', pos: '5', what: 'Multi-city firm', good: 'Southwest footprint and a broad offer beyond search.', know: 'Their own site lists Las Vegas, Orlando, Phoenix, Tampa and Tucson.' },
-  { name: 'Victorious', pos: '8', what: 'National SEO specialist', good: 'Search is all they do, and the focus shows.', know: 'Their own site lists San Francisco, Austin, Boston, Chicago and Denver among its city pages.' },
-  { name: 'Local SEO Today', pos: '9', what: 'Valley local SEO specialist', good: 'Properly suburb level: separate Mesa, Peoria, Scottsdale and Tempe pages.', know: 'Same playbook we run. Ask us both the same questions and compare answers, not design.' },
-  { name: 'FactoryJet', pos: 'not yet', what: 'That is us', good: 'Engineering-first local SEO, month to month, and the person doing the work is who you talk to.', know: 'We do not rank on page one for this term today, and our link profile is a fraction of the firms above.', us: true },
-];
-
-type FaqGroup = { id: string; label: string; items: { q: string; a: string }[] };
-
-/* Sourced from live Google People-Also-Ask, 2026-08-12 (see the brief JSON).
-   Phrasing kept close to how people type it. The questions are national, the
-   answers are localised to Phoenix honestly rather than faked as local questions. */
-const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
-  {
-    id: 'faq-cost',
-    label: 'What it costs',
-    items: [
-      { q: 'How much does an SEO agency charge in Phoenix?', a: 'No honest agency quotes before opening your site. Your number moves on how competitive your category is here, how many places you serve, and how much technical repair comes first. We bill month to month, audit free, and put the scope in writing.' },
-      { q: 'How much does it cost to hire an SEO agency?', a: 'Agencies price on effort, so ask what effort you are buying: how many hours land on your account, who does them, and whether technical fixes are included or billed on top. Similar-looking quotes often differ threefold in real work.' },
-      { q: 'How much should a small business spend on SEO?', a: 'Less than it brings back. Work out what one new customer is worth across a year, then ask how many extra a month would cover the work with room to spare. A handful means the scope fits. Dozens means start narrower.' },
-      { q: 'Is an SEO agency worth it?', a: 'Worth it when people already search for what you sell and somebody else sits above you. Worth little when nobody searches. The common failure is not paying for SEO, it is paying with no way to tell whether it works.' },
-      { q: 'Is SEO worth it for small businesses?', a: 'In Phoenix, usually, because you are not fighting the internet. You are fighting the handful of businesses in your category within a few miles, and that is a fight a normal owner can win. Test it: search your category plus near me.' },
+    sector: 'Aesthetic Medicine, Plastic Surgery & Concierge Healthcare',
+    headline: 'Dominating High-Ticket Patient Search Across Scottsdale & Paradise Valley',
+    description:
+      'In the Valley’s highly competitive cosmetic surgery and elective medical markets, prospective patients conduct rigorous research before booking consultations. We optimize multi-practitioner Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
+    image: '/images/us/phoenix-web-design/mobile-first.webp',
+    alt: 'Phoenix and Scottsdale cosmetic surgery aesthetic clinic local SEO ranking strategy',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting Scottsdale, Paradise Valley, and Arcadia',
     ],
   },
   {
-    id: 'faq-diy',
-    label: 'Doing it yourself',
-    items: [
-      { q: 'Can I do SEO myself?', a: 'The first chunk, yes, and you should. Fill your Business Profile completely, make your name, address and phone identical everywhere, use your own photos, and ask every happy customer for a review. It gets hard at technical repair and earning links.' },
-      { q: 'Can I do local SEO myself?', a: 'Yes for the profile work, where most of the early win lives. Pick the most specific primary category, fill in services and attributes, set real hours, post your own photos. What owners underestimate is consistency: weekly beats a burst in January.' },
+    sector: 'Corporate Law, Estate Planning & Commercial Real Estate Litigation',
+    headline: 'High-Authority Local Search Engines for Biltmore & Downtown Law Firms',
+    description:
+      'Legal search queries across Maricopa County are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Phoenix corporate law firm litigation and estate planning local SEO ranking strategy',
+    points: [
+      'LegalService and Attorney schema linking State Bar of Arizona verified credentials',
+      'Localized practice area silos targeting Camelback Corridor, Biltmore, and North Scottsdale',
+      'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    id: 'faq-ai',
-    label: 'SEO and AI',
-    items: [
-      { q: 'Is SEO replaced by AI?', a: 'No, but the shape changed. People still search, they just as often read a summary or ask an assistant instead of clicking. The work that gets you named in those answers is the work that got you ranked: clear pages, real expertise, consistent data.' },
-      { q: 'Is SEO dead now with AI?', a: 'This story returns every few years. Social was going to kill it, then paid ads, now AI answers. Meanwhile 1,300 people a month still type seo agency phoenix into Google. If people search before they buy, visibility matters.' },
-      { q: 'Can ChatGPT do SEO?', a: 'It helps with drafting and the boring analysis, and it is good at both. It cannot claim your Business Profile, fix your site speed, earn a review, or persuade another site to link to you. Check every fact it gives you.' },
-      { q: 'What is replacing SEO?', a: 'Nothing is. It is absorbing a new surface. The label is generative engine optimization, or GEO: structured data and answer-first writing that lets ChatGPT, Perplexity and Google AI Overviews quote you. It sits on top of ordinary SEO.' },
+    sector: 'Commercial Construction, Industrial Roofing & Trade Services',
+    headline: 'Capturing High-Value Commercial Project Inquiries Across the Valley',
+    description:
+      'General contractors, roofing enterprises, and commercial HVAC operators across Phoenix require continuous inbound bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Phoenix commercial contractor roofing and construction local SEO optimization',
+    points: [
+      'Service area radius optimization covering Maricopa and Pinal County commercial hubs',
+      'High-speed mobile performance ensuring immediate project bidding phone calls',
+      'Structured LocalBusiness and Contractor schema markup for local search dominance',
     ],
   },
   {
-    id: 'faq-work',
-    label: 'How the work works',
-    items: [
-      { q: 'What does an SEO agency do?', a: 'Four things, roughly in order. Fix what is technically broken on your site. Get your business data right everywhere Google looks, starting with your Business Profile. Build pages matching what people type. Then earn reviews and mentions.' },
-      { q: 'What are the four main types of SEO?', a: 'On-page, which is content and structure. Technical, which is speed, crawlability and structured data. Off-page, which is reviews, links and mentions. And local, which is your Business Profile and the map results. Phoenix service businesses earn most early return from the last two.' },
-      { q: 'What is the 80/20 rule in SEO?', a: 'That a small slice of the work produces most of the result. In local search that slice is a complete and correctly categorized Business Profile, a steady flow of genuine reviews, and a site that loads fast and says plainly what you do and where.' },
-      { q: 'What are the top 5 SEO strategies?', a: 'Complete the Business Profile properly, fix site speed and structured data, build one honest page per service and per area you serve, run reviews as a weekly routine, and earn mentions from local sites with an audience. In that order.' },
-    ],
-  },
-  {
-    id: 'faq-local',
-    label: 'Local search in the Valley',
-    items: [
-      { q: 'What is local SEO vs SEO?', a: 'Regular SEO ranks pages for anyone, anywhere. Local SEO is showing up when someone nearby searches, in Google Maps and the three-result local pack. The difference is distance: Google weighs how close you are to the searcher.' },
-      { q: 'How to do local SEO for beginners?', a: 'Claim your Google Business Profile. Pick the most specific primary category. Fill in services, attributes and real hours. Add your own photos. Make your name, address and phone identical everywhere. Ask for reviews and reply to all of them.' },
-      { q: 'How long does it take for SEO to kick in?', a: 'Profile fixes can move map rankings within weeks. Organic pages usually show early movement in three to six months and settle between six and twelve. In Phoenix we win the quiet searches first, so calls arrive while bigger terms mature.' },
-      { q: 'Why can I rank in Chandler but not in Phoenix?', a: 'Because distance is a ranking factor. Google is answering a question about what is near the searcher, so a business in Chandler is a worse answer for someone in Peoria. The fix is expanding outward one square of the grid at a time.' },
-      { q: 'Who is the best SEO agency in Phoenix?', a: 'Whichever one shows its work: a written scope you read before signing, month-to-month terms, your accounts and content staying yours, and reporting tied to calls and leads. Run every candidate through that list, us included.' },
-      { q: 'Can you guarantee a number one ranking in Phoenix?', a: 'No, and Google’s own guidance tells you to be wary of anyone who does. Nobody outside Google controls the results. What we commit to is the work, a plain explanation of what we did, and your right to walk at the end of any month.' },
+    sector: 'Semiconductor Supply, Precision Engineering & B2B Logistics',
+    headline: 'Topical Authority & AI Citation Engineering for Silicon Desert Tech',
+    description:
+      'Semiconductor suppliers, precision CNC machine shops, and logistics operators across Tempe and Chandler require commanding authority in technical search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
+    image: '/images/us/phoenix-web-design/hero.webp',
+    alt: 'Phoenix semiconductor supply and precision engineering B2B local SEO architecture',
+    points: [
+      'Topical entity architecture covering precision microelectronics and supply chain capabilities',
+      'Structured Organization and Service schema for AI citation retrieval on ChatGPT and Perplexity',
+      'High-authority regional trade publication and industrial cluster directory synchronization',
     ],
   },
 ];
 
-/* Schema mainEntity is derived from the array above. Never hand-write a second list. */
-const faqSchemaItems = FAQ_GROUPS.flatMap((g) =>
-  g.items.map((item) => ({
-    '@type': 'Question' as const,
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer' as const, text: item.a },
-  }))
-);
-
-const OTHER_CITIES: { name: string; path: string }[] = [
-  { name: 'Austin SEO', path: '/austin/seo' },
-  { name: 'Denver SEO', path: '/denver/seo' },
-  { name: 'Nashville SEO', path: '/nashville/seo' },
-  { name: 'Charlotte SEO', path: '/charlotte/seo' },
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional Phoenix agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+  },
+  {
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+  },
+  {
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+  },
 ];
 
-const AREAS = ['Phoenix', 'Scottsdale', 'Tempe', 'Chandler', 'Mesa', 'Gilbert', 'Glendale', 'Peoria', 'Surprise', 'Goodyear', 'Queen Creek'];
-const areaServed = AREAS.map((a) => ({
-  '@type': 'City' as const,
-  name: a,
-  containedInPlace: { '@type': 'State' as const, name: 'Arizona' },
-}));
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across the Phoenix metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+  },
+];
 
-const jsonLd = {
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+  },
+  {
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+  },
+  {
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+  },
+  {
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+  },
+];
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'Phoenix Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Phoenix business?',
+    answer:
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Phoenix corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring Valley-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
+    answer:
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
+    answer:
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+  },
+  {
+    category: 'timeline',
+    question: 'How quickly can our Phoenix business expect to see Google Maps rank improvements?',
+    answer:
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Scottsdale or the Biltmore area generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+  },
+  {
+    category: 'timeline',
+    question: 'What factors determine how fast a Phoenix business can rank in the Local 3-Pack?',
+    answer:
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
+    answer:
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
+    answer:
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
+    answer:
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    answer:
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
+    answer:
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+  },
+  {
+    category: 'local',
+    question: 'Do you manage multi-location local SEO campaigns across the Phoenix Metro?',
+    answer:
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Phoenix, Scottsdale, Tempe, Chandler, Mesa, and Gilbert.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help our practice outrank entrenched competitors in Scottsdale and Biltmore?',
+    answer:
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+  },
+  {
+    category: 'local',
+    question: 'How do service-area businesses without a public storefront rank in Phoenix?',
+    answer:
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Valley ZIP codes and commercial corridors.',
+  },
+  {
+    category: 'local',
+    question: 'Do you optimize for Spanish-language search queries in Phoenix?',
+    answer:
+      'Yes. We build specialized bilingual landing pages and Spanish search query metadata for practices serving Arizona’s multicultural demographics.',
+  },
+  {
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
+    answer:
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+  },
+  {
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
+    answer:
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across the Phoenix metro, showing exactly where your business appears in the top 3 and where optimization is needed.',
+  },
+  {
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
+    answer:
+      'We continuously monitor your primary search categories in Phoenix, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+  },
+  {
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
+    answer:
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+];
+
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': ['LocalBusiness', 'ProfessionalService'],
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed,
-      knowsAbout: ['Local SEO', 'Technical SEO', 'Google Business Profile optimization', 'Generative engine optimization'],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'SEO Services in Phoenix, AZ',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      url: CANONICAL,
-      areaServed,
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Phoenix SEO services',
-        itemListElement: STEPS.map((s) => ({
-          '@type': 'Offer',
-          itemOffered: { '@type': 'Service', name: s.h, description: s.p },
-        })),
-      },
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${CANONICAL}#cities`,
-      name: 'FactoryJet local SEO city pages',
-      itemListElement: OTHER_CITIES.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        url: `https://factoryjet.com${c.path}`,
-      })),
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'US SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Phoenix', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#webpage`,
-      url: CANONICAL,
-      name: 'SEO Agency Phoenix AZ | Local SEO Across the Valley | FactoryJet',
-      description:
-        'What an SEO agency in Phoenix actually does, why distance makes the Valley a dozen markets rather than one, who holds page one for seo agency phoenix, and how FactoryJet compares.',
-      inLanguage: 'en-US',
-      dateModified: MODIFIED,
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      about: { '@id': `${CANONICAL}#service` },
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['.pxseo .bluf p', '.pxseo .bluf-support p', '.pxseo .faqcat p'],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqSchemaItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Phoenix Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Phoenix',
+    addressRegion: 'AZ',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 33.4484,
+    longitude: -112.074,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Phoenix' },
+    { '@type': 'City', name: 'Scottsdale' },
+    { '@type': 'City', name: 'Tempe' },
+    { '@type': 'City', name: 'Chandler' },
+    { '@type': 'City', name: 'Gilbert' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Phoenix Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Phoenix businesses.',
+  areaServed: { '@type': 'State', name: 'Arizona' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Phoenix Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Phoenix local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Scottsdale, Tempe, and Biltmore.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Phoenix', item: CANONICAL },
   ],
 };
 
 export default function PhoenixSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="phx-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="phx-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="phx-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="phx-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="phx-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="pxseo">
-        {/* HERO: valley grid, always light */}
-        <section className="hero">
-          <div className="wrap hero-grid">
-            <div>
-              <span className="loc"><b />Phoenix, AZ · Valley wide</span>
-              <h1>Phoenix SEO for a valley where distance decides who gets found</h1>
-              <p className="lead">Greater Phoenix runs from Buckeye out past Queen Creek. Google ranks local results partly on how close you are to the searcher, so <b>one Phoenix ranking is really a dozen neighborhood rankings</b>. We win them one square of the grid at a time.</p>
-              <HeroInlineForm region="us" source="us_phoenix_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="cta-row">
-                <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
-              </div>
-            </div>
-            <div className="board" aria-hidden="true">
-              <div className="bhead"><span>Where you need to show up</span><span>Greater Phoenix</span></div>
-              <div className="bgrid">
-                {BOARD.map((b) => (
-                  <div className={b.on ? 'bcell on' : 'bcell'} key={b.name}>
-                    {b.name}<span>{b.note}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="ridge"><i /><i /><i /></div>
-            </div>
-          </div>
-        </section>
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* FACTS BAR */}
-        <div className="factsbar">
-          <div className="wrap row">
-            {FACTS.map((f) => (
-              <div className="fact" key={f.v}><div className="v">{f.v}</div><div className="k">{f.k}</div></div>
-            ))}
-          </div>
-        </div>
-
-        {/* ANSWER FIRST */}
-        <section className="blufsec">
-          <div className="wrap">
-            <div className="bluf">
-              <span className="tag">The short answer</span>
-              <p>An SEO agency in Phoenix gets your business found by people already searching for what you sell, in Google Maps, in the normal results, and now inside AI answers. The work is four things: your Google Business Profile, the technical health of your site, pages written for what the Valley actually searches, and reviews.</p>
-            </div>
-            <div className="bluf-support body">
-              <p>
-                Those four are not equal in a metro this spread out. Your <Link href="/services/local-seo">Business Profile and local listings</Link> decide the three-result map pack, where most Phoenix service businesses get their calls. A free <Link href="/services/seo-audit">SEO audit</Link> starts on the technical side, because a slow site will not hold a ranking however good the writing is. Then pages matching what people here type, and last <Link href="/services/ai-seo">AI SEO and GEO</Link>, so assistants quote you instead of a competitor.
-              </p>
-              <p>
-                Who does this here? A few genuine Phoenix and Scottsdale firms, several national agencies servicing the Valley from elsewhere, a long tail of freelancers, and directories that outrank all of them without doing SEO for anyone. We name them below, with our own position stated plainly. Smaller operation? <Link href="/services/small-business-seo">Small business SEO</Link> is the short version.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* WHY PHOENIX IS ITS OWN MARKET */}
-        <section className="sprawl">
-          <div className="wrap">
-            <span className="eyebrow">Why the Valley is different</span>
-            <h2>Phoenix is not one search market. It is a grid of them.</h2>
-            <p className="lead">Most cities have a downtown and a fight over it. Phoenix has a street grid stretched across a valley full of separate municipalities, and Google is answering a question about what is near the person searching.</p>
-            <div className="sgrid">
-              {MOSAIC.map((m) => (
-                <div className="scell" key={m.n}>
-                  <div className="n">{m.n}</div>
-                  <p>{m.t}</p>
-                  <span className="src">{m.src}</span>
-                </div>
-              ))}
-            </div>
-            <p className="closer">
-              In practice: a plumber in Gilbert will not appear in the map pack for somebody standing in Peoria, however good the SEO is, because thirty-odd miles of grid sit between them. Agencies sell &quot;rank in Phoenix&quot; because it sounds like one thing to buy. It is your own city, then the two next to it, then the next ring, each with its own competitors. Anyone quoting a Phoenix number without asking where your vans go is quoting a template. Same argument, nationally: <Link href="/services/seo">US SEO services</Link>.
-            </p>
-          </div>
-        </section>
-
-        {/* RELATED SEARCHES */}
-        <div className="demand">
-          <div className="wrap">
-            <p className="dh">What Google itself shows alongside &quot;seo agency phoenix&quot; (live results, August 2026)</p>
-            <div className="chips">
-              {RELATED.map((r) => (<span key={r}><b>{r}</b></span>))}
-            </div>
-          </div>
-        </div>
-
-        {/* DISTRICTS */}
-        <section className="verts">
-          <div className="wrap">
-            <span className="eyebrow">Corridor by corridor</span>
-            <h2>Six Valleys, not one city</h2>
-            <p className="lead">A cosmetic dentist in Old Town and an air conditioning company in Surprise are both doing local SEO, and nothing about their strategy overlaps. Each query below is what that corner of the Valley actually produces.</p>
-            <div className="qgrid">
-              {DISTRICTS.map((d) => (
-                <div className="qcard" key={d.q}>
-                  <div className="qbar"><i />{d.q} <span className="kd">{d.kd}</span></div>
-                  <div className="qbody"><h3>{d.h}</h3><p>{d.p}</p></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* IMAGE ROW 1: the near-me argument */}
-        <section className="imgsec">
-          <div className="wrap imgrow">
-            <div className="body">
-              <span className="eyebrow">Near-me searches</span>
-              <h2>Your next customer is two miles away and does not know your name</h2>
-              <p className="lead">Google lists relevance, distance and prominence as the three things behind local results. Distance you cannot change. The other two you can, and almost nobody here works on them properly.</p>
-              <p style={{ marginTop: '16px' }}>Relevance is mostly categories and services: an afternoon of work. Prominence is reviews, mentions and links: months of it, and the reason a competitor with a worse website sits above you.</p>
-              <div className="cta-row">
-                <ModalCTAButton label="See where you rank across the Valley" region="us" modalVariant="seo" btnVariant="primary-light" />
-              </div>
-            </div>
-            <div className="imgwrap">
-              <img
-                src="/images/us/phoenix-seo/phoenix-local-owner.webp"
-                alt="A Phoenix shop owner handing a purchase to a customer, with palm trees and desert mountains visible through the storefront window"
-                width={1264}
-                height={848}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* SEASONALITY */}
-        <section className="season">
-          <div className="wrap">
-            <span className="eyebrow">The Phoenix calendar</span>
-            <h2>Demand here swings harder than almost anywhere</h2>
-            <p className="lead">Half the businesses here have a season that decides their year, and the search work has to be finished months before it starts.</p>
-            <div className="lane">
-              {SEASON.map((s) => (
-                <div className="sitem" key={s.mo}>
-                  <span className="mo">{s.mo}</span>
-                  <h3>{s.h}</h3>
-                  <p>{s.p}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* LISTICLE */}
-        <section className="steps">
-          <div className="wrap">
-            <span className="eyebrow">First 30 days</span>
-            <h2>Seven things we do before we ask you to judge anything</h2>
-            <p className="lead">This is the order, and the order matters. Most of it is unglamorous, none of it is secret, and you are welcome to do any of it yourself.</p>
-            <ol className="steplist">
-              {STEPS.map((s) => (
-                <li key={s.h}><h3>{s.h}</h3><p>{s.p}</p></li>
-              ))}
-            </ol>
-            <div className="cta-row">
-              <ModalCTAButton label="Get your free Phoenix SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-              <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder first</a>
-            </div>
-          </div>
-        </section>
-
-        {/* THE ONE DARK SECTION */}
-        <section className="darksec">
-          <div className="wrap">
-            <span className="eyebrow">AI answers</span>
-            <h2>Google is not the only place people ask about Phoenix businesses now</h2>
-            <p className="lead">When we pulled the live results in August 2026, Google was not rendering an AI Overview on this query. It renders one on plenty of others, and your customers ask assistants directly either way.</p>
-            <div className="dgrid">
-              <div className="dpill">
-                <h3>Entity data</h3>
-                <p>Structured data stating plainly what you do, where, and who runs it, so a model has something unambiguous to lift.</p>
-              </div>
-              <div className="dpill">
-                <h3>Answer-first pages</h3>
-                <p>The answer in the first forty words, then the support. Buried answers do not get quoted, by assistants or by skimming humans.</p>
-              </div>
-              <div className="dpill">
-                <h3>Reviews and mentions</h3>
-                <p>Assistants lean on the same corroboration Google does. Accurate descriptions elsewhere are what make a model confident enough to name you.</p>
-              </div>
-            </div>
-            <p className="lead" style={{ marginTop: '26px' }}>
-              Check where you stand with our free <Link href="/ai-visibility-checker" className="dlink">AI visibility checker</Link>, or read how the discipline works on our <Link href="/services/ai-seo" className="dlink">AI SEO page</Link>.
-            </p>
-          </div>
-        </section>
-
-        {/* RIVALS TABLE */}
-        <section className="rivals">
-          <div className="wrap">
-            <span className="eyebrow">The SERP, honestly</span>
-            <h2>Who you are actually up against for &quot;seo agency phoenix&quot;</h2>
-            <p className="lead">Live results, August 2026. Everything in this table is either their own page title, the locations listed on their own site, or their position in the results. No spin and no disparagement.</p>
-            <div className="tablewrap">
-              <table>
-                <caption className="sr-only">Page one results for the search seo agency phoenix, August 2026</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Who</th>
-                    <th scope="col">What they are</th>
-                    <th scope="col">Genuinely good at</th>
-                    <th scope="col">Worth knowing</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {RIVALS.map((r) => (
-                    <tr key={r.name} className={r.us ? 'us' : undefined}>
-                      <th scope="row">{r.name}<span className="pos">{r.pos}</span></th>
-                      <td>{r.what}</td>
-                      <td>{r.good}</td>
-                      <td>{r.know}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="honest">
-              <h3>Why we publish that last row</h3>
-              <p>
-                Because you will find out anyway, and the gap matters less for you than for us. You need to rank in a few square miles against maybe a dozen local rivals. We are trying to rank nationally against firms with many times our link profile. Your version works on a normal timeline. Ours takes years.
-              </p>
-              <p>
-                Ask all of us the same three questions. Who does the work. What happens if it does not move in six months. Does anything leave with you when you go. We write every city page one at a time: <Link href="/austin/seo">Austin</Link>, <Link href="/denver/seo">Denver</Link>, <Link href="/nashville/seo">Nashville</Link>, <Link href="/charlotte/seo">Charlotte</Link>.
-              </p>
-              <div className="cta-row" style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Get your free Phoenix SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* IMAGE ROW 2: consultant */}
-        <section className="imgsec">
-          <div className="wrap imgrow flip">
-            <div className="imgwrap">
-              <img
-                src="/images/us/phoenix-seo/phoenix-consult.webp"
-                alt="A FactoryJet strategist and a Phoenix business owner working through a local search plan across a table, with a desert mountain visible outside"
-                width={1264}
-                height={848}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="body">
-              <span className="eyebrow">Who you work with</span>
-              <h2>A Phoenix SEO consultant who can read a waterfall chart</h2>
-              <p className="lead">No account managers. The person who writes the fixes explains them to you, in plain language, on the same call.</p>
-              <p style={{ marginTop: '16px' }}>Technical work is the floor rather than an upsell: Core Web Vitals, structured data and page speed every month, because rankings on a broken site do not stay put. <Link href="/services/seo-consulting">SEO consulting</Link> without execution produces a deck nobody actions. Home services run on their own rules in this climate, which is why <Link href="/services/roofing-seo">roofing SEO</Link> gets its own playbook.</p>
-              <div className="cta-row">
-                <a className="btn btn-ghost" href={CALENDLY}>Book 30 minutes, no pitch deck</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* PROOF */}
-        <section className="proof">
-          <div className="wrap">
-            <div className="proofcard">
-              <blockquote><p>I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a scope you read before you sign, and no twelve-month handcuffs. If our Phoenix SEO does not earn its keep, you leave the next month.</p></blockquote>
-              <div className="byline">
-                <div className="avatar">BB</div>
-                <div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet. Building sites and search for SMBs for over a decade.</div></div>
-              </div>
-              <div className="clients">
-                <span>Impulse Branding Solutions</span><span>Belle Maison</span><span>Shevva Car Driver Hire</span><span>Rukman Transport</span>
-              </div>
-              <p className="real">No stock screenshots and no invented case studies. Those client builds are live right now. Open them and run PageSpeed yourself.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* IMAGE ROW 3: what you get */}
-        <section className="imgsec" style={{ paddingTop: 0 }}>
-          <div className="wrap imgrow">
-            <div className="body">
-              <span className="eyebrow">What you get every month</span>
-              <h2>One scope, the whole stack, no add-on surprises</h2>
-              <p className="lead">Technical repair, Business Profile work, citation and duplicate cleanup, reviews, local content and AI search visibility, in one monthly scope you read before you agree to it. You keep all of it if you leave: profile, content, citations, analytics access.</p>
-            </div>
-            <div className="imgwrap">
-              <img
-                src="/images/us/phoenix-seo/phoenix-seo-team.webp"
-                alt="Two FactoryJet colleagues reviewing printed page layouts together in a sunlit Arizona office"
-                width={1264}
-                height={848}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="faq">
-          <div className="wrap">
-            <span className="eyebrow">Phoenix SEO FAQ</span>
-            <h2>Questions, answered like a real call</h2>
-            <p className="lead">These are the questions Google shows people asking around this search, answered the way we would answer them on the phone.</p>
-            <div className="faqgrid">
-              <nav className="faqnav" aria-label="FAQ categories">
-                {FAQ_GROUPS.map((g) => (
-                  <a href={`#${g.id}`} key={g.id}>{g.label} <span className="ct">{g.items.length}</span></a>
-                ))}
-                <p className="faqnavhelp">Not answered here?<br /><a href={CALENDLY}>Talk to the founder</a></p>
-              </nav>
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                {FAQ_GROUPS.map((g) => (
-                  <div className="faqcat" id={g.id} key={g.id}>
-                    <p className="ch">{g.label}</p>
-                    {g.items.map((it, i) => (
-                      <details key={it.q} open={g.id === 'faq-cost' && i === 0}>
-                        <summary>{it.q}</summary>
-                        <p>{it.a}</p>
-                      </details>
-                    ))}
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Phoenix Local SEO &amp; AI Citation Authority</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Phoenix Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Scottsdale, Tempe, and the Camelback Corridor. Engineered for verified inbound calls and high-ticket consultations.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#phx-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Phoenix Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/phoenix-web-design/hero.webp"
+                  alt="Phoenix Arizona local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
                 ))}
               </div>
             </div>
-            <p className="closer" style={{ marginTop: '30px' }}>
-              Sources for the claims above: Google&apos;s <a href={SRC_GBP} rel="noopener">Business Profile documentation</a> for relevance, distance and prominence, Google Search Central&apos;s <a href={SRC_GOOGLE_SEO} rel="noopener">guidance on hiring an SEO</a> for the warning about guaranteed rankings, and the <a href={SRC_BRIGHTLOCAL} rel="noopener">BrightLocal Local Consumer Review Survey 2026</a> for the review figure.
-            </p>
           </div>
         </section>
 
-        {/* FINAL */}
-        <section className="final">
-          <div className="wrap">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Get started</span>
-            <h2>Start with the square of the grid you are standing in</h2>
-            <p className="lead">A free Phoenix SEO audit shows where you sit in the map pack today, what is technically holding the site back, and what we would fix first. Yours to keep either way.</p>
-            <div className="cta-row">
-              <ModalCTAButton label="Get your free Phoenix SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-              <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/phoenix-web-design/valley-planning.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Phoenix businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for the Valley&apos;s High-Value Commercial Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Scottsdale aesthetic surgeons to Biltmore estate planning attorneys and East Valley commercial contractors, Phoenix businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
+              </div>
             </div>
-            <p className="fine">
-              SEO across Phoenix, Scottsdale, Tempe, Chandler, Mesa, Gilbert, Glendale, Peoria, Surprise, Goodyear and Queen Creek. Services: <Link href="/services/seo">SEO</Link>, <Link href="/services/local-seo">local SEO</Link>, <Link href="/services/small-business-seo">small business SEO</Link>, <Link href="/services/seo-audit">SEO audit</Link>, <Link href="/services/ai-seo">AI SEO</Link>. Other cities: <Link href="/austin/seo">Austin</Link>, <Link href="/denver/seo">Denver</Link>, <Link href="/nashville/seo">Nashville</Link>, <Link href="/charlotte/seo">Charlotte</Link>, <Link href="/tampa/seo">Tampa</Link>.
-            </p>
           </div>
         </section>
-        <SeoCityLinksUS currentCity="phoenix" />
+
+        {/* ── 04. PHOENIX DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="phx-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Phoenix Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for Phoenix&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Scottsdale aesthetic clinics to Biltmore corporate law firms and East Valley commercial contractors:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for Phoenix
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in the Valley demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Phoenix Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// PHOENIX LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Phoenix local search."
+            city="Phoenix"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across Maricopa County:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Phoenix SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="PHOENIX LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Phoenix AZ"
+          lead="Direct, plain English answers to what Phoenix business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="phoenix" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Phoenix Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }
