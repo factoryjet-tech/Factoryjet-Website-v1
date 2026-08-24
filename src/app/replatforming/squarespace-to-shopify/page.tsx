@@ -13,21 +13,21 @@ const PAGE_MODIFIED = '2026-08-24';
 export const metadata: Metadata = {
   title: 'Squarespace to Shopify Migration Services | FactoryJet',
   description:
-    'Complete engineering blueprint for migrating from Squarespace to Shopify. We upgrade your beautiful design into a high-converting Shopify store with Shop Pay 1-click checkout, advanced inventory management, and zero SEO ranking loss.',
+    'Migrate Squarespace to Shopify with zero ranking loss. Unlock Shop Pay 1-click checkout and advanced inventory while keeping your aesthetic.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Squarespace to Shopify Migration Services | FactoryJet',
     description:
-      'Replatform Squarespace to Shopify without losing your visual design aesthetic, blog history, or search rankings. Fixed price, senior developer delivery.',
+      'Migrate Squarespace to Shopify with zero ranking loss. Unlock Shop Pay 1-click checkout while keeping your aesthetic.',
     url: 'https://factoryjet.com/replatforming/squarespace-to-shopify',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Squarespace to Shopify migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Squarespace to Shopify Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squarespace to Shopify Migration | FactoryJet',
-    description: 'Break free from Squarespace e-commerce limitations. Upgrade to Shopify with zero cutover downtime.',
+    title: 'Squarespace to Shopify Migration Services | FactoryJet',
+    description: 'Migrate Squarespace to Shopify with zero ranking loss or downtime.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/squarespace-to-shopify' },

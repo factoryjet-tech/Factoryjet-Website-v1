@@ -11,23 +11,23 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'NetSuite SuiteCommerce to Shopify Plus Migration Services | FactoryJet',
+  title: 'NetSuite to Shopify Plus Migration Services | FactoryJet',
   description:
-    'Complete engineering blueprint for migrating from NetSuite SuiteCommerce (SCA / Advanced) to Shopify Plus. We preserve your NetSuite ERP as your core single source of truth while giving your team a high-converting, lightning-fast Shopify Plus storefront.',
+    'Migrate NetSuite SuiteCommerce to Shopify Plus without downtime. We keep your NetSuite ERP in sync while lifting checkout speed. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'NetSuite SuiteCommerce to Shopify Plus Migration Services | FactoryJet',
+    title: 'NetSuite to Shopify Plus Migration Services | FactoryJet',
     description:
-      'Replatform SuiteCommerce to Shopify Plus without disrupting your NetSuite ERP, wholesale contract pricing, inventory allocation, or Google rankings.',
+      'Migrate NetSuite SuiteCommerce to Shopify Plus without downtime. Keep NetSuite ERP in sync while lifting checkout speed.',
     url: 'https://factoryjet.com/replatforming/netsuite-suitecommerce-to-shopify-plus',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet NetSuite SuiteCommerce to Shopify Plus migration' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'NetSuite to Shopify Plus Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SuiteCommerce to Shopify Plus Migration | FactoryJet',
-    description: 'Keep NetSuite ERP as your operational core while moving your storefront to Shopify Plus with zero cutover downtime.',
+    title: 'NetSuite to Shopify Plus Migration Services | FactoryJet',
+    description: 'Migrate NetSuite SuiteCommerce to Shopify Plus with full ERP sync.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/netsuite-suitecommerce-to-shopify-plus' },

@@ -13,21 +13,21 @@ const PAGE_MODIFIED = '2026-08-24';
 export const metadata: Metadata = {
   title: 'Wix to Shopify Migration Services | FactoryJet',
   description:
-    'Complete engineering blueprint for migrating from Wix eCommerce to Shopify. We transfer your product catalog, customer records, and order history while boosting your checkout speed with Shop Pay and preserving 100% of your Google search rankings.',
+    'Migrate Wix to Shopify with zero downtime. We transfer product catalogs, customer records, and order history with 1:1 301 redirects. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Wix to Shopify Migration Services | FactoryJet',
     description:
-      'Replatform Wix to Shopify without losing products, customer history, or search engine rankings. Fixed price, senior developer delivery.',
+      'Migrate Wix to Shopify with zero downtime. Transfer product catalogs, customer records, and order history with 1:1 301 redirects.',
     url: 'https://factoryjet.com/replatforming/wix-to-shopify',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Wix to Shopify migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Wix to Shopify Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wix to Shopify Migration | FactoryJet',
-    description: 'Break free from Wix eCommerce limits. Upgrade to Shopify with zero cutover downtime.',
+    title: 'Wix to Shopify Migration Services | FactoryJet',
+    description: 'Migrate Wix to Shopify with zero ranking loss or cutover downtime.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/wix-to-shopify' },

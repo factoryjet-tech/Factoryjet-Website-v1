@@ -11,23 +11,23 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'Magento to Shopify Plus Migration Services | Adobe Commerce Replatforming | FactoryJet',
+  title: 'Magento to Shopify Plus Migration Services | FactoryJet',
   description:
-    'Complete engineering blueprint and migration services for moving from Magento 1, Magento 2, and Adobe Commerce to Shopify Plus. We handle EAV attribute mapping, extension replacements, ERP syncing, and single-hop 301 redirects with zero cutover downtime.',
+    'Migrate Magento & Adobe Commerce to Shopify Plus with zero downtime. 100% SEO equity, EAV catalog mapping, and ERP sync. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Magento to Shopify Plus Migration Services | FactoryJet',
     description:
-      'Replatform Adobe Commerce and Magento to Shopify Plus without losing rankings, customer order history, or B2B pricing logic. Fixed price, senior delivery.',
+      'Migrate Magento & Adobe Commerce to Shopify Plus with zero downtime. 100% SEO equity, EAV catalog mapping, and ERP sync.',
     url: 'https://factoryjet.com/replatforming/magento-to-shopify',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Magento to Shopify Plus migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Magento to Shopify Plus Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Magento to Shopify Plus Migration | FactoryJet',
-    description: 'Adobe Commerce and Magento to Shopify Plus migration with zero ranking loss and full ERP integration.',
+    title: 'Magento to Shopify Plus Migration Services | FactoryJet',
+    description: 'Migrate Magento to Shopify Plus without downtime or SEO loss.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/magento-to-shopify' },

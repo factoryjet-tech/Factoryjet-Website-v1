@@ -13,21 +13,21 @@ const PAGE_MODIFIED = '2026-08-24';
 export const metadata: Metadata = {
   title: 'WooCommerce to Shopify Migration Services | FactoryJet',
   description:
-    'Complete engineering blueprint for migrating from WooCommerce to Shopify. We sanitize messy WordPress database tables, transfer customer order history, eliminate server maintenance, and protect 100% of your Google rankings with single-hop 301 redirects.',
+    'Migrate WooCommerce to Shopify with zero downtime. Clean WordPress database tables, transfer order history, and protect SEO. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'WooCommerce to Shopify Migration Services | FactoryJet',
     description:
-      'Replatform WooCommerce to Shopify without plugin crashes, database bloat, or lost search rankings. Fixed price, senior developer delivery.',
+      'Migrate WooCommerce to Shopify with zero downtime. Clean WordPress database tables, transfer order history, and protect SEO.',
     url: 'https://factoryjet.com/replatforming/woocommerce-to-shopify',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet WooCommerce to Shopify migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'WooCommerce to Shopify Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WooCommerce to Shopify Migration | FactoryJet',
-    description: 'Eliminate WordPress plugin bloat and server maintenance. Upgrade to Shopify with zero cutover downtime.',
+    title: 'WooCommerce to Shopify Migration Services | FactoryJet',
+    description: 'Migrate WooCommerce to Shopify with zero downtime or SEO loss.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },

@@ -11,15 +11,15 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Replatforming & Migration Services | FactoryJet',
+  title: 'E-Commerce Replatforming & Migration | FactoryJet',
   description:
-    'Complete enterprise e-commerce replatforming and migration services. We move stores between Magento, NetSuite SuiteCommerce, BigCommerce, WooCommerce, Shopify Plus, Squarespace, Wix, WordPress, and Salesforce Commerce Cloud with 100% SEO equity preservation and zero cutover downtime.',
+    'Enterprise e-commerce replatforming services between Magento, NetSuite, BigCommerce, WooCommerce & Shopify Plus with zero downtime & 100% SEO.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Replatforming & Migration Services | FactoryJet',
+    title: 'E-Commerce Replatforming & Migration | FactoryJet',
     description:
-      'Migrate between Magento, NetSuite, BigCommerce, WooCommerce, Shopify Plus, Salesforce, and more without losing Google rankings, order history, or ERP synchronicity.',
+      'Enterprise e-commerce replatforming services between Magento, NetSuite, BigCommerce, WooCommerce & Shopify Plus with zero downtime & 100% SEO.',
     url: 'https://factoryjet.com/replatforming',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet e-commerce replatforming and migration services' }],
     locale: 'en_US',

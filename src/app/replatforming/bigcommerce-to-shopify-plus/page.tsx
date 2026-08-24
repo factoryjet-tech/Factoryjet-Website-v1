@@ -11,23 +11,23 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
+  title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
   description:
-    'Complete engineering blueprint for migrating from BigCommerce to Shopify Plus. We transfer product catalogs, customer history, variant options, and B2B pricing with complete 1-to-1 301 URL redirect preservation and zero cutover downtime.',
+    'Migrate BigCommerce to Shopify Plus with zero data loss. We transfer product option sets, customer history, and 301 redirects. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
+    title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
     description:
-      'Replatform BigCommerce to Shopify Plus without losing rankings, customer order history, or sales velocity. Fixed price, senior delivery.',
+      'Migrate BigCommerce to Shopify Plus with zero data loss. Transfer product option sets, customer history, and 301 redirects.',
     url: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet BigCommerce to Shopify Plus migration services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'BigCommerce to Shopify Plus Migration Services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
-    description: 'Upgrade from BigCommerce to Shopify Plus with zero ranking loss and accelerated Shop Pay checkout conversion.',
+    description: 'Migrate BigCommerce to Shopify Plus with zero downtime or SEO loss.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus' },
