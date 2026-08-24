@@ -6,6 +6,7 @@ import Link from 'next/link'
 // exists to stop new SEO city pages shipping as orphans.
 const ALL_CITIES = [
   { slug: 'arlington',        label: 'Arlington, TX' },
+  { slug: 'atlanta',          label: 'Atlanta, GA' },
   { slug: 'austin',           label: 'Austin, TX' },
   { slug: 'boise',            label: 'Boise, ID' },
   { slug: 'boston',           label: 'Boston, MA' },
@@ -23,6 +24,7 @@ const ALL_CITIES = [
   { slug: 'las-vegas',        label: 'Las Vegas, NV' },
   { slug: 'lincoln',          label: 'Lincoln, NE' },
   { slug: 'los-angeles',      label: 'Los Angeles, CA' },
+  { slug: 'miami',            label: 'Miami, FL' },
   { slug: 'nashville',        label: 'Nashville, TN' },
   { slug: 'phoenix',          label: 'Phoenix, AZ' },
   { slug: 'providence',       label: 'Providence, RI' },

@@ -1,593 +1,910 @@
-// V2 ecommerce city page — Tampa, FL
-// Design system: py-10 md:py-14 standard | 30/65/5 dark/light rhythm | Clash Display headlines
-// Schema: server-side via SchemaScript (AI-crawler visible in initial HTML)
-// Copy source: src/lib/legacy-pages/CityLandingUS/CityLandingPage.jsx → CITIES.tampa
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
-import Link from 'next/link'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/tampa/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'Top-rated Shopify developer in Tampa FL: stores live in 7 days, fixed-price. Gulf Coast e-commerce: Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  description:
+    'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    url: 'https://factoryjet.com/tampa/ecommerce-development',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet - Shopify Developer Tampa',
-      },
-    ],
+    title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    description:
+      'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Tampa E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top-Rated Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    description: 'Custom headless e-commerce engineering in Tampa FL. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/tampa/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['tampa'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
 
+const PARTNERS = [
+  'Shopify Plus Enterprise',
+  'BigCommerce B2B Edition',
+  'Next.js 15 App Router',
+  'NetSuite ERP Integration',
+  'SAP & Microsoft Dynamics',
+  'Stripe Payments & Klarna',
+  'Klaviyo Marketing Automation',
+  'Algolia Search & Discovery',
+];
+
+const STAT_CARDS = [
+  { num: '540ms', title: 'Average Checkout Speed', desc: 'Sub-second mobile checkout latency engineered to maximize checkout completion rates.', icon: '⚡' },
+  { num: '3.4x', title: 'Average Conversion Lift', desc: 'Measured conversion rate surge after headless architecture and mobile UX replatforming.', icon: '📈' },
+  { num: '99.99%', title: 'Peak Uptime Reliability', desc: 'Zero downtime during Black Friday, Cyber Monday, and high-volume promotional flash sales.', icon: '🛡️' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, custom API connectors, and hosting configurations.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Water Street & Downtown Tampa',
+    query: 'luxury ecommerce development water street tampa',
+    focus: 'High-Rise Residential Merchandising, Luxury D2C & Creator Commerce',
+    desc: 'The vibrant urban waterfront. Demands bespoke digital flagships, high-resolution lifestyle lookbooks, VIP client portals, and frictionless mobile checkouts.',
+  },
+  {
+    corridor: 'Westshore Commercial District',
+    query: 'b2b corporate ecommerce westshore tampa',
+    focus: 'Corporate Regional Retail, Executive Procurement & B2B Portals',
+    desc: 'Dense corporate headquarters corridor. Features unified commerce engines connecting physical retail stores, warehouse inventory feeds, and regional distributor portals.',
+  },
+  {
+    corridor: 'Ybor City & Historic Quarter',
+    query: 'craft beverage ecommerce ybor city',
+    focus: 'Bespoke Apparel, Cigar Culture Products & Craft Beverages',
+    desc: 'Historic maker and culinary district. Features custom box-builder funnels, recurring membership subscriptions, and state-by-state compliance integrations.',
+  },
+  {
+    corridor: 'South Tampa & Hyde Park',
+    query: 'designer fashion ecommerce south tampa',
+    focus: 'Luxury Fashion Flagships, Designer Goods & Private Client Portals',
+    desc: 'Affluent shopping district. Features 3D product configurators, customized swatch selection funnels, and frictionless Shop Pay checkout.',
+  },
+  {
+    corridor: 'Gateway & Mid-Pinellas Corridor',
+    query: 'medical device ecommerce gateway tampa',
+    focus: 'Medical Device Sales, Clinical Technology & B2B Ordering',
+    desc: 'High-tech medical manufacturing hub. Demands HIPAA-aware customer data handling, clinic reordering subscriptions, and verified provider discount tiers.',
+  },
+  {
+    corridor: 'Port Tampa Bay Logistics Nexus',
+    query: 'wholesale industrial ecommerce port tampa bay',
+    focus: 'Maritime Supply, Cold-Chain Seafood & Industrial Wholesale',
+    desc: 'Major Gulf Coast trade hub. Features custom net-payment terms, volume-tiered pricing matrices, punchout catalogs, and real-time ERP inventory syncing.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Wholesale Distribution, Maritime Supply & Industrial B2B',
+    headline: 'Engineering Enterprise B2B Portals for Gulf Coast Distributors',
+    description:
+      'Port Tampa Bay and East Tampa industrial distributors require complex digital procurement systems. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom price lists, quote-to-order workflows, and real-time NetSuite or SAP inventory synchronization.',
+    image: '/images/us/tampa/ecommerce/portfolio-1.webp',
+    alt: 'Tampa enterprise maritime wholesale distribution and B2B ecommerce development',
+    points: [
+      'Customer-specific contracted pricing matrices and tiered volume discounts',
+      'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
+      'Automated bidirectional synchronization with NetSuite, SAP, and Epicor ERPs',
+    ],
+  },
+  {
+    sector: 'Luxury Fashion, Designer Apparel & Lifestyle Brands',
+    headline: 'High-Impact Digital Flagships for South Tampa & Hyde Park Brands',
+    description:
+      'From luxury boutiques in Hyde Park Village to high-growth coastal lifestyle brands, visual storytelling drives brand equity. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Tampa luxury fashion and coastal lifestyle D2C ecommerce development',
+    points: [
+      'Sub-second headless Next.js frontend with instant mobile product filtering',
+      'Dynamic product bundling, tiered upsells, and personalized cross-sells',
+      'Integrated VIP loyalty programs, SMS marketing funnels, and post-purchase flows',
+    ],
+  },
+  {
+    sector: 'Craft Beverage, Specialty Foods & Subscription Commerce',
+    headline: 'High-Volume Recurring Revenue Engines for Tampa Bay Makers',
+    description:
+      'Ybor craft beverage producers and specialty food makers in Florida demand robust recurring subscription engines. We develop custom recharge and Stripe billing integrations, box builder configurators, and automated customer self-service retention portals.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Tampa craft beverage and specialty gourmet food subscription ecommerce',
+    points: [
+      'Custom box builder and recurring subscription membership architectures',
+      'Self-service customer portal reducing subscription cancellation churn',
+      'Automated cold-chain and temperature-controlled shipping rule integrations',
+    ],
+  },
+  {
+    sector: 'Medical Devices, Healthcare Technology & Clinical Supplies',
+    headline: 'Compliant Medical & Healthcare Product Sales Portals',
+    description:
+      'Medical device manufacturers and clinical supply networks across Gateway and Tampa Bay require secure, compliant e-commerce systems. We build verified provider purchase portals, clinic replenishment subscriptions, and secure payment workflows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Tampa medical device and healthcare clinic product ecommerce store design',
+    points: [
+      'Verified practitioner license gating and professional wholesale tiers',
+      'HIPAA-aware checkout workflows and secure customer data handling',
+      'Automated recurring delivery and clinic replenishment subscriptions',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow Monolithic Platforms & Crashing Servers',
+    problem: 'Legacy Magento, WooCommerce, or custom PHP stores slow down under traffic spikes, causing lost sales, database timeouts, and high ongoing maintenance bills.',
+    solution: 'We engineer headless Shopify Plus and BigCommerce architectures on global edge networks, handling unlimited concurrent traffic with sub-second page loads.',
+  },
+  {
+    num: '02',
+    title: 'Ending Broken ERP and Warehouse Inventory Synchronization',
+    problem: 'Outdated batch sync scripts create ghost inventory, overselling, and manual data entry headaches between your web store and warehouse ERP.',
+    solution: 'We build real-time webhook-driven middleware connecting NetSuite, SAP, or Microsoft Dynamics for automated inventory, order, and tracking sync.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Friction-Filled Checkouts that Kill Mobile Conversion',
+    problem: 'Clunky multi-page checkouts with slow shipping rate lookups and mandatory registration cause mobile shoppers to abandon their carts.',
+    solution: 'We implement streamlined one-page and one-click checkout flows with Apple Pay, Shop Pay, Google Pay, and instant address autocompletion.',
+  },
+  {
+    num: '04',
+    title: 'Modernizing Antiquated B2B Manual PDF and Email Ordering',
+    problem: 'Wholesale buyers are forced to call or email orders, creating order processing delays, human errors, and high operational overhead.',
+    solution: 'We launch self-service B2B customer portals with custom contract pricing, net-term credit approvals, quote requests, and instant PO generation.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Data Architecture & System Discovery',
+    desc: 'We audit your catalog data, customer database, ERP integrations, and third-party apps to design a future-proof commerce roadmap.',
+    deliverables: ['Catalog schema and variant taxonomy mapping', 'ERP, OMS, and warehouse integration architecture', 'Mobile UX conversion wireframes in Figma', 'Migration risk mitigation protocol'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js Frontend & Core Engineering',
+    desc: 'We build your custom storefront using Next.js 15, TypeScript, and modern component libraries connected to Shopify Plus or BigCommerce APIs.',
+    deliverables: ['Custom Next.js 15 headless storefront', 'Sub-second search and filtering powered by Algolia', 'Dynamic cart, upsell, and cross-sell drawer', 'Multi-device mobile responsive optimization'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'ERP Integration & Historical Data Migration',
+    desc: 'We securely migrate historical customers, orders, and product data while establishing real-time bidirectional ERP connectors.',
+    deliverables: ['Zero-downtime historical data migration', 'Automated NetSuite/SAP/QuickBooks sync', 'Custom B2B pricing and account hierarchy rules', 'Payment gateway and tax compliance configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Load Testing, Cutover & Launch Warranty',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Model',
+    factoryjet: 'Headless Next.js 15 with Shopify Plus or BigCommerce B2B. Instant edge rendering and total front-end design freedom.',
+    traditional: 'Monolithic legacy templates tied to server-side PHP with slow page rendering and rigid theme constraints.',
+  },
+  {
+    label: 'ERP & Systems Sync',
+    factoryjet: 'Event-driven, real-time webhook middleware connecting NetSuite, SAP, Microsoft Dynamics, and custom WMS.',
+    traditional: 'Fragile daily batch CSV imports that cause inventory discrepancies, overselling, and manual data cleanup.',
+  },
+  {
+    label: 'Checkout Performance',
+    factoryjet: 'Sub-600ms checkout load times with native Shop Pay, Apple Pay, and accelerated payment tokens.',
+    traditional: 'Multi-step checkouts requiring page reloads, causing 65%+ cart abandonment on mobile devices.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository and Figma source files.',
+    traditional: 'Proprietary platform lock-in or agency-held codebase with recurring licensing and maintenance surcharges.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'replatforming', label: 'Migration & Replatforming' },
+  { key: 'technical', label: 'Headless Tech Stack' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'support', label: 'Support & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Tampa, FL?',
-              answer:
-                "FactoryJet is Tampa's top-rated Shopify development agency, 500+ projects delivered, 4.9★ Google rating, and the only shop in the Gulf Coast region combining Shopify e-commerce with AI agent development. Unlike local Tampa agencies (Wicked Creative, Digital Momentum) that specialize in branding and marketing, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote enterprise-level prices and multi-month timelines, we launch in 7 days, fixed-price.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Tampa?',
-              answer:
-                "Pricing is fixed-price and scoped to your build: the main drivers are product count, integrations, and design complexity, and every project is quoted up front after a free discovery call, so you know the full cost before work starts. Established Tampa agencies charge enterprise-level rates for comparable scope; FactoryJet delivers the same quality at a fraction of the cost. Every project includes custom design, full development, Florida sales tax configuration (7.5% for Tampa/Hillsborough County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support. No hidden fees, no Phase 2 upsells.",
-            },
-            {
-              category: 'pricing',
-              question: 'What Florida sales tax rate should my Tampa Shopify store charge?',
-              answer:
-                "Tampa businesses in Hillsborough County should configure Shopify to collect 7.5% combined sales tax: Florida's state rate of 6% plus the Hillsborough County discretionary surtax of 1.5%. Florida uses destination-based sales tax, you charge the rate at the buyer's shipping address, not your business location. FactoryJet configures your complete Florida tax settings during every Shopify build, including correct rates for Miami (7%), Orlando (6.5%), and Jacksonville (7%). Florida also offers sales tax exemptions on certain food, medicine, and agricultural items, which we configure for relevant stores.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Tampa?',
-              answer:
-                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Wicked Creative (4–8 weeks), regional agencies like Mad Creative Beanstalk (6–10 weeks), or national agencies like WebFX (8–16 weeks). Our 7-day timeline is possible because we design in code, no Figma-to-handoff delay, and use a component architecture optimized for rapid deployment. Complex builds with custom features (subscriptions, B2B portals, equipment configurators) may take 2–3 weeks.',
-            },
-            {
-              category: 'pricing',
-              question: 'Does Tampa have any e-commerce advantages over other US cities?',
-              answer:
-                "Yes, several. Florida has no state income tax, giving Tampa-based DTC entrepreneurs higher take-home margins than founders in California, New York, or Illinois. Tampa's 7.5% Hillsborough County sales tax is competitive compared to California (up to 10.75%) and many Northeast states. Tampa's 24M annual tourism visitors create a constantly refreshed customer acquisition pool for local brands. Port Tampa Bay, Florida's largest port, makes Tampa one of the best-positioned cities in the Southeast for physical goods fulfillment and import/export businesses with e-commerce components.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Tampa marine and outdoor brands?',
-              answer:
-                "Yes, Gulf Coast marine culture is one of our core Tampa specialties. We build Shopify stores for saltwater fishing brands, boat accessory companies, marine gear retailers, water sports equipment businesses, and outdoor apparel brands. Tampa marine brands have unique needs: equipment configurators, dealer pricing tiers, rental calendar integrations, and nationwide shipping for oversized marine gear. FactoryJet builds all of these natively into Shopify, including the B2B wholesale portals that let Tampa marine brands scale from DTC to dealer distribution simultaneously.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for an Ybor City or Cuban food brand?',
-              answer:
-                "Absolutely. Ybor City's Cuban food heritage, hand-rolled cigars, the original Cuban sandwich, Latin coffee culture, has some of the strongest brand equity of any American food geography. We build Shopify stores for Cuban food brands, craft cigar companies, Tampa Bay specialty food producers, and Latin beverage businesses. Tampa food brands have unique needs: age verification for tobacco and alcohol, refrigerated shipping for perishables, Florida Cottage Food compliant setups, and nationwide gifting flows for tourists who discovered the brand in Ybor City. FactoryJet builds all of these natively.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Wicked Creative for Tampa Shopify development?',
-              answer:
-                "Wicked Creative is a Tampa brand strategy and digital marketing agency with a strong local reputation. However, they don't specialize in Shopify development, no published Shopify pricing, no AI e-commerce capabilities, and no 7-day delivery guarantee. Their focus is brand identity and marketing campaigns. FactoryJet specializes exclusively in Shopify development and AI-powered e-commerce, delivers in 7 days, prices transparently and fixed-price, and has built stores across Tampa's core verticals: healthcare-wellness, marine, food and beverage, and tourism.",
-            },
-            {
-              category: 'local',
-              question: 'Does my Tampa business need Shopify or WooCommerce?',
-              answer:
-                "For most Tampa businesses, Shopify is the better choice: faster to launch (7 days), lower ongoing maintenance costs, better App Store for subscriptions and B2B, and superior mobile checkout conversion. WooCommerce makes sense if you already have a WordPress site with significant SEO equity and need tight CMS control. At FactoryJet, both Shopify and WooCommerce builds are fixed-price and quoted up front. We'll recommend the right platform based on your catalog size, subscription needs, B2B requirements, and existing tech stack.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Tampa business from WooCommerce or Squarespace to Shopify?',
-              answer:
-                'Yes, we migrate Tampa businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL redirect mapping (preserving Google rankings), metafield migration, Florida tax reconfiguration, and SEO continuity setup. We implement 301 redirects for every old URL so your Tampa local search rankings survive the migration. Timeline: 7–14 days depending on catalog size.',
-            },
-            {
-              category: 'included',
-              question: 'What AI services are available for Tampa small businesses?',
-              answer:
-                "FactoryJet is the only Tampa e-commerce agency that builds production AI agents alongside Shopify development. We build: AI chatbots trained on your catalog and FAQs, AI-powered lead qualification agents, customer service automation (order status, returns, product recommendations), and AI content pipelines that keep your store's blog and product descriptions optimized for ChatGPT, Perplexity, and Google AI Overviews. Tampa's Embarc Collective tech ecosystem is driving AI adoption across Gulf Coast businesses: FactoryJet gets you there in weeks, not months.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Tampa business?',
-              answer:
-                'Every Tampa Shopify store includes: custom design (not a theme), full Shopify development and configuration, Florida sales tax setup (7.5% Hillsborough County), payment gateway integration (Shopify Payments, PayPal, Afterpay), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, FAQPage + Service + BreadcrumbList JSON-LD schema, AI search visibility (AEO for ChatGPT, Perplexity, Google AI Overviews), 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front, no hidden fees.',
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Tampa Bay sports, marine, or outdoor lifestyle brand?',
-              answer: "Yes, Tampa Bay's sports culture and Gulf Coast lifestyle create major DTC opportunities. Tampa is home to the Buccaneers (Super Bowl LV champions), Lightning (3 Stanley Cups in 5 years), Rays, and Rowdies, plus the world's largest concentration of amateur fishing tournaments. We build Shopify stores for: sports lifestyle apparel brands, official-style fan merchandise (non-licensed), marine and fishing gear retailers, Gulf Coast beach lifestyle brands, and outdoor sporting goods companies. Tampa Bay marine retail is especially underdeveloped online, FactoryJet builds fishing gear and boating accessory stores with product configurators, guide service booking, and rental deposit logic that brick-and-mortar marine shops can't match.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Tampa Shopify store on Google and in AI search?',
-              answer: "FactoryJet builds every Tampa Shopify store with SEO and AEO foundations targeting Tampa Bay-specific search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized meta titles targeting 'Tampa [product]', 'Tampa Bay [industry] store', 'buy [product] Tampa FL'; Core Web Vitals optimization (Lighthouse 90+); and AEO content that answers how Tampa consumers research purchases via AI. Florida's 22M population and Tampa Bay's 3.2M metro mean huge search volume for local product queries, FactoryJet's AEO content strategy positions your store to capture both Google results and AI-generated answer citations for Tampa-area searches.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Tampa brands?',
-              answer: "Yes, subscription commerce is a growing model across Tampa's food, lifestyle, and marine categories. We build: Tampa hot sauce and BBQ rub clubs, Gulf seafood and specialty food subscription boxes, craft beer subscriptions for Tampa Bay's craft brewery scene (Cigar City, Coppertail, Angry Chair), premium cigar subscriptions for Ybor City brands with PACT Act compliance, boat supply and maintenance subscription programs, and wellness product clubs for Tampa's health-conscious consumer base. Florida's no-income-tax advantage means Tampa entrepreneurs keep more recurring revenue margin than founders in most states. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Hillsborough County tax compliance for recurring billing, and age verification for tobacco and alcohol subscriptions.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Tampa Shopify store accept?',
-              answer: "Every Tampa Shopify store should accept: Shopify Payments, PayPal (30%+ first-time buyer preference), Apple Pay and Google Pay (Tampa's young professional and tech population is mobile-payment-forward, reduces cart abandonment by 40%), and Afterpay or Shop Pay Installments for orders above $100. For Tampa's Ybor City cigar brands, configure age verification before any payment collection and use PACT Act-compliant shipping verification. For Tampa's healthcare B2B stores (medical supplies, scrubs, wellness equipment), add institutional PO payment terms and net-30 invoicing. For Tampa's marine and boating stores, add deposit-plus-balance payment flows for equipment rentals and custom orders. All configuration is in the standard 7-day build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Tampa defense, aerospace, or technology company?',
-              answer: "Yes, Tampa is one of the US military's most important economic hubs: MacDill Air Force Base (CENTCOM and SOCOM headquarters), the 6th Air Refueling Wing, the National Guard, and hundreds of defense contractors make Tampa the #3 US defense market by contract spending. This creates B2B e-commerce demand for: government-contract supply portals, mil-spec equipment and accessory stores, defense training materials and media, and security technology product companies. FactoryJet builds Shopify stores with GSA Schedule pricing configurations, CAC card-compatible authentication (for government buyer verification), ITAR-compliant product listing restrictions, and net-30/net-60 government billing terms. Tampa's defense ecosystem is underserved by e-commerce: FactoryJet builds the stores that close that gap.",
-            },
-            {
-              category: 'local',
-              question: 'Do you serve St. Petersburg, Clearwater, and Sarasota in addition to Tampa?',
-              answer: "Yes, FactoryJet serves the entire Tampa Bay metro and Gulf Coast: Tampa, St. Petersburg, Clearwater, Bradenton, Sarasota, Brandon, Wesley Chapel, Land O'Lakes, Dunedin, Tarpon Springs, and all Hillsborough, Pinellas, Pasco, and Manatee county businesses. Each area has a distinct consumer profile: St. Pete has a younger, arts-forward creative economy (Dali Museum, Vinoy, Fairgrounds St. Pete); Clearwater is family tourism and Scientology headquarters; Sarasota is the Gulf Coast's luxury arts and culture destination with high-AOV consumer demand. FactoryJet configures destination-based Florida sales tax for all county rates: Hillsborough 7.5%, Pinellas 7.0%, Pasco 7.0%, and Sarasota 7.0%.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet optimize Tampa Shopify stores for mobile shoppers?',
-              answer: "Tampa's consumer is mobile-first: Florida's outdoor lifestyle, beach culture, and young-skewing professional population means your buyers are browsing and purchasing on phones. FactoryJet optimizes every Tampa Shopify store for mobile with: mobile-first design (built for 375px before scaling to desktop), Google Core Web Vitals compliance (Lighthouse 90+, LCP under 2.5s on mobile), Apple Pay and Google Pay one-tap checkout, lazy-loaded images for fast initial mobile renders, and AEO structured content that surfaces in AI-generated mobile search results. Tampa's tourist population (24M annual visitors) is especially mobile-dependent, international visitors searching 'buy Tampa Bay gifts' or 'Tampa souvenir shop' do so entirely on mobile while traveling.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Tampa businesses?',
-              answer: "Yes, FactoryJet offers post-launch support built around Tampa Bay's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a fixed monthly retainer (development hours plus same-day bug priority), seasonal campaign builds (Gasparilla Pirate Festival merchandise in January, Super Bowl fan merchandise when Tampa hosts, Stanley Cup playoff gear), and quarterly performance reviews. Tampa Bay sports brands in particular need on-call support: a Lightning playoff run or a Buccaneers Super Bowl creates instant merchandise demand spikes that require same-day inventory and promotional updates. FactoryJet retainer clients get priority response for championship moments and high-traffic events.",
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom e-commerce development cost for a Tampa brand?',
+    answer:
+      'Project investment is determined by catalog complexity, custom ERP/OMS integration requirements, B2B wholesale features, and design scope. Mid-market direct-to-consumer storefronts are scoped on transparent fixed-price milestone contracts. Large enterprise replatforming initiatives with complex ERP middleware and custom B2B portals receive detailed architectural plans with guaranteed deliverables. Every proposal includes custom Figma UX, Next.js engineering, full ERP integration, and 100% code ownership.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden ongoing agency fees or monthly platform markups?',
+    answer:
+      'No. You contract directly with your core platform providers (Shopify Plus, BigCommerce, Cloudflare) and retain direct billing ownership. We never charge ongoing agency royalties or mark up your infrastructure costs.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overruns?',
+    answer:
+      'We complete an exhaustive architectural discovery and data mapping phase before development begins. All APIs, data schemas, design components, and integration requirements are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
+  },
+  {
+    category: 'replatforming',
+    question: 'How do you ensure zero downtime and preserved SEO rankings during migration?',
+    answer:
+      'We execute comprehensive pre-launch data migrations in staging environments, build complete 1-to-1 301 redirect maps for every legacy URL, preserve URL slugs where possible, and execute DNS cutover during off-peak hours with zero downtime for existing shoppers.',
+  },
+  {
+    category: 'replatforming',
+    question: 'Can you migrate customer accounts, order history, and reviews from Magento or WooCommerce?',
+    answer:
+      'Yes. We migrate your complete historical catalog, customer records, order histories, and verified product reviews seamlessly, ensuring long-term customer lifetime value data remains intact.',
+  },
+  {
+    category: 'replatforming',
+    question: 'How long does an enterprise e-commerce replatforming project typically take?',
+    answer:
+      'Focused D2C storefront replatforming projects are typically delivered in 4 to 8 weeks. Complex enterprise deployments involving extensive ERP integrations, custom B2B pricing rules, and multi-warehouse routing generally take 8 to 12 weeks from kickoff to production launch.',
+  },
+  {
+    category: 'technical',
+    question: 'Why choose Headless Next.js over standard monolithic Shopify themes?',
+    answer:
+      'Headless architectures decouple the presentation layer from backend logic, allowing pages to load in under 600ms on mobile devices, eliminating third-party app script bloat, and unlocking complete design flexibility for custom product configurators and high-converting checkout flows.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you integrate with NetSuite, SAP, or Microsoft Dynamics ERPs?',
+    answer:
+      'We build secure, event-driven API middleware that synchronizes inventory levels, product catalog updates, customer tiers, sales orders, and tracking numbers in real time, eliminating batch sync lag and manual reconciliation.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle site speed and Core Web Vitals optimization for e-commerce?',
+    answer:
+      'We implement static page pre-rendering, modern WebP/AVIF image formats, dynamic edge caching via Cloudflare, and lightweight modular JavaScript bundles to ensure your store achieves 90+ Lighthouse mobile performance scores.',
+  },
+  {
+    category: 'technical',
+    question: 'What search and merchandising platforms do you recommend?',
+    answer:
+      'We integrate enterprise search solutions such as Algolia, Searchspring, or Shopify Search & Discovery to deliver instant typo-tolerant search results, facet filtering, and automated visual merchandising.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
+    answer:
+      'Yes. We build comprehensive B2B features including customer-specific price lists, volume break tables, tax exemption handling, custom payment terms (Net 30/60), and corporate account hierarchy management.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do quote-to-order workflows work in your B2B store builds?',
+    answer:
+      'Wholesale buyers can build custom quote requests in their cart, submit them directly to your sales team, receive negotiated pricing adjustments, and convert approved quotes into completed orders in a single click.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you support hybrid stores with both direct-to-consumer and wholesale access?',
+    answer:
+      'Yes. We can architect unified storefronts where public retail customers shop standard MSRP products while verified wholesale accounts log in to see custom wholesale pricing, bulk quantity rules, and purchase order checkout options.',
+  },
+  {
+    category: 'b2b',
+    question: 'Do you support automated freight shipping calculations for heavy industrial orders?',
+    answer:
+      'Yes. We integrate LTL freight rate calculators and custom carrier APIs (FreightQuote, Echo Logistics) that calculate real-time pallet rates and accessorial charges based on delivery location requirements.',
+  },
+  {
+    category: 'support',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon final milestone completion, you receive full ownership of the clean GitHub repository, Figma design files, API middleware code, and hosting configurations with zero agency proprietary lock-in.',
+  },
+  {
+    category: 'support',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training to ensure your operational team is completely confident managing the platform.',
+  },
+  {
+    category: 'support',
+    question: 'How do you train our internal merchandising and customer support teams?',
+    answer:
+      'We provide tailored video walkthroughs and documentation covering order management, product uploads, discount creation, customer account management, and ERP sync troubleshooting.',
+  },
+  {
+    category: 'support',
+    question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
+    answer:
+      'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Tampa E-Commerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tampa',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 27.9506,
+    longitude: -82.4572,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Tampa' },
+    { '@type': 'City', name: 'St. Petersburg' },
+    { '@type': 'City', name: 'Clearwater' },
+    { '@type': 'City', name: 'Brandon' },
+    { '@type': 'City', name: 'Wesley Chapel' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Tampa E-Commerce Development & Headless Architecture',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
+  description:
+    'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Tampa enterprise brands.',
+  areaServed: { '@type': 'State', name: 'Florida' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  description: 'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Tampa', item: CANONICAL },
+  ],
+};
+
+export default function TampaEcommercePage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="tpa-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="tpa-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="tpa-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="tpa-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="tpa-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── 1. HERO (light) ─────────────────────────────────────────── */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_tampa_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
-          headline="Tampa's Top-Rated Shopify Developer for Gulf Coast Businesses"
-          lead="Tampa is one of the fastest-growing economies in Florida, $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it, live in 7 days, fixed-price. 500+ projects, 4.9★ on Google."
-          trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── 2. LOGO BAR (light) ────────────────────────────────────── */}
-        <LogoBar
-          tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE"
-        />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Tampa E-Commerce &amp; Enterprise Architecture</span>
+                </div>
 
-        {/* ── 3. TRUST STATS (tinted band) ──────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Tampa e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Tampa E-Commerce Agency for High-Growth Brands
+                </h1>
 
-        {/* ── 4. CITY CONTEXT (light / cream) ───────────────────────── */}
-        <CityContextSection
-          eyebrow="TAMPA MARKET"
-          headline="The Gulf Coast Economy Is Growing. Build the Store That Captures It"
-          leadParagraphs={[
-            "Tampa's $200B GDP is fueled by healthcare giants (BayCare, AdventHealth, Moffitt Cancer Center, Tampa General), Port Tampa Bay: the largest port in Florida, defense and aerospace (MacDill Air Force Base, L3Harris), and a thriving tourism economy with 24M annual visitors. Florida's 0% state income tax and Tampa's 7.5% Hillsborough County sales tax make this one of the most DTC-friendly metros in the Southeast. Add Ybor City's Cuban heritage food scene, a fast-growing tech sector anchored by Embarc Collective, and Gulf Coast marine culture, and you have a city with e-commerce demand across half a dozen distinct verticals. FactoryJet builds Shopify stores that rank for all of them, mobile-first, Lighthouse 95+, with AI product discovery and AEO content structured for ChatGPT and Google AI Overviews.",
-          ]}
-          stats={[
-            {
-              value: '3.2M+',
-              label: 'Tampa Metro Population: Largest Metro on the Gulf Coast',
-              sourceUrl: 'https://www.census.gov/quickfacts/fact/table/tampacityflorida/POP010220',
-            },
-            {
-              value: '0%',
-              label: 'Florida State Income Tax: Max Margin Advantage for DTC Founders',
-              sourceUrl: 'https://floridarevenue.com/taxes/taxesfees/Pages/communications_services_tax.aspx',
-            },
-            {
-              value: '$200B',
-              label: 'Tampa Bay GDP: One of the Fastest-Growing Economies in the US',
-              sourceUrl: 'https://www.tampabay.org/resources/economic-impact/',
-            },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Scale direct-to-consumer and wholesale operations with headless Shopify Plus, BigCommerce B2B, and sub-second checkout speeds. Engineered with bidirectional NetSuite and SAP ERP integrations.
+                </p>
 
-        {/* ── 5. SERVICE EXPLANATION (white) ────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="E-COMMERCE DEVELOPMENT · Tampa"
-          headline="What 'E-Commerce Development' Actually Means for a Tampa Business"
-          lead="Most Tampa agencies sell you a theme and hand you a bill. FactoryJet builds a revenue-generating Shopify store: custom design, Florida sales tax configured correctly (7.5% Hillsborough County), AI-powered product discovery, JSON-LD schema for AI search visibility, and a Lighthouse 95+ performance score: all in 7 days, fixed-price."
-          body={
-            <>
-              <p>
-                Tampa&apos;s healthcare and wellness economy, anchored by BayCare Health System,
-                AdventHealth, Moffitt Cancer Center, and Tampa General, has created a large DTC
-                market for medical-adjacent products, wellness supplements, fitness equipment, and
-                health technology. These brands need Shopify stores that communicate clinical
-                credibility fast. FactoryJet builds stores with trust-building UX, subscription
-                billing for recurring wellness products, and B2B pricing tiers for healthcare
-                procurement teams.
-              </p>
-              <p>
-                Tampa&apos;s marine and outdoor economy is one of the strongest in the US. Gulf
-                Coast boating culture, saltwater fishing, and an outdoor lifestyle spanning Clearwater
-                Beach to the Florida Keys creates sustained DTC demand for marine gear, fishing
-                equipment, outdoor apparel, and water sports products. FactoryJet builds Shopify
-                stores for marine brands with rental calendars, equipment configurators, dealer
-                wholesale portals, and nationwide shipping configurations built in from day one.
-              </p>
-              <p>
-                Every FactoryJet e-commerce project covers discovery, platform selection, custom
-                Shopify development, product catalog setup, Florida tax configuration, Core Web
-                Vitals optimization, and AEO content for ChatGPT and Perplexity. You leave with a
-                store you own outright, no platform lock-in, no retainer required, and a 30-day
-                support window after launch.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/tampa/ecommerce/service-explanation.webp"
-              alt=""
-              aria-hidden="true"
-              width={800}
-              height={600}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get an E-Commerce Architecture Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#tpa-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Tampa Corridors</span>
+                  </a>
+                </div>
+              </div>
 
-        {/* ── 6. STRATEGIC DARK SECTION (dark) ──────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="Why Tampa Businesses Choose FactoryJet Over Local Agencies"
-          lead={
-            "Wicked Creative is Tampa's best-known local web agency, but their focus is brand strategy and digital marketing, not Shopify development or AI-powered e-commerce. Mpls Digital ranks for Tampa searches but operates from Minneapolis with no Gulf Coast market knowledge and no fixed pricing. No Tampa agency combines Shopify specialization with AI development, 7-day delivery, and transparent fixed pricing.\n\nFactoryJet launches full Shopify stores in 7 days at a fixed, up-front price. Unlike Thrive Internet Marketing (Fort Worth, hourly rates, no fixed pricing) or WebFX (enterprise-level mid-market quotes), we deliver with real Tampa market knowledge: Florida's tax structure, Gulf Coast consumer behavior, Ybor City's Cuban food heritage, and the healthcare-wellness DTC market that drives half of Tampa Bay's e-commerce growth."
-          }
-          pillars={[
-            {
-              title: 'AI-native',
-              body: "Every store ships with AI-powered product recommendations, AEO content optimized for ChatGPT and Perplexity, and JSON-LD schema that gets cited in Google AI Overviews. Tampa's growing tech sector, anchored by Embarc Collective and a wave of healthcare tech startups, expects AI-powered commerce experiences. We build them as standard.",
-            },
-            {
-              title: 'Transparent',
-              body: "Fixed pricing on the first call across Shopify, WooCommerce, and headless builds. No discovery fees, no 'it depends' quotes, no Phase 2 invoices after launch.",
-            },
-            {
-              title: 'Guaranteed',
-              body: "7-day delivery on standard Shopify builds. If we miss the deadline, you don't pay. We've delivered on time on 97% of 500+ projects, including for Tampa brands preparing for seasonal launches tied to the Gulf Coast tourism peak.",
-            },
-          ]}
-        />
-
-        {/* ── 7. PROCESS (light / cream) ────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Tampa Shopify Store"
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery & Platform Selection',
-              description:
-                'We map your product catalog, target customer, and revenue goals. We recommend Shopify, WooCommerce, or headless based on your SKU count, subscription needs, and B2B requirements, not what is easiest for us to build. Tampa businesses get a tailored recommendation in 24 hours.',
-            },
-            {
-              number: '02',
-              title: 'UX Design & Store Architecture',
-              description:
-                "We design your store structure, homepage, collection pages, product pages, cart, checkout, and post-purchase flows, with conversion rate optimization built into every layout decision. Mobile-first, thumb-zone aware, and tested against Tampa's diverse consumer base spanning healthcare professionals, marine enthusiasts, tourists, and Cuban-American food buyers.",
-            },
-            {
-              number: '03',
-              title: 'Development & Configuration',
-              description:
-                'Custom Shopify theme or headless build, Florida sales tax setup (7.5% Hillsborough County), payment gateway integration (Shopify Payments, PayPal, Afterpay), app integrations, and GSAP micro-animations. Performance budgets are enforced from the first commit: Lighthouse 90+ is non-negotiable.',
-            },
-            {
-              number: '04',
-              title: 'Products, Content & SEO',
-              description:
-                'Product catalog upload, optimized descriptions, alt tags, meta fields, JSON-LD schema (FAQPage, Product, BreadcrumbList), and AEO content structured to get cited by ChatGPT, Perplexity, and Google AI Overviews. We submit to Google Search Console and verify AI crawler rendering.',
-            },
-            {
-              number: '05',
-              title: 'Launch & Growth Enablement',
-              description:
-                'Cloudflare/Vercel deploy, GA4 e-commerce tracking, GTM events, and a recorded launch walkthrough. Your 30-day support window covers post-launch fixes, additional product uploads, and training so your Tampa team can self-manage from day one. No retainer required.',
-            },
-          ]}
-        />
-
-        {/* ── 8. PORTFOLIO (white) ──────────────────────────────────── */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What Tampa e-commerce brands look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Healthcare & Wellness',
-              title: 'Tampa Healthcare & Wellness DTC Client',
-              description:
-                "Tampa Bay's healthcare economy: BayCare, AdventHealth, Moffitt, Tampa General, creates strong DTC demand for medical-adjacent wellness products, supplements, and health technology. These brands need stores that communicate clinical credibility and support subscription billing for recurring wellness orders. We build Shopify stores with trust-building UX and B2B pricing tiers for institutional buyers.",
-              imageSrc: '/images/us/tampa/ecommerce/portfolio-1.webp',
-              stat1: '+43% subscription rate',
-              stat2: '< 1.2s load time',
-            },
-            {
-              industry: 'Marine & Outdoor',
-              title: 'Tampa Marine & Outdoor Brand Client',
-              description:
-                "Gulf Coast boating culture, saltwater fishing, and water sports create one of the most concentrated marine gear markets in the US. Marine brands in Tampa need Shopify stores with equipment configurators, dealer wholesale portals, rental calendar integrations, and seasonal inventory management. We build stores for marine gear, fishing equipment, and outdoor apparel with nationwide shipping built in from day one.",
-              imageSrc: '/images/us/tampa/ecommerce/portfolio-2.webp',
-              stat1: '+51% AOV increase',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'Food & Cuban Culture',
-              title: 'Tampa Food & Ybor City Brand Client',
-              description:
-                "Ybor City: the historic Cuban neighborhood that built Tampa's cigar industry, has evolved into one of Florida's most distinctive food cultures. Cuban sandwich brands, craft cigar companies, Latin food products, and Tampa Bay's restaurant scene all have strong DTC potential. We build Shopify stores with gifting flows, subscription boxes, age verification for tobacco and alcohol, and nationwide cold-chain shipping configurations.",
-              imageSrc: '/images/us/tampa/ecommerce/portfolio-3.webp',
-              stat1: '+39% repeat orders',
-              stat2: 'Lighthouse 95',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-
-        {/* ── 9. COMPARISON TABLE (cream) ───────────────────────────── */}
-        <ComparisonTable
-          eyebrow="WHY FACTORYJET"
-          headline="FactoryJet vs Tampa E-Commerce Agencies"
-          lead={
-            "Tampa has a growing agency scene, but most local shops focus on branding and digital marketing rather than Shopify specialization. Wicked Creative is well-regarded for brand strategy but doesn't publish Shopify pricing or offer AI-powered e-commerce. Mpls Digital ranks for Tampa searches but operates from Minneapolis with no local market knowledge.\n\nFactoryJet delivers a full Shopify store in 7 days, fixed-price, with AI-powered features those agencies don't offer in the SMB range. No lock-in. No retainer. No surprise invoices."
-          }
-          columns={[
-            { label: 'Their pricing' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we cost less' },
-          ]}
-          rows={[
-            {
-              feature: 'Wicked Creative',
-              values: [
-                'Enterprise-level rates (brand strategy + marketing focus, not Shopify specialists)',
-                'Fixed-price · Shopify Standard',
-                'FactoryJet specializes exclusively in e-commerce and delivers in 7 days. Wicked Creative focuses on brand identity and digital marketing, no published Shopify pricing, no AI capabilities, no 7-day delivery guarantee.',
-              ],
-            },
-            {
-              feature: 'Thrive Internet Marketing',
-              values: [
-                'Hourly rates, no fixed pricing, 4–8 week timelines (Fort Worth-based)',
-                'Fixed-price · 7-day delivery',
-                'Thrive is a digital marketing agency with web development as a side service. FactoryJet builds exclusively on Shopify and Next.js with AI features, fixed pricing, and 7-day delivery: Thrive offers none of these.',
-              ],
-            },
-          ]}
-        />
-
-        {/* ── 10. PRICING (white) ───────────────────────────────────── */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="Transparent Pricing for Tampa E-Commerce Businesses"
-          lead={
-            "Tampa agency rates for a comparable Shopify build run at enterprise-level prices, and national agencies like WebFX quote mid-market scope at a steep premium. FactoryJet delivers the same quality at a fraction of the cost: fixed-price, with a faster timeline and a codebase you own outright. Pricing is scoped to your build; the main drivers are product count, integrations, and design complexity, and you get a full quote up front after a free discovery call. Stores ship in 7 days. No retainer required."
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description:
-                'A fully custom Shopify store live in 7 days. Best for Tampa DTC founders, marine brands, food businesses, and healthcare-adjacent wellness brands launching their first online store or replacing a template.',
-              features: [
-                'Custom Shopify theme (not a template)',
-                'Up to 100 products uploaded & configured',
-                'Florida sales tax setup (7.5% Hillsborough County)',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description:
-                'Advanced Shopify build with subscriptions, B2B tiered pricing, or dealer portals. Best for Tampa healthcare brands, marine gear wholesalers, and established DTC brands scaling online revenue.',
-              features: [
-                'Everything in Shopify Standard',
-                'Subscription billing (Recharge / Skio)',
-                'B2B dealer pricing & wholesale portal',
-                'Equipment configurator & rental calendar',
-                'GSAP micro-animations & editorial design',
-                'AI product recommendations integration',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description:
-                "Next.js headless storefront with Shopify or Medusa backend. For Tampa brands that need sub-500ms load times, custom API integrations, or a B2B portal that outperforms every competitor on the Gulf Coast.",
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'Custom API & ERP integrations',
-                'B2B portal: PO payments, dealer tiers',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                'Quarterly performance reviews',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
-
-        {/* ── 11. INDUSTRIES (cream) ────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="TAMPA × E-COMMERCE"
-          headline="E-Commerce Development for Tampa's Key Industries"
-          lead="From Gulf Coast marine brands to Ybor City food culture to healthcare-adjacent wellness companies, Tampa's economy spans industries with distinct e-commerce needs. FactoryJet has built stores for each of them."
-          sectors={[
-            {
-              name: 'Healthcare & Wellness',
-              description:
-                "DTC stores for Tampa's thriving wellness market, supplements, medical devices, fitness equipment, and health technology backed by the credibility of Moffitt Cancer Center, BayCare, and AdventHealth. Healthcare-adjacent brands need trust-building UX, subscription billing for recurring orders, and B2B pricing tiers for institutional procurement teams.",
-              example:
-                'Supplement brands, medical device accessory companies, fitness equipment retailers, and health technology products serving Tampa Bay healthcare professionals and consumers.',
-            },
-            {
-              name: 'Marine & Outdoor',
-              description:
-                "Shopify stores for Gulf Coast marine brands, fishing gear, boating equipment, water sports products, and outdoor apparel. Tampa Bay is one of the largest marine markets in the US. Marine brands need equipment configurators, dealer wholesale portals, rental integrations, and seasonal inventory management built natively into their Shopify setup.",
-              example:
-                "Marine gear retailers, saltwater fishing brands, boat accessory companies, and Gulf Coast outdoor apparel businesses serving Tampa Bay's boating and fishing community.",
-            },
-            {
-              name: 'Food & Cuban Culture',
-              description:
-                "E-commerce for Tampa's distinctive food scene: Ybor City cigars, Cuban sandwiches, Latin food products, craft beverages, and Gulf Coast seafood brands. Tampa's food culture has strong DTC potential nationally, with gifting flows, subscription boxes, and age verification for tobacco and alcohol products all required natively.",
-              example:
-                'Cuban food brands, craft cigar companies, Tampa Bay specialty food producers, and artisan beverage businesses with national DTC ambitions.',
-            },
-            {
-              name: 'Tourism & Hospitality',
-              description:
-                "Booking integrations, merchandise stores, and experience commerce for Tampa Bay's 24M annual visitors. Tourism and hospitality brands need Shopify stores with event ticket integrations, experience booking calendars, branded merchandise shops, and gift card flows that convert one-time visitors into repeat customers.",
-              example:
-                'Attraction merchandise stores, Gulf Coast experience brands, Tampa Bay hotel gift shops, and hospitality brands monetizing their visitor audience beyond the stay.',
-            },
-            {
-              name: 'Defense & Aerospace Adjacent',
-              description:
-                "B2B e-commerce for suppliers and contractors serving MacDill Air Force Base, L3Harris, and Tampa Bay's defense sector. Defense-adjacent businesses need secure B2B portals, compliance-aware content structures, contractor pricing tiers, and technical product catalogs that communicate to procurement professionals.",
-              example:
-                "Defense technology accessories, contractor supply companies, and B2B equipment brands serving MacDill AFB and L3Harris's supply chain in the Tampa Bay area.",
-            },
-            {
-              name: 'Financial Services & Fintech',
-              description:
-                "E-commerce for Tampa's growing fintech and financial services sector, branded product stores, professional training courses, event merchandise, and financial tool subscriptions. Tampa Bay's financial services community (MetLife, Franklin Templeton, Raymond James) creates B2B software and professional service commerce opportunities.",
-              example:
-                'Financial training course stores, fintech branded merchandise, professional service subscription platforms, and financial tool SaaS companies based in the Tampa metro.',
-            },
-          ]}
-        />
-
-        {/* ── 12. TESTIMONIALS (white) ──────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
-
-        {/* ── 13. FAQ (cream) ───────────────────────────────────────── */}
-        <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Tampa E-Commerce Businesses"
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
-
-
-        {/* Cross-link: Related Services in Tampa */}
-        <section className="py-10 bg-[#FAFAF7]">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-              Also in Tampa
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/tampa/web-design/"
-                className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-              >
-                Web Design →
-              </Link>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/tampa/ecommerce/service-explanation.webp"
+                  alt="Tampa Florida enterprise ecommerce engineering and headless Shopify Plus development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 14. FINAL CTA (dark) ──────────────────────────────────── */}
-        <EcommerceCityLinksUS currentCity="tampa" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Build Your Tampa Shopify Store?"
-          sub="Tampa's Gulf Coast economy is growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors are capturing the searches, and the sales, you should own. Pick a tier, book a 30-minute audit, and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-        />
-      </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Enterprise Commerce &amp; ERP Ecosystem</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('tampa', FAQ_ITEMS) }}
-    />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom headless platforms in Tampa"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Scale &amp; Reliability</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  E-Commerce Engineered for Florida&apos;s High-Volume Merchants
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From South Tampa luxury boutiques to Port Tampa Bay maritime logistics distributors and Gateway medical technology leaders, we engineer resilient commerce systems that maximize margins and eliminate checkout friction.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule E-Commerce Architecture Review" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. TAMPA DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="tpa-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Tampa Bay Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored E-Commerce for Tampa&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From South Tampa luxury brands to Port Tampa Bay maritime logistics and Gateway medical technologies:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized E-Commerce Architectures for Tampa Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Florida demands tailored purchase flows, inventory connectors, and checkout performance:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Tampa Merchants Choose FactoryJet E-Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks and slow monolithic checkouts with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// TAMPA ENTERPRISE E-COMMERCE BLUEPRINT"
+            title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get an E-Commerce Architecture Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE REPLATFORMING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Replatforming Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Replatforming Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-downtime migrations and high-conversion storefront launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Tampa E-Commerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless e-commerce development against traditional template agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="TAMPA E-COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce Development in Tampa FL"
+          lead="Direct, plain English answers to what Tampa brand founders and digital commerce leaders ask about replatforming and development:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="tampa" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; Zero Downtime</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Tampa E-Commerce Architecture?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your catalog size and operational goals. We will provide a comprehensive architectural proposal, clear migration timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
+    </>
   );
 }

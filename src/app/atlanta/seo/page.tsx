@@ -10,27 +10,27 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
-const CANONICAL = 'https://factoryjet.com/nashville/seo';
+const CANONICAL = 'https://factoryjet.com/atlanta/seo';
 
 export const metadata: Metadata = {
-  title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Atlanta Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+    'Atlanta local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Buckhead, Midtown, and Perimeter Center.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Atlanta Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+      'Atlanta local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Buckhead, Midtown, and Perimeter Center.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Atlanta Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Nashville local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Atlanta Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Atlanta local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -48,98 +48,98 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Nashville commercial corridors.', icon: '📍' },
-  { num: '4.7x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Atlanta commercial corridors.', icon: '📍' },
+  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
   { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'Music Row & Midtown',
-    query: 'entertainment law seo music row nashville',
-    focus: 'Entertainment Law, Artist Management & Recording Studios',
-    desc: 'The global epicenter of music business. High-intent local searches demand entertainment legal schemas, verified studio credentials, and top organic rankings.',
+    corridor: 'Buckhead & Peachtree Road',
+    query: 'wealth management seo buckhead atlanta',
+    focus: 'Wealth Advisory, Commercial Law & Plastic Surgery',
+    desc: 'Dense financial and luxury medical center in North Atlanta. Ultra-high competition for private client inquiries, high-ticket surgical consultations, and institutional wealth retainers.',
   },
   {
-    corridor: 'Downtown Nashville & SoBro',
-    query: 'hospitality seo downtown nashville',
-    focus: 'Convention Hospitality, Real Estate Developers & Tourism',
-    desc: 'Fast-growing urban core. Captures high-volume corporate event inquiries, private venue bookings, and commercial real estate development searches.',
+    corridor: 'Midtown & Tech Square',
+    query: 'b2b saas seo midtown atlanta',
+    focus: 'Fintech, Healthtech & Enterprise B2B SaaS',
+    desc: 'Major corporate innovation cluster adjacent to Georgia Tech. Tech enterprises demand structured entity graphs, deep topical authority hubs, and AI answer engine visibility.',
   },
   {
-    corridor: 'West End & Vanderbilt Medical District',
-    query: 'specialty medical clinic seo west end nashville',
-    focus: 'Hospital Networks, Specialized Clinics & Surgery Centers',
-    desc: 'The healthcare management capital of America. Multi-location practice architectures, physician directories, and structured patient review funnels.',
+    corridor: 'Downtown & Centennial Olympic Park',
+    query: 'corporate law firm seo downtown atlanta',
+    focus: 'Convention Hospitality, Logistics HQs & Corporate Legal',
+    desc: 'The civic and legal nexus of Georgia. Demands practice area dominance in federal litigation, commercial real estate disputes, and corporate logistics contracts.',
   },
   {
-    corridor: 'The Gulch & Germantown',
-    query: 'creative agency seo the gulch',
-    focus: 'Culinary Brands, Boutique Retail & Creative Studios',
-    desc: 'High-end culinary and retail district. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
+    corridor: 'Perimeter Center & Central Perimeter',
+    query: 'specialty medical clinic seo perimeter center',
+    focus: 'Fortune 500 Regional HQs, Healthcare Systems & Medical Specialties',
+    desc: 'High-density medical and corporate corridor spanning Sandy Springs and Dunwoody. Multi-location clinic architectures and localized neighborhood rank grids capture patient demand.',
   },
   {
-    corridor: 'Brentwood & Cool Springs',
-    query: 'wealth advisory seo brentwood nashville',
-    focus: 'Corporate Regional HQs, Healthcare Management & Financial Advisory',
-    desc: 'Affluent corporate commercial hub in Williamson County. Captures high-net-worth wealth retainers, corporate consulting contracts, and B2B vendor inquiries.',
+    corridor: 'West Midtown & Howell Mill Corridor',
+    query: 'architecture studio seo west midtown atlanta',
+    focus: 'Creative Agencies, Architecture Studios & Luxury Dining',
+    desc: 'Vibrant design and culinary epicenter. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
   },
   {
-    corridor: 'Murfreesboro & I-24 Logistics Corridor',
-    query: 'industrial manufacturing seo murfreesboro',
-    focus: 'Automotive Manufacturing, Equipment Supply & Freight Hubs',
-    desc: 'Dense industrial manufacturing corridor. B2B service inquiries require technical capability landing pages, equipment schemas, and sub-second edge performance.',
+    corridor: 'Alpharetta & North Fulton Corridor',
+    query: 'managed it services seo alpharetta',
+    focus: 'Fintech Capital, IT Managed Services & Telecommunications',
+    desc: 'High-density tech manufacturing and financial transaction nexus. B2B service inquiries require technical capability landing pages and sub-second page performance.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Healthcare Systems, Medical Specialists & Aesthetics',
-    headline: 'Capturing High-Value Patients Across West End & Williamson County',
+    sector: 'High-Ticket Medical Practices, Aesthetics & Surgical Centers',
+    headline: 'Capturing High-Value Patients Across Buckhead & Perimeter Center',
     description:
-      'In Middle Tennessee’s competitive healthcare capital, prospective patients research physician credentials thoroughly before scheduling procedures. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive surgical and orthopedic queries.',
+      'In affluent North Atlanta corridors, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive aesthetic and orthopedic queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Nashville healthcare medical clinic and surgical center local SEO optimization',
+    alt: 'Atlanta healthcare medical clinic and surgical center local SEO optimization',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Hyper-local neighborhood geo-pages targeting West End, Green Hills, and Brentwood',
+      'Hyper-local neighborhood geo-pages targeting Buckhead, Sandy Springs, and Alpharetta',
     ],
   },
   {
-    sector: 'Music Entertainment, Creative Agencies & Media Studios',
-    headline: 'Topical Authority & AI Citation Engineering for Music City Brands',
+    sector: 'B2B SaaS, Fintech & Enterprise IT Solutions',
+    headline: 'Topical Authority & AI Citation Engineering for Atlanta Tech Leaders',
     description:
-      'Music Row talent managers, recording studios, and indie labels demand high-visibility digital footprints. We build comprehensive topical clusters, artist event schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Midtown and Alpharetta enterprise technology buyers use generative AI engines and Google Search to discover software vendors. We build comprehensive topical clusters, technical whitepaper funnels, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Nashville music entertainment studio and talent management search engine optimization',
+    alt: 'Atlanta B2B enterprise software and fintech search engine optimization',
     points: [
-      'Topical content graph covering artist representation, studio services, and licensing',
-      'Structured EntertainmentBusiness and Organization schema for AI citation retrieval',
-      'High-authority music trade publication and entertainment directory synchronization',
+      'Topical content graph covering high-intent software comparisons and enterprise workflows',
+      'Structured SoftwareApplication and Organization schema for AI citation retrieval',
+      'High-authority technical PR and software review directory profile synchronization',
     ],
   },
   {
-    sector: 'Corporate Law, Litigation & Intellectual Property',
-    headline: 'Dominating High-Stakes Search Corridors for Nashville Law Firms',
+    sector: 'Corporate Litigation, Personal Injury & Commercial Law',
+    headline: 'Dominating High-Stakes Search Corridors for Metro Atlanta Law Firms',
     description:
-      'Legal search terms in Davidson and Williamson counties are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
+      'Legal search terms in Atlanta are among the most fiercely contested in the country. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Nashville corporate law firm litigation and copyright local SEO ranking strategy',
+    alt: 'Atlanta corporate law firm litigation and personal injury local SEO ranking strategy',
     points: [
-      'LegalService and Attorney schema linking Tennessee Bar verified credentials',
-      'Localized practice area silos targeting Davidson, Williamson, and Rutherford counties',
+      'LegalService and Attorney schema linking State Bar of Georgia verified credentials',
+      'Localized practice area silos targeting Fulton, Gwinnett, Cobb, and DeKalb counties',
       'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    sector: 'Automotive Manufacturing, Supply Chain & Industrial Parts',
-    headline: 'Driving High-Ticket Commercial Inquiries Across Middle Tennessee',
+    sector: 'Commercial Contracting, Industrial Supply & Logistics',
+    headline: 'Driving High-Ticket Commercial Inquiries Across the I-85 & I-285 Corridors',
     description:
-      'Automotive suppliers, industrial fabricators, and equipment distributors along the I-24 and I-65 corridors require steady commercial contract flow. We optimize your local digital footprint to capture plant engineers, procurement directors, and regional operations managers.',
+      'General contractors, industrial suppliers, and logistics providers in Atlanta require steady commercial contract flow. We optimize your local digital footprint to capture facility managers, procurement directors, and commercial developers seeking regional partners.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial supply local SEO architecture',
+    alt: 'Atlanta commercial contracting and industrial supply local SEO architecture',
     points: [
       'Commercial capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate quote request submissions',
@@ -152,7 +152,7 @@ const PAIN_POINTS = [
   {
     num: '01',
     title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Nashville agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    problem: 'Traditional Atlanta agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
     solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
   },
   {
@@ -180,7 +180,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 01',
     title: 'Local Entity & Citation Audit',
     desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across metro Nashville', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    deliverables: ['Google Maps rank grid scan across metro Atlanta', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
   },
   {
     phase: 'Phase 02',
@@ -229,16 +229,16 @@ const FAQ_CATEGORIES = [
   { key: 'pricing', label: 'Cost & Retainers' },
   { key: 'timeline', label: 'Timeline & Results' },
   { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Nashville Market Focus' },
+  { key: 'local', label: 'Atlanta Market Focus' },
   { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Nashville business?',
+    question: 'How much does local SEO cost for an Atlanta business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Nashville corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Atlanta corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -254,13 +254,13 @@ const FAQ_ITEMS = [
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Nashville business expect to see Google Maps rank improvements?',
+    question: 'How quickly can our Atlanta business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in West End or Brentwood generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Buckhead or Midtown generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Nashville business can rank in the Local 3-Pack?',
+    question: 'What factors determine how fast an Atlanta business can rank in the Local 3-Pack?',
     answer:
       'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
@@ -296,27 +296,27 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across Middle Tennessee?',
+    question: 'Do you optimize for multiple locations across the Greater Atlanta metro area?',
     answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Nashville, Brentwood, Franklin, Murfreesboro, Hendersonville, and Mount Juliet.',
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Atlanta, Alpharetta, Marietta, Sandy Springs, Roswell, and Decatur.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in West End and Green Hills?',
+    question: 'Can you help our practice outrank entrenched competitors in Buckhead and Midtown?',
     answer:
       'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Nashville?',
+    question: 'How do service-area businesses without a public storefront rank in Atlanta?',
     answer:
       'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
   },
   {
     category: 'local',
-    question: 'Can you optimize our local presence for entertainment and artist services?',
+    question: 'Can you optimize our local presence for Spanish-speaking customers in Metro Atlanta?',
     answer:
-      'Yes. We build specialized event and entertainment schemas, local studio directories, and music licensing metadata to capture high-value industry searches across Music Row.',
+      'Yes. We can architect bilingual landing pages, localized metadata, and Spanish-language GBP service descriptions to capture high-intent inquiries across Georgia’s diverse commercial markets.',
   },
   {
     category: 'reporting',
@@ -328,13 +328,13 @@ const FAQ_ITEMS = [
     category: 'reporting',
     question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Nashville, showing exactly where your business appears in the top 3 and where optimization is needed.',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Atlanta, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
     category: 'reporting',
     question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'We continuously monitor your primary search categories in Nashville, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+      'We continuously monitor your primary search categories in Atlanta, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
     category: 'reporting',
@@ -360,35 +360,35 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Nashville Local SEO Agency',
+  name: 'FactoryJet - Atlanta Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Nashville',
-    addressRegion: 'TN',
+    addressLocality: 'Atlanta',
+    addressRegion: 'GA',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 36.1627,
-    longitude: -86.7816,
+    latitude: 33.7490,
+    longitude: -84.3880,
   },
   areaServed: [
-    { '@type': 'City', name: 'Nashville' },
-    { '@type': 'City', name: 'Brentwood' },
-    { '@type': 'City', name: 'Franklin' },
-    { '@type': 'City', name: 'Murfreesboro' },
-    { '@type': 'City', name: 'Hendersonville' },
+    { '@type': 'City', name: 'Atlanta' },
+    { '@type': 'City', name: 'Alpharetta' },
+    { '@type': 'City', name: 'Marietta' },
+    { '@type': 'City', name: 'Sandy Springs' },
+    { '@type': 'City', name: 'Roswell' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Nashville Local SEO & Google Maps Optimization',
+  name: 'Atlanta Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
@@ -396,15 +396,15 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Nashville businesses.',
-  areaServed: { '@type': 'State', name: 'Tennessee' },
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Atlanta businesses.',
+  areaServed: { '@type': 'State', name: 'Georgia' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+  name: 'Atlanta Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Atlanta local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Buckhead, Midtown, and Perimeter Center.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -415,18 +415,18 @@ const BREADCRUMB_SCHEMA = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
     { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Nashville', item: CANONICAL },
+    { '@type': 'ListItem', position: 3, name: 'Atlanta', item: CANONICAL },
   ],
 };
 
-export default function NashvilleSeoPage() {
+export default function AtlantaSeoPage() {
   return (
     <>
-      <script id="bna-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bna-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="bna-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="bna-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="bna-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="atl-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="atl-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="atl-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="atl-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="atl-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,26 +441,26 @@ export default function NashvilleSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Nashville Local SEO &amp; AI Citation Authority</span>
+                  <span>Atlanta Local SEO &amp; AI Citation Authority</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Nashville Local SEO Agency for Market Leaders
+                  Atlanta Local SEO Agency for Market Leaders
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Music Row, West End, and Brentwood. Engineered for verified inbound calls and high-ticket consultations.
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Buckhead, Midtown, and Perimeter Center. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-                  <a href="#bna-districts" className="rv-btn-secondary">
+                  <a href="#atl-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Nashville Corridors</span>
+                    <span>Explore Atlanta Corridors</span>
                   </a>
                 </div>
               </div>
@@ -468,8 +468,8 @@ export default function NashvilleSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/nashville/hero-nashville.webp"
-                  alt="Nashville Tennessee local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/atlanta-web-design/hero.webp"
+                  alt="Atlanta Georgia local SEO rankings and Google Maps 3-Pack dominance strategy"
                   width={640}
                   height={640}
                   priority
@@ -512,7 +512,7 @@ export default function NashvilleSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Nashville businesses"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Atlanta businesses"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -529,11 +529,11 @@ export default function NashvilleSeoPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Nashville&apos;s High-Value Commercial Sectors
+                  Engineered for Atlanta&apos;s High-Value Commercial Sectors
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Music Row entertainment firms to West End hospital systems and Brentwood corporate headquarters, Tennessee businesses need verified search authority to capture high-ticket clients before competitors do.
+                  From Buckhead wealth managers to Midtown tech companies and Perimeter Center medical clinics, Atlanta businesses need verified search authority to capture high-ticket clients before competitors do.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -564,21 +564,21 @@ export default function NashvilleSeoPage() {
           </div>
         </section>
 
-        {/* ── 04. NASHVILLE DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="bna-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. ATLANTA DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="atl-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Middle Tennessee Commercial Corridor Depth</span>
+                <span>Metro Atlanta Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Local SEO for Nashville&apos;s Core Sectors
+                Tailored Local SEO for Atlanta&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From Music Row studios to West End healthcare hubs and Brentwood corporate offices:
+                From Buckhead luxury practices to Midtown tech hubs and Alpharetta corporate corridors:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function NashvilleSeoPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Local Search Architectures for Nashville
+                Specialized Local Search Architectures for Atlanta
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every high-value commercial sector in Tennessee demands tailored keyword targeting, entity schemas, and conversion pathways:
+                Every high-value commercial sector in Georgia demands tailored keyword targeting, entity schemas, and conversion pathways:
               </p>
             </div>
 
@@ -695,7 +695,7 @@ export default function NashvilleSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Nashville Companies Choose FactoryJet Local SEO
+                Why Atlanta Companies Choose FactoryJet Local SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace generic SEO reports with direct rank dominance and verified phone lead generation:
@@ -735,10 +735,10 @@ export default function NashvilleSeoPage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-blueprint">
           <LocalSeoArchitectureBlueprint
-            badge="// NASHVILLE LOCAL SEARCH & AI RANKING BLUEPRINT"
+            badge="// ATLANTA LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Nashville local search."
-            city="Nashville"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Atlanta local search."
+            city="Atlanta"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
           />
@@ -758,7 +758,7 @@ export default function NashvilleSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Middle Tennessee:
+                A systematic, engineering-first methodology for establishing market dominance across Greater Atlanta:
               </p>
             </div>
 
@@ -819,7 +819,7 @@ export default function NashvilleSeoPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Nashville SEO Agencies: What to Ask
+                Evaluating Atlanta SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 Compare engineering-led local search optimization against traditional marketing agencies before you sign:
@@ -863,9 +863,9 @@ export default function NashvilleSeoPage() {
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="NASHVILLE LOCAL SEARCH INTELLIGENCE"
-          headline="Frequently Asked Questions About Local SEO in Nashville TN"
-          lead="Direct, plain English answers to what Nashville business owners and marketing directors ask about search visibility:"
+          eyebrow="ATLANTA LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Atlanta GA"
+          lead="Direct, plain English answers to what Atlanta business owners and marketing directors ask about search visibility:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -874,7 +874,7 @@ export default function NashvilleSeoPage() {
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
-            <SeoCityLinksUS currentCity="nashville" />
+            <SeoCityLinksUS currentCity="atlanta" />
           </div>
         </section>
 
@@ -889,7 +889,7 @@ export default function NashvilleSeoPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Nashville Local Search?
+              Ready to Dominate Atlanta Local Search?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

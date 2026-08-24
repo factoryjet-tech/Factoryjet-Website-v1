@@ -1,375 +1,502 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import HeroInlineForm from '@/components/HeroInlineForm';
-import './tampa-seo.css';
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   /us/tampa/seo, Tampa local-SEO city page. Built 2026-06-06.
-   Real SiteHeader/SiteFooter/ModalCTAButton. Styles scoped under .tseo
-   (./tampa-seo.css, next/font vars, no webfont request). CSS-drawn map hero
-   (text LCP, zero CLS) → Lighthouse 95+ target. Source: research/mockup-us-tampa-seo-v2.html.
-   Honesty: fixed-price month-to-month, free audit, no guarantee; real clients
-   only; founder byline. No fake LocalBusiness address, no self-serving Review schema.
-───────────────────────────────────────────────────────────────────────────── */
-
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
-  title: 'Tampa SEO Company | Local SEO Services in Tampa | FactoryJet',
+  title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is a Tampa SEO company that gets local businesses into the Google Map Pack and "near me" results. Local SEO month-to-month, fixed-price, free audit. Built by senior engineers.',
+    'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Tampa SEO Company | Local SEO Services in Tampa | FactoryJet',
-    description:
-      'Tampa SEO company that gets you into the Google Map Pack. Local SEO month-to-month, fixed-price, free audit. Senior team, founder-led.',
-    url: CANONICAL,
-    siteName: 'FactoryJet',
-    locale: 'en_US',
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description:
+      'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Tampa Local SEO Agency' }],
+    locale: 'en_US',
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Tampa local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-type FaqGroup = { id: string; label: string; items: { q: string; a: string }[] };
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
 
-const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Tampa Bay commercial corridors.', icon: '📍' },
+  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    id: 'faq-pricing',
-    label: 'Pricing & timeline',
-    items: [
-      { q: 'How much does local SEO cost in Tampa?', a: "FactoryJet's Tampa local SEO is fixed-price and billed month-to-month, scoped to your competition and number of locations after a free audit, so you know the cost before you start. Most US agencies charge a steep monthly premium for comparable work; we deliver the same quality for far less. There's no setup fee and no long-term contract." },
-      { q: 'How long does SEO take to work in Tampa?', a: 'Expect early movement in 3–6 months and stable local-pack rankings in 6–12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2–8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
-      { q: 'How fast can I rank in the Tampa Map Pack?', a: 'If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15–60 days. Starting from scratch in a competitive category, plan on 3–6 months. The Map Pack is driven almost entirely by your Google Business Profile.' },
-      { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
+    corridor: 'Downtown Tampa & Water Street',
+    query: 'corporate law firm seo downtown tampa',
+    focus: 'Fintech Headquarters, Corporate Law & Commercial Real Estate',
+    desc: 'The vibrant economic core of Tampa Bay. High-intent local searches demand corporate litigation schemas, verified partner credentials, and top organic rankings.',
+  },
+  {
+    corridor: 'Westshore Business District',
+    query: 'b2b professional services seo westshore tampa',
+    focus: 'Regional Corporate HQs, Executive Search & B2B Professional Services',
+    desc: 'The largest commercial office market in Florida. Captures high-ticket executive search inquiries, corporate advisory retainers, and B2B vendor searches.',
+  },
+  {
+    corridor: 'Ybor City & Historic District',
+    query: 'creative agency seo ybor city tampa',
+    focus: 'Creative Agencies, Architecture Studios & Boutique Hospitality',
+    desc: 'Historic creative and technology nexus. Features visual schema integration, localized service radius targeting, and Google Maps prominence.',
+  },
+  {
+    corridor: 'South Tampa & Hyde Park',
+    query: 'aesthetic clinic seo south tampa',
+    focus: 'Private Wealth Advisory, Aesthetic Medicine & Luxury Real Estate',
+    desc: 'Affluent residential and commercial strip. Captures high-ticket elective procedure consultations, private wealth management, and luxury residential listings.',
+  },
+  {
+    corridor: 'Gateway & Carillon Park',
+    query: 'medical device seo carillon park',
+    focus: 'Healthcare Systems, Medical Device Technology & Clinical Research',
+    desc: 'Dense healthcare innovation hub. Multi-location practice architectures, physician directories, and structured patient review funnels.',
+  },
+  {
+    corridor: 'Port Tampa Bay & East Tampa Corridor',
+    query: 'maritime logistics seo port tampa bay',
+    focus: 'Maritime Logistics, Industrial Cold Storage & Heavy Distribution',
+    desc: 'Florida’s largest cargo port. B2B service inquiries require technical capability landing pages, freight quote calculators, and sub-second edge performance.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Medical Specialties, Plastic Surgery & Concierge Health',
+    headline: 'Capturing High-Value Patients Across South Tampa & Westshore',
+    description:
+      'In Tampa Bay’s competitive healthcare and aesthetic sectors, patients research clinic reputations and doctor credentials thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Tampa healthcare medical clinic and elective surgery local SEO optimization',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting South Tampa, Hyde Park, and Carrollwood',
     ],
   },
   {
-    id: 'faq-basics',
-    label: 'Local SEO basics',
-    items: [
-      { q: 'What is local SEO?', a: 'Local SEO is how your business shows up when nearby Tampa customers search for what you sell, in Google Maps, the local 3-pack, and "near me" results. Unlike general SEO, it targets high-intent buyers ready to call or visit.' },
-      { q: 'What is the Google Map Pack (local 3-pack)?', a: 'The Map Pack is the block of three businesses with a map at the top of local searches. It is generated entirely from Google Business Profiles and ranked by relevance, distance, and prominence.' },
-      { q: 'How important is Google Business Profile to local SEO?', a: 'It is the single most important asset, because the Map Pack is built from it. A complete profile with consistent name, address, and phone, plus photos, posts, and reviews, is what gets you into the three-pack.' },
-      { q: "What's the difference between local SEO and regular SEO?", a: 'Regular SEO chases broad web traffic; local SEO captures nearby Tampa buyers with purchase intent and adds Map Pack signals (Google Business Profile, citations, reviews, and proximity) that national SEO ignores.' },
+    sector: 'Corporate Law, Maritime Litigation & Commercial Real Estate',
+    headline: 'Dominating High-Stakes Search Corridors for Tampa Bay Law Firms',
+    description:
+      'Legal search terms in Hillsborough and Pinellas counties are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Tampa corporate law firm litigation and maritime law local SEO strategy',
+    points: [
+      'LegalService and Attorney schema linking Florida Bar verified credentials',
+      'Localized practice area silos targeting Downtown Tampa, St. Petersburg, and Clearwater',
+      'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    id: 'faq-included',
-    label: "What's included",
-    items: [
-      { q: "What's included in your Tampa SEO services?", a: 'Google Business Profile optimization, local citations and NAP cleanup, review generation and response, on-page and technical SEO, local content, AI/GEO optimization, and monthly reporting tied to calls and leads. You get a written deliverables list. Vagueness is a red flag in any SEO company.' },
-      { q: 'How do you measure success?', a: 'We lead with revenue, not vanity metrics: phone calls, direction requests, form fills, and booked leads first, then Map Pack rankings, profile views, and organic traffic as the "why."' },
-      { q: 'Do I get access to my analytics and a monthly report?', a: 'Yes. You keep full ownership of and access to Google Analytics and Search Console, plus a plain-English monthly report connecting rankings to traffic to calls. No access to your own data is a major red flag with any agency.' },
-      { q: 'Will my business get cited by AI tools like ChatGPT?', a: 'We optimize your content and entity data so AI answer engines (ChatGPT, Perplexity, and Google AI Overviews) can find and cite your business. AI engines reward clear, well-structured, well-sourced content, which is exactly how we build.' },
+    sector: 'Wealth Management, Family Offices & Executive Consulting',
+    headline: 'Topical Authority & AI Citation Engineering for Tampa Financial Leaders',
+    description:
+      'Water Street and Westshore wealth managers require commanding search presence to capture relocating high-net-worth families and corporate leaders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Tampa private wealth management and executive financial consulting SEO strategy',
+    points: [
+      'Topical content graph covering Florida tax advantages and private wealth advisory',
+      'Structured FinancialService and Organization schema for AI citation retrieval',
+      'High-authority regional financial PR and tier-one publication placements',
     ],
   },
   {
-    id: 'faq-trust',
-    label: 'Contracts & guarantees',
-    items: [
-      { q: 'Do you require a long-term contract?', a: "No. FactoryJet local SEO is month-to-month: cancel any time with 30 days' notice. Most Tampa agencies lock you in for 6–12 months; we would rather earn the next month." },
-      { q: 'What happens to my work if I leave?', a: 'You keep everything: your Google Business Profile, website content, citations, and reporting access stay yours. Work that disappears when you leave was rented, not built.' },
-      { q: 'Can you guarantee #1 rankings in Tampa?', a: 'No, and you should walk away from anyone who does. Google itself warns against SEOs who guarantee rankings. What we guarantee is real work, a transparent roadmap, month-to-month flexibility, and reporting tied to calls and leads.' },
-      { q: 'How do I avoid SEO scams in Tampa?', a: 'Look for transparent tactics, Google Business Profile and review expertise, realistic timelines, and full access to your own data. Run from guaranteed rankings, no reporting, and one-size-fits-all packages.' },
-    ],
-  },
-  {
-    id: 'faq-fit',
-    label: 'Fit & getting started',
-    items: [
-      { q: 'Does local SEO work for my industry?', a: 'Yes for any business serving a local area: home services (HVAC, roofing, pools, plumbing), medical and dental, law, real estate, restaurants, and retail all rank well. Service-area businesses without a storefront still dominate the Map Pack.' },
-      { q: 'Do I need SEO if I already run Google Ads?', a: 'Yes, they work together. Ads are a faucet that stops the moment you stop paying; SEO is an asset that keeps producing. Studies show organic local listings earn several times more clicks than paid ads, with no per-click cost once you rank.' },
-      { q: 'Should I hire an agency or build SEO in-house?', a: 'A senior in-house SEO costs roughly $80K–$120K a year in salary alone, plus tools. An agency delivers the full skill set (GBP, technical, content, links) for a fraction of that. Most Tampa SMBs keep one internal point person and outsource execution.' },
-      { q: 'Do you serve St. Petersburg, Clearwater, and Brandon too?', a: 'Yes. We work across the entire Tampa–St. Petersburg–Clearwater metro, including Westshore, Downtown, Ybor City, St. Pete, Clearwater, and Brandon.' },
+    sector: 'Maritime Cargo, Industrial Cold Storage & Heavy Logistics',
+    headline: 'Driving High-Ticket Commercial Inquiries Across Port Tampa Bay',
+    description:
+      'Marine cargo operators, terminal logistics providers, and cold storage distributors in East Tampa require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, fleet managers, and regional logistics coordinators.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Tampa maritime cargo logistics and industrial cold storage local SEO architecture',
+    points: [
+      'Commercial logistics capability landing pages optimized for regional radius search queries',
+      'High-speed mobile performance ensuring immediate freight quote request submissions',
+      'Structured LocalBusiness schema with verified commercial service area parameters',
     ],
   },
 ];
 
-const VERTICALS: { h: string; p: string }[] = [
-  { h: 'Medical & dental practices', p: 'Clinics, dentists, and specialists competing for "near me" patient searches.' },
-  { h: 'Law firms & attorneys', p: 'Practice-area pages and reviews that win high-value local cases.' },
-  { h: 'Accountants, advisors & insurance', p: 'Professional services that close on trust and proximity.' },
-  { h: 'Home services & contractors', p: 'HVAC, roofing, pools, remodeling: the Tampa growth verticals.' },
-  { h: 'Real estate & brokers', p: 'Neighborhood and listing visibility across the metro.' },
-  { h: 'Restaurants & local e-commerce', p: 'Local discovery, reviews, and "open now" intent.' },
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
+    problem: 'Traditional Tampa agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
+    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
+    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+  },
+  {
+    num: '03',
+    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
+    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
+    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+  },
+  {
+    num: '04',
+    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
+    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
+    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+  },
 ];
 
-const INCLUDED: { h: string; p: string }[] = [
-  { h: 'Google Business Profile optimization', p: 'The Map Pack is built from your profile. We optimize categories, services, photos, posts, and Q&A, and keep your name, address, and phone consistent everywhere.' },
-  { h: 'Local citations & NAP cleanup', p: 'Accurate, consistent listings across the directories Google trusts, and cleanup of the duplicates dragging you down.' },
-  { h: 'Reviews that move rankings', p: 'A system to earn and respond to reviews, one of the strongest local signals you actually control.' },
-  { h: 'On-page & technical SEO', p: 'Fast, crawlable pages, Core Web Vitals, schema, and content built around how Tampa customers search.' },
-  { h: 'Local content', p: 'Service and neighborhood pages that earn rankings without reading like thin doorway pages.' },
-  { h: 'AI SEO / GEO', p: 'We structure your content and entity data so ChatGPT, Perplexity, and Google AI Overviews can find and cite your business.' },
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Local Entity & Citation Audit',
+    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
+    deliverables: ['Google Maps rank grid scan across Tampa Bay', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Google Business Profile & On-Page Geo-Optimization',
+    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
+    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Tier-One Citation Sync & Local PR Distribution',
+    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
+    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Rank Defense, AI Citation Monitoring & Expansion',
+    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
+    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+  },
 ];
 
-const STEPS: { pill: string; h: string; p: string }[] = [
-  { pill: 'Day 1', h: 'Free audit', p: 'We show where you rank in the Map Pack today and what is holding you back.' },
-  { pill: 'Week 1', h: 'Foundations', p: 'Google Business Profile, citations, and technical fixes.' },
-  { pill: 'Ongoing', h: 'Content & links', p: 'Local content, reviews, and authority built month over month.' },
-  { pill: 'Monthly', h: 'Reporting', p: 'Tied to calls and leads, not vanity ranking screenshots.' },
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Ranking Target',
+    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+  },
+  {
+    label: 'Structured Data',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
+    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+  },
+  {
+    label: 'Citation Quality',
+    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
+    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+  },
+  {
+    label: 'AI Search Preparedness',
+    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
+    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+  },
 ];
 
-const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Pricing', fj: 'Fixed-price, month-to-month', alt: 'Premium monthly retainers', hl: true },
-  { k: 'Contract', fj: 'Month-to-month', alt: '6–12 month lock-in' },
-  { k: 'Who does the work', fj: 'Senior engineers', alt: 'Junior account managers' },
-  { k: 'Kickoff', fj: '7 days', alt: 'Weeks' },
-  { k: 'Reporting', fj: 'Calls & leads', alt: 'Ranking screenshots' },
-  { k: 'AI SEO / GEO', fj: 'Included', alt: 'Rarely offered' },
-  { k: 'Your data & accounts', fj: 'You own them', alt: 'Often locked to the agency' },
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Retainers' },
+  { key: 'timeline', label: 'Timeline & Results' },
+  { key: 'technical', label: 'GBP & Schemas' },
+  { key: 'local', label: 'Tampa Bay Market Focus' },
+  { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
-const faqSchemaItems = FAQ_GROUPS.flatMap((g) =>
-  g.items.map((item) => ({
-    '@type': 'Question' as const,
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer' as const, text: item.a },
-  }))
-);
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Tampa business?',
+    answer:
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Tampa corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there any hidden citation fees or third-party listing markups?',
+    answer:
+      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you require long-term lock-in contracts for SEO retainers?',
+    answer:
+      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+  },
+  {
+    category: 'timeline',
+    question: 'How quickly can our Tampa business expect to see Google Maps rank improvements?',
+    answer:
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Westshore or Downtown Tampa generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+  },
+  {
+    category: 'timeline',
+    question: 'What factors determine how fast a Tampa business can rank in the Local 3-Pack?',
+    answer:
+      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens to our local rankings if we pause or discontinue services?',
+    answer:
+      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
+    answer:
+      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured JSON-LD schemas do you implement on our website?',
+    answer:
+      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    answer:
+      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle review generation without violating Google policies?',
+    answer:
+      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
+  },
+  {
+    category: 'local',
+    question: 'Do you manage multi-location local SEO campaigns across Tampa Bay?',
+    answer:
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Tampa, St. Petersburg, Clearwater, Brandon, Riverview, and Wesley Chapel.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help our practice outrank entrenched competitors in Westshore and South Tampa?',
+    answer:
+      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+  },
+  {
+    category: 'local',
+    question: 'How do service-area businesses without a public storefront rank in Tampa?',
+    answer:
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
+  },
+  {
+    category: 'local',
+    question: 'Can you optimize for both Hillsborough and Pinellas county searches?',
+    answer:
+      'Yes. We build dedicated geo-targeted landing page silos and citation networks tailored for both sides of Tampa Bay, ensuring strong organic visibility in both Tampa and St. Petersburg.',
+  },
+  {
+    category: 'reporting',
+    question: 'How do you track and report local SEO progress each month?',
+    answer:
+      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+  },
+  {
+    category: 'reporting',
+    question: 'What is a Local Geo-Grid rank tracking report?',
+    answer:
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Tampa Bay, showing exactly where your business appears in the top 3 and where optimization is needed.',
+  },
+  {
+    category: 'reporting',
+    question: 'How do you combat spam and fake competitor listings on Google Maps?',
+    answer:
+      'We continuously monitor your primary search categories in Tampa, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+  },
+  {
+    category: 'reporting',
+    question: 'Who will be our main point of contact during the campaign?',
+    answer:
+      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+];
 
-const jsonLd = {
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://factoryjet.com/tampa/seo#webpage',
-      url: 'https://factoryjet.com/tampa/seo',
-      // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'Local SEO Services in Tampa, FL',
-      serviceType: 'Search engine optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'City', name: 'Tampa', containedInPlace: { '@type': 'State', name: 'Florida' } },
-      url: CANONICAL,
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'US SEO Services', item: 'https://factoryjet.com/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Tampa', item: 'https://factoryjet.com/tampa' },
-        { '@type': 'ListItem', position: 4, name: 'SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'Tampa SEO Company | Local SEO Services in Tampa, FL',
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqSchemaItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Tampa Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tampa',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 27.9506,
+    longitude: -82.4572,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Tampa' },
+    { '@type': 'City', name: 'St. Petersburg' },
+    { '@type': 'City', name: 'Clearwater' },
+    { '@type': 'City', name: 'Brandon' },
+    { '@type': 'City', name: 'Wesley Chapel' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Tampa Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  description:
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Tampa businesses.',
+  areaServed: { '@type': 'State', name: 'Florida' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Tampa', item: CANONICAL },
   ],
 };
 
 export default function TampaSeoPage() {
   return (
     <>
-      <SiteHeader />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="tpa-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="tpa-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="tpa-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="tpa-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="tpa-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <main className="tseo">
-        {/* HERO */}
-        <section className="hero">
-          <div className="wrap hero-grid">
-            <div>
-              <span className="loc rise d1"><b />Tampa, FL · Local SEO</span>
-              <h1 className="rise d2">The Tampa SEO company that gets you in the <span className="it">Map&nbsp;Pack</span></h1>
-              <p className="lead rise d3">We get Tampa businesses into Google&apos;s local 3-pack: the three results customers actually call. Local SEO <b>fixed-price, month-to-month</b>, built and run by senior engineers. No lock-in, no account managers, no guesswork.</p>
-              <HeroInlineForm region="us" source="tampa_seo_hero" submitLabel="Get my free SEO audit" />
-              <div className="cta-row rise d4">
-                <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
-              </div>
-              <div className="hstat rise d5">
-                <div><div className="n"><span className="star">★</span> 4.9</div><div className="l">on Google, across 500+ projects</div></div>
-                <div className="sep" />
-                <div><div className="n">Month-to-month</div><div className="l">no lock-in, ever</div></div>
-                <div className="sep" />
-                <div><div className="n">7-day</div><div className="l">kickoff</div></div>
-              </div>
-            </div>
-            <div className="hero-vis rise d3" aria-hidden="true">
-              <div className="mapcard">
-                <div className="streets" />
-                <div className="park p1" /><div className="park p2" />
-                <div className="road r1" /><div className="road r2" />
-                <div className="rings" /><div className="pulsering" />
-                <div className="pin c1"><div className="head"><i /></div></div>
-                <div className="pin c2"><div className="head"><i /></div></div>
-                <div className="pin you"><span className="lbl">You · Map Pack #1</span><div className="head"><i /></div></div>
-                <div className="pack">
-                  <div className="ph">◉ Google · local results</div>
-                  <div className="q">seo company tampa</div>
-                  <div className="pr win"><div className="nm">Your Business <span className="tag">#1 · MAP PACK</span></div><div className="mt"><span className="star">★★★★★</span> 5.0 (128) · Tampa, FL</div></div>
-                  <div className="pr comp"><div className="nm">A competitor</div><div className="mt">★ 4.1 (22)</div></div>
-                  <div className="pr comp"><div className="nm">Another competitor</div><div className="mt">★ 3.8 (9)</div></div>
-                </div>
-                <div className="fchip f1 float"><div className="k">Map-pack clicks</div><div className="v">44% ↑</div></div>
-                <div className="fchip f2 float"><span className="dot" /><div><div className="k">Calls</div><div className="t">Ringing again</div></div></div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* BLUF */}
-        <section style={{ padding: '0 0 70px' }}>
-          <div className="wrap">
-            <div className="bluf"><p>FactoryJet is a Tampa SEO company that helps local businesses rank in Google&apos;s Map Pack and &quot;near me&quot; results. We handle Google Business Profile optimization, local citations, reviews, technical SEO, and content, billed month-to-month at a fixed price, with a free audit and no long-term contract. Our Tampa SEO services cover every neighborhood across Tampa Bay, and you work directly with senior SEO experts instead of an account manager.</p></div>
-          </div>
-        </section>
-
-        {/* STATS */}
-        <section className="dark">
-          <div className="wrap">
-            <span className="eyebrow">Why it matters</span>
-            <h2>In Tampa, the local pack is the whole game</h2>
-            <p className="lead" style={{ maxWidth: 640 }}>Your competition is not a national brand. It is the business three blocks over. Here is what the numbers say about getting found in Tampa Bay.</p>
-            <div className="statgrid">
-              <div className="scard"><div className="n">3.42M</div><div className="l">people in the Tampa–St. Petersburg–Clearwater metro</div><div className="src">US Census, 2024</div></div>
-              <div className="scard"><div className="n">#1</div><div className="l">Florida leads the US in small businesses per capita</div><div className="src">Clarify Capital</div></div>
-              <div className="scard"><div className="n">44%</div><div className="l">of clicks go to the top-3 local "Map Pack" results</div><div className="src">BrightLocal</div></div>
-              <div className="scard"><div className="n">266%</div><div className="l">more leads with 50+ reviews vs. under 10</div><div className="src">BrightLocal</div></div>
-            </div>
-            <p style={{ marginTop: 24, maxWidth: 720, color: 'var(--ct-mut)' }}>Nearly half of all Google searches have local intent: someone looking for a business near them, ready to call or book. If you are not in Tampa&apos;s local pack for the terms that matter, most of those buyers never see you.</p>
-          </div>
-        </section>
-
-        {/* WHO WE HELP */}
-        <section>
-          <div className="wrap">
-            <span className="eyebrow">Who we help in Tampa</span>
-            <h2>Built for the businesses that live on local search</h2>
-            <p className="lead" style={{ maxWidth: 680 }}>If your customers are in Hillsborough or Pinellas, ranking in the local pack turns straight into calls and bookings. We focus on the Tampa verticals where that matters most:</p>
-            <div className="grid3">
-              {VERTICALS.map((v) => (
-                <div className="ucard" key={v.h}><h3>{v.h}</h3><p>{v.p}</p></div>
-              ))}
-            </div>
-            <p className="districts">From Westshore to St. Pete, we run Tampa Bay SEO across the whole metro: <b>Westshore, Downtown Tampa, Ybor City, Water Street, St. Petersburg, Clearwater, and Brandon</b>.</p>
-          </div>
-        </section>
-
-        {/* WHAT'S INCLUDED */}
-        <section className="room-peach">
-          <div className="wrap">
-            <span className="eyebrow">What&apos;s included</span>
-            <h2>Your Tampa local SEO, end to end</h2>
-            <p className="lead" style={{ maxWidth: 680 }}>SEO services in Tampa, FL and across Tampa Bay, handled by senior SEO experts and billed in one flat monthly fee, with no add-on surprises.</p>
-            <div className="grid2">
-              {INCLUDED.map((c) => (
-                <div className="ucard" key={c.h}><h3>{c.h}</h3><p>{c.p}</p></div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCESS */}
-        <section className="room-lav">
-          <div className="wrap">
-            <span className="eyebrow">How it works</span>
-            <h2>A 7-day kickoff, then steady monthly work</h2>
-            <div className="grid4">
-              {STEPS.map((s) => (
-                <div className="ucard step" key={s.h}><span className="pill">{s.pill}</span><h3>{s.h}</h3><p>{s.p}</p></div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* COMPARISON */}
-        <section>
-          <div className="wrap">
-            <span className="eyebrow">Honest comparison</span>
-            <h2>FactoryJet vs. a typical Tampa SEO agency</h2>
-            <div className="cmpwrap">
-              <table className="cmp">
-                <thead><tr><th>What matters</th><th className="fjh">FactoryJet</th><th>Typical Tampa agency</th></tr></thead>
-                <tbody>
-                  {COMPARE.map((r) => (
-                    <tr key={r.k}>
-                      <td className="k">{r.k}</td>
-                      <td className="fj">{r.hl ? <span className="hl">{r.fj}</span> : r.fj}</td>
-                      <td className="alt">{r.alt}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* PROOF */}
-        <section className="green">
-          <div className="wrap">
-            <span className="eyebrow">Proof</span>
-            <h2>Real businesses, real sites you can open right now</h2>
-            <p className="lead" style={{ maxWidth: 760 }}>We do not use stock screenshots or invented case studies. These are live FactoryJet builds. Open them and run PageSpeed yourself.</p>
-            <div className="clients">
-              <span>Impulse Branding Solutions</span><span>Belle Maison</span><span>Shevva Car Driver Hire</span><span>Rukman Transport</span>
-            </div>
-            <div className="quote">
-              <p>&quot;I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a price you see before you sign, and no 12-month handcuffs. If our Tampa SEO doesn&apos;t earn its keep, you leave the next month.&quot;</p>
-              <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet · 12+ years building for SMBs</div></div></div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="room-peach">
-          <div className="wrap">
-            <span className="eyebrow">Tampa SEO FAQ</span>
-            <h2>Questions, answered like a real call</h2>
-            <p className="lead" style={{ maxWidth: 640 }}>Answer-first and honest: the same answers we would give you on the phone. <strong>20 questions.</strong></p>
-            <div className="faqgrid">
-              <nav className="faqnav">
-                {FAQ_GROUPS.map((g) => (
-                  <a href={`#${g.id}`} key={g.id}>{g.label} <span className="ct">{g.items.length}</span></a>
-                ))}
-                <p className="faqhelp">Can&apos;t find your answer?<br /><a href={CALENDLY} style={{ fontWeight: 700, color: 'var(--orange-d)' }}>Talk to the founder →</a></p>
-              </nav>
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                {FAQ_GROUPS.map((g) => (
-                  <div className="faqcat" id={g.id} key={g.id}>
-                    <p className="ch">{g.label}</p>
-                    {g.items.map((it, i) => (
-                      <details key={it.q} open={g.id === 'faq-pricing' && i === 0}>
-                        <summary>{it.q}</summary>
-                        <p>{it.a}</p>
-                      </details>
-                    ))}
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Tampa Local SEO &amp; AI Citation Authority</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Tampa Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Downtown Tampa, Westshore, and South Tampa. Engineered for verified inbound calls and high-ticket consultations.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#tpa-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Tampa Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/tampa/hero-tampa.webp"
+                  alt="Tampa Florida local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
                   </div>
                 ))}
               </div>
@@ -377,23 +504,406 @@ export default function TampaSeoPage() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
-        <section className="final">
-          <div className="wrap">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Get started</span>
-            <h2>Ready to own Tampa&apos;s local search?</h2>
-            <p className="lead">Start with a free Tampa SEO audit. We will show you where you stand in the Map Pack, what is holding you back, and exactly what we would fix, with zero pressure to continue.</p>
-            <div className="cta-row">
-              <ModalCTAButton label="Get your free Tampa SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
-              <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Tampa Bay businesses"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Precision Local Authority</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Tampa Bay&apos;s High-Value Commercial Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Downtown Tampa corporate litigation firms to Westshore business consultants and South Tampa aesthetic clinics, Florida businesses need verified search authority to capture high-ticket clients before competitors do.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
+              </div>
             </div>
-            <p className="fine">Local SEO · fixed-price · month-to-month · free audit · no setup fee · <Link href="/services/seo">US SEO services</Link></p>
           </div>
         </section>
-        <SeoCityLinksUS currentCity="tampa" />
+
+        {/* ── 04. TAMPA DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="tpa-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Tampa Bay Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local SEO for Tampa&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Downtown legal practices to Westshore corporate offices and Port Tampa Bay trade hubs:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local Search Architectures for Tampa Bay
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every high-value commercial sector in Florida demands tailored keyword targeting, entity schemas, and conversion pathways:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Tampa Companies Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// TAMPA BAY LOCAL SEARCH & AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Tampa Bay local search."
+            city="Tampa"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A systematic, engineering-first methodology for establishing market dominance across Tampa Bay:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Tampa SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="TAMPA BAY LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Tampa FL"
+          lead="Direct, plain English answers to what Tampa Bay business owners and marketing directors ask about search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="tampa" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Verified Rank Dominance</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Tampa Bay Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter locale="us" />
     </>
   );
 }

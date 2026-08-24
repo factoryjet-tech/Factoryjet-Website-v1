@@ -1,559 +1,910 @@
-// V2 ecommerce city page — Nashville, TN
-// Design system: py-10 md:py-14 standard | 30/65/5 dark/light rhythm | Clash Display headlines
-// Schema: server-side via SchemaScript (AI-crawler visible in initial HTML)
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
-import Link from 'next/link'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/nashville/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'Top-rated Shopify developer in Nashville TN: stores live in 7 days, fixed-price. Music City e-commerce: Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  description:
+    'Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    url: 'https://factoryjet.com/nashville/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Nashville' }],
+    title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    description:
+      'Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top-Rated Shopify Developer Nashville TN | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days, fixed-price. Music City e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
+    title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    description: 'Custom headless e-commerce engineering in Nashville TN. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/nashville/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['nashville'],
-  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
-}
+};
 
+const PARTNERS = [
+  'Shopify Plus Enterprise',
+  'BigCommerce B2B Edition',
+  'Next.js 15 App Router',
+  'NetSuite ERP Integration',
+  'SAP & Microsoft Dynamics',
+  'Stripe Payments & Klarna',
+  'Klaviyo Marketing Automation',
+  'Algolia Search & Discovery',
+];
+
+const STAT_CARDS = [
+  { num: '530ms', title: 'Average Checkout Speed', desc: 'Sub-second mobile checkout latency engineered to maximize checkout completion rates.', icon: '⚡' },
+  { num: '3.5x', title: 'Average Conversion Lift', desc: 'Measured conversion rate surge after headless architecture and mobile UX replatforming.', icon: '📈' },
+  { num: '99.99%', title: 'Peak Uptime Reliability', desc: 'Zero downtime during album drops, tour merchandise sales, and high-volume flash sales.', icon: '🛡️' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, custom API connectors, and hosting configurations.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Music Row & Midtown',
+    query: 'artist merchandise ecommerce music row nashville',
+    focus: 'Artist Merchandise, Tour Bundles & Vinyl Direct-to-Consumer',
+    desc: 'The global heart of music merchandising. Demands high-concurrency flash drop architecture, dynamic tour bundling, VIP access gating, and global CDN delivery.',
+  },
+  {
+    corridor: 'The Gulch & Downtown',
+    query: 'fashion apparel ecommerce the gulch nashville',
+    focus: 'Bespoke Apparel, Southern Culinary Goods & Lifestyle Brands',
+    desc: 'High-end retail and culinary district. Features rich visual lookbooks, custom bundle builders, interactive swatch selectors, and frictionless Shop Pay checkout.',
+  },
+  {
+    corridor: 'West End & Medical Corridor',
+    query: 'medical supply ecommerce west end nashville',
+    focus: 'Healthcare Equipment, Medical Supply & Clinic Ordering Portals',
+    desc: 'The nation’s healthcare hub. Requires HIPAA-aware customer data handling, clinic reordering subscriptions, and verified provider discount tiers.',
+  },
+  {
+    corridor: 'Germantown & North Nashville',
+    query: 'artisan spirits ecommerce germantown nashville',
+    focus: 'Artisanal Leather, Crafted Distilleries & Subscription Goods',
+    desc: 'Historic creative district. Features custom box-builder funnels, recurring membership subscriptions, and state-by-state alcohol compliance integrations.',
+  },
+  {
+    corridor: 'Brentwood & Cool Springs',
+    query: 'b2b corporate procurement ecommerce brentwood',
+    focus: 'Corporate B2B Purchasing, Franchise Supply & Office Procurement',
+    desc: 'Dense corporate headquarters corridor. Features custom net-term customer portals, tiered price lists, punchout catalogs, and real-time ERP inventory syncing.',
+  },
+  {
+    corridor: 'Murfreesboro & I-24 Logistics Nexus',
+    query: 'automotive parts wholesale ecommerce murfreesboro',
+    focus: 'Automotive Aftermarket Parts, Industrial Equipment & Wholesale Distribution',
+    desc: 'Major Southeast automotive manufacturing hub. Requires Year-Make-Model search filters, heavy freight shipping calculators, and bulk CSV ordering.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Music Entertainment, Artist Merchandising & Tour Commerce',
+    headline: 'High-Concurrency Flash-Sale Storefronts for Record Labels & Artists',
+    description:
+      'Music Row labels and merchandise managers experience sudden traffic surges during tour announcements and album drops. We engineer headless Next.js storefronts on edge infrastructure capable of processing thousands of checkout orders per minute with zero lag or platform downtime.',
+    image: '/images/us/nashville/ecommerce/portfolio-1.webp',
+    alt: 'Nashville music artist merchandise and tour ecommerce development',
+    points: [
+      'High-concurrency edge infrastructure engineered for zero-latency flash drops',
+      'Dynamic ticket and merchandise bundling with VIP membership access gating',
+      'Global multi-currency checkout with localized fulfillment routing',
+    ],
+  },
+  {
+    sector: 'Automotive Supply, Industrial Parts & Heavy Equipment',
+    headline: 'Engineering Enterprise B2B Portals for Tennessee Manufacturers',
+    description:
+      'Automotive component manufacturers and equipment distributors along the I-24 and I-65 corridors require specialized procurement platforms. We develop custom BigCommerce B2B and Shopify Plus architectures featuring Year-Make-Model part fitment finders, custom contract pricing, and bidirectional NetSuite or SAP sync.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Nashville automotive manufacturing and industrial equipment B2B ecommerce platform',
+    points: [
+      'Year-Make-Model part fitment lookup engines with faceted catalog filtering',
+      'Automated LTL freight rate calculators and shipping rule integrations',
+      'Bidirectional real-time inventory and purchase order sync with NetSuite and SAP',
+    ],
+  },
+  {
+    sector: 'Artisanal Distilleries, Food & Beverage & Subscription Goods',
+    headline: 'High-Volume Recurring Revenue Engines for Tennessee Craft Brands',
+    description:
+      'From craft whiskey distilleries to gourmet Southern culinary makers, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, state-compliant age verification workflows, and automated customer self-service retention portals.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Nashville craft distillery and gourmet food subscription ecommerce store design',
+    points: [
+      'Custom box builder and recurring subscription membership architectures',
+      'Self-service customer portal reducing subscription cancellation churn',
+      'Automated state-by-state alcohol tax calculation and carrier compliance integration',
+    ],
+  },
+  {
+    sector: 'Medical Supplies, Clinic Equipment & Healthcare Commerce',
+    headline: 'Compliant Medical & Healthcare Product Sales Portals',
+    description:
+      'Healthcare management companies and clinic supply networks across Nashville require secure, compliant e-commerce systems. We build verified provider purchase portals, clinic replenishment subscriptions, and secure payment workflows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Nashville medical equipment and healthcare clinic supply ecommerce store design',
+    points: [
+      'Verified practitioner license gating and professional wholesale tiers',
+      'HIPAA-aware checkout workflows and secure customer data handling',
+      'Automated recurring delivery and clinic replenishment subscriptions',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow Monolithic Platforms & Crashing Servers',
+    problem: 'Legacy Magento, WooCommerce, or custom PHP stores slow down under traffic spikes, causing lost sales, database timeouts, and high ongoing maintenance bills.',
+    solution: 'We engineer headless Shopify Plus and BigCommerce architectures on global edge networks, handling unlimited concurrent traffic with sub-second page loads.',
+  },
+  {
+    num: '02',
+    title: 'Ending Broken ERP and Warehouse Inventory Synchronization',
+    problem: 'Outdated batch sync scripts create ghost inventory, overselling, and manual data entry headaches between your web store and warehouse ERP.',
+    solution: 'We build real-time webhook-driven middleware connecting NetSuite, SAP, or Microsoft Dynamics for automated inventory, order, and tracking sync.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Friction-Filled Checkouts that Kill Mobile Conversion',
+    problem: 'Clunky multi-page checkouts with slow shipping rate lookups and mandatory registration cause mobile shoppers to abandon their carts.',
+    solution: 'We implement streamlined one-page and one-click checkout flows with Apple Pay, Shop Pay, Google Pay, and instant address autocompletion.',
+  },
+  {
+    num: '04',
+    title: 'Modernizing Antiquated B2B Manual PDF and Email Ordering',
+    problem: 'Wholesale buyers are forced to call or email orders, creating order processing delays, human errors, and high operational overhead.',
+    solution: 'We launch self-service B2B customer portals with custom contract pricing, net-term credit approvals, quote requests, and instant PO generation.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Data Architecture & System Discovery',
+    desc: 'We audit your catalog data, customer database, ERP integrations, and third-party apps to design a future-proof commerce roadmap.',
+    deliverables: ['Catalog schema and variant taxonomy mapping', 'ERP, OMS, and warehouse integration architecture', 'Mobile UX conversion wireframes in Figma', 'Migration risk mitigation protocol'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js Frontend & Core Engineering',
+    desc: 'We build your custom storefront using Next.js 15, TypeScript, and modern component libraries connected to Shopify Plus or BigCommerce APIs.',
+    deliverables: ['Custom Next.js 15 headless storefront', 'Sub-second search and filtering powered by Algolia', 'Dynamic cart, upsell, and cross-sell drawer', 'Multi-device mobile responsive optimization'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'ERP Integration & Historical Data Migration',
+    desc: 'We securely migrate historical customers, orders, and product data while establishing real-time bidirectional ERP connectors.',
+    deliverables: ['Zero-downtime historical data migration', 'Automated NetSuite/SAP/QuickBooks sync', 'Custom B2B pricing and account hierarchy rules', 'Payment gateway and tax compliance configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Load Testing, Cutover & Launch Warranty',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Model',
+    factoryjet: 'Headless Next.js 15 with Shopify Plus or BigCommerce B2B. Instant edge rendering and total front-end design freedom.',
+    traditional: 'Monolithic legacy templates tied to server-side PHP with slow page rendering and rigid theme constraints.',
+  },
+  {
+    label: 'ERP & Systems Sync',
+    factoryjet: 'Event-driven, real-time webhook middleware connecting NetSuite, SAP, Microsoft Dynamics, and custom WMS.',
+    traditional: 'Fragile daily batch CSV imports that cause inventory discrepancies, overselling, and manual data cleanup.',
+  },
+  {
+    label: 'Checkout Performance',
+    factoryjet: 'Sub-600ms checkout load times with native Shop Pay, Apple Pay, and accelerated payment tokens.',
+    traditional: 'Multi-step checkouts requiring page reloads, causing 65%+ cart abandonment on mobile devices.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository and Figma source files.',
+    traditional: 'Proprietary platform lock-in or agency-held codebase with recurring licensing and maintenance surcharges.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'replatforming', label: 'Migration & Replatforming' },
+  { key: 'technical', label: 'Headless Tech Stack' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'support', label: 'Support & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Nashville, TN?',
-              answer:
-                "FactoryJet is Nashville's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only shop in Music City combining Shopify e-commerce with AI development. Local Nashville agencies (Infomedia, Thompson-Miller) focus on healthcare and financial services web design, not Shopify. National agencies targeting Nashville charge enterprise-level rates. FactoryJet launches Shopify stores in 7 days, fixed-price, with real Nashville market knowledge.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Nashville?',
-              answer:
-                'Pricing is fixed-price and scoped to your build: the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, Tennessee sales tax configuration (9.25% for Davidson County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support.',
-            },
-            {
-              category: 'pricing',
-              question: 'What Tennessee sales tax rate should my Nashville Shopify store charge?',
-              answer:
-                "Nashville businesses in Davidson County should configure Shopify to collect 9.25% combined sales tax: Tennessee state rate of 7.0% plus Davidson County's 2.25% local rate. Tennessee uses destination-based sales tax. Important Nashville-specific note: Tennessee's reduced 4% state rate on food and groceries applies to grocery items, FactoryJet configures the correct product-level tax categories for food, apparel, and general merchandise in every Tennessee build.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Nashville music artists and bands?',
-              answer:
-                "Yes, music and entertainment is one of our core Nashville specialties. We build Shopify stores for artist merchandise (T-shirts, vinyl, signed items), digital downloads, fan club subscriptions, album pre-orders, tour merchandise, and backstage experience packages. We integrate with Bandcamp, DistroKid, and Spotify for Artists to create a unified commerce experience. Nashville labels and management companies use FactoryJet to launch merch stores in 7 days ahead of album releases and tour announcements.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Nashville restaurant or food brand?',
-              answer:
-                "Yes: Nashville's culinary scene (hot chicken, BBQ, Tennessee whiskey, craft coffee) drives major DTC opportunity. We build Shopify stores for restaurant merchandise shops, hot sauce and condiment brands, food subscription boxes, catering booking systems, and whiskey club subscriptions. For Nashville hot chicken brands specifically, we handle heat-level variant configuration, regional shipping restrictions for perishables, and gift set bundling.",
-            },
-            {
-              category: 'local',
-              question: "How does FactoryJet serve Nashville's healthcare industry?",
-              answer:
-                "Nashville's $76B healthcare economy creates B2B e-commerce demand unlike any other US city. We build Shopify stores for: medical supply retailers (gloves, PPE, disposables), healthcare apparel brands (scrubs, compression socks), patient wellness product companies, healthcare staffing agency portals, and medical equipment rental platforms. We configure B2B pricing tiers, institutional PO payment terms, hospital system billing integrations, and HIPAA-compatible data handling where required.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Nashville?',
-              answer:
-                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Infomedia (8–12 weeks), Thrive Internet Marketing (4–8 weeks), or national agencies like Lounge Lizard (10–16 weeks). Our 7-day timeline is possible because we design in code and use a component architecture optimized for rapid deployment.',
-            },
-            {
-              category: 'pricing',
-              question: "What advantage does Tennessee's zero income tax give Nashville e-commerce businesses?",
-              answer:
-                "Tennessee repealed the Hall Tax on investment income in 2021, making it a true zero-income-tax state. For Nashville DTC founders, this means higher personal margins on business profits and more capital available to reinvest in inventory and marketing. Combined with FactoryJet's fixed-price builds, Nashville entrepreneurs launch profitable stores faster than in almost any other major US metro.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Nashville tourism and hospitality businesses?',
-              answer:
-                "Yes, Nashville's 16M annual visitors create significant digital retail opportunity. We build online gift shops for attractions, hotels, and experiences; event merchandise stores for Nashville venues; souvenir brand DTC stores; and tour booking + merchandise combination stores. We configure tourist-specific features: airport pickup locations, international shipping for visitors taking Nashville goods home, gift wrapping, and 'Keep in Nashville' digital gift cards.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to national agencies for Nashville Shopify development?',
-              answer:
-                "National agencies targeting Nashville (Thrive, Lounge Lizard, WebFX) charge enterprise-level rates, quote 8–16 week timelines, have no Nashville market knowledge, and treat your store as one of thousands of cookie-cutter projects. FactoryJet knows Nashville: the Tennessee tax structure, Music City's tourism economy, the Vanderbilt healthcare corridor, the hot chicken DTC opportunity. We deliver in 7 days, fixed-price, and build AI-powered features those agencies can't offer at any price.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Nashville website to Shopify?',
-              answer:
-                "Yes, migrations are a significant part of our Nashville work. We migrate from WooCommerce, BigCommerce, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Nashville local search rankings), Tennessee tax reconfiguration, and SEO continuity. Timeline: 7–14 days.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Nashville business?',
-              answer:
-                "Every Nashville Shopify store includes: custom design (not a theme), full Shopify development, Tennessee sales tax setup (9.25% Davidson County, food product reduced rates), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front, no hidden fees.",
-            },
-            {
-              category: 'included',
-              question: 'Can you build a Shopify store for a Nashville apparel or Southern lifestyle brand?',
-              answer: "Absolutely, Nashville apparel is one of the best DTC opportunities in the Southeast. Nashville's cultural exports, country music aesthetics, Southern lifestyle, Western wear, and Music City identity, translate into strong national brand demand. We build Shopify stores for: Western wear and boot brands, country music–adjacent apparel, Nashville-themed lifestyle goods, Southern food and lifestyle subscription boxes, and artisan craft brands. Nashville apparel brands sell nationally on the strength of place identity: a well-built Shopify store with editorial photography and fast mobile checkout converts country music fans coast to coast. FactoryJet launches Nashville apparel stores in 7 days, fixed-price.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Nashville Shopify store on Google and AI search?',
-              answer: "FactoryJet builds every Nashville Shopify store with full SEO and AEO foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized titles targeting 'Nashville [product]', 'buy Nashville merchandise', 'Music City gifts'; Core Web Vitals optimization (Lighthouse 90+); Tennessee sales tax compliance (search engines factor compliance in trustworthiness signals); and structured FAQ content that answers how Nashville consumers search for your category. Nashville's 16M annual tourists are heavy local searchers, 'Nashville souvenir shop', 'Nashville hot chicken gift', 'Nashville music merchandise' are high-volume queries FactoryJet targets in every relevant build.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Nashville brands?',
-              answer: "Yes, Nashville is strong subscription territory. We build subscription stores for: Nashville hot sauce and condiment clubs (monthly spice boxes), Tennessee whiskey and spirits clubs (monthly selections with TABC age verification), music merchandise fan subscriptions (exclusive monthly merch for artist fan clubs), Nashville restaurant recipe and ingredient subscriptions, and wellness product clubs for Nashville's growing health sector. Nashville's loyal fan base, across sports (Predators, Titans), music, food, and Southern culture, creates high-retention subscription customers. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, Tennessee compliance built in, and conversion flows optimized for Music City's brand-loyal consumer.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Nashville Shopify store accept?',
-              answer: "Every Nashville Shopify store should accept: Shopify Payments, PayPal (30%+ of US first-time buyers prefer PayPal), Apple Pay and Google Pay (Nashville's growing tech population is mobile-payment-forward), and Afterpay for higher-value orders. For Nashville's alcohol and spirits brands, FactoryJet integrates age verification flows before payment collection. For Nashville's healthcare B2B stores, add net-30/net-60 invoicing and institutional billing via Shopify's B2B tools. For Nashville's tourism gift stores, add gift card purchasing with email delivery, Nashville tourists prefer digital gift cards for sending Nashville gifts to friends back home. All payment configuration is included in the standard 7-day build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Nashville wedding or events brand?',
-              answer: "Yes, Nashville is America's #1 bachelorette party and wedding destination, attracting 800,000+ bachelorette groups annually. This creates significant DTC demand for: bachelorette merchandise (custom sashes, accessories, apparel), wedding party gift boxes, event photography and videography packages, Nashville-themed custom product lines, and wedding favor brands. FactoryJet builds Shopify stores for Nashville wedding brands with: custom product personalization (engraving, monogramming, custom text via Shopify's product options), rush shipping configurations, gift registry integration, and bulk/group order pricing for wedding parties. Nashville's wedding economy represents $900M in annual spending: a well-built Shopify store captures a meaningful slice of that at full margin.",
-            },
-            {
-              category: 'technical',
-              question: 'Do you serve Brentwood, Franklin, and Murfreesboro in addition to Nashville?',
-              answer: "Yes, FactoryJet serves the entire Greater Nashville metro: Nashville/Davidson County, Brentwood, Franklin/Williamson County, Murfreesboro/Rutherford County, Hendersonville, Clarksville, Smyrna, and Lebanon. Each area has a distinct consumer profile: Franklin and Brentwood are high-income suburban markets with premium brand expectations, Murfreesboro is Middle Tennessee State University's home with a younger demographic, and Clarksville serves the Fort Campbell military community. FactoryJet configures Tennessee's destination-based sales tax for all counties: Davidson (9.25%), Williamson (9.25%), and Rutherford (9.75%), and builds stores with SEO targeting Greater Nashville search queries.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet optimize Nashville Shopify stores for mobile shoppers?',
-              answer: "Nashville's consumer is mobile-first: the city's younger population, high tourism traffic, and live music culture mean your customers are browsing and buying on phones. FactoryJet optimizes every Nashville Shopify store for mobile with: mobile-first design (layouts built for 375px screens before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms), Apple Pay and Google Pay one-tap checkout (eliminates the biggest mobile cart abandonment point), thumb-friendly button sizing, and lazy-loaded images that don't block mobile rendering. Every Nashville build passes Lighthouse 90+ on mobile before delivery, not after.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Nashville businesses?',
-              answer: "Yes, FactoryJet offers post-launch support built around Nashville's seasonal commerce calendar. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours plus same-day bug priority), pre-season campaign builds (CMA Awards merchandise drops, New Year's Eve Nashville tourism season, bachelorette season spring–fall), and performance monitoring. Nashville artists and labels in particular benefit from on-call retainer support: an album drop, a Grammy nomination, or a viral TikTok moment requires same-day store updates to capture demand spikes. FactoryJet retainer clients get priority response windows for exactly these moments.",
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom e-commerce development cost for a Nashville brand?',
+    answer:
+      'Project investment is determined by catalog complexity, custom ERP/OMS integration requirements, B2B wholesale features, and design scope. Mid-market direct-to-consumer storefronts are scoped on transparent fixed-price milestone contracts. Large enterprise replatforming initiatives with complex ERP middleware and custom B2B portals receive detailed architectural plans with guaranteed deliverables. Every proposal includes custom Figma UX, Next.js engineering, full ERP integration, and 100% code ownership.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden ongoing agency fees or monthly platform markups?',
+    answer:
+      'No. You contract directly with your core platform providers (Shopify Plus, BigCommerce, Cloudflare) and retain direct billing ownership. We never charge ongoing agency royalties or mark up your infrastructure costs.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overruns?',
+    answer:
+      'We complete an exhaustive architectural discovery and data mapping phase before development begins. All APIs, data schemas, design components, and integration requirements are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
+  },
+  {
+    category: 'replatforming',
+    question: 'How do you ensure zero downtime and preserved SEO rankings during migration?',
+    answer:
+      'We execute comprehensive pre-launch data migrations in staging environments, build complete 1-to-1 301 redirect maps for every legacy URL, preserve URL slugs where possible, and execute DNS cutover during off-peak hours with zero downtime for existing shoppers.',
+  },
+  {
+    category: 'replatforming',
+    question: 'Can you migrate customer accounts, order history, and reviews from Magento or WooCommerce?',
+    answer:
+      'Yes. We migrate your complete historical catalog, customer records, order histories, and verified product reviews seamlessly, ensuring long-term customer lifetime value data remains intact.',
+  },
+  {
+    category: 'replatforming',
+    question: 'How long does an enterprise e-commerce replatforming project typically take?',
+    answer:
+      'Focused D2C storefront replatforming projects are typically delivered in 4 to 8 weeks. Complex enterprise deployments involving extensive ERP integrations, custom B2B pricing rules, and multi-warehouse routing generally take 8 to 12 weeks from kickoff to production launch.',
+  },
+  {
+    category: 'technical',
+    question: 'Why choose Headless Next.js over standard monolithic Shopify themes?',
+    answer:
+      'Headless architectures decouple the presentation layer from backend logic, allowing pages to load in under 600ms on mobile devices, eliminating third-party app script bloat, and unlocking complete design flexibility for custom product configurators and high-converting checkout flows.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you integrate with NetSuite, SAP, or Microsoft Dynamics ERPs?',
+    answer:
+      'We build secure, event-driven API middleware that synchronizes inventory levels, product catalog updates, customer tiers, sales orders, and tracking numbers in real time, eliminating batch sync lag and manual reconciliation.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle site speed and Core Web Vitals optimization for e-commerce?',
+    answer:
+      'We implement static page pre-rendering, modern WebP/AVIF image formats, dynamic edge caching via Cloudflare, and lightweight modular JavaScript bundles to ensure your store achieves 90+ Lighthouse mobile performance scores.',
+  },
+  {
+    category: 'technical',
+    question: 'What search and merchandising platforms do you recommend?',
+    answer:
+      'We integrate enterprise search solutions such as Algolia, Searchspring, or Shopify Search & Discovery to deliver instant typo-tolerant search results, facet filtering, and automated visual merchandising.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
+    answer:
+      'Yes. We build comprehensive B2B features including customer-specific price lists, volume break tables, tax exemption handling, custom payment terms (Net 30/60), and corporate account hierarchy management.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do quote-to-order workflows work in your B2B store builds?',
+    answer:
+      'Wholesale buyers can build custom quote requests in their cart, submit them directly to your sales team, receive negotiated pricing adjustments, and convert approved quotes into completed orders in a single click.',
+  },
+  {
+    category: 'b2b',
+    question: 'Can you support hybrid stores with both direct-to-consumer and wholesale access?',
+    answer:
+      'Yes. We can architect unified storefronts where public retail customers shop standard MSRP products while verified wholesale accounts log in to see custom wholesale pricing, bulk quantity rules, and purchase order checkout options.',
+  },
+  {
+    category: 'b2b',
+    question: 'Do you build Year-Make-Model part fitment lookups for automotive and equipment brands?',
+    answer:
+      'Yes. We build high-speed automotive and industrial part fitment search engines that allow buyers to select specific vehicle or machinery specifications and immediately see guaranteed-fit products.',
+  },
+  {
+    category: 'support',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon final milestone completion, you receive full ownership of the clean GitHub repository, Figma design files, API middleware code, and hosting configurations with zero agency proprietary lock-in.',
+  },
+  {
+    category: 'support',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training to ensure your operational team is completely confident managing the platform.',
+  },
+  {
+    category: 'support',
+    question: 'How do you train our internal merchandising and customer support teams?',
+    answer:
+      'We provide tailored video walkthroughs and documentation covering order management, product uploads, discount creation, customer account management, and ERP sync troubleshooting.',
+  },
+  {
+    category: 'support',
+    question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
+    answer:
+      'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Nashville E-Commerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Nashville',
+    addressRegion: 'TN',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 36.1627,
+    longitude: -86.7816,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Nashville' },
+    { '@type': 'City', name: 'Brentwood' },
+    { '@type': 'City', name: 'Franklin' },
+    { '@type': 'City', name: 'Murfreesboro' },
+    { '@type': 'City', name: 'Hendersonville' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Nashville E-Commerce Development & Headless Architecture',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
+  description:
+    'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Nashville enterprise brands.',
+  areaServed: { '@type': 'State', name: 'Tennessee' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  description: 'Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Nashville', item: CANONICAL },
+  ],
+};
+
+export default function NashvilleEcommercePage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="bna-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="bna-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="bna-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="bna-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="bna-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── 1. HERO ────────────────────────────────────────────────── */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_nashville_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · NASHVILLE"
-          headline="Nashville's Top-Rated Shopify Developer for Music City Businesses"
-          lead="The only Nashville e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ Google rating."
-          trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── 2. LOGO BAR ─────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE" />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Nashville E-Commerce &amp; Enterprise Architecture</span>
+                </div>
 
-        {/* ── 3. TRUST STATS ──────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Nashville e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Nashville E-Commerce Agency for High-Growth Brands
+                </h1>
 
-        {/* ── 4. CITY CONTEXT ─────────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="NASHVILLE MARKET"
-          headline="16 Million Visitors Per Year. Is Your Nashville Store Ready to Sell?"
-          leadParagraphs={[
-            "Nashville draws 16 million visitors annually generating $9.1 billion in economic impact, making it the #1 tourism destination in the Southeast US. That visitor economy drives retail demand for music merchandise, local food brands, whiskey and spirits, Nashville-made apparel, and souvenirs. Yet most Nashville businesses capture only a fraction of this spending because their e-commerce stores are either non-existent or built on templates that don't convert. FactoryJet builds Shopify stores that turn Nashville's tourism foot traffic into recurring digital revenue, with smart email capture, local pickup options, and tourist-targeted gifting flows.",
-            "Nashville is America's healthcare capital. HCA Healthcare, Vanderbilt University Medical Center, Ascension Saint Thomas, and 500+ healthcare companies generate $76 billion in annual revenue and employ 280,000 people. Tennessee has no state income tax (the Hall Tax was fully repealed in 2021), Nashville entrepreneurs keep more of their income than founders in 41 other states. Our fixed-price builds combined with Tennessee's zero income tax make Nashville one of the most profitable cities in the US to run a DTC brand.",
-          ]}
-          stats={[
-            { value: '16M+', label: 'Nashville Annual Visitors, #1 Southeast Tourism Destination', sourceUrl: 'https://www.visitmusiccity.com/about-us/press-room' },
-            { value: '0%', label: 'Tennessee State Income Tax (Hall Tax repealed 2021)', sourceUrl: 'https://www.tn.gov/revenue/taxes/hall-income-tax.html' },
-            { value: '$76B', label: "Nashville Healthcare Industry Annual Revenue", sourceUrl: 'https://www.nashvillehealth.org/' },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Scale direct-to-consumer and wholesale operations with headless Shopify Plus, BigCommerce B2B, and sub-second checkout speeds. Engineered with bidirectional NetSuite and SAP ERP integrations.
+                </p>
 
-        {/* ── 5. SERVICE EXPLANATION ──────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="E-COMMERCE DEVELOPMENT · Nashville"
-          headline="What 'E-Commerce Development' Actually Means for a Nashville Business"
-          lead="Most Nashville agencies focus on healthcare web design and marketing, not Shopify e-commerce. FactoryJet builds revenue-generating stores: custom design, Tennessee sales tax configured correctly (9.25% Davidson County, with food product reduced rates), AI-powered product discovery, and a Lighthouse 95+ performance score: all in 7 days, fixed-price."
-          body={
-            <>
-              <p>
-                For Nashville&apos;s music and entertainment brands, artists, labels, merch
-                companies, and event brands: the Shopify store is the primary monetization
-                channel outside of streaming and live performance. FactoryJet builds artist
-                merchandise stores, digital download shops, fan club subscriptions, and album
-                pre-order flows with Bandcamp and DistroKid integrations. We launch ahead of
-                album releases, tour announcements, and GRAMMY moments in 7 days.
-              </p>
-              <p>
-                For Nashville&apos;s healthcare brands: the $76B corridor of HCA, Vanderbilt,
-                and 500+ companies, e-commerce needs include medical supply ordering portals,
-                healthcare apparel (scrubs, compression socks), patient wellness products, and
-                B2B purchasing platforms with institutional PO payment terms. FactoryJet builds
-                the enterprise-grade stores that Nashville&apos;s healthcare buyers expect.
-              </p>
-              <p>
-                Nashville&apos;s 9.25% combined sales tax (Tennessee state 7.0% + Davidson County
-                2.25%) has important nuance: Tennessee&apos;s reduced 4% state rate on food and
-                groceries applies to grocery items. FactoryJet configures the correct product-level
-                tax categories for food, apparel, and general merchandise in every Tennessee build.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/nashville/ecommerce/service-explanation.webp"
-              alt=""
-              aria-hidden="true"
-              width={800}
-              height={600}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get an E-Commerce Architecture Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#bna-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Nashville Corridors</span>
+                  </a>
+                </div>
+              </div>
 
-        {/* ── 6. STRATEGIC DARK SECTION ───────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="Why Nashville Businesses Choose FactoryJet Over Local Agencies"
-          lead={
-            "Infomedia and Thompson-Miller are established Nashville web agencies focused on healthcare and financial services web design, not Shopify e-commerce. Ramsey Solutions dominates Nashville's marketing world but doesn't build e-commerce stores. National agencies targeting Nashville: Thrive Internet Marketing (Fort Worth), Lounge Lizard (New York), charge enterprise-level rates with 8–16 week timelines and no Tennessee-specific market knowledge.\n\nFactoryJet delivers in 7 days, fixed-price, with deep Nashville expertise: Tennessee's zero income tax advantage, the 9.25% sales tax structure with food product nuance, Music City's tourism economy, and the healthcare B2B opportunity that national agencies overlook entirely."
-          }
-          pillars={[
-            {
-              title: 'Music-commerce native',
-              body: "Every artist merchandise store ships with fan club subscriptions, digital download flows, album pre-order mechanics, and Bandcamp/DistroKid integrations. Nashville's music economy generates undermonetized digital revenue, FactoryJet captures it for artists and labels as standard.",
-            },
-            {
-              title: 'Transparent',
-              body: 'Fixed pricing on the first call, scoped to your build. No discovery fees, no healthcare-complexity surcharges, no Phase 2 invoices after launch.',
-            },
-            {
-              title: 'Guaranteed',
-              body: "7-day delivery on standard Shopify builds. If we miss the deadline, you don't pay. We've delivered on time on 97% of 500+ projects, including for Nashville brands launching ahead of CMA Fest and album release dates.",
-            },
-          ]}
-        />
-
-        {/* ── 7. PROCESS ──────────────────────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Nashville Shopify Store"
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery & Platform Selection',
-              description:
-                "We map your product catalog, target customer, and revenue goals. For Nashville businesses, we assess music merchandise requirements, healthcare B2B needs, and tourism gifting flows. Shopify, WooCommerce, or headless, recommended based on your actual needs in 24 hours.",
-            },
-            {
-              number: '02',
-              title: 'UX Design & Store Architecture',
-              description:
-                "We design your store, homepage, collection pages, product pages, cart, and checkout, with Music City's diverse consumer base in mind. Bold typography for artist brands, clinical precision for healthcare, tourist-friendly gifting for Nashville's visitor economy.",
-            },
-            {
-              number: '03',
-              title: 'Development & Configuration',
-              description:
-                "Custom Shopify theme or headless build, Tennessee sales tax setup (9.25% Davidson County + food product reduced rates), Shopify Payments + Afterpay, Bandcamp/DistroKid integrations for music brands, and GSAP micro-animations. Lighthouse 90+ on every build.",
-            },
-            {
-              number: '04',
-              title: 'Products, Content & SEO',
-              description:
-                'Product catalog upload, optimized descriptions, JSON-LD schema (FAQPage, Product, BreadcrumbList), and AEO content structured to get cited by ChatGPT, Perplexity, and Google AI Overviews for Nashville-specific product queries.',
-            },
-            {
-              number: '05',
-              title: 'Launch & Growth Enablement',
-              description:
-                "Cloudflare/Vercel deploy, GA4 e-commerce tracking, and a recorded launch walkthrough. Your 30-day support window covers post-launch fixes, tourist-season inventory updates, and training so your Nashville team can self-manage from day one.",
-            },
-          ]}
-        />
-
-        {/* ── 8. PORTFOLIO ────────────────────────────────────────────── */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What Nashville e-commerce brands look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Music & Entertainment',
-              title: 'Nashville Artist Merchandise Client',
-              description:
-                "Nashville's music economy generates $1.8B annually. Artists and labels with merchandise, vinyl, and fan club subscriptions need Shopify stores that can handle drops, pre-orders, and subscription billing. FactoryJet builds merch stores with Bandcamp integration, limited-edition mechanics, and fan membership flows, ready in 7 days for tour announcements and album releases.",
-              imageSrc: '/images/us/nashville/ecommerce/portfolio-1.webp',
-              stat1: '+58% fan revenue',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'Food, Spirits & Hot Chicken',
-              title: 'Nashville Food Brand DTC Client',
-              description:
-                "Nashville's culinary scene, hot chicken, BBQ, Tennessee whiskey, craft coffee, drives major DTC opportunity. 16M annual visitors discover Nashville food brands digitally. We build stores with heat-level variant configuration, regional shipping restrictions for perishables, gift set bundling, and tourist-friendly gifting flows that convert visitor discovery into recurring customer relationships.",
-              imageSrc: '/images/us/nashville/ecommerce/portfolio-2.webp',
-              stat1: '+46% AOV increase',
-              stat2: 'Lighthouse 93',
-            },
-            {
-              industry: 'Healthcare & Wellness',
-              title: 'Nashville Healthcare Brand Client',
-              description:
-                "Nashville's $76B healthcare ecosystem creates B2B e-commerce demand unlike any other US city. We build Shopify stores for medical supply retailers, healthcare apparel brands (scrubs, compression socks), patient wellness product companies, and B2B purchasing platforms with institutional PO payment terms and hospital system billing integrations.",
-              imageSrc: '/images/us/nashville/ecommerce/portfolio-3.webp',
-              stat1: '+39% B2B order volume',
-              stat2: 'Lighthouse 95',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-
-        {/* ── 9. COMPARISON TABLE ─────────────────────────────────────── */}
-        <ComparisonTable
-          eyebrow="WHY FACTORYJET"
-          headline="FactoryJet vs Nashville E-Commerce Agencies"
-          lead={
-            "Nashville's agency market is dominated by healthcare and marketing specialists, not Shopify e-commerce experts. Infomedia and Thompson-Miller do excellent healthcare web work but not DTC stores. National agencies targeting Nashville charge enterprise-level rates with no Music City market knowledge.\n\nFactoryJet delivers a full Shopify store in 7 days, fixed-price, with music commerce, healthcare B2B, and tourism gifting expertise that Nashville agencies simply don't offer."
-          }
-          columns={[
-            { label: 'Their approach' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we win' },
-          ]}
-          rows={[
-            {
-              feature: 'Infomedia',
-              values: [
-                'Healthcare web design, not Shopify specialists',
-                'Fixed-price (Shopify Standard)',
-                "Infomedia focuses on healthcare websites and digital marketing, not DTC Shopify stores. FactoryJet builds music commerce, food brands, and healthcare B2B stores with AI features and 7-day delivery that Infomedia doesn't offer.",
-              ],
-            },
-            {
-              feature: 'Thrive Internet Marketing',
-              values: [
-                'No fixed pricing, 4–8 weeks (Fort Worth-based)',
-                'Fixed-price · 7-day delivery',
-                "Thrive is a Fort Worth digital marketing agency with web development as a side service and no Nashville market knowledge. FactoryJet delivers in 7 days, fixed-price, with deep Music City expertise: Tennessee tax nuance, tourism economy, healthcare B2B.",
-              ],
-            },
-          ]}
-        />
-
-        {/* ── 10. PRICING ─────────────────────────────────────────────── */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="What's Included for Nashville E-Commerce Businesses"
-          lead={
-            "Pricing is fixed-price and scoped to your build: the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. FactoryJet delivers a full custom Shopify store with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description:
-                "A fully custom Shopify store live in 7 days. Best for Nashville artists, food brands, and tourism businesses launching their first online store.",
-              features: [
-                'Custom Shopify theme (not a template)',
-                'Up to 100 products uploaded & configured',
-                'Tennessee sales tax setup (9.25% Davidson County + food rates)',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description:
-                "Advanced Shopify build with subscriptions, fan club mechanics, or B2B healthcare pricing. Best for Nashville artists scaling merch, food brands with subscription boxes, and healthcare companies needing institutional billing.",
-              features: [
-                'Everything in Shopify Standard',
-                'Fan club / subscription billing (Recharge)',
-                'Bandcamp + DistroKid integration',
-                'B2B pricing tiers & PO payment terms',
-                'GSAP micro-animations & editorial design',
-                'AI product recommendations integration',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description:
-                "Next.js headless storefront for Nashville healthcare companies and enterprise brands that need sub-500ms load times, custom API integrations, or a B2B portal that outperforms every competitor.",
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'Custom API & ERP integrations',
-                'Healthcare B2B portal: PO payments, institutional billing',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                'Quarterly performance reviews',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
-
-        {/* ── 11. INDUSTRIES ──────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="NASHVILLE × E-COMMERCE"
-          headline="E-Commerce Development for Nashville's Key Industries"
-          lead="From Music City artists to America's healthcare capital, Nashville's economy spans industries with distinct e-commerce needs. FactoryJet has built stores for each of them."
-          sectors={[
-            {
-              name: 'Music & Entertainment',
-              description:
-                "Merchandise stores, vinyl shops, fan club subscriptions, and artist DTC stores for Nashville's world-famous music scene. Bandcamp integration, limited-edition drops, album pre-orders, tour merchandise, and digital download flows built as standard.",
-              example:
-                'SXSW artists, Nashville record labels, independent musicians, and event merchandise brands.',
-            },
-            {
-              name: 'Food, Spirits & Hot Chicken',
-              description:
-                "DTC stores for Nashville-made foods, Tennessee whiskey brands, hot sauce companies, and restaurant merchandise. Heat-level variant configuration, regional shipping restrictions for perishables, and gift set bundling for Nashville's culinary export market.",
-              example:
-                "Hot chicken brands, BBQ sauce companies, Tennessee whiskey DTC stores, and Nashville restaurant merchandise brands.",
-            },
-            {
-              name: 'Healthcare & Wellness',
-              description:
-                "B2B ordering portals, medical supply stores, and wellness product DTC shops for Nashville's $76B healthcare ecosystem. Institutional PO payment terms, HIPAA-aware data handling, and hospital system billing integrations built in.",
-              example:
-                "Medical supply retailers, healthcare apparel brands (scrubs, compression socks), and patient wellness product companies serving Nashville's 280,000 healthcare workers.",
-            },
-            {
-              name: 'Tourism & Hospitality',
-              description:
-                "Online gift shops, experience booking, and visitor merchandise for Nashville's 16M annual visitor economy. Tourist-specific features: local pickup options, international shipping, gift wrapping, and 'Keep in Nashville' digital gift cards.",
-              example:
-                "Hotel merchandise stores, Nashville attraction gift shops, souvenir brands, and tour booking + merchandise combination stores.",
-            },
-            {
-              name: 'Apparel & Lifestyle',
-              description:
-                "Nashville-themed apparel, country-adjacent fashion, and lifestyle brands for Music City's cultural export market. From independent makers to nationally recognized Nashville-made apparel brands shipping to country music fans across the US.",
-              example:
-                "Nashville-themed lifestyle apparel, country music fashion brands, and DTC apparel companies targeting Music City's cultural export market.",
-            },
-            {
-              name: 'Real Estate & Home',
-              description:
-                "Interior design product stores, home goods, and renovation supply e-commerce for Nashville's booming real estate market. Nashville's rapid population growth and relocation economy create sustained demand for premium home goods shipped nationwide.",
-              example:
-                "Home furnishings brands, interior design product lines, and artisan goods makers serving Nashville's fast-growing residential market.",
-            },
-          ]}
-        />
-
-        {/* ── 12. TESTIMONIALS ────────────────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
-
-        {/* ── 13. FAQ ─────────────────────────────────────────────────── */}
-        <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Nashville E-Commerce Businesses"
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
-
-
-        {/* Cross-link: Related Services in Nashville */}
-        <section className="py-10 bg-[#FAFAF7]">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-              Also in Nashville
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/nashville/web-design/"
-                className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-              >
-                Web Design →
-              </Link>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/nashville/ecommerce/service-explanation.webp"
+                  alt="Nashville Tennessee enterprise ecommerce engineering and headless Shopify Plus development"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 14. FINAL CTA ───────────────────────────────────────────── */}
-        <EcommerceCityLinksUS currentCity="nashville" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Build Your Nashville Shopify Store?"
-          sub="Music City's tourism economy, healthcare sector, and artist brands are all generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a 30-minute audit and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-        />
-      </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Enterprise Commerce &amp; ERP Ecosystem</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('nashville', FAQ_ITEMS) }}
-    />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom headless platforms in Nashville"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Scale &amp; Reliability</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  E-Commerce Engineered for Tennessee&apos;s High-Volume Merchants
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Music Row artist merchandise drops to Murfreesboro automotive parts distributors and Brentwood healthcare management networks, we engineer resilient commerce systems that maximize margins and eliminate checkout friction.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule E-Commerce Architecture Review" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. NASHVILLE DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="bna-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Middle Tennessee Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored E-Commerce for Nashville&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Music Row merchandise drops to automotive manufacturing corridors and Brentwood corporate offices:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized E-Commerce Architectures for Nashville Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Tennessee demands tailored purchase flows, inventory connectors, and checkout performance:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Nashville Merchants Choose FactoryJet E-Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks and slow monolithic checkouts with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// NASHVILLE ENTERPRISE E-COMMERCE BLUEPRINT"
+            title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get an E-Commerce Architecture Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE REPLATFORMING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Replatforming Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Replatforming Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-downtime migrations and high-conversion storefront launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Nashville E-Commerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless e-commerce development against traditional template agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="NASHVILLE E-COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce Development in Nashville TN"
+          lead="Direct, plain English answers to what Nashville brand founders and digital commerce leaders ask about replatforming and development:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="nashville" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; Zero Downtime</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Nashville E-Commerce Architecture?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your catalog size and operational goals. We will provide a comprehensive architectural proposal, clear migration timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
+    </>
   );
 }

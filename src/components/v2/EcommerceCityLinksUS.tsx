@@ -1,10 +1,13 @@
 import Link from 'next/link'
 
 const ALL_CITIES = [
+  { slug: 'atlanta',      label: 'Atlanta, GA' },
   { slug: 'austin',       label: 'Austin, TX' },
   { slug: 'boise',        label: 'Boise, ID' },
   { slug: 'charlotte',    label: 'Charlotte, NC' },
   { slug: 'chattanooga',  label: 'Chattanooga, TN' },
+  { slug: 'chicago',      label: 'Chicago, IL' },
+  { slug: 'dallas',       label: 'Dallas, TX' },
   { slug: 'denver',       label: 'Denver, CO' },
   { slug: 'fargo',        label: 'Fargo, ND' },
   { slug: 'lincoln',      label: 'Lincoln, NE' },

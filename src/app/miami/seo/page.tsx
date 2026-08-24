@@ -10,27 +10,27 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
-const CANONICAL = 'https://factoryjet.com/nashville/seo';
+const CANONICAL = 'https://factoryjet.com/miami/seo';
 
 export const metadata: Metadata = {
-  title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+    'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+      'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Nashville local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Miami local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -48,102 +48,102 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Nashville commercial corridors.', icon: '📍' },
-  { num: '4.7x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Miami commercial corridors.', icon: '📍' },
+  { num: '4.9x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
   { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'Music Row & Midtown',
-    query: 'entertainment law seo music row nashville',
-    focus: 'Entertainment Law, Artist Management & Recording Studios',
-    desc: 'The global epicenter of music business. High-intent local searches demand entertainment legal schemas, verified studio credentials, and top organic rankings.',
+    corridor: 'Brickell Financial District',
+    query: 'private wealth seo brickell miami',
+    focus: 'Cross-Border Wealth Advisory, Private Equity & Corporate Law',
+    desc: 'The Wall Street of the South. Fierce local competition for ultra-high-net-worth family office advisory, international arbitration, and private wealth management inquiries.',
   },
   {
-    corridor: 'Downtown Nashville & SoBro',
-    query: 'hospitality seo downtown nashville',
-    focus: 'Convention Hospitality, Real Estate Developers & Tourism',
-    desc: 'Fast-growing urban core. Captures high-volume corporate event inquiries, private venue bookings, and commercial real estate development searches.',
+    corridor: 'Coral Gables & Downtown Gables',
+    query: 'corporate law firm seo coral gables',
+    focus: 'Corporate Legal, Executive Healthcare & Financial Consulting',
+    desc: 'Affluent corporate headquarters hub. Features deep practice area knowledge graphs, attorney profile schemas, and bilingual Spanish and English search optimization.',
   },
   {
-    corridor: 'West End & Vanderbilt Medical District',
-    query: 'specialty medical clinic seo west end nashville',
-    focus: 'Hospital Networks, Specialized Clinics & Surgery Centers',
-    desc: 'The healthcare management capital of America. Multi-location practice architectures, physician directories, and structured patient review funnels.',
+    corridor: 'Wynwood & Miami Design District',
+    query: 'architecture studio seo miami design district',
+    focus: 'Luxury Fashion Flagships, Architecture & Creative Agencies',
+    desc: 'Global luxury retail and architectural epicenter. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
   },
   {
-    corridor: 'The Gulch & Germantown',
-    query: 'creative agency seo the gulch',
-    focus: 'Culinary Brands, Boutique Retail & Creative Studios',
-    desc: 'High-end culinary and retail district. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
+    corridor: 'Miami Beach & South Beach',
+    query: 'cosmetic surgery seo miami beach',
+    focus: 'Boutique Hospitality, Cosmetic Surgery & Luxury Real Estate',
+    desc: 'World-renowned medical and luxury residential strip. Captures high-ticket elective procedure consultations, private surgical inquiries, and luxury property showings.',
   },
   {
-    corridor: 'Brentwood & Cool Springs',
-    query: 'wealth advisory seo brentwood nashville',
-    focus: 'Corporate Regional HQs, Healthcare Management & Financial Advisory',
-    desc: 'Affluent corporate commercial hub in Williamson County. Captures high-net-worth wealth retainers, corporate consulting contracts, and B2B vendor inquiries.',
+    corridor: 'Doral & Airport Logistics Hub',
+    query: 'freight forwarding seo doral',
+    focus: 'Import/Export Logistics, Cold-Chain Transport & Industrial Trade',
+    desc: 'The gateway to Latin American commerce. B2B service inquiries require technical capability landing pages, freight quote calculators, and sub-second edge performance.',
   },
   {
-    corridor: 'Murfreesboro & I-24 Logistics Corridor',
-    query: 'industrial manufacturing seo murfreesboro',
-    focus: 'Automotive Manufacturing, Equipment Supply & Freight Hubs',
-    desc: 'Dense industrial manufacturing corridor. B2B service inquiries require technical capability landing pages, equipment schemas, and sub-second edge performance.',
+    corridor: 'Aventura & Sunny Isles Beach',
+    query: 'private wealth management seo aventura',
+    focus: 'High-Net-Worth Private Wealth, Aesthetic Clinics & Luxury Yachting',
+    desc: 'Affluent coastal corridor. Features structured medical and financial schema, neighborhood rank grid saturation, and multi-language patient intake flows.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Healthcare Systems, Medical Specialists & Aesthetics',
-    headline: 'Capturing High-Value Patients Across West End & Williamson County',
+    sector: 'Cosmetic Surgery, Medical Aesthetics & Specialty Clinics',
+    headline: 'Capturing High-Value Patients Across Brickell, Coral Gables & Miami Beach',
     description:
-      'In Middle Tennessee’s competitive healthcare capital, prospective patients research physician credentials thoroughly before scheduling procedures. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive surgical and orthopedic queries.',
+      'In South Florida’s competitive aesthetic and surgical markets, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Nashville healthcare medical clinic and surgical center local SEO optimization',
+    alt: 'Miami healthcare medical aesthetic and plastic surgery clinic local SEO optimization',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Hyper-local neighborhood geo-pages targeting West End, Green Hills, and Brentwood',
+      'Hyper-local neighborhood geo-pages targeting Brickell, Coral Gables, and Miami Beach',
     ],
   },
   {
-    sector: 'Music Entertainment, Creative Agencies & Media Studios',
-    headline: 'Topical Authority & AI Citation Engineering for Music City Brands',
+    sector: 'Cross-Border Wealth Management, Family Offices & Fintech',
+    headline: 'Topical Authority & AI Citation Engineering for Miami Financial Leaders',
     description:
-      'Music Row talent managers, recording studios, and indie labels demand high-visibility digital footprints. We build comprehensive topical clusters, artist event schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Brickell financial advisors and family offices require commanding search presence to capture relocating wealth and international capital. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Nashville music entertainment studio and talent management search engine optimization',
+    alt: 'Miami private wealth management and cross-border financial SEO strategy',
     points: [
-      'Topical content graph covering artist representation, studio services, and licensing',
-      'Structured EntertainmentBusiness and Organization schema for AI citation retrieval',
-      'High-authority music trade publication and entertainment directory synchronization',
+      'Topical content graph covering cross-border tax planning and private wealth advisory',
+      'Structured FinancialService and Organization schema for AI citation retrieval',
+      'High-authority regional financial PR and tier-one publication placements',
     ],
   },
   {
-    sector: 'Corporate Law, Litigation & Intellectual Property',
-    headline: 'Dominating High-Stakes Search Corridors for Nashville Law Firms',
+    sector: 'Corporate Litigation, International Arbitration & Real Estate Law',
+    headline: 'Dominating High-Stakes Search Corridors for South Florida Law Firms',
     description:
-      'Legal search terms in Davidson and Williamson counties are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
+      'Legal search terms in Miami-Dade County are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and bilingual search dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Nashville corporate law firm litigation and copyright local SEO ranking strategy',
+    alt: 'Miami corporate law firm litigation and international arbitration local SEO strategy',
     points: [
-      'LegalService and Attorney schema linking Tennessee Bar verified credentials',
-      'Localized practice area silos targeting Davidson, Williamson, and Rutherford counties',
+      'LegalService and Attorney schema linking Florida Bar verified credentials',
+      'Bilingual English and Spanish content architecture with localized schema markup',
       'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    sector: 'Automotive Manufacturing, Supply Chain & Industrial Parts',
-    headline: 'Driving High-Ticket Commercial Inquiries Across Middle Tennessee',
+    sector: 'Import/Export Logistics, Freight Forwarding & Maritime Trade',
+    headline: 'Driving High-Ticket Commercial Inquiries Across Doral & PortMiami',
     description:
-      'Automotive suppliers, industrial fabricators, and equipment distributors along the I-24 and I-65 corridors require steady commercial contract flow. We optimize your local digital footprint to capture plant engineers, procurement directors, and regional operations managers.',
+      'Freight forwarders, customs brokers, and maritime logistics operators in Miami require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, trade managers, and international distributors seeking verified regional partners.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial supply local SEO architecture',
+    alt: 'Miami import export logistics and freight forwarding local SEO architecture',
     points: [
-      'Commercial capability landing pages optimized for regional radius search queries',
-      'High-speed mobile performance ensuring immediate quote request submissions',
-      'Structured LocalBusiness schema with verified commercial service area parameters',
+      'Commercial logistics capability landing pages optimized for trade corridor queries',
+      'High-speed mobile performance ensuring immediate freight quote request submissions',
+      'Structured LocalBusiness schema with verified international trade parameters',
     ],
   },
 ];
@@ -152,7 +152,7 @@ const PAIN_POINTS = [
   {
     num: '01',
     title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Nashville agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    problem: 'Traditional Miami agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
     solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
   },
   {
@@ -180,7 +180,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 01',
     title: 'Local Entity & Citation Audit',
     desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across metro Nashville', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    deliverables: ['Google Maps rank grid scan across Miami-Dade', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
   },
   {
     phase: 'Phase 02',
@@ -229,16 +229,16 @@ const FAQ_CATEGORIES = [
   { key: 'pricing', label: 'Cost & Retainers' },
   { key: 'timeline', label: 'Timeline & Results' },
   { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Nashville Market Focus' },
+  { key: 'local', label: 'Miami Market Focus' },
   { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Nashville business?',
+    question: 'How much does local SEO cost for a Miami business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Nashville corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Miami corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring county-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -254,13 +254,13 @@ const FAQ_ITEMS = [
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Nashville business expect to see Google Maps rank improvements?',
+    question: 'How quickly can our Miami business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in West End or Brentwood generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Brickell or Coral Gables generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Nashville business can rank in the Local 3-Pack?',
+    question: 'What factors determine how fast a Miami business can rank in the Local 3-Pack?',
     answer:
       'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
@@ -296,27 +296,27 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across Middle Tennessee?',
+    question: 'Do you optimize for bilingual English and Spanish searches in Miami?',
     answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Nashville, Brentwood, Franklin, Murfreesboro, Hendersonville, and Mount Juliet.',
+      'Yes. We architect bilingual landing pages, localized metadata, and Spanish-language GBP service descriptions to capture high-intent inquiries across South Florida’s vibrant bilingual commercial landscape.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in West End and Green Hills?',
+    question: 'Can you help our practice outrank entrenched competitors in Brickell and Coral Gables?',
     answer:
       'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Nashville?',
+    question: 'How do service-area businesses without a public storefront rank in Miami?',
     answer:
       'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target ZIP codes and commercial corridors.',
   },
   {
     category: 'local',
-    question: 'Can you optimize our local presence for entertainment and artist services?',
+    question: 'Do you manage multi-location local SEO campaigns across South Florida?',
     answer:
-      'Yes. We build specialized event and entertainment schemas, local studio directories, and music licensing metadata to capture high-value industry searches across Music Row.',
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Miami, Miami Beach, Coral Gables, Doral, Fort Lauderdale, and Boca Raton.',
   },
   {
     category: 'reporting',
@@ -328,13 +328,13 @@ const FAQ_ITEMS = [
     category: 'reporting',
     question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Nashville, showing exactly where your business appears in the top 3 and where optimization is needed.',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Miami, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
     category: 'reporting',
     question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'We continuously monitor your primary search categories in Nashville, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+      'We continuously monitor your primary search categories in Miami, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
     category: 'reporting',
@@ -360,35 +360,35 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Nashville Local SEO Agency',
+  name: 'FactoryJet - Miami Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Nashville',
-    addressRegion: 'TN',
+    addressLocality: 'Miami',
+    addressRegion: 'FL',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 36.1627,
-    longitude: -86.7816,
+    latitude: 25.7617,
+    longitude: -80.1918,
   },
   areaServed: [
-    { '@type': 'City', name: 'Nashville' },
-    { '@type': 'City', name: 'Brentwood' },
-    { '@type': 'City', name: 'Franklin' },
-    { '@type': 'City', name: 'Murfreesboro' },
-    { '@type': 'City', name: 'Hendersonville' },
+    { '@type': 'City', name: 'Miami' },
+    { '@type': 'City', name: 'Miami Beach' },
+    { '@type': 'City', name: 'Coral Gables' },
+    { '@type': 'City', name: 'Doral' },
+    { '@type': 'City', name: 'Aventura' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Nashville Local SEO & Google Maps Optimization',
+  name: 'Miami Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
@@ -396,15 +396,15 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Nashville businesses.',
-  areaServed: { '@type': 'State', name: 'Tennessee' },
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Miami businesses.',
+  areaServed: { '@type': 'State', name: 'Florida' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+  name: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -415,18 +415,18 @@ const BREADCRUMB_SCHEMA = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
     { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Nashville', item: CANONICAL },
+    { '@type': 'ListItem', position: 3, name: 'Miami', item: CANONICAL },
   ],
 };
 
-export default function NashvilleSeoPage() {
+export default function MiamiSeoPage() {
   return (
     <>
-      <script id="bna-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bna-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="bna-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="bna-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="bna-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="mia-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="mia-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="mia-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="mia-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="mia-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,26 +441,26 @@ export default function NashvilleSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Nashville Local SEO &amp; AI Citation Authority</span>
+                  <span>Miami Local SEO &amp; AI Citation Authority</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Nashville Local SEO Agency for Market Leaders
+                  Miami Local SEO Agency for Market Leaders
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Music Row, West End, and Brentwood. Engineered for verified inbound calls and high-ticket consultations.
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Brickell, Coral Gables, and Wynwood. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-                  <a href="#bna-districts" className="rv-btn-secondary">
+                  <a href="#mia-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Nashville Corridors</span>
+                    <span>Explore Miami Corridors</span>
                   </a>
                 </div>
               </div>
@@ -468,8 +468,8 @@ export default function NashvilleSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/nashville/hero-nashville.webp"
-                  alt="Nashville Tennessee local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/miami/hero-miami.webp"
+                  alt="Miami Florida local SEO rankings and Google Maps 3-Pack dominance strategy"
                   width={640}
                   height={640}
                   priority
@@ -512,7 +512,7 @@ export default function NashvilleSeoPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Nashville businesses"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Miami businesses"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -529,11 +529,11 @@ export default function NashvilleSeoPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Nashville&apos;s High-Value Commercial Sectors
+                  Engineered for Miami&apos;s High-Value Commercial Sectors
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Music Row entertainment firms to West End hospital systems and Brentwood corporate headquarters, Tennessee businesses need verified search authority to capture high-ticket clients before competitors do.
+                  From Brickell wealth managers to Coral Gables corporate law firms and Miami Beach aesthetic clinics, Florida businesses need verified search authority to capture high-ticket clients before competitors do.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -564,21 +564,21 @@ export default function NashvilleSeoPage() {
           </div>
         </section>
 
-        {/* ── 04. NASHVILLE DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="bna-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. MIAMI DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="mia-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Middle Tennessee Commercial Corridor Depth</span>
+                <span>South Florida Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Local SEO for Nashville&apos;s Core Sectors
+                Tailored Local SEO for Miami&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From Music Row studios to West End healthcare hubs and Brentwood corporate offices:
+                From Brickell financial advisors to Coral Gables law practices and Doral trade hubs:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function NashvilleSeoPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Local Search Architectures for Nashville
+                Specialized Local Search Architectures for Miami
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every high-value commercial sector in Tennessee demands tailored keyword targeting, entity schemas, and conversion pathways:
+                Every high-value commercial sector in Florida demands tailored keyword targeting, entity schemas, and conversion pathways:
               </p>
             </div>
 
@@ -695,7 +695,7 @@ export default function NashvilleSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Nashville Companies Choose FactoryJet Local SEO
+                Why Miami Companies Choose FactoryJet Local SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace generic SEO reports with direct rank dominance and verified phone lead generation:
@@ -735,10 +735,10 @@ export default function NashvilleSeoPage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-blueprint">
           <LocalSeoArchitectureBlueprint
-            badge="// NASHVILLE LOCAL SEARCH & AI RANKING BLUEPRINT"
+            badge="// MIAMI LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Nashville local search."
-            city="Nashville"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Miami local search."
+            city="Miami"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
           />
@@ -758,7 +758,7 @@ export default function NashvilleSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Middle Tennessee:
+                A systematic, engineering-first methodology for establishing market dominance across South Florida:
               </p>
             </div>
 
@@ -819,7 +819,7 @@ export default function NashvilleSeoPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Nashville SEO Agencies: What to Ask
+                Evaluating Miami SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 Compare engineering-led local search optimization against traditional marketing agencies before you sign:
@@ -863,9 +863,9 @@ export default function NashvilleSeoPage() {
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="NASHVILLE LOCAL SEARCH INTELLIGENCE"
-          headline="Frequently Asked Questions About Local SEO in Nashville TN"
-          lead="Direct, plain English answers to what Nashville business owners and marketing directors ask about search visibility:"
+          eyebrow="MIAMI LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Miami FL"
+          lead="Direct, plain English answers to what Miami business owners and marketing directors ask about search visibility:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -874,7 +874,7 @@ export default function NashvilleSeoPage() {
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
-            <SeoCityLinksUS currentCity="nashville" />
+            <SeoCityLinksUS currentCity="miami" />
           </div>
         </section>
 
@@ -889,7 +889,7 @@ export default function NashvilleSeoPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Nashville Local Search?
+              Ready to Dominate Miami Local Search?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
