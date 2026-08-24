@@ -2,17 +2,17 @@ import Link from "next/link";
 import RecognitionStrip from "@/components/RecognitionStrip";
 
 const SERVICE_LINKS = [
-  { label: "Web Design Manchester", href: "/manchester" },
-  { label: "E-Commerce Development", href: "/manchester" },
-  { label: "SEO Agency Manchester", href: "/manchester" },
-  { label: "AI Agent Development", href: "/manchester" },
-  { label: "Website Redesign", href: "/manchester" },
-  { label: "Web Design Sheffield", href: "/sheffield" },
+  { label: "Web Design Manchester", href: "/uk/manchester" },
+  { label: "E-Commerce Development", href: "/uk/manchester" },
+  { label: "SEO Agency Manchester", href: "/uk/manchester" },
+  { label: "AI Agent Development", href: "/uk/manchester" },
+  { label: "Website Redesign", href: "/uk/manchester" },
+  { label: "Web Design Sheffield", href: "/uk/sheffield" },
 ];
 
 const BOTTOM_LINKS = [
-  { label: "Web Design Manchester", href: "/manchester" },
-  { label: "Web Design Sheffield", href: "/sheffield" },
+  { label: "Web Design Manchester", href: "/uk/manchester" },
+  { label: "Web Design Sheffield", href: "/uk/sheffield" },
   { label: "AI-Native Agency", href: "/" },
 ];
 

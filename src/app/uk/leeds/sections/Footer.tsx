@@ -2,20 +2,20 @@ import Link from "next/link";
 import RecognitionStrip from "@/components/RecognitionStrip";
 
 const SERVICE_LINKS = [
-  { label: "Web Design Leeds", href: "/leeds" },
-  { label: "E-Commerce Development Leeds", href: "/leeds" },
-  { label: "AI Agent Development Leeds", href: "/leeds" },
-  { label: "AI SEO Leeds (GEO/AEO)", href: "/leeds" },
-  { label: "Shopify Development Leeds", href: "/leeds" },
-  { label: "WordPress Development Leeds", href: "/leeds" },
+  { label: "Web Design Leeds", href: "/uk/leeds" },
+  { label: "E-Commerce Development Leeds", href: "/uk/leeds" },
+  { label: "AI Agent Development Leeds", href: "/uk/leeds" },
+  { label: "AI SEO Leeds (GEO/AEO)", href: "/uk/leeds" },
+  { label: "Shopify Development Leeds", href: "/uk/leeds" },
+  { label: "WordPress Development Leeds", href: "/uk/leeds" },
 ];
 
 const BOTTOM_LINKS = [
-  { label: "Manchester", href: "/manchester" },
-  { label: "Birmingham", href: "/birmingham" },
-  { label: "Sheffield", href: "/sheffield" },
-  { label: "Bristol", href: "/bristol" },
-  { label: "Edinburgh", href: "/edinburgh" },
+  { label: "Manchester", href: "/uk/manchester" },
+  { label: "Birmingham", href: "/uk/birmingham" },
+  { label: "Sheffield", href: "/uk/sheffield" },
+  { label: "Bristol", href: "/uk/bristol" },
+  { label: "Edinburgh", href: "/uk/edinburgh" },
 ];
 
 export default function Footer() {

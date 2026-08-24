@@ -18,7 +18,9 @@
     "indexnow": "node scripts/submit-indexnow.mjs",
     "bing:submit": "node scripts/submit-bing-api.mjs",
     "social:status": "node scripts/social-publish.mjs --status",
-    "social:post": "node scripts/social-publish.mjs"
+    "social:post": "node scripts/social-publish.mjs",
+    "audit:schema": "node scripts/audit-schema-truth.mjs",
+    "audit:schema:uk": "node scripts/audit-schema-truth.mjs --filter /uk/"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

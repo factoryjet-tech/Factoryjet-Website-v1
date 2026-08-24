@@ -25,12 +25,6 @@ const breadcrumbSchema = {
       name: "Manchester",
       item: "https://factoryjet.com/uk/manchester",
     },
-    {
-      "@type": "ListItem",
-      position: 4,
-      name: "Web Design",
-      item: "https://factoryjet.com/manchester",
-    },
   ],
 };
 
