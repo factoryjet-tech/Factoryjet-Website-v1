@@ -420,7 +420,7 @@ const SERVICE_SCHEMA = {
     jobTitle: 'Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
-      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
@@ -456,7 +456,7 @@ const WEBPAGE_SCHEMA = {
     jobTitle: 'Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
-      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },

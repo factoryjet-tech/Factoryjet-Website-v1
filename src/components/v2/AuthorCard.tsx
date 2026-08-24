@@ -60,7 +60,7 @@ export default function AuthorCard({ variant = 'light', className = '' }: Author
           {/* Entity Profile Links & Credentials */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-semibold">
             <a
-              href="https://www.linkedin.com/in/bhavesh-barot"
+              href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/"
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border transition-colors ${
