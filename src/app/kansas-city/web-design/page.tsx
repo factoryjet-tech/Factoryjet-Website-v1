@@ -5,145 +5,145 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
-const CANONICAL = 'https://factoryjet.com/denver/seo';
+const CANONICAL = 'https://factoryjet.com/kansas-city/web-design';
 
 export const metadata: Metadata = {
-  title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
   description:
-    'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+    'Kansas City web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
     description:
-      'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+      'Kansas City web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Kansas City Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Denver local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description: 'Custom Next.js web design and engineering in Kansas City MO. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
-  'Apple Business Connect',
-  'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Next.js 15 App Router',
+  'React 19 Server Components',
+  'TypeScript Enterprise',
+  'Tailwind CSS & Vanilla Design Tokens',
+  'Cloudflare Edge Network',
+  'Sanity & Strapi Headless CMS',
+  'Figma Design Systems',
+  'Core Web Vitals SLA (95+)',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Denver commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'Lower Downtown (LoDo) & Union Station',
-    query: 'venture capital corporate legal seo lodo denver',
-    focus: 'Fintech Platforms, Venture Capital & High-Growth Tech',
-    desc: 'The vibrant urban innovation and legal corridor. Captures high-ticket corporate legal retainers, tech venture inquiries, and commercial advisory contracts.',
+    corridor: 'Crossroads Arts District & Downtown KC',
+    query: 'creative studio fintech web design crossroads kc',
+    focus: 'Creative Studios, Fintech Platforms & Urban Tech',
+    desc: 'The vibrant design, arts, and urban innovation spine. Demands high-speed corporate flagships, interactive portfolio visualizers, and sub-second edge hosting.',
   },
   {
-    corridor: 'Denver Tech Center (DTC) & Greenwood Village',
-    query: 'enterprise b2b saas telecommunications seo dtc',
-    focus: 'Enterprise SaaS, Telecommunications & Corporate HQ',
-    desc: 'Major corporate and software campus core. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    corridor: 'Country Club Plaza & Midtown',
+    query: 'wealth management law firm web design country club plaza',
+    focus: 'Wealth Advisory, Corporate Law & Commercial Real Estate',
+    desc: 'The executive financial and legal seat of Kansas City. Demands refined editorial typography, interactive wealth calculators, and SOC2-compliant client portals.',
   },
   {
-    corridor: 'Cherry Creek North',
-    query: 'plastic surgery private wealth advisory seo cherry creek',
-    focus: 'Private Wealth Advisory, Aesthetic Surgery & Concierge Medicine',
-    desc: 'Affluent executive and specialized medical enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth retainers.',
+    corridor: 'Overland Park & College Boulevard',
+    query: 'healthtech telecom enterprise web design overland park',
+    focus: 'HealthTech, Telecommunications & Corporate HQ',
+    desc: 'Major corporate and telecommunications campus corridor. Features multi-practitioner clinic directories, patient intake forms, and enterprise service matrices.',
   },
   {
-    corridor: 'RiNo & Five Points',
-    query: 'creative agency outdoor lifestyle brand seo rino',
-    focus: 'Creative Agencies, Architecture Studios & Outdoor Lifestyle',
-    desc: 'Renowned creative and architectural core. Multi-location practice architectures, studio directories, and verified customer review funnels.',
+    corridor: 'KC Animal Health Corridor',
+    query: 'animal health veterinary bio tech web design kansas city',
+    focus: 'Animal Sciences, Veterinary Tech & Bio-Agriculture',
+    desc: 'The global animal health corridor. Demands clinical-grade scientific design systems, interactive pipeline visualizers, and sub-second edge performance.',
   },
   {
-    corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'cleantech quantum computing enterprise seo boulder',
-    focus: 'CleanTech, Quantum Computing & Aerospace Software',
-    desc: 'World-class scientific and deep tech nexus. Requires deep topical content graphs, researcher schemas, and institutional citations across Colorado.',
+    corridor: 'Northland & KCI Logistics Corridor',
+    query: 'aviation logistics freight web design northland kc',
+    focus: 'Aviation Logistics, Cold Storage & Distribution',
+    desc: 'Major Midwest aviation and freight distribution hub. Features freight rate estimation calculators, warehouse capability matrices, and RFQ workflows.',
   },
   {
-    corridor: 'Golden & West Metro Industrial',
-    query: 'precision manufacturing engineering contractor seo golden co',
-    focus: 'Advanced Manufacturing, Engineering & Outdoor Gear',
-    desc: 'Precision industrial and outdoor brand manufacturing. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+    corridor: 'Lenexa & Olathe Industrial Corridor',
+    query: 'precision manufacturing fabrication web design lenexa',
+    focus: 'Precision Tooling, Heavy Manufacturing & Fabrication',
+    desc: 'Heavy manufacturing and precision tooling heartland. Features CAD blueprint upload portals, equipment tolerance matrices, and ERP quote integrations.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Private Wealth Advisory, Estate Planning & Corporate Law',
-    headline: 'Dominating High-Stakes Search Corridors for Denver Firms',
+    sector: 'Animal Health, Veterinary Sciences & Bio-Agriculture',
+    headline: 'Clinical-Grade Digital Flagships for KC Animal Health Leaders',
     description:
-      'Legal and financial search queries across Denver and Arapahoe counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
-    image: '/images/us/denver/law-firm.webp',
-    alt: 'Denver and Cherry Creek private wealth management estate planning and corporate law local SEO',
+      'From the Kansas City Animal Health Corridor to bio-agriculture enterprises in Olathe, institutional credibility is paramount. We engineer custom Next.js web applications with interactive pipeline diagrams, research documentation hubs, regulatory compliance showcases, and sub-second edge performance.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Kansas City animal health corridor veterinary biotechnology and bio agriculture web design engineering',
     points: [
-      'LegalService and Attorney schema linking Colorado Bar verified credentials',
-      'Localized practice area silos targeting LoDo, Cherry Creek, and the Denver Tech Center',
-      'High-authority local legal directory citations and editorial publication placements',
+      'Interactive scientific pipeline visualizers and mechanism-of-action animations',
+      'Secure research data rooms and corporate partner portal integrations',
+      'Compliance-first architectures with sub-second global edge CDN caching',
     ],
   },
   {
-    sector: 'Aesthetic Surgery, Concierge Medicine & Specialized Clinics',
-    headline: 'Capturing High-Value Patient Consultations Across Cherry Creek & DTC',
+    sector: 'Private Wealth Advisory, Family Offices & Corporate Law',
+    headline: 'Sophisticated Digital Flagships for Plaza & Downtown KC Firms',
     description:
-      'In Denver’s premier elective surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/denver/healthcare-clinic.webp',
-    alt: 'Denver Cherry Creek aesthetic plastic surgery medical practice clinic local SEO strategy',
+      'Private wealth advisory firms, family offices, and commercial litigation practices across Country Club Plaza and Downtown Kansas City demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Kansas City Country Club Plaza wealth management private equity and corporate law website design',
     points: [
-      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
-      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Hyper-local neighborhood geo-pages targeting Cherry Creek, Greenwood Village, and Boulder',
+      'Refined editorial typography and interactive portfolio asset allocation visualizers',
+      'Encrypted client portal integration with multi-factor authentication routing',
+      '100% intellectual property ownership with full source code transfer',
     ],
   },
   {
-    sector: 'Outdoor Recreation Brands, Gear Manufacturing & Active Lifestyle',
-    headline: 'Local & Regional Search Dominance for Colorado Outdoor Leaders',
+    sector: 'Precision Manufacturing, Heavy Equipment & Fabrication',
+    headline: 'Engineering Commercial Lead Engines for Kansas City Manufacturers',
     description:
-      'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immediate regional store discovery. We optimize Google Business Profiles, embed product catalogs, synchronize dealer networks, and capture high-intent gear searches.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor gear technical apparel brand retail store local SEO optimization',
+      'From Lenexa precision tooling builders to Olathe heavy fabrication facilities, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive equipment capability matrices, ISO quality cert showcases, and secure CAD blueprint upload funnels.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Kansas City precision manufacturing heavy equipment fabrication and engineering web design',
     points: [
-      'Multi-location retail store and authorized dealer directory optimization',
-      'Local radius geo-fencing targeting Front Range recreation corridors',
-      'Structured Store and Product schema markup for Google Merchant Center synchronization',
+      'Interactive equipment capability matrices and engineering tolerance tables',
+      'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
+      'Structured manufacturing schema markup linking verified ISO and quality certifications',
     ],
   },
   {
-    sector: 'Commercial Construction, HVAC & General Contracting',
-    headline: 'Driving Continuous Commercial Project Bidding Across Front Range',
+    sector: 'Aviation Logistics, Freight Forwarding & B2B Distribution',
+    headline: 'Commercial Lead Engines for KCI Logistics & Northland Hubs',
     description:
-      'Commercial general contractors, roofing companies, and HVAC specialists across the Denver metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/denver/contractor-site.webp',
-    alt: 'Denver commercial general contractor HVAC and roofing local SEO ranking architecture',
+      'Freight forwarders, cold storage logistics operators, and intermodal carriers across the Kansas City metropolitan area demand high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, and automated lead routing.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Kansas City freight logistics aviation cargo and multimodal distribution web design',
     points: [
-      'Service area radius optimization covering Denver, Aurora, Lakewood, and Littleton',
-      'High-speed mobile performance ensuring immediate project bidding phone calls',
-      'Structured LocalBusiness and Contractor schema markup for local search dominance',
+      'Interactive freight rate estimation calculators and RFQ workflow automation',
+      'Sub-second mobile performance ensuring immediate commercial quote submissions',
+      'Structured LogisticsService and Organization schema markup for regional search dominance',
     ],
   },
 ];
@@ -151,196 +151,196 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Denver agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Ending Slow WordPress Themes & Bloated Plugin Stacks',
+    problem: 'Traditional Kansas City agencies build on bloated WordPress templates with 30+ plugins, resulting in sluggish load times, security vulnerabilities, and constant breakages.',
+    solution: 'We engineer custom Next.js 15 web applications on modern edge networks, achieving sub-second load times and zero dependency bloat.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
+    problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'Overcoming Fragile Mobile Experiences That Hurt Lead Conversion',
+    problem: 'Poorly coded desktop-first designs break on mobile devices, with slow forms, misaligned buttons, and confusing navigation that drives prospects away.',
+    solution: 'We engineer mobile-first responsive interfaces with frictionless touch navigation, instant autocompleting forms, and clean Core Web Vitals.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'Stopping Agency Code Hostage & Hidden Licensing Fees',
+    problem: 'Many agencies lock your website into proprietary platforms or charge ongoing licensing fees to keep your own code operational.',
+    solution: 'You receive 100% full intellectual property ownership, the complete GitHub repository, and documented deployment configurations upon project completion.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across the Denver metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Discovery, Information Architecture & Strategy',
+    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Custom Figma UI/UX Design & Design Tokens',
+    desc: 'We design bespoke desktop and mobile prototypes in Figma, complete with typography tokens, spacing scales, and custom brand visual assets.',
+    deliverables: ['High-fidelity interactive Figma prototypes', 'Mobile responsive component wireframes', 'Design tokens and typography scales', 'Client design review and revision approval'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Next.js 15 Engineering & Headless CMS Integration',
+    desc: 'We transform approved designs into production React 19 code with TypeScript, Tailwind CSS, structured schema markup, and headless CMS integrations.',
+    deliverables: ['Custom Next.js 15 App Router architecture', 'Sanity/Strapi headless content management setup', 'JSON-LD structured schema graph implementation', 'Cross-browser and multi-device QA validation'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Core Web Vitals Optimization, Launch & Handover',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ performance optimization', 'Cloudflare DNS cutover and SSL deployment', 'Full GitHub repository and asset transfer', '30-day post-launch warranty and team training'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Engineering Stack',
+    factoryjet: 'Modern Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Outdated monolithic WordPress, Elementor, or heavy Webflow templates.',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'Delivery Speed',
+    factoryjet: 'Rapid 7-day agile sprint with fixed-price milestone delivery.',
+    traditional: '4 to 8 months of protracted discovery meetings and frequent timeline slippages.',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Google Lighthouse Core Web Vitals mobile performance.',
+    traditional: 'Sub-60 mobile performance scores with heavy render-blocking scripts.',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'IP & Code Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary platform lock-in or agency-retained code repositories.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Retainers' },
-  { key: 'timeline', label: 'Timeline & Results' },
-  { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Denver Market Focus' },
-  { key: 'reporting', label: 'Tracking & Deliverables' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Process' },
+  { key: 'tech', label: 'Next.js Tech Stack' },
+  { key: 'local', label: 'Kansas City Focus' },
+  { key: 'ownership', label: 'Code & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Denver business?',
+    question: 'How much does custom web design cost for a Kansas City business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Denver corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or corporate practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Project investments are based on total page count, interactive feature complexity, custom API integrations, and content scope. Every project is scoped with a transparent, fixed-price milestone agreement. Focused corporate websites are delivered with full Figma UI/UX, custom Next.js engineering, and 100% code ownership with zero surprise overages.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+      'No. We believe you should own your website outright. You contract directly with your preferred hosting provider (Cloudflare, Vercel) and pay zero monthly agency licensing fees.',
   },
   {
     category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Denver business expect to see Google Maps rank improvements?',
+    question: 'How can you deliver a custom Next.js website in just 7 days?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Cherry Creek or LoDo generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'We eliminate bloated agency bureaucracy and junior account layers. Our senior full-stack engineers and Figma UI/UX designers work directly with you through focused, daily milestone sprints to design, build, and deploy your site in parallel.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Denver business can rank in the Local 3-Pack?',
+    question: 'What is required from our internal team during the 7-day sprint?',
     answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+      'We require brand assets (logos, brand guidelines), key service copy, and prompt feedback on the Figma design prototypes during scheduled milestone check-ins to ensure rapid project delivery.',
   },
   {
     category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
+    question: 'What happens if we need design revisions during the process?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'Every project includes dedicated design revision cycles during the Figma prototype phase, ensuring you approve every layout, color choice, and typography detail before development begins.',
   },
   {
-    category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
+    category: 'tech',
+    question: 'Why choose Next.js 15 over WordPress or Webflow?',
     answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+      'Next.js 15 delivers unbeatable performance with sub-second page loads, superior SEO through server-side rendering, rock-solid security without vulnerable plugins, and infinite scalability that monolithic page builders cannot match.',
   },
   {
-    category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
+    category: 'tech',
+    question: 'Can our marketing team edit text and images without touching code?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi, allowing your marketing team to create blog posts, update service copy, and upload images through an easy visual dashboard.',
   },
   {
-    category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    category: 'tech',
+    question: 'How do you ensure our website achieves 95+ Core Web Vitals scores?',
     answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+      'We optimize every asset using modern WebP/AVIF image formats, eliminate render-blocking JavaScript, implement static page pre-rendering, and deploy on Cloudflare global edge networks.',
   },
   {
-    category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
+    category: 'tech',
+    question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
-  },
-  {
-    category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across the Front Range?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Denver, Boulder, Greenwood Village, Lakewood, and Fort Collins.',
+      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Cherry Creek and LoDo?',
+    question: 'Do you have experience with Kansas City animal health and agriculture companies?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'Yes. We build high-credibility digital experiences for KC Animal Health Corridor enterprises, veterinary technology providers, and agricultural science innovators requiring interactive pipeline diagrams and research portals.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Denver?',
+    question: 'Can you design websites tailored for Plaza and Downtown KC legal practices?',
     answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Front Range ZIP codes and commercial corridors.',
+      'Yes. We develop sophisticated digital flagships for corporate trial attorneys, private wealth managers, and commercial real estate firms featuring practice area silos, executive bio schemas, and client portals.',
   },
   {
     category: 'local',
-    question: 'Do you optimize for technology and enterprise SaaS searches in DTC?',
+    question: 'Can you integrate custom CRM and lead capture workflows like HubSpot or Salesforce?',
     answer:
-      'Yes. We build specialized topical hubs and enterprise B2B schema markup for SaaS, cloud engineering, and telecom providers.',
+      'Yes. We build webhook-driven form integrations that instantly route leads, quote inquiries, and consultation requests directly into your CRM, Slack, or email marketing automation platform.',
   },
   {
-    category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
+    category: 'local',
+    question: 'Can you build manufacturing websites for Lenexa and Olathe industrial companies?',
     answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+      'Yes. We engineer precision industrial web applications with interactive tolerance tables, ISO quality certifications, and secure engineering RFQ upload portals.',
   },
   {
-    category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Denver, showing exactly where your business appears in the top 3 and where optimization is needed.',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, Figma design assets, and deployment configurations with zero vendor lock-in.',
   },
   {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'We continuously monitor your primary search categories in Denver, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
   },
   {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
+    category: 'ownership',
+    question: 'How do you train our internal team on managing the website?',
     answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update content in the CMS, view form submissions, and manage media assets.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
+    answer:
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
 
@@ -360,51 +360,51 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Denver Local SEO Agency',
+  name: 'FactoryJet - Kansas City Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Denver',
-    addressRegion: 'CO',
+    addressLocality: 'Kansas City',
+    addressRegion: 'MO',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 39.7392,
-    longitude: -104.9903,
+    latitude: 39.0997,
+    longitude: -94.5786,
   },
   areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Greenwood Village' },
-    { '@type': 'City', name: 'Cherry Creek' },
-    { '@type': 'City', name: 'Lakewood' },
+    { '@type': 'City', name: 'Kansas City' },
+    { '@type': 'City', name: 'Overland Park' },
+    { '@type': 'City', name: 'Olathe' },
+    { '@type': 'City', name: 'Lenexa' },
+    { '@type': 'City', name: 'Lee\'s Summit' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Denver Local SEO & Google Maps Optimization',
+  name: 'Kansas City Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Denver businesses.',
-  areaServed: { '@type': 'State', name: 'Colorado' },
+    'Custom Next.js web design and engineering in Kansas City MO. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Midwest businesses.',
+  areaServed: [{ '@type': 'State', name: 'Missouri' }, { '@type': 'State', name: 'Kansas' }],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+  name: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description: 'Kansas City web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -414,19 +414,19 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Denver', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Kansas City', item: CANONICAL },
   ],
 };
 
-export default function DenverSeoPage() {
+export default function KansasCityWebDesignPage() {
   return (
     <>
-      <script id="den-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="den-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="den-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="den-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="kc-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="kc-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="kc-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="kc-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="kc-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,26 +441,26 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver Local SEO &amp; AI Citation Authority</span>
+                  <span>Kansas City Web Design &amp; Full-Stack Engineering</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Denver Local SEO Agency for Market Leaders
+                  Kansas City Web Design Agency for High-Growth Brands
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across LoDo, Cherry Creek, and the Denver Tech Center. Engineered for verified inbound calls and high-ticket consultations.
+                  Custom Next.js 15 websites, bespoke Figma UI/UX, and sub-second performance engineered for Midwest leaders. 7-day agile delivery with 100% intellectual property code ownership.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-                  <a href="#den-seo-districts" className="rv-btn-secondary">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#kc-web-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Denver Corridors</span>
+                    <span>Explore Kansas City Corridors</span>
                   </a>
                 </div>
               </div>
@@ -468,8 +468,8 @@ export default function DenverSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/b2b-website-design/hero.webp"
+                  alt="Kansas City Missouri web design and custom Next.js web application development"
                   width={640}
                   height={640}
                   priority
@@ -480,12 +480,12 @@ export default function DenverSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Modern Frontend &amp; Cloud Infrastructure</div>
               <div className="rv-ticker-line" />
             </div>
 
@@ -511,8 +511,8 @@ export default function DenverSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/denver/tech-office.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Denver businesses"
+                  src="/images/us/b2b-website-design/sales-enablement.webp"
+                  alt="FactoryJet senior UI UX designers collaborating on custom Kansas City web design sprint"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -525,15 +525,15 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Precision Local Authority</span>
+                  <span>Speed, Craft &amp; Performance</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Denver&apos;s High-Value Commercial Sectors
+                  Web Design Engineered for Heart of America Leaders
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From LoDo corporate law firms to Cherry Creek aesthetic surgery clinics and DTC enterprise software providers, Colorado businesses need verified search authority to capture high-ticket clients before competitors do.
+                  From Animal Health Corridor bio-innovators to Country Club Plaza wealth advisory firms and Overland Park enterprise tech campuses, we build high-converting web applications that elevate your brand equity.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -557,28 +557,28 @@ export default function DenverSeoPage() {
 
                 {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <ModalCTAButton label="Schedule Web Design Consultation" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── 04. DENVER DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="den-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. KANSAS CITY DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="kc-web-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Denver Commercial Corridor Depth</span>
+                <span>Kansas City Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Local SEO for Denver&apos;s Core Sectors
+                Tailored Web Design for Kansas City&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From LoDo tech startups to Cherry Creek private wealth and DTC enterprise software:
+                From Animal Health Corridor leaders to Plaza wealth managers and Lenexa manufacturers:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function DenverSeoPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Local Search Architectures for Denver
+                Specialized Web Architectures for Midwest Brands
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every high-value commercial sector in the Front Range demands tailored keyword targeting, entity schemas, and conversion pathways:
+                Every commercial sector in the Kansas City metro demands tailored user flows, design tokens, and performance metrics:
               </p>
             </div>
 
@@ -695,10 +695,10 @@ export default function DenverSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Denver Companies Choose FactoryJet Local SEO
+                Why Kansas City Leaders Choose FactoryJet Web Design
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace fragile WordPress page builders with high-performance Next.js engineering:
               </p>
             </div>
 
@@ -733,18 +733,18 @@ export default function DenverSeoPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <div id="local-seo-blueprint">
-          <LocalSeoArchitectureBlueprint
-            badge="// DENVER LOCAL SEARCH & AI RANKING BLUEPRINT"
-            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Denver local search."
-            city="Denver"
-            ctaLabel="Get a Free Local SEO Audit"
+        <div id="web-design-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// KANSAS CITY FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
+            title="Next.js 15 App Router to Global Cloudflare Edge"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
+            city="Kansas City"
+            ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -752,13 +752,13 @@ export default function DenverSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Proven 7-Day Sprint Model</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 4-Stage Local SEO Ranking Protocol
+                Our 4-Stage Rapid Web Design Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Greater Denver:
+                A disciplined engineering methodology for zero-delay deliveries and high-conversion web launches:
               </p>
             </div>
 
@@ -819,10 +819,10 @@ export default function DenverSeoPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Denver SEO Agencies: What to Ask
+                Evaluating Kansas City Web Design Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
               </p>
             </div>
 
@@ -830,7 +830,7 @@ export default function DenverSeoPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -863,9 +863,9 @@ export default function DenverSeoPage() {
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="DENVER LOCAL SEARCH INTELLIGENCE"
-          headline="Frequently Asked Questions About Local SEO in Denver CO"
-          lead="Direct, plain English answers to what Denver business owners and marketing directors ask about search visibility:"
+          eyebrow="KANSAS CITY WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Kansas City MO"
+          lead="Direct, plain English answers to what Kansas City business owners and marketing leaders ask about website design and engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -874,7 +874,7 @@ export default function DenverSeoPage() {
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
-            <SeoCityLinksUS currentCity="denver" />
+            <WebDesignCityLinksUS currentCity="kansas-city" />
           </div>
         </section>
 
@@ -885,19 +885,19 @@ export default function DenverSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Denver Local Search?
+              Ready to Upgrade Your Kansas City Web Presence?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

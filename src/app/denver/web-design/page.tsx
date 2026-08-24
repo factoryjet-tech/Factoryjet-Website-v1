@@ -13,137 +13,137 @@ const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/denver/web-design';
 
 export const metadata: Metadata = {
-  title: 'Denver Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Denver Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
   description:
-    'Denver web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Colorado businesses.',
+    'Denver web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Colorado businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Denver Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
     description:
-      'Denver web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Colorado businesses.',
+      'Denver web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Colorado businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver Web Design Agency | Fast Next.js Sites | FactoryJet',
-    description: 'Custom Next.js web design in Denver CO. 7-day launch and 100% full IP code ownership.',
+    title: 'Denver Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    description: 'Custom Next.js web design and engineering in Denver CO. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [
-  'Next.js 15 & React',
+  'Next.js 15 App Router',
+  'React 19 Server Components',
   'TypeScript Enterprise',
-  'Tailwind CSS',
+  'Tailwind CSS & Vanilla Design Tokens',
+  'Cloudflare Edge Network',
+  'Sanity & Strapi Headless CMS',
   'Figma Design Systems',
-  'Cloudflare Global Edge',
-  'Stripe Payments',
-  'Google Analytics 4',
-  'PostgreSQL & Vercel',
+  'Core Web Vitals SLA (95+)',
 ];
 
 const STAT_CARDS = [
-  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
-  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across Colorado.', icon: '🚀' },
-  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across enterprise tech, outdoor gear, healthcare, and B2B.', icon: '🏢' },
-  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'LoDo & Union Station Tech Hub',
-    query: 'fintech web design denver',
-    focus: 'Fintech, Venture Capital & Corporate Advisory',
-    desc: 'Dense financial and commercial district in downtown Denver. Institutional investors evaluate partner credentials, visual polish, and sub-second page performance before booking discovery calls.',
+    corridor: 'Lower Downtown (LoDo) & Union Station',
+    query: 'fintech venture capital web design lodo denver',
+    focus: 'Fintech Platforms, Venture Capital & High-Growth Tech',
+    desc: 'The vibrant urban technology and startup spine. Demands high-speed corporate flagships, interactive fintech visualizers, and sub-second edge hosting.',
   },
   {
     corridor: 'Denver Tech Center (DTC) & Greenwood Village',
-    query: 'saas website design denver tech center',
-    focus: 'Enterprise B2B Software, Cybersecurity & Telecommunications',
-    desc: 'Major corporate innovation cluster along I-25. Tech companies require interactive component libraries, clear documentation portals, and high-converting product demo funnels.',
+    query: 'enterprise saas telecommunications web design dtc',
+    focus: 'Enterprise SaaS, Telecommunications & Corporate HQ',
+    desc: 'Major corporate and telecommunications campus corridor. Demands SOC2-compliant client portals, enterprise software capability matrices, and global edge CDN caching.',
   },
   {
-    corridor: 'RiNo (River North Art District)',
-    query: 'architecture firm website design denver',
-    focus: 'Creative Studios, Architecture, Luxury Real Estate & Craft Hospitality',
-    desc: 'Creative powerhouse along Brighton Boulevard. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
-  },
-  {
-    corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'climate tech web design boulder co',
-    focus: 'Climate Tech, Quantum Computing & Biotech Research',
-    desc: 'Deep-tech innovation corridor. Demands high-performance scientific data visualizations, interactive whitepaper downloads, and frictionless recruiting portals.',
+    corridor: 'RiNo (River North Arts District)',
+    query: 'outdoor lifestyle creative agency web design rino',
+    focus: 'Creative Agencies, Architecture Studios & Outdoor Lifestyle',
+    desc: 'Renowned creative, architecture, and lifestyle core. Features tactile editorial typography, interactive video heroes, and smooth micro-animations.',
   },
   {
     corridor: 'Cherry Creek North',
-    query: 'medical aesthetics web design cherry creek',
-    focus: 'Private Wealth Advisory, Plastic Surgery & Medical Aesthetics',
-    desc: 'Affluent shopping and medical corridor. Demands sophisticated brand aesthetics, private consultation booking workflows, and flawless mobile experiences.',
+    query: 'wealth management aesthetic clinic web design cherry creek',
+    focus: 'Private Wealth Advisory, Concierge Medicine & Luxury Real Estate',
+    desc: 'Affluent executive and specialized medical enclave. Demands refined editorial typography, interactive wealth calculators, and frictionless consultation booking.',
   },
   {
-    corridor: 'Golden, Lakewood & Foothills Corridor',
-    query: 'aerospace manufacturing web design golden co',
-    focus: 'Outdoor Recreation Gear, Aerospace Engineering & Clean Energy',
-    desc: 'Advanced manufacturing and outdoor recreation corridor. High-speed spec sheet downloads, equipment capability matrices, and rapid RFQ calculators capture high-value contracts.',
+    corridor: 'Boulder & US-36 Tech Corridor',
+    query: 'cleantech quantum computing web design boulder',
+    focus: 'CleanTech, Quantum Computing & Aerospace Software',
+    desc: 'World-class scientific and deep tech nexus. Features technical documentation hubs, research pipeline visualizers, and developer APIs.',
+  },
+  {
+    corridor: 'Golden & West Metro Industrial',
+    query: 'advanced manufacturing engineering web design golden co',
+    focus: 'Advanced Manufacturing, Engineering & Outdoor Gear',
+    desc: 'Precision industrial and outdoor brand manufacturing. Features CAD blueprint upload portals, equipment tolerance matrices, and ERP quote integrations.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'B2B Enterprise Software, Cybersecurity & Cloud Platforms',
-    headline: 'Engineering High-Conversion Digital Flagships for Front Range Tech Leaders',
+    sector: 'Enterprise SaaS, Cloud Platforms & CleanTech Innovations',
+    headline: 'High-Performance Web Applications for Colorado Tech Leaders',
     description:
-      'The Denver Tech Center and Boulder corridors demand websites that speak to enterprise buyers and security teams. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Denver enterprise software and cloud infrastructure web design engineering',
+      'From DTC enterprise software platforms to Boulder CleanTech startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, developer documentation hubs, and sub-second edge response times.',
+    image: '/images/us/denver/tech-office.webp',
+    alt: 'Denver enterprise SaaS technology cloud platform web design engineering',
     points: [
-      'Interactive product feature tours and downloadable technical whitepaper funnels',
-      'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
-      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+      'Interactive software feature sandboxes and animated architecture visualizers',
+      'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
+      'Frictionless lead routing directly into HubSpot, Salesforce, or Slack',
     ],
   },
   {
-    sector: 'Healthcare Systems, Specialty Surgery & Medical Aesthetics',
-    headline: 'High-Trust Patient & Provider Digital Experiences Across Colorado',
+    sector: 'Private Wealth Management, Family Offices & Commercial Law',
+    headline: 'High-Authority Digital Flagships for Cherry Creek & LoDo Firms',
     description:
-      'From the Anschutz Medical Campus to private clinics in Cherry Creek, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Denver healthcare medical practice and surgical clinic website design',
+      'Private wealth advisory firms, family offices, and commercial litigation practices in Cherry Creek North and Downtown Denver demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
+    image: '/images/us/denver/law-firm.webp',
+    alt: 'Denver and Cherry Creek wealth management law firm web design',
     points: [
-      'Searchable provider directories with specialty credentials and hospital affiliations',
-      'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
-      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+      'Refined editorial typography and interactive portfolio asset allocation visualizers',
+      'Encrypted client portal integration with multi-factor authentication routing',
+      '100% intellectual property ownership with full source code transfer',
     ],
   },
   {
-    sector: 'Private Wealth Management, Venture Capital & Corporate Law',
-    headline: 'Projecting Institutional Stature for LoDo Financial Practices',
+    sector: 'Outdoor Recreation Brands, Gear Manufacturing & Active Lifestyle',
+    headline: 'Tactile Digital Experiences for Colorado Outdoor Brands',
     description:
-      'High-stakes litigation and private wealth firms in downtown Denver cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
-    image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Denver corporate law firm litigation and private wealth web design',
+      'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immersive visual storytelling. We build responsive web applications with interactive product visualizers, material durability showcases, and frictionless checkout funnels.',
+    image: '/images/us/denver/ecommerce/portfolio-1.webp',
+    alt: 'Denver outdoor recreation brand technical apparel and gear ecommerce web design',
     points: [
-      'Deep practice area knowledge graphs and structured legal case victory portfolios',
-      'Attorney profile schema with state bar admissions and published industry insights',
-      'Secure lead capture workflows routing confidential inquiries to specific partners',
+      'Interactive product visualizers and material durability spec matrices',
+      'Sub-second mobile speed ensuring immediate product purchases and dealer inquiries',
+      'Structured Product schema markup for Google Merchant Center synchronization',
     ],
   },
   {
-    sector: 'Outdoor Recreation Gear, Clean Energy & Aerospace Engineering',
-    headline: 'Engineering Technical Authority for Front Range Manufacturers',
+    sector: 'Concierge Medicine, Specialized Clinics & Aesthetic Surgery',
+    headline: 'Patient-Centered Digital Platforms for Cherry Creek Practices',
     description:
-      'Colorado is a global leader in outdoor gear innovation, aerospace systems, and clean energy. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Denver aerospace engineering and clean energy web design engineering',
+      'In Denver’s competitive elective medicine market, patients evaluate clinical expertise and facility reputation thoroughly before booking. We craft accessible, HIPAA-conscious interfaces with provider directories, service area silos, and frictionless appointment scheduling workflows.',
+    image: '/images/us/denver/healthcare-clinic.webp',
+    alt: 'Denver concierge healthcare medical practice clinic website design and development',
     points: [
-      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
-      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
-      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+      'Multi-practitioner physician directories with board certification schemas',
+      'Sub-second mobile speed ensuring immediate patient appointment booking',
+      'Accessible, ADA-compliant typography, contrast scales, and focus states',
     ],
   },
 ];
@@ -151,196 +151,196 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
-    problem: 'Traditional Denver agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
-    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+    title: 'Ending Slow WordPress Themes & Bloated Plugin Stacks',
+    problem: 'Traditional Denver agencies build on bloated WordPress templates with 30+ plugins, resulting in sluggish load times, security vulnerabilities, and constant breakages.',
+    solution: 'We engineer custom Next.js 15 web applications on modern edge networks, achieving sub-second load times and zero dependency bloat.',
   },
   {
     num: '02',
-    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
-    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
-    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+    title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
+    problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
   },
   {
     num: '03',
-    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
-    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
-    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+    title: 'Overcoming Fragile Mobile Experiences That Hurt Lead Conversion',
+    problem: 'Poorly coded desktop-first designs break on mobile devices, with slow forms, misaligned buttons, and confusing navigation that drives prospects away.',
+    solution: 'We engineer mobile-first responsive interfaces with frictionless touch navigation, instant autocompleting forms, and clean Core Web Vitals.',
   },
   {
     num: '04',
-    title: 'Building Built-In Search & AI Citation Architecture from Day One',
-    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
-    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+    title: 'Stopping Agency Code Hostage & Hidden Licensing Fees',
+    problem: 'Many agencies lock your website into proprietary platforms or charge ongoing licensing fees to keep your own code operational.',
+    solution: 'You receive 100% full intellectual property ownership, the complete GitHub repository, and documented deployment configurations upon project completion.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Architectural Scope & Figma Prototyping',
-    desc: 'We analyze your Colorado competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
-    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+    title: 'Discovery, Information Architecture & Strategy',
+    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
   },
   {
     phase: 'Phase 02',
-    title: 'Headless Next.js 15 & React Engineering',
-    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
-    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+    title: 'Custom Figma UI/UX Design & Design Tokens',
+    desc: 'We design bespoke desktop and mobile prototypes in Figma, complete with typography tokens, spacing scales, and custom brand visual assets.',
+    deliverables: ['High-fidelity interactive Figma prototypes', 'Mobile responsive component wireframes', 'Design tokens and typography scales', 'Client design review and revision approval'],
   },
   {
     phase: 'Phase 03',
-    title: 'Edge Deployment & Local SEO Integration',
-    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
-    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+    title: 'Next.js 15 Engineering & Headless CMS Integration',
+    desc: 'We transform approved designs into production React 19 code with TypeScript, Tailwind CSS, structured schema markup, and headless CMS integrations.',
+    deliverables: ['Custom Next.js 15 App Router architecture', 'Sanity/Strapi headless content management setup', 'JSON-LD structured schema graph implementation', 'Cross-browser and multi-device QA validation'],
   },
   {
     phase: 'Phase 04',
-    title: 'Core Web Vitals QA, Handoff & Launch',
-    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
-    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+    title: 'Core Web Vitals Optimization, Launch & Handover',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ performance optimization', 'Cloudflare DNS cutover and SSL deployment', 'Full GitHub repository and asset transfer', '30-day post-launch warranty and team training'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Source Code Ownership',
-    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
-    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+    label: 'Engineering Stack',
+    factoryjet: 'Modern Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Outdated monolithic WordPress, Elementor, or heavy Webflow templates.',
+  },
+  {
+    label: 'Delivery Speed',
+    factoryjet: 'Rapid 7-day agile sprint with fixed-price milestone delivery.',
+    traditional: '4 to 8 months of protracted discovery meetings and frequent timeline slippages.',
   },
   {
     label: 'Mobile Speed SLA',
-    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
-    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+    factoryjet: 'Guaranteed 95+ Google Lighthouse Core Web Vitals mobile performance.',
+    traditional: 'Sub-60 mobile performance scores with heavy render-blocking scripts.',
   },
   {
-    label: 'Sprint Timeline',
-    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
-    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
-  },
-  {
-    label: 'Structured Data & AI Readiness',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
-    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+    label: 'IP & Code Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary platform lock-in or agency-retained code repositories.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Scope' },
-  { key: 'timeline', label: 'Timeline & Sprint' },
-  { key: 'technical', label: 'Tech Stack & Performance' },
-  { key: 'local', label: 'Denver Market Focus' },
-  { key: 'ownership', label: 'Ownership & Support' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Process' },
+  { key: 'tech', label: 'Next.js Tech Stack' },
+  { key: 'local', label: 'Denver Focus' },
+  { key: 'ownership', label: 'Code & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does a custom Denver web design project cost?',
+    question: 'How much does custom web design cost for a Denver business?',
     answer:
-      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
+      'Project investments are based on total page count, interactive feature complexity, custom API integrations, and content scope. Every project is scoped with a transparent, fixed-price milestone agreement. Focused corporate websites are delivered with full Figma UI/UX, custom Next.js engineering, and 100% code ownership with zero surprise overages.',
   },
   {
     category: 'pricing',
-    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
+      'No. We believe you should own your website outright. You contract directly with your preferred hosting provider (Cloudflare, Vercel) and pay zero monthly agency licensing fees.',
   },
   {
     category: 'pricing',
-    question: 'How does your fixed-price quote protect our business from budget overruns?',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
     category: 'timeline',
-    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
+    question: 'How can you deliver a custom Next.js website in just 7 days?',
     answer:
-      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
+      'We eliminate bloated agency bureaucracy and junior account layers. Our senior full-stack engineers and Figma UI/UX designers work directly with you through focused, daily milestone sprints to design, build, and deploy your site in parallel.',
   },
   {
     category: 'timeline',
-    question: 'What do you need from our team before starting the 7-day sprint?',
+    question: 'What is required from our internal team during the 7-day sprint?',
     answer:
-      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
+      'We require brand assets (logos, brand guidelines), key service copy, and prompt feedback on the Figma design prototypes during scheduled milestone check-ins to ensure rapid project delivery.',
   },
   {
     category: 'timeline',
-    question: 'What happens if we need design revisions during the sprint?',
+    question: 'What happens if we need design revisions during the process?',
     answer:
-      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
+      'Every project includes dedicated design revision cycles during the Figma prototype phase, ensuring you approve every layout, color choice, and typography detail before development begins.',
   },
   {
-    category: 'technical',
-    question: 'Why choose Next.js over traditional WordPress for a Denver business?',
+    category: 'tech',
+    question: 'Why choose Next.js 15 over WordPress or Webflow?',
     answer:
-      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Denver search queries.',
+      'Next.js 15 delivers unbeatable performance with sub-second page loads, superior SEO through server-side rendering, rock-solid security without vulnerable plugins, and infinite scalability that monolithic page builders cannot match.',
   },
   {
-    category: 'technical',
-    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    category: 'tech',
+    question: 'Can our marketing team edit text and images without touching code?',
     answer:
-      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+      'Yes. We integrate intuitive headless CMS platforms like Sanity or Strapi, allowing your marketing team to create blog posts, update service copy, and upload images through an easy visual dashboard.',
   },
   {
-    category: 'technical',
-    question: 'What content management system (CMS) do you connect for easy client updates?',
+    category: 'tech',
+    question: 'How do you ensure our website achieves 95+ Core Web Vitals scores?',
     answer:
-      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
+      'We optimize every asset using modern WebP/AVIF image formats, eliminate render-blocking JavaScript, implement static page pre-rendering, and deploy on Cloudflare global edge networks.',
   },
   {
-    category: 'technical',
-    question: 'How do you handle website hosting and security certificates?',
+    category: 'tech',
+    question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
-  },
-  {
-    category: 'local',
-    question: 'Do you build B2B websites for Denver Tech Center (DTC) software companies?',
-    answer:
-      'Yes. We build high-conversion B2B websites tailored for DTC and Boulder technology firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
+      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
     category: 'local',
-    question: 'Can you design websites for Denver healthcare and medical aesthetics practices?',
+    question: 'Do you have experience with Denver tech startups and DTC enterprise companies?',
     answer:
-      'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and aesthetic centers across Greater Denver and Cherry Creek, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
+      'Yes. We build high-performance web applications for LoDo fintech platforms, DTC enterprise SaaS providers, and Boulder deep tech innovators requiring interactive sandboxes and API visualizers.',
   },
   {
     category: 'local',
-    question: 'Can you integrate e-commerce capabilities into our Colorado business site?',
+    question: 'Can you design websites tailored for Cherry Creek wealth management and legal practices?',
     answer:
-      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for outdoor consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
+      'Yes. We develop sophisticated digital flagships for private wealth managers, corporate attorneys, and family offices featuring practice area silos, executive bio schemas, and client portals.',
   },
   {
     category: 'local',
-    question: 'How does your web design optimize for local Denver search rankings?',
+    question: 'Can you integrate custom CRM and lead capture workflows like HubSpot or Salesforce?',
     answer:
-      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Denver, Boulder, Lakewood, Aurora, and Fort Collins.',
+      'Yes. We build webhook-driven form integrations that instantly route leads, quote inquiries, and consultation requests directly into your CRM, Slack, or email marketing automation platform.',
+  },
+  {
+    category: 'local',
+    question: 'Do you design ecommerce and catalog websites for Colorado outdoor brands?',
+    answer:
+      'Yes. We engineer high-converting digital storefronts and product visualizers for outdoor recreation and technical gear companies across Colorado.',
   },
   {
     category: 'ownership',
-    question: 'Do we own the website code and design assets after launch?',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, Figma design assets, and deployment configurations with zero vendor lock-in.',
   },
   {
     category: 'ownership',
-    question: 'What kind of support is included after the website goes live?',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
   },
   {
     category: 'ownership',
-    question: 'Can any developer maintain our Next.js website in the future?',
+    question: 'How do you train our internal team on managing the website?',
     answer:
-      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update content in the CMS, view form submissions, and manage media assets.',
   },
   {
     category: 'ownership',
-    question: 'How do you train our internal team to manage site content?',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
     answer:
-      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
 
@@ -364,7 +364,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Denver',
@@ -379,9 +379,9 @@ const LOCAL_BUSINESS_SCHEMA = {
   areaServed: [
     { '@type': 'City', name: 'Denver' },
     { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Aurora' },
-    { '@type': 'City', name: 'Lakewood' },
     { '@type': 'City', name: 'Greenwood Village' },
+    { '@type': 'City', name: 'Cherry Creek' },
+    { '@type': 'City', name: 'Golden' },
   ],
 };
 
@@ -394,17 +394,17 @@ const SERVICE_SCHEMA = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
-    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Denver businesses.',
+    'Custom Next.js web design and engineering in Denver CO. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Colorado businesses.',
   areaServed: { '@type': 'State', name: 'Colorado' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver Web Design Agency | Fast Next.js Sites | FactoryJet',
-  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Denver CO businesses.',
+  name: 'Denver Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  description: 'Denver web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Colorado businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -422,11 +422,11 @@ const BREADCRUMB_SCHEMA = {
 export default function DenverWebDesignPage() {
   return (
     <>
-      <script id="den-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="den-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="den-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="den-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="den-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="den-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="den-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="den-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="den-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,20 +441,20 @@ export default function DenverWebDesignPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver Web Design &amp; Frontend Engineering</span>
+                  <span>Denver Web Design &amp; Full-Stack Engineering</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Denver Web Design Agency for Growing Brands
+                  Denver Web Design Agency for High-Growth Brands
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                  Custom Next.js 15 websites, bespoke Figma UI/UX, and sub-second performance engineered for Colorado leaders. 7-day agile delivery with 100% intellectual property code ownership.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
-                  <a href="#den-districts" className="rv-btn-secondary">
+                  <a href="#den-web-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
@@ -469,7 +469,7 @@ export default function DenverWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado modern web design engineering and custom Next.js website mockup"
+                  alt="Denver Colorado web design and custom Next.js web application development"
                   width={640}
                   height={640}
                   priority
@@ -485,7 +485,7 @@ export default function DenverWebDesignPage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-label">Modern Frontend &amp; Cloud Infrastructure</div>
               <div className="rv-ticker-line" />
             </div>
 
@@ -511,8 +511,8 @@ export default function DenverWebDesignPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/denver/denver-aerial.webp"
-                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Denver"
+                  src="/images/us/denver/tech-office.webp"
+                  alt="FactoryJet senior UI UX designers collaborating on custom Denver web design sprint"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -525,15 +525,15 @@ export default function DenverWebDesignPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Speed, Polish &amp; Conversion</span>
+                  <span>Speed, Craft &amp; Performance</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Websites Built for Denver&apos;s High-Value Sectors
+                  Web Design Engineered for Mile High Leaders
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Denver Tech Center software firms to Cherry Creek medical clinics and Boulder research labs, Colorado businesses need sites that project engineering authority and convert high-ticket decision-makers.
+                  From LoDo fintech innovators and DTC enterprise software giants to Cherry Creek wealth advisory firms, we build high-converting web applications that elevate your brand equity.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -557,7 +557,7 @@ export default function DenverWebDesignPage() {
 
                 {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Schedule Web Design Consultation" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
@@ -565,20 +565,20 @@ export default function DenverWebDesignPage() {
         </section>
 
         {/* ── 04. DENVER DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="den-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        <section id="den-web-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Front Range Commercial Corridor Depth</span>
+                <span>Denver Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Tailored Web Design for Denver&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From LoDo financial firms to Denver Tech Center software campuses and Boulder research hubs:
+                From LoDo tech startups to DTC enterprise software and Cherry Creek private wealth:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function DenverWebDesignPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Web Architectures for Denver Businesses
+                Specialized Web Architectures for Colorado Brands
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every commercial sector in Colorado demands tailored user experiences, technical credibility, and conversion paths:
+                Every commercial sector in the Denver metro demands tailored user flows, design tokens, and performance metrics:
               </p>
             </div>
 
@@ -695,10 +695,10 @@ export default function DenverWebDesignPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Denver Companies Choose FactoryJet Web Design
+                Why Denver Leaders Choose FactoryJet Web Design
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace outdated WordPress themes and bloated retainers with modern engineering:
+                We replace fragile WordPress page builders with high-performance Next.js engineering:
               </p>
             </div>
 
@@ -733,18 +733,18 @@ export default function DenverWebDesignPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <div id="web-architecture-blueprint">
+        <div id="web-design-blueprint">
           <WebDesignArchitectureBlueprint
-            badge="// DENVER MODERN WEB ARCHITECTURE BLUEPRINT"
-            title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            badge="// DENVER FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
+            title="Next.js 15 App Router to Global Cloudflare Edge"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
             city="Denver"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -752,13 +752,13 @@ export default function DenverWebDesignPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Guaranteed 7-Day Sprint</span>
+                <span>Proven 7-Day Sprint Model</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 7-Day Delivery Sprint Protocol
+                Our 4-Stage Rapid Web Design Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+                A disciplined engineering methodology for zero-delay deliveries and high-conversion web launches:
               </p>
             </div>
 
@@ -822,7 +822,7 @@ export default function DenverWebDesignPage() {
                 Evaluating Denver Web Design Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led Next.js development against traditional design agencies before you commit:
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
               </p>
             </div>
 
@@ -830,7 +830,7 @@ export default function DenverWebDesignPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -865,7 +865,7 @@ export default function DenverWebDesignPage() {
         <FAQ
           eyebrow="DENVER WEB DESIGN INTELLIGENCE"
           headline="Frequently Asked Questions About Web Design in Denver CO"
-          lead="Direct, plain English answers to what Denver business owners and marketing leaders ask about website projects:"
+          lead="Direct, plain English answers to what Denver business owners and marketing leaders ask about website design and engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -889,15 +889,15 @@ export default function DenverWebDesignPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Upgrade Your Denver Business Website?
+              Ready to Upgrade Your Denver Web Presence?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

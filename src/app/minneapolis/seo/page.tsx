@@ -10,27 +10,27 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
-const CANONICAL = 'https://factoryjet.com/denver/seo';
+const CANONICAL = 'https://factoryjet.com/minneapolis/seo';
 
 export const metadata: Metadata = {
-  title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+    'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
     description:
-      'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+      'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Minneapolis Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Denver local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Minneapolis local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -48,7 +48,7 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Denver commercial corridors.', icon: '📍' },
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Twin Cities commercial corridors.', icon: '📍' },
   { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
   { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
   { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
@@ -56,92 +56,92 @@ const STAT_CARDS = [
 
 const DISTRICTS = [
   {
-    corridor: 'Lower Downtown (LoDo) & Union Station',
-    query: 'venture capital corporate legal seo lodo denver',
-    focus: 'Fintech Platforms, Venture Capital & High-Growth Tech',
-    desc: 'The vibrant urban innovation and legal corridor. Captures high-ticket corporate legal retainers, tech venture inquiries, and commercial advisory contracts.',
+    corridor: 'Downtown Minneapolis & North Loop',
+    query: 'venture capital corporate legal seo north loop minneapolis',
+    focus: 'Fintech Platforms, Venture Capital & Creative Agencies',
+    desc: 'The vibrant design and legal core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and tech venture advisory contracts.',
   },
   {
-    corridor: 'Denver Tech Center (DTC) & Greenwood Village',
-    query: 'enterprise b2b saas telecommunications seo dtc',
-    focus: 'Enterprise SaaS, Telecommunications & Corporate HQ',
-    desc: 'Major corporate and software campus core. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    corridor: 'Plymouth & West Metro MedTech Corridor',
+    query: 'medical device healthcare clinic seo plymouth mn',
+    focus: 'Medical Device Manufacturing, Clinical Diagnostics & Healthcare',
+    desc: 'The global Medical Alley heartland. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
   },
   {
-    corridor: 'Cherry Creek North',
-    query: 'plastic surgery private wealth advisory seo cherry creek',
-    focus: 'Private Wealth Advisory, Aesthetic Surgery & Concierge Medicine',
-    desc: 'Affluent executive and specialized medical enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth retainers.',
+    corridor: 'Bloomington & I-494 Corporate Spine',
+    query: 'corporate litigation wealth management seo bloomington mn',
+    focus: 'Corporate Law, Private Equity & Commercial Real Estate',
+    desc: 'Major corporate and financial headquarters corridor. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
-    corridor: 'RiNo & Five Points',
-    query: 'creative agency outdoor lifestyle brand seo rino',
-    focus: 'Creative Agencies, Architecture Studios & Outdoor Lifestyle',
-    desc: 'Renowned creative and architectural core. Multi-location practice architectures, studio directories, and verified customer review funnels.',
+    corridor: 'St. Paul Capital & Grand Avenue',
+    query: 'estate planning higher education seo st paul',
+    focus: 'Estate Planning Law, Higher Education & Enterprise Nonprofits',
+    desc: 'Historic seat of government and law. Intense competition for high-net-worth estate planning, trust litigation, and wealth advisory retainers.',
   },
   {
-    corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'cleantech quantum computing enterprise seo boulder',
-    focus: 'CleanTech, Quantum Computing & Aerospace Software',
-    desc: 'World-class scientific and deep tech nexus. Requires deep topical content graphs, researcher schemas, and institutional citations across Colorado.',
+    corridor: 'Eden Prairie & Minnetonka Tech Hub',
+    query: 'enterprise cloud software telematics seo eden prairie',
+    focus: 'Enterprise Cloud Software, Telematics & Logistics Platforms',
+    desc: 'Major enterprise and supply chain software corridor. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
   },
   {
-    corridor: 'Golden & West Metro Industrial',
-    query: 'precision manufacturing engineering contractor seo golden co',
-    focus: 'Advanced Manufacturing, Engineering & Outdoor Gear',
-    desc: 'Precision industrial and outdoor brand manufacturing. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+    corridor: 'Anoka & North Metro Industrial Hub',
+    query: 'precision machining commercial contractor seo anoka mn',
+    focus: 'Precision Tooling, Commercial Contracting & Advanced Fabrication',
+    desc: 'Precision industrial and heavy contracting heartland. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Private Wealth Advisory, Estate Planning & Corporate Law',
-    headline: 'Dominating High-Stakes Search Corridors for Denver Firms',
+    sector: 'Corporate Litigation, Commercial Real Estate & Financial Services',
+    headline: 'Dominating High-Stakes Search Corridors for Twin Cities Law Firms',
     description:
-      'Legal and financial search queries across Denver and Arapahoe counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
-    image: '/images/us/denver/law-firm.webp',
-    alt: 'Denver and Cherry Creek private wealth management estate planning and corporate law local SEO',
+      'Legal search queries across Hennepin and Ramsey counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Minneapolis corporate law firm commercial litigation and estate planning local SEO ranking strategy',
     points: [
-      'LegalService and Attorney schema linking Colorado Bar verified credentials',
-      'Localized practice area silos targeting LoDo, Cherry Creek, and the Denver Tech Center',
+      'LegalService and Attorney schema linking Minnesota State Bar verified credentials',
+      'Localized practice area silos targeting Downtown Minneapolis, St. Paul, and Bloomington',
       'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    sector: 'Aesthetic Surgery, Concierge Medicine & Specialized Clinics',
-    headline: 'Capturing High-Value Patient Consultations Across Cherry Creek & DTC',
+    sector: 'Medical Device Manufacturing, Specialized Healthcare & Clinics',
+    headline: 'Topical Authority & Clinical Citations for Medical Alley Leaders',
     description:
-      'In Denver’s premier elective surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/denver/healthcare-clinic.webp',
-    alt: 'Denver Cherry Creek aesthetic plastic surgery medical practice clinic local SEO strategy',
+      'In Minnesota’s renowned Medical Alley corridor, prospective healthcare buyers and specialized patients evaluate clinical credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Minneapolis Medical Alley medical device clinical diagnostics local SEO optimization',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Hyper-local neighborhood geo-pages targeting Cherry Creek, Greenwood Village, and Boulder',
+      'Hyper-local neighborhood geo-pages targeting Plymouth, Maple Grove, and Edina',
     ],
   },
   {
-    sector: 'Outdoor Recreation Brands, Gear Manufacturing & Active Lifestyle',
-    headline: 'Local & Regional Search Dominance for Colorado Outdoor Leaders',
+    sector: 'Enterprise Cloud Software, Telematics & Supply Chain Tech',
+    headline: 'Topical Authority & AI Citation Engineering for Eden Prairie Tech',
     description:
-      'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immediate regional store discovery. We optimize Google Business Profiles, embed product catalogs, synchronize dealer networks, and capture high-intent gear searches.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor gear technical apparel brand retail store local SEO optimization',
+      'Enterprise software platforms, telematics innovators, and logistics technology providers in Eden Prairie and Minnetonka require commanding authority in technical search. We engineer deep topical content graphs, software schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Minneapolis enterprise cloud software supply chain technology local SEO optimization',
     points: [
-      'Multi-location retail store and authorized dealer directory optimization',
-      'Local radius geo-fencing targeting Front Range recreation corridors',
-      'Structured Store and Product schema markup for Google Merchant Center synchronization',
+      'Topical entity architecture covering cloud software capabilities and compliance standards',
+      'Structured SoftwareApplication and Organization schema for AI citation retrieval',
+      'High-authority regional trade publication and Minnesota tech directory synchronization',
     ],
   },
   {
     sector: 'Commercial Construction, HVAC & General Contracting',
-    headline: 'Driving Continuous Commercial Project Bidding Across Front Range',
+    headline: 'Driving Continuous Commercial Project Bidding Across Twin Cities',
     description:
-      'Commercial general contractors, roofing companies, and HVAC specialists across the Denver metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/denver/contractor-site.webp',
-    alt: 'Denver commercial general contractor HVAC and roofing local SEO ranking architecture',
+      'Commercial general contractors, roofing companies, and HVAC specialists across the Minneapolis and St. Paul metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Minneapolis commercial contractor HVAC and roofing local SEO ranking architecture',
     points: [
-      'Service area radius optimization covering Denver, Aurora, Lakewood, and Littleton',
+      'Service area radius optimization covering Minneapolis, St. Paul, Bloomington, and Brooklyn Park',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
       'Structured LocalBusiness and Contractor schema markup for local search dominance',
     ],
@@ -152,7 +152,7 @@ const PAIN_POINTS = [
   {
     num: '01',
     title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Denver agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
+    problem: 'Traditional Minneapolis agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
     solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
   },
   {
@@ -180,7 +180,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 01',
     title: 'Local Entity & Citation Audit',
     desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across the Denver metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    deliverables: ['Google Maps rank grid scan across the Twin Cities', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
   },
   {
     phase: 'Phase 02',
@@ -229,16 +229,16 @@ const FAQ_CATEGORIES = [
   { key: 'pricing', label: 'Cost & Retainers' },
   { key: 'timeline', label: 'Timeline & Results' },
   { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Denver Market Focus' },
+  { key: 'local', label: 'Minneapolis Market Focus' },
   { key: 'reporting', label: 'Tracking & Deliverables' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Denver business?',
+    question: 'How much does local SEO cost for a Minneapolis business?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Denver corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or corporate practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Twin Cities corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or enterprise legal practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
   },
   {
     category: 'pricing',
@@ -254,13 +254,13 @@ const FAQ_ITEMS = [
   },
   {
     category: 'timeline',
-    question: 'How quickly can our Denver business expect to see Google Maps rank improvements?',
+    question: 'How quickly can our Minneapolis business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Cherry Creek or LoDo generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Downtown Minneapolis or Plymouth generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
   },
   {
     category: 'timeline',
-    question: 'What factors determine how fast a Denver business can rank in the Local 3-Pack?',
+    question: 'What factors determine how fast a Minneapolis business can rank in the Local 3-Pack?',
     answer:
       'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
   },
@@ -296,27 +296,27 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across the Front Range?',
+    question: 'Do you manage multi-location local SEO campaigns across the Twin Cities?',
     answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Denver, Boulder, Greenwood Village, Lakewood, and Fort Collins.',
+      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Minneapolis, St. Paul, Bloomington, Plymouth, and Eden Prairie.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Cherry Creek and LoDo?',
+    question: 'Can you help our practice outrank entrenched competitors in Downtown and Plymouth?',
     answer:
       'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Denver?',
+    question: 'How do service-area businesses without a public storefront rank in Minneapolis?',
     answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Front Range ZIP codes and commercial corridors.',
+      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Twin Cities ZIP codes and commercial corridors.',
   },
   {
     category: 'local',
-    question: 'Do you optimize for technology and enterprise SaaS searches in DTC?',
+    question: 'Do you optimize for Medical Alley and biomedical device searches in Minnesota?',
     answer:
-      'Yes. We build specialized topical hubs and enterprise B2B schema markup for SaaS, cloud engineering, and telecom providers.',
+      'Yes. We build specialized topical hubs and medical device schema markup for life sciences, diagnostic laboratories, and healthcare engineering firms.',
   },
   {
     category: 'reporting',
@@ -328,13 +328,13 @@ const FAQ_ITEMS = [
     category: 'reporting',
     question: 'What is a Local Geo-Grid rank tracking report?',
     answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Denver, showing exactly where your business appears in the top 3 and where optimization is needed.',
+      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across the Twin Cities metro, showing exactly where your business appears in the top 3 and where optimization is needed.',
   },
   {
     category: 'reporting',
     question: 'How do you combat spam and fake competitor listings on Google Maps?',
     answer:
-      'We continuously monitor your primary search categories in Denver, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+      'We continuously monitor your primary search categories in Minneapolis, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
   },
   {
     category: 'reporting',
@@ -360,35 +360,35 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Denver Local SEO Agency',
+  name: 'FactoryJet - Minneapolis Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Denver',
-    addressRegion: 'CO',
+    addressLocality: 'Minneapolis',
+    addressRegion: 'MN',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 39.7392,
-    longitude: -104.9903,
+    latitude: 44.9778,
+    longitude: -93.265,
   },
   areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Greenwood Village' },
-    { '@type': 'City', name: 'Cherry Creek' },
-    { '@type': 'City', name: 'Lakewood' },
+    { '@type': 'City', name: 'Minneapolis' },
+    { '@type': 'City', name: 'St. Paul' },
+    { '@type': 'City', name: 'Bloomington' },
+    { '@type': 'City', name: 'Plymouth' },
+    { '@type': 'City', name: 'Eden Prairie' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Denver Local SEO & Google Maps Optimization',
+  name: 'Minneapolis Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
@@ -396,15 +396,15 @@ const SERVICE_SCHEMA = {
   },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Denver businesses.',
-  areaServed: { '@type': 'State', name: 'Colorado' },
+    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Minnesota businesses.',
+  areaServed: { '@type': 'State', name: 'Minnesota' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+  name: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -415,18 +415,18 @@ const BREADCRUMB_SCHEMA = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
     { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Denver', item: CANONICAL },
+    { '@type': 'ListItem', position: 3, name: 'Minneapolis', item: CANONICAL },
   ],
 };
 
-export default function DenverSeoPage() {
+export default function MinneapolisSeoPage() {
   return (
     <>
-      <script id="den-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="den-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="den-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="den-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="mpls-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="mpls-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="mpls-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="mpls-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="mpls-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,26 +441,26 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver Local SEO &amp; AI Citation Authority</span>
+                  <span>Minneapolis Local SEO &amp; AI Citation Authority</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Denver Local SEO Agency for Market Leaders
+                  Minneapolis Local SEO Agency for Market Leaders
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across LoDo, Cherry Creek, and the Denver Tech Center. Engineered for verified inbound calls and high-ticket consultations.
+                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Downtown Minneapolis, North Loop, and Plymouth. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-                  <a href="#den-seo-districts" className="rv-btn-secondary">
+                  <a href="#mpls-seo-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Denver Corridors</span>
+                    <span>Explore Twin Cities Corridors</span>
                   </a>
                 </div>
               </div>
@@ -468,8 +468,8 @@ export default function DenverSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/saas-website-design/hero.webp"
+                  alt="Minneapolis Minnesota local SEO rankings and Google Maps 3-Pack dominance strategy"
                   width={640}
                   height={640}
                   priority
@@ -511,8 +511,8 @@ export default function DenverSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/denver/tech-office.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Denver businesses"
+                  src="/images/us/b2b-website-design/sales-enablement.webp"
+                  alt="FactoryJet senior SEO strategists conducting local search audit for Minneapolis businesses"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -529,11 +529,11 @@ export default function DenverSeoPage() {
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Denver&apos;s High-Value Commercial Sectors
+                  Engineered for Twin Cities&apos; High-Value Commercial Sectors
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From LoDo corporate law firms to Cherry Creek aesthetic surgery clinics and DTC enterprise software providers, Colorado businesses need verified search authority to capture high-ticket clients before competitors do.
+                  From Medical Alley biomedical device giants in Plymouth to Downtown Minneapolis corporate law firms and Eden Prairie cloud software providers, Minnesota businesses need verified search authority to capture high-ticket clients before competitors do.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -564,21 +564,21 @@ export default function DenverSeoPage() {
           </div>
         </section>
 
-        {/* ── 04. DENVER DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="den-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. MINNEAPOLIS DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="mpls-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Denver Commercial Corridor Depth</span>
+                <span>Twin Cities Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Local SEO for Denver&apos;s Core Sectors
+                Tailored Local SEO for Minnesota&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From LoDo tech startups to Cherry Creek private wealth and DTC enterprise software:
+                From Medical Alley leaders to Downtown corporate law and Eden Prairie enterprise tech:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function DenverSeoPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Local Search Architectures for Denver
+                Specialized Local Search Architectures for Minneapolis
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every high-value commercial sector in the Front Range demands tailored keyword targeting, entity schemas, and conversion pathways:
+                Every high-value commercial sector in the Twin Cities metro demands tailored keyword targeting, entity schemas, and conversion pathways:
               </p>
             </div>
 
@@ -695,7 +695,7 @@ export default function DenverSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Denver Companies Choose FactoryJet Local SEO
+                Why Minneapolis Companies Choose FactoryJet Local SEO
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 We replace generic SEO reports with direct rank dominance and verified phone lead generation:
@@ -735,10 +735,10 @@ export default function DenverSeoPage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-blueprint">
           <LocalSeoArchitectureBlueprint
-            badge="// DENVER LOCAL SEARCH & AI RANKING BLUEPRINT"
+            badge="// MINNEAPOLIS LOCAL SEARCH & AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Denver local search."
-            city="Denver"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Minneapolis local search."
+            city="Minneapolis"
             ctaLabel="Get a Free Local SEO Audit"
             region="us"
           />
@@ -758,7 +758,7 @@ export default function DenverSeoPage() {
                 Our 4-Stage Local SEO Ranking Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Greater Denver:
+                A systematic, engineering-first methodology for establishing market dominance across Greater Minneapolis:
               </p>
             </div>
 
@@ -819,7 +819,7 @@ export default function DenverSeoPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Denver SEO Agencies: What to Ask
+                Evaluating Minneapolis SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
                 Compare engineering-led local search optimization against traditional marketing agencies before you sign:
@@ -863,9 +863,9 @@ export default function DenverSeoPage() {
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="DENVER LOCAL SEARCH INTELLIGENCE"
-          headline="Frequently Asked Questions About Local SEO in Denver CO"
-          lead="Direct, plain English answers to what Denver business owners and marketing directors ask about search visibility:"
+          eyebrow="MINNEAPOLIS LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Minneapolis MN"
+          lead="Direct, plain English answers to what Twin Cities business owners and marketing directors ask about search visibility:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -874,7 +874,7 @@ export default function DenverSeoPage() {
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
-            <SeoCityLinksUS currentCity="denver" />
+            <SeoCityLinksUS currentCity="minneapolis" />
           </div>
         </section>
 
@@ -889,7 +889,7 @@ export default function DenverSeoPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Denver Local Search?
+              Ready to Dominate Minneapolis Local Search?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>

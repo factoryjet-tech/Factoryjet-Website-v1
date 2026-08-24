@@ -13,137 +13,137 @@ const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/denver/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Denver E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+  title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
   description:
-    'Denver ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Colorado brands.',
+    'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+    title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
     description:
-      'Denver ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Colorado brands.',
+      'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver E-Commerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
-    description: 'Enterprise Shopify Plus, B2B wholesale portals, and headless commerce engineering in Denver CO.',
+    title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+    description: 'Custom Shopify Plus and Headless Next.js ecommerce engineering for Colorado brands. Sub-second performance and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [
-  'Shopify Plus Certified',
+  'Shopify Plus Partner',
+  'Headless Next.js 15 App Router',
   'BigCommerce B2B Edition',
-  'NetSuite ERP Integration',
-  'SAP & Microsoft Dynamics',
-  'Next.js 15 Headless',
-  'Stripe Payments & Klarna',
-  'Klaviyo Enterprise',
-  'Gorgias & Rebuy Engine',
+  'NetSuite & SAP ERP Sync',
+  'Klaviyo VIP Partner',
+  'Sanity Composable Commerce',
+  'Cloudflare Edge Commerce',
+  'Sub-Second Checkout SLA',
 ];
 
 const STAT_CARDS = [
-  { num: 'Sub-Second', title: 'Catalog Load Performance', desc: 'High-speed headless storefronts rendering 100,000+ SKU catalogs instantly on mobile devices.', icon: '⚡' },
-  { num: '100%', title: 'ERP & Inventory Sync', desc: 'Real-time bidirectional synchronization with NetSuite, SAP, Acumatica, and custom warehouse OMS.', icon: '🔄' },
-  { num: 'Custom B2B', title: 'Wholesale Portals', desc: 'Tiered customer pricing, custom payment terms (Net 30/60), punchout catalogs, and quick order pads.', icon: '🏢' },
-  { num: 'Zero Bloat', title: 'Custom Liquid & React', desc: 'Eliminate third-party app conflicts and slow cart scripts with clean, performant native code.', icon: '🛡️' },
+  { num: '0.4s', title: 'Average Product Load Time', desc: 'Sub-second edge caching across global Cloudflare CDN endpoints for frictionless mobile shopping.', icon: '⚡' },
+  { num: '34%', title: 'Mobile Checkout Lift', desc: 'Average conversion rate increase following headless Next.js re-platforming and one-click checkout.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own your custom theme repository, headless API connectors, and NetSuite sync pipelines.', icon: '🛡️' },
+  { num: '0', title: 'Monolithic Slowdowns', desc: 'Zero bloated Liquid plugins, render-blocking scripts, or slow database queries choking checkout.', icon: '💎' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'RiNo & LoDo Innovation District',
-    query: 'shopify plus agency denver',
-    focus: 'Direct-to-Consumer Outdoor Lifestyle, Apparel & Footwear',
-    desc: 'Premier consumer brand headquarters in downtown Denver. We build bespoke Shopify Plus flagships with custom cart drawers, personalized cross-sells, and frictionless Shop Pay checkout flows.',
+    corridor: 'RiNo & Five Points',
+    query: 'outdoor lifestyle d2c ecommerce rino denver',
+    focus: 'Outdoor Lifestyle D2C, Technical Apparel & Craft Beverage Brands',
+    desc: 'The creative lifestyle and active apparel heartland. Demands tactile editorial visual storytelling, interactive size finders, and instant mobile checkouts.',
   },
   {
-    corridor: 'Golden, Lakewood & I-70 Foothills',
-    query: 'outdoor gear ecommerce development golden co',
-    focus: 'Outdoor Recreation Gear, Bike Brands & Ski Equipment',
-    desc: 'The nation’s outdoor gear capital. We build custom product configurators, ski/bike sizing recommendation engines, and high-conversion pre-order launch funnels.',
-  },
-  {
-    corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'headless ecommerce development boulder',
-    focus: 'Clean Tech, Scientific Instruments & Consumer Electronics',
-    desc: 'Deep-tech and innovation corridor. We build sub-second headless Next.js commerce storefronts supporting complex technical product configurators and international currencies.',
+    corridor: 'Lower Downtown (LoDo) & Central Core',
+    query: 'omnichannel luxury d2c ecommerce lodo denver',
+    focus: 'Omnichannel Retail, Luxury Goods & Direct-to-Consumer HQ',
+    desc: 'Flagship consumer brand and luxury retail corridor. Features headless Shopify architectures, POS omnichannel synchronizations, and VIP subscription flows.',
   },
   {
     corridor: 'Denver Tech Center (DTC) & South Metro',
-    query: 'b2b ecommerce development denver tech center',
-    focus: 'Corporate Merchandising, Gated Portals & Supply Chains',
-    desc: 'Major corporate campus cluster. We build enterprise B2B merchandise portals with company account hierarchies, purchase order terms (Net 30/60), and one-click repeat ordering tools.',
+    query: 'b2b wholesale ecommerce portal greenwood village',
+    focus: 'B2B Wholesale Portals, Electronic Components & Enterprise Supply',
+    desc: 'Major enterprise and distributor corridor. Demands custom tier pricing matrices, NetSuite ERP synchronizations, and automated purchase order workflows.',
   },
   {
-    corridor: 'Cherry Creek North',
-    query: 'luxury ecommerce agency cherry creek',
-    focus: 'Luxury Goods, Fine Jewelry & Specialty Beauty Brands',
-    desc: 'Affluent retail and fashion corridor. We build editorial digital flagships with high-resolution media galleries, virtual appointment booking, and bespoke concierge checkout flows.',
+    corridor: 'Golden & West Metro Industrial',
+    query: 'technical gear manufacturing ecommerce golden co',
+    focus: 'Technical Gear Manufacturing, Aerospace Parts & Precision Equipment',
+    desc: 'Precision engineering and heavy equipment manufacturing. Requires CAD spec visualizers, bulk freight quoting, and custom B2B punchout catalogs.',
   },
   {
-    corridor: 'Aurora & Commerce City Logistics Hub',
-    query: 'wholesale portal development aurora co',
-    focus: 'Industrial Machinery Parts, Bulk Chemicals & Commercial Supplies',
-    desc: 'Dense logistics and bulk distribution center. We implement bulk tiered pricing matrices, freight carrier LTL rate calculators, and automated Net-30 invoice settlement portals.',
+    corridor: 'Boulder & US-36 Corridor',
+    query: 'organic packaged goods cpg ecommerce boulder',
+    focus: 'Health & Wellness, Organic Packaged Goods & Sustainable D2C',
+    desc: 'National organic food and sustainable wellness capital. Features complex subscription billing matrices, cold chain fulfillment sync, and custom bundle builders.',
+  },
+  {
+    corridor: 'Adams County & North Metro Logistics',
+    query: 'cold storage wholesale distribution ecommerce adams county',
+    focus: 'Cold Storage, High-Volume Fulfillment & Wholesale Distribution',
+    desc: 'Regional logistics and freight fulfillment corridor. Features automated 3PL warehouse sync, real-time freight estimation, and multi-warehouse routing.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Outdoor Recreation Gear, Ski Hardware & Activewear DTC',
-    headline: 'Sub-Second Visual Flagships Driving Global Outdoor Commerce',
+    sector: 'Outdoor Recreation Brands, Active Apparel & Technical Gear',
+    headline: 'Engineering Immersive Digital Storefronts for Colorado Outdoor Leaders',
     description:
-      'Colorado is the epicentre of outdoor gear innovation. Modern consumer brands cannot tolerate slow mobile cart rendering or clunky checkout flows. We engineer custom Shopify Plus themes and headless Next.js storefronts featuring instant size and color swatch switching, dynamic bundle builders, native Shop Pay integration, and predictive search that doubles mobile conversion rates.',
-    image: '/images/us/marketplace/miami-luxury-crossborder-creator-commerce.webp',
-    alt: 'Denver outdoor gear and activewear brand ecommerce development',
+      'From RiNo activewear brands to Golden technical mountaineering builders, outdoor enthusiasts demand fluid visual commerce and instant mobile purchasing. We engineer custom headless Next.js storefronts with interactive product visualizers, technical spec comparisons, and frictionless one-click checkouts.',
+    image: '/images/us/denver/ecommerce/portfolio-1.webp',
+    alt: 'Denver outdoor gear technical apparel brand ecommerce development and headless Shopify Plus',
     points: [
-      'Sub-second mobile product page rendering with instant image and variant switches',
-      'Custom slide-out cart drawers with tiered free-shipping progress bars and upsells',
-      'Native integration with Klaviyo, Gorgias, Rebuy, and Meta conversion APIs',
+      'Interactive 3D product visualizers and material durability spec comparisons',
+      'Instant headless Shopify checkout with Apple Pay and Shop Pay acceleration',
+      'Klaviyo SMS and post-purchase replenishment automation integrations',
     ],
   },
   {
-    sector: 'Industrial Equipment, Replacement Parts & Machinery B2B',
-    headline: 'Digitizing Complex Wholesale Operations for Colorado Industrial Leaders',
+    sector: 'Organic CPG, Functional Nutrition & Sustainable Food Brands',
+    headline: 'High-LTV Subscription Architectures for Boulder & Denver Food Brands',
     description:
-      'Front Range industrial distributors handling tens of thousands of SKUs require more than basic consumer checkout templates. We engineer enterprise B2B portals on Shopify Plus and BigCommerce B2B Edition featuring customer-specific contract pricing, exploded parts diagram search, instant CSV bulk ordering, and real-time NetSuite or SAP inventory synchronization.',
-    image: '/images/us/marketplace/shopify-plus-b2b-wholesale-portal.webp',
-    alt: 'Denver industrial equipment and B2B wholesale ecommerce portal development',
+      'Organic packaged food companies and wellness supplement innovators require recurring subscription revenue and flexible bundle configurations. We engineer custom Recharge and Smartrr subscription portals with self-service flavor swapping, automated prepaid discounts, and cold-pack shipping logic.',
+    image: '/images/us/denver/ecommerce/portfolio-2.webp',
+    alt: 'Denver and Boulder organic CPG food supplement subscription ecommerce development',
     points: [
-      'Customer-specific contract pricing tiers, volume discounts, and gated wholesale catalogs',
-      'Exploded schematic parts lookup and instant bulk CSV order upload tools',
-      'Direct bidirectional integration with NetSuite, SAP, and Acumatica ERP systems',
+      'Custom bundle-and-save configurators with dynamic tiered volume pricing',
+      'Frictionless subscriber portal with self-service skip, swap, and add-on controls',
+      'Cold-chain fulfillment routing integrated with regional 3PL networks',
     ],
   },
   {
-    sector: 'Specialty Food, Craft Beverage & Cold-Chain Wholesale',
-    headline: 'High-Volume Wholesale & Direct-to-Consumer Culinary Commerce',
+    sector: 'B2B Industrial Equipment, Precision Tooling & Wholesale Supply',
+    headline: 'Self-Service Wholesale Portals for Front Range Manufacturers',
     description:
-      'Colorado boasts a vibrant craft beverage, organic food, and specialty culinary ecosystem. Whether distributing craft beverages regionally or shipping artisanal foods nationwide, we build high-performance storefronts with custom delivery date pickers, automated freight refrigeration rules, and recurring subscription engines.',
-    image: '/images/us/marketplace/bigcommerce-b2b-edition-quoting.webp',
-    alt: 'Denver craft food and beverage specialty ecommerce platform engineering',
+      'Industrial manufacturers and B2B wholesale distributors across the Denver Tech Center and Adams County require streamlined digital ordering for commercial buyers. We build custom BigCommerce B2B and Shopify Plus wholesale portals with customer-specific pricing, NetSuite ERP sync, and net terms invoicing.',
+    image: '/images/us/denver/ecommerce/portfolio-3.webp',
+    alt: 'Denver B2B wholesale portal NetSuite ERP ecommerce integration and industrial parts catalog',
     points: [
-      'Advanced regional delivery date scheduling with refrigerated zip code routing rules',
-      'Frictionless wholesale re-ordering portals for restaurant and hospitality accounts',
-      'High-conversion subscription billing and custom gift box bundling configurators',
+      'Custom B2B wholesale portals with tiered negotiated pricing and MOQ validation',
+      'Real-time NetSuite, SAP, and Epicor inventory and purchase order synchronization',
+      'Self-service corporate credit limits, invoice terms, and re-order requisition funnels',
     ],
   },
   {
-    sector: 'Medical Supplies, Laboratory Tech & Healthcare Procurement',
-    headline: 'Compliant & Streamlined Procurement for Healthcare Systems',
+    sector: 'Luxury Home Goods, Architectural Hardware & Interior Design',
+    headline: 'Tactile Editorial Commerce for Colorado Home & Architecture Brands',
     description:
-      'Supplying hospitals, research clinics, and biotech laboratories along the Front Range requires strict compliance, purchase order processing, and tax exemption management. We construct verified medical supply marketplaces featuring automated tax-exempt document verification, Net 30/60 purchase order workflows, and multi-department approval hierarchies.',
-    image: '/images/us/marketplace/omnichannel-vs-multichannel-unified-data.webp',
-    alt: 'Denver medical supply and healthcare equipment ecommerce development',
+      'High-end furniture makers, architectural hardware craftsmen, and designer lighting brands in Denver demand visual elegance and complex custom configuration. We engineer bespoke finish visualizers, trade professional discount portals, and white-glove freight shipping calculations.',
+    image: '/images/us/denver/ecommerce/service-explanation.webp',
+    alt: 'Denver luxury home goods furniture and architectural hardware ecommerce website engineering',
     points: [
-      'Automated state tax exemption certificate collection and automated verification',
-      'Purchase order (PO) generation with multi-tiered corporate approval workflows',
-      'Restricted product catalog access based on professional medical licensing validation',
+      'Interactive swatch selectors and material finish customizers',
+      'Gated interior designer trade discount application and approval workflows',
+      'LTL freight calculation with white-glove inside delivery options at checkout',
     ],
   },
 ];
@@ -151,209 +151,196 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending App-Stack Bloat & Mobile Cart Abandonment',
-    problem: 'Standard Shopify agencies install 30+ recurring monthly subscription apps that conflict with each other, slow down page speeds, and cause cart checkout crashes.',
-    solution: 'We engineer custom Liquid and TypeScript components natively into your theme, eliminating bloated third-party apps while cutting monthly software overhead.',
+    title: 'Ending Sluggish 4-Second Product Page Loads & Abandoned Carts',
+    problem: 'Bloated Shopify themes packed with 25+ unoptimized apps create slow, jittery mobile browsing that frustrates shoppers and inflates bounce rates.',
+    solution: 'We engineer custom Headless Next.js 15 storefronts with sub-second page loads, instant client-side filtering, and frictionless mobile checkouts.',
   },
   {
     num: '02',
-    title: 'Eliminating Manual Order Entry & ERP Inventory Disconnects',
-    problem: 'Operating disjointed ecommerce platforms forces customer service teams to manually re-enter orders into NetSuite or SAP, causing shipping delays and stockouts.',
-    solution: 'We construct robust bidirectional middleware synchronizing inventory counts, customer pricing, sales orders, and tracking updates in real time.',
+    title: 'Eliminating Fragile Manual Data Entry Between Shopify & NetSuite',
+    problem: 'Disconnected inventory and orders lead to out-of-stock cancellations, fulfillment delays, and expensive manual accounting overhead.',
+    solution: 'We build bidirectional real-time middleware connecting your storefront directly to NetSuite, SAP, or QuickBooks with zero data latency.',
   },
   {
     num: '03',
-    title: 'Replacing Outdated B2B Phone & Fax Orders with Self-Service Portals',
-    problem: 'Wholesale buyers in the Denver industrial corridor expect self-service digital portals with custom account terms, volume pricing, and reorder pads.',
-    solution: 'We build enterprise B2B wholesale portals with company account hierarchies, purchase order terms (Net 30/60), and one-click repeat ordering tools.',
+    title: 'Modernizing Clunky Legacy B2B Wholesale Email & PDF Orders',
+    problem: 'Wholesale buyers are forced to submit manual order forms and wait days for invoice confirmation and inventory verification.',
+    solution: 'We deploy self-service B2B portals with account-specific price tiers, quick CSV order uploads, purchase order approvals, and net terms checkout.',
   },
   {
     num: '04',
-    title: 'Preventing Catastrophic Traffic Drops During Ecommerce Migrations',
-    problem: 'Replatforming from Magento or WooCommerce without meticulous technical SEO planning causes 404 errors, loss of keyword rankings, and immediate revenue drops.',
-    solution: 'We execute 100% URL-by-URL redirect mapping, preserve canonical metadata, and inject structured Product JSON-LD schema to maintain and grow search revenue.',
+    title: 'Stopping Monthly App Subscription Bleed & Plugin Bloat',
+    problem: 'Standard stores accumulate dozens of monthly SaaS app fees that add technical debt, security vulnerabilities, and code conflicts.',
+    solution: 'We replace third-party apps with native, performant React micro-components and unified serverless endpoints, reducing monthly app expenses.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Catalog Data Modeling & ERP Scoping',
-    desc: 'We map product variants, SKU hierarchies, B2B pricing matrices, and technical API specifications for NetSuite or SAP integration.',
-    deliverables: ['Catalog schema & variant mapping', 'ERP integration API specification', 'B2B pricing tier & account rules', 'Desktop & mobile UX wireframes'],
+    title: 'Architecture Strategy & Catalog Modeling',
+    desc: 'We analyze your SKU matrix, customer segmentation, ERP integrations, and checkout funnels to architect an unshakeable digital commerce foundation.',
+    deliverables: ['Product data taxonomy and variant model architecture', 'ERP and 3PL warehouse integration scope', 'Competitor conversion benchmark and UX gap analysis', 'Technical specifications and milestone roadmap'],
   },
   {
     phase: 'Phase 02',
-    title: 'Custom Storefront & Theme Engineering',
-    desc: 'We develop high-performance Shopify Plus or BigCommerce themes with clean native Liquid, custom cart drawers, and sub-second catalog speeds.',
-    deliverables: ['Custom theme development', 'Sub-second mobile optimization', 'Interactive product configurator', 'Slide-out cart drawer with upsells'],
+    title: 'Custom Figma UI/UX & High-Conversion Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on mobile-first thumb zones, product detail pages, and frictionless carts.',
+    deliverables: ['Interactive Figma prototypes for all key templates', 'Mobile-first cart drawer and checkout wireframes', 'Design tokens, color harmonies, and typography scales', 'Stakeholder review and design sign-off'],
   },
   {
     phase: 'Phase 03',
-    title: 'Backend ERP & Middleware Integration',
-    desc: 'We connect your storefront to ERP, CRM, and warehouse management systems, enabling real-time stock sync and automated wholesale workflows.',
-    deliverables: ['NetSuite / SAP bidirectional sync', 'B2B Net 30/60 checkout workflow', 'Automated 3PL warehouse routing', 'Payment gateway & Shop Pay setup'],
+    title: 'Headless Next.js 15 & Shopify Plus Engineering',
+    desc: 'We build your custom commerce application using Next.js 15, TypeScript, Tailwind CSS, and robust headless APIs for sub-second performance.',
+    deliverables: ['Custom Next.js 15 App Router storefront', 'Shopify Storefront API and GraphQL integration', 'Automated ERP and inventory synchronization pipelines', 'Comprehensive end-to-end checkout testing'],
   },
   {
     phase: 'Phase 04',
-    title: 'Data Migration, End-to-End QA & Launch',
-    desc: 'We migrate historic customer data and order histories, execute 301 redirect mapping, validate transactions, and go live.',
-    deliverables: ['Customer & order history migration', '100% 301 URL redirect preservation', 'Checkout load & fraud rule testing', 'Staff training & post-launch warranty'],
+    title: 'Performance QA, Cutover & Growth Handoff',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ Core Web Vitals optimization', 'Zero-downtime DNS cutover and payment gateway validation', 'Full GitHub repository transfer and technical documentation', '30-day post-launch warranty and team training'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Code Quality & App Reliance',
-    factoryjet: 'Clean Native Architecture. Custom Liquid and TypeScript components with minimal third-party apps, ensuring sub-second speeds and zero plugin conflict crashes.',
-    traditional: 'Heavy App Stacking. 35+ third-party monthly subscription apps stacked onto an off-the-shelf theme, resulting in slow 5-second load times and high recurring app costs.',
+    label: 'Frontend Stack',
+    factoryjet: 'Modern Headless Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Monolithic Liquid themes packed with 20+ unoptimized third-party Shopify apps.',
   },
   {
-    label: 'ERP & Complex System Integration',
-    factoryjet: 'Enterprise Middleware Expertise. Direct API synchronization with NetSuite, SAP, Acumatica, and custom warehouse management systems.',
-    traditional: 'Basic Store Setup Only. Limited to standard Shopify settings with no capability to handle custom B2B workflows, ERP data feeds, or EDI order streams.',
+    label: 'Page Speed SLA',
+    factoryjet: 'Sub-second First Contentful Paint (<0.5s) with guaranteed 95+ Core Web Vitals.',
+    traditional: '3 to 6 second load times resulting in high bounce rates and lost ad spend efficiency.',
   },
   {
-    label: 'Mobile Speed & Conversion Optimization',
-    factoryjet: 'Sub-Second Performance SLA. Static asset pre-rendering and optimized image pipelines designed to maximize mobile checkout completion rates.',
-    traditional: 'Unoptimized Out-of-the-Box Themes. Bloated scripts and uncompressed assets that drag mobile Lighthouse performance below 40/100.',
+    label: 'ERP & B2B Integration',
+    factoryjet: 'Native bidirectional middleware for NetSuite, SAP, and Epicor with real-time sync.',
+    traditional: 'Fragile batch CSV uploads or expensive third-party connector plugins prone to failure.',
   },
   {
-    label: 'SEO Migration & Traffic Preservation',
-    factoryjet: 'Zero-Downtime SEO Protection. 100% URL-by-URL redirect mapping, canonical preservation, and structured Product JSON-LD schema.',
-    traditional: 'Neglected Redirects. Generic wildcard redirects that cause 404 errors, catastrophic organic keyword drops, and lost revenue during replatforming.',
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary agency themes or closed SaaS platforms with vendor lock-in.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'platforms', label: 'Platforms & Tech' },
-  { key: 'b2b', label: 'B2B Wholesale' },
-  { key: 'integrations', label: 'ERP & Integrations' },
-  { key: 'migration', label: 'Migration & SEO' },
-  { key: 'cost', label: 'Pricing & Scope' },
-  { key: 'speed', label: 'Speed & Conversion' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'tech', label: 'Headless & Shopify' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'local', label: 'Denver & Colorado' },
+  { key: 'handoff', label: 'Ownership & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'platforms',
-    question: 'Why should a Denver business choose Shopify Plus over Magento or custom legacy platforms?',
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a Denver brand?',
     answer:
-      'Legacy platforms like Magento (Adobe Commerce) or outdated WooCommerce setups demand substantial ongoing server maintenance, security patching, and expensive DevOps overhead. Shopify Plus delivers 99.99% uptime, infinite elasticity during holiday volume spikes, native multi-currency support, and the highest-converting checkout in commerce (Shop Pay) while reducing total cost of ownership by up to 60%.',
+      'Project investments depend on catalog complexity, custom ERP integration requirements, subscription mechanics, and custom B2B wholesale portal scope. Every project is scoped under a transparent, fixed-price milestone contract. Focused Shopify Plus stores and headless Next.js architectures are delivered with full Figma UI/UX, custom code, and 100% intellectual property ownership with zero surprise overages.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
+    answer:
+      'No. We believe you should own your commerce infrastructure outright. You contract directly with your platform providers (Shopify Plus, Cloudflare) and pay zero monthly agency licensing fees.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
+    answer:
+      'We complete an exhaustive technical scoping process, API inventory, and data mapping plan before writing code. All design components, custom features, and third-party integrations are locked into a binding scope of work that guarantees delivery at the agreed investment level.',
+  },
+  {
+    category: 'tech',
+    question: 'Why choose Headless Next.js 15 over a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js delivers sub-second page loads, instant client-side catalog filtering, complete design freedom unconstrained by theme templates, superior SEO rankings, and higher conversion rates on mobile devices.',
+  },
+  {
+    category: 'tech',
+    question: 'Can our marketing team manage products and banners without touching code?',
+    answer:
+      'Yes. Your team continues using the familiar Shopify admin for managing products, inventory, orders, and discounts, or an intuitive composable CMS like Sanity for landing page visual editing.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you handle zero-downtime store migration from Magento or WooCommerce?',
+    answer:
+      'We build comprehensive data migration pipelines for customers, order history, and product catalogs, implement strict 1-to-1 301 URL redirect maps, and conduct parallel sandbox testing before flipping DNS records.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you ensure our ecommerce store achieves 95+ Core Web Vitals scores?',
+    answer:
+      'We leverage static generation with incremental static regeneration, optimize all visual media into modern AVIF/WebP formats, eliminate render-blocking scripts, and deploy on Cloudflare global edge networks.',
   },
   {
     category: 'b2b',
-    question: 'How do you engineer B2B wholesale capabilities on Shopify Plus?',
+    question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
     answer:
-      'We utilize Shopify Plus B2B features alongside custom middleware to implement tiered contract pricing, custom payment terms (Net 30/60), company account hierarchies, purchase order processing, quantity price breaks, and gated product catalogs, allowing you to run B2B and DTC operations seamlessly from a single admin backend.',
-  },
-  {
-    category: 'integrations',
-    question: 'Can you integrate our Denver ecommerce store with NetSuite or SAP ERP?',
-    answer:
-      'Yes. We build robust, bidirectional API integrations connecting your storefront with NetSuite, SAP, Acumatica, Microsoft Dynamics, or custom ERP systems. This synchronizes inventory counts, customer-specific pricing matrices, sales orders, customer credits, and fulfillment tracking numbers in real time.',
-  },
-  {
-    category: 'migration',
-    question: 'How do you prevent organic search ranking drops during an ecommerce replatforming?',
-    answer:
-      'We execute a comprehensive 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, AggregateRating, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
-  },
-  {
-    category: 'cost',
-    question: 'How much does an enterprise ecommerce development project cost in Denver?',
-    answer:
-      'Project investments depend on catalog complexity, custom UI requirements, B2B wholesale scope, and ERP integration depth. We provide fixed-price milestone contracts with transparent scopes and zero surprise fees. Every proposal includes full UX design, custom development, data migration, and launch warranty.',
-  },
-  {
-    category: 'platforms',
-    question: 'What is headless commerce and is it right for our brand?',
-    answer:
-      'Headless commerce decouples the frontend user experience (built in Next.js and React) from the backend commerce engine (such as Shopify Plus). It delivers sub-second page loads, limitless design flexibility, and dynamic omnichannel experiences. It is ideal for high-growth brands with complex product configurators or multi-region flagships.',
-  },
-  {
-    category: 'speed',
-    question: 'How do you optimize mobile conversion rates for Denver ecommerce stores?',
-    answer:
-      'We optimize every touchpoint: instant product variant switching, sticky Add-to-Cart buttons, high-speed mobile search with instant autocomplete, slide-out cart drawers with free-shipping progress bars, and one-tap checkout via Apple Pay and Shop Pay.',
-  },
-  {
-    category: 'migration',
-    question: 'Can you migrate our historical customer data and order history from WooCommerce or Magento?',
-    answer:
-      'Yes. We extract, sanitize, and migrate complete customer databases, past order histories, product variants, metafields, customer reviews, and category structures with zero data loss.',
-  },
-  {
-    category: 'platforms',
-    question: 'Do you build custom subscription billing workflows?',
-    answer:
-      'Yes. We integrate native subscription engines like Recharge, Smartrr, or custom Shopify Subscriptions API workflows, allowing customers to easily manage recurring orders, swap products, and adjust delivery frequencies from a seamless customer portal.',
+      'Yes. We engineer enterprise B2B features including customer-specific price lists, volume break discounts, quick order entry forms, net payment terms, and corporate multi-user account management.',
   },
   {
     category: 'b2b',
-    question: 'How do you handle shipping calculations for heavy freight and LTL shipments in Colorado?',
+    question: 'How do you integrate our ecommerce store with NetSuite or SAP ERP?',
     answer:
-      'For industrial B2B and machinery distributors, we integrate custom freight rate calculators (such as FreightClub or ShipStation Carrier API) to provide real-time LTL shipping quotes based on pallet dimensions, weight, and destination commercial loading dock attributes.',
+      'We build robust bidirectional API connectors that automatically sync inventory levels, customer records, sales orders, tracking numbers, and invoice statuses between your storefront and ERP.',
   },
   {
-    category: 'speed',
-    question: 'How do you ensure our ecommerce storefront remains fast with hundreds of products?',
+    category: 'b2b',
+    question: 'Can you handle punchout catalog integrations for corporate procurement systems?',
     answer:
-      'We avoid bloated third-party apps by writing clean native Liquid and React code. We implement responsive WebP image pipelines, server-side caching, and asynchronous script loading to guarantee sub-second catalog browsing and 90+ Core Web Vitals scores.',
+      'Yes. We support cXML and OCI punchout integrations that connect your catalog directly into procurement platforms like Coupa, Ariba, and Jaggaer.',
   },
   {
-    category: 'platforms',
-    question: 'Can our store support multi-currency and international cross-border sales?',
+    category: 'local',
+    question: 'Do you have experience with Colorado outdoor recreation and apparel brands?',
     answer:
-      'Yes. Using Shopify Markets or BigCommerce Multi-Storefront, we configure localized currencies, automatic geo-IP redirection, duties and import tax calculations at checkout, and localized language storefronts.',
+      'Yes. We design and build high-performance digital storefronts for activewear, technical gear, and outdoor lifestyle brands across RiNo, Boulder, and Golden.',
   },
   {
-    category: 'integrations',
-    question: 'What analytics and revenue tracking tools do you configure before launch?',
+    category: 'local',
+    question: 'Can you build subscription commerce systems for Boulder organic CPG brands?',
     answer:
-      'We configure server-side Google Analytics 4 (GA4) e-commerce tracking, Google Tag Manager, Meta Conversions API (CAPI), Pinterest Tag, TikTok Pixel, and Klaviyo revenue attribution to ensure complete data accuracy.',
+      'Yes. We engineer customized subscription portals, bundle builders, and replenishment flows integrated with Recharge and Smartrr for food, beverage, and wellness brands.',
   },
   {
-    category: 'cost',
-    question: 'Do you offer ongoing conversion rate optimization (CRO) retainers after launch?',
+    category: 'local',
+    question: 'Can you integrate local warehouse fulfillment and regional 3PL logistics?',
     answer:
-      'Yes. We provide monthly growth retainers focused on continuous A/B testing, heatmap analysis, checkout funnel optimization, new landing page development, and retention email marketing.',
+      'Yes. We build automated order routing logic that distributes fulfillment orders to regional Front Range 3PL facilities and cold-storage distribution centers.',
   },
   {
-    category: 'cost',
-    question: 'How long does a complete enterprise ecommerce redesign and launch take?',
+    category: 'local',
+    question: 'Do you engineer omnichannel POS integrations for Denver physical retail stores?',
     answer:
-      'Standard custom Shopify Plus builds take 6 to 8 weeks from initial design to production deployment. Complex enterprise projects with multi-system ERP integrations and large custom catalog migrations typically require 8 to 12 weeks.',
+      'Yes. We connect online commerce systems with Shopify POS and legacy retail systems for unified inventory, gift cards, loyalty rewards, and in-store pickup.',
   },
   {
-    category: 'integrations',
-    question: 'Can you integrate third-party marketplaces like Amazon, Walmart, and Target Plus?',
+    category: 'handoff',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'Yes. We connect multichannel catalog feeds and inventory management systems to synchronize stock levels, pricing, and orders across your central Shopify admin and third-party marketplaces.',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, custom API connectors, and Figma design assets with zero vendor lock-in.',
   },
   {
-    category: 'cost',
-    question: 'Do we own all custom theme code and design assets upon completion?',
+    category: 'handoff',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Yes, 100%. You receive complete ownership of all custom theme code, GitHub repositories, Figma source design files, and backend configurations with zero recurring agency royalties.',
+      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training for your internal operations staff.',
   },
   {
-    category: 'integrations',
-    question: 'How do you handle sales tax compliance for multi-state ecommerce sales?',
+    category: 'handoff',
+    question: 'How do you train our internal team on managing the new store?',
     answer:
-      'We integrate automated sales tax calculation engines such as Avalara AvaTax, TaxJar, or Shopify Tax to ensure accurate economic nexus tracking and real-time sales tax collection across all US jurisdictions.',
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update product catalogs, manage promotional banners, view analytics, and process orders.',
   },
   {
-    category: 'platforms',
-    question: 'Can you create custom product configurators or customizer tools?',
+    category: 'handoff',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
     answer:
-      'Yes. We build high-performance 2D and 3D product configurators using WebGL and modern React, allowing customers to customize colors, engravings, dimensions, and materials with real-time price updates.',
-  },
-  {
-    category: 'cost',
-    question: 'How do we get started on an ecommerce project with FactoryJet in Denver?',
-    answer:
-      'Schedule a discovery consultation or request an enterprise ecommerce architecture review. We will evaluate your current tech stack, identify conversion bottlenecks, and provide a clear roadmap and fixed-price proposal within 24 hours.',
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
 
@@ -377,7 +364,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Denver',
@@ -392,32 +379,32 @@ const LOCAL_BUSINESS_SCHEMA = {
   areaServed: [
     { '@type': 'City', name: 'Denver' },
     { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Aurora' },
-    { '@type': 'City', name: 'Lakewood' },
     { '@type': 'City', name: 'Greenwood Village' },
+    { '@type': 'City', name: 'Golden' },
+    { '@type': 'City', name: 'RiNo' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Denver E-Commerce Development & Shopify Plus Architecture',
+  name: 'Denver E-Commerce Development & Headless Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'E-Commerce Development, Shopify Plus Engineering & B2B Wholesale Portals',
+  serviceType: 'Headless E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
-    'Senior engineering-led custom Shopify Plus storefronts, B2B wholesale portals, ERP integrations, and headless commerce engineering for Denver businesses.',
+    'Custom headless Next.js ecommerce engineering, Shopify Plus architectures, NetSuite ERP integrations, and sub-second performance for Colorado brands.',
   areaServed: { '@type': 'State', name: 'Colorado' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
-  description: 'Enterprise Shopify Plus, BigCommerce B2B, and headless ecommerce development for Denver brands.',
+  name: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+  description: 'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -454,19 +441,19 @@ export default function DenverEcommercePage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver E-Commerce Development &amp; Architecture</span>
+                  <span>Denver E-Commerce &amp; Headless Architecture</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Enterprise E-Commerce Development for Denver Brands
+                  Denver E-Commerce Development Agency for High-Growth Brands
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Scale your direct-to-consumer flagship or B2B wholesale operation with custom Shopify Plus engineering, sub-second catalog speeds, and NetSuite/SAP ERP integrations.
+                  High-converting Shopify Plus stores, headless Next.js 15 storefronts, and real-time NetSuite ERP integrations engineered for Colorado leaders. Sub-second performance with 100% intellectual property code ownership.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get an E-Commerce Proposal" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
                   <a href="#den-ecom-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
@@ -481,8 +468,8 @@ export default function DenverEcommercePage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/marketplace/headless-nextjs-vs-monolithic-liquid-architecture.webp"
-                  alt="Denver E-Commerce Development Storefront Architecture"
+                  src="/images/us/denver/hero-denver.webp"
+                  alt="Denver Colorado ecommerce development Shopify Plus headless Next.js engineering"
                   width={640}
                   height={640}
                   priority
@@ -498,7 +485,7 @@ export default function DenverEcommercePage() {
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Enterprise E-Commerce Stack &amp; ERP Connectors</div>
+              <div className="rv-ticker-label">Modern Commerce &amp; ERP Infrastructure</div>
               <div className="rv-ticker-line" />
             </div>
 
@@ -524,8 +511,8 @@ export default function DenverEcommercePage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/marketplace/ecommerce-speed-core-web-vitals-performance-engine.webp"
-                  alt="FactoryJet enterprise ecommerce architects building scalable Shopify Plus systems in Denver"
+                  src="/images/us/denver/ecommerce/service-explanation.webp"
+                  alt="FactoryJet senior ecommerce engineers building headless Shopify Plus storefronts for Denver brands"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -538,15 +525,15 @@ export default function DenverEcommercePage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Speed, B2B &amp; Conversion</span>
+                  <span>Speed, Conversions &amp; Scale</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Commerce Platforms Built for High-Volume Operations
+                  E-Commerce Engineered for Colorado Commerce Leaders
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From outdoor recreation brands in RiNo to industrial equipment distributors in Aurora, we build commerce engines that maximize conversion and automate backend operations.
+                  From RiNo activewear brands and Boulder organic CPG innovators to Front Range B2B wholesale manufacturers, we build high-converting ecommerce platforms that scale without limits.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -570,14 +557,14 @@ export default function DenverEcommercePage() {
 
                 {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Schedule E-Commerce Strategy Call" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Schedule E-Commerce Consultation" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── 04. DENVER DISTRICTS SECTION ── */}
+        {/* ── 04. DENVER DISTRICTS & INDUSTRY DIRECTORY ── */}
         <section id="den-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -585,13 +572,13 @@ export default function DenverEcommercePage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Front Range E-Commerce Depth</span>
+                <span>Denver Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Commerce Solutions for Denver Corridors
+                Tailored E-Commerce for Denver&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From outdoor recreation brands in RiNo to industrial B2B hubs in Aurora:
+                From RiNo outdoor apparel brands to Boulder organic CPG and DTC wholesale distributors:
               </p>
             </div>
 
@@ -637,13 +624,13 @@ export default function DenverEcommercePage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Industry-Specific Architecture</span>
+                <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Commerce Architectures for Denver Sectors
+                Specialized E-Commerce Architectures for Colorado
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Discover how our enterprise commerce engineering accelerates wholesale and retail conversions across core industries:
+                Every commercial sector in the Front Range demands tailored cart flows, subscription logic, and ERP sync pipelines:
               </p>
             </div>
 
@@ -697,7 +684,7 @@ export default function DenverEcommercePage() {
           </div>
         </section>
 
-        {/* ── 06. CORE PAIN POINTS SECTION ── */}
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -705,13 +692,13 @@ export default function DenverEcommercePage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>The FactoryJet Commerce Difference</span>
+                <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Denver Brands Choose FactoryJet E-Commerce
+                Why Denver Leaders Choose FactoryJet E-Commerce
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace fragile app-stacked storefronts with clean engineering and automated ERP workflows:
+                We replace bloated monolithic themes with high-performance headless engineering:
               </p>
             </div>
 
@@ -746,19 +733,19 @@ export default function DenverEcommercePage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <div id="enterprise-architecture-blueprint">
+        <div id="ecommerce-blueprint">
           <EnterpriseArchitectureBlueprint
-            badge="// DENVER ENTERPRISE E-COMMERCE BLUEPRINT"
-            title="High-Scale Commerce Architecture: From Storefront to ERP"
-            subtitle="Explore how custom Shopify Plus components, NetSuite middleware, real-time inventory pipelines, and sub-second checkout connect."
-            legacySource="Legacy Monolithic Storefront"
-            targetStack="Shopify Plus & Next.js 15"
-            ctaLabel="Get an E-Commerce Architecture Review"
+            badge="// DENVER ECOMMERCE &amp; ERP BLUEPRINT"
+            title="Headless Next.js 15 &amp; Shopify Plus Architecture"
+            subtitle="Explore how headless Next.js, Shopify Storefront API, NetSuite ERP synchronization, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce & Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B & Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP ROADMAP MATRIX ── */}
+        {/* ── 08. STEP-BY-STEP 4-STAGE RE-PLATFORMING PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -766,13 +753,13 @@ export default function DenverEcommercePage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>8-Week Enterprise Deployment</span>
+                <span>Proven Commerce Engineering Protocol</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 8-Week Enterprise Commerce Deployment Protocol
+                Our 4-Stage E-Commerce Launch Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic milestone roadmap ensuring zero downtime, safe data migration, and full ERP synchronization:
+                A disciplined engineering methodology for zero-downtime migrations and high-converting launches:
               </p>
             </div>
 
@@ -822,7 +809,7 @@ export default function DenverEcommercePage() {
           </div>
         </section>
 
-        {/* ── 09. EVALUATION FRAMEWORK TABLE ── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
@@ -836,15 +823,15 @@ export default function DenverEcommercePage() {
                 Evaluating Denver E-Commerce Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-first architecture against off-the-shelf theme stacking before you sign:
+                Compare engineering-led headless development against traditional Shopify theme agencies before you sign:
               </p>
             </div>
 
             <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
-                <div>Architecture Factor</div>
-                <div style={{ color: '#FF5622' }}>FactoryJet Enterprise Commerce</div>
-                <div style={{ color: '#A0A0B0' }}>Standard Theme Agencies</div>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Theme Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -878,8 +865,8 @@ export default function DenverEcommercePage() {
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="DENVER E-COMMERCE INTELLIGENCE"
-          headline="Frequently Asked Questions About E-Commerce in Denver CO"
-          lead="Direct, plain English answers to what Denver brand founders and operations directors ask about commerce development:"
+          headline="Frequently Asked Questions About E-Commerce Development in Denver CO"
+          lead="Direct, plain English answers to what Colorado brand founders and ecommerce leaders ask about online commerce engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -899,19 +886,19 @@ export default function DenverEcommercePage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Enterprise Shopify Plus &amp; B2B</span>
+              <span>Fixed-Price &amp; Sub-Second Performance</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Scale Your Denver E-Commerce Platform?
+              Ready to Upgrade Your Denver Digital Storefront?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Request a comprehensive technical architecture review. We will evaluate your catalog data, ERP integration scope, and conversion bottlenecks.
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Request Your Commerce Proposal" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

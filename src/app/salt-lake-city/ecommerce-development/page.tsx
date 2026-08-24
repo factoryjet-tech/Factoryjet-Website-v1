@@ -5,145 +5,145 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
-const CANONICAL = 'https://factoryjet.com/denver/seo';
+const CANONICAL = 'https://factoryjet.com/salt-lake-city/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Salt Lake City E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
   description:
-    'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+    'Salt Lake City ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Utah brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Salt Lake City E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
     description:
-      'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+      'Salt Lake City ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Utah brands.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver Local SEO Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Salt Lake City E-Commerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Denver local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Salt Lake City E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+    description: 'Custom Shopify Plus and Headless Next.js ecommerce engineering for Utah brands. Sub-second performance and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [
-  'Google Business Profile API',
-  'Search Console Integration',
-  'Apple Business Connect',
-  'Bing Places for Business',
-  'Schema.org Knowledge Graph',
-  'OpenAI SearchGPT Citations',
-  'Perplexity AI Citation Index',
-  'BrightLocal & Yext Multi-Sync',
+  'Shopify Plus Partner',
+  'Headless Next.js 15 App Router',
+  'BigCommerce B2B Edition',
+  'NetSuite & SAP ERP Sync',
+  'Klaviyo VIP Partner',
+  'Sanity Composable Commerce',
+  'Cloudflare Edge Commerce',
+  'Sub-Second Checkout SLA',
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Denver commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  { num: '0.4s', title: 'Average Product Load Time', desc: 'Sub-second edge caching across global Cloudflare CDN endpoints for frictionless mobile shopping.', icon: '⚡' },
+  { num: '33%', title: 'Mobile Checkout Lift', desc: 'Average conversion rate increase following headless Next.js re-platforming and one-click checkout.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own your custom theme repository, headless API connectors, and NetSuite sync pipelines.', icon: '🛡️' },
+  { num: '0', title: 'Monolithic Slowdowns', desc: 'Zero bloated Liquid plugins, render-blocking scripts, or slow database queries choking checkout.', icon: '💎' },
 ];
 
 const DISTRICTS = [
   {
-    corridor: 'Lower Downtown (LoDo) & Union Station',
-    query: 'venture capital corporate legal seo lodo denver',
-    focus: 'Fintech Platforms, Venture Capital & High-Growth Tech',
-    desc: 'The vibrant urban innovation and legal corridor. Captures high-ticket corporate legal retainers, tech venture inquiries, and commercial advisory contracts.',
+    corridor: 'Silicon Slopes & Lehi',
+    query: 'omnichannel consumer tech ecommerce lehi utah',
+    focus: 'Omnichannel Activewear, Consumer Hardware & High-Growth D2C',
+    desc: 'The beating heart of Utah consumer tech. Demands headless Shopify architectures, POS omnichannel synchronizations, and VIP subscription flows.',
   },
   {
-    corridor: 'Denver Tech Center (DTC) & Greenwood Village',
-    query: 'enterprise b2b saas telecommunications seo dtc',
-    focus: 'Enterprise SaaS, Telecommunications & Corporate HQ',
-    desc: 'Major corporate and software campus core. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    corridor: 'Downtown Salt Lake City & Central Core',
+    query: 'luxury d2c health wellness ecommerce downtown slc',
+    focus: 'Luxury Consumer Brands, Health & Direct-to-Consumer HQ',
+    desc: 'Flagship brand and wellness headquarters. Demands tactile editorial visual storytelling, interactive product selectors, and instant mobile checkouts.',
   },
   {
-    corridor: 'Cherry Creek North',
-    query: 'plastic surgery private wealth advisory seo cherry creek',
-    focus: 'Private Wealth Advisory, Aesthetic Surgery & Concierge Medicine',
-    desc: 'Affluent executive and specialized medical enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth retainers.',
+    corridor: 'South Jordan & Daybreak',
+    query: 'nutraceutical supplement subscription ecommerce south jordan',
+    focus: 'Nutraceuticals, Supplement Subscriptions & Wellness D2C',
+    desc: 'Major dietary supplement and health corridor. Features complex subscription billing matrices, custom bundle builders, and automated replenishment logic.',
   },
   {
-    corridor: 'RiNo & Five Points',
-    query: 'creative agency outdoor lifestyle brand seo rino',
-    focus: 'Creative Agencies, Architecture Studios & Outdoor Lifestyle',
-    desc: 'Renowned creative and architectural core. Multi-location practice architectures, studio directories, and verified customer review funnels.',
+    corridor: 'Sandy & Draper Corridor',
+    query: 'digital subscription direct sales modernization draper',
+    focus: 'Direct Sales Modernization, Digital Subscriptions & Specialty Goods',
+    desc: 'Consumer product and direct sales hub. Features multi-tier distributor portals, personalized cart flows, and custom reward programs.',
   },
   {
-    corridor: 'Boulder & US-36 Tech Corridor',
-    query: 'cleantech quantum computing enterprise seo boulder',
-    focus: 'CleanTech, Quantum Computing & Aerospace Software',
-    desc: 'World-class scientific and deep tech nexus. Requires deep topical content graphs, researcher schemas, and institutional citations across Colorado.',
+    corridor: 'West Valley City & Logistics Nexus',
+    query: 'b2b industrial wholesale ecommerce portal west valley',
+    focus: 'B2B Industrial Wholesale, Electrical Components & Tooling Supply',
+    desc: 'Major industrial distribution corridor. Demands custom tier pricing matrices, NetSuite ERP synchronizations, and automated purchase order workflows.',
   },
   {
-    corridor: 'Golden & West Metro Industrial',
-    query: 'precision manufacturing engineering contractor seo golden co',
-    focus: 'Advanced Manufacturing, Engineering & Outdoor Gear',
-    desc: 'Precision industrial and outdoor brand manufacturing. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+    corridor: 'Ogden & Northern Utah Industrial',
+    query: 'outdoor action sports gear manufacturing ecommerce ogden',
+    focus: 'Outdoor Action Sports Gear, Aerospace Parts & Composites',
+    desc: 'Action sports and outdoor manufacturing heartland. Requires CAD spec visualizers, bulk freight quoting, and custom B2B punchout catalogs.',
   },
 ];
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Private Wealth Advisory, Estate Planning & Corporate Law',
-    headline: 'Dominating High-Stakes Search Corridors for Denver Firms',
+    sector: 'Nutraceuticals, Dietary Supplements & Wellness Subscriptions',
+    headline: 'High-LTV Subscription Architectures for Utah Wellness Brands',
     description:
-      'Legal and financial search queries across Denver and Arapahoe counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
-    image: '/images/us/denver/law-firm.webp',
-    alt: 'Denver and Cherry Creek private wealth management estate planning and corporate law local SEO',
+      'Nutraceutical innovators, wellness drink brands, and dietary supplement companies across South Jordan and Salt Lake City require recurring subscription revenue and flexible bundle configurations. We engineer custom Recharge and Smartrr subscription portals with self-service flavor swapping, automated prepaid discounts, and cold-pack shipping logic.',
+    image: '/images/us/denver/ecommerce/portfolio-2.webp',
+    alt: 'Salt Lake City nutraceutical dietary supplement wellness subscription ecommerce development',
     points: [
-      'LegalService and Attorney schema linking Colorado Bar verified credentials',
-      'Localized practice area silos targeting LoDo, Cherry Creek, and the Denver Tech Center',
-      'High-authority local legal directory citations and editorial publication placements',
+      'Custom bundle-and-save configurators with dynamic tiered volume pricing',
+      'Frictionless subscriber portal with self-service skip, swap, and add-on controls',
+      'Klaviyo SMS and post-purchase replenishment automation integrations',
     ],
   },
   {
-    sector: 'Aesthetic Surgery, Concierge Medicine & Specialized Clinics',
-    headline: 'Capturing High-Value Patient Consultations Across Cherry Creek & DTC',
+    sector: 'Outdoor Recreation, Ski Apparel & Technical Mountain Gear',
+    headline: 'Engineering Immersive Digital Storefronts for Utah Outdoor Leaders',
     description:
-      'In Denver’s premier elective surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/denver/healthcare-clinic.webp',
-    alt: 'Denver Cherry Creek aesthetic plastic surgery medical practice clinic local SEO strategy',
-    points: [
-      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
-      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
-      'Hyper-local neighborhood geo-pages targeting Cherry Creek, Greenwood Village, and Boulder',
-    ],
-  },
-  {
-    sector: 'Outdoor Recreation Brands, Gear Manufacturing & Active Lifestyle',
-    headline: 'Local & Regional Search Dominance for Colorado Outdoor Leaders',
-    description:
-      'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immediate regional store discovery. We optimize Google Business Profiles, embed product catalogs, synchronize dealer networks, and capture high-intent gear searches.',
+      'From Wasatch backcountry ski gear builders to Ogden technical apparel innovators, outdoor enthusiasts demand fluid visual commerce and instant mobile purchasing. We engineer custom headless Next.js storefronts with interactive product visualizers, technical spec comparisons, and frictionless one-click checkouts.',
     image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor gear technical apparel brand retail store local SEO optimization',
+    alt: 'Utah outdoor sports ski apparel and mountain gear ecommerce development headless Shopify Plus',
     points: [
-      'Multi-location retail store and authorized dealer directory optimization',
-      'Local radius geo-fencing targeting Front Range recreation corridors',
-      'Structured Store and Product schema markup for Google Merchant Center synchronization',
+      'Interactive 3D product visualizers and material durability spec comparisons',
+      'Instant headless Shopify checkout with Apple Pay and Shop Pay acceleration',
+      'Multi-warehouse regional fulfillment sync with automated inventory routing',
     ],
   },
   {
-    sector: 'Commercial Construction, HVAC & General Contracting',
-    headline: 'Driving Continuous Commercial Project Bidding Across Front Range',
+    sector: 'B2B Industrial Hardware, Precision Tooling & Wholesale Supply',
+    headline: 'Self-Service Wholesale Portals for Wasatch Front Manufacturers',
     description:
-      'Commercial general contractors, roofing companies, and HVAC specialists across the Denver metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/denver/contractor-site.webp',
-    alt: 'Denver commercial general contractor HVAC and roofing local SEO ranking architecture',
+      'Industrial manufacturers and B2B wholesale distributors across West Valley City and Sandy require streamlined digital ordering for commercial buyers. We build custom BigCommerce B2B and Shopify Plus wholesale portals with customer-specific pricing, NetSuite ERP sync, and net terms invoicing.',
+    image: '/images/us/denver/ecommerce/portfolio-3.webp',
+    alt: 'Salt Lake City B2B wholesale portal NetSuite ERP ecommerce integration and industrial tooling catalog',
     points: [
-      'Service area radius optimization covering Denver, Aurora, Lakewood, and Littleton',
-      'High-speed mobile performance ensuring immediate project bidding phone calls',
-      'Structured LocalBusiness and Contractor schema markup for local search dominance',
+      'Custom B2B wholesale portals with tiered negotiated pricing and MOQ validation',
+      'Real-time NetSuite, SAP, and Epicor inventory and purchase order synchronization',
+      'Self-service corporate credit limits, invoice terms, and re-order requisition funnels',
+    ],
+  },
+  {
+    sector: 'Consumer Electronics, Smart Hardware & Silicon Slopes D2C',
+    headline: 'High-Converting Digital Launchpads for Utah Hardware Startups',
+    description:
+      'Consumer electronics builders, smart home innovators, and IoT device manufacturers in Lehi and Draper demand high-velocity checkout funnels. We engineer custom interactive feature comparison tables, warranty registration workflows, and accessory bundle upsell funnels.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Silicon Slopes consumer electronics smart hardware ecommerce website engineering',
+    points: [
+      'Interactive device specification tables and dynamic accessory upsell drawers',
+      'Sub-second mobile speed ensuring immediate product purchases and global deliveries',
+      'Structured Product schema markup for Google Merchant Center synchronization',
     ],
   },
 ];
@@ -151,196 +151,196 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Monthly SEO Retainers with Zero Measurable Inbound Calls',
-    problem: 'Traditional Denver agencies send generic monthly PDF reports filled with vanity impressions while your Google Maps rankings remain stagnant on page two.',
-    solution: 'We focus on concrete local conversion outcomes: Google Local 3-Pack visibility, verified phone calls, consultation bookings, and qualified commercial RFQs.',
+    title: 'Ending Sluggish 4-Second Product Page Loads & Abandoned Carts',
+    problem: 'Bloated Shopify themes packed with 25+ unoptimized apps create slow, jittery mobile browsing that frustrates shoppers and inflates bounce rates.',
+    solution: 'We engineer custom Headless Next.js 15 storefronts with sub-second page loads, instant client-side filtering, and frictionless mobile checkouts.',
   },
   {
     num: '02',
-    title: 'Eliminating Risky PBN Links & Automated Citation Spam',
-    problem: 'Cheap agencies build spammy automated citations and private blog network links that trigger Google algorithmic penalties and destroy your domain authority.',
-    solution: 'We implement 100% white-hat local entity optimization, syncing direct with Google Business Profile API, Apple Business Connect, and tier-one local publications.',
+    title: 'Eliminating Fragile Manual Data Entry Between Shopify & NetSuite',
+    problem: 'Disconnected inventory and orders lead to out-of-stock cancellations, fulfillment delays, and expensive manual accounting overhead.',
+    solution: 'We build bidirectional real-time middleware connecting your storefront directly to NetSuite, SAP, or QuickBooks with zero data latency.',
   },
   {
     num: '03',
-    title: 'Fixing Inconsistent NAP Data Across Duplicate Profiles',
-    problem: 'Duplicate or outdated listings with conflicting phone numbers and suite addresses confuse search engine crawlers and split your local ranking signals.',
-    solution: 'We execute complete citation deduplication and NAP synchronization across all major data aggregators, establishing clean, authoritative entity signals.',
+    title: 'Modernizing Clunky Legacy B2B Wholesale Email & PDF Orders',
+    problem: 'Wholesale buyers are forced to submit manual order forms and wait days for invoice confirmation and inventory verification.',
+    solution: 'We deploy self-service B2B portals with account-specific price tiers, quick CSV order uploads, purchase order approvals, and net terms checkout.',
   },
   {
     num: '04',
-    title: 'Optimizing for AI Answer Engines & SearchGPT Citations',
-    problem: 'Basic SEO tactics ignore generative AI engines like ChatGPT, Claude, and Perplexity, causing your business to be omitted from conversational recommendations.',
-    solution: 'We structure your content with deep semantic entities, speakable markup, and question-answering schemas that position your firm as the verified local authority.',
+    title: 'Stopping Monthly App Subscription Bleed & Plugin Bloat',
+    problem: 'Standard stores accumulate dozens of monthly SaaS app fees that add technical debt, security vulnerabilities, and code conflicts.',
+    solution: 'We replace third-party apps with native, performant React micro-components and unified serverless endpoints, reducing monthly app expenses.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
-    title: 'Local Entity & Citation Audit',
-    desc: 'We perform a deep forensic scan of your Google Business Profile, existing citations, NAP consistency, and local competitor ranking signals.',
-    deliverables: ['Google Maps rank grid scan across the Denver metro', 'NAP consistency and duplicate listing audit', 'Competitor keyword and backlink gap analysis', 'Baseline local visibility scorecard'],
+    title: 'Architecture Strategy & Catalog Modeling',
+    desc: 'We analyze your SKU matrix, customer segmentation, ERP integrations, and checkout funnels to architect an unshakeable digital commerce foundation.',
+    deliverables: ['Product data taxonomy and variant model architecture', 'ERP and 3PL warehouse integration scope', 'Competitor conversion benchmark and UX gap analysis', 'Technical specifications and milestone roadmap'],
   },
   {
     phase: 'Phase 02',
-    title: 'Google Business Profile & On-Page Geo-Optimization',
-    desc: 'We optimize primary categories, service sub-attributes, geo-targeted metadata, and embed structured JSON-LD schema across your website.',
-    deliverables: ['GBP category and attribute optimization', 'LocalBusiness & ProfessionalService schema graph', 'Localized service area landing page copy', 'Core Web Vitals performance acceleration'],
+    title: 'Custom Figma UI/UX & High-Conversion Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on mobile-first thumb zones, product detail pages, and frictionless carts.',
+    deliverables: ['Interactive Figma prototypes for all key templates', 'Mobile-first cart drawer and checkout wireframes', 'Design tokens, color harmonies, and typography scales', 'Stakeholder review and design sign-off'],
   },
   {
     phase: 'Phase 03',
-    title: 'Tier-One Citation Sync & Local PR Distribution',
-    desc: 'We synchronize your verified business data across major directories and secure localized editorial placements to build genuine regional authority.',
-    deliverables: ['Direct API sync with Apple, Bing & Google', 'Tier-one directory citations (Data Axle, Neustar)', 'Localized press release and editorial outreach', 'Review velocity and response workflow setup'],
+    title: 'Headless Next.js 15 & Shopify Plus Engineering',
+    desc: 'We build your custom commerce application using Next.js 15, TypeScript, Tailwind CSS, and robust headless APIs for sub-second performance.',
+    deliverables: ['Custom Next.js 15 App Router storefront', 'Shopify Storefront API and GraphQL integration', 'Automated ERP and inventory synchronization pipelines', 'Comprehensive end-to-end checkout testing'],
   },
   {
     phase: 'Phase 04',
-    title: 'Rank Defense, AI Citation Monitoring & Expansion',
-    desc: 'We track daily local 3-Pack movements, monitor AI search citations, protect against competitor spam, and expand into neighboring suburban corridors.',
-    deliverables: ['Weekly geo-grid rank tracking reports', 'SearchGPT and Perplexity citation audits', 'Spam listing monitoring and resolution', 'Quarterly local market expansion roadmap'],
+    title: 'Performance QA, Cutover & Growth Handoff',
+    desc: 'We execute speed benchmarking, set up Cloudflare edge routing, execute production domain cutover, and transfer full code ownership.',
+    deliverables: ['Lighthouse 95+ Core Web Vitals optimization', 'Zero-downtime DNS cutover and payment gateway validation', 'Full GitHub repository transfer and technical documentation', '30-day post-launch warranty and team training'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    label: 'Frontend Stack',
+    factoryjet: 'Modern Headless Next.js 15, React 19, TypeScript, and Tailwind CSS on Cloudflare Edge.',
+    traditional: 'Monolithic Liquid themes packed with 20+ unoptimized third-party Shopify apps.',
   },
   {
-    label: 'Structured Data',
-    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    label: 'Page Speed SLA',
+    factoryjet: 'Sub-second First Contentful Paint (<0.5s) with guaranteed 95+ Core Web Vitals.',
+    traditional: '3 to 6 second load times resulting in high bounce rates and lost ad spend efficiency.',
   },
   {
-    label: 'Citation Quality',
-    factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    label: 'ERP & B2B Integration',
+    factoryjet: 'Native bidirectional middleware for NetSuite, SAP, and Epicor with real-time sync.',
+    traditional: 'Fragile batch CSV uploads or expensive third-party connector plugins prone to failure.',
   },
   {
-    label: 'AI Search Preparedness',
-    factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary agency themes or closed SaaS platforms with vendor lock-in.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Cost & Retainers' },
-  { key: 'timeline', label: 'Timeline & Results' },
-  { key: 'technical', label: 'GBP & Schemas' },
-  { key: 'local', label: 'Denver Market Focus' },
-  { key: 'reporting', label: 'Tracking & Deliverables' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'tech', label: 'Headless & Shopify' },
+  { key: 'b2b', label: 'B2B & Wholesale' },
+  { key: 'local', label: 'Salt Lake City Focus' },
+  { key: 'handoff', label: 'Ownership & Support' },
 ];
 
 const FAQ_ITEMS = [
   {
     category: 'pricing',
-    question: 'How much does local SEO cost for a Denver business?',
+    question: 'How much does custom ecommerce development cost for a Salt Lake City brand?',
     answer:
-      'Local SEO campaigns are priced based on your market competition, number of physical locations, practice area scope, and current domain health. A focused single-location local campaign targeting core Denver corridors is structured on a transparent monthly retainer with zero long-term lock-ins. Multi-location healthcare networks or corporate practices requiring metro-wide rank dominance receive tailored scoping with clear milestone deliverables.',
+      'Project investments depend on catalog complexity, custom ERP integration requirements, subscription mechanics, and custom B2B wholesale portal scope. Every project is scoped under a transparent, fixed-price milestone contract. Focused Shopify Plus stores and headless Next.js architectures are delivered with full Figma UI/UX, custom code, and 100% intellectual property ownership with zero surprise overages.',
   },
   {
     category: 'pricing',
-    question: 'Are there any hidden citation fees or third-party listing markups?',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+      'No. We believe you should own your commerce infrastructure outright. You contract directly with your platform providers (Shopify Plus, Cloudflare) and pay zero monthly agency licensing fees.',
   },
   {
     category: 'pricing',
-    question: 'Do you require long-term lock-in contracts for SEO retainers?',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+      'We complete an exhaustive technical scoping process, API inventory, and data mapping plan before writing code. All design components, custom features, and third-party integrations are locked into a binding scope of work that guarantees delivery at the agreed investment level.',
   },
   {
-    category: 'timeline',
-    question: 'How quickly can our Denver business expect to see Google Maps rank improvements?',
+    category: 'tech',
+    question: 'Why choose Headless Next.js 15 over a standard Shopify Liquid theme?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Cherry Creek or LoDo generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Headless Next.js delivers sub-second page loads, instant client-side catalog filtering, complete design freedom unconstrained by theme templates, superior SEO rankings, and higher conversion rates on mobile devices.',
   },
   {
-    category: 'timeline',
-    question: 'What factors determine how fast a Denver business can rank in the Local 3-Pack?',
+    category: 'tech',
+    question: 'Can our marketing team manage products and banners without touching code?',
     answer:
-      'Key determinants include your physical office location relative to the searcher, category selection accuracy, total volume of authentic customer reviews, website Core Web Vitals speed, and the clean consistency of your citation profile across data aggregators.',
+      'Yes. Your team continues using the familiar Shopify admin for managing products, inventory, orders, and discounts, or an intuitive composable CMS like Sanity for landing page visual editing.',
   },
   {
-    category: 'timeline',
-    question: 'What happens to our local rankings if we pause or discontinue services?',
+    category: 'tech',
+    question: 'How do you handle zero-downtime store migration from Magento or WooCommerce?',
     answer:
-      'Unlike pay-per-click advertising, the foundational assets we build (optimized GBP profile, clean directory citations, structured website schemas, and localized content silos) remain 100% your permanent intellectual property and provide long-lasting organic value.',
+      'We build comprehensive data migration pipelines for customers, order history, and product catalogs, implement strict 1-to-1 301 URL redirect maps, and conduct parallel sandbox testing before flipping DNS records.',
   },
   {
-    category: 'technical',
-    question: 'How do you optimize our Google Business Profile for maximum local radius reach?',
+    category: 'tech',
+    question: 'How do you ensure our ecommerce store achieves 95+ Core Web Vitals scores?',
     answer:
-      'We identify and configure primary and secondary categories, craft keyword-optimized business descriptions, upload geo-tagged photo assets, build product and service catalogs, and configure automated review generation funnels.',
+      'We leverage static generation with incremental static regeneration, optimize all visual media into modern AVIF/WebP formats, eliminate render-blocking scripts, and deploy on Cloudflare global edge networks.',
   },
   {
-    category: 'technical',
-    question: 'What structured JSON-LD schemas do you implement on our website?',
+    category: 'b2b',
+    question: 'Can you build custom B2B wholesale portals with tiered customer pricing?',
     answer:
-      'We inject comprehensive server-rendered schemas including LocalBusiness, ProfessionalService, MedicalBusiness or LegalService, GeoCoordinates, OpeningHoursSpecification, Service, FAQPage, and speakable selectors for AI voice search.',
+      'Yes. We engineer enterprise B2B features including customer-specific price lists, volume break discounts, quick order entry forms, net payment terms, and corporate multi-user account management.',
   },
   {
-    category: 'technical',
-    question: 'How do you ensure our company is recommended by AI search engines like ChatGPT and Perplexity?',
+    category: 'b2b',
+    question: 'How do you integrate our ecommerce store with NetSuite or SAP ERP?',
     answer:
-      'We optimize your digital entity profile across authoritative data sources that AI training models reference, ensuring consistent factual data regarding your services, locations, credentials, and customer satisfaction ratings.',
+      'We build robust bidirectional API connectors that automatically sync inventory levels, customer records, sales orders, tracking numbers, and invoice statuses between your storefront and ERP.',
   },
   {
-    category: 'technical',
-    question: 'How do you handle review generation without violating Google policies?',
+    category: 'b2b',
+    question: 'Can you handle punchout catalog integrations for corporate procurement systems?',
     answer:
-      'We establish frictionless SMS and email review request workflows that invite genuine satisfied clients to share their direct feedback on your Google Business Profile, strictly avoiding review gating or incentivized reviews.',
-  },
-  {
-    category: 'local',
-    question: 'Do you manage multi-location local SEO campaigns across the Front Range?',
-    answer:
-      'Yes. We build dedicated, location-specific landing pages and optimize distinct Google Business Profiles for each physical office across Denver, Boulder, Greenwood Village, Lakewood, and Fort Collins.',
+      'Yes. We support cXML and OCI punchout integrations that connect your catalog directly into procurement platforms like Coupa, Ariba, and Jaggaer.',
   },
   {
     category: 'local',
-    question: 'Can you help our practice outrank entrenched competitors in Cherry Creek and LoDo?',
+    question: 'Do you have experience with Utah nutraceutical and supplement brands?',
     answer:
-      'Yes. By combining technical website speed, deep topical content authority, clean multi-aggregator citations, and consistent review velocity, we systematically capture top 3 map positions from legacy competitors.',
+      'Yes. We design and engineer customized subscription portals, bundle builders, and replenishment flows integrated with Recharge and Smartrr for health and wellness brands across Utah.',
   },
   {
     category: 'local',
-    question: 'How do service-area businesses without a public storefront rank in Denver?',
+    question: 'Can you build high-converting storefronts for Utah outdoor sports brands?',
     answer:
-      'We configure your Google Business Profile as a verified Service Area Business (SAB), hiding your residential address while establishing explicit service boundaries across your target Front Range ZIP codes and commercial corridors.',
+      'Yes. We build responsive web applications with interactive product visualizers, material durability spec matrices, and multi-warehouse routing for outdoor and ski gear brands.',
   },
   {
     category: 'local',
-    question: 'Do you optimize for technology and enterprise SaaS searches in DTC?',
+    question: 'Can you integrate local warehouse fulfillment and regional 3PL logistics?',
     answer:
-      'Yes. We build specialized topical hubs and enterprise B2B schema markup for SaaS, cloud engineering, and telecom providers.',
+      'Yes. We build automated order routing logic that distributes fulfillment orders to regional Wasatch Front 3PL facilities and distribution centers.',
   },
   {
-    category: 'reporting',
-    question: 'How do you track and report local SEO progress each month?',
+    category: 'local',
+    question: 'Do you engineer omnichannel POS integrations for Utah retail flagships?',
     answer:
-      'We provide access to an interactive dashboard showing local 3-Pack geo-grid ranking positions, organic keyword trajectories, verified Google Maps phone calls, website click-throughs, and consultation inquiry submissions.',
+      'Yes. We connect online commerce systems with Shopify POS and legacy retail systems for unified inventory, gift cards, loyalty rewards, and in-store pickup.',
   },
   {
-    category: 'reporting',
-    question: 'What is a Local Geo-Grid rank tracking report?',
+    category: 'handoff',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'A geo-grid scan measures your Google Maps ranking position at dozens of physical coordinates across Greater Denver, showing exactly where your business appears in the top 3 and where optimization is needed.',
+      'Yes, 100%. Upon final milestone completion, you receive complete ownership of the GitHub repository, custom API connectors, and Figma design assets with zero vendor lock-in.',
   },
   {
-    category: 'reporting',
-    question: 'How do you combat spam and fake competitor listings on Google Maps?',
+    category: 'handoff',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'We continuously monitor your primary search categories in Denver, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+      'Every project includes a 30-day comprehensive post-launch warranty covering bug fixes, performance tuning, and recorded video training for your internal operations staff.',
   },
   {
-    category: 'reporting',
-    question: 'Who will be our main point of contact during the campaign?',
+    category: 'handoff',
+    question: 'How do you train our internal team on managing the new store?',
     answer:
-      'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+      'We deliver custom recorded video walkthroughs and documentation explaining how to update product catalogs, manage promotional banners, view analytics, and process orders.',
+  },
+  {
+    category: 'handoff',
+    question: 'Can any software engineer maintain our Next.js codebase in the future?',
+    answer:
+      'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
 ];
 
@@ -360,51 +360,51 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Denver Local SEO Agency',
+  name: 'FactoryJet - Salt Lake City E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Denver',
-    addressRegion: 'CO',
+    addressLocality: 'Salt Lake City',
+    addressRegion: 'UT',
     addressCountry: 'US',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 39.7392,
-    longitude: -104.9903,
+    latitude: 40.7608,
+    longitude: -111.891,
   },
   areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Greenwood Village' },
-    { '@type': 'City', name: 'Cherry Creek' },
-    { '@type': 'City', name: 'Lakewood' },
+    { '@type': 'City', name: 'Salt Lake City' },
+    { '@type': 'City', name: 'Lehi' },
+    { '@type': 'City', name: 'Draper' },
+    { '@type': 'City', name: 'South Jordan' },
+    { '@type': 'City', name: 'Sandy' },
   ],
 };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Denver Local SEO & Google Maps Optimization',
+  name: 'Salt Lake City E-Commerce Development & Headless Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
+  serviceType: 'Headless E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
-    'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Denver businesses.',
-  areaServed: { '@type': 'State', name: 'Colorado' },
+    'Custom headless Next.js ecommerce engineering, Shopify Plus architectures, NetSuite ERP integrations, and sub-second performance for Utah brands.',
+  areaServed: { '@type': 'State', name: 'Utah' },
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver Local SEO Agency | Search & AI Visibility | FactoryJet',
-  description: 'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+  name: 'Salt Lake City E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+  description: 'Salt Lake City ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Utah brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
 };
@@ -414,19 +414,19 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Denver', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Salt Lake City', item: CANONICAL },
   ],
 };
 
-export default function DenverSeoPage() {
+export default function SaltLakeCityEcommercePage() {
   return (
     <>
-      <script id="den-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="den-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="den-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="den-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="slc-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="slc-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="slc-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="slc-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="slc-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -441,26 +441,26 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver Local SEO &amp; AI Citation Authority</span>
+                  <span>Salt Lake City E-Commerce &amp; Headless Architecture</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Denver Local SEO Agency for Market Leaders
+                  Salt Lake City E-Commerce Development Agency for High-Growth Brands
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across LoDo, Cherry Creek, and the Denver Tech Center. Engineered for verified inbound calls and high-ticket consultations.
+                  High-converting Shopify Plus stores, headless Next.js 15 storefronts, and real-time NetSuite ERP integrations engineered for Silicon Slopes leaders. Sub-second performance with 100% intellectual property code ownership.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-                  <a href="#den-seo-districts" className="rv-btn-secondary">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#slc-ecom-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Denver Corridors</span>
+                    <span>Explore Silicon Slopes Corridors</span>
                   </a>
                 </div>
               </div>
@@ -468,8 +468,8 @@ export default function DenverSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/denver/ecommerce/portfolio-2.webp"
+                  alt="Salt Lake City Utah ecommerce development Shopify Plus headless Next.js engineering"
                   width={640}
                   height={640}
                   priority
@@ -480,12 +480,12 @@ export default function DenverSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / CITATION MARQUEE TICKER ── */}
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Local Search &amp; AI Citation Infrastructure</div>
+              <div className="rv-ticker-label">Modern Commerce &amp; ERP Infrastructure</div>
               <div className="rv-ticker-line" />
             </div>
 
@@ -511,8 +511,8 @@ export default function DenverSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/denver/tech-office.webp"
-                  alt="FactoryJet senior SEO strategists conducting local search audit for Denver businesses"
+                  src="/images/us/b2b-website-design/buying-committee.webp"
+                  alt="FactoryJet senior ecommerce engineers building headless Shopify Plus storefronts for Utah brands"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -525,15 +525,15 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Precision Local Authority</span>
+                  <span>Speed, Conversions &amp; Scale</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Denver&apos;s High-Value Commercial Sectors
+                  E-Commerce Engineered for Silicon Slopes Leaders
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From LoDo corporate law firms to Cherry Creek aesthetic surgery clinics and DTC enterprise software providers, Colorado businesses need verified search authority to capture high-ticket clients before competitors do.
+                  From Lehi consumer tech innovators and South Jordan nutraceutical leaders to Wasatch Front B2B wholesale manufacturers, we build high-converting ecommerce platforms that scale without limits.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -557,28 +557,28 @@ export default function DenverSeoPage() {
 
                 {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Request Local SEO Competitor Scan" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <ModalCTAButton label="Schedule E-Commerce Consultation" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── 04. DENVER DISTRICTS & INDUSTRY DIRECTORY ── */}
-        <section id="den-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. SALT LAKE CITY DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="slc-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Denver Commercial Corridor Depth</span>
+                <span>Wasatch Front Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Local SEO for Denver&apos;s Core Sectors
+                Tailored E-Commerce for Utah&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From LoDo tech startups to Cherry Creek private wealth and DTC enterprise software:
+                From Silicon Slopes consumer tech brands to South Jordan nutraceuticals and West Valley wholesale:
               </p>
             </div>
 
@@ -627,10 +627,10 @@ export default function DenverSeoPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Local Search Architectures for Denver
+                Specialized E-Commerce Architectures for Utah Brands
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every high-value commercial sector in the Front Range demands tailored keyword targeting, entity schemas, and conversion pathways:
+                Every commercial sector in the Wasatch Front demands tailored cart flows, subscription logic, and ERP sync pipelines:
               </p>
             </div>
 
@@ -695,10 +695,10 @@ export default function DenverSeoPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Denver Companies Choose FactoryJet Local SEO
+                Why Salt Lake City Leaders Choose FactoryJet E-Commerce
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace generic SEO reports with direct rank dominance and verified phone lead generation:
+                We replace bloated monolithic themes with high-performance headless engineering:
               </p>
             </div>
 
@@ -733,18 +733,19 @@ export default function DenverSeoPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <div id="local-seo-blueprint">
-          <LocalSeoArchitectureBlueprint
-            badge="// DENVER LOCAL SEARCH & AI RANKING BLUEPRINT"
-            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
-            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Denver local search."
-            city="Denver"
-            ctaLabel="Get a Free Local SEO Audit"
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// SILICON SLOPES ECOMMERCE &amp; ERP BLUEPRINT"
+            title="Headless Next.js 15 &amp; Shopify Plus Architecture"
+            subtitle="Explore how headless Next.js, Shopify Storefront API, NetSuite ERP synchronization, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce & Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B & Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        {/* ── 08. STEP-BY-STEP 4-STAGE RE-PLATFORMING PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -752,13 +753,13 @@ export default function DenverSeoPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven Local Ranking Engine</span>
+                <span>Proven Commerce Engineering Protocol</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 4-Stage Local SEO Ranking Protocol
+                Our 4-Stage E-Commerce Launch Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A systematic, engineering-first methodology for establishing market dominance across Greater Denver:
+                A disciplined engineering methodology for zero-downtime migrations and high-converting launches:
               </p>
             </div>
 
@@ -819,10 +820,10 @@ export default function DenverSeoPage() {
                 <span>Vendor Due Diligence</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Denver SEO Agencies: What to Ask
+                Evaluating Salt Lake City E-Commerce Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Compare engineering-led headless development against traditional Shopify theme agencies before you sign:
               </p>
             </div>
 
@@ -830,7 +831,7 @@ export default function DenverSeoPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Theme Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -863,9 +864,9 @@ export default function DenverSeoPage() {
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="DENVER LOCAL SEARCH INTELLIGENCE"
-          headline="Frequently Asked Questions About Local SEO in Denver CO"
-          lead="Direct, plain English answers to what Denver business owners and marketing directors ask about search visibility:"
+          eyebrow="SALT LAKE CITY E-COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About E-Commerce Development in Salt Lake City UT"
+          lead="Direct, plain English answers to what Utah brand founders and ecommerce leaders ask about online commerce engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -874,7 +875,7 @@ export default function DenverSeoPage() {
         {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
-            <SeoCityLinksUS currentCity="denver" />
+            <EcommerceCityLinksUS currentCity="salt-lake-city" />
           </div>
         </section>
 
@@ -885,19 +886,19 @@ export default function DenverSeoPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Verified Rank Dominance</span>
+              <span>Fixed-Price &amp; Sub-Second Performance</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Dominate Denver Local Search?
+              Ready to Upgrade Your Utah Digital Storefront?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Claim your complimentary local SEO audit and discover the exact ranking and citation gaps preventing your firm from capturing the Google Maps 3-Pack.
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
