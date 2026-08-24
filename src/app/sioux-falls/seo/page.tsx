@@ -13,23 +13,23 @@ const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
-  title: 'Sioux Falls SEO Company & Local SEO Agency SD | FactoryJet',
+  title: 'Sioux Falls SEO Company & Local Agency SD | FactoryJet',
   description:
-    'Sioux Falls SEO company and agency. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Sioux Falls SD.',
+    'Sioux Falls SEO company and agency. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for South Dakota.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Sioux Falls SEO Company & Local SEO Agency SD | FactoryJet',
+    title: 'Sioux Falls SEO Company & Local Agency SD | FactoryJet',
     description:
-      'Sioux Falls SEO company and agency. No-contract local SEO, Google Map Pack rankings, and technical SEO for Sioux Falls SD businesses.',
+      'Sioux Falls SEO company and agency. No-contract local SEO, Google Map Pack rankings, and technical SEO for Sioux Falls businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Sioux Falls SEO Company & Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sioux Falls SEO Company & Local SEO Agency SD | FactoryJet',
+    title: 'Sioux Falls SEO Company & Local Agency SD | FactoryJet',
     description: 'Local and technical SEO in Sioux Falls SD. Win the Google Map Pack and AI search citations.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -49,54 +49,109 @@ const PARTNERS = [
 
 const STAT_CARDS = [
   { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local profiles.', icon: '📍' },
-  { num: '210K+', title: 'Sioux Empire Metro', desc: 'Fast-growing regional population driving steady local search demand.', icon: '📈' },
-  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across B2B, healthcare, and services.', icon: '🏢' },
+  { num: '250+', title: 'Monthly Head Demand', desc: 'Verified monthly searches across Sioux Falls SEO company and agency queries.', icon: '📈' },
+  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across healthcare, finance, and services.', icon: '🏢' },
   { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown & Phillips Avenue',
-    query: 'personal injury lawyer sioux falls',
-    focus: 'Legal, Financial Advisory & Professional Services',
-    desc: 'Dense commercial core around Phillips Avenue and 8th & Railroad. Local B2B clients and legal cases evaluate technical credentials, page speed, and practice area authority.',
+    query: 'corporate law firm sioux falls',
+    focus: 'Legal, Wealth Management & Corporate Trust',
+    desc: 'Historic commercial center in Minnehaha County. Corporate decision-makers evaluate technical credentials, page speed, and practice area authority before initiating contact.',
   },
   {
-    corridor: 'Sanford & Avera Healthcare Corridors',
-    query: 'dentist sioux falls sd',
-    focus: 'Healthcare, Dental & Private Specialty Clinics',
-    desc: 'Anchored by the massive Sanford Health and Avera Health systems. Independent clinics and dentists win high-value local patient appointments through verified Google reviews and accurate medical schema.',
+    corridor: '57th & Louise Medical Corridor',
+    query: 'medical specialist sioux falls',
+    focus: 'Healthcare, Dental & Private Practices',
+    desc: 'Anchored by the massive regional footprints of Sanford Health and Avera Health. Independent practices capture high-intent patient queries through verified reviews and medical schema.',
   },
   {
-    corridor: 'Financial & Trust Headquarters',
-    query: 'commercial insurance sioux falls',
-    focus: 'Banking, Trust Services & Corporate B2B',
-    desc: 'Major national banking, credit card, and trust administrative centers. Technical SEO and authoritative content put your firm on regional commercial vendor shortlists.',
+    corridor: 'I-29 & I-90 Logistics Crossroads',
+    query: 'manufacturing suppliers sioux falls',
+    focus: 'AgTech, Food Processing & Industrial Logistics',
+    desc: 'Major Upper Midwest transportation nexus. Technical SEO and structured product specifications put regional equipment suppliers on national procurement shortlists.',
   },
   {
-    corridor: 'Empire Mall & 41st Street Corridor',
-    query: 'hvac repair sioux falls',
-    focus: 'Home Services, Contractors & Commercial Retail',
-    desc: 'High-traffic commercial strip for HVAC, plumbing, roofing, and retail. Extreme seasonal Midwest weather shifts create sudden surges in emergency home service searches.',
+    corridor: 'Empire Mall & 41st Street',
+    query: 'best restaurant sioux falls',
+    focus: 'Retail, Hospitality & High-Traffic Dining',
+    desc: 'High-density retail and dining district along 41st Street. Mobile discoverability, live menu schema, and steady review acquisition drive high foot traffic.',
   },
   {
-    corridor: 'South Sioux Falls (57th & 85th St)',
-    query: 'med spa sioux falls',
-    focus: 'High-Ticket Residential, Wellness & Med Spas',
-    desc: 'Affluent residential expansion corridor where high-income families research aesthetic clinics, wellness providers, and home contractors before calling.',
+    corridor: 'East 10th & Dawley Farm Village',
+    query: 'family dentist east sioux falls',
+    focus: 'Suburban Healthcare, Retail & Home Services',
+    desc: 'Rapidly growing eastern residential communities. Localized Map Pack ranking signals and neighborhood landing pages capture family service demand.',
   },
   {
-    corridor: 'Brandon, Harrisburg & Tea Suburbs',
-    query: 'ac repair harrisburg sd',
-    focus: 'Suburban Multi-Location & Home Services',
-    desc: 'Rapidly growing residential communities across Lincoln and Minnehaha counties. Winning local search requires unique geographic landing pages for each surrounding town.',
+    corridor: 'Northern Industrial & Airport Corridor',
+    query: 'roofing contractor sioux falls',
+    focus: 'Commercial Contracting, Roofing & HVAC',
+    desc: 'Contracting hub servicing Minnehaha and Lincoln counties. Extreme weather shifts require urgent emergency search prominence and automated review collection.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Regional Healthcare Systems & Specialty Clinics',
+    headline: 'Converting Patients in the Upper Midwest’s Medical Hub',
+    description:
+      'Sioux Falls is the premier medical referral center for South Dakota, Iowa, and Minnesota. We build exhaustive medical schema, physician profile directories, and HIPAA-aware conversion flows that allow independent practices to win Google 3-Pack rankings and earn direct quotes in AI answer engines.',
+    image: '/images/us/sioux-falls/hero-sioux-falls.webp',
+    alt: 'Sioux Falls healthcare and medical practice local SEO strategy',
+    points: [
+      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
+      'Post-visit SMS review workflows generating consistent 5-star patient feedback',
+    ],
+  },
+  {
+    sector: 'Financial Services, Trust Administration & Commercial Lending',
+    headline: 'Projecting Institutional Trust in America’s Banking Capital',
+    description:
+      'South Dakota’s favorable trust laws have made Sioux Falls a national center for wealth management and commercial banking. We engineer sub-second page performance, verified financial entity schemas, and deep practice area content that converts sophisticated corporate clients.',
+    image: '/images/us/services/seo/team-cutout.webp',
+    alt: 'Sioux Falls financial advisory and trust administration local search marketing',
+    points: [
+      'Structured JSON-LD schema for FinancialService, AccountingService, and WealthManagement',
+      'High-authority regional media citations and verified NAP directory synchronization',
+      'Conversion-optimized lead capture flows designed for high-net-worth consultations',
+    ],
+  },
+  {
+    sector: 'AgTech, Precision Equipment & Food Processing',
+    headline: 'Winning National Supplier Procurement Across the Upper Midwest',
+    description:
+      'From agricultural machinery fabricators to bio-processing suppliers along I-90 and I-29, regional B2B buyers search technical specifications online before issuing an RFQ. We format technical capability matrices and spec sheets to rank for commercial buyer queries.',
+    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    alt: 'Sioux Falls AgTech and precision manufacturing industrial SEO',
+    points: [
+      'Answer-first technical specifications formatted for generative AI search crawlers',
+      'Sub-second page load speeds on Next.js and Cloudflare Edge infrastructure',
+      'Structured capability matrices and downloadable technical PDF spec indexing',
+    ],
+  },
+  {
+    sector: 'High-Ticket Home Services, Roofing & Mechanical Contractors',
+    headline: 'Capturing Emergency Search Demand Across Extreme Plains Weather',
+    description:
+      'Severe summer Great Plains hail storms and harsh sub-zero winter freeze-thaw cycles create urgent home repair needs across Minnehaha and Lincoln counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages.',
+    image: '/images/us/services/seo/hero-seo.webp',
+    alt: 'Sioux Falls roofing contractor and HVAC home services local SEO map pack',
+    points: [
+      'Neighborhood landing pages for Downtown, Dawley Farm, Brandon, and Harrisburg',
+      'Live call recording and conversion attribution integrated into Google Analytics 4',
+      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+    ],
   },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Breaking Through Map Pack Competition Across the Sioux Empire',
+    title: 'Overcoming Google Map Pack Invisibility in Minnehaha County',
     problem: 'Outdated business listings, duplicate directory citations, and missing review velocity push your profile down into the second and third pages of Google Maps.',
     solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
   },
@@ -114,42 +169,89 @@ const PAIN_POINTS = [
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across Minnehaha County',
-    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Brandon, Harrisburg, Tea, and Dell Rapids.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Sioux Empire.',
+    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across Lincoln County',
+    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Brandon, Harrisburg, Tea, and Hartford.',
+    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Sioux Falls metro area.',
   },
 ];
 
-const WORKING_STEPS = [
+const ROADMAP_STEPS = [
   {
-    n: '01',
-    t: 'Comprehensive Sioux Falls Market & Competitor Audit',
-    d: 'We analyze your current rankings, Google Business Profile health, Core Web Vitals, backlink profile, and top competitors across the Sioux Empire.',
-    icon: '🔍',
+    phase: 'Month 1',
+    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
+    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
+    deliverables: [
+      'Comprehensive 50-point technical SEO and crawlability audit report',
+      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
+      'Google Business Profile category audit, address verification, and metadata cleanup',
+      'Custom phone call, form submission, and live chat conversion tracking setup',
+    ],
   },
   {
-    n: '02',
-    t: 'Technical SEO & Core Web Vitals Optimization',
-    d: 'We repair slow server response times, eliminate render-blocking scripts, fix crawl errors, and implement exhaustive JSON-LD LocalBusiness schema.',
-    icon: '⚙️',
+    phase: 'Month 2',
+    title: 'Local Citation Architecture, Review Systems & Entity Schema',
+    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
+    deliverables: [
+      'Cleanup and synchronization across 40+ premier local business directories',
+      'Implementation of exhaustive nested JSON-LD schema markup',
+      'Automated SMS and email review collection system deployment',
+      'Competitive gap analysis against top 3 Sioux Falls Map Pack leaders',
+    ],
   },
   {
-    n: '03',
-    t: 'Google Business Profile & Map Pack Acceleration',
-    d: 'We optimize primary categories, secondary service menus, business descriptions, high-resolution visual assets, and local review collection systems.',
-    icon: '📍',
+    phase: 'Month 3',
+    title: 'Corridor Landing Pages & Sioux Falls Content Silo Expansion',
+    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Sioux Falls business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
+    deliverables: [
+      'Launch of dedicated neighborhood service pages for key target areas',
+      'Publishing of detailed service category guides and comparison matrices',
+      'On-page internal linking optimization across core commercial URLs',
+      'First quarterly ranking progress review and pipeline attribution report',
+    ],
   },
   {
-    n: '04',
-    t: 'Localized Corridor Content & Entity Building',
-    d: 'We write deep, answer-first landing pages tailored to specific Sioux Falls districts and surrounding towns from Brandon to Harrisburg and Tea.',
-    icon: '✍️',
+    phase: 'Months 4 to 6',
+    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
+    desc: 'We build high-quality contextual backlinks from reputable South Dakota publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
+    deliverables: [
+      'Targeted local digital PR and editorial backlink acquisition',
+      'Generative Engine Optimization formatting for AI answer citation',
+      'Ongoing Map Pack rank tracking and competitor defense updates',
+      'Monthly executive strategy meetings with senior technical engineers',
+    ],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Contract Flexibility',
+    factoryjet: 'Month-to-month agreements based on performance and trust.',
+    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
   },
   {
-    n: '05',
-    t: 'Live Attribution & Continuous Month-to-Month Growth',
-    d: 'We deliver transparent monthly reporting tracking real phone calls, form submissions, revenue growth, and AI citation visibility across ChatGPT and Google.',
-    icon: '📈',
+    label: 'Team Seniority',
+    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
+    traditional: 'Junior account coordinators acting as communication intermediaries.',
+  },
+  {
+    label: 'Technical Implementation',
+    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
+    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+  },
+  {
+    label: 'Lead Attribution',
+    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
+    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+  },
+  {
+    label: 'Data & Account Ownership',
+    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
+    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
+  },
+  {
+    label: 'AI & Generative Search',
+    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
+    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
   },
 ];
 
@@ -165,13 +267,19 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in Sioux Falls SD?',
     answer:
-      'Sioux Falls SEO services typically range from $1,000 to $3,000 per month depending on sector competitiveness, number of business locations, and technical site condition. FactoryJet operates on month-to-month agreements with no long-term contract lock-ins and starts with a comprehensive free technical audit.',
+      'Sioux Falls SEO services typically range from $1,200 to $3,000 per month depending on industry competitiveness, number of physical locations, and technical website condition. FactoryJet operates on flexible month-to-month agreements with no long-term contract lock-ins and begins with a comprehensive free technical audit.',
   },
   {
     category: 'pricing',
     question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
     answer:
       'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
+  },
+  {
+    category: 'pricing',
+    question: 'What hidden fees or setup costs should Sioux Falls businesses watch out for?',
+    answer:
+      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
   },
   {
     category: 'pricing',
@@ -189,13 +297,19 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you rank our business in surrounding towns like Brandon, Harrisburg, and Tea?',
     answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Sioux Empire suburbs including Brandon, Harrisburg, Tea, Hartford, and Dell Rapids.',
+      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Greater Minnehaha and Lincoln county suburbs including Brandon, Harrisburg, Tea, Hartford, and Dell Rapids.',
   },
   {
     category: 'local',
     question: 'How important are Google reviews for Sioux Falls local rankings?',
     answer:
       'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
+  },
+  {
+    category: 'local',
+    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
+    answer:
+      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
   },
   {
     category: 'technical',
@@ -210,6 +324,18 @@ const FAQ_ITEMS = [
       'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
   },
   {
+    category: 'technical',
+    question: 'Why does website loading speed directly impact Google search rankings?',
+    answer:
+      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured data schema do you implement on local Sioux Falls websites?',
+    answer:
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, FinancialService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+  },
+  {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Sioux Falls?',
     answer:
@@ -220,6 +346,18 @@ const FAQ_ITEMS = [
     question: 'How do you track and report SEO return on investment (ROI)?',
     answer:
       'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will algorithm updates from Google disrupt our search rankings?',
+    answer:
+      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+  },
+  {
+    category: 'timeline',
+    question: 'Can SEO replace our paid Google Ads spend in Sioux Falls?',
+    answer:
+      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Sioux Falls clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
   },
 ];
 
@@ -260,7 +398,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     { '@type': 'City', name: 'Brandon' },
     { '@type': 'City', name: 'Harrisburg' },
     { '@type': 'City', name: 'Tea' },
-    { '@type': 'City', name: 'Dell Rapids' },
+    { '@type': 'City', name: 'Hartford' },
   ],
 };
 
@@ -273,7 +411,7 @@ const SERVICE_SCHEMA = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Local SEO, Technical SEO & AI Search Optimization',
+  serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Sioux Falls businesses.',
   areaServed: { '@type': 'State', name: 'South Dakota' },
@@ -282,7 +420,7 @@ const SERVICE_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Sioux Falls SEO Company & Local SEO Agency SD | FactoryJet',
+  name: 'Sioux Falls SEO Company & Local Agency SD | FactoryJet',
   description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Sioux Falls SD businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
@@ -293,7 +431,7 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Sioux Falls', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'Sioux Falls', item: 'https://factoryjet.com/sioux-falls/ecommerce-development' },
     { '@type': 'ListItem', position: 3, name: 'SEO', item: CANONICAL },
   ],
 };
@@ -301,11 +439,11 @@ const BREADCRUMB_SCHEMA = {
 export default function SiouxFallsSeoPage() {
   return (
     <>
-      <script id="sf-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="sf-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="sf-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="sf-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="sf-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="fsd-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="fsd-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="fsd-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="fsd-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="fsd-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -326,22 +464,22 @@ export default function SiouxFallsSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Sioux Falls SEO Company &amp; Local Agency
+                  Sioux Falls SEO Company &amp; Local Search Marketing Agency
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent Sioux Empire search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  Win the Google 3-Pack Map results, dominate high-intent South Dakota search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Claim Free Sioux Falls SEO Audit" region="us" btnVariant="primary-dark" />
-                  <a href="#sf-districts" className="rv-btn-secondary">
+                  <a href="#fsd-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Local Districts</span>
+                    <span>Explore Sioux Falls Corridors</span>
                   </a>
                 </div>
               </div>
@@ -349,8 +487,8 @@ export default function SiouxFallsSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/services/seo/hero-seo.webp"
-                  alt="Sioux Falls South Dakota local SEO technical optimization and Google Map Pack ranking strategy"
+                  src="/images/us/sioux-falls/hero-sioux-falls.webp"
+                  alt="Sioux Falls South Dakota skyline and local SEO technical optimization strategy"
                   width={640}
                   height={640}
                   priority
@@ -408,15 +546,15 @@ export default function SiouxFallsSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Sioux Empire Market Reality</span>
+                  <span>South Dakota Market Reality</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for Growth Across the Sioux Empire
+                  Engineered for Results in Sioux Falls
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With steady regional growth across Minnehaha and Lincoln counties, standard generic SEO fails. We combine Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority to capture real commercial leads.
+                  With regional medical networks, expanding banking institutions, and rapid residential growth in Minnehaha and Lincoln counties, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -440,7 +578,7 @@ export default function SiouxFallsSeoPage() {
 
                 {/* Bottom Actions: Discovery Call CTA Button */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Schedule Strategy Call" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Schedule Sioux Falls Strategy Call" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
 
@@ -448,8 +586,8 @@ export default function SiouxFallsSeoPage() {
           </div>
         </section>
 
-        {/* ── 04. SIOUX FALLS CORRIDORS DIRECTORY ── */}
-        <section id="sf-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 04. SIOUX FALLS BUSINESS CORRIDORS DIRECTORY ── */}
+        <section id="fsd-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -459,10 +597,10 @@ export default function SiouxFallsSeoPage() {
                 <span>Geographic Precision</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored SEO for Sioux Falls Business Corridors
+                Tailored SEO for Sioux Falls Core Corridors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From Downtown Phillips Avenue to healthcare corridors and suburban expansion:
+                From Downtown trust practices to 57th &amp; Louise medical clinics and I-90 logistics hubs:
               </p>
             </div>
 
@@ -500,8 +638,76 @@ export default function SiouxFallsSeoPage() {
           </div>
         </section>
 
-        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Search Strategies for Sioux Falls Leading Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every vertical in Sioux Falls demands distinct schema models, citation targets, and conversion architectures:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -548,7 +754,7 @@ export default function SiouxFallsSeoPage() {
           </div>
         </section>
 
-        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="seo-architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// SIOUX FALLS LOCAL SEO & AI CITATION BLUEPRINT"
@@ -561,72 +767,141 @@ export default function SiouxFallsSeoPage() {
           />
         </div>
 
-        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 08. STEP-BY-STEP 6-MONTH ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
-              {/* Left Column Sticky Content */}
-              <div style={{ position: 'sticky', top: '100px' }}>
-                <div className="rv-badge" style={{ marginBottom: '14px' }}>
-                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
-                  </svg>
-                  <span>Step-by-Step Delivery</span>
-                </div>
-                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Sioux Falls SEO Protocol
-                </h2>
-                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We start with a thorough technical audit and move methodically from low-competition quick wins to high-volume commercial keywords and Map Pack rankings.
-                </p>
-                <ModalCTAButton label="Start Your Free SEO Audit" region="us" btnVariant="primary-dark" />
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Predictable Delivery</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 6-Month Sioux Falls Domination Roadmap
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+              </p>
+            </div>
 
-              {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
-                        {s.icon}
-                      </div>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
-                        {s.n}
-                      </span>
-                    </div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
-                      {s.t}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
-                      {s.d}
-                    </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
                   </div>
-                ))}
-              </div>
 
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Sioux Falls SEO Companies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
         <FAQ
           eyebrow="SIOUX FALLS SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Sioux Falls SD"
-          lead="Direct, plain English answers to what Sioux Falls business owners and marketing leaders ask about local search:"
+          lead="Direct, plain English answers to what Sioux Falls business owners and marketing leaders ask about local search rankings and lead generation:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <SeoCityLinksUS currentCity="sioux-falls" />
           </div>
         </section>
 
-        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
           <div className="pp-wrap" style={{ maxWidth: '800px' }}>
             <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
@@ -645,7 +920,7 @@ export default function SiouxFallsSeoPage() {
             </p>
             
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Claim Your Free Sioux Falls SEO Audit" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

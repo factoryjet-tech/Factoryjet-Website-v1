@@ -93,6 +93,61 @@ const DISTRICTS = [
   },
 ];
 
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Manufacturing, Precision Machining & Industrial B2B',
+    headline: 'Engineering Digital Credibility for Cleveland Industrial Leaders',
+    description:
+      'Cleveland’s historic 200-year industrial powerhouse demands websites that speak directly to engineers and procurement officers. We build structured product capability matrices, downloadable ISO certification spec sheets, interactive RFQ calculators, and sub-second page speeds that convert B2B buyers.',
+    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    alt: 'Cleveland precision manufacturing and industrial equipment web design engineering',
+    points: [
+      'Interactive equipment capability tables and downloadable CAD/PDF spec sheets',
+      'Frictionless RFQ form routing directly to estimating and engineering teams',
+      'Lightweight Next.js architecture deployed to Cloudflare Edge for global speed',
+    ],
+  },
+  {
+    sector: 'Healthcare, Dental & Specialized Medical Clinics',
+    headline: 'High-Conversion Patient Journeys in the Global Medical Capital',
+    description:
+      'Whether you operate an independent surgical clinic or provide specialized B2B vendor services to the Cleveland Clinic network, credibility is vital. We build HIPAA-aware web portals, physician directory matrices, clear insurance plan guides, and instant mobile appointment scheduling flows.',
+    image: '/images/us/services/seo/team-cutout.webp',
+    alt: 'Cleveland healthcare dental and medical practice website design',
+    points: [
+      'Intuitive provider bio directories with education and specialty filters',
+      'HIPAA-aware consultation forms and click-to-call mobile contact buttons',
+      'Flawless mobile responsive design achieving 95+ Google Lighthouse scores',
+    ],
+  },
+  {
+    sector: 'Legal Practices, Corporate Counsel & Litigation',
+    headline: 'Projecting Institutional Authority for Northeast Ohio Law Firms',
+    description:
+      'High-stakes litigation and corporate clients in Downtown Cleveland evaluate your website before agreeing to an initial consultation. We design modern, high-contrast digital flagships featuring practice area breakdowns, attorney bio repositories, and secure client intake flows.',
+    image: '/images/us/commerce/b2b-ecommerce-trade-counter.webp',
+    alt: 'Cleveland law firm corporate counsel and litigation web design',
+    points: [
+      'Comprehensive practice area content architecture and case result portfolios',
+      'Attorney profile schema with state bar admissions and verified credentials',
+      'Secure lead capture workflows routing inquiries to the correct partner instantly',
+    ],
+  },
+  {
+    sector: 'Hospitality, Dining & Specialty Retail',
+    headline: 'Fast Visual Storytelling for Ohio City & Tremont Venues',
+    description:
+      'From craft breweries and historic restaurants along West 25th to boutique retailers, customer conversion happens on mobile devices. We build lightning-fast storefronts featuring dynamic digital menus, live reservation widgets, private dining inquiry forms, and event calendars.',
+    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
+    alt: 'Cleveland hospitality restaurant and retail web design development',
+    points: [
+      'Sub-second mobile menu rendering with dietary and allergy filter badges',
+      'Seamless OpenTable and Resy reservation embeds with zero page lag',
+      'Private dining and event venue buyout inquiry forms that drive high-ticket revenue',
+    ],
+  },
+];
+
 const PAIN_POINTS = [
   {
     num: '01',
@@ -120,36 +175,83 @@ const PAIN_POINTS = [
   },
 ];
 
-const WORKING_STEPS = [
+const ROADMAP_STEPS = [
   {
-    n: '01',
-    t: 'Strategy & Brand Architecture',
-    d: 'We establish your conversion goals, target customer personas, sitemap structure, and technical requirements on our kickoff call.',
-    icon: '🔍',
+    phase: 'Days 1 to 2',
+    title: 'Strategy, Sitemaps & Figma High-Fidelity UI Prototyping',
+    desc: 'We define your core customer conversion funnel, map the site architecture, and deliver high-fidelity Figma prototypes for desktop and mobile devices for your direct review.',
+    deliverables: [
+      'Comprehensive conversion strategy and sitemap blueprint',
+      'High-fidelity interactive Figma desktop and mobile UI prototypes',
+      'Typography, color palette, and bespoke design system component library',
+      'Initial content outline and asset preparation checklist',
+    ],
   },
   {
-    n: '02',
-    t: 'Figma Prototype & Design System',
-    d: 'We craft high-fidelity desktop and mobile prototypes with bespoke typography, colors, and UI components for your direct approval.',
-    icon: '🎨',
+    phase: 'Days 3 to 5',
+    title: 'Custom Next.js 15 Frontend Engineering & Cloudflare Edge Deployment',
+    desc: 'We code your website using clean, type-safe Next.js and React components. Every page is statically generated and deployed across Cloudflare’s global edge network for sub-second delivery.',
+    deliverables: [
+      'Bespoke Next.js 15 and Tailwind CSS codebase with zero plugin dependencies',
+      'Mobile-first responsive optimization across all screen resolutions',
+      'Sub-second asset compression and edge caching configuration',
+      'Integration of interactive lead capture forms and click-to-call buttons',
+    ],
   },
   {
-    n: '03',
-    t: 'Next.js & Cloudflare Development',
-    d: 'We code your site using clean, type-safe Next.js and React components with sub-second asset delivery on Cloudflare Global Edge.',
-    icon: '⚙️',
+    phase: 'Days 6 to 7',
+    title: 'Content Population, JSON-LD Schema, GA4 Setup & Live Launch',
+    desc: 'We integrate your copy, high-resolution photography, structured schema markup, and conversion tracking. We execute a zero-downtime domain switch and deliver a video handover session.',
+    deliverables: [
+      'Full content population and high-resolution WebP image optimization',
+      'Exhaustive JSON-LD LocalBusiness and ProfessionalService schema deployment',
+      'Google Analytics 4 conversion event and goal tracking configuration',
+      'Zero-downtime DNS cutover and recorded video training session',
+    ],
   },
   {
-    n: '04',
-    t: 'Content, Schema & Tracking Integration',
-    d: 'We integrate your copy, high-resolution photography, JSON-LD schema markup, and Google Analytics 4 conversion event tracking.',
-    icon: '✍️',
+    phase: 'Post-Launch',
+    title: '30-Day Full Warranty & Ongoing Engineering Support',
+    desc: 'We stand behind our code with a complete 30-day post-launch warranty covering any bug fixes, technical adjustments, or content revisions to ensure total peace of mind.',
+    deliverables: [
+      '30-day comprehensive bug fix and code adjustment guarantee',
+      'Post-launch Core Web Vitals and speed monitoring validation',
+      'Direct communication channel with senior technical engineers',
+      'Optional month-to-month growth and feature expansion retainers',
+    ],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Tech Stack & Performance',
+    factoryjet: 'Modern Next.js and React deployed to Cloudflare Edge (Lighthouse 95+).',
+    traditional: 'Outdated WordPress themes loaded with 35 third-party plugins (Lighthouse <60).',
   },
   {
-    n: '05',
-    t: 'Production Launch & Handover Session',
-    d: 'We run pre-launch QA, connect your custom domain with zero downtime, and record a video training session for your team.',
-    icon: '🚀',
+    label: 'Delivery Speed SLA',
+    factoryjet: 'Guaranteed 7-day sprint delivery from signed scope to live production.',
+    traditional: 'Open-ended timelines dragging projects out for 4 to 8 months.',
+  },
+  {
+    label: 'Pricing Transparency',
+    factoryjet: 'Fixed-price milestone contracts with exact written deliverables.',
+    traditional: 'Unpredictable hourly billing with expensive scope change add-ons.',
+  },
+  {
+    label: 'Code & Asset Ownership',
+    factoryjet: 'You own 100% of your Git repository, Figma files, and hosting setup.',
+    traditional: 'Locks code inside proprietary agency platforms or mandatory retainers.',
+  },
+  {
+    label: 'Search Engine Readiness',
+    factoryjet: 'Built-in JSON-LD entity schema, sub-second speed, and GA4 tracking.',
+    traditional: 'Treats SEO and analytics as an expensive optional upsell after launch.',
+  },
+  {
+    label: 'Team Communication',
+    factoryjet: 'Direct access to the senior software engineers building your website.',
+    traditional: 'Junior account coordinators acting as communication intermediaries.',
   },
 ];
 
@@ -174,6 +276,18 @@ const FAQ_ITEMS = [
       'Yes. Our 7-day delivery sprint is built on dedicated engineering workflows: discovery and Figma UI design in days 1 to 2, Next.js component development in days 3 to 5, and content population, SEO schema, and QA launch on days 6 and 7.',
   },
   {
+    category: 'pricing',
+    question: 'What is included in the fixed-price web design quote?',
+    answer:
+      'Every project includes complete strategy, interactive Figma UI prototypes, Next.js frontend development, content population, mobile Core Web Vitals optimization, JSON-LD schema markup, Google Analytics 4 conversion tracking, DNS domain launch, and a 30-day post-launch warranty.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you handle revisions during the 7-day build process?',
+    answer:
+      'During days 1 and 2, we present interactive Figma prototypes for your team to review and annotate directly. We conduct two structured revision cycles before writing code, ensuring the visual layout is 100% approved before frontend engineering begins.',
+  },
+  {
     category: 'technical',
     question: 'Why do you build on Next.js instead of WordPress?',
     answer:
@@ -184,6 +298,18 @@ const FAQ_ITEMS = [
     question: 'How do you ensure our website passes Google Core Web Vitals?',
     answer:
       'We optimize image compression with modern AVIF/WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+  },
+  {
+    category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
+    answer:
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
+    answer:
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
   },
   {
     category: 'local',
@@ -198,6 +324,18 @@ const FAQ_ITEMS = [
       'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and med spas across Greater Cleveland, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
   },
   {
+    category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our Cleveland business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
+  },
+  {
+    category: 'local',
+    question: 'How does your web design optimize for local Cleveland search rankings?',
+    answer:
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Cleveland, Lakewood, Beachwood, Solon, and Westlake.',
+  },
+  {
     category: 'ownership',
     question: 'Do we own the website code and design assets after launch?',
     answer:
@@ -208,6 +346,18 @@ const FAQ_ITEMS = [
     question: 'What kind of support is included after the website goes live?',
     answer:
       'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
+    answer:
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
+    answer:
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
   },
 ];
 
@@ -281,7 +431,7 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Cleveland', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'Cleveland', item: 'https://factoryjet.com/cleveland/seo' },
     { '@type': 'ListItem', position: 3, name: 'Web Design', item: CANONICAL },
   ],
 };
@@ -488,8 +638,76 @@ export default function ClevelandWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Cleveland Businesses
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in Cleveland demands tailored user experiences, technical credibility, and conversion paths:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -536,7 +754,7 @@ export default function ClevelandWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="web-architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// CLEVELAND MODERN WEB ARCHITECTURE BLUEPRINT"
@@ -549,55 +767,124 @@ export default function ClevelandWebDesignPage() {
           />
         </div>
 
-        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
-              {/* Left Column Sticky Content */}
-              <div style={{ position: 'sticky', top: '100px' }}>
-                <div className="rv-badge" style={{ marginBottom: '14px' }}>
-                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
-                  </svg>
-                  <span>Step-by-Step Delivery</span>
-                </div>
-                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 7-Day Sprint Delivery Protocol
-                </h2>
-                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From discovery and Figma design to full Next.js development, QA testing, and live domain launch in 7 calendar days.
-                </p>
-                <ModalCTAButton label="Start Your Project" region="us" btnVariant="primary-dark" />
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
 
-              {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
-                        {s.icon}
-                      </div>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
-                        {s.n}
-                      </span>
-                    </div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
-                      {s.t}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
-                      {s.d}
-                    </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
                   </div>
-                ))}
-              </div>
 
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Cleveland Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
         <FAQ
           eyebrow="CLEVELAND WEB DESIGN INTELLIGENCE"
           headline="Frequently Asked Questions About Web Design in Cleveland OH"
@@ -607,14 +894,14 @@ export default function ClevelandWebDesignPage() {
           bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <WebDesignCityLinksUS currentCity="cleveland" />
           </div>
         </section>
 
-        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
           <div className="pp-wrap" style={{ maxWidth: '800px' }}>
             <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>

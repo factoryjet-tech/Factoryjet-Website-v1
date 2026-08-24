@@ -13,23 +13,23 @@ const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/colorado-springs/seo';
 
 export const metadata: Metadata = {
-  title: 'Colorado Springs SEO Company & Local Agency CO | FactoryJet',
+  title: 'Colorado Springs SEO Company & Local Agency | FactoryJet',
   description:
-    'Colorado Springs SEO company. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Colorado Springs CO.',
+    'Colorado Springs SEO company and agency. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Olympic City.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Colorado Springs SEO Company & Local Agency CO | FactoryJet',
+    title: 'Colorado Springs SEO Company & Local Agency | FactoryJet',
     description:
-      'Colorado Springs SEO company and agency. No-contract local SEO, Google Map Pack rankings, and technical SEO for Colorado Springs CO businesses.',
+      'Colorado Springs SEO company and agency. No-contract local SEO, Google Map Pack rankings, and technical SEO for Colorado Springs businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Colorado Springs SEO Company & Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Colorado Springs SEO Company & Local Agency CO | FactoryJet',
+    title: 'Colorado Springs SEO Company & Local Agency | FactoryJet',
     description: 'Local and technical SEO in Colorado Springs CO. Win the Google Map Pack and AI search citations.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -49,107 +49,209 @@ const PARTNERS = [
 
 const STAT_CARDS = [
   { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local profiles.', icon: '📍' },
-  { num: '4,400+', title: 'Monthly Head Demand', desc: 'Monthly searches across Colorado Springs SEO company and agency queries.', icon: '📈' },
-  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across B2B, aerospace, and services.', icon: '🏢' },
+  { num: '180+', title: 'Monthly Head Demand', desc: 'Verified monthly searches across Colorado Springs SEO company and agency queries.', icon: '📈' },
+  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across defense, medical, and services.', icon: '🏢' },
   { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
   {
     corridor: 'Downtown & Tejon Corridor',
-    query: 'personal injury lawyer colorado springs',
-    focus: 'Legal, Financial Services & Commercial Hubs',
-    desc: 'High-density professional services corridor in central Colorado Springs. Local search visibility here depends on clean category mapping, strong review authority, and mobile-optimized site performance.',
+    query: 'colorado springs business attorney',
+    focus: 'Legal, Corporate Counsel & Professional Services',
+    desc: 'Central commercial district anchored by the Pikes Peak Center and historic Tejon Street. Corporate buyers look for verified client testimonials and clear practice area expertise.',
   },
   {
     corridor: 'Briargate & Northgate',
-    query: 'dentist briargate colorado springs',
-    focus: 'Healthcare, Dental & Family Practices',
-    desc: 'Rapidly growing residential and medical corridor near the Air Force Academy. High-earning families research reviews, provider credentials, and Google Maps directions before booking appointments.',
+    query: 'family dentist briargate colorado springs',
+    focus: 'Healthcare, Dental & High-Income Family Services',
+    desc: 'Rapidly expanding northern residential corridor along Powers Boulevard. High-converting practices capture patients through mobile speed, localized reviews, and Map Pack prominence.',
   },
   {
-    corridor: 'Powers Corridor & Falcon',
-    query: 'hvac repair colorado springs',
-    focus: 'Home Services, Contractors & Retail',
-    desc: 'Major commercial artery for roofing, HVAC, plumbing, and home remodeling. Seasonal weather shifts create sudden spikes in local repair searches across El Paso County.',
+    corridor: 'Interquest & Tech Center',
+    query: 'aerospace defense contractors colorado springs',
+    focus: 'Defense Technology, Cybersecurity & Engineering',
+    desc: 'Defense and aerospace technology corridor near the Air Force Academy. Answer-first content, technical certifications, and CMMC compliance signals capture prime defense procurement.',
   },
   {
-    corridor: 'Broadmoor & Southwest Corridor',
-    query: 'med spa colorado springs',
-    focus: 'Luxury Hospitality, Wellness & Private Wealth',
-    desc: 'Affluent residential and resort corridor near Cheyenne Mountain. High-ticket clients conduct deep research into brand reputation, certifications, and customer experiences.',
+    corridor: 'Garden of the Gods & Westside',
+    query: 'outdoor adventure tours colorado springs',
+    focus: 'Tourism, Outdoor Hospitality & Active Living',
+    desc: 'High-volume tourist hub surrounding Manitou Springs and Old Colorado City. Mobile discoverability, seasonal review velocity, and rich visual schema drive bookings.',
   },
   {
-    corridor: 'Old Colorado City & Manitou',
-    query: 'boutique hotel manitou springs',
-    focus: 'Hospitality, Dining & Tourism',
-    desc: 'Historic tourism and arts district along the foothills of Pikes Peak. Discovery is visual and seasonal, where fresh photos, correct hours, and local schema capture tourist and local foot traffic.',
+    corridor: 'Falcon & Eastern Expansion Corridor',
+    query: 'roofing contractor falcon co',
+    focus: 'Home Services, Roofing & General Contractors',
+    desc: 'Fast-growing eastern suburbs facing extreme Pikes Peak hail storms. Urgent homeowner search terms require localized Map Pack dominance and immediate click-to-call flows.',
   },
   {
-    corridor: 'Aerospace & Defense Corridor',
-    query: 'defense contractor suppliers colorado springs',
-    focus: 'Aerospace, Defense & Cybersecurity B2B',
-    desc: 'High-tech corridor surrounding Peterson Space Force Base and Schriever. Technical SEO, precise capability statements, and compliance schema earn positions on defense procurement shortlists.',
+    corridor: 'The Broadmoor & South Suburbs',
+    query: 'wealth management broadmoor colorado springs',
+    focus: 'Private Wealth, Luxury Real Estate & Med Spas',
+    desc: 'Affluent southern corridor where high-net-worth clients research provider reputations and comprehensive credentials before booking consultations.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Defense Technology, Aerospace & Cybersecurity',
+    headline: 'Capturing Prime Defense Procurement Around Space Command & Peterson SFB',
+    description:
+      'Home to U.S. Space Command, Peterson Space Force Base, and Schriever Space Force Base, Colorado Springs is America’s premier defense technology hub. We build authoritative capability silos, government entity schemas, and sub-second page performance that position engineering contractors on prime DoD procurement lists.',
+    image: '/images/us/colorado-springs/hero-colorado-springs.webp',
+    alt: 'Colorado Springs aerospace and defense contracting local SEO strategy',
+    points: [
+      'Structured entity schemas for GovernmentOrganization and DefenseContractor',
+      'Answer-first technical capability sheets formatted for AI answer indexing',
+      'Sub-second page speeds on Next.js and Cloudflare Edge infrastructure',
+    ],
+  },
+  {
+    sector: 'High-Ticket Home Services, Roofing & Storm Repair',
+    headline: 'Dominating Severe Hail and Freeze-Thaw Emergency Searches',
+    description:
+      'Severe Rocky Mountain hail storms and drastic Pikes Peak weather shifts create urgent homeowner repair demands across El Paso County. We position your contracting business directly in the top 3 Google Map Pack with live call recording and neighborhood service pages from Briargate to Falcon.',
+    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    alt: 'Colorado Springs roofing contractor and home services local SEO map pack',
+    points: [
+      'Dedicated neighborhood landing pages for Briargate, Northgate, Falcon, and Fountain',
+      'Real-time call recording and conversion attribution integrated into Google Analytics 4',
+      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+    ],
+  },
+  {
+    sector: 'Healthcare, Orthopedics & Sports Medicine',
+    headline: 'Winning Patient Trust in America’s Olympic City',
+    description:
+      'As Olympic City USA, Colorado Springs has an active population demanding top-tier sports medicine, physical therapy, and orthodontic care. We build comprehensive medical schema, doctor profile hubs, and automated patient review systems that secure top organic rankings and AI overview citations.',
+    image: '/images/us/services/seo/team-cutout.webp',
+    alt: 'Colorado Springs sports medicine and healthcare practice local SEO',
+    points: [
+      'Comprehensive schema for MedicalClinic, Physician, and SportsMedicine',
+      'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
+      'Post-appointment SMS review workflows generating steady 5-star patient feedback',
+    ],
+  },
+  {
+    sector: 'Tourism, Outdoor Recreation & Hospitality',
+    headline: 'Converting Millions of Annual Pikes Peak Visitors on Mobile',
+    description:
+      'From Garden of the Gods to Pikes Peak cog railway tours, millions of tourists visit Colorado Springs each year looking for immediate mobile recommendations. We optimize local entity signals, live event schemas, and mobile page performance to capture tourists searching on their phones.',
+    image: '/images/us/services/seo/hero-seo.webp',
+    alt: 'Colorado Springs outdoor recreation tourism and hospitality local SEO',
+    points: [
+      'Sub-second mobile speed optimization capturing immediate on-the-go visitor searches',
+      'Structured TouristAttraction and Event schema for rich Google search snippets',
+      'Continuous review velocity optimization across Google Maps and Apple Maps',
+    ],
   },
 ];
 
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Breaking Through Map Pack Competition Across the Pikes Peak Region',
-    problem: 'Hundreds of local contractors and service businesses fight for the same top 3 Google Map Pack spots across Colorado Springs and El Paso County.',
+    title: 'Overcoming Map Pack Invisibility Across Pikes Peak Region Corridors',
+    problem: 'Outdated business listings, missing category signals, and zero review velocity leave your business invisible on the second and third pages of Google Maps.',
     solution: 'We execute comprehensive Google Business Profile optimization, primary category audits, geotagged photo feeds, and automated review collection systems.',
   },
   {
     num: '02',
-    title: 'Fixing Slow Legacy Themes That Fail Core Web Vitals and Organic Rankings',
-    problem: 'Bloated WordPress templates, slow server hosting, and missing schema markup prevent search engine bots and AI answer engines from recognizing your authority.',
+    title: 'Fixing Slow Legacy Code and Technical Debt That Destroys Rankings',
+    problem: 'Bloated WordPress plugins, sluggish server hosting, and missing schema markup prevent search engine bots and AI assistants from indexing your pages.',
     solution: 'We engineer sub-second page loads, clean JSON-LD entity schema, and single-hop crawl architecture to earn top organic ranks and Google AI Overview citations.',
   },
   {
     num: '03',
     title: 'Ending Locked 12-Month Contracts with Zero Transparent Lead Attribution',
-    problem: 'Traditional agencies lock Colorado Springs businesses into annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
+    problem: 'Traditional agencies lock Colorado Springs businesses into rigid annual retainers while delivering meaningless keyword ranking screenshots instead of qualified leads.',
     solution: 'FactoryJet operates on flexible month-to-month agreements. We track real phone calls, form completions, and qualified pipeline revenue with custom GA4 events.',
   },
   {
     num: '04',
-    title: 'Capturing High-Value Geo-Targeted Commercial Keywords Across El Paso County',
-    problem: 'Relying solely on broad city terms causes businesses to miss high-intent searches across Briargate, Fountain, Monument, and Falcon.',
-    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Front Range.',
+    title: 'Capturing High-Value Geo-Targeted Commercial Keywords in El Paso County',
+    problem: 'Relying solely on broad city-level terms causes businesses to miss high-intent searches across Briargate, Falcon, Fountain, and Monument.',
+    solution: 'We build structured local service area landing pages and localized content silos that capture micro-corridor search volume throughout the Pikes Peak region.',
   },
 ];
 
-const WORKING_STEPS = [
+const ROADMAP_STEPS = [
   {
-    n: '01',
-    t: 'Comprehensive Colorado Springs Market Audit',
-    d: 'We analyze your current rankings, Google Business Profile health, Core Web Vitals, backlink profile, and top local competitors across El Paso County.',
-    icon: '🔍',
+    phase: 'Month 1',
+    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
+    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
+    deliverables: [
+      'Comprehensive 50-point technical SEO and crawlability audit report',
+      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
+      'Google Business Profile category audit, address verification, and metadata cleanup',
+      'Custom phone call, form submission, and live chat conversion tracking setup',
+    ],
   },
   {
-    n: '02',
-    t: 'Technical SEO & Core Web Vitals Optimization',
-    d: 'We repair slow server response times, eliminate render-blocking scripts, fix crawl errors, and implement exhaustive JSON-LD LocalBusiness schema.',
-    icon: '⚙️',
+    phase: 'Month 2',
+    title: 'Local Citation Architecture, Review Systems & Entity Schema',
+    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
+    deliverables: [
+      'Cleanup and synchronization across 40+ premier local business directories',
+      'Implementation of exhaustive nested JSON-LD schema markup',
+      'Automated SMS and email review collection system deployment',
+      'Competitive gap analysis against top 3 Colorado Springs Map Pack leaders',
+    ],
   },
   {
-    n: '03',
-    t: 'Google Business Profile & Map Pack Acceleration',
-    d: 'We optimize primary categories, secondary service menus, business descriptions, high-resolution visual assets, and local review collection systems.',
-    icon: '📍',
+    phase: 'Month 3',
+    title: 'Corridor Landing Pages & Pikes Peak Content Silo Expansion',
+    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Colorado Springs business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
+    deliverables: [
+      'Launch of dedicated neighborhood service pages for key target areas',
+      'Publishing of detailed service category guides and comparison matrices',
+      'On-page internal linking optimization across core commercial URLs',
+      'First quarterly ranking progress review and pipeline attribution report',
+    ],
   },
   {
-    n: '04',
-    t: 'Localized Corridor Content & Entity Building',
-    d: 'We write deep, answer-first landing pages tailored to specific Colorado Springs districts and surrounding towns from Briargate to Monument and Fountain.',
-    icon: '✍️',
+    phase: 'Months 4 to 6',
+    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
+    desc: 'We build high-quality contextual backlinks from reputable Colorado publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
+    deliverables: [
+      'Targeted local digital PR and editorial backlink acquisition',
+      'Generative Engine Optimization formatting for AI answer citation',
+      'Ongoing Map Pack rank tracking and competitor defense updates',
+      'Monthly executive strategy meetings with senior technical engineers',
+    ],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Contract Flexibility',
+    factoryjet: 'Month-to-month agreements based on performance and trust.',
+    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
   },
   {
-    n: '05',
-    t: 'Live Attribution & Continuous Month-to-Month Growth',
-    d: 'We deliver transparent monthly reporting tracking real phone calls, form submissions, revenue growth, and AI citation visibility across ChatGPT and Google.',
-    icon: '📈',
+    label: 'Team Seniority',
+    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
+    traditional: 'Junior account coordinators acting as communication intermediaries.',
+  },
+  {
+    label: 'Technical Implementation',
+    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
+    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+  },
+  {
+    label: 'Lead Attribution',
+    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
+    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+  },
+  {
+    label: 'Data & Account Ownership',
+    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
+    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
+  },
+  {
+    label: 'AI & Generative Search',
+    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
+    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
   },
 ];
 
@@ -175,6 +277,12 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
+    question: 'What hidden fees or setup costs should Colorado Springs businesses watch out for?',
+    answer:
+      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
+  },
+  {
+    category: 'pricing',
     question: 'How do I compare quotes from different Colorado Springs SEO companies?',
     answer:
       'Compare deliverables, team seniority, and account ownership. Verify whether technical code fixes are included or billed extra, whether you will speak directly with an engineer or an account manager, and confirm that you retain 100% ownership of your content, code, and analytics data.',
@@ -187,15 +295,21 @@ const FAQ_ITEMS = [
   },
   {
     category: 'local',
-    question: 'Can you rank our business in surrounding towns like Monument, Fountain, and Falcon?',
+    question: 'Can you rank our business in surrounding towns like Monument, Falcon, and Fountain?',
     answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting El Paso County suburbs including Monument, Fountain, Falcon, Manitou Springs, and Woodland Park.',
+      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting Greater El Paso County areas including Monument, Falcon, Fountain, Manitou Springs, and Woodland Park.',
   },
   {
     category: 'local',
     question: 'How important are Google reviews for Colorado Springs local rankings?',
     answer:
       'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
+  },
+  {
+    category: 'local',
+    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
+    answer:
+      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
   },
   {
     category: 'technical',
@@ -210,6 +324,18 @@ const FAQ_ITEMS = [
       'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
   },
   {
+    category: 'technical',
+    question: 'Why does website loading speed directly impact Google search rankings?',
+    answer:
+      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured data schema do you implement on local Colorado Springs websites?',
+    answer:
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, GovernmentOrganization, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+  },
+  {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Colorado Springs?',
     answer:
@@ -220,6 +346,18 @@ const FAQ_ITEMS = [
     question: 'How do you track and report SEO return on investment (ROI)?',
     answer:
       'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will algorithm updates from Google disrupt our search rankings?',
+    answer:
+      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+  },
+  {
+    category: 'timeline',
+    question: 'Can SEO replace our paid Google Ads spend in Colorado Springs?',
+    answer:
+      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Colorado Springs clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
   },
 ];
 
@@ -257,10 +395,10 @@ const LOCAL_BUSINESS_SCHEMA = {
   },
   areaServed: [
     { '@type': 'City', name: 'Colorado Springs' },
+    { '@type': 'City', name: 'Briargate' },
     { '@type': 'City', name: 'Monument' },
-    { '@type': 'City', name: 'Fountain' },
     { '@type': 'City', name: 'Falcon' },
-    { '@type': 'City', name: 'Manitou Springs' },
+    { '@type': 'City', name: 'Fountain' },
   ],
 };
 
@@ -273,7 +411,7 @@ const SERVICE_SCHEMA = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Local SEO, Technical SEO & AI Search Optimization',
+  serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Colorado Springs businesses.',
   areaServed: { '@type': 'State', name: 'Colorado' },
@@ -282,7 +420,7 @@ const SERVICE_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Colorado Springs SEO Company & Local Agency CO | FactoryJet',
+  name: 'Colorado Springs SEO Company & Local Agency | FactoryJet',
   description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Colorado Springs CO businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
@@ -326,11 +464,11 @@ export default function ColoradoSpringsSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Colorado Springs SEO Company &amp; Local Agency
+                  Colorado Springs SEO Company &amp; Local Search Marketing Agency
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent Colorado Springs search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  Win the Google 3-Pack Map results, dominate high-intent Pikes Peak region search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">
@@ -341,7 +479,7 @@ export default function ColoradoSpringsSeoPage() {
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Local Corridors</span>
+                    <span>Explore Pikes Peak Corridors</span>
                   </a>
                 </div>
               </div>
@@ -349,8 +487,8 @@ export default function ColoradoSpringsSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/services/seo/hero-seo.webp"
-                  alt="Colorado Springs local SEO technical optimization and Google Map Pack ranking strategy"
+                  src="/images/us/colorado-springs/hero-colorado-springs.webp"
+                  alt="Colorado Springs mountain landscape and local SEO technical optimization strategy"
                   width={640}
                   height={640}
                   priority
@@ -416,7 +554,7 @@ export default function ColoradoSpringsSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With high commercial intent across defense, healthcare, and home contractor services, standard generic SEO fails. We combine Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority to capture real commercial leads.
+                  With defense expansion, booming residential corridors in Briargate, and rapid commercial growth in El Paso County, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -440,7 +578,7 @@ export default function ColoradoSpringsSeoPage() {
 
                 {/* Bottom Actions: Discovery Call CTA Button */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Schedule Strategy Call" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Schedule Colorado Springs Strategy Call" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
 
@@ -448,7 +586,7 @@ export default function ColoradoSpringsSeoPage() {
           </div>
         </section>
 
-        {/* ── 04. COLORADO SPRINGS CORRIDORS DIRECTORY ── */}
+        {/* ── 04. COLORADO SPRINGS BUSINESS CORRIDORS DIRECTORY ── */}
         <section id="cos-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -459,10 +597,10 @@ export default function ColoradoSpringsSeoPage() {
                 <span>Geographic Precision</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored SEO for Colorado Springs Business Corridors
+                Tailored SEO for Colorado Springs Core Corridors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From Downtown professional services to Briargate healthcare and Powers home contractors:
+                From Downtown legal practices to Interquest defense tech and Briargate dental clinics:
               </p>
             </div>
 
@@ -500,8 +638,76 @@ export default function ColoradoSpringsSeoPage() {
           </div>
         </section>
 
-        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Search Strategies for Colorado Springs Leading Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every vertical in Colorado Springs demands distinct schema models, citation targets, and conversion architectures:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -548,7 +754,7 @@ export default function ColoradoSpringsSeoPage() {
           </div>
         </section>
 
-        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="seo-architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// COLORADO SPRINGS LOCAL SEO & AI CITATION BLUEPRINT"
@@ -561,72 +767,141 @@ export default function ColoradoSpringsSeoPage() {
           />
         </div>
 
-        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 08. STEP-BY-STEP 6-MONTH ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
-              {/* Left Column Sticky Content */}
-              <div style={{ position: 'sticky', top: '100px' }}>
-                <div className="rv-badge" style={{ marginBottom: '14px' }}>
-                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
-                  </svg>
-                  <span>Step-by-Step Delivery</span>
-                </div>
-                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Colorado Springs SEO Protocol
-                </h2>
-                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We start with a thorough technical audit and move methodically from low-competition quick wins to high-volume commercial keywords and Map Pack rankings.
-                </p>
-                <ModalCTAButton label="Start Your Free SEO Audit" region="us" btnVariant="primary-dark" />
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Predictable Delivery</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 6-Month Colorado Springs Domination Roadmap
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+              </p>
+            </div>
 
-              {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
-                        {s.icon}
-                      </div>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
-                        {s.n}
-                      </span>
-                    </div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
-                      {s.t}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
-                      {s.d}
-                    </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
                   </div>
-                ))}
-              </div>
 
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Colorado Springs SEO Companies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
         <FAQ
           eyebrow="COLORADO SPRINGS SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Colorado Springs CO"
-          lead="Direct, plain English answers to what Colorado Springs business owners and marketing leaders ask about local search:"
+          lead="Direct, plain English answers to what Colorado Springs business owners and marketing leaders ask about local search rankings and lead generation:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <SeoCityLinksUS currentCity="colorado-springs" />
           </div>
         </section>
 
-        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
           <div className="pp-wrap" style={{ maxWidth: '800px' }}>
             <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
@@ -645,7 +920,7 @@ export default function ColoradoSpringsSeoPage() {
             </p>
             
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Claim Your Free Colorado Springs SEO Audit" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

@@ -93,6 +93,61 @@ const DISTRICTS = [
   },
 ];
 
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Healthcare, Dental & Specialized Clinical Practices',
+    headline: 'Capturing Patient Searches in the Global Healthcare Capital',
+    description:
+      'Operating in the backyard of the Cleveland Clinic and University Hospitals requires exceptional local authority. Independent medical groups, specialized surgical clinics, and orthodontic practices win patient bookings by building exhaustive medical schema, verifying physician credentials, and automating 5-star review collection workflows.',
+    image: '/images/us/services/seo/hero-seo.webp',
+    alt: 'Cleveland healthcare and medical practice local SEO search optimization',
+    points: [
+      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
+      'Post-appointment SMS review acquisition generating steady patient feedback',
+    ],
+  },
+  {
+    sector: 'Precision Manufacturing, Polymers & Industrial B2B',
+    headline: 'Winning National Supplier Procurement Across Northeast Ohio',
+    description:
+      'From polymer compounders and metal fabricators in Solon to machinery suppliers in Independence, industrial buyers research technical specifications online before submitting an RFQ. We format technical capability matrices and spec sheets to rank for B2B buyer queries and earn automated citations in generative AI search tools.',
+    image: '/images/us/commerce/ecommerce-for-manufacturers-factory-floor.webp',
+    alt: 'Cleveland precision manufacturing and industrial supplier enterprise SEO',
+    points: [
+      'Answer-first technical specifications formatted for AI answer engine indexing',
+      'Sub-second page load speeds on Next.js and Cloudflare Edge CDN infrastructure',
+      'Structured capability matrices and downloadable technical PDF spec indexing',
+    ],
+  },
+  {
+    sector: 'Legal Practices, Corporate Counsel & Litigation',
+    headline: 'Securing High-Value Cases Across Cuyahoga County Courts',
+    description:
+      'Legal search terms in Downtown Cleveland and surrounding suburbs carry immense commercial value. We engineer deep practice-area content hubs for personal injury, corporate litigation, and estate planning that establish undeniable local authority and capture permanent top-three organic rankings.',
+    image: '/images/us/services/seo/team-cutout.webp',
+    alt: 'Cleveland law firm organic search marketing and litigation practice SEO',
+    points: [
+      'Detailed practice area silos for commercial litigation and injury law',
+      'Attorney profile schema with state bar admissions and verified case summaries',
+      'High-authority regional media citations and local legal directory synchronization',
+    ],
+  },
+  {
+    sector: 'High-Ticket Home Services, HVAC & Roofing Contractors',
+    headline: 'Capturing Emergency Search Demand Across Lake Erie Weather Shifts',
+    description:
+      'Severe winter lake-effect snowstorms and hot, humid summer heatwaves trigger urgent home repair searches across Cuyahoga and Lorain counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood to Westlake.',
+    image: '/images/us/commerce/ecommerce-growth-agency-team.webp',
+    alt: 'Cleveland home services and mechanical contractor local SEO map pack strategy',
+    points: [
+      'Neighborhood landing pages for Lakewood, Westlake, Beachwood, and Strongsville',
+      'Live call recording and conversion attribution integrated into Google Analytics 4',
+      'Crawl-optimized review velocity systems to outperform multi-truck regional competitors',
+    ],
+  },
+];
+
 const PAIN_POINTS = [
   {
     num: '01',
@@ -120,36 +175,83 @@ const PAIN_POINTS = [
   },
 ];
 
-const WORKING_STEPS = [
+const ROADMAP_STEPS = [
   {
-    n: '01',
-    t: 'Comprehensive Cleveland Market & Competitor Audit',
-    d: 'We analyze your current rankings, Google Business Profile health, Core Web Vitals, backlink profile, and top competitors across Cuyahoga County.',
-    icon: '🔍',
+    phase: 'Month 1',
+    title: 'Full Technical Audit, Core Web Vitals Fixes & GBP Baseline',
+    desc: 'We conduct a line-by-line audit of your website code, crawl depth, indexing health, server response times, and current Google Business Profile status. We resolve all technical errors, repair broken redirects, clean up duplicate citations, and establish baseline conversion tracking in Google Analytics 4.',
+    deliverables: [
+      'Comprehensive 50-point technical SEO and crawlability audit report',
+      'Core Web Vitals code refactoring targeting sub-second LCP and zero CLS',
+      'Google Business Profile category audit, address verification, and metadata cleanup',
+      'Custom phone call, form submission, and live chat conversion tracking setup',
+    ],
   },
   {
-    n: '02',
-    t: 'Technical SEO & Core Web Vitals Optimization',
-    d: 'We repair slow server response times, eliminate render-blocking scripts, fix crawl errors, and implement exhaustive JSON-LD LocalBusiness schema.',
-    icon: '⚙️',
+    phase: 'Month 2',
+    title: 'Local Citation Architecture, Review Systems & Entity Schema',
+    desc: 'We rebuild your local citation footprint across essential Tier 1 business directories, mapping your Name, Address, and Phone number with complete consistency. In parallel, we deploy structured JSON-LD LocalBusiness schema and launch automated review generation workflows.',
+    deliverables: [
+      'Cleanup and synchronization across 40+ premier local business directories',
+      'Implementation of exhaustive nested JSON-LD schema markup',
+      'Automated SMS and email review collection system deployment',
+      'Competitive gap analysis against top 3 Cleveland Map Pack leaders',
+    ],
   },
   {
-    n: '03',
-    t: 'Google Business Profile & Map Pack Acceleration',
-    d: 'We optimize primary categories, secondary service menus, business descriptions, high-resolution visual assets, and local review collection systems.',
-    icon: '📍',
+    phase: 'Month 3',
+    title: 'Corridor Landing Pages & Cleveland Content Silo Expansion',
+    desc: 'We architect and publish high-converting, answer-first landing pages tailored to specific Cleveland business corridors and surrounding suburbs. Each page is engineered with distinct geographic schema, localized proof points, and targeted commercial copy.',
+    deliverables: [
+      'Launch of dedicated neighborhood service pages for key target areas',
+      'Publishing of detailed service category guides and comparison matrices',
+      'On-page internal linking optimization across core commercial URLs',
+      'First quarterly ranking progress review and pipeline attribution report',
+    ],
   },
   {
-    n: '04',
-    t: 'Localized Corridor Content & Entity Building',
-    d: 'We write deep, answer-first landing pages tailored to specific Cleveland districts and surrounding towns from Lakewood to Solon and Westlake.',
-    icon: '✍️',
+    phase: 'Months 4 to 6',
+    title: 'Authority Link Acquisition, AI Engine Optimization & Scale',
+    desc: 'We build high-quality contextual backlinks from reputable Ohio publications, industry associations, and regional business hubs. We optimize content structure to trigger direct citations across generative AI search platforms including ChatGPT, Perplexity, and Google AI Overviews.',
+    deliverables: [
+      'Targeted local digital PR and editorial backlink acquisition',
+      'Generative Engine Optimization formatting for AI answer citation',
+      'Ongoing Map Pack rank tracking and competitor defense updates',
+      'Monthly executive strategy meetings with senior technical engineers',
+    ],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Contract Flexibility',
+    factoryjet: 'Month-to-month agreements based on performance and trust.',
+    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
   },
   {
-    n: '05',
-    t: 'Live Attribution & Continuous Month-to-Month Growth',
-    d: 'We deliver transparent monthly reporting tracking real phone calls, form submissions, revenue growth, and AI citation visibility across ChatGPT and Google.',
-    icon: '📈',
+    label: 'Team Seniority',
+    factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
+    traditional: 'Junior account coordinators acting as communication intermediaries.',
+  },
+  {
+    label: 'Technical Implementation',
+    factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
+    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+  },
+  {
+    label: 'Lead Attribution',
+    factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
+    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+  },
+  {
+    label: 'Data & Account Ownership',
+    factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
+    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
+  },
+  {
+    label: 'AI & Generative Search',
+    factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
+    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
   },
 ];
 
@@ -172,6 +274,12 @@ const FAQ_ITEMS = [
     question: 'Why do you offer month-to-month terms instead of 12-month contracts?',
     answer:
       'We believe client retention should be earned through measurable lead generation and ranking improvements rather than legal lock-ins. Month-to-month agreements keep our engineering team accountable to driving real business pipeline every 30 days.',
+  },
+  {
+    category: 'pricing',
+    question: 'What hidden fees or setup costs should Cleveland businesses watch out for?',
+    answer:
+      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
   },
   {
     category: 'pricing',
@@ -198,6 +306,12 @@ const FAQ_ITEMS = [
       'Google reviews are one of the strongest direct ranking factors for local search. We help your business implement frictionless post-service SMS and email review collection workflows that consistently generate verified 5-star customer feedback.',
   },
   {
+    category: 'local',
+    question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
+    answer:
+      'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
+  },
+  {
     category: 'technical',
     question: 'What is technical SEO and why is it essential for Cleveland businesses?',
     answer:
@@ -210,6 +324,18 @@ const FAQ_ITEMS = [
       'We format content using answer-first prose, authoritative factual data, structured schema entities, and clean semantic HTML. This enables AI search engines like Perplexity, ChatGPT Search, and Google AI Overviews to parse and quote your brand directly.',
   },
   {
+    category: 'technical',
+    question: 'Why does website loading speed directly impact Google search rankings?',
+    answer:
+      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+  },
+  {
+    category: 'technical',
+    question: 'What structured data schema do you implement on local Cleveland websites?',
+    answer:
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+  },
+  {
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Cleveland?',
     answer:
@@ -220,6 +346,18 @@ const FAQ_ITEMS = [
     question: 'How do you track and report SEO return on investment (ROI)?',
     answer:
       'We track real commercial outcomes: phone call leads, form submissions, online appointment bookings, and organic revenue via custom Google Analytics 4 event tracking and Google Search Console data.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will algorithm updates from Google disrupt our search rankings?',
+    answer:
+      'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
+  },
+  {
+    category: 'timeline',
+    question: 'Can SEO replace our paid Google Ads spend in Cleveland?',
+    answer:
+      'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Cleveland clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
   },
 ];
 
@@ -274,7 +412,7 @@ const SERVICE_SCHEMA = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  serviceType: 'Local SEO, Technical SEO & AI Search Optimization',
+  serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Cleveland businesses.',
   areaServed: { '@type': 'State', name: 'Ohio' },
@@ -327,7 +465,7 @@ export default function ClevelandSeoPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Cleveland SEO Company &amp; Local Search Agency
+                  Cleveland SEO Company &amp; Local Search Marketing Agency
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
@@ -501,8 +639,76 @@ export default function ClevelandSeoPage() {
           </div>
         </section>
 
-        {/* ── 05. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Search Strategies for Cleveland&apos;s Leading Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every vertical in Cleveland demands distinct schema models, citation targets, and conversion architectures:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
               <div className="rv-badge" style={{ marginBottom: '14px' }}>
@@ -549,7 +755,7 @@ export default function ClevelandSeoPage() {
           </div>
         </section>
 
-        {/* ── 06. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="seo-architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// CLEVELAND LOCAL SEO & AI CITATION BLUEPRINT"
@@ -562,72 +768,141 @@ export default function ClevelandSeoPage() {
           />
         </div>
 
-        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+        {/* ── 08. STEP-BY-STEP 6-MONTH ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
-              
-              {/* Left Column Sticky Content */}
-              <div style={{ position: 'sticky', top: '100px' }}>
-                <div className="rv-badge" style={{ marginBottom: '14px' }}>
-                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
-                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
-                  </svg>
-                  <span>Step-by-Step Delivery</span>
-                </div>
-                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
-                  Our 5-Step Cleveland SEO Protocol
-                </h2>
-                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  We start with a thorough technical audit and move methodically from low-competition quick wins to high-volume commercial keywords and Map Pack rankings.
-                </p>
-                <ModalCTAButton label="Start Your Free SEO Audit" region="us" btnVariant="primary-dark" />
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Predictable Delivery</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 6-Month Cleveland Search Domination Roadmap
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A transparent, step-by-step engineering roadmap delivering compounding search visibility from day one:
+              </p>
+            </div>
 
-              {/* Right Column Step Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {WORKING_STEPS.map((s) => (
-                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
-                        {s.icon}
-                      </div>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
-                        {s.n}
-                      </span>
-                    </div>
-                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
-                      {s.t}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
-                      {s.d}
-                    </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
                   </div>
-                ))}
-              </div>
 
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ── 08. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Cleveland SEO Companies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
         <FAQ
           eyebrow="CLEVELAND SEO INTELLIGENCE"
           headline="Frequently Asked Questions About SEO in Cleveland OH"
-          lead="Direct, plain English answers to what Cleveland business owners and marketing leaders ask about local search:"
+          lead="Direct, plain English answers to what Cleveland business owners and marketing leaders ask about local search rankings and lead generation:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── 09. LOCAL LINK SILO MATRIX ── */}
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <SeoCityLinksUS currentCity="cleveland" />
           </div>
         </section>
 
-        {/* ── 10. FINAL EXECUTIVE CTA BANNER ── */}
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
           <div className="pp-wrap" style={{ maxWidth: '800px' }}>
             <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
