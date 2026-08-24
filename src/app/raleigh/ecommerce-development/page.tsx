@@ -1,560 +1,922 @@
-// V2 ecommerce city page — Raleigh, NC
-// Design system: py-10 md:py-14 standard | 30/65/5 dark/light rhythm | Clash Display headlines
-// Schema: server-side via SchemaScript (AI-crawler visible in initial HTML)
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
-import Link from 'next/link'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/raleigh/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Top-Rated Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'Shopify developer in Raleigh NC: stores live in 7 days, fixed-price. Research Triangle e-commerce: Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description:
+    'Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Top-Rated Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists: Shopify, WooCommerce & AI. 500+ projects, 4.9★ on Google. Free audit.',
-    url: 'https://factoryjet.com/raleigh/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Raleigh' }],
+    title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description:
+      'Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Raleigh Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top-Rated Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify developer in Raleigh, NC: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists.',
+    title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/raleigh/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['raleigh'],
-  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
-}
+};
 
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Headless Next.js 15',
+  'BigCommerce B2B Edition',
+  'Klaviyo Master Elite',
+  'Algolia Search AI',
+  'Sanity CMS Studio',
+  'Cloudflare Edge CDN',
+  'Stripe Payments Enterprise',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Research Triangle Park (RTP) BioTech Corridor',
+    query: 'laboratory consumables clinical biotech wholesale ecommerce rtp nc',
+    focus: 'Clinical Supplies, Lab Consumables & BioTech Wholesale',
+    desc: 'The global research and life sciences hub. Demands compliance-first wholesale portals, custom ERP inventory sync, and multi-tier pricing.',
+  },
+  {
+    corridor: 'Downtown Raleigh & Warehouse District',
+    query: 'modern d2c lifestyle apparel retail ecommerce warehouse district raleigh',
+    focus: 'Modern D2C Brands, Craft Retail & Lifestyle Flagships',
+    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive sizing calculators, and seamless mobile checkout.',
+  },
+  {
+    corridor: 'North Hills & Midtown Corporate Hub',
+    query: 'enterprise retail franchise distribution ecommerce north hills raleigh',
+    focus: 'Enterprise Omnichannel Retail & Franchise Commerce',
+    desc: 'Major corporate and retail distribution corridor. Features multi-warehouse inventory routing, complex POS synchronization, and automated checkout.',
+  },
+  {
+    corridor: 'Cary Tech & Enterprise Campus Corridor',
+    query: 'software licensing digital subscriptions hardware ecommerce cary nc',
+    focus: 'Software Licensing, Tech Hardware & Digital Subscriptions',
+    desc: 'High-growth technology corridor. Features recurring subscription billing, digital license provisioning, and sub-second global edge performance.',
+  },
+  {
+    corridor: 'Durham American Tobacco & Innovation Hub',
+    query: 'artisanal consumer goods specialty food beverage ecommerce durham nc',
+    focus: 'Specialty Food & Beverage, Artisanal Goods & Direct-to-Consumer',
+    desc: 'Historic innovation core. Features rich visual storytelling, subscription delivery management, and cold-chain shipping calculation.',
+  },
+  {
+    corridor: 'Morrisville & I-40 Logistics Spine',
+    query: 'industrial electronics hardware b2b distribution ecommerce morrisville nc',
+    focus: 'Industrial Electronics, B2B Supplies & Heavy Hardware',
+    desc: 'Advanced manufacturing and freight fulfillment nexus. B2B wholesale portals with purchase order workflows, net-30 terms, and tiered pricing.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Life Sciences, Laboratory Equipment & B2B BioTech',
+    headline: 'Clinical-Grade B2B Wholesale Portals for RTP Research Leaders',
+    description:
+      'Biotechnology providers, laboratory equipment suppliers, and clinical consumable distributors across Research Triangle Park require institutional B2B commerce architectures. We engineer headless Shopify Plus and Next.js applications with automated PO processing, Net-30 credit terms, contracted institutional pricing, and real-time ERP inventory syncing.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Raleigh Research Triangle Park life sciences laboratory equipment and biotech B2B ecommerce engineering',
+    points: [
+      'Custom customer group pricing tiers with contracted research institution discounts',
+      'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
+      'Real-time two-way synchronization with SAP, NetSuite, Epicor, and Microsoft Dynamics ERPs',
+    ],
+  },
+  {
+    sector: 'Direct-to-Consumer Outdoor, Sporting & Athletic Goods',
+    headline: 'High-Converting Headless Storefronts for Carolina Lifestyle Brands',
+    description:
+      'From North Carolina outdoor apparel innovators to athletic footwear brands, high-growth direct-to-consumer businesses demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, and interactive gear configurators.',
+    image: '/images/us/raleigh/hero-raleigh.webp',
+    alt: 'Raleigh direct-to-consumer outdoor sporting goods and athletic apparel ecommerce storefront design',
+    points: [
+      'Sub-second first contentful paint and instant product filtering with zero layout shifts',
+      'Custom interactive bundle builders, sizing calculators, and upsell modules',
+      'Seamless checkout optimization utilizing Shop Pay, Apple Pay, and Klarna financing',
+    ],
+  },
+  {
+    sector: 'Agritech, Specialty Food & Craft Beverage',
+    headline: 'Tactile Editorial E-Commerce for Triangle Artisanal Producers',
+    description:
+      'Specialty roasters, craft breweries, and sustainable agricultural brands across the Triangle demand digital storefronts that reflect their product craft. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Raleigh Durham specialty craft beverage and agritech subscription ecommerce platform',
+    points: [
+      'Flexible recurring subscription management with custom delivery interval selection',
+      'Dynamic cold-pack and localized perishable shipping rate calculation',
+      'Integrated loyalty rewards, customer referral engines, and review collection',
+    ],
+  },
+  {
+    sector: 'Industrial Electronics, CleanTech & Precision Tooling',
+    headline: 'Engineering Commercial Wholesale Engines for Morrisville Distributors',
+    description:
+      'Industrial hardware distributors, electronic component suppliers, and precision tooling manufacturers across Morrisville and I-40 demand robust B2B capabilities. We build high-speed wholesale platforms with bulk CSV order uploads, freight rate estimation at checkout, and automated tax exemption validation.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Raleigh industrial electronics precision hardware and clean technology B2B ecommerce platform',
+    points: [
+      'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
+      'Dynamic LTL freight calculation integrations with real-time carrier rate tables',
+      'Automated Avalara tax exemption certificate management and resale verification',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow Monolithic Platforms & Sluggish Mobile Checkouts',
+    problem: 'Legacy Magento and bloated WooCommerce stores suffer from 4-second load times, checkout friction, and high cart abandonment on mobile devices.',
+    solution: 'We build headless Next.js 15 storefronts connected to Shopify Plus APIs, delivering sub-second page rendering and frictionless 1-tap checkout.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Replatforming Timelines & Revenue Disruption',
+    problem: 'Traditional agencies quote 6 to 9 months for replatforming, leading to massive budget overruns, operational friction, and lost holiday sales.',
+    solution: 'Our disciplined agile migration sprint delivers complete catalog data migration, ERP integration, and production launch in verified milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Broken ERP, POS & Multi-Warehouse Inventory Sync',
+    problem: 'Disjointed inventory systems cause overselling, delayed fulfillment, manual spreadsheet updates, and poor customer reviews across physical and online channels.',
+    solution: 'We engineer real-time two-way webhooks that synchronize inventory across NetSuite, SAP, Manhattan POS, and regional 3PL fulfillment centers.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Complex Plugin Chains & Fragile Checkout Flows',
+    problem: 'Stacking 25+ third-party Shopify apps slows down storefront speed, introduces script conflicts, and creates expensive monthly SaaS subscriptions.',
+    solution: 'We build native React components and custom Shopify Functions, replacing expensive apps with lightweight, custom code that you own 100%.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Catalog Architecture, ERP Mapping & Data Strategy',
+    desc: 'We map every SKU, customer record, historical order, and third-party integration into a clean headless commerce architectural blueprint.',
+    deliverables: ['Product data modeling and attribute hierarchy map', 'ERP, CRM, and 3PL fulfillment integration matrix', 'SEO redirect plan preserving 100% of organic traffic', 'Fixed-price milestone agreement and delivery schedule'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & High-Conversion Storefront Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on friction-free navigation, interactive PDPs, and optimized checkout funnels.',
+    deliverables: ['Complete desktop and mobile Figma prototypes', 'Interactive product detail page and cart drawer wireframes', 'Bespoke design system tokens and typography scales', 'Stakeholder design review and milestone sign-off'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Headless Next.js 15 Engineering & Shopify Plus API Integration',
+    desc: 'We build the production application using Next.js 15 App Router, React 19, Tailwind CSS, and Shopify Storefront GraphQL APIs.',
+    deliverables: ['Custom headless Next.js frontend repository', 'Shopify Plus Storefront API and Cart integration', 'Custom B2B wholesale pricing and portal modules', 'Automated unit, integration, and end-to-end checkout testing'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Zero-Downtime Data Cutover, Speed Tuning & Handover',
+    desc: 'We execute complete database migration, verify 95+ Core Web Vitals, manage DNS cutover, and transfer full code repository ownership.',
+    deliverables: ['Complete historical order and customer data migration', 'Core Web Vitals 95+ optimization report', 'Live DNS cutover with zero downtime or lost orders', 'Full GitHub repository transfer and 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Stack',
+    factoryjet: 'Headless Next.js 15 App Router on Cloudflare Edge paired with Shopify Plus.',
+    traditional: 'Heavy monolithic Shopify themes or outdated monolithic Magento PHP stacks.',
+  },
+  {
+    label: 'Checkout Speed',
+    factoryjet: 'Sub-second mobile page loads with instant 1-tap Shop Pay, Apple Pay, and Google Pay.',
+    traditional: '3 to 5 second mobile page loads with render-blocking tracking scripts and layout shift.',
+  },
+  {
+    label: 'B2B & Wholesale Capabilities',
+    factoryjet: 'Native custom B2B wholesale portal with customer pricing tiers, Net terms, and ERP sync.',
+    traditional: 'Fragile third-party apps charging expensive monthly subscriptions per wholesale seat.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary theme locks or agency-retained custom codebases.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Migration' },
+  { key: 'tech', label: 'Shopify & Next.js Stack' },
+  { key: 'local', label: 'Research Triangle Focus' },
+  { key: 'ownership', label: 'Code & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Raleigh, NC?',
-              answer:
-                "FactoryJet is Raleigh's top-rated Shopify development agency, 500+ projects, 4.9★ Google rating, and the only agency in the Research Triangle combining Shopify e-commerce with AI agent development. Local Raleigh agencies (Forge Digital, Kaptiv8, Kelp Creative) focus on marketing and general web design. National agencies targeting Raleigh charge enterprise-level rates. FactoryJet launches in 7 days, fixed-price, with real Research Triangle market knowledge.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Raleigh?',
-              answer:
-                "Pricing is fixed-price and scoped to your build: the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every project includes custom design, full development, North Carolina sales tax configuration (7.25% Wake County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support.",
-            },
-            {
-              category: 'pricing',
-              question: 'What North Carolina sales tax rate should my Raleigh Shopify store charge?',
-              answer:
-                "Raleigh businesses in Wake County should configure Shopify to collect 7.25% combined sales tax: North Carolina state rate of 4.75% plus Wake County's 2.5% local rate. North Carolina uses destination-based sales tax. FactoryJet configures all Triangle county rates: Durham County (7.5%), Orange County/Chapel Hill (7.5%), Johnston County (7%), and Chatham County (7%). We also configure NC's food exemptions and manufacturing exemptions relevant for RTP companies.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Research Triangle tech and SaaS companies?',
-              answer:
-                "Yes, RTP tech companies are a core Raleigh specialty. We build Shopify stores for: SaaS companies selling annual license subscriptions, hardware and IoT device companies with accessory stores, developer tool companies with swag shops, and B2B tech companies with self-serve ordering portals. RTP companies like Pendo, Bandwidth, and Cato Networks represent the caliber of technology brand that needs a Shopify store matching their product sophistication.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Raleigh life sciences or biotech company?',
-              answer:
-                "Yes: RTP's life sciences corridor (GSK, Bayer, Novo Nordisk, Cree, NC BioTech) creates B2B e-commerce demand for lab supplies, medical devices, biotech reagents, and pharmaceutical-adjacent wellness products. We build: regulated lab supply ordering portals (with PO payment terms and institutional billing), medical device DTC stores (FDA-labeling compliant product descriptions), pharma-adjacent wellness product stores, and clinical research B2B purchasing platforms.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Raleigh?',
-              answer:
-                "FactoryJet launches standard Shopify stores in 7 days. Compare that to Forge Digital Marketing (8–12 weeks), national agencies (8–16 weeks), and Charlotte agencies targeting Raleigh (6–12 weeks). Our 7-day timeline is possible because we design in code, no Figma-to-handoff delay. B2B portals with complex pricing tiers or life sciences stores with regulatory configurations may take 2–3 weeks.",
-            },
-            {
-              category: 'local',
-              question: 'Do you serve both Raleigh and Durham / Chapel Hill?',
-              answer:
-                "Yes, FactoryJet serves the entire Research Triangle: Raleigh, Durham, Chapel Hill, Cary, Apex, Morrisville, and all Wake, Durham, and Orange County businesses. We know the Triangle's distinct consumer profiles: Raleigh's banking/tech professional market, Durham's entrepreneurial and food-forward Bull City culture, Chapel Hill's university-driven ecosystem, and Cary's fast-growing suburban market. Our builds are optimized for Triangle-wide local SEO.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a Raleigh craft brewery or restaurant?',
-              answer:
-                "Yes: Raleigh's food scene has exploded. Trophy Brewing, Clouds Brewing, Lynnwood Brewing Concern, and dozens of Triangle breweries have DTC opportunity through merchandise, beer clubs, and branded goods. North Carolina allows direct-to-consumer beer sales with proper ABC permits, we configure age verification and NC ABC compliance in every brewery store.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Charlotte-based agencies for Raleigh businesses?',
-              answer:
-                "Charlotte is 3 hours from Raleigh, and Charlotte agencies targeting the Triangle have no Raleigh market knowledge. The Research Triangle's consumer is distinctly different: more tech-focused, younger demographics, stronger university brand loyalty, higher AI and SaaS product awareness, and a foodie culture centered on Durham's James Beard-recognized restaurant scene. FactoryJet's Raleigh expertise means your store is built for the Research Triangle customer.",
-            },
-            {
-              category: 'included',
-              question: 'What AI services are available for Raleigh small businesses?',
-              answer:
-                "FactoryJet is the only Raleigh e-commerce agency building production AI agents alongside Shopify development. We build: AI chatbots trained on your product catalog and RTP B2B use cases, AI-powered lead qualification for B2B tech and life sciences customers, automated customer service for order tracking and returns, and AEO content optimization for ChatGPT, Perplexity, and Google AI Overviews. Research Triangle consumers are the most AI-literate in the Southeast: your store should reflect that.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my Raleigh business to Shopify?',
-              answer:
-                "Yes, we migrate Raleigh businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL 301 redirects (preserving Raleigh and Triangle local search rankings), NC tax reconfiguration, and SEO continuity. Timeline: 7–14 days.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Raleigh business?',
-              answer:
-                "Every Raleigh Shopify store includes: custom design (not a theme), full Shopify development, NC sales tax setup (7.25% Wake County), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Fixed-price, quoted up front, no hidden fees.",
-            },
-            {
-              category: 'included',
-              question: 'Can you build a Shopify store for a Raleigh, Durham, or Chapel Hill apparel or brand?',
-              answer: "Absolutely: the Research Triangle has a rich DTC brand ecosystem built around NC State (Wolfpack), UNC (Tar Heels), Duke (Blue Devils), university alumni culture, and Bull City Durham's independent maker scene. We build Shopify stores for: university-adjacent apparel and lifestyle brands, Durham craft food and beverage brands, Chapel Hill artisan goods, Research Triangle professional lifestyle products, and Southern apparel companies with national reach. RTP's highly educated, tech-forward consumer base is an ideal DTC buyer, sophisticated, brand-aware, and willing to invest in quality. FactoryJet builds stores that convert the Triangle's discerning consumer into repeat buyers.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Raleigh Shopify store on Google and in AI search?',
-              answer: "FactoryJet builds every Raleigh Shopify store with full SEO and AEO foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized titles targeting 'Raleigh [product]', 'Research Triangle [industry]', 'NC [product] store'; Core Web Vitals optimization (Lighthouse 90+); and AEO content aligned with how RTP's AI-literate consumers research purchases in ChatGPT and Perplexity. Raleigh-Durham is one of the highest-AI-adoption metros in the US: your store's JSON-LD schema determines whether it appears in AI-generated answers for Triangle product queries. Most Raleigh competitors haven't optimized for AI search yet, early movers win the most valuable positions.",
-            },
-            {
-              category: 'included',
-              question: 'Do you build subscription Shopify stores for Research Triangle brands?',
-              answer: "Yes, subscription commerce fits the RTP consumer perfectly. The Triangle's 300,000+ university-affiliated population and tech professional base are comfortable with subscription billing from their SaaS product experiences. We build: craft beer club subscriptions for Raleigh's thriving brewery scene (Trophy, Clouds, Lynnwood), coffee roaster subscriptions for Triangle specialty coffee brands, B2B SaaS license renewal portals for RTP tech companies, life sciences lab supply subscriptions with PO billing, and NC State / UNC fan merchandise subscriptions. FactoryJet builds with Recharge or native Shopify Subscriptions, NC Wake County tax configuration for recurring billing, and conversion flows optimized for the Triangle's brand-loyal professional consumer.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should a Raleigh Shopify store accept?',
-              answer: "Every Raleigh Shopify store should accept: Shopify Payments, PayPal (30%+ of first-time US online buyers), Apple Pay and Google Pay (RTP's tech worker population is among the highest Apple adoption rate in the Southeast), and Afterpay or Shop Pay Installments for premium orders. For Raleigh's B2B tech and life sciences stores, configure institutional PO payment terms, net-30/net-60 invoicing, and corporate credit card billing via Shopify's B2B portal. For Raleigh's craft brewery stores, integrate age verification before payment collection. For Triangle university-adjacent brands, Venmo checkout integration appeals to the student demographic. FactoryJet configures the full payment stack in the standard 7-day build.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for an NC State, UNC, or Duke-adjacent brand?',
-              answer: "Yes, university-adjacent brands are a core Raleigh specialty. We build Shopify stores for: independent apparel and lifestyle brands inspired by Wolfpack, Tar Heels, or Blue Devils culture (not official licensed merchandise, that requires university licensing); alumni lifestyle brands selling to the 400,000+ Triangle university alumni nationwide; brands built around ACC rivalry culture (merchandise, gifts, game-day accessories); and student entrepreneur DTC brands launching from the UNC, Duke, or NC State startup ecosystem. Triangle university towns have three distinct alumni brand audiences: NC State's engineering and agriculture culture in Raleigh, UNC's liberal arts and healthcare culture in Chapel Hill, and Duke's business and law culture in Durham.",
-            },
-            {
-              category: 'local',
-              question: 'Do you serve Cary, Apex, Morrisville, and Holly Springs in addition to Raleigh?',
-              answer: "Yes, FactoryJet serves the entire Wake County and Greater Triangle: Raleigh, Cary, Apex, Morrisville, Holly Springs, Fuquay-Varina, Garner, Clayton, and all Triangle ZIP codes. Cary is one of the fastest-growing and highest-income suburbs in the US (nicknamed 'Containment Area for Relocated Yankees'. It's a high-purchasing-power market). Morrisville is home to major tech employers (Cisco, SAS Institute, IBM RTP). Holly Springs and Apex are young-family markets with strong home goods and lifestyle product demand. FactoryJet configures Wake County's 7.25% sales tax for all Triangle municipalities and builds stores that rank for both city-level and Triangle-region searches.",
-            },
-            {
-              category: 'local',
-              question: 'How does FactoryJet optimize Raleigh Shopify stores for mobile shoppers?',
-              answer: "Raleigh-Durham's tech professional population is a mobile-shopping leader, high smartphone penetration, heavy app usage, and AI-assisted shopping behavior. FactoryJet optimizes every Raleigh Shopify store for mobile with: mobile-first layouts (375px before desktop), Google Core Web Vitals compliance (Lighthouse 90+, sub-1.5s LCP on mobile), one-tap Apple Pay and Google Pay at checkout (the single biggest mobile conversion improvement), lazy-loaded images that don't block initial paint, and AEO structured content that surfaces in AI-generated mobile search answers. Triangle consumers are more likely than average US buyers to search in ChatGPT or Perplexity before purchasing, optimizing for AI search captures intent that traditional Google results miss.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support plans for Raleigh businesses?',
-              answer: "Yes, FactoryJet offers post-launch support designed for the Triangle's startup and growth-stage business culture. Every build includes a 30-day support window. Ongoing options: a monthly retainer (development hours plus same-day priority response), performance reviews every 90 days, RTP-specific campaign builds (SAS Global Forum merchandise, NC State / UNC rivalry season drops, Triangle startup ecosystem launch campaigns), and iterative feature additions. Raleigh's startup culture values iterative improvement over set-and-forget launches, FactoryJet retainer clients treat their Shopify store like a product and ship updates regularly. We've built long-term relationships with multiple Triangle brands across multiple product iterations.",
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a Raleigh brand?',
+    answer:
+      'Project investments depend on total SKU count, custom ERP/3PL integrations, B2B wholesale requirements, and custom interactive features. Every project is quoted with a binding, fixed-price milestone agreement and zero hidden change orders.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
+    answer:
+      'No. We deliver turnkey, fully documented codebases that you own 100%. You pay standard platform hosting fees directly to your providers and pay zero mandatory agency retainers.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
+    answer:
+      'We complete an exhaustive architectural discovery and API integration mapping process before development begins, locking in the technical scope in a binding milestone contract.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can you help us reduce our monthly Shopify app subscription costs?',
+    answer:
+      'Yes. By engineering custom React components and native Shopify Functions, we typically eliminate 5 to 15 third-party apps, saving thousands annually in recurring SaaS fees while speeding up your site.',
+  },
+  {
+    category: 'timeline',
+    question: 'How fast can you replatform our store from Magento or WooCommerce to Shopify Plus?',
+    answer:
+      'Our disciplined agile engineering sprints deliver complete replatforming, data migration, and custom frontend development within verified milestone timelines without halting current store sales.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will our existing customer passwords and historical order data transfer safely?',
+    answer:
+      'Yes. We execute automated, validated data pipelines that migrate all historical customer profiles, order histories, product variants, and metadata with zero data loss.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you guarantee zero downtime during DNS launch cutover?',
+    answer:
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+  },
+  {
+    category: 'timeline',
+    question: 'What is required from our internal operations team during the build?',
+    answer:
+      'We require API access credentials to your existing commerce platform, ERP/3PL system documentation, brand assets, and participation in weekly milestone demonstration reviews.',
+  },
+  {
+    category: 'tech',
+    question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
+    answer:
+      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+  },
+  {
+    category: 'tech',
+    question: 'Can you integrate our complex ERP, POS, and warehouse management software?',
+    answer:
+      'Yes. We build custom API connectors and webhook listeners for NetSuite, SAP, Microsoft Dynamics, Epicor, Manhattan Associates, and all major third-party logistics (3PL) providers.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you optimize checkout conversion rates on mobile devices?',
+    answer:
+      'We eliminate render-blocking scripts, implement one-click Shop Pay and Apple Pay biometric checkouts, and streamline the mobile cart drawer for frictionless purchasing.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with RTP life sciences and biotech commerce?',
+    answer:
+      'Yes. We engineer high-compliance B2B portals for Research Triangle Park biotech firms, laboratory supply companies, and clinical researchers requiring contracted pricing and Net-30 purchase orders.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build custom B2B wholesale portals for North Carolina manufacturers?',
+    answer:
+      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk CSV ordering, Net-30 purchase order workflows, and custom invoice management.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate multi-location POS inventory across Triangle retail stores?',
+    answer:
+      'Yes. We connect Shopify POS and custom point-of-sale systems across brick-and-mortar locations to ensure unified omnichannel inventory, buy-online-pickup-in-store (BOPIS), and real-time stock routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build subscription commerce for Triangle craft beverage and agritech brands?',
+    answer:
+      'Yes. We integrate advanced recurring subscription engines, custom bundle builders, and automated retention flows for high-growth direct-to-consumer specialty food and beverage brands.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon project completion, you receive complete ownership of the private GitHub repository, Figma design files, and deployment infrastructure with zero vendor lock-in.',
+  },
+  {
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal merchandising team on managing products and promotions?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation showing your team how to update catalog attributes, launch promotions, schedule flash sales, and manage orders.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
+    answer:
+      'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Raleigh Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Raleigh',
+    addressRegion: 'NC',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 35.7796,
+    longitude: -78.6382,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Durham' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Chapel Hill' },
+    { '@type': 'City', name: 'Morrisville' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Raleigh Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
+  description:
+    'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Research Triangle brands.',
+  areaServed: [{ '@type': 'State', name: 'North Carolina' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description: 'Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Ecommerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Raleigh', item: CANONICAL },
+  ],
+};
+
+export default function RaleighEcommerceDevelopmentPage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="raleigh-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="raleigh-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="raleigh-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="raleigh-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="raleigh-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── 1. HERO ────────────────────────────────────────────────── */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_raleigh_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · RALEIGH"
-          headline="Raleigh's Top-Rated Shopify Developer for the Research Triangle"
-          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ Google rating."
-          trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Raleigh, NC" badgeLabel="Live in 7 days" />}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── 2. LOGO BAR ─────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE" />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Raleigh Ecommerce Development &amp; Headless Architecture</span>
+                </div>
 
-        {/* ── 3. TRUST STATS ──────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Raleigh e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Raleigh Ecommerce Development Agency for High-Growth Brands
+                </h1>
 
-        {/* ── 4. CITY CONTEXT ─────────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="RALEIGH MARKET"
-          headline="Research Triangle Brands Need Stores as Smart as Their Products"
-          leadParagraphs={[
-            "Research Triangle Park (RTP): the 7,000-acre innovation campus between Raleigh, Durham, and Chapel Hill, hosts IBM, Cisco, SAS Institute, Red Hat, Cree, BASF, and 300+ technology, life sciences, and biotech companies employing 65,000 workers. Forbes named Raleigh the #1 city for jobs in the US three years running. That concentration of high-income, tech-savvy workers creates DTC demand for premium products that out-converts national benchmarks by 30–40%. FactoryJet builds Shopify stores that capture this Research Triangle consumer.",
-            "The Triangle's university ecosystem: NC State (35,000 students), UNC Chapel Hill (30,000), Duke (16,000), feeds a startup culture that has produced billion-dollar companies including Bandwidth (NASDAQ: BAND) and Pendo (Series E, $200M+). Raleigh/Wake County combined sales tax runs 7.25% (NC state 4.75% + Wake County 2.5%). FactoryJet configures every Raleigh store's complete NC tax settings, including Durham County (7.5%), Orange County/Chapel Hill (7.5%), and all Triangle municipalities.",
-          ]}
-          stats={[
-            { value: '2M+', label: 'Research Triangle Metro Population', sourceUrl: 'https://www.census.gov/quickfacts/raleighcitynorthcarolina' },
-            { value: '65K+', label: 'Workers at Research Triangle Park', sourceUrl: 'https://www.rtp.org/about/rtp-fast-facts/' },
-            { value: '#1', label: "Forbes' Best City for Jobs in the US", sourceUrl: 'https://www.forbes.com/sites/samanthasharf/best-cities-for-jobs/' },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for Research Triangle brands. 7-day agile delivery with 100% code ownership.
+                </p>
 
-        {/* ── 5. SERVICE EXPLANATION ──────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="E-COMMERCE DEVELOPMENT · Raleigh"
-          headline="What 'E-Commerce Development' Actually Means for a Raleigh Business"
-          lead="Raleigh agencies focus on marketing and general web design, few specialize in Shopify e-commerce for the Triangle's tech and life sciences market. FactoryJet builds revenue-generating stores: custom design, NC sales tax configured correctly (7.25% Wake County + all Triangle rates), AI-powered product discovery, and a Lighthouse 95+ performance score: all in 7 days, fixed-price."
-          body={
-            <>
-              <p>
-                For Raleigh&apos;s tech and SaaS companies: RTP brands like Pendo, Bandwidth,
-                and Cato Networks represent the caliber of company that needs a Shopify store
-                matching their product sophistication. FactoryJet builds stores for SaaS license
-                subscriptions, hardware accessory shops, B2B developer tool companies with
-                self-serve ordering portals, and IoT device brands with warranty registration
-                flows built in.
-              </p>
-              <p>
-                For the Triangle&apos;s life sciences corridor: GSK, Bayer, Novo Nordisk, and
-                NC BioTech in RTP, B2B e-commerce demand includes lab supply ordering portals
-                with PO payment terms, medical device DTC stores with FDA-labeling compliant
-                product descriptions, and pharma-adjacent wellness product stores. NC&apos;s
-                biotech hub is one of the most underserved e-commerce markets in the US,
-                FactoryJet builds the enterprise-grade stores that RTP companies deserve.
-              </p>
-              <p>
-                The Triangle&apos;s three-city consumer profile is distinctly different: Raleigh&apos;s
-                tech professional market, Durham&apos;s entrepreneurial food-forward Bull City
-                culture, and Chapel Hill&apos;s university-driven academic ecosystem. FactoryJet
-                builds stores optimized for Triangle-wide local SEO: one store, three markets.
-              </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/raleigh/ecommerce/service-explanation.webp"
-              alt=""
-              aria-hidden="true"
-              width={800}
-              height={600}
-              loading="lazy"
-              decoding="async"
-              className="w-full rounded-2xl object-cover"
-            />
-          }
-        />
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#raleigh-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Research Triangle Corridors</span>
+                  </a>
+                </div>
+              </div>
 
-        {/* ── 6. STRATEGIC DARK SECTION ───────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="Why Raleigh Businesses Choose FactoryJet Over Local Agencies"
-          lead={
-            "Forge Digital Marketing and Kaptiv8 serve Raleigh's marketing needs but don't specialize in Shopify development. Orange Orchard handles PR and some digital work. Kelp Creative does web design but not AI-powered e-commerce. KoMarketing and other national agencies targeting Raleigh charge enterprise-level rates with no Research Triangle market knowledge.\n\nFactoryJet delivers in 7 days, fixed-price, with deep Raleigh expertise: RTP's tech and life sciences ecosystem, Wake County tax structure, and the Triangle's university-tech consumer profile that's more AI-literate than any other Southeast market."
-          }
-          pillars={[
-            {
-              title: 'RTP tech-native',
-              body: "RTP companies like Pendo, Bandwidth, and SAS set the Triangle's technology standard. FactoryJet builds Shopify stores that match that sophistication, subscription billing, B2B portals, API integrations, and AI chatbots trained on your catalog. Research Triangle consumers are the most AI-literate in the Southeast.",
-            },
-            {
-              title: 'Transparent',
-              body: 'Fixed pricing on the first call, scoped to your build. No discovery fees, no life-sciences-complexity surcharges, no Phase 2 invoices after launch.',
-            },
-            {
-              title: 'Guaranteed',
-              body: "7-day delivery on standard Shopify builds. If we miss the deadline, you don't pay. We've delivered on time on 97% of 500+ projects, including for Raleigh brands launching ahead of SXSW and Triangle startup announcement cycles.",
-            },
-          ]}
-        />
-
-        {/* ── 7. PROCESS ──────────────────────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Raleigh Shopify Store"
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery & Platform Selection',
-              description:
-                "We map your product catalog, target customer, and revenue goals. For Raleigh businesses, we assess RTP B2B requirements, life sciences compliance needs, and Triangle-wide SEO configuration. Shopify, WooCommerce, or headless, recommended in 24 hours.",
-            },
-            {
-              number: '02',
-              title: 'UX Design & Store Architecture',
-              description:
-                "We design your store, homepage, collection pages, product pages, cart, and checkout, to match the Triangle's tech-sophisticated consumer standard. Clean, data-forward layouts for life sciences and SaaS brands, food-forward editorial designs for Durham's craft market.",
-            },
-            {
-              number: '03',
-              title: 'Development & Configuration',
-              description:
-                "Custom Shopify theme or headless build, North Carolina sales tax setup (7.25% Wake County + Durham 7.5% + Orange 7.5%), B2B PO payment terms, regulatory-compliant product descriptions for life sciences, and GSAP micro-animations. Lighthouse 90+ non-negotiable.",
-            },
-            {
-              number: '04',
-              title: 'Products, Content & SEO',
-              description:
-                'Product catalog upload, Triangle-optimized SEO (Raleigh + Durham + Chapel Hill queries), JSON-LD schema (FAQPage, Product, BreadcrumbList), and AEO content structured to get cited by ChatGPT, Perplexity, and Google AI Overviews.',
-            },
-            {
-              number: '05',
-              title: 'Launch & Growth Enablement',
-              description:
-                "Cloudflare/Vercel deploy, GA4 e-commerce tracking, and a recorded launch walkthrough. Your 30-day support window covers post-launch fixes, RTP B2B buyer onboarding, and training so your Raleigh team can self-manage from day one.",
-            },
-          ]}
-        />
-
-        {/* ── 8. PORTFOLIO ────────────────────────────────────────────── */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What Raleigh e-commerce brands look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Tech & SaaS',
-              title: 'Research Triangle Tech Brand Client',
-              description:
-                "RTP companies like Pendo, Bandwidth, and Cato Networks represent the caliber of technology brand that needs a Shopify store matching their product sophistication. We build stores for SaaS license subscriptions, hardware device shops, developer tool companies with self-serve portals, and IoT brands, with B2B pricing tiers, subscription billing, and API integrations built as standard.",
-              imageSrc: '/images/us/raleigh/ecommerce/portfolio-1.webp',
-              stat1: '+44% B2B conversion',
-              stat2: 'Lighthouse 95',
-            },
-            {
-              industry: 'Life Sciences & Biotech',
-              title: 'RTP Life Sciences DTC Client',
-              description:
-                "RTP's life sciences corridor: GSK, Bayer, Novo Nordisk, NC BioTech, creates B2B e-commerce demand for lab supplies, medical devices, and pharma-adjacent wellness products. We build regulated ordering portals with PO payment terms, FDA-labeling compliant product descriptions, and institutional billing for NC's biotech hub: one of the most underserved e-commerce markets in the US.",
-              imageSrc: '/images/us/raleigh/ecommerce/portfolio-2.webp',
-              stat1: '+38% institutional orders',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'Food & Craft Beverages',
-              title: 'Triangle Food Brand Client',
-              description:
-                "Raleigh's award-winning restaurant scene and Durham's Bull City food culture: Trophy Brewing, Clouds Brewing, Lynnwood Brewing, and dozens of Triangle restaurants, have DTC opportunity through merchandise, beer clubs, and branded goods. We build stores with NC ABC compliance, age verification, and subscription billing for the Triangle's food-forward consumer.",
-              imageSrc: '/images/us/raleigh/ecommerce/portfolio-3.webp',
-              stat1: '+41% subscription revenue',
-              stat2: '< 1.2s load time',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
-
-        {/* ── 9. COMPARISON TABLE ─────────────────────────────────────── */}
-        <ComparisonTable
-          eyebrow="WHY FACTORYJET"
-          headline="FactoryJet vs Raleigh E-Commerce Agencies"
-          lead={
-            "Raleigh's agency market focuses on marketing and general web design, few specialize in Shopify e-commerce for the Triangle's tech and life sciences market. National agencies targeting Raleigh charge enterprise-level rates with no Research Triangle market knowledge.\n\nFactoryJet delivers a full Shopify store in 7 days, fixed-price, with RTP tech sophistication, life sciences B2B expertise, and Triangle-wide SEO that local agencies simply don't offer."
-          }
-          columns={[
-            { label: 'Their approach' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we win' },
-          ]}
-          rows={[
-            {
-              feature: 'Forge Digital Marketing',
-              values: [
-                'Marketing-focused, not Shopify specialists',
-                'Fixed-price (Shopify Standard)',
-                "Forge focuses on digital marketing, not Shopify e-commerce. FactoryJet builds RTP-grade Shopify stores with life sciences B2B capabilities, AI features, and 7-day delivery that Forge doesn't offer.",
-              ],
-            },
-            {
-              feature: 'KoMarketing (national)',
-              values: [
-                'No Raleigh/Triangle market presence',
-                'Fixed-price · 7-day delivery',
-                "KoMarketing is B2B-focused with no Triangle market knowledge. FactoryJet delivers real Research Triangle expertise: RTP's tech ecosystem, Wake County tax structure, the Triangle's university-tech consumer profile, with 7-day delivery at a fraction of the cost.",
-              ],
-            },
-          ]}
-        />
-
-        {/* ── 10. PRICING ─────────────────────────────────────────────── */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="What's Included for Raleigh E-Commerce Businesses"
-          lead={
-            "Pricing is fixed-price and scoped to your build: the main drivers are product count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. FactoryJet delivers a full custom Shopify store with RTP tech sophistication, life sciences B2B capabilities, and a codebase you own outright. Stores ship in 7 days."
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description:
-                "A fully custom Shopify store live in 7 days. Best for Raleigh DTC founders, food brands, apparel companies, and Triangle startups launching their first online store.",
-              features: [
-                'Custom Shopify theme (not a template)',
-                'Up to 100 products uploaded & configured',
-                'NC sales tax setup (7.25% Wake + Triangle counties)',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description:
-                "Advanced Shopify build with B2B portals, subscription billing, or life sciences compliance. Best for RTP tech companies, research institutions, and Triangle brands scaling DTC revenue.",
-              features: [
-                'Everything in Shopify Standard',
-                'B2B portal: PO payments, dealer pricing',
-                'Subscription billing (Recharge / Skio)',
-                'Life sciences regulatory product descriptions',
-                'GSAP micro-animations & editorial design',
-                'AI product recommendations integration',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description:
-                "Next.js headless storefront for RTP enterprises that need sub-500ms load times, custom API integrations, or a B2B life sciences portal that sets the Triangle standard.",
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'Custom API & ERP integrations',
-                'Enterprise B2B: institutional billing, PO payments',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                'Quarterly performance reviews',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
-
-        {/* ── 11. INDUSTRIES ──────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="RALEIGH × E-COMMERCE"
-          headline="E-Commerce Development for Raleigh's Key Industries"
-          lead="From Research Triangle Park's life sciences corridor to Durham's food culture and NC State's startup ecosystem, the Triangle's industries have distinct e-commerce needs. FactoryJet has built stores for each of them."
-          sectors={[
-            {
-              name: 'Life Sciences & Biotech',
-              description:
-                "B2B lab supply stores, medical device e-commerce, and pharma-adjacent DTC health products for RTP's life sciences corridor. PO payment terms, FDA-labeling compliant product descriptions, and institutional billing configurations built as standard.",
-              example:
-                "Lab supply retailers, medical device DTC brands, pharmaceutical-adjacent wellness companies, and biotech accessory stores serving RTP's 300+ life sciences tenants.",
-            },
-            {
-              name: 'Tech & SaaS Brands',
-              description:
-                "Software license stores, hardware accessory shops, and B2B SaaS billing portals for Research Triangle's tech companies. Pendo, Bandwidth, and SAS represent the caliber of tech brand that needs enterprise-grade Shopify: FactoryJet builds to that standard.",
-              example:
-                "SaaS companies selling annual license subscriptions, hardware and IoT device brands, developer tool companies, and B2B tech brands with self-serve ordering portals.",
-            },
-            {
-              name: 'University & Education Brands',
-              description:
-                "NC State, UNC, and Duke-affiliated merchandise, apparel, and educational product stores. University-licensed merchandise, lab-to-market product commercialization, and student startup DTC stores for the Triangle's 81,000+ university students.",
-              example:
-                "University-licensed merchandise brands, academic spinout DTC companies, student startup e-commerce stores, and educational product brands in the Triangle.",
-            },
-            {
-              name: 'Food & Craft Beverages',
-              description:
-                "Raleigh's award-winning restaurant scene and Durham's Bull City food culture: Trophy Brewing, Clouds Brewing, Lynnwood Brewing, generate DTC opportunity through merchandise, beer clubs, and branded goods. NC ABC compliance and subscription billing built in.",
-              example:
-                "Triangle craft breweries, Raleigh restaurant merchandise brands, Durham artisan food companies, and specialty coffee roasters serving the Triangle's food-forward consumers.",
-            },
-            {
-              name: 'Apparel & Lifestyle',
-              description:
-                "Research Triangle-inspired lifestyle brands, outdoor apparel, and DTC fashion for the Triangle's young professional population. NC State-adjacent streetwear, Durham Bull City pride brands, and Chapel Hill lifestyle labels with national shipping ambitions.",
-              example:
-                "Triangle lifestyle apparel brands, university-adjacent streetwear companies, outdoor apparel DTC stores, and fashion labels targeting the Triangle's young professional market.",
-            },
-            {
-              name: 'Home & Sustainability',
-              description:
-                "Eco-friendly home goods, sustainable products, and interior design brands for Raleigh's sustainability-conscious consumers. Raleigh's rapid population growth and tech-forward demographics create sustained demand for premium sustainable home goods shipped nationwide.",
-              example:
-                "Sustainable home goods brands, eco-friendly product DTC stores, interior design product lines, and artisan goods makers based in the Raleigh metro.",
-            },
-          ]}
-        />
-
-        {/* ── 12. TESTIMONIALS ────────────────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
-
-        {/* ── 13. FAQ ─────────────────────────────────────────────────── */}
-        <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Raleigh E-Commerce Businesses"
-          categories={FAQ_CATEGORIES}
-          items={FAQ_ITEMS}
-        />
-
-
-        {/* Cross-link: Related Services in Raleigh */}
-        <section className="py-10 bg-[#FAFAF7]">
-          <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-              Also in Raleigh
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/raleigh/web-design/"
-                className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-              >
-                Web Design →
-              </Link>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/raleigh/hero-raleigh.webp"
+                  alt="Raleigh North Carolina ecommerce development and headless Shopify Plus storefront engineering"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 14. FINAL CTA ───────────────────────────────────────────── */}
-        <EcommerceCityLinksUS currentCity="raleigh" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Build Your Raleigh Shopify Store?"
-          sub="Research Triangle's tech brands, life sciences companies, and food-forward entrepreneurs are generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a 30-minute audit and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-        />
-      </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce Engine &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('raleigh', FAQ_ITEMS) }}
-    />
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/b2b-website-design/sales-enablement.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Raleigh Shopify Plus storefront"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Ecommerce Engineered for Research Triangle Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From RTP biotech suppliers to Downtown Raleigh D2C lifestyle brands and Morrisville electronics distributors, we build high-converting commerce engines that maximize revenue velocity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Ecommerce Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. RALEIGH DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="raleigh-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Research Triangle Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Ecommerce Development for Raleigh&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From RTP life science suppliers to Warehouse District retail brands and Morrisville distributors:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Commerce Architectures for Triangle Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across the Triangle demands tailored checkout flows, inventory integrations, and performance metrics:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Raleigh Leaders Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks with enterprise headless Shopify Plus engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// RALEIGH COMMERCE STACK &amp; HEADLESS BLUEPRINT"
+            title="Headless Next.js 15 to Shopify Plus Engine"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Ecommerce Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay migrations and high-conversion commerce launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Raleigh Ecommerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Headless Engine</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="RESEARCH TRIANGLE COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About Ecommerce Development in Raleigh NC"
+          lead="Direct, plain English answers to what Raleigh and Durham ecommerce founders and marketing leaders ask about Shopify Plus and headless engineering:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="raleigh" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Raleigh Ecommerce Engine?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
+    </>
   );
 }

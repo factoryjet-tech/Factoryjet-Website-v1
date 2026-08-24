@@ -1,770 +1,921 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import './providence-seo.css';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-// ─ Constants ────────────────────────────────────────────────────────────────
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/providence/seo';
 
-// ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Providence RI SEO Company | Local SEO Services | FactoryJet',
+  title: 'Providence Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is a Providence RI SEO company that puts Rhode Island businesses into Google\'s local 3-pack. College Hill to Jewelry District local SEO, Google Business Profile optimization, and AI-search citation. Month-to-month, senior engineers, free audit.',
+    'Providence local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, College Hill, and Rhode Island.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Providence RI SEO Company | FactoryJet',
-    description:
-      'Rhode Island SEO for Providence businesses. Rank in local 3-pack for Brown, RISD, the medical corridor, and the booming restaurant and hospitality scene. KD 5.4, open right now.',
-    url: CANONICAL,
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Providence Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description:
+      'Providence local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, College Hill, and Rhode Island.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Providence Local SEO Agency' }],
+    locale: 'en_US',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Providence Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Providence local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-// ─ FAQ data ──────────────────────────────────────────────────────────────────
-const FAQ_GROUPS = [
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Providence commercial corridors.', icon: '📍' },
+  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    id: 'cost',
-    label: 'Cost & timeline',
-    count: 4,
-    items: [
-      {
-        q: 'How much does local SEO cost for a Providence small business?',
-        a: 'Cost depends on your category, how many locations you serve, and how competitive your specific query set is in the Providence market. A single-location restaurant in the East Side competes differently than a law firm targeting Rhode Island statewide searches. We scope every engagement individually, give you a flat monthly fee upfront, and never add hourly charges. Book a free 30-minute audit and we will scope it specifically for your situation.',
-      },
-      {
-        q: 'How long until I see local SEO results in Providence?',
-        a: 'Google Business Profile improvements typically move rankings in four to eight weeks. Organic keyword improvements for competitive Providence queries usually take three to five months. With KD 5.4 on primary keywords, Providence is faster-moving than most East Coast markets of comparable size. We track every signal weekly and show you movement with context.',
-      },
-      {
-        q: 'Is there a long-term contract requirement?',
-        a: 'No. All FactoryJet engagements are month-to-month. You stay because results keep you here. Pause or cancel with 30 days notice at any point, no penalty.',
-      },
-      {
-        q: 'Are there setup fees or upfront costs?',
-        a: 'No setup fee. The technical and competitive audit we run at kickoff is included in the monthly fee. That covers strategy, content, link building, GBP management, reporting, and a monthly call.',
-      },
+    corridor: 'Downtown Providence & Financial District',
+    query: 'commercial litigation corporate law wealth management seo downtown providence',
+    focus: 'Corporate Law, Wealth Management & Commercial Real Estate',
+    desc: 'The executive legal and financial heart of Rhode Island. Captures high-ticket corporate retainers, commercial leasing inquiries, and wealth advisory contracts.',
+  },
+  {
+    corridor: 'College Hill & East Side Academic Core',
+    query: 'specialized healthcare cosmetic dentistry psychiatry seo college hill providence',
+    focus: 'Specialized Healthcare, Elective Medicine & Private Practices',
+    desc: 'Affluent East Side corridor anchored by Brown University and RISD. Captures elective surgery, specialized clinical practices, and high-value legal consults.',
+  },
+  {
+    corridor: 'Jewelry District & Innovation Corridor',
+    query: 'biotech venture tech software lab space seo jewelry district providence',
+    focus: 'BioTech Startups, Medical Devices & Modern Software Hubs',
+    desc: 'Rhode Island thriving life sciences and innovation corridor. Demands structured entity markup, scientific leadership profiles, and tech capability silos.',
+  },
+  {
+    corridor: 'Federal Hill Hospitality & Culinary Corridor',
+    query: 'fine dining event venue boutique hospitality seo federal hill providence',
+    focus: 'Fine Dining, Event Venues & Boutique Hospitality',
+    desc: 'Historic culinary destination. Dominates local map pack queries for private dining, weddings, corporate catering, and tourist destination searches.',
+  },
+  {
+    corridor: 'Route 128 & I-95 Precision Manufacturing Spine',
+    query: 'precision machining medical fabrication industrial contractor seo providence',
+    focus: 'Precision Tooling, Marine Fabrication & Industrial Services',
+    desc: 'Heavy manufacturing and precision maritime fulfillment nexus. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+  },
+  {
+    corridor: 'Warwick & Cranston Commercial Retail Hub',
+    query: 'home services general contractor automotive commercial seo warwick ri',
+    focus: 'Commercial Contracting, Home Services & Retail Hubs',
+    desc: 'High-density commercial and service corridor. Drives high-intent inbound phone calls for HVAC, roofing, commercial electrical, and plumbing.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Specialized Healthcare, Surgical & Clinical Practices',
+    headline: 'Capturing High-Value Patients Across Providence & East Side',
+    description:
+      'In Rhode Island premier elective surgery, cosmetic dentistry, and specialized clinical markets, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Providence Rhode Island specialized medical practice clinical surgery local SEO ranking strategy',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Hyper-local neighborhood geo-pages targeting Downtown Providence, College Hill, and East Side',
     ],
   },
   {
-    id: 'market',
-    label: 'Providence RI market',
-    count: 4,
-    items: [
-      {
-        q: 'Why is local SEO in Providence such a strong opportunity right now?',
-        a: 'Providence has keyword difficulty scores as low as 5.4 for primary SEO service queries, meaning the incumbent agencies ranking in the top results have thin content and weak authority. For any service category in the Providence market, a well-executed SEO campaign can displace existing rankings faster than in Boston, New York, or other Northeast metros. Combined with Brown University, RISD, a growing biotech and education sector, and a national restaurant scene, the organic search opportunity in Providence is genuinely underserved relative to the market size.',
-      },
-      {
-        q: 'Which Providence neighborhoods and areas matter most for local SEO?',
-        a: 'The highest search density areas are Downtown / Financial District, College Hill (serving Brown and RISD communities), Federal Hill (restaurant and Italian corridor), the Jewelry District and Wexford Innovation District, Fox Point, South Providence, and the surrounding Cranston, Pawtucket, and East Providence coverage zones. For healthcare and education services, we also target searches originating from Woonsocket, Warwick, and North Providence.',
-      },
-      {
-        q: 'How does the university presence affect SEO strategy in Providence?',
-        a: 'Brown University and RISD together generate a combined student, faculty, and staff population of roughly 15,000 people, plus tens of thousands of alumni who return seasonally, plus parent visitor traffic during move-in and graduation. That creates sustained search demand for food, housing, services, and entertainment with predictable seasonal peaks in September and May. We build content calendars and GBP campaigns around those cycles.',
-      },
-      {
-        q: 'Is the Providence restaurant and hospitality market hard to rank in?',
-        a: 'Restaurants and hospitality are competitive in GBP searches near Downtown and Federal Hill, but many operators have not done the technical SEO work: their sites have poor Core Web Vitals, no structured data, and GBP profiles that were set up years ago and never maintained. That means a well-optimized competitor can move into the local 3-pack with three to four months of consistent work.',
-      },
+    sector: 'Corporate Litigation, Admiralty & Estate Law',
+    headline: 'Dominating High-Stakes Legal Search Corridors in Rhode Island',
+    description:
+      'Legal search queries across Providence and Rhode Island courts are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Providence corporate law firm commercial litigation and maritime law local SEO strategy',
+    points: [
+      'LegalService and Attorney schema linking Rhode Island Bar Association verified credentials',
+      'Localized practice area silos targeting Downtown Providence, Warwick, and Newport',
+      'High-authority local legal directory citations and editorial publication placements',
     ],
   },
   {
-    id: 'included',
-    label: 'What is included',
-    count: 4,
-    items: [
-      {
-        q: 'What does FactoryJet do every month for a Providence SEO client?',
-        a: 'Monthly work covers: technical SEO health (Core Web Vitals, schema, crawl issues), one to two long-form content pieces targeting your highest-value Providence queries, Google Business Profile management (photos, posts, Q&A, review strategy), local citation audits and cleanup across 40+ directories, internal linking improvements, competitor monitoring, and a monthly performance call with a written summary of rankings, tracked calls, and traffic breakdown.',
-      },
-      {
-        q: 'Do you manage Google Business Profile for Providence businesses?',
-        a: 'Yes. GBP is one of the fastest levers in Providence local search. We optimize every field, add photos, write keyword-rich service descriptions, publish weekly posts, manage Q&A, and develop a review velocity strategy. For multi-location Rhode Island businesses, each location is managed with location-specific content and separate tracking.',
-      },
-      {
-        q: 'What does local link building look like in the Providence market?',
-        a: 'Providence-specific editorial opportunities include the Providence Journal, Providence Business News, GoLocalProv, What\'s Up Newp, Brown University and RISD adjacent publications, Rhode Island Commerce, Providence Chamber of Commerce, and category-specific directories for healthcare, hospitality, and the arts. No paid links. Everything is earned through content quality and local context.',
-      },
-      {
-        q: 'Do you optimize for Google AI Overviews and AI search?',
-        a: 'Yes. Every content piece is structured to appear in Google AI Overviews, ChatGPT, and Perplexity when users ask about Providence businesses and services. Answer-first content structure, FAQ schema, entity markup, and sourced statistics all increase citation probability. Providence is a relatively early-stage market for AI citation, which means businesses that build this structure now face less competition for those placements.',
-      },
+    sector: 'Precision Manufacturing, Maritime Tech & Jewelry Fabrication',
+    headline: 'Driving B2B Procurement Inquiries for Rhode Island Fabricators',
+    description:
+      'Precision tooling shops, marine defense suppliers, and jewelry manufacturers across Rhode Island require steady commercial quote requests. We build specialized technical service pages, link ISO quality certifications, and optimize commercial keyword rankings.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Providence precision tooling maritime manufacturing and industrial fabrication local SEO',
+    points: [
+      'Industrial engineering service schemas linking ISO and ITAR certifications',
+      'High-intent B2B keyword silos targeting regional OEM and defense procurement teams',
+      'Authoritative regional business citations across New England commercial databases',
     ],
   },
   {
-    id: 'trust',
-    label: 'Trust & process',
-    count: 4,
-    items: [
-      {
-        q: 'Who does the actual SEO work at FactoryJet?',
-        a: 'Senior engineers and content strategists with 12+ years of combined experience. No junior account managers, no outsourced vendors. Bhavesh Barot, the founder, is directly involved in strategy for every client account. You communicate with the people doing the work.',
-      },
-      {
-        q: 'What happens to my accounts if I ever leave?',
-        a: 'Everything is yours. GSC, GBP, GA4, and all content belong to you. We add ourselves as contributors, not owners, and remove our access cleanly at the end. No data lock-in of any kind.',
-      },
-      {
-        q: 'How do you report results for a Providence business?',
-        a: 'We track calls and form fills from organic, not just keyword rankings. Monthly reports include: organic call volume, GBP call tracking, form submissions from organic, ranking movement for primary Providence queries, Core Web Vitals status, and competitor activity. One live call per month to discuss what the data means and the plan for the next 30 days.',
-      },
-      {
-        q: 'Have you worked with Northeast US businesses before?',
-        a: 'Yes. We have served 500+ businesses across competitive markets in the US, UK, UAE and India, including New England markets with similar characteristics: university-adjacent demand, strong hospitality and healthcare sectors, and a professional services base. We apply the cross-market pattern recognition to every Providence engagement.',
-      },
-    ],
-  },
-  {
-    id: 'start',
-    label: 'Getting started',
-    count: 4,
-    items: [
-      {
-        q: 'What does the free audit call cover?',
-        a: 'Thirty focused minutes: your GBP health, website technical status, current keyword rankings for your primary Providence queries, and what your top local competitors are doing that you are not. You leave with a prioritized opportunity list regardless of whether we work together.',
-      },
-      {
-        q: 'How fast can you start?',
-        a: 'Technical work begins within seven days of signing. GBP and content campaigns start in week two after access verification and competitor mapping. Full campaign rhythm is established by week four.',
-      },
-      {
-        q: 'What if my website is already slow or outdated?',
-        a: 'We flag and fix technical issues as part of the engagement. If the site requires a full rebuild, FactoryJet also builds high-performance websites in seven days, so we can run both tracks without adding a second vendor.',
-      },
-      {
-        q: 'I run a small operation in Providence. Is SEO worth it at my scale?',
-        a: 'Local SEO has the highest ROI at small scale precisely because a single phone call or form fill from organic can represent a meaningful percentage of monthly revenue. The investment compounds: a Providence business that builds local search authority now will have a structural advantage over any competitor that starts in year two or three.',
-      },
+    sector: 'Premier Hospitality, Culinary Groups & Historic Tourism',
+    headline: 'Local Map Pack Dominance for Federal Hill & Downtown Venues',
+    description:
+      'Fine dining establishments, event venues, and boutique hotel operators across Federal Hill and Downtown Providence rely on local search visibility to capture reservation volume. We optimize menu schemas, manage reputation signals, and capture high-intent dining searches.',
+    image: '/images/us/restaurant-website-design/hero.webp',
+    alt: 'Providence Federal Hill fine dining restaurant and hospitality local SEO optimization',
+    points: [
+      'Restaurant and Menu structured JSON-LD schema with direct reservation booking links',
+      'Google Maps 3-Pack ranking for high-intent culinary and private event search terms',
+      'Continuous review generation and reputation monitoring across Google and TripAdvisor',
     ],
   },
 ];
 
-// ─ Listicle ──────────────────────────────────────────────────────────────────
-const LISTICLE: { n: string; h: string; p: string }[] = [
+const PAIN_POINTS = [
   {
-    n: '01',
-    h: 'Students, faculty, and alumni search locally and you are invisible to them',
-    p: 'Brown and RISD together bring tens of thousands of high-spending searchers into Providence. They search for food, services, and experiences on mobile constantly. Not being in the local 3-pack means you do not exist to that cohort.',
+    num: '01',
+    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
+    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
+    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
   },
   {
-    n: '02',
-    h: 'Your Google Business Profile was set up years ago and never maintained',
-    p: 'An inactive GBP suppresses local ranking directly. Recency of posts, photo updates, Q&A activity, and review response all affect your position in the maps carousel. Most Providence businesses have outdated profiles that can be improved immediately.',
+    num: '02',
+    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
+    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
+    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
   },
   {
-    n: '03',
-    h: 'The KD 5.4 window in Providence will not stay open much longer',
-    p: 'Keyword difficulty scores under 6 are rare in any metro market. Providence is open right now because the existing top-ranking pages are weak. National agencies will eventually notice this. The time to build authority here is before they do.',
+    num: '03',
+    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
+    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Rhode Island unique municipal boundaries, regional corridors, or industry specifics.',
+    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to Providence commercial realities.',
   },
   {
-    n: '04',
-    h: 'You rank for your business name but not for what a stranger searches',
-    p: 'Branded searches only find people who already know you. Local SEO captures "providence [service]" queries from buyers who have never heard of your business. That is the only funnel that actually compounds.',
-  },
-  {
-    n: '05',
-    h: 'Your website has slow Core Web Vitals on a Boston or Providence 5G connection',
-    p: 'Rhode Island has high mobile internet penetration and tech-savvy users. A slow website signals low quality to Google and kills mobile conversions before a visitor reads a single sentence.',
-  },
-  {
-    n: '06',
-    h: 'The biotech and healthcare corridor is generating B2B search you are missing',
-    p: 'The Wexford Innovation District and Providence healthcare sector are growing fast. Professional and B2B service providers who build local search authority in this ecosystem now will have a significant advantage as the market matures.',
-  },
-  {
-    n: '07',
-    h: 'AI Overviews are recommending other Providence businesses, not yours',
-    p: 'When someone asks ChatGPT or Google AI "what is the best [service] in Providence RI," the answer comes from structured, authoritative content. Without that structure on your site, you get no citation regardless of how established your business is.',
+    num: '04',
+    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
+    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
+    solution: 'We execute 100% white-hat local citation building, regional trade publication placements, and verified local press authority for permanent ranking gains.',
   },
 ];
 
-// ─ Comparison ────────────────────────────────────────────────────────────────
-const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Pricing model', fj: 'Flat monthly fee, scoped upfront', alt: 'Hourly or retainer with add-ons', hl: true },
-  { k: 'Contract', fj: 'Month-to-month', alt: '6 to 12 month lock-in' },
-  { k: 'Who does the work', fj: 'Senior engineers', alt: 'Junior account managers' },
-  { k: 'Kickoff time', fj: '7 days', alt: '3 to 6 weeks onboarding' },
-  { k: 'Reporting', fj: 'Calls & leads tracked', alt: 'Ranking screenshots' },
-  { k: 'AI SEO / GEO', fj: 'Included', alt: 'Rarely offered' },
-  { k: 'Your data & accounts', fj: 'You own everything', alt: 'Often locked to agency' },
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Entity Audit, GBP Optimization & Technical Foundations',
+    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
+    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
+    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
+    deliverables: ['Hyper-local corridor landing pages (Downtown, College Hill, Federal Hill)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'High-Authority Regional Citations & Review Velocity Engine',
+    desc: 'We build authoritative local citations across regional Rhode Island chambers, industry trade directories, and deploy automated review generation workflows.',
+    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Rhode Island business directory and chamber of commerce listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
+    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
+    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+  },
 ];
 
-// ─ JSON-LD ───────────────────────────────────────────────────────────────────
-const faqItems = FAQ_GROUPS.flatMap((g) =>
-  g.items.map((it) => ({
-    '@type': 'Question',
-    name: it.q,
-    acceptedAnswer: { '@type': 'Answer', text: it.a },
-  }))
-);
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Local Ranking Method',
+    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
+    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+  },
+  {
+    label: 'AI Search Readiness',
+    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
+    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+  },
+  {
+    label: 'Citation Integrity',
+    factoryjet: 'Manual 100% NAP synchronization across top-tier business directories and regional chambers.',
+    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+  },
+  {
+    label: 'Contract Flexibility',
+    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
+    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+  },
+];
 
-const jsonLd = {
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing & Retainers' },
+  { key: 'timeline', label: 'Rankings & Timeline' },
+  { key: 'ai', label: 'Search & AI Citations' },
+  { key: 'local', label: 'Providence & Rhode Island Focus' },
+  { key: 'deliverables', label: 'Deliverables & Reporting' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Providence business?',
+    answer:
+      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you lock clients into mandatory 12-month contracts?',
+    answer:
+      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
+  },
+  {
+    category: 'pricing',
+    question: 'What is included in your monthly local SEO scope?',
+    answer:
+      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you calculate ROI on local SEO campaigns?',
+    answer:
+      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+  },
+  {
+    category: 'timeline',
+    question: 'How quickly can a Providence business rank in the Google Maps 3-Pack?',
+    answer:
+      'Initial improvements in Google Maps visibility and citation consistency typically appear within 30 to 45 days. High-competition search terms in legal, medical, and commercial contracting generally reach Top-3 dominance within 90 to 120 days.',
+  },
+  {
+    category: 'timeline',
+    question: 'What factors determine ranking speed in local search?',
+    answer:
+      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
+  },
+  {
+    category: 'timeline',
+    question: 'Can you fix past Google Business Profile suspensions or penalties?',
+    answer:
+      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you handle review generation without violating Google policies?',
+    answer:
+      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+  },
+  {
+    category: 'ai',
+    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
+    answer:
+      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+  },
+  {
+    category: 'ai',
+    question: 'Why is structured Schema.org JSON-LD so important for local search?',
+    answer:
+      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
+  },
+  {
+    category: 'ai',
+    question: 'How do you track whether AI search engines are citing our brand?',
+    answer:
+      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews to ensure continuous visibility.',
+  },
+  {
+    category: 'ai',
+    question: 'Can AI search engines replace traditional Google Maps for local queries?',
+    answer:
+      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Dominating local foundational data ensures you capture both traditional and AI-driven searches.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with Providence healthcare and medical practices?',
+    answer:
+      'Yes. We build specialized local SEO architectures for private surgical practices, cosmetic dentists, and clinical specialists across College Hill, East Side, and the Jewelry District.',
+  },
+  {
+    category: 'local',
+    question: 'Can you optimize law firms competing across Rhode Island statewide courts?',
+    answer:
+      'Yes. We engineer comprehensive practice area silos and attorney schema graphs targeting Downtown Providence, Warwick, Cranston, and Newport legal search queries.',
+  },
+  {
+    category: 'local',
+    question: 'How do you target multiple municipalities in Rhode Island without keyword cannibalization?',
+    answer:
+      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates that avoid internal ranking conflicts.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help commercial contractors win bids in Warwick and Cranston?',
+    answer:
+      'Yes. We optimize Service Area Business (SAB) profiles, commercial contracting schemas, and geo-targeted service corridors across Providence, Kent, and Washington counties.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What reports and dashboards will our team receive each month?',
+    answer:
+      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Providence neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
+  },
+  {
+    category: 'deliverables',
+    question: 'Do we own all citations and profiles created during the campaign?',
+    answer:
+      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
+  },
+  {
+    category: 'deliverables',
+    question: 'Who will be our primary point of contact during the engagement?',
+    answer:
+      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
+  },
+  {
+    category: 'deliverables',
+    question: 'How do we get started with a Providence local SEO audit?',
+    answer:
+      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+];
+
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://factoryjet.com/providence/seo#webpage',
-      url: 'https://factoryjet.com/providence/seo',
-      // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'connect@factoryjet.com' },
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'Providence RI Local SEO Services',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: {
-        '@type': 'City',
-        name: 'Providence',
-        containedInPlace: { '@type': 'State', name: 'Rhode Island' },
-      },
-      description:
-        'Local SEO for Providence RI businesses: Google Business Profile, local 3-pack ranking, AI-search citation, and technical SEO for the Rhode Island market.',
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#page`,
-      url: CANONICAL,
-      name: 'Providence RI SEO Company | FactoryJet',
-      isPartOf: { '@id': 'https://factoryjet.com/#site' },
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 3, name: 'Providence', item: 'https://factoryjet.com/providence' },
-          { '@type': 'ListItem', position: 4, name: 'SEO', item: CANONICAL },
-        ],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Providence Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Providence',
+    addressRegion: 'RI',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 41.824,
+    longitude: -71.4128,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Providence' },
+    { '@type': 'City', name: 'Warwick' },
+    { '@type': 'City', name: 'Cranston' },
+    { '@type': 'City', name: 'Pawtucket' },
+    { '@type': 'City', name: 'East Providence' },
   ],
 };
 
-// Broadside columns content
-const BS_COL1 = [
-  'Providence SEO company',
-  'Local SEO Providence RI',
-  'Google Business Profile',
-  'Near me search ranking',
-];
-const BS_COL2 = [
-  'SEO agency Providence',
-  'Rhode Island local SEO',
-  'AI Overview citations',
-  'College Hill visibility',
-];
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Providence Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
+  description:
+    'Providence local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, College Hill, and Rhode Island.',
+  areaServed: [{ '@type': 'State', name: 'Rhode Island' }],
+};
 
-// ─ Component ─────────────────────────────────────────────────────────────────
-export default function ProvidenceSEO() {
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Providence Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Providence local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, College Hill, and Rhode Island.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Providence', item: CANONICAL },
+  ],
+};
+
+export default function ProvidenceSeoPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="pvseo">
-        <SiteHeader />
-        <main>
+      <script id="prov-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="prov-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="prov-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="prov-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="prov-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-          {/* ── HERO ─────────────────────────────────────────────────────── */}
-          <section className="hero">
-            <div className="wrap hero-grid">
-              {/* Left: copy */}
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <div className="loc rise"><b />&nbsp;Providence, RI</div>
-                <h1 className="rise d1">
-                  Providence <span className="it">SEO company</span><br />
-                  for Rhode Island businesses<br />that want to rank first.
-                </h1>
-                <p className="lead rise d2">
-                  FactoryJet gets Providence businesses into Google's local 3-pack and AI Overviews.
-                  KD 5.4 market, month-to-month, senior engineers, free audit. Serving College Hill to the
-                  Jewelry District.
-                </p>
-                <div className="hstat rise d3">
-                  <div className="n">
-                    <span className="star">★</span>&nbsp;5.0
-                    <span className="l">/ 500+ clients</span>
-                  </div>
-                  <div className="sep" />
-                  <div className="n">KD 5.4<span className="l">&nbsp;open market</span></div>
-                  <div className="sep" />
-                  <div className="n">7 days<span className="l">&nbsp;to start</span></div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Providence Local SEO &amp; Google Maps Engineering</span>
                 </div>
-                <HeroInlineForm region="us" source="providence_seo_hero" submitLabel="Get my free SEO audit" />
-                <div className="cta-row rise d4">
-                  <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Talk to the founder
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Providence Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, capture high-intent search queries, and secure AI answer citations across Providence and Rhode Island.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#prov-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Providence Corridors</span>
                   </a>
                 </div>
               </div>
 
-              {/* Right: broadside card */}
-              <div className="hero-vis float">
-                {/* Floating chips */}
-                <div className="schip ch1">
-                  <div className="k">Keyword difficulty</div>
-                  <div className="v">KD 5.4</div>
-                </div>
-                <div className="schip ch2">
-                  <div className="cdot" />
-                  <div className="ct2">Low competition</div>
-                </div>
-
-                <div className="broadside">
-                  {/* Masthead */}
-                  <div className="bs-masthead">
-                    <div className="bs-name">Providence Search Report</div>
-                    <div className="bs-date">Vol. 1 &middot; 2026 Edition</div>
-                  </div>
-
-                  {/* Orange rule */}
-                  <div className="bs-rule" />
-
-                  {/* Deck */}
-                  <div className="bs-deck">
-                    <div className="bs-kicker">Local search intelligence</div>
-                    <div className="bs-hl">
-                      Providence local 3-pack: lowest KD in New England. Open for capture.
-                    </div>
-                  </div>
-
-                  {/* Columns */}
-                  <div className="bs-cols">
-                    <div className="bs-col">
-                      <div className="bs-col-head">Top queries</div>
-                      <ul>
-                        {BS_COL1.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bs-divider" />
-                    <div className="bs-col">
-                      <div className="bs-col-head">Opportunity</div>
-                      <ul>
-                        {BS_COL2.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Footer */}
-                  <div className="bs-footer">
-                    <div className="stat">
-                      <div className="sv">180K</div>
-                      <div className="sl">residents</div>
-                    </div>
-                    <div className="sdiv" />
-                    <div className="stat">
-                      <div className="sv">1,080</div>
-                      <div className="sl">mo. searches</div>
-                    </div>
-                    <div className="sdiv" />
-                    <div className="stat">
-                      <div className="sv">5.4</div>
-                      <div className="sl">avg. KD</div>
-                    </div>
-                    <div className="sdiv" />
-                    <div className="stat">
-                      <div className="sv">4</div>
-                      <div className="sl">universities</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ── BLUF ─────────────────────────────────────────────────────── */}
-          <section style={{ paddingTop: 0, paddingBottom: '60px' }}>
-            <div className="wrap">
-              <div className="bluf rise">
-                <p>
-                  <strong>The short version:</strong> Providence has 180,000 residents, four universities, a nationally
-                  recognized restaurant scene, a growing biotech and innovation corridor, and keyword difficulty scores
-                  under 6 for primary SEO queries. That combination does not exist anywhere else in New England.
-                  The businesses that build local search authority here in the next 12 months will own rankings
-                  their competitors cannot displace without starting over.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* ── DARK STATS ───────────────────────────────────────────────── */}
-          <section className="dark">
-            <div className="wrap">
-              <div className="eyebrow">Providence market data</div>
-              <h2>The numbers that make Providence a rare SEO opportunity.</h2>
-              <p className="lead">Real data. Verified sources.</p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/providence/seo/providence-ri-seo-hero.webp"
-                  alt="Providence RI downtown and waterfront, the knowledge-economy capital where Brown, RISD, and a dense small business scene converge"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  alt="Providence Rhode Island local SEO Google Maps 3-Pack ranking strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-              <div className="statgrid">
-                <div className="scard">
-                  <div className="n">180K</div>
-                  <div className="l">Providence population, capital of Rhode Island and anchor of the Greater Providence metro (1.6M)</div>
-                  <div className="src">US Census Bureau, 2024</div>
-                </div>
-                <div className="scard">
-                  <div className="n">4</div>
-                  <div className="l">Major universities within city limits: Brown, RISD, Providence College, Johnson &amp; Wales, combined enrollment 30K+</div>
-                  <div className="src">NCES Integrated Postsecondary Education Data System, 2024</div>
-                </div>
-                <div className="scard">
-                  <div className="n">KD 5.4</div>
-                  <div className="l">Average keyword difficulty for "seo company providence" cluster, among the lowest in any comparable Northeast US market</div>
-                  <div className="src">Semrush keyword analysis, 2026</div>
-                </div>
-                <div className="scard">
-                  <div className="n">28%</div>
-                  <div className="l">Growth in Providence metro tech and biotech employment since 2020, driving a new wave of B2B search demand</div>
-                  <div className="src">RI Commerce Corporation, 2024</div>
-                </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Search Engines &amp; Knowledge Graph Networks</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
-          <section>
-            <div className="wrap">
-              <div className="eyebrow">Who we work with</div>
-              <h2>Built for every type of Providence business.</h2>
-              <p className="lead">
-                From Federal Hill restaurants to Wexford biotech startups, local SEO works for any category
-                with a local search audience.
-              </p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/providence/seo/providence-university-district.webp"
-                  alt="Providence RI university district and small businesses. Brown University, RISD, and Johnson & Wales create a uniquely dense local search market"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  alt="FactoryJet senior SEO engineers optimizing Providence local entity knowledge graph"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-              <div className="grid3">
-                {[
-                  {
-                    pill: 'Restaurants & Food',
-                    h: 'Restaurants, cafes & food businesses',
-                    p: 'Providence has a nationally recognized dining scene that attracts visitors specifically for food. We build GBP presence and content that captures both the tourist search ("best restaurants providence") and the local residential search year-round.',
-                  },
-                  {
-                    pill: 'Healthcare & Wellness',
-                    h: 'Medical practices, clinics & therapists',
-                    p: 'Brown Medical, Lifespan, and Care New England anchor a large healthcare ecosystem. Adjacent practices, specialists, and wellness services benefit from proximity and can capture both institutional referral traffic and direct patient searches.',
-                  },
-                  {
-                    pill: 'Education & Tutoring',
-                    h: 'Tutors, test prep, coaching & education services',
-                    p: 'The student population at Brown, RISD, and PC generates consistent demand for academic support, test prep, and skills training. We target both student-specific and parent-driven search behavior.',
-                  },
-                  {
-                    pill: 'Professional Services',
-                    h: 'Law, accounting, finance & consulting',
-                    p: 'The growing Wexford and Jewelry District professional base generates high-value B2B search demand. We position professional service firms for the commercial-intent queries that attract institutional and startup clients.',
-                  },
-                  {
-                    pill: 'Arts, Design & Creative',
-                    h: 'Galleries, studios, creative agencies & services',
-                    p: 'Providence\'s RISD-adjacent creative community generates unique search demand for design services, studio space, gallery events, and creative consulting. We build authority in this niche ecosystem.',
-                  },
-                  {
-                    pill: 'Retail & Home Services',
-                    h: 'Local shops, contractors & home professionals',
-                    p: 'East Side, Federal Hill, and the growing South Providence residential market all generate consistent local service searches. We get your business into the map results for the neighborhoods you actually serve.',
-                  },
-                ].map(({ pill, h, p }) => (
-                  <div className="ucard" key={h}>
-                    <div className="pill">{pill}</div>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="districts">
-                We cover all Providence neighborhoods and nearby RI cities: <b>College Hill</b>, <b>Federal Hill</b>,
-                <b> Jewelry District</b>, <b>Fox Point</b>, <b>Downtown</b>, <b>South Providence</b>,
-                <b> Cranston</b>, <b>Pawtucket</b>, <b>East Providence</b>, <b>North Providence</b>, <b>Woonsocket</b>, <b>Warwick</b>.
-              </p>
-            </div>
-          </section>
 
-          {/* ── LISTICLE ─────────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">Warning signs</div>
-              <h2>7 signs your Providence business is losing customers to Google right now.</h2>
-              <p className="lead">
-                Each one is a direct revenue leak. Most can be fixed in the first 60 days of a focused campaign.
-              </p>
-              <ul className="listicle-list">
-                {LISTICLE.map(({ n, h, p }) => (
-                  <li key={n}>
-                    <div className="li-n">{n}</div>
-                    <div>
-                      <div className="li-h">{h}</div>
-                      <div className="li-p">{p}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-
-          {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
-          <section className="room-lav">
-            <div className="wrap">
-              <div className="eyebrow">What you get</div>
-              <h2>Full-stack SEO built for the Rhode Island market.</h2>
-              <p className="lead">
-                One flat engagement. No package tiers, no feature gates. The complete SEO stack, every month.
-              </p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/shared/factoryjet-senior-engineer.webp"
-                  alt="FactoryJet senior engineer reviewing SEO audit data, every engagement is led by a specialist, not handed to a junior"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="grid2">
-                {[
-                  {
-                    h: 'Technical SEO foundation',
-                    p: 'Core Web Vitals, crawl management, schema markup (LocalBusiness, FAQPage, Service), mobile performance, and structured data for AI citation. Providence sites tend to have accumulated technical debt from older CMS installs, we clear that foundation first.',
-                  },
-                  {
-                    h: 'Google Business Profile management',
-                    p: 'Full GBP optimization: photos, service descriptions, weekly posts tied to Providence events (Providence Restaurant Weeks, WaterFire, Brown commencement), Q&A management, and review strategy. For multi-location Rhode Island businesses, each location managed separately.',
-                  },
-                  {
-                    h: 'Providence-specific long-form content',
-                    p: 'One to two in-depth content pieces per month targeting your highest-value Providence queries. Structured for Google featured snippets and AI Overviews, with local stats, FAQ schema, and internal links to your service pages.',
-                  },
-                  {
-                    h: 'Rhode Island link building',
-                    p: 'Editorial placements in the Providence Journal, Providence Business News, GoLocalProv, What\'s Up Newp, Brown and RISD adjacent publications, RI Chamber of Commerce, and category-specific directories. No paid links.',
-                  },
-                  {
-                    h: 'AI search optimization (GEO)',
-                    p: 'Content structured for Google AI Overviews, ChatGPT, and Perplexity citations. Answer-first formatting, entity markup, FAQ schema, and verified sourcing. Providence is early-stage for AI citation competition, now is the time to build that authority.',
-                  },
-                  {
-                    h: 'Monthly reporting and strategy',
-                    p: 'Tracked calls and form fills from organic, GBP call volume, ranking movement for your Providence queries, Core Web Vitals status, and competitor activity. One live call per month with a written plan for the next 30 days.',
-                  },
-                ].map(({ h, p }) => (
-                  <div className="ucard" key={h}>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ── PROCESS ──────────────────────────────────────────────────── */}
-          <section>
-            <div className="wrap">
-              <div className="eyebrow">How it works</div>
-              <h2>From audit to ranking in four steps.</h2>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet founder on a free audit call, 30 minutes that maps your Providence SEO opportunity with zero obligation"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="grid4">
-                {[
-                  { n: '01', h: 'Free audit call', p: '30 minutes. GBP, website health, current Providence rankings, competitor analysis. You leave with a concrete priority list.' },
-                  { n: '02', h: 'Scope and kickoff', p: 'Flat monthly fee scoped to your Providence market and goals. Technical baseline and access setup within seven days.' },
-                  { n: '03', h: 'Build and publish', p: 'Technical fixes in weeks one and two. GBP campaign in week two. Content and link building from week three onward.' },
-                  { n: '04', h: 'Track, report, adapt', p: 'Monthly performance review, written plan for next 30 days, competitor monitoring, and a live call to discuss everything.' },
-                ].map(({ n, h, p }) => (
-                  <div className="ucard" key={n}>
-                    <div className="pill">{n}</div>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ── COMPARISON ───────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">How we compare</div>
-              <h2>FactoryJet vs. a traditional Rhode Island agency.</h2>
-              <div className="cmpwrap">
-                <table className="cmp">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th className="fjh">FactoryJet</th>
-                      <th>Traditional Agency</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {COMPARE.map(({ k, fj, alt, hl }) => (
-                      <tr key={k}>
-                        <td className="k">{k}</td>
-                        <td className="fj">{hl ? <span className="hl">{fj}</span> : fj}</td>
-                        <td className="alt">{alt}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-
-          {/* ── PROOF ────────────────────────────────────────────────────── */}
-          <section className="green">
-            <div className="wrap">
-              <div className="eyebrow">Results that hold</div>
-              <h2>500+ businesses. Senior engineers. Founder-led strategy.</h2>
-              <p className="lead">
-                We track calls and bookings, not ranking screenshots.
-              </p>
-              <div className="quote">
-                <p>
-                  "Three months in and we had more organic calls than the entire previous year combined.
-                  The team knows what they are doing and they explain every decision clearly."
-                </p>
-                <div className="byline">
-                  <div className="avatar">K</div>
-                  <div>
-                    <div className="nm">Kiran M. Impulse Branding</div>
-                    <div className="ti">Brand strategy and digital services</div>
-                  </div>
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Search Precision &amp; Real Growth</span>
                 </div>
-              </div>
-              <div style={{ margin: '0 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/providence/seo/providence-knowledge-economy.webp"
-                  alt="Providence RI knowledge economy businesses, healthcare, biotech, creative agencies, and restaurants that win with local SEO"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="clients">
-                {['Impulse Branding', 'Belle Maison', 'Formative Concepts', '500+ businesses served'].map(
-                  (c) => <span key={c}>{c}</span>
-                )}
-              </div>
-            </div>
-          </section>
 
-          {/* ── FAQ ──────────────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">Questions answered</div>
-              <h2>What Providence business owners ask before starting SEO.</h2>
-              <div className="faqgrid">
-                <nav aria-label="FAQ categories">
-                  <div className="faqnav">
-                    {FAQ_GROUPS.map((g) => (
-                      <a href={`#faq-${g.id}`} key={g.id}>
-                        {g.label}<span className="ct">{g.count}</span>
-                      </a>
-                    ))}
-                  </div>
-                  <p className="faqhelp">
-                    More questions? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a>.
-                  </p>
-                </nav>
-                <div>
-                  {FAQ_GROUPS.map((g) => (
-                    <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
-                      <div className="ch">{g.label}</div>
-                      {g.items.map((it) => (
-                        <details key={it.q}>
-                          <summary>{it.q}</summary>
-                          <p>{it.a}</p>
-                        </details>
-                      ))}
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Local Search Engineered for Providence Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Downtown litigation practices to East Side clinical groups and Route 128 industrial manufacturers, we build high-converting search architectures that capture the Ocean State market.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Local SEO Consultation" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* ── FINAL CTA ────────────────────────────────────────────────── */}
-          <section className="final">
-            <div className="wrap">
-              <div className="eyebrow">Ready to start</div>
-              <h2>
-                The Providence SEO window is open.<br />
-                <span className="it">Let's move before it closes.</span>
+        {/* ── 04. PROVIDENCE DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="prov-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Providence Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local Search Optimization for Rhode Island Sectors
               </h2>
-              <p className="lead">
-                Free 30-minute audit. We show you where you stand, what your competitors are doing,
-                and the three moves with the biggest impact. No obligation, no pressure.
-              </p>
-              <div className="cta-row">
-                <ModalCTAButton
-                  label="Get your free SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
-                />
-                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  Talk to the founder
-                </a>
-              </div>
-              <p className="fine">
-                Month-to-month &middot; free audit &middot; no setup fee &middot; senior engineers &middot; US SEO services
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Downtown law practices to College Hill medical groups and Federal Hill dining venues:
               </p>
             </div>
-          </section>
 
-          <SeoCityLinksUS currentCity="providence" />
-        </main>
-        <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-      </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local SEO Strategies for Rhode Island Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across Providence demands tailored schema models, citation graphs, and map optimization:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Providence Leaders Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace opaque monthly agency reports with technical local search and AI citation dominance:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// PROVIDENCE LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Providence local search."
+            city="Providence"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for guaranteed Local 3-Pack capture and AI citation visibility:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Providence SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="PROVIDENCE LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Providence RI"
+          lead="Direct, plain English answers to what Rhode Island business owners and marketing leaders ask about Google Maps 3-Pack and search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="providence" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Map Pack Dominance &amp; Real Growth</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Providence Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary Google Business Profile and local entity audit. We will reveal exactly where you are losing leads to competitors and how to capture the Local 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
     </>
   );
 }

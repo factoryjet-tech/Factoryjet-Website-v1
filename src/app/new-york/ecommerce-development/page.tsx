@@ -1,645 +1,922 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const IMG = '/images/us/marketplace';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/new-york/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best E-Commerce Development Agency New York NYC | Top Developers | FactoryJet',
+  title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
   description:
-    'Ranked the Best E-Commerce Development Agency in New York. Top e-commerce developers in NYC for luxury fashion, DTC brands, and enterprise B2B. Shopify Plus, WooCommerce, Headless Next.js, and ERP integrations.',
+    'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best E-Commerce Development Agency New York NYC | FactoryJet',
+    title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
     description:
-      'Top e-commerce development company in New York. We build ultra-fast Shopify Plus, WooCommerce, and headless storefronts for NYC brands with zero fluff and fixed pricing.',
-    url: 'https://factoryjet.com/new-york/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Best E-Commerce Development Agency New York NYC' }],
+      'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'New York Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best E-Commerce Development Agency in New York | FactoryJet',
-    description: 'Top NYC e-commerce developers building sub-second Shopify Plus, Headless, and ERP commerce engines.',
+    title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in New York City. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/new-york/ecommerce-development' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ─────────────────────────────────────────────
-   FAQ DATA
-───────────────────────────────────────────── */
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Headless Next.js 15',
+  'BigCommerce B2B Edition',
+  'Klaviyo Master Elite',
+  'Algolia Search AI',
+  'Sanity CMS Studio',
+  'Cloudflare Edge CDN',
+  'Stripe Payments Enterprise',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'SoHo & Madison Avenue Luxury Corridor',
+    query: 'luxury retail haute couture headless ecommerce soho nyc',
+    focus: 'Luxury Fashion, High-End Retail & Flagship Boutiques',
+    desc: 'The global epicenter of luxury fashion. Demands ultra-responsive lookbooks, interactive sizing visualizers, and sub-second edge hosting.',
+  },
+  {
+    corridor: 'Garment District & Midtown Fashion HQ',
+    query: 'apparel wholesale b2b private label ecommerce garment district',
+    focus: 'Apparel Manufacturing, B2B Wholesale & Line Sheet Portals',
+    desc: 'Historic apparel production core. B2B wholesale portals with purchase order workflows, net-30 terms, and tiered line sheet pricing.',
+  },
+  {
+    corridor: 'DUMBO & Brooklyn Creative Commerce',
+    query: 'artisanal lifestyle home goods d2c ecommerce dumbo',
+    focus: 'Modern D2C Brands, Artisanal Goods & Specialty Homeware',
+    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive 3D product configurators, and seamless mobile checkout.',
+  },
+  {
+    corridor: 'Flatiron & Chelsea D2C Tech Corridor',
+    query: 'health beauty subscription wellness ecommerce flatiron',
+    focus: 'Beauty, Wellness & Subscription Commerce Scale-Ups',
+    desc: 'High-growth direct-to-consumer hub. Features recurring subscription billing, dynamic bundle builders, and personalized quiz funnels.',
+  },
+  {
+    corridor: 'Long Island City B2B Distribution Spine',
+    query: 'commercial food beverage cold storage ecommerce lic queens',
+    focus: 'Gourmet Food Wholesale, Beverage & Cold-Chain Logistics',
+    desc: 'Major multi-borough distribution nexus. Demands real-time ERP inventory syncing, dynamic freight calculations, and route scheduling.',
+  },
+  {
+    corridor: 'Financial District FinTech & Digital Goods Hub',
+    query: 'digital subscriptions fintech micro transactions ecommerce fidi',
+    focus: 'Digital Subscriptions, FinTech Commerce & Digital Assets',
+    desc: 'High-velocity transaction epicenter. Demands multi-currency settlement, tokenized micro-billing, and high-concurrency payment routing.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Luxury Fashion, Designer Apparel & Accessories',
+    headline: 'Editorial-Grade Headless Commerce for New York Fashion Houses',
+    description:
+      'From SoHo luxury flagships to Madison Avenue designer houses, high-end fashion brands demand digital shopping experiences that match their runway aesthetic. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich editorial lookbooks, and global multi-currency checkout.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'New York City SoHo luxury fashion apparel and designer accessories headless ecommerce storefront',
+    points: [
+      'Sub-second first contentful paint and instant product filtering with zero layout shifts',
+      'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell styling modules',
+      'Seamless multi-currency global checkout utilizing Shopify Markets and localized duties',
+    ],
+  },
+  {
+    sector: 'Direct-to-Consumer Beauty, Skincare & Wellness',
+    headline: 'High-Conversion Subscription Storefronts for Flatiron Brands',
+    description:
+      'Fast-growing beauty, skincare, and wellness brands across Flatiron and Chelsea need commerce platforms engineered for recurring customer lifetime value. We build custom headless Next.js storefronts with dynamic bundle builders, diagnostic shade-finder quizzes, and automated recurring subscription billing.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'New York City direct-to-consumer beauty skincare and wellness subscription ecommerce platform',
+    points: [
+      'Custom interactive bundle configurators and personalized diagnostic quiz engines',
+      'Seamless subscription management with Recharge, Smartrr, and Stripe Billing',
+      'High-speed mobile checkout optimized for TikTok Shop, Instagram, and paid media traffic',
+    ],
+  },
+  {
+    sector: 'B2B Wholesale, Food & Beverage Supply Chain',
+    headline: 'Enterprise Wholesale Portals for Garment District & Queens Distributors',
+    description:
+      'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require robust B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'New York City apparel manufacturing and food wholesale B2B ecommerce engineering',
+    points: [
+      'Custom customer group pricing tiers with contracted volume discount schedules',
+      'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
+      'Real-time two-way synchronization with SAP, NetSuite, Epicor, and QuickBooks Enterprise',
+    ],
+  },
+  {
+    sector: 'Luxury Jewelry, Horology & Fine Goods',
+    headline: 'High-Trust Digital Showrooms for Diamond District Jewelers',
+    description:
+      'High-value jewelry retailers and fine watch dealers in Manhattan demand unmatched security and visual fidelity. We build bespoke digital showrooms with high-resolution 360-degree gem visualizers, custom ring configurators, insured white-glove shipping integrations, and high-limit payment routing.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'New York City Diamond District luxury jewelry and fine watch ecommerce website design',
+    points: [
+      'Interactive 360-degree 3D jewelry configurators and diamond certification databases',
+      'High-limit fraud protection and escrow-integrated payment gateway routing',
+      'Insured armored courier shipping rate calculation and white-glove delivery tracking',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow Monolithic Platforms & Sluggish Mobile Checkouts',
+    problem: 'Legacy Magento and bloated WooCommerce stores suffer from 4-second load times, checkout friction, and high cart abandonment on mobile devices.',
+    solution: 'We build headless Next.js 15 storefronts connected to Shopify Plus APIs, delivering sub-second page rendering and frictionless 1-tap checkout.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Replatforming Timelines & Revenue Disruption',
+    problem: 'Traditional agencies quote 6 to 9 months for replatforming, leading to massive budget overruns, operational friction, and lost holiday sales.',
+    solution: 'Our disciplined agile migration sprint delivers complete catalog data migration, ERP integration, and production launch in verified milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Broken ERP, POS & Multi-Warehouse Inventory Sync',
+    problem: 'Disjointed inventory systems cause overselling, delayed fulfillment, manual spreadsheet updates, and poor customer reviews across physical and online channels.',
+    solution: 'We engineer real-time two-way webhooks that synchronize inventory across NetSuite, SAP, Manhattan POS, and regional 3PL fulfillment centers.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Complex Plugin Chains & Fragile Checkout Flows',
+    problem: 'Stacking 25+ third-party Shopify apps slows down storefront speed, introduces script conflicts, and creates expensive monthly SaaS subscriptions.',
+    solution: 'We build native React components and custom Shopify Functions, replacing expensive apps with lightweight, custom code that you own 100%.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Catalog Architecture, ERP Mapping & Data Strategy',
+    desc: 'We map every SKU, customer record, historical order, and third-party integration into a clean headless commerce architectural blueprint.',
+    deliverables: ['Product data modeling and attribute hierarchy map', 'ERP, CRM, and 3PL fulfillment integration matrix', 'SEO redirect plan preserving 100% of organic traffic', 'Fixed-price milestone agreement and delivery schedule'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & High-Conversion Storefront Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on friction-free navigation, interactive PDPs, and optimized checkout funnels.',
+    deliverables: ['Complete desktop and mobile Figma prototypes', 'Interactive product detail page and cart drawer wireframes', 'Bespoke design system tokens and typography scales', 'Stakeholder design review and milestone sign-off'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Headless Next.js 15 Engineering & Shopify Plus API Integration',
+    desc: 'We build the production application using Next.js 15 App Router, React 19, Tailwind CSS, and Shopify Storefront GraphQL APIs.',
+    deliverables: ['Custom headless Next.js frontend repository', 'Shopify Plus Storefront API and Cart integration', 'Custom B2B wholesale pricing and portal modules', 'Automated unit, integration, and end-to-end checkout testing'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Zero-Downtime Data Cutover, Speed Tuning & Handover',
+    desc: 'We execute complete database migration, verify 95+ Core Web Vitals, manage DNS cutover, and transfer full code repository ownership.',
+    deliverables: ['Complete historical order and customer data migration', 'Core Web Vitals 95+ optimization report', 'Live DNS cutover with zero downtime or lost orders', 'Full GitHub repository transfer and 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Stack',
+    factoryjet: 'Headless Next.js 15 App Router on Cloudflare Edge paired with Shopify Plus.',
+    traditional: 'Heavy monolithic Shopify themes or outdated monolithic Magento PHP stacks.',
+  },
+  {
+    label: 'Checkout Speed',
+    factoryjet: 'Sub-second mobile page loads with instant 1-tap Shop Pay, Apple Pay, and Google Pay.',
+    traditional: '3 to 5 second mobile page loads with render-blocking tracking scripts and layout shift.',
+  },
+  {
+    label: 'B2B & Wholesale Capabilities',
+    factoryjet: 'Native custom B2B wholesale portal with customer pricing tiers, Net terms, and ERP sync.',
+    traditional: 'Fragile third-party apps charging expensive monthly subscriptions per wholesale seat.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary theme locks or agency-retained custom codebases.',
+  },
+];
+
 const FAQ_CATEGORIES = [
-  { key: 'agency', label: 'NYC Agency Standards' },
-  { key: 'platforms', label: 'Platforms & Tech' },
-  { key: 'local', label: 'New York Retail & POS' },
-  { key: 'pricing', label: 'Fixed Pricing & Scoping' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Migration' },
+  { key: 'tech', label: 'Shopify & Next.js Stack' },
+  { key: 'local', label: 'New York City Focus' },
+  { key: 'ownership', label: 'Code & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-  // NYC Agency Standards
   {
-    category: 'agency',
-    question: 'Why is FactoryJet ranked the Best E-Commerce Development Agency in New York?',
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a New York brand?',
     answer:
-      'FactoryJet is recognized as the best e-commerce development agency in New York because we combine senior engineering leadership with fixed-price accountability and sub-second performance guarantees. Unlike traditional Madison Avenue agency holding groups that bill excessive hourly retainers with layers of non-technical account managers, FactoryJet provides direct access to veteran commerce engineers who build high-converting Shopify Plus, WooCommerce, and headless Next.js platforms delivered in weeks rather than quarters.',
+      'Project investments depend on total SKU count, custom ERP/3PL integrations, B2B wholesale requirements, and custom interactive features. Every project is quoted with a binding, fixed-price milestone agreement and zero hidden change orders.',
   },
   {
-    category: 'agency',
-    question: 'How do top e-commerce developers in NYC evaluate store speed and conversion architecture?',
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
     answer:
-      'Top e-commerce developers audit the full critical rendering path: server-side rendering (SSR), Largest Contentful Paint (LCP), total blocking time from third-party app scripts, checkout tokenization latency, and mobile payment options like Apple Pay and Shop Pay. We guarantee green Core Web Vitals on every build.',
+      'No. We deliver turnkey, fully documented codebases that you own 100%. You pay standard platform hosting fees directly to your providers and pay zero mandatory agency retainers.',
   },
   {
-    category: 'agency',
-    question: 'What types of New York brands does FactoryJet partner with?',
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'We partner with premier Manhattan luxury fashion houses, SoHo direct-to-consumer apparel labels, Brooklyn lifestyle goods, beauty brands, and enterprise wholesale distributors located across the New York metropolitan area.',
+      'We complete an exhaustive architectural discovery and API integration mapping process before development begins, locking in the technical scope in a binding milestone contract.',
   },
   {
-    category: 'agency',
-    question: 'How does FactoryJet compare to high-priced Madison Avenue and SoHo creative agencies?',
+    category: 'pricing',
+    question: 'Can you help us reduce our monthly Shopify app subscription costs?',
     answer:
-      'Traditional NYC creative firms frequently charge $80,000 to $250,000+ for standard theme customisations while outsourcing technical development. FactoryJet operates with senior engineering precision: every dollar goes directly into custom frontend design, resilient database schemas, ERP connectors, and speed optimization with 100% transparent fixed scoping.',
-  },
-
-  // Platforms & Tech
-  {
-    category: 'platforms',
-    question: 'Which platforms do your New York e-commerce developers build on?',
-    answer:
-      'We architect and deploy on Shopify and Shopify Plus, WooCommerce, BigCommerce, Magento (Adobe Commerce), headless Next.js App Router, and Commerceflo, integrating centralized ERPs and automated marketing stacks.',
+      'Yes. By engineering custom React components and native Shopify Functions, we typically eliminate 5 to 15 third-party apps, saving thousands annually in recurring SaaS fees while speeding up your site.',
   },
   {
-    category: 'platforms',
-    question: 'How do you integrate Shopify Plus with NetSuite and HubSpot for NYC brands?',
+    category: 'timeline',
+    question: 'How fast can you replatform our store from Magento or WooCommerce to Shopify Plus?',
     answer:
-      'We build bi-directional GraphQL and REST event pipelines that synchronize product catalogs, real-time inventory counts, customer loyalty segments, and purchase orders between Shopify Plus, NetSuite ERP, and HubSpot CRM in under 150 milliseconds.',
+      'Our disciplined agile engineering sprints deliver complete replatforming, data migration, and custom frontend development within verified milestone timelines without halting current store sales.',
   },
   {
-    category: 'platforms',
-    question: 'Can you migrate legacy Magento or WooCommerce stores to Shopify Plus without downtime?',
+    category: 'timeline',
+    question: 'Will our existing customer passwords and historical order data transfer safely?',
     answer:
-      'Yes. We have executed hundreds of frictionless migrations. We transfer full historical customer data, order histories, and SKU catalogs, map comprehensive 301 redirect tables to protect organic SEO rankings, and test on staging before cutover.',
+      'Yes. We execute automated, validated data pipelines that migrate all historical customer profiles, order histories, product variants, and metadata with zero data loss.',
   },
   {
-    category: 'platforms',
-    question: 'How do you prepare New York brands for agentic commerce and AI shopping agents?',
+    category: 'timeline',
+    question: 'How do you guarantee zero downtime during DNS launch cutover?',
     answer:
-      'We build comprehensive JSON-LD schema layers and dedicated Model Context Protocol (MCP) server endpoints, enabling autonomous shopping assistants (OpenAI Operator, Google Astra, Perplexity) to discover, query stock, and execute delegated token checkouts on your store.',
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
   },
-
-  // New York Retail & POS
+  {
+    category: 'timeline',
+    question: 'What is required from our internal operations team during the build?',
+    answer:
+      'We require API access credentials to your existing commerce platform, ERP/3PL system documentation, brand assets, and participation in weekly milestone demonstration reviews.',
+  },
+  {
+    category: 'tech',
+    question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
+    answer:
+      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+  },
+  {
+    category: 'tech',
+    question: 'Can you integrate our complex ERP, POS, and warehouse management software?',
+    answer:
+      'Yes. We build custom API connectors and webhook listeners for NetSuite, SAP, Microsoft Dynamics, Epicor, Manhattan Associates, and all major third-party logistics (3PL) providers.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you optimize checkout conversion rates on mobile devices?',
+    answer:
+      'We eliminate render-blocking scripts, implement one-click Shop Pay and Apple Pay biometric checkouts, and streamline the mobile cart drawer for frictionless purchasing.',
+  },
   {
     category: 'local',
-    question: 'How do you unify online e-commerce with physical retail stores in Manhattan and Brooklyn?',
+    question: 'Do you have experience with New York luxury fashion and apparel brands?',
     answer:
-      'We configure unified omnichannel POS integrations (Shopify POS Pro or custom POS connectors) linking your physical flagship stores in SoHo, Fifth Avenue, or Williamsburg directly to your central online warehouse. Customers can view live in-store stock, purchase online for in-store pickup (BOPIS), and complete cross-channel returns.',
+      'Yes. We engineer high-speed digital flagships for SoHo and Madison Avenue fashion houses, luxury footwear brands, and designer accessory creators requiring editorial lookbooks and multi-currency commerce.',
   },
   {
     category: 'local',
-    question: 'How do you support multi-currency and international luxury shipping from New York?',
+    question: 'Can you build custom B2B wholesale portals for Garment District manufacturers?',
     answer:
-      'We configure Shopify Markets and global localized storefronts with automated currency conversion, localized duty and tax calculation at checkout, and global carrier shipping integrations.',
+      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
   },
   {
     category: 'local',
-    question: 'Can you build custom B2B wholesale portals for New York fashion showrooms?',
+    question: 'Can you integrate multi-location POS inventory across Manhattan retail stores?',
     answer:
-      'Yes. Using Shopify Plus native B2B or BigCommerce B2B Edition, we create private wholesale showrooms featuring custom contract price lists, Net 30/60 terms, matrix quick-order pads, and corporate buyer account permissions.',
-  },
-
-  // Fixed Pricing & Scoping
-  {
-    category: 'pricing',
-    question: 'How much does e-commerce development cost with a top New York agency?',
-    answer:
-      'While standard NYC agencies charge open-ended retainers of $30,000+ per month, FactoryJet provides clear, fixed-price project milestones starting from $4,500 for custom builds and migrations, scoped fully up front before any code is written.',
+      'Yes. We connect Shopify POS and custom point-of-sale systems across brick-and-mortar locations to ensure unified omnichannel inventory, buy-online-pickup-in-store (BOPIS), and real-time stock routing.',
   },
   {
-    category: 'pricing',
-    question: 'Do you charge ongoing percentages of gross merchandise volume (GMV)?',
+    category: 'local',
+    question: 'Can you build subscription commerce for D2C beauty and wellness brands in NYC?',
     answer:
-      'Never. You retain 100% of your revenue. We never take revenue shares or charge hidden licensing fees.',
+      'Yes. We integrate advanced recurring subscription engines, custom bundle builders, and automated retention flows for high-growth direct-to-consumer health and beauty brands.',
   },
   {
-    category: 'pricing',
-    question: 'How fast can our New York e-commerce store launch?',
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
     answer:
-      'Depending on complexity, standard high-performance storefronts launch in 2 to 4 weeks, with enterprise headless or ERP-connected builds launching in 5 to 8 weeks.',
+      'Yes, 100%. Upon project completion, you receive complete ownership of the private GitHub repository, Figma design files, and deployment infrastructure with zero vendor lock-in.',
   },
   {
-    category: 'pricing',
-    question: 'How do we schedule an architecture consultation with the founder in New York?',
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
     answer:
-      'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will analyze your current store performance, catalog architecture, and growth targets to deliver a comprehensive fixed-price engineering proposal.',
+      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
   },
   {
-    category: 'agency',
-    question: 'Why is FactoryJet considered the Best E-Commerce Development Company in New York for fashion brands?',
+    category: 'ownership',
+    question: 'How do you train our internal merchandising team on managing products and promotions?',
     answer:
-      'We combine Madison Avenue aesthetic standards with Silicon Valley cloud engineering. Our top NYC developers build sub-second, highly polished Shopify Plus and Headless Next.js storefronts with custom VIP clienteling, NetSuite ERP integration, and frictionless mobile checkouts tailored to luxury apparel and lifestyle labels.',
+      'We deliver custom recorded video walkthroughs and documentation showing your team how to update catalog attributes, launch promotions, schedule flash sales, and manage orders.',
   },
   {
-    category: 'platforms',
-    question: 'How do top e-commerce developers in New York optimize stores for high mobile conversion?',
+    category: 'ownership',
+    question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
     answer:
-      'With over 75% of NYC retail traffic originating on mobile devices, our developers eliminate render-blocking JavaScript, implement sub-second edge rendering on Cloudflare, and configure 1-click accelerated wallets (Apple Pay, Shop Pay) to maximize mobile checkout completion.',
-  },
-  {
-    category: 'luxury',
-    question: 'How do you build private runway pre-order portals for NYC luxury designers?',
-    answer:
-      'We create exclusive, password-protected pre-order experiences where VIP clientele can reserve upcoming seasonal drops with partial deposits or card-on-file tokenization, calculating production lead times and expected ship dates automatically.',
+      'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
   },
 ];
 
-/* ─────────────────────────────────────────────
-   SCHEMAS
-───────────────────────────────────────────── */
 const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
   })),
 };
 
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'FactoryJet - Best E-Commerce Development Agency New York',
-  description:
-    'Top e-commerce development company in New York NYC. Custom Shopify Plus, WooCommerce, Headless Next.js, and ERP integrations for luxury, DTC, and wholesale brands.',
-  url: 'https://factoryjet.com/new-york/ecommerce-development',
-  telephone: '+1-800-FACTORYJET',
+  name: 'FactoryJet - New York Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'New York',
     addressRegion: 'NY',
     addressCountry: 'US',
   },
-  areaServed: [{ '@type': 'City', name: 'New York' }, { '@type': 'AdministrativeArea', name: 'New York Metropolitan Area' }],
-  priceRange: '$$$$',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 40.7128,
+    longitude: -74.006,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'New York' },
+    { '@type': 'City', name: 'Manhattan' },
+    { '@type': 'City', name: 'Brooklyn' },
+    { '@type': 'City', name: 'Queens' },
+    { '@type': 'City', name: 'SoHo' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'New York Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
+  description:
+    'Custom headless Shopify Plus and Next.js ecommerce development in New York City. Sub-second performance, full IP code ownership, and rapid 7-day delivery for NYC brands.',
+  areaServed: [{ '@type': 'State', name: 'New York' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description: 'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
 };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'New York', item: 'https://factoryjet.com/new-york/ecommerce-development' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Ecommerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'New York', item: CANONICAL },
   ],
 };
 
-const STATS = [
-  { b: 'Top Ranked NYC', s: 'best e-commerce developers' },
-  { b: 'Sub-Second LCP', s: 'guaranteed mobile speed' },
-  { b: 'Fixed-Price', s: 'zero surprise agency overages' },
-  { b: '500+ Stores', s: 'delivered across global markets' },
-];
-
-const SOURCED = [
-  {
-    v: '53%',
-    d: 'of mobile retail visitors abandon websites that take longer than 3 seconds to load, making raw frontend speed the #1 revenue lever in NYC retail.',
-    src: 'Google Web Performance Data',
-    href: 'https://web.dev',
-  },
-  {
-    v: '3.4x',
-    d: 'higher conversion rates generated by unified omnichannel stores connecting physical Manhattan retail POS with online digital inventory.',
-    src: 'NRF Omnichannel Retail Report',
-    href: 'https://nrf.com',
-  },
-  {
-    v: '$120 Billion',
-    d: 'annual digital commerce volume generated by New York metropolitan brands across fashion, beauty, luxury, and wholesale distribution.',
-    src: 'US Department of Commerce',
-    href: 'https://www.commerce.gov',
-  },
-];
-
-const PILLARS = [
-  { i: '◈', t: '1. Best E-Commerce Development Agency Standards', d: 'We build bespoke, high-converting digital storefronts on Shopify Plus, WooCommerce, and headless Next.js tailored to New York’s competitive consumer and luxury markets.' },
-  { i: '◇', t: '2. Top E-Commerce Developers & Senior Engineering', d: 'Work directly with seasoned commerce architects who write clean, maintainable code rather than junior agency account coordinators.' },
-  { i: '↯', t: '3. Unified Flagship Retail & POS Synchronization', d: 'Bridge your Manhattan, SoHo, and Brooklyn physical stores with your online warehouse for real-time inventory visibility and in-store pickup.' },
-  { i: '▤', t: '4. Enterprise ERP, CRM & HubSpot Integration', d: 'Connect NetSuite, SAP, Katana, Klaviyo, and HubSpot directly into your store with automated bi-directional data pipelines.' },
-  { i: '⛓', t: '5. Frictionless Replatforming & Migration', d: 'Migrate from legacy Magento, WooCommerce, or custom monoliths to modern Shopify Plus with zero downtime and 100% SEO rank preservation.' },
-  { i: '⤢', t: '6. Agentic Commerce & AI Agent Discoverability', d: 'Deploy structured JSON-LD schemas and MCP server endpoints so autonomous AI shoppers cite, recommend, and purchase your products.' },
-];
-
-export default function NewYorkEcommercePage() {
+export default function NewYorkEcommerceDevelopmentPage() {
   return (
     <>
-      <script id="ny-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="ny-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
-      <script id="ny-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="ny-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="ny-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="ny-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="ny-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="ny-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── Hero ── */}
-        <section className="pp-dotgrid">
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Best E-Commerce Development Agency in New York</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Top e-commerce developers in <span className="pp-grad">New York NYC.</span>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>New York Ecommerce Development &amp; Headless Architecture</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  New York Ecommerce Development Agency for High-Growth Brands
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Ranked the Best E-Commerce Development Company in NYC. High-performance Shopify Plus, WooCommerce,
-                  Headless Next.js, and ERP integrations for luxury, fashion, and enterprise brands.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for New York brands. 7-day agile delivery with 100% code ownership.
                 </p>
-                <HeroInlineForm source="us_new_york_ecommerce_hero" region="us" submitLabel="Get an NYC Store Scope" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#ny-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore New York Corridors</span>
+                  </a>
+                </div>
               </div>
 
-              {/* Visual Architecture Graphic */}
-              <div
-                role="img"
-                aria-label="New York e-commerce architecture diagram showing unified retail POS connected to Shopify Plus and ERP systems."
-                style={{
-                  border: '1px solid var(--pp-line)',
-                  borderRadius: '18px',
-                  background: '#fff',
-                  padding: '24px',
-                  boxShadow: '0 18px 50px rgba(20,17,15,.08)',
-                }}
-              >
-                <div
-                  style={{
-                    border: '1.5px solid var(--pp-orange)',
-                    borderRadius: '12px',
-                    background: 'var(--pp-tint)',
-                    padding: '14px',
-                    textAlign: 'center',
-                    fontFamily: 'var(--pp-disp)',
-                    fontWeight: 700,
-                    color: 'var(--pp-ink)',
-                    marginBottom: '18px',
-                  }}
-                >
-                  NYC Commerce Flagship Engine
-                  <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Manhattan POS · Shopify Plus · NetSuite ERP · Sub-Second LCP
-                  </small>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/saas-website-design/hero.webp"
+                  alt="New York City ecommerce development and headless Shopify Plus storefront engineering"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce Engine &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/b2b-website-design/sales-enablement.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom New York Shopify Plus storefront"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                  {[
-                    { name: 'Shopify Plus', desc: 'Custom Theme' },
-                    { name: 'SoHo POS', desc: 'In-Store Pickup' },
-                    { name: 'NetSuite ERP', desc: 'Live Inventory' },
-                    { name: 'Headless UI', desc: 'Next.js 15' },
-                    { name: 'HubSpot Sync', desc: 'CRM Workflows' },
-                    { name: 'AI Commerce', desc: 'MCP Protocol' },
-                  ].map((ch) => (
-                    <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
-                      <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>{ch.desc}</span>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Ecommerce Engineered for New York Market Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From SoHo luxury fashion houses to Garment District apparel wholesalers and Flatiron D2C brands, we build high-converting commerce engines that maximize revenue velocity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Ecommerce Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. NEW YORK DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="ny-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>New York Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Ecommerce Development for New York&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From SoHo luxury boutiques to Garment District apparel wholesalers and DUMBO design creators:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
                 <div
+                  key={d.corridor}
                   style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
                   }}
                 >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Top E-Commerce Company NYC
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
                   </div>
-                  <div>Zero Retainer Waste · 100% Senior Engineers</div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
               </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Commerce Architectures for New York Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across New York demands tailored checkout flows, inventory integrations, and performance metrics:
+              </p>
             </div>
-          </div>
-        </section>
 
-        {/* ── Stat Band ── */}
-        <section className="pp-sec tint" style={{ paddingTop: '38px', paddingBottom: '38px' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (
-                <div className="pp-stat" key={s.b}>
-                  <b>{s.b}</b>
-                  <span>{s.s}</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── Definitional Answer-First Block ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// why we are the top e-commerce agency in nyc</p>
-            <h2 style={{ marginTop: '10px' }}>What makes FactoryJet the Best E-Commerce Development Agency in New York?</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                <strong>The FactoryJet Advantage:</strong> As the leading e-commerce development company in New York,
-                FactoryJet replaces bloated agency retainers with senior engineering execution. We design and develop bespoke
-                online storefronts on Shopify Plus, WooCommerce, BigCommerce, and headless Next.js architectures that achieve
-                sub-second mobile load times and maximize conversion.
-              </p>
-              <p>
-                New York retail brands face intense competition across digital and physical channels. Our top e-commerce developers
-                bridge online DTC stores with physical retail POS locations in SoHo, Manhattan, and Brooklyn, synchronizing inventory
-                in real time across NetSuite, SAP, Katana, and HubSpot CRM backends.
-              </p>
-              <p>
-                Whether you are launching a luxury fashion label, replatforming a multi-million-dollar catalog from legacy Magento,
-                or engineering an automated B2B wholesale showroom, FactoryJet delivers fixed-price certainty with zero agency fluff.
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why New York Leaders Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks with enterprise headless Shopify Plus engineering:
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* ── Sourced Stats ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// new york retail benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>New York e-commerce performance by the numbers</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
-                  <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
-                  <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '10px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}
-                  >
-                    {s.src}
-                  </a>
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 6 Core Capabilities ── */}
-        <section className="pp-sec">
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// NEW YORK COMMERCE STACK &amp; HEADLESS BLUEPRINT"
+            title="Headless Next.js 15 to Shopify Plus Engine"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">// full-funnel commerce engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Why New York brands choose our top e-commerce developers</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
-              From bespoke UI/UX storefront design to complex ERP and marketplace integrations, we provide end-to-end commerce development.
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Ecommerce Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay migrations and high-conversion commerce launches:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating New York Ecommerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Headless Engine</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="NEW YORK COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About Ecommerce Development in New York City"
+          lead="Direct, plain English answers to what New York ecommerce founders and marketing leaders ask about Shopify Plus and headless engineering:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="new-york" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your New York Ecommerce Engine?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {PILLARS.map((p) => (
-                <div className="pp-card" key={p.t}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '20px', color: 'var(--pp-orange-dark)', marginBottom: '10px' }} aria-hidden="true">{p.i}</div>
-                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{p.t}</h3>
-                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{p.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="nyc-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_new_york_ecommerce_page"
-              defaultPlatform="magento"
-              defaultTarget="shopify-plus"
-            />
-          </div>
-        </section>
-
-        
-        {/* ── Manhattan & SoHo Retail Omnichannel Architecture Case Study ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// new york retail engineering</p>
-            <h2 style={{ marginTop: '10px' }}>Engineering Omnichannel POS and Sub-Second Commerce for SoHo Luxury Brands</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                New York fashion and lifestyle brands operate at the intersection of high-touch Manhattan retail and high-volume
-                global digital commerce. Disjointed inventory between SoHo flagship stores and New Jersey 3PL distribution centers
-                creates costly stockouts and customer friction.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Unified Flagship POS &amp; Digital Inventory Routing</h3>
-              <p>
-                We connect physical Shopify POS registers in Manhattan and Brooklyn directly to your centralized ecommerce database.
-                When inventory sells out in-store, sales associates use endless-aisle digital lookups to ship directly to the customer's
-                home from the central warehouse.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. VIP Clienteling &amp; Private Collection Gating</h3>
-              <p>
-                For luxury fashion labels, we build private password-gated clienteling portals where high-net-worth VIPs access exclusive
-                runway collections, pre-order limited edition drops, and receive customized concierge checkout links via email and SMS.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Enterprise NetSuite &amp; Apparel PLM Integration</h3>
-              <p>
-                We build bi-directional data connectors linking Shopify Plus to NetSuite ERP and apparel Product Lifecycle Management (PLM)
-                systems, automating SKU creation, fabric composition attributes, and international customs tariff codes.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* ── 7-Step Commerce Engineering Process ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// senior engineering methodology</p>
-            <h2 style={{ marginTop: '10px' }}>Our 7-Step E-Commerce Engineering Process for New York NYC Brands</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Building a market-leading digital storefront requires rigorous engineering discipline, transparent fixed-price
-                scoping, and close technical collaboration. Here is how our top e-commerce developers execute projects for New York NYC companies:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 1: Technical Discovery &amp; Catalog Architecture Audit</h3>
-              <p>
-                We conduct an exhaustive technical audit of your existing SKU catalog, variant matrices, customer data schemas, and ERP workflows.
-                We identify performance bottlenecks, database query inefficiencies, and third-party app bloat that drag down conversion rates.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 2: Wireframing &amp; High-Converting UI/UX Design</h3>
-              <p>
-                Our designers construct bespoke storefront layouts tailored to SoHo & Manhattan consumer aesthetics. Every user interface
-                component is designed with mobile-first conversion principles, rapid product filtering, and frictionless 1-click accelerated checkout paths.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 3: Frontend Theme &amp; Component Engineering</h3>
-              <p>
-                We build clean, maintainable Shopify Liquid themes or Headless Next.js 15 React Server Components with zero unneeded third-party libraries.
-                Our code adheres to strict TypeScript standards, ensuring modularity, accessibility (WCAG 2.1 AA), and sub-second rendering.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 4: ERP, CRM &amp; Marketplace Middleware Integration</h3>
-              <p>
-                We engineer custom bi-directional API pipelines connecting your store to NetSuite, SAP, Katana, Klaviyo, HubSpot, and marketplace channels
-                (Amazon SP-API, Walmart Marketplace, TikTok Shop), synchronizing inventory balances and customer order records in real time.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 5: Full Catalog Migration &amp; 301 Redirect Mapping</h3>
-              <p>
-                If migrating from legacy Magento, WooCommerce, or custom backends, we transfer full customer accounts, historical order records,
-                and SKU catalogs. We build comprehensive 1-to-1 301 redirect maps to guarantee zero loss of organic SEO search rankings and backlinks.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 6: Rigorous QA, Load Testing &amp; Security Auditing</h3>
-              <p>
-                We run automated load tests simulating 50,000+ simultaneous shoppers, verify payment gateway webhooks across all currencies,
-                and audit Core Web Vitals to guarantee sub-1.2s Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS).
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Step 7: Production Cutover, Schema Validation &amp; 24/7 Monitoring</h3>
-              <p>
-                We execute zero-downtime DNS cutover, validate structured JSON-LD schemas with Google Search Console, submit instant IndexNow pings,
-                and provide real-time uptime monitoring to ensure your NYC commerce engine generates revenue without interruption.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Comparison Table ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// agency model comparison</p>
-            <h2 style={{ marginTop: '10px' }}>FactoryJet vs. Traditional NYC Holding Agencies vs. Freelancers</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              See why high-growth New York founders choose our direct engineering model over high-overhead Madison Avenue firms.
-            </p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead>
-                  <tr>
-                    <th>Agency Dimension</th>
-                    <th>FactoryJet (Top Developers)</th>
-                    <th>NYC Holding Agency</th>
-                    <th>Freelancers / Offshore</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="me">
-                    <td className="name">Pricing &amp; Billing Model</td>
-                    <td>100% Fixed-Price Milestones</td>
-                    <td>$30k+/mo Retainers + Hourly Overage</td>
-                    <td>Unpredictable Hourly Rates</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Direct Senior Engineer Access</td>
-                    <td>Yes (Direct communication with builders)</td>
-                    <td>No (Layers of account coordinators)</td>
-                    <td>Yes (Variable skill levels)</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">Performance Guarantee (LCP &lt; 1.2s)</td>
-                    <td>Contractually guaranteed (Lighthouse 95+)</td>
-                    <td>Rarely guaranteed</td>
-                    <td>No speed guarantees</td>
-                  </tr>
-                  <tr>
-                    <td className="name">ERP &amp; Enterprise Data Sync</td>
-                    <td>Custom NetSuite, SAP &amp; HubSpot APIs</td>
-                    <td>Subcontracted to third parties</td>
-                    <td>Limited to basic plugins</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">Time to Production Launch</td>
-                    <td>2 to 4 Weeks</td>
-                    <td>3 to 6 Months</td>
-                    <td>Frequent project delays</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Ongoing Revenue Share</td>
-                    <td>0% (You keep 100% of revenue)</td>
-                    <td>Often demand revenue percentage</td>
-                    <td>0%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="pp-sec pp-faqsec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// common questions</p>
-            <div style={{ marginTop: '16px' }}>
-              <FAQ
-                headline="Frequently asked questions about e-commerce development in New York"
-                categories={FAQ_CATEGORIES}
-                items={FAQ_ITEMS}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── Final CTA ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-ctagrid">
-              <div className="pp-cta">
-                <p className="pp-mlabel">// partner with top nyc developers</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to build with New York’s top e-commerce agency?</h2>
-                <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us evaluate your store performance, review your ERP integrations, and deliver a fixed-price
-                  roadmap before any build begins.
-                </p>
-                <div style={{ marginTop: '24px' }}>
-                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Book a 30-Minute Scoping Call
-                  </a>
-                </div>
-                <div className="founder">
-                  <div className="b">B</div>
-                  <div>
-                    <b>Bhavesh Barot</b>
-                    <span>Founder, FactoryJet · 10+ yrs building commerce</span>
-                  </div>
-                </div>
-              </div>
-              <div className="pp-proof">
-                <div className="top">
-                  <Image
-                    src="/images/testimonials/ricky-belle-maison-160.webp"
-                    alt="Ricky B, Belle Maison"
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Ricky B.</b>
-                    <span>Founder, Belle Maison</span>
-                  </div>
-                </div>
-                <blockquote>
-                  &ldquo;FactoryJet is hands down the best e-commerce development company we have worked with. They rebuilt our
-                  multi-channel Shopify Plus store in 3 weeks and doubled our mobile checkout rate.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
-                </div>
-              </div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter locale="us" />
     </>
   );
 }
