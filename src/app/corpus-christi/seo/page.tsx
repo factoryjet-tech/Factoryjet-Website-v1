@@ -1,756 +1,921 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import './corpus-christi-seo.css';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-// ─ Constants ────────────────────────────────────────────────────────────────
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const PAGE_MODIFIED = '2026-08-24';
 const CANONICAL = 'https://factoryjet.com/corpus-christi/seo';
 
-// ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Corpus Christi SEO Company | Local SEO Services | FactoryJet',
+  title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
   description:
-    'FactoryJet is a Corpus Christi TX SEO company that puts Gulf Coast businesses into Google\'s local 3-pack. Port city local SEO, Google Business Profile, and AI-search optimization. Month-to-month, senior engineers, free audit.',
+    'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Corpus Christi TX SEO Company | FactoryJet',
-    description:
-      'Gulf Coast SEO for Corpus Christi businesses. Get into the local 3-pack, dominate "near me" searches, and capture tourists, energy workers, and Coastal Bend residents finding you first.',
-    url: CANONICAL,
     type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description:
+      'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Corpus Christi Local SEO Agency' }],
+    locale: 'en_US',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+    description: 'Dominate Corpus Christi local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Coastal Bend.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-// ─ FAQ data ──────────────────────────────────────────────────────────────────
-const FAQ_GROUPS = [
+const PARTNERS = [
+  'Google Business Profile API',
+  'Search Console Integration',
+  'Apple Business Connect',
+  'Bing Places for Business',
+  'Schema.org Knowledge Graph',
+  'OpenAI SearchGPT Citations',
+  'Perplexity AI Citation Index',
+  'BrightLocal & Yext Multi-Sync',
+];
+
+const STAT_CARDS = [
+  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Corpus Christi commercial corridors.', icon: '📍' },
+  { num: '5.0x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
+  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
+  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+];
+
+const DISTRICTS = [
   {
-    id: 'cost',
-    label: 'Cost & timeline',
-    count: 4,
-    items: [
-      {
-        q: 'How much does SEO cost for a Corpus Christi small business?',
-        a: 'Cost depends on how competitive your category is, how many locations you have, and what state your website is in today. Tourism and hospitality companies in a high-traffic corridor face different demand than a niche industrial supplier near the Port. We scope every engagement individually, give you a flat monthly fee upfront, and never add hourly charges or surprise add-ons. Book a free 30-minute call and we will scope it for you with no obligation.',
-      },
-      {
-        q: 'How long before I see results from local SEO in Corpus Christi?',
-        a: 'Google Business Profile improvements typically show movement in four to eight weeks. Organic ranking shifts for competitive queries like "seo company corpus christi" usually take three to five months. AI overview citations can appear faster if your content directly answers specific questions. We track every signal weekly and show you what is moving and why.',
-      },
-      {
-        q: 'Do I have to sign a long-term contract?',
-        a: 'No. Every FactoryJet engagement is month-to-month. We stay because results keep you here, not a contract clause. You can pause or cancel with 30 days notice at any point.',
-      },
-      {
-        q: 'Is there a setup fee or onboarding cost?',
-        a: 'No setup fee. We do a full technical and competitive audit as part of kickoff at no additional charge. The monthly fee covers everything: strategy, content, link building, GBP management, reporting, and a monthly call.',
-      },
+    corridor: 'Downtown Corpus Christi & Marina Waterfront',
+    query: 'maritime law corporate litigation financial advisory commercial real estate seo downtown corpus christi',
+    focus: 'Admiralty Law, Wealth Advisory & Marine Commercial Services',
+    desc: 'The bayfront commercial and legal core. Captures maritime law retainers, coastal real estate transactions, and corporate financial advisory consults.',
+  },
+  {
+    corridor: 'Port of Corpus Christi & Ship Channel Corridor',
+    query: 'energy logistics marine fabrication industrial contracting petrochemical seo port corpus christi',
+    focus: 'Energy Logistics, Heavy Marine Fabrication & Petrochem Supply',
+    desc: 'The nation largest energy export port. B2B service queries demand technical capability schemas, safety certifications, and commercial bid workflows.',
+  },
+  {
+    corridor: 'Southside Commercial & Retail Power Hub',
+    query: 'aesthetic medicine dental implants roofing general contractor seo southside corpus christi',
+    focus: 'Elective Healthcare, Home Contracting & Specialized Trades',
+    desc: 'High-density commercial and residential epicenter. Intense local search competition for cosmetic dentistry, roofing, HVAC, and legal consultations.',
+  },
+  {
+    corridor: 'Padre Island & Mustang Island Hospitality Enclave',
+    query: 'vacation rental management deep sea charter hospitality resort seo padre island tx',
+    focus: 'Coastal Hospitality, Fishing Charters & Vacation Rentals',
+    desc: 'Premier Gulf Coast tourism corridor. Demands high-converting reservation funnels, seasonal keyword optimization, and real-time review management.',
+  },
+  {
+    corridor: 'Calallen & Northwest Coastal Bend Logistics Spine',
+    query: 'heavy equipment repair freight transport commercial electrical logistics seo calallen tx',
+    focus: 'Industrial Freight, Heavy Equipment & Fleet Maintenance',
+    desc: 'Strategic transportation highway connecting the port to inland Texas. Drives steady inbound emergency repair calls and commercial project bids.',
+  },
+  {
+    corridor: 'Bayfront & University Drive Innovation Corridor',
+    query: 'environmental engineering marine research it services consultancy seo bayfront corpus christi',
+    focus: 'Marine Research, Environmental Services & Tech Consulting',
+    desc: 'Academic and marine research hub anchored by TAMU-CC. Features technical research schemas, municipal contract funnels, and B2B consulting pages.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Port Logistics, Industrial Fabrication & Maritime Energy',
+    headline: 'Commercial Lead Engines for Port of Corpus Christi Energy Operators',
+    description:
+      'As America leading energy export hub, Corpus Christi maritime logistics providers, industrial pipe fabricators, and petrochemical service contractors demand steady commercial RFQ volume. We build specialized technical service pages, link ISO safety certifications, and optimize commercial keyword rankings.',
+    image: '/images/us/corpus-christi/seo/corpus-christi-port-economy.webp',
+    alt: 'Corpus Christi Texas port logistics maritime fabrication energy services local SEO',
+    points: [
+      'Industrial engineering service schemas linking ISO, ASME, and marine safety certifications',
+      'High-intent B2B keyword silos targeting regional refinery, shipping, and port procurement managers',
+      'Authoritative regional business citations across Texas energy and maritime commercial databases',
     ],
   },
   {
-    id: 'market',
-    label: 'Corpus Christi market',
-    count: 4,
-    items: [
-      {
-        q: 'Why is local SEO especially important in Corpus Christi?',
-        a: 'Corpus Christi has three distinct buyer pools layered on top of each other: 316,000 permanent residents, roughly 5.7 million annual tourists and day visitors, and a large rotating workforce tied to the Port and the petrochemical corridor. All three groups search "near me" on mobile. The businesses that own those local 3-pack results capture customers from every layer. A well-optimized GBP alone can double inbound calls without a single dollar in ads.',
-      },
-      {
-        q: 'Which Corpus Christi neighborhoods and areas matter most for local SEO?',
-        a: 'Coverage priority depends on your business, but the highest-traffic search zones are Downtown / Uptown, North Beach, Padre Island, Flour Bluff, Portland, Robstown, Calallen, and the South Side. Industrial and energy services businesses also need to rank for searches originating from Port Aransas, Gregory-Portland, and Aransas Pass. We map keyword volume to geography so you are not spending budget chasing areas where your target customers do not actually search from.',
-      },
-      {
-        q: 'Does the tourism seasonality in Corpus Christi affect SEO strategy?',
-        a: 'Yes, and it is a real advantage if you plan for it. Search volume for tourism-adjacent categories spikes April through September and again around spring break. We build content and GBP posts aligned to that calendar so your business captures the surge rather than missing it. For year-round service businesses, we focus on the off-season to build ranking authority before the surge arrives.',
-      },
-      {
-        q: 'How does the Port of Corpus Christi affect the local SEO competitive landscape?',
-        a: 'The Port drives a large B2B search market: logistics, marine services, industrial equipment, staffing, food service, and professional services are all heavily searched by people affiliated with port operations. That B2B layer is less saturated than the consumer market and tends to have higher average transaction values. If your business serves the energy, marine, or industrial sectors, we can target those commercial-intent queries specifically.',
-      },
+    sector: 'Commercial Construction, Roofing & Marine Contracting',
+    headline: 'Driving High-Value Project Bidding Across Greater Corpus Christi & Nueces County',
+    description:
+      'Commercial general contractors, coastal roofing specialists, and marine piling contractors across the Coastal Bend require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
+    image: '/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp',
+    alt: 'Corpus Christi Texas commercial roofing general contractor marine construction local SEO engine',
+    points: [
+      'ServiceAreaBusiness schema markup defining multi-county Coastal Bend operational boundaries',
+      'Hyper-local neighborhood geo-pages targeting Southside, Calallen, Flour Bluff, and Portland TX',
+      'High-authority regional contractor directory citations and verified trade accreditations',
     ],
   },
   {
-    id: 'included',
-    label: 'What is included',
-    count: 4,
-    items: [
-      {
-        q: 'What does FactoryJet actually do every month for SEO?',
-        a: 'Each month we do: technical SEO health checks (Core Web Vitals, crawl issues, schema), one to two long-form content pieces targeting high-intent Corpus Christi queries, Google Business Profile posts and Q&A management, local citation audits and cleanup, internal linking improvements, a monthly performance call, and a plain-English report showing ranking movement, calls tracked, and traffic source breakdown.',
-      },
-      {
-        q: 'Do you manage Google Business Profile?',
-        a: 'Yes. GBP optimization is one of the fastest ways to move in local search. We set up or audit your profile, add photos, write keyword-optimized service descriptions, publish weekly posts, monitor and respond to questions, and flag review trends. If you have multiple locations across the Coastal Bend, we manage each one separately with location-specific content.',
-      },
-      {
-        q: 'Do you handle link building for Corpus Christi businesses?',
-        a: 'Yes. Local link building in the Corpus Christi market includes outreach to local media (Caller-Times, KRIS, KZTV), the Corpus Christi Chamber of Commerce, industry-specific directories for the energy and tourism sectors, and Coastal Bend regional business publications. We do not buy links. Every placement is editorial and relevant.',
-      },
-      {
-        q: 'Do you optimize for AI search and Google\'s AI Overviews?',
-        a: 'Yes. We structure every content piece to answer the exact question format that AI Overviews quote from. That means answer-first paragraphs, FAQ schema, entity markup, and verified stats with sourced citations. Corpus Christi businesses that publish authoritative content on Gulf Coast-specific topics get cited faster because there is less competition for those specific entity associations.',
-      },
+    sector: 'Specialized Healthcare, Orthopedics & Coastal Clinics',
+    headline: 'Capturing High-Value Patients in Corpus Christi Medical Corridors',
+    description:
+      'In Corpus Christi competitive orthopedic surgery, cosmetic dentistry, and cardiology markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
+    image: '/images/us/corpus-christi/seo/corpus-christi-seo-hero.webp',
+    alt: 'Corpus Christi Texas sports medicine orthopedic physical therapy clinic local SEO ranking engine',
+    points: [
+      'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
+      'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
+      'Automated patient review generation funnels ensuring continuous 5-star reputation growth',
     ],
   },
   {
-    id: 'trust',
-    label: 'Trust & process',
-    count: 4,
-    items: [
-      {
-        q: 'Who actually does the SEO work at FactoryJet?',
-        a: 'Senior engineers and content strategists with 12+ years of combined web and search experience. You work directly with the people building your campaign. There are no junior account managers acting as go-betweens, and there are no outsourced black-box vendors in the workflow. Bhavesh Barot, the founder, is personally involved in strategy for every account.',
-      },
-      {
-        q: 'What happens to my Google accounts and data if I leave?',
-        a: 'You own everything. Your Google Search Console, Google Business Profile, GA4, and any content we produce all belong to you. We add ourselves as contributors, not owners, and we remove our access cleanly at the end of any engagement. There is no lock-in on data or access.',
-      },
-      {
-        q: 'How do you report results and what metrics actually matter?',
-        a: 'We care about calls and form fills, not just ranking screenshots. Monthly reports cover: tracked phone calls from organic, GBP call volume, organic form submissions, ranking movement for your primary and secondary keywords, Core Web Vitals status, and the tasks completed that month. We also show you what competitors changed so you understand the context behind any movement.',
-      },
-      {
-        q: 'Have you worked with businesses similar to mine in the Gulf Coast market?',
-        a: 'We have served 500+ businesses across the US, UK, UAE and India, including tourism and hospitality, energy services, marine, healthcare, professional services, and retail. The Corpus Christi market is structurally similar to other port cities we have worked in: layered buyer types, seasonal surges, and a B2B sector that sits beside the consumer market. We apply that cross-market pattern recognition to your specific category.',
-      },
-    ],
-  },
-  {
-    id: 'start',
-    label: 'Getting started',
-    count: 4,
-    items: [
-      {
-        q: 'What happens in the free audit call?',
-        a: 'We spend 30 minutes on your current Google Business Profile, your website technical health, what you rank for now, and what your top three competitors are doing that you are not. You walk away with a clear picture of your biggest opportunities ranked by effort and expected impact. No sales pitch, no pressure. If we are a fit, we scope an engagement. If we are not, we tell you honestly.',
-      },
-      {
-        q: 'How quickly can you start?',
-        a: 'We can begin technical work within seven days of signing. Content and GBP campaigns start in week two once we have verified access to your accounts and completed the competitor mapping. Full campaign rhythm is established by week four.',
-      },
-      {
-        q: 'Do I need to have a website already?',
-        a: 'A website helps, but we can start with GBP optimization and local citation building immediately. If your website needs a rebuild, FactoryJet also builds high-performance websites in seven days, so we can run both tracks in parallel without adding a second vendor.',
-      },
-      {
-        q: 'What if I am already working with another SEO agency in Corpus Christi?',
-        a: 'We do competitive audits for clients switching agencies regularly. Before you make a change, request a full export of your account data and a reporting summary from your current agency. Then let us show you what we would do differently. We can compare approaches side by side on the free call with no commitment required.',
-      },
+    sector: 'Coastal Hospitality, Deep-Sea Chartering & Resort Tourism',
+    headline: 'Local Map Pack Dominance for Gulf Coast Tourism Leaders',
+    description:
+      'Fishing charter captains, waterfront resorts, seafood dining establishments, and vacation rental managers across Padre Island and Port Aransas rely on local search visibility to capture tourists and travelers. We optimize Google Maps profiles, build event-driven landing pages, and drive high-intent reservation volume.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Corpus Christi Texas coastal tourism fishing charter vacation rental resort local SEO',
+    points: [
+      'TouristAttraction and LodgingBusiness structured schema with direct booking integration',
+      'Google Maps 3-Pack ranking for high-intent deep sea fishing, beach resort, and coastal dining terms',
+      'Continuous review velocity management across Google Business Profile, TripAdvisor, and Yelp',
     ],
   },
 ];
 
-// ─ Listicle ──────────────────────────────────────────────────────────────────
-const LISTICLE: { n: string; h: string; p: string }[] = [
+const PAIN_POINTS = [
   {
-    n: '01',
-    h: 'Tourists search "near me" and find your competitors first',
-    p: 'With 5.7 million annual visitors to the Corpus Christi area, ranking in the local 3-pack for even a narrow category can generate a consistent stream of first-time customers who have never heard of you before.',
+    num: '01',
+    title: 'Ending Opaque Monthly Retainers With Zero Visible Map Pack Growth',
+    problem: 'Traditional agencies send generic monthly PDF reports filled with vanity impressions while your Google Business Profile remains stuck outside the Local 3-Pack.',
+    solution: 'We focus on tangible Google Maps 3-Pack rankings, qualified phone calls, and revenue-generating local search positions with full dashboard transparency.',
   },
   {
-    n: '02',
-    h: 'Your Google Business Profile was set up once and never touched',
-    p: 'An unclaimed or incomplete GBP suppresses your local ranking directly. Photos, service descriptions, weekly posts, and Q&A activity all feed the algorithm signals that determine whether you appear or not.',
+    num: '02',
+    title: 'Eliminating Fragile Plugin Schemas That Fail AI Citation Crawlers',
+    problem: 'Basic WordPress SEO plugins generate disjointed, broken schemas that AI search engines like SearchGPT and Perplexity fail to parse as verified business entities.',
+    solution: 'We hand-craft connected Schema.org JSON-LD entity graphs linking your Google Knowledge Graph, licensing credentials, and verified local citations.',
   },
   {
-    n: '03',
-    h: 'You show up for your business name but nothing else',
-    p: 'Branded searches only reach people who already know you. Local SEO opens the top of the funnel: people searching "corpus christi [service]" who have never heard your name but are ready to buy today.',
+    num: '03',
+    title: 'Overcoming High Agency Turnover & Junior Account Handler Runaround',
+    problem: 'Big-box marketing agencies assign junior coordinators who do not understand Corpus Christi coastal market dynamics, port districts, or industry specifics.',
+    solution: 'You work directly with senior local SEO technical engineers who execute hyper-local geo-targeting tailored to Coastal Bend commercial realities.',
   },
   {
-    n: '04',
-    h: 'Your site loads slowly on a mobile phone with a weaker connection',
-    p: 'Visitors browsing from the beach, from Padre Island, or from the North Beach corridor are on mobile with variable signal. A slow site kills conversions and directly hurts your Core Web Vitals ranking signals.',
-  },
-  {
-    n: '05',
-    h: 'Energy sector and Port-related buyers cannot find you through Google',
-    p: 'B2B search from the Port, the refineries, and the industrial corridor uses specific commercial-intent queries that are lightly contested. Without targeted content, you are invisible to buyers with the highest transaction values in the market.',
-  },
-  {
-    n: '06',
-    h: 'You spent money on ads but stopped because the ROI felt unstable',
-    p: 'Paid search requires constant budget to maintain visibility. Organic rankings compound over time. A business that builds strong local SEO in Corpus Christi today will have lower customer acquisition costs in year two and three than any competitor still relying purely on paid.',
-  },
-  {
-    n: '07',
-    h: 'Your reviews are solid but your competitors have more of them recently',
-    p: 'Review velocity matters more than total count. Google prioritizes recency. If competitors are getting five reviews a month and you are getting one, you will slide in local pack rankings over time regardless of your average star rating.',
+    num: '04',
+    title: 'Stopping Toxic Link Networks That Trigger Search Penalties',
+    problem: 'Cheap SEO providers build spammy automated backlinks from private blog networks, risking sudden Google algorithmic penalties and ranking demotions.',
+    solution: 'We execute 100% white-hat local citation building, regional trade publication placements, and verified local press authority for permanent ranking gains.',
   },
 ];
 
-// ─ Comparison ────────────────────────────────────────────────────────────────
-const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Pricing model', fj: 'Flat monthly fee, scoped upfront', alt: 'Hourly or retainer with add-ons', hl: true },
-  { k: 'Contract', fj: 'Month-to-month', alt: '6 to 12 month lock-in' },
-  { k: 'Who does the work', fj: 'Senior engineers', alt: 'Junior account managers' },
-  { k: 'Kickoff time', fj: '7 days', alt: '3 to 6 weeks onboarding' },
-  { k: 'Reporting', fj: 'Calls & leads tracked', alt: 'Ranking screenshots' },
-  { k: 'AI SEO / GEO', fj: 'Included', alt: 'Rarely offered' },
-  { k: 'Your data & accounts', fj: 'You own everything', alt: 'Often locked to agency' },
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Entity Audit, GBP Optimization & Technical Foundations',
+    desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
+    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Local Geo-Silo Architecture & JSON-LD Entity Graph Build',
+    desc: 'We engineer dedicated geo-targeted service silos and implement nested Schema.org JSON-LD entity graphs connecting your business to the Google Knowledge Graph.',
+    deliverables: ['Hyper-local corridor landing pages (Downtown, Port, Southside, Padre Island)', 'Custom JSON-LD schema graphs (LocalBusiness, Service, Physician, LegalService)', 'Internal contextual link graph distributing domain authority', 'Service area boundary definition in Google Maps API'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'High-Authority Regional Citations & Review Velocity Engine',
+    desc: 'We build authoritative local citations across regional Coastal Bend chambers, industry trade directories, and deploy automated review generation workflows.',
+    deliverables: ['Tier-1 citation distribution across Apple Maps, Bing, Yelp, and YellowPages', 'Regional Corpus Christi business directory and chamber of commerce listings', 'Automated SMS and email review generation campaign deployment', 'Review response protocol and Google Maps attribute updates'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'AI Citation Retrieval, Continuous Tracking & Reporting',
+    desc: 'We optimize your brand footprint for retrieval in AI answer engines (SearchGPT, Perplexity, Google AI Overviews) and provide real-time ranking dashboards.',
+    deliverables: ['AI search engine citation indexing verification', 'Real-time geo-grid local rank tracking dashboard', 'Monthly inbound call and consultation conversion reporting', 'Quarterly strategic expansion and competitor defense roadmaps'],
+  },
 ];
 
-// ─ JSON-LD ───────────────────────────────────────────────────────────────────
-const faqItems = FAQ_GROUPS.flatMap((g) =>
-  g.items.map((it) => ({
-    '@type': 'Question',
-    name: it.q,
-    acceptedAnswer: { '@type': 'Answer', text: it.a },
-  }))
-);
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Local Ranking Method',
+    factoryjet: 'Full-stack entity engineering, connected JSON-LD schemas, and verified GBP category optimization.',
+    traditional: 'Basic keyword stuffing, generic blog posts, and automated low-quality citation blasts.',
+  },
+  {
+    label: 'AI Search Readiness',
+    factoryjet: 'Optimized for OpenAI SearchGPT, Perplexity AI, and Google AI Overviews citation retrieval.',
+    traditional: 'Unaware of AI answer engines; relies solely on legacy 10 blue link keyword matching.',
+  },
+  {
+    label: 'Citation Integrity',
+    factoryjet: 'Manual 100% NAP synchronization across top-tier business directories and regional chambers.',
+    traditional: 'Automated spam submissions leading to duplicate listings and fragmented NAP data.',
+  },
+  {
+    label: 'Contract Flexibility',
+    factoryjet: 'Transparent milestone and performance deliverables with zero predatory multi-year lock-ins.',
+    traditional: 'Rigid 12-month locking contracts with severe early termination penalties.',
+  },
+];
 
-const jsonLd = {
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing & Retainers' },
+  { key: 'timeline', label: 'Rankings & Timeline' },
+  { key: 'ai', label: 'Search & AI Citations' },
+  { key: 'local', label: 'Corpus Christi & Coastal Bend' },
+  { key: 'deliverables', label: 'Deliverables & Reporting' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does local SEO cost for a Corpus Christi TX business?',
+    answer:
+      'Monthly investments depend on your industry vertical, market competition, and target geographic coverage. We provide clear, transparent monthly deliverables with zero hidden hourly fees and zero long-term hostage contracts.',
+  },
+  {
+    category: 'pricing',
+    question: 'Do you lock clients into mandatory 12-month contracts?',
+    answer:
+      'No. We operate on performance and transparency. We believe our results should earn your partnership every single month, so you are never locked into an inflexible annual agreement.',
+  },
+  {
+    category: 'pricing',
+    question: 'What is included in your monthly local SEO scope?',
+    answer:
+      'Every engagement includes full Google Business Profile management, local citation building and cleanup, structured schema graph maintenance, geo-silo content engineering, review generation workflows, and monthly conversion tracking.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you calculate ROI on local SEO campaigns?',
+    answer:
+      'We track qualified phone calls, appointment bookings, contact form submissions, and direct navigation requests generated through Google Maps and local organic search, giving you clear visibility into revenue attribution.',
+  },
+  {
+    category: 'timeline',
+    question: 'How quickly can a Corpus Christi business rank in the Google Maps 3-Pack?',
+    answer:
+      'Initial improvements in Google Maps visibility and citation consistency typically appear within 30 to 45 days. High-competition search terms in legal, medical, and commercial contracting generally reach Top-3 dominance within 90 to 120 days.',
+  },
+  {
+    category: 'timeline',
+    question: 'What factors determine ranking speed in local search?',
+    answer:
+      'Key factors include existing domain authority, Google Business Profile age and history, review count and sentiment velocity, NAP consistency across citation networks, and the strength of competitor profiles in your specific corridor.',
+  },
+  {
+    category: 'timeline',
+    question: 'Can you fix past Google Business Profile suspensions or penalties?',
+    answer:
+      'Yes. We audit your profile for policy compliance issues, correct address and category discrepancies, submit formal reinstatement appeals to Google, and restore your ranking standing.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you handle review generation without violating Google policies?',
+    answer:
+      'We set up automated post-service email and SMS review request funnels that invite genuine customers to share their authentic experiences on your verified Google Business Profile in compliance with FTC and Google guidelines.',
+  },
+  {
+    category: 'ai',
+    question: 'How does local SEO help my business appear in SearchGPT and AI Overviews?',
+    answer:
+      'AI answer engines retrieve verified facts from structured knowledge graphs, verified directories, and authoritative publications. We build connected JSON-LD schemas that make your business data unmistakable to LLM crawlers.',
+  },
+  {
+    category: 'ai',
+    question: 'Why is structured Schema.org JSON-LD so important for local search?',
+    answer:
+      'Schema markup explicitly defines your exact business type, physical coordinates, service area, opening hours, accepted payments, and practitioner credentials directly in machine-readable code for search crawlers.',
+  },
+  {
+    category: 'ai',
+    question: 'How do you track whether AI search engines are citing our brand?',
+    answer:
+      'We monitor citation appearances, brand mentions, and referral traffic originating from OpenAI SearchGPT, Perplexity AI, Claude, and Google AI Overviews to ensure continuous visibility.',
+  },
+  {
+    category: 'ai',
+    question: 'Can AI search engines replace traditional Google Maps for local queries?',
+    answer:
+      'No. AI search engines synthesize and cite verified local data from Google Maps, Apple Maps, Yelp, and official websites. Dominating local foundational data ensures you capture both traditional and AI-driven searches.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with Corpus Christi port and maritime industrial contractors?',
+    answer:
+      'Yes. We optimize local search footprints for marine fabrication shops, petrochemical contractors, and logistics operators across the Port of Corpus Christi and Nueces Bay corridors.',
+  },
+  {
+    category: 'local',
+    question: 'Can you optimize healthcare and dental practices across the Coastal Bend?',
+    answer:
+      'Yes. We engineer comprehensive practitioner schemas and medical procedure silos targeting Corpus Christi, Portland, Rockport, and surrounding communities.',
+  },
+  {
+    category: 'local',
+    question: 'How do you target multiple Coastal Bend cities without keyword cannibalization?',
+    answer:
+      'We construct distinct, geo-targeted corridor pages with unique local proof points, localized customer testimonials, and specific municipal service coordinates that avoid internal ranking conflicts.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help coastal tourism and fishing charter operators?',
+    answer:
+      'Yes. We optimize local search profiles, tourist attraction schemas, and map listings for charter captains, marinas, beach resorts, and hospitality venues across Padre Island and Port Aransas.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What reports and dashboards will our team receive each month?',
+    answer:
+      'You receive access to a real-time geo-grid local rank tracking dashboard showing exact keyword positions across every Corpus Christi neighborhood, plus monthly conversion summaries detailing call volume and lead inquiries.',
+  },
+  {
+    category: 'deliverables',
+    question: 'Do we own all citations and profiles created during the campaign?',
+    answer:
+      'Yes, 100%. All directory listings, Google Business Profiles, and citation accounts belong exclusively to your business with full master ownership credentials.',
+  },
+  {
+    category: 'deliverables',
+    question: 'Who will be our primary point of contact during the engagement?',
+    answer:
+      'You work directly with a senior technical SEO engineer who leads the strategy, executes the code changes, and leads your monthly strategy review sessions.',
+  },
+  {
+    category: 'deliverables',
+    question: 'How do we get started with a Corpus Christi local SEO audit?',
+    answer:
+      'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+];
+
+const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://factoryjet.com/corpus-christi/seo#webpage',
-      url: 'https://factoryjet.com/corpus-christi/seo',
-      // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
-      isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'connect@factoryjet.com' },
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
-    {
-      '@type': 'Service',
-      '@id': `${CANONICAL}#service`,
-      name: 'Corpus Christi TX Local SEO Services',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: {
-        '@type': 'City',
-        name: 'Corpus Christi',
-        containedInPlace: { '@type': 'State', name: 'Texas' },
-      },
-      description:
-        'Local SEO for Corpus Christi TX businesses: Google Business Profile optimization, local 3-pack ranking, AI-search citation, and technical SEO.',
-    },
-    {
-      '@type': 'WebPage',
-      '@id': `${CANONICAL}#page`,
-      url: CANONICAL,
-      name: 'Corpus Christi TX SEO Company | FactoryJet',
-      isPartOf: { '@id': 'https://factoryjet.com/#site' },
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 3, name: 'Corpus Christi', item: 'https://factoryjet.com/corpus-christi' },
-          { '@type': 'ListItem', position: 4, name: 'SEO', item: CANONICAL },
-        ],
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
-      mainEntity: faqItems,
-    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Corpus Christi Local SEO Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Corpus Christi',
+    addressRegion: 'TX',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 27.8006,
+    longitude: -97.3964,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Corpus Christi' },
+    { '@type': 'City', name: 'Portland' },
+    { '@type': 'City', name: 'Rockport' },
+    { '@type': 'City', name: 'Port Aransas' },
+    { '@type': 'City', name: 'Robstown' },
   ],
 };
 
-// ─ Component ─────────────────────────────────────────────────────────────────
-export default function CorpusChristiSEO() {
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Corpus Christi Local SEO & Google Maps Optimization',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
+  description:
+    'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
+  areaServed: [{ '@type': 'State', name: 'Texas' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+  description: 'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Corpus Christi', item: CANONICAL },
+  ],
+};
+
+export default function CorpusChristiSeoPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="ccseo">
-        <SiteHeader />
-        <main>
+      <script id="cc-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="cc-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="cc-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="cc-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="cc-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-          {/* ── HERO ─────────────────────────────────────────────────────── */}
-          <section className="hero">
-            <div className="wrap hero-grid">
-              {/* Left: copy */}
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
               <div>
-                <div className="loc rise"><b />&nbsp;Corpus Christi, TX</div>
-                <h1 className="rise d1">
-                  Corpus Christi <span className="it">SEO company</span> that<br />
-                  puts Gulf Coast businesses<br />on the local map.
-                </h1>
-                <p className="lead rise d2">
-                  FactoryJet gets Corpus Christi businesses into Google's local 3-pack and AI Overviews.
-                  Month-to-month, senior engineers, free audit. Serving the Coastal Bend and Port industries.
-                </p>
-                <div className="hstat rise d3">
-                  <div className="n">
-                    <span className="star">★</span>&nbsp;5.0
-                    <span className="l">/ 500+ clients</span>
-                  </div>
-                  <div className="sep" />
-                  <div className="n">7 days<span className="l">&nbsp;to start</span></div>
-                  <div className="sep" />
-                  <div className="n">0<span className="l">&nbsp;setup fee</span></div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Corpus Christi Local SEO &amp; Google Maps Engineering</span>
                 </div>
-                <HeroInlineForm region="us" source="corpus_christi_seo_hero" submitLabel="Get my free SEO audit" />
-                <div className="cta-row rise d4">
-                  <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Talk to the founder
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Corpus Christi Local SEO Agency for Market Leaders
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Dominate the Google Maps 3-Pack, capture high-intent search queries, and secure AI answer citations across Corpus Christi and the Coastal Bend.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <a href="#cc-seo-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Coastal Bend Corridors</span>
                   </a>
                 </div>
               </div>
 
-              {/* Right: harbor/sonar visual */}
-              <div className="hero-vis float">
-                {/* Floating chips */}
-                <div className="schip ch1">
-                  <div className="k">Monthly searches</div>
-                  <div className="v">320 / mo</div>
-                </div>
-                <div className="schip ch2">
-                  <div className="cdot" />
-                  <div className="ct2">Low competition</div>
-                </div>
-
-                <div className="harborchart">
-                  {/* Sonar disc */}
-                  <div className="sonardisc">
-                    {/* Rings */}
-                    <div className="sring r1" />
-                    <div className="sring r2" />
-                    <div className="sring r3" />
-                    {/* Sweep arm */}
-                    <div className="sonarsweep" />
-                    {/* Pulse */}
-                    <div className="sonarpulse" />
-                    {/* Competitor dots */}
-                    <div className="sdot c1" />
-                    <div className="sdot c2" />
-                    <div className="sdot c3" />
-                    {/* YOU dot */}
-                    <div className="sdot you" />
-                    <div className="syou">YOU</div>
-                  </div>
-
-                  {/* Stats strip */}
-                  <div className="sonarinfo">
-                    <div className="si-item">
-                      <div className="si-val">316K</div>
-                      <div className="si-lbl">residents</div>
-                    </div>
-                    <div className="si-div" />
-                    <div className="si-item">
-                      <div className="si-val">5.7M</div>
-                      <div className="si-lbl">visitors / yr</div>
-                    </div>
-                    <div className="si-div" />
-                    <div className="si-item">
-                      <div className="si-val">#5</div>
-                      <div className="si-lbl">US port</div>
-                    </div>
-                    <div className="si-div" />
-                    <div className="si-item">
-                      <div className="si-val">KD 10</div>
-                      <div className="si-lbl">low difficulty</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ── BLUF ─────────────────────────────────────────────────────── */}
-          <section style={{ paddingTop: 0, paddingBottom: '60px' }}>
-            <div className="wrap">
-              <div className="bluf rise">
-                <p>
-                  <strong>The short version:</strong> Corpus Christi has 316,000 permanent residents, 5.7 million annual visitors,
-                  and one of the largest port complexes on the Gulf Coast, and the local 3-pack for most service categories
-                  has fewer than three fully optimized competitors. That means a well-run SEO campaign can move you into the
-                  top results within months, not years. We have done it for 500+ businesses. We can do it for yours.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* ── DARK STATS ───────────────────────────────────────────────── */}
-          <section className="dark">
-            <div className="wrap">
-              <div className="eyebrow">Corpus Christi market data</div>
-              <h2>The numbers behind the opportunity.</h2>
-              <p className="lead">Real data. Verified sources. This is the market you are competing in.</p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/corpus-christi/seo/corpus-christi-seo-hero.webp"
-                  alt="Corpus Christi TX harbor and downtown, the Gulf Coast port city where energy, tourism, and local commerce converge"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="statgrid">
-                <div className="scard">
-                  <div className="n">316K</div>
-                  <div className="l">Corpus Christi population, making it the 8th largest city in Texas</div>
-                  <div className="src">US Census Bureau, 2024</div>
-                </div>
-                <div className="scard">
-                  <div className="n">5.7M</div>
-                  <div className="l">Annual visitors to the Corpus Christi metro, tourism is a $1.5B+ economic driver</div>
-                  <div className="src">Visit Corpus Christi / TxDOT, 2023</div>
-                </div>
-                <div className="scard">
-                  <div className="n">#5</div>
-                  <div className="l">Rank of the Port of Corpus Christi among all US ports by export tonnage</div>
-                  <div className="src">American Association of Port Authorities, 2024</div>
-                </div>
-                <div className="scard">
-                  <div className="n">46%</div>
-                  <div className="l">Share of local business searches that result in a call or visit within 24 hours</div>
-                  <div className="src">Google / Ipsos Local Search Study</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ── WHO WE HELP ──────────────────────────────────────────────── */}
-          <section>
-            <div className="wrap">
-              <div className="eyebrow">Who we work with</div>
-              <h2>Built for businesses across the Coastal Bend.</h2>
-              <p className="lead">
-                From North Beach hospitality to South Side industrial suppliers, local SEO compounds for any category
-                with a local search audience.
-              </p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp"
-                  alt="Corpus Christi TX business owners across the Coastal Bend, hospitality, marine, energy, and retail all run on local search"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="grid3">
-                {[
-                  {
-                    pill: 'Tourism & Hospitality',
-                    h: 'Hotels, vacation rentals & restaurants',
-                    p: 'Capture spring breakers, summer visitors, and year-round locals. We optimize GBP, manage review velocity, and build content around the seasonal search spikes that drive your revenue.',
-                  },
-                  {
-                    pill: 'Energy & Industrial',
-                    h: 'Contractors, suppliers & services near the Port',
-                    p: 'The Port and refinery corridor generates a steady B2B search market with low competition and high average deal sizes. We target commercial-intent queries that generalist agencies ignore.',
-                  },
-                  {
-                    pill: 'Healthcare & Clinics',
-                    h: 'Medical, dental & wellness practices',
-                    p: 'Corpus Christi patients search by neighborhood and specialty. We build landing pages for Calallen, Padre Island, Portland, and other distinct sub-markets so every coverage area ranks independently.',
-                  },
-                  {
-                    pill: 'Retail & DTC',
-                    h: 'Local shops, boutiques & service retailers',
-                    p: 'Tourists searching from hotel rooms represent impulse-purchase opportunities. We get your retail location into the maps results that appear on those mobile searches before they leave the island.',
-                  },
-                  {
-                    pill: 'Professional Services',
-                    h: 'Law, accounting, real estate & consulting',
-                    p: 'Corpus Christi has a growing professional class connected to the energy and logistics industry. We position your practice for the high-value client segments moving into the market.',
-                  },
-                  {
-                    pill: 'Marine & Waterfront',
-                    h: 'Boat repair, charter, diving & marine services',
-                    p: 'The waterfront economy has specific, navigable search terms that rank quickly with the right content. We map every keyword cluster in your niche and build content coverage systematically.',
-                  },
-                ].map(({ pill, h, p }) => (
-                  <div className="ucard" key={h}>
-                    <div className="pill">{pill}</div>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="districts">
-                We cover all Corpus Christi areas: <b>Downtown / Uptown</b>, <b>North Beach</b>, <b>Padre Island</b>,
-                <b> Flour Bluff</b>, <b>Calallen</b>, <b>South Side</b>, <b>Portland</b>, <b>Robstown</b>,
-                <b> Port Aransas</b>, <b>Rockport</b>, <b>Aransas Pass</b>, and surrounding Coastal Bend communities.
-              </p>
-            </div>
-          </section>
-
-          {/* ── LISTICLE ─────────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">Warning signs</div>
-              <h2>7 signs your Corpus Christi business is losing customers to Google right now.</h2>
-              <p className="lead">
-                Each one of these costs you real revenue. Most can be fixed in the first 60 days of a focused SEO campaign.
-              </p>
-              <ul className="listicle-list">
-                {LISTICLE.map(({ n, h, p }) => (
-                  <li key={n}>
-                    <div className="li-n">{n}</div>
-                    <div>
-                      <div className="li-h">{h}</div>
-                      <div className="li-p">{p}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-
-          {/* ── WHAT IS INCLUDED ─────────────────────────────────────────── */}
-          <section className="room-lav">
-            <div className="wrap">
-              <div className="eyebrow">What you get</div>
-              <h2>Everything a Gulf Coast business needs to rank and grow.</h2>
-              <p className="lead">
-                No package tiers, no feature gates. One flat engagement that covers the full SEO stack.
-              </p>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/shared/factoryjet-senior-engineer.webp"
-                  alt="FactoryJet senior engineer reviewing SEO audit data, every engagement is led by a specialist, not handed to a junior"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="grid2">
-                {[
-                  {
-                    h: 'Technical SEO foundation',
-                    p: 'Core Web Vitals optimization, crawl-budget management, schema markup (LocalBusiness, FAQPage, Service), mobile performance, and structured data for AI citation. Your website has to be technically clean before content can compound.',
-                  },
-                  {
-                    h: 'Google Business Profile management',
-                    p: 'Full GBP optimization: photos, service descriptions, weekly posts, Q&A, attribute updates, and review strategy. For multi-location businesses across the Coastal Bend, each location is managed as its own entity with location-specific content.',
-                  },
-                  {
-                    h: 'Long-form local content',
-                    p: 'One to two in-depth content pieces per month targeting your highest-value Corpus Christi queries. Each piece is structured for Google\'s featured snippets and AI Overviews, with verified local stats, FAQ schema, and internal linking to your service pages.',
-                  },
-                  {
-                    h: 'Local citation and link building',
-                    p: 'NAP consistency across 40+ directories, outreach to local media (Caller-Times, KRIS-TV, KZTV), Chamber of Commerce placement, and industry-specific citations in the energy, tourism, and marine sectors. Zero paid links.',
-                  },
-                  {
-                    h: 'AI search and GEO optimization',
-                    p: 'Every piece of content is structured to be cited in Google AI Overviews, Perplexity, ChatGPT, and other AI search surfaces. Entity markup, answer-first formatting, and verified source attribution all increase citation probability within the first 90 days.',
-                  },
-                  {
-                    h: 'Monthly reporting and strategy call',
-                    p: 'You see tracked calls, form fills, ranking movement for your primary queries, GBP call volume, Core Web Vitals status, and competitor activity. One live call per month to discuss what the data means and what we are doing next.',
-                  },
-                ].map(({ h, p }) => (
-                  <div className="ucard" key={h}>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ── PROCESS ──────────────────────────────────────────────────── */}
-          <section>
-            <div className="wrap">
-              <div className="eyebrow">How it works</div>
-              <h2>From audit to ranking in four clear steps.</h2>
-              <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
-                <Image
-                  src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet founder on a free audit call, 30 minutes that maps your Corpus Christi SEO opportunity with zero obligation"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-              <div className="grid4">
-                {[
-                  {
-                    n: '01',
-                    h: 'Free audit call',
-                    p: '30 minutes. We audit your GBP, website health, current rankings, and what your top three Corpus Christi competitors are doing differently. You leave with a clear picture regardless of whether we work together.',
-                  },
-                  {
-                    n: '02',
-                    h: 'Scope and kickoff',
-                    p: 'We scope a flat-fee engagement based on your market, category, and goals. Access setup and technical baseline take seven days. No delays, no bureaucracy.',
-                  },
-                  {
-                    n: '03',
-                    h: 'Build and publish',
-                    p: 'Technical fixes ship in weeks one and two. GBP campaign launches in week two. Content and link building run from week three onward on a consistent monthly cadence.',
-                  },
-                  {
-                    n: '04',
-                    h: 'Track, report, adapt',
-                    p: 'Monthly performance review against your specific Corpus Christi market. We adjust targeting based on what is moving and bring you a written plan for the next 30 days.',
-                  },
-                ].map(({ n, h, p }) => (
-                  <div className="ucard" key={n}>
-                    <div className="pill">{n}</div>
-                    <h3>{h}</h3>
-                    <p>{p}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* ── COMPARISON ───────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">How we compare</div>
-              <h2>FactoryJet vs. a traditional agency.</h2>
-              <div className="cmpwrap">
-                <table className="cmp">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th className="fjh">FactoryJet</th>
-                      <th>Traditional Agency</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {COMPARE.map(({ k, fj, alt, hl }) => (
-                      <tr key={k}>
-                        <td className="k">{k}</td>
-                        <td className="fj">
-                          {hl ? <span className="hl">{fj}</span> : fj}
-                        </td>
-                        <td className="alt">{alt}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-
-          {/* ── PROOF ────────────────────────────────────────────────────── */}
-          <section className="green">
-            <div className="wrap">
-              <div className="eyebrow">Results that hold</div>
-              <h2>500+ businesses. Senior engineers. Founder-led strategy.</h2>
-              <p className="lead">
-                Real client results, real business owners, real industries served across 10+ years of doing this work.
-              </p>
-              <div className="quote">
-                <p>
-                  "We went from page three to the local 3-pack in under 90 days. The team is senior, the communication
-                  is clear, and the results track to actual calls and bookings, not just ranking screenshots."
-                </p>
-                <div className="byline">
-                  <div className="avatar">V</div>
-                  <div>
-                    <div className="nm">Vishal, Impulse Branding</div>
-                    <div className="ti">MEP and print branding solutions</div>
-                  </div>
-                </div>
-              </div>
-              <div style={{ margin: '0 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/corpus-christi/seo/corpus-christi-port-economy.webp"
-                  alt="Corpus Christi TX port and energy economy, the Gulf Coast market where local SEO converts search intent into high-value clients"
-                  width={1200}
-                  height={600}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                  alt="Corpus Christi Texas local SEO Google Maps 3-Pack ranking strategy"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-              <div className="clients">
-                {['Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
-                  (c) => <span key={c}>{c}</span>
-                )}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Search Engines &amp; Knowledge Graph Networks</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* ── FAQ ──────────────────────────────────────────────────────── */}
-          <section className="room-peach">
-            <div className="wrap">
-              <div className="eyebrow">Questions answered</div>
-              <h2>Everything Corpus Christi business owners ask before starting SEO.</h2>
-              <div className="faqgrid">
-                {/* Nav */}
-                <nav aria-label="FAQ categories">
-                  <div className="faqnav">
-                    {FAQ_GROUPS.map((g) => (
-                      <a href={`#faq-${g.id}`} key={g.id}>
-                        {g.label}<span className="ct">{g.count}</span>
-                      </a>
-                    ))}
-                  </div>
-                  <p className="faqhelp">
-                    Still have questions? <a href={CALENDLY} target="_blank" rel="noopener noreferrer">Book a free call</a> and
-                    we will answer them live, no sales pitch.
-                  </p>
-                </nav>
-                {/* Answers */}
-                <div>
-                  {FAQ_GROUPS.map((g) => (
-                    <div className="faqcat" key={g.id} id={`faq-${g.id}`}>
-                      <div className="ch">{g.label}</div>
-                      {g.items.map((it) => (
-                        <details key={it.q}>
-                          <summary>{it.q}</summary>
-                          <p>{it.a}</p>
-                        </details>
-                      ))}
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp"
+                  alt="FactoryJet senior SEO engineers optimizing Corpus Christi local entity knowledge graph"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Search Precision &amp; Real Growth</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Local Search Engineered for Coastal Bend Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Port of Corpus Christi industrial fabricators to Southside healthcare practices and Padre Island hospitality brands, we build high-converting search architectures that capture Texas buyers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Local SEO Consultation" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* ── FINAL CTA ────────────────────────────────────────────────── */}
-          <section className="final">
-            <div className="wrap">
-              <div className="eyebrow">Ready to start</div>
-              <h2>
-                Let's put your Corpus Christi business<br />
-                on the <span className="it">map that pays.</span>
+        {/* ── 04. CORPUS CHRISTI DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="cc-seo-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Coastal Bend Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Local Search Optimization for Coastal Bend Sectors
               </h2>
-              <p className="lead">
-                Free 30-minute audit. We show you exactly where you stand, what your competitors are doing,
-                and the three moves that will have the biggest impact. No obligation, no pressure.
-              </p>
-              <div className="cta-row">
-                <ModalCTAButton
-                  label="Get your free SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
-                />
-                <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                  Talk to the founder
-                </a>
-              </div>
-              <p className="fine">
-                Month-to-month &middot; free audit &middot; no setup fee &middot; senior engineers &middot; US SEO services
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Port industrial operators to Southside healthcare enclaves and Padre Island hospitality brands:
               </p>
             </div>
-          </section>
 
-          <SeoCityLinksUS currentCity="corpus-christi" />
-        </main>
-        <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-      </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Local SEO Strategies for Coastal Bend Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across Corpus Christi demands tailored schema models, citation graphs, and map optimization:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Corpus Christi Leaders Choose FactoryJet Local SEO
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace opaque monthly agency reports with technical local search and AI citation dominance:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            badge="// CORPUS CHRISTI LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
+            title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
+            subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Corpus Christi local search."
+            city="Corpus Christi"
+            ctaLabel="Get a Free Local SEO Audit"
+            region="us"
+          />
+        </div>
+
+        {/* ── 08. STEP-BY-STEP 4-STAGE RANKING PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven Local Ranking Engine</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Local SEO Ranking Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for guaranteed Local 3-Pack capture and AI citation visibility:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Corpus Christi SEO Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="CORPUS CHRISTI LOCAL SEARCH INTELLIGENCE"
+          headline="Frequently Asked Questions About Local SEO in Corpus Christi TX"
+          lead="Direct, plain English answers to what Coastal Bend business owners and marketing leaders ask about Google Maps 3-Pack and search visibility:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <SeoCityLinksUS currentCity="corpus-christi" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Map Pack Dominance &amp; Real Growth</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Dominate Corpus Christi Local Search?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Claim your complimentary Google Business Profile and local entity audit. We will reveal exactly where you are losing leads to competitors and how to capture the Local 3-Pack.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
     </>
   );
 }

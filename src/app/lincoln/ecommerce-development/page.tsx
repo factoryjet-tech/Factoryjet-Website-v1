@@ -1,528 +1,922 @@
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
+
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/lincoln/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'Top-rated Shopify agency in Lincoln NE: stores live in 7 days, fixed-price. Silicon Prairie e-commerce: Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description:
+    'Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days, fixed-price. Silicon Prairie specialists: Shopify, WooCommerce & AI. Free audit.',
-    url: 'https://factoryjet.com/lincoln/ecommerce-development',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet - Shopify Agency Lincoln NE',
-      },
-    ],
+    title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description:
+      'Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Lincoln Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'Top-rated Shopify agency in Lincoln NE: stores live in 7 days, fixed-price. Silicon Prairie e-commerce specialists. Free audit.',
+    title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Lincoln NE. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/lincoln/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['lincoln'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('lincoln', FAQ_ITEMS) }}
-    />
-  )
-}
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Headless Next.js 15',
+  'BigCommerce B2B Edition',
+  'Klaviyo Master Elite',
+  'Algolia Search AI',
+  'Sanity CMS Studio',
+  'Cloudflare Edge CDN',
+  'Stripe Payments Enterprise',
+];
 
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown Lincoln & Historic Haymarket District',
+    query: 'lifestyle retail collegiate apparel boutique d2c ecommerce downtown lincoln',
+    focus: 'Collegiate Apparel, Lifestyle Goods & D2C Commerce',
+    desc: 'The historic entertainment and retail heart. Demands sub-second page loads, interactive lookbooks, and friction-free mobile checkout.',
+  },
+  {
+    corridor: 'University of Nebraska Innovation Campus (NIC)',
+    query: 'agtech precision farming software digital licensing ecommerce lincoln nic',
+    focus: 'AgTech Software, Precision Sensors & Digital Licensing',
+    desc: 'High-growth agricultural research and technology cluster. Features recurring subscription billing, digital license provisioning, and global CDN delivery.',
+  },
+  {
+    corridor: 'West O Street Commercial & Logistics Corridor',
+    query: 'heavy equipment parts freight logistics agricultural wholesale b2b west o lincoln',
+    focus: 'Heavy Equipment, Ag Logistics & Wholesale Distribution',
+    desc: 'Major industrial and freight artery. Features bulk matrix ordering, real-time ERP inventory sync, and automated LTL freight calculations.',
+  },
+  {
+    corridor: 'South Lincoln & Pine Lake Commercial Enclave',
+    query: 'specialized home goods consumer health wellness ecommerce south lincoln',
+    focus: 'Consumer Goods, Health & Wellness & High-Growth D2C',
+    desc: 'Affluent and rapidly expanding residential corridor. Features dynamic bundle builders, subscription retention engines, and mobile checkouts.',
+  },
+  {
+    corridor: 'North 27th Street Industrial Supply Spine',
+    query: 'sheet metal fabrication electrical supply manufacturing wholesale north 27th lincoln',
+    focus: 'Sheet Metal, Industrial Electrical & Manufacturing Supplies',
+    desc: 'Precision manufacturing and contractor fulfillment core. B2B wholesale portals with purchase order workflows, ERP integration, and volume tiered pricing.',
+  },
+  {
+    corridor: 'Air Park Industrial & Manufacturing District',
+    query: 'aviation components warehousing tier 1 supplier wholesale b2b air park lincoln',
+    focus: 'Aerospace Components, Industrial Storage & B2B Supply',
+    desc: 'Heavy manufacturing park adjacent to Lincoln Airport. Demands custom customer group pricing tiers, Net terms, and multi-user corporate workflows.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Agricultural Technology, Livestock Genetics & Agronomy Supply',
+    headline: 'Enterprise B2B Wholesale Portals for Nebraska AgTech Leaders',
+    description:
+      'Livestock nutrition manufacturers, seed distributors, and precision agriculture equipment providers across Lincoln and the Silicon Prairie require robust digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
+    image: '/images/us/lincoln/ecommerce/portfolio-1.webp',
+    alt: 'Lincoln Nebraska agricultural technology livestock genetics and agronomy supply B2B ecommerce platform',
+    points: [
+      'Custom dealer group pricing tiers with contracted volume discount schedules',
+      'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
+      'Real-time two-way synchronization with SAP, NetSuite, Epicor, and Microsoft Dynamics',
+    ],
+  },
+  {
+    sector: 'B2B Industrial Equipment, Sheet Metal & Manufacturing',
+    headline: 'High-Throughput Commerce Engines for Lincoln Industrial Suppliers',
+    description:
+      'Sheet metal fabricators, industrial electrical parts distributors, and hydraulic tool manufacturers across North 27th and West O Street demand robust online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Lincoln Nebraska industrial equipment sheet metal fabrication and manufacturing B2B ecommerce engineering',
+    points: [
+      'Interactive schematic parts breakdown with instant add-to-cart item matching',
+      'Automated LTL freight shipping calculation and hazardous materials handling logic',
+      'Customer-specific credit limits and corporate purchasing account hierarchies',
+    ],
+  },
+  {
+    sector: 'Athletic Apparel, Outdoor Gear & Collegiate Merchandising',
+    headline: 'High-Converting Headless Storefronts for Nebraska Lifestyle Brands',
+    description:
+      'From Husker collegiate lifestyle apparel creators to hunting gear innovators and outdoor performance brands, Nebraska brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Lincoln Nebraska athletic apparel outdoor hunting gear and collegiate merchandising headless ecommerce',
+    points: [
+      'Sub-second first contentful paint and instant product filtering with zero layout shifts',
+      'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
+      'Seamless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
+    ],
+  },
+  {
+    sector: 'Specialty Food, Artisan Confections & Direct-to-Consumer',
+    headline: 'Tactile Editorial E-Commerce for Haymarket Food Artisans',
+    description:
+      'Specialty meat processors, artisan confectionery creators, and craft beverage makers across the Historic Haymarket demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Lincoln Haymarket artisan specialty food craft beverage and gourmet goods subscription ecommerce',
+    points: [
+      'Flexible recurring subscription management with custom delivery interval selection',
+      'Dynamic cold-pack and localized perishable shipping rate calculation',
+      'Integrated loyalty rewards, customer referral engines, and verified review collection',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow Monolithic Platforms & Sluggish Mobile Checkouts',
+    problem: 'Legacy Magento and bloated WooCommerce stores suffer from 4-second load times, checkout friction, and high cart abandonment on mobile devices.',
+    solution: 'We build headless Next.js 15 storefronts connected to Shopify Plus APIs, delivering sub-second page rendering and frictionless 1-tap checkout.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Replatforming Timelines & Revenue Disruption',
+    problem: 'Traditional agencies quote 6 to 9 months for replatforming, leading to massive budget overruns, operational friction, and lost holiday sales.',
+    solution: 'Our disciplined agile migration sprint delivers complete catalog data migration, ERP integration, and production launch in verified milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Broken ERP, POS & Multi-Warehouse Inventory Sync',
+    problem: 'Disjointed inventory systems cause overselling, delayed fulfillment, manual spreadsheet updates, and poor customer reviews across physical and online channels.',
+    solution: 'We engineer real-time two-way webhooks that synchronize inventory across NetSuite, SAP, Manhattan POS, and regional 3PL fulfillment centers.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Complex Plugin Chains & Fragile Checkout Flows',
+    problem: 'Stacking 25+ third-party Shopify apps slows down storefront speed, introduces script conflicts, and creates expensive monthly SaaS subscriptions.',
+    solution: 'We build native React components and custom Shopify Functions, replacing expensive apps with lightweight, custom code that you own 100%.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Catalog Architecture, ERP Mapping & Data Strategy',
+    desc: 'We map every SKU, customer record, historical order, and third-party integration into a clean headless commerce architectural blueprint.',
+    deliverables: ['Product data modeling and attribute hierarchy map', 'ERP, CRM, and 3PL fulfillment integration matrix', 'SEO redirect plan preserving 100% of organic traffic', 'Fixed-price milestone agreement and delivery schedule'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & High-Conversion Storefront Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on friction-free navigation, interactive PDPs, and optimized checkout funnels.',
+    deliverables: ['Complete desktop and mobile Figma prototypes', 'Interactive product detail page and cart drawer wireframes', 'Bespoke design system tokens and typography scales', 'Stakeholder design review and milestone sign-off'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Headless Next.js 15 Engineering & Shopify Plus API Integration',
+    desc: 'We build the production application using Next.js 15 App Router, React 19, Tailwind CSS, and Shopify Storefront GraphQL APIs.',
+    deliverables: ['Custom headless Next.js frontend repository', 'Shopify Plus Storefront API and Cart integration', 'Custom B2B wholesale pricing and portal modules', 'Automated unit, integration, and end-to-end checkout testing'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Zero-Downtime Data Cutover, Speed Tuning & Handover',
+    desc: 'We execute complete database migration, verify 95+ Core Web Vitals, manage DNS cutover, and transfer full code repository ownership.',
+    deliverables: ['Complete historical order and customer data migration', 'Core Web Vitals 95+ optimization report', 'Live DNS cutover with zero downtime or lost orders', 'Full GitHub repository transfer and 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Stack',
+    factoryjet: 'Headless Next.js 15 App Router on Cloudflare Edge paired with Shopify Plus.',
+    traditional: 'Heavy monolithic Shopify themes or outdated monolithic Magento PHP stacks.',
+  },
+  {
+    label: 'Checkout Speed',
+    factoryjet: 'Sub-second mobile page loads with instant 1-tap Shop Pay, Apple Pay, and Google Pay.',
+    traditional: '3 to 5 second mobile page loads with render-blocking tracking scripts and layout shift.',
+  },
+  {
+    label: 'B2B & Wholesale Capabilities',
+    factoryjet: 'Native custom B2B wholesale portal with customer pricing tiers, Net terms, and ERP sync.',
+    traditional: 'Fragile third-party apps charging expensive monthly subscriptions per wholesale seat.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary theme locks or agency-retained custom codebases.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Migration' },
+  { key: 'tech', label: 'Shopify & Next.js Stack' },
+  { key: 'local', label: 'Lincoln & Nebraska Focus' },
+  { key: 'ownership', label: 'Code & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Do you have specific experience with Shopify development in Lincoln, Nebraska?',
-              answer: "Yes. We've built e-commerce stores for businesses across the Lincoln metro and broader Nebraska market. We understand Nebraska buyers, the ag-tech sector around UNL, the Husker merchandise market, and Nebraska's straightforward sales tax structure.",
-            },
-            {
-              category: 'pricing',
-              question: "What's Nebraska's sales tax, and how does it apply to my Shopify store?",
-              answer: "Nebraska has a 5.5% state sales tax. Lincoln itself adds a local tax that brings the combined rate to approximately 7% (5.5% state + 1.5% city). We configure Shopify Tax to automatically calculate and collect the correct amount based on the buyer's specific location. If you sell into other states and exceed their economic nexus thresholds, we configure multi-state tax handling too.",
-            },
-            {
-              category: 'local',
-              question: 'How does the 7-day delivery guarantee work?',
-              answer: "Once you approve your proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your complete Shopify store within that window. If we miss the deadline for any reason on our end, you receive a full refund. We've never had to issue one.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for Husker merchandise or university-related products?',
-              answer: "Yes. We've built merchandise stores for university and sports-adjacent brands. Important note: if you plan to use University of Nebraska's official trademarks, you'll need a UNL licensing agreement. If you're selling Husker-inspired or fan-culture products that don't use official marks, no licensing is required. We'll help you structure the store correctly for either situation.",
-            },
-            {
-              category: 'local',
-              question: 'I run a farm or ag business in Nebraska. Can I sell products online?',
-              answer: "Absolutely, and this is one of the fastest-growing segments we serve. Nebraska's ag businesses are increasingly selling direct: equipment parts, inputs, specialty crops, value-added food products, and branded farm merchandise. We build Shopify stores with B2B wholesale pricing for commercial buyers, volume discounts, net payment terms, and inventory management that connects with your existing systems.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a B2B wholesale portal for a Lincoln manufacturing company?',
-              answer: "Yes. Our Growth and Headless packages include full B2B wholesale functionality: separate pricing tiers by customer group, minimum order quantities, volume discounts, net 30/60/90 payment terms, and a wholesale buyer portal with unique login. Nebraska manufacturers and industrial suppliers are a core segment for us.",
-            },
-            {
-              category: 'local',
-              question: "What's the difference between you and Omaha-based agencies for Lincoln businesses?",
-              answer: "Several Omaha agencies serve Lincoln clients, and some do good work. The issues are typically: they charge Omaha overhead prices to Lincoln businesses, Lincoln projects get lower priority than their Omaha accounts, and timelines stretch as a result. We serve Lincoln businesses with the same priority as any other client, and our 7-day delivery is non-negotiable regardless of your city.",
-            },
-            {
-              category: 'local',
-              question: "I've heard Sproutbox does good Shopify work in Lincoln. Why should I consider FactoryJet?",
-              answer: "Sproutbox does solid design work. They're a broad-service digital agency. If you want Shopify as your primary platform and want a team for whom Shopify is the only thing they do, that's us. 500+ stores deep vs. being one of many services in an agency's portfolio. We're also faster (7 days) and significantly less expensive.",
-            },
-            {
-              category: 'included',
-              question: 'How does Shopify handle subscription or recurring orders for Lincoln businesses?',
-              answer: "We integrate Shopify Subscriptions or Recharge depending on your needs. Subscription commerce works exceptionally well for Nebraska food producers, supplement brands, and pet supply businesses. We set up the subscriber portal, discount logic, pause/skip/cancel flows, and Klaviyo email sequences that keep churn low.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you integrate my Shopify store with my existing POS or inventory system?',
-              answer: "Yes. If you're running Shopify POS in a Lincoln retail location, the inventory sync is automatic. For other POS systems (Square, Lightspeed, Clover), we build the integration. For Lincoln businesses with ERP systems or custom inventory software, we build API connections through our Headless package.",
-            },
-            {
-              category: 'pricing',
-              question: 'What does a Shopify store typically cost in Lincoln, Nebraska?',
-              answer: "Local Lincoln and Omaha agencies typically charge premium rates for a Shopify build with 6–14 week timelines. Freelancers run cheaper but with variable quality and no accountability. Our pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, we deliver in 7 days, and we back it with a money-back guarantee.",
-            },
-            {
-              category: 'technical',
-              question: 'Can you help me rank on Google for Shopify-related searches in Lincoln?',
-              answer: "Every store we build is fully SEO-configured out of the box: optimized metadata, JSON-LD schema, fast load times (Core Web Vitals green), mobile-first design, and a clean sitemap submitted to Google Search Console on launch day. For Lincoln businesses, we also optimize for local search signals so you appear in 'near me' queries.",
-            },
-            {
-              category: 'local',
-              question: "I already have a Shopify store but it's not performing. Can you audit and fix it?",
-              answer: "Yes. Our free 24-hour audit covers speed scores, checkout abandonment rate, mobile UX issues, conversion funnel gaps, and theme code problems. We then provide a specific list of what's broken and a fixed price to fix it.",
-            },
-            {
-              category: 'local',
-              question: 'Do you work with startups and early-stage businesses in Lincoln?',
-              answer: "Yes. Lincoln's startup ecosystem, particularly around UNL's innovation programs and the NMotion accelerator, produces a lot of early-stage product companies. We work with pre-revenue and early-stage businesses. For most startups, the right starting point is our Standard package to validate the product concept before investing in advanced features.",
-            },
-            {
-              category: 'local',
-              question: 'How do I handle shipping and fulfillment for Nebraska buyers?',
-              answer: "We configure Shopify's shipping module with USPS, UPS, and FedEx carrier-calculated rates based on package weight and destination. For Nebraska agricultural products, we factor in perishable shipping constraints. For high-volume operations, we integrate ShipStation or EasyPost for warehouse management.",
-            },
-            {
-              category: 'technical',
-              question: 'Can you set up Google Shopping for my Lincoln product business?',
-              answer: "Google Shopping is included in our Growth and Headless packages and available as a paid add-on for Standard. We set up Google Merchant Center, configure your product feed, write optimized product titles and descriptions, and link to Google Ads.",
-            },
-            {
-              category: 'local',
-              question: "I'm a food producer in Nebraska. Can I ship food products nationally through my Shopify store?",
-              answer: "Yes, with some planning. Most shelf-stable packaged food products can be shipped nationwide without restriction. Meat and dairy require USDA/FDA compliance and specific labeling. Alcohol has state-by-state shipping restrictions. We've helped Nebraska food producers navigate these requirements many times.",
-            },
-            {
-              category: 'support',
-              question: 'Do you offer ongoing maintenance and support after launch?',
-              answer: "Yes. Every project includes 30 days of post-launch support, bug fixes, adjustments, questions answered same-day. After that, we offer monthly maintenance plans that include theme updates, app maintenance, speed monitoring, and priority support.",
-            },
-            {
-              category: 'local',
-              question: "What makes FactoryJet different from a Nebraska freelancer I found on LinkedIn?",
-              answer: "A freelancer might be excellent, or they might disappear after the deposit. We're a 25-person team with project managers, designers, developers, and QA working in parallel. We have 500+ stores as proof. We put a contractual delivery deadline in writing. No freelancer will ever offer you that.",
-            },
-            {
-              category: 'local',
-              question: "I'm outside Lincoln: Kearney, Grand Island, or another Nebraska city. Do you serve me?",
-              answer: "Absolutely. We serve businesses across all of Nebraska. Nebraska's 5.5% sales tax applies statewide, so there's no configuration difference for non-Lincoln cities. Remote collaboration is our normal: most of our projects are handled entirely over Zoom and Slack.",
-            },
-            {
-              category: 'local',
-              question: 'Who is the best ecommerce development company in Lincoln?',
-              answer:
-                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Lincoln you compare, or any ecommerce solution company in Lincoln, should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Lincoln and the best ecommerce solution company in Lincoln for your catalog.',
-            },
-            {
-              category: 'pricing',
-              question: 'Should I hire ecommerce developer in Lincoln or work with an agency?',
-              answer:
-                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Lincoln directly, ask for store speed scores from past builds before committing.',
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a Lincoln brand?',
+    answer:
+      'Project investments depend on total SKU count, custom ERP/3PL integrations, B2B wholesale requirements, and custom interactive features. Every project is quoted with a binding, fixed-price milestone agreement and zero hidden change orders.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
+    answer:
+      'No. We deliver turnkey, fully documented codebases that you own 100%. You pay standard platform hosting fees directly to your providers and pay zero mandatory agency retainers.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
+    answer:
+      'We complete an exhaustive architectural discovery and API integration mapping process before development begins, locking in the technical scope in a binding milestone contract.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can you help us reduce our monthly Shopify app subscription costs?',
+    answer:
+      'Yes. By engineering custom React components and native Shopify Functions, we typically eliminate 5 to 15 third-party apps, saving thousands annually in recurring SaaS fees while speeding up your site.',
+  },
+  {
+    category: 'timeline',
+    question: 'How fast can you replatform our store from Magento or WooCommerce to Shopify Plus?',
+    answer:
+      'Our disciplined agile engineering sprints deliver complete replatforming, data migration, and custom frontend development within verified milestone timelines without halting current store sales.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will our existing customer passwords and historical order data transfer safely?',
+    answer:
+      'Yes. We execute automated, validated data pipelines that migrate all historical customer profiles, order histories, product variants, and metadata with zero data loss.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you guarantee zero downtime during DNS launch cutover?',
+    answer:
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+  },
+  {
+    category: 'timeline',
+    question: 'What is required from our internal operations team during the build?',
+    answer:
+      'We require API access credentials to your existing commerce platform, ERP/3PL system documentation, brand assets, and participation in weekly milestone demonstration reviews.',
+  },
+  {
+    category: 'tech',
+    question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
+    answer:
+      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+  },
+  {
+    category: 'tech',
+    question: 'Can you integrate our complex ERP, POS, and warehouse management software?',
+    answer:
+      'Yes. We build custom API connectors and webhook listeners for NetSuite, SAP, Microsoft Dynamics, Epicor, Manhattan Associates, and all major third-party logistics (3PL) providers.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you optimize checkout conversion rates on mobile devices?',
+    answer:
+      'We eliminate render-blocking scripts, implement one-click Shop Pay and Apple Pay biometric checkouts, and streamline the mobile cart drawer for frictionless purchasing.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with Lincoln agricultural and farming suppliers?',
+    answer:
+      'Yes. We engineer enterprise B2B portals for livestock nutrition companies, seed distributors, and precision farming implement dealers across the Silicon Prairie.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build custom B2B wholesale portals for North 27th industrial suppliers?',
+    answer:
+      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate multi-location POS inventory across Nebraska retail stores?',
+    answer:
+      'Yes. We connect Shopify POS and custom point-of-sale systems across brick-and-mortar locations to ensure unified omnichannel inventory, buy-online-pickup-in-store (BOPIS), and real-time stock routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build subscription commerce for Lincoln gourmet food and confectionery brands?',
+    answer:
+      'Yes. We integrate advanced recurring subscription engines, custom bundle builders, and automated retention flows for high-growth direct-to-consumer food, confectionery, and craft brands.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon project completion, you receive complete ownership of the private GitHub repository, Figma design files, and deployment infrastructure with zero vendor lock-in.',
+  },
+  {
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal merchandising team on managing products and promotions?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation showing your team how to update catalog attributes, launch promotions, schedule flash sales, and manage orders.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
+    answer:
+      'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Lincoln Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lincoln',
+    addressRegion: 'NE',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 40.8136,
+    longitude: -96.7026,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Lincoln' },
+    { '@type': 'City', name: 'Waverly' },
+    { '@type': 'City', name: 'Hickman' },
+    { '@type': 'City', name: 'Seward' },
+    { '@type': 'City', name: 'Beatrice' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Lincoln Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
+  description:
+    'Custom headless Shopify Plus and Next.js ecommerce development in Lincoln NE. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Nebraska brands.',
+  areaServed: [{ '@type': 'State', name: 'Nebraska' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description: 'Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Ecommerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Lincoln', item: CANONICAL },
+  ],
+};
+
+export default function LincolnEcommerceDevelopmentPage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="lincoln-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="lincoln-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="lincoln-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="lincoln-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="lincoln-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* HERO */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_lincoln_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · LINCOLN, NE"
-          headline="Shopify Agency Lincoln NE for Nebraska Businesses"
-          lead="Lincoln is the Silicon Prairie's university town, ag-tech hub, and fastest-growing mid-market city, and the businesses winning online here aren't waiting 3 months for a local agency. They launch in 7 days at fixed-price tiers."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* LOGO BAR */}
-        <LogoBar tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE" />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Lincoln Ecommerce Development &amp; Headless Architecture</span>
+                </div>
 
-        {/* BIG THREE TRUST BLOCK */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Lincoln e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Lincoln Ecommerce Development Agency for High-Growth Brands
+                </h1>
 
-        {/* CITY CONTEXT */}
-        <CityContextSection
-          eyebrow="WHY LINCOLN E-COMMERCE IS DIFFERENT"
-          headline="The Silicon Prairie University Town With a Massive Husker Market and Booming Ag-Tech Sector"
-          leadParagraphs={[
-            "Lincoln doesn't get the same press as Omaha, but the capital city has a unique e-commerce opportunity that most businesses haven't fully tapped. University of Nebraska–Lincoln's 25,000+ students create a captive consumer market on campus. Husker merchandise, game-day gear, and branded apparel are perpetual demand categories.",
-            "Meanwhile, the ag-tech sector growing up around UNL's research programs is creating B2B e-commerce opportunities for equipment, precision farming tools, and agricultural software. Nebraska's 5.5% state sales tax is straightforward to configure, and Lincoln adds approximately 1.5% city tax for a combined ~7% rate.",
-            "Lincoln has relatively low competition from established Shopify agencies, which means businesses that launch a professional store now can establish search ranking dominance before the market gets crowded. The window to own your category in Lincoln e-commerce is open right now.",
-          ]}
-          stats={[
-            { value: '25K+', label: 'UNL students, massive on-campus and alumni consumer market', sourceUrl: 'https://www.unl.edu/about/' },
-            { value: '340K+', label: 'Lincoln metro population with strong purchase intent', sourceUrl: 'https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-cities-and-towns.html' },
-            { value: '~7%', label: "Nebraska combined sales tax (5.5% state + 1.5% Lincoln city)", sourceUrl: 'https://revenue.nebraska.gov/about/sales-and-use-tax' },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for Nebraska brands. 7-day agile delivery with 100% code ownership.
+                </p>
 
-        {/* SERVICE EXPLANATION */}
-        <ServiceExplanation
-          eyebrow="WHAT WE BUILD FOR LINCOLN BUSINESSES"
-          headline="Shopify Stores Built for Nebraska Buyers, From Husker Fans to Ag Producers"
-          lead="Lincoln e-commerce has two distinct markets that smart businesses capture simultaneously: the university consumer (students, alumni, and fans who buy on mobile and respond to Husker-adjacent branding), and the Nebraska producer (ag businesses and manufacturers moving their products online for the first time). We build for both, with Nebraska's 5.5% sales tax auto-configured from day one."
-          body={
-            <>
-              <p>
-                For university-adjacent merchandise brands and campus businesses, we build
-                Shopify stores with mobile-first checkout optimized for the student buyer,
-                game-day promotional calendar support, and email automation through Klaviyo
-                that captures first-time buyers and turns them into repeat customers.
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#lincoln-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Lincoln Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/lincoln/ecommerce/portfolio-1.webp"
+                  alt="Lincoln Nebraska ecommerce development and headless Shopify Plus storefront engineering"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce Engine &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/manufacturing-website-design/shop-floor.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Lincoln Shopify Plus storefront"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Ecommerce Engineered for Nebraska Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Silicon Prairie AgTech innovators to Haymarket lifestyle brands and North 27th industrial suppliers, we build high-converting commerce engines that maximize revenue velocity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Ecommerce Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. LINCOLN DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="lincoln-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Lincoln Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Ecommerce Development for Lincoln&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Haymarket lifestyle brands to Silicon Prairie AgTech suppliers and North 27th manufacturers:
               </p>
-              <p>
-                For Lincoln&apos;s ag-tech companies, equipment dealers, and manufacturers, we
-                build B2B wholesale portals with tiered pricing by customer group, volume
-                discounts, minimum order quantities, and net payment terms, with ERP
-                integrations through our Headless package for high-SKU industrial catalogs.
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Commerce Architectures for Nebraska Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across Lincoln demands tailored checkout flows, inventory integrations, and performance metrics:
               </p>
-              <p>
-                Every Lincoln Shopify build includes Google Shopping integration, JSON-LD
-                schema for AI search visibility, Core Web Vitals optimization, and a 30-day
-                support window. Nebraska is price-conscious: our pricing reflects that.
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Lincoln Leaders Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks with enterprise headless Shopify Plus engineering:
               </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/lincoln/ecommerce/service-explanation.webp"
-              alt="Shopify development process for Lincoln Nebraska businesses"
-              width={1200}
-              height={800}
-              className="rounded-2xl w-full object-cover"
-              loading="lazy"
-            />
-          }
-        />
+            </div>
 
-        {/* STRATEGIC DARK */}
-        <StrategicDarkSection
-          eyebrow="THE FACTORYJET DIFFERENCE"
-          headline="Three Reasons Lincoln Businesses Choose Us Over Local Agencies"
-          lead="Swanson Russell and Sproutbox are capable Lincoln agencies, but built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days, at a fixed price quoted up front."
-          pillars={[
-            {
-              title: 'Launch While Others Plan',
-              body: "Lincoln agencies are booking into next quarter. We launch your store in 7 days. While they're in kickoff meetings, you're already making sales and building customer relationships.",
-            },
-            {
-              title: 'Nebraska-Honest Pricing',
-              body: 'No hourly billing, no scope creep, no surprise invoices. You get a fixed price before you pay anything, and that price never changes. What we quote is what you pay.',
-            },
-            {
-              title: 'Built to Convert',
-              body: "Pretty stores that don't convert are expensive billboards. Every section, CTA, and checkout flow is optimized around conversion data from 500+ stores we've launched across the US, UK, UAE and India.",
-            },
-          ]}
-        />
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* SERVICE JOURNEY */}
-        <ServiceJourneyRow
-          eyebrow="HOW IT WORKS"
-          headline="From First Call to Live Store in 7 Days"
-          stages={[
-            {
-              number: '01',
-              title: 'Strategy Call',
-              description: 'We learn about your Lincoln business, your products, and your customers in 45 minutes, no pitch, just honest advice on what you need.',
-            },
-            {
-              number: '02',
-              title: 'Fixed-Price Proposal',
-              description: 'Within 24 hours you get a complete proposal: fixed price, exact launch date, full scope, and sitemap. No surprises, no hourly billing.',
-            },
-            {
-              number: '03',
-              title: 'Design & Build (Days 1–5)',
-              description: 'We design your custom theme, configure products, set up Nebraska tax rules, connect your payment gateway, and integrate all marketing tools.',
-            },
-            {
-              number: '04',
-              title: 'Review & Revisions (Day 6)',
-              description: 'You review on a private preview link. We make all revisions same-day. Most clients approve on first review with minor tweaks.',
-            },
-            {
-              number: '05',
-              title: 'Launch Day (Day 7)',
-              description: 'We go live, submit to Google, complete full mobile QA, and hand you the keys with 30-day support and complete documentation.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// LINCOLN COMMERCE STACK &amp; HEADLESS BLUEPRINT"
+            title="Headless Next.js 15 to Shopify Plus Engine"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        {/* PORTFOLIO */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="Stores We've Built for Businesses Like Yours"
-          cards={[
-            {
-              industry: 'Ag-Tech & Equipment',
-              title: 'Nebraska Agricultural Equipment Store',
-              description: "A Nebraska ag equipment parts dealer needed a B2B wholesale portal with tiered dealer pricing, bulk ordering, and inventory sync. We launched in 7 days with Nebraska tax configured, dealer login portal, and a product catalog of 2,500+ SKUs.",
-              imageSrc: '/images/us/lincoln/ecommerce/portfolio-1.webp',
-              stat1: '+290% online orders',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'University Apparel & Merchandise',
-              title: 'Nebraska University Merchandise Brand',
-              description: "A Lincoln merchandise brand serving UNL students and Husker fans needed a Shopify store with game-day promotional support, mobile-first checkout, and Klaviyo automation for alumni buyers. Launched in 7 days with $34K in first-month revenue.",
-              imageSrc: '/images/us/lincoln/ecommerce/portfolio-2.webp',
-              stat1: '$34K first-month revenue',
-              stat2: 'Launched in 7 days',
-            },
-            {
-              industry: 'Nebraska Food & Specialty',
-              title: 'Nebraska Specialty Food Producer',
-              description: "A Nebraska food producer needed to go DTC nationally with subscription box options, local pickup, and compliant food labeling. We built a Shopify store with Recharge subscription integration and Google Shopping feed, achieving 4.1% conversion from launch.",
-              imageSrc: '/images/us/lincoln/ecommerce/portfolio-3.webp',
-              stat1: '4.1% conversion rate',
-              stat2: 'From day one',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Ecommerce Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay migrations and high-conversion commerce launches:
+              </p>
+            </div>
 
-        {/* COMPARISON TABLE */}
-        <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Lincoln's Biggest Shopify Agencies"
-          lead="Swanson Russell and Sproutbox are established Lincoln agencies, but built for larger budgets and longer timelines. FactoryJet delivers a full Shopify store in 7 days, fixed-price, with AI features no local agency offers at SMB-friendly rates."
-          columns={[
-            { label: 'Their pricing' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we cost less' },
-          ]}
-          rows={[
-            {
-              feature: 'Swanson Russell (Lincoln)',
-              values: [
-                'Enterprise-level project rates (full-service advertising agency, strong on branding and media, Shopify is one of dozens of services, 8–16 week timelines)',
-                'Fixed-price, 7-day delivery',
-                'Swanson Russell is a top-tier branding and advertising agency, not a Shopify e-commerce specialist. FactoryJet builds exclusively on Shopify, launches in 7 days, and costs fixed-price.',
-              ],
-            },
-            {
-              feature: 'Sproutbox (Lincoln)',
-              values: [
-                'Premium project rates (design and digital agency with broad services, 6–12 week timelines)',
-                'Fixed-price, 7-day delivery',
-                'Sproutbox does solid design work but Shopify is one of many services in their portfolio. FactoryJet builds exclusively on Shopify, 500+ stores deep, with faster delivery and lower cost.',
-              ],
-            },
-            {
-              feature: 'Omaha-Based Agencies',
-              values: [
-                'Higher overhead, premium rates, Lincoln projects often de-prioritized, 6–14 week timelines',
-                'Fixed-price, 7-day delivery',
-                'Omaha agencies serving Lincoln clients often de-prioritize Lincoln projects relative to their Omaha accounts. FactoryJet serves every client with the same priority, and the same 7-day guarantee.',
-              ],
-            },
-          ]}
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
 
-        {/* PRICING */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="Fixed-Price Shopify Packages for Lincoln Businesses"
-          lead="Lincoln and Omaha agencies typically charge premium rates for a Shopify build with 6–14 week timelines. FactoryJet pricing is fixed-price and scoped to your build: the main drivers are catalog size, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Stores ship in 7 days, Nebraska-honest pricing from day one."
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description: 'For Lincoln boutiques, food producers, merchandise brands, and service businesses launching their first professional Shopify store.',
-              features: [
-                'Custom Shopify theme (no templates)',
-                'Up to 100 products configured',
-                'Nebraska ~7% sales tax auto-setup',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description: 'For growing Lincoln and Nebraska brands, includes B2B wholesale pricing, Klaviyo email automation, and Google Shopping.',
-              features: [
-                'Everything in Shopify Standard',
-                'B2B wholesale pricing & portal',
-                'Klaviyo email automation setup',
-                'Google Shopping feed configuration',
-                'Meta Ads pixel + product catalog',
-                'Subscription & recurring order support',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description: 'Enterprise Shopify for high-volume Lincoln businesses, ag-tech companies, and manufacturers needing ERP integrations and maximum performance.',
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'ERP / inventory system integration',
-                'Multi-location fulfillment logic',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                '60-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
 
-        {/* INDUSTRIES GRID */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE IN LINCOLN"
-          headline="E-Commerce Development for Lincoln's Key Industries"
-          lead="From Husker merchandise and ag-tech equipment to downtown Lincoln boutiques and Nebraska food producers, FactoryJet has built Shopify stores for every sector driving Lincoln's economy."
-          sectors={[
-            {
-              name: 'Ag-Tech & Farm Equipment',
-              description: 'Precision farming tools, equipment parts, seed dealers, and ag-tech SaaS companies serving Nebraska farmers and ranchers going online for the first time.',
-              example: 'Ag equipment parts dealers, seed suppliers, precision ag companies, and farm supply retailers across Nebraska.',
-            },
-            {
-              name: 'University Apparel & Merchandise',
-              description: "Husker merchandise, campus brands, and alumni goods businesses serving UNL's 25,000+ students and massive national fan base, with game-day promotional support built in.",
-              example: "University-adjacent merchandise brands, fan gear retailers, and alumni goods companies serving the Husker market nationwide.",
-            },
-            {
-              name: 'Nebraska Food & Specialty',
-              description: 'Cornhusker popcorn, craft foods, specialty meats, and Nebraska-made food products shipping direct to consumers nationwide, with subscription boxes, compliant labeling, and cold-chain configurations.',
-              example: 'Nebraska specialty food producers, craft beverage brands, artisan goods makers, and farm-direct food businesses.',
-            },
-            {
-              name: 'Downtown Lincoln Retail',
-              description: 'Haymarket District boutiques, O Street shops, and local retailers expanding their physical presence online, with POS sync, local pickup, and inventory management.',
-              example: 'Haymarket boutiques, O Street specialty retailers, and independent shops in downtown Lincoln and the surrounding areas.',
-            },
-            {
-              name: 'Manufacturing & Industrial',
-              description: 'Nebraska manufacturers and industrial suppliers building B2B e-commerce channels to reach buyers beyond the local market, with B2B portals, bulk ordering, and ERP integrations.',
-              example: 'Nebraska manufacturers, industrial component suppliers, and equipment dealers serving the broader Midwest market.',
-            },
-            {
-              name: 'Health & Wellness',
-              description: "Supplement brands, fitness studios, and wellness businesses serving Lincoln's health-conscious university and professional market, with subscription billing and Klaviyo automation.",
-              example: "Supplement brands, fitness equipment retailers, yoga studios, and wellness product companies serving the Lincoln metro.",
-            },
-          ]}
-        />
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
 
-        {/* TESTIMONIALS */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* FAQ */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Lincoln Ecommerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Headless Engine</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Lincoln E-Commerce Businesses"
+          eyebrow="LINCOLN COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About Ecommerce Development in Lincoln NE"
+          lead="Direct, plain English answers to what Nebraska ecommerce founders and operations leaders ask about Shopify Plus and headless engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* FINAL CTA */}
-        <EcommerceCityLinksUS currentCity="lincoln" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Launch Your Lincoln Shopify Store in 7 Days?"
-          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price, no commitment required."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-        />
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="lincoln" />
+          </div>
+        </section>
 
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Lincoln Ecommerce Engine?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+
+      <SiteFooter locale="us" />
     </>
-  )
+  );
 }

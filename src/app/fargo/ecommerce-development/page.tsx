@@ -1,533 +1,922 @@
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
+
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/fargo/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
-  description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
+  title: 'Fargo Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description:
+    'Fargo ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for North Dakota brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
-    description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
-    url: 'https://factoryjet.com/fargo/ecommerce-development',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet - Shopify Developer Fargo ND',
-      },
-    ],
+    title: 'Fargo Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description:
+      'Fargo ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for North Dakota brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Fargo Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
-    description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
+    title: 'Fargo Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Fargo ND. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/fargo/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['fargo'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+};
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('fargo', FAQ_ITEMS) }}
-    />
-  )
-}
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Headless Next.js 15',
+  'BigCommerce B2B Edition',
+  'Klaviyo Master Elite',
+  'Algolia Search AI',
+  'Sanity CMS Studio',
+  'Cloudflare Edge CDN',
+  'Stripe Payments Enterprise',
+];
 
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown Fargo & Broadway Innovation Corridor',
+    query: 'software tech direct to consumer lifestyle retail ecommerce downtown fargo',
+    focus: 'Tech Innovation, Lifestyle Retail & Modern D2C',
+    desc: 'The vibrant entrepreneurial core. Demands sub-second page loads, interactive lookbooks, and friction-free mobile checkout.',
+  },
+  {
+    corridor: 'Red River Valley AgTech & Agriculture Hub',
+    query: 'agricultural equipment seeds fertilizer wholesale b2b ecommerce red river valley',
+    focus: 'AgTech, Precision Farming, Seeds & Fertilizer',
+    desc: 'The nation agricultural heartland. B2B wholesale portals with purchase order workflows, bulk freight calculation, and tiered dealer pricing.',
+  },
+  {
+    corridor: 'West Fargo Commercial & Industrial Spine',
+    query: 'heavy machinery hydraulic equipment industrial supply wholesale west fargo',
+    focus: 'Heavy Machinery, Industrial Tooling & Manufacturing',
+    desc: 'Heavy equipment and logistics fulfillment hub. Features bulk matrix ordering, real-time ERP inventory sync, and LTL shipping.',
+  },
+  {
+    corridor: 'NDSU Research & Tech Park Innovation District',
+    query: 'biomedical precision tech enterprise software licensing ecommerce ndsu park',
+    focus: 'Precision Tech, Biomedical Sensors & Enterprise Software',
+    desc: 'High-growth technology incubator. Features recurring subscription billing, digital license provisioning, and global CDN delivery.',
+  },
+  {
+    corridor: '13th Avenue South & 45th Street Commercial Hub',
+    query: 'multi location retail pos sync consumer goods ecommerce fargo nd',
+    focus: 'Omnichannel Retail, Multi-Location POS & Consumer Brands',
+    desc: 'High-density commercial corridor. Demands real-time POS inventory synchronization, BOPIS workflows, and customer loyalty engines.',
+  },
+  {
+    corridor: 'Moorhead Border Logistics & Manufacturing',
+    query: 'regional cold storage transportation equipment wholesale moorhead fargo',
+    focus: 'Cold Storage Equipment, Logistics & Regional Supply',
+    desc: 'Cross-border commerce artery. Demands multi-warehouse inventory visibility, automated freight rating, and custom invoicing.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Agricultural Equipment, Precision Farming & Seed Distribution',
+    headline: 'Enterprise B2B Wholesale Portals for Red River Valley Ag Leaders',
+    description:
+      'Seed producers, precision agriculture equipment manufacturers, and agronomy chemical distributors across the Red River Valley require robust digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
+    image: '/images/us/fargo/ecommerce/portfolio-1.webp',
+    alt: 'Fargo North Dakota Red River Valley agricultural equipment seeds and precision farming B2B ecommerce platform',
+    points: [
+      'Custom dealer group pricing tiers with contracted volume discount schedules',
+      'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
+      'Real-time two-way synchronization with SAP, NetSuite, Epicor, and Microsoft Dynamics',
+    ],
+  },
+  {
+    sector: 'B2B Industrial Supply, Hydraulic Hardware & Heavy Machinery',
+    headline: 'High-Throughput Commerce Engines for West Fargo Industrial Distributors',
+    description:
+      'Industrial hardware suppliers, hydraulic component distributors, and heavy machinery parts dealers across West Fargo demand robust online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Fargo West Fargo industrial supply heavy machinery and hydraulic parts B2B ecommerce engineering',
+    points: [
+      'Interactive schematic parts breakdown with instant add-to-cart item matching',
+      'Automated LTL freight shipping calculation and hazardous materials handling logic',
+      'Customer-specific credit limits and corporate purchasing account hierarchies',
+    ],
+  },
+  {
+    sector: 'Outdoor Apparel, Cold-Weather Gear & Sporting Goods',
+    headline: 'High-Converting Headless Storefronts for Northern Plains Outdoor Brands',
+    description:
+      'From Fargo cold-weather hunting gear creators to ice fishing innovators and outdoor lifestyle apparel brands, northern brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Fargo North Dakota cold weather outdoor apparel sporting goods and hunting gear headless ecommerce',
+    points: [
+      'Sub-second first contentful paint and instant product filtering with zero layout shifts',
+      'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
+      'Seamless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
+    ],
+  },
+  {
+    sector: 'HealthTech, Biomedical Nutrition & Specialty Consumables',
+    headline: 'High-Conversion Subscription Storefronts for NDSU Tech Scale-Ups',
+    description:
+      'Fast-growing biomedical, specialty nutrition, and consumer health innovators across the NDSU Research Park require platforms engineered for recurring customer lifetime value. We build custom headless Next.js storefronts with dynamic bundle builders, diagnostic intake quizzes, and automated recurring subscription billing.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Fargo North Dakota biomedical nutrition healthtech and consumer wellness subscription ecommerce',
+    points: [
+      'Custom interactive bundle configurators and personalized diagnostic quiz engines',
+      'Seamless subscription management with Recharge, Smartrr, and Stripe Billing',
+      'High-speed mobile checkout optimized for paid social, search, and influencer traffic',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow Monolithic Platforms & Sluggish Mobile Checkouts',
+    problem: 'Legacy Magento and bloated WooCommerce stores suffer from 4-second load times, checkout friction, and high cart abandonment on mobile devices.',
+    solution: 'We build headless Next.js 15 storefronts connected to Shopify Plus APIs, delivering sub-second page rendering and frictionless 1-tap checkout.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Replatforming Timelines & Revenue Disruption',
+    problem: 'Traditional agencies quote 6 to 9 months for replatforming, leading to massive budget overruns, operational friction, and lost holiday sales.',
+    solution: 'Our disciplined agile migration sprint delivers complete catalog data migration, ERP integration, and production launch in verified milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Broken ERP, POS & Multi-Warehouse Inventory Sync',
+    problem: 'Disjointed inventory systems cause overselling, delayed fulfillment, manual spreadsheet updates, and poor customer reviews across physical and online channels.',
+    solution: 'We engineer real-time two-way webhooks that synchronize inventory across NetSuite, SAP, Manhattan POS, and regional 3PL fulfillment centers.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Complex Plugin Chains & Fragile Checkout Flows',
+    problem: 'Stacking 25+ third-party Shopify apps slows down storefront speed, introduces script conflicts, and creates expensive monthly SaaS subscriptions.',
+    solution: 'We build native React components and custom Shopify Functions, replacing expensive apps with lightweight, custom code that you own 100%.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Catalog Architecture, ERP Mapping & Data Strategy',
+    desc: 'We map every SKU, customer record, historical order, and third-party integration into a clean headless commerce architectural blueprint.',
+    deliverables: ['Product data modeling and attribute hierarchy map', 'ERP, CRM, and 3PL fulfillment integration matrix', 'SEO redirect plan preserving 100% of organic traffic', 'Fixed-price milestone agreement and delivery schedule'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & High-Conversion Storefront Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on friction-free navigation, interactive PDPs, and optimized checkout funnels.',
+    deliverables: ['Complete desktop and mobile Figma prototypes', 'Interactive product detail page and cart drawer wireframes', 'Bespoke design system tokens and typography scales', 'Stakeholder design review and milestone sign-off'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Headless Next.js 15 Engineering & Shopify Plus API Integration',
+    desc: 'We build the production application using Next.js 15 App Router, React 19, Tailwind CSS, and Shopify Storefront GraphQL APIs.',
+    deliverables: ['Custom headless Next.js frontend repository', 'Shopify Plus Storefront API and Cart integration', 'Custom B2B wholesale pricing and portal modules', 'Automated unit, integration, and end-to-end checkout testing'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Zero-Downtime Data Cutover, Speed Tuning & Handover',
+    desc: 'We execute complete database migration, verify 95+ Core Web Vitals, manage DNS cutover, and transfer full code repository ownership.',
+    deliverables: ['Complete historical order and customer data migration', 'Core Web Vitals 95+ optimization report', 'Live DNS cutover with zero downtime or lost orders', 'Full GitHub repository transfer and 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Stack',
+    factoryjet: 'Headless Next.js 15 App Router on Cloudflare Edge paired with Shopify Plus.',
+    traditional: 'Heavy monolithic Shopify themes or outdated monolithic Magento PHP stacks.',
+  },
+  {
+    label: 'Checkout Speed',
+    factoryjet: 'Sub-second mobile page loads with instant 1-tap Shop Pay, Apple Pay, and Google Pay.',
+    traditional: '3 to 5 second mobile page loads with render-blocking tracking scripts and layout shift.',
+  },
+  {
+    label: 'B2B & Wholesale Capabilities',
+    factoryjet: 'Native custom B2B wholesale portal with customer pricing tiers, Net terms, and ERP sync.',
+    traditional: 'Fragile third-party apps charging expensive monthly subscriptions per wholesale seat.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary theme locks or agency-retained custom codebases.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Migration' },
+  { key: 'tech', label: 'Shopify & Next.js Stack' },
+  { key: 'local', label: 'Fargo & ND Focus' },
+  { key: 'ownership', label: 'Code & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Do you actually have experience with Shopify development in Fargo, ND?',
-              answer: "Yes. We've built stores for businesses across the Fargo-Moorhead metro, from ag-equipment dealers in the Red River Valley to downtown Fargo boutiques on Broadway. We understand the cross-border ND/MN market, the ag-tech buyer behavior, and the tax rules that trip up most developers.",
-            },
-            {
-              category: 'local',
-              question: 'How does the 7-day delivery guarantee actually work?',
-              answer: "Once you approve your project proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your full Shopify store in that window. If we miss the deadline for any reason on our end, you get a full refund. We've never missed a deadline.",
-            },
-            {
-              category: 'pricing',
-              question: 'How do you handle North Dakota sales tax on a Shopify store?',
-              answer: "North Dakota charges a 5% state sales tax, and Fargo adds a 2% city tax on top, bringing the combined rate to 7%. We configure Shopify Tax to automatically calculate and collect the right amount based on customer location. We also set up MN sales tax rules for your Moorhead buyers across the river.",
-            },
-            {
-              category: 'pricing',
-              question: 'What about Minnesota buyers from Moorhead? Do I need to collect MN sales tax too?',
-              answer: "It depends on your sales volume into Minnesota. If you exceed Minnesota's economic nexus threshold ($100,000 in sales or 200 transactions), you're required to collect MN's 6.875% state tax plus applicable local taxes. We configure your Shopify store to handle both ND and MN tax rules from day one.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you build a Shopify store with B2B wholesale pricing for my ag or manufacturing business?',
-              answer: "Absolutely, this is one of our specialties in Fargo. We build B2B wholesale portals with tiered pricing by customer group, volume discounts, minimum order quantities, and net payment terms. Your wholesale buyers get a separate login experience from your retail customers.",
-            },
-            {
-              category: 'local',
-              question: "I've heard Onsharp is the go-to agency in Fargo. Why should I consider FactoryJet instead?",
-              answer: "Onsharp is a great full-service agency, excellent for enterprise clients with large budgets and complex digital marketing needs. But if you're a growing SMB who specifically needs a Shopify store built well and launched fast, you're paying for a lot of overhead you don't need. We specialize exclusively in Shopify, fixed-price, launch in 7 days, and back it with a guarantee.",
-            },
-            {
-              category: 'local',
-              question: "What's the difference between you and AdShark Marketing for e-commerce?",
-              answer: "AdShark is excellent at paid media: Google Ads, Meta Ads, programmatic. They're a marketing agency, not a Shopify development shop. If your store is already built and you need ads management, talk to AdShark. If you need a store built first, that's where we come in. Many clients work with both: we build the store, they manage the ads.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Bluestem Media for Shopify work?',
-              answer: "Bluestem has been around for decades and does solid WordPress work. Shopify is a secondary offering for them, not their primary platform. If you want a team for whom Shopify is the only thing they do, 500+ stores deep, that's us. We also launch in 7 days vs. their typical 4–8 week timeline.",
-            },
-            {
-              category: 'included',
-              question: "I'm a manufacturer in Fargo. Can you build a product catalog with thousands of SKUs?",
-              answer: "Yes. Our Headless Shopify package is built for exactly this use case, ag equipment parts, industrial components, or manufactured goods with complex variant trees. We handle bulk CSV product imports, variant matrices, B2B pricing tiers, and integration with your existing ERP or inventory management system.",
-            },
-            {
-              category: 'local',
-              question: 'Does Microsoft TechSpark or Emerging Prairie offer any e-commerce grants or subsidies?',
-              answer: "Microsoft TechSpark's Fargo initiative includes digital skills programs and some technology credits, but direct e-commerce store grants aren't currently part of the program. The most accessible path for most Fargo SMBs is working with a fixed-price specialist who can scope the work upfront, which is exactly the gap we fill.",
-            },
-            {
-              category: 'pricing',
-              question: 'What e-commerce platform should I use: Shopify, WooCommerce, or something else?',
-              answer: "For 95% of Fargo SMBs, Shopify is the right answer. It handles North Dakota sales tax automatically, runs fast out of the box, has the best app ecosystem for marketing integrations, and requires zero server maintenance. WooCommerce can work if you're deeply committed to WordPress and have a developer on staff to maintain it.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you integrate my Shopify store with my existing point-of-sale system?',
-              answer: "Yes. If you're running Shopify POS, the integration is seamless: your online and in-store inventory sync automatically. If you're on a different POS system (Square, Lightspeed, Clover), we build a custom integration or use a middleware connector. This is common for downtown Fargo retailers who run a physical store and want to add an online channel.",
-            },
-            {
-              category: 'support',
-              question: 'Do you do ongoing Shopify maintenance and support after launch?',
-              answer: "Every project includes 30 days of post-launch support at no extra cost. After that, we offer monthly maintenance plans that include theme updates, app maintenance, speed monitoring, and priority support. Many Fargo clients stay on maintenance plans for years.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does a Shopify store cost in Fargo compared to hiring locally?',
-              answer: "Local Fargo agencies typically charge enterprise-level rates for a Shopify build with 4–12 week timelines. Freelancers on Upwork run far cheaper but with variable quality. FactoryJet delivers the same quality at a fraction of the cost, fixed-price and scoped to your build, in 7 days, backed by a money-back guarantee. The main cost drivers are page count, integrations, and design complexity, and every project is quoted up front after a free discovery call so you know the full cost before work starts.",
-            },
-            {
-              category: 'technical',
-              question: 'Can you help me set up Google Shopping for my Fargo Shopify store?',
-              answer: "Yes, Google Shopping setup is included in our Growth and Headless packages and available as an add-on for Standard. We create your Google Merchant Center account, configure your product feed, set up feed rules for ND/MN pricing, and link it to Google Ads.",
-            },
-            {
-              category: 'included',
-              question: "I'm running a craft brewery in Fargo. Can I sell merchandise and beer subscriptions online?",
-              answer: "Yes. North Dakota has specific alcohol shipping laws that restrict direct-to-consumer beer shipping, but merchandise, branded apparel, glassware, and non-alcoholic products can be sold and shipped without restriction. We build brewery merchandise stores with event ticketing, merchandise bundles, and local pickup options.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for agricultural businesses, like seed dealers or precision ag companies?',
-              answer: "This is a growing segment for us. Ag-tech companies, seed dealers, equipment parts suppliers, and precision ag businesses are all building e-commerce channels as farmers increasingly research and purchase online. We understand the ND ag buyer: mobile, spec-focused, and often purchasing for large operations with multi-location accounts.",
-            },
-            {
-              category: 'local',
-              question: "What's your process if I already have a Shopify store but it's slow or not converting?",
-              answer: "We start with a free audit, speed scores, conversion funnel analysis, mobile UX review, and checkout abandonment data. Then we give you a specific list of what's broken and what it'll cost to fix. Common issues: slow theme code, unoptimized product images, broken mobile checkout, missing upsells, poor product page copy.",
-            },
-            {
-              category: 'local',
-              question: "I'm in Moorhead, MN, not Fargo. Do you still serve my area?",
-              answer: "Absolutely. The Fargo-Moorhead metro is one market in our eyes. We serve businesses on both sides of the Red River: Moorhead, West Fargo, Dilworth, Barnesville, and across the region. The only difference for you as a Moorhead business is that Minnesota tax rules apply from day one, which we configure automatically.",
-            },
-            {
-              category: 'local',
-              question: "How do I get started? What's the first step?",
-              answer: "Book a 45-minute strategy call. No sales pitch, no pressure, we ask about your business, your products, and your goals, then tell you exactly what we'd build and what it would cost. You'll leave the call with a clear picture of the right path forward.",
-            },
-            {
-              category: 'included',
-              question: "What if I need more than just a Shopify store, like custom web apps or integrations?",
-              answer: "We build custom web applications, CRMs, booking systems, and complex API integrations beyond standard Shopify. If your business has a workflow that needs custom software, like a dealer portal, a custom configurator, or an ERP integration: our full-stack team handles those projects too.",
-            },
-            {
-              category: 'local',
-              question: 'Who is the best ecommerce development company in Fargo?',
-              answer:
-                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Fargo you compare, or any ecommerce solution company in Fargo, should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Fargo and the best ecommerce solution company in Fargo for your catalog.',
-            },
-            {
-              category: 'pricing',
-              question: 'Should I hire ecommerce developer in Fargo or work with an agency?',
-              answer:
-                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Fargo directly, ask for store speed scores from past builds before committing.',
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a Fargo brand?',
+    answer:
+      'Project investments depend on total SKU count, custom ERP/3PL integrations, B2B wholesale requirements, and custom interactive features. Every project is quoted with a binding, fixed-price milestone agreement and zero hidden change orders.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
+    answer:
+      'No. We deliver turnkey, fully documented codebases that you own 100%. You pay standard platform hosting fees directly to your providers and pay zero mandatory agency retainers.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
+    answer:
+      'We complete an exhaustive architectural discovery and API integration mapping process before development begins, locking in the technical scope in a binding milestone contract.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can you help us reduce our monthly Shopify app subscription costs?',
+    answer:
+      'Yes. By engineering custom React components and native Shopify Functions, we typically eliminate 5 to 15 third-party apps, saving thousands annually in recurring SaaS fees while speeding up your site.',
+  },
+  {
+    category: 'timeline',
+    question: 'How fast can you replatform our store from Magento or WooCommerce to Shopify Plus?',
+    answer:
+      'Our disciplined agile engineering sprints deliver complete replatforming, data migration, and custom frontend development within verified milestone timelines without halting current store sales.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will our existing customer passwords and historical order data transfer safely?',
+    answer:
+      'Yes. We execute automated, validated data pipelines that migrate all historical customer profiles, order histories, product variants, and metadata with zero data loss.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you guarantee zero downtime during DNS launch cutover?',
+    answer:
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+  },
+  {
+    category: 'timeline',
+    question: 'What is required from our internal operations team during the build?',
+    answer:
+      'We require API access credentials to your existing commerce platform, ERP/3PL system documentation, brand assets, and participation in weekly milestone demonstration reviews.',
+  },
+  {
+    category: 'tech',
+    question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
+    answer:
+      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+  },
+  {
+    category: 'tech',
+    question: 'Can you integrate our complex ERP, POS, and warehouse management software?',
+    answer:
+      'Yes. We build custom API connectors and webhook listeners for NetSuite, SAP, Microsoft Dynamics, Epicor, Manhattan Associates, and all major third-party logistics (3PL) providers.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you optimize checkout conversion rates on mobile devices?',
+    answer:
+      'We eliminate render-blocking scripts, implement one-click Shop Pay and Apple Pay biometric checkouts, and streamline the mobile cart drawer for frictionless purchasing.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with Fargo agricultural and farming suppliers?',
+    answer:
+      'Yes. We engineer enterprise B2B portals for seed companies, precision agriculture equipment manufacturers, and agronomy chemical distributors across the Red River Valley.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build custom B2B wholesale portals for West Fargo industrial suppliers?',
+    answer:
+      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate multi-location POS inventory across North Dakota retail stores?',
+    answer:
+      'Yes. We connect Shopify POS and custom point-of-sale systems across brick-and-mortar locations to ensure unified omnichannel inventory, buy-online-pickup-in-store (BOPIS), and real-time stock routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build subscription commerce for Fargo specialty food and wellness brands?',
+    answer:
+      'Yes. We integrate advanced recurring subscription engines, custom bundle builders, and automated retention flows for high-growth direct-to-consumer food, beverage, and nutritional brands.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon project completion, you receive complete ownership of the private GitHub repository, Figma design files, and deployment infrastructure with zero vendor lock-in.',
+  },
+  {
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal merchandising team on managing products and promotions?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation showing your team how to update catalog attributes, launch promotions, schedule flash sales, and manage orders.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
+    answer:
+      'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Fargo Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Fargo',
+    addressRegion: 'ND',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 46.8772,
+    longitude: -96.7898,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Fargo' },
+    { '@type': 'City', name: 'West Fargo' },
+    { '@type': 'City', name: 'Moorhead' },
+    { '@type': 'City', name: 'Dilworth' },
+    { '@type': 'City', name: 'Grand Forks' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Fargo Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
+  description:
+    'Custom headless Shopify Plus and Next.js ecommerce development in Fargo ND. Sub-second performance, full IP code ownership, and rapid 7-day delivery for North Dakota brands.',
+  areaServed: [{ '@type': 'State', name: 'North Dakota' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Fargo Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description: 'Fargo ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for North Dakota brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Ecommerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Fargo', item: CANONICAL },
+  ],
+};
+
+export default function FargoEcommerceDevelopmentPage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="fargo-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="fargo-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="fargo-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="fargo-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="fargo-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* HERO */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_fargo_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · FARGO, ND"
-          headline="Shopify Developer Fargo for Silicon Prairie Businesses"
-          lead="Fargo's fastest-growing brands are ditching slow local agencies and launching high-converting Shopify stores in 7 days, at fixed-price vs local benchmarks."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ on Google', 'Fixed-Price']}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* LOGO BAR */}
-        <LogoBar tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE" />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Fargo Ecommerce Development &amp; Headless Architecture</span>
+                </div>
 
-        {/* BIG THREE TRUST BLOCK */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Fargo e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Fargo Ecommerce Development Agency for High-Growth Brands
+                </h1>
 
-        {/* CITY CONTEXT */}
-        <CityContextSection
-          eyebrow="WHY FARGO E-COMMERCE IS DIFFERENT"
-          headline="The Silicon Prairie Advantage, and What It Means for Your Online Store"
-          leadParagraphs={[
-            "Fargo isn't just a cold-weather city anymore. Microsoft TechSpark chose Fargo as one of its five pilot cities, the Emerging Prairie ecosystem has produced dozens of funded startups, and the Fargo-Moorhead metro is the fastest-growing market between Minneapolis and Seattle.",
-            "Ag-tech companies, Bobcat-country equipment dealers, and manufacturing firms that once sold purely offline are finally realizing their customers are searching online first. The businesses winning in this market aren't the ones with the biggest ad budgets. They're the ones with a Shopify store that loads fast, converts on mobile, and handles cross-border ND–MN tax rules automatically.",
-            "North Dakota charges 5% state sales tax and Fargo adds 2% city tax: a combined 7%. Across the Red River, Moorhead buyers are subject to Minnesota's 6.875% state rate plus local taxes. Getting both right from day one is table stakes for Fargo e-commerce. That's exactly what we configure.",
-          ]}
-          stats={[
-            { value: 'Top 5', label: 'Microsoft TechSpark city, major tech investment hub', sourceUrl: 'https://www.microsoft.com/en-us/corporate-responsibility/techspark' },
-            { value: '$25B+', label: 'Annual ag-tech & manufacturing output in the region', sourceUrl: 'https://www.fmgov.com/economic-development/' },
-            { value: '250K+', label: 'Fargo-Moorhead metro population, cross-border market', sourceUrl: 'https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-cities-and-towns.html' },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for North Dakota brands. 7-day agile delivery with 100% code ownership.
+                </p>
 
-        {/* SERVICE EXPLANATION */}
-        <ServiceExplanation
-          eyebrow="WHAT WE BUILD FOR FARGO BUSINESSES"
-          headline="A Shopify Store Engineered for North Dakota Buyers, and Minnesota Ones Too"
-          lead="Most Fargo e-commerce businesses run into the same wall: generic themes, weeks spent trying to configure ND's 5% state tax plus Fargo's 2% city tax, and the realization they also need to handle Minnesota buyers across the river in Moorhead. We've solved this dozens of times. Our Fargo Shopify builds include automatic multi-state tax configuration for ND + MN from day one."
-          body={
-            <>
-              <p>
-                For ag-tech companies, equipment dealers, and manufacturing firms, we build B2B
-                wholesale portals with tiered pricing by customer group, volume discounts, minimum
-                order quantities, and net payment terms. Your wholesale buyers get a separate login
-                experience from retail customers: a standard feature at no extra charge.
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#fargo-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Red River Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/fargo/ecommerce/portfolio-1.webp"
+                  alt="Fargo North Dakota ecommerce development and headless Shopify Plus storefront engineering"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce Engine &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/manufacturing-website-design/shop-floor.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Fargo Shopify Plus storefront"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Ecommerce Engineered for North Dakota Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Red River Valley agricultural innovators to West Fargo industrial equipment dealers and tech leaders, we build high-converting commerce engines that maximize revenue velocity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Ecommerce Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. FARGO DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="fargo-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Red River Valley Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Ecommerce Development for Fargo&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Red River Valley agricultural suppliers to West Fargo equipment distributors and tech scale-ups:
               </p>
-              <p>
-                For downtown Fargo retailers and craft beverage brands, we build mobile-first
-                checkout designed for the rural buyer ordering on a phone with limited connectivity,
-                full Google Shopping and Meta Ads integration, and Klaviyo email automation that
-                turns first-time buyers into repeat customers.
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Commerce Architectures for North Dakota Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across the Red River Valley demands tailored checkout flows, inventory integrations, and performance metrics:
               </p>
-              <p>
-                Every Fargo Shopify store ships with AEO content optimized for ChatGPT and
-                Perplexity, JSON-LD schema, Core Web Vitals 90+ scores, and a 30-day support
-                window. You get a revenue engine, not a brochure.
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Fargo Leaders Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks with enterprise headless Shopify Plus engineering:
               </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/fargo/ecommerce/service-explanation.webp"
-              alt="Shopify development process for Fargo ND businesses"
-              width={1200}
-              height={800}
-              className="rounded-2xl w-full object-cover"
-              loading="lazy"
-            />
-          }
-        />
+            </div>
 
-        {/* STRATEGIC DARK */}
-        <StrategicDarkSection
-          eyebrow="THE FACTORYJET DIFFERENCE"
-          headline="Three Reasons Silicon Prairie Businesses Choose Us Over Local Agencies"
-          lead="Onsharp and Bluestem are capable agencies, but built for enterprise clients and WordPress. FactoryJet launches full Shopify stores in 7 days at a fixed, transparent quote, with AI-powered features no local agency offers at SMB pricing."
-          pillars={[
-            {
-              title: 'AI-Native Stores',
-              body: 'Every store ships with AI product descriptions, AI-powered search, and smart recommendation engines. Your competitors are still using keyword-stuffed copy written in 2018. Your store will outrank and outconvert them from day one.',
-            },
-            {
-              title: 'Guaranteed Delivery',
-              body: 'We contractually guarantee your store goes live in 7 days or you get a full refund. No other Shopify developer in Fargo offers this. We do it on every single project, 500+ times and counting.',
-            },
-            {
-              title: 'Built to Convert',
-              body: "Beautiful isn't enough. Every section, button, and product page is designed around conversion rate optimization principles. A store that doesn't sell isn't a store. It's a brochure. We don't build brochures.",
-            },
-          ]}
-        />
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* SERVICE JOURNEY */}
-        <ServiceJourneyRow
-          eyebrow="HOW IT WORKS"
-          headline="From First Call to Live Store in 7 Days"
-          stages={[
-            {
-              number: '01',
-              title: 'Strategy Call',
-              description: 'We spend 45 minutes learning your products, your customers, and your revenue goals. No sales pitch, just honest advice on what you actually need to build.',
-            },
-            {
-              number: '02',
-              title: 'Proposal in 24 Hours',
-              description: 'You get a fixed-price proposal, exact delivery date, and a complete sitemap before we take a dollar. No hourly billing surprises, no scope creep.',
-            },
-            {
-              number: '03',
-              title: 'Design & Build (Days 1–5)',
-              description: 'We design, build, and configure your full Shopify store, theme, products, ND+MN tax settings, payment gateway, and all integrations.',
-            },
-            {
-              number: '04',
-              title: 'Review & Revisions (Day 6)',
-              description: 'You get a private preview link. We make same-day revisions until everything looks and works exactly as you envisioned.',
-            },
-            {
-              number: '05',
-              title: 'Launch Day (Day 7)',
-              description: 'We go live, submit to Google, run final QA across mobile and desktop, and hand you the keys with a 30-day support window.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// FARGO COMMERCE STACK &amp; HEADLESS BLUEPRINT"
+            title="Headless Next.js 15 to Shopify Plus Engine"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        {/* PORTFOLIO */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="Stores We've Built for Businesses Like Yours"
-          cards={[
-            {
-              industry: 'Ag-Tech & Equipment',
-              title: 'Agricultural Equipment Parts Store',
-              description: 'A Fargo-area ag equipment parts dealer needed a B2B wholesale portal with tiered dealer pricing, bulk ordering, and multi-location inventory sync. We launched in 7 days with ND and MN tax configured, dealer login portal, and a product catalog of 3,000+ SKUs.',
-              imageSrc: '/images/us/fargo/ecommerce/portfolio-1.webp',
-              stat1: '+340% online parts orders',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'Craft Beverage & Merchandise',
-              title: 'Fargo Craft Brewery Shop',
-              description: "A downtown Fargo brewery needed a merchandise and event store that worked for locals and shipped branded gear nationwide. We built Shopify with event ticketing integration, merchandise bundles, local pickup, and Klaviyo email automation.",
-              imageSrc: '/images/us/fargo/ecommerce/portfolio-2.webp',
-              stat1: '$28K first-month revenue',
-              stat2: 'Launched in 6 days',
-            },
-            {
-              industry: 'Home & Outdoor Goods',
-              title: 'Fargo Home & Outdoor Brand',
-              description: 'A Fargo-Moorhead home goods brand sold through local markets but had no online channel. We built a Shopify store with Google Shopping integration, cross-border ND/MN shipping zones, and a Klaviyo welcome series that converted 22% of email subscribers to buyers.',
-              imageSrc: '/images/us/fargo/ecommerce/portfolio-3.webp',
-              stat1: '4.2% conversion rate',
-              stat2: 'vs 1.8% industry avg',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Ecommerce Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay migrations and high-conversion commerce launches:
+              </p>
+            </div>
 
-        {/* COMPARISON TABLE */}
-        <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Fargo's Biggest Shopify Agencies"
-          lead="Onsharp and Bluestem are established Fargo agencies, but built for larger budgets, longer timelines, and WordPress. FactoryJet delivers a full Shopify store in 7 days with AI features no local agency offers at SMB pricing."
-          columns={[
-            { label: 'Their pricing' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we cost less' },
-          ]}
-          rows={[
-            {
-              feature: 'Onsharp (Fargo)',
-              values: [
-                'Enterprise-level rates (full-service digital agency, excellent for enterprise, 6–12 week timelines)',
-                'Fixed-price · 7-day delivery',
-                'Onsharp is great for enterprise clients with large budgets and complex marketing needs. FactoryJet gives Fargo SMBs the same Shopify quality at fixed-price, with a guaranteed 7-day timeline.',
-              ],
-            },
-            {
-              feature: 'AdShark Marketing',
-              values: [
-                'Ongoing monthly retainer (paid media and PPC agency, not a Shopify development shop)',
-                'Fixed-price one-time build · 7-day delivery',
-                'AdShark specializes in paid media, not store development. FactoryJet builds the store first, then you can bring in AdShark for ads management. We work well together.',
-              ],
-            },
-            {
-              feature: 'Bluestem Media',
-              values: [
-                'Premium agency rates (WordPress-first agency since early 2000s, Shopify is secondary, 4–8 week timelines)',
-                'Fixed-price · 7-day delivery',
-                'Bluestem does solid WordPress work but Shopify is a secondary platform for them. FactoryJet builds exclusively on Shopify, 500+ stores deep, with faster delivery and lower cost.',
-              ],
-            },
-          ]}
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
 
-        {/* PRICING */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="Fixed-Price Shopify Packages for Fargo Businesses"
-          lead="Fargo agency rates for a comparable Shopify build typically run enterprise-level with 4–12 week timelines. FactoryJet delivers a full custom Shopify store in 7 days, at a fixed, transparent quote. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description: 'A fully custom Shopify store live in 7 days. Best for Fargo retail shops, boutiques, and service businesses launching their first professional online store.',
-              features: [
-                'Custom Shopify theme (no templates)',
-                'Up to 100 products configured',
-                'ND 7% + MN tax auto-setup',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description: 'Advanced Shopify build with B2B wholesale pricing, Klaviyo email automation, and Google Shopping. Best for growing Fargo-Moorhead brands scaling online revenue.',
-              features: [
-                'Everything in Shopify Standard',
-                'B2B wholesale catalog & pricing tiers',
-                'Klaviyo email automation setup',
-                'Google Shopping feed configuration',
-                'Meta Ads pixel + product catalog',
-                'Subscription / recurring order support',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description: 'Enterprise-grade headless Shopify for ag-tech, manufacturing, and high-volume Fargo businesses needing maximum performance and ERP integrations.',
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'ERP / inventory system integration',
-                'Multi-location fulfillment logic',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                '60-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
 
-        {/* INDUSTRIES GRID */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE IN FARGO"
-          headline="E-Commerce Development for Fargo's Key Industries"
-          lead="From Silicon Prairie startups and ag-tech equipment dealers to downtown Fargo boutiques and cross-border Moorhead retailers, FactoryJet has built Shopify stores for every sector driving the Fargo-Moorhead economy."
-          sectors={[
-            {
-              name: 'Ag-Tech & Equipment',
-              description: 'Parts stores, equipment dealers, and ag-tech SaaS companies selling to North Dakota farmers and ranchers, with B2B wholesale portals, bulk ordering, and ERP integrations.',
-              example: 'Ag equipment parts dealers, seed suppliers, precision ag companies, and farm supply retailers serving the Red River Valley.',
-            },
-            {
-              name: 'Manufacturing & Industrial',
-              description: 'Bobcat-country fabricators, metal shops, and industrial suppliers moving their catalog online with B2B wholesale portals, tiered dealer pricing, and net payment terms.',
-              example: 'Metal fabricators, industrial component suppliers, and manufacturing parts dealers serving the Fargo-Moorhead metro and beyond.',
-            },
-            {
-              name: 'Downtown Retail & Boutiques',
-              description: 'Broadway Square boutiques, specialty food shops, and Fargo makers expanding their physical store online, with POS sync, local pickup, and inventory management.',
-              example: 'Broadway boutiques, specialty retailers, gift shops, and independent makers in downtown Fargo and the surrounding areas.',
-            },
-            {
-              name: 'Craft Beverage & Food',
-              description: 'North Dakota craft breweries, distilleries, and specialty food producers shipping merchandise and subscription boxes nationally with compliant age verification and shipping zones.',
-              example: 'Fargo craft breweries, specialty food producers, and North Dakota-made artisan goods brands selling DTC nationwide.',
-            },
-            {
-              name: 'Health & Wellness',
-              description: 'Supplement brands, fitness studios, and wellness practitioners launching DTC subscription stores for the Fargo-Moorhead health-conscious consumer base.',
-              example: 'Supplement brands, fitness equipment retailers, yoga studios, and wellness product companies serving the Fargo metro.',
-            },
-            {
-              name: 'Logistics & Supply Chain',
-              description: 'Cross-border Fargo-Moorhead distributors managing multi-state inventory, ND and MN tax rules, and complex shipping logic for regional distribution networks.',
-              example: 'Regional distributors, wholesale suppliers, and cross-border logistics companies managing inventory across the ND-MN border.',
-            },
-          ]}
-        />
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
 
-        {/* TESTIMONIALS */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* FAQ */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Fargo Ecommerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Headless Engine</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Fargo E-Commerce Businesses"
+          eyebrow="FARGO COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About Ecommerce Development in Fargo ND"
+          lead="Direct, plain English answers to what North Dakota ecommerce founders and operations leaders ask about Shopify Plus and headless engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* FINAL CTA */}
-        <EcommerceCityLinksUS currentCity="fargo" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Launch Your Fargo Shopify Store in 7 Days?"
-          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-        />
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="fargo" />
+          </div>
+        </section>
 
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Fargo Ecommerce Engine?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+
+      <SiteFooter locale="us" />
     </>
-  )
+  );
 }

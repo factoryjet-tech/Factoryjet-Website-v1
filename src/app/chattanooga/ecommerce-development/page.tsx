@@ -1,591 +1,922 @@
-// V2 ecommerce city page — Chattanooga, TN
-// Design system: py-14 md:py-20 standard | 30/65/5 dark/light rhythm | Clash Display headlines
-// Schema: server-side via SchemaScript (AI-crawler visible in initial HTML)
-// GSC: "shopify chattanooga" — 68 impressions @ position 8.3 — #1 quick win
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import FAQ from '@/components/v2/FAQ';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import '@/components/v2/PlatformPage.css';
 
-import type { Metadata } from 'next'
-import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
-import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import CityContextSection from '@/components/v2/CityContextSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
-import ComparisonTable from '@/components/v2/ComparisonTable'
-import PricingTiers from '@/components/v2/PricingTiers'
-import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import FAQ from '@/components/v2/FAQ'
-import FinalCTA from '@/components/v2/FinalCTA'
-import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/chattanooga/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
-  description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses, 7-day delivery, fixed price, full code ownership. Free audit.',
+  title: 'Chattanooga Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description:
+    'Chattanooga ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Tennessee brands.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
-    description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses, 7-day delivery, fixed price, full code ownership. Free audit.',
-    url: 'https://factoryjet.com/chattanooga/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
+    title: 'Chattanooga Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description:
+      'Chattanooga ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Tennessee brands.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chattanooga Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
-    description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses, 7-day delivery, fixed price, full code ownership. Free audit.',
+    title: 'Chattanooga Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Chattanooga TN. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/chattanooga/ecommerce-development',
-    languages: ecommerceCityAlternatesUS['chattanooga'],
-  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
-}
+};
 
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Headless Next.js 15',
+  'BigCommerce B2B Edition',
+  'Klaviyo Master Elite',
+  'Algolia Search AI',
+  'Sanity CMS Studio',
+  'Cloudflare Edge CDN',
+  'Stripe Payments Enterprise',
+];
+
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
+  { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Downtown Chattanooga & Innovation District',
+    query: 'freight logistics software transport tech ecommerce downtown chattanooga',
+    focus: 'Freight Tech, Logistics Platforms & Digital Services',
+    desc: 'The gigabit-powered innovation center of the Southeast. Demands high-throughput digital commerce, recurring API subscriptions, and automated client billing.',
+  },
+  {
+    corridor: 'Southside Historic & Creative Arts Corridor',
+    query: 'lifestyle apparel handcrafted goods direct to consumer ecommerce southside chattanooga',
+    focus: 'Lifestyle Apparel, Handcrafted Goods & Modern D2C',
+    desc: 'Vibrant cultural and craft hub. Features tactile editorial layouts, interactive 3D product configurators, and seamless mobile checkouts.',
+  },
+  {
+    corridor: 'Northshore & Riverfront Retail Enclave',
+    query: 'outdoor recreation boutique lifestyle retail ecommerce northshore chattanooga',
+    focus: 'Outdoor Recreation, Boutique Retail & Sporting Goods',
+    desc: 'Premier outdoor lifestyle district. Features interactive visual lookbooks, dynamic sizing guides, and sub-second edge product filtering.',
+  },
+  {
+    corridor: 'Enterprise South Industrial Park & VW Corridor',
+    query: 'automotive tier 1 supplier industrial equipment wholesale b2b ecommerce enterprise south',
+    focus: 'Automotive Parts, Heavy Equipment & B2B Supply',
+    desc: 'Major automotive and heavy manufacturing cluster. B2B wholesale portals with purchase order workflows, ERP integration, and volume tiered pricing.',
+  },
+  {
+    corridor: 'Hamilton Place & East Brainerd Commercial Hub',
+    query: 'multi location retail omnichannel commerce pos sync hamilton place chattanooga',
+    focus: 'Omnichannel Retail, Multi-Location POS & Consumer Brands',
+    desc: 'High-density commercial and retail corridor. Demands real-time POS inventory synchronization, BOPIS workflows, and customer loyalty engines.',
+  },
+  {
+    corridor: 'Lookout Mountain & St. Elmo Outdoor District',
+    query: 'climbing adventure gear custom outdoor equipment ecommerce st elmo chattanooga',
+    focus: 'Climbing Gear, Adventure Outfitting & Technical Hardware',
+    desc: 'Outdoor adventure epicenter. Demands custom bundle configurators, heavy technical specification sheets, and flexible financing checkouts.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Freight Logistics, Fleet Supply & Transportation Tech',
+    headline: 'Enterprise Portals for Chattanooga Freight & Transportation Leaders',
+    description:
+      'As the freight logistics capital of America, Chattanooga transportation tech companies and fleet parts suppliers require high-performance B2B ordering portals. We build custom commerce platforms with real-time EDI integrations, automated purchase order approvals, custom customer credit terms, and multi-warehouse fulfillment routing.',
+    image: '/images/us/chattanooga/ecommerce/portfolio-1.webp',
+    alt: 'Chattanooga Tennessee freight logistics transportation technology and fleet supply B2B ecommerce platform',
+    points: [
+      'Automated purchase order workflows with Net-30 credit invoicing and approval hierarchies',
+      'Real-time two-way synchronization with transportation management systems and enterprise ERPs',
+      'Bulk matrix ordering and custom customer group pricing tiers for regional fleet accounts',
+    ],
+  },
+  {
+    sector: 'Outdoor Recreation, Climbing Gear & Adventure Apparel',
+    headline: 'High-Converting Headless Storefronts for Scenic City Adventure Brands',
+    description:
+      'From world-class climbing equipment manufacturers to mountain biking apparel creators, Chattanooga outdoor brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Chattanooga Tennessee outdoor recreation rock climbing gear and adventure apparel headless ecommerce',
+    points: [
+      'Sub-second first contentful paint and instant product filtering with zero layout shifts',
+      'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
+      'Seamless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
+    ],
+  },
+  {
+    sector: 'Advanced Manufacturing, Tooling & Automotive Components',
+    headline: 'B2B Wholesale Engines for Enterprise South Industrial Suppliers',
+    description:
+      'Tier-1 automotive parts manufacturers, precision machining shops, and industrial hardware distributors across Enterprise South require robust B2B wholesale capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Chattanooga Enterprise South automotive parts precision manufacturing and industrial tooling B2B commerce',
+    points: [
+      'Custom customer group pricing tiers with contracted volume discount schedules',
+      'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
+      'Real-time two-way synchronization with SAP, NetSuite, Epicor, and QuickBooks Enterprise',
+    ],
+  },
+  {
+    sector: 'Specialty Food, Craft Beverage & Direct-to-Consumer Goods',
+    headline: 'Tactile Editorial E-Commerce for Southside Artisan Producers',
+    description:
+      'Specialty coffee roasters, craft distillers, and artisan food producers across Chattanooga Southside demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Chattanooga Southside artisan specialty food craft beverage and lifestyle goods subscription ecommerce',
+    points: [
+      'Flexible recurring subscription management with custom delivery interval selection',
+      'Dynamic cold-pack and localized perishable shipping rate calculation',
+      'Integrated loyalty rewards, customer referral engines, and verified review collection',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending Slow Monolithic Platforms & Sluggish Mobile Checkouts',
+    problem: 'Legacy Magento and bloated WooCommerce stores suffer from 4-second load times, checkout friction, and high cart abandonment on mobile devices.',
+    solution: 'We build headless Next.js 15 storefronts connected to Shopify Plus APIs, delivering sub-second page rendering and frictionless 1-tap checkout.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Endless 6-Month Replatforming Timelines & Revenue Disruption',
+    problem: 'Traditional agencies quote 6 to 9 months for replatforming, leading to massive budget overruns, operational friction, and lost holiday sales.',
+    solution: 'Our disciplined agile migration sprint delivers complete catalog data migration, ERP integration, and production launch in verified milestone windows.',
+  },
+  {
+    num: '03',
+    title: 'Overcoming Broken ERP, POS & Multi-Warehouse Inventory Sync',
+    problem: 'Disjointed inventory systems cause overselling, delayed fulfillment, manual spreadsheet updates, and poor customer reviews across physical and online channels.',
+    solution: 'We engineer real-time two-way webhooks that synchronize inventory across NetSuite, SAP, Manhattan POS, and regional 3PL fulfillment centers.',
+  },
+  {
+    num: '04',
+    title: 'Stopping Complex Plugin Chains & Fragile Checkout Flows',
+    problem: 'Stacking 25+ third-party Shopify apps slows down storefront speed, introduces script conflicts, and creates expensive monthly SaaS subscriptions.',
+    solution: 'We build native React components and custom Shopify Functions, replacing expensive apps with lightweight, custom code that you own 100%.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Catalog Architecture, ERP Mapping & Data Strategy',
+    desc: 'We map every SKU, customer record, historical order, and third-party integration into a clean headless commerce architectural blueprint.',
+    deliverables: ['Product data modeling and attribute hierarchy map', 'ERP, CRM, and 3PL fulfillment integration matrix', 'SEO redirect plan preserving 100% of organic traffic', 'Fixed-price milestone agreement and delivery schedule'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Custom Figma UI/UX Design & High-Conversion Storefront Prototyping',
+    desc: 'We design bespoke desktop and mobile shopping experiences in Figma, focusing on friction-free navigation, interactive PDPs, and optimized checkout funnels.',
+    deliverables: ['Complete desktop and mobile Figma prototypes', 'Interactive product detail page and cart drawer wireframes', 'Bespoke design system tokens and typography scales', 'Stakeholder design review and milestone sign-off'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Headless Next.js 15 Engineering & Shopify Plus API Integration',
+    desc: 'We build the production application using Next.js 15 App Router, React 19, Tailwind CSS, and Shopify Storefront GraphQL APIs.',
+    deliverables: ['Custom headless Next.js frontend repository', 'Shopify Plus Storefront API and Cart integration', 'Custom B2B wholesale pricing and portal modules', 'Automated unit, integration, and end-to-end checkout testing'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Zero-Downtime Data Cutover, Speed Tuning & Handover',
+    desc: 'We execute complete database migration, verify 95+ Core Web Vitals, manage DNS cutover, and transfer full code repository ownership.',
+    deliverables: ['Complete historical order and customer data migration', 'Core Web Vitals 95+ optimization report', 'Live DNS cutover with zero downtime or lost orders', 'Full GitHub repository transfer and 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Architecture Stack',
+    factoryjet: 'Headless Next.js 15 App Router on Cloudflare Edge paired with Shopify Plus.',
+    traditional: 'Heavy monolithic Shopify themes or outdated monolithic Magento PHP stacks.',
+  },
+  {
+    label: 'Checkout Speed',
+    factoryjet: 'Sub-second mobile page loads with instant 1-tap Shop Pay, Apple Pay, and Google Pay.',
+    traditional: '3 to 5 second mobile page loads with render-blocking tracking scripts and layout shift.',
+  },
+  {
+    label: 'B2B & Wholesale Capabilities',
+    factoryjet: 'Native custom B2B wholesale portal with customer pricing tiers, Net terms, and ERP sync.',
+    traditional: 'Fragile third-party apps charging expensive monthly subscriptions per wholesale seat.',
+  },
+  {
+    label: 'Code & IP Ownership',
+    factoryjet: '100% full intellectual property ownership. You receive the complete GitHub repository.',
+    traditional: 'Proprietary theme locks or agency-retained custom codebases.',
+  },
+];
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing', label: 'Pricing & Scope' },
+  { key: 'timeline', label: 'Timeline & Migration' },
+  { key: 'tech', label: 'Shopify & Next.js Stack' },
+  { key: 'local', label: 'Chattanooga & TN Focus' },
+  { key: 'ownership', label: 'Code & Ownership' },
 ];
 
 const FAQ_ITEMS = [
-            {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Chattanooga, Tennessee?',
-              answer:
-                "FactoryJet is Chattanooga's top-rated Shopify development agency, 500+ projects delivered, 4.9★ Google rating, and the only shop in Gig City that combines Shopify e-commerce with AI agent development at SMB pricing. Unlike local agencies like Riverworks Marketing, JLB Works, and Slamdot that build primarily on WordPress, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies like Growisto and WebCitz that rank for Chattanooga queries but operate with 7–16 week timelines and zero local market knowledge, we launch in 7 days, fixed-price.",
-            },
-            {
-              category: 'pricing',
-              question: 'How much does Shopify development cost in Chattanooga?',
-              answer:
-                "FactoryJet's Shopify pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity, compared to enterprise-level rates at established Chattanooga agencies. Every project includes custom design, full development, Tennessee sales tax configuration for Hamilton County, product catalog setup, mobile-first responsive design, Core Web Vitals optimization, and 30 days of post-launch support. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hidden fees, no phase-2 upsells.",
-            },
-            {
-              category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Chattanooga?',
-              answer:
-                "FactoryJet launches standard Shopify stores in 7 days. Compare that to Growisto (7–16 weeks), WebCitz (4–8 weeks), or local Chattanooga agencies like JLB Works (6–12 weeks for custom builds). Our 7-day timeline works because we design in code, no Figma-to-handoff delay, and use a component architecture optimized for rapid deployment. Complex builds with subscription billing, B2B wholesale portals, or headless architectures typically take 2–3 weeks.",
-            },
-            {
-              category: 'pricing',
-              question: 'What Tennessee sales tax rate should my Chattanooga Shopify store charge?',
-              answer:
-                "Chattanooga businesses in Hamilton County should configure Shopify to collect 9.25%–9.75% combined sales tax depending on your exact municipality: Tennessee's state rate is 7.0%, plus Hamilton County's local rate of 2.25%–2.75%. Tennessee uses destination-based sales tax, you charge the rate at the buyer's shipping address. Tennessee also applies a reduced 4% rate on food and groceries and 7% on prepared food, which we configure correctly for food and beverage clients. FactoryJet handles all Tennessee tax configuration during every Shopify build.",
-            },
-            {
-              category: 'local',
-              question: "How does Chattanooga's EPB fiber internet affect my e-commerce business?",
-              answer:
-                "EPB's 25 Gbps fiber means your internal team manages your store at extraordinary speeds, but your customer experience depends on your store's server performance and CDN delivery, not your office connection. FactoryJet builds all stores with Lighthouse 90+ scores and deploys on Cloudflare's global CDN, so your store loads in under 1.5 seconds for every customer regardless of their connection. Gig City's infrastructure is a genuine business advantage for internal operations; FactoryJet makes sure your storefront matches that speed globally.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for outdoor and adventure businesses in Chattanooga?',
-              answer:
-                "Absolutely, outdoor and adventure is one of our core Chattanooga specialties. We build stores with gear rental calendars, guided experience booking integrations, waiver flows, seasonal inventory management, and adventure-specific product configurations. Chattanooga's position as a top outdoor destination, rock climbing at Sunset Rock, kayaking the Tennessee River, hang gliding at Lookout Mountain, means your store needs to convert both local customers and 10.7M annual visitors who discover you through search before they arrive.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build an online ordering or merchandise store for a Chattanooga restaurant?',
-              answer:
-                "Yes, Chattanooga's $1.8B tourism economy means your restaurant has a real digital revenue opportunity beyond walk-in traffic. FactoryJet builds Shopify-powered restaurant stores handling online ordering, digital gift cards, branded merchandise, catering inquiry forms, and event ticket sales. We integrate with Toast, Square, and other POS systems. Restaurants on Chattanooga's Southside, North Shore, and downtown have used our stores to add significant revenue from visitors who discover them on Google before arriving in the city.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Riverworks Marketing for Shopify in Chattanooga?',
-              answer:
-                "Riverworks Marketing is a well-regarded Chattanooga full-service digital agency, strong in SEO, paid media, and brand work, primarily WordPress-built. They don't specialize in Shopify development or AI-powered e-commerce and don't publish Shopify-specific pricing. FactoryJet is a pure-play Shopify and e-commerce development shop: 7-day launches, transparent fixed pricing, and AI development no Chattanooga agency offers at comparable pricing.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to JLB Works for e-commerce in Chattanooga?',
-              answer:
-                "JLB Works is Chattanooga's largest web design firm with 800+ clients, but they build primarily on WordPress without a dedicated Shopify or AI development practice. Timelines run 6–12 weeks for custom projects. FactoryJet specializes exclusively in Shopify e-commerce: 7-day delivery, fixed-price, and AI capabilities that JLB Works doesn't offer at any SMB price point. For a Shopify store that needs to be live and converting within a week, FactoryJet fills the gap JLB Works leaves.",
-            },
-            {
-              category: 'local',
-              question: 'Does my Chattanooga business need a local Shopify developer?',
-              answer:
-                "You need a developer who understands Chattanooga's market, not necessarily one with a physical office there. What matters: knowledge of Tennessee's 9.25% combined sales tax, the tri-state TN/GA/AL customer base, Chattanooga's outdoor and tourism economy, CO.LAB's startup ecosystem, and Hamilton County search behavior. FactoryJet delivers deep Chattanooga market knowledge with remote-first collaboration: direct engineer access (no account managers), same-day responses, and weekly video check-ins during your 7-day build.",
-            },
-            {
-              category: 'included',
-              question: 'What AI services are available for Chattanooga small businesses?',
-              answer:
-                "FactoryJet is the only e-commerce agency serving Chattanooga that builds production AI agents alongside Shopify development. We build AI chatbots trained on your product catalog and FAQs, AI-powered lead qualification agents, customer service automation that handles order status and returns without human intervention, and AEO content optimized for ChatGPT and Perplexity. Chattanooga already runs AI-powered smart traffic systems citywide and is partnering with IonQ on quantum computing: your business should be on the same trajectory.",
-            },
-            {
-              category: 'pricing',
-              question: 'Can you migrate my existing Chattanooga website to Shopify?',
-              answer:
-                "Yes, Shopify migrations are a significant part of our Chattanooga work. We migrate from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom-built platforms. Every migration includes full product catalog transfer, customer data migration, order history preservation, URL redirect mapping to preserve Google rankings, Tennessee tax reconfiguration, and SEO continuity setup. We implement 301 redirects for every old URL so your Chattanooga local search rankings survive the migration intact. Timeline: 7–14 days depending on catalog size.",
-            },
-            {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for a Chattanooga business?',
-              answer:
-                "Every Chattanooga Shopify store includes: custom design (not a purchased theme), full Shopify development, Tennessee sales tax setup (9.25%–9.75% Hamilton County rates), payment gateway integration (Shopify Payments, PayPal, Afterpay, Affirm), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, JSON-LD schema (FAQPage, Service, BreadcrumbList), AEO content for ChatGPT and Perplexity, 30 days of post-launch support, and a recorded launch walkthrough. Fixed-price, no hidden fees.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Chattanooga craft breweries or distilleries?',
-              answer:
-                "Yes, Chattanooga's craft beverage scene is one of our local specialties. We build DTC stores with age verification flows, Tennessee TABC-compliant shipping zone configurations, subscription beer and spirits clubs, gift box builders, and nationwide cold-chain shipping setups. Chattanooga's 10.7M annual visitors discover local beverage brands during their visit and then reorder online: a properly built Shopify store turns that first-visit discovery into a recurring DTC customer relationship.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a B2B Shopify store for a Chattanooga manufacturing company?',
-              answer:
-                "Yes, B2B industrial e-commerce is one of our specialties for the Chattanooga and Tennessee Valley manufacturing market. We build Shopify B2B portals with dealer pricing tiers, bulk order discounts, net-30 and net-60 payment terms, purchase order checkout workflows, equipment part configurators, and CSV bulk import ordering for high-SKU industrial catalogs. Chattanooga manufacturers use our portals to process hundreds of dealer orders monthly while eliminating the phone and email overhead that consumes sales team capacity.",
-            },
-            {
-              category: 'technical',
-              question: 'How do I rank my Chattanooga Shopify store on Google and in AI search?',
-              answer:
-                "FactoryJet builds every Chattanooga Shopify store with a full SEO and AEO foundation. We implement FAQPage + Service + BreadcrumbList + Product JSON-LD schema so Google, ChatGPT, Perplexity, and Google AI Overviews can surface your store; keyword-optimized page titles and H1s targeting Chattanooga-specific queries like 'buy outdoor gear chattanooga' and 'chattanooga craft beer online'; Core Web Vitals optimization (Lighthouse 90+); and blog content targeting the FAQ-style queries your customers type into AI assistants. Most Chattanooga clients see measurable organic growth within 60–90 days of launch.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for a CO.LAB startup or Gig City tech company?',
-              answer:
-                "Yes, CO.LAB startups and GIGTANK alumni are one of our sweet spots in Chattanooga. Early-stage companies need e-commerce infrastructure that launches fast, scales as you grow, and fits a startup budget. FactoryJet's fixed-price Shopify build gives CO.LAB founders enterprise-quality stores at pre-seed pricing. We've built stores for founders at every stage, from pre-launch DTC landing pages to full B2B portals for post-seed companies scaling revenue.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should my Chattanooga Shopify store accept?',
-              answer:
-                "Every Chattanooga Shopify store should accept Shopify Payments for the lowest transaction fees, PayPal since 30%+ of US online shoppers prefer it for first purchases, Apple Pay and Google Pay to reduce mobile checkout friction (critical for Chattanooga's high-traffic tourist base), and Afterpay or Affirm for orders above $100. For B2B manufacturers, add net-30 and net-60 invoicing via Shopify's B2B tools. FactoryJet configures all payment methods during your standard 7-day build, no extra charge.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does Tennessee having one of the highest combined sales tax rates in the US affect my Shopify store?',
-              answer:
-                "Tennessee's combined sales tax of 9.25%–9.75% is among the highest in the country, but Chattanooga shoppers are accustomed to it, it won't hurt your conversion rate if you configure Shopify correctly. You must collect the state rate of 7.0% plus Hamilton County's local rate of 2.25%–2.75% depending on your municipality. Tennessee also has reduced rates for groceries (4%) and prepared food (7%), requiring separate configuration for food and beverage brands. FactoryJet handles all Tennessee tax settings, including destination-based collection for out-of-state orders and economic nexus compliance, during every build.",
-            },
-            {
-              category: 'included',
-              question: 'Can you build a Shopify store for a Chattanooga apparel or clothing brand?',
-              answer:
-                "Absolutely, apparel is a strong vertical for Chattanooga's independent clothing scene and outdoor apparel brands. We build Shopify stores with size variant configurations, fit guides, return and exchange flows, and print-on-demand integrations with Printful or Printify. Chattanooga's outdoor culture and creative arts community generate consistent demand for locally-designed and adventure-inspired apparel, and a well-built Shopify store converts both local buyers and 10.7M annual visitors who want to take a piece of Chattanooga home with them.",
-            },
-            {
-              category: 'local',
-              question: 'Does FactoryJet offer ongoing Shopify support for Chattanooga businesses?',
-              answer:
-                "Yes: every FactoryJet project includes 30 days of free post-launch support covering bug fixes, minor adjustments, and launch questions. Beyond that, Chattanooga businesses can choose monthly retainer plans that include up to 4 hours of development time and priority support response. We also offer seasonal campaign builds, pre-summer outdoor gear drops, fall tourism season promotions, and holiday gift set launches that are especially important for Chattanooga's tourism-driven economy. Many Chattanooga clients have been on maintenance plans for two-plus years.",
-            },
-            {
-              category: 'included',
-              question: 'Can you build a subscription Shopify store for a Chattanooga brand?',
-              answer:
-                "Yes, subscription commerce works especially well for Chattanooga's craft beverage, outdoor gear, and wellness brands. We build subscription Shopify stores using Recharge, Skio, or native Shopify subscriptions: monthly craft beer or spirits clubs, outdoor gear subscription boxes, guided experience memberships, and supplement auto-ship programs. Subscription stores typically generate 30–50% higher customer lifetime value than one-time-purchase stores, and Chattanooga's loyal local consumer base and returning tourist visitors are an ideal audience for subscription models.",
-            },
-            {
-              category: 'local',
-              question: 'What Shopify developers are available in Chattanooga, TN?',
-              answer:
-                "Chattanooga's dedicated Shopify developer options are limited: most local agencies like Riverworks Marketing, JLB Works, and Slamdot build primarily on WordPress. National agencies like Growisto appear in 'shopify chattanooga' search results but operate with 7–16 week timelines and zero Gig City market knowledge. FactoryJet is the Shopify-specialist option: custom Shopify development, 7-day delivery, Tennessee sales tax configuration (9.25% Hamilton County), and a team that understands the outdoor, tourism, craft beverage, and manufacturing sectors that define Chattanooga's economy. Book a free audit to see a sample store architecture built for your industry.",
-            },
-            {
-              category: 'technical',
-              question: 'How does a Shopify store help a Chattanooga business compete online?',
-              answer:
-                "A well-built Shopify store gives a Chattanooga business three competitive advantages: it captures intent from the 10.7M annual visitors who research purchases before arriving in the city; it ranks for local queries like 'buy outdoor gear chattanooga' and 'craft beer chattanooga online'; and it automates B2B ordering for Tennessee Valley manufacturers. FactoryJet builds every Chattanooga Shopify store with AEO content structured for ChatGPT and Perplexity citations, JSON-LD schema for Google AI Overviews, and Core Web Vitals scores above 90: the technical foundation that converts search traffic into revenue.",
-            },
-            {
-              category: 'local',
-              question: 'Who is the best ecommerce development company in Chattanooga?',
-              answer:
-                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Chattanooga you compare, or any ecommerce solution company in Chattanooga, should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Chattanooga and the best ecommerce solution company in Chattanooga for your catalog.',
-            },
-            {
-              category: 'pricing',
-              question: 'Should I hire ecommerce developer in Chattanooga or work with an agency?',
-              answer:
-                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Chattanooga directly, ask for store speed scores from past builds before committing.',
-            },
+  {
+    category: 'pricing',
+    question: 'How much does custom ecommerce development cost for a Chattanooga brand?',
+    answer:
+      'Project investments depend on total SKU count, custom ERP/3PL integrations, B2B wholesale requirements, and custom interactive features. Every project is quoted with a binding, fixed-price milestone agreement and zero hidden change orders.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there hidden monthly maintenance fees or recurring agency retainers?',
+    answer:
+      'No. We deliver turnkey, fully documented codebases that you own 100%. You pay standard platform hosting fees directly to your providers and pay zero mandatory agency retainers.',
+  },
+  {
+    category: 'pricing',
+    question: 'How do you guarantee that project budgets remain fixed without overages?',
+    answer:
+      'We complete an exhaustive architectural discovery and API integration mapping process before development begins, locking in the technical scope in a binding milestone contract.',
+  },
+  {
+    category: 'pricing',
+    question: 'Can you help us reduce our monthly Shopify app subscription costs?',
+    answer:
+      'Yes. By engineering custom React components and native Shopify Functions, we typically eliminate 5 to 15 third-party apps, saving thousands annually in recurring SaaS fees while speeding up your site.',
+  },
+  {
+    category: 'timeline',
+    question: 'How fast can you replatform our store from Magento or WooCommerce to Shopify Plus?',
+    answer:
+      'Our disciplined agile engineering sprints deliver complete replatforming, data migration, and custom frontend development within verified milestone timelines without halting current store sales.',
+  },
+  {
+    category: 'timeline',
+    question: 'Will our existing customer passwords and historical order data transfer safely?',
+    answer:
+      'Yes. We execute automated, validated data pipelines that migrate all historical customer profiles, order histories, product variants, and metadata with zero data loss.',
+  },
+  {
+    category: 'timeline',
+    question: 'How do you guarantee zero downtime during DNS launch cutover?',
+    answer:
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+  },
+  {
+    category: 'timeline',
+    question: 'What is required from our internal operations team during the build?',
+    answer:
+      'We require API access credentials to your existing commerce platform, ERP/3PL system documentation, brand assets, and participation in weekly milestone demonstration reviews.',
+  },
+  {
+    category: 'tech',
+    question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
+    answer:
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
+    answer:
+      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+  },
+  {
+    category: 'tech',
+    question: 'Can you integrate our complex ERP, POS, and warehouse management software?',
+    answer:
+      'Yes. We build custom API connectors and webhook listeners for NetSuite, SAP, Microsoft Dynamics, Epicor, Manhattan Associates, and all major third-party logistics (3PL) providers.',
+  },
+  {
+    category: 'tech',
+    question: 'How do you optimize checkout conversion rates on mobile devices?',
+    answer:
+      'We eliminate render-blocking scripts, implement one-click Shop Pay and Apple Pay biometric checkouts, and streamline the mobile cart drawer for frictionless purchasing.',
+  },
+  {
+    category: 'local',
+    question: 'Do you have experience with Chattanooga freight and logistics suppliers?',
+    answer:
+      'Yes. We engineer enterprise B2B portals for freight tech, fleet supply, and transportation parts distributors requiring purchase order workflows and real-time ERP sync.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build custom B2B wholesale portals for Enterprise South manufacturers?',
+    answer:
+      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate multi-location POS inventory across Tennessee retail stores?',
+    answer:
+      'Yes. We connect Shopify POS and custom point-of-sale systems across brick-and-mortar locations to ensure unified omnichannel inventory, buy-online-pickup-in-store (BOPIS), and real-time stock routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you build subscription commerce for Chattanooga specialty food and beverage brands?',
+    answer:
+      'Yes. We integrate advanced recurring subscription engines, custom bundle builders, and automated retention flows for high-growth direct-to-consumer food, beverage, and craft brands.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the full source code and intellectual property after launch?',
+    answer:
+      'Yes, 100%. Upon project completion, you receive complete ownership of the private GitHub repository, Figma design files, and deployment infrastructure with zero vendor lock-in.',
+  },
+  {
+    category: 'ownership',
+    question: 'What warranty and post-launch support do you provide?',
+    answer:
+      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal merchandising team on managing products and promotions?',
+    answer:
+      'We deliver custom recorded video walkthroughs and documentation showing your team how to update catalog attributes, launch promotions, schedule flash sales, and manage orders.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
+    answer:
+      'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
 ];
-export default function Page() {
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Chattanooga Ecommerce Development Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Chattanooga',
+    addressRegion: 'TN',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 35.0456,
+    longitude: -85.3097,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Chattanooga' },
+    { '@type': 'City', name: 'Cleveland' },
+    { '@type': 'City', name: 'East Ridge' },
+    { '@type': 'City', name: 'Red Bank' },
+    { '@type': 'City', name: 'Hixson' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Chattanooga Ecommerce Development & Shopify Plus Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
+  description:
+    'Custom headless Shopify Plus and Next.js ecommerce development in Chattanooga TN. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Tennessee brands.',
+  areaServed: [{ '@type': 'State', name: 'Tennessee' }],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Chattanooga Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  description: 'Chattanooga ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Tennessee brands.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Ecommerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Chattanooga', item: CANONICAL },
+  ],
+};
+
+export default function ChattanoogaEcommerceDevelopmentPage() {
   return (
     <>
-      <SchemaScript />
-      <SiteHeader />
-      <main className="bg-fj-cream">
+      <script id="chattanooga-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="chattanooga-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="chattanooga-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="chattanooga-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="chattanooga-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-        {/* ── 1. HERO ─────────────────────────────────────────────────── */}
-        <Hero
-        formSlot={<HeroInlineForm region="us" source="us_chattanooga_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT · CHATTANOOGA"
-          headline="Shopify Developer Chattanooga for Tennessee Businesses"
-          lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match, live in 7 days, at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★ on Google."
-          trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Chattanooga, TN" badgeLabel="Live in 7 days" />}
-        />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE" />
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Chattanooga Ecommerce Development &amp; Headless Architecture</span>
+                </div>
 
-        {/* ── 3. TRUST STATS ───────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="Results that Chattanooga e-commerce brands trust."
-        />
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Chattanooga Ecommerce Development Agency for High-Growth Brands
+                </h1>
 
-        {/* ── 4. CITY CONTEXT ──────────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="CHATTANOOGA MARKET"
-          headline="America's Most Connected City Deserves a Store That Converts"
-          leadParagraphs={[
-            "Chattanooga became 'Gig City' in 2010: the first city in the Western Hemisphere with a community-wide 1 Gbps fiber network. Today EPB offers 25 Gbps residential and business service, generating $2.69 billion in documented economic benefits over its first decade. Your Shopify store should match that same forward-thinking standard. FactoryJet builds on Next.js 15 with Cloudflare CDN, stores that load in under 1.5 seconds for every customer, whether they're on EPB fiber in Chattanooga or a mobile connection in Nashville.",
-            "Tourism is the engine: $1.8 billion in annual visitor spending from 10.7 million visitors who support 13,000 jobs across Greater Chattanooga. Outdoor adventure, craft beverages, the Tennessee Aquarium, Rock City, and Ruby Falls draw visitors who spend online before they arrive, yet most Chattanooga businesses can't capture that digital intent because their websites aren't built to sell. CO.LAB, the 3rd-largest business incubator in the United States, anchors a growing startup ecosystem alongside GIGTANK and the EPB/IonQ quantum innovation center.",
-            "Fourteen Chattanooga-area companies made the 2025 Inc. 5000 with a 323% median three-year revenue growth rate. The city's established web agencies: Riverworks Marketing, JLB Works, Slamdot, are WordPress shops with no Shopify specialization or AI development capability. National agencies like Growisto rank for 'shopify developer chattanooga' but operate with 7–16 week timelines and zero Gig City market knowledge. FactoryJet operates in exactly that gap: real Tennessee market expertise, 7-day delivery, transparent fixed pricing.",
-          ]}
-          stats={[
-            { value: '25 Gbps', label: "EPB Fiber Speed: World's Fastest Municipal Network", sourceUrl: 'https://epb.com/business/internet/' },
-            { value: '$1.8B', label: 'Annual Visitor Spending, 10.7M Visitors to Chattanooga', sourceUrl: 'https://www.chattanoogachamber.com/economic-development/' },
-            { value: '14', label: 'Inc. 5000 Companies in the Chattanooga Area (2025)', sourceUrl: 'https://www.inc.com/inc5000' },
-          ]}
-        />
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for Tennessee brands. 7-day agile delivery with 100% code ownership.
+                </p>
 
-        {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="E-COMMERCE DEVELOPMENT · Chattanooga"
-          headline="What 'Shopify Development' Actually Means for a Chattanooga Business"
-          lead="Most Chattanooga web agencies build on WordPress and focus on digital marketing, not Shopify e-commerce. FactoryJet builds revenue-generating stores: custom design, Tennessee sales tax configured correctly (9.25%–9.75% for Hamilton County), AI-powered product discovery, JSON-LD schema for AI search visibility, and a Lighthouse 95+ performance score: all in 7 days, fixed-price."
-          body={
-            <>
-              <p>
-                For Chattanooga&apos;s outdoor and adventure brands, rock climbing at Sunset Rock,
-                kayaking the Tennessee River, hang gliding at Lookout Mountain, cycling the Stinson
-                Trail: an e-commerce store needs to convert both local repeat customers and the
-                10.7 million annual visitors who discover you through Google and ChatGPT searches.
-                We build Shopify stores with adventure-specific product configurations, gear rental
-                calendars, guided experience bookings, waiver integrations, and seasonal inventory
-                flows built natively into the architecture from day one.
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#chattanooga-ecom-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Chattanooga Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/chattanooga/ecommerce/portfolio-1.webp"
+                  alt="Chattanooga Tennessee ecommerce development and headless Shopify Plus storefront engineering"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Commerce Engine &amp; Cloud Infrastructure</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/b2b-website-design/hero.webp"
+                  alt="FactoryJet senior ecommerce engineers building custom Chattanooga Shopify Plus storefront"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Craft &amp; Performance</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Ecommerce Engineered for Scenic City Leaders
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Chattanooga freight technology innovators to Southside artisan producers and Enterprise South industrial suppliers, we build high-converting commerce engines that maximize revenue velocity.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Ecommerce Consultation" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. CHATTANOOGA DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="chattanooga-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Chattanooga Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Ecommerce Development for Chattanooga&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Downtown freight platforms to Southside lifestyle brands and Enterprise South industrial suppliers:
               </p>
-              <p>
-                For Chattanooga&apos;s manufacturing and industrial sector: the Tennessee Valley&apos;s
-                legacy of precision manufacturing, automotive parts, and equipment distribution,
-                a B2B wholesale portal needs tiered dealer pricing, bulk order workflows, net-30
-                payment terms, and purchase order integration. FactoryJet builds Shopify B2B
-                portals that handle hundreds of dealer orders per month without additional sales
-                staff, giving Tennessee Valley manufacturers a digital channel that works as hard
-                as the production floor.
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Commerce Architectures for Chattanooga Brands
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector across Chattanooga demands tailored checkout flows, inventory integrations, and performance metrics:
               </p>
-              <p>
-                Every FactoryJet e-commerce project covers discovery, platform selection, custom
-                Shopify development, product catalog setup, Tennessee sales tax configuration
-                (including the state&apos;s reduced 4% grocery rate and 7% prepared food rate),
-                Core Web Vitals optimization, and AEO content built to get cited by ChatGPT
-                and Perplexity. You leave with a store you own outright, no platform lock-in,
-                no retainer required, and a 30-day support window after launch.
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Chattanooga Leaders Choose FactoryJet Commerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace fragile plugin stacks with enterprise headless Shopify Plus engineering:
               </p>
-            </>
-          }
-          rightSlot={
-            <img
-              src="/images/us/chattanooga/ecommerce/service-explanation.webp"
-              alt=""
-              aria-hidden="true"
-              width={1200}
-              height={800}
-              className="w-full rounded-2xl object-cover"
-              loading="lazy"
-            />
-          }
-        />
+            </div>
 
-        {/* ── 6. STRATEGIC DARK ────────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="Why Chattanooga Businesses Choose FactoryJet Over Local Agencies"
-          lead={
-            "Riverworks Marketing and Papercut Interactive have served Chattanooga since the early 2000s, but neither offers Shopify specialization or AI-powered e-commerce at SMB pricing. JLB Works has 800+ clients and builds primarily on WordPress with no dedicated Shopify practice. Slamdot has built on WordPress. The national agencies ranking for 'shopify developer chattanooga': Growisto, WebCitz, quote 7–16 week timelines, publish no pricing, and have zero Gig City market knowledge.\n\nFactoryJet launches full Shopify stores in 7 days, at a fixed, transparent quote. We know Hamilton County's 9.25% combined sales tax structure, the Tennessee River outdoor economy, CO.LAB's startup pipeline, and the GIGTANK ecosystem that defines Chattanooga commerce."
-          }
-          pillars={[
-            {
-              title: 'AI-Native',
-              body: "Every store ships with AI-powered product recommendations, AEO content optimized for ChatGPT and Perplexity, and JSON-LD schema that gets cited in Google AI Overviews. Chattanooga already runs AI-powered smart traffic systems citywide: your Shopify store should be on the same technology level.",
-            },
-            {
-              title: 'Transparent',
-              body: "Fixed pricing on the first call. No discovery fees, no 'it depends' quotes, no phase-2 invoices. Unlike Growisto and WebCitz who publish zero pricing, you know your exact number before we start.",
-            },
-            {
-              title: 'Guaranteed',
-              body: "7-day delivery on standard Shopify builds. If we miss the deadline, you don't pay. We've delivered on time on 97% of 500+ projects, including for Chattanooga brands preparing for outdoor tourism peaks and seasonal product launches.",
-            },
-          ]}
-        />
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* ── 7. PROCESS ───────────────────────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Chattanooga Shopify Store in 7 Days"
-          stages={[
-            {
-              number: '01',
-              title: 'Discovery & Platform Selection',
-              description:
-                'We map your product catalog, target customer, and revenue goals. We recommend Shopify, WooCommerce, or headless based on your SKU count, subscription needs, and B2B requirements. Chattanooga businesses get a tailored platform recommendation within 24 hours of the discovery call.',
-            },
-            {
-              number: '02',
-              title: 'UX Design & Store Architecture',
-              description:
-                "We design your full store structure, homepage, collection pages, product pages, cart, and checkout, with conversion optimization built into every layout decision. Mobile-first and thumb-zone aware, tested against Chattanooga's outdoor-savvy, tourist-heavy consumer standard.",
-            },
-            {
-              number: '03',
-              title: 'Development & Configuration',
-              description:
-                'Custom Shopify theme development, Tennessee sales tax setup (9.25%–9.75% Hamilton County), payment gateway integration (Shopify Payments, PayPal, Afterpay, Affirm), app integrations, and GSAP micro-animations. Lighthouse 90+ performance is enforced from the first commit, no exceptions.',
-            },
-            {
-              number: '04',
-              title: 'Products, Content & SEO',
-              description:
-                'Product catalog upload, optimized descriptions, alt tags, meta fields, JSON-LD schema (FAQPage, Product, BreadcrumbList), and AEO content structured to get cited by ChatGPT, Perplexity, and Google AI Overviews. We target Chattanooga-specific keyword patterns and submit to Google Search Console.',
-            },
-            {
-              number: '05',
-              title: 'Launch & Growth Enablement',
-              description:
-                'Cloudflare Pages deploy, GA4 e-commerce tracking, GTM event setup, and a recorded launch walkthrough. Your 30-day support window covers post-launch fixes, additional product uploads, and team training so your Chattanooga team can self-manage the store from day one.',
-            },
-          ]}
-        />
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// CHATTANOOGA COMMERCE STACK &amp; HEADLESS BLUEPRINT"
+            title="Headless Next.js 15 to Shopify Plus Engine"
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
+        </div>
 
-        {/* ── 8. PORTFOLIO ─────────────────────────────────────────────── */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What Chattanooga e-commerce brands look like after FactoryJet."
-          cards={[
-            {
-              industry: 'Outdoor & Adventure Brands',
-              title: 'Chattanooga Outdoor & Adventure Client',
-              description:
-                "Chattanooga's outdoor economy spans rock climbing, kayaking, hang gliding, and mountain biking, with 10.7M annual visitors who spend on gear and guided experiences. We build Shopify stores with rental calendars, booking integrations, adventure-specific product configurations, seasonal drops, and gear subscription boxes. Every store loads under 1.5 seconds on mobile, because outdoor shoppers research and buy from the trail.",
-              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-1.webp',
-              stat1: '+43% conversion rate',
-              stat2: '7-day launch',
-            },
-            {
-              industry: 'Craft Beverage & Food',
-              title: 'Chattanooga Craft Beverage & Food Client',
-              description:
-                "Chattanooga's growing craft brewery, distillery, and specialty food scene sells to locals, tourists, and nationwide DTC audiences simultaneously. We build Shopify stores with age verification, TABC-aware shipping configurations, subscription beer and spirits clubs, gift box builders, and gifting flows for the 10.7M annual visitors who want to take a taste of Chattanooga home with them.",
-              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-2.webp',
-              stat1: '+49% AOV increase',
-              stat2: 'Lighthouse 95',
-            },
-            {
-              industry: 'Manufacturing & Industrial',
-              title: 'Chattanooga Manufacturing & Industrial Client',
-              description:
-                "The Tennessee Valley's manufacturing base needs B2B ordering infrastructure that reduces sales overhead. We build Shopify B2B portals with dealer pricing tiers, bulk ordering, net-30/net-60 payment terms, purchase order workflows, and equipment configurators. Chattanooga manufacturers use our portals to process 300+ dealer orders monthly without adding sales headcount.",
-              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-3.webp',
-              stat1: '+35% repeat orders',
-              stat2: '< 1.3s load time',
-            },
-          ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
-        />
+        {/* ── 08. STEP-BY-STEP 4-STAGE SPRINT PROTOCOL ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Proven 7-Day Sprint Model</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 4-Stage Rapid Ecommerce Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                A disciplined engineering methodology for zero-delay migrations and high-conversion commerce launches:
+              </p>
+            </div>
 
-        {/* ── 9. COMPARISON TABLE ──────────────────────────────────────── */}
-        <ComparisonTable
-          eyebrow="WHY FACTORYJET"
-          headline="FactoryJet vs Chattanooga E-Commerce Agencies"
-          lead={
-            "Chattanooga's established agencies, Riverworks Marketing and JLB Works, have strong local reputations built on WordPress and digital marketing, not Shopify specialization. National agencies like Growisto rank for Chattanooga queries but operate with 7–16 week timelines and zero local market knowledge.\n\nFactoryJet delivers a full Shopify store in 7 days, with AI-powered features no Chattanooga agency offers at SMB pricing. No lock-in. No retainer. No surprise invoices."
-          }
-          columns={[
-            { label: 'Their pricing' },
-            { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Why we cost less' },
-          ]}
-          rows={[
-            {
-              feature: 'Riverworks Marketing',
-              values: [
-                'Enterprise-level rates (full-service digital agency, WordPress-focused, no published Shopify-specific pricing)',
-                'Fixed-price (Shopify Standard)',
-                'Riverworks is a full-service marketing agency, strong in SEO and paid media, not Shopify e-commerce. FactoryJet specializes exclusively in Shopify with AI-powered features, 7-day delivery, and fixed pricing Riverworks cannot match.',
-              ],
-            },
-            {
-              feature: 'JLB Works',
-              values: [
-                'Premium agency rates (800+ clients, WordPress-focused general web design, 6–12 week timelines)',
-                'Fixed-price · 7-day delivery',
-                "JLB Works is Chattanooga's largest general web design firm, no dedicated Shopify or AI development practice. FactoryJet builds exclusively on Shopify and Next.js with AI capabilities, fixed pricing, and guaranteed 7-day delivery.",
-              ],
-            },
-          ]}
-        />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
 
-        {/* ── 10. PRICING ──────────────────────────────────────────────── */}
-        <PricingTiers
-          eyebrow="TRANSPARENT PRICING"
-          headline="Transparent Pricing for Chattanooga E-Commerce Businesses"
-          lead={
-            "Chattanooga agency rates for a comparable Shopify build typically run enterprise-level, and national agencies like WebCitz and Growisto quote even higher with multi-month timelines. FactoryJet delivers a full custom Shopify store, at a fixed, transparent quote, with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
-          }
-          tiers={[
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Standard',
-              description:
-                'A fully custom Shopify store live in 7 days. Best for Chattanooga outdoor brands, craft beverage companies, restaurants, and lifestyle businesses launching their first store or replacing a slow template.',
-              features: [
-                'Custom Shopify theme (not a template)',
-                'Up to 100 products uploaded & configured',
-                'Tennessee sales tax setup (9.25% Hamilton County)',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Shopify Growth',
-              description:
-                'Advanced Shopify build with subscriptions, B2B wholesale, or multi-location inventory. Best for Chattanooga manufacturers, craft beverage subscription brands, and established outdoor gear companies scaling online revenue.',
-              features: [
-                'Everything in Shopify Standard',
-                'Subscription billing (Recharge / Skio)',
-                'B2B dealer pricing & wholesale portal',
-                'Multi-location inventory management',
-                'GSAP micro-animations & editorial design',
-                'AI product recommendations integration',
-                'Priority support + training session',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-              popular: true,
-            },
-            {
-              priceRange: 'Fixed-price',
-              name: 'Custom / Headless',
-              description:
-                'Next.js headless storefront with Shopify or Medusa backend. For Chattanooga brands that need sub-500ms load times, custom API integrations, or a B2B portal that outperforms every competitor in the Tennessee Valley.',
-              features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'Custom API & ERP integrations',
-                'B2B portal: PO payments, dealer tiers',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                'Quarterly performance reviews',
-              ],
-              cta: { label: 'Get a quote', modal: true, region: 'us' },
-            },
-          ] as const}
-        />
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="CHATTANOOGA × E-COMMERCE"
-          headline="E-Commerce Development for Chattanooga's Key Industries"
-          lead="From Tennessee River outdoor brands to Gig City tech startups, Chattanooga's economy spans industries with very different e-commerce needs. FactoryJet has built Shopify stores for each of them."
-          sectors={[
-            {
-              name: 'Outdoor & Adventure Brands',
-              description:
-                "Shopify stores for rock climbing gear, kayaking equipment, hang gliding experiences, cycling apparel, and guided adventure bookings. Chattanooga's position as a top US outdoor destination means your store must convert both local customers and 10.7M annual visitors who discover you through search before they arrive.",
-              example:
-                'Rock climbing gear retailers, kayak rental companies, adventure tour operators, and outdoor apparel brands serving the Chattanooga outdoor economy.',
-            },
-            {
-              name: 'Manufacturing & Industrial',
-              description:
-                "B2B ordering portals for Tennessee Valley manufacturers, automotive parts, precision equipment, and industrial supplies. Dealer portals with bulk pricing, net-30 terms, purchase order workflows, and equipment configurators that process hundreds of B2B orders monthly without adding sales headcount.",
-              example:
-                'Automotive parts distributors, precision manufacturing suppliers, and equipment dealers serving the tri-state TN/GA/AL industrial market.',
-            },
-            {
-              name: 'Craft Breweries & Distilleries',
-              description:
-                "DTC stores, merchandise shops, and subscription beer and spirits clubs for Chattanooga's craft beverage scene. Age verification, Tennessee TABC-compliant shipping zones, gift box builders, and nationwide cold-chain shipping configurations built natively into every build.",
-              example:
-                "Craft breweries, distilleries, and specialty beverage brands selling DTC to Chattanooga's 10.7M annual visitors and nationwide audiences.",
-            },
-            {
-              name: 'Restaurants & Hospitality',
-              description:
-                "Online ordering, digital gift cards, merchandise stores, and catering inquiry forms that capture revenue from Chattanooga's $1.8B tourism economy. Integration with Toast, Square, and other POS systems your team already uses.",
-              example:
-                'Chattanooga Southside, North Shore, and downtown restaurants capturing digital revenue from tourists and locals through Shopify-powered online ordering.',
-            },
-            {
-              name: 'Automotive Parts & Accessories',
-              description:
-                "E-commerce for the tri-state TN/GA/AL auto parts and accessories market, vehicle fitment lookup, bulk dealer ordering, parts configurators, and distributor portals. Chattanooga's manufacturing heritage creates strong demand for precision parts e-commerce.",
-              example:
-                'Auto parts retailers, specialty accessories brands, and aftermarket equipment distributors serving the greater Chattanooga tri-state market.',
-            },
-            {
-              name: 'Arts, Apparel & Creative Products',
-              description:
-                "Shopify stores for Chattanooga's vibrant artist, maker, and apparel community. Custom print-on-demand integrations, limited-edition drops, gallery product stores, and artist membership subscriptions for the growing creative economy in Southside and North Shore.",
-              example:
-                "Independent artists, clothing brands, craft makers, and creative studios in Chattanooga's Southside and North Shore arts districts.",
-            },
-          ]}
-        />
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
 
-        {/* ── 12. TESTIMONIALS ─────────────────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="Rated 4.9/5 on Google across 500+ projects."
-        />
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* ── 13. FAQ ──────────────────────────────────────────────────── */}
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Chattanooga Ecommerce Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led headless development against traditional template agencies before you sign:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Headless Engine</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Chattanooga E-Commerce Businesses"
+          eyebrow="CHATTANOOGA COMMERCE INTELLIGENCE"
+          headline="Frequently Asked Questions About Ecommerce Development in Chattanooga TN"
+          lead="Direct, plain English answers to what Tennessee ecommerce founders and operations leaders ask about Shopify Plus and headless engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
         />
 
-        {/* ── 14. FINAL CTA ─────────────────────────────────────────────── */}
-        <EcommerceCityLinksUS currentCity="chattanooga" />
-        <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Build Your Chattanooga Shopify Store?"
-          sub="Gig City's e-commerce market is growing faster than most businesses can capture. Every week without a high-performing Shopify store is a week your competitors are owning the searches, and the sales, you should have. Pick a tier, book a 30-minute audit, and we'll have your store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-        />
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <EcommerceCityLinksUS currentCity="chattanooga" />
+          </div>
+        </section>
 
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Chattanooga Ecommerce Engine?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('chattanooga', FAQ_ITEMS) }}
-    />
+      <SiteFooter locale="us" />
+    </>
   );
 }
