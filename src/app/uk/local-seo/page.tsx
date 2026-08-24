@@ -2,10 +2,15 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './local-seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/local-seo';
-const UPDATED = '2026-07-25';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -104,37 +109,16 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Local SEO Services UK',
-      serviceType: 'Local SEO, Google Business Profile optimisation, and AI-answer visibility for near-me queries',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      url: CANONICAL,
-      description:
-        'Local SEO agency in the UK. We get businesses into the map pack through Google Business Profile optimisation, citations, and reviews, and get them named in AI answers for near me searches.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'Local SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': ['WebPage', 'Article'],
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'Local SEO Agency UK | Map Pack & AI Answers | FactoryJet',
-      headline: 'Local SEO for UK Businesses That Need to Win the Map Pack and the AI Answer',
-      inLanguage: 'en-GB',
-      datePublished: '2026-07-25',
-      dateModified: UPDATED,
       author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -235,9 +219,22 @@ export default function LocalSeoUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">AI answers for &quot;near me&quot;</div><div className="scorecard-note">tracked like any other ranking</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>Tracked</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>Tracked</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 1b. COUNTER-NARRATIVE & TECHNICAL NUANCE ═══ */}
+        <section className="sec" style={{ backgroundColor: '#F9F9FC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="wrap">
+            <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
+              <span className="chip" style={{ marginBottom: 12 }}>The Direct Comparison</span>
+              <h2>The Typical UK Agency Frustration vs The FactoryJet Engineering Approach</h2>
+              <p className="lead mt-4">
+                Traditional SEO agencies sell vague retainers, automated citation spam, and opaque monthly reports. FactoryJet delivers deterministic entity schemas, verified NAP consistency, and direct engineer access with full transparency.
+              </p>
             </div>
           </div>
         </section>
@@ -307,21 +304,21 @@ export default function LocalSeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Local search in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Local search in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
                     { v: '~30%', t: 'of UK searches now show an AI Overview', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
                     { v: '8% vs 15%', t: 'link click rate with an AI summary vs without', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
@@ -391,7 +388,7 @@ export default function LocalSeoUKPage() {
                 { n: '07', t: 'AI-answer visibility tracking', d: 'We check whether ChatGPT, Gemini, and Google AI Overviews actually name you when someone asks for your kind of business nearby, and report it like any other metric.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -508,9 +505,9 @@ export default function LocalSeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -521,12 +518,12 @@ export default function LocalSeoUKPage() {
                     { kw: 'ecommerce seo agency', v: '1,000', w: '63%', kd: 'KD 0 · Adjacent quick win · related service' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -547,15 +544,15 @@ export default function LocalSeoUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {LOCAL_SEO_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
               Agencies named from live UK search results for local SEO terms, July 2026. Listing is not endorsement,
               and we are one option among them.
             </p>
@@ -594,7 +591,7 @@ export default function LocalSeoUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">How competitive your local market is</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">How many locations you need covered</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">How many &quot;near me&quot; prompts and engines you target</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free local SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free local SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

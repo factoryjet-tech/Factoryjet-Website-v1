@@ -3,11 +3,16 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Script from 'next/script';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AuthorCard from '@/components/v2/AuthorCard';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './ecommerce-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-seo';
-const UPDATED = '2026-08-01';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives FAQPage schema; visible accordion below mirrors this content) ─── */
 const FAQ_ITEMS: { question: string; answer: string }[] = [
@@ -92,28 +97,16 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Ecommerce SEO Services UK',
-      serviceType: 'Ecommerce search engine optimisation',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      url: CANONICAL,
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'Ecommerce SEO', item: 'https://factoryjet.com/uk/ecommerce-seo' },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'Ecommerce SEO Agency UK | Organic Revenue, Not Just Rankings | FactoryJet',
-      inLanguage: 'en-GB',
-      dateModified: UPDATED,
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
+      author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -171,7 +164,7 @@ export default function EcommerceSeoPage() {
 
       {/* Right: Revenue scorecard; green theme, distinct from Shopify dev page */}
       <div className="card card-top-green">
-        <p className="eyebrow" style={{ color: 'var(--green)' }}>AVERAGE ECOMMERCE SEO RESULTS</p>
+        <p className="eyebrow" style={{ color: 'var( - green)' }}>AVERAGE ECOMMERCE SEO RESULTS</p>
         <p className="pull-quote-green" style={{ fontSize: '17px' }}>Rankings are vanity. Revenue from organic is the metric.</p>
         <div style={{ marginTop: '20px' }}>
           <div className="scorecard-row">
@@ -210,8 +203,8 @@ export default function EcommerceSeoPage() {
             <div className="scorecard-val">Month-to-month</div>
           </div>
         </div>
-        <div style={{ borderTop: '1px solid var(--n100)', marginTop: '4px', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Results vary by market, competition, and site authority. Ranges based on FactoryJet client data 2022–2026.</p>
+        <div style={{ borderTop: '1px solid var( - n100)', marginTop: '4px', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>Results vary by market, competition, and site authority. Ranges based on FactoryJet client data 2022–2026.</p>
         </div>
       </div>
     </div>
@@ -221,7 +214,7 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   2. HERO IMAGE BAND; full-width image + 4 green-tinted stats
 ════════════════════════════════════════════════ */}
-<section style={{ background: 'var(--ink)', padding: '0' }}>
+<section style={{ background: 'var( - ink)', padding: '0' }}>
   <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', minHeight: '340px' }}>
     <div style={{ position: 'relative', overflow: 'hidden' }}>
       <img width="1200" height="800" fetchPriority="high" loading="eager" src="https://im.runware.ai/image/os/a02d21/ws/3/ii/cea4b179-9321-4a20-b849-4cae7995f000.webp"
@@ -232,20 +225,20 @@ export default function EcommerceSeoPage() {
     </div>
     <div style={{ padding: '48px 24px 48px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '32px' }}>
       <div>
-        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var(--green)' }}>+42%</div>
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>Organic Revenue · Month 3 Avg</div>
+        <div style={{ fontFamily: 'var( - fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var( - green)' }}>+42%</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>Organic Revenue · Month 3 Avg</div>
       </div>
       <div>
-        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var(--green)' }}>6–8 Wks</div>
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>First Rankings Lift</div>
+        <div style={{ fontFamily: 'var( - fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var( - green)' }}>6–8 Wks</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>First Rankings Lift</div>
       </div>
       <div>
-        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var(--green)' }}>500+</div>
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>Ecommerce Stores Served</div>
+        <div style={{ fontFamily: 'var( - fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var( - green)' }}>500+</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>Ecommerce Stores Served</div>
       </div>
       <div>
-        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var(--green)' }}>M-T-M</div>
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>No Annual Lock-In</div>
+        <div style={{ fontFamily: 'var( - fd)', fontSize: 'clamp(1.75rem,3vw,2.5rem)', fontWeight: '700', lineHeight: '1', letterSpacing: '-.04em', color: 'var( - green)' }}>M-T-M</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '11px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '6px' }}>No Annual Lock-In</div>
       </div>
     </div>
   </div>
@@ -255,7 +248,7 @@ export default function EcommerceSeoPage() {
   3. RANK TRACKER VISUAL; unique section (replaces trust strip)
      Shows actual keyword position movements; distinct from Page 1
 ════════════════════════════════════════════════ */}
-<section style={{ background: 'var(--white)', padding: '56px 0', borderBottom: '1px solid var(--n200)' }}>
+<section style={{ background: 'var( - white)', padding: '56px 0', borderBottom: '1px solid var( - n200)' }}>
   <div className="wrap">
     <div style={{ textAlign: 'center', marginBottom: '40px' }}>
       <span className="eyebrow">KEYWORD POSITION TRACKER</span>
@@ -299,7 +292,7 @@ export default function EcommerceSeoPage() {
         <div className="rank-bar"><div className="rank-fill" style={{ width: '99%' }}></div></div>
       </div>
     </div>
-    <p style={{ textAlign: 'center', marginTop: '16px', fontSize: '12px', color: 'var(--n400)' }}>Illustrative of typical client results. Individual results depend on competition, domain authority, and content volume. Rankings verified via Google Search Console.</p>
+    <p style={{ textAlign: 'center', marginTop: '16px', fontSize: '12px', color: 'var( - n400)' }}>Illustrative of typical client results. Individual results depend on competition, domain authority, and content volume. Rankings verified via Google Search Console.</p>
   </div>
 </section>
 
@@ -327,22 +320,22 @@ export default function EcommerceSeoPage() {
           <p>FactoryJet starts every ecommerce SEO engagement with a technical audit; not keyword research. We fix the crawlability and Core Web Vitals issues first because ranking improvements are impossible on a store that Google can't index properly. Then we move to category page architecture, product page optimisation, and link building. The result is organic revenue growth that compounds month over month and doesn't evaporate when you pause a budget.</p>
           {/* Visual: Platform expertise + sectors served */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '4px' }}>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px 16px' }}>
-              <p style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '8px' }}>PLATFORMS</p>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px 16px' }}>
+              <p style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '8px' }}>PLATFORMS</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>Shopify</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>WooCommerce</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>Magento</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>BigCommerce</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>Shopify</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>WooCommerce</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>Magento</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>BigCommerce</span>
               </div>
             </div>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px 16px' }}>
-              <p style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '8px' }}>UK SECTORS</p>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px 16px' }}>
+              <p style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '8px' }}>UK SECTORS</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>Home Décor</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>Fashion</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>B2B Wholesale</span>
-                <span style={{ padding: '4px 10px', background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var(--ink)' }}>Food &amp; Drink</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>Home Décor</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>Fashion</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>B2B Wholesale</span>
+                <span style={{ padding: '4px 10px', background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '999px', fontSize: '12px', fontWeight: '500', color: 'var( - ink)' }}>Food &amp; Drink</span>
               </div>
             </div>
           </div>
@@ -354,64 +347,64 @@ export default function EcommerceSeoPage() {
         <div className="card card-top-green" style={{ padding: '0', overflow: 'hidden' }}>
 
           {/* Header */}
-          <div style={{ padding: '18px 24px', borderBottom: '1px solid var(--n100)' }}>
-            <span className="eyebrow" style={{ color: 'var(--green)', margin: '0', display: 'block' }}>ORGANIC REVENUE; COMPOUND GROWTH</span>
-            <p style={{ fontSize: '12px', color: 'var(--n400)', margin: '6px 0 0', lineHeight: '1.5' }}>Representative of FactoryJet ecommerce engagements. Results depend on competition and domain authority.</p>
+          <div style={{ padding: '18px 24px', borderBottom: '1px solid var( - n100)' }}>
+            <span className="eyebrow" style={{ color: 'var( - green)', margin: '0', display: 'block' }}>ORGANIC REVENUE; COMPOUND GROWTH</span>
+            <p style={{ fontSize: '12px', color: 'var( - n400)', margin: '6px 0 0', lineHeight: '1.5' }}>Representative of FactoryJet ecommerce engagements. Results depend on competition and domain authority.</p>
           </div>
 
           {/* Bar chart */}
           <div style={{ padding: '20px 24px 0' }}>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '5px', height: '96px' }}>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.11', borderRadius: '3px 3px 0 0', height: '10%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.20', borderRadius: '3px 3px 0 0', height: '18%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.30', borderRadius: '3px 3px 0 0', height: '28%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.42', borderRadius: '3px 3px 0 0', height: '40%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.54', borderRadius: '3px 3px 0 0', height: '53%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.66', borderRadius: '3px 3px 0 0', height: '64%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.78', borderRadius: '3px 3px 0 0', height: '75%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', opacity: '.90', borderRadius: '3px 3px 0 0', height: '85%' }}></div>
-              <div style={{ flex: '1', background: 'var(--green)', borderRadius: '3px 3px 0 0', height: '100%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.11', borderRadius: '3px 3px 0 0', height: '10%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.20', borderRadius: '3px 3px 0 0', height: '18%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.30', borderRadius: '3px 3px 0 0', height: '28%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.42', borderRadius: '3px 3px 0 0', height: '40%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.54', borderRadius: '3px 3px 0 0', height: '53%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.66', borderRadius: '3px 3px 0 0', height: '64%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.78', borderRadius: '3px 3px 0 0', height: '75%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', opacity: '.90', borderRadius: '3px 3px 0 0', height: '85%' }}></div>
+              <div style={{ flex: '1', background: 'var( - green)', borderRadius: '3px 3px 0 0', height: '100%' }}></div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid var(--n200)', paddingTop: '5px' }}>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M1</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M2</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M3</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M4</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M5</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M6</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M7</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M8</span>
-              <span style={{ fontFamily: 'var(--fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var(--n400)' }}>M9+</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid var( - n200)', paddingTop: '5px' }}>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M1</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M2</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M3</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M4</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M5</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M6</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M7</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M8</span>
+              <span style={{ fontFamily: 'var( - fm)', fontSize: '9px', letterSpacing: '.08em', color: 'var( - n400)' }}>M9+</span>
             </div>
           </div>
 
           {/* Milestone 2x2 grid */}
-          <div style={{ borderTop: '1px solid var(--n100)', marginTop: '16px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderBottom: '1px solid var(--n100)' }}>
-              <div style={{ padding: '14px 20px', borderRight: '1px solid var(--n100)' }}>
-                <div style={{ fontFamily: 'var(--fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var(--green)', lineHeight: '1' }}>Wk 3–4</div>
-                <div style={{ fontSize: '11px', color: 'var(--n600)', marginTop: '4px', lineHeight: '1.4' }}>First ranking improvements</div>
+          <div style={{ borderTop: '1px solid var( - n100)', marginTop: '16px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderBottom: '1px solid var( - n100)' }}>
+              <div style={{ padding: '14px 20px', borderRight: '1px solid var( - n100)' }}>
+                <div style={{ fontFamily: 'var( - fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var( - green)', lineHeight: '1' }}>Wk 3–4</div>
+                <div style={{ fontSize: '11px', color: 'var( - n600)', marginTop: '4px', lineHeight: '1.4' }}>First ranking improvements</div>
               </div>
               <div style={{ padding: '14px 20px' }}>
-                <div style={{ fontFamily: 'var(--fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var(--green)', lineHeight: '1' }}>Month 3</div>
-                <div style={{ fontSize: '11px', color: 'var(--n600)', marginTop: '4px', lineHeight: '1.4' }}>Revenue lift visible in GA4</div>
+                <div style={{ fontFamily: 'var( - fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var( - green)', lineHeight: '1' }}>Month 3</div>
+                <div style={{ fontSize: '11px', color: 'var( - n600)', marginTop: '4px', lineHeight: '1.4' }}>Revenue lift visible in GA4</div>
               </div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-              <div style={{ padding: '14px 20px', borderRight: '1px solid var(--n100)' }}>
-                <div style={{ fontFamily: 'var(--fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var(--green)', lineHeight: '1' }}>Month 6</div>
-                <div style={{ fontSize: '11px', color: 'var(--n600)', marginTop: '4px', lineHeight: '1.4' }}>Organic outpaces paid CPCs</div>
+              <div style={{ padding: '14px 20px', borderRight: '1px solid var( - n100)' }}>
+                <div style={{ fontFamily: 'var( - fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var( - green)', lineHeight: '1' }}>Month 6</div>
+                <div style={{ fontSize: '11px', color: 'var( - n600)', marginTop: '4px', lineHeight: '1.4' }}>Organic outpaces paid CPCs</div>
               </div>
               <div style={{ padding: '14px 20px' }}>
-                <div style={{ fontFamily: 'var(--fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var(--green)', lineHeight: '1' }}>Month 9+</div>
-                <div style={{ fontSize: '11px', color: 'var(--n600)', marginTop: '4px', lineHeight: '1.4' }}>Compounding without ad spend</div>
+                <div style={{ fontFamily: 'var( - fd)', fontSize: '1.25rem', fontWeight: '700', color: 'var( - green)', lineHeight: '1' }}>Month 9+</div>
+                <div style={{ fontSize: '11px', color: 'var( - n600)', marginTop: '4px', lineHeight: '1.4' }}>Compounding without ad spend</div>
               </div>
             </div>
           </div>
 
           {/* Footer note */}
           <div style={{ padding: '12px 20px', background: 'rgba(5,150,105,.05)', borderTop: '1px solid rgba(5,150,105,.15)' }}>
-            <p style={{ fontSize: '11px', color: 'var(--green)', fontWeight: '600', margin: '0' }}>Month-to-month contracts. No lock-in. Results hold us accountable.</p>
+            <p style={{ fontSize: '11px', color: 'var( - green)', fontWeight: '600', margin: '0' }}>Month-to-month contracts. No lock-in. Results hold us accountable.</p>
           </div>
 
         </div>
@@ -463,40 +456,40 @@ export default function EcommerceSeoPage() {
     </div>
     <div className="svc-grid">
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 01</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 01</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Ecommerce Technical SEO Audit</h3>
         <p style={{ fontSize: '14px' }}>Full crawl of your Shopify, WooCommerce, or Magento store: canonical URL issues, crawl budget waste, Core Web Vitals failures, duplicate content, sitemap errors, and schema markup gaps. Delivered as a prioritised fix list, not a 90-page PDF.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>Every engagement starts here. No exceptions.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>Every engagement starts here. No exceptions.</p>
       </div>
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 02</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 02</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Category Page SEO</h3>
         <p style={{ fontSize: '14px' }}>Keyword-mapped category hierarchy, H1 and meta rewrite, above-the-fold content strategy, FAQ schema, internal link structure, and pagination handling. Category pages are where UK ecommerce brands win or lose in organic search.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>60% of ecommerce organic revenue comes from category pages.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>60% of ecommerce organic revenue comes from category pages.</p>
       </div>
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 03</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 03</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Product Page Optimisation</h3>
         <p style={{ fontSize: '14px' }}>Long-tail keyword targeting for individual SKUs, Product schema with price, availability, and review aggregation for Google Shopping eligibility, review integration, and FAQ content targeting "is this worth buying" queries that convert at 4–6%.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>Product pages with FAQ schema convert 40% better on average.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>Product pages with FAQ schema convert 40% better on average.</p>
       </div>
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 04</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 04</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>UK Link Building for Ecommerce</h3>
         <p style={{ fontSize: '14px' }}>Editorial links from UK lifestyle, trade, and category-specific publications. Supplier and manufacturer link requests. Digital PR targeting product category keywords with newsworthy angles that earn links rather than buying them.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>Domain authority is the multiplier on all on-page SEO work.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>Domain authority is the multiplier on all on-page SEO work.</p>
       </div>
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 05</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 05</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Ecommerce Content Strategy</h3>
         <p style={{ fontSize: '14px' }}>Buyer guides, comparison content, and how-to articles targeting informational queries that sit above your commercial pages in the purchase funnel; capturing UK shoppers earlier in the decision process and building category authority.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>Informational content drives 23% of ecommerce organic revenue in competitive markets.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>Informational content drives 23% of ecommerce organic revenue in competitive markets.</p>
       </div>
       <div className="svc-card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>SERVICE 06</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>SERVICE 06</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>AI Search Optimisation (AEO)</h3>
         <p style={{ fontSize: '14px' }}>Structured data, FAQ schema, and answer-first content formats that get your UK ecommerce store cited in ChatGPT, Google AI Overviews, and Perplexity; the fastest-growing product discovery channel for UK consumers in 2026.</p>
-        <p style={{ fontSize: '13px', color: 'var(--green)', marginTop: '12px', fontWeight: '600' }}>AI citations for ecommerce product queries grew 340% in 12 months; UK data, 2026.</p>
+        <p style={{ fontSize: '13px', color: 'var( - green)', marginTop: '12px', fontWeight: '600' }}>AI citations for ecommerce product queries grew 340% in 12 months; UK data, 2026.</p>
       </div>
     </div>
   </div>
@@ -511,26 +504,26 @@ export default function EcommerceSeoPage() {
       <div style={{ textAlign: 'center', padding: '16px' }}>
         <div className="chip-green" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-green"></span>Organic Revenue</div>
         <div className="stat-num-green">+42%</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>avg. organic revenue growth in month 3</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>vs. month 1 of engagement</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>avg. organic revenue growth in month 3</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>vs. month 1 of engagement</p>
       </div>
       <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid rgba(5,150,105,.15)' }}>
         <div className="chip-green" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-green"></span>Rankings Lift</div>
         <div className="stat-num-green">+18 pos</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>avg. category page position improvements</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>on target commercial keywords</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>avg. category page position improvements</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>on target commercial keywords</p>
       </div>
       <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid rgba(5,150,105,.15)' }}>
         <div className="chip-green" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-green"></span>Platform Coverage</div>
         <div className="stat-num-green">3</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>ecommerce platforms: Shopify, WooCommerce, Magento</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>+ BigCommerce and custom platforms</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>ecommerce platforms: Shopify, WooCommerce, Magento</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>+ BigCommerce and custom platforms</p>
       </div>
       <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid rgba(5,150,105,.15)' }}>
         <div className="chip-green" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-green"></span>Contract Type</div>
         <div className="stat-num-green" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)' }}>M-T-M</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>month-to-month with no annual lock-in</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>results keep us; not a contract</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>month-to-month with no annual lock-in</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>results keep us; not a contract</p>
       </div>
     </div>
   </div>
@@ -539,47 +532,47 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   8. TECH STACK; Reversed 40/60 with tools panel
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div className="col-4060">
       {/* Tools panel 40% */}
       <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
-        <div style={{ padding: '20px 24px', borderBottom: '1px solid var(--n100)' }}>
-          <span className="eyebrow" style={{ color: 'var(--green)', marginBottom: '0' }}>SEO TOOLS WE USE</span>
+        <div style={{ padding: '20px 24px', borderBottom: '1px solid var( - n100)' }}>
+          <span className="eyebrow" style={{ color: 'var( - green)', marginBottom: '0' }}>SEO TOOLS WE USE</span>
         </div>
         <div style={{ padding: '0 24px' }}>
           <div className="scorecard-row">
             <div className="scorecard-metric">Technical Audits</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>Screaming Frog, Semrush</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>Screaming Frog, Semrush</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Keyword Research</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>Semrush, Ahrefs, Google Planner</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>Semrush, Ahrefs, Google Planner</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Ranking Tracking</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>Google Search Console (primary)</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>Google Search Console (primary)</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Performance</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>PageSpeed Insights, Core Web Vitals</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>PageSpeed Insights, Core Web Vitals</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Content</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>Surfer SEO, Clearscope</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>Surfer SEO, Clearscope</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Schema Validation</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>Google Rich Results Test</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>Google Rich Results Test</div>
           </div>
           <div className="scorecard-row">
             <div className="scorecard-metric">Analytics</div>
-            <div style={{ fontSize: '14px', color: 'var(--n600)', textAlign: 'right' }}>GA4 ecommerce events, GTM</div>
+            <div style={{ fontSize: '14px', color: 'var( - n600)', textAlign: 'right' }}>GA4 ecommerce events, GTM</div>
           </div>
         </div>
-        <div style={{ padding: '16px 24px', background: 'var(--n100)', borderTop: '1px solid var(--n200)' }}>
-          <div style={{ height: '3px', width: '32px', borderRadius: '999px', background: 'var(--green)', marginBottom: '8px' }}></div>
-          <p style={{ fontFamily: 'var(--fd)', fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Every claim backed by Google Search Console data. Not rank trackers.</p>
+        <div style={{ padding: '16px 24px', background: 'var( - n100)', borderTop: '1px solid var( - n200)' }}>
+          <div style={{ height: '3px', width: '32px', borderRadius: '999px', background: 'var( - green)', marginBottom: '8px' }}></div>
+          <p style={{ fontFamily: 'var( - fd)', fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Every claim backed by Google Search Console data. Not rank trackers.</p>
         </div>
       </div>
 
@@ -593,35 +586,35 @@ export default function EcommerceSeoPage() {
           <span className="chip">Screaming Frog</span><span className="chip">Core Web Vitals</span>
         </div>
         <div className="stack">
-          <p className="lead"><strong style={{ color: 'var(--ink)' }}>Organic revenue, organic sessions, and organic conversion rate</strong> are the three metrics our monthly reports open with. Position tracking is a supporting tool, not the headline.</p>
+          <p className="lead"><strong style={{ color: 'var( - ink)' }}>Organic revenue, organic sessions, and organic conversion rate</strong> are the three metrics our monthly reports open with. Position tracking is a supporting tool, not the headline.</p>
 
           {/* Visual: 3 metric source cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '10px', marginTop: '4px' }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px 16px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px 16px' }}>
               <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#E8F5E9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: '0' }}>
                 <span style={{ fontSize: '16px' }}>🔍</span>
               </div>
               <div>
-                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '2px' }}>Google Search Console; primary source</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Actual UK impressions and clicks. Third-party rank trackers can show the same keyword at position 4 and 11 in the same week depending on the data centre sampled.</p>
+                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '2px' }}>Google Search Console; primary source</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Actual UK impressions and clicks. Third-party rank trackers can show the same keyword at position 4 and 11 in the same week depending on the data centre sampled.</p>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px 16px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px 16px' }}>
               <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#E8F5E9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: '0' }}>
                 <span style={{ fontSize: '16px' }}>📊</span>
               </div>
               <div>
-                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '2px' }}>GA4 Ecommerce; revenue closed loop</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Organic sessions, add-to-carts, transactions, and revenue. If we can't close the loop from keyword to sale, we don't count it.</p>
+                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '2px' }}>GA4 Ecommerce; revenue closed loop</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Organic sessions, add-to-carts, transactions, and revenue. If we can't close the loop from keyword to sale, we don't count it.</p>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px 16px' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px 16px' }}>
               <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#E8F5E9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: '0' }}>
                 <span style={{ fontSize: '16px' }}>📈</span>
               </div>
               <div>
-                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '2px' }}>Organic share of wallet; long-term metric</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>What percentage of your total revenue comes from organic search. The most meaningful ecommerce SEO metric you're probably not tracking.</p>
+                <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '2px' }}>Organic share of wallet; long-term metric</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>What percentage of your total revenue comes from organic search. The most meaningful ecommerce SEO metric you're probably not tracking.</p>
               </div>
             </div>
           </div>
@@ -648,49 +641,49 @@ export default function EcommerceSeoPage() {
 
       {/* Visual: UK categories grid */}
       <div style={{ marginTop: '24px' }}>
-        <p style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--green)', marginBottom: '12px' }}>UK CATEGORIES WE WORK IN</p>
+        <p style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - green)', marginBottom: '12px' }}>UK CATEGORIES WE WORK IN</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '10px' }}>
-          <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '3px' }}>Home Décor</p>
-            <p style={{ fontSize: '11px', color: 'var(--n400)' }}>Artificial plants, furniture, soft furnishings</p>
+          <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px' }}>
+            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '3px' }}>Home Décor</p>
+            <p style={{ fontSize: '11px', color: 'var( - n400)' }}>Artificial plants, furniture, soft furnishings</p>
           </div>
-          <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '3px' }}>Fashion</p>
-            <p style={{ fontSize: '11px', color: 'var(--n400)' }}>Women's clothing, trainers, accessories</p>
+          <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px' }}>
+            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '3px' }}>Fashion</p>
+            <p style={{ fontSize: '11px', color: 'var( - n400)' }}>Women's clothing, trainers, accessories</p>
           </div>
-          <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '3px' }}>B2B Wholesale</p>
-            <p style={{ fontSize: '11px', color: 'var(--n400)' }}>Trade plants, promotional products</p>
+          <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px' }}>
+            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '3px' }}>B2B Wholesale</p>
+            <p style={{ fontSize: '11px', color: 'var( - n400)' }}>Trade plants, promotional products</p>
           </div>
-          <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '3px' }}>Food &amp; Drink</p>
-            <p style={{ fontSize: '11px', color: 'var(--n400)' }}>D2C, subscription, gifting</p>
+          <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px' }}>
+            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '3px' }}>Food &amp; Drink</p>
+            <p style={{ fontSize: '11px', color: 'var( - n400)' }}>D2C, subscription, gifting</p>
           </div>
-          <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '3px' }}>Professional Services</p>
-            <p style={{ fontSize: '11px', color: 'var(--n400)' }}>Service ecommerce, booking platforms</p>
+          <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px' }}>
+            <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '3px' }}>Professional Services</p>
+            <p style={{ fontSize: '11px', color: 'var( - n400)' }}>Service ecommerce, booking platforms</p>
           </div>
-          <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <p style={{ fontSize: '12px', fontWeight: '600', color: 'var(--green)', textAlign: 'center' }}>Each has distinct keyword architecture + Google Shopping signals</p>
+          <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <p style={{ fontSize: '12px', fontWeight: '600', color: 'var( - green)', textAlign: 'center' }}>Each has distinct keyword architecture + Google Shopping signals</p>
           </div>
         </div>
       </div>
     </div>
     <div className="col-3">
-      <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '28px' }}>
+      <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '16px', padding: '28px' }}>
         <div className="stat-num-green" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>£262B</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>UK ecommerce market value in 2024</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>2nd largest in Europe; IMRG 2024</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>UK ecommerce market value in 2024</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>2nd largest in Europe; IMRG 2024</p>
       </div>
-      <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '28px' }}>
+      <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '16px', padding: '28px' }}>
         <div className="stat-num-green" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>+61%</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>UK ecommerce Google Ads CPC increase since 2020</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>making organic search the only channel that gets cheaper</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>UK ecommerce Google Ads CPC increase since 2020</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>making organic search the only channel that gets cheaper</p>
       </div>
-      <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '28px' }}>
+      <div style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '16px', padding: '28px' }}>
         <div className="stat-num-green" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>38%</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>growth in UK ecommerce organic search volume since 2020</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>across fashion, home, B2B, and specialist categories</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>growth in UK ecommerce organic search volume since 2020</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>across fashion, home, B2B, and specialist categories</p>
       </div>
     </div>
   </div>
@@ -699,7 +692,7 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   10. COMPARISON TABLE
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div style={{ maxWidth: '640px', margin: '0 auto 48px', textAlign: 'center' }}>
       <span className="eyebrow">HOW WE COMPARE</span>
@@ -743,39 +736,39 @@ export default function EcommerceSeoPage() {
     </div>
     <ul className="col-3">
       <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>+57 positions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>on "artificial plants UK"; 6 months</div>
+        <div style={{ background: 'var( - green-bg)', border: '1px solid var( - green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - green)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - green)', letterSpacing: '-.03em' }}>+57 positions</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>on "artificial plants UK"; 6 months</div>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Our organic traffic was zero when we started. FactoryJet fixed the technical issues first; turns out Shopify was indexing 400 duplicate filter pages; then rebuilt our category content. We're now getting 2,800 organic sessions per month to categories that were invisible before."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, London</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>3.2× organic revenue</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>in 8 months vs. baseline</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every other SEO agency we'd spoken to showed us ranking dashboards. FactoryJet opened with a GA4 ecommerce breakdown and asked why our organic sessions weren't converting. That framing changed everything; we ended up with better traffic, not just more of it."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK</p>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Our organic traffic was zero when we started. FactoryJet fixed the technical issues first; turns out Shopify was indexing 400 duplicate filter pages; then rebuilt our category content. We're now getting 2,800 organic sessions per month to categories that were invisible before."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Vishal; Director, Bombay Petals</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>B2B artificial plants, London</p>
         </div>
       </li>
       <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>Page 1 · 6 target terms</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>none were ranked before engagement</div>
+        <div style={{ background: 'var( - green-bg)', border: '1px solid var( - green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - green)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - green)', letterSpacing: '-.03em' }}>3.2× organic revenue</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>in 8 months vs. baseline</div>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"We'd been doing SEO with a UK agency for 18 months; paying a hefty monthly retainer; and had nothing to show for it in Search Console. FactoryJet's audit found 11 technical issues the previous agency had missed entirely. We switched, and were on page 1 for our core terms inside 6 months."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK</p>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every other SEO agency we'd spoken to showed us ranking dashboards. FactoryJet opened with a GA4 ecommerce breakdown and asked why our organic sessions weren't converting. That framing changed everything; we ended up with better traffic, not just more of it."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Ricky B; Founder, Belle Maison</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>Home décor ecommerce, UK</p>
+        </div>
+      </li>
+      <li className="card">
+        <div style={{ background: 'var( - green-bg)', border: '1px solid var( - green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - green)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - green)', letterSpacing: '-.03em' }}>Page 1 · 6 target terms</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>none were ranked before engagement</div>
+        </div>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"We'd been doing SEO with a UK agency for 18 months; paying a hefty monthly retainer; and had nothing to show for it in Search Console. FactoryJet's audit found 11 technical issues the previous agency had missed entirely. We switched, and were on page 1 for our core terms inside 6 months."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Kiran M; Founder, Impulse Branding</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>Promotional products, UK</p>
         </div>
       </li>
     </ul>
@@ -785,52 +778,52 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   12. FOUNDER + HIRE SECTION
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div className="col-6040">
       <div>
         <span className="eyebrow">ECOMMERCE SEO AGENCY UK</span>
         <h2 style={{ marginBottom: '20px' }}>Hire an ecommerce SEO agency that ties every deliverable to organic revenue</h2>
         <div className="stack">
-          <p className="lead">When you hire an <strong style={{ color: 'var(--ink)' }}>ecommerce SEO agency in the UK</strong>, you're buying a specific outcome: more organic revenue from your existing product catalogue. FactoryJet's engagement model is built around that outcome; we scope work by what will move revenue, not by the number of "SEO tasks" we can bill.</p>
+          <p className="lead">When you hire an <strong style={{ color: 'var( - ink)' }}>ecommerce SEO agency in the UK</strong>, you're buying a specific outcome: more organic revenue from your existing product catalogue. FactoryJet's engagement model is built around that outcome; we scope work by what will move revenue, not by the number of "SEO tasks" we can bill.</p>
           {/* Visual: 2 differentiator cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '4px' }}>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '18px', marginBottom: '8px' }}>🔧</div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '4px' }}>In-house Shopify dev</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>When a Liquid issue blocks GoogleBot from indexing your category pages, we fix it in the same week; not in a separate agency project.</p>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '4px' }}>In-house Shopify dev</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>When a Liquid issue blocks GoogleBot from indexing your category pages, we fix it in the same week; not in a separate agency project.</p>
             </div>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '18px', marginBottom: '8px' }}>📅</div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '4px' }}>Month-to-month only</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>No lock-in contracts. We have to earn the next month. If organic revenue isn't growing, there's no clause to fall back on.</p>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '4px' }}>Month-to-month only</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>No lock-in contracts. We have to earn the next month. If organic revenue isn't growing, there's no clause to fall back on.</p>
             </div>
           </div>
           <div className="pull-quote" style={{ fontSize: '17px' }}>Month-to-month contracts. No lock-in. Results keep us.</div>
         </div>
-        <div style={{ marginTop: '28px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '24px' }}>
+        <div style={{ marginTop: '28px', background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '16px', padding: '24px' }}>
           <h3 style={{ fontSize: '16px', marginBottom: '12px' }}>When UK brands hire FactoryJet for ecommerce SEO</h3>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>• Organic revenue is flat despite steady paid acquisition</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>• Previous UK SEO agency showed rankings but not revenue results</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>• Shopify or WooCommerce store has never had a technical SEO audit</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>• Category pages have no content above the product grid</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>• Google Search Console shows crawl errors nobody has fixed</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>• Organic revenue is flat despite steady paid acquisition</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>• Previous UK SEO agency showed rankings but not revenue results</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>• Shopify or WooCommerce store has never had a technical SEO audit</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>• Category pages have no content above the product grid</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>• Google Search Console shows crawl errors nobody has fixed</li>
           </ul>
         </div>
       </div>
 
       <div className="card" style={{ textAlign: 'center' }}>
         <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', border: '3px solid rgba(255,92,0,.2)', flexShrink: '0' }}>
-          <span style={{ fontFamily: 'var(--fd)', fontSize: '26px', fontWeight: '800', color: '#fff', lineHeight: '1' }}>B</span>
+          <span style={{ fontFamily: 'var( - fd)', fontSize: '26px', fontWeight: '800', color: '#fff', lineHeight: '1' }}>B</span>
         </div>
         <h3 style={{ fontSize: '18px', marginBottom: '4px' }}>Bhavesh</h3>
-        <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', color: 'var(--n400)', letterSpacing: '.10em', textTransform: 'uppercase', marginBottom: '16px' }}>Founder · FactoryJet</p>
-        <div style={{ background: 'var(--cream)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
-          <p style={{ fontSize: '14px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6' }}>"Returns on your time; that's what I hold every project to. If I can't show you where the organic revenue came from in Search Console, we're working on the wrong things."</p>
+        <p style={{ fontFamily: 'var( - fm)', fontSize: '11px', color: 'var( - n400)', letterSpacing: '.10em', textTransform: 'uppercase', marginBottom: '16px' }}>Founder · FactoryJet</p>
+        <div style={{ background: 'var( - cream)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
+          <p style={{ fontSize: '14px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6' }}>"Returns on your time; that's what I hold every project to. If I can't show you where the organic revenue came from in Search Console, we're working on the wrong things."</p>
         </div>
         <ModalCTAButton label="Book a Free SEO Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
-        <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '12px' }}>30 minutes. We'll audit your current organic performance in GSC before the call.</p>
+        <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '12px' }}>30 minutes. We'll audit your current organic performance in GSC before the call.</p>
       </div>
     </div>
   </div>
@@ -869,7 +862,7 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   14. FAQ
 ════════════════════════════════════════════════ */}
-<section id="faq" className="sec-lg" style={{ background: 'var(--white)' }}>
+<section id="faq" className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div style={{ maxWidth: '640px' }}>
       <p className="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
@@ -1072,7 +1065,7 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   15. UK CITIES + RELATED
 ════════════════════════════════════════════════ */}
-<section className="sec" style={{ background: 'var(--cream)' }}>
+<section className="sec" style={{ background: 'var( - cream)' }}>
   <div className="wrap">
     <span className="eyebrow">Serving the UK</span>
     <h2 style={{ fontSize: 'clamp(1.25rem,2.5vw,1.75rem)', marginTop: '8px', marginBottom: '24px' }}>Ecommerce SEO Services for UK Brands</h2>
@@ -1106,7 +1099,7 @@ export default function EcommerceSeoPage() {
 {/* ════════════════════════════════════════════════
   16. FINAL CTA
 ════════════════════════════════════════════════ */}
-<section style={{ background: 'var(--dark)', padding: '80px 0' }}>
+<section style={{ background: 'var( - dark)', padding: '80px 0' }}>
   <div className="wrap" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
     <span className="eyebrow" style={{ color: 'rgba(5,150,105,.9)' }}>READY TO GROW ORGANIC REVENUE</span>
     <h2 style={{ color: '#fff', marginTop: '12px', fontSize: 'clamp(1.75rem,4vw,2.75rem)' }}>Get a Free Ecommerce SEO Audit; See What's Costing You Revenue</h2>

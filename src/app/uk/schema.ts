@@ -17,6 +17,23 @@ const organization = {
   logo: "https://factoryjet.com/logo.png",
   description:
     "FactoryJet is the UK’s AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. Pricing is fixed and published upfront.",
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",

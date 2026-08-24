@@ -29,7 +29,7 @@ const STATS: Stat[] = [
   {
     value: "2.6M+",
     label: "Metro Population",
-    sublabel: "Median age 34.4 — native digital adopters",
+    sublabel: "Median age 34.4, native digital adopters",
     icon: Users,
     trend: "Youngest UK City",
   },

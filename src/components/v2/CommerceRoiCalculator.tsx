@@ -15,8 +15,11 @@ export default function CommerceRoiCalculator({
   region = 'us',
   className = '',
 }: CommerceRoiCalculatorProps) {
+  const isUK = region === 'uk';
+  const sym = isUK ? '£' : '$';
+
   // Inputs
-  const [monthlyRevenue, setMonthlyRevenue] = useState<number>(125000);
+  const [monthlyRevenue, setMonthlyRevenue] = useState<number>(isUK ? 100000 : 125000);
   const [conversionRate, setConversionRate] = useState<number>(1.8);
   const [currentSpeed, setCurrentSpeed] = useState<number>(3.8); // seconds
   const targetSpeed = 0.8; // seconds (FactoryJet standard)
@@ -86,7 +89,7 @@ export default function CommerceRoiCalculator({
                     Current Monthly Online Revenue
                   </label>
                   <span style={{ fontSize: '15px', fontWeight: 800, color: '#FF5622', fontFamily: 'var(--pp-mono, monospace)' }}>
-                    ${monthlyRevenue.toLocaleString()}
+                    {sym}{monthlyRevenue.toLocaleString()}
                   </span>
                 </div>
                 <input
@@ -100,9 +103,9 @@ export default function CommerceRoiCalculator({
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
-                  <span>$10,000/mo</span>
-                  <span>$500,000/mo</span>
-                  <span>$1,000,000+/mo</span>
+                  <span>{sym}10,000/mo</span>
+                  <span>{sym}500,000/mo</span>
+                  <span>{sym}1,000,000+/mo</span>
                 </div>
               </div>
 
@@ -128,7 +131,7 @@ export default function CommerceRoiCalculator({
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
                   <span>0.5% (Sub-par)</span>
-                  <span>1.8% (US Average)</span>
+                  <span>1.8% (UK/US Average)</span>
                   <span>5.0% (Top Tier)</span>
                 </div>
               </div>
@@ -178,7 +181,7 @@ export default function CommerceRoiCalculator({
                   Annual Revenue Lost to Latency
                 </span>
                 <div style={{ fontSize: 'clamp(28px, 3.5vw, 38px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.02em', marginTop: '4px', lineHeight: 1.1 }}>
-                  +${Math.round(results.additionalAnnualRevenue).toLocaleString()}
+                  +{sym}{Math.round(results.additionalAnnualRevenue).toLocaleString()}
                   <span style={{ fontSize: '14px', fontWeight: 600, color: '#A0A0B0', marginLeft: '6px' }}>/ year</span>
                 </div>
                 <p style={{ fontSize: '12px', color: '#8E8E9F', margin: '4px 0 0' }}>
@@ -190,7 +193,7 @@ export default function CommerceRoiCalculator({
                 <div>
                   <span style={{ fontSize: '11px', color: '#8E8E9F', display: 'block' }}>Monthly Recovery</span>
                   <span style={{ fontSize: '16px', fontWeight: 700, color: '#10B981' }}>
-                    +${Math.round(results.additionalMonthlyRevenue).toLocaleString()}/mo
+                    +{sym}{Math.round(results.additionalMonthlyRevenue).toLocaleString()}/mo
                   </span>
                 </div>
                 <div>

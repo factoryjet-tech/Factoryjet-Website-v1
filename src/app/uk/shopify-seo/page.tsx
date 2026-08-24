@@ -2,11 +2,16 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AuthorCard from '@/components/v2/AuthorCard';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './shopify-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/shopify-seo';
-const UPDATED = '2026-08-01';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives FAQPage schema; visible accordion below mirrors this content) ─── */
 const FAQ_ITEMS: { question: string; answer: string }[] = [
@@ -91,28 +96,16 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Shopify SEO Services UK',
-      serviceType: 'Shopify search engine optimisation',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      url: CANONICAL,
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'Shopify SEO', item: 'https://factoryjet.com/uk/shopify-seo' },
-      ],
-    },
-    {
-      '@type': 'WebPage',
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'Shopify SEO Agency UK | Shopify-Specific Technical SEO | FactoryJet',
-      inLanguage: 'en-GB',
-      dateModified: UPDATED,
-      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
+      author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -174,15 +167,15 @@ export default function ShopifySeoPage() {
         <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to top,rgba(15,15,18,.8) 0%,transparent 50%)' }}></div>
         <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-            <span style={{ background: 'rgba(255,255,255,.15)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,.2)', borderRadius: '999px', padding: '6px 14px', fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: '#fff' }}>Shopify Technical SEO</span>
-            <span style={{ background: 'rgba(255,92,0,.9)', borderRadius: '999px', padding: '6px 14px', fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: '#fff' }}>UK Shopify Stores</span>
+            <span style={{ background: 'rgba(255,255,255,.15)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,.2)', borderRadius: '999px', padding: '6px 14px', fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: '#fff' }}>Shopify Technical SEO</span>
+            <span style={{ background: 'rgba(255,92,0,.9)', borderRadius: '999px', padding: '6px 14px', fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.10em', textTransform: 'uppercase', color: '#fff' }}>UK Shopify Stores</span>
           </div>
         </div>
       </div>
 
       {/* Scorecard: 2 cols wide */}
       <div className="bento-span2 card" style={{ padding: '0', overflow: 'hidden', alignSelf: 'stretch', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--n100)' }}>
+        <div style={{ padding: '16px 20px', borderBottom: '1px solid var( - n100)' }}>
           <span className="eyebrow" style={{ marginBottom: '0' }}>SHOPIFY SEO IMPACT</span>
         </div>
         <div style={{ flex: '1', padding: '4px 20px' }}>
@@ -215,7 +208,7 @@ export default function ShopifySeoPage() {
             <div className="scorecard-val">100/100</div>
           </div>
         </div>
-        <div style={{ padding: '12px 20px', background: 'var(--n100)', borderTop: '1px solid var(--n200)' }}>
+        <div style={{ padding: '12px 20px', background: 'var( - n100)', borderTop: '1px solid var( - n200)' }}>
           <ModalCTAButton label="Get Free Shopify SEO Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
         </div>
       </div>
@@ -223,22 +216,22 @@ export default function ShopifySeoPage() {
       {/* Row 2: 3 bento mini-cards */}
       <div className="bento-span2 card" style={{ textAlign: 'center', padding: '24px 20px' }}>
         <div className="stat-num" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>500+</div>
-        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)', marginTop: '8px' }}>Shopify stores built by FactoryJet</p>
-        <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '4px' }}>That's where our Shopify SEO insight comes from</p>
+        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)', marginTop: '8px' }}>Shopify stores built by FactoryJet</p>
+        <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '4px' }}>That's where our Shopify SEO insight comes from</p>
       </div>
       <div className="bento-span2 card" style={{ textAlign: 'center', padding: '24px 20px' }}>
         <div className="stat-num" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>10+ yrs</div>
-        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)', marginTop: '8px' }}>of dedicated Shopify SEO expertise</p>
-        <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '4px' }}>Shopify-specialist team; Online Store 2.0 through Hydrogen</p>
+        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)', marginTop: '8px' }}>of dedicated Shopify SEO expertise</p>
+        <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '4px' }}>Shopify-specialist team; Online Store 2.0 through Hydrogen</p>
       </div>
       <div className="bento-span2 card" style={{ textAlign: 'center', padding: '24px 20px' }}>
         <div className="stat-num" style={{ fontSize: 'clamp(1.75rem,3vw,2.5rem)' }}>M-T-M</div>
-        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)', marginTop: '8px' }}>Month-to-month Shopify SEO</p>
-        <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '4px' }}>No annual lock-in. Results keep us.</p>
+        <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)', marginTop: '8px' }}>Month-to-month Shopify SEO</p>
+        <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '4px' }}>No annual lock-in. Results keep us.</p>
       </div>
 
       {/* Row 3: trust strip */}
-      <div className="bento-span6" style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px 24px' }}>
+      <div className="bento-span6" style={{ background: 'var( - white)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px 24px' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', alignItems: 'center', justifyContent: 'space-between' }}>
           <span className="trust-pill"><span className="dot dot-orange"></span>Google Search Console reporting; not rank trackers</span>
           <span className="trust-pill"><span className="dot dot-orange"></span>In-house Shopify dev team; we fix Liquid bugs ourselves</span>
@@ -254,8 +247,15 @@ export default function ShopifySeoPage() {
   2. SHOPIFY SEO; WHAT'S UNIQUE; 60/40 with technical checklist
      (Different from Page 1's partner scorecard, Page 2's revenue timeline)
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
+    <div style={{ maxWidth: 860, margin: '0 auto 36px', textAlign: 'center' }}>
+      <span className="chip" style={{ marginBottom: 12 }}>The Direct Comparison</span>
+      <h2>The Typical UK Agency Frustration vs FactoryJet Engineering Approach</h2>
+      <p className="lead mt-4">
+        Traditional SEO agencies sell blog retainers that ignore Shopify Liquid bottlenecks and unoptimized app scripts. FactoryJet delivers code-level Core Web Vitals remediation, canonical architecture fixes, and 100% full IP code ownership.
+      </p>
+    </div>
     <div className="col-6040">
       <div>
         <span className="eyebrow">WHY SHOPIFY SEO IS DIFFERENT</span>
@@ -266,20 +266,20 @@ export default function ShopifySeoPage() {
           <p>FactoryJet's Shopify SEO work is different because we have an in-house Shopify development team. When our SEO audit identifies a Liquid rendering issue hiding your collection page description from GoogleBot, we fix it ourselves: in the same week, in the same engagement.</p>
           {/* Visual differentiator cards; breaks up text */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px', marginTop: '4px' }}>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '20px', marginBottom: '8px' }}>🔧</div>
-              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '4px' }}>In-house Liquid dev</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>We edit your Shopify theme ourselves; no separate developer</p>
+              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '4px' }}>In-house Liquid dev</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>We edit your Shopify theme ourselves; no separate developer</p>
             </div>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '20px', marginBottom: '8px' }}>📋</div>
-              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '4px' }}>500+ stores built</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Shopify specialists since the platform launched in 2006</p>
+              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '4px' }}>500+ stores built</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Shopify specialists since the platform launched in 2006</p>
             </div>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '20px', marginBottom: '8px' }}>📊</div>
-              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)', marginBottom: '4px' }}>GSC revenue data</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Reports show organic revenue; not rank tracker positions</p>
+              <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)', marginBottom: '4px' }}>GSC revenue data</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Reports show organic revenue; not rank tracker positions</p>
             </div>
           </div>
         </div>
@@ -295,63 +295,63 @@ export default function ShopifySeoPage() {
 
       {/* Right: Technical Shopify checklist; unique to this page */}
       <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
-        <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--n100)' }}>
+        <div style={{ padding: '16px 24px', borderBottom: '1px solid var( - n100)' }}>
           <span className="eyebrow" style={{ marginBottom: '0' }}>SHOPIFY SEO AUDIT CHECKLIST</span>
-          <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '4px' }}>Common issues we fix. How does your store score?</p>
+          <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '4px' }}>Common issues we fix. How does your store score?</p>
         </div>
         <div style={{ padding: '0 24px' }}>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Duplicate product URLs from multiple collections</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>Shopify creates /products/slug AND /collections/name/products/slug; both crawlable by default</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Duplicate product URLs from multiple collections</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>Shopify creates /products/slug AND /collections/name/products/slug; both crawlable by default</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Faceted navigation pages in Shopify sitemap</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>Filter pages (?filter.p.product_type=) waste crawl budget and create thin content</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Faceted navigation pages in Shopify sitemap</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>Filter pages (?filter.p.product_type=) waste crawl budget and create thin content</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Collection description hidden below product grid</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>Many Shopify themes render collection description below 300 product thumbnail images</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Collection description hidden below product grid</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>Many Shopify themes render collection description below 300 product thumbnail images</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Missing or incorrect Product schema</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>Many Shopify themes output incomplete JSON-LD, disqualifying from Google Shopping rich results</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Missing or incorrect Product schema</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>Many Shopify themes output incomplete JSON-LD, disqualifying from Google Shopping rich results</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Pagination not handled (page 2+ indexed)</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>Collection page 2+ URLs often indexed without canonical pointing to page 1</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Pagination not handled (page 2+ indexed)</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>Collection page 2+ URLs often indexed without canonical pointing to page 1</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon issue">✗</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>JavaScript-rendered content invisible to GoogleBot</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '2px' }}>App-injected content (review widgets, product customisers) often not crawlable</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>JavaScript-rendered content invisible to GoogleBot</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '2px' }}>App-injected content (review widgets, product customisers) often not crawlable</p>
             </div>
           </div>
           <div className="check-item">
             <div className="check-icon fixed">✓</div>
             <div>
-              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>After FactoryJet Shopify SEO audit: all of the above fixed</p>
-              <p style={{ fontSize: '12px', color: 'var(--green)', marginTop: '2px' }}>With in-house Shopify dev team handling the Liquid fixes directly</p>
+              <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>After FactoryJet Shopify SEO audit: all of the above fixed</p>
+              <p style={{ fontSize: '12px', color: 'var( - green)', marginTop: '2px' }}>With in-house Shopify dev team handling the Liquid fixes directly</p>
             </div>
           </div>
         </div>
-        <div style={{ padding: '16px 24px', background: 'var(--orange-bg)', borderTop: '1px solid var(--orange-bd)' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--orange)' }}>How many of these does your Shopify store have? We'll tell you in the free audit.</p>
+        <div style={{ padding: '16px 24px', background: 'var( - orange-bg)', borderTop: '1px solid var( - orange-bd)' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - orange)' }}>How many of these does your Shopify store have? We'll tell you in the free audit.</p>
         </div>
       </div>
     </div>
@@ -376,14 +376,14 @@ export default function ShopifySeoPage() {
         <div className="prob-cell">
           <div className="prob-label problem">PROBLEM</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Shopify's duplicate product URL structure</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>Shopify creates two crawlable URLs for every product: /products/your-product-slug and /collections/your-collection/products/your-product-slug. Unless handled correctly via canonical tags in your theme's Liquid code, both URLs are indexed. Google sees duplicate content, splits link equity between them, and ranks neither well. For stores with 500 SKUs in 20 collections, this means 10,000 duplicate pages competing against each other.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>Shopify creates two crawlable URLs for every product: /products/your-product-slug and /collections/your-collection/products/your-product-slug. Unless handled correctly via canonical tags in your theme's Liquid code, both URLs are indexed. Google sees duplicate content, splits link equity between them, and ranks neither well. For stores with 500 SKUs in 20 collections, this means 10,000 duplicate pages competing against each other.</p>
         </div>
         <div className="prob-cell fix">
           <div className="prob-label fix-label">HOW WE FIX IT</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Liquid canonical tag audit + single canonical path enforcement</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>FactoryJet audits your theme's Liquid canonical tag implementation and enforces a single canonical URL path for all products: /products/slug as the canonical, with all /collections/*/products/slug variations pointing to it. We also ensure your sitemap outputs only the canonical product URLs. This fix alone typically recovers 30–50% of wasted crawl budget on large Shopify stores and concentrates link equity on the correct URLs.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>FactoryJet audits your theme's Liquid canonical tag implementation and enforces a single canonical URL path for all products: /products/slug as the canonical, with all /collections/*/products/slug variations pointing to it. We also ensure your sitemap outputs only the canonical product URLs. This fix alone typically recovers 30–50% of wasted crawl budget on large Shopify stores and concentrates link equity on the correct URLs.</p>
           <div style={{ marginTop: '12px', padding: '10px 14px', background: 'rgba(5,150,105,.1)', borderRadius: '8px' }}>
-            <p style={{ fontSize: '12px', color: 'var(--green)', fontWeight: '600' }}>Typical outcome: crawl budget waste reduced by 60–70%.</p>
+            <p style={{ fontSize: '12px', color: 'var( - green)', fontWeight: '600' }}>Typical outcome: crawl budget waste reduced by 60–70%.</p>
           </div>
         </div>
       </div>
@@ -393,14 +393,14 @@ export default function ShopifySeoPage() {
         <div className="prob-cell">
           <div className="prob-label problem">PROBLEM</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Collection pages with no above-the-fold SEO content</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>Most Shopify themes are built to display products; not to rank for category-level search terms. The collection description field is typically rendered below all product thumbnails. On a collection with 100 products, your SEO content sits 100 product images below the fold. GoogleBot crawls a limited amount of each page. If your SEO content is that far down, it does not reliably get crawled or weighted. Your collection pages are invisible to Google for competitive UK category terms.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>Most Shopify themes are built to display products; not to rank for category-level search terms. The collection description field is typically rendered below all product thumbnails. On a collection with 100 products, your SEO content sits 100 product images below the fold. GoogleBot crawls a limited amount of each page. If your SEO content is that far down, it does not reliably get crawled or weighted. Your collection pages are invisible to Google for competitive UK category terms.</p>
         </div>
         <div className="prob-cell fix">
           <div className="prob-label fix-label">HOW WE FIX IT</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Theme restructuring + collection SEO content above the grid</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>FactoryJet edits your theme's collection Liquid template to render an above-the-fold SEO block before the product grid: H1 with the keyword, 150–200 words of collection-specific content, FAQ schema content, and a keyword-mapped internal link block. We also write or audit the collection description content itself, targeting the UK commercial search terms your competitors are ranking for on their category pages. This is where the majority of ecommerce organic revenue comes from.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>FactoryJet edits your theme's collection Liquid template to render an above-the-fold SEO block before the product grid: H1 with the keyword, 150–200 words of collection-specific content, FAQ schema content, and a keyword-mapped internal link block. We also write or audit the collection description content itself, targeting the UK commercial search terms your competitors are ranking for on their category pages. This is where the majority of ecommerce organic revenue comes from.</p>
           <div style={{ marginTop: '12px', padding: '10px 14px', background: 'rgba(5,150,105,.1)', borderRadius: '8px' }}>
-            <p style={{ fontSize: '12px', color: 'var(--green)', fontWeight: '600' }}>Typical outcome: collection page rankings improve 15–30 positions on primary commercial terms within 3 months.</p>
+            <p style={{ fontSize: '12px', color: 'var( - green)', fontWeight: '600' }}>Typical outcome: collection page rankings improve 15–30 positions on primary commercial terms within 3 months.</p>
           </div>
         </div>
       </div>
@@ -410,14 +410,14 @@ export default function ShopifySeoPage() {
         <div className="prob-cell">
           <div className="prob-label problem">PROBLEM</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Faceted navigation creating thousands of thin pages</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>Shopify's native filtering system (and most filter apps) creates separate crawlable URLs for every combination of filters: ?filter.p.product_type=trainers&filter.v.availability=true. A store with 6 filter types and multiple values per filter can generate 5,000–50,000 thin filter combination pages. Google crawls all of these instead of your actual money pages, dilutes your crawl budget, and often gives thin-content penalties that suppress your real collection pages.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>Shopify's native filtering system (and most filter apps) creates separate crawlable URLs for every combination of filters: ?filter.p.product_type=trainers&filter.v.availability=true. A store with 6 filter types and multiple values per filter can generate 5,000–50,000 thin filter combination pages. Google crawls all of these instead of your actual money pages, dilutes your crawl budget, and often gives thin-content penalties that suppress your real collection pages.</p>
         </div>
         <div className="prob-cell fix">
           <div className="prob-label fix-label">HOW WE FIX IT</div>
           <h3 style={{ fontSize: '17px', marginBottom: '10px' }}>Filter URL canonicalisation + robots meta for thin filter pages</h3>
-          <p style={{ fontSize: '14px', color: 'var(--n600)' }}>FactoryJet implements canonical tags or robots noindex meta tags for all filter-generated URLs, so Google stops crawling them and redirects its crawl budget to your collection and product pages. Where filter pages have genuine search volume (e.g., specific colour or size queries that UK shoppers actually search), we evaluate whether to make them indexable with proper content; turning a crawl budget drain into a ranking opportunity. Implementation requires direct Liquid theme editing; no app workaround.</p>
+          <p style={{ fontSize: '14px', color: 'var( - n600)' }}>FactoryJet implements canonical tags or robots noindex meta tags for all filter-generated URLs, so Google stops crawling them and redirects its crawl budget to your collection and product pages. Where filter pages have genuine search volume (e.g., specific colour or size queries that UK shoppers actually search), we evaluate whether to make them indexable with proper content; turning a crawl budget drain into a ranking opportunity. Implementation requires direct Liquid theme editing; no app workaround.</p>
           <div style={{ marginTop: '12px', padding: '10px 14px', background: 'rgba(5,150,105,.1)', borderRadius: '8px' }}>
-            <p style={{ fontSize: '12px', color: 'var(--green)', fontWeight: '600' }}>Typical outcome: crawl coverage of real pages doubles within 6 weeks of implementation.</p>
+            <p style={{ fontSize: '12px', color: 'var( - green)', fontWeight: '600' }}>Typical outcome: crawl coverage of real pages doubles within 6 weeks of implementation.</p>
           </div>
         </div>
       </div>
@@ -429,7 +429,7 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   4. IMAGE BAND; Runware image full-width
 ════════════════════════════════════════════════ */}
-<section style={{ background: 'var(--ink)', padding: '0' }}>
+<section style={{ background: 'var( - ink)', padding: '0' }}>
   <div style={{ maxWidth: '100%', position: 'relative' }}>
     <img width="1200" height="600" loading="lazy" src="https://im.runware.ai/image/os/a07dlim3/ws/3/ii/3bf8c844-931e-4ecb-809d-42f6ab6e318a.webp"
       alt="Shopify organic search performance results for FactoryJet UK client; GSC data showing ranking improvements"
@@ -438,8 +438,8 @@ export default function ShopifySeoPage() {
     <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to bottom,rgba(15,15,18,.7) 0%,rgba(15,15,18,.4) 50%,rgba(15,15,18,.85) 100%)' }}></div>
     <div style={{ position: 'absolute', inset: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ textAlign: 'center', maxWidth: '700px', padding: '0 24px' }}>
-        <p style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(1.5rem,4vw,2.5rem)', fontWeight: '700', lineHeight: '1.25', color: '#fff', letterSpacing: '-.025em' }}>"We'd had three other UK Shopify SEO agencies. FactoryJet was the first one that could actually edit our theme."</p>
-        <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '16px' }}>UK Shopify store founder; Home Décor Category</p>
+        <p style={{ fontFamily: 'var( - fd)', fontSize: 'clamp(1.5rem,4vw,2.5rem)', fontWeight: '700', lineHeight: '1.25', color: '#fff', letterSpacing: '-.025em' }}>"We'd had three other UK Shopify SEO agencies. FactoryJet was the first one that could actually edit our theme."</p>
+        <p style={{ fontFamily: 'var( - fm)', fontSize: '11px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.5)', marginTop: '16px' }}>UK Shopify store founder; Home Décor Category</p>
       </div>
     </div>
   </div>
@@ -458,40 +458,40 @@ export default function ShopifySeoPage() {
     </div>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '20px' }}>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 01</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 01</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Technical SEO Audit</h3>
         <p style={{ fontSize: '14px' }}>Complete crawl of your Shopify store: duplicate URLs, canonical tag implementation, sitemap quality, Core Web Vitals, schema markup, faceted navigation handling, pagination, and JavaScript rendering analysis. Delivered as a prioritised Liquid fix list; not a generic SEO report.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>Shopify-specific. Not generic. Delivered in week 1.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>Shopify-specific. Not generic. Delivered in week 1.</p>
       </div>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 02</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 02</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Collection Page SEO</h3>
         <p style={{ fontSize: '14px' }}>H1 strategy, above-the-fold content blocks in Liquid, keyword-mapped collection descriptions, FAQ schema, internal linking, and pagination handling for every collection page that targets commercial UK search terms. This is where Shopify organic revenue is won.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>Most UK Shopify stores have no above-the-fold collection SEO content.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>Most UK Shopify stores have no above-the-fold collection SEO content.</p>
       </div>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 03</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 03</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Product Page SEO</h3>
         <p style={{ fontSize: '14px' }}>Long-tail product keyword mapping, Product schema with correct price, availability, and review aggregation, FAQ content below product descriptions targeting "is this worth buying" queries, and structured review data for Google Shopping eligibility.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>Product pages with complete Product schema earn rich results in UK search.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>Product pages with complete Product schema earn rich results in UK search.</p>
       </div>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 04</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 04</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Core Web Vitals</h3>
         <p style={{ fontSize: '14px' }}>LCP, CLS, and INP optimisation for Shopify; Largest Contentful Paint (typically your hero image or product grid), Cumulative Layout Shift from lazy-loaded apps, and Interaction to Next Paint from theme JavaScript. Delivered by developers, not a generic Google tool recommendation list.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>UK Shopify stores that pass Core Web Vitals get a documented ranking signal advantage.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>UK Shopify stores that pass Core Web Vitals get a documented ranking signal advantage.</p>
       </div>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 05</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 05</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Link Building UK</h3>
         <p style={{ fontSize: '14px' }}>Editorial links from UK ecommerce, fashion, home, and specialist category publications. Supplier and manufacturer links. Digital PR angles built around UK Shopify store data and category expertise. Targets the domain authority improvements that multiply your on-page Shopify SEO work.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>Domain authority is the lever that makes all on-page Shopify SEO compound.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>Domain authority is the lever that makes all on-page Shopify SEO compound.</p>
       </div>
       <div className="card">
-        <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '12px' }}>SHOPIFY SEO 06</div>
+        <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: 'var( - orange)', marginBottom: '12px' }}>SHOPIFY SEO 06</div>
         <h3 style={{ fontSize: '16px', marginBottom: '10px' }}>Shopify Migrations; SEO-Safe</h3>
         <p style={{ fontSize: '14px' }}>Migrating to Shopify from WooCommerce, Magento, or another platform without losing your organic search rankings requires careful URL mapping, canonical handling, 301 redirect chains, and GSC monitoring post-launch. FactoryJet does Shopify migrations with SEO continuity as a first-class requirement.</p>
-        <p style={{ fontSize: '13px', color: 'var(--orange)', marginTop: '12px', fontWeight: '600' }}>Most Shopify migrations lose 30–60% of organic traffic. Ours don't.</p>
+        <p style={{ fontSize: '13px', color: 'var( - orange)', marginTop: '12px', fontWeight: '600' }}>Most Shopify migrations lose 30–60% of organic traffic. Ours don't.</p>
       </div>
     </div>
   </div>
@@ -506,26 +506,26 @@ export default function ShopifySeoPage() {
       <div style={{ textAlign: 'center', padding: '16px' }}>
         <div className="chip" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-orange"></span>Crawl Recovery</div>
         <div className="stat-num">74%</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>crawl budget recovered after deduplication</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>average across UK Shopify store audits</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>crawl budget recovered after deduplication</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>average across UK Shopify store audits</p>
       </div>
-      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var(--orange-bd)' }}>
+      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var( - orange-bd)' }}>
         <div className="chip" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-orange"></span>Ranking Lift</div>
         <div className="stat-num">+22 pos</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>avg. category page position gain</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>on target commercial UK Shopify terms</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>avg. category page position gain</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>on target commercial UK Shopify terms</p>
       </div>
-      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var(--orange-bd)' }}>
+      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var( - orange-bd)' }}>
         <div className="chip" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-orange"></span>Shopify Specialists</div>
         <div className="stat-num">10+ yrs</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>dedicated Shopify SEO, 500+ stores built</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>OS 2.0, Hydrogen, Headless: we know every platform change</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>dedicated Shopify SEO, 500+ stores built</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>OS 2.0, Hydrogen, Headless: we know every platform change</p>
       </div>
-      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var(--orange-bd)' }}>
+      <div style={{ textAlign: 'center', padding: '16px', borderLeft: '1px solid var( - orange-bd)' }}>
         <div className="chip" style={{ marginBottom: '12px', justifyContent: 'center' }}><span className="dot dot-orange"></span>Revenue Growth</div>
         <div className="stat-num">+38%</div>
-        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>avg. organic revenue month 3 vs month 1</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '4px' }}>across active Shopify SEO engagements</p>
+        <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var( - ink)' }}>avg. organic revenue month 3 vs month 1</p>
+        <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '4px' }}>across active Shopify SEO engagements</p>
       </div>
     </div>
   </div>
@@ -534,7 +534,7 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   7. SHOPIFY SEO vs GENERIC ECOMMERCE SEO; 4060 layout
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div className="col-4060">
       {/* Comparison table left */}
@@ -570,32 +570,32 @@ export default function ShopifySeoPage() {
         <div className="card" style={{ marginBottom: '20px' }}>
           <span className="eyebrow">SHOPIFY PLANS SUPPORTED</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '4px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var(--n100)' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--green)', flexShrink: '0' }}></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var( - n100)' }}>
+              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var( - green)', flexShrink: '0' }}></div>
               <div>
-                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Shopify Basic / Shopify</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Standard technical SEO and collection optimisation</p>
+                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Shopify Basic / Shopify</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Standard technical SEO and collection optimisation</p>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var(--n100)' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--green)', flexShrink: '0' }}></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var( - n100)' }}>
+              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var( - green)', flexShrink: '0' }}></div>
               <div>
-                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Shopify Advanced</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Advanced theme customisation, expanded schema coverage</p>
+                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Shopify Advanced</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Advanced theme customisation, expanded schema coverage</p>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var(--n100)' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--green)', flexShrink: '0' }}></div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0', borderBottom: '1px solid var( - n100)' }}>
+              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var( - green)', flexShrink: '0' }}></div>
               <div>
-                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Shopify Plus</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Enterprise-scale crawl management, B2B SEO, internationalisation</p>
+                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Shopify Plus</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Enterprise-scale crawl management, B2B SEO, internationalisation</p>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 0' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--orange)', flexShrink: '0' }}></div>
+              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var( - orange)', flexShrink: '0' }}></div>
               <div>
-                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)' }}>Shopify Hydrogen / Headless</p>
-                <p style={{ fontSize: '12px', color: 'var(--n400)' }}>React + Liquid hybrid SEO, SSR rendering validation</p>
+                <p style={{ fontSize: '14px', fontWeight: '600', color: 'var( - ink)' }}>Shopify Hydrogen / Headless</p>
+                <p style={{ fontSize: '12px', color: 'var( - n400)' }}>React + Liquid hybrid SEO, SSR rendering validation</p>
               </div>
             </div>
           </div>
@@ -603,11 +603,11 @@ export default function ShopifySeoPage() {
         <div className="card">
           <span className="eyebrow">WHO HIRES US FOR SHOPIFY SEO</span>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '8px' }}>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>→ UK Shopify stores spending on paid ads and nothing on organic</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>→ Brands that had Shopify SEO from an agency with no Shopify dev team</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>→ Stores migrating from WooCommerce / Magento to Shopify</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>→ Shopify merchants with duplicate URL issues Google told them about in GSC</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>→ Shopify Plus brands needing enterprise crawl budget management</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>→ UK Shopify stores spending on paid ads and nothing on organic</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>→ Brands that had Shopify SEO from an agency with no Shopify dev team</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>→ Stores migrating from WooCommerce / Magento to Shopify</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>→ Shopify merchants with duplicate URL issues Google told them about in GSC</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>→ Shopify Plus brands needing enterprise crawl budget management</li>
           </ul>
         </div>
       </div>
@@ -627,39 +627,39 @@ export default function ShopifySeoPage() {
     </div>
     <ul className="col-3">
       <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>+57 positions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>"artificial plants UK"; 6 months</div>
+        <div style={{ background: 'var( - orange-bg)', border: '1px solid var( - orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - orange)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - orange)', letterSpacing: '-.03em' }}>+57 positions</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>"artificial plants UK"; 6 months</div>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"FactoryJet found that Shopify had indexed 400 filter combination pages on our store; pages for every combination of colour, size, and availability filter. Google was spending its crawl budget on these instead of our actual collection pages. Fixing the canonicalisation and removing the filter pages from the sitemap was the turning point."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, UK; Shopify Plus</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>3.2× organic sessions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>8 months after engagement started</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every UK SEO agency we'd spoken to said they could 'do Shopify SEO' but when they described their process it was always the same: write some blog posts, build some links, update meta descriptions. FactoryJet's first call was about canonicalisation and Liquid rendering. That was the first time I felt like someone actually understood our Shopify store."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK; Shopify Advanced</p>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"FactoryJet found that Shopify had indexed 400 filter combination pages on our store; pages for every combination of colour, size, and availability filter. Google was spending its crawl budget on these instead of our actual collection pages. Fixing the canonicalisation and removing the filter pages from the sitemap was the turning point."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Vishal; Director, Bombay Petals</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>B2B artificial plants, UK; Shopify Plus</p>
         </div>
       </li>
       <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>Page 1 in 5 months</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>from position 40+ on core commercial terms</div>
+        <div style={{ background: 'var( - orange-bg)', border: '1px solid var( - orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - orange)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - orange)', letterSpacing: '-.03em' }}>3.2× organic sessions</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>8 months after engagement started</div>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"After a Shopify migration from WooCommerce that another agency handled, our organic traffic dropped 60%. FactoryJet identified that 200 of our product URLs had changed and the redirects were set up incorrectly; the link equity wasn't being passed through. They fixed the redirect chain and rebuilt our collection page content. We recovered all the traffic in 5 months."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK; Shopify</p>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every UK SEO agency we'd spoken to said they could 'do Shopify SEO' but when they described their process it was always the same: write some blog posts, build some links, update meta descriptions. FactoryJet's first call was about canonicalisation and Liquid rendering. That was the first time I felt like someone actually understood our Shopify store."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Ricky B; Founder, Belle Maison</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>Home décor ecommerce, UK; Shopify Advanced</p>
+        </div>
+      </li>
+      <li className="card">
+        <div style={{ background: 'var( - orange-bg)', border: '1px solid var( - orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
+          <div style={{ fontFamily: 'var( - fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var( - orange)' }}>RESULT</div>
+          <div style={{ fontFamily: 'var( - fd)', fontSize: '20px', fontWeight: '700', color: 'var( - orange)', letterSpacing: '-.03em' }}>Page 1 in 5 months</div>
+          <div style={{ fontSize: '12px', color: 'var( - n600)', marginTop: '2px' }}>from position 40+ on core commercial terms</div>
+        </div>
+        <p style={{ fontSize: '15px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"After a Shopify migration from WooCommerce that another agency handled, our organic traffic dropped 60%. FactoryJet identified that 200 of our product URLs had changed and the redirects were set up incorrectly; the link equity wasn't being passed through. They fixed the redirect chain and rebuilt our collection page content. We recovered all the traffic in 5 months."</p>
+        <div style={{ borderTop: '1px solid var( - n200)', paddingTop: '16px' }}>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var( - ink)' }}>Kiran M; Founder, Impulse Branding</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)' }}>Promotional products, UK; Shopify</p>
         </div>
       </li>
     </ul>
@@ -669,59 +669,59 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   9. FOUNDER + HIRE
 ════════════════════════════════════════════════ */}
-<section className="sec-lg" style={{ background: 'var(--white)' }}>
+<section className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div className="col-6040">
       <div>
         <span className="eyebrow">SHOPIFY SEO AGENCY UK</span>
         <h2 style={{ marginBottom: '20px' }}>Hire a Shopify SEO agency with an actual Shopify development team</h2>
         <div className="stack">
-          <p className="lead">When you hire a <strong style={{ color: 'var(--ink)' }}>Shopify SEO agency in the UK</strong>, you need to ask one question that most UK brands forget to ask: "Who fixes the Liquid code when your audit finds a Shopify-specific technical problem?" Most UK Shopify SEO agencies cannot fix Liquid. FactoryJet built 500+ Shopify stores. We can.</p>
+          <p className="lead">When you hire a <strong style={{ color: 'var( - ink)' }}>Shopify SEO agency in the UK</strong>, you need to ask one question that most UK brands forget to ask: "Who fixes the Liquid code when your audit finds a Shopify-specific technical problem?" Most UK Shopify SEO agencies cannot fix Liquid. FactoryJet built 500+ Shopify stores. We can.</p>
           {/* Visual: How integration works + contract model */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '4px' }}>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '18px', marginBottom: '8px' }}>⚙️</div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '4px' }}>SEO + Dev in one team</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Same audit doc, same Shopify theme. Liquid fixes; canonical tags, collection templates, faceted nav; happen in the same week as the recommendation.</p>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '4px' }}>SEO + Dev in one team</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Same audit doc, same Shopify theme. Liquid fixes; canonical tags, collection templates, faceted nav; happen in the same week as the recommendation.</p>
             </div>
-            <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '12px', padding: '16px' }}>
+            <div style={{ background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '12px', padding: '16px' }}>
               <div style={{ fontSize: '18px', marginBottom: '8px' }}>📅</div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--ink)', marginBottom: '4px' }}>Earn every month</p>
-              <p style={{ fontSize: '12px', color: 'var(--n400)' }}>Month-to-month contracts only. We work on what moves organic revenue; not what fills a retainer hours budget.</p>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: 'var( - ink)', marginBottom: '4px' }}>Earn every month</p>
+              <p style={{ fontSize: '12px', color: 'var( - n400)' }}>Month-to-month contracts only. We work on what moves organic revenue; not what fills a retainer hours budget.</p>
             </div>
           </div>
           <div className="pull-quote">A Shopify SEO audit without a Shopify developer is a list of problems you can't fix.</div>
         </div>
-        <div style={{ marginTop: '28px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '24px' }}>
+        <div style={{ marginTop: '28px', background: 'var( - cream)', border: '1px solid var( - n200)', borderRadius: '16px', padding: '24px' }}>
           <h3 style={{ fontSize: '15px', marginBottom: '12px' }}>Before hiring any Shopify SEO agency UK; ask these three questions</h3>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>1. "Can you edit our Shopify Liquid theme directly, or would fixes go to a separate developer?"</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>2. "Will your monthly reports come from Google Search Console, or a third-party rank tracker?"</li>
-            <li style={{ fontSize: '14px', color: 'var(--n600)' }}>3. "What happens in month one before any ranking improvement?"</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>1. "Can you edit our Shopify Liquid theme directly, or would fixes go to a separate developer?"</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>2. "Will your monthly reports come from Google Search Console, or a third-party rank tracker?"</li>
+            <li style={{ fontSize: '14px', color: 'var( - n600)' }}>3. "What happens in month one before any ranking improvement?"</li>
           </ul>
-          <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '12px' }}>FactoryJet answers: (1) we edit Liquid ourselves; (2) GSC, always; (3) full technical audit + quick wins.</p>
+          <p style={{ fontSize: '13px', color: 'var( - n400)', marginTop: '12px' }}>FactoryJet answers: (1) we edit Liquid ourselves; (2) GSC, always; (3) full technical audit + quick wins.</p>
         </div>
       </div>
 
       <div className="card" style={{ textAlign: 'center' }}>
         <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', border: '3px solid rgba(255,92,0,.2)', flexShrink: '0' }}>
-          <span style={{ fontFamily: 'var(--fd)', fontSize: '26px', fontWeight: '800', color: '#fff', lineHeight: '1' }}>B</span>
+          <span style={{ fontFamily: 'var( - fd)', fontSize: '26px', fontWeight: '800', color: '#fff', lineHeight: '1' }}>B</span>
         </div>
         <h3 style={{ fontSize: '18px', marginBottom: '4px' }}>Bhavesh</h3>
-        <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', color: 'var(--n400)', letterSpacing: '.10em', textTransform: 'uppercase', marginBottom: '16px' }}>Founder · FactoryJet</p>
-        <div style={{ background: 'var(--cream)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
-          <p style={{ fontSize: '14px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6' }}>"Returns on your time; that's what I hold every Shopify SEO engagement to. If the audit doesn't find real technical problems we can fix in week one, we'll tell you that on the discovery call."</p>
+        <p style={{ fontFamily: 'var( - fm)', fontSize: '11px', color: 'var( - n400)', letterSpacing: '.10em', textTransform: 'uppercase', marginBottom: '16px' }}>Founder · FactoryJet</p>
+        <div style={{ background: 'var( - cream)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
+          <p style={{ fontSize: '14px', color: 'var( - ink)', fontWeight: '500', lineHeight: '1.6' }}>"Returns on your time; that's what I hold every Shopify SEO engagement to. If the audit doesn't find real technical problems we can fix in week one, we'll tell you that on the discovery call."</p>
         </div>
-        <div style={{ background: 'var(--n100)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
-          <p style={{ fontFamily: 'var(--fm)', fontSize: '11px', color: 'var(--n400)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '8px' }}>Before the call, we'll check</p>
+        <div style={{ background: 'var( - n100)', borderRadius: '12px', padding: '16px', marginBottom: '20px', textAlign: 'left' }}>
+          <p style={{ fontFamily: 'var( - fm)', fontSize: '11px', color: 'var( - n400)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '8px' }}>Before the call, we'll check</p>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <li style={{ fontSize: '13px', color: 'var(--n600)' }}>✓ Your Google Search Console coverage report</li>
-            <li style={{ fontSize: '13px', color: 'var(--n600)' }}>✓ Your Shopify sitemap.xml for duplicate issues</li>
-            <li style={{ fontSize: '13px', color: 'var(--n600)' }}>✓ Core Web Vitals for your homepage and top collection page</li>
+            <li style={{ fontSize: '13px', color: 'var( - n600)' }}>✓ Your Google Search Console coverage report</li>
+            <li style={{ fontSize: '13px', color: 'var( - n600)' }}>✓ Your Shopify sitemap.xml for duplicate issues</li>
+            <li style={{ fontSize: '13px', color: 'var( - n600)' }}>✓ Core Web Vitals for your homepage and top collection page</li>
           </ul>
         </div>
         <ModalCTAButton label="Book Free Shopify SEO Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
-        <p style={{ fontSize: '12px', color: 'var(--n400)', marginTop: '12px' }}>30 minutes. We come prepared. No sales pitch.</p>
+        <p style={{ fontSize: '12px', color: 'var( - n400)', marginTop: '12px' }}>30 minutes. We come prepared. No sales pitch.</p>
       </div>
     </div>
   </div>
@@ -759,7 +759,7 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   11. FAQ
 ════════════════════════════════════════════════ */}
-<section id="faq" className="sec-lg" style={{ background: 'var(--white)' }}>
+<section id="faq" className="sec-lg" style={{ background: 'var( - white)' }}>
   <div className="wrap">
     <div style={{ maxWidth: '640px' }}>
       <p className="eyebrow">SHOPIFY SEO FAQ</p>
@@ -962,7 +962,7 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   12. UK CITIES + RELATED
 ════════════════════════════════════════════════ */}
-<section className="sec" style={{ background: 'var(--cream)' }}>
+<section className="sec" style={{ background: 'var( - cream)' }}>
   <div className="wrap">
     <span className="eyebrow">Serving the UK</span>
     <h2 style={{ fontSize: 'clamp(1.25rem,2.5vw,1.75rem)', marginTop: '8px', marginBottom: '24px' }}>Shopify SEO Services for UK Brands</h2>
@@ -996,7 +996,7 @@ export default function ShopifySeoPage() {
 {/* ════════════════════════════════════════════════
   13. FINAL CTA
 ════════════════════════════════════════════════ */}
-<section style={{ background: 'var(--dark)', padding: '80px 0' }}>
+<section style={{ background: 'var( - dark)', padding: '80px 0' }}>
   <div className="wrap" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
     <span className="eyebrow" style={{ color: 'rgba(255,92,0,.9)' }}>START WITH A FREE SHOPIFY SEO AUDIT</span>
     <h2 style={{ color: '#fff', marginTop: '12px', fontSize: 'clamp(1.75rem,4vw,2.75rem)' }}>Find out what's stopping your UK Shopify store from ranking</h2>

@@ -32,45 +32,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "FactoryJet Technologies",
-  description:
-    "AI-powered web design agency building custom websites for Sheffield SMBs in 7 days.",
-  url: "https://factoryjet.com/uk/sheffield",
-  telephone: "+919699977699",
-  email: "connect@factoryjet.com",
-  serviceArea: {
-    "@type": "AdministrativeArea",
-    name: "Sheffield, South Yorkshire, UK",
-  },
-  areaServed: ["Sheffield", "Rotherham", "Barnsley", "Doncaster"],
-  sameAs: [
-    "https://www.linkedin.com/company/factoryjet",
-    "https://www.crunchbase.com/organization/factoryjet",
-  ],
-  
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Web Design",
-  name: "Web Design Sheffield",
-  description:
-    "Custom AI-powered websites for Sheffield businesses, delivered in 7 days. Includes mobile-first design, Sheffield local SEO, SSL, analytics, and 30 days support.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "FactoryJet Technologies",
-    url: "https://factoryjet.com",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Sheffield",
-  },
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -161,14 +122,6 @@ export default function SheffieldUKLayout({
 }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

@@ -3,10 +3,15 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo';
-const UPDATED = '2026-07-25';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -105,37 +110,16 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'SEO Services UK',
-      serviceType: 'SEO, local SEO, ecommerce SEO, and AI search optimization',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      url: CANONICAL,
-      description:
-        'SEO agency in the UK. We rank businesses in Google and get them named in AI answers from ChatGPT, Gemini, Perplexity, and Google AI Overviews, with technical, local, and ecommerce SEO on every account.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'SEO', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': ['WebPage', 'Article'],
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'SEO Agency UK | Rank in Google & the AI Answers Above It | FactoryJet',
-      headline: 'SEO in the UK, Built for Google and the AI Answers Now Above It',
-      inLanguage: 'en-GB',
-      datePublished: '2026-07-25',
-      dateModified: UPDATED,
       author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -220,7 +204,7 @@ export default function SeoUKPage() {
                 <span className="eyebrow">What we optimise for</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Google organic</div><div className="scorecard-note">the ten blue links, still ranked</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>Ranked</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>Ranked</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Google AI Overviews</div><div className="scorecard-note">the summary above the links</div></div>
@@ -236,7 +220,7 @@ export default function SeoUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Technical &amp; schema</div><div className="scorecard-note">in server HTML, crawler-readable</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>100%</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>100%</div>
                 </div>
               </div>
             </div>
@@ -305,9 +289,9 @@ export default function SeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Search in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Search in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
@@ -315,12 +299,12 @@ export default function SeoUKPage() {
                     { v: '8% vs 15%', t: 'link click rate with an AI summary vs without', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                     { v: '1.8bn', t: 'UK ChatGPT visits, first 8 months of 2025', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
@@ -399,7 +383,7 @@ export default function SeoUKPage() {
                 { n: '07', t: 'Measure and compound', d: 'We track rankings, enquiries, and where you get named across engines month on month, double down on what moves, and keep the content fresh so you stay found.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -525,9 +509,9 @@ export default function SeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -538,12 +522,12 @@ export default function SeoUKPage() {
                     { kw: 'seo audit services', v: '880', w: '24%', kd: 'KD 14 · Winnable now' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -564,15 +548,15 @@ export default function SeoUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO agency terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -609,7 +593,7 @@ export default function SeoUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">How competitive your market is</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Content and authority you already have</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Local, national, or ecommerce focus</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

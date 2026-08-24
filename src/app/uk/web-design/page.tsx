@@ -4,10 +4,15 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/web-design';
-const UPDATED = '2026-07-01';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -87,6 +92,23 @@ const jsonLd = {
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
+      author: {
+        '@type': 'Person',
+        name: 'Bhavesh Barot',
+        jobTitle: 'Chief Technical Architect',
+        url: 'https://factoryjet.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+          'https://github.com/factoryjet-tech',
+        ],
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '64',
+        bestRating: '5',
+        worstRating: '1',
+      },
     },
     {
       '@type': 'BreadcrumbList',
@@ -109,8 +131,12 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
+        jobTitle: 'Chief Technical Architect',
+        url: 'https://factoryjet.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+          'https://github.com/factoryjet-tech',
+        ],
       },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
@@ -602,6 +628,20 @@ export default function WebDesignUKPage() {
           </div>
         </section>
 
+        {/* ═══ 9c. REGIONAL PERFORMANCE BENCHMARK & ARCHITECTURE BLUEPRINT ═══ */}
+        <section className="sec-lg" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="wrap">
+            <RegionalBenchmarkCard city="United Kingdom" vertical="web-design" />
+          </div>
+        </section>
+
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint />
+        </div>
+
+        {/* ═══ INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ═══ */}
+        <WebDesignValueCalculator city="UK" region="uk" />
+
         {/* ═══ 10. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
@@ -648,6 +688,16 @@ export default function WebDesignUKPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ═══ UK REGIONAL HORIZONTAL CROSS-LINKS ═══ */}
+        <CityLinksUK currentService="web-design" />
+
+        {/* ═══ VERIFIED AUTHOR ENTITY CARD ═══ */}
+        <section className="sec-lg" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="wrap">
+            <AuthorCard />
           </div>
         </section>
 

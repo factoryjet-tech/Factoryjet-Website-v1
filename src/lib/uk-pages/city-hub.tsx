@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { CityData, services } from '@/data/uk'
 import HeroInlineForm from '@/components/HeroInlineForm'
 import UkFooter from '@/app/uk/sections/Footer'
+import AuthorCard from '@/components/v2/AuthorCard'
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint'
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator'
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard'
+import CityLinksUK from '@/components/v2/CityLinksUK'
+import ModalCTAButton from '@/components/v2/ModalCTAButton'
 import { getCityDepth } from '@/data/countries/gb/cityDepth'
 import { getCityMarket, type CityMarket } from '@/data/countries/gb/cityMarket'
 
@@ -60,7 +66,9 @@ interface CityHubPageProps {
   city: CityData
 }
 
-const UPDATED = '2026-08-03'
+const UPDATED = '2026-08-24'
+
+const LCP_IMAGE = '/images/uk/hero-uk.webp';
 
 // 2026-08-03: UK doorway grid retirement.
 //
@@ -104,7 +112,7 @@ const UK_HUBS = [
 
 const fmt = (n: number) => n.toLocaleString('en-GB')
 
-/** "a, b and c" — plain English, no Oxford comma before the final "and". */
+/** "a, b and c"  -  plain English, no Oxford comma before the final "and". */
 const listSentence = (items: string[]) =>
   items.length <= 1
     ? (items[0] ?? '')
@@ -201,6 +209,7 @@ const H2 =
 const LEAD = 'mt-3 max-w-[64ch] font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600'
 
 export default function CityHubPage({ city }: CityHubPageProps) {
+  const CANONICAL = `https://factoryjet.com/uk/${city.slug}`
   const depth = getCityDepth(city.slug)
   const market = getCityMarket(city.slug)
   const faqs = buildFaqs(city, market)
@@ -223,19 +232,37 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     '@type': 'WebPage',
     '@id': `https://factoryjet.com/uk/${city.slug}#webpage`,
     url: `https://factoryjet.com/uk/${city.slug}`,
-    name: `Web Design & Digital Agency in ${city.name} | FactoryJet`,
-    dateModified: UPDATED,
+    name: `Web Design & Digital Agency ${city.name} | FactoryJet`,
+    description: `Websites, e-commerce, SEO and AI agents for ${city.name} businesses. Sub-second speed, 7-day express delivery, and 100% full IP code ownership.`,
     inLanguage: 'en-GB',
+    datePublished: '2026-08-01',
+    dateModified: UPDATED,
     author: {
       '@type': 'Person',
       name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder, FactoryJet',
+      jobTitle: 'Chief Technical Architect',
+      url: 'https://factoryjet.com/about',
+      sameAs: [
+        'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+        'https://github.com/factoryjet-tech',
+      ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '64',
+      bestRating: '5',
+      worstRating: '1',
     },
     publisher: { '@id': 'https://factoryjet.com/#organization' },
     about: {
       '@type': 'City',
       name: city.name,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: city.coordinates.lat,
+        longitude: city.coordinates.lng,
+      },
       address: { '@type': 'PostalAddress', addressRegion: city.region, addressCountry: 'GB' },
     },
   }
@@ -564,6 +591,42 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             </div>
           </section>
         )}
+
+        {/* ── 10b. COUNTER-NARRATIVE & VENDOR DUE DILIGENCE ── */}
+        <section className="border-t border-fj-neutral-200 bg-fj-cream px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-[1160px]">
+            <div className="mx-auto max-w-[860px] text-center">
+              <p className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FF5622]">
+                The Direct Comparison
+              </p>
+              <h2 className="mt-3 font-fj-display text-[1.75rem] font-semibold tracking-[-0.02em] text-fj-ink md:text-[2.25rem]">
+                The Typical UK Agency Frustration vs The FactoryJet Engineering Approach
+              </h2>
+              <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                Traditional regional digital agencies rely on slow page builders, 12-week delivery delays, and proprietary platform lock-in. FactoryJet delivers deterministic Next.js 15 apps, sub-second LCP speeds, and 100% full IP code ownership.
+              </p>
+            </div>
+
+            {/* Standard Deliverables & Protocols Checklist */}
+            <div className="mt-10 rounded-2xl border border-fj-neutral-200 bg-white p-6 md:p-8">
+              <h3 className="font-fj-display text-[1.125rem] font-semibold text-fj-ink">
+                Standard Engineering Deliverables for {city.name} Builds:
+              </h3>
+              <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  'Server-side rendered Next.js 15 App Router',
+                  'LocalBusiness Schema.org JSON-LD graph',
+                  '95+ Core Web Vitals speed target (< 1.2s LCP)',
+                  '100% complete GitHub code ownership transfer',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-[13.5px] font-medium text-fj-neutral-700">
+                    <span className="text-[#10B981] font-bold">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
 
         {/* 11. FAQ, 22 questions, marked up as a list for extraction */}
         <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">

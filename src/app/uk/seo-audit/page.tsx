@@ -3,10 +3,15 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './seo-audit.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo-audit';
-const UPDATED = '2026-07-25';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -111,37 +116,16 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'SEO Audit Services UK',
-      serviceType: 'SEO audit, technical SEO audit, content audit, backlink audit, and AI-visibility check',
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-      areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      url: CANONICAL,
-      description:
-        'Human-reviewed SEO audit services for UK businesses. We check technical health, on-page content, and backlink authority, and now AI visibility across ChatGPT, Gemini, Perplexity, and Google AI Overviews.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'SEO Audit', item: CANONICAL },
-      ],
-    },
-    {
-      '@type': ['WebPage', 'Article'],
-      '@id': CANONICAL,
-      url: CANONICAL,
-      name: 'SEO Audit Services UK | Free & Human-Reviewed | FactoryJet',
-      headline: 'An SEO Audit for UK Businesses That Actually Tells You What to Fix First',
-      inLanguage: 'en-GB',
-      datePublished: '2026-07-25',
-      dateModified: UPDATED,
       author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-        jobTitle: 'Founder, FactoryJet',
-      },
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -243,9 +227,22 @@ export default function SeoAuditUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Prioritised action list</div><div className="scorecard-note">ranked by likely impact</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>Delivered</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>Delivered</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 1b. COUNTER-NARRATIVE & TECHNICAL NUANCE ═══ */}
+        <section className="sec" style={{ backgroundColor: '#F9F9FC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="wrap">
+            <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
+              <span className="chip" style={{ marginBottom: 12 }}>The Direct Comparison</span>
+              <h2>The Typical UK Agency Frustration vs The FactoryJet Engineering Approach</h2>
+              <p className="lead mt-4">
+                Automated PDF audit reports from traditional agencies generate hundreds of pages of noise without actionable solutions. FactoryJet delivers senior engineer audits with code-level fixes, schema graphs, and verified Core Web Vitals remediation.
+              </p>
             </div>
           </div>
         </section>
@@ -314,9 +311,9 @@ export default function SeoAuditUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · AI search in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · AI search in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
@@ -324,12 +321,12 @@ export default function SeoAuditUKPage() {
                     { v: '8% vs 15%', t: 'link click rate with an AI summary vs without', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                     { v: '1%', t: 'of clicks land on a source link inside the AI summary itself', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
@@ -445,7 +442,7 @@ export default function SeoAuditUKPage() {
                 { n: '07', t: 'A prioritised 90-day action list', d: <>Everything above gets ranked by what will move the needle first, so the audit ends in a plan, not just a diagnosis.</> },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -565,9 +562,9 @@ export default function SeoAuditUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -578,12 +575,12 @@ export default function SeoAuditUKPage() {
                     { kw: 'shopify seo agency', v: '720', w: '82%', kd: 'KD 0 · Adjacent quick win' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -604,15 +601,15 @@ export default function SeoAuditUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AUDIT_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO audit terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -649,7 +646,7 @@ export default function SeoAuditUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">How competitive your market is</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Content and authority you already have</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Whether AI visibility needs work too</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free audit before you commit to anything</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free audit before you commit to anything</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

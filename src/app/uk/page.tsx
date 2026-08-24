@@ -9,13 +9,18 @@ import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
 import FinalCTA from "./sections/FinalCTA";
 import Footer from "./sections/Footer";
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 
 import { ukMetadata } from "./metadata";
 import { ukSchemas } from "./schema";
 
 // Last date the content of /uk actually changed. Matches the `UPDATED` const
 // convention used by the UK hub pages (see src/app/uk/ai-agents/page.tsx).
-const UPDATED = "2026-08-03";
+const UPDATED = "2026-08-24";
 
 export function generateMetadata(): Metadata {
   return ukMetadata;
@@ -76,7 +81,27 @@ export default function UKPage() {
         <Cities />
         <TechStack />
         <Pricing />
+        <section className="sec-lg" style={{ backgroundColor: "#FFFFFF", padding: "48px 0 16px" }}>
+          <div className="wrap" style={{ maxWidth: 1120, margin: "0 auto", padding: "0 16px" }}>
+            <RegionalBenchmarkCard city="United Kingdom" vertical="web-design" />
+          </div>
+        </section>
+
+        <div id="uk-architecture-blueprint">
+          <WebDesignArchitectureBlueprint />
+        </div>
+
+        <WebDesignValueCalculator city="UK" region="uk" />
+
         <FAQ />
+
+        <CityLinksUK />
+
+        <section className="sec-lg" style={{ backgroundColor: "#F6F6F9", padding: "48px 0", borderTop: "1px solid #E6E6EC" }}>
+          <div className="wrap" style={{ maxWidth: 1120, margin: "0 auto", padding: "0 16px" }}>
+            <AuthorCard />
+          </div>
+        </section>
         <FinalCTA />
         <Footer />
       </main>

@@ -15,10 +15,13 @@ export default function WebDesignValueCalculator({
   region = 'us',
   className = '',
 }: WebDesignValueCalculatorProps) {
+  const isUK = region === 'uk';
+  const sym = isUK ? '£' : '$';
+
   // Inputs
   const [monthlyTraffic, setMonthlyTraffic] = useState<number>(6500);
   const [bounceRate, setBounceRate] = useState<number>(64); // %
-  const [dealValue, setDealValue] = useState<number>(3500); // $
+  const [dealValue, setDealValue] = useState<number>(isUK ? 3000 : 3500); // Currency value
   const [conversionRate, setConversionRate] = useState<number>(1.4); // %
 
   // Calculations
@@ -133,7 +136,7 @@ export default function WebDesignValueCalculator({
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
                   <span>30% (Optimized)</span>
-                  <span>64% (Average WP Site)</span>
+                  <span>64% (Average Site)</span>
                   <span>85% (Severe Bounce)</span>
                 </div>
               </div>
@@ -145,7 +148,7 @@ export default function WebDesignValueCalculator({
                     Average Client / Project Deal Value
                   </label>
                   <span style={{ fontSize: '15px', fontWeight: 800, color: '#FF5622', fontFamily: 'var(--pp-mono, monospace)' }}>
-                    ${dealValue.toLocaleString()}
+                    {sym}{dealValue.toLocaleString()}
                   </span>
                 </div>
                 <input
@@ -159,9 +162,9 @@ export default function WebDesignValueCalculator({
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
-                  <span>$500</span>
-                  <span>$10,000</span>
-                  <span>$25,000+</span>
+                  <span>{sym}500</span>
+                  <span>{sym}10,000</span>
+                  <span>{sym}25,000+</span>
                 </div>
               </div>
             </div>
@@ -183,7 +186,7 @@ export default function WebDesignValueCalculator({
                   Projected Annual Pipeline Gain
                 </span>
                 <div style={{ fontSize: 'clamp(28px, 3.5vw, 38px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.02em', marginTop: '4px', lineHeight: 1.1 }}>
-                  +${Math.round(results.additionalAnnualPipeline).toLocaleString()}
+                  +{sym}{Math.round(results.additionalAnnualPipeline).toLocaleString()}
                   <span style={{ fontSize: '14px', fontWeight: 600, color: '#A0A0B0', marginLeft: '6px' }}>/ year</span>
                 </div>
                 <p style={{ fontSize: '12px', color: '#8E8E9F', margin: '4px 0 0' }}>
@@ -209,7 +212,7 @@ export default function WebDesignValueCalculator({
               <div style={{ borderTop: '1px solid #2E2E33', paddingTop: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12.5px', marginBottom: '6px' }}>
                   <span style={{ color: '#A0A0B0' }}>Monthly Value Creation:</span>
-                  <span style={{ fontWeight: 700, color: '#FFFFFF' }}>+${Math.round(results.additionalMonthlyPipeline).toLocaleString()}/mo</span>
+                  <span style={{ fontWeight: 700, color: '#FFFFFF' }}>+{sym}{Math.round(results.additionalMonthlyPipeline).toLocaleString()}/mo</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12.5px' }}>
                   <span style={{ color: '#A0A0B0' }}>Target Mobile Bounce Rate:</span>

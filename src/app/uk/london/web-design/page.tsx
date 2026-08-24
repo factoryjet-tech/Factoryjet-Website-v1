@@ -2,10 +2,15 @@ import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london/web-design';
-const UPDATED = '2026-07-01';
+const UPDATED = '2026-08-24';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -81,6 +86,23 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Web Design London',
+      author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+      aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
       serviceType: 'Web design',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'London' },
@@ -165,7 +187,7 @@ export default function LondonWebDesignPage() {
           <div className="wrap">
             <div className="col-6040">
               <div>
-                <p className="bc" style={{ fontFamily: 'var(--fm)', fontSize: 11, letterSpacing: '.04em', color: 'var(--n400)', marginBottom: 14 }}>Home &rsaquo; UK &rsaquo; London &rsaquo; Web Design</p>
+                <p className="bc" style={{ fontFamily: 'var( - fm)', fontSize: 11, letterSpacing: '.04em', color: 'var( - n400)', marginBottom: 14 }}>Home &rsaquo; UK &rsaquo; London &rsaquo; Web Design</p>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />London Web Design Agency</span>
                   <span className="chip">Next.js &middot; Webflow &middot; Shopify</span>
@@ -198,7 +220,7 @@ export default function LondonWebDesignPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Core Web Vitals</div><div className="scorecard-note">LCP, CLS, INP on delivery</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>Green</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>Green</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Delivery</div><div className="scorecard-note">standard build, express available</div></div>
@@ -210,7 +232,7 @@ export default function LondonWebDesignPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Code Ownership</div><div className="scorecard-note">pushed to your GitHub at launch</div></div>
-                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>100%</div>
+                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>100%</div>
                 </div>
               </div>
             </div>
@@ -419,19 +441,19 @@ export default function LondonWebDesignPage() {
                 <div className="col-2 mt-8">
                   <div className="card">
                     <div className="stat-num">2.3&times;</div>
-                    <p className="mb-2" style={{ color: 'var(--ink)', fontWeight: 600, marginTop: 8 }}>Mobile add-to-cart lift</p>
+                    <p className="mb-2" style={{ color: 'var( - ink)', fontWeight: 600, marginTop: 8 }}>Mobile add-to-cart lift</p>
                     <p style={{ fontSize: 13 }}>vs. a generic theme, averaged across our ecommerce builds.</p>
                   </div>
                   <div className="card">
                     <div className="stat-num">&lt;1.5s</div>
-                    <p className="mb-2" style={{ color: 'var(--ink)', fontWeight: 600, marginTop: 8 }}>Typical mobile load</p>
+                    <p className="mb-2" style={{ color: 'var( - ink)', fontWeight: 600, marginTop: 8 }}>Typical mobile load</p>
                     <p style={{ fontSize: 13 }}>on delivery, measured in Lighthouse before handover.</p>
                   </div>
                 </div>
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <div style={{ background: 'var(--dark)', color: '#fff', borderRadius: 12, padding: '16px 18px', fontFamily: 'var(--fd)', fontWeight: 700 }}>
+                <div style={{ background: 'var( - dark)', color: '#fff', borderRadius: 12, padding: '16px 18px', fontFamily: 'var( - fd)', fontWeight: 700 }}>
                   Every build includes
                 </div>
                 {[
@@ -442,8 +464,8 @@ export default function LondonWebDesignPage() {
                   'Full code ownership on your GitHub',
                 ].map((item) => (
                   <div key={item} className="scorecard-row" style={{ padding: '13px 12px' }}>
-                    <span style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 14, color: 'var(--ink)' }}>
-                      <span style={{ color: 'var(--orange)', fontWeight: 700 }}>&#10003;</span>{item}
+                    <span style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 14, color: 'var( - ink)' }}>
+                      <span style={{ color: 'var( - orange)', fontWeight: 700 }}>&#10003;</span>{item}
                     </span>
                   </div>
                 ))}
@@ -586,9 +608,9 @@ export default function LondonWebDesignPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>London &middot; Monthly Search Demand</span>
-                  <span style={{ background: 'var(--orange)', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>London &middot; Monthly Search Demand</span>
+                  <span style={{ background: 'var( - orange)', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -599,12 +621,12 @@ export default function LondonWebDesignPage() {
                     { kw: 'london web designer', v: '880', w: '20%', kd: 'KD 48 · Freelance-intent' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, London / United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, London / United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -649,8 +671,8 @@ export default function LondonWebDesignPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Marketing site vs. ecommerce</div><div className="scorecard-val" style={{ fontSize: 14 }}>Type</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Integrations (CRM, payments, stock)</div><div className="scorecard-val" style={{ fontSize: 14 }}>Systems</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Custom design and copywriting</div><div className="scorecard-val" style={{ fontSize: 14 }}>Craft</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">No central London day rates</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Fixed</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Fixed quote before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">No central London day rates</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Fixed</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Fixed quote before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

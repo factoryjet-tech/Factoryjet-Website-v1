@@ -3,51 +3,6 @@ import { ALL_FAQS } from "./sections/FAQ";
 
 export const metadata = manchesterMetadata;
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "FactoryJet Technologies",
-  description:
-    "AI-native web design agency building custom websites for Manchester businesses. Next.js 15, GSAP, Tailwind CSS 4. Pricing is fixed and published upfront.",
-  url: "https://factoryjet.com/manchester",
-  email: "connect@factoryjet.com",
-  areaServed: {
-    "@type": "City",
-    name: "Manchester",
-    containedInPlace: {
-      "@type": "AdministrativeArea",
-      name: "Greater Manchester",
-    },
-  },
-  serviceArea: {
-    "@type": "AdministrativeArea",
-    name: "Greater Manchester, UK",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/factoryjet",
-    "https://www.crunchbase.com/organization/factoryjet",
-  ],
-  
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Web Design",
-  name: "Web Design Manchester",
-  description:
-    "AI-native web design agency serving Manchester businesses. Custom websites built with Next.js 15, GSAP animations, and Tailwind CSS 4. Pricing is fixed and published upfront. Lighthouse 90+ guaranteed.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "FactoryJet Technologies",
-    url: "https://factoryjet.com",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Manchester",
-  },
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -144,16 +99,6 @@ export default function ManchesterLayout({
 }) {
   return (
     <>
-      <script
-        id="manchester-local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        id="manchester-service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <script
         id="manchester-breadcrumb-schema"
         type="application/ld+json"

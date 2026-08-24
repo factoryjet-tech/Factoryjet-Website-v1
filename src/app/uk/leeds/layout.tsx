@@ -3,51 +3,6 @@ import { ALL_FAQS } from "./sections/FAQ";
 
 export const metadata = leedsMetadata;
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "FactoryJet Technologies",
-  description:
-    "AI-native web design agency building custom websites for Leeds businesses. Next.js 15, GSAP, Tailwind CSS 4. Pricing is fixed and published upfront.",
-  url: "https://factoryjet.com/leeds",
-  email: "connect@factoryjet.com",
-  areaServed: {
-    "@type": "City",
-    name: "Leeds",
-    containedInPlace: {
-      "@type": "AdministrativeArea",
-      name: "Greater Leeds",
-    },
-  },
-  serviceArea: {
-    "@type": "AdministrativeArea",
-    name: "Greater Leeds, UK",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/factoryjet",
-    "https://www.crunchbase.com/organization/factoryjet",
-  ],
-  
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Web Design",
-  name: "Web Design Leeds",
-  description:
-    "AI-native web design agency serving Leeds businesses. Custom websites built with Next.js 15, GSAP animations, and Tailwind CSS 4. Pricing is fixed and published upfront. Lighthouse 90+ guaranteed.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: "FactoryJet Technologies",
-    url: "https://factoryjet.com",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Leeds",
-  },
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -144,16 +99,6 @@ export default function LeedsLayout({
 }) {
   return (
     <>
-      <script
-        id="leeds-local-business-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        id="leeds-service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <script
         id="leeds-breadcrumb-schema"
         type="application/ld+json"

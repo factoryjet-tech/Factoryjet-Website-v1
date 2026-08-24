@@ -15,10 +15,13 @@ export default function LocalSeoOpportunityEstimator({
   region = 'us',
   className = '',
 }: LocalSeoOpportunityEstimatorProps) {
+  const isUK = region === 'uk';
+  const sym = isUK ? '£' : '$';
+
   // Inputs
   const [searchVolume, setSearchVolume] = useState<number>(3800);
   const [currentRankTier, setCurrentRankTier] = useState<number>(2); // 0 = Top 3 (44%), 1 = Rank 4-7 (14%), 2 = Rank 8-20 (4%), 3 = Unranked (0.5%)
-  const [customerLtv, setCustomerLtv] = useState<number>(1500); // $
+  const [customerLtv, setCustomerLtv] = useState<number>(isUK ? 1200 : 1500); // Currency value
   const [closeRate, setCloseRate] = useState<number>(25); // %
 
   const rankTierLabels = [
@@ -152,7 +155,7 @@ export default function LocalSeoOpportunityEstimator({
                     Average Client / Deal Value (LTV)
                   </label>
                   <span style={{ fontSize: '15px', fontWeight: 800, color: '#FF5622', fontFamily: 'var(--pp-mono, monospace)' }}>
-                    ${customerLtv.toLocaleString()}
+                    {sym}{customerLtv.toLocaleString()}
                   </span>
                 </div>
                 <input
@@ -166,9 +169,9 @@ export default function LocalSeoOpportunityEstimator({
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
-                  <span>$200</span>
-                  <span>$5,000</span>
-                  <span>$10,000+</span>
+                  <span>{sym}200</span>
+                  <span>{sym}5,000</span>
+                  <span>{sym}10,000+</span>
                 </div>
               </div>
             </div>
@@ -190,7 +193,7 @@ export default function LocalSeoOpportunityEstimator({
                   Estimated Annual Pipeline Opportunity
                 </span>
                 <div style={{ fontSize: 'clamp(28px, 3.5vw, 38px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.02em', marginTop: '4px', lineHeight: 1.1 }}>
-                  +${Math.round(results.additionalAnnualPipeline).toLocaleString()}
+                  +{sym}{Math.round(results.additionalAnnualPipeline).toLocaleString()}
                   <span style={{ fontSize: '14px', fontWeight: 600, color: '#A0A0B0', marginLeft: '6px' }}>/ year</span>
                 </div>
                 <p style={{ fontSize: '12px', color: '#8E8E9F', margin: '4px 0 0' }}>
@@ -216,7 +219,7 @@ export default function LocalSeoOpportunityEstimator({
               <div style={{ borderTop: '1px solid #2E2E33', paddingTop: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12.5px', marginBottom: '6px' }}>
                   <span style={{ color: '#A0A0B0' }}>Monthly Pipeline Gain:</span>
-                  <span style={{ fontWeight: 700, color: '#FFFFFF' }}>+${Math.round(results.additionalMonthlyPipeline).toLocaleString()}/mo</span>
+                  <span style={{ fontWeight: 700, color: '#FFFFFF' }}>+{sym}{Math.round(results.additionalMonthlyPipeline).toLocaleString()}/mo</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12.5px' }}>
                   <span style={{ color: '#A0A0B0' }}>Target Map Pack Share:</span>

@@ -8,10 +8,15 @@ import DemandBars from '@/components/v2/motion/DemandBars';
 import TiltCard from '@/components/v2/motion/TiltCard';
 import AICitationDemo from '@/components/v2/AICitationDemo';
 import AreaExplorer from '@/components/v2/AreaExplorer';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london/seo';
-const UPDATED = '2026-07-01';
+const UPDATED = '2026-08-24';
 
 /* ─── London areas (drives the interactive explorer) ────────────────── */
 const AREAS = [
@@ -148,6 +153,23 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'SEO Agency London',
+      author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+      aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
       serviceType: 'Search engine optimisation',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'London' },
@@ -474,6 +496,25 @@ export default function LondonSeoPage() {
                 <div className="step card"><span className="k">03</span><h3>Fix and build</h3><p>Technical fixes, new content, and credible links, plus GEO and AEO so AI answers quote you.</p></div>
                 <div className="step card"><span className="k">04</span><h3>Earn authority</h3><p>Links and content compound while we track rankings and AI visibility together each month.</p></div>
                 <div className="step card"><span className="k">05</span><h3>Report and refine</h3><p>A one-page report you can read in five minutes, then we double down on what is working.</p></div>
+              </div>
+
+              {/* Deliverables Checklist & List Density */}
+              <div style={{ backgroundColor: '#F9F9FC', border: '1px solid #E6E6EC', borderRadius: 12, padding: 24, marginTop: 32 }}>
+                <h3 style={{ fontSize: 16, fontWeight: 700, margin: '0 0 12px' }}>Standard Monthly SEO Deliverables &amp; Engineering Protocols:</h3>
+                <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 10, margin: 0, padding: 0, listStyle: 'none' }}>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> Google Search Console &amp; crawl budget audit
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> LocalBusiness JSON-LD entity graph updates
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> AI answer citation &amp; brand visibility monitoring
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> Core Web Vitals speed verification
+                  </li>
+                </ul>
               </div>
             </MotionFadeUp>
           </div>

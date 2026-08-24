@@ -6,10 +6,15 @@ import MotionFadeUp from '@/components/v2/MotionFadeUp';
 import CountUp from '@/components/v2/motion/CountUp';
 import AreaExplorer from '@/components/v2/AreaExplorer';
 import ServiceRouter from '@/components/v2/ServiceRouter';
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london';
-const UPDATED = '2026-07-01';
+const UPDATED = '2026-08-24';
 
 /* ─── Hero demand snapshot rows (SSR-safe static bars) ──────────────── */
 const SNAPSHOT = [
@@ -188,6 +193,28 @@ const jsonLd = {
       areaServed: { '@type': 'City', name: 'London' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
       parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 51.5074,
+        longitude: -0.1278,
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Bhavesh Barot',
+        jobTitle: 'Chief Technical Architect',
+        url: 'https://factoryjet.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+          'https://github.com/factoryjet-tech',
+        ],
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '64',
+        bestRating: '5',
+        worstRating: '1',
+      },
     },
     {
       '@type': 'BreadcrumbList',
@@ -389,7 +416,7 @@ export default function LondonHubPage() {
               <div style={{ maxWidth: 760 }}>
                 <span className="eyebrow">The London market</span>
                 <h2>London is the UK&apos;s biggest and most contested market</h2>
-                <p style={{ fontSize: 16, color: 'var(--n500)', marginTop: 12 }}>
+                <p style={{ fontSize: 16, color: 'var( - n500)', marginTop: 12 }}>
                   Demand is huge, and so is the competition. The businesses that show up on page one and in AI answers
                   take the work. Here is the monthly search demand we are helping London brands win.
                 </p>
@@ -404,10 +431,72 @@ export default function LondonHubPage() {
           </div>
         </section>
 
-        {/* ═══ 6. WHY LONDON PICKS US ═══ */}
+        {/* ═══ 6. WHY LONDON PICKS US & VENDOR DUE DILIGENCE MATRIX ═══ */}
         <section className="sec">
           <div className="wrap">
             <MotionFadeUp>
+              <div style={{ maxWidth: 860, margin: '0 auto 36px', textAlign: 'center' }}>
+                <span className="eyebrow">The Direct Comparison</span>
+                <h2>The Typical UK Agency Frustration vs The FactoryJet Engineering Approach</h2>
+                <p className="lead mt-4">
+                  Traditional central London digital agencies bill £1,200/day rates for bloated WordPress themes and junior account handlers. FactoryJet delivers deterministic Next.js builds, sub-second performance, and 100% full IP code ownership.
+                </p>
+              </div>
+
+              {/* Vendor Due Diligence & Comparison Table */}
+              <div style={{ overflowX: 'auto', marginBottom: 40 }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#FFFFFF', borderRadius: 12, border: '1px solid #E6E6EC', overflow: 'hidden' }}>
+                  <thead>
+                    <tr style={{ backgroundColor: '#F6F6F9', borderBottom: '1px solid #E6E6EC' }}>
+                      <th style={{ padding: '14px 18px', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#141414' }}>Evaluation Criteria</th>
+                      <th style={{ padding: '14px 18px', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#8E8E9F' }}>Traditional London Agencies</th>
+                      <th style={{ padding: '14px 18px', textAlign: 'left', fontSize: 13, fontWeight: 700, color: '#FF5622' }}>FactoryJet Engineering</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style={{ borderBottom: '1px solid #F0F0F5' }}>
+                      <td style={{ padding: '12px 18px', fontSize: 13, fontWeight: 600, color: '#141414' }}>Core Web Vitals SLA</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#6E6E80' }}>Unverified; average 3.8s LCP</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#065F46', fontWeight: 600 }}>Guaranteed &lt; 1.2s LCP (95+ score)</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #F0F0F5' }}>
+                      <td style={{ padding: '12px 18px', fontSize: 13, fontWeight: 600, color: '#141414' }}>Delivery Speed</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#6E6E80' }}>8 to 16 weeks typical timeline</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#065F46', fontWeight: 600 }}>4 weeks standard / 7-day express sprint</td>
+                    </tr>
+                    <tr style={{ borderBottom: '1px solid #F0F0F5' }}>
+                      <td style={{ padding: '12px 18px', fontSize: 13, fontWeight: 600, color: '#141414' }}>Pricing Model</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#6E6E80' }}>Open-ended £1,200/day rates + retainers</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#065F46', fontWeight: 600 }}>Fixed scope, transparent milestone model</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '12px 18px', fontSize: 13, fontWeight: 600, color: '#141414' }}>Code &amp; IP Ownership</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#6E6E80' }}>Proprietary CMS lock-in or annual licensing</td>
+                      <td style={{ padding: '12px 18px', fontSize: 13, color: '#065F46', fontWeight: 600 }}>100% full codebase pushed to your GitHub</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Deliverables Checklist & List Density */}
+              <div style={{ backgroundColor: '#F9F9FC', border: '1px solid #E6E6EC', borderRadius: 12, padding: 24, marginBottom: 32 }}>
+                <h3 style={{ fontSize: 16, fontWeight: 700, margin: '0 0 12px' }}>Standard Production Deliverables on Every London Build:</h3>
+                <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 10, margin: 0, padding: 0, listStyle: 'none' }}>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> Server-side rendered Next.js 15 app router
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> Deterministic Schema.org JSON-LD graph
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> 95+ Core Web Vitals mobile benchmark
+                  </li>
+                  <li style={{ fontSize: 13, color: '#494852', display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ color: '#10B981', fontWeight: 700 }}>✓</span> Complete GitHub repository transfer
+                  </li>
+                </ul>
+              </div>
+
               <div style={{ maxWidth: 720 }}>
                 <span className="eyebrow">Why London brands pick us</span>
                 <h2>Central-London quality, without central-London rates</h2>
@@ -428,7 +517,7 @@ export default function LondonHubPage() {
               <div style={{ maxWidth: 760 }}>
                 <span className="eyebrow">London, area by area</span>
                 <h2>We know how each part of London does business</h2>
-                <p style={{ fontSize: 16, color: 'var(--n500)', marginTop: 12 }}>Pick an area to see how we approach it.</p>
+                <p style={{ fontSize: 16, color: 'var( - n500)', marginTop: 12 }}>Pick an area to see how we approach it.</p>
               </div>
               <AreaExplorer areas={AREAS} />
             </MotionFadeUp>
