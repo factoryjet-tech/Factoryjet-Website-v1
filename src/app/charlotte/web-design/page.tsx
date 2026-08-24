@@ -1,366 +1,909 @@
 import type { Metadata } from 'next';
-import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
-import Hero from '@/components/v2/Hero';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import ExitIntentLeadForm from '@/components/ExitIntentLeadForm'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
-import Image from 'next/image'
-import Link from 'next/link'
+import '@/components/v2/PlatformPage.css';
 
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/charlotte/web-design';
 
 export const metadata: Metadata = {
-  title: 'Web Design Charlotte NC | 7-Day Delivery | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses in 7 days: Next.js, SEO, and GA4 included, with a codebase you own.',
-  alternates: {
-    canonical: 'https://factoryjet.com/charlotte/web-design',
-    languages: webDesignPriorityCityAlternatesUS.charlotte,
-  },
+  title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Charlotte web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for North Carolina businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Charlotte NC | 7-Day Delivery | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses in 7 days: Next.js, SEO, and GA4 included, with a codebase you own.',
-    url: 'https://factoryjet.com/charlotte/web-design/',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet Web Design: Charlotte, NC',
-      },
-    ],
+    title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Charlotte web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for North Carolina businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Charlotte Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Charlotte NC | 7-Day Delivery | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses in 7 days: Next.js, SEO, and GA4 included, with a codebase you own.',
+    title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Charlotte NC. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-
-const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Scope & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
 ];
 
-const CHARLOTTE_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Charlotte?","answer":"Website cost depends on scope: the number of pages, whether you need a blog CMS or lead-capture flows, e-commerce, or custom AI features. We work to a fixed, agreed scope with no hidden discovery fees, and most projects ship in 7 days. The fastest way to get an exact figure for your project is a quick call with the founder.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' typically take three to six months for a new domain. The work that compresses this timeline, schema markup, internal linking, content depth, technical performance, is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?","answer":"Yes. Charlotte's financial services ecosystem is one of our most common client profiles. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call.","category":"local"},{"question":"Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?","answer":"Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO, important for vendors competing for procurement attention at Atrium (70,000+ employees) and Novant Health.","category":"local"},{"question":"We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?","answer":"Yes. Charlotte's manufacturing sector: Husqvarna, Daimler Trucks, and their supply chains, relies on supplier websites to pre-qualify vendors before RFQs are issued. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens.","category":"platform"},{"question":"How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?","answer":"Idea Kraft and Bowen are established Charlotte agencies. Neither publishes delivery timelines. FactoryJet is upfront about scope and timeline, delivers in 7 days, and builds in Next.js rather than WordPress, which means faster load times and no ongoing plugin maintenance for your team. We deliver at a fixed, agreed scope for equivalent work.","category":"local"},{"question":"Do you handle ongoing website maintenance after launch?","answer":"Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. A lot of Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow.","category":"support"},{"question":"Who owns the code and design files after the project is done?","answer":"You do, 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off.","category":"support"},{"question":"My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?","answer":"Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for the logistics, freight, and distribution clients who operate in that corridor.","category":"platform"},{"question":"We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?","answer":"For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality food and interior photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline.","category":"local"},{"question":"Can you add AI features like a chatbot or smart search to our Charlotte business website?","answer":"Yes. Our Custom builds include AI integrations, trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone.","category":"technical"},{"question":"How do you handle analytics and conversion tracking?","answer":"GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic.","category":"technical"},{"question":"Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.","answer":"Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals, we aim for sub-1.5-second load times on a 4G connection as a baseline.","category":"technical"},{"question":"We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?","answer":"Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches: SouthPark, Ballantyne, Steele Creek, not just city-wide.","category":"technical"},{"question":"Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?","answer":"Yes. Charlotte's motorsports ecosystem, anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville, creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements.","category":"technical"},{"question":"We're based in Concord, Huntersville, or Lake Norman, not technically Charlotte. Can you still help?","answer":"Absolutely. We work with businesses across the entire Charlotte metro: Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide.","category":"local"},{"question":"How does the design revision process work?","answer":"Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session, we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline.","category":"support"},{"question":"Where is the site hosted and how does that affect performance for Charlotte visitors?","answer":"We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes, useful for Charlotte businesses running event promotions or seasonal campaigns, without requiring you to manage server infrastructure.","category":"technical"},{"question":"Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?","answer":"Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously.","category":"local"},{"question":"What's the ROI on a professionally built website for a Charlotte business?","answer":"A professionally built FactoryJet site typically pays for itself with two to three additional qualified leads converted per month, often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings. It's prospects who bounced to a competitor before they ever called you.","category":"local"}];
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across Charlotte.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across banking, energy, healthcare, and logistics.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Uptown Charlotte Financial Center',
+    query: 'banking technology web design charlotte',
+    focus: 'Banking, Capital Markets & Commercial Real Estate',
+    desc: 'The nation’s second-largest banking center. Institutional financial firms demand executive polish, secure investor hubs, and sub-second page performance.',
+  },
+  {
+    corridor: 'South End & LoSo Innovation District',
+    query: 'fintech website design south end charlotte',
+    focus: 'Fintech, Digital Innovation & Creative Studios',
+    desc: 'Rapidly growing tech and creative district. Tech companies require interactive component libraries, clear documentation portals, and high-converting product demo funnels.',
+  },
+  {
+    corridor: 'Ballantyne & South Charlotte',
+    query: 'corporate headquarters web design ballantyne',
+    focus: 'Corporate Regional HQs, Insurance & Wealth Advisory',
+    desc: 'Premier master-planned corporate park. Demands enterprise-grade accessibility, partner credential directories, and sub-second edge hosting.',
+  },
+  {
+    corridor: 'University City & Innovation Corridor',
+    query: 'energy engineering web design charlotte',
+    focus: 'Energy Engineering, Research Labs & Clean Tech',
+    desc: 'Major energy and technical research hub. High-speed spec sheet downloads, equipment capability matrices, and rapid RFQ calculators capture enterprise contracts.',
+  },
+  {
+    corridor: 'Lake Norman & North Mecklenburg',
+    query: 'motorsports engineering web design lake norman',
+    focus: 'Motorsports Engineering, Luxury Marine & Specialty Retail',
+    desc: 'High-performance engineering corridor. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects luxury standards.',
+  },
+  {
+    corridor: 'Charlotte Douglas Airport & Logistics Hub',
+    query: 'freight logistics web design charlotte',
+    focus: 'Heavy Freight, Supply Chain Platforms & Industrial Services',
+    desc: 'Critical Southeast logistics nexus. High-speed quote calculators, fleet capability matrices, and rapid RFQ workflows capture commercial freight supply contracts.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Banking Technology, Fintech & Capital Markets',
+    headline: 'Engineering High-Conversion Digital Flagships for Charlotte Financial Leaders',
+    description:
+      'Uptown and South End financial firms demand websites that speak to enterprise CFOs, institutional partners, and compliance officers. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Charlotte banking technology and fintech web design engineering',
+    points: [
+      'Interactive product feature tours and downloadable technical whitepaper funnels',
+      'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Healthcare Systems, Medical Specialists & Aesthetics',
+    headline: 'High-Trust Patient & Provider Digital Experiences Across the Carolinas',
+    description:
+      'From private practices in Ballantyne to surgical clinics in South Park, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Charlotte healthcare medical practice and surgical clinic website design',
+    points: [
+      'Searchable provider directories with specialty credentials and hospital affiliations',
+      'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
+      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+    ],
+  },
+  {
+    sector: 'Corporate Law, Private Equity & Commercial Real Estate',
+    headline: 'Projecting Institutional Stature for Uptown Charlotte Practices',
+    description:
+      'High-stakes corporate litigation and commercial real estate firms in Charlotte cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Charlotte corporate law firm litigation and commercial real estate web design',
+    points: [
+      'Deep practice area knowledge graphs and structured legal case victory portfolios',
+      'Attorney profile schema with state bar admissions and published industry insights',
+      'Secure lead capture workflows routing confidential inquiries to specific partners',
+    ],
+  },
+  {
+    sector: 'Energy Engineering, Clean Tech & Heavy Logistics',
+    headline: 'Engineering Industrial Authority for Carolinas Supply Chain Leaders',
+    description:
+      'Charlotte is a recognized energy engineering and logistics powerhouse. Technical websites built on slow legacy WordPress themes fail to convince procurement committees. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Charlotte energy engineering and logistics web design engineering',
+    points: [
+      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
+      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
+    problem: 'Traditional Charlotte agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
+    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+  },
+  {
+    num: '02',
+    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
+    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
+    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
+    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
+    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+  },
+  {
+    num: '04',
+    title: 'Building Built-In Search & AI Citation Architecture from Day One',
+    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
+    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Architectural Scope & Figma Prototyping',
+    desc: 'We analyze your Charlotte competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
+    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js 15 & React Engineering',
+    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
+    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Edge Deployment & Local SEO Integration',
+    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
+    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals QA, Handoff & Launch',
+    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Source Code Ownership',
+    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
+    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
+    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+  },
+  {
+    label: 'Sprint Timeline',
+    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
+    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+  },
+  {
+    label: 'Structured Data & AI Readiness',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
+    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+  },
+];
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'timeline', label: 'Timeline & Sprint' },
+  { key: 'technical', label: 'Tech Stack & Performance' },
+  { key: 'local', label: 'Charlotte Market Focus' },
+  { key: 'ownership', label: 'Ownership & Support' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does a custom Charlotte web design project cost?',
+    answer:
+      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
+    answer:
+      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
+  },
+  {
+    category: 'pricing',
+    question: 'How does your fixed-price quote protect our business from budget overruns?',
+    answer:
+      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
+  },
+  {
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
+    answer:
+      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
+  },
+  {
+    category: 'timeline',
+    question: 'What do you need from our team before starting the 7-day sprint?',
+    answer:
+      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the sprint?',
+    answer:
+      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
+  },
+  {
+    category: 'technical',
+    question: 'Why choose Next.js over traditional WordPress for a Charlotte business?',
+    answer:
+      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Charlotte search queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    answer:
+      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+  },
+  {
+    category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
+    answer:
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
+    answer:
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
+  },
+  {
+    category: 'local',
+    question: 'Do you build B2B websites for South End fintech and digital firms?',
+    answer:
+      'Yes. We build high-conversion B2B websites tailored for South End and Uptown financial technology firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you design websites for Charlotte healthcare and dental practices?',
+    answer:
+      'Yes. We build modern, HIPAA-aware websites for healthcare clinics, dental groups, and surgical centers across Greater Charlotte and Ballantyne, featuring doctor bio directories, insurance plan listings, and frictionless appointment booking integrations.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our North Carolina business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
+  },
+  {
+    category: 'local',
+    question: 'How does your web design optimize for local Charlotte search rankings?',
+    answer:
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Charlotte, Concord, Huntersville, Matthews, and Fort Mill.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
+    answer:
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+  },
+  {
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
+    answer:
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
+    answer:
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
+    answer:
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Charlotte Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Charlotte',
+    addressRegion: 'NC',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 35.2271,
+    longitude: -80.8431,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Charlotte' },
+    { '@type': 'City', name: 'Concord' },
+    { '@type': 'City', name: 'Huntersville' },
+    { '@type': 'City', name: 'Matthews' },
+    { '@type': 'City', name: 'Fort Mill' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Charlotte Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Charlotte businesses.',
+  areaServed: { '@type': 'State', name: 'North Carolina' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Charlotte NC businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Charlotte', item: CANONICAL },
+  ],
+};
 
 export default function CharlotteWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-    <main className="bg-fj-cream">
-      <Hero
-        eyebrow={"WEB DESIGN · CHARLOTTE"}
-        headline={"Web Design in Charlotte That Converts Visitors Into Clients"}
-        lead={"Charlotte is the second-largest banking center in the US, home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days."}
-        formSlot={<HeroInlineForm source="charlotte_web_design_hero" />}
-        trustItems={["500+ businesses served", "7-day delivery", "AI SEO-ready websites"]}
-        rightSlot={
-          <div className="relative select-none py-6 pr-6">
-            <div className="overflow-hidden rounded-2xl border border-black/[0.07] bg-white shadow-[0_24px_64px_-12px_rgba(15,15,18,0.22)]">
-              <div className="flex items-center gap-3 border-b border-black/[0.07] bg-[#ECECED] px-4 py-3">
-                <div className="flex shrink-0 gap-1.5">
-                  <span className="block h-3 w-3 rounded-full bg-[#FF5F57]" />
-                  <span className="block h-3 w-3 rounded-full bg-[#FEBC2E]" />
-                  <span className="block h-3 w-3 rounded-full bg-[#28C840]" />
+      <script id="clt-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="clt-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="clt-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="clt-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="clt-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Charlotte Web Design &amp; Frontend Engineering</span>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <div className="truncate rounded-md bg-white px-3 py-1.5 font-mono text-[11px] leading-none text-[#6B7280]">yourbusiness.com</div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Charlotte Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#clt-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Charlotte Corridors</span>
+                  </a>
                 </div>
               </div>
-              <Image
-                src="/images/us/charlotte/charlotte-site-mockup.webp"
-                alt="Example of a modern, conversion-focused website FactoryJet builds for Charlotte businesses"
-                width={1600}
-                height={1000}
-                className="h-auto w-full"
-                priority
-              />
-            </div>
-            <div className="absolute -top-3 right-3 rounded-full bg-[#B23E13] px-3 py-1.5 text-[11.5px] font-bold text-white shadow-[0_6px_18px_rgba(240,90,40,0.4)]">
-              Live in 7 days · Charlotte, NC
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/charlotte/hero-charlotte.webp"
+                  alt="Charlotte North Carolina modern web design engineering and custom Next.js website mockup"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
             </div>
           </div>
-        }
-      />
-      <LogoBar
-        tagline="Trusted by 500+ businesses across the US, UK, and UAE"
-      />
-      <BigThreeTrustBlock
-        eyebrow="BY THE NUMBERS"
-        headline={"Results that Charlotte businesses trust."}
-      />
-      <CityContextSection
-        eyebrow={"CHARLOTTE MARKET"}
-        headline={"Why Your Charlotte Web Presence Can't Be an Afterthought"}
-        leadParagraphs={[
-          "Charlotte's city population hit roughly 900,000 in 2024, anchored inside a Charlotte-Concord-Gastonia MSA that generates over $220 billion in GDP. This is the second-largest banking center in the United States by assets: Bank of America's global headquarters, Truist Financial's HQ, and Wells Fargo's East Coast hub are all here. Duke Energy and NASCAR also call Charlotte home, and a fast-growing tech sector led by Red Ventures and LendingTree has added tens of thousands of high-income professionals to the metro over the past decade. The manufacturing corridor: Husqvarna, Daimler Trucks North America, adds a dense B2B supply chain, while Atrium Health (70,000+ employees) and Novant Health anchor one of the largest healthcare systems in the Southeast.",
-          "Charlotte has been one of the fastest-growing metros in the Southeast for a decade straight. Professional buyers here are sophisticated, shaped by decades of banking culture, and they compare every vendor they consider against best-in-class financial brands. A slow, poorly structured website doesn't just lose rankings; it signals that your business isn't at the same level as the firms they trust. Your website is the first compliance review every prospect runs on you."
-        ]}
-        stats={[
-          {"value":"900,000","label":"Charlotte City Population (2024)","sourceUrl":"https://www.census.gov/quickfacts/fact/table/charlottecitynorthcarolina/PST045224"},
-          {"value":"$220B+","label":"Charlotte-Concord-Gastonia MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP16740"},
-          {"value":"#2","label":"Largest US Banking Center by Assets","sourceUrl":"https://www.charlotteregion.com/key-industries/financial-services"}
-        ]}
-      />
-      <ServiceExplanation
-        eyebrow={"WEB DESIGN · Charlotte"}
-        headline={"What 'Web Design' Actually Means for a Charlotte Business"}
-        lead={"Charlotte's buyer base, shaped by decades of banking culture, has a higher bar for professionalism, clarity, and trust than most US cities. Your website is your first compliance review. It needs to signal credibility, clarity of service, and operational quality before anyone picks up the phone."}
-        body={
-          <>
-            <p>For FinTech, financial services, and professional services firms, vendors and suppliers to Bank of America, Truist, and Wells Fargo's East Coast hub; law firms; accounting firms; insurance; and wealth management: your site needs clear service architecture, case studies, professional photography, and compliance-aware form design. Buyers at this level have seen thousands of vendor websites. A site that looks generic or loads slowly doesn't just underperform; it disqualifies you before the conversation starts.</p>
-            <p>For healthcare and enterprise suppliers: Atrium Health and Novant Health vendors, Duke Energy supply chain partners, and Charlotte's manufacturing corridor, websites need robust capability documentation, certification display, and RFQ workflows that speak directly to procurement teams. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to convert the buyers your business actually needs.</p>
-          </>
-        }
-        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
-      />
-      <StrategicDarkSection
-        eyebrow="WHY FACTORYJET"
-        headline={"Why Charlotte Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Charlotte has credible local agencies. Idea Kraft builds WordPress-based web design projects for Charlotte brands. Bowen offers full-service marketing plus web. Forge3 covers digital marketing and web. None of them publish delivery timelines.\n\nFactoryJet delivers the same scope, blog CMS, lead capture, GA4, Next.js, on a fixed, agreed scope, with a 7-day delivery guarantee and a codebase you own outright. No plugin maintenance. No retainer required. No surprise invoices after launch.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
-        pillars={[
-          { title: 'AI-native',    body: 'Every site is built with an AI-assisted workflow | compressing build time without compressing quality. We have run 500+ projects through this system.' },
-          { title: 'Transparent',  body: 'Clear scope on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed scope, agreed up front.' },
-          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
-        ]}
-      />
-      <ServiceJourneyRow
-        eyebrow={"OUR PROCESS"}
-        headline={"How We Build Your Charlotte Website"}
-        stages={[
-          {"number":"01","title":"Discovery & Strategy","description":"We map your ideal customer profile, audit your top three Charlotte competitors, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we'll measure it.: Days 1–2"},
-          {"number":"02","title":"Design & Prototyping","description":"Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.: Days 3–4"},
-          {"number":"03","title":"Development","description":"We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.: Days 5–6"},
-          {"number":"04","title":"Content & SEO","description":"Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).: Day 6–7"},
-          {"number":"05","title":"Launch & Handover","description":"We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions., Day 7+"}
-        ]}
-      />
-      <PortfolioShowcase
-        eyebrow="RECENT WORK"
-        headline={"What Charlotte businesses look like after FactoryJet."}
-        cards={[
-          {
-            "industry":"FinTech & Financial Services",
-            "title":"Charlotte FinTech & Financial Services Client",
-            "description":"Charlotte is the second-largest US banking center, home to Bank of America, Truist, and Wells Fargo's East Coast HQ. Vendors and suppliers to this ecosystem need sites that project professional credibility instantly. We build fast, schema-rich sites with clear service architecture and compliance-aware form design that earn trust before any conversation starts.",
-            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-1.webp",
-            "stat1":"+40% conversions",
-            "stat2":"< 1.5s load time"
-          },
-          {
-            "industry":"Healthcare & Life Sciences",
-            "title":"Charlotte Healthcare & Life Sciences Client",
-            "description":"Atrium Health (70,000+ employees) and Novant Health anchor one of the Southeast's largest healthcare systems. Vendors, private practices, and life sciences firms serving this ecosystem need sites that build patient and partner trust fast, with HIPAA-aware form design, clear service navigation, and local SEO.",
-            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-2.webp",
-            "stat1":"+40% conversions",
-            "stat2":"< 1.5s load time"
-          },
-          {
-            "industry":"Manufacturing & Industrial",
-            "title":"Charlotte Manufacturing & Industrial Client",
-            "description":"Charlotte's manufacturing corridor: Husqvarna, Daimler Trucks North America, creates a deep B2B supply chain. Suppliers need capability pages, certification display, and RFQ workflows that speak directly to procurement teams. We build B2B sites designed to win shortlists, not just look good.",
-            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-3.webp",
-            "stat1":"+40% conversions",
-            "stat2":"< 1.5s load time"
-          }
-        ]}
-        ctaHref="/portfolio"
-        ctaLabel="View full portfolio"
-      />
-      <ComparisonTable
-        eyebrow={"WHY FACTORYJET"}
-        headline={"FactoryJet vs. Charlotte Web Agencies"}
-        lead={"Charlotte agencies like Idea Kraft and Bowen do credible work, but neither publishes delivery timelines, and most build on WordPress. FactoryJet delivers in 7 days, builds in Next.js, and hands you a codebase you own. Here's how we compare."}
-        columns={[{"label":"Typical Charlotte agency"},{"label":"FactoryJet","isFactoryJet":true},{"label":"What it means for you"}]}
-        rows={[
-          {"feature":"Delivery timeline","values":["Not published; multi-week WordPress builds","7-day delivery guarantee","You launch in a week, not a quarter."]},
-          {"feature":"Tech stack & ownership","values":["WordPress; ongoing plugin upkeep","Next.js; codebase you own outright","Faster load times and no monthly plugin overhead."]},
-          {"feature":"Process","values":["Discovery fees; open-ended timelines","Fixed, agreed scope up front","No surprise invoices after launch."]}
-        ]}
-      />
-      <IndustriesGrid
-        eyebrow={"CHARLOTTE × WEB DESIGN"}
-        headline={"Web Design for Charlotte's Key Industries"}
-        lead={"From Bank of America's global headquarters to NASCAR's racing corridor to Atrium Health's hospital network, Charlotte's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
-        sectors={[
-          {
-            "name":"FinTech & Financial Services",
-            "description":"Charlotte is the second-largest US banking center. Vendors and suppliers to Bank of America, Truist, Wells Fargo's East Coast hub, and the broader financial ecosystem need sites that project instant credibility, clear service architecture, compliance-aware form design, and the kind of visual professionalism that earns a shortlist spot.",
-            "example":"Suppliers, consultants, and fintech firms serving Bank of America, Truist, or Wells Fargo in the Charlotte metro."
-          },
-          {
-            "name":"Healthcare & Life Sciences",
-            "description":"Atrium Health (70,000+ employees) and Novant Health anchor one of the Southeast's largest healthcare networks. Vendors, private practices, and life sciences companies serving this ecosystem need sites that build patient and partner trust: HIPAA-aware form design, clear service navigation, and local SEO for clinic and practice visibility.",
-            "example":"Private practices, healthcare vendors, and life sciences firms in the Charlotte and surrounding piedmont market."
-          },
-          {
-            "name":"Manufacturing & Industrial",
-            "description":"Charlotte's manufacturing corridor, anchored by Husqvarna and Daimler Trucks North America, creates a dense B2B supply chain. Suppliers need capability pages, certification display, and RFQ workflows that speak directly to procurement teams and win shortlists before a sales call happens.",
-            "example":"Component suppliers and industrial service firms serving Charlotte's manufacturing corridor."
-          },
-          {
-            "name":"Professional & Business Services",
-            "description":"Law firms, accounting firms, insurance brokers, wealth managers, and consulting practices make up a substantial share of Charlotte's professional workforce. For these businesses, the website is the pitch deck, it either earns a meeting or loses one. We build lead-capture flows and authority-building content structures designed for B2B buyer cycles.",
-            "example":"Legal, accounting, insurance, and consulting firms serving Charlotte's corporate and mid-market base."
-          },
-          {
-            "name":"Technology & Innovation",
-            "description":"Charlotte's growing tech sector, anchored by Red Ventures and LendingTree, supported by a wave of corporate relocations, is creating new demand for B2B SaaS and professional tech services sites. These buyers research deeply before engaging. We build fast, schema-rich sites that communicate technical credibility and rank for the specific queries your buyers use.",
-            "example":"SaaS companies, digital agencies, and tech-enabled services firms operating in the Charlotte metro."
-          }
-        ]}
-      />
-      {/* Pricing tiers section removed 2026-06-22, no pricing on service pages. */}
-      <TestimonialsSection
-        region="us"
-        eyebrow="WHAT CLIENTS SAY"
-        headline={"Rated 4.9/5 on Google across 500+ projects."}
-      />
-      <FAQ
-        eyebrow="COMMON QUESTIONS"
-        headline={"Common Questions from Charlotte Businesses"}
-        categories={FAQ_CATEGORIES}
-        items={CHARLOTTE_FAQ_ITEMS}
-      />
-      {/* Cross-link: Related Services in Charlotte */}
-      <section className="py-10 bg-[#FAFAF7]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-            Also in Charlotte
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/charlotte/ecommerce-development/"
-              className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-            >
-              Ecommerce Development →
-            </Link>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Charlotte"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for Charlotte&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Uptown banking institutions to South End fintech leaders and Lake Norman engineering studios, Charlotte businesses need sites that project authority and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. CHARLOTTE DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="clt-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Carolinas Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Charlotte&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Uptown financial firms to South End tech startups and Lake Norman engineering studios:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Charlotte Businesses
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in the Carolinas demands tailored user experiences, technical credibility, and conversion paths:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Charlotte Companies Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// CHARLOTTE MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            city="Charlotte"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
         </div>
-      </section>
-      <WebDesignCityLinksUS currentCity="charlotte" />
-      <FinalCTA
-        variant="dark"
-        eyebrow={"READY TO START"}
-        headline={"Ready to Build Your Charlotte Website?"}
-        sub={"Charlotte's $220B+ economy is built on trust, and your website is the first trust signal every prospect sees. In a city where buyers compare you against firms that bank with Bank of America, a slow or amateur-looking site doesn't just underperform. It disqualifies you. Start today."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
-      />
-      <SchemaScript />
-    </main>
-      <ExitIntentLeadForm
-        region="us"
-        source="exit_intent_charlotte_web_design"
-        heading="Claim your free website audit"
-        subheading="Expert analysis of your SEO, speed and UX. Just your name and email."
-        promo="Free website audit, no cost, no obligation"
-      />
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://factoryjet.com/charlotte/web-design#business",
-        "name": "FactoryJet Technologies",
-        "url": "https://factoryjet.com",
-        "telephone": "+919699977699",
-        "areaServed": "Charlotte"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://factoryjet.com/charlotte/web-design#service",
-        "name": "Web Design Charlotte",
-        "provider": {
-          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-          "name": "FactoryJet Technologies"
-        },
-        "areaServed": "Charlotte",
-        "description": "FactoryJet builds fast, conversion-focused websites for Charlotte businesses in 7 days. Next.js, SEO, and GA4 included."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://factoryjet.com/charlotte/web-design#faq",
-        "mainEntity": CHARLOTTE_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://factoryjet.com/charlotte/web-design#breadcrumbs",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://factoryjet.com"},
-          {"@type": "ListItem", "position": 2, "name": "United States", "item": "https://factoryjet.com"},
-          {"@type": "ListItem", "position": 3, "name": "Charlotte", "item": "https://factoryjet.com/charlotte"},
-          {"@type": "ListItem", "position": 4, "name": "Web Design", "item": "https://factoryjet.com/charlotte/web-design"}
-        ]
-      }
-    ]
-  };
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How FactoryJet builds your Charlotte website in 7 days",
-    "description": "Our proven 7-day process for delivering a professional, SEO-optimized website for Charlotte businesses.",
-    "totalTime": "P7D",
-    "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Day 1: Discovery Call", "text": "We learn your business, goals, and competitive landscape in Charlotte. We define the sitemap, content strategy, and technical requirements." },
-      { "@type": "HowToStep", "position": 2, "name": "Day 2: Strategy & Structure", "text": "We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins." },
-      { "@type": "HowToStep", "position": 3, "name": "Days 3–4: Design", "text": "We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs." },
-      { "@type": "HowToStep", "position": 4, "name": "Days 5–6: Development & SEO", "text": "We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for Charlotte, structured data, and connect all integrations." },
-      { "@type": "HowToStep", "position": 5, "name": "Day 7: Launch", "text": "Your Charlotte website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support." }
-    ]
-  };
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "dateModified": "2026-08-04",
-          "name": "Web Design Charlotte NC | 7-Day Delivery | FactoryJet",
-          "url": "https://factoryjet.com/charlotte/web-design/",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
-          }
-        }) }}
-      />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Charlotte Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="CHARLOTTE WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Charlotte NC"
+          lead="Direct, plain English answers to what Charlotte business owners and marketing leaders ask about website projects:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="charlotte" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Charlotte Business Website?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
     </>
   );
 }

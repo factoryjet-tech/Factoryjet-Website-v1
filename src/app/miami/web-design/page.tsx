@@ -1,312 +1,909 @@
 import type { Metadata } from 'next';
-import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
-import Image from 'next/image'
-import Link from 'next/link'
+import '@/components/v2/PlatformPage.css';
 
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/miami/web-design';
 
 export const metadata: Metadata = {
-  title: 'Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Miami businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-  alternates: {
-    canonical: 'https://factoryjet.com/miami/web-design',
-    languages: webDesignPriorityCityAlternatesUS.miami,
-  },
+  title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Miami web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Florida businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Miami businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-    url: 'https://factoryjet.com/miami/web-design/',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet Web Design: Miami, FL',
-      },
-    ],
+    title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Miami web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Florida businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Miami businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
+    title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Miami FL. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-
-const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
 ];
 
-const MIAMI_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Miami?","answer":"Pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity. Most Miami small businesses choose the Starter tier for a clean five-page site or Growth for a blog CMS, multilingual-ready architecture, and lead capture. Custom builds cover e-commerce or AI features. Local Miami agencies charge enterprise-level rates for comparable scope; FactoryJet delivers the same quality at a fraction of the cost, quoted up front after a free discovery call.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build completes in 7 days from kickoff to launch. Days 1–2 cover discovery and strategy, Days 3–4 cover design and prototyping, Days 5–6 cover development, and Day 7 covers content, SEO finalization, and launch. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new Miami site ranks on Google?","answer":"Branded searches (your business name) typically rank within one to two weeks of launch. Service plus location queries like 'web design Miami' or 'FinTech website Miami' take three to six months for a new domain. The work that compresses this timeline, schema, internal linking, content depth, technical performance, is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"Do you build websites for FinTech and financial services companies in Brickell?","answer":"Yes. Miami's Brickell corridor is one of our most common client profiles. We build sites that communicate regulatory credibility and service architecture to international buyers who research before they talk to anyone. That means clear capability pages, trust signals (certifications, regulatory disclosures, client logos), and lead-capture flows designed for sophisticated B2B buyers.","category":"local"},{"question":"Can you build multilingual websites: English and Spanish?","answer":"Yes. Miami's bilingual market is a core design constraint, not an afterthought. FactoryJet's Growth tier includes multilingual-ready architecture from the first commit, meaning the codebase is structured to support Spanish content without a full rebuild later. We can also deliver fully translated Spanish pages if content is provided, and we build Spanish metadata for SEO.","category":"local"},{"question":"How does FactoryJet compare to Miami agencies like Refresh Agency or Absolute Web?","answer":"Refresh Agency and Absolute Web are credible Miami agencies with track records. Neither publishes a 7-day delivery commitment. Refresh Agency does not publish pricing. Absolute Web's e-commerce projects run at enterprise-level rates. FactoryJet quotes fixed-price upfront, delivers in 7 days, and builds in Next.js, which means faster load times and no monthly plugin overhead for your team.","category":"local"},{"question":"We're a real estate company in Miami targeting international buyers. What do you build?","answer":"Gallery-heavy layouts, fast image delivery (WebP optimized for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results, increasingly important as international buyers research remotely before visiting.","category":"included"},{"question":"Do you handle website maintenance after launch?","answer":"Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and training questions at no extra cost. After that, we offer ongoing maintenance packages for businesses that want regular updates, performance monitoring, and priority turnaround on changes. Most Miami clients on retainer pay a flat monthly fee and never deal with a surprise invoice.","category":"support"},{"question":"Who owns the website code and design files after the project?","answer":"You do, fully. FactoryJet hands over the complete Next.js codebase, all Figma design files, and any CMS credentials at the end of every project. There is no proprietary platform, no lock-in, and no monthly fee tied to the build itself. You can host it anywhere, hand it to another developer, or manage it in-house.","category":"support"},{"question":"Can you build a website that works well for Spanish-speaking customers in Little Havana or Doral?","answer":"Absolutely. Miami's Spanish-speaking market, particularly in neighborhoods like Little Havana, Doral, and Hialeah, is too large to ignore. We build bilingual sites with proper hreflang tags, Spanish metadata, and content structures designed for both language audiences. If you provide Spanish copy, we implement it cleanly. If you need translation guidance, we can coordinate that as part of the project scope.","category":"local"},{"question":"Do you build e-commerce websites for Miami businesses?","answer":"Yes. Our Custom tier covers full e-commerce builds, product catalogs, checkout flows, payment integrations, and inventory management. Miami's retail and DTC brands often need sites that handle both English and Spanish-speaking shoppers and process international orders. We build on Next.js with headless commerce architecture so you own the stack and aren't paying monthly platform fees that scale against your revenue.","category":"technical"},{"question":"We run a luxury brand in Coral Gables or Miami Beach. Can you design a site that matches our positioning?","answer":"Yes. Luxury brand sites require a different visual language, generous whitespace, high-resolution imagery with fast delivery, restrained typography, and conversion flows that feel premium rather than pushy. We have built luxury brand sites for the Coral Gables and Miami Beach markets and understand the balance between aesthetic ambition and measurable performance. The result looks like a high-end agency build because we build to the same visual standards, just without the overhead.","category":"local"},{"question":"What about international SEO? My clients come from Latin America and Europe.","answer":"International SEO is built into our Growth and Custom tiers. That includes hreflang tags for language and region targeting, Spanish-language metadata, schema markup that AI crawlers can parse in multiple languages, and page speed optimization for international connections that may not have US-level bandwidth. Miami businesses with Latin American client bases often see significant organic traffic gains from proper hreflang implementation alone.","category":"technical"},{"question":"My business gets a lot of tourist traffic in season. How do you design for mobile visitors who are already in Miami?","answer":"Mobile-first is our default, not a feature we charge extra for. Every site we build loads fast on 4G connections, renders cleanly on any screen size, and puts the most important actions (call, book, inquiry) within a single thumb tap. For tourism and hospitality businesses in South Beach or Wynwood, we also optimize for 'near me' search intent so visitors already in the area find you on Google Maps and your site simultaneously.","category":"technical"},{"question":"We're a restaurant group in Miami Beach or Wynwood. What should our website include?","answer":"At minimum: a fast-loading menu (ideally a PDF and an HTML version for SEO), a reservation or inquiry flow, high-quality food and venue photography with WebP delivery, and Google Maps integration. For groups with multiple locations, common in Miami Beach and Wynwood, we build multi-location architecture that ranks each venue independently. We also wire up GA4 so you can see which traffic source is driving reservations.","category":"local"},{"question":"Can you integrate IDX property search for a real estate site?","answer":"Yes. IDX integration is available in our Custom tier and connects your site to the MLS database so visitors can search live listings directly on your site rather than bouncing to Zillow or Realtor.com. For Miami's luxury and international buyer market, we pair IDX with multilingual UX and fast image delivery so the search experience works for international buyers browsing from Latin America or Europe.","category":"local"},{"question":"Do you add AI features like chatbots or smart search to websites?","answer":"Yes, on the Custom tier. We integrate AI chat (using APIs from OpenAI or Anthropic depending on fit), semantic search for product or content libraries, and AI-assisted lead qualification flows. For Miami businesses with high international inquiry volume, common in real estate, FinTech, and professional services: an AI-powered intake form that qualifies leads in English and Spanish before routing them to your team can meaningfully reduce response time and increase conversion rate.","category":"technical"},{"question":"How do I know my new site will actually be fast enough for international visitors?","answer":"We enforce Core Web Vitals green and Lighthouse performance scores above 90 on every build. Images are delivered as WebP via Cloudflare's global CDN, which has edge nodes in Miami and across Latin America. JavaScript is code-split and deferred where possible. We do not ship third-party scripts without a performance review. For international visitors connecting from São Paulo, Buenos Aires, or Madrid, common for Miami's business and tourism markets, these choices mean a site that loads in under two seconds rather than five.","category":"technical"},{"question":"How many revisions are included and how does the feedback process work?","answer":"Starter tier includes two structured revision rounds at the design stage before development begins. Growth and Custom tiers include three. Revisions happen in a shared Figma file with comments, not email threads, so feedback is tracked, actioned, and confirmed in one place. We do not make scope-expanding changes during revision rounds without a separate agreement, but minor adjustments to layout, copy, and color are covered.","category":"pricing"},{"question":"Where will my site be hosted, and what does that cost?","answer":"We deploy to Cloudflare Pages, which has a generous free tier that covers most FactoryJet sites indefinitely. Cloudflare's global CDN is particularly fast for Miami businesses with international audiences, edge nodes in Latin America mean faster load times for clients in Colombia, Brazil, or Argentina. If your project requires a managed database or server-side logic, we provision on Vercel or Railway and give you the credentials outright. Hosting costs are typically minimal depending on traffic volume.","category":"pricing"},{"question":"What kind of ROI can I expect from a new website?","answer":"The most direct ROI drivers are organic search traffic, lead form conversion rate, and time-to-response for inbound inquiries. Miami businesses in professional services and real estate typically see meaningful organic traffic gains within 90 days of a properly SEO-structured launch. E-commerce and hospitality sites often see conversion rate improvements within the first 30 days if the previous site had significant UX or speed issues. We wire GA4 from day one so you have a clear before/after picture, not anecdotes.","category":"local"},{"question":"Does FactoryJet work with businesses in Fort Lauderdale and the broader South Florida corridor?","answer":"Yes. We serve the full South Florida market: Miami-Dade, Broward, and Palm Beach counties. Fort Lauderdale businesses in marine, aviation, finance, and tourism are a common fit. The 7-day timeline and fixed pricing work the same regardless of your specific city, and we build with local SEO structures that target your actual service area, whether that's Fort Lauderdale, Aventura, or Coral Gables.","category":"local"}];
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across South Florida.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across luxury hospitality, wealth management, and import-export.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Brickell Financial District',
+    query: 'private wealth web design brickell',
+    focus: 'Cross-Border Banking, Wealth Management & Private Equity',
+    desc: 'The Wall Street of the South. International financial executives evaluate partner credentials, visual polish, and sub-second page performance before booking private consultations.',
+  },
+  {
+    corridor: 'Wynwood & Miami Design District',
+    query: 'luxury brand web design miami design district',
+    focus: 'Luxury Fashion, Contemporary Art & Creative Agencies',
+    desc: 'Global luxury retail and art hub. Demands ultra-high-resolution project galleries, fluid grid transitions, and editorial typography that reflects haute couture standards.',
+  },
+  {
+    corridor: 'Downtown Miami & Biscayne Corridor',
+    query: 'real estate developer website design miami',
+    focus: 'Real Estate Developments, Architecture & Hospitality',
+    desc: 'High-density architectural epicenter. Features interactive 3D floorplan tours, multi-language buyer portals, and sub-second edge hosting.',
+  },
+  {
+    corridor: 'Coral Gables & Coconut Grove',
+    query: 'corporate law firm web design coral gables',
+    focus: 'Corporate Latin American HQs, Law Firms & Executive Consulting',
+    desc: 'Affluent corporate headquarters hub. Features deep practice area knowledge graphs, partner biographical directories, and bilingual client intake funnels.',
+  },
+  {
+    corridor: 'Miami Beach & South Beach',
+    query: 'boutique hotel web design miami beach',
+    focus: 'Boutique Hospitality, Nightlife & Luxury Lifestyle',
+    desc: 'World-renowned hospitality strip. Demands high-speed booking engine integrations, VIP reservation workflows, and flawless mobile experiences.',
+  },
+  {
+    corridor: 'Doral & Airport Logistics Hub',
+    query: 'freight forwarding website design doral',
+    focus: 'Import/Export, Freight Forwarding & Cold-Chain Logistics',
+    desc: 'The gateway to Latin American commerce. High-speed quote calculators, container tracking interfaces, and rapid RFQ workflows capture international trade contracts.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Cross-Border Wealth, Fintech & Private Equity',
+    headline: 'Engineering High-Conversion Digital Flagships for Brickell Financial Leaders',
+    description:
+      'Brickell and Coral Gables wealth management firms demand websites that speak to international family offices, high-net-worth investors, and corporate treasurers. We build custom Next.js web applications featuring interactive investor portal gateways, multi-currency display, and lightning-fast page speeds.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Miami private wealth and cross-border fintech web design engineering',
+    points: [
+      'Interactive portfolio performance overviews and downloadable investor reports',
+      'Frictionless multi-step consultation scheduling forms routing to wealth partners',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Luxury Real Estate, Architecture & Hospitality',
+    headline: 'High-Impact Visual Flagships for South Florida Developers',
+    description:
+      'From ultra-luxury condominium developments in Biscayne Bay to boutique hotels in South Beach, visual prestige drives buyer interest. We craft bespoke digital flagships featuring full-screen cinematic video headers, interactive floorplan configurators, and private showing reservation flows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Miami luxury real estate and architecture website design',
+    points: [
+      'Interactive 3D unit floorplan viewers and high-resolution architectural galleries',
+      'VIP private showing inquiry forms with automated CRM sales lead routing',
+      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+    ],
+  },
+  {
+    sector: 'Corporate Law, Litigation & International Arbitration',
+    headline: 'Projecting Institutional Stature for Coral Gables Practices',
+    description:
+      'High-stakes international arbitration and corporate law firms in Miami cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Miami corporate law firm litigation and international arbitration web design',
+    points: [
+      'Deep practice area knowledge graphs and structured legal case victory portfolios',
+      'Attorney profile schema with state bar admissions and published industry insights',
+      'Bilingual English and Spanish content architecture with localized schema markup',
+    ],
+  },
+  {
+    sector: 'Import/Export, Freight Forwarding & Maritime Trade',
+    headline: 'Engineering Industrial Authority for Doral Logistics Leaders',
+    description:
+      'Miami is the premier logistics gateway between North America and Latin America. Industrial websites built on slow legacy WordPress themes fail to convince global supply chain directors. We develop high-performance web applications featuring structured capability tables, instant freight quote calculators, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Miami import export and freight forwarding web design engineering',
+    points: [
+      'Interactive logistics capability matrices and downloadable customs documentation',
+      'Frictionless multi-step freight RFQ form workflows routing directly to dispatch teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
+    problem: 'Traditional Miami agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
+    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+  },
+  {
+    num: '02',
+    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
+    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
+    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
+    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
+    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+  },
+  {
+    num: '04',
+    title: 'Building Built-In Search & AI Citation Architecture from Day One',
+    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
+    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Architectural Scope & Figma Prototyping',
+    desc: 'We analyze your Miami competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
+    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js 15 & React Engineering',
+    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
+    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Edge Deployment & Local SEO Integration',
+    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
+    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals QA, Handoff & Launch',
+    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Source Code Ownership',
+    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
+    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
+    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+  },
+  {
+    label: 'Sprint Timeline',
+    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
+    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+  },
+  {
+    label: 'Structured Data & AI Readiness',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
+    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+  },
+];
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'timeline', label: 'Timeline & Sprint' },
+  { key: 'technical', label: 'Tech Stack & Performance' },
+  { key: 'local', label: 'Miami Market Focus' },
+  { key: 'ownership', label: 'Ownership & Support' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does a custom Miami web design project cost?',
+    answer:
+      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
+    answer:
+      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
+  },
+  {
+    category: 'pricing',
+    question: 'How does your fixed-price quote protect our business from budget overruns?',
+    answer:
+      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
+  },
+  {
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
+    answer:
+      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
+  },
+  {
+    category: 'timeline',
+    question: 'What do you need from our team before starting the 7-day sprint?',
+    answer:
+      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the sprint?',
+    answer:
+      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
+  },
+  {
+    category: 'technical',
+    question: 'Why choose Next.js over traditional WordPress for a Miami business?',
+    answer:
+      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Miami search queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    answer:
+      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+  },
+  {
+    category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
+    answer:
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
+    answer:
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
+  },
+  {
+    category: 'local',
+    question: 'Do you build bilingual English and Spanish websites for Miami companies?',
+    answer:
+      'Yes. We architect seamless multi-language routing with hreflang tags, localized JSON-LD schema, and high-performance language toggles to effectively capture both domestic US and Latin American markets.',
+  },
+  {
+    category: 'local',
+    question: 'Can you design websites for Brickell financial firms and family offices?',
+    answer:
+      'Yes. We build modern, institutional-grade websites for private wealth management, private equity, and legal practices in Brickell and Coral Gables, featuring partner bio directories, transaction tombs, and encrypted client intake gateways.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our Florida business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for luxury consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
+  },
+  {
+    category: 'local',
+    question: 'How does your web design optimize for local Miami search rankings?',
+    answer:
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Miami, Miami Beach, Coral Gables, Doral, and Fort Lauderdale.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
+    answer:
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+  },
+  {
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
+    answer:
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
+    answer:
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
+    answer:
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Miami Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Miami',
+    addressRegion: 'FL',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 25.7617,
+    longitude: -80.1918,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Miami' },
+    { '@type': 'City', name: 'Miami Beach' },
+    { '@type': 'City', name: 'Coral Gables' },
+    { '@type': 'City', name: 'Doral' },
+    { '@type': 'City', name: 'Fort Lauderdale' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Miami Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Miami businesses.',
+  areaServed: { '@type': 'State', name: 'Florida' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Miami FL businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Miami', item: CANONICAL },
+  ],
+};
 
 export default function MiamiWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-    <main className="bg-fj-cream">
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_miami_web_design_hero" />}
-        eyebrow={"WEB DESIGN · MIAMI"}
-        headline={"Web Design in Miami That Converts Visitors Into Clients"}
-        lead={"Miami businesses compete in one of the fastest-moving markets in the US: Latin American trade, global finance, and a booming tech scene all converging in one city. FactoryJet delivers a production-ready website in 7 days, fixed-price. You own the code, the design files, and the results."}
-        trustItems={["Fixed-price websites","7-day delivery","Next.js + GA4 included"]}
-        extraCta={<WhatsAppCTA city="Miami" variant="light" />}
-        rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Miami, FL" badgeLabel="Live in 7 days" />}
-      />
-      <LogoBar
-        tagline="Trusted by 500+ businesses across the US, UK, and UAE"
-      />
-      <BigThreeTrustBlock
-        eyebrow="BY THE NUMBERS"
-        headline={"Results that Miami businesses trust."}
-      />
-      <CityContextSection
-        eyebrow={"MIAMI MARKET"}
-        headline={"Why Your Miami Web Presence Can't Be an Afterthought"}
-        leadParagraphs={["Miami's metro economy is a genuine global crossroads. The Miami-Fort Lauderdale-West Palm Beach MSA generates $413B+ in GDP, anchored by 80+ international banks operating out of the Brickell financial corridor, a $20B+ annual tourism economy driven by South Beach and the cruise industry, and a luxury real estate market that competes with New York and London for international buyers. The Magic City Innovation District signals Miami's growing tech credibility, while Latin American HQs and trade relationships make the city the de facto US gateway to a market of 650 million consumers. Miami city proper holds 2.7M residents, with the broader metro at 6.2M+ as of 2024. In a market where your competition isn't just across town. It's across borders: a slow, unclear website doesn't just lose local rankings. It loses international deals to the firm whose site loaded first and answered the question in two languages."]}
-        stats={[{"value":"6.2M+","label":"Miami-Fort Lauderdale-West Palm Beach Metro Population (2024)","sourceUrl":"https://www.census.gov/quickfacts/fact/table/miamidadecountyflorida/PST045224"},{"value":"$413B+","label":"Miami-Fort Lauderdale-West Palm Beach MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP33100"},{"value":"80+","label":"International Banks with Miami Operations","sourceUrl":"https://www.miamidade.gov/global/economy/trade-and-finance.page"}]}
-      />
-      <ServiceExplanation
-        eyebrow={"WEB DESIGN · Miami"}
-        headline={"What 'Web Design' Actually Means for a Miami Business"}
-        lead={"Miami's bilingual market (English and Spanish), global finance clientele, and tourism-driven consumer base create web requirements you won't find in most agency playbooks. FactoryJet builds with multilingual-ready architecture from day one, fast load times for mobile users on the go, and lead capture flows tuned for international B2B buyers who evaluate you before they ever pick up the phone."}
-        body={<><p>For FinTech and financial services companies along the Brickell corridor, international banks, wealth management firms, payment processors, and the consultancies that serve them: a website needs to project regulatory credibility fast. Buyers in this sector read service architecture pages before they read testimonials. We structure your site to communicate compliance credibility, clear capability scope, and trust signals (certifications, client logos, regulatory disclosures) in the first scroll.</p><p>For real estate and tourism businesses: the industries that collectively define Miami's global brand: your website is competing with international firms for buyers who may never visit your office before wiring a deposit. Miami's $20B+ tourism economy and booming luxury real estate market require sites that convert international visitors into leads: gallery-heavy layouts with fast image delivery, multilingual UX, and booking or inquiry flows that work on a phone in any time zone. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank, not just to look good in a screenshot.</p></>}
-        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
-      />
-      <StrategicDarkSection
-        eyebrow="WHY FACTORYJET"
-        headline={"Why Miami Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Miami has strong local agencies, Refresh Agency handles digital marketing and web for Miami brands, The Duel operates out of Wynwood doing branding and web, and Absolute Web has built e-commerce and web design projects across South Florida for years. All credible. None publishes a 7-day delivery commitment or builds in Next.js as standard.\n\nFactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, multilingual-ready architecture, and GA4 analytics: fixed-price for equivalent scope, with a faster timeline and a codebase that doesn't require monthly plugin fees.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, multilingual-ready architecture for Miami's bilingual market, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch."}
-        pillars={[
-          { title: 'AI-native',    body: 'Every site is built with AI-assisted workflow | compressing build time without compressing quality. We have run 500+ projects through this system.' },
-          { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no \'it depends\' quotes that arrive three weeks later. Fixed price. Agreed up front.' },
-          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
-        ]}
-      />
-      <ServiceJourneyRow
-        eyebrow={"OUR PROCESS"}
-        headline={"How We Build Your Miami Website"}
-        stages={[
-          {"number":"01","title":"Discovery & Strategy","description":"We map your ideal customer profile, audit the top three competitors in your Miami market, and agree the sitemap and content plan, including multilingual scope if needed. You leave this phase knowing exactly what the site will do and how we will measure it.: Days 1–2"},
-          {"number":"02","title":"Design & Prototyping","description":"Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written. Fast turnaround keeps the 7-day clock on track.: Days 3–4"},
-          {"number":"03","title":"Development","description":"We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Multilingual-ready architecture is scaffolded from the first commit, not bolted on afterward. Performance budgets are enforced throughout.: Days 5–6"},
-          {"number":"04","title":"Content & SEO","description":"Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot). Spanish metadata added where in scope.: Day 6–7"},
-          {"number":"05","title":"Launch & Handover","description":"We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions., Day 7+"}
-        ]}
-      />
-      <PortfolioShowcase
-        eyebrow="RECENT WORK"
-        headline={"What Miami businesses look like after FactoryJet."}
-        cards={[
-          {"industry":"FinTech & Financial Services","title":"Miami FinTech & Financial Services Client","description":"Brickell's financial corridor hosts 80+ international banks and a growing FinTech ecosystem. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that convert sophisticated financial clients.","imageSrc":"/images/us/miami/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Real Estate & Luxury Property","title":"Miami Real Estate & Luxury Property Client","description":"Miami's luxury real estate market competes globally for buyers who may never visit before making a decision. Sites need gallery-heavy layouts, fast image delivery for international connections, IDX integration, and inquiry flows that work across time zones. We build for the international buyer, not just the local one.","imageSrc":"/images/us/miami/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Tourism & Hospitality","title":"Miami Tourism & Hospitality Client","description":"Miami's $20B+ annual tourism economy runs on first impressions, and the first impression is always the website. South Beach hotels, restaurant groups, and cruise-adjacent businesses need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor.","imageSrc":"/images/us/miami/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
-        ]}
-        ctaHref="/portfolio"
-        ctaLabel="View full portfolio"
-      />
-      <ComparisonTable
-        eyebrow={"WHY FACTORYJET"}
-        headline={"Why Miami Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Miami has credible local agencies, Refresh Agency and Absolute Web both have track records. Neither publishes a 7-day delivery commitment or builds in Next.js as standard. FactoryJet's Growth tier delivers equivalent scope, 10–15 pages, CMS, multilingual-ready architecture, lead capture, GA4: fixed-price, with a codebase you own outright and no monthly plugin overhead."}
-        columns={[{"label":"Their approach"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we win"}]}
-        rows={[
-          {"feature":"Refresh Agency","values":["Pricing not publicly disclosed; Miami-based digital marketing + web agency","Fixed-price (Growth tier)","FactoryJet delivers in 7 days on Next.js with multilingual-ready architecture; Refresh Agency timeline and stack are not publicly stated."]},
-          {"feature":"Absolute Web","values":["Enterprise-level rates for e-commerce and web design projects, based on published case studies","Fixed-price (Growth tier)","Next.js vs platform-dependent builds means faster load times, no monthly plugin overhead, and a codebase Miami clients own outright."]}
-        ]}
-      />
-      <IndustriesGrid
-        eyebrow={"MIAMI × WEB DESIGN"}
-        headline={"Web Design for Miami's Key Industries"}
-        lead={"From Brickell's finance corridor to the Art Basel crowd in Wynwood, Miami's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
-        sectors={[
-          {"name":"FinTech & Financial Services","description":"Brickell City Centre hosts 80+ international banks and a growing FinTech ecosystem covering payments, wealth management, and cross-border finance. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that rank and convert.","example":"Wealth management firms, payment processors, and FinTech startups serving the Brickell corridor and Latin American clients."},
-          {"name":"Real Estate & Luxury Property","description":"Miami's luxury real estate market competes globally, with international buyers from Latin America, Europe, and beyond making decisions remotely. Sites need gallery-heavy layouts, fast image delivery, IDX integration, and inquiry flows optimized for buyers in multiple time zones. We build for the international buyer, not just the local one.","example":"Luxury brokerages, property developers, and property management companies serving Miami-Dade and Broward counties."},
-          {"name":"Tourism & Hospitality","description":"Miami's $20B+ annual tourism economy runs on first impressions, and the first impression is always the website. South Beach hotels, restaurant groups, cruise-adjacent businesses, and tour operators need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor platform.","example":"Boutique hotels, restaurant groups, and tour operators serving South Beach, Brickell, and the Port of Miami."},
-          {"name":"Healthcare & Life Sciences","description":"Jackson Health System employs 14,000+ staff and the University of Miami Health System anchors a broader healthcare cluster of 300+ biotech and life sciences companies across Miami-Dade. Sites in this sector need HIPAA-aware contact forms, clear service navigation for patients and partners, and local SEO that competes in a dense provider market.","example":"Private practices, life sciences vendors, and healthcare service firms across Miami-Dade and Broward counties."},
-          {"name":"Professional & Business Services","description":"Latin American HQs, international consultancies, law firms, and accounting practices serving cross-border clients make up a significant slice of Miami's professional services economy. These businesses need authority-building content, bilingual capability signals, and lead capture flows designed for longer B2B sales cycles with international prospects.","example":"Law firms, consultancies, and accounting practices serving Latin American corporate clients from Miami offices."}
-        ]}
-      />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Miami Businesses"}
-        lead={"Miami agencies charge enterprise-level rates for web design projects with comparable scope. FactoryJet's Growth tier delivers 10–15 pages, a blog CMS, multilingual-ready architecture, SEO, and analytics: fixed-price, with 7-day delivery and a Next.js codebase you own outright. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No retainer required."}
-        tiers={[
-          {"name":"Starter","priceRange":"Fixed-price","description":"5-page brochure site, fast mobile load, ranks for your name and core service. Best for local Miami businesses and sole traders.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"name":"Growth","priceRange":"Fixed-price","description":"10–15 page site with blog CMS, lead-capture, multilingual-ready architecture, and analytics. Best for Miami SMBs scaling online.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Multilingual-ready architecture","Lead capture & email automation","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"name":"Custom","priceRange":"Fixed-price","description":"Custom Next.js with e-commerce, AI features, API integrations, and priority support. Best for complex Miami businesses with international requirements.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
-      <TestimonialsSection
-        region="us"
-        eyebrow="WHAT CLIENTS SAY"
-        headline={"Rated 4.9/5 on Google across 500+ projects."}
-      />
-      <FAQ
-        eyebrow="COMMON QUESTIONS"
-        headline={"Common Questions from Miami Businesses"}
-        categories={FAQ_CATEGORIES}
-        items={MIAMI_FAQ_ITEMS}
-      />
-      {/* Cross-link: Related Services in Miami */}
-      <section className="py-10 bg-[#FAFAF7]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-            Also in Miami
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/miami/ecommerce-development/"
-              className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-            >
-              Ecommerce Development →
-            </Link>
+      <script id="mia-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="mia-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="mia-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="mia-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="mia-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Miami Web Design &amp; Frontend Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Miami Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#mia-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Miami Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/miami/hero-miami.webp"
+                  alt="Miami Florida modern web design engineering and custom Next.js website mockup"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
           </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Miami"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for Miami&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From Brickell wealth management firms to Wynwood creative studios and Doral international logistics hubs, Florida businesses need sites that project prestige and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. MIAMI DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="mia-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>South Florida Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Miami&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From Brickell international finance to Wynwood design studios and Doral logistics hubs:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Miami Businesses
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in South Florida demands tailored user experiences, technical credibility, and conversion paths:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Miami Companies Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// MIAMI MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            city="Miami"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
         </div>
-      </section>
-      <WebDesignCityLinksUS currentCity="miami" />
-      <FinalCTA
-        variant="dark"
-        eyebrow={"READY TO START"}
-        headline={"Ready to Build Your Miami Website?"}
-        sub={"Miami's $413B metro economy moves at international speed. Every week without a high-performing website is a week your competitors are capturing the searches, and the clients, you should own. Start today and have a sitemap ready within 72 hours."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
-        extraCta={<WhatsAppCTA city="Miami" variant="dark" />}
-      />
-      <SchemaScript />
-    </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://factoryjet.com/miami/web-design#business",
-        "name": "FactoryJet Technologies",
-        "url": "https://factoryjet.com",
-        "telephone": "+919699977699",
-        "areaServed": "Miami"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://factoryjet.com/miami/web-design#service",
-        "name": "Web Design Miami",
-        "provider": {
-          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-          "name": "FactoryJet Technologies"
-        },
-        "areaServed": "Miami",
-        "description": "FactoryJet builds fast, conversion-focused websites for Miami businesses. 7-day delivery, fixed-price. Next.js, SEO, and GA4 included."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://factoryjet.com/miami/web-design#faq",
-        "mainEntity": MIAMI_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://factoryjet.com/miami/web-design#breadcrumbs",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://factoryjet.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "United States",
-            "item": "https://factoryjet.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Miami",
-            "item": "https://factoryjet.com/miami"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Web Design",
-            "item": "https://factoryjet.com/miami/web-design"
-          }
-        ]
-      }
-    ]
-  };
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How FactoryJet builds your Miami website in 7 days",
-    "description": "Our proven 7-day process for delivering a professional, SEO-optimized website for Miami businesses.",
-    "totalTime": "P7D",
-    "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Day 1: Discovery Call", "text": "We learn your business, goals, and competitive landscape in Miami. We define the sitemap, content strategy, and technical requirements." },
-      { "@type": "HowToStep", "position": 2, "name": "Day 2: Strategy & Structure", "text": "We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins." },
-      { "@type": "HowToStep", "position": 3, "name": "Days 3–4: Design", "text": "We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs." },
-      { "@type": "HowToStep", "position": 4, "name": "Days 5–6: Development & SEO", "text": "We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for Miami, structured data, and connect all integrations." },
-      { "@type": "HowToStep", "position": 5, "name": "Day 7: Launch", "text": "Your Miami website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support." }
-    ]
-  };
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "dateModified": "2026-08-04",
-          "name": "Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet",
-          "url": "https://factoryjet.com/miami/web-design/",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
-          }
-        }) }}
-      />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Miami Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="MIAMI WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Miami FL"
+          lead="Direct, plain English answers to what Miami business owners and marketing leaders ask about website projects:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="miami" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Miami Business Website?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
     </>
   );
 }

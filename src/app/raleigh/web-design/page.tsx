@@ -1,296 +1,909 @@
 import type { Metadata } from 'next';
-import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
-import Hero from '@/components/v2/Hero';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
-import CityContextSection from '@/components/v2/CityContextSection';
-import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
-import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
-import ComparisonTable from '@/components/v2/ComparisonTable';
-import PricingTiers from '@/components/v2/PricingTiers';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import Image from 'next/image';
+import Link from 'next/link';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
-import Image from 'next/image'
-import Link from 'next/link'
+import '@/components/v2/PlatformPage.css';
 
+const PAGE_MODIFIED = '2026-08-24';
+const CANONICAL = 'https://factoryjet.com/raleigh/web-design';
 
 export const metadata: Metadata = {
-  title: 'Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-  alternates: {
-    canonical: 'https://factoryjet.com/raleigh/web-design',
-    languages: webDesignPriorityCityAlternatesUS.raleigh,
-  },
+  title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description:
+    'Raleigh web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Research Triangle businesses.',
+  alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-    url: 'https://factoryjet.com/raleigh/web-design/',
-    images: [
-      {
-        url: 'https://factoryjet.com/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet Web Design: Raleigh, NC',
-      },
-    ],
+    title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description:
+      'Raleigh web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Research Triangle businesses.',
+    url: CANONICAL,
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Raleigh Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
+    title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+    description: 'Custom Next.js web design in Raleigh NC. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-
-const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
+const PARTNERS = [
+  'Next.js 15 & React',
+  'TypeScript Enterprise',
+  'Tailwind CSS',
+  'Figma Design Systems',
+  'Cloudflare Global Edge',
+  'Stripe Payments',
+  'Google Analytics 4',
+  'PostgreSQL & Vercel',
 ];
 
-const RALEIGH_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Raleigh?","answer":"Pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity. Most Raleigh small businesses choose the Starter tier for a clean five-page site, or Growth for a blog CMS and lead capture. Custom builds with e-commerce or AI features are scoped on top. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"FactoryJet delivers in 7 days from kickoff to launch. Discovery and strategy take the first two days, design and prototyping run days three and four, development happens on days five and six, content and SEO land on day six to seven, and we launch and hand over on day seven. We don't start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We don't charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) typically rank within one to two weeks of launch. Service plus location queries like 'web design Raleigh' take three to six months for a new domain, longer for competitive national terms. The work that compresses this timeline, schema markup, internal linking, content depth, technical performance, is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"We're a biotech or pharma vendor serving the RTP cluster, do you understand what our website needs?","answer":"Yes. Buyers in the pharma and life sciences space evaluate evidence before making decisions. That means your site needs technical credibility: precise service descriptions, publication or study references where appropriate, regulatory context, and design that signals GMP-level attention to detail. We structure content to answer procurement-level questions before the first sales call, because in this sector, the website is often the pre-qualification filter.","category":"local"},{"question":"We're a tech startup or SaaS company in the Triangle, can you build for a technical buyer audience?","answer":"Yes. We build product-depth pages, integration documentation, and demo or trial conversion flows tuned for technical buyers with longer B2B sales cycles. For Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area SaaS companies, this is our most common project profile.","category":"local"},{"question":"We're a university spinout or research-adjacent company, what does our website need?","answer":"University spinouts need to bridge academic credibility with commercial clarity. That means translating research into buyer-facing value propositions, structuring content around business outcomes rather than methodology, and using design that signals precision without being impenetrable to non-technical buyers. We've built sites for this profile before and know the balance required.","category":"local"},{"question":"How does FactoryJet compare to Raleigh agencies like Forge3 or iFactory?","answer":"Forge3 and iFactory are established Raleigh agencies with solid reputations. Neither commits to delivery timelines or fixed pricing in writing. FactoryJet gives you a clear, fixed-price quote up front after a free discovery call, delivers in 7 days in writing, and builds in Next.js rather than WordPress, which means faster load times, no monthly plugin maintenance costs, and a codebase your team can manage without a developer on retainer.","category":"local"},{"question":"Do you handle website maintenance after launch?","answer":"Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and CMS training questions. After that, you can manage the site yourself: the recorded handover session and CMS are designed for non-developers. We also offer ongoing maintenance retainers for Raleigh businesses that want a dedicated team handling updates, performance monitoring, and security patches.","category":"support"},{"question":"Who owns the code and design after the project is done?","answer":"You own everything: the Next.js codebase, the Figma design system, all copy and imagery we produce. There's no vendor lock-in, no proprietary platform, and no monthly license fee to keep your site running. You can take the code to any developer or host it anywhere. Most Raleigh clients keep it on Cloudflare Pages because the performance and edge caching are hard to beat.","category":"support"},{"question":"We're serving federal government or research institutions in the Triangle, what do we need on our site?","answer":"Government and research institution vendors in the Triangle face strict procurement requirements, sites need to communicate compliance credentials, past performance, and NAICS codes clearly. We structure service pages around the questions a contracting officer asks, not the questions a consumer asks. If you're pursuing SBIR grants or federal contracts through NC State's Office of Technology Commercialization, that positioning needs to be explicit and findable.","category":"local"},{"question":"Can you build a website for a restaurant or food business in the Raleigh area?","answer":"Yes. Raleigh's food scene, from Hillsborough Street and Five Points to downtown Raleigh's restaurant renaissance, is competitive. A restaurant site needs fast mobile load times (most diners search on phone, walking), online reservation integration, menu pages that render beautifully, and local SEO tuned for 'near me' searches. We also wire up Google Business Profile schema so your hours and menu data appear directly in search results.","category":"local"},{"question":"I'm a real estate professional in Cary, Apex, or Holly Springs, can you build a site that generates leads?","answer":"Absolutely. The Raleigh metro suburbs: Cary, Apex, Holly Springs, Morrisville, are among the fastest-growing residential markets in the Southeast. A real estate site for this market needs IDX integration or a curated listing approach, hyper-local neighborhood pages optimized for searches like 'homes for sale in Apex NC,' and a lead capture flow that routes inquiries directly to your CRM. We build all of this into the Growth and Custom tiers.","category":"local"},{"question":"Do you build e-commerce sites for Triangle-area retail businesses?","answer":"Yes. Whether you're a boutique in Five Points, a specialty retailer near NC State's campus, or a DTC brand shipping out of the Triangle, we build Shopify storefronts and custom Next.js e-commerce sites. We handle product setup, payment integration, shipping configuration, and SEO for category and product pages. The Custom tier is where most e-commerce projects land.","category":"technical"},{"question":"Can you add AI features like a chatbot or AI search to our site?","answer":"Yes. The Custom tier includes AI integrations, chatbots trained on your service documentation, AI-powered site search, content recommendation engines, and lead qualification flows. For SaaS companies in the Cisco and Red Hat ecosystem or NC State spinouts building AI products, we can also build product demo experiences and interactive feature showcases. These are production features, not proof-of-concept prototypes.","category":"technical"},{"question":"What analytics will I actually be able to see after launch?","answer":"Every project ships with GA4 wired up and a GTM container configured. You get event tracking for contact form submissions, CTA clicks, scroll depth, and any conversion goal specific to your business. For Raleigh B2B businesses with longer sales cycles, we also set up attribution reporting so you can see which channels, organic search, LinkedIn, referral, are driving your most qualified inquiries. We walk through the dashboard in the recorded handover session.","category":"technical"},{"question":"How do you handle the design process, will I have input?","answer":"Yes, and it's structured so feedback is efficient rather than open-ended. After discovery, we deliver Figma wireframes covering every page. You review and comment in Figma, we incorporate feedback, and a second round locks the direction. We don't start writing code until the design is approved. This prevents the expensive mid-build changes that inflate timelines at agencies that skip structured prototyping.","category":"local"},{"question":"How many revision rounds are included?","answer":"Starter includes two revision rounds, Growth includes three. Revisions happen at the Figma stage, before development, where changes are fast and free. Structural changes after development begins are scoped and quoted separately, but in practice this rarely happens because the prototyping phase catches everything. We've run this process on 500+ projects and the two-round structure works.","category":"support"},{"question":"Where will the site be hosted and who handles that?","answer":"We deploy to Cloudflare Pages by default. It's free at the usage levels most SMBs need, delivers sub-100ms response times globally, and has zero cold-start latency because Next.js pages are served from the edge. We handle the initial setup, domain configuration, and SSL. After handover, Cloudflare's dashboard is straightforward enough that your team can manage it without a developer.","category":"technical"},{"question":"What's the ROI on a new website for a Raleigh B2B business?","answer":"For a B2B company serving RTP companies, a single new client won from organic search often pays for the site multiple times over. We've seen Raleigh consulting and professional services firms convert one additional enterprise inquiry per month from a properly structured site, at average deal sizes of $20,000–$100,000, the math is straightforward. We build sites to generate measurable pipeline, not just look good in a portfolio.","category":"platform"},{"question":"Can you build a site for a healthcare practice or healthtech company in the Triangle?","answer":"Yes. Healthcare sites in the Triangle, whether a private practice, a vendor to WakeMed or Duke Health, or a healthtech startup, need HIPAA-aware contact form design (no PHI in unencrypted fields), clear service navigation, and local SEO tuned for high-intent patient or partner searches. We don't use contact form tools that store sensitive data on third-party servers. For healthtech companies raising Series A or pursuing hospital partnerships, we also build investor-facing and partnership sections alongside the marketing site.","category":"local"},{"question":"We're a professional services firm targeting SAS Institute, Biogen, or other major RTP employers, how do you position a site for enterprise B2B?","answer":"Enterprise B2B sites targeting RTP's anchor companies need to pass a procurement-level credibility check before a sourcing manager will forward your site to their team. That means clear case studies with named outcomes (not just logos), precise service descriptions that match how buyers scope work, social proof from recognizable organizations, and a site that loads in under two seconds on any device. We build the positioning strategy, content architecture, and technical foundation as a single integrated project, not three separate engagements.","category":"platform"}];
+const STAT_CARDS = [
+  { num: '7 Days', title: 'Launch Delivery SLA', desc: 'From signed scope to live production deployment with zero agency delays.', icon: '⚡' },
+  { num: '95+', title: 'Mobile Lighthouse Score', desc: 'Sub-second mobile loading speeds engineered for high conversion rates across the Research Triangle.', icon: '🚀' },
+  { num: '500+', title: 'Websites Launched', desc: 'Custom web platforms delivered across biopharma, enterprise SaaS, and research spinouts.', icon: '🏢' },
+  { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean Next.js repository, Figma files, and hosting configuration.', icon: '🛡️' },
+];
+
+const DISTRICTS = [
+  {
+    corridor: 'Research Triangle Park & I-40 Tech Corridor',
+    query: 'biopharma web design rtp raleigh',
+    focus: 'Biopharma, Clinical CROs & AgTech',
+    desc: 'The largest dedicated research park in North America. Demands interactive clinical trial gateways, research paper libraries, and sub-second edge performance.',
+  },
+  {
+    corridor: 'Downtown Raleigh & Warehouse District',
+    query: 'saas website design downtown raleigh',
+    focus: 'Software SaaS, Clean Energy & Digital Startups',
+    desc: 'High-growth tech and creative corridor. Tech companies require interactive component libraries, clear documentation portals, and high-converting product demo funnels.',
+  },
+  {
+    corridor: 'North Hills & Midtown Raleigh',
+    query: 'corporate headquarters web design north hills',
+    focus: 'Corporate Regional HQs, Private Equity & Commercial Real Estate',
+    desc: 'High-density corporate commercial district. Features executive credential directories, transaction portfolios, and enterprise accessibility compliance.',
+  },
+  {
+    corridor: 'Downtown Durham & American Tobacco Campus',
+    query: 'healthtech web design durham',
+    focus: 'Healthtech, AI Analytics & Creative Studios',
+    desc: 'Innovation and life science center. High-speed spec sheet downloads, platform capability matrices, and rapid RFQ calculators.',
+  },
+  {
+    corridor: 'Cary & Western Wake Tech Park',
+    query: 'enterprise software web design cary',
+    focus: 'Enterprise Software, Game Development & Fintech',
+    desc: 'Global enterprise software corridor. High-speed interactive product configurators, global CDN image delivery, and sub-second page loads.',
+  },
+  {
+    corridor: 'Chapel Hill & University Innovation Corridor',
+    query: 'university spinout web design chapel hill',
+    focus: 'Biomedical Commercialization, Education Tech & Venture Spinouts',
+    desc: 'Premier university research spinout cluster. Features scientific publication hubs, investor presentation decks, and sub-second edge hosting.',
+  },
+];
+
+const INDUSTRY_SHOWCASE = [
+  {
+    sector: 'Biopharma, Clinical Research & Life Sciences',
+    headline: 'Engineering High-Trust Scientific Flagships for Research Triangle Leaders',
+    description:
+      'RTP biopharma and clinical research organizations demand websites that speak to global pharmaceutical sponsors, FDA regulators, and clinical trial investigators. We build custom Next.js web applications featuring interactive pipeline tables, downloadable scientific whitepapers, and sub-second edge speeds.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Raleigh biopharma and life sciences web design engineering',
+    points: [
+      'Interactive clinical pipeline matrices and downloadable peer-reviewed research',
+      'Frictionless multi-step sponsor inquiry forms routing to business development teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Healthcare Systems, Specialized Clinics & Surgery Centers',
+    headline: 'High-Trust Patient & Provider Digital Experiences Across the Triangle',
+    description:
+      'From private practices in North Hills to surgical clinics in Cary, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Raleigh healthcare medical practice and surgical clinic website design',
+    points: [
+      'Searchable provider directories with clinical specialty credentials and hospital affiliations',
+      'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
+      'Flawless responsive performance achieving 95+ Core Web Vitals across mobile networks',
+    ],
+  },
+  {
+    sector: 'Corporate Law, Venture Capital & IP Litigation',
+    headline: 'Projecting Institutional Stature for Downtown Raleigh Practices',
+    description:
+      'High-stakes intellectual property and venture capital law firms in the Research Triangle cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
+    image: '/images/us/services/law-firm-seo/hero.webp',
+    alt: 'Raleigh corporate law firm intellectual property and venture capital web design',
+    points: [
+      'Deep practice area knowledge graphs and structured legal case victory portfolios',
+      'Attorney profile schema with state bar admissions and published industry insights',
+      'Secure lead capture workflows routing confidential inquiries to specific partners',
+    ],
+  },
+  {
+    sector: 'Clean Tech, Advanced Automation & AgTech',
+    headline: 'Engineering Technical Authority for Triangle Innovators',
+    description:
+      'From clean energy startups to automated agriculture technology leaders across Wake County, technical buyers demand precision. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Raleigh clean tech and automated agtech web design engineering',
+    points: [
+      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
+      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Eliminating Slow WordPress Themes & Fragile Plugin Stacks',
+    problem: 'Traditional Raleigh agencies install bloated multi-purpose themes loaded with 35+ unmaintained plugins that cause 4 to 6 second load times and frequent security breaches.',
+    solution: 'We engineer custom Next.js 15 architectures with pure TypeScript and Tailwind CSS, pre-rendering static HTML pages that load in under 600 milliseconds on mobile networks.',
+  },
+  {
+    num: '02',
+    title: 'Ending Proprietary CMS Lock-In & Recurring Platform Surcharges',
+    problem: 'Many local web firms build on proprietary site-builder platforms, holding your design assets and database hostage under mandatory monthly hosting contracts.',
+    solution: 'You receive 100% intellectual property ownership of your Figma design system, clean GitHub source code, and Cloudflare Edge hosting accounts upon launch.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Protracted 16-Week Timelines with Focused 7-Day Sprints',
+    problem: 'Traditional agencies route your feedback through multiple layers of account managers, dragging simple corporate website builds into 4 to 6 month ordeals.',
+    solution: 'We work in dedicated daily sprints with direct senior engineering access, moving from approved Figma prototype to live production deployment in 7 calendar days.',
+  },
+  {
+    num: '04',
+    title: 'Building Built-In Search & AI Citation Architecture from Day One',
+    problem: 'Basic agencies treat SEO as an afterthought or an expensive add-on, leaving your site with missing JSON-LD schema, broken canonicals, and poor Core Web Vitals.',
+    solution: 'Every page includes server-rendered LocalBusiness, Service, and FAQPage schema, speakable selectors for AI search engines, and sub-second performance.',
+  },
+];
+
+const ROADMAP_STEPS = [
+  {
+    phase: 'Phase 01',
+    title: 'Architectural Scope & Figma Prototyping',
+    desc: 'We analyze your Raleigh competitors, map conversion pathways, and design a custom desktop and mobile prototype in Figma.',
+    deliverables: ['Competitive local search audit', 'Bespoke Figma UI component design', 'Conversion wireframes and content plan', 'Client milestone approval'],
+  },
+  {
+    phase: 'Phase 02',
+    title: 'Headless Next.js 15 & React Engineering',
+    desc: 'We code your website using clean, type-safe Next.js 15 App Router components with modular Tailwind styling and zero plugin bloat.',
+    deliverables: ['Custom React 19 component library', 'Type-safe TypeScript architecture', 'Mobile responsive touch optimization', 'Lightweight headless CMS integration'],
+  },
+  {
+    phase: 'Phase 03',
+    title: 'Edge Deployment & Local SEO Integration',
+    desc: 'We deploy your site to Cloudflare Global Edge nodes and implement rich JSON-LD structured data for Google and AI engines.',
+    deliverables: ['Cloudflare Edge CDN caching', 'Structured JSON-LD schema graph', 'Google Analytics 4 & Tag Manager setup', 'Enterprise security header configuration'],
+  },
+  {
+    phase: 'Phase 04',
+    title: 'Core Web Vitals QA, Handoff & Launch',
+    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
+  },
+];
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Source Code Ownership',
+    factoryjet: '100% Full IP Ownership. You receive the complete GitHub repository, Figma source files, and hosting credentials.',
+    traditional: 'Proprietary Lock-in. Agencies retain code rights or charge high recurring license fees to keep your website live.',
+  },
+  {
+    label: 'Mobile Speed SLA',
+    factoryjet: 'Guaranteed 95+ Mobile Lighthouse score with sub-second page rendering on 4G/5G mobile connections.',
+    traditional: 'Heavy WordPress themes averaging 3 to 6 second load times and failing Google Core Web Vitals assessments.',
+  },
+  {
+    label: 'Sprint Timeline',
+    factoryjet: 'Strict 7-day sprint delivery with daily progress updates and direct senior developer communication.',
+    traditional: '12 to 24 week protracted build cycles plagued by scope drift and endless account manager meetings.',
+  },
+  {
+    label: 'Structured Data & AI Readiness',
+    factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, ProfessionalService, WebPage, speakable, FAQPage).',
+    traditional: 'Basic auto-generated meta tags without entity knowledge graphs, breadcrumb markup, or AI answer formatting.',
+  },
+];
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'timeline', label: 'Timeline & Sprint' },
+  { key: 'technical', label: 'Tech Stack & Performance' },
+  { key: 'local', label: 'Raleigh Market Focus' },
+  { key: 'ownership', label: 'Ownership & Support' },
+];
+
+const FAQ_ITEMS = [
+  {
+    category: 'pricing',
+    question: 'How much does a custom Raleigh web design project cost?',
+    answer:
+      'Project pricing is based on your required page volume, interactive features, custom integrations, and content scope. A high-converting 5 to 10 page corporate website built in Next.js is delivered on a transparent fixed-price quote with zero hidden agency surcharges. Large enterprise platforms with complex database portals or multi-location architectures are scoped with clear milestone deliverables. Every quote includes custom Figma design, Next.js engineering, local SEO schema, and 100% code ownership.',
+  },
+  {
+    category: 'pricing',
+    question: 'Are there any recurring hosting fees or ongoing platform royalties?',
+    answer:
+      'No. Because we build using modern static generation and serverless Next.js deployed to Cloudflare Pages or Vercel, your ongoing hosting infrastructure costs are virtually zero. You own your hosting accounts directly and never pay mandatory monthly agency platform fees.',
+  },
+  {
+    category: 'pricing',
+    question: 'How does your fixed-price quote protect our business from budget overruns?',
+    answer:
+      'We complete a thorough technical scope and wireframe review before beginning development. Your written proposal specifies all deliverables, design revisions, technical integrations, and launch timelines. The agreed price is guaranteed and will only adjust if you explicitly request expanded features during the sprint.',
+  },
+  {
+    category: 'timeline',
+    question: 'How can you deliver a custom Next.js website in 7 days without cutting corners?',
+    answer:
+      'We eliminate agency bureaucracy and account manager bottlenecks. By assigning dedicated senior engineers and UI designers who work directly with your leadership team using modular design tokens, we execute focused daily sprint milestones. Day 1-2 covers architecture and Figma approval; Day 3-4 completes Next.js engineering; Day 5-6 integrates local schema and edge deployment; Day 7 handles QA and launch.',
+  },
+  {
+    category: 'timeline',
+    question: 'What do you need from our team before starting the 7-day sprint?',
+    answer:
+      'To maintain our 7-day delivery SLA, we require high-resolution brand assets (logos and brand guidelines), existing photography or video assets, approved copy direction or core service descriptions, and access to your domain DNS or hosting accounts. Once these assets are in our shared project workspace, the sprint begins immediately.',
+  },
+  {
+    category: 'timeline',
+    question: 'What happens if we need design revisions during the sprint?',
+    answer:
+      'Our sprint includes dedicated review milestones on Days 2 and 6. Because we prototype in Figma before writing code, visual adjustments to layout, typography, and color schemes are made rapidly without causing development delays.',
+  },
+  {
+    category: 'technical',
+    question: 'Why choose Next.js over traditional WordPress for a Raleigh business?',
+    answer:
+      'WordPress websites rely on bloated server runtime PHP, heavy database queries, and vulnerable third-party plugins that degrade page load speed and invite security exploits. Next.js pre-renders pages into static HTML and modern JavaScript, deploying directly to global edge networks. This delivers sub-second page loads, near-instant mobile browsing, impenetrable security, and significantly higher conversion rates for competitive Raleigh search queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee a 95+ Google Lighthouse mobile score?',
+    answer:
+      'We optimize image compression with modern WebP formats, eliminate render-blocking JavaScript, implement CSS containment, and deploy assets globally via Cloudflare Edge CDN to achieve Lighthouse performance scores of 95+.',
+  },
+  {
+    category: 'technical',
+    question: 'What content management system (CMS) do you connect for easy client updates?',
+    answer:
+      'We connect intuitive headless CMS platforms like Sanity, Contentful, or Strapi that allow your marketing team to edit text, upload photos, and publish blog articles effortlessly without touching code or risking site layout breaks.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle website hosting and security certificates?',
+    answer:
+      'We deploy your website to Cloudflare Pages or Vercel, providing enterprise-grade DDoS protection, automated global SSL certificates, and 99.99% uptime with zero hosting maintenance fees for most small and mid-sized business applications.',
+  },
+  {
+    category: 'local',
+    question: 'Do you build B2B websites for RTP biopharma and life sciences companies?',
+    answer:
+      'Yes. We build high-conversion B2B websites tailored for Research Triangle biopharma, clinical CROs, and agtech enterprises, complete with pipeline charts, downloadable clinical whitepapers, and seamless CRM lead routing.',
+  },
+  {
+    category: 'local',
+    question: 'Can you design websites for Cary and Downtown Raleigh software startups?',
+    answer:
+      'Yes. We build modern SaaS websites featuring interactive product demos, API documentation hubs, and frictionless demo scheduling workflows.',
+  },
+  {
+    category: 'local',
+    question: 'Can you integrate e-commerce capabilities into our North Carolina business site?',
+    answer:
+      'Yes. Whether you require a simple Stripe checkout for service retainers or a full Shopify storefront integration for consumer goods, we build secure, high-conversion e-commerce workflows into your custom web architecture.',
+  },
+  {
+    category: 'local',
+    question: 'How does your web design optimize for local Raleigh search rankings?',
+    answer:
+      'We embed structured LocalBusiness JSON-LD schema, configure Google Analytics 4 conversion tracking, optimize Core Web Vitals, and architect localized service area landing pages for Raleigh, Durham, Cary, Chapel Hill, and Apex.',
+  },
+  {
+    category: 'ownership',
+    question: 'Do we own the website code and design assets after launch?',
+    answer:
+      'Yes, 100%. You receive full intellectual property ownership of your Figma design system, clean GitHub repository, and Cloudflare hosting configuration. You are never locked into proprietary platforms or mandatory maintenance contracts.',
+  },
+  {
+    category: 'ownership',
+    question: 'What kind of support is included after the website goes live?',
+    answer:
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, technical adjustments, and recorded video handover training to ensure your team is completely confident managing the site.',
+  },
+  {
+    category: 'ownership',
+    question: 'Can any developer maintain our Next.js website in the future?',
+    answer:
+      'Yes. Next.js and React are the global industry standard for modern web engineering. Because we write clean, documented TypeScript without proprietary plugins, any competent software engineer can maintain or extend your codebase.',
+  },
+  {
+    category: 'ownership',
+    question: 'How do you train our internal team to manage site content?',
+    answer:
+      'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const LOCAL_BUSINESS_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FactoryJet - Raleigh Web Design Agency',
+  image: 'https://factoryjet.com/og-default.png',
+  url: CANONICAL,
+  telephone: '+1-832-998-8422',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Raleigh',
+    addressRegion: 'NC',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 35.7796,
+    longitude: -78.6382,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Durham' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Chapel Hill' },
+    { '@type': 'City', name: 'Apex' },
+  ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Raleigh Web Design & Next.js Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
+  description:
+    'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Research Triangle businesses.',
+  areaServed: { '@type': 'State', name: 'North Carolina' },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+  description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Raleigh NC businesses.',
+  url: CANONICAL,
+  dateModified: PAGE_MODIFIED,
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design', item: 'https://factoryjet.com/services/web-design' },
+    { '@type': 'ListItem', position: 3, name: 'Raleigh', item: CANONICAL },
+  ],
+};
 
 export default function RaleighWebDesignPage() {
   return (
     <>
-      <SiteHeader />
-    <main className="bg-fj-cream">
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_raleigh_web_design_hero" />}
-        eyebrow={"WEB DESIGN · RALEIGH"}
-        headline={"Web Design in Raleigh That Converts Visitors Into Clients"}
-        lead={"Raleigh sits at the heart of Research Triangle Park: the most research-intensive region in the US, home to Cisco, Red Hat, IBM, and dozens of biotech firms. Buyers here are highly educated, deeply skeptical, and will read your website like a peer review. FactoryJet delivers a production-ready website in 7 days, fixed-price."}
-        trustItems={["Fixed-price websites", "7-day delivery", "Next.js + GA4 included"]}
-        extraCta={<WhatsAppCTA city="Raleigh" variant="light" />}
-        rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Raleigh, NC" badgeLabel="Live in 7 days" />}
-      />
-      <LogoBar
-        tagline="Trusted by 500+ businesses across the US, UK, and UAE"
-      />
-      <BigThreeTrustBlock
-        eyebrow="BY THE NUMBERS"
-        headline={"Results that Raleigh businesses trust."}
-      />
-      <CityContextSection
-        eyebrow={"RALEIGH MARKET"}
-        headline={"Why Your Raleigh Web Presence Can't Be an Afterthought"}
-        leadParagraphs={["Raleigh's population reached approximately 482,000 in 2024, anchoring a Raleigh-Cary MSA that generates over $90 billion in GDP. At the center of that economy sits Research Triangle Park, 7,000 acres with 300+ companies, 60,000+ workers, and a global roster that includes Cisco's largest East Coast campus, Red Hat (acquired by IBM for $34 billion), Lenovo North America HQ, Syneos Health, and Biogen. NC State, Duke, and UNC feed a research ecosystem that ranks the Triangle region in the top 5 US pharmaceutical clusters, according to PhRMA. Raleigh is also the fastest-growing tech talent pool in the Southeast. What this means for your website: every buyer in this market, whether they're evaluating a vendor for a pharma CRO or a SaaS tool for a university spinout, is accustomed to reading technical documentation, peer-reviewed studies, and detailed product pages. They will compare your website against the sites of the Fortune 500 companies they work with every day. If your site can't withstand that comparison, you're not getting the meeting."]}
-        stats={[
-          {"value":"482,000","label":"Raleigh City Population (2024)","sourceUrl":"https://www.census.gov/quickfacts/fact/table/raleighcitynorthcarolina/PST045224"},
-          {"value":"$90B+","label":"Raleigh-Cary MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP39580"},
-          {"value":"300+","label":"Companies at Research Triangle Park","sourceUrl":"https://www.rtp.org/about/rtp-at-a-glance/"}
-        ]}
-      />
-      <ServiceExplanation
-        eyebrow={"WEB DESIGN · Raleigh"}
-        headline={"What 'Web Design' Actually Means for a Raleigh Business"}
-        lead={"The Research Triangle buyer is skeptical by nature, these are scientists, engineers, and researchers who evaluate evidence before making decisions. Your website needs to present proof, not promises. Clear case studies, precise service descriptions, performance data, and JSON-LD schema that gets you into AI search results matter here more than anywhere."}
-        body={<><p>Biotech, pharma, and life sciences vendors serving the RTP cluster: CROs and suppliers working alongside Biogen, Syneos Health, and the broader pharma ecosystem, need sites with technical credibility baked in. That means publication and study references where appropriate, regulatory context, clean professional design that signals GMP-level attention to detail, and content structured to answer procurement-level questions before the first call. A generic template site will not survive scrutiny from a sourcing manager at a top-5 pharma company.</p><p>Technology and SaaS companies in the Cisco and Red Hat ecosystem, NC State spinouts, and Triangle-area startups face a different challenge: communicating product depth to buyers who are technical themselves. These sites need product-depth pages, integration documentation, and demo or trial conversion flows tuned for a longer B2B sales cycle. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, JSON-LD schema for AI search visibility, GA4 wired from day one, and a recorded handover so your team can self-manage without calling a developer.</p></>}
-        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
-      />
-      <StrategicDarkSection
-        eyebrow="WHY FACTORYJET"
-        headline={"Why Raleigh Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Local Raleigh agencies include Forge3 (digital marketing and web, Raleigh-based), iFactory (web design and development, Raleigh), and national players like Lounge Lizard that actively serve the Triangle market. Forge3 and iFactory are credible firms, but neither publishes delivery timelines or builds in Next.js as standard. Triangle-area agencies charge enterprise-level rates for a 10–15 page project.\n\nFactoryJet's Growth tier delivers the same scope, blog CMS, lead capture, GA4, Next.js, at a fixed, transparent quote, with a 7-day delivery guarantee in writing and a codebase you own outright. No retainer, no plugin maintenance, no proprietary platform. We win because every project ships with JSON-LD schema for AI search crawlers (GPTBot, ClaudeBot, PerplexityBot), Lighthouse 95+ performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
-        pillars={[
-          { title: 'AI-native',    body: 'Every site ships with JSON-LD schema for AI search crawlers and is built with an AI-assisted workflow that compresses build time without compressing quality. We have run 500+ projects through this system.' },
-          { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price, agreed up front, in writing.' },
-          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
-        ]}
-      />
-      <ServiceJourneyRow
-        eyebrow={"OUR PROCESS"}
-        headline={"How We Build Your Raleigh Website in 7 Days"}
-        stages={[
-          {"number":"01","title":"Discovery & Strategy","description":"We map your ideal customer profile, audit your top three competitors in the Triangle market, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we'll measure it.: Days 1–2"},
-          {"number":"02","title":"Design & Prototyping","description":"Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.: Days 3–4"},
-          {"number":"03","title":"Development","description":"We build the site in Next.js with animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.: Days 5–6"},
-          {"number":"04","title":"Content & SEO","description":"Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).: Day 6–7"},
-          {"number":"05","title":"Launch & Handover","description":"We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions., Day 7+"}
-        ]}
-      />
-      <PortfolioShowcase
-        eyebrow="RECENT WORK"
-        headline={"What Raleigh businesses look like after FactoryJet."}
-        cards={[
-          {"industry":"Biotech & Life Sciences","title":"Biotech & Life Sciences Client","description":"Serving the RTP pharma cluster: Biogen, Syneos Health, and ecosystem vendors, these sites require technical credibility, regulatory context, and precision design that signals GMP-level attention to detail. We structure content to answer procurement-level questions before the first call.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Technology & SaaS","title":"Technology & SaaS Client","description":"For Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area startups, we build product-depth pages, integration documentation, and demo or trial conversion flows tuned for technical buyers with long B2B sales cycles.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Professional Services","title":"Professional Services Client","description":"University spinouts, consulting firms, legal and finance practices serving RTP companies need sites that establish authority, capture leads, and route inquiries efficiently. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
-        ]}
-        ctaHref="/portfolio"
-        ctaLabel="View full portfolio"
-      />
-      <ComparisonTable
-        eyebrow={"WHY FACTORYJET"}
-        headline={"FactoryJet vs. Raleigh Web Agencies"}
-        lead={"Triangle-area agencies are well-regarded, but pricing and timelines are rarely published. FactoryJet gives you a fixed price and timeline up front, and delivers in 7 days on a Next.js stack that outperforms WordPress on every metric that matters to your buyers."}
-        columns={[{"label":"Their approach"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we win"}]}
-        rows={[
-          {"feature":"Forge3","values":["Timeline not published","Fixed-price (Growth tier)","FactoryJet delivers in 7 days on Next.js. Forge3's timeline and tech stack are not publicly stated."]},
-          {"feature":"iFactory","values":["Timeline not published","Fixed-price (Growth tier)","Next.js vs. WordPress means faster load times, no monthly plugin maintenance, and a codebase you own."]}
-        ]}
-      />
-      <IndustriesGrid
-        eyebrow={"RALEIGH × WEB DESIGN"}
-        headline={"Web Design for Raleigh's Key Industries"}
-        lead={"From pharma CROs to university spinouts, Raleigh's economy spans industries with demanding, research-driven buyers. FactoryJet has built sites for each of them."}
-        sectors={[
-          {"name":"Biotech & Life Sciences","description":"The Triangle region ranks in the top 5 US pharma clusters. Vendors and CROs serving Biogen, Syneos Health, and the broader RTP pharma ecosystem need sites with technical credibility, regulatory context, and design that signals precision. We structure content to answer procurement-level questions before the first call.","example":"CROs, pharma vendors, and life sciences service firms serving the RTP cluster."},
-          {"name":"Technology & SaaS","description":"Cisco's largest East Coast campus, Red Hat (now IBM), and Lenovo North America HQ anchor an enterprise tech ecosystem in RTP. Suppliers, integrators, and SaaS startups in this space need product-depth pages, integration documentation, and demo conversion flows for technical buyers.","example":"Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area SaaS startups."},
-          {"name":"University Research & Spinouts","description":"NC State, Duke, and UNC collectively generate a pipeline of spinouts, commercialization offices, and research-adjacent businesses. These organizations need sites that bridge academic credibility with commercial clarity, translating research into buyer-facing value propositions.","example":"University spinouts, commercialization offices, and research-adjacent companies from the NC State / Duke / UNC ecosystem."},
-          {"name":"Professional & Business Services","description":"Consulting, legal, finance, and marketing firms serving RTP companies make up a significant share of the Triangle economy. These businesses need websites that establish authority quickly, capture leads efficiently, and route inquiries to the right person: the site is the pitch deck.","example":"Consulting, legal, and finance firms supporting Raleigh's corporate and research base."},
-          {"name":"Healthcare","description":"WakeMed, Duke Health, and UNC Health anchor one of the largest healthcare clusters in the Southeast. Private practices, healthcare vendors, and healthtech companies in the Triangle need sites with HIPAA-aware form design, clear service navigation, and local SEO tuned for high-intent patient or partner searches.","example":"Private practices, healthcare vendors, and healthtech companies serving WakeMed, Duke Health, and UNC Health."}
-        ]}
-      />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"What's Included for Raleigh Businesses"}
-        lead={"Pricing is fixed-price and scoped to your build: the main drivers are page count, integrations, and design complexity. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every tier ships with 7-day delivery, Next.js, code you own, and no plugin maintenance. No retainer required."}
-        tiers={[
-          {"priceRange":"Fixed-price","name":"Starter","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local services who need a credible online presence quickly.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"priceRange":"Fixed-price","name":"Growth","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Raleigh SMBs scaling online who need the site to actively generate qualified inquiries, especially for technical or B2B audiences.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"priceRange":"Fixed-price","name":"Custom","description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established RTP-adjacent businesses with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
-      <TestimonialsSection
-        region="us"
-        eyebrow="WHAT CLIENTS SAY"
-        headline={"Rated 4.9/5 on Google across 500+ projects."}
-      />
-      <FAQ
-        eyebrow="COMMON QUESTIONS"
-        headline={"Common Questions from Raleigh Businesses"}
-        categories={FAQ_CATEGORIES}
-        items={RALEIGH_FAQ_ITEMS}
-      />
-      {/* Cross-link: Related Services in Raleigh */}
-      <section className="py-10 bg-[#FAFAF7]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
-            Also in Raleigh
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/raleigh/ecommerce-development/"
-              className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
-            >
-              Ecommerce Development →
-            </Link>
+      <script id="rdu-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="rdu-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
+      <script id="rdu-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="rdu-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="rdu-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+
+      <main className="platpage">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              {/* Left Column Typography */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Raleigh Web Design &amp; Frontend Engineering</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Raleigh Web Design Agency for Growing Brands
+                </h1>
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
+                </p>
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
+                  <a href="#rdu-districts" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Triangle Corridors</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/us/raleigh/hero-raleigh.webp"
+                  alt="Raleigh North Carolina modern web design engineering and custom Next.js website mockup"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            </div>
           </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Modern Frontend Engineering Stack</div>
+              <div className="rv-ticker-line" />
+            </div>
+
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              {/* Left Column: Clean Organic Curved Photo Frame */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Raleigh"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Speed, Polish &amp; Conversion</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Websites Built for the Triangle&apos;s High-Value Sectors
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  From RTP biopharma leaders to Cary enterprise software firms and Downtown Raleigh startups, Triangle businesses need sites that project authority and convert high-ticket decision-makers.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. RALEIGH DISTRICTS & INDUSTRY DIRECTORY ── */}
+        <section id="rdu-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Research Triangle Commercial Corridor Depth</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Tailored Web Design for Raleigh&apos;s Core Sectors
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From RTP research centers to Downtown Raleigh SaaS firms and Cary software campuses:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              {DISTRICTS.map((d) => (
+                <div
+                  key={d.corridor}
+                  style={{
+                    background: '#FFFFFF',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    transition: 'all 0.25s ease',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {d.corridor}
+                    </span>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                      {d.query}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>
+                    {d.focus}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>
+                    {d.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Industry-Specific Execution</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Specialized Web Architectures for Triangle Businesses
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Every commercial sector in the Research Triangle demands tailored user experiences, technical credibility, and conversion paths:
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+              {INDUSTRY_SHOWCASE.map((ind, idx) => (
+                <div
+                  key={ind.sector}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
+                    gap: 'clamp(28px, 5vw, 56px)',
+                    alignItems: 'center',
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '20px',
+                    padding: 'clamp(24px, 4vw, 44px)',
+                  }}
+                >
+                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {ind.sector}
+                    </span>
+                    <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
+                      {ind.headline}
+                    </h3>
+                    <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.65, margin: '0 0 20px' }}>
+                      {ind.description}
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      {ind.points.map((pt, pIdx) => (
+                        <div key={pIdx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622', flexShrink: 0 }} />
+                          <span style={{ fontSize: '13.5px', fontWeight: 600, color: '#141414' }}>{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                    <Image
+                      src={ind.image}
+                      alt={ind.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The FactoryJet Difference</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Raleigh Companies Choose FactoryJet Web Design
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We replace outdated WordPress themes and bloated retainers with modern engineering:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="web-architecture-blueprint">
+          <WebDesignArchitectureBlueprint
+            badge="// RALEIGH MODERN WEB ARCHITECTURE BLUEPRINT"
+            title="High-Performance Frontend: From Code to Conversion"
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            city="Raleigh"
+            ctaLabel="Get a Fixed-Price Quote"
+            region="us"
+          />
         </div>
-      </section>
-      <WebDesignCityLinksUS currentCity="raleigh" />
-      <FinalCTA
-        variant="dark"
-        eyebrow={"READY TO START"}
-        headline={"Ready to Build Your Raleigh Website?"}
-        sub={"Research Triangle Park companies set a high bar for everything, including the websites of the vendors and partners they work with. Every week without a credible, fast-loading website is a week your competitors are getting the meeting you should have gotten. Start today."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
-        extraCta={<WhatsAppCTA city="Raleigh" variant="dark" />}
-      />
-      <SchemaScript />
-    </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
-    </>
-  );
-}
 
-function SchemaScript() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://factoryjet.com/raleigh/web-design#business",
-        "name": "FactoryJet Technologies",
-        "url": "https://factoryjet.com",
-        "telephone": "+919699977699",
-        "areaServed": "Raleigh"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://factoryjet.com/raleigh/web-design#service",
-        "name": "Web Design Raleigh",
-        "provider": {
-          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-          "name": "FactoryJet Technologies"
-        },
-        "areaServed": "Raleigh",
-        "description": "FactoryJet builds fast, conversion-focused websites for Raleigh businesses. 7-day delivery, fixed-price. Next.js, SEO, and GA4 included."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://factoryjet.com/raleigh/web-design#faq",
-        "mainEntity": RALEIGH_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://factoryjet.com/raleigh/web-design#breadcrumbs",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://factoryjet.com"},
-          {"@type": "ListItem", "position": 2, "name": "United States", "item": "https://factoryjet.com"},
-          {"@type": "ListItem", "position": 3, "name": "Raleigh", "item": "https://factoryjet.com/raleigh"},
-          {"@type": "ListItem", "position": 4, "name": "Web Design", "item": "https://factoryjet.com/raleigh/web-design"}
-        ]
-      }
-    ]
-  };
+        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Guaranteed 7-Day Sprint</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Our 7-Day Delivery Sprint Protocol
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+              </p>
+            </div>
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How FactoryJet builds your Raleigh website in 7 days",
-    "description": "Our proven 7-day process for delivering a professional, SEO-optimized website for Raleigh businesses.",
-    "totalTime": "P7D",
-    "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Day 1: Discovery Call", "text": "We learn your business, goals, and competitive landscape in Raleigh. We define the sitemap, content strategy, and technical requirements." },
-      { "@type": "HowToStep", "position": 2, "name": "Day 2: Strategy & Structure", "text": "We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins." },
-      { "@type": "HowToStep", "position": 3, "name": "Days 3–4: Design", "text": "We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs." },
-      { "@type": "HowToStep", "position": 4, "name": "Days 5–6: Development & SEO", "text": "We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for Raleigh, structured data, and connect all integrations." },
-      { "@type": "HowToStep", "position": 5, "name": "Day 7: Launch", "text": "Your Raleigh website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support." }
-    ]
-  };
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "dateModified": "2026-08-04",
-          "name": "Web Design Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet",
-          "url": "https://factoryjet.com/raleigh/web-design/",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
-          }
-        }) }}
-      />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+              {ROADMAP_STEPS.map((step) => (
+                <div
+                  key={step.phase}
+                  style={{
+                    background: '#F9F9FC',
+                    border: '1px solid #E6E6EC',
+                    borderRadius: '16px',
+                    padding: '28px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                      {step.phase}
+                    </span>
+                  </div>
+
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 10px', lineHeight: 1.3 }}>
+                    {step.title}
+                  </h3>
+
+                  <p style={{ fontSize: '13.5px', color: '#494852', lineHeight: 1.55, margin: '0 0 18px', flexGrow: 1 }}>
+                    {step.desc}
+                  </p>
+
+                  <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                      Core Deliverables:
+                    </span>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {step.deliverables.map((del, dIdx) => (
+                        <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
+                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span>{del}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Raleigh Web Design Agencies: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare engineering-led Next.js development against traditional design agencies before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="RALEIGH WEB DESIGN INTELLIGENCE"
+          headline="Frequently Asked Questions About Web Design in Raleigh NC"
+          lead="Direct, plain English answers to what Raleigh business owners and marketing leaders ask about website projects:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#FFFFFF]"
+        />
+
+        {/* ── 11. LOCAL LINK SILO MATRIX ── */}
+        <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
+          <div className="pp-wrap">
+            <WebDesignCityLinksUS currentCity="raleigh" />
+          </div>
+        </section>
+
+        {/* ── 12. FINAL EXECUTIVE CTA BANNER ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price &amp; 7-Day Delivery</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade Your Raleigh Business Website?
+            </h2>
+
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+            </p>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter locale="us" />
     </>
   );
 }
