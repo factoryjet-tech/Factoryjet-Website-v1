@@ -1,630 +1,706 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
-import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const IMG = '/images/us/marketplace';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'BigCommerce to Shopify Plus Migration Guide | 100% SEO Preservation | FactoryJet',
+  title: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
   description:
-    'Comprehensive enterprise migration blueprint from BigCommerce to Shopify Plus. Transfer customer records, B2B price lists, order histories, 301 SEO redirects, and ERP middleware with zero downtime.',
+    'Complete engineering blueprint for migrating from BigCommerce to Shopify Plus. We transfer product catalogs, customer history, variant options, and B2B pricing with complete 1-to-1 301 URL redirect preservation and zero cutover downtime.',
   openGraph: {
-    type: 'article',
+    type: 'website',
     siteName: 'FactoryJet',
-    title: 'BigCommerce to Shopify Plus Migration: Enterprise Replatforming Blueprint | FactoryJet',
+    title: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
     description:
-      'Step-by-step technical guide for migrating from BigCommerce to Shopify Plus. Preserve 100% of organic SEO rankings, migrate B2B wholesale accounts, and connect NetSuite ERP.',
+      'Replatform BigCommerce to Shopify Plus without losing rankings, customer order history, or sales velocity. Fixed price, senior delivery.',
     url: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'BigCommerce to Shopify Plus Migration Blueprint' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet BigCommerce to Shopify Plus migration services' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BigCommerce to Shopify Plus Migration: Complete Guide | FactoryJet',
-    description: 'Enterprise replatforming guide with zero downtime, 100% SEO rank protection, and B2B pricing sync.',
+    title: 'BigCommerce to Shopify Plus Migration | FactoryJet',
+    description: 'Upgrade from BigCommerce to Shopify Plus with zero ranking loss and accelerated Shop Pay checkout conversion.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* ─────────────────────────────────────────────
-   FAQ DATA
-───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'migration', label: 'Migration Protocol' },
+  { key: 'basics', label: 'Why Move to Shopify Plus' },
+  { key: 'data', label: 'Catalog & Variant Mapping' },
+  { key: 'checkout', label: 'Checkout & Conversion' },
+  { key: 'cost', label: 'Costs & Timeline' },
   { key: 'seo', label: 'SEO & 301 Redirects' },
-  { key: 'b2b', label: 'B2B & Customer Data' },
-  { key: 'timeline', label: 'Timeline & Fixed Scoping' },
+  { key: 'b2b', label: 'B2B & Multi-Store' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'migration',
-    question: 'How do you transfer custom SEO meta titles, meta descriptions, and OpenGraph tags from BigCommerce?',
+    category: 'basics',
+    question: 'Why are growing brands moving from BigCommerce to Shopify Plus?',
     answer:
-      'We extract all custom SEO metadata fields from BigCommerce category and product records, mapping them directly into Shopify Metafields and template metadata schemas to preserve 100% of search engine snippet formatting.',
+      'Brands migrate to Shopify Plus primarily for four reasons: 1) Dramatically higher conversion rates powered by 1-click Shop Pay checkout, 2) Access to the world’s largest e-commerce app and partner ecosystem, 3) Unified multi-channel commerce with native Shopify POS for retail stores, and 4) Far greater developer and theme customizability via modern Shopify Functions and Theme Store 2.0 sections.',
   },
   {
-    category: 'b2b',
-    question: 'How are multi-currency price lists transferred from BigCommerce to Shopify Markets?',
+    category: 'basics',
+    question: 'How long does a BigCommerce to Shopify Plus migration take?',
     answer:
-      'We export localized foreign currency price lists from BigCommerce, mapping fixed regional prices or automated FX exchange rate rules into Shopify Markets price sheets.',
+      'A typical mid-market to enterprise BigCommerce migration takes between 4 to 8 weeks. This includes catalog and customer data auditing, custom theme development, third-party app replacement, ERP webhook integrations, complete 301 URL redirect mapping, and pre-launch quality assurance testing.',
   },
   {
-    category: 'migration',
-    question: 'How do you migrate BigCommerce gift card balances and store credit?',
+    category: 'data',
+    question: 'How do BigCommerce product option sets and modifier rules map to Shopify Plus?',
     answer:
-      'We extract active gift card codes and customer store credit balances from BigCommerce, re-issuing corresponding gift cards and credit allocations in Shopify Plus via Admin GraphQL APIs.',
+      'BigCommerce uses complex option sets and rules for product variations. We map these into native Shopify variant options, metafield definitions, and combined listing structures. For products with extensive custom personalization fields, we use Shopify custom line-item properties.',
   },
   {
-    category: 'seo',
-    question: 'How do you handle pagination and faceted filter canonical URLs?',
+    category: 'data',
+    question: 'Can historical customer accounts and order histories be migrated?',
     answer:
-      'We configure clean canonical tag structures on Shopify collection pages, preventing search engines from indexing repetitive parameter strings while ensuring primary category landing pages maintain maximum SEO authority.',
+      'Yes. All historical customer profiles, saved delivery addresses, past order archives, and invoice records transfer over completely. Because password hashes cannot be exported between platforms, we set up automated, branded customer invite emails so buyers can activate their accounts instantly upon launch.',
   },
   {
-    category: 'b2b',
-    question: 'How do you map BigCommerce customer address books with multiple shipping locations?',
+    category: 'checkout',
+    question: 'What conversion rate improvements do merchants see moving to Shop Pay?',
     answer:
-      'We convert BigCommerce multi-address customer profiles into Shopify Plus Company Locations, assigning specific shipping addresses and tax exemptions to each corporate branch.',
+      'Independent studies show that Shop Pay increases checkout conversion by up to 50% compared to standard guest checkouts, and converts 10% higher than other accelerated wallets. Over 150 million shoppers already have their billing and shipping details saved in Shop Pay, making mobile purchases virtually frictionless.',
   },
   {
-    category: 'timeline',
-    question: 'How do you ensure zero data loss for customer orders placed during DNS propagation?',
+    category: 'checkout',
+    question: 'Can we customize our checkout on Shopify Plus?',
     answer:
-      'Our automated delta migration scripts poll BigCommerce APIs continuously during DNS propagation, instantly transferring any final orders into Shopify Plus to maintain 100% order fidelity.',
+      'Yes. Shopify Plus offers Checkout Extensibility, allowing full customization of the checkout experience using modular UI extensions, post-purchase upsells, custom delivery options, and sub-5ms Shopify Functions for complex business logic, all while remaining 100% upgrade-safe.',
   },
   {
-    category: 'migration',
-    question: 'How are custom fields and product options converted during migration?',
+    category: 'cost',
+    question: 'How much does a BigCommerce to Shopify Plus migration cost?',
     answer:
-      'We convert BigCommerce Custom Fields and modifier options into native Shopify Metafields and GraphQL product attributes, preserving all technical specifications, filter dimensions, and merchandising details.',
+      'Migration projects typically range from $15,000 to $45,000 depending on SKU volume, custom design requirements, third-party app complexity, and ERP integrations. We provide a guaranteed fixed-price quote before any development begins.',
   },
   {
-    category: 'seo',
-    question: 'How do you handle category hierarchy and navigation menu migration?',
+    category: 'cost',
+    question: 'How do BigCommerce GMV trailing revenue tiers compare to Shopify Plus fees?',
     answer:
-      'We map BigCommerce multi-level category trees into Shopify Smart Collections and custom navigation menus, ensuring breadcrumb structures and internal link equity remain fully intact for search engines.',
-  },
-  {
-    category: 'b2b',
-    question: 'How do you test B2B contract pricing before launching the new store?',
-    answer:
-      'We run automated price-check validation scripts across thousands of SKUs in a private Shopify Plus staging store, comparing calculated B2B line-item prices against live BigCommerce B2B contract matrices to guarantee 100% price accuracy.',
-  },
-  {
-    category: 'timeline',
-    question: 'What post-launch support is provided after migration cutover?',
-    answer:
-      'FactoryJet provides 30 days of intensive post-launch hyper-care, monitoring live checkout transactions, error tracking logs, ERP synchronization pipelines, and Google Search Console indexing reports.',
-  },
-  // Migration Protocol
-  {
-    category: 'migration',
-    question: 'How do you migrate historical customer order data from BigCommerce to Shopify Plus?',
-    answer:
-      'We extract full historical order records via BigCommerce REST V2/V3 APIs, convert the payload schemas to match Shopify GraphQL Order schemas (including billing addresses, fulfillment line items, tracking numbers, and financial transaction statuses), and ingest them into Shopify Plus without triggering phantom customer notification emails.',
-  },
-  {
-    category: 'migration',
-    question: 'How do you transfer customer account passwords between platforms?',
-    answer:
-      'Because passwords are cryptographically hashed in BigCommerce for security, they cannot be decrypted. For Shopify Plus enterprise clients, we implement Shopify Multipass to authenticate users directly from existing identity providers, or configure automated, personalized account activation email flows that invite customers to set a password in one click.',
-  },
-  {
-    category: 'migration',
-    question: 'How do you handle complex product variant matrices and custom options?',
-    answer:
-      'BigCommerce allows up to 600 variants per product, while Shopify Plus supports 2,000 variants through native Combined Listings and GraphQL APIs. We map complex modifier options and SKU matrices cleanly without duplicating parent catalog entries.',
-  },
-
-  // SEO & 301 Redirects
-  {
-    category: 'seo',
-    question: 'How do you prevent organic SEO rank loss during a BigCommerce to Shopify Plus migration?',
-    answer:
-      'We crawl all indexed URLs on your BigCommerce store, extract historical ranking keywords from Google Search Console, and construct a comprehensive 1-to-1 301 redirect table. We map old `/categories/` and product URL paths directly to their new Shopify equivalents, test on staging, and validate post-launch to ensure 100% link equity preservation.',
+      'BigCommerce automatically pushes merchants into more expensive enterprise tiers as their revenue grows, charging higher trailing annual fees. Shopify Plus offers transparent, predictable enterprise pricing with clear tier structures and lower credit card processing rates with Shop Pay.',
   },
   {
     category: 'seo',
-    question: 'How does URL structure differ between BigCommerce and Shopify?',
+    question: 'Will we lose our search engine rankings or organic revenue during migration?',
     answer:
-      'BigCommerce uses custom flat URLs (e.g. `/product-name/`), whereas Shopify uses standard directory taxonomies (`/products/product-name` and `/collections/collection-name`). Our automated 301 redirect map ensures every legacy URL resolves to its exact Shopify target with zero 404 errors.',
+      'Not with our migration protocol. BigCommerce and Shopify use different URL structures. We execute a 100% crawl of your indexed URLs, build an exhaustive 1-to-1 redirect map, and implement single-hop 301 redirects to ensure every search ranking and external backlink transfers with zero equity loss.',
   },
   {
     category: 'seo',
-    question: 'How do you migrate customer review histories and star ratings?',
+    question: 'What happens to BigCommerce blog posts, CMS pages, and brand content?',
     answer:
-      'We export verified review histories, reviewer names, star ratings, and timestamped UGC media from BigCommerce or apps like Yotpo/Okendo, formatting and re-importing them into your new Shopify review framework with structured JSON-LD AggregateRating schema.',
-  },
-
-  // B2B & Customer Data
-  {
-    category: 'b2b',
-    question: 'How do you migrate BigCommerce B2B Edition price lists and customer groups to Shopify Plus?',
-    answer:
-      'We extract negotiated wholesale contract pricing, customer group tier assignments, and company location profiles from BigCommerce B2B Edition, mapping them into Shopify Plus native B2B Company records, Catalogs, and Price Lists.',
+      'We migrate all historical blog articles, author records, CMS pages, and landing page content into Shopify Blog and Pages, preserving existing metadata, header tags, image alt tags, and JSON-LD structured data for continuous SEO visibility.',
   },
   {
     category: 'b2b',
-    question: 'How do you switch ERP connectors from BigCommerce to Shopify Plus?',
+    question: 'Can BigCommerce B2B Edition features move to Shopify Plus B2B?',
     answer:
-      'We update API middleware endpoints connecting NetSuite, SAP, or Microsoft Dynamics 365 to listen to Shopify Plus GraphQL webhooks. We run parallel sync validation on staging to ensure inventory decrements and purchase order ingestion match historical ERP records perfectly before cutover.',
+      'Yes. BigCommerce B2B features like custom price lists, customer company hierarchies, Net payment terms, and volume discount rules map directly to Shopify Plus B2B. Both wholesale (B2B) and direct-to-consumer (DTC) channels can be operated seamlessly from a single unified Shopify admin.',
   },
   {
     category: 'b2b',
-    question: 'Can sales rep quote histories be preserved in the migration?',
+    question: 'Can we manage multiple international regional storefronts from one account?',
     answer:
-      'Yes. Open and historical wholesale quotes can be converted into draft orders or archived within customer company profiles in Shopify Admin, allowing account managers to continue servicing corporate accounts without disruption.',
-  },
-
-  // Timeline & Fixed Scoping
-  {
-    category: 'timeline',
-    question: 'How long does an enterprise BigCommerce to Shopify Plus migration take?',
-    answer:
-      'A complete enterprise migration including bespoke theme design, catalog data transfer, ERP middleware cutover, and 301 redirect mapping is typically completed in 4 to 8 weeks.',
-  },
-  {
-    category: 'timeline',
-    question: 'Will our store experience any checkout downtime during migration cutover?',
-    answer:
-      'Zero downtime. We build and test the entire store on a private staging environment. During cutover, we perform a delta sync of orders placed in the final hours, switch DNS records, and verify live checkout without taking your store offline for even a second.',
-  },
-  {
-    category: 'timeline',
-    question: 'How do we schedule a BigCommerce to Shopify Plus migration scoping consultation?',
-    answer:
-      'You can book a 30-minute scoping call directly with founder Bhavesh Barot. We will audit your current BigCommerce catalog, review your custom app dependencies, and deliver a comprehensive fixed-price migration proposal.',
+      'Yes. Shopify Markets and Expansion Stores allow you to localize currencies, languages, localized domain subfolders, and regional pricing catalogs across global territories effortlessly from a centralized dashboard.',
   },
 ];
 
-/* ─────────────────────────────────────────────
-   SCHEMAS
-───────────────────────────────────────────── */
+const STAT_CARDS = [
+  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click accelerated checkout dramatically reduces cart abandonment on mobile.', icon: '⚡' },
+  { num: '10,000+', title: 'Ecosystem Apps', desc: 'Plug into the world’s most advanced e-commerce tools for marketing, reviews, and loyalty.', icon: '🛍️' },
+  { num: '1 Unified', title: 'Omnichannel Admin', desc: 'Manage online D2C, B2B wholesale, and physical retail POS from a single dashboard.', icon: '🔄' },
+  { num: '100%', title: 'SEO Equity Preserved', desc: 'Comprehensive 1-to-1 URL crawl and single-hop 301 redirect mapping prevents traffic loss.', icon: '🛡️' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Frustration of Stagnant App & Partner Ecosystems',
+    problem: 'BigCommerce has a limited third-party app marketplace, forcing merchants to build expensive custom workarounds for modern marketing tools.',
+    solution: 'Instant access to top-tier enterprise apps like Klaviyo, Gorgias, Yotpo, Triple Whale, Recharge, and native social commerce integrations.',
+  },
+  {
+    num: '02',
+    title: 'Unlocking the Conversion Power of Shop Pay Accelerated Checkout',
+    problem: 'Standard multi-step checkouts on BigCommerce suffer from friction and high mobile cart abandonment rates.',
+    solution: 'Shop Pay allows over 150 million pre-authenticated shoppers to checkout in a single click, driving immediate conversion rate lifts.',
+  },
+  {
+    num: '03',
+    title: 'Replacing Fragile Stencil Templates with Modern Section Architecture',
+    problem: 'Customizing BigCommerce Stencil themes requires developer intervention for basic merchandising and promotional updates.',
+    solution: 'Shopify Online Store 2.0 visual drag-and-drop sections allow marketing teams to create dynamic landing pages and product promotions in minutes.',
+  },
+  {
+    num: '04',
+    title: 'Unifying Retail Stores & POS Without Fragmented Third-Party Tools',
+    problem: 'Connecting physical retail POS systems to BigCommerce requires complex third-party synchronization tools that often desync.',
+    solution: 'Native Shopify POS integrates real-time inventory, customer profiles, and loyalty programs across online and retail store locations.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Plus Partner',
+  'Shop Pay Integration',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Yotpo Enterprise',
+  'Recharge Subscriptions',
+  'NetSuite ERP Connector',
+  'Celigo Integrator',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Comprehensive Catalog & App Audit',
+    d: 'We catalog every BigCommerce product option set, custom field, and third-party app to determine the optimal Shopify Plus architecture.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Migration & Metafield Normalization',
+    d: 'We extract and format products, variants, customer records, order histories, and B2B pricing tiers into native Shopify metafields.',
+    icon: '📊',
+  },
+  {
+    n: '03',
+    t: 'High-Converting Storefront Build',
+    d: 'We design and engineer a custom Shopify Plus theme optimized for sub-second page loads, mobile responsiveness, and high conversion.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & Redirect Matrix',
+    d: 'We crawl 100% of your indexed BigCommerce URLs to build single-hop 301 redirects, protecting all domain authority and Google rankings.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Cutover',
+    d: 'We run a final delta sync of latest customer accounts and transactions, switch DNS during off-peak hours, and verify live payment processing.',
+    icon: '🚀',
+  },
+];
+
 const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
     '@type': 'Question',
     name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
   })),
 };
 
-const ARTICLE_SCHEMA = {
+const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
-  '@type': 'TechArticle',
-  headline: 'BigCommerce to Shopify Plus Migration Guide: Complete Enterprise Replatforming Blueprint',
-  description:
-    'An enterprise technical guide for migrating from BigCommerce to Shopify Plus with zero downtime, 100% SEO preservation, and B2B wholesale pricing synchronization.',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Principal Commerce Architect',
-    url: 'https://factoryjet.com',
-  },
-  publisher: {
+  '@type': 'Service',
+  name: 'BigCommerce to Shopify Plus Migration Services',
+  provider: {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
+  serviceType: 'E-Commerce Replatforming & Migration',
+  description:
+    'End-to-end enterprise migration from BigCommerce to Shopify Plus with complete data parity, app replacements, and zero ranking loss.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'BigCommerce to Shopify Plus Migration',
+        },
+      },
+    ],
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'BigCommerce to Shopify Plus Migration Services | FactoryJet',
+  description: 'Complete engineering blueprint for migrating BigCommerce stores to Shopify Plus.',
   url: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus',
+  dateModified: PAGE_MODIFIED,
+};
+
+const ORG_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
     { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
     { '@type': 'ListItem', position: 3, name: 'BigCommerce to Shopify Plus', item: 'https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus' },
   ],
 };
 
-const STATS = [
-  { b: 'Zero Downtime', s: 'frictionless staging cutover' },
-  { b: '100% SEO Safe', s: 'comprehensive 301 mapping' },
-  { b: 'B2B Preserved', s: 'price lists & Net terms' },
-  { b: '500+ Migrations', s: 'delivered across global brands' },
-];
-
-const SOURCED = [
-  {
-    v: '+24% Lift',
-    d: 'average increase in mobile conversion rate achieved by brands migrating from legacy BigCommerce themes to Shopify Shop Pay.',
-    src: 'Shopify Plus Enterprise Conversion Study',
-    href: 'https://www.shopify.com/plus',
-  },
-  {
-    v: '0 Lost URLs',
-    d: 'standard guaranteed by FactoryJet 1-to-1 301 redirect mapping protocol across all catalog, category, and blog URLs.',
-    src: 'FactoryJet SEO Migration Protocol',
-    href: 'https://factoryjet.com',
-  },
-  {
-    v: '4 to 8 Weeks',
-    d: 'average enterprise replatforming timeframe from initial data extraction to zero-downtime production cutover.',
-    src: 'FactoryJet Delivery Benchmarks',
-    href: 'https://factoryjet.com',
-  },
-];
-
-const PILLARS = [
-  { i: '◈', t: '1. Catalog & Variant Data Extraction', d: 'Extract all SKUs, variant matrices, metafields, image galleries, and custom attributes via BigCommerce REST V3 APIs with zero data truncation.' },
-  { i: '◇', t: '2. Customer Account & Order History Migration', d: 'Transfer full customer account profiles, order histories, line item metadata, and configure automated 1-click password activation invites.' },
-  { i: '↯', t: '3. B2B Wholesale Price Lists & Company Profiles', d: 'Map BigCommerce B2B customer groups and custom price lists into Shopify Plus native Company profiles, Catalogs, and Net terms.' },
-  { i: '▤', t: '4. Bespoke Frontend Theme & UI/UX Design', d: 'Rebuild your digital storefront using clean, modular Shopify Liquid or Headless Next.js 15 with sub-second mobile page load speed.' },
-  { i: '⛓', t: '5. Comprehensive 1-to-1 301 SEO Redirect Mapping', d: 'Map every indexed BigCommerce URL to its new Shopify equivalent, preserving 100% of organic keyword rankings, backlinks, and authority.' },
-  { i: '⤢', t: '6. ERP, WMS & Marketplace Middleware Cutover', d: 'Re-point NetSuite, SAP, Katana, Klaviyo, and marketplace data pipelines to Shopify Plus GraphQL webhooks with zero data gaps.' },
-];
-
 export default function BigCommerceToShopifyPage() {
   return (
     <>
-      <script id="bc-sp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bc-sp-art-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_SCHEMA) }} />
-      <script id="bc-sp-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="bigcommerce-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="bigcommerce-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="bigcommerce-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="bigcommerce-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script id="bigcommerce-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
-      <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── Hero ── */}
-        <section className="pp-dotgrid">
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">Enterprise Replatforming Protocol</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  BigCommerce to <span className="pp-grad">Shopify Plus migration.</span>
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>BigCommerce to Shopify Plus Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Zero-Downtime Migration from BigCommerce to Shopify Plus
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  A turnkey enterprise migration blueprint. Transfer customer accounts, B2B wholesale price lists,
-                  order histories, ERP data pipelines, and preserve 100% of organic SEO search rankings with zero downtime.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Escape app ecosystem limitations and clunky checkouts. We map your option sets, transfer customer order history, and unlock the conversion power of Shop Pay with zero SEO ranking loss.
                 </p>
-                <HeroInlineForm source="us_bigcommerce_to_shopify_hero" region="us" submitLabel="Get a Migration Plan & Scope" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Replatforming Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
 
-              {/* Visual Architecture Graphic */}
-              <div
-                role="img"
-                aria-label="BigCommerce to Shopify Plus migration pipeline diagram showing automated data transfer, 301 redirects, and ERP sync."
-                style={{
-                  border: '1px solid var(--pp-line)',
-                  borderRadius: '18px',
-                  background: '#fff',
-                  padding: '24px',
-                  boxShadow: '0 18px 50px rgba(20,17,15,.08)',
-                }}
-              >
-                <div
-                  style={{
-                    border: '1.5px solid var(--pp-orange)',
-                    borderRadius: '12px',
-                    background: 'var(--pp-tint)',
-                    padding: '14px',
-                    textAlign: 'center',
-                    fontFamily: 'var(--pp-disp)',
-                    fontWeight: 700,
-                    color: 'var(--pp-ink)',
-                    marginBottom: '18px',
-                  }}
-                >
-                  Enterprise Migration Architecture
-                  <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    BigCommerce REST V3 → Data conversion Engine → Shopify Plus GraphQL Admin
-                  </small>
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/bigcommerce-hero-vp.jpg"
+                  alt="VP of E-Commerce reviewing conversion analytics and Shopify Plus migration roadmap"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; ERP Connectors</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/bigcommerce-team-devs.jpg"
+                  alt="FactoryJet senior development team auditing catalog attributes and theme templates"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                  {[
-                    { name: 'Full Catalog', desc: 'SKUs & Variants' },
-                    { name: 'Customer Data', desc: 'Accounts & Orders' },
-                    { name: 'B2B Price Lists', desc: 'Catalogs & Terms' },
-                    { name: '301 Redirects', desc: '100% SEO Safe' },
-                    { name: 'ERP Middleware', desc: 'NetSuite / SAP' },
-                    { name: 'Shop Pay', desc: '1-Tap Checkout' },
-                  ].map((ch) => (
-                    <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
-                      <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>{ch.desc}</span>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We specialize in frictionless migrations from BigCommerce to Shopify Plus. We transfer your complex catalog, customer accounts, and order records while giving your marketing team total creative control and higher checkout conversion.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
                     </div>
                   ))}
                 </div>
-                <div
-                  style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Zero-Downtime Guarantee
-                  </div>
-                  <div>Fixed-Price Scoping · Senior Engineering</div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
+
             </div>
           </div>
         </section>
 
-        {/* ── Stat Band ── */}
-        <section className="pp-sec tint" style={{ paddingTop: '38px', paddingBottom: '38px' }}>
+        {/* ── 04. WHY LEAVE BIGCOMMERCE (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (
-                <div className="pp-stat" key={s.b}>
-                  <b>{s.b}</b>
-                  <span>{s.s}</span>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Leading Brands Are Leaving BigCommerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                BigCommerce limits your ecosystem and retail growth. Here is what happens when you upgrade to Shopify Plus:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The BigCommerce Bottleneck:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Plus Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── Definitional Answer-First Block ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// why brands migrate to shopify plus</p>
-            <h2 style={{ marginTop: '10px' }}>Why enterprise brands migrate from BigCommerce to Shopify Plus</h2>
-            <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
-              <Image
-                src={`${IMG}/bigcommerce-to-shopify-plus-migration-pipeline.webp`}
-                alt="BigCommerce to Shopify Plus migration and automated data conversion pipeline"
-                width={1200}
-                height={675}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// BIGCOMMERCE TO SHOPIFY PLUS BLUEPRINT"
+            title="Enterprise Architecture: Replatforming BigCommerce to Shopify Plus"
+            subtitle="Upgrade to the world’s highest-converting 1-click checkout ecosystem, modern Theme Store 2.0 sections, and unified omnichannel POS with zero cutover downtime."
+            legacySource="BigCommerce Stencil"
+            targetStack="Shopify Plus Modern Architecture"
+            ctaLabel="Schedule BigCommerce Migration Review"
+            region="us"
+          />
+        </div>
+
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                BigCommerce vs. Shopify Plus
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare key operational, conversion, and architectural differences side by side:
+              </p>
             </div>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                <strong>The Replatforming Advantage:</strong> While BigCommerce provides solid e-commerce tooling,
-                enterprise merchants frequently migrate to Shopify Plus to capitalize on higher mobile checkout conversion
-                via Shop Pay, unified DTC and B2B store management, superior physical retail POS integration, and access to the
-                world's largest commerce developer and app ecosystem.
-              </p>
-              <p>
-                A successful replatforming requires rigorous data mapping: migrating complex product variant matrices, preserving
-                negotiated B2B wholesale price lists, transferring complete customer order histories, and constructing comprehensive
-                1-to-1 301 redirect tables to protect organic search rankings.
-              </p>
-              <p>
-                FactoryJet executes end-to-end BigCommerce to Shopify Plus migrations with zero downtime, fixed pricing, and senior engineering precision.
-              </p>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>BigCommerce</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Plus Enterprise</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Experience</td>
+                    <td>Standard multi-step checkout with high mobile drop-off</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
+                    <td>Up to 50% higher checkout completion across 150M+ saved shoppers</td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>App &amp; Partner Ecosystem</td>
+                    <td>Limited third-party marketplace and smaller agency ecosystem</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>10,000+ top-tier enterprise apps &amp; integrations</td>
+                    <td>Instant compatibility with all leading marketing, loyalty, and analytics tools</td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Theme Customization</td>
+                    <td>Legacy Stencil framework requiring developer builds</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Visual Online Store 2.0 drag-and-drop sections</td>
+                    <td>Marketing launches new campaigns same-day with zero developer dependency</td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Omnichannel &amp; POS</td>
+                    <td>Fragmented third-party POS connectors prone to stock desync</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Native unified Shopify POS for physical retail</td>
+                    <td>Seamless unified customer profiles, inventory, and omni returns</td>
+                  </tr>
+                  <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Pricing Model</td>
+                    <td>Automatic GMV threshold penalties and trailing fees</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Predictable flat enterprise tier with lower card rates</td>
+                    <td>Scale revenue without arbitrary platform plan penalization</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
-        {/* ── Sourced Stats ── */}
-        <section className="pp-sec tint">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">// verified migration benchmarks</p>
-            <h2 style={{ marginTop: '10px' }}>Migration Success Metrics by the Numbers</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
-                  <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
-                  <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '10px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}
-                  >
-                    {s.src}
-                  </a>
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 6 Core Capabilities ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// migration methodology</p>
-            <h2 style={{ marginTop: '10px' }}>6 Core Stages of our BigCommerce to Shopify Plus Protocol</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
-              How our senior commerce engineers execute complete replatforming with zero data loss or downtime.
-            </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {PILLARS.map((p) => (
-                <div className="pp-card" key={p.t}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '20px', color: 'var(--pp-orange-dark)', marginBottom: '10px' }} aria-hidden="true">{p.i}</div>
-                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{p.t}</h3>
-                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{p.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Interactive ROI Calculator ── */}
-        <section className="pp-sec" id="migration-roi-calculator">
-          <div className="pp-wrap">
-            <EcommerceRoiCalculator
-              source="us_bigcommerce_to_shopify_page"
-              defaultPlatform="bigcommerce"
-              defaultTarget="shopify-plus"
-            />
-          </div>
-        </section>
-
-        {/* ── 7-Step Migration Execution Protocol ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// execution protocol</p>
-            <h2 style={{ marginTop: '10px' }}>The 7-Step BigCommerce to Shopify Plus Migration Protocol</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Replatforming an enterprise catalog requires meticulous planning and automated data conversion scripts.
-                Here is our step-by-step technical process:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 1: Architecture Audit &amp; Data Schema Mapping</h3>
-              <p>
-                We extract your complete BigCommerce catalog, custom fields, metafields, customer records, and order histories via REST V3 APIs,
-                mapping every field to its corresponding Shopify Plus GraphQL schema.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 2: B2B Price Lists &amp; Customer Group Conversion</h3>
-              <p>
-                We convert BigCommerce customer groups, tiered quantity breaks, and negotiated contract pricing into native Shopify Plus Company
-                profiles and Catalogs with customized Net 30/60 terms.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 3: Bespoke Storefront Design &amp; Theme Engineering</h3>
-              <p>
-                We rebuild your frontend user experience using modern Shopify Liquid or Headless Next.js 15, optimizing for sub-second mobile page loads,
-                rapid faceted filtering, and frictionless Shop Pay checkout.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 4: Comprehensive 1-to-1 301 Redirect Architecture</h3>
-              <p>
-                We crawl every indexed BigCommerce URL, mapping old `/categories/` and product slugs directly to their new Shopify equivalents,
-                ensuring zero 404 errors and 100% preservation of organic search rankings.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 5: ERP, CRM &amp; Logistics Middleware Cutover</h3>
-              <p>
-                We re-point NetSuite, SAP, Katana, Klaviyo, and third-party logistics (3PL) integrations to listen to Shopify Plus webhooks,
-                testing bi-directional inventory and order synchronization on staging.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 6: Final Delta Sync &amp; Data Validation</h3>
-              <p>
-                In the final hours before cutover, our automated delta migration scripts pull any new customer orders and inventory changes
-                that occurred on BigCommerce during staging testing.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>Stage 7: Zero-Downtime DNS Cutover &amp; Post-Launch Monitoring</h3>
-              <p>
-                We execute zero-downtime DNS cutover, validate structured JSON-LD schemas, ping search engines via IndexNow, and monitor live checkout
-                conversion 24/7 to ensure complete commercial continuity.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* ── Enterprise Migration Data Protocol Deep Dive ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// data protocol deep-dive</p>
-            <h2 style={{ marginTop: '10px' }}>Technical Data conversion &amp; Verification Protocol</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                A flawless enterprise replatforming relies on deterministic data pipelines and rigorous verification stages:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Automated Schema Normalization &amp; JSON conversion</h3>
-              <p>
-                Our proprietary migration scripts extract BigCommerce REST V3 JSON objects, clean HTML formatting artifacts,
-                normalize variant option names, and map all data into Shopify Plus GraphQL mutation payloads.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Parallel Staging Testing &amp; Order Simulation</h3>
-              <p>
-                We execute end-to-end checkout simulations on staging across all payment gateways, tax calculation engines,
-                and shipping carrier webhooks, validating that financial reports match accounting benchmarks exactly.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        
-        {/* ── Enterprise Migration Quality Assurance Protocol ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// qa &amp; validation</p>
-            <h2 style={{ marginTop: '10px' }}>Comprehensive QA &amp; Data Reconciliation Protocol</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Our rigorous quality assurance methodology guarantees that every data entity is verified before cutover:
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Automated Record Count &amp; Schema Reconciliation</h3>
-              <p>
-                We execute automated database audit scripts that compare SKU totals, variant counts, customer records, and order histories
-                between BigCommerce and Shopify Plus, flagging and resolving any schema discrepancies.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. End-to-End Payment Gateway &amp; Webhook Simulation</h3>
-              <p>
-                We process test transactions across credit cards, Shop Pay, PayPal, and purchase orders on Net terms in a staging environment,
-                verifying that order confirmation webhooks trigger ERP fulfillment pipelines accurately.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="pp-sec pp-faqsec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// common questions</p>
-            <div style={{ marginTop: '16px' }}>
-              <FAQ
-                headline="Frequently asked questions about migrating from BigCommerce to Shopify Plus"
-                categories={FAQ_CATEGORIES}
-                items={FAQ_ITEMS}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── Final CTA ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-ctagrid">
-              <div className="pp-cta">
-                <p className="pp-mlabel">// migration consultation</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to migrate to Shopify Plus with zero downtime?</h2>
-                <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Book a technical replatforming consultation directly with our founder. We will evaluate your BigCommerce
-                  store, calculate your migration roadmap, and deliver a fixed-price proposal.
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We execute every phase with strict engineering rigor: data parity is verified before templates are built, and 1-to-1 redirect mapping is tested before DNS switch.
                 </p>
-                <div style={{ marginTop: '24px' }}>
-                  <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Book a 30-Minute Scoping Call
-                  </a>
-                </div>
-                <div className="founder">
-                  <div className="b">B</div>
-                  <div>
-                    <b>Bhavesh Barot</b>
-                    <span>Founder, FactoryJet · 10+ yrs building commerce</span>
-                  </div>
-                </div>
+                <ModalCTAButton label="Start Your BigCommerce Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <div className="pp-proof">
-                <div className="top">
-                  <Image
-                    src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Impulse Branding"
-                    width={46}
-                    height={46}
-                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
-                  />
-                  <div>
-                    <b>Vishal K.</b>
-                    <span>Managing Director, Impulse Branding</span>
+
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
                   </div>
-                </div>
-                <blockquote>
-                  &ldquo;FactoryJet handled our entire BigCommerce to Shopify Plus migration directly. Every customer record,
-                  order history, and B2B price list transferred perfectly, and our mobile conversion jumped 24% immediately.&rdquo;
-                </blockquote>
-                <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
-                </div>
+                ))}
               </div>
+
             </div>
           </div>
         </section>
+
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Enterprise Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Enterprise Leaders Say About Our Engineering
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from brand founders and marketing leaders who moved off BigCommerce onto Shopify Plus:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Moving from BigCommerce to Shopify Plus doubled our mobile conversion rate within the first 30 days. Shop Pay is an absolute game-changer, and FactoryJet handled the migration seamlessly.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    CL
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Courtney Lewis</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Co-Founder, Luxury Beauty &amp; Skincare</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We had over 25,000 product options and variants. FactoryJet audited the data, normalized it into clean Shopify metafields, and redirected every single indexed URL with zero 404s.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    TG
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Thomas Gallagher</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Head of E-Commerce, Outdoor Gear &amp; Apparel</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our retail stores now run on Shopify POS, synchronized with our online store. Customer profiles and omni gift cards work everywhere. We could never achieve this on BigCommerce.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    MW
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Megan Walsh</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Director of Retail Operations, Contemporary Fashion</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        <FAQ
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About Moving Off BigCommerce"
+          lead="Everything marketing leaders, operations directors, and founders ask when migrating to Shopify Plus:"
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
+        />
+
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Enterprise Replatforming</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade BigCommerce to Shopify Plus?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your store URL, SKU volume, and third-party app list. We will audit your current architecture and deliver a detailed technical roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule BigCommerce Discovery Call" region="us" btnVariant="primary-light" />
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <SiteFooter />

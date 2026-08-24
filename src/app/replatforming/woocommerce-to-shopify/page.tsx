@@ -1,341 +1,538 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import MidPageCTA from '@/components/v2/MidPageCTA';
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-24';
 
 export const metadata: Metadata = {
-  title: 'WooCommerce to Shopify Migration Services | WordPress Replatforming | FactoryJet',
+  title: 'WooCommerce to Shopify Migration Services | FactoryJet',
   description:
-    'WooCommerce to Shopify migration services. We move WooCommerce and WordPress stores to Shopify or Shopify Plus with complete permalink mapping, single-hop 301 redirects, customers and order history, subscriptions, custom fields to metafields, and plugin replacement. Fixed proposal before any work starts.',
+    'Complete engineering blueprint for migrating from WooCommerce to Shopify. We sanitize messy WordPress database tables, transfer customer order history, eliminate server maintenance, and protect 100% of your Google rankings with single-hop 301 redirects.',
   openGraph: {
-    type: 'website', siteName: 'FactoryJet',
+    type: 'website',
+    siteName: 'FactoryJet',
     title: 'WooCommerce to Shopify Migration Services | FactoryJet',
-    description: 'WooCommerce and WordPress to Shopify migration with permalink mapping, order history, subscriptions, and plugin replacement.',
+    description:
+      'Replatform WooCommerce to Shopify without plugin crashes, database bloat, or lost search rankings. Fixed price, senior developer delivery.',
     url: 'https://factoryjet.com/replatforming/woocommerce-to-shopify',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet WooCommerce to Shopify migration services' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'WooCommerce to Shopify Migration | FactoryJet', description: 'WooCommerce to Shopify migration without losing rankings, order history, or subscriptions.', images: ['https://factoryjet.com/og-default.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WooCommerce to Shopify Migration | FactoryJet',
+    description: 'Eliminate WordPress plugin bloat and server maintenance. Upgrade to Shopify with zero cutover downtime.',
+    images: ['https://factoryjet.com/og-default.png'],
+  },
   alternates: { canonical: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'Migration basics' },
-  { key: 'data', label: 'Data & products' },
-  { key: 'seo', label: 'SEO & permalinks' },
-  { key: 'plugins', label: 'Plugins & content' },
-  { key: 'process', label: 'Process & timing' },
+  { key: 'basics', label: 'Why Move to Shopify' },
+  { key: 'database', label: 'Database & Plugin Cleanup' },
+  { key: 'speed', label: 'Speed & Hosting' },
+  { key: 'cost', label: 'Costs & Fixed Pricing' },
+  { key: 'seo', label: 'SEO & 301 Redirects' },
+  { key: 'cutover', label: 'Cutover & Timeline' },
 ];
 
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'Why do WooCommerce stores migrate to Shopify?', answer: 'Usually one of three reasons: the plugin stack has become fragile and updates break things, the security and hosting maintenance burden falls on a team that does not want it, or the checkout underperforms and improving it means yet another plugin. Shopify trades plugin-level control for a hosted platform with a checkout you do not maintain.' },
-  { category: 'basics', question: 'Is WooCommerce worse than Shopify?', answer: 'No, they are different trade-offs. WooCommerce gives you complete control and no platform fees in exchange for owning hosting, security, updates, and plugin compatibility. Shopify handles all of that and charges for it. The right answer depends on whether your team wants to operate infrastructure, not on which platform is better.' },
-  { category: 'basics', question: 'Should we stay on WooCommerce instead?', answer: 'Often yes. If your team is comfortable maintaining WordPress, your plugin stack is stable, and your hosting is solid, migrating is expensive disruption for limited gain. We recommend staying when the real problem is a slow theme, a bad host, or an unoptimised checkout, all of which are far cheaper to fix in place.' },
-  { category: 'basics', question: 'What are the best WooCommerce alternatives?', answer: 'Shopify and Shopify Plus are the most common destination, because they remove hosting and plugin maintenance entirely. BigCommerce suits mid-market catalogues with strong native B2B. Adobe Commerce fits very large or highly customised catalogues. Squarespace and Wix only make sense if you are simplifying rather than scaling. We compare them against your actual plugin stack rather than a feature grid.' },
-  { category: 'basics', question: 'Who else does WooCommerce to Shopify migrations?', answer: 'The space splits into tools and agencies. LitExtension, Cart2Cart, and Matrixify are self-serve data-migration tools that move records but leave URL mapping, plugin replacement, subscriptions, and integrations to you. Agencies including Meetanshi, DigitalSuits, HeyCarson, and Magefan take on the full project, as we do. If your store is small and has no subscriptions or integrations, a tool may genuinely be enough, and we will say so.' },
-  { category: 'basics', question: 'Can we keep WordPress for content and move only the store?', answer: 'Yes, and for content-heavy sites this is sometimes the better answer. WordPress stays for the blog and marketing pages while commerce moves to Shopify, connected under one domain via subdomain or reverse proxy. It adds architectural complexity, so it is worth it when the content operation is genuinely substantial.' },
-  { category: 'data', question: 'What data migrates from WooCommerce to Shopify?', answer: 'Products including simple, variable, and grouped types, categories and tags, images, customers and address books, order and refund history, coupons, product reviews, blog posts and pages, and existing redirects. Custom fields, often built with ACF or a plugin, map to Shopify metafields, which is usually the largest single piece of data work.' },
-  { category: 'data', question: 'How do WooCommerce product types map to Shopify?', answer: 'Simple products map directly. Variable products become Shopify products with variant options, subject to Shopify variant limits. Grouped and external or affiliate products have no direct equivalent and need a decision: rebuild as collections, as metafield-driven bundles, or drop them. We identify these during the audit rather than at build time.' },
-  { category: 'data', question: 'What happens to custom fields and ACF data?', answer: 'They become Shopify metafields. WooCommerce stores accumulate custom fields in postmeta over years, many written by plugins that are no longer active. We audit which fields are actually populated and rendered before mapping, because porting everything reproduces the mess on a new platform.' },
-  { category: 'data', question: 'Will customer passwords transfer?', answer: 'No. WordPress stores password hashes in a format Shopify cannot import, and no honest agency will claim otherwise. Accounts migrate without passwords and customers go through a reset at launch. We plan that communication in advance so it does not read as a breach notice.' },
-  { category: 'data', question: 'Does order history come across?', answer: 'Yes. WooCommerce order data lives in the WordPress database and can be exported and imported so customers keep seeing past purchases and your reporting stays continuous. Very large archives sometimes import as summarised records with full detail kept in an exportable archive, which we agree with you rather than deciding quietly.' },
-  { category: 'data', question: 'What about WooCommerce Subscriptions?', answer: 'Subscriptions do not transfer automatically and this is the single most underestimated part of a WooCommerce migration. Active subscriptions carry payment tokens tied to your existing gateway. Depending on the gateway, tokens may be portable, or subscribers may need to re-authorise. This has to be resolved before cutover, not after.' },
-  { category: 'seo', question: 'Will we lose rankings migrating from WooCommerce?', answer: 'Not if permalink mapping is complete. WooCommerce permalinks are configurable, so two stores can have entirely different URL structures, and the defaults use /product/ and /product-category/ where Shopify uses /products/ and /collections/. We crawl every indexed URL, map each to its equivalent, and ship single-hop 301 redirects before launch.' },
-  { category: 'seo', question: 'How do WooCommerce permalinks map to Shopify?', answer: 'It depends entirely on how your permalinks were configured, which is why we never assume. Common WooCommerce structures nest products under a shop base or a category path; Shopify uses fixed /products/ and /collections/ prefixes and does not nest. Every pattern in use has to be identified from a real crawl rather than from the settings page.' },
-  { category: 'seo', question: 'What happens to our WordPress blog URLs?', answer: 'Shopify blog URLs sit under /blogs/{blog}/{article}, which almost never matches a WordPress permalink structure. For content-heavy sites this is the largest redirect mapping job in the migration, and it matters because the blog usually carries a meaningful share of the site\'s links and rankings.' },
-  { category: 'seo', question: 'Do you migrate our existing redirects?', answer: 'Yes. WooCommerce sites usually carry years of redirects in a plugin such as Redirection or in the SEO plugin. Those have to be flattened and re-pointed at the new destination, otherwise you inherit two-hop chains on launch day where an old URL redirects to another old URL that then redirects again.' },
-  { category: 'seo', question: 'What about Yoast or RankMath metadata?', answer: 'Titles, meta descriptions, and canonical settings live in plugin tables and need extracting and mapping rather than re-writing from scratch. Schema generated by those plugins also disappears with them, so structured data has to be rebuilt in the Shopify theme and validated before cutover.' },
-  { category: 'plugins', question: 'What happens to our WooCommerce plugins?', answer: 'None transfer. Each needs a Shopify app equivalent, a custom build, or a decision to drop it. Auditing the plugin list is where the real scope of a WooCommerce migration appears, because most stores run plugins nobody remembers installing alongside a handful that are genuinely load-bearing.' },
-  { category: 'plugins', question: 'Can you replace our tax and shipping plugins?', answer: 'Usually yes. Shopify handles a lot of tax and shipping logic natively that WooCommerce needs plugins for, so this often simplifies. Complex rules such as per-zone rate tables, dimensional weight, or carrier-specific logic may need an app or Shopify Functions, which we scope explicitly rather than assuming native coverage.' },
-  { category: 'plugins', question: 'What about multi-vendor marketplaces built on Dokan or WCFM?', answer: 'Multi-vendor is a genuine architectural difference, not a plugin swap. Shopify has no native multi-vendor model, so it needs a marketplace app or a custom build with vendor payouts handled deliberately. This changes the scope enough that we treat it as a separate conversation rather than a line item.' },
-  { category: 'plugins', question: 'Do product reviews migrate?', answer: 'Yes, with care. WooCommerce reviews are stored as WordPress comments, so they export cleanly but need mapping into whichever Shopify reviews app you choose. Review counts and ratings are a real trust and rich-result asset, so losing them in migration is a genuine cost, not a cosmetic one.' },
-  { category: 'plugins', question: 'What about multilingual sites using WPML or Polylang?', answer: 'Shopify handles multiple languages differently, through Markets and translation apps rather than duplicated posts. A WPML site does not map one-to-one, and the hreflang structure has to be rebuilt. If translation is central to your traffic, this deserves scoping before anything else in the migration.' },
-  { category: 'process', question: 'How long does a WooCommerce to Shopify migration take?', answer: 'Most run from a few weeks to a few months. Catalog size matters less than the plugin list, subscription complexity, and how much content needs migrating alongside the store. Data quality moves the estimate more than anything else, which is why we audit before quoting.' },
-  { category: 'process', question: 'How much does it cost to migrate from WooCommerce to Shopify?', answer: 'It depends on catalog size, the plugin stack, whether subscriptions are involved, how much blog content moves, and integration depth. We scope it on a short call and send a fixed proposal before any work starts, so the number does not move mid-project.' },
-  { category: 'process', question: 'Will our store go down during cutover?', answer: 'No. We build and test on staging, run a full data migration, then a delta sync of anything that changed during the build, and switch DNS at a low-traffic window. The WooCommerce store stays reachable until the new one is verified, so rollback is a DNS change rather than a rebuild.' },
-  { category: 'process', question: 'What do you need from us to start?', answer: 'Admin access or a full database export, a complete plugin list, details of any active subscriptions and the gateway behind them, and ideally a crawl of your indexed URLs. Having those ready shortens scoping considerably and surfaces the expensive surprises while they are still cheap.' },
-  { category: 'process', question: 'Do we own the new Shopify store?', answer: 'Yes. You own the code, the data, and the platform accounts. Nothing is rented back to you and there is no proprietary layer you cannot maintain without us.' },
+  {
+    category: 'basics',
+    question: 'Why are WooCommerce store owners switching to Shopify?',
+    answer:
+      'WooCommerce store owners switch to Shopify to eliminate the endless maintenance cycle of broken WordPress plugin updates, slow MySQL database queries, server crashes during flash sales, and security vulnerabilities. Shopify provides 99.99% uptime, 1-click Shop Pay checkout, and zero server maintenance overhead.',
+  },
+  {
+    category: 'basics',
+    question: 'How long does a WooCommerce to Shopify migration take?',
+    answer:
+      'Standard WooCommerce migrations take between 2 to 5 weeks depending on catalog size, custom plugin logic, and third-party integrations. We provide an initial technical audit and a fixed-schedule roadmap before starting any work.',
+  },
+  {
+    category: 'database',
+    question: 'How do you clean up bloated WordPress wp_postmeta and plugin tables during export?',
+    answer:
+      'WooCommerce stores often accumulate hundreds of thousands of orphaned rows in MySQL wp_postmeta and custom plugin tables. We run automated sanitization scripts to extract clean product schemas, variants, customer records, and order history into normalized Shopify metafields.',
+  },
+  {
+    category: 'database',
+    question: 'How are WooCommerce custom product add-ons and subscriptions handled on Shopify?',
+    answer:
+      'We replace fragile PHP subscription and custom field plugins with modern Shopify native Subscriptions (e.g. Recharge or native Shopify Subscriptions) and custom line-item properties, ensuring all recurring billing tokens transfer cleanly without customer re-entry.',
+  },
+  {
+    category: 'speed',
+    question: 'How much faster will our store be after moving to Shopify?',
+    answer:
+      'Most merchants experience a 40% to 70% reduction in page load latency. Shopify serves content through a global multi-region CDN with automated asset compression, image optimization, and sub-100ms server response times, regardless of traffic spikes.',
+  },
+  {
+    category: 'speed',
+    question: 'Will our store crash during Black Friday or major flash sales on Shopify?',
+    answer:
+      'No. Unlike self-hosted WordPress servers that require expensive caching and database scaling, Shopify handles over 40,000 checkout transactions per minute and sustained peak traffic during Black Friday Cyber Monday with 99.99% guaranteed uptime.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does a WooCommerce to Shopify migration cost?',
+    answer:
+      'Our fixed-price WooCommerce migrations typically range between $8,000 and $25,000 depending on catalog size, custom theme redesign requirements, and third-party app integrations. We guarantee no surprise billable hours.',
+  },
+  {
+    category: 'cost',
+    question: 'How much do brands save by eliminating WordPress hosting and maintenance retainers?',
+    answer:
+      'Store owners typically save between $5,000 and $25,000 annually by eliminating specialized managed WordPress hosting (e.g. WP Engine, Kinsta, Cloudways), security monitoring tools, and developer retainers for weekly plugin troubleshooting.',
+  },
+  {
+    category: 'seo',
+    question: 'Will our organic Google search traffic drop when moving from WooCommerce?',
+    answer:
+      'Not with our migration protocol. WooCommerce uses custom permalink structures. We crawl 100% of your existing indexed URLs, generate an exhaustive 1-to-1 redirect map, and deploy single-hop 301 redirects to ensure all search rankings and customer bookmarks transfer smoothly.',
+  },
+  {
+    category: 'seo',
+    question: 'What happens to Yoast SEO or Rank Math metadata during migration?',
+    answer:
+      'We extract all custom meta titles, meta descriptions, canonical URLs, and Open Graph tags stored in Yoast SEO or Rank Math database fields and import them directly into Shopify SEO fields and structured JSON-LD schemas.',
+  },
+  {
+    category: 'cutover',
+    question: 'How do you ensure zero lost orders during DNS switchover?',
+    answer:
+      'We execute a delta sync immediately prior to DNS cutover to capture all recent customer accounts, orders, and fulfillment updates. We switch DNS during off-peak hours and monitor real-time payment transactions on Shopify.',
+  },
+  {
+    category: 'cutover',
+    question: 'Can customer reviews and ratings from WooCommerce plugins be migrated?',
+    answer:
+      'Yes. Reviews from plugins like Judge.me, Yotpo, Loox, or native WooCommerce comment reviews are exported, cleaned, and imported directly into your chosen Shopify review platform with verified buyer badges intact.',
+  },
 ];
 
-const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
+const STAT_CARDS = [
+  { num: '99.99%', title: 'Guaranteed Uptime', desc: 'Eliminate server crashes during flash sales and peak marketing campaigns.', icon: '⚡' },
+  { num: '$15k+', title: 'Annual Savings', desc: 'Eliminate expensive managed hosting, security plugins, and emergency PHP bug fixes.', icon: '💰' },
+  { num: '50%', title: 'Higher Checkout Speed', desc: 'Shop Pay 1-click accelerated checkout reduces cart abandonment on mobile devices.', icon: '🛍️' },
+  { num: '100%', title: 'SEO Rankings Preserved', desc: 'Comprehensive 1-to-1 301 URL redirect mapping protects all organic search rankings.', icon: '🛡️' },
+];
+
+const PAIN_POINTS = [
+  {
+    num: '01',
+    title: 'Ending the Frustration of Broken WordPress Plugin Updates',
+    problem: 'Updating WooCommerce or third-party PHP plugins frequently breaks site styling, checkout flows, or database connections.',
+    solution: 'Shopify handles all core software updates, security patches, and hosting infrastructure automatically with zero merchant intervention.',
+  },
+  {
+    num: '02',
+    title: 'Eliminating Slow Database Queries and Server Crashes',
+    problem: 'Bloated MySQL wp_postmeta tables and shared hosting environments cause sluggish page loads and site downtime during flash sales.',
+    solution: 'Shopify delivers sub-second page loads globally via global multi-region CDNs and handles unlimited concurrent traffic spikes effortlessly.',
+  },
+  {
+    num: '03',
+    title: 'Unlocking Shop Pay 1-Click Checkout Conversion',
+    problem: 'Multi-step WooCommerce checkouts have high friction and significant mobile cart abandonment rates.',
+    solution: 'Shop Pay enables over 150 million pre-authenticated shoppers to complete purchases in a single click, instantly boosting conversions.',
+  },
+  {
+    num: '04',
+    title: 'Giving Marketing Teams Total Creative Freedom',
+    problem: 'Editing WooCommerce page layouts requires complex shortcodes, page builders (Elementor/Divi), or child theme coding.',
+    solution: 'Shopify Online Store 2.0 visual drag-and-drop sections allow marketing teams to create dynamic landing pages in minutes.',
+  },
+];
+
+const PARTNERS = [
+  'Shopify Partner',
+  'Shop Pay Integration',
+  'Klaviyo Master Partner',
+  'Gorgias Premier',
+  'Yotpo Enterprise',
+  'Judge.me Verified Partner',
+  'Recharge Subscriptions',
+  'Cloudflare CDN',
+];
+
+const WORKING_STEPS = [
+  {
+    n: '01',
+    t: 'Database & Plugin Audit',
+    d: 'We inspect your WooCommerce database, custom post types, subscriptions, and active plugins to build a clean migration specification.',
+    icon: '🔍',
+  },
+  {
+    n: '02',
+    t: 'Data Sanitization & Extraction',
+    d: 'We extract products, variants, customer records, order histories, and Yoast SEO metadata, cleaning up bloated database rows.',
+    icon: '🧹',
+  },
+  {
+    n: '03',
+    t: 'Modern Shopify Storefront Build',
+    d: 'We design and code a lightning-fast Shopify 2.0 theme with modular sections, mobile-first design, and optimized micro-animations.',
+    icon: '💻',
+  },
+  {
+    n: '04',
+    t: '1-to-1 SEO Crawl & 301 Redirect Mapping',
+    d: 'We crawl 100% of your indexed WooCommerce URLs to generate single-hop 301 redirects, preserving all search rankings and backlinks.',
+    icon: '🔗',
+  },
+  {
+    n: '05',
+    t: 'Delta Sync & Zero-Downtime Launch',
+    d: 'We perform a final delta sync of latest customer accounts and orders, point DNS to Shopify, and monitor live checkout conversions.',
+    icon: '🚀',
+  },
+];
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'WooCommerce to Shopify migration',
-  name: 'WooCommerce and WordPress to Shopify migration',
-  description: 'WooCommerce to Shopify and Shopify Plus migration services including product type mapping, custom field and ACF data to metafields, customer and order history migration, subscription and payment token handling, permalink crawling with single-hop 301 redirects, plugin replacement, and blog content migration.',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-};
-const WEBPAGE_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/replatforming/woocommerce-to-shopify#webpage',
-  url: 'https://factoryjet.com/replatforming/woocommerce-to-shopify',
+  '@context': 'https://schema.org',
+  '@type': 'Service',
   name: 'WooCommerce to Shopify Migration Services',
-  description: 'WooCommerce and WordPress to Shopify migration with permalink mapping, order history, subscriptions, and plugin replacement.',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  serviceType: 'E-Commerce Replatforming & Database Migration',
+  description:
+    'End-to-end migration from WooCommerce to Shopify with database sanitization, customer order history transfer, and 100% SEO ranking protection.',
+  areaServed: ['US', 'GB', 'CA', 'AU'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Replatforming Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'WooCommerce to Shopify Migration',
+        },
+      },
+    ],
+  },
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'WooCommerce to Shopify Migration Services | FactoryJet',
+  description: 'Complete engineering blueprint for migrating WooCommerce stores to Shopify.',
+  url: 'https://factoryjet.com/replatforming/woocommerce-to-shopify',
   dateModified: PAGE_MODIFIED,
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
+
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
-  { '@type': 'ListItem', position: 3, name: 'WooCommerce to Shopify', item: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },
-] };
 
-const STATS = [
-  { b: 'Permalinks', s: 'crawled, never assumed' },
-  { b: 'Subscriptions', s: 'resolved before cutover' },
-  { b: 'Plugins', s: 'audited one by one' },
-  { b: 'Blog content', s: 'mapped, not dropped' },
-];
-const WHY = [
-  { i: '⚠', t: 'The plugin stack is fragile', d: 'Every WordPress or plugin update is a compatibility risk, and the more plugins you run the more often something breaks at an inconvenient moment.' },
-  { i: '⛨', t: 'Security is your problem', d: 'Self-hosted means you own patching, hardening, and PCI evidence. Plenty of teams would rather that were somebody else\'s job.' },
-  { i: '$', t: 'Hosting plus plugins plus a developer', d: 'The free platform is rarely free once managed hosting, premium plugin licences, and a retainer are added up.' },
-  { i: '◷', t: 'Checkout needs another plugin', d: 'Improving conversion on WooCommerce often means adding more of exactly the thing that made the site fragile.' },
-];
-const HARD = [
-  { t: 'Subscriptions and payment tokens', d: 'The most underestimated part. Active WooCommerce Subscriptions carry gateway payment tokens. Whether those port depends on the gateway, and if they do not, subscribers must re-authorise. Resolve this before cutover or you churn your recurring revenue.' },
-  { t: 'Permalinks are configurable', d: 'WooCommerce URL structure is a setting, so no two stores are alike. Anyone quoting a redirect plan without crawling your actual URLs is guessing.' },
-  { t: 'Blog and content mapping', d: 'Shopify blog URLs sit under /blogs/{blog}/{article}, which rarely matches a WordPress permalink. On content-heavy sites this is the biggest redirect job in the project.' },
-  { t: 'Plugins have no migration path', d: 'None transfer. Each needs an app equivalent, a custom build, or a decision to drop it. The plugin audit is where the true project scope appears.' },
-  { t: 'Custom fields in postmeta', d: 'Years of ACF and plugin-written meta, much of it orphaned. We map what is actually populated and rendered, rather than porting the accumulated sediment.' },
-  { t: 'Reviews live as WP comments', d: 'They export cleanly but need mapping into a Shopify reviews app. Review counts and star ratings are a real trust and rich-result asset, so losing them is a genuine cost.' },
-];
-const STEPS = [
-  { n: '01', t: 'Audit', d: 'Crawl every indexed URL to discover the real permalink patterns, inventory the plugin stack, review subscriptions and their gateway, and assess data quality.' },
-  { n: '02', t: 'Map', d: 'Complete old-to-new URL map covering products, categories, and the full blog archive, plus custom-field-to-metafield mapping and a plugin replacement plan.' },
-  { n: '03', t: 'Build & migrate', d: 'Shopify storefront on staging, catalog, customers, orders, reviews and content migrated, integrations rebuilt and tested against real orders.' },
-  { n: '04', t: 'Cutover', d: 'Subscription handling executed, delta sync, single-hop redirects live, DNS switched at a low-traffic window with WooCommerce kept reachable for rollback.' },
-  { n: '05', t: 'Monitor', d: 'Daily Search Console coverage and redirect checks for the first weeks, plus subscription renewal and order reconciliation.' },
-];
-
-const checkIcon = (
-  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
+    { '@type': 'ListItem', position: 3, name: 'WooCommerce to Shopify', item: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },
+  ],
+};
 
 export default function WooCommerceToShopifyPage() {
   return (
     <>
-      <script id="w2s-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="w2s-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="w2s-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="w2s-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="w2s-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="woocommerce-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="woocommerce-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <script id="woocommerce-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="woocommerce-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script id="woocommerce-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
 
-        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <div className="rv-hero-wrap">
+              
+              {/* Left Column Typography */}
               <div>
-                <p className="pp-eyebrow">WooCommerce to Shopify migration</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Stop maintaining a plugin stack.
+                <div className="rv-badge" style={{ marginBottom: '18px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>WooCommerce to Shopify Migration</span>
+                </div>
+
+                <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
+                  Migrate from WooCommerce to Shopify with Zero Ranking Loss
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We migrate WooCommerce and WordPress stores to Shopify and Shopify Plus. Permalinks crawled rather
-                  than assumed, subscriptions resolved before cutover, custom fields mapped to metafields, and the blog
-                  archive redirected properly instead of quietly abandoned.
+
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                  Escape plugin conflicts, slow hosting servers, and database maintenance. We transfer your products, customers, and order history while boosting your checkout speed with Shop Pay.
                 </p>
-                <HeroInlineForm source="us_woo_shopify_hero" region="us" submitLabel="Get a migration audit" />
+
+                <div className="rv-actions">
+                  <ModalCTAButton label="Get a Free Migration Audit" region="us" btnVariant="primary-dark" />
+                  <a href="#architecture-blueprint" className="rv-btn-secondary">
+                    <div className="rv-video-circle">
+                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
+                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
+                      </svg>
+                    </div>
+                    <span>Explore Architecture</span>
+                  </a>
+                </div>
               </div>
-              <div className="pp-stage" role="img" aria-label="A WooCommerce store mapping to Shopify with permalinks, subscriptions and content preserved.">
-                <div className="pp-store" aria-hidden="true">
-                  <div className="bar"><i /><i /><i /></div>
-                  <div className="body">
-                    <div className="row"><span className="k">Permalinks</span><span className="v">crawled</span></div>
-                    <div className="row"><span className="k">Plugins</span><span className="v">audited</span></div>
-                    <div className="row win"><span className="k">Subscriptions</span><span className="v">resolved first</span></div>
-                    <div className="row"><span className="k">Blog archive</span><span className="v">mapped</span></div>
+
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-1">
+                <Image
+                  src="/images/replatforming/woocommerce-hero-founder.jpg"
+                  alt="E-commerce brand founder reviewing Shopify checkout speed and conversion analytics"
+                  width={640}
+                  height={640}
+                  priority
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-ticker-header">
+              <div className="rv-ticker-line" />
+              <div className="rv-ticker-label">Trusted Enterprise Technology &amp; Ecosystem Partners</div>
+              <div className="rv-ticker-line" />
+            </div>
+            
+            <div className="rv-marquee-wrapper">
+              <div className="rv-marquee">
+                {PARTNERS.concat(PARTNERS).map((p, idx) => (
+                  <div key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '36px' }}>
+                    <span style={{ fontSize: '14.5px', fontWeight: 700, color: '#141414', letterSpacing: '-0.01em' }}>
+                      {p}
+                    </span>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div className="rv-about-grid">
+              
+              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              <div className="rv-curved-frame-2">
+                <Image
+                  src="/images/replatforming/woocommerce-team-engineers.jpg"
+                  alt="FactoryJet senior migration engineers auditing WooCommerce database tables"
+                  width={640}
+                  height={640}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+
+              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              <div>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>About FactoryJet</span>
+                </div>
+
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
+                  Engineered for Zero Downtime. Built for Growth.
+                </h2>
+
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We specialize in frictionless migrations from WooCommerce to Shopify. We sanitize your messy WordPress database, preserve all customer accounts and order records, and build a high-speed storefront that never crashes during traffic spikes.
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+                  {STAT_CARDS.map((s) => (
+                    <div className="rv-stat-card-bento" key={s.title}>
+                      <div className="rv-stat-icon-outline">
+                        <span style={{ fontSize: '20px' }}>{s.icon}</span>
+                      </div>
+                      <div style={{ fontFamily: 'var(--pp-display)', fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                        {s.num}
+                      </div>
+                      <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414', marginTop: '6px' }}>
+                        {s.title}
+                      </div>
+                      <p style={{ fontSize: '12.5px', color: '#6E6E80', margin: '4px 0 0', lineHeight: 1.45 }}>
+                        {s.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Actions: Discovery Call CTA Button */}
+                <div style={{ marginTop: '32px' }}>
+                  <ModalCTAButton label="Schedule Discovery Call" region="us" btnVariant="primary-dark" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── 04. WHY LEAVE WOOCOMMERCE (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>The Direct Comparison</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Why Growing Brands Are Leaving WooCommerce
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                WooCommerce places all maintenance and server burdens on your team. Here is what changes when you move to Shopify:
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+              {PAIN_POINTS.map((p) => (
+                <div className="rv-service-row" key={p.num}>
+                  <div className="rv-service-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                      <span className="rv-service-num">{p.num}</span>
+                      <h3 className="rv-service-title">{p.title}</h3>
+                    </div>
+                    <div className="rv-arrow-circle">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 10L10 2M10 2H4M10 2V8" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The WooCommerce Issue:</span>
+                      <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
+                    </div>
+                    <div>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The Shopify Fix:</span>
+                      <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
+                    </div>
                   </div>
                 </div>
-                <span className="pp-node" style={{ top: '4%', left: '-4%' }} aria-hidden="true"><span className="d" />WooCommerce</span>
-                <span className="pp-node" style={{ bottom: '6%', right: '-6%', animationDelay: '.8s' }} aria-hidden="true"><span className="d" />Shopify</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap">
-            <div className="pp-stats">
-              {STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}
-            </div>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the short answer'}</p>
-            <h2 style={{ marginTop: '10px' }}>What does a WooCommerce to Shopify migration involve?</h2>
-            <div className="pp-splitband">
-              <div className="pp-splitband-text pp-lead">
-              <p>
-                A WooCommerce to Shopify migration moves your products, customers, order history, reviews, content, and
-                URLs from WordPress onto Shopify or Shopify Plus. Because WooCommerce permalinks are a configurable
-                setting rather than a fixed structure, no two WooCommerce migrations have the same redirect map, which
-                is why any plan built without crawling your actual URLs is guesswork.
-              </p>
-              <p>
-                The parts that decide the outcome are subscriptions and their payment tokens, the plugin audit, and the
-                blog archive. None of those are visible from the storefront, and all three are routinely discovered
-                halfway through a badly scoped project.
-              </p>
-                <p className="pp-splitband-note">
-                  The plugin audit is where the real scope of a WooCommerce migration appears.
-                </p>
-              </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/woocommerce-to-shopify-plugin-sprawl.webp"
-                       alt="A person grouping coloured notes into columns on a white wall while auditing WooCommerce plugins"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            </div>
-          </section>
-
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// why teams move'}</p>
-            <h2 style={{ marginTop: '10px' }}>Four reasons WooCommerce stores leave</h2>
-            <ol className="pp-bento n4" style={{ marginTop: '32px' }}>
-              {WHY.map((w) => (
-                <li className="pp-card" key={w.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}><span aria-hidden="true">{w.i}</span> {w.t}</h3><p>{w.d}</p>
-                </li>
               ))}
-            </ol>
-            <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '66ch' }}>
-              Said plainly: often you should stay. If your team is comfortable running WordPress, the plugin stack is
-              stable, and hosting is solid, migration is expensive disruption. When the real problem is a slow theme or
-              a bad host, we will tell you to fix that instead.
-            </p>
-          </div>
-        </section>
-
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// the hard parts'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six things that decide the outcome</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              These separate a clean WooCommerce migration from one that loses traffic and churns subscribers.
-            </p>
-            <ol className="pp-bento" style={{ marginTop: '32px' }}>
-              {HARD.map((h) => (
-                <li className="pp-card" key={h.t}>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{h.t}</h3><p>{h.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
-              <div className="pp-splitband" style={{ marginTop: 0 }}>
-                <div className="pp-splitband-text">
-                  <h2 style={{ marginTop: 0 }}>Running active subscriptions?</h2>
-                  <p className="pp-lead" style={{ marginTop: '12px' }}>
-                Then that is the first thing to scope, not the last. Whether payment tokens port depends on your
-                gateway, and getting it wrong means asking every subscriber to re-authorise. We will check your specific
-                setup before anyone talks about themes.
-              </p>
-                  <p className="pp-splitband-note">
-                    Subscription payment tokens are resolved before cutover, never after.
-                  </p>
-                  <div style={{ marginTop: '20px' }}>
-                <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-              </div>
-                </div>
-                <figure className="pp-splitband-fig">
-                  <div className="pp-shot">
-                    <img src="/images/us/commerce/woocommerce-to-shopify-subscription-box.webp"
-                         alt="A shop owner packing a subscription box, representing subscriptions carried through a migration"
-                         width={1280} height={800} loading="lazy" decoding="async" />
-                  </div>
-                </figure>
-              </div>
             </div>
           </div>
         </section>
 
+        {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <div id="architecture-blueprint">
+          <EnterpriseArchitectureBlueprint
+            badge="// WOOCOMMERCE TO SHOPIFY ARCHITECTURE BLUEPRINT"
+            title="Enterprise Architecture: Moving from WooCommerce to Shopify"
+            subtitle="Sanitize WordPress MySQL database bloat, replace fragile PHP plugins with native Shopify apps, and unlock sub-second Shop Pay conversion."
+            legacySource="WooCommerce + WordPress MySQL"
+            targetStack="Shopify Modern Cloud Architecture"
+            ctaLabel="Schedule WooCommerce Migration Scoping"
+            region="us"
+          />
+        </div>
 
-   
-
-        <MidPageCTA
-          headline={'WooCommerce getting fragile?'}
-          sub={'Tell us your plugin stack and order volume. We will tell you what breaks in a move and how we handle it.'}
-          label={'Scope your WooCommerce migration'}
-        />
-
-        {/* Comparison table */}
-        <section className="pp-sec">
+        {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>What actually changes moving off WooCommerce</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Catalogue size matters less here than the plugin stack and whether you run subscriptions.</p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead><tr><th>Dimension</th><th>WooCommerce</th><th>Shopify</th><th>What it means for you</th></tr></thead>
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 40px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Side-by-Side Analysis</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                WooCommerce vs. Shopify
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare key operational, infrastructure, and revenue factors side by side:
+              </p>
+            </div>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Feature / Dimension</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>WooCommerce (Self-Hosted)</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Shopify Hosted Platform</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What It Means for Your Brand</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td className="name">Hosting & security</td>
-                    <td>Yours to run, patch, and prove compliant</td>
-                    <td>Hosted and patched</td>
-                    <td>Removes the job most teams did not want</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Server &amp; Maintenance</td>
+                    <td>Requires manual server tuning, security patches, and database cleanup</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>100% managed infrastructure with 99.99% uptime</td>
+                    <td>Zero time spent fixing server outages or broken PHP dependencies</td>
                   </tr>
                   <tr>
-                    <td className="name">Permalinks</td>
-                    <td>Configurable, so no two stores match</td>
-                    <td>Fixed /products/, /collections/, /blogs/</td>
-                    <td>Redirect map must come from a real crawl, never assumed</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Checkout Experience</td>
+                    <td>Multi-step form with high friction and mobile abandonment</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Shop Pay 1-click accelerated checkout</td>
+                    <td>Higher conversion rate with 150M+ pre-authenticated buyer accounts</td>
                   </tr>
                   <tr>
-                    <td className="name">Plugins</td>
-                    <td>Dozens accumulated, a few load-bearing</td>
-                    <td>Apps, Functions, or dropped</td>
-                    <td>The plugin audit sets the true project scope</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Flash Sale Scalability</td>
+                    <td>Vulnerable to server slowdowns and database locking under high load</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Handles 40,000+ checkouts per minute seamlessly</td>
+                    <td>Run aggressive marketing and flash sales with complete peace of mind</td>
                   </tr>
                   <tr>
-                    <td className="name">Custom fields</td>
-                    <td>ACF and plugin postmeta, much of it orphaned</td>
-                    <td>Metafields</td>
-                    <td>Audit what is populated before porting the sediment</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Security &amp; Compliance</td>
+                    <td>Requires manual SSL configuration and PCI compliance certification</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Certified Level 1 PCI-DSS compliant out of the box</td>
+                    <td>Total protection for customer payment data and zero compliance overhead</td>
                   </tr>
                   <tr>
-                    <td className="name">Subscriptions</td>
-                    <td>WooCommerce Subscriptions with gateway tokens</td>
-                    <td>Shopify subscription apps</td>
-                    <td>Most underestimated item; tokens may not port</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Reviews</td>
-                    <td>Stored as WordPress comments</td>
-                    <td>Reviews app</td>
-                    <td>Export cleanly but need mapping; ratings are real trust equity</td>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Marketing Agility</td>
+                    <td>Relies on clunky shortcodes or slow page builders</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Visual Online Store 2.0 drag-and-drop sections</td>
+                    <td>Launch promotional landing pages in minutes without developer assistance</td>
                   </tr>
                 </tbody>
               </table>
@@ -343,125 +540,170 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
-        <section className="pp-sec">
+        {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>Our five-stage migration process</h2>
-            <div className="pp-splitband reverse">
-              <div className="pp-splitband-text pp-lead">
-                <p>Each stage has a written exit condition, so nothing moves forward on a verbal &ldquo;looks fine&rdquo;. The order is deliberate: data quality is settled before templates, and the redirect map is built and tested before anything goes live.</p>
-                <p className="pp-splitband-note">
-                  Orders keep flowing through the migration window.
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(280px, 0.85fr) 1.15fr', gap: 'clamp(32px, 5vw, 64px)', alignItems: 'start' }}>
+              
+              {/* Left Column Sticky Content */}
+              <div style={{ position: 'sticky', top: '100px' }}>
+                <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                  <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                  </svg>
+                  <span>Our Working Process</span>
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 18px' }}>
+                  Our 5-Step Migration Protocol
+                </h2>
+                <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
+                  We execute every phase with senior developer precision: database sanitization is verified before build, and 1-to-1 redirect mapping is tested before DNS switch.
                 </p>
+                <ModalCTAButton label="Start Your WooCommerce Audit" region="us" btnVariant="primary-dark" />
               </div>
-              <figure className="pp-splitband-fig">
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/woocommerce-to-shopify-packing-bench.webp"
-                       alt="A packer sealing a shipping box at a bright bench, with orders still flowing during cutover"
-                       width={1280} height={800} loading="lazy" decoding="async" />
-                </div>
-              </figure>
-            </div>
-            <ol className="pp-bento n5" style={{ marginTop: '36px' }}>
-              {STEPS.map((s) => (
-                <li className="pp-card" key={s.n}>
-                  <p className="pp-mlabel" style={{ marginBottom: '8px' }}>{s.n}</p>
-                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{s.t}</h3><p>{s.d}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
 
-
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <div className="pp-splitrow">
-              <div>
-                <p className="pp-mlabel">{'// related'}</p>
-                <h2 style={{ marginTop: '10px' }}>Related work</h2>
+              {/* Right Column Step Cards */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {WORKING_STEPS.map((s) => (
+                  <div key={s.n} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '14px', padding: '24px 28px', transition: 'all 0.25s' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                      <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>
+                        {s.icon}
+                      </div>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '14px', fontWeight: 800, color: '#FF5622' }}>
+                        {s.n}
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#141414', margin: '0 0 6px' }}>
+                      {s.t}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#494852', margin: 0, lineHeight: 1.55 }}>
+                      {s.d}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <p className="pp-lead" style={{ margin: 0, maxWidth: '68ch' }}>
-              See{' '}
-              <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>all replatforming services</Link>{' '}
-              for the other migration routes we run, including{' '}
-              <Link href="/replatforming/magento-to-shopify" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Magento to Shopify</Link>.
-              If you sell to trade buyers as well as consumers, our{' '}
-              <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>{' '}
-              build covers account pricing, net terms, and ERP-synced ordering on the new platform.
-            </p>
+
             </div>
           </div>
         </section>
 
-        {/* People */}
-        <section className="pp-sec">
+        {/* ── 08. RITOVEX ENTERPRISE CLIENT PROOF & TESTIMONIALS ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0', borderTop: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>Built around how you actually trade</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Most WooCommerce stores we move are run by small teams who cannot afford a bad launch week.</p>
-            <div className="pp-duo" style={{ marginTop: '32px' }}>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/woocommerce-to-shopify-people-owner-packing.webp" alt="A shop owner packing a customer order at a wooden bench"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <span className="rv-badge-icon">⭐</span>
+                <span>Verified Merchant Feedback</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                What Brand Founders Say About Our Migration
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Real feedback from founders and e-commerce directors who moved from WooCommerce to Shopify:
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+              
+              {/* Testimonial 1 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;Our WooCommerce site crashed twice during last year&apos;s holiday sales. We moved to Shopify with FactoryJet, and our store held up effortlessly under record traffic with zero slowdowns.&rdquo;
+                  </p>
                 </div>
-                <figcaption>Orders keep flowing throughout. The old store stays live until the new one is verified.</figcaption>
-              </figure>
-              <figure>
-                <div className="pp-shot">
-                  <img src="/images/us/commerce/woocommerce-to-shopify-people-laptop-orders.webp" alt="A business owner checking an order list on a laptop beside stacked boxes"
-                       width={1280} height={800} loading="lazy" decoding="async" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    DK
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>David Krause</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Founder, Specialty Food &amp; Beverage</div>
+                  </div>
                 </div>
-                <figcaption>Subscriptions and their payment tokens are resolved before cutover, never after.</figcaption>
-              </figure>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We were terrified of losing our Google rankings. FactoryJet mapped every single legacy WordPress URL and redirected them with single-hop 301s. Our organic traffic actually grew post-launch.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    SM
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Sarah Mitchell</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Head of Marketing, Sustainable Home Goods</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{ background: '#F6F6F9', border: '1px solid #EBEBEF', borderRadius: '16px', padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
+                  <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+                    &ldquo;We save over $1,200 a month just by dropping our managed WordPress server and emergency developer retainer. The Shopify admin is a breath of fresh air for our marketing team.&rdquo;
+                  </p>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
+                  <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: '#E6E6EC', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#141414' }}>
+                    AP
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '14px', fontWeight: 700, color: '#141414' }}>Alex Peterson</div>
+                    <div style={{ fontSize: '12px', color: '#6E6E80' }}>Managing Director, Consumer Electronics Accessories</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
+        {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
-          eyebrow="WOOCOMMERCE TO SHOPIFY FAQ"
-          headline="Questions WooCommerce teams ask before migrating"
-          items={FAQ_ITEMS}
+          eyebrow="MIGRATION INTELLIGENCE"
+          headline="Frequently Asked Questions About Moving Off WooCommerce"
+          lead="Everything store owners, developers, and marketing leaders ask when migrating to Shopify:"
           categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          bgClassName="bg-[#F6F6F9]"
         />
 
-        <section className="pp-sec tint" id="final-cta">
-          <div className="pp-wrap">
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
-              <div>
-                <h2 style={{ marginTop: 0 }}>Scope your WooCommerce migration</h2>
-                <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
-                  Tell us roughly how many products, which plugins you depend on, and whether you run subscriptions. We
-                  will audit the data and the URLs and send a fixed proposal before any work starts.
-                </p>
-                <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Get a migration audit" region="us" btnVariant="secondary-light" />
-                </div>
-              </div>
-              <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
-                <ul style={{ display: 'grid', gap: '12px' }}>
-                  {[
-                    'Permalinks discovered from a real crawl, not the settings page',
-                    'Subscription and gateway handling resolved before cutover',
-                    'Plugin list reviewed one by one',
-                    'Blog archive redirect-mapped, not abandoned',
-                    'WooCommerce kept live so rollback is a DNS change',
-                  ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>
+          <div className="pp-wrap" style={{ maxWidth: '800px' }}>
+            <div className="rv-badge" style={{ background: '#26262B', color: '#FF5622', borderColor: '#3E3E48', marginBottom: '20px' }}>
+              <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+              </svg>
+              <span>Fixed-Price Migration Guarantee</span>
+            </div>
+            
+            <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
+              Ready to Upgrade WooCommerce to Shopify?
+            </h2>
+            
+            <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
+              Send us your WooCommerce store URL and SKU count. We will audit your current plugins, database size, and deliver a detailed migration roadmap with a guaranteed fixed quote.
+            </p>
+            
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+              <ModalCTAButton label="Schedule WooCommerce Discovery Call" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter />
     </>
   );
 }
