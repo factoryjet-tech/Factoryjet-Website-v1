@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -271,6 +274,23 @@ const FAQ_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'E-Commerce Replatforming & Platform Migration Services',
   provider: {
     '@type': 'Organization',
@@ -301,6 +321,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Enterprise replatforming blueprint that protects rankings, order history, customer accounts, and ERP workflows.',
   url: 'https://factoryjet.com/replatforming',
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const ORG_SCHEMA = {
@@ -319,6 +349,30 @@ const BREADCRUMB_SCHEMA = {
     { '@type': 'ListItem', position: 2, name: 'Replatforming', item: 'https://factoryjet.com/replatforming' },
   ],
 };
+
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Technical Execution Model',
+    factoryjet: 'Senior commerce systems architects write custom ETL scripts and Shopify Functions with 100% full IP ownership.',
+    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
+  },
+  {
+    label: 'SEO & 301 URL Preservation',
+    factoryjet: '1-to-1 exact path mapping of 100% legacy URLs with single-hop 301 redirects and schema retention.',
+    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
+  },
+  {
+    label: 'ERP & Warehouse Synchronization',
+    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS in under 150ms.',
+    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
+  },
+  {
+    label: 'Commercial Terms & Accountability',
+    factoryjet: 'Transparent fixed-price milestone scope with guaranteed zero-downtime cutover SLA.',
+    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
+  },
+];
 
 export default function ReplatformingHubPage() {
   return (
@@ -582,6 +636,12 @@ export default function ReplatformingHubPage() {
         </section>
 
         {/* ── 06. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Enterprise Replatforming" vertical="replatforming" />
+          </div>
+        </section>
+
         <div id="architecture-blueprint">
           <EnterpriseArchitectureBlueprint
             badge="// ENTERPRISE REPLATFORMING BLUEPRINT"
@@ -722,6 +782,62 @@ export default function ReplatformingHubPage() {
         </section>
 
         {/* ── 09. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
+        
+        {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Migration Partners: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare senior engineering replatforming against traditional design agency retainers before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <CommerceRoiCalculator city="Enterprise Store" region="us" />
+
         <FAQ
           eyebrow="MIGRATION INTELLIGENCE"
           headline="Frequently Asked Questions About E-Commerce Replatforming"
@@ -730,6 +846,13 @@ export default function ReplatformingHubPage() {
           items={FAQ_ITEMS}
           bgClassName="bg-[#F6F6F9]"
         />
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
+          </div>
+        </section>
 
         {/* ── 10. FINAL EXECUTIVE REPLATFORMING CTA ── */}
         <section className="pp-sec" style={{ backgroundColor: '#141414', color: '#FFFFFF', padding: 'clamp(64px, 10vh, 112px) 0', textAlign: 'center' }}>

@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -360,6 +363,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Seattle E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -388,6 +398,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Seattle E-Commerce Development & Headless Architecture',
   provider: {
     '@type': 'Organization',
@@ -407,6 +434,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Seattle e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Pacific Northwest enterprise brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -734,7 +771,13 @@ export default function SeattleEcommercePage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <EnterpriseArchitectureBlueprint
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Seattle" vertical="ecommerce" />
+          </div>
+        </section>
+
+        <EnterpriseArchitectureBlueprint
             badge="// SEATTLE ENTERPRISE E-COMMERCE BLUEPRINT"
             title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
             subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
@@ -862,6 +905,9 @@ export default function SeattleEcommercePage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE SPEED & REVENUE RECOVERY CALCULATOR ── */}
+        <CommerceRoiCalculator city="Seattle" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="SEATTLE E-COMMERCE INTELLIGENCE"
@@ -876,6 +922,13 @@ export default function SeattleEcommercePage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <EcommerceCityLinksUS currentCity="seattle" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

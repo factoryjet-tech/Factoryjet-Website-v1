@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -377,6 +380,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Charlotte Ecommerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -405,6 +415,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Charlotte Ecommerce Development & Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
@@ -424,6 +451,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion in Charlotte NC.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -756,7 +793,13 @@ export default function CharlotteEcommerceDevelopmentPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <div id="ecom-architecture-blueprint">
-          <EnterpriseArchitectureBlueprint
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Charlotte" vertical="ecommerce" />
+          </div>
+        </section>
+
+        <EnterpriseArchitectureBlueprint
             badge="// CHARLOTTE COMMERCE ARCHITECTURE BLUEPRINT"
             title="Modern E-Commerce: From Catalog to One-Tap Checkout"
             subtitle="Explore how custom Shopify Liquid architecture, Shop Pay acceleration, B2B wholesale portals, and automated ERP sync drive scalable revenue."
@@ -885,6 +928,8 @@ export default function CharlotteEcommerceDevelopmentPage() {
         </section>
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
+        <CommerceRoiCalculator city="Charlotte" region="us" />
+
         <FAQ
           eyebrow="CHARLOTTE ECOMMERCE INTELLIGENCE"
           headline="Frequently Asked Questions About E-Commerce in Charlotte NC"
@@ -898,6 +943,13 @@ export default function CharlotteEcommerceDevelopmentPage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <EcommerceCityLinksUS currentCity="charlotte" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

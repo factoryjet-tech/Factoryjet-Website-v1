@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -372,6 +375,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - New York Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -400,6 +410,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'New York Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
@@ -419,6 +446,16 @@ const WEBPAGE_SCHEMA = {
   description: 'New York web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for NYC enterprises and high-growth brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -873,6 +910,9 @@ export default function NewYorkWebDesignPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
+        <WebDesignValueCalculator city="New York" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="NEW YORK WEB DESIGN INTELLIGENCE"
@@ -887,6 +927,13 @@ export default function NewYorkWebDesignPage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <WebDesignCityLinksUS currentCity="new-york" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -372,6 +375,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Chattanooga Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -400,6 +410,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Chattanooga Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
@@ -419,6 +446,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Chattanooga local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Northshore, Southside, and Hamilton County.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -746,7 +783,13 @@ export default function ChattanoogaSeoPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-blueprint">
-          <LocalSeoArchitectureBlueprint
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Chattanooga" vertical="seo" />
+          </div>
+        </section>
+
+        <LocalSeoArchitectureBlueprint
             badge="// CHATTANOOGA LOCAL SEARCH &amp; AI RANKING BLUEPRINT"
             title="4-Layer Local SEO Stack: Google Maps to AI Overviews"
             subtitle="Explore how GBP API optimization, multi-directory citation syncing, structured schema graphs, and AI citation crawlers work together to dominate Chattanooga local search."
@@ -873,6 +916,9 @@ export default function ChattanoogaSeoPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE GOOGLE MAP PACK OPPORTUNITY ESTIMATOR ── */}
+        <LocalSeoOpportunityEstimator city="Chattanooga" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="CHATTANOOGA LOCAL SEARCH INTELLIGENCE"
@@ -887,6 +933,13 @@ export default function ChattanoogaSeoPage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <SeoCityLinksUS currentCity="chattanooga" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

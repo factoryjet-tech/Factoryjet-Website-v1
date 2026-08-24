@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -373,6 +376,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Dallas Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -401,6 +411,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Dallas Local SEO & Map Pack Optimization',
   provider: {
     '@type': 'Organization',
@@ -420,6 +447,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Texas businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -747,7 +784,13 @@ export default function DallasSeoPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-architecture-blueprint">
-          <LocalSeoArchitectureBlueprint
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Dallas" vertical="seo" />
+          </div>
+        </section>
+
+        <LocalSeoArchitectureBlueprint
             badge="// DALLAS LOCAL SEO & MAP PACK BLUEPRINT"
             title="Entity-Led Local Search: From Citations to Inbound Calls"
             subtitle="Explore how Google Business Profile signals, data aggregator sync, LocalBusiness schema, and review acceleration work together."
@@ -874,6 +917,9 @@ export default function DallasSeoPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE GOOGLE MAP PACK OPPORTUNITY ESTIMATOR ── */}
+        <LocalSeoOpportunityEstimator city="Dallas" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="DALLAS LOCAL SEO INTELLIGENCE"
@@ -888,6 +934,13 @@ export default function DallasSeoPage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <SeoCityLinksUS currentCity="dallas" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

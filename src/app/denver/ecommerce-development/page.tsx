@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -360,6 +363,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Denver E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -388,6 +398,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Denver E-Commerce Development & Headless Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
@@ -407,6 +434,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -734,7 +771,13 @@ export default function DenverEcommercePage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
-          <EnterpriseArchitectureBlueprint
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Denver" vertical="ecommerce" />
+          </div>
+        </section>
+
+        <EnterpriseArchitectureBlueprint
             badge="// DENVER ECOMMERCE &amp; ERP BLUEPRINT"
             title="Headless Next.js 15 &amp; Shopify Plus Architecture"
             subtitle="Explore how headless Next.js, Shopify Storefront API, NetSuite ERP synchronization, and Cloudflare edge caching operate together seamlessly."
@@ -862,6 +905,9 @@ export default function DenverEcommercePage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE SPEED & REVENUE RECOVERY CALCULATOR ── */}
+        <CommerceRoiCalculator city="Denver" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="DENVER E-COMMERCE INTELLIGENCE"
@@ -876,6 +922,13 @@ export default function DenverEcommercePage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <EcommerceCityLinksUS currentCity="denver" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 

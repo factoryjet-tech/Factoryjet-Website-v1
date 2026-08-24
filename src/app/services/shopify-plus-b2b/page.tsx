@@ -6,8 +6,12 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import '@/components/v2/PlatformPage.css';
 
+const PAGE_MODIFIED = '2026-08-24';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
@@ -179,6 +183,23 @@ const FAQ_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   serviceType: 'Shopify Plus B2B Wholesale Development Agency',
   name: 'Shopify Plus B2B Wholesale Portal Development',
   description:
@@ -198,6 +219,25 @@ const HOWTO_SCHEMA = {
     { '@type': 'HowToStep', position: 2, name: 'Native B2B Architecture & ERP Integration', text: 'We configure Shopify Plus B2B price lists, Net payment terms, Shopify Functions checkout rules, and ERP connectors.' },
     { '@type': 'HowToStep', position: 3, name: 'Buyer Testing & Full Wholesale Launch', text: 'We validate matrix order forms, test ERP invoice synchronizations, and onboard wholesale accounts.' },
   ],
+};
+
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Shopify Plus B2B Agency & Wholesale Development | FactoryJet',
+  description: 'Scale B2B wholesale on Shopify Plus with custom pricing and ERP sync.',
+  url: 'https://factoryjet.com/services/shopify-plus-b2b',
+  dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const ORG_SCHEMA = {
@@ -256,12 +296,37 @@ const BENEFITS = [
   { i: '⤢', t: 'Custom B2B Checkout Rules with Shopify Functions', d: 'Enforce minimum order quantities (MOQs), case pack multiples, and custom freight rules natively in checkout.' },
 ];
 
+
+const EVALUATION_CRITERIA = [
+  {
+    label: 'Technical Execution Model',
+    factoryjet: 'Senior commerce systems architects write custom ETL scripts and Shopify Functions with 100% full IP ownership.',
+    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
+  },
+  {
+    label: 'SEO & 301 URL Preservation',
+    factoryjet: '1-to-1 exact path mapping of 100% legacy URLs with single-hop 301 redirects and schema retention.',
+    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
+  },
+  {
+    label: 'ERP & Warehouse Synchronization',
+    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS in under 150ms.',
+    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
+  },
+  {
+    label: 'Commercial Terms & Accountability',
+    factoryjet: 'Transparent fixed-price milestone scope with guaranteed zero-downtime cutover SLA.',
+    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
+  },
+];
+
 export default function ShopifyPlusB2BPage() {
   return (
     <>
       <script id="sp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script id="sp-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="sp-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
+      <script id="sp-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="sp-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script id="sp-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
@@ -587,6 +652,12 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Enterprise Replatforming" vertical="replatforming" />
+          </div>
+        </section>
+
         <EnterpriseArchitectureBlueprint
           badge="// UNIFIED B2B COMMERCE ARCHITECTURE"
           title="Enterprise B2B Wholesale & DTC on a Single Modern Commerce Engine"
@@ -602,7 +673,63 @@ export default function ShopifyPlusB2BPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// wholesale answers</p>
             <div style={{ marginTop: '16px' }}>
-              <FAQ
+              
+        {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
+              <div className="rv-badge" style={{ marginBottom: '14px' }}>
+                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
+                </svg>
+                <span>Vendor Due Diligence</span>
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Evaluating Migration Partners: What to Ask
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                Compare senior engineering replatforming against traditional design agency retainers before you commit:
+              </p>
+            </div>
+
+            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+                <div>Evaluation Factor</div>
+                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+              </div>
+
+              {EVALUATION_CRITERIA.map((crit, cIdx) => (
+                <div
+                  key={crit.label}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
+                    padding: '20px 24px',
+                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
+                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
+                    {crit.label}
+                  </div>
+                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                    {crit.factoryjet}
+                  </div>
+                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                    {crit.traditional}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <CommerceRoiCalculator city="Enterprise Store" region="us" />
+
+        <FAQ
                 headline="Frequently asked questions about Shopify Plus B2B"
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
@@ -662,6 +789,12 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
       </main>
+
+      <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+        <div className="pp-wrap">
+          <AuthorCard />
+        </div>
+      </section>
 
       <SiteFooter />
     </>

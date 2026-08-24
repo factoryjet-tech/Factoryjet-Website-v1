@@ -6,6 +6,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
+import AuthorCard from '@/components/v2/AuthorCard';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
@@ -360,6 +363,13 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'FactoryJet - Portland Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -388,6 +398,23 @@ const LOCAL_BUSINESS_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '64',
+    bestRating: '5',
+    worstRating: '1',
+  },
   name: 'Portland Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
@@ -407,6 +434,16 @@ const WEBPAGE_SCHEMA = {
   description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Portland OR businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-barot',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -733,6 +770,12 @@ export default function PortlandWebDesignPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <div className="pp-wrap">
+            <RegionalBenchmarkCard city="Portland" vertical="web-design" />
+          </div>
+        </section>
+
         <div id="web-architecture-blueprint">
           <WebDesignArchitectureBlueprint
             badge="// PORTLAND MODERN WEB ARCHITECTURE BLUEPRINT"
@@ -861,6 +904,9 @@ export default function PortlandWebDesignPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
+        <WebDesignValueCalculator city="Portland" region="us" />
+
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="PORTLAND WEB DESIGN INTELLIGENCE"
@@ -875,6 +921,13 @@ export default function PortlandWebDesignPage() {
         <section style={{ background: '#F6F6F9', borderTop: '1px solid #E6E6EC', padding: '48px 0' }}>
           <div className="pp-wrap">
             <WebDesignCityLinksUS currentCity="portland" />
+          </div>
+        </section>
+
+        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
+          <div className="pp-wrap">
+            <AuthorCard />
           </div>
         </section>
 
