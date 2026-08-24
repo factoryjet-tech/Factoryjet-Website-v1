@@ -215,8 +215,7 @@ const HOW_TO_SCHEMA = {
 const SPEAKABLE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Web Design Agency Australia | Websites Live in 7 Days | FactoryJet',
-  url: 'https://factoryjet.com/au/',
+  '@id': 'https://factoryjet.com/au#webpage',
   speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.a', '[data-speakable]'] },
 };
 

@@ -695,8 +695,7 @@ export default function AIAutomationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "AI Automation Agency in the USA for Small Businesses | FactoryJet",
-          "url": "https://factoryjet.com/services/ai-automation",
+          "@id": "https://factoryjet.com/services/ai-automation#webpage",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]

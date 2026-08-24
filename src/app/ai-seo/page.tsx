@@ -416,10 +416,6 @@ function AnswerCardStack() {
 export default function AiSeoIndiaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
       <script id="ai-seo-webpage-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script id="ai-seo-service-schema" type="application/ld+json"

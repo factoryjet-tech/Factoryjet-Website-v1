@@ -160,8 +160,7 @@ export default function USHomePage() {
       <script id="speakable-schema-us-hub" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'name': 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
-        'url': 'https://factoryjet.com/',
+        '@id': 'https://factoryjet.com#webpage',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', '.faq-answer', '[data-speakable]'] },
       }) }} />
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://factoryjet.com' }]} />

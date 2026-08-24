@@ -663,8 +663,7 @@ export default function EcommerceDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Ecommerce Development | Shopify & Custom Stores | FactoryJet",
-          "url": "https://factoryjet.com/services/ecommerce-development/",
+          "@id": "https://factoryjet.com/services/ecommerce-development#webpage",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]

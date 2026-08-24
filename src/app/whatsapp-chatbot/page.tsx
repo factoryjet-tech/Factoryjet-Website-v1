@@ -145,7 +145,7 @@ const breadcrumbSchema = {
 const speakableSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/whatsapp-chatbot/#webpage',
+  '@id': 'https://factoryjet.com/whatsapp-chatbot#webpage',
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'h2:first-of-type'],

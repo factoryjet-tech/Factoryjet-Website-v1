@@ -728,10 +728,6 @@ export default function ShopifySeoServicePage() {
     <>
       {/* JSON-LD schemas */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
         id="shopify-seo-webpage-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}

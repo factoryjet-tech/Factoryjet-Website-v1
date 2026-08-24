@@ -21,6 +21,7 @@
  *   S6 headings     no skipped heading level (h2 -> h4), exactly one h1
  *   S7 rating       AggregateRating is accompanied by visible reviews on the page
  *   S8 freshness    dateModified present, parseable, not in the future
+ *   S9 redirect     sitemap URLs answer 200, and any redirect is 301 not 302
  *
  * Usage:
  *   node scripts/audit-schema-truth.mjs --filter /uk/
@@ -65,8 +66,16 @@ const NON_FETCHABLE = [/^https?:\/\/schema\.org/i, /^https?:\/\/www\.w3\.org/i];
 const bust = (u) => u + (u.includes('?') ? '&' : '?') + 'cb=' + Math.random().toString(36).slice(2);
 
 async function getPage(url) {
-  const res = await fetch(bust(url), { headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache' } });
-  return { status: res.status, body: await res.text() };
+  // manual redirect: a URL listed in the sitemap should answer 200 itself.
+  // Following silently would audit the target twice and hide the redirect.
+  const first = await fetch(bust(url), {
+    headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache' },
+    redirect: 'manual',
+  });
+  if (first.status >= 300 && first.status < 400) {
+    return { status: first.status, redirectTo: first.headers.get('location'), body: '' };
+  }
+  return { status: first.status, body: await first.text() };
 }
 
 /* One network check per unique URL across the whole run. */
@@ -233,8 +242,14 @@ async function auditPage(url, html) {
 
   // S4 competing entities: same @type asserted more than once at TOP LEVEL,
   // without distinct @id. Nested property values are excluded by design.
+  //
+  // Service and Product are deliberately NOT here. A hub page legitimately
+  // offers several distinct services (/uk lists Web Design, E-Commerce, AI
+  // Agents and AI SEO as four separate Service nodes, each with its own
+  // serviceType, description and url). Only types that describe THE page or
+  // THE publisher can meaningfully conflict.
   const top = topLevelNodes(blocks);
-  const SINGLETON = ['Organization', 'LocalBusiness', 'ProfessionalService', 'WebPage', 'Service', 'Product', 'FAQPage'];
+  const SINGLETON = ['Organization', 'LocalBusiness', 'ProfessionalService', 'WebPage', 'FAQPage'];
   for (const t of SINGLETON) {
     const same = top.filter((n) => typeOf(n) === t);
     if (same.length < 2) continue;
@@ -320,7 +335,21 @@ urls = urls.slice(0, LIMIT);
 console.error(`Schema-truth audit: ${urls.length} live URLs${FILTER ? ` matching ${FILTER}` : ''}\n`);
 
 const results = await pool(urls, async (u) => {
-  const { status, body } = await getPage(u);
+  const { status, body, redirectTo } = await getPage(u);
+  if (redirectTo) {
+    // A sitemap URL that redirects wastes crawl budget and splits signals.
+    // 302/307 is worse than 404 here: it tells Google the move is temporary,
+    // so ranking signals are not consolidated onto the destination.
+    const permanent = status === 301 || status === 308;
+    return {
+      url: u, ldBlocks: 0, nodes: 0, urlsChecked: 0, notes: [],
+      fails: [{
+        check: 'S9-redirect',
+        detail: `listed in the sitemap but answers HTTP ${status} to ${redirectTo}` +
+                (permanent ? '' : ` — ${status} is temporary, use 301 so ranking signals consolidate`),
+      }],
+    };
+  }
   if (status !== 200) return { url: u, error: `HTTP ${status}` };
   return auditPage(u, body);
 }, CONCURRENCY);
@@ -343,6 +372,7 @@ const CHECKS = {
   'S6-headings': 'one h1, no skipped levels',
   'S7-rating': 'AggregateRating has visible reviews',
   'S8-freshness': 'dateModified valid and not future',
+  'S9-redirect': 'sitemap URLs answer 200, not a redirect',
 };
 
 console.log(`=== SCHEMA TRUTH: ${ok.length} pages audited, ${failing.length} failing ===\n`);
