@@ -208,7 +208,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',
   description:
-    'A UK SEO consultant who plans and does the work himself. Technical, local, and ecommerce SEO, plus getting named in AI answers. Free SEO audit before you commit.',
+    'A UK SEO consultant who plans and does the work himself. Technical, local and ecommerce SEO, plus AI answers. Free audit before you commit.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',

@@ -141,9 +141,9 @@ const FAQ_ITEMS: { question: string; answer: string; cat: FaqCategory }[] = [
    search volume. "Shopify agency UK" does, and unlike "ecommerce seo uk" it does not put this
    page in competition with /uk/ecommerce-seo. The page's job is the Shopify platform layer:
    collection architecture, filters, variant URLs, Liquid templates, app weight. */
-const TITLE = 'Shopify Agency UK: The Technical Shopify SEO Reference | FactoryJet';
+const TITLE = 'Shopify Agency UK | Technical Shopify SEO | FactoryJet';
 const DESCRIPTION =
-  'A UK Shopify agency reference for the SEO problems Shopify creates by default: duplicate product and variant URLs, filter pages that eat crawl capacity, collection text buried below the grid, Liquid template fixes and app weight. Written by the team that edits the theme.';
+  'The SEO problems Shopify creates by default: duplicate variant URLs, filter pages eating crawl budget, buried collection text, Liquid fixes and app weight.';
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -296,7 +296,7 @@ const FAQ_ITEMS: { question: string; answer: string; category: FaqCategory }[] =
 export const metadata: Metadata = {
   title: 'Shopify Agency UK | Hire a Shopify Developer | FactoryJet',
   description:
-    'FactoryJet is a certified Shopify Partner agency in the UK. Hire a Shopify developer for custom themes, Shopify Plus, B2B, migrations and headless Hydrogen. Free store audit.',
+    'Hire a UK Shopify developer for custom themes, Shopify Plus, B2B, migrations and headless Hydrogen. Free store audit, no obligation.',
   alternates: {
     canonical: CANONICAL,
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },

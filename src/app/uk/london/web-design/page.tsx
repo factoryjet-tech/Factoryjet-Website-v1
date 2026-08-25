@@ -226,7 +226,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'Web Design London | Website Design Agency | FactoryJet',
   description:
-    'FactoryJet is a web design agency in London. Fast, conversion-focused website design and ecommerce on Next.js, WordPress, Webflow, Framer, and Shopify. Fixed quote, you own the code.',
+    'A web design agency in London. Fast, conversion-focused sites and ecommerce on Next.js, WordPress, Webflow and Shopify. You own the code.',
   alternates: {
     canonical: CANONICAL,
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },

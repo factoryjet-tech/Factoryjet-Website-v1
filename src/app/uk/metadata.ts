@@ -20,7 +20,7 @@ export const ukViewport: Viewport = {
  * prices anywhere on the site, so that claim was not true.
  */
 export const ukMetadata: Metadata = {
-  title: "Digital Agency UK: Web Design, E-Commerce & AI SEO | FactoryJet",
+  title: "Digital Agency UK: Web Design, Ecommerce, SEO | FactoryJet",
   description:
     "FactoryJet is an AI-native digital agency for UK businesses. Web design, Shopify and WooCommerce builds, AI agents and AI SEO, across 21 UK cities. Free audit.",
   alternates: {
@@ -34,7 +34,7 @@ export const ukMetadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Digital Agency UK: Web Design, E-Commerce & AI SEO | FactoryJet",
+    title: "Digital Agency UK: Web Design, Ecommerce, SEO | FactoryJet",
     description:
       "FactoryJet is an AI-native digital agency for UK businesses. Web design, Shopify and WooCommerce builds, AI agents and AI SEO, across 21 UK cities. Free audit.",
     url: "https://factoryjet.com/uk",
@@ -52,7 +52,7 @@ export const ukMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Agency UK: Web Design, E-Commerce & AI SEO | FactoryJet",
+    title: "Digital Agency UK: Web Design, Ecommerce, SEO | FactoryJet",
     description:
       "Web design, Shopify and WooCommerce builds, custom AI agents and AI SEO for UK businesses. Scoped and quoted up front, before any work starts.",
   },

@@ -200,7 +200,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',
   description:
-    'FactoryJet is an AI SEO agency in the UK. We use answer engine optimisation (AEO) and generative engine optimisation (GEO) to get your business named in ChatGPT, Gemini, Perplexity and Google AI Overviews, while keeping your Google rankings. Free AI visibility check.',
+    'A UK AI SEO agency using AEO and GEO to get your business named in ChatGPT, Perplexity and Google AI Overviews, without losing your Google rankings.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',

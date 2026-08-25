@@ -284,9 +284,19 @@ function measure(url, html) {
 
   const canonical = (html.match(/<link[^>]+rel=["']canonical["'][^>]*href=["']([^"']+)["']/i) ||
                      html.match(/<link[^>]+href=["']([^"']+)["'][^>]*rel=["']canonical["']/i) || [])[1] || null;
-  const title = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.trim() || '';
-  const desc = (html.match(/<meta[^>]+name=["']description["'][^>]*content=["']([^"']*)["']/i) ||
-                html.match(/<meta[^>]+content=["']([^"']*)["'][^>]*name=["']description["']/i) || [])[1] || '';
+  // Decode entities BEFORE measuring length. The rendered HTML carries "&amp;"
+  // where the author wrote "&", so a raw .length counts one ampersand as five
+  // characters and reports a compliant title as four over the limit. Measured
+  // 2026-08-25: this produced two false T8 failures on /uk pages whose real
+  // titles were 57 and 58 characters.
+  const entities = (s) => s
+    .replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"').replace(/&#0?39;|&apos;/gi, "'")
+    .replace(/&nbsp;/gi, ' ').replace(/&#8217;/g, '’').replace(/&#8216;/g, '‘');
+
+  const title = entities((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1]?.trim() || '');
+  const desc = entities((html.match(/<meta[^>]+name=["']description["'][^>]*content=["']([^"']*)["']/i) ||
+                html.match(/<meta[^>]+content=["']([^"']*)["'][^>]*name=["']description["']/i) || [])[1] || '');
   const robots = (html.match(/<meta[^>]+name=["']robots["'][^>]*content=["']([^"']*)["']/i) || [])[1] || '';
 
   let dateModified = null;

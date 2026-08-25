@@ -157,7 +157,7 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Web Design UK | Conversion-First Web Design Agency | FactoryJet',
+      name: 'Web Design UK | Conversion-First Design Agency | FactoryJet',
       headline: 'Web Design UK That Turns Visitors Into Buyers',
       description:
         'What web design UK covers, what a good build includes, how to choose a web design agency UK businesses can hold to a number, and 28 answered questions.',
@@ -189,14 +189,14 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Web Design UK | Conversion-First Web Design Agency | FactoryJet',
+  title: 'Web Design UK | Conversion-First Design Agency | FactoryJet',
   description:
-    'Web design UK, done properly. FactoryJet is a web design agency UK brands hire for fast, conversion-first website design on Next.js, WordPress, Webflow, Framer and Shopify. Scoped up front, you own the code.',
+    'A web design agency UK brands hire for fast, conversion-first sites on Next.js, WordPress, Webflow and Shopify. Scoped up front, you own the code.',
   // Emits the same cluster the India and US web-design pages emit, so the
   // en-GB reciprocal actually resolves. Previously canonical-only.
   alternates: { canonical: CANONICAL, languages: webDesignAlternates },
   openGraph: {
-    title: 'Web Design UK | Conversion-First Web Design Agency | FactoryJet',
+    title: 'Web Design UK | Conversion-First Design Agency | FactoryJet',
     description:
       'A web design agency UK brands hire to build fast, conversion-first websites. Next.js, WordPress, Webflow, Framer, Shopify. Scoped up front, you own the code.',
     url: CANONICAL,

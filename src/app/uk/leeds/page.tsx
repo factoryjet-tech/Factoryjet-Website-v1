@@ -77,7 +77,7 @@ const fmt = (n: number) => n.toLocaleString('en-GB')
 export const metadata: Metadata = {
   title: 'SEO Agency Leeds | Local and Organic Search | FactoryJet',
   description:
-    'SEO agency work for Leeds businesses: technical fixes, Google Business Profile, area pages and links. Written scope up front, accounts stay in your name, no lock-in.',
+    'SEO for Leeds businesses: technical fixes, Google Business Profile, area pages and links. Scope up front, accounts stay in your name.',
   keywords: [
     'seo agency leeds',
     'seo leeds',

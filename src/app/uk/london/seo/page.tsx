@@ -551,7 +551,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'SEO Agency London | Technical, Local & AI SEO | FactoryJet',
   description:
-    'What a London SEO engagement actually includes: technical fixes, local map pack work, content, links, and AI search. Scope, process, reporting, and a free audit.',
+    'What a London SEO engagement includes: technical fixes, map pack work, content, links and AI search. Scope, process, reporting, free audit.',
   alternates: {
     canonical: CANONICAL,
     languages: {

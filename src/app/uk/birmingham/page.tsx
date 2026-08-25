@@ -31,7 +31,7 @@ const PAGE_MODIFIED = '2026-08-25';
 export const metadata: Metadata = {
   title: 'SEO Agency Birmingham | Local & AI Search | FactoryJet',
   description:
-    'Birmingham SEO agency for firms that need enquiries. Technical fixes, Google Business Profile, local landing pages and AI search visibility across the West Midlands. Free site review.',
+    'Birmingham SEO agency for firms that need enquiries. Technical fixes, Google Business Profile, local pages and AI search. Free site review.',
   // UK-only page with no international twin, so both hreflang entries are self-referential.
   // The page shipped with no hreflang at all until 2026-08-25.
   alternates: {

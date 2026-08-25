@@ -28,7 +28,7 @@ const PAGE_MODIFIED = '2026-08-25';
 export const metadata: Metadata = {
   title: 'SEO Agency Liverpool | Local SEO and AI Search | FactoryJet',
   description:
-    'SEO agency for Liverpool and Merseyside businesses. Technical fixes, Google Business Profile, service pages and AI search visibility. Free site review, no obligation.',
+    'SEO for Liverpool and Merseyside businesses. Technical fixes, Google Business Profile, service pages and AI search. Free site review.',
   // UK-only page with no international twin, so both entries are self-referential.
   alternates: {
     canonical: CANONICAL,
